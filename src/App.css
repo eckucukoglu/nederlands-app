@@ -1,0 +1,11 @@
+/* src/App.css */
+.flashcard { perspective: 1000px; }
+.flashcard-inner { transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1); transform-style: preserve-3d; }
+.flashcard.flipped .flashcard-inner { transform: rotateY(180deg); }
+.flashcard-front, .flashcard-back { backface-visibility: hidden; }
+.flashcard-back { transform: rotateY(180deg); }
+
+/* Scrollbar inceltme (İsteğe bağlı) */
+.scrollbar-thin::-webkit-scrollbar { height: 6px; width: 6px; }
+.scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+.scrollbar-thin::-webkit-scrollbar-thumb { background-color: #cbd5e1; border-radius: 20px; }

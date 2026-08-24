@@ -1,0 +1,170 @@
+import React, { useState, useEffect } from 'react';
+
+export default function ExerciseEngine({ sectionData, chapterNum }) {
+  const [subTab, setSubTab] = useState("book");
+  const [answers, setAnswers] = useState({});
+  const [showResults, setShowResults] = useState(false);
+  const [qStats, setQStats] = useState(JSON.parse(localStorage.getItem('questionStats')) || {});
+
+  // YENİ EKLENEN KISIM: Bölüm (sekme) değiştiğinde tüm state'leri sıfırla!
+  useEffect(() => {
+    setSubTab("book");      // Her zaman 'Kitaptaki Sorular' sekmesine dön
+    setAnswers({});         // Önceki cevapları temizle
+    setShowResults(false);  // Sonuç gösterme modunu kapat
+  }, [sectionData?.id]);    // sectionData.id her değiştiğinde bu bloğu tetikle
+
+  if (!sectionData) return null;
+
+  const bookExercises = sectionData.exerciseGroups?.filter(g => !g.isExtra) || [];
+  const extraExercises = sectionData.exerciseGroups?.filter(g => g.isExtra) || [];
+  const currentGroups = subTab === "book" ? bookExercises : extraExercises;
+
+  const handleAnswerChange = (qId, value) => {
+    setAnswers({ ...answers, [qId]: value });
+  };
+
+  const handleVerify = () => {
+    setShowResults(true);
+    const newStats = { ...qStats };
+    currentGroups.forEach(group => {
+      group.questions.forEach(q => {
+        const userAns = answers[q.id]?.toLowerCase().trim() || "";
+        const isCorrect = userAns === q.correctAnswer.toLowerCase();
+        if (userAns !== "") {
+          const current = newStats[q.id] || { correct: 0, incorrect: 0 };
+          newStats[q.id] = {
+            correct: current.correct + (isCorrect ? 1 : 0),
+            incorrect: current.incorrect + (!isCorrect ? 1 : 0)
+          };
+        }
+      });
+    });
+    setQStats(newStats);
+    localStorage.setItem('questionStats', JSON.stringify(newStats));
+  };
+
+  const speakDutch = (text) => {
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'nl-NL';
+    window.speechSynthesis.speak(utterance);
+  };
+
+  return (
+    <div className="space-y-6">
+      {/* BAŞLIK VE SEKME (SUB-TAB) SEÇİCİ */}
+      <div className="bg-slate-800 rounded-2xl p-6 shadow-lg border border-slate-700 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+        <div>
+          <div className="inline-flex items-center space-x-2 bg-brand-900/30 border border-brand-500/20 text-brand-400 font-bold px-3 py-1 rounded-full text-xs mb-2">
+            <i className="fa-solid fa-stethoscope"></i>
+            <span>Hoofdstuk {chapterNum} • Sectie {sectionData.id}</span>
+          </div>
+          <h2 className="text-2xl font-extrabold text-slate-100">{sectionData.title}</h2>
+        </div>
+
+        <div className="bg-slate-900/50 p-1.5 rounded-xl flex space-x-1 w-full md:w-auto border border-slate-700/50">
+          <button
+            onClick={() => { setSubTab("book"); setShowResults(false); }}
+            className={`flex-1 md:flex-none px-4 py-2 rounded-lg text-xs font-bold transition-all flex items-center justify-center space-x-2 ${
+              subTab === "book" ? "bg-slate-700 text-brand-300 shadow-sm" : "text-slate-400 hover:text-slate-200 hover:bg-slate-800"
+            }`}
+          >
+            <i className="fa-solid fa-book-open"></i><span>Kitaptaki Sorular</span>
+          </button>
+          <button
+            onClick={() => { setSubTab("extra"); setShowResults(false); }}
+            className={`flex-1 md:flex-none px-4 py-2 rounded-lg text-xs font-bold transition-all flex items-center justify-center space-x-2 ${
+              subTab === "extra" ? "bg-brand-600 text-white shadow-sm" : "text-slate-400 hover:text-slate-200 hover:bg-slate-800"
+            }`}
+          >
+            <i className="fa-solid fa-fire text-amber-400"></i><span>Ekstra Pratik</span>
+          </button>
+        </div>
+      </div>
+
+      {/* TEORİ / KONU ANLATIMI */}
+      {sectionData.theory && (
+        <div className="bg-slate-800 rounded-2xl p-6 shadow-lg border border-slate-700">
+          <div className="text-slate-300 leading-relaxed font-medium">
+            {sectionData.theory}
+          </div>
+        </div>
+      )}
+
+      {/* SORULAR */}
+      <div className="bg-slate-800 rounded-2xl p-6 shadow-lg border border-slate-700 space-y-6">
+        {currentGroups.map((group, gIdx) => (
+          <div key={gIdx} className="space-y-6 mb-8">
+            <h3 className="font-bold text-brand-400 border-b border-slate-700 pb-2 flex items-center space-x-2">
+              <i className="fa-solid fa-pen-to-square"></i>
+              <span>{group.instruction}</span>
+            </h3>
+
+            {group.questions.map((q, idx) => {
+              const userAns = answers[q.id];
+              const isCorrect = userAns?.toLowerCase().trim() === q.correctAnswer.toLowerCase();
+
+              return (
+                <div key={q.id} className="p-4 rounded-xl border border-slate-700 bg-slate-900/50 space-y-3">
+                  <div className="flex items-start justify-between gap-3">
+                    <span className="font-extrabold text-xs bg-slate-700 text-slate-300 px-2.5 py-1 rounded-md">Q{idx + 1}</span>
+                    <p className="flex-1 font-semibold text-sm text-slate-200">{q.question}</p>
+                    <button onClick={() => speakDutch(q.question)} className="text-slate-500 hover:text-brand-400 text-xs transition-colors">
+                      <i className="fa-solid fa-volume-high"></i>
+                    </button>
+                  </div>
+
+                  <div className="pt-1">
+                    {q.type === 'multiple_choice' ? (
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        {q.options.map(opt => {
+                          let btnClass = "bg-slate-800 border-slate-600 text-slate-300 hover:border-brand-500 hover:bg-slate-700";
+                          if (userAns === opt) btnClass = "bg-brand-600 text-white border-brand-500 shadow-sm";
+                          if (showResults) {
+                            if (opt === q.correctAnswer) btnClass = "bg-emerald-600 text-white border-emerald-500 font-bold";
+                            else if (userAns === opt && !isCorrect) btnClass = "bg-rose-600 text-white border-rose-500";
+                          }
+                          return (
+                            <button key={opt} disabled={showResults} onClick={() => handleAnswerChange(q.id, opt)} className={`p-3 rounded-lg border text-xs text-left font-medium transition-all flex items-center justify-between ${btnClass}`}>
+                              <span>{opt}</span>
+                              {showResults && opt === q.correctAnswer && <i className="fa-solid fa-circle-check text-emerald-200 text-sm"></i>}
+                              {showResults && userAns === opt && !isCorrect && <i className="fa-solid fa-circle-xmark text-rose-200 text-sm"></i>}
+                            </button>
+                          );
+                        })}
+                      </div>
+                    ) : (
+                      <input 
+                        type="text" 
+                        disabled={showResults}
+                        placeholder="Typ je antwoord..." 
+                        value={userAns || ''} 
+                        onChange={(e) => handleAnswerChange(q.id, e.target.value)}
+                        className="p-3 w-full max-w-sm text-sm rounded-xl border border-slate-600 bg-slate-900 text-slate-200 placeholder-slate-500 focus:ring-2 focus:ring-brand-500 outline-none"
+                      />
+                    )}
+                  </div>
+
+                  {showResults && (
+                    <div className={`p-3 rounded-lg text-xs leading-relaxed ${isCorrect ? "bg-emerald-900/30 text-emerald-300 border border-emerald-800" : "bg-rose-900/30 text-rose-300 border border-rose-800"}`}>
+                      <span className="font-bold">{isCorrect ? "✔️ Juist! (Doğru)" : "❌ Onjuist. (Yanlış)"} </span>
+                      {!isCorrect && <span>Het goede antwoord is: <strong className="text-white">{q.correctAnswer}</strong></span>}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        ))}
+
+        {currentGroups.length > 0 && (
+          <div className="flex justify-end pt-4 border-t border-slate-700">
+            <button onClick={handleVerify} className="px-6 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white text-sm font-bold shadow-lg transition">
+              Verifieer Antwoorden (Kontrol Et)
+            </button>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
