@@ -147,33 +147,48 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
     setSelectedWords(null);
   };
 
-  // YENİ: KELİME LİSTEDE YOKSA DİREKT "BİLMİYORUM" OLARAK İŞARETLEME FONKSİYONU
-  const handleNotFoundClick = (e) => {
+  // YENİ: 3 YÖNLÜ DÜĞME (TOGGLE SWITCH) MANTIĞI
+  const handleRawWordToggle = (direction, e) => {
     e.stopPropagation();
     if (!clickedWordRaw) return;
 
-    const storageKey = `dialogueUnknowns_${chapterId}`;
-    const existingUnknowns = JSON.parse(localStorage.getItem(storageKey)) || [];
-    
-    // Kelimeyi flashcard listesine manuel olarak ekle
-    if (!existingUnknowns.some(w => w.nl === clickedWordRaw)) {
-      const fallbackWord = { 
-        nl: clickedWordRaw, 
-        en: "Not found in dictionary", 
-        tr: "Sözlükte bulunamadı",
-        example: "Kullanıcı tarafından manuel olarak 'Bilmiyorum' işaretlendi."
-      };
-      existingUnknowns.push(fallbackWord);
-      localStorage.setItem(storageKey, JSON.stringify(existingUnknowns));
+    const currentStatus = wordStatuses[clickedWordRaw];
+    let newStatus;
+
+    if (direction === 'left') {
+      if (currentStatus === 'known') newStatus = undefined; // Yeşilden -> Ortaya (Default)
+      else newStatus = 'unknown'; // Ortadan -> Kırmızıya (Sola)
+    } else if (direction === 'right') {
+      if (currentStatus === 'unknown') newStatus = undefined; // Kırmızıdan -> Ortaya (Default)
+      else newStatus = 'known'; // Ortadan -> Yeşile (Sağa)
     }
 
-    // Kelimenin durumunu "bilmiyorum" (kırmızı) olarak kaydet
-    const newStatuses = { ...wordStatuses, [clickedWordRaw]: 'unknown' };
+    const storageKey = `dialogueUnknowns_${chapterId}`;
+    const existingUnknowns = JSON.parse(localStorage.getItem(storageKey)) || [];
+    let updatedUnknowns = existingUnknowns;
+
+    if (newStatus === 'unknown') {
+      if (!existingUnknowns.some(w => w.nl === clickedWordRaw)) {
+        updatedUnknowns = [...existingUnknowns, {
+          nl: clickedWordRaw, 
+          en: "Not found in dictionary", 
+          tr: "Sözlükte bulunamadı",
+          example: "Kullanıcı tarafından manuel olarak işaretlendi."
+        }];
+      }
+    } else {
+      updatedUnknowns = existingUnknowns.filter(w => w.nl !== clickedWordRaw);
+    }
+    localStorage.setItem(storageKey, JSON.stringify(updatedUnknowns));
+
+    const newStatuses = { ...wordStatuses };
+    if (newStatus === undefined) {
+      delete newStatuses[clickedWordRaw];
+    } else {
+      newStatuses[clickedWordRaw] = newStatus;
+    }
     setWordStatuses(newStatuses);
     localStorage.setItem(`dialogueWordStatuses_${chapterId}`, JSON.stringify(newStatuses));
-    
-    // İşlem bitince pop-up'ı kapat
-    setSelectedWords(null);
   };
 
   const handleStarClick = (e) => {
@@ -188,6 +203,22 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
     setShowFavInput(false);
     setFavNote("");
   };
+
+  // RAW KELİME İÇİN 3 YÖNLÜ DÜĞME (UI HESAPLAMASI)
+  const rawStatus = wordStatuses[clickedWordRaw];
+  let trackColor = "bg-slate-700/80";
+  let thumbColor = "bg-slate-400";
+  let translateClass = "translate-x-[18px]"; // Merkez (Default)
+
+  if (rawStatus === 'unknown') {
+    trackColor = "bg-rose-900/60";
+    thumbColor = "bg-rose-500";
+    translateClass = "translate-x-[2px]"; // Sol
+  } else if (rawStatus === 'known') {
+    trackColor = "bg-emerald-900/60";
+    thumbColor = "bg-emerald-500";
+    translateClass = "translate-x-[34px]"; // Sağ
+  }
 
   return (
     <div className="bg-slate-900 rounded-2xl p-6 shadow-lg border border-slate-700 relative" onClick={() => { setSelectedWords(null); setShowFavInput(false); }}>
@@ -304,25 +335,35 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
         })}
       </div>
 
-      {/* POP-UP ALANI */}
       {selectedWords && selectedWords.length > 0 && (
         <>
           <div className="fixed inset-0 z-40" onClick={(e) => { e.stopPropagation(); setSelectedWords(null); }}></div>
           <div 
-            className="fixed bg-slate-800 border border-slate-600 p-3 rounded-xl shadow-2xl z-50 min-w-[240px] max-w-[280px] transform -translate-x-1/2 max-h-[300px] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-600" 
+            className="fixed bg-slate-800 border border-slate-600 p-3 rounded-xl shadow-2xl z-50 min-w-[240px] max-w-[280px] transform -translate-x-1/2 max-h-[360px] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-600" 
             style={{ left: `${popupPos.x}px`, top: `${popupPos.y}px` }} 
             onClick={(e) => e.stopPropagation()}
           >
-            {/* YENİ: LİSTEDE YOK BUTONU */}
-            <div className="mb-3 pb-2 border-b border-slate-700/80 flex justify-between items-center gap-3">
-              <span className="text-[10px] text-slate-400 leading-tight">Aradığın kelime bu listede yok mu?</span>
-              <button 
-                onClick={handleNotFoundClick}
-                className="bg-rose-900/30 hover:bg-rose-800/50 border border-rose-800/50 text-rose-300 text-[10px] font-bold px-2 py-1.5 rounded transition-colors whitespace-nowrap flex items-center"
-                title="Tıkladığın kelimeyi direkt 'Bilmiyorum' olarak işaretle"
-              >
-                <i className="fa-solid fa-xmark mr-1"></i> Direkt İşaretle
-              </button>
+            
+            {/* YENİ: 3 YÖNLÜ DÜĞME (3-WAY TOGGLE SWITCH) ALANI */}
+            <div className="mb-3 pb-3 border-b border-slate-700/80 flex justify-between items-center gap-3">
+              <div className="flex flex-col truncate">
+                <span className="text-[13px] font-bold text-slate-200 truncate">
+                  <i className="fa-solid fa-pen-nib text-brand-400 mr-1.5"></i>
+                  {clickedWordRaw}
+                </span>
+                <span className="text-[10px] text-slate-400 leading-tight mt-0.5">Sadece kelimeyi işaretle</span>
+              </div>
+              
+              {/* Toggle Gövdesi */}
+              <div className={`relative w-14 h-6 rounded-full transition-colors duration-300 flex-shrink-0 ${trackColor}`}>
+                {/* Sol Tıklama Alanı */}
+                <div className="absolute left-0 w-1/2 h-full z-10 cursor-pointer rounded-l-full" onClick={(e) => handleRawWordToggle('left', e)}></div>
+                {/* Sağ Tıklama Alanı */}
+                <div className="absolute right-0 w-1/2 h-full z-10 cursor-pointer rounded-r-full" onClick={(e) => handleRawWordToggle('right', e)}></div>
+                
+                {/* Hareketli Yuvarlak Top (Thumb) */}
+                <div className={`absolute top-[2px] w-5 h-5 rounded-full shadow-md transition-transform duration-300 ease-in-out ${thumbColor} ${translateClass}`}></div>
+              </div>
             </div>
 
             <div className="space-y-3">
