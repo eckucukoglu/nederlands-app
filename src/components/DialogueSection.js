@@ -233,8 +233,10 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite }
               <h3 className="font-bold text-brand-400 text-lg">{selectedWord.nl}</h3>
               <button onClick={() => speakDutch(selectedWord.nl)} className="text-slate-400 hover:text-brand-300"><i className="fa-solid fa-volume-high"></i></button>
             </div>
-            <p className="text-sm font-medium text-slate-200">EN: {selectedWord.en}</p>
-            <p className="text-xs text-slate-400 italic mt-1">{selectedWord.example}</p>
+			<p className="text-sm font-medium text-slate-200">🇬🇧 EN: {selectedWord.en}</p>
+            {selectedWord.tr && <p className="text-sm font-bold text-brand-300 mt-1">🇹🇷 TR: {selectedWord.tr}</p>}
+			
+            <p className="text-xs text-slate-400 italic mt-2">{selectedWord.example}</p>
             <div className="flex gap-2 mt-4">
               <button onClick={() => handleWordKnowledge(true)} className="flex-1 bg-emerald-900/40 hover:bg-emerald-800/60 border border-emerald-700/50 text-emerald-300 text-xs font-bold py-2 rounded-lg transition-colors">✔️ Biliyorum</button>
               <button onClick={() => handleWordKnowledge(false)} className="flex-1 bg-rose-900/40 hover:bg-rose-800/60 border border-rose-700/50 text-rose-300 text-xs font-bold py-2 rounded-lg transition-colors">❌ Bilmiyorum</button>
