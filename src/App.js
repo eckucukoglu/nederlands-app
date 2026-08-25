@@ -6,7 +6,6 @@ import ExerciseEngine from './components/ExerciseEngine';
 import Flashcards from './components/Flashcards';
 import { bookSections } from './data';
 
-// Ünite başlıkları sözlüğü
 const chapterTitles = {
   1: "Welkom", 2: "In de kantine", 3: "In het café", 4: "Op straat", 5: "Op de markt",
   6: "In een restaurant", 7: "In een kledingzaak", 8: "Bij de makelaar", 9: "Bij de huisarts",
@@ -17,9 +16,6 @@ const chapterTitles = {
 
 function App() {
   const availableChapters = [...new Set(bookSections.map(sec => sec.chapter))].filter(Boolean).sort((a, b) => a - b);
-  
-  // DÜZELTME BURADA: Siteye ilk kez girildiğinde veya hafıza boşsa, 
-  // sondaki ünite yerine direkt İLK mevcut üniteden (1. Ünite) başlar.
   const fallbackChapter = availableChapters[0] || 1;
 
   const [currentChapter, setCurrentChapter] = useState(() => {
@@ -30,26 +26,36 @@ function App() {
 
   const [activeTab, setActiveTab] = useState(() => {
     const savedTab = localStorage.getItem(`lastVisitedTab_${currentChapter}`);
-    // Eğer hafızada kayıtlı sekme yoksa, o ünitenin '.1' sekmesinden başlar (Örn: 1.1)
     return savedTab ? savedTab : `${currentChapter}.1`;
   });
 
-  // Favori Bölümler ve Notları İçin Hafıza
+  // Favoriler Hafızası
   const [favorites, setFavorites] = useState(() => {
     const saved = localStorage.getItem('favoriteSections');
     return saved ? JSON.parse(saved) : {};
   });
 
-  // Favori Ekle/Çıkar Fonksiyonu
+  // YENİ: Tamamlananlar Hafızası
+  const [completed, setCompleted] = useState(() => {
+    const saved = localStorage.getItem('completedSections');
+    return saved ? JSON.parse(saved) : {};
+  });
+
   const toggleFavorite = (sectionId, note) => {
     const newFavs = { ...favorites };
-    if (newFavs[sectionId]) {
-      delete newFavs[sectionId];
-    } else {
-      newFavs[sectionId] = note;
-    }
+    if (newFavs[sectionId]) delete newFavs[sectionId];
+    else newFavs[sectionId] = note;
     setFavorites(newFavs);
     localStorage.setItem('favoriteSections', JSON.stringify(newFavs));
+  };
+
+  // YENİ: Tamamlandı Ekle/Çıkar Fonksiyonu
+  const toggleCompleted = (sectionId) => {
+    const newComp = { ...completed };
+    if (newComp[sectionId]) delete newComp[sectionId];
+    else newComp[sectionId] = true;
+    setCompleted(newComp);
+    localStorage.setItem('completedSections', JSON.stringify(newComp));
   };
 
   useEffect(() => {
@@ -71,7 +77,6 @@ function App() {
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-900 transition-colors duration-300">
-      {/* HEADER */}
       <header className="bg-slate-950 text-white shadow-xl sticky top-0 z-50 border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 py-3 flex flex-wrap justify-between items-center gap-4">
           <div className="flex items-center space-x-3">
@@ -103,7 +108,6 @@ function App() {
           </div>
         </div>
 
-        {/* BÖLÜM SEKMELERİ */}
         <div className="bg-slate-900/50 border-t border-slate-800 overflow-x-auto scrollbar-thin">
           <div className="max-w-7xl mx-auto px-4 flex space-x-1 py-1.5 min-w-max">
             {currentSections.map(sec => (
@@ -115,7 +119,11 @@ function App() {
                 }`}
               >
                 <span>{sec.id.includes('On-Class') ? 'On-Class' : sec.id}</span>
-                {favorites[sec.id] && <i className="fa-solid fa-star text-amber-400 ml-1"></i>}
+                {/* YENİ: İkonların Yan Yana Gösterimi */}
+                <div className="flex items-center space-x-1 ml-1">
+                  {completed[sec.id] && <i className="fa-solid fa-circle-check text-emerald-400"></i>}
+                  {favorites[sec.id] && <i className="fa-solid fa-star text-amber-400"></i>}
+                </div>
               </button>
             ))}
             <div className="h-5 w-[1px] bg-slate-700 my-auto mx-1"></div>
@@ -132,13 +140,14 @@ function App() {
         </div>
       </header>
 
-      {/* ANA İÇERİK ALANI */}
       <main className="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 text-slate-200">
         {(activeTab.includes('.1') && !activeTab.includes('On-Class')) && (
           <DialogueSection 
             sectionId={activeTab} 
             favorites={favorites} 
             toggleFavorite={toggleFavorite} 
+            completed={completed} 
+            toggleCompleted={toggleCompleted} 
           />
         )}
         
@@ -148,6 +157,8 @@ function App() {
             chapterNum={currentChapter} 
             favorites={favorites} 
             toggleFavorite={toggleFavorite} 
+            completed={completed} 
+            toggleCompleted={toggleCompleted}
           />
         )}
 

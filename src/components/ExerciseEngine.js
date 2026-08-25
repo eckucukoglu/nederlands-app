@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-export default function ExerciseEngine({ sectionData, chapterNum, favorites, toggleFavorite }) {
+export default function ExerciseEngine({ sectionData, chapterNum, favorites, toggleFavorite, completed, toggleCompleted }) {
   const [subTab, setSubTab] = useState("book");
   const [answers, setAnswers] = useState({});
   const [showResults, setShowResults] = useState(false);
@@ -10,6 +10,7 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
   const [favNote, setFavNote] = useState("");
 
   const isFav = favorites && favorites[sectionData?.id];
+  const isComp = completed && completed[sectionData?.id];
 
   useEffect(() => {
     setSubTab("book");      
@@ -70,10 +71,8 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
 
   return (
     <div className="space-y-6" onClick={() => setShowFavInput(false)}>
-      {/* BAŞLIK VE SEKME (SUB-TAB) SEÇİCİ */}
       <div className="bg-slate-800 rounded-2xl p-6 shadow-lg border border-slate-700 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
         
-        {/* SOL KISIM: ROZET, BAŞLIK VE YILDIZ */}
         <div className="flex-1">
           <div className="inline-flex items-center space-x-2 bg-brand-900/30 border border-brand-500/20 text-brand-400 font-bold px-3 py-1 rounded-full text-xs mb-3">
             <i className="fa-solid fa-stethoscope"></i>
@@ -83,8 +82,17 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
           <div className="flex items-center space-x-3">
             <h2 className="text-2xl font-extrabold text-slate-100">{sectionData.title}</h2>
             
-            {/* YILDIZ ALANI */}
-            <div className="relative flex items-center">
+            {/* İKON ALANI (TİK + YILDIZ) */}
+            <div className="relative flex items-center space-x-3">
+              
+              <button onClick={(e) => { e.stopPropagation(); toggleCompleted(sectionData.id); }} className="text-2xl transition-transform hover:scale-110 focus:outline-none mt-1">
+                {isComp ? (
+                  <i className="fa-solid fa-circle-check text-emerald-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.6)]"></i>
+                ) : (
+                  <i className="fa-regular fa-circle-check text-slate-500 hover:text-emerald-400 transition-colors"></i>
+                )}
+              </button>
+
               <div className="group relative flex items-center">
                 <button onClick={handleStarClick} className="text-2xl transition-transform hover:scale-110 focus:outline-none mt-1">
                   {isFav ? (
@@ -94,7 +102,6 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
                   )}
                 </button>
                 
-                {/* HOVER TOOLTIP */}
                 {isFav && (
                   <div className="absolute left-full ml-3 top-0 hidden group-hover:block w-56 p-3 bg-slate-800 border border-slate-600 text-slate-200 text-xs rounded-xl shadow-2xl z-50">
                     <div className="font-bold text-amber-400 mb-1 border-b border-slate-600 pb-1">Mijn Notitie:</div>
@@ -103,7 +110,6 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
                 )}
               </div>
 
-              {/* NOT GİRİŞ KUTUSU */}
               {showFavInput && (
                 <div className="absolute left-full ml-3 top-0 bg-slate-800 p-2 rounded-xl shadow-2xl border border-slate-600 z-50 flex items-center gap-2" onClick={e => e.stopPropagation()}>
                   <input
@@ -123,7 +129,6 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
           </div>
         </div>
 
-        {/* SAĞ KISIM: BUTONLAR */}
         <div className="bg-slate-900/50 p-1.5 rounded-xl flex space-x-1 w-full lg:w-auto border border-slate-700/50">
           <button
             onClick={() => { setSubTab("book"); setShowResults(false); }}
@@ -144,7 +149,6 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
         </div>
       </div>
 
-      {/* TEORİ / KONU ANLATIMI */}
       {sectionData.theory && (
         <div className="bg-slate-800 rounded-2xl p-6 shadow-lg border border-slate-700">
           <div className="text-slate-300 leading-relaxed font-medium">
@@ -153,7 +157,6 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
         </div>
       )}
 
-      {/* SORULAR */}
       <div className="bg-slate-800 rounded-2xl p-6 shadow-lg border border-slate-700 space-y-6">
         {currentGroups.map((group, gIdx) => (
           <div key={gIdx} className="space-y-6 mb-8">

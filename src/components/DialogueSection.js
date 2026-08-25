@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { vocabulary, dialogues } from '../data';
-import { globalDictionary } from '../data/globalDictionary'; // YENİ SÖZLÜĞÜ İÇERİ ALIYORUZ
+import { globalDictionary } from '../data/globalDictionary'; 
 
-export default function DialogueSection({ sectionId, favorites, toggleFavorite }) {
+export default function DialogueSection({ sectionId, favorites, toggleFavorite, completed, toggleCompleted }) {
   const chapterId = sectionId.split('.')[0];
   const [selectedWord, setSelectedWord] = useState(null);
   const [popupPos, setPopupPos] = useState({ x: 0, y: 0 });
@@ -18,6 +18,7 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite }
 
   const activeDialogue = dialogues[sectionId] || [];
   const isFav = favorites && favorites[sectionId];
+  const isComp = completed && completed[sectionId];
 
   useEffect(() => {
     const saved = localStorage.getItem(`dialogueWordStatuses_${chapterId}`);
@@ -31,7 +32,6 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite }
     window.speechSynthesis.speak(utterance);
   };
 
-  // YENİ AKILLI KELİME ÖBEĞİ (PHRASE) ARAMA FONKSİYONU
   const handleWordClick = (e, wordIndex, cleanWords) => {
     e.stopPropagation();
     setPopupPos({ x: e.clientX, y: e.clientY });
@@ -40,7 +40,6 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite }
     let foundMatch = null;
     let matchString = cleanWords[wordIndex];
 
-    // 1. Önce 3 kelimelik öbek arıyoruz (Örn: "ik weet het")
     const triplets = [
       [wordIndex - 2, wordIndex - 1, wordIndex], 
       [wordIndex - 1, wordIndex, wordIndex + 1], 
@@ -54,12 +53,8 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite }
       }
     }
 
-    // 2. Bulamadıysak 2 kelimelik öbek arıyoruz (Örn: "wat leuk", "tot ziens")
     if (!foundMatch) {
-      const pairs = [
-        [wordIndex - 1, wordIndex], 
-        [wordIndex, wordIndex + 1]
-      ];
+      const pairs = [[wordIndex - 1, wordIndex], [wordIndex, wordIndex + 1]];
       for (let indices of pairs) {
         if (indices.every(idx => idx >= 0 && idx < cleanWords.length)) {
           const phrase = indices.map(idx => cleanWords[idx]).join(' ');
@@ -69,17 +64,13 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite }
       }
     }
 
-    // 3. Hala bulamadıysak tek kelimeyi arıyoruz
-    if (!foundMatch) {
-      foundMatch = allVocab.find(v => v.nl.toLowerCase() === matchString);
-    }
+    if (!foundMatch) foundMatch = allVocab.find(v => v.nl.toLowerCase() === matchString);
 
-    // 4. Fallback (Yoksa bilinmeyen kelime hatası)
     if (!foundMatch) {
       foundMatch = { 
         nl: matchString, 
         en: "Translation not available", 
-        example: "Sözlükte bulunamadı. Lütfen kelime kökünü (infinitive) kontrol ediniz." 
+        example: "Sözlükte bulunamadı. Lütfen kelime kökünü kontrol ediniz." 
       };
     }
 
@@ -128,7 +119,17 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite }
           <span>Dialoog Lezen en Luisteren</span>
         </h3>
 
-        <div className="relative flex items-center">
+        {/* İKON ALANI (TİK + YILDIZ) */}
+        <div className="relative flex items-center space-x-3">
+          
+          <button onClick={(e) => { e.stopPropagation(); toggleCompleted(sectionId); }} className="text-xl transition-transform hover:scale-110 focus:outline-none">
+            {isComp ? (
+              <i className="fa-solid fa-circle-check text-emerald-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.6)]"></i>
+            ) : (
+              <i className="fa-regular fa-circle-check text-slate-500 hover:text-emerald-400 transition-colors"></i>
+            )}
+          </button>
+
           <div className="group relative flex items-center">
             <button onClick={handleStarClick} className="text-xl transition-transform hover:scale-110 focus:outline-none">
               {isFav ? (
@@ -167,8 +168,6 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite }
       <div className="space-y-3">
         {activeDialogue.map((line, idx) => {
           const isDoc = line.speaker.includes("Huisarts") || line.speaker.includes("Fietsenmaker");
-          
-          // Satırdaki kelimeleri temizleyip önbelleğe alıyoruz
           const words = line.text.split(' ');
           const cleanWords = words.map(w => w.replace(/[.,?!:;–-]/g, '').toLowerCase());
 
@@ -180,12 +179,9 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite }
               <div className="flex-1">
                 <span className="font-bold text-xs uppercase tracking-wider text-slate-400">{line.speaker}</span>
                 <p className="text-sm font-semibold text-slate-200 mt-0.5 leading-relaxed">
-                  
-                  {/* KELİMELERİ EKRANA ÇİZDİREN KISIM (ÖBEK RENKLENDİRME EKLENDİ) */}
                   {words.map((word, i) => {
-                    let status = wordStatuses[cleanWords[i]]; // Önce tek kelime rengine bakar
+                    let status = wordStatuses[cleanWords[i]]; 
                     
-                    // Kelime tekil olarak boyanmamışsa, etrafındaki öbeklerde (phrase) renk var mı diye kontrol et!
                     if (!status) {
                       const triplets = [[i-2, i-1, i], [i-1, i, i+1], [i, i+1, i+2]];
                       for (let indices of triplets) {
@@ -233,9 +229,8 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite }
               <h3 className="font-bold text-brand-400 text-lg">{selectedWord.nl}</h3>
               <button onClick={() => speakDutch(selectedWord.nl)} className="text-slate-400 hover:text-brand-300"><i className="fa-solid fa-volume-high"></i></button>
             </div>
-			<p className="text-sm font-medium text-slate-200">🇬🇧 EN: {selectedWord.en}</p>
+            <p className="text-sm font-medium text-slate-200">🇬🇧 EN: {selectedWord.en}</p>
             {selectedWord.tr && <p className="text-sm font-bold text-brand-300 mt-1">🇹🇷 TR: {selectedWord.tr}</p>}
-			
             <p className="text-xs text-slate-400 italic mt-2">{selectedWord.example}</p>
             <div className="flex gap-2 mt-4">
               <button onClick={() => handleWordKnowledge(true)} className="flex-1 bg-emerald-900/40 hover:bg-emerald-800/60 border border-emerald-700/50 text-emerald-300 text-xs font-bold py-2 rounded-lg transition-colors">✔️ Biliyorum</button>
