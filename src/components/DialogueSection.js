@@ -56,7 +56,6 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
     const cleanWord = cleanWords[wordIndex];
     setClickedWordRaw(cleanWord);
 
-    // Pop-up'ın ekrandan taşmasını engellemek için daha dinamik yükseklik hesabı
     let yPosition = e.clientY + 15;
     if (yPosition + 280 > window.innerHeight) {
       yPosition = e.clientY - 260; 
@@ -145,8 +144,35 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
 
     setWordStatuses(newStatuses);
     localStorage.setItem(`dialogueWordStatuses_${chapterId}`, JSON.stringify(newStatuses));
+    setSelectedWords(null);
+  };
 
-    // YENİ EKLENEN KISIM: Herhangi bir butona basıldığı an pop-up'ı anında kapatır.
+  // YENİ: KELİME LİSTEDE YOKSA DİREKT "BİLMİYORUM" OLARAK İŞARETLEME FONKSİYONU
+  const handleNotFoundClick = (e) => {
+    e.stopPropagation();
+    if (!clickedWordRaw) return;
+
+    const storageKey = `dialogueUnknowns_${chapterId}`;
+    const existingUnknowns = JSON.parse(localStorage.getItem(storageKey)) || [];
+    
+    // Kelimeyi flashcard listesine manuel olarak ekle
+    if (!existingUnknowns.some(w => w.nl === clickedWordRaw)) {
+      const fallbackWord = { 
+        nl: clickedWordRaw, 
+        en: "Not found in dictionary", 
+        tr: "Sözlükte bulunamadı",
+        example: "Kullanıcı tarafından manuel olarak 'Bilmiyorum' işaretlendi."
+      };
+      existingUnknowns.push(fallbackWord);
+      localStorage.setItem(storageKey, JSON.stringify(existingUnknowns));
+    }
+
+    // Kelimenin durumunu "bilmiyorum" (kırmızı) olarak kaydet
+    const newStatuses = { ...wordStatuses, [clickedWordRaw]: 'unknown' };
+    setWordStatuses(newStatuses);
+    localStorage.setItem(`dialogueWordStatuses_${chapterId}`, JSON.stringify(newStatuses));
+    
+    // İşlem bitince pop-up'ı kapat
     setSelectedWords(null);
   };
 
@@ -278,7 +304,7 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
         })}
       </div>
 
-      {/* YENİ: DAHA KOMPAKT (SIKIŞIK) VE KULLANICI DOSTU POP-UP ALANI */}
+      {/* POP-UP ALANI */}
       {selectedWords && selectedWords.length > 0 && (
         <>
           <div className="fixed inset-0 z-40" onClick={(e) => { e.stopPropagation(); setSelectedWords(null); }}></div>
@@ -287,6 +313,18 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
             style={{ left: `${popupPos.x}px`, top: `${popupPos.y}px` }} 
             onClick={(e) => e.stopPropagation()}
           >
+            {/* YENİ: LİSTEDE YOK BUTONU */}
+            <div className="mb-3 pb-2 border-b border-slate-700/80 flex justify-between items-center gap-3">
+              <span className="text-[10px] text-slate-400 leading-tight">Aradığın kelime bu listede yok mu?</span>
+              <button 
+                onClick={handleNotFoundClick}
+                className="bg-rose-900/30 hover:bg-rose-800/50 border border-rose-800/50 text-rose-300 text-[10px] font-bold px-2 py-1.5 rounded transition-colors whitespace-nowrap flex items-center"
+                title="Tıkladığın kelimeyi direkt 'Bilmiyorum' olarak işaretle"
+              >
+                <i className="fa-solid fa-xmark mr-1"></i> Direkt İşaretle
+              </button>
+            </div>
+
             <div className="space-y-3">
               {selectedWords.map((wordObj, idx) => {
                 const currentStatus = wordStatuses[wordObj.nl.toLowerCase()];
