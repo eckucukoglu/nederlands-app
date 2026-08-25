@@ -17,7 +17,10 @@ const chapterTitles = {
 
 function App() {
   const availableChapters = [...new Set(bookSections.map(sec => sec.chapter))].filter(Boolean).sort((a, b) => a - b);
-  const fallbackChapter = availableChapters[availableChapters.length - 1] || 9;
+  
+  // DÜZELTME BURADA: Siteye ilk kez girildiğinde veya hafıza boşsa, 
+  // sondaki ünite yerine direkt İLK mevcut üniteden (1. Ünite) başlar.
+  const fallbackChapter = availableChapters[0] || 1;
 
   const [currentChapter, setCurrentChapter] = useState(() => {
     const savedChapter = localStorage.getItem('lastVisitedChapter');
@@ -27,22 +30,23 @@ function App() {
 
   const [activeTab, setActiveTab] = useState(() => {
     const savedTab = localStorage.getItem(`lastVisitedTab_${currentChapter}`);
+    // Eğer hafızada kayıtlı sekme yoksa, o ünitenin '.1' sekmesinden başlar (Örn: 1.1)
     return savedTab ? savedTab : `${currentChapter}.1`;
   });
 
-  // YENİ: Favori Bölümler ve Notları İçin Hafıza
+  // Favori Bölümler ve Notları İçin Hafıza
   const [favorites, setFavorites] = useState(() => {
     const saved = localStorage.getItem('favoriteSections');
     return saved ? JSON.parse(saved) : {};
   });
 
-  // YENİ: Favori Ekle/Çıkar Fonksiyonu
+  // Favori Ekle/Çıkar Fonksiyonu
   const toggleFavorite = (sectionId, note) => {
     const newFavs = { ...favorites };
     if (newFavs[sectionId]) {
-      delete newFavs[sectionId]; // Zaten favoriyse sil
+      delete newFavs[sectionId];
     } else {
-      newFavs[sectionId] = note; // Değilse not ile birlikte ekle
+      newFavs[sectionId] = note;
     }
     setFavorites(newFavs);
     localStorage.setItem('favoriteSections', JSON.stringify(newFavs));
@@ -111,7 +115,6 @@ function App() {
                 }`}
               >
                 <span>{sec.id.includes('On-Class') ? 'On-Class' : sec.id}</span>
-                {/* FAVORİ İSE YILDIZ GÖSTER */}
                 {favorites[sec.id] && <i className="fa-solid fa-star text-amber-400 ml-1"></i>}
               </button>
             ))}
