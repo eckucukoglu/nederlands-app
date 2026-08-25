@@ -6,7 +6,6 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
   const [showResults, setShowResults] = useState(false);
   const [qStats, setQStats] = useState(JSON.parse(localStorage.getItem('questionStats')) || {});
 
-  // YENİ: Favori Input State'leri
   const [showFavInput, setShowFavInput] = useState(false);
   const [favNote, setFavNote] = useState("");
 
@@ -72,65 +71,63 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
   return (
     <div className="space-y-6" onClick={() => setShowFavInput(false)}>
       {/* BAŞLIK VE SEKME (SUB-TAB) SEÇİCİ */}
-      <div className="bg-slate-800 rounded-2xl p-6 shadow-lg border border-slate-700 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+      <div className="bg-slate-800 rounded-2xl p-6 shadow-lg border border-slate-700 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
         
-        {/* SOL KISIM: ÜNİTE BİLGİSİ VE YILDIZ */}
-        <div className="flex-1 w-full flex justify-between items-start">
-          <div>
-            <div className="inline-flex items-center space-x-2 bg-brand-900/30 border border-brand-500/20 text-brand-400 font-bold px-3 py-1 rounded-full text-xs mb-2">
-              <i className="fa-solid fa-stethoscope"></i>
-              <span>Hoofdstuk {chapterNum} • Sectie {sectionData.id}</span>
-            </div>
+        {/* SOL KISIM: ROZET, BAŞLIK VE YILDIZ */}
+        <div className="flex-1">
+          <div className="inline-flex items-center space-x-2 bg-brand-900/30 border border-brand-500/20 text-brand-400 font-bold px-3 py-1 rounded-full text-xs mb-3">
+            <i className="fa-solid fa-stethoscope"></i>
+            <span>Hoofdstuk {chapterNum} • Sectie {sectionData.id}</span>
+          </div>
+          
+          <div className="flex items-center space-x-3">
+            <h2 className="text-2xl font-extrabold text-slate-100">{sectionData.title}</h2>
             
-            <div className="flex items-center space-x-3 mt-1">
-              <h2 className="text-2xl font-extrabold text-slate-100">{sectionData.title}</h2>
-              
-              {/* YILDIZ ALANI */}
-              <div className="relative flex items-center">
-                <div className="group relative flex items-center">
-                  <button onClick={handleStarClick} className="text-2xl transition-transform hover:scale-110 focus:outline-none mt-1">
-                    {isFav ? (
-                      <i className="fa-solid fa-star text-amber-400 drop-shadow-[0_0_8px_rgba(251,191,36,0.6)]"></i>
-                    ) : (
-                      <i className="fa-regular fa-star text-slate-500 hover:text-amber-400 transition-colors"></i>
-                    )}
-                  </button>
-                  
-                  {/* HOVER TOOLTIP */}
-                  {isFav && (
-                    <div className="absolute left-full ml-3 top-0 hidden group-hover:block w-56 p-3 bg-slate-800 border border-slate-600 text-slate-200 text-xs rounded-xl shadow-2xl z-50">
-                      <div className="font-bold text-amber-400 mb-1 border-b border-slate-600 pb-1">Mijn Notitie:</div>
-                      <p className="break-words leading-relaxed">{favorites[sectionData.id]}</p>
-                    </div>
+            {/* YILDIZ ALANI */}
+            <div className="relative flex items-center">
+              <div className="group relative flex items-center">
+                <button onClick={handleStarClick} className="text-2xl transition-transform hover:scale-110 focus:outline-none mt-1">
+                  {isFav ? (
+                    <i className="fa-solid fa-star text-amber-400 drop-shadow-[0_0_8px_rgba(251,191,36,0.6)]"></i>
+                  ) : (
+                    <i className="fa-regular fa-star text-slate-500 hover:text-amber-400 transition-colors"></i>
                   )}
-                </div>
-
-                {/* NOT GİRİŞ KUTUSU */}
-                {showFavInput && (
-                  <div className="absolute left-full ml-3 top-0 bg-slate-800 p-2 rounded-xl shadow-2xl border border-slate-600 z-50 flex items-center gap-2" onClick={e => e.stopPropagation()}>
-                    <input
-                      autoFocus
-                      maxLength={100}
-                      value={favNote}
-                      onChange={e => setFavNote(e.target.value)}
-                      placeholder="Notun (max 100 kar.)..."
-                      className="bg-slate-900 border border-slate-600 text-slate-200 text-xs rounded-lg px-2.5 py-1.5 w-48 focus:outline-none focus:border-amber-400"
-                    />
-                    <button onClick={saveFavorite} className="bg-emerald-600 hover:bg-emerald-500 text-white p-1.5 rounded-lg text-xs transition-colors">
-                      <i className="fa-solid fa-check"></i>
-                    </button>
+                </button>
+                
+                {/* HOVER TOOLTIP */}
+                {isFav && (
+                  <div className="absolute left-full ml-3 top-0 hidden group-hover:block w-56 p-3 bg-slate-800 border border-slate-600 text-slate-200 text-xs rounded-xl shadow-2xl z-50">
+                    <div className="font-bold text-amber-400 mb-1 border-b border-slate-600 pb-1">Mijn Notitie:</div>
+                    <p className="break-words leading-relaxed">{favorites[sectionData.id]}</p>
                   </div>
                 )}
               </div>
+
+              {/* NOT GİRİŞ KUTUSU */}
+              {showFavInput && (
+                <div className="absolute left-full ml-3 top-0 bg-slate-800 p-2 rounded-xl shadow-2xl border border-slate-600 z-50 flex items-center gap-2" onClick={e => e.stopPropagation()}>
+                  <input
+                    autoFocus
+                    maxLength={100}
+                    value={favNote}
+                    onChange={e => setFavNote(e.target.value)}
+                    placeholder="Notun (max 100 kar.)..."
+                    className="bg-slate-900 border border-slate-600 text-slate-200 text-xs rounded-lg px-2.5 py-1.5 w-48 focus:outline-none focus:border-amber-400"
+                  />
+                  <button onClick={saveFavorite} className="bg-emerald-600 hover:bg-emerald-500 text-white p-1.5 rounded-lg text-xs transition-colors">
+                    <i className="fa-solid fa-check"></i>
+                  </button>
+                </div>
+              )}
             </div>
           </div>
-          <h2 className="text-2xl font-extrabold text-slate-100">{sectionData.title}</h2>
         </div>
 
-        <div className="bg-slate-900/50 p-1.5 rounded-xl flex space-x-1 w-full md:w-auto border border-slate-700/50">
+        {/* SAĞ KISIM: BUTONLAR */}
+        <div className="bg-slate-900/50 p-1.5 rounded-xl flex space-x-1 w-full lg:w-auto border border-slate-700/50">
           <button
             onClick={() => { setSubTab("book"); setShowResults(false); }}
-            className={`flex-1 md:flex-none px-4 py-2 rounded-lg text-xs font-bold transition-all flex items-center justify-center space-x-2 ${
+            className={`flex-1 lg:flex-none px-4 py-2 rounded-lg text-xs font-bold transition-all flex items-center justify-center space-x-2 ${
               subTab === "book" ? "bg-slate-700 text-brand-300 shadow-sm" : "text-slate-400 hover:text-slate-200 hover:bg-slate-800"
             }`}
           >
@@ -138,7 +135,7 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
           </button>
           <button
             onClick={() => { setSubTab("extra"); setShowResults(false); }}
-            className={`flex-1 md:flex-none px-4 py-2 rounded-lg text-xs font-bold transition-all flex items-center justify-center space-x-2 ${
+            className={`flex-1 lg:flex-none px-4 py-2 rounded-lg text-xs font-bold transition-all flex items-center justify-center space-x-2 ${
               subTab === "extra" ? "bg-brand-600 text-white shadow-sm" : "text-slate-400 hover:text-slate-200 hover:bg-slate-800"
             }`}
           >
