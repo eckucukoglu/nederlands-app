@@ -451,7 +451,7 @@ export const globalDictionary = [
   { nl: "wat", en: "a little", tr: "biraz", example: "Proef maar wat." },
   { nl: "een beetje", en: "a bit", tr: "biraz", example: "Een beetje vet." },
   { nl: "vet", en: "greasy", tr: "yağlı", example: "Een beetje vet." },
-  { nl: "het toetje", en: "dessert", tr: "tatlı", example: "Kan ik een toetje bestellen?" }
+  { nl: "het toetje", en: "dessert", tr: "tatlı", example: "Kan ik een toetje bestellen?" },
 
 // ==========================================
   // 🗣️ GÜNLÜK İFADELER VE SÖZ KALIPLARI (Phrases) - CH 7 to 12
@@ -1041,7 +1041,7 @@ export const globalDictionary = [
   { nl: "het bordje", en: "sign / plate", tr: "tabela", example: "Kijk naar het bordje." },
   { nl: "volgen", en: "follow", tr: "takip etmek", example: "De bordjes volgen." },
   { nl: "makkelijker", en: "easier", tr: "daha kolay", example: "Dat is misschien makkelijker." },
-  { nl: "makkelijk", en: "easy", tr: "kolay", example: "Het is makkelijk." }
+  { nl: "makkelijk", en: "easy", tr: "kolay", example: "Het is makkelijk." },
   
   // ==========================================
   // 🗣️ GÜNLÜK İFADELER VE SÖZ KALIPLARI (Phrases) - CH 13 to 18
@@ -1529,7 +1529,7 @@ export const globalDictionary = [
   { nl: "gevonden", en: "found", tr: "bulunursa", example: "Gevonden is." }, //[cite: 7]
   { nl: "nemen contact op", en: "contact / get in touch", tr: "iletişime geçmek", example: "Nemen we contact met u op." }, //[cite: 7]
   { nl: "de kans", en: "chance", tr: "şans / ihtimal", example: "De kans is klein." }, //[cite: 7]
-  { nl: "eerlijk", en: "honest", tr: "dürüst", example: "Als ik eerlijk ben." } //[cite: 7]
+  { nl: "eerlijk", en: "honest", tr: "dürüst", example: "Als ik eerlijk ben." }, //[cite: 7]
   
   
   
