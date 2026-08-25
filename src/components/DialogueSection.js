@@ -19,11 +19,15 @@ const fallbackDictionary = {
   "weer": "again", "als": "like/as", "nieuw": "new", "woorden": "words", "morgen": "tomorrow", "overmorgen": "the day after tomorrow", "dag": "day"
 };
 
-export default function DialogueSection({ sectionId }) {
+export default function DialogueSection({ sectionId, favorites, toggleFavorite }) {
   const chapterId = sectionId.split('.')[0];
   const [selectedWord, setSelectedWord] = useState(null);
   const [popupPos, setPopupPos] = useState({ x: 0, y: 0 });
   const [clickedWordRaw, setClickedWordRaw] = useState("");
+  
+  // YENİ: Favori Yıldız Input State'leri
+  const [showFavInput, setShowFavInput] = useState(false);
+  const [favNote, setFavNote] = useState("");
   
   const [wordStatuses, setWordStatuses] = useState(() => {
     const saved = localStorage.getItem(`dialogueWordStatuses_${chapterId}`);
@@ -31,6 +35,7 @@ export default function DialogueSection({ sectionId }) {
   });
 
   const activeDialogue = dialogues[sectionId] || [];
+  const isFav = favorites && favorites[sectionId];
 
   useEffect(() => {
     const saved = localStorage.getItem(`dialogueWordStatuses_${chapterId}`);
@@ -52,7 +57,6 @@ export default function DialogueSection({ sectionId }) {
     setClickedWordRaw(cleanWord);
     
     let found = vocabulary.find(v => v.nl.toLowerCase() === cleanWord);
-    
     if (!found) {
       try {
         const regex = new RegExp(`\\b${cleanWord}\\b`, 'i');
@@ -65,12 +69,9 @@ export default function DialogueSection({ sectionId }) {
     if (!found) {
       const fallback = fallbackDictionary[cleanWord];
       found = { 
-        nl: cleanWord, 
-        en: fallback || "Translation not available", 
-        example: fallback ? "Uit de dialoog" : "Bilinmeyen kelime." 
+        nl: cleanWord, en: fallback || "Translation not available", example: fallback ? "Uit de dialoog" : "Bilinmeyen kelime." 
       };
     }
-    
     setSelectedWord(found);
   };
 
@@ -93,12 +94,68 @@ export default function DialogueSection({ sectionId }) {
     setSelectedWord(null);
   };
 
+  // FAVORİ BUTONU TETİKLEYİCİSİ
+  const handleStarClick = (e) => {
+    e.stopPropagation();
+    if (isFav) toggleFavorite(sectionId, null);
+    else setShowFavInput(true);
+  };
+
+  const saveFavorite = (e) => {
+    e.stopPropagation();
+    toggleFavorite(sectionId, favNote.trim() || "Önemli Bölüm");
+    setShowFavInput(false);
+    setFavNote("");
+  };
+
   return (
-    <div className="bg-slate-900 rounded-2xl p-6 shadow-lg border border-slate-700 relative" onClick={() => setSelectedWord(null)}>
-      <h3 className="text-lg font-bold text-slate-100 mb-4 flex items-center space-x-2">
-        <i className="fa-solid fa-comments text-brand-400"></i>
-        <span>Dialoog Lezen en Luisteren</span>
-      </h3>
+    <div className="bg-slate-900 rounded-2xl p-6 shadow-lg border border-slate-700 relative" onClick={() => { setSelectedWord(null); setShowFavInput(false); }}>
+      
+      {/* BAŞLIK VE YILDIZ */}
+      <div className="flex justify-between items-center mb-4">
+        <h3 className="text-lg font-bold text-slate-100 flex items-center space-x-2">
+          <i className="fa-solid fa-comments text-brand-400"></i>
+          <span>Dialoog Lezen en Luisteren</span>
+        </h3>
+
+        {/* YILDIZ ALANI */}
+        <div className="relative flex items-center">
+          <div className="group relative flex items-center">
+            <button onClick={handleStarClick} className="text-xl transition-transform hover:scale-110 focus:outline-none">
+              {isFav ? (
+                <i className="fa-solid fa-star text-amber-400 drop-shadow-[0_0_8px_rgba(251,191,36,0.6)]"></i>
+              ) : (
+                <i className="fa-regular fa-star text-slate-500 hover:text-amber-400 transition-colors"></i>
+              )}
+            </button>
+            
+            {/* HOVER TOOLTIP */}
+            {isFav && (
+              <div className="absolute right-0 top-full mt-2 hidden group-hover:block w-48 p-3 bg-slate-800 border border-slate-600 text-slate-200 text-xs rounded-xl shadow-2xl z-50">
+                <div className="font-bold text-amber-400 mb-1 border-b border-slate-600 pb-1">Mijn Notitie:</div>
+                <p className="break-words leading-relaxed">{favorites[sectionId]}</p>
+              </div>
+            )}
+          </div>
+
+          {/* NOT GİRİŞ KUTUSU */}
+          {showFavInput && (
+            <div className="absolute right-0 top-full mt-2 bg-slate-800 p-2 rounded-xl shadow-2xl border border-slate-600 z-50 flex items-center gap-2" onClick={e => e.stopPropagation()}>
+              <input
+                autoFocus
+                maxLength={100}
+                value={favNote}
+                onChange={e => setFavNote(e.target.value)}
+                placeholder="Notun (max 100 kar.)..."
+                className="bg-slate-900 border border-slate-600 text-slate-200 text-xs rounded-lg px-2.5 py-1.5 w-48 focus:outline-none focus:border-amber-400"
+              />
+              <button onClick={saveFavorite} className="bg-emerald-600 hover:bg-emerald-500 text-white p-1.5 rounded-lg text-xs transition-colors">
+                <i className="fa-solid fa-check"></i>
+              </button>
+            </div>
+          )}
+        </div>
+      </div>
       
       <div className="space-y-3">
         {activeDialogue.map((line, idx) => {
@@ -115,8 +172,8 @@ export default function DialogueSection({ sectionId }) {
                     const cleanWord = word.replace(/[.,?!:;–-]/g, '').toLowerCase();
                     const status = wordStatuses[cleanWord];
                     let wordColor = 'inherit';
-                    if (status === 'known') wordColor = '#34d399'; // Daha açık yeşil (Emerald 400)
-                    if (status === 'unknown') wordColor = '#fb7185'; // Daha açık kırmızı (Rose 400)
+                    if (status === 'known') wordColor = '#34d399'; 
+                    if (status === 'unknown') wordColor = '#fb7185';
 
                     return (
                       <span key={i} style={{ color: wordColor, textDecoration: 'underline', textDecorationStyle: 'dotted', cursor: 'pointer' }} onClick={(e) => handleWordClick(e, word)}>
@@ -132,19 +189,11 @@ export default function DialogueSection({ sectionId }) {
         })}
       </div>
 
-      {/* POP-UP ALANI (DARK MODE) */}
+      {/* POP-UP ÇEVİRİ ALANI */}
       {selectedWord && (
         <>
-          <div 
-            className="fixed inset-0 z-40" 
-            onClick={(e) => { e.stopPropagation(); setSelectedWord(null); }}
-          ></div>
-
-          <div 
-            className="fixed bg-slate-800 border border-slate-600 p-4 rounded-xl shadow-2xl z-50 min-w-[240px] transform -translate-x-1/2" 
-            style={{ left: `${popupPos.x}px`, top: `${popupPos.y + 15}px` }} 
-            onClick={(e) => e.stopPropagation()}
-          >
+          <div className="fixed inset-0 z-40" onClick={(e) => { e.stopPropagation(); setSelectedWord(null); }}></div>
+          <div className="fixed bg-slate-800 border border-slate-600 p-4 rounded-xl shadow-2xl z-50 min-w-[240px] transform -translate-x-1/2" style={{ left: `${popupPos.x}px`, top: `${popupPos.y + 15}px` }} onClick={(e) => e.stopPropagation()}>
             <div className="flex justify-between items-center mb-2">
               <h3 className="font-bold text-brand-400 text-lg">{selectedWord.nl}</h3>
               <button onClick={() => speakDutch(selectedWord.nl)} className="text-slate-400 hover:text-brand-300"><i className="fa-solid fa-volume-high"></i></button>

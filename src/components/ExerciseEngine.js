@@ -1,17 +1,23 @@
 import React, { useState, useEffect } from 'react';
 
-export default function ExerciseEngine({ sectionData, chapterNum }) {
+export default function ExerciseEngine({ sectionData, chapterNum, favorites, toggleFavorite }) {
   const [subTab, setSubTab] = useState("book");
   const [answers, setAnswers] = useState({});
   const [showResults, setShowResults] = useState(false);
   const [qStats, setQStats] = useState(JSON.parse(localStorage.getItem('questionStats')) || {});
 
-  // YENİ EKLENEN KISIM: Bölüm (sekme) değiştiğinde tüm state'leri sıfırla!
+  // YENİ: Favori Input State'leri
+  const [showFavInput, setShowFavInput] = useState(false);
+  const [favNote, setFavNote] = useState("");
+
+  const isFav = favorites && favorites[sectionData?.id];
+
   useEffect(() => {
-    setSubTab("book");      // Her zaman 'Kitaptaki Sorular' sekmesine dön
-    setAnswers({});         // Önceki cevapları temizle
-    setShowResults(false);  // Sonuç gösterme modunu kapat
-  }, [sectionData?.id]);    // sectionData.id her değiştiğinde bu bloğu tetikle
+    setSubTab("book");      
+    setAnswers({});         
+    setShowResults(false);  
+    setShowFavInput(false); 
+  }, [sectionData?.id]);
 
   if (!sectionData) return null;
 
@@ -50,14 +56,73 @@ export default function ExerciseEngine({ sectionData, chapterNum }) {
     window.speechSynthesis.speak(utterance);
   };
 
+  const handleStarClick = (e) => {
+    e.stopPropagation();
+    if (isFav) toggleFavorite(sectionData.id, null);
+    else setShowFavInput(true);
+  };
+
+  const saveFavorite = (e) => {
+    e.stopPropagation();
+    toggleFavorite(sectionData.id, favNote.trim() || "Önemli Bölüm");
+    setShowFavInput(false);
+    setFavNote("");
+  };
+
   return (
-    <div className="space-y-6">
+    <div className="space-y-6" onClick={() => setShowFavInput(false)}>
       {/* BAŞLIK VE SEKME (SUB-TAB) SEÇİCİ */}
       <div className="bg-slate-800 rounded-2xl p-6 shadow-lg border border-slate-700 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-        <div>
-          <div className="inline-flex items-center space-x-2 bg-brand-900/30 border border-brand-500/20 text-brand-400 font-bold px-3 py-1 rounded-full text-xs mb-2">
-            <i className="fa-solid fa-stethoscope"></i>
-            <span>Hoofdstuk {chapterNum} • Sectie {sectionData.id}</span>
+        
+        {/* SOL KISIM: ÜNİTE BİLGİSİ VE YILDIZ */}
+        <div className="flex-1 w-full flex justify-between items-start">
+          <div>
+            <div className="inline-flex items-center space-x-2 bg-brand-900/30 border border-brand-500/20 text-brand-400 font-bold px-3 py-1 rounded-full text-xs mb-2">
+              <i className="fa-solid fa-stethoscope"></i>
+              <span>Hoofdstuk {chapterNum} • Sectie {sectionData.id}</span>
+            </div>
+            
+            <div className="flex items-center space-x-3 mt-1">
+              <h2 className="text-2xl font-extrabold text-slate-100">{sectionData.title}</h2>
+              
+              {/* YILDIZ ALANI */}
+              <div className="relative flex items-center">
+                <div className="group relative flex items-center">
+                  <button onClick={handleStarClick} className="text-2xl transition-transform hover:scale-110 focus:outline-none mt-1">
+                    {isFav ? (
+                      <i className="fa-solid fa-star text-amber-400 drop-shadow-[0_0_8px_rgba(251,191,36,0.6)]"></i>
+                    ) : (
+                      <i className="fa-regular fa-star text-slate-500 hover:text-amber-400 transition-colors"></i>
+                    )}
+                  </button>
+                  
+                  {/* HOVER TOOLTIP */}
+                  {isFav && (
+                    <div className="absolute left-full ml-3 top-0 hidden group-hover:block w-56 p-3 bg-slate-800 border border-slate-600 text-slate-200 text-xs rounded-xl shadow-2xl z-50">
+                      <div className="font-bold text-amber-400 mb-1 border-b border-slate-600 pb-1">Mijn Notitie:</div>
+                      <p className="break-words leading-relaxed">{favorites[sectionData.id]}</p>
+                    </div>
+                  )}
+                </div>
+
+                {/* NOT GİRİŞ KUTUSU */}
+                {showFavInput && (
+                  <div className="absolute left-full ml-3 top-0 bg-slate-800 p-2 rounded-xl shadow-2xl border border-slate-600 z-50 flex items-center gap-2" onClick={e => e.stopPropagation()}>
+                    <input
+                      autoFocus
+                      maxLength={100}
+                      value={favNote}
+                      onChange={e => setFavNote(e.target.value)}
+                      placeholder="Notun (max 100 kar.)..."
+                      className="bg-slate-900 border border-slate-600 text-slate-200 text-xs rounded-lg px-2.5 py-1.5 w-48 focus:outline-none focus:border-amber-400"
+                    />
+                    <button onClick={saveFavorite} className="bg-emerald-600 hover:bg-emerald-500 text-white p-1.5 rounded-lg text-xs transition-colors">
+                      <i className="fa-solid fa-check"></i>
+                    </button>
+                  </div>
+                )}
+              </div>
+            </div>
           </div>
           <h2 className="text-2xl font-extrabold text-slate-100">{sectionData.title}</h2>
         </div>

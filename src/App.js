@@ -30,6 +30,24 @@ function App() {
     return savedTab ? savedTab : `${currentChapter}.1`;
   });
 
+  // YENİ: Favori Bölümler ve Notları İçin Hafıza
+  const [favorites, setFavorites] = useState(() => {
+    const saved = localStorage.getItem('favoriteSections');
+    return saved ? JSON.parse(saved) : {};
+  });
+
+  // YENİ: Favori Ekle/Çıkar Fonksiyonu
+  const toggleFavorite = (sectionId, note) => {
+    const newFavs = { ...favorites };
+    if (newFavs[sectionId]) {
+      delete newFavs[sectionId]; // Zaten favoriyse sil
+    } else {
+      newFavs[sectionId] = note; // Değilse not ile birlikte ekle
+    }
+    setFavorites(newFavs);
+    localStorage.setItem('favoriteSections', JSON.stringify(newFavs));
+  };
+
   useEffect(() => {
     localStorage.setItem('lastVisitedChapter', currentChapter);
   }, [currentChapter]);
@@ -93,6 +111,8 @@ function App() {
                 }`}
               >
                 <span>{sec.id.includes('On-Class') ? 'On-Class' : sec.id}</span>
+                {/* FAVORİ İSE YILDIZ GÖSTER */}
+                {favorites[sec.id] && <i className="fa-solid fa-star text-amber-400 ml-1"></i>}
               </button>
             ))}
             <div className="h-5 w-[1px] bg-slate-700 my-auto mx-1"></div>
@@ -112,11 +132,20 @@ function App() {
       {/* ANA İÇERİK ALANI */}
       <main className="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 text-slate-200">
         {(activeTab.includes('.1') && !activeTab.includes('On-Class')) && (
-          <DialogueSection sectionId={activeTab} />
+          <DialogueSection 
+            sectionId={activeTab} 
+            favorites={favorites} 
+            toggleFavorite={toggleFavorite} 
+          />
         )}
         
         {activeTab !== 'flashcards' && bookSections.find(s => s.id === activeTab) && (
-          <ExerciseEngine sectionData={bookSections.find(s => s.id === activeTab)} chapterNum={currentChapter} />
+          <ExerciseEngine 
+            sectionData={bookSections.find(s => s.id === activeTab)} 
+            chapterNum={currentChapter} 
+            favorites={favorites} 
+            toggleFavorite={toggleFavorite} 
+          />
         )}
 
         {activeTab === 'flashcards' && <Flashcards initialChapter={currentChapter} />}
