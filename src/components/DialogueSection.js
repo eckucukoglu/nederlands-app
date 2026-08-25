@@ -1,23 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { vocabulary, dialogues } from '../data';
-
-const fallbackDictionary = {
-  "de": "the", "een": "a/an", "het": "the", "ik": "I", "u": "you (formal)", "we": "we", "ze": "they", "mijn": "my", "uw": "your",
-  "is": "is", "zijn": "are", "ben": "am", "heeft": "has", "hebt": "have", "hebben": "have", "heb": "have", "kunt": "can", "wil": "want",
-  "wat": "what", "waar": "where", "wanneer": "when", "hoe": "how", "waarom": "why",
-  "nou": "well", "hoef": "need to", "niet": "not", "te": "to", "vragen": "ask", "hier": "here", "komt": "comes", "doen": "do",
-  "nee": "no", "dat": "that", "wel": "indeed/well", "er": "there", "aan": "on", "hand": "hand", "ziet": "see", "zit": "sit/is", 
-  "onder": "under / covered in", "rode": "red", "zitten": "sit/are", "op": "on", "en": "and", "alleen": "only", "maar": "but", 
-  "niets": "nothing", "sinds": "since", "vertellen": "tell", "gisteren": "yesterday", "met": "with", "huis": "house", "naar": "to",
-  "nog": "still/yet", "biertje": "beer", "iets": "something", "eigenlijk": "actually", "dagen": "days", "o": "oh", "ja": "yes", 
-  "in": "in", "weekend": "weekend", "heel": "very", "veel": "much/many", "aardbeien": "strawberries", "tuin": "garden", "meer": "more", 
-  "dan": "than", "jaar": "year", "andere": "other", "verder": "further", "mee": "along", "graag": "gladly", "voor": "for", 
-  "volgende": "next", "week": "week", "nieuwe": "new", "maken": "make", "bedankt": "thanks", "tot": "until/see you",
-  "beetje": "a bit", "van": "from", "onze": "our", "zeg": "say", "je": "you", "heet": "is called", "ook": "also", "erg": "very",
-  "sorry": "sorry", "zegt": "say", "oud": "old", "dus": "so", "bent": "are", "hij": "he/it", "prima": "fine", "misschien": "maybe", 
-  "even": "just/briefly", "kijken": "look", "vanmorgen": "this morning", "goed": "good", "zal": "will", "hele": "whole", 
-  "weer": "again", "als": "like/as", "nieuw": "new", "woorden": "words", "morgen": "tomorrow", "overmorgen": "the day after tomorrow", "dag": "day"
-};
+import { globalDictionary } from '../data/globalDictionary'; // YENİ SÖZLÜĞÜ İÇERİ ALIYORUZ
 
 export default function DialogueSection({ sectionId, favorites, toggleFavorite }) {
   const chapterId = sectionId.split('.')[0];
@@ -25,7 +8,6 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite }
   const [popupPos, setPopupPos] = useState({ x: 0, y: 0 });
   const [clickedWordRaw, setClickedWordRaw] = useState("");
   
-  // YENİ: Favori Yıldız Input State'leri
   const [showFavInput, setShowFavInput] = useState(false);
   const [favNote, setFavNote] = useState("");
   
@@ -49,30 +31,60 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite }
     window.speechSynthesis.speak(utterance);
   };
 
-  const handleWordClick = (e, wordText) => {
+  // YENİ AKILLI KELİME ÖBEĞİ (PHRASE) ARAMA FONKSİYONU
+  const handleWordClick = (e, wordIndex, cleanWords) => {
     e.stopPropagation();
     setPopupPos({ x: e.clientX, y: e.clientY });
 
-    const cleanWord = wordText.replace(/[.,?!:;–-]/g, '').toLowerCase();
-    setClickedWordRaw(cleanWord);
-    
-    let found = vocabulary.find(v => v.nl.toLowerCase() === cleanWord);
-    if (!found) {
-      try {
-        const regex = new RegExp(`\\b${cleanWord}\\b`, 'i');
-        found = vocabulary.find(v => regex.test(v.nl));
-      } catch (err) {
-        console.error("Regex hatası:", err);
+    const allVocab = [...vocabulary, ...globalDictionary];
+    let foundMatch = null;
+    let matchString = cleanWords[wordIndex];
+
+    // 1. Önce 3 kelimelik öbek arıyoruz (Örn: "ik weet het")
+    const triplets = [
+      [wordIndex - 2, wordIndex - 1, wordIndex], 
+      [wordIndex - 1, wordIndex, wordIndex + 1], 
+      [wordIndex, wordIndex + 1, wordIndex + 2]
+    ];
+    for (let indices of triplets) {
+      if (indices.every(idx => idx >= 0 && idx < cleanWords.length)) {
+        const phrase = indices.map(idx => cleanWords[idx]).join(' ');
+        const match = allVocab.find(v => v.nl.toLowerCase() === phrase);
+        if (match) { foundMatch = match; matchString = phrase; break; }
       }
     }
 
-    if (!found) {
-      const fallback = fallbackDictionary[cleanWord];
-      found = { 
-        nl: cleanWord, en: fallback || "Translation not available", example: fallback ? "Uit de dialoog" : "Bilinmeyen kelime." 
+    // 2. Bulamadıysak 2 kelimelik öbek arıyoruz (Örn: "wat leuk", "tot ziens")
+    if (!foundMatch) {
+      const pairs = [
+        [wordIndex - 1, wordIndex], 
+        [wordIndex, wordIndex + 1]
+      ];
+      for (let indices of pairs) {
+        if (indices.every(idx => idx >= 0 && idx < cleanWords.length)) {
+          const phrase = indices.map(idx => cleanWords[idx]).join(' ');
+          const match = allVocab.find(v => v.nl.toLowerCase() === phrase);
+          if (match) { foundMatch = match; matchString = phrase; break; }
+        }
+      }
+    }
+
+    // 3. Hala bulamadıysak tek kelimeyi arıyoruz
+    if (!foundMatch) {
+      foundMatch = allVocab.find(v => v.nl.toLowerCase() === matchString);
+    }
+
+    // 4. Fallback (Yoksa bilinmeyen kelime hatası)
+    if (!foundMatch) {
+      foundMatch = { 
+        nl: matchString, 
+        en: "Translation not available", 
+        example: "Sözlükte bulunamadı. Lütfen kelime kökünü (infinitive) kontrol ediniz." 
       };
     }
-    setSelectedWord(found);
+
+    setClickedWordRaw(matchString);
+    setSelectedWord(foundMatch);
   };
 
   const handleWordKnowledge = (isKnown) => {
@@ -94,7 +106,6 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite }
     setSelectedWord(null);
   };
 
-  // FAVORİ BUTONU TETİKLEYİCİSİ
   const handleStarClick = (e) => {
     e.stopPropagation();
     if (isFav) toggleFavorite(sectionId, null);
@@ -111,14 +122,12 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite }
   return (
     <div className="bg-slate-900 rounded-2xl p-6 shadow-lg border border-slate-700 relative" onClick={() => { setSelectedWord(null); setShowFavInput(false); }}>
       
-      {/* BAŞLIK VE YILDIZ */}
       <div className="flex justify-between items-center mb-4">
         <h3 className="text-lg font-bold text-slate-100 flex items-center space-x-2">
           <i className="fa-solid fa-comments text-brand-400"></i>
           <span>Dialoog Lezen en Luisteren</span>
         </h3>
 
-        {/* YILDIZ ALANI */}
         <div className="relative flex items-center">
           <div className="group relative flex items-center">
             <button onClick={handleStarClick} className="text-xl transition-transform hover:scale-110 focus:outline-none">
@@ -129,7 +138,6 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite }
               )}
             </button>
             
-            {/* HOVER TOOLTIP */}
             {isFav && (
               <div className="absolute right-0 top-full mt-2 hidden group-hover:block w-48 p-3 bg-slate-800 border border-slate-600 text-slate-200 text-xs rounded-xl shadow-2xl z-50">
                 <div className="font-bold text-amber-400 mb-1 border-b border-slate-600 pb-1">Mijn Notitie:</div>
@@ -138,7 +146,6 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite }
             )}
           </div>
 
-          {/* NOT GİRİŞ KUTUSU */}
           {showFavInput && (
             <div className="absolute right-0 top-full mt-2 bg-slate-800 p-2 rounded-xl shadow-2xl border border-slate-600 z-50 flex items-center gap-2" onClick={e => e.stopPropagation()}>
               <input
@@ -160,6 +167,11 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite }
       <div className="space-y-3">
         {activeDialogue.map((line, idx) => {
           const isDoc = line.speaker.includes("Huisarts") || line.speaker.includes("Fietsenmaker");
+          
+          // Satırdaki kelimeleri temizleyip önbelleğe alıyoruz
+          const words = line.text.split(' ');
+          const cleanWords = words.map(w => w.replace(/[.,?!:;–-]/g, '').toLowerCase());
+
           return (
             <div key={idx} className={`p-3.5 rounded-xl flex items-start space-x-3 transition ${isDoc ? "bg-teal-900/20 border-l-4 border-teal-600" : "bg-slate-800/50 border-l-4 border-slate-600"}`}>
               <button onClick={() => speakDutch(line.text)} className="bg-slate-800 border border-slate-600 p-2 rounded-lg shadow-sm hover:bg-slate-700 text-brand-400 transition flex-shrink-0 mt-0.5">
@@ -168,15 +180,39 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite }
               <div className="flex-1">
                 <span className="font-bold text-xs uppercase tracking-wider text-slate-400">{line.speaker}</span>
                 <p className="text-sm font-semibold text-slate-200 mt-0.5 leading-relaxed">
-                  {line.text.split(' ').map((word, i) => {
-                    const cleanWord = word.replace(/[.,?!:;–-]/g, '').toLowerCase();
-                    const status = wordStatuses[cleanWord];
+                  
+                  {/* KELİMELERİ EKRANA ÇİZDİREN KISIM (ÖBEK RENKLENDİRME EKLENDİ) */}
+                  {words.map((word, i) => {
+                    let status = wordStatuses[cleanWords[i]]; // Önce tek kelime rengine bakar
+                    
+                    // Kelime tekil olarak boyanmamışsa, etrafındaki öbeklerde (phrase) renk var mı diye kontrol et!
+                    if (!status) {
+                      const triplets = [[i-2, i-1, i], [i-1, i, i+1], [i, i+1, i+2]];
+                      for (let indices of triplets) {
+                        if (indices.every(idx => idx >= 0 && idx < cleanWords.length)) {
+                          const phrase = indices.map(idx => cleanWords[idx]).join(' ');
+                          if (wordStatuses[phrase]) status = wordStatuses[phrase];
+                        }
+                      }
+                      const pairs = [[i-1, i], [i, i+1]];
+                      for (let indices of pairs) {
+                        if (indices.every(idx => idx >= 0 && idx < cleanWords.length)) {
+                          const phrase = indices.map(idx => cleanWords[idx]).join(' ');
+                          if (wordStatuses[phrase]) status = wordStatuses[phrase];
+                        }
+                      }
+                    }
+
                     let wordColor = 'inherit';
                     if (status === 'known') wordColor = '#34d399'; 
                     if (status === 'unknown') wordColor = '#fb7185';
 
                     return (
-                      <span key={i} style={{ color: wordColor, textDecoration: 'underline', textDecorationStyle: 'dotted', cursor: 'pointer' }} onClick={(e) => handleWordClick(e, word)}>
+                      <span 
+                        key={i} 
+                        style={{ color: wordColor, textDecoration: 'underline', textDecorationStyle: 'dotted', cursor: 'pointer' }} 
+                        onClick={(e) => handleWordClick(e, i, cleanWords)}
+                      >
                         {word}{' '}
                       </span>
                     );
@@ -189,7 +225,6 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite }
         })}
       </div>
 
-      {/* POP-UP ÇEVİRİ ALANI */}
       {selectedWord && (
         <>
           <div className="fixed inset-0 z-40" onClick={(e) => { e.stopPropagation(); setSelectedWord(null); }}></div>
