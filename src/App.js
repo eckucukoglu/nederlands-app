@@ -65,7 +65,9 @@ function MainContent({ user, setIsAuthModalOpen }) {
   const [searchResults, setSearchResults] = useState(null);
 
   const [isChapterExpanded, setIsChapterExpanded] = useState(false);
-  const [isSectionExpanded, setIsSectionExpanded] = useState(false); 
+  
+  // YENİ: Mobilde açılan section menüsü için state
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); 
 
   const [globalWordStatuses, setGlobalWordStatuses] = useState(() => {
     const saved = localStorage.getItem(`dialogueWordStatuses_${currentChapter}`);
@@ -262,39 +264,37 @@ function MainContent({ user, setIsAuthModalOpen }) {
     trackColor = "bg-emerald-900/60"; thumbColor = "bg-emerald-500"; translateClass = "translate-x-[34px]";
   }
 
-  // YENİ: İLERİ / GERİ KONTROLLERİ İÇİN GEREKLİ HESAPLAMALAR
-  const currentIndex = currentSections.findIndex(sec => sec.id === activeTab);
-  const prevSection = currentIndex > 0 ? currentSections[currentIndex - 1] : null;
-  const nextSection = currentIndex !== -1 && currentIndex < currentSections.length - 1 ? currentSections[currentIndex + 1] : null;
-
-  // Başlığı bulunmayan özel bölümler (Dialoog ve On-Class) için Fallback oluşturucu
-  const getSectionTitle = (sec) => {
-    if (sec.title) return sec.title;
-    if (sec.id.includes('On-Class')) return "Extra Oefeningen";
-    if (sec.id.endsWith('.1')) return "Dialoog";
+  // Section Başlığı Getirici Fallback
+  const getSectionTitle = (secId) => {
+    if (secId === 'flashcards') return "Flashcards";
+    const sec = currentSections.find(s => s.id === secId);
+    if (sec && sec.title) return sec.title;
+    if (secId.includes('On-Class')) return "Extra Oefeningen";
+    if (secId.endsWith('.1')) return "Dialoog";
     return "Oefening";
   };
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-900 transition-colors duration-300">
-      <header className="bg-slate-950 text-white shadow-xl sticky top-0 z-50 border-b border-slate-800">
+      
+      {/* 1. ÜST HEADER (Sabit) */}
+      <header className="bg-slate-950 text-white shadow-md sticky top-0 z-50 border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 py-3 flex flex-wrap justify-between items-center gap-4">
           
           <div className="flex items-center space-x-3">
-            <div className="bg-brand-900/50 border border-brand-500/30 p-2.5 rounded-xl backdrop-blur">
-              <i className="fa-solid fa-book-medical text-2xl text-brand-400"></i>
+            <div className="bg-brand-900/50 border border-brand-500/30 p-2 rounded-xl backdrop-blur">
+              <i className="fa-solid fa-book-medical text-xl text-brand-400"></i>
             </div>
             <div>
               <h1 className="font-bold text-lg leading-tight text-slate-100 hidden sm:block">Nederlands in Gang</h1>
               <h1 className="font-bold text-lg leading-tight text-slate-100 sm:hidden">NiG</h1>
-              <p className="text-xs text-brand-300 hidden sm:block">Interactief Oefenportaal (A1 → A2)</p>
             </div>
           </div>
 
           <div className="flex items-center space-x-1 sm:space-x-1.5 overflow-visible">
             
             <button 
-              onClick={() => { setActiveTab("flashcards"); setIsChapterExpanded(false); setIsSectionExpanded(false); setIsSearchExpanded(false); }}
+              onClick={() => { setActiveTab("flashcards"); setIsChapterExpanded(false); setIsSearchExpanded(false); }}
               className={`p-1.5 sm:p-2 rounded-full transition-colors flex items-center justify-center ${activeTab === 'flashcards' ? 'bg-rose-600 text-white shadow-md' : 'bg-rose-900/30 text-rose-400 hover:bg-rose-600 hover:text-white border border-rose-800/30'}`}
               title="Flashcards"
             >
@@ -327,7 +327,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
                   if (isSearchExpanded && searchQuery.trim()) handleGlobalSearch();
                   else {
                     setIsSearchExpanded(!isSearchExpanded);
-                    if (!isSearchExpanded) { setIsChapterExpanded(false); setIsSectionExpanded(false); }
+                    if (!isSearchExpanded) setIsChapterExpanded(false);
                     if (isSearchExpanded) { setSearchResults(null); setSearchQuery(''); }
                   }
                 }}
@@ -337,6 +337,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
                 <i className="fa-solid fa-magnifying-glass text-lg sm:text-xl"></i>
               </button>
 
+              {/* Arama Sonuçları Modal */}
               {searchResults && searchResults.length > 0 && (
                 <>
                   <div className="fixed inset-0 z-40" onClick={() => setSearchResults(null)}></div>
@@ -396,7 +397,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
 
             <div className="relative flex items-center">
               <button
-                onClick={() => { setIsChapterExpanded(!isChapterExpanded); setIsSectionExpanded(false); setIsSearchExpanded(false); }}
+                onClick={() => { setIsChapterExpanded(!isChapterExpanded); setIsSearchExpanded(false); }}
                 className={`flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 rounded-full font-extrabold text-xs sm:text-sm transition-all border shadow-sm ${isChapterExpanded ? 'bg-brand-600 text-white border-brand-500' : 'bg-slate-800 text-brand-400 border-slate-700 hover:bg-slate-700'}`}
                 title="Bölüm Değiştir"
               >
@@ -406,10 +407,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
               <div className={`transition-all duration-300 ease-in-out overflow-hidden flex items-center ${isChapterExpanded ? 'w-32 sm:w-48 opacity-100 ml-1 sm:ml-2' : 'w-0 opacity-0'}`}>
                 <select
                   value={currentChapter}
-                  onChange={(e) => {
-                    handleChapterChange(e);
-                    setIsChapterExpanded(false); 
-                  }}
+                  onChange={(e) => { handleChapterChange(e); setIsChapterExpanded(false); }}
                   className="w-full bg-slate-800 border border-slate-700 text-slate-200 text-xs sm:text-sm rounded-full px-2 sm:px-4 py-1.5 focus:outline-none focus:ring-1 focus:ring-brand-500 shadow-inner cursor-pointer appearance-none"
                 >
                   {availableChapters.map(ch => (
@@ -421,102 +419,96 @@ function MainContent({ user, setIsAuthModalOpen }) {
               </div>
             </div>
 
-            <div className="relative flex items-center ml-1">
-              <button
-                onClick={() => { setIsSectionExpanded(!isSectionExpanded); setIsChapterExpanded(false); setIsSearchExpanded(false); }}
-                className={`flex items-center justify-center h-8 sm:h-9 px-3 rounded-full font-extrabold text-xs sm:text-sm transition-all border shadow-sm ${
-                  activeTab !== 'flashcards' 
-                    ? 'bg-brand-600 text-white border-brand-500' 
-                    : 'bg-slate-800 text-slate-400 border-slate-700 hover:bg-slate-700'
-                }`}
-                title="Sectie Değiştir"
-              >
-                {activeTab === 'flashcards' ? '-' : (activeTab.includes('On-Class') ? 'On-C' : activeTab)}
-              </button>
-
-              <div className={`transition-all duration-300 ease-in-out overflow-hidden flex items-center ${isSectionExpanded ? 'w-24 sm:w-32 opacity-100 ml-1' : 'w-0 opacity-0'}`}>
-                <select
-                  value={activeTab}
-                  onChange={(e) => {
-                    setActiveTab(e.target.value);
-                    setIsSectionExpanded(false);
-                  }}
-                  className="w-full bg-slate-800 border border-slate-700 text-slate-200 text-xs sm:text-sm rounded-full px-2 sm:px-3 py-1.5 focus:outline-none focus:ring-1 focus:ring-brand-500 shadow-inner cursor-pointer appearance-none"
-                >
-                  {currentSections.map(sec => (
-                    <option key={sec.id} value={sec.id}>
-                      {sec.id.includes('On-Class') ? 'On-Class' : sec.id}
-                      {completed[sec.id] ? ' ✓' : ''}
-                      {favorites[sec.id] ? ' ★' : ''}
-                    </option>
-                  ))}
-                </select>
-              </div>
-            </div>
-
           </div>
         </div>
       </header>
 
-      <main className="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 text-slate-200 flex flex-col">
-        
-        {/* YENİ: ZARİF İLERİ / GERİ BUTONLARI (Flashcards hariç ana köşelerde uçar) */}
-        {activeTab !== 'flashcards' && (
-          <div className="flex justify-between items-end mb-3 px-1 sm:px-2 z-10">
-            {/* SOL (Geri) BUTONU */}
-            <div className="flex-1 flex justify-start">
-              {prevSection && (
-                <button 
-                  onClick={() => setActiveTab(prevSection.id)}
-                  className="group flex items-center text-left space-x-2 sm:space-x-3 text-slate-500 hover:text-brand-400 transition-colors"
-                >
-                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center group-hover:border-brand-500 group-hover:bg-brand-900/30 transition-all flex-shrink-0 shadow-sm">
-                    <i className="fa-solid fa-chevron-left text-[10px] sm:text-xs"></i>
-                  </div>
-                  <div className="flex flex-col">
-                    <div className="flex items-center space-x-1.5">
-                      <span className="font-bold text-[11px] sm:text-xs text-slate-400 group-hover:text-brand-300 transition-colors">
-                        {prevSection.id.includes('On-Class') ? 'On-C' : prevSection.id}
-                      </span>
-                      {completed[prevSection.id] && <i className="fa-solid fa-circle-check text-emerald-500 text-[10px]"></i>}
-                      {favorites[prevSection.id] && <i className="fa-solid fa-star text-amber-400 text-[10px]"></i>}
-                    </div>
-                    <span className="text-[9px] sm:text-[10px] text-slate-500 group-hover:text-slate-400 transition-colors truncate max-w-[120px] sm:max-w-[160px] md:max-w-[250px]">
-                      {getSectionTitle(prevSection)}
-                    </span>
-                  </div>
-                </button>
-              )}
-            </div>
+      {/* 2. ALT MENÜ - SECTION BAR (Desktop & Mobile) */}
+      <div className="bg-slate-900/40 border-b border-slate-800 w-full shadow-inner z-40">
+        <div className="max-w-7xl mx-auto px-4 py-2.5 flex justify-center">
 
-            {/* SAĞ (İleri) BUTONU */}
-            <div className="flex-1 flex justify-end">
-              {nextSection && (
-                <button 
-                  onClick={() => setActiveTab(nextSection.id)}
-                  className="group flex items-center text-right space-x-2 sm:space-x-3 text-slate-500 hover:text-brand-400 transition-colors"
+          {/* DESKTOP: Yanyana Şık Yuvarlak Kapsüller */}
+          <div className="hidden sm:flex items-center justify-center flex-wrap gap-2">
+            {currentSections.map(sec => {
+              const isActive = activeTab === sec.id;
+              const isC = completed[sec.id];
+              const isF = favorites[sec.id];
+              return (
+                <button
+                  key={sec.id}
+                  onClick={() => setActiveTab(sec.id)}
+                  className={`relative flex items-center justify-center h-9 px-3.5 rounded-full text-[11px] font-extrabold transition-all border shadow-sm ${
+                    isActive
+                      ? 'bg-brand-600 text-white border-brand-500 z-10'
+                      : 'bg-slate-800 text-slate-400 border-slate-700 hover:bg-slate-700 hover:text-slate-200'
+                  }`}
                 >
-                  <div className="flex flex-col items-end">
-                    <div className="flex items-center space-x-1.5">
-                      {favorites[nextSection.id] && <i className="fa-solid fa-star text-amber-400 text-[10px]"></i>}
-                      {completed[nextSection.id] && <i className="fa-solid fa-circle-check text-emerald-500 text-[10px]"></i>}
-                      <span className="font-bold text-[11px] sm:text-xs text-slate-400 group-hover:text-brand-300 transition-colors">
-                        {nextSection.id.includes('On-Class') ? 'On-C' : nextSection.id}
-                      </span>
+                  {sec.id.includes('On-Class') ? 'On-C' : sec.id}
+
+                  {/* Rozetler */}
+                  {(isC || isF) && (
+                    <div className="absolute -top-1.5 -right-1.5 flex space-x-[1px]">
+                      {isF && <div className="w-[14px] h-[14px] bg-slate-900 rounded-full flex items-center justify-center border border-slate-700"><i className="fa-solid fa-star text-amber-400 text-[8px]"></i></div>}
+                      {isC && <div className="w-[14px] h-[14px] bg-slate-900 rounded-full flex items-center justify-center border border-slate-700"><i className="fa-solid fa-circle-check text-emerald-400 text-[9px]"></i></div>}
                     </div>
-                    <span className="text-[9px] sm:text-[10px] text-slate-500 group-hover:text-slate-400 transition-colors truncate max-w-[120px] sm:max-w-[160px] md:max-w-[250px]">
-                      {getSectionTitle(nextSection)}
-                    </span>
-                  </div>
-                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center group-hover:border-brand-500 group-hover:bg-brand-900/30 transition-all flex-shrink-0 shadow-sm">
-                    <i className="fa-solid fa-chevron-right text-[10px] sm:text-xs"></i>
-                  </div>
+                  )}
                 </button>
-              )}
-            </div>
+              );
+            })}
           </div>
-        )}
 
+          {/* MOBILE: İlerleme Noktaları Taşıyan Akıllı Buton */}
+          <div className="sm:hidden w-full max-w-sm relative">
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className={`w-full border rounded-full h-10 px-4 flex items-center justify-between shadow-sm transition-all ${isMobileMenuOpen ? 'bg-slate-800 border-brand-500' : 'bg-slate-800 border-slate-700'}`}
+            >
+              {/* Dinamik Noktalar */}
+              <div className="flex items-center space-x-1.5">
+                {currentSections.map(sec => (
+                  <div key={sec.id} className={`rounded-full transition-all ${activeTab === sec.id ? 'w-2 h-2 bg-brand-400' : 'w-1.5 h-1.5 bg-slate-600'}`}></div>
+                ))}
+              </div>
+              
+              {/* Aktif Section İsmi */}
+              <div className="flex items-center space-x-2 text-slate-200 text-xs font-bold">
+                <span>{activeTab === 'flashcards' ? 'Flashcards' : (activeTab.includes('On-Class') ? 'Extra: On-Class' : `Sectie ${activeTab}`)}</span>
+                <i className={`fa-solid fa-chevron-${isMobileMenuOpen ? 'up' : 'down'} text-brand-400`}></i>
+              </div>
+            </button>
+
+            {/* Mobil Açılır Liste (Pop-up) */}
+            {isMobileMenuOpen && (
+              <>
+                <div className="fixed inset-0 z-40" onClick={() => setIsMobileMenuOpen(false)}></div>
+                <div className="absolute top-full left-0 w-full mt-2 bg-slate-800 border border-slate-600 rounded-2xl shadow-2xl z-50 overflow-hidden flex flex-col py-1.5">
+                  {currentSections.map(sec => {
+                    const isC = completed[sec.id];
+                    const isF = favorites[sec.id];
+                    return (
+                      <button
+                        key={sec.id}
+                        onClick={() => { setActiveTab(sec.id); setIsMobileMenuOpen(false); }}
+                        className={`w-full px-4 py-3 flex items-center justify-between text-sm transition-colors ${activeTab === sec.id ? 'bg-slate-700/50 text-brand-300 font-bold border-l-4 border-brand-400' : 'text-slate-300 hover:bg-slate-700/30 border-l-4 border-transparent'}`}
+                      >
+                        <span className="truncate pr-2">{sec.id.includes('On-Class') ? 'Extra: On-Class' : `${sec.id} - ${getSectionTitle(sec.id)}`}</span>
+                        <div className="flex items-center space-x-2 flex-shrink-0">
+                          {isF && <i className="fa-solid fa-star text-amber-400"></i>}
+                          {isC && <i className="fa-solid fa-circle-check text-emerald-400"></i>}
+                        </div>
+                      </button>
+                    );
+                  })}
+                </div>
+              </>
+            )}
+          </div>
+
+        </div>
+      </div>
+
+      <main className="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 text-slate-200 flex flex-col relative">
+        
         {/* ANA KART BİLEŞENLERİ */}
         {(activeTab.includes('.1') && !activeTab.includes('On-Class')) && (
           <DialogueSection 
