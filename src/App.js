@@ -34,7 +34,7 @@ const fallbackDictionary = {
   "even": "just/briefly", "kijken": "look", "vanmorgen": "this morning", "goed": "good", "zal": "will", "hele": "whole", 
   "weer": "again", "als": "like/as", "nieuw": "new", "woorden": "words", "morgen": "tomorrow", "overmorgen": "the day after tomorrow", "dag": "day"
 };
-
+// elbette
 function MainContent({ user, setIsAuthModalOpen }) {
   const availableChapters = [...new Set(bookSections.map(sec => sec.chapter))].filter(Boolean).sort((a, b) => a - b);
   const fallbackChapter = availableChapters[0] || 1;
