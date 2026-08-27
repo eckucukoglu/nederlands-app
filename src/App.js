@@ -65,7 +65,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
   const [searchResults, setSearchResults] = useState(null);
 
   const [isChapterExpanded, setIsChapterExpanded] = useState(false);
-  const [isSectionExpanded, setIsSectionExpanded] = useState(false); // YENİ: Section seçici animasyon state'i
+  const [isSectionExpanded, setIsSectionExpanded] = useState(false); 
 
   const [globalWordStatuses, setGlobalWordStatuses] = useState(() => {
     const saved = localStorage.getItem(`dialogueWordStatuses_${currentChapter}`);
@@ -262,6 +262,19 @@ function MainContent({ user, setIsAuthModalOpen }) {
     trackColor = "bg-emerald-900/60"; thumbColor = "bg-emerald-500"; translateClass = "translate-x-[34px]";
   }
 
+  // YENİ: İLERİ / GERİ KONTROLLERİ İÇİN GEREKLİ HESAPLAMALAR
+  const currentIndex = currentSections.findIndex(sec => sec.id === activeTab);
+  const prevSection = currentIndex > 0 ? currentSections[currentIndex - 1] : null;
+  const nextSection = currentIndex !== -1 && currentIndex < currentSections.length - 1 ? currentSections[currentIndex + 1] : null;
+
+  // Başlığı bulunmayan özel bölümler (Dialoog ve On-Class) için Fallback oluşturucu
+  const getSectionTitle = (sec) => {
+    if (sec.title) return sec.title;
+    if (sec.id.includes('On-Class')) return "Extra Oefeningen";
+    if (sec.id.endsWith('.1')) return "Dialoog";
+    return "Oefening";
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-slate-900 transition-colors duration-300">
       <header className="bg-slate-950 text-white shadow-xl sticky top-0 z-50 border-b border-slate-800">
@@ -278,10 +291,8 @@ function MainContent({ user, setIsAuthModalOpen }) {
             </div>
           </div>
 
-          {/* SAĞ TARAF: KOMPAKT VE GENİŞLEYEN KONTROLLER */}
           <div className="flex items-center space-x-1 sm:space-x-1.5 overflow-visible">
             
-            {/* 1. FLASHCARDS BUTONU (Kırmızı, İkonlu) */}
             <button 
               onClick={() => { setActiveTab("flashcards"); setIsChapterExpanded(false); setIsSectionExpanded(false); setIsSearchExpanded(false); }}
               className={`p-1.5 sm:p-2 rounded-full transition-colors flex items-center justify-center ${activeTab === 'flashcards' ? 'bg-rose-600 text-white shadow-md' : 'bg-rose-900/30 text-rose-400 hover:bg-rose-600 hover:text-white border border-rose-800/30'}`}
@@ -290,7 +301,6 @@ function MainContent({ user, setIsAuthModalOpen }) {
               <i className="fa-solid fa-clone text-lg sm:text-xl"></i>
             </button>
 
-            {/* 2. LOGIN BUTONU */}
             <button 
               onClick={() => setIsAuthModalOpen(true)}
               className="p-1.5 sm:p-2 rounded-full hover:bg-slate-800 transition-colors flex items-center justify-center relative group"
@@ -300,7 +310,6 @@ function MainContent({ user, setIsAuthModalOpen }) {
               {user && <div className="absolute top-0 right-0 w-2.5 h-2.5 bg-emerald-500 border-2 border-slate-950 rounded-full"></div>}
             </button>
 
-            {/* 3. GENİŞLEYEN ARAMA BUTONU */}
             <div className="relative flex items-center">
               <div className={`transition-all duration-300 ease-in-out overflow-hidden flex items-center ${isSearchExpanded ? 'w-32 sm:w-48 opacity-100 mr-1' : 'w-0 opacity-0'}`}>
                 <form onSubmit={handleGlobalSearch} className="w-full">
@@ -328,7 +337,6 @@ function MainContent({ user, setIsAuthModalOpen }) {
                 <i className="fa-solid fa-magnifying-glass text-lg sm:text-xl"></i>
               </button>
 
-              {/* ARAMA SONUÇLARI POP-UP */}
               {searchResults && searchResults.length > 0 && (
                 <>
                   <div className="fixed inset-0 z-40" onClick={() => setSearchResults(null)}></div>
@@ -386,7 +394,6 @@ function MainContent({ user, setIsAuthModalOpen }) {
 
             <div className="h-6 w-[1px] bg-slate-700 my-auto mx-0.5 sm:mx-1.5"></div>
 
-            {/* 4. GENİŞLEYEN ÜNİTE (CHAPTER) SEÇİCİ */}
             <div className="relative flex items-center">
               <button
                 onClick={() => { setIsChapterExpanded(!isChapterExpanded); setIsSectionExpanded(false); setIsSearchExpanded(false); }}
@@ -414,7 +421,6 @@ function MainContent({ user, setIsAuthModalOpen }) {
               </div>
             </div>
 
-            {/* 5. YENİ: GENİŞLEYEN SECTİON SEÇİCİ (14.1, 14.2 vb.) */}
             <div className="relative flex items-center ml-1">
               <button
                 onClick={() => { setIsSectionExpanded(!isSectionExpanded); setIsChapterExpanded(false); setIsSearchExpanded(false); }}
@@ -437,7 +443,6 @@ function MainContent({ user, setIsAuthModalOpen }) {
                   }}
                   className="w-full bg-slate-800 border border-slate-700 text-slate-200 text-xs sm:text-sm rounded-full px-2 sm:px-3 py-1.5 focus:outline-none focus:ring-1 focus:ring-brand-500 shadow-inner cursor-pointer appearance-none"
                 >
-                  {/* On-Class Egzersizleri ve Normal Sectionlar Burada Çıkar */}
                   {currentSections.map(sec => (
                     <option key={sec.id} value={sec.id}>
                       {sec.id.includes('On-Class') ? 'On-Class' : sec.id}
@@ -453,7 +458,66 @@ function MainContent({ user, setIsAuthModalOpen }) {
         </div>
       </header>
 
-      <main className="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 text-slate-200">
+      <main className="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 text-slate-200 flex flex-col">
+        
+        {/* YENİ: ZARİF İLERİ / GERİ BUTONLARI (Flashcards hariç ana köşelerde uçar) */}
+        {activeTab !== 'flashcards' && (
+          <div className="flex justify-between items-end mb-3 px-1 sm:px-2 z-10">
+            {/* SOL (Geri) BUTONU */}
+            <div className="flex-1 flex justify-start">
+              {prevSection && (
+                <button 
+                  onClick={() => setActiveTab(prevSection.id)}
+                  className="group flex items-center text-left space-x-2 sm:space-x-3 text-slate-500 hover:text-brand-400 transition-colors"
+                >
+                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center group-hover:border-brand-500 group-hover:bg-brand-900/30 transition-all flex-shrink-0 shadow-sm">
+                    <i className="fa-solid fa-chevron-left text-[10px] sm:text-xs"></i>
+                  </div>
+                  <div className="flex flex-col">
+                    <div className="flex items-center space-x-1.5">
+                      <span className="font-bold text-[11px] sm:text-xs text-slate-400 group-hover:text-brand-300 transition-colors">
+                        {prevSection.id.includes('On-Class') ? 'On-C' : prevSection.id}
+                      </span>
+                      {completed[prevSection.id] && <i className="fa-solid fa-circle-check text-emerald-500 text-[10px]"></i>}
+                      {favorites[prevSection.id] && <i className="fa-solid fa-star text-amber-400 text-[10px]"></i>}
+                    </div>
+                    <span className="text-[9px] sm:text-[10px] text-slate-500 group-hover:text-slate-400 transition-colors truncate max-w-[120px] sm:max-w-[160px] md:max-w-[250px]">
+                      {getSectionTitle(prevSection)}
+                    </span>
+                  </div>
+                </button>
+              )}
+            </div>
+
+            {/* SAĞ (İleri) BUTONU */}
+            <div className="flex-1 flex justify-end">
+              {nextSection && (
+                <button 
+                  onClick={() => setActiveTab(nextSection.id)}
+                  className="group flex items-center text-right space-x-2 sm:space-x-3 text-slate-500 hover:text-brand-400 transition-colors"
+                >
+                  <div className="flex flex-col items-end">
+                    <div className="flex items-center space-x-1.5">
+                      {favorites[nextSection.id] && <i className="fa-solid fa-star text-amber-400 text-[10px]"></i>}
+                      {completed[nextSection.id] && <i className="fa-solid fa-circle-check text-emerald-500 text-[10px]"></i>}
+                      <span className="font-bold text-[11px] sm:text-xs text-slate-400 group-hover:text-brand-300 transition-colors">
+                        {nextSection.id.includes('On-Class') ? 'On-C' : nextSection.id}
+                      </span>
+                    </div>
+                    <span className="text-[9px] sm:text-[10px] text-slate-500 group-hover:text-slate-400 transition-colors truncate max-w-[120px] sm:max-w-[160px] md:max-w-[250px]">
+                      {getSectionTitle(nextSection)}
+                    </span>
+                  </div>
+                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center group-hover:border-brand-500 group-hover:bg-brand-900/30 transition-all flex-shrink-0 shadow-sm">
+                    <i className="fa-solid fa-chevron-right text-[10px] sm:text-xs"></i>
+                  </div>
+                </button>
+              )}
+            </div>
+          </div>
+        )}
+
+        {/* ANA KART BİLEŞENLERİ */}
         {(activeTab.includes('.1') && !activeTab.includes('On-Class')) && (
           <DialogueSection 
             sectionId={activeTab} 
