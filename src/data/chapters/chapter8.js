@@ -343,34 +343,135 @@ export const chapter8Sections = [
       }
     ]
   },
-  {
+{
     id: "On-Class-8",
     chapter: 8,
-    title: "On-Class Extra: Geen vs Niet Deep Dive",
+    title: "Extra Oefeningen (On-Class)",
     theory: (
       <>
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>🎓 On-Class Grammatica: Geen vs Niet</h3>
-          
-          <h4 className="font-bold text-emerald-300 mt-2 border-b border-emerald-500/30 pb-1">Geen:</h4>
-          <p className="text-sm text-slate-300 mt-1">Sadece ve sadece <strong>belirsiz isimleri (artikelsiz veya 'een' artikeli alan isimler)</strong> olumsuz yaparken kullanılır.</p>
-          <p className="text-sm italic text-emerald-100 mt-1">"Ik heb een fiets -> Ik heb <strong>geen</strong> fiets."</p>
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #3b82f6', marginBottom: '20px' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#60a5fa' }}>🚫 Ontkenning (Olumsuzluk): GEEN vs. NIET</h3>
+          <p className="text-sm text-slate-300 mb-2">Hollandacada İngilizcedeki "not" kelimesinin karşılığı olarak iki farklı kelime kullanılır: <strong>niet</strong> ve <strong>geen</strong>.</p>
+        </div>
 
-          <h4 className="font-bold text-emerald-300 mt-4 border-b border-emerald-500/30 pb-1">Niet:</h4>
-          <p className="text-sm text-slate-300 mt-1">Belirli isimleri (de/het, mijn/jouw/zijn, deze/die) olumsuz yaparken <strong>niet</strong> kullanılır!</p>
-          <p className="text-sm italic text-emerald-100 mt-1">"Dat is <strong>niet</strong> mijn auto." (Geen mijn auto YANLIŞTIR!).</p>
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>❌ GEEN (No / Not a / Not any)</h3>
+          <p className="text-sm text-slate-300 mb-3"><strong>Geen</strong> yalnızca <strong>isimleri (nouns)</strong> olumsuz yapmak için kullanılır. Önünde "een" (bir) olan veya hiçbir artikel almayan (belirsiz) isimlerle kullanılır.</p>
+          
+          <div className="bg-purple-900/30 p-4 rounded-xl border border-purple-500/30">
+            <h4 className="font-bold text-purple-300 text-sm mb-2">Structure: Subject + Verb + Geen + Noun</h4>
+            <ul className="text-sm text-slate-200 list-disc pl-5 space-y-2">
+              <li>Ik heb <strong>geen</strong> auto. (I don't have a car.)</li>
+              <li>Zij drinkt <strong>geen</strong> koffie. (She doesn't drink coffee.)</li>
+              <li>Wij hebben <strong>geen</strong> kinderen. (We don't have children.)</li>
+              <li>Hij heeft <strong>geen</strong> werk. (He has no work.)</li>
+            </ul>
+
+            <h4 className="font-bold text-rose-400 text-sm mt-4 mb-1">🚨 Belangrijk (Önemli Kural):</h4>
+            <p className="text-sm text-slate-300">Hollandacada ASLA "geen een" denmez. Sadece "geen" kullanılır.</p>
+            <ul className="text-sm text-slate-200 list-disc pl-5 mt-1">
+              <li className="text-rose-300 line-through">Ik heb geen een auto. (YANLIŞ)</li>
+              <li className="text-emerald-400">Ik heb <strong>geen</strong> auto. (DOĞRU)</li>
+              <li>Ik heb katten. ➔ Ik heb <strong>geen</strong> katten. (I have no cats.)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>🙅‍♂️ NIET (Not) & Positioning</h3>
+          <p className="text-sm text-slate-300 mb-3"><strong>Niet</strong>, isimler dışındaki diğer her şeyi (fiilleri, sıfatları, yerleri veya belirli isimleri) olumsuz yapmak için kullanılır. Cümledeki yeri, neyi olumsuz yaptığınıza bağlıdır.</p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <h4 className="font-bold text-emerald-300 text-sm mb-1">1. Met een adjectief (Sıfatlarla)</h4>
+              <p className="text-xs text-slate-400 mb-1">Kural: <strong>niet + adjective</strong> (Sıfattan önce gelir)</p>
+              <ul className="text-sm text-slate-200 list-disc pl-5 mb-3">
+                <li>Ik ben <strong>niet</strong> moe. (I'm not tired.)</li>
+                <li>Het huis is <strong>niet</strong> groot. (The house isn't big.)</li>
+                <li>De film is <strong>niet</strong> interessant.</li>
+              </ul>
+
+              <h4 className="font-bold text-emerald-300 text-sm mb-1">2. Met een plaats (Yer bildiren kelimelerle)</h4>
+              <p className="text-xs text-slate-400 mb-1">Kural: <strong>niet + place</strong> (Yer kelimesinden önce gelir)</p>
+              <ul className="text-sm text-slate-200 list-disc pl-5">
+                <li>Ik woon <strong>niet</strong> in Amsterdam.</li>
+                <li>Hij is <strong>niet</strong> thuis.</li>
+                <li>Zij werkt <strong>niet</strong> in Rotterdam.</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="font-bold text-emerald-300 text-sm mb-1">3. Met een werkwoord (Fiillerle)</h4>
+              <p className="text-xs text-slate-400 mb-1">Kural: Fiilden sonra (genellikle cümlenin ilerleyen kısmında) gelir.</p>
+              <ul className="text-sm text-slate-200 list-disc pl-5 mb-3">
+                <li>Ik weet het <strong>niet</strong>. (I don't know it.)</li>
+                <li>Ik werk <strong>niet</strong>. (I don't work.)</li>
+                <li>Ik slaap <strong>niet</strong>.</li>
+                <li className="mt-1 italic text-slate-400">Ekstra bilgi varsa (Extra information):</li>
+                <li>Ik werk <strong>niet</strong> vandaag.</li>
+                <li>Hij komt <strong>niet</strong> morgen.</li>
+              </ul>
+
+              <h4 className="font-bold text-emerald-300 text-sm mb-1">4. Met specifieke nouns (Belirli isimlerle)</h4>
+              <p className="text-xs text-slate-400 mb-1">Kural: İsmin önünde <strong>de, het, mijn, jouw, deze, dit, dat</strong> varsa GEEN değil NIET kullanılır.</p>
+              <ul className="text-sm text-slate-200 list-disc pl-5">
+                <li>Dat is <strong>niet</strong> mijn fiets. (That isn't my bike.)</li>
+                <li>Dat is <strong>niet</strong> de auto.</li>
+                <li>Dit is <strong>niet</strong> het boek.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f59e0b' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#fbbf24' }}>⚖️ Vergelijken (Karşılaştırma)</h3>
+          <ul className="text-sm text-slate-200 list-disc pl-5 space-y-2">
+            <li>Ik heb <strong>geen</strong> fiets. <span className="text-slate-400 italic">(I don't have a bike. - Belirsiz isim)</span></li>
+            <li>Dat is <strong>niet</strong> mijn fiets. <span className="text-slate-400 italic">(That isn't my bike. - Belirli isim 'mijn')</span></li>
+          </ul>
         </div>
       </>
     ),
     exerciseGroups: [
       {
-        instruction: "On-Class Oefeningen: De Ultieme Negatie Test",
+        instruction: "On-Class Oefening 1: Geen of Niet?",
+        isExtra: false,
+        questions: [
+          { id: "8_onclass_1_1", type: "multiple_choice", question: "Ik heb ________ auto.", options: ["geen", "niet"], correctAnswer: "geen" },
+          { id: "8_onclass_1_2", type: "multiple_choice", question: "Zij drinkt ________ koffie.", options: ["geen", "niet"], correctAnswer: "geen" },
+          { id: "8_onclass_1_3", type: "multiple_choice", question: "Ik werk ________ vandaag.", options: ["geen", "niet"], correctAnswer: "niet" },
+          { id: "8_onclass_1_4", type: "multiple_choice", question: "Dat is ________ mijn auto.", options: ["geen", "niet"], correctAnswer: "niet" },
+          { id: "8_onclass_1_5", type: "multiple_choice", question: "Ik ben ________ moe.", options: ["geen", "niet"], correctAnswer: "niet" }
+        ]
+      },
+      {
+        instruction: "On-Class Oefening 2: Zinnen Negatief Maken met GEEN",
+        isExtra: false,
+        questions: [
+          { id: "8_onclass_2_1", type: "multiple_choice", question: "Maak de zin negatief: 'Ik heb een fiets.'", options: ["Ik heb niet een fiets.", "Ik heb geen een fiets.", "Ik heb geen fiets."], correctAnswer: "Ik heb geen fiets." },
+          { id: "8_onclass_2_2", type: "multiple_choice", question: "Maak de zin negatief: 'Wij hebben kinderen.'", options: ["Wij hebben niet kinderen.", "Wij hebben geen kinderen.", "Wij geen hebben kinderen."], correctAnswer: "Wij hebben geen kinderen." },
+          { id: "8_onclass_2_3", type: "fill_in", question: "Hij heeft werk. ➔ Hij heeft ________ werk.", correctAnswer: "geen" },
+          { id: "8_onclass_2_4", type: "fill_in", question: "Ik heb katten. ➔ Ik heb ________ katten.", correctAnswer: "geen" }
+        ]
+      },
+      {
+        instruction: "On-Class Oefening 3: De positie van NIET",
         isExtra: true,
         questions: [
-          { id: "8_onclass_1", type: "fill_in", question: "Ik spreek ________ Engels. (Engels is a specific language/concept).", correctAnswer: "geen" },
-          { id: "8_onclass_2", type: "multiple_choice", question: "Kies de juiste ontkenning: 'Dat is ________ de docent.'", options: ["niet", "geen"], correctAnswer: "niet" },
-          { id: "8_onclass_3", type: "multiple_choice", question: "Kies de juiste ontkenning: 'Hij koopt ________ auto.' (belirsiz/indefinite)", options: ["niet", "geen"], correctAnswer: "geen" },
-          { id: "8_onclass_4", type: "multiple_choice", question: "Kies de juiste ontkenning: 'Ik woon ________ in Amsterdam.'", options: ["niet", "geen"], correctAnswer: "niet" }
+          { id: "8_onclass_3_1", type: "multiple_choice", question: "Kies de juiste zin (Adjectief):", options: ["Het huis is groot niet.", "Het huis is niet groot.", "Niet het huis is groot."], correctAnswer: "Het huis is niet groot." },
+          { id: "8_onclass_3_2", type: "multiple_choice", question: "Kies de juiste zin (Plaats/Location):", options: ["Ik woon niet in Amsterdam.", "Ik woon in Amsterdam niet.", "Niet ik woon in Amsterdam."], correctAnswer: "Ik woon niet in Amsterdam." },
+          { id: "8_onclass_3_3", type: "multiple_choice", question: "Kies de juiste zin (Werkwoord):", options: ["Ik niet weet het.", "Ik weet het niet.", "Niet ik weet het."], correctAnswer: "Ik weet het niet." },
+          { id: "8_onclass_3_4", type: "multiple_choice", question: "Kies de juiste zin met extra informatie:", options: ["Hij komt morgen niet.", "Hij komt niet morgen.", "Hij niet komt morgen."], correctAnswer: "Hij komt niet morgen." }
+        ]
+      },
+      {
+        instruction: "On-Class Oefening 4: Specifieke Nouns (Belirli İsimler)",
+        isExtra: true,
+        questions: [
+          { id: "8_onclass_4_1", type: "multiple_choice", question: "Dat is ________ het boek.", options: ["geen", "niet"], correctAnswer: "niet" },
+          { id: "8_onclass_4_2", type: "multiple_choice", question: "Dit is ________ mijn fiets.", options: ["geen", "niet"], correctAnswer: "niet" },
+          { id: "8_onclass_4_3", type: "multiple_choice", question: "Dat is ________ de auto van Jan.", options: ["geen", "niet"], correctAnswer: "niet" },
+          { id: "8_onclass_4_4", type: "fill_in", question: "Ik heb een auto. Dat is ________ mijn auto.", correctAnswer: "niet" }
         ]
       }
     ]

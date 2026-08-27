@@ -472,10 +472,10 @@ export const chapter10Sections = [
   {
     id: "On-Class-10",
     chapter: 10,
-    title: "On-Class Herhaling",
+    title: "Extra Oefeningen (On-Class)",
     theory: (
       <>
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
+	          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
           <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>🎓 On-Class Samenvatting Hoofdstuk 10</h3>
           
           <h4 style={{ color: '#a78bfa' }}>1. Verstaan en begrijpen</h4>
@@ -496,16 +496,197 @@ export const chapter10Sections = [
           <h4 style={{ color: '#fbbf24', marginTop: '15px' }}>4. Modale Werkwoorden in Imperfectum</h4>
           <p>zullen = zou/zouden (would), kunnen = kon/konden (could), moeten = moest/moesten (had to), willen = wilde/wou (wanted to).</p>
         </div>
+		
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #3b82f6', marginBottom: '20px' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#60a5fa' }}>👂 Verstaan vs. Begrijpen</h3>
+          <p className="text-sm text-slate-300 mb-2">Hollandacada "anlamak" için iki farklı kelime kullanılır ve bağlamları tamamen farklıdır:</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="bg-blue-900/30 p-3 rounded-lg border border-blue-500/30">
+              <h4 className="font-bold text-blue-300 text-sm mb-1">Verstaan (Fiziksel Duyma)</h4>
+              <p className="text-sm text-blue-100 mb-2">Fiziksel olarak birini duymak veya kelimeleri seçebilmekle ilgilidir.</p>
+              <ul className="text-sm text-slate-300 list-disc pl-5">
+                <li><em>Sorry ik versta u niet goed.</em> (Özür dilerim sizi iyi duyamıyorum/anlayamıyorum.)</li>
+              </ul>
+            </div>
+            <div className="bg-blue-900/30 p-3 rounded-lg border border-blue-500/30">
+              <h4 className="font-bold text-blue-300 text-sm mb-1">Begrijpen (Anlamı Kavrama)</h4>
+              <p className="text-sm text-blue-100 mb-2">Söylenen kelimeleri duydunuz ancak manasını/ne demek istendiğini bilmiyorsanız kullanılır.</p>
+              <ul className="text-sm text-slate-300 list-disc pl-5">
+                <li><em>Sorry ik begrijp het niet. Wat bedoelt u met 'tiptop'?</em> (Özür dilerim anlamadım. 'Tiptop' ile ne kastediyorsunuz?)</li>
+              </ul>
+            </div>
+          </div>
+          <h4 className="font-bold text-slate-200 text-xs uppercase mt-3 mb-1">Anlaşılmadığında Kullanılan Cümleler:</h4>
+          <ul className="text-sm text-slate-300 list-disc pl-5 space-y-1">
+            <li><strong>Kan u het nog een keer zeggen?</strong> (Can you say it one more time?)</li>
+            <li><strong>Kunt u het even herhalen?</strong> (Can you repeat?)</li>
+            <li><strong>Wat zegt u?</strong> (What are you saying?)</li>
+            <li><strong>Hoe heet dat?</strong> (What is that called?)</li>
+          </ul>
+        </div>
+
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>🤔 Bedoelen vs. Betekenen (To Mean)</h3>
+          <p className="text-sm text-slate-300 mb-2">İngilizcedeki "to mean" kelimesi Hollandacada ikiye ayrılır:</p>
+          <ul className="text-sm text-slate-200 list-disc pl-5 space-y-2">
+            <li><strong>Bedoelen:</strong> Bir <em>kişinin</em> ne söylemek istediğini (niyetini) ifade ederken kullanılır.<br/><span className="text-slate-400">Örn: Wat <strong>bedoelt</strong> u? (Siz ne kastediyorsunuz/demek istiyorsunuz?)</span></li>
+            <li><strong>Betekenen:</strong> Bir <em>kelimenin, işaretin veya durumun</em> kelime anlamını/manasını ifade ederken kullanılır.<br/><span className="text-slate-400">Örn: Wat <strong>betekent</strong> 'proost'? ('Proost' kelimesi ne anlama gelir?)</span></li>
+          </ul>
+        </div>
+
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>🚲 De Fiets (Bisiklet Parçaları)</h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-sm text-slate-200">
+            <div><strong className="text-emerald-300">het wiel:</strong> tekerlek</div>
+            <div><strong className="text-emerald-300">de band:</strong> lastik</div>
+            <div><strong className="text-emerald-300">het stuur:</strong> direksiyon/gidon</div>
+            <div><strong className="text-emerald-300">het zadel:</strong> sele</div>
+            <div><strong className="text-emerald-300">de bagagedrager:</strong> bagaj taşıyıcı</div>
+            <div><strong className="text-emerald-300">de trapper:</strong> pedal</div>
+            <div><strong className="text-emerald-300">de rem:</strong> fren</div>
+            <div><strong className="text-emerald-300">de bel:</strong> zil</div>
+            <div><strong className="text-emerald-300">de ketting:</strong> zincir</div>
+            <div><strong className="text-emerald-300">het voorlicht:</strong> ön far</div>
+            <div><strong className="text-emerald-300">het achterlicht:</strong> arka lamba</div>
+          </div>
+          <p className="text-xs text-slate-400 mt-3 italic">Ekstra Kelimeler: vogelbekdier (platypus/ornitorenk), lieveheersbeestje (ladybug/uğur böceği).</p>
+        </div>
+
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f59e0b', marginBottom: '20px' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#fbbf24' }}>⏳ Imperfectum (Past Simple / Geçmiş Zaman)</h3>
+          <p className="text-sm text-slate-300 mb-3">Imperfectum, geçmişteki durumları veya alışkanlıkları anlatmak için kullanılır (Örn: <em>Het was goed gisteren / Ik werkte</em>).</p>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <div>
+              <h4 className="font-bold text-amber-300 text-sm mb-1">Regelmatige Werkwoorden (Düzenli Fiiller)</h4>
+              <p className="text-xs text-slate-400 mb-2">Kökün son harfi 'soft ketchup' (t, k, f, s, c, h, p) harflerinden biriyse <strong>-te/-ten</strong>, değilse <strong>-de/-den</strong> alır.</p>
+              <table className="w-full text-sm text-left text-slate-300 border-collapse mb-2">
+                <thead>
+                  <tr className="border-b border-slate-700">
+                    <th className="py-1">Persoon</th>
+                    <th className="py-1">Pattern (te/de)</th>
+                    <th className="py-1">werken</th>
+                    <th className="py-1">fietsen</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-slate-700/50"><td>ik, jij, hij</td><td>stem + te / de</td><td>werk<strong>te</strong></td><td>fiets<strong>te</strong></td></tr>
+                  <tr><td>wij, jullie, zij</td><td>stem + ten / den</td><td>werk<strong>ten</strong></td><td>fiets<strong>ten</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div>
+              <h4 className="font-bold text-amber-300 text-sm mb-1">Onregelmatige Vormen (Düzensizler)</h4>
+              <ul className="text-xs text-slate-300 list-disc pl-5 space-y-1">
+                <li><strong>zijn (to be):</strong> was / waren</li>
+                <li><strong>hebben (to have):</strong> had / hadden</li>
+                <li><strong>gaan (to go):</strong> ging / gingen</li>
+                <li><strong>komen (to come):</strong> kwam / kwamen</li>
+                <li><strong>zien (to see):</strong> zag / zagen</li>
+                <li><strong>vinden (to find):</strong> vond / vonden</li>
+                <li><strong>doen (to do):</strong> deed / deden</li>
+                <li><strong>staan (to stand):</strong> stond / stonden</li>
+                <li><strong>vallen (to fall):</strong> viel / vielen</li>
+                <li><strong>zeggen (to say):</strong> zei / zeiden</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="bg-amber-900/30 p-3 rounded-lg border border-amber-500/30 mt-4">
+            <h4 className="text-amber-300 font-bold text-sm mb-2">Modale Werkwoorden in Imperfectum (Modal Fiiller)</h4>
+            <div className="grid grid-cols-5 gap-1 text-xs text-amber-100">
+              <div className="font-bold border-b border-amber-500/50 pb-1">Person</div>
+              <div className="font-bold border-b border-amber-500/50 pb-1">mogen (may)</div>
+              <div className="font-bold border-b border-amber-500/50 pb-1">willen (want)</div>
+              <div className="font-bold border-b border-amber-500/50 pb-1">moeten (must)</div>
+              <div className="font-bold border-b border-amber-500/50 pb-1">kunnen (can)</div>
+              
+              <div className="py-1">ik/jij/hij</div>
+              <div className="py-1">mocht</div>
+              <div className="py-1">wilde / wou</div>
+              <div className="py-1">moest</div>
+              <div className="py-1">kon</div>
+              
+              <div className="py-1">wij/jullie/zij</div>
+              <div className="py-1">mochten</div>
+              <div className="py-1">wilden</div>
+              <div className="py-1">moesten</div>
+              <div className="py-1">konden</div>
+            </div>
+            <p className="text-sm font-bold text-white mt-2">zullen (will) ➔ zou / zouden (would)</p>
+          </div>
+        </div>
+
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #6366f1' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#93c5fd' }}>📝 Dialogue Q&A</h3>
+          <ul className="text-sm text-slate-200 space-y-1 list-disc pl-5">
+            <li><strong>Wat is kapot?</strong> ➔ Het voorlicht, het achterlicht en de trapper van de fiets zijn kapot.</li>
+            <li><strong>Wat is er gebeurd? (What happened?)</strong> ➔ Ik ben met mijn fiets tegen een huis gereden.</li>
+            <li><strong>Reactie van de fietsenmaker:</strong> ➔ Dat is niet heel slim... (That is not very smart...) Geen probleem, ik kan de fiets repareren. Kom over drie dagen terug.</li>
+          </ul>
+        </div>
       </>
     ),
     exerciseGroups: [
-      {
+		{
         instruction: "Slimme Oefeningen (Pedagogisch): On-Class Grammatica Test",
         isExtra: true,
         questions: [
           { id: "10_onclass_1", type: "multiple_choice", question: "Wat is de verleden tijd (imperfectum) van het onregelmatige werkwoord 'zijn' (ik)?", options: ["had", "was", "ben"], correctAnswer: "was" },
           { id: "10_onclass_2", type: "multiple_choice", question: "Wat is de verleden tijd van 'hebben' (wij)?", options: ["hebben", "hadden", "haddden"], correctAnswer: "hadden" },
           { id: "10_onclass_3", type: "fill_in", question: "Vertaal de zin: 'Wat bedoelt u met tiptop?' -> 'What do you ________ by tiptop?'", correctAnswer: "mean" }
+        ]
+      },
+	  {
+        instruction: "On-Class Oefening 1: Verstaan of Begrijpen?",
+        isExtra: false,
+        questions: [
+          { id: "10_onclass_1_1", type: "fill_in", question: "Ik hoor je niet door de muziek. Sorry, ik ________ u niet goed.", correctAnswer: "versta" },
+          { id: "10_onclass_1_2", type: "fill_in", question: "Ik weet niet wat dat woord betekent. Sorry, ik ________ het niet.", correctAnswer: "begrijp" },
+          { id: "10_onclass_1_3", type: "multiple_choice", question: "Wat zeg je als je de spreker fysiek niet goed hoort?", options: ["Sorry, ik begrijp het niet.", "Sorry, ik versta u niet.", "Wat betekent dat?"], correctAnswer: "Sorry, ik versta u niet." }
+        ]
+      },
+      {
+        instruction: "On-Class Oefening 2: Bedoelen of Betekenen?",
+        isExtra: false,
+        questions: [
+          { id: "10_onclass_2_1", type: "fill_in", question: "Wat ________ het woord 'voorlicht'? (anlamına gelmek)", correctAnswer: "betekent" },
+          { id: "10_onclass_2_2", type: "fill_in", question: "Ik snap je niet. Wat ________ u met 'tiptop'? (kastetmek/demek istemek)", correctAnswer: "bedoelt" },
+          { id: "10_onclass_2_3", type: "multiple_choice", question: "Vertaal: 'What do you mean by that?'", options: ["Wat beteken je daarmee?", "Wat bedoel je daarmee?", "Wat versta je daarmee?"], correctAnswer: "Wat bedoel je daarmee?" }
+        ]
+      },
+      {
+        instruction: "On-Class Oefening 3: De Fiets (Bisiklet Parçaları)",
+        isExtra: false,
+        questions: [
+          { id: "10_onclass_3_1", type: "fill_in", question: "The wheel = het ________", correctAnswer: "wiel" },
+          { id: "10_onclass_3_2", type: "fill_in", question: "The steering wheel = het ________", correctAnswer: "stuur" },
+          { id: "10_onclass_3_3", type: "fill_in", question: "The pedal = de ________", correctAnswer: "trapper" },
+          { id: "10_onclass_3_4", type: "multiple_choice", question: "Hoe zeg je 'the brake' in het Nederlands?", options: ["de band", "de ketting", "de rem"], correctAnswer: "de rem" },
+          { id: "10_onclass_3_5", type: "fill_in", question: "The parcel shelf / rear rack = de ________", correctAnswer: "bagagedrager" }
+        ]
+      },
+      {
+        instruction: "On-Class Oefening 4: Imperfectum (Düzensiz ve Modal Fiiller)",
+        isExtra: true,
+        questions: [
+          { id: "10_onclass_4_1", type: "fill_in", question: "Ik ________ (zijn) gisteren ziek.", correctAnswer: "was" },
+          { id: "10_onclass_4_2", type: "fill_in", question: "Wij ________ (hebben) een probleem met de fiets.", correctAnswer: "hadden" },
+          { id: "10_onclass_4_3", type: "fill_in", question: "Hij ________ (gaan) naar de supermarkt.", correctAnswer: "ging" },
+          { id: "10_onclass_4_4", type: "fill_in", question: "Zij (they) ________ (doen) hun huiswerk niet.", correctAnswer: "deden" },
+          { id: "10_onclass_4_5", type: "multiple_choice", question: "Wat is het imperfectum (ik-vorm) van 'kunnen' (can)?", options: ["kon", "moest", "wilde"], correctAnswer: "kon" },
+          { id: "10_onclass_4_6", type: "fill_in", question: "Ik ________ (willen) een nieuwe fiets kopen. (I wanted)", correctAnswer: "wilde" },
+          { id: "10_onclass_4_7", type: "multiple_choice", question: "Wat is de verleden tijd (past tense) van 'zullen' (will)?", options: ["mocht", "zou", "kon"], correctAnswer: "zou" }
+        ]
+      },
+      {
+        instruction: "On-Class Oefening 5: Situaties in het Nederlands",
+        isExtra: true,
+        questions: [
+          { id: "10_onclass_5_1", type: "multiple_choice", question: "Wat zeg je als je vraagt om herhaling? (Ask to repeat)", options: ["Hoe heet dat?", "Wat is er gebeurd?", "Kunt u het nog een keer zeggen?"], correctAnswer: "Kunt u het nog een keer zeggen?" },
+          { id: "10_onclass_5_2", type: "fill_in", question: "Vertaal: 'What happened?' -> Wat is er ________?", correctAnswer: "gebeurd" },
+          { id: "10_onclass_5_3", type: "multiple_choice", question: "Waarom is de fiets van de klant kapot?", options: ["Hij is gevallen.", "Hij is tegen een huis gereden.", "De fiets is heel oud."], correctAnswer: "Hij is tegen een huis gereden." }
         ]
       }
     ]

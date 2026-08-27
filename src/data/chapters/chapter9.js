@@ -352,25 +352,199 @@ export const chapter9Sections = [
     exerciseGroups: []
   },
   {
-    id: "On-Class-9", chapter: 9, title: "On-Class Herhaling",
+    id: "On-Class-9",
+    chapter: 9,
+    title: "Extra Oefeningen (On-Class)",
     theory: (
       <>
-        <h3>🎓 On-Class Samenvatting Hoofdstuk 9</h3>
-        <p><strong>Geen / Niet:</strong></p>
-        <ul>
-          <li><strong>niet:</strong> Focus op verbs, adjectives of locaties (bijv. Ik kan dan niet. Het is niet mooi.)</li>
-          <li><strong>geen:</strong> Focus op nouns met 'een' of zonder lidwoord (bijv. Ik heb geen katten. Ik heb geen hond.)</li>
-        </ul>
+	  
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #3b82f6', marginBottom: '20px' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#60a5fa' }}>🔄 Herhaling Les 8: Geen vs. Niet</h3>
+          <p className="text-sm text-slate-300 mb-2">Hollandacada olumsuzluk (negation) yaparken <strong>geen</strong> ve <strong>niet</strong> kuralları şöyledir:</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="bg-blue-900/30 p-3 rounded-lg border border-blue-500/30">
+              <h4 className="font-bold text-blue-300 text-sm mb-1">Niet (Değil)</h4>
+              <ul className="text-sm text-slate-200 list-disc pl-5 space-y-1">
+                <li><strong>Fiilleri olumsuz yaparken:</strong> Ik kan dan <em>niet</em>. (O zaman gelemem/yapamam).</li>
+                <li><strong>Sıfatları olumsuz yaparken:</strong> Het huis is <em>niet</em> mooi. (Ev güzel değil).</li>
+                <li><strong>Lokasyon/Yer bildirirken:</strong> Amsterdam is <em>niet</em> in Frankrijk.</li>
+                <li><strong>Belirli isimlerden önce:</strong> İsimden önce de, het, deze, die, mijn, jouw varsa <em>niet</em> kullanılır.<br/>➔ Ik heb <em>de</em> hond <em>niet</em>.</li>
+              </ul>
+            </div>
+            <div className="bg-blue-900/30 p-3 rounded-lg border border-blue-500/30">
+              <h4 className="font-bold text-blue-300 text-sm mb-1">Geen (Hiç / Yok)</h4>
+              <ul className="text-sm text-slate-200 list-disc pl-5 space-y-1">
+                <li>Odak isimdeyse ve ismin önünde <strong>'een'</strong> varsa veya <strong>hiçbir şey yoksa</strong> (belirsiz isimler) <em>geen</em> kullanılır.</li>
+                <li>➔ Ik heb <em>katten</em>. ➔ Ik heb <strong>geen</strong> katten. (Hiç kedim yok).</li>
+                <li>➔ Ik heb <em>een hond</em>. ➔ Ik heb <strong>geen</strong> hond.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>🧍 Lichaamsdelen (Vücut Bölümleri)</h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-y-2 gap-x-4 text-sm text-slate-200 bg-purple-900/20 p-4 rounded-xl border border-purple-500/30">
+            <div><strong className="text-purple-300">het hoofd:</strong> head (baş)</div>
+            <div><strong className="text-purple-300">de nek:</strong> neck (boyun)</div>
+            <div><strong className="text-purple-300">het gezicht:</strong> face (yüz)</div>
+            <div><strong className="text-purple-300">de mond:</strong> mouth (ağız)</div>
+            <div><strong className="text-purple-300">het oog:</strong> the eye (göz)</div>
+            <div><strong className="text-purple-300">de neus:</strong> the nose (burun)</div>
+            <div><strong className="text-purple-300">het oor:</strong> the ear (kulak)</div>
+            <div><strong className="text-purple-300">de keel:</strong> the throat (boğaz)</div>
+            <div><strong className="text-purple-300">de buik:</strong> the belly (karın)</div>
+            <div><strong className="text-purple-300">de rug:</strong> the back (sırt)</div>
+            <div><strong className="text-purple-300">de arm:</strong> the arm (kol)</div>
+            <div><strong className="text-purple-300">de schouder:</strong> shoulder (omuz)</div>
+            <div><strong className="text-purple-300">de pols:</strong> wrist (bilek)</div>
+            <div><strong className="text-purple-300">de hand:</strong> the hand (el)</div>
+            <div><strong className="text-purple-300">de vinger:</strong> the finger (parmak)</div>
+            <div><strong className="text-purple-300">het been:</strong> the leg (bacak)</div>
+            <div><strong className="text-purple-300">de knie:</strong> the knee (diz)</div>
+            <div><strong className="text-purple-300">de enkel:</strong> the ankle (ayak bileği)</div>
+            <div><strong className="text-purple-300">de voet:</strong> the foot (ayak)</div>
+            <div><strong className="text-purple-300">de huid:</strong> the skin (cilt/deri)</div>
+          </div>
+        </div>
+
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>🩺 Bij de Huisarts (Doktorda)</h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <h4 className="font-bold text-emerald-300 text-sm mb-2">De Huisarts (Doctor / GP) vraagt:</h4>
+              <ul className="text-sm text-slate-200 space-y-2 list-disc pl-5">
+                <li><strong>Wat is er aan de hand?</strong> (Sorun nedir? / What's the matter?)</li>
+                <li><strong>Wat zijn de klachten?</strong> (Şikayetleriniz / semptomlarınız neler?)</li>
+                <li><strong>Hoelang hebt u dat al?</strong> (Ne zamandır böyle?)</li>
+                <li><strong>Wanneer is dat begonnen?</strong> (Ne zaman başladı?)</li>
+                <li><strong>Hebt u koorts?</strong> (Ateşiniz var mı?)</li>
+                <li><strong>Waar hebt u pijn?</strong> (Nereniz ağrıyor?)</li>
+                <li><strong>Het lijkt op een allergische reactie.</strong> (Alerjik bir reaksiyona benziyor.)</li>
+                <li><strong>Ik geef u een zalf mee tegen de jeuk.</strong> (Size kaşıntı için bir merhem veriyorum.)</li>
+                <li><strong>Ik geef u een recept voor de apotheek.</strong> (Eczane için size bir reçete veriyorum.)</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-bold text-emerald-300 text-sm mb-2">De Patiënt zegt:</h4>
+              <ul className="text-sm text-slate-200 space-y-2 list-disc pl-5">
+                <li><strong>Ik heb last van mijn keel.</strong> (Boğazım beni rahatsız ediyor.)</li>
+                <li><strong>Mijn keel doet pijn / zeer.</strong> (Boğazım ağrıyor / acıyor.)</li>
+                <li><strong>De bultjes jeuken verschrikkelijk.</strong> (Kızarıklıklar / kabartılar korkunç derecede kaşınıyor.)</li>
+                <li><strong>Ik voel me niet goed.</strong> (Kendimi iyi hissetmiyorum.)</li>
+                <li><strong>Ik ben ziek.</strong> (Hastayım.)</li>
+                <li><strong>Ik slaap slecht.</strong> (Kötü uyuyorum.)</li>
+                <li><strong>Ik heb hoofdpijn.</strong> (Başım ağrıyor.)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f59e0b', marginBottom: '20px' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#fbbf24' }}>☀️ Dagdelen (Günün Bölümleri) & Tijdwoorden</h3>
+          <div className="grid grid-cols-2 gap-4 text-sm text-slate-200">
+            <div>
+              <h4 className="font-bold text-amber-300 mb-1">Dagdelen:</h4>
+              <ul className="space-y-1">
+                <li>06.00 - 12.00: <strong>de ochtend</strong> (sabah)</li>
+                <li>12.00 - 18.00: <strong>de middag</strong> (öğle)</li>
+                <li>18.00 - 24.00: <strong>de avond</strong> (akşam)</li>
+                <li>00.00 - 06.00: <strong>de nacht</strong> (gece)</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-bold text-amber-300 mb-1">Zaman İfadeleri:</h4>
+              <ul className="space-y-1">
+                <li><strong>gisterochtend:</strong> yesterday morning</li>
+                <li><strong>gistermiddag:</strong> yesterday afternoon</li>
+                <li><strong>gisteravond:</strong> yesterday evening</li>
+                <li><strong>vannacht:</strong> last night / tonight</li>
+                <li><strong>vanochtend:</strong> this morning</li>
+                <li><strong>vanmiddag:</strong> this afternoon</li>
+                <li><strong>vanavond:</strong> this evening / tonight</li>
+                <li><strong>morgenochtend:</strong> tomorrow morning</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #6366f1' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#93c5fd' }}>⏳ Present Perfect (Voltooid Tegenwoordige Tijd)</h3>
+          <p className="text-sm text-slate-300 mb-3">Geçmişte olan ve biten olayları anlatmak için kullanılır. (Örn: I have worked / Çalıştım).</p>
+          
+          <div className="bg-indigo-900/30 p-4 rounded-xl border border-indigo-500/30">
+            <h4 className="font-bold text-indigo-300 text-sm mb-2">Formül: Hebben / Zijn + Participium (Past Participle)</h4>
+            <p className="text-sm text-indigo-100 mb-2">Düzenli fiillerin 3. halini (participium) yapmak için: <strong>ge + stam (kök) + t/d</strong></p>
+            
+            <h5 className="font-bold text-white text-xs mt-3">Ne zaman 't', ne zaman 'd'? ('Soft Ketchup' kuralı)</h5>
+            <p className="text-sm text-slate-300 mb-2">Fiilin kökünün son harfi <strong>s, o, f, t, k, e, c, h, p</strong> harflerinden biriyse <strong>+ t</strong> gelir. Diğer tüm durumlarda <strong>+ d</strong> gelir.</p>
+            <ul className="text-sm text-slate-200 list-disc pl-5 mb-3">
+              <li>werken ➔ stam: werk (k ile bitiyor) ➔ ge + werk + t = <strong>gewerkt</strong></li>
+              <li>rennen (koşmak) ➔ stam: ren (n ile bitiyor) ➔ ge + ren + d = <strong>gerend</strong></li>
+              <li>bellen ➔ stam: bel ➔ ge + bel + d = <strong>gebeld</strong></li>
+            </ul>
+
+            <h5 className="font-bold text-white text-xs mt-3">Ne zaman 'Hebben', Ne zaman 'Zijn'?</h5>
+            <p className="text-sm text-slate-300 mb-2">Hareket veya durum değişikliği bildiren fiillerde (gaan, komen, stoppen vb.) <strong>zijn</strong> çekimi (ben, bent, is, zijn) kullanılır. Diğerlerinde <strong>hebben</strong> (heb, hebt, heeft, hebben) kullanılır.</p>
+            <ul className="text-sm text-slate-200 list-disc pl-5">
+              <li>Ik <strong>heb</strong> gewerkt. (I have worked).</li>
+              <li>Wij <strong>zijn</strong> gegaan. (We have gone).</li>
+              <li>Jullie <strong>zijn</strong> gekomen. (You have come).</li>
+              <li>Ik <strong>ben</strong> met de cursus <strong>gestopt</strong>. (Kursa son verdim/bıraktım).</li>
+            </ul>
+          </div>
+        </div>
       </>
     ),
     exerciseGroups: [
       {
-        instruction: "Slimme Oefeningen: Geen vs Niet",
+        instruction: "On-Class Oefening 1: Geen of Niet?",
+        isExtra: false,
+        questions: [
+          { id: "9_onclass_1_1", type: "multiple_choice", question: "Ik heb ________ katten.", options: ["geen", "niet"], correctAnswer: "geen" },
+          { id: "9_onclass_1_2", type: "multiple_choice", question: "Het huis is ________ mooi.", options: ["geen", "niet"], correctAnswer: "niet" },
+          { id: "9_onclass_1_3", type: "multiple_choice", question: "Ik heb ________ hond. (I have no dog).", options: ["geen", "niet"], correctAnswer: "geen" },
+          { id: "9_onclass_1_4", type: "multiple_choice", question: "Amsterdam is ________ in Frankrijk.", options: ["geen", "niet"], correctAnswer: "niet" },
+          { id: "9_onclass_1_5", type: "multiple_choice", question: "Ik heb de pen ________.", options: ["geen", "niet"], correctAnswer: "niet" }
+        ]
+      },
+      {
+        instruction: "On-Class Oefening 2: Lichaamsdelen & De Huisarts",
+        isExtra: false,
+        questions: [
+          { id: "9_onclass_2_1", type: "fill_in", question: "The throat = de ________", correctAnswer: "keel" },
+          { id: "9_onclass_2_2", type: "fill_in", question: "The face = het ________", correctAnswer: "gezicht" },
+          { id: "9_onclass_2_3", type: "fill_in", question: "The belly/stomach = de ________", correctAnswer: "buik" },
+          { id: "9_onclass_2_4", type: "fill_in", question: "Doktor: Wat is er aan de ________? (What is the matter?)", correctAnswer: "hand" },
+          { id: "9_onclass_2_5", type: "fill_in", question: "Patiënt: Ik heb last van mijn keel. Mijn keel doet ________. (hurts)", correctAnswer: "pijn" },
+          { id: "9_onclass_2_6", type: "multiple_choice", question: "Vertaal: 'I don't feel well.'", options: ["Ik ben ziek.", "Ik voel me niet goed.", "Ik slaap slecht."], correctAnswer: "Ik voel me niet goed." },
+          { id: "9_onclass_2_7", type: "fill_in", question: "Doktor: Ik geef u een recept voor de ________. (pharmacy)", correctAnswer: "apotheek" }
+        ]
+      },
+      {
+        instruction: "On-Class Oefening 3: Dagdelen & Tijd",
         isExtra: true,
         questions: [
-          { id: "9_onclass_1", type: "multiple_choice", question: "Kies de juiste vorm: Ik heb ___ auto.", options: ["niet", "geen", "niets"], correctAnswer: "geen" },
-          { id: "9_onclass_2", type: "multiple_choice", question: "Kies de juiste vorm: Mijn huis is ___ groot.", options: ["niet", "geen", "niets"], correctAnswer: "niet" },
-          { id: "9_onclass_3", type: "multiple_choice", question: "Waar staat TEMPO voor?", options: ["Tijd - Eten - Manier - Plaats", "Tijd - Manier - Plaats - Object", "Tempo - Extra - Meer - Procent"], correctAnswer: "Tijd - Manier - Plaats - Object" }
+          { id: "9_onclass_3_1", type: "multiple_choice", question: "Het is 14:00 uur. Het is de...", options: ["ochtend", "middag", "avond", "nacht"], correctAnswer: "middag" },
+          { id: "9_onclass_3_2", type: "fill_in", question: "Yesterday morning = ________", correctAnswer: "gisterochtend" },
+          { id: "9_onclass_3_3", type: "fill_in", question: "Tonight / Last night = ________", correctAnswer: "vannacht" },
+          { id: "9_onclass_3_4", type: "multiple_choice", question: "Wat betekent 'vanochtend'?", options: ["tomorrow morning", "this morning", "yesterday morning"], correctAnswer: "this morning" }
+        ]
+      },
+      {
+        instruction: "On-Class Oefening 4: Perfectum (Voltooid Tegenwoordige Tijd)",
+        isExtra: false,
+        questions: [
+          { id: "9_onclass_4_1", type: "fill_in", question: "spelen ➔ ge + speel + d = ________", correctAnswer: "gespeeld" },
+          { id: "9_onclass_4_2", type: "fill_in", question: "stoppen ➔ ge + stop + t = ________", correctAnswer: "gestopt" },
+          { id: "9_onclass_4_3", type: "fill_in", question: "Ik ________ gisteren mijn zus gebeld. (heb / ben)", correctAnswer: "heb" },
+          { id: "9_onclass_4_4", type: "fill_in", question: "Ja, ik ________ met de cursus gestopt. (heb / ben)", correctAnswer: "ben" },
+          { id: "9_onclass_4_5", type: "fill_in", question: "Ik heb in Amsterdam ________. (wonen ➔ past participle)", correctAnswer: "gewoond" },
+          { id: "9_onclass_4_6", type: "fill_in", question: "Wij ________ naar huis gegaan. (hebben / zijn)", correctAnswer: "zijn" },
+          { id: "9_onclass_4_7", type: "multiple_choice", question: "Krijgt 'proeven' (stam: proef) een 't' of een 'd' in het perfectum?", options: ["een 't' (geproeft)", "een 'd' (geproefd)"], correctAnswer: "een 'd' (geproefd)" },
+          { id: "9_onclass_4_8", type: "fill_in", question: "Ik ________ een salade besteld. (hebben of zijn?)", correctAnswer: "heb" },
+          { id: "9_onclass_4_9", type: "multiple_choice", question: "Wat is het juiste participium van drinken (irregular)?", options: ["gedrinkt", "gedronken", "gedronkt"], correctAnswer: "gedronken" }
         ]
       }
     ]

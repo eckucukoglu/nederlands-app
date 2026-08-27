@@ -314,5 +314,204 @@ export const chapter12Sections = [
         ]
       }
     ]
+  },
+  {
+    id: "On-Class-12",
+    chapter: 12,
+    title: "12.8 Extra Oefeningen (On-Class)",
+    theory: (
+      <>
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #3b82f6', marginBottom: '20px' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#60a5fa' }}>🔄 Herhaling (Les 11) & Wederkerende Werkwoorden</h3>
+          <p className="text-sm text-slate-300 mb-2">Refleksif (Dönüşlü) Fiillerin tekrarı:</p>
+          <ul className="text-sm text-slate-200 list-disc pl-5 space-y-1 mb-3">
+            <li><strong>zich wassen:</strong> Ik was <em>me</em>. (Yıkanıyorum)</li>
+            <li><strong>zich voorbereiden:</strong> Ik bereid <em>me</em> voor. (Hazırlanıyorum / to get prepared/ready)</li>
+            <li><strong>Ik ben vandaag jarig.</strong> (Bugün benim doğum günüm / It's my birthday today)</li>
+          </ul>
+          <div className="bg-blue-900/30 p-3 rounded-lg border border-blue-500/30">
+            <h4 className="text-blue-300 font-bold text-xs uppercase mb-1">zich vergissen (to be mistaken / yanılmak)</h4>
+            <div className="grid grid-cols-2 gap-2 text-sm text-blue-100">
+              <div>ik vergis <strong>me</strong></div>
+              <div>wij vergissen <strong>ons</strong></div>
+              <div>jij vergist <strong>je</strong></div>
+              <div>jullie vergissen <strong>je</strong></div>
+              <div>hij vergist <strong>zich</strong></div>
+              <div>zij vergissen <strong>zich</strong></div>
+            </div>
+          </div>
+        </div>
+
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>📍 Plaats vs. Beweging (Location vs. Movement)</h3>
+          <p className="text-sm text-slate-300 mb-3">Yön tariflerinde "Bulunma/Konum (Plaats)" ile "Hareket (Beweging)" ifadelerini ayırt etmek önemlidir.</p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <h4 className="font-bold text-purple-300 text-sm mb-1">Plaats (Konum/Yer)</h4>
+              <ul className="text-sm text-slate-200 list-disc pl-5 space-y-1">
+                <li><strong>boven en beneden:</strong> upstairs and downstairs (yukarısı ve aşağısı)</li>
+                <li><strong>op de eerste verdieping:</strong> on the first floor (birinci katta)</li>
+                <li><strong>aan de linkerkant / aan de rechterkant:</strong> on the left side / on the right side</li>
+                <li><strong>tegenover de ingang:</strong> opposite the entrance (girişin karşısında)</li>
+                <li><strong>aan het eind van de gang:</strong> at the end of the hallway (koridorun sonunda)</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-bold text-purple-300 text-sm mb-1">Beweging (Hareket)</h4>
+              <ul className="text-sm text-slate-200 list-disc pl-5 space-y-1">
+                <li><strong>de trap op/af gaan:</strong> go upstairs/downstairs (merdiven inmek/çıkmak)</li>
+                <li><strong>rechtdoor lopen:</strong> walk straight (düz yürümek)</li>
+                <li><strong>linksaf/rechtsaf gaan:</strong> turn left/right (sağa/sola dönmek)</li>
+                <li><strong>de hoek om gaan:</strong> to go around the corner (köşeyi dönmek)</li>
+                <li><strong>de gang uit lopen:</strong> walk until the end of the hallway (koridoru bitene kadar yürümek)</li>
+                <li><strong>de bordjes volgen:</strong> follow the signs (tabelaları takip etmek)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>✂️ Separable Verbs (Scheidbare Werkwoorden)</h3>
+          <p className="text-sm text-slate-300 mb-2">Ayrılabilen fiillerde, fiil çekimlendiğinde ilk parça (prefix) cümlenin <strong>en sonuna</strong> gider[cite: 1].</p>
+          
+          <div className="bg-emerald-900/30 p-3 rounded-lg border border-emerald-500/30 mb-3">
+            <h4 className="text-emerald-300 font-bold text-sm mb-1">Voorbeeld: in-stappen (to get on the train/bus)</h4>
+            <ul className="text-sm text-emerald-100 list-disc pl-5 space-y-1">
+              <li><strong>Present:</strong> Hij <span className="font-bold text-white">stapt</span> bij het centraal station <span className="font-bold text-white">in</span>.</li>
+              <li><strong>Imperfectum:</strong> Hij <span className="font-bold text-white">stapte</span> bij het centraal station <span className="font-bold text-white">in</span>.</li>
+              <li><strong>Perfectum:</strong> Hij is bij het station <span className="font-bold text-white">in</span>ge<span className="font-bold text-white">stapt</span>. (Araya 'ge' girer)</li>
+              <li><strong>Infinitive/Basic:</strong> U kunt direct <span className="font-bold text-white">instappen</span>. (Yardımcı fiil ile ayrılmaz)</li>
+              <li><strong>Met te (with hoeven):</strong> U hoeft nog niet <span className="font-bold text-white">in te stappen</span>. (Araya 'te' girer)</li>
+            </ul>
+          </div>
+          <p className="text-xs text-slate-400"><em>Andere voorbeelden:</em> Ik kan de fles opendoen. ➔ Ik <strong>doe</strong> de fles <strong>open</strong>.</p>
+        </div>
+
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f59e0b', marginBottom: '20px' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#fbbf24' }}>🗺️ De weg vragen en een route controleren</h3>
+          <p className="text-sm text-slate-300 mb-3">Yol sormak ve tarifi teyit etmek için faydalı ifadeler:</p>
+          
+          <table className="w-full text-sm text-left text-slate-300 border-collapse">
+            <tbody className="divide-y divide-slate-700/50">
+              <tr>
+                <td className="py-2 font-semibold text-amber-300">Pardon, mag ik u iets vragen?</td>
+                <td className="py-2">Excuse me, can I ask you something? (iets = something)</td>
+              </tr>
+              <tr>
+                <td className="py-2 font-semibold text-amber-300">Kunt u mij helpen?</td>
+                <td className="py-2">Can you help me?</td>
+              </tr>
+              <tr>
+                <td className="py-2 font-semibold text-amber-300">Weet u waar ... is? / Ik zoek ...</td>
+                <td className="py-2">Do you know where ... is? / I am looking for ...</td>
+              </tr>
+              <tr>
+                <td className="py-2 font-semibold text-amber-300">Zijn er hier ook ergens toiletten?</td>
+                <td className="py-2">Are there any toilets around here too? (ergens = somewhere)</td>
+              </tr>
+              <tr>
+                <td className="py-2 font-semibold text-amber-300">Kan ik dat lopen? / Is dat ver?</td>
+                <td className="py-2">Can I walk that? / Is that far?</td>
+              </tr>
+              <tr>
+                <td className="py-2 font-semibold text-amber-300">Welke bus of tram moet ik nemen?</td>
+                <td className="py-2">Which bus or tram should I take?</td>
+              </tr>
+              <tr>
+                <td className="py-2 font-semibold text-amber-300">Kunt u dat nog een keer zeggen?</td>
+                <td className="py-2">Can you repeat that? (nog een keer = one more time/again)</td>
+              </tr>
+              <tr>
+                <td className="py-2 font-semibold text-amber-300">Sorry, ik begrijp het niet.</td>
+                <td className="py-2">Sorry, I don't understand.</td>
+              </tr>
+              <tr>
+                <td className="py-2 font-semibold text-amber-300">Bedoelt u de eerste straat links?</td>
+                <td className="py-2">Do you mean the first street on the left? (Kontrol etme)</td>
+              </tr>
+              <tr>
+                <td className="py-2 font-semibold text-amber-300">Dus eerst rechtdoor en dan rechts?</td>
+                <td className="py-2">So first straight ahead and then to the right?</td>
+              </tr>
+              <tr>
+                <td className="py-2 font-semibold text-amber-300">Ja, dat klopt. / Klopt dat?</td>
+                <td className="py-2">Yes, that is correct. / Is that correct?</td>
+              </tr>
+              <tr>
+                <td className="py-2 font-semibold text-amber-300">Dank u wel. / Bedankt voor uw hulp.</td>
+                <td className="py-2">Thank you. / Thank you for your help. (Afsluiten/Closing)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #6366f1' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#93c5fd' }}>📝 Dialogue Lesson 12 (Q&A)</h3>
+          <ul className="text-sm text-slate-200 space-y-2 list-disc pl-5">
+            <li><strong>Waar is Kirsten?</strong> ➔ Kirsten is op het station.</li>
+            <li><strong>Wat vraagt Kirsten aan de buschauffeur?</strong> ➔ Zij vraagt of zij kan lopen.</li>
+            <li><strong>Kan zij naar de evenementenhal lopen of moet zij met de tram gaan?</strong> ➔ (Zij moet met de tram gaan/het is te ver).</li>
+            <li><strong>Waar is de wandelbeurs?</strong> ➔ De wandelbeurs is in hal drie.</li>
+          </ul>
+        </div>
+      </>
+    ),
+    exerciseGroups: [
+      {
+        instruction: "On-Class Oefening 1: Zich Vergissen (Reflexive Verbs)",
+        isExtra: false,
+        questions: [
+          { id: "12_onclass_1_1", type: "fill_in", question: "Ik vergis ________. (I am mistaken)", correctAnswer: "me" },
+          { id: "12_onclass_1_2", type: "fill_in", question: "Hij vergist ________. (He is mistaken)", correctAnswer: "zich" },
+          { id: "12_onclass_1_3", type: "fill_in", question: "Wij vergissen ________. (We are mistaken)", correctAnswer: "ons" },
+          { id: "12_onclass_1_4", type: "fill_in", question: "Ik bereid ________ voor. (I get prepared)", correctAnswer: "me" }
+        ]
+      },
+      {
+        instruction: "On-Class Oefening 2: Plaats of Beweging? (Konum mu Hareket mi?)",
+        isExtra: false,
+        questions: [
+          { id: "12_onclass_2_1", type: "multiple_choice", question: "Is 'tegenover de ingang' een plaats of een beweging?", options: ["Plaats (Location)", "Beweging (Movement)"], correctAnswer: "Plaats (Location)" },
+          { id: "12_onclass_2_2", type: "multiple_choice", question: "Is 'de bordjes volgen' een plaats of een beweging?", options: ["Plaats (Location)", "Beweging (Movement)"], correctAnswer: "Beweging (Movement)" },
+          { id: "12_onclass_2_3", type: "multiple_choice", question: "Is 'aan het eind van de gang' een plaats of een beweging?", options: ["Plaats (Location)", "Beweging (Movement)"], correctAnswer: "Plaats (Location)" },
+          { id: "12_onclass_2_4", type: "multiple_choice", question: "Is 'de hoek om gaan' een plaats of een beweging?", options: ["Plaats (Location)", "Beweging (Movement)"], correctAnswer: "Beweging (Movement)" }
+        ]
+      },
+      {
+        instruction: "On-Class Oefening 3: Separable Verbs (Ayrılabilen Fiiller - Opdracht 4)",
+        isExtra: false,
+        questions: [
+          { id: "12_onclass_3_1", type: "fill_in", question: "Kirsten ________ de straat ________. (oversteken - to cross)", correctAnswer: "steekt, over" },
+          { id: "12_onclass_3_2", type: "fill_in", question: "Ik ________ een plattegrond ________. (meenemen - to take along)", correctAnswer: "neem, mee" },
+          { id: "12_onclass_3_3", type: "fill_in", question: "Hoe laat ________ we ________? (afspreken - to meet up)", correctAnswer: "spreken, af" },
+          { id: "12_onclass_3_4", type: "fill_in", question: "Gisteren ________ ik Peter in de supermarkt ________. (tegenkomen - to bump into / past tense)", correctAnswer: "kwam, tegen" },
+          { id: "12_onclass_3_5", type: "fill_in", question: "Waar ben je ________? (instappen - perfectum)", correctAnswer: "ingestapt" },
+          { id: "12_onclass_3_6", type: "fill_in", question: "Ik heb de koffie al ________. (afrekenen - perfectum)", correctAnswer: "afgerekend" },
+          { id: "12_onclass_3_7", type: "multiple_choice", question: "Kies de juiste zin met 'opendoen':", options: ["Ik opendoe de fles.", "Ik doe de fles open.", "Ik doe open de fles."], correctAnswer: "Ik doe de fles open." }
+        ]
+      },
+      {
+        instruction: "On-Class Oefening 4: De weg vragen en controleren (Yol sorma ve teyit etme)",
+        isExtra: true,
+        questions: [
+          { id: "12_onclass_4_1", type: "fill_in", question: "Pardon, ________ ik u iets vragen? (May I ask you something?)", correctAnswer: "mag" },
+          { id: "12_onclass_4_2", type: "fill_in", question: "Zijn er hier ook ________ toiletten? (somewhere)", correctAnswer: "ergens" },
+          { id: "12_onclass_4_3", type: "multiple_choice", question: "Je verstaat het niet goed. Wat zeg je? (You didn't hear it well. What do you say?)", options: ["Kunt u dat nog een keer zeggen?", "Is dat ver?", "Bedankt voor uw hulp."], correctAnswer: "Kunt u dat nog een keer zeggen?" },
+          { id: "12_onclass_4_4", type: "fill_in", question: "________ u de eerste straat links? (Do you mean...)", correctAnswer: "Bedoelt" },
+          { id: "12_onclass_4_5", type: "multiple_choice", question: "Je checkt de route: 'Dus eerst rechtdoor en dan rechts?' De persoon antwoordt: 'Ja, dat ________.'", options: ["loopt", "klopt", "is"], correctAnswer: "klopt" },
+          { id: "12_onclass_4_6", type: "fill_in", question: "Bedankt ________ uw hulp. (Thank you for your help)", correctAnswer: "voor" }
+        ]
+      },
+      {
+        instruction: "On-Class Oefening 5: Dialogue Q&A",
+        isExtra: true,
+        questions: [
+          { id: "12_onclass_5_1", type: "multiple_choice", question: "Waar is Kirsten aan het begin van de dialoog?", options: ["In hal drie", "Op het station", "In de trein"], correctAnswer: "Op het station" },
+          { id: "12_onclass_5_2", type: "multiple_choice", question: "Wat vraagt Kirsten aan de buschauffeur?", options: ["Hoe laat het is.", "Waar de toiletten zijn.", "Of zij kan lopen naar de evenementenhal."], correctAnswer: "Of zij kan lopen naar de evenementenhal." },
+          { id: "12_onclass_5_3", type: "fill_in", question: "Waar is de wandelbeurs? -> De wandelbeurs is in ________ drie.", correctAnswer: "hal" }
+        ]
+      }
+    ]
   }
 ];

@@ -354,39 +354,189 @@ export const chapter6Sections = [
       }
     ]
   },
-  {
+{
     id: "On-Class-6",
     chapter: 6,
-    title: "On-Class Extra: In het restaurant",
+    title: "Extra Oefeningen (On-Class)",
     theory: (
       <>
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>🎓 On-Class Grammatica & Vocabulaire Extra</h3>
-          
-          <h4 className="font-bold text-emerald-300 mt-2 border-b border-emerald-500/30 pb-1">Waarmee? (Ne ile?)</h4>
-          <p className="text-sm text-slate-300 mt-2">Araç/gereç sorarken <strong>Waarmee</strong> kullanılır.</p>
-          <ul className="text-sm text-slate-200 list-disc pl-5 mt-1">
-            <li>Waarmee eet je soep? ➔ Met een lepel.</li>
-            <li>Waarmee eet je een salade? ➔ Met een vork.</li>
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #3b82f6', marginBottom: '20px' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#60a5fa' }}>🔄 Repetitie Les 5 (Op de markt)</h3>
+          <p className="text-sm text-slate-300 mb-2">Geçen dersin tekrarı: Pazardaki temel soru ve cevaplar:</p>
+          <ul className="text-sm text-slate-200 list-disc pl-5 space-y-1">
+            <li><strong>Wat koop je op de markt?</strong> ➔ Ik koop twee kilo tomaten en twee kilo sinaasappels op de markt.</li>
+            <li><strong>Hoeveel komkommers wil je?</strong> ➔ Ik wil zes komkommers.</li>
+            <li><strong>Wil je ook een kilo aardappels?</strong> ➔ Nee, ik wil 2 kilo aardappels.</li>
+            <li><strong>Hoeveel is het? / Hoeveel kost het?</strong> (Ne kadar tutuyor / Fiyatı ne kadar?)</li>
           </ul>
+        </div>
 
-          <h4 className="font-bold text-emerald-300 mt-4 border-b border-emerald-500/30 pb-1">Gangen (Yemek Kursları):</h4>
-          <ul className="text-sm text-slate-200 list-disc pl-5 mt-1">
-            <li><strong>het voorgerecht</strong> = starter (başlangıç)</li>
-            <li><strong>het hoofdgerecht</strong> = main course (ana yemek)</li>
-            <li><strong>het nagerecht / het toetje</strong> = dessert (tatlı)</li>
-          </ul>
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>🍽️ In het restaurant (Dialoog, Gangen & Bestek)</h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <h4 className="font-bold text-purple-300 text-sm mb-1">Dialoog Samenvatting (Özet)</h4>
+              <ul className="text-sm text-slate-200 list-disc pl-5 space-y-1">
+                <li><strong>Wie zijn er in het restaurant?</strong> ➔ Hun namen zijn Jasper en Christine. (Onların adları Jasper ve Christine.)</li>
+                <li><strong>Wat drinken ze?</strong> ➔ Jasper drinkt mineraalwater en Christine ook.</li>
+                <li><strong>Wat nemen ze als voorgerecht?</strong> ➔ Ze nemen mosterdsoep en Spaanse salade.</li>
+                <li><strong>Wat neemt Jasper als hoofdgerecht?</strong> ➔ Biefstuk met frietjes.</li>
+                <li className="text-slate-400 italic mt-1">Not: <strong>nemen</strong> = almak / sipariş etmek (get/take).</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="font-bold text-purple-300 text-sm mb-1">Gangen (Yemek Kursları) & Cutlery (Çatal Bıçak)</h4>
+              <ul className="text-sm text-slate-200 list-disc pl-5 space-y-1">
+                <li><strong>voorgerecht:</strong> starter (başlangıç)</li>
+                <li><strong>hoofdgerecht:</strong> main course (ana yemek)</li>
+                <li><strong>het nagerecht / toetje:</strong> dessert (tatlı)</li>
+                <li className="mt-2 border-t border-purple-500/30 pt-2"><strong>lepel:</strong> spoon (kaşık)</li>
+                <li><strong>mes:</strong> knife (bıçak)</li>
+                <li><strong>vork:</strong> fork (çatal)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="bg-purple-900/30 p-3 rounded-lg border border-purple-500/30 mt-4 text-sm text-purple-100">
+            <h4 className="font-bold text-white text-xs uppercase mb-1">Example sentences:</h4>
+            <ul className="list-disc pl-5">
+              <li><strong>Waarmee eet je soep?</strong> (What do you eat soup with? / Çorbayı neyle yersin?)</li>
+              <li><strong>Waarmee eet je een salade?</strong></li>
+              <li><strong>Wat neem je als voorgerecht?</strong></li>
+              <li><strong>Wat wil je als hoofdgerecht?</strong></li>
+            </ul>
+          </div>
+        </div>
+
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>🗣️ Expressing Opinions (Fikir ve Beğeni Belirtmek)</h3>
+          <p className="text-sm text-slate-300 mb-2">Hollandacada bir şeyi beğenip beğenmediğinizi ifade etmek için <strong>"vinden"</strong> (bulmak) veya <strong>"houden van"</strong> (sevmek) kullanılır.</p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <h4 className="font-bold text-emerald-300 text-sm mb-1">Positief (Olumlu)</h4>
+              <ul className="text-sm text-slate-200 list-disc pl-5 space-y-1">
+                <li>Ik vind het <strong>leuk</strong>. (I like it / fun)</li>
+                <li>Ik vind het <strong>mooi</strong>. (pretty/beautiful)</li>
+                <li>Ik vind het <strong>lekker</strong>. (I find it tasty)</li>
+                <li>Ik vind het <strong>heerlijk</strong>. (I find it delicious)</li>
+                <li>Ja, ik <strong>houd van</strong> kip. (Yes, I like chicken)</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-bold text-rose-400 text-sm mb-1">Andere of negatieve antwoorden (Diğer/Olumsuz)</h4>
+              <ul className="text-sm text-slate-200 list-disc pl-5 space-y-1">
+                <li><strong>Het gaat wel.</strong> (So so / İdare eder)</li>
+                <li>Ik vind het <strong>niet zo lekker</strong>. (I don't find it very tasty)</li>
+                <li>Ik vind het <strong>vies</strong>. (I think it is bad/nasty)</li>
+                <li>Ik vind het <strong>stom</strong>. (stupid)</li>
+                <li>Ik vind het <strong>heet</strong>. (hot)</li>
+                <li>Nee, ik <strong>houd niet van</strong> mosselen. (No, I don't like mussels)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="mt-3">
+            <h4 className="font-bold text-emerald-300 text-sm mb-1">Vragen (Sorular):</h4>
+            <ul className="text-sm text-slate-200 list-disc pl-5">
+              <li><strong>Hoe vind je de soep? / Wat vind je van de soep?</strong></li>
+              <li><strong>Vind je de koffie lekker?</strong></li>
+              <li><strong>Houd je van kip?</strong> (Do you like chicken?)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f59e0b' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#fbbf24' }}>🔑 Modal Verbs & Infinitive (Modale Werkwoorden)</h3>
+          <p className="text-sm text-slate-300 mb-2">Modal fiiller, cümlenin ana fiiline zorunluluk, izin, yetenek veya istek gibi anlamlar katar. Modal fiil çekimlenip 2. sıraya gelirken, asıl fiil cümlenin <strong>en sonuna mastar (infinitief)</strong> halinde gider.</p>
+          
+          <table className="w-full text-sm text-left text-slate-300 border-collapse mb-4 mt-2">
+            <thead>
+              <tr className="border-b border-slate-700 text-slate-200">
+                <th className="py-2 w-1/3">Modaal Werkwoord</th>
+                <th className="py-2">Betekenis (Meaning)</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-700/50">
+              <tr>
+                <td className="py-2 font-semibold text-amber-300">mogen</td>
+                <td className="py-2">to be allowed to / can have (İzinli olmak, yapabilmek)</td>
+              </tr>
+              <tr>
+                <td className="py-2 font-semibold text-amber-300">willen</td>
+                <td className="py-2">to want (İstemek)</td>
+              </tr>
+              <tr>
+                <td className="py-2 font-semibold text-amber-300">moeten</td>
+                <td className="py-2">must (Zorunda olmak)</td>
+              </tr>
+              <tr>
+                <td className="py-2 font-semibold text-amber-300">kunnen</td>
+                <td className="py-2">can / to be able to (Yapabilmek, yetenek)</td>
+              </tr>
+              <tr>
+                <td className="py-2 font-semibold text-amber-300">zullen</td>
+                <td className="py-2">will / shall (Gelecek zaman / Teklif)</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div className="bg-amber-900/30 p-3 rounded-lg border border-amber-500/30">
+            <h4 className="font-bold text-white text-xs uppercase mb-1">Voorbeelden (Örnekler)</h4>
+            <ul className="text-sm text-amber-100 list-disc pl-5 space-y-1">
+              <li>Ik <strong>wil</strong> soep <strong>bestellen</strong>.</li>
+              <li>Wij <strong>mogen</strong> bij het raam <strong>zitten</strong>.</li>
+              <li>De serveerster <strong>moet</strong> een lepel <strong>halen</strong>.</li>
+              <li>Jullie <strong>kunnen</strong> daar gaan <strong>zitten</strong>.</li>
+              <li><strong>Zullen</strong> we later een nagerecht <strong>kiezen</strong>?</li>
+            </ul>
+          </div>
         </div>
       </>
     ),
     exerciseGroups: [
       {
-        instruction: "On-Class Oefeningen: Vragen en Bestek",
+        instruction: "On-Class Oefening 1: Gangen en Bestek (Yemekler ve Çatal Bıçak)",
+        isExtra: false,
+        questions: [
+          { id: "6_onclass_1_1", type: "fill_in", question: "Starter = ________", correctAnswer: "voorgerecht" },
+          { id: "6_onclass_1_2", type: "fill_in", question: "Dessert = het ________ (of toetje)", correctAnswer: "nagerecht" },
+          { id: "6_onclass_1_3", type: "fill_in", question: "Main course = ________", correctAnswer: "hoofdgerecht" },
+          { id: "6_onclass_1_4", type: "multiple_choice", question: "Waarmee eet je soep? (What do you eat soup with?)", options: ["met een vork", "met een mes", "met een lepel"], correctAnswer: "met een lepel" },
+          { id: "6_onclass_1_5", type: "fill_in", question: "What will you get for the main course? ➔ Wat ________ je als hoofdgerecht?", correctAnswer: "neem" }
+        ]
+      },
+      {
+        instruction: "On-Class Oefening 2: Meningen Uiten (Expressing Opinions)",
+        isExtra: false,
+        questions: [
+          { id: "6_onclass_2_1", type: "multiple_choice", question: "Vertaal: 'I think it is delicious.'", options: ["Ik vind het vies.", "Ik vind het heerlijk.", "Het gaat wel."], correctAnswer: "Ik vind het heerlijk." },
+          { id: "6_onclass_2_2", type: "multiple_choice", question: "Vertaal: 'I don't find it very tasty.'", options: ["Ik vind het niet zo lekker.", "Ik vind het stom.", "Ik vind het heet."], correctAnswer: "Ik vind het niet zo lekker." },
+          { id: "6_onclass_2_3", type: "fill_in", question: "Do you like chicken? ➔ ________ je van kip?", correctAnswer: "Houd" },
+          { id: "6_onclass_2_4", type: "multiple_choice", question: "Als het eten echt heel slecht is (bad), dan zeg je:", options: ["Het gaat wel.", "Ik vind het vies.", "Ik vind het mooi."], correctAnswer: "Ik vind het vies." }
+        ]
+      },
+      {
+        instruction: "On-Class Oefening 3: Modale Werkwoorden (Modal Verbs)",
         isExtra: true,
         questions: [
-          { id: "6_onclass_1", type: "fill_in", question: "Vertaal: 'Çorbayı ne ile yersin?' -> ________ eet je soep?", correctAnswer: "Waarmee" },
-          { id: "6_onclass_2", type: "multiple_choice", question: "Welk woord hoort NIET bij de gangen (courses)?", options: ["het nagerecht", "het voorgerecht", "het bestek", "het hoofdgerecht"], correctAnswer: "het bestek" },
-          { id: "6_onclass_3", type: "multiple_choice", question: "Waarmee snijd je vlees (et kesmek)?", options: ["Met een lepel", "Met een mes", "Met een vork"], correctAnswer: "Met een mes" }
+          { id: "6_onclass_3_1", type: "fill_in", question: "Ik ________ soep bestellen. (want to)", correctAnswer: "wil" },
+          { id: "6_onclass_3_2", type: "fill_in", question: "Wij ________ bij het raam zitten. (are allowed to)", correctAnswer: "mogen" },
+          { id: "6_onclass_3_3", type: "fill_in", question: "De serveerster ________ een lepel halen. (must)", correctAnswer: "moet" },
+          { id: "6_onclass_3_4", type: "fill_in", question: "Jullie ________ daar gaan zitten. (can)", correctAnswer: "kunnen" },
+          { id: "6_onclass_3_5", type: "fill_in", question: "________ we later een nagerecht kiezen? (shall)", correctAnswer: "Zullen" },
+          { id: "6_onclass_3_6", type: "multiple_choice", question: "Welke zin is grammaticaal correct? (Let op de positie van het werkwoord!)", options: ["Ik wil bestellen soep.", "Ik wil soep bestellen.", "Ik soep wil bestellen."], correctAnswer: "Ik wil soep bestellen." }
+        ]
+      },
+      {
+        instruction: "On-Class Oefening 4: Herhaling Les 5 (Markt)",
+        isExtra: true,
+        questions: [
+          { id: "6_onclass_4_1", type: "fill_in", question: "Vertaal: 'How much does it cost?' ➔ ________ kost het?", correctAnswer: "Hoeveel" },
+          { id: "6_onclass_4_2", type: "fill_in", question: "Ik wil twee ________ tomaten. (kilos)", correctAnswer: "kilo" },
+          { id: "6_onclass_4_3", type: "multiple_choice", question: "Wat antwoord je op: 'Wil je ook een kilo aardappels?'", options: ["Nee, ik wil 2 kilo aardappels.", "Ik vind het lekker.", "Met een mes."], correctAnswer: "Nee, ik wil 2 kilo aardappels." }
         ]
       }
     ]

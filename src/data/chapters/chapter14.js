@@ -399,5 +399,179 @@ export const chapter14Sections = [
         ]
       }
     ]
+  },
+  {
+    id: "On-Class-14",
+    chapter: 14,
+    title: "14.8 Extra Oefeningen (On-Class)",
+    theory: (
+      <>
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #3b82f6', marginBottom: '20px' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#60a5fa' }}>🗣️ Over koetjes en kalfjes praten (Small Talk)</h3>
+          <p className="text-sm text-slate-300 mb-2">Hollandacada havadan sudan konuşmak için sık kullanılan sorular ve cevaplar:</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <h4 className="font-bold text-slate-200 text-xs uppercase mb-1">Vragen (Sorular)</h4>
+              <ul className="text-sm text-slate-300 list-disc pl-5 space-y-1">
+                <li><strong>Hoe gaat het met je?</strong> (How are you?)</li>
+                <li><strong>Wat heb je gisteren gedaan?</strong> (What did you do yesterday?)</li>
+                <li><strong>Heb je deze week gesport?</strong> (Have you exercised this week?)</li>
+                <li><strong>Wat vind je van het weer vandaag?</strong> (What do you think of the weather today?)</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-bold text-slate-200 text-xs uppercase mb-1">Responses (Cevaplar)</h4>
+              <ul className="text-sm text-slate-300 list-disc pl-5 space-y-1">
+                <li><strong>Goed, dank je. En met jou?</strong> (Good, thank you. And you?)</li>
+                <li><strong>O ja? Welke sport heb je gedaan?</strong> (Oh yes? Which sport did you do?)</li>
+                <li><strong>Zeg dat wel!</strong> (You can say that again! / For sure! - <em>Kesinlikle katılıyorum</em>)</li>
+              </ul>
+            </div>
+          </div>
+          <div className="mt-4 p-3 bg-blue-900/30 rounded-lg border border-blue-500/30 text-sm text-blue-100">
+            <strong>Extra:</strong> Evcil hayvan sevmek/okşamak (to pet) = <strong>aaien</strong>. Past tense: <strong>geaaid</strong>.<br/>
+            <em>Ik heb mijn kat geaaid.</em>
+          </div>
+        </div>
+
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>❓ Indirecte Vraag (Opdracht 4)</h3>
+          <p className="text-sm text-slate-300 mb-3">Daha kibar sorular sormak için dolaylı soru yapıları kullanılır. Asıl fiil cümlenin <strong>en sonuna</strong> gider!</p>
+          
+          <table className="w-full text-sm text-left text-slate-300 border-collapse">
+            <thead>
+              <tr className="border-b border-slate-700 text-slate-200">
+                <th className="py-2">Soort informatie</th>
+                <th className="py-2">Begin (Inleiding)</th>
+                <th className="py-2">Indirecte vraag (Fiil sonda!)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-slate-700/50">
+                <td className="py-3 font-semibold text-purple-300">Vraagwoord (Soru Kelimesi)</td>
+                <td className="py-3">Kunt u me zeggen ... <br/><span className="text-xs text-slate-500">(Could you tell me...)</span></td>
+                <td className="py-3"><strong>waar</strong> de balie <strong>is</strong>? <br/><span className="text-xs text-slate-500">(Where the desk is?)</span></td>
+              </tr>
+              <tr>
+                <td className="py-3 font-semibold text-purple-300">Ja/nee-informatie (Evet/Hayır)</td>
+                <td className="py-3">Weet u misschien ... <br/><span className="text-xs text-slate-500">(Do you maybe know...)</span></td>
+                <td className="py-3"><strong>of</strong> de automaat op muntgeld <strong>werkt</strong>? <br/><span className="text-xs text-slate-500">(whether/if the machine takes coins?)</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>🤔 Zullen + wel (Waarschijnlijkheid / Probability)</h3>
+          <p className="text-sm text-slate-300 mb-2"><strong>Zullen</strong> fiili <strong>wel</strong> kelimesi ile kullanıldığında <em>'muhtemelen (probably)'</em> anlamı katar. Bu durumda ana fiil her zaman mastar (infinitief) olarak cümlenin sonuna yerleştirilir.</p>
+          <ul className="text-sm text-slate-200 list-disc pl-5 mb-4 space-y-1">
+            <li>Je <strong>zult</strong> het morgen <strong>wel</strong> voelen.</li>
+            <li>Je <strong>zult</strong> morgen <strong>wel</strong> spierpijn <strong>hebben</strong>. (You will probably have sore muscles tomorrow.)</li>
+            <li>Het <strong>zal wel lukken</strong>.</li>
+            <li>Ze <strong>zullen wel komen</strong>.</li>
+          </ul>
+
+          <h4 className="font-bold text-emerald-400 text-sm mb-1">Opdracht 7 (The verb is changed into an infinitive and placed at the end):</h4>
+          <ul className="text-sm text-slate-300 list-decimal pl-5 space-y-1">
+            <li>Een jaarabonnement is goedkoper. ➔ Een jaarabonnement <strong>zal wel</strong> goedkoper <strong>zijn</strong>.</li>
+            <li>Je conditie <strong>zal wel</strong> snel <strong>verbeteren</strong>.</li>
+            <li>Ze <strong>zullen wel</strong> ook groepslessen <strong>hebben</strong>.</li>
+            <li>Dat <strong>zal</strong> ze <strong>wel</strong> een goed idee <strong>vinden</strong>.</li>
+          </ul>
+        </div>
+
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f59e0b', marginBottom: '20px' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#fbbf24' }}>⏳ Future Tense in Dutch</h3>
+          <table className="w-full text-sm text-left text-slate-300 border-collapse mt-2">
+            <thead>
+              <tr className="border-b border-slate-700 text-slate-200">
+                <th className="py-2 w-1/4">Vorm (Form)</th>
+                <th className="py-2 w-1/3">Gebruik (Kullanım)</th>
+                <th className="py-2">Voorbeeld (Örnek) & Pattern</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-700/50">
+              <tr>
+                <td className="py-3 font-semibold text-amber-300">1. Presens + tijd</td>
+                <td className="py-3">Gewone of vaste toekomstige activiteit (Normal, sabit plan)</td>
+                <td className="py-3">Ik <strong>werk</strong> morgen van tien tot twee.<br/><span className="text-xs text-slate-500">Pattern: subject + verb + rest</span></td>
+              </tr>
+              <tr>
+                <td className="py-3 font-semibold text-amber-300">2. Gaan + Infinitief</td>
+                <td className="py-3">Plan of voornemen (Niyet, "going to")</td>
+                <td className="py-3">Ik <strong>ga</strong> volgende week Nederlands <strong>studeren</strong>.<br/>Ik <strong>ga</strong> cola <strong>drinken</strong>.<br/><span className="text-xs text-slate-500">Pattern: subject + conjugation of 'gaan' + rest + infinitive</span></td>
+              </tr>
+              <tr>
+                <td className="py-3 font-semibold text-amber-300">3. Zullen + Infinitief</td>
+                <td className="py-3">Minder persoonlijke voorspelling of aangekondigde gebeurtenis / Beloften (Sözler)</td>
+                <td className="py-3">De les <strong>zal</strong> om acht uur <strong>beginnen</strong>.<br/>Ik <strong>zal</strong> je <strong>helpen</strong>.<br/><span className="text-xs text-slate-500">Pattern: Subject + conjugation 'zullen' + rest + infinitive</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #6366f1' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#93c5fd' }}>📝 Dialogue Lesson 14 (Q&A)</h3>
+          <ul className="text-sm text-slate-200 space-y-2 list-disc pl-5">
+            <li><strong>Waar is Paul?</strong> ➔ Hij is in de gym/sportschool.</li>
+            <li><strong>Wil Paul lid worden of is hij al lid?</strong> ➔ Paul wil lid van de sportschool worden.</li>
+            <li><strong>Waar kan hij zich inschrijven?</strong> ➔ Hij kan zich bij de balie inschrijven. (Where can he register?)</li>
+            <li><strong>Wat is het verschil tussen een maandabonnement en een jaarabonnement?</strong> ➔ Het verschil tussen een maandabonnement en een jaarabonnement is 10 procent.</li>
+            <li><strong>Welke aanbieding heeft de sportschool?</strong> ➔ De sportschool geeft 10 procent korting en een gratis t-shirt voor elk abonnement.</li>
+            <li><strong>Wat wil Paul in de sportschool doen?</strong> ➔ Hij wil zijn conditie verbeteren, zijn spieren versterken en ook gewicht verliezen.</li>
+          </ul>
+        </div>
+      </>
+    ),
+    exerciseGroups: [
+      {
+        instruction: "On-Class Oefening 1: Zullen als belofte (Söz/Niyet olarak Zullen)",
+        isExtra: false,
+        questions: [
+          { id: "14_onclass_1_1", type: "fill_in", question: "Ik ________ het raam ________. (Pencereyi kapatacağım - dichtdoen)", correctAnswer: "zal, dichtdoen" },
+          { id: "14_onclass_1_2", type: "fill_in", question: "Wij ________ naar de bioscoop ________. (Sinemaya gideceğiz - gaan)", correctAnswer: "zullen, gaan" },
+          { id: "14_onclass_1_3", type: "fill_in", question: "Ik ________ de link in de chat ________. (Linki chate koyacağım - zetten)", correctAnswer: "zal, zetten" },
+          { id: "14_onclass_1_4", type: "multiple_choice", question: "Vertaal: 'We will get more coffee.'", options: ["We zullen nieuwe koffie halen.", "We halen zullen nieuwe koffie.", "Zullen we nieuwe koffie halen."], correctAnswer: "We zullen nieuwe koffie halen." }
+        ]
+      },
+      {
+        instruction: "On-Class Oefening 2: Indirecte Vragen",
+        isExtra: false,
+        questions: [
+          { id: "14_onclass_2_1", type: "fill_in", question: "Is hier een wc in de buurt? -> Weet u ________ hier een wc in de buurt ________?", correctAnswer: "of, is" },
+          { id: "14_onclass_2_2", type: "fill_in", question: "Waar is de balie? -> Kunt u me zeggen ________ de balie ________?", correctAnswer: "waar, is" },
+          { id: "14_onclass_2_3", type: "multiple_choice", question: "Werkt de automaat op muntgeld? (Indirect: Do you maybe know whether the machine takes coins?)", options: ["Weet u misschien of werkt de automaat op muntgeld?", "Weet u misschien of de automaat op muntgeld werkt?", "Kunt u me zeggen of de automaat op muntgeld werkt?"], correctAnswer: "Weet u misschien of de automaat op muntgeld werkt?" }
+        ]
+      },
+      {
+        instruction: "On-Class Oefening 3: Zullen + wel (Probability)",
+        isExtra: false,
+        questions: [
+          { id: "14_onclass_3_1", type: "multiple_choice", question: "Een jaarabonnement is goedkoper. (Make it probable)", options: ["Een jaarabonnement zal wel goedkoper zijn.", "Een jaarabonnement zal wel is goedkoper.", "Een jaarabonnement zullen wel goedkoper zijn."], correctAnswer: "Een jaarabonnement zal wel goedkoper zijn." },
+          { id: "14_onclass_3_2", type: "fill_in", question: "Je conditie verbetert snel. -> Je conditie ________ wel snel ________.", correctAnswer: "zal, verbeteren" },
+          { id: "14_onclass_3_3", type: "fill_in", question: "Ze vinden dat een goed idee. -> Dat ________ ze wel een goed idee ________.", correctAnswer: "zal, vinden" },
+          { id: "14_onclass_3_4", type: "multiple_choice", question: "Vertaal: 'You will probably have sore muscles tomorrow.'", options: ["Je zult morgen wel spierpijn hebben.", "Je zal wel hebben morgen spierpijn.", "Je zult morgen spierpijn hebben wel."], correctAnswer: "Je zult morgen wel spierpijn hebben." }
+        ]
+      },
+      {
+        instruction: "On-Class Oefening 4: Future Tense & Small Talk",
+        isExtra: true,
+        questions: [
+          { id: "14_onclass_4_1", type: "multiple_choice", question: "Welke vorm gebruik je voor een 'plan of voornemen' (plan/intention)?", options: ["Presens + tijd (Ik werk morgen)", "Gaan + Infinitief (Ik ga lasagne eten)", "Zullen + Infinitief (Ik zal je helpen)"], correctAnswer: "Gaan + Infinitief (Ik ga lasagne eten)" },
+          { id: "14_onclass_4_2", type: "fill_in", question: "Vertaal: 'I have pet my cat.' -> Ik heb mijn kat ________.", correctAnswer: "geaaid" },
+          { id: "14_onclass_4_3", type: "multiple_choice", question: "Iemand zegt: 'Het is koud vandaag, hè?' Jij bent het er helemaal mee eens. Wat zeg je?", options: ["Goed, dank je.", "Zeg dat wel!", "Wat heb je gisteren gedaan?"], correctAnswer: "Zeg dat wel!" }
+        ]
+      },
+      {
+        instruction: "On-Class Oefening 5: Dialogue Q&A",
+        isExtra: true,
+        questions: [
+          { id: "14_onclass_5_1", type: "multiple_choice", question: "Wat is het verschil tussen de abonnementen in de sportschool?", options: ["Er is geen verschil.", "Het verschil is 10 procent.", "Een maandabonnement is gratis."], correctAnswer: "Het verschil is 10 procent." },
+          { id: "14_onclass_5_2", type: "multiple_choice", question: "Waar kan Paul zich inschrijven?", options: ["Bij de automaat", "Bij de balie", "In de groepsles"], correctAnswer: "Bij de balie" },
+          { id: "14_onclass_5_3", type: "fill_in", question: "Paul wil zijn spieren ________ (strengthen) en gewicht ________ (lose).", correctAnswer: "versterken, verliezen" }
+        ]
+      }
+    ]
   }
+  
 ];

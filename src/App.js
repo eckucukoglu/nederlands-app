@@ -68,10 +68,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
   const [isChapterExpanded, setIsChapterExpanded] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); 
 
-  // YENİ: Akıllı Sıkışma (Overflow) Ölçer State'i
-  const [isSectionBarOverflowing, setIsSectionBarOverflowing] = useState(() => {
-    return typeof window !== 'undefined' && window.innerWidth < 768;
-  });
+  const [isSectionBarOverflowing, setIsSectionBarOverflowing] = useState(false);
 
   const [globalWordStatuses, setGlobalWordStatuses] = useState(() => {
     const saved = localStorage.getItem(`dialogueWordStatuses_${currentChapter}`);
@@ -81,19 +78,18 @@ function MainContent({ user, setIsAuthModalOpen }) {
   const searchRef = useRef(null);
   const chapterMenuRef = useRef(null);
   const mobileMenuRef = useRef(null);
-  const sectionMeasureRef = useRef(null); // YENİ: Bölümlerin sığıp sığmadığını ölçecek olan ref
+  const sectionMeasureRef = useRef(null); 
 
-  // Akıllı Taşma/Sıkışma Dinleyicisi
   useEffect(() => {
     const checkOverflow = () => {
       if (sectionMeasureRef.current) {
         const containerWidth = sectionMeasureRef.current.clientWidth;
         const contentWidth = sectionMeasureRef.current.scrollWidth;
-        setIsSectionBarOverflowing(contentWidth > containerWidth);
+        setIsSectionBarOverflowing(contentWidth > containerWidth + 1);
       }
     };
     checkOverflow();
-    const timeoutId = setTimeout(checkOverflow, 150); 
+    const timeoutId = setTimeout(checkOverflow, 50); 
     window.addEventListener('resize', checkOverflow);
     return () => {
       clearTimeout(timeoutId);
@@ -366,21 +362,21 @@ function MainContent({ user, setIsAuthModalOpen }) {
   );
 
   return (
-    <div className="min-h-screen flex flex-col bg-slate-900 transition-colors duration-300">
+    <div className="min-h-screen flex flex-col bg-slate-900 transition-colors duration-300 w-full max-w-full">
       
-      {/* HEADER */}
-      <header className="bg-slate-950 text-white shadow-md sticky top-0 z-50 border-b border-slate-800 flex-none">
+      {/* 1. HEADER (ÜST MENÜ) - CSS Kilidi (overflow-x-hidden) düzeltildi! */}
+      <header className="bg-slate-950 text-white shadow-md sticky top-0 z-50 border-b border-slate-800 flex-none w-full">
         <div className="max-w-7xl mx-auto px-3 sm:px-4 py-3 flex flex-nowrap justify-between items-center gap-2">
           
-          <div className="flex items-center space-x-2 flex-shrink-0">
-            <div className="bg-brand-900/50 p-2 rounded-xl backdrop-blur">
+          <div className="flex items-center space-x-2 flex-shrink min-w-0">
+            <div className="bg-brand-900/50 p-2 rounded-xl backdrop-blur flex-shrink-0">
               <i className="fa-solid fa-book-medical text-xl text-brand-400"></i>
             </div>
-            <div className="hidden sm:block">
-              <h1 className="font-bold text-lg leading-tight text-slate-100">Nederlands in Gang</h1>
-              <p className="text-xs text-brand-300">Interactief Oefenportaal (A1 → A2)</p>
+            <div className="hidden sm:block truncate">
+              <h1 className="font-bold text-lg leading-tight text-slate-100 truncate">Nederlands in Gang</h1>
+              <p className="text-xs text-brand-300 truncate">Interactief Oefenportaal (A1 → A2)</p>
             </div>
-            <h1 className="font-bold text-lg leading-tight text-slate-100 sm:hidden">NiG</h1>
+            <h1 className="font-bold text-lg leading-tight text-slate-100 sm:hidden flex-shrink-0">NiG</h1>
           </div>
 
           <div className="flex items-center space-x-1 sm:space-x-2 flex-shrink-0 overflow-visible">
@@ -402,7 +398,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
               {user && <div className="absolute top-0 right-0 w-2.5 h-2.5 bg-emerald-500 border-2 border-slate-950 rounded-full"></div>}
             </button>
 
-            {/* ARAMA (Masaüstü) - ref eklendi */}
+            {/* ARAMA (Masaüstü) */}
             <div className="relative flex items-center" ref={searchRef}>
               <div className={`hidden sm:flex transition-all duration-300 ease-in-out overflow-hidden items-center ${isSearchExpanded ? 'w-56 opacity-100 mr-1' : 'w-0 opacity-0'}`}>
                 <form onSubmit={handleGlobalSearch} className="w-full relative">
@@ -487,7 +483,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
         </div>
       </header>
 
-      {/* MOBİL MERKEZ ARAMA (Modal) */}
+      {/* 2. MOBİL MERKEZ ARAMA (Modal) */}
       {isMobileSearchOpen && (
         <div className="sm:hidden fixed inset-0 z-[100] bg-slate-950/90 backdrop-blur-sm flex items-center justify-center p-4" onClick={() => setIsMobileSearchOpen(false)}>
           <div className="w-full max-w-sm bg-slate-900 border border-slate-700 rounded-3xl p-5 shadow-2xl flex flex-col max-h-[85vh]" onClick={e => e.stopPropagation()}>
@@ -528,15 +524,18 @@ function MainContent({ user, setIsAuthModalOpen }) {
         </div>
       )}
 
-      {/* ALT MENÜ - SECTION BAR (Desktop - Dinamik Taşma Ölçümü) */}
-      {/* Container her zaman DOM'da kalıp sığıp sığmadığını test eder, sığmazsa gizlenir. */}
+      {/* 3. SECTION BAR (AKILLI KİLİT MEKANİZMASI) */}
       <div 
-        className={`bg-slate-900/40 border-slate-800 w-full shadow-inner z-40 flex-none transition-all duration-300 ${
-          isSectionBarOverflowing ? 'absolute top-0 left-0 h-0 overflow-hidden invisible opacity-0 pointer-events-none' : 'border-b relative opacity-100'
+        className={`bg-slate-900/40 border-slate-800 w-full max-w-full overflow-hidden shadow-inner z-40 flex-none transition-all duration-300 ${
+          isSectionBarOverflowing ? 'absolute top-0 left-0 h-0 invisible opacity-0 pointer-events-none' : 'border-b relative opacity-100'
         }`}
       >
-        <div ref={sectionMeasureRef} className="max-w-7xl mx-auto px-2 py-2.5 flex justify-between items-center w-full overflow-hidden whitespace-nowrap gap-2">
-          
+        <style>{`.hide-scroll::-webkit-scrollbar { display: none; }`}</style>
+        <div 
+          ref={sectionMeasureRef} 
+          className="max-w-7xl mx-auto px-2 py-2.5 flex justify-between items-center w-full max-w-full overflow-x-auto hide-scroll whitespace-nowrap gap-2" 
+          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        >
           {/* SOL (Geri) BUTONU */}
           <div className="flex-1 flex justify-start min-w-0 pr-1 sm:pr-2">
             {activeTab !== 'flashcards' && prevSection && (
@@ -563,7 +562,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
             )}
           </div>
 
-          {/* ORTA (Kapsüller) - İyice sıkışana kadar flex-nowrap ile yan yana kalır */}
+          {/* ORTA (Kapsüller) - Taşına kadar yan yana */}
           <div className="flex items-center justify-center flex-nowrap gap-1 px-1 flex-shrink-0">
             {currentSections.map(sec => {
               const isActive = activeTab === sec.id;
@@ -618,8 +617,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
         </div>
       </div>
 
-      {/* MOBİL - ZARİF İLERLEME ÇUBUĞU (Mini-Stepper) VE AÇILIR MENÜ */}
-      {/* Sadece Desktop versiyon sığmadığı anlarda (isSectionBarOverflowing) devreye girer */}
+      {/* 4. MOBİL ZARİF İLERLEME ÇUBUĞU (Yalnızca masaüstü menü sıkışınca belirir) */}
       {isSectionBarOverflowing && (
         <div className="w-full relative px-4 py-3 bg-slate-900/60 border-b border-slate-800 shadow-inner z-40 flex-none" ref={mobileMenuRef}>
           <button
@@ -687,6 +685,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
         </div>
       )}
 
+      {/* 5. ANA İÇERİK */}
       <main className="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 text-slate-200 flex flex-col relative overflow-hidden">
         
         {(activeTab.includes('.1') && !activeTab.includes('On-Class')) && (

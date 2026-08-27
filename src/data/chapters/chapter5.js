@@ -423,37 +423,202 @@ export const chapter5Sections = [
   {
     id: "On-Class-5",
     chapter: 5,
-    title: "On-Class Extra: Adjectief & Pluralis Rules",
+    title: "5.7 Extra Oefeningen (On-Class)",
     theory: (
       <>
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>🎓 On-Class Grammatica Extra</h3>
-          
-          <h4 className="font-bold text-emerald-300 mt-2 border-b border-emerald-500/30 pb-1">Sıfat Zıt Anlamlıları (Adjectieven):</h4>
-          <div className="grid grid-cols-2 gap-2 text-sm text-slate-200 mt-2">
-            <div>lekker (lezzetli) / vies (iğrenç)</div>
-            <div>leuk (güzel) / stom (aptalca)</div>
-            <div>groot (büyük) / klein (küçük)</div>
-            <div>lang (uzun) / kort (kısa)</div>
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #3b82f6', marginBottom: '20px' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#60a5fa' }}>🔄 Repetitie Les 4 (Afspreken & Zullen)</h3>
+          <p className="text-sm text-slate-300 mb-2">Buluşma ayarlamak ve teklifte bulunmak için kullanılan ifadeler:</p>
+          <ul className="text-sm text-slate-200 list-disc pl-5 space-y-1">
+            <li><strong>Zullen we naar Parijs gaan?</strong> (Shall we go to Paris?)</li>
+            <li><strong>Zullen we na de les koffie drinken?</strong> ➔ Ja, leuk!</li>
+            <li><strong>Kun je vanavond?</strong> ➔ Nee, dan kan ik niet. (Can you tonight? No, I can't then.)</li>
+            <li><strong>Hoe laat zullen we afspreken?</strong> ➔ Zullen we om kwart over vijf afspreken? (What time shall we meet? Shall we meet at a quarter past five?)</li>
+            <li><strong>Waar zullen we afspreken?</strong> ➔ Zullen we in het café afspreken?</li>
+          </ul>
+        </div>
+
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>🥦 Kernwoorden: Groente en Fruit</h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-y-2 gap-x-4 text-sm text-slate-200 bg-purple-900/20 p-4 rounded-xl border border-purple-500/30">
+            <div><strong className="text-purple-300">de aardappel:</strong> potato</div>
+            <div><strong className="text-purple-300">de tomaat:</strong> tomato</div>
+            <div><strong className="text-purple-300">de komkommer:</strong> cucumber</div>
+            <div><strong className="text-purple-300">de paprika:</strong> pepper</div>
+            <div><strong className="text-purple-300">de courgette:</strong> zucchini</div>
+            <div><strong className="text-purple-300">de bloemkool:</strong> cauliflower</div>
+            <div><strong className="text-purple-300">de champignon:</strong> mushroom</div>
+            <div><strong className="text-purple-300">de ui:</strong> onion</div>
+            <div><strong className="text-purple-300">de wortel:</strong> carrot</div>
+            <div><strong className="text-purple-300">de appel:</strong> apple</div>
+            <div><strong className="text-purple-300">de banaan:</strong> banana</div>
+            <div><strong className="text-purple-300">de sinaasappel:</strong> orange</div>
+            <div><strong className="text-purple-300">de aardbei:</strong> strawberry</div>
+            <div><strong className="text-purple-300">de druif:</strong> grape</div>
+            <div className="col-span-2 mt-2 pt-2 border-t border-purple-500/30">
+              <strong className="text-purple-300">een krop sla:</strong> a head of lettuce (bir marul)
+            </div>
           </div>
+        </div>
+
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>📦 Meervoud (Plural in Dutch)</h3>
+          <p className="text-sm text-slate-300 mb-2">Hollandacada çoğul yapmak için genellikle ismin sonuna <strong>-s</strong> veya <strong>-en</strong> ekleriz.</p>
           
-          <h4 className="font-bold text-emerald-300 mt-4 border-b border-emerald-500/30 pb-1">Neden "de lekkere maaltijd" ama "het eten is lekker"?</h4>
-          <p className="text-sm text-slate-300 mt-2">Eğer sıfat isimden <strong>önce</strong> geliyorsa (ve kurallara uyuyorsa) -e alır. Ancak eğer sıfat isimden <strong>sonra</strong> geliyorsa (arada 'is' fiili varsa) <strong>ASLA '-e' almaz!</strong></p>
-          <ul className="text-sm text-slate-200 list-disc pl-5">
-            <li>De grote man. (Büyük adam).</li>
-            <li>De man is groot. (De man is grote DENMEZ).</li>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <h4 className="font-bold text-emerald-300 text-sm mb-1">Ne zaman sadece "-s" eklenir? (No Apostrophe)</h4>
+              <ul className="text-sm text-slate-200 list-disc pl-5 space-y-1">
+                <li>Vurgusuz son hecesi <strong>-el, -em, -en, -er</strong> ile bitenler:<br/><em>tafel ➔ tafels, bezem ➔ bezems, jongen ➔ jongens, kamer ➔ kamers</em></li>
+                <li>Tüm küçültme (diminutive) kelimeleri <strong>(-je)</strong>:<br/><em>meisje ➔ meisjes</em></li>
+                <li>Modern yabancı kökenli kelimeler:<br/><em>computer ➔ computers, café ➔ cafés</em></li>
+              </ul>
+            </div>
+            <div className="bg-emerald-900/30 p-3 rounded-lg border border-emerald-500/30">
+              <h4 className="font-bold text-emerald-300 text-sm mb-1">Uitzonderingen (İstisnalar)</h4>
+              <p className="text-sm text-emerald-100 mb-1">Bazı kelimeler sayılardan sonra <strong>tekil</strong> kalır!</p>
+              <ul className="text-sm text-white list-disc pl-5 space-y-1">
+                <li>dertig <strong>cent</strong></li>
+                <li>acht <strong>euro</strong></li>
+                <li>twee <strong>kilo</strong> aardappels</li>
+                <li>drie <strong>uur</strong></li>
+                <li>twintig <strong>jaar</strong></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f59e0b', marginBottom: '20px' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#fbbf24' }}>🎨 Het Adjectief (Sıfatların Çekimi: +e kuralı)</h3>
+          <p className="text-sm text-slate-300 mb-2">Sıfat bir ismi tanımlar (groot, klein, lekker, stom vb.). Sıfat isimden <strong>önce</strong> geldiğinde genellikle sonuna <strong>-e</strong> eklenir. Ancak önemli bir istisna vardır!</p>
+          
+          <ul className="text-sm text-slate-200 list-disc pl-5 mb-3 space-y-1">
+            <li><strong>Kural 1:</strong> Sıfat isimden <em>sonra</em> (arada 'is' gibi bir fiil varsa) gelirse '-e' EKLENMEZ. <br/>➔ <em>Het eten is lekker.</em></li>
+            <li><strong>Kural 2:</strong> Tüm <strong>'de'</strong> kelimeleri için sıfata her zaman '-e' EKLENİR.<br/>➔ <em>de grote komkommer, een grote komkommer</em></li>
+            <li><strong>Kural 3 (İSTİSNA!):</strong> <strong>'het'</strong> kelimelerinde, eğer kelimenin önünde <strong>'een'</strong> varsa veya <strong>hiçbir artikel yoksa</strong> sıfata '-e' EKLENMEZ!</li>
+          </ul>
+
+          <table className="w-full text-sm text-left text-slate-300 border-collapse mt-2">
+            <thead>
+              <tr className="border-b border-slate-700 text-slate-200">
+                <th className="py-2">Artikel / Situatie</th>
+                <th className="py-2">de-words (de komkommer)</th>
+                <th className="py-2 text-amber-300">het-words (het café)</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-700/50">
+              <tr>
+                <td className="py-2 font-semibold">de of het</td>
+                <td className="py-2">de grot<strong>e</strong> komkommer</td>
+                <td className="py-2">het grot<strong>e</strong> café</td>
+              </tr>
+              <tr>
+                <td className="py-2 font-semibold text-rose-300">'een' of geen artikel</td>
+                <td className="py-2">een grot<strong>e</strong> komkommer</td>
+                <td className="py-2 text-rose-300 font-bold">een groot café<br/>(groot café)</td>
+              </tr>
+              <tr>
+                <td className="py-2 font-semibold">meervoud (plural)</td>
+                <td className="py-2">de grot<strong>e</strong> komkommers</td>
+                <td className="py-2">de grot<strong>e</strong> cafés</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #ef4444', marginBottom: '20px' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#f87171' }}>⚙️ Werkwoorden (Fiiller) & Inversie</h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <h4 className="font-bold text-rose-300 text-sm mb-2">Conjugation (werken vs gebruiken)</h4>
+              <ul className="text-sm text-slate-200 space-y-1 font-mono bg-rose-900/20 p-3 rounded-lg">
+                <li>ik werk / gebruik</li>
+                <li>jij werkt / gebruikt</li>
+                <li>hij/zij/het werkt / gebruikt</li>
+                <li>wij werken / gebruiken</li>
+                <li>jullie werken / gebruiken</li>
+                <li>zij werken / gebruiken</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-bold text-rose-300 text-sm mb-2">Inversie (Devrik Cümle)</h4>
+              <p className="text-sm text-slate-300 mb-2">Cümleye zaman gibi başka bir öğe ile başlarsak fiil ve özne yer değiştirir (Fiil hep 2. sıradadır).</p>
+              <ul className="text-sm text-slate-200 list-disc pl-5">
+                <li><em>Wij hebben vanavond een feestje.</em></li>
+                <li>➔ <strong>Vanavond hebben wij</strong> een feestje.</li>
+                <li><em>Ik wil nu pizza.</em></li>
+                <li>➔ <strong>Nu wil ik</strong> pizza.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #6366f1' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#93c5fd' }}>📝 Dialogue Q&A: Hans op de markt</h3>
+          <ul className="text-sm text-slate-200 space-y-1 list-disc pl-5">
+            <li><strong>Hoeveel tomaten koopt Hans?</strong> ➔ Hans koopt zes tomaten.</li>
+            <li><strong>Wanneer komen de buren bij Hans eten?</strong> ➔ Morgen komen de buren bij Hans eten.</li>
+            <li><strong>Wat gaan ze eten?</strong> ➔ Hans en de buren eten stamppot.</li>
+            <li><strong>Is de andijvie goedkoop?</strong> ➔ Ja, de andijvie is goedkoop.</li>
+            <li><strong>Koopt Hans komkommers?</strong> ➔ Nee, Hans koopt geen komkommers.</li>
+            <li><strong>Hoeveel moet Hans betalen?</strong> ➔ Hans betaalt acht euro dertig. (8,30)</li>
           </ul>
         </div>
       </>
     ),
     exerciseGroups: [
       {
-        instruction: "On-Class Oefeningen: Adjectieven Test",
+        instruction: "On-Class Oefening 1: Herhaling Les 4 (Zullen & Afspreken)",
+        isExtra: false,
+        questions: [
+          { id: "5_onclass_1_1", type: "fill_in", question: "Zullen we naar Parijs ________? (go)", correctAnswer: "gaan" },
+          { id: "5_onclass_1_2", type: "fill_in", question: "Hoe laat zullen we ________? (meet up)", correctAnswer: "afspreken" },
+          { id: "5_onclass_1_3", type: "multiple_choice", question: "Wat antwoord je op: 'Zullen we na de les koffie drinken?'", options: ["Ja, leuk!", "Nee, dan kan ik niet.", "Ik weet het niet."], correctAnswer: "Ja, leuk!" },
+          { id: "5_onclass_1_4", type: "fill_in", question: "Kun je vanavond? Nee, dan ________ ik niet. (can)", correctAnswer: "kan" }
+        ]
+      },
+      {
+        instruction: "On-Class Oefening 2: Groente en Fruit (Kernwoorden)",
+        isExtra: false,
+        questions: [
+          { id: "5_onclass_2_1", type: "fill_in", question: "The cucumber = de ________", correctAnswer: "komkommer" },
+          { id: "5_onclass_2_2", type: "fill_in", question: "The onion = de ________", correctAnswer: "ui" },
+          { id: "5_onclass_2_3", type: "fill_in", question: "The strawberry = de ________", correctAnswer: "aardbei" },
+          { id: "5_onclass_2_4", type: "fill_in", question: "A head of lettuce = een krop ________", correctAnswer: "sla" },
+          { id: "5_onclass_2_5", type: "multiple_choice", question: "Wat is 'cauliflower' in het Nederlands?", options: ["de courgette", "de bloemkool", "de champignon"], correctAnswer: "de bloemkool" }
+        ]
+      },
+      {
+        instruction: "On-Class Oefening 3: Meervoud (Plural)",
+        isExtra: false,
+        questions: [
+          { id: "5_onclass_3_1", type: "fill_in", question: "Eén jongen, twee ________", correctAnswer: "jongens" },
+          { id: "5_onclass_3_2", type: "fill_in", question: "Eén meisje, twee ________", correctAnswer: "meisjes" },
+          { id: "5_onclass_3_3", type: "fill_in", question: "Eén kamer, twee ________", correctAnswer: "kamers" },
+          { id: "5_onclass_3_4", type: "multiple_choice", question: "Hoe zeg je 'eight euros' in het Nederlands?", options: ["acht euros", "acht euro's", "acht euro"], correctAnswer: "acht euro" },
+          { id: "5_onclass_3_5", type: "multiple_choice", question: "Hoe zeg je 'two kilos of potatoes'?", options: ["twee kilo's aardappels", "twee kilo aardappels", "twee kilos aardappel"], correctAnswer: "twee kilo aardappels" }
+        ]
+      },
+      {
+        instruction: "On-Class Oefening 4: Het Adjectief (+e of geen +e?)",
         isExtra: true,
         questions: [
-          { id: "5_onclass_1", type: "multiple_choice", question: "Kies de juiste zin (Sıfat isimden SONRA gelirse kural nedir?):", options: ["Het eten is lekkere.", "Het eten is lekker.", "De eten is lekker."], correctAnswer: "Het eten is lekker." },
-          { id: "5_onclass_2", type: "fill_in", question: "Wat is het tegenovergestelde (zıt anlam) van 'groot'?", correctAnswer: "klein" },
-          { id: "5_onclass_3", type: "fill_in", question: "Wat is het tegenovergestelde (zıt anlam) van 'lekker' (bijv. eten)?", correctAnswer: "vies" }
+          { id: "5_onclass_4_1", type: "multiple_choice", question: "Het woord is 'de tomaat'. Je gebruikt 'lekker'.", options: ["de lekker tomaat", "de lekkere tomaat", "een lekker tomaat"], correctAnswer: "de lekkere tomaat" },
+          { id: "5_onclass_4_2", type: "multiple_choice", question: "Het woord is 'het café'. Je gebruikt 'groot'.", options: ["het grote café", "het groot café", "een grote café"], correctAnswer: "het grote café" },
+          { id: "5_onclass_4_3", type: "multiple_choice", question: "LET OP! Het woord is 'het huis'. Je gebruikt 'een' en 'mooi'.", options: ["een mooi huis", "een mooie huis", "het mooie huis"], correctAnswer: "een mooi huis" },
+          { id: "5_onclass_4_4", type: "fill_in", question: "Het eten ________ lekker. (Sıfat isimden sonra, '+e' yok).", correctAnswer: "is" },
+          { id: "5_onclass_4_5", type: "fill_in", question: "De man is groot. ➔ Het is de ________ man.", correctAnswer: "grote" }
+        ]
+      },
+      {
+        instruction: "On-Class Oefening 5: Dialoog en Inversie",
+        isExtra: true,
+        questions: [
+          { id: "5_onclass_5_1", type: "multiple_choice", question: "Wat gaan Hans en de buren eten?", options: ["Pizza", "Stamppot", "Andijvie"], correctAnswer: "Stamppot" },
+          { id: "5_onclass_5_2", type: "fill_in", question: "Koopt Hans komkommers? Nee, Hans koopt ________ komkommers.", correctAnswer: "geen" },
+          { id: "5_onclass_5_3", type: "multiple_choice", question: "Maak de zin correct met inversie: 'Wij hebben vanavond een feestje.' ➔ Vanavond...", options: ["Vanavond wij hebben een feestje.", "Vanavond hebben wij een feestje.", "Vanavond een feestje hebben wij."], correctAnswer: "Vanavond hebben wij een feestje." },
+          { id: "5_onclass_5_4", type: "fill_in", question: "Nu ________ ik pizza. (willen)", correctAnswer: "wil" }
         ]
       }
     ]

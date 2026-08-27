@@ -432,5 +432,165 @@ export const chapter11Sections = [
         ]
       }
     ]
+  },
+  {
+    id: "On-Class-11",
+    chapter: 11,
+    title: "11.7 Extra Oefeningen (On-Class)",
+    theory: (
+      <>
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #3b82f6', marginBottom: '20px' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#60a5fa' }}>🔄 Repetitie & Vragen (Les 10)</h3>
+          <ul className="text-sm text-slate-300 list-disc pl-5 space-y-1">
+            <li><strong>Past Simple (O.T.T.):</strong> Ik werk<strong>te</strong>, Ik speel<strong>de</strong>, Ik herhaal<strong>de</strong>, Ik woon<strong>de</strong>.</li>
+            <li><strong>Begrip (Anlama):</strong> Ik versta u niet. / Sorry ik begrijp u niet.</li>
+            <li><strong>Beterschap!:</strong> Ik hoop dat hij snel beter wordt. (I hope he'll get well soon.)</li>
+          </ul>
+          <h4 className="font-bold text-blue-300 text-sm mt-3 mb-1">Vragen en Antwoorden:</h4>
+          <ul className="text-sm text-slate-300 list-disc pl-5 space-y-1">
+            <li><strong>Wat doe je voor werk? / Heb je een baan?</strong> ➔ Ik ben fietsenmaker. / Ik heb een bijbaantje.</li>
+            <li><strong>Studeer je? / Doe je nog iets naast je studie?</strong> ➔ Ik studeer logopedie.</li>
+            <li><strong>Wat zijn je hobby's? / Houd je van films?</strong> ➔ Ik zwem graag. / Ik houd van wandelen. / Ik ben gek op Cubaanse muziek.</li>
+          </ul>
+        </div>
+
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>🪞 Reflexive Verbs (Wederkerende Werkwoorden)</h3>
+          <p className="text-sm text-slate-300 mb-2">Hollandacada dönüşlü fiiller (kendini, kendine vb.) <strong>reflexief pronomen</strong> alır:</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm text-slate-200 mb-3 bg-purple-900/30 p-3 rounded-lg border border-purple-500/30">
+            <div>ik ➔ <strong>me</strong></div>
+            <div>jij/je ➔ <strong>je</strong></div>
+            <div>u ➔ <strong>u/zich</strong></div>
+            <div>hij/zij/ze ➔ <strong>zich</strong></div>
+            <div>wij/we ➔ <strong>ons</strong></div>
+            <div>jullie ➔ <strong>je</strong></div>
+            <div>zij/ze ➔ <strong>zich</strong></div>
+          </div>
+          <ul className="text-sm text-purple-100 list-disc pl-5 space-y-1">
+            <li>Ik herinner <strong>me</strong> dat.</li>
+            <li>Je vergist <strong>je</strong>.</li>
+            <li>Ik stel <strong>me</strong> even voor.</li>
+            <li>Zij voelt <strong>zich</strong> thuis.</li>
+            <li>Hij interesseert <strong>zich</strong> voor films.</li>
+            <li>Wij bereiden <strong>ons</strong> voor op een wandelreis.</li>
+            <li>Jullie vervelen <strong>je</strong> niet.</li>
+          </ul>
+        </div>
+
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>🎒 Bij zich (With oneselves) & Elkaar (Each other)</h3>
+          <p className="text-sm text-slate-300 mb-2"><strong>"Bij zich"</strong> yanında bulundurmak anlamındadır ve reflexive formları kullanır:</p>
+          <ul className="text-sm text-emerald-100 list-disc pl-5 space-y-1 mb-3">
+            <li>Ik heb een pen bij <strong>me</strong>. (I have a pen with me.)</li>
+            <li>Heb je een pen bij <strong>je</strong>?</li>
+            <li>Hij heeft zijn telefoon bij <strong>zich</strong>. (He has his phone with him.)</li>
+          </ul>
+          <p className="text-sm text-slate-300 mb-2"><strong>"Elkaar"</strong> ise 'birbirini/birbirlerine' (each other) anlamına gelir:</p>
+          <ul className="text-sm text-emerald-100 list-disc pl-5 space-y-1">
+            <li>Kennen jullie <strong>elkaar</strong>? (Do you know each other?)</li>
+            <li>Wij helpen <strong>elkaar</strong>. (We help each other.)</li>
+          </ul>
+        </div>
+
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f59e0b', marginBottom: '20px' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#fbbf24' }}>💬 Exclamations & Situational Reactions</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <h4 className="font-bold text-amber-300 text-sm mb-1">Uitroepen (Wat...!)</h4>
+              <ul className="text-sm text-slate-200 list-disc pl-5 space-y-1">
+                <li><strong>Wat leuk!</strong> = How fun!</li>
+                <li><strong>Wat toevallig!</strong> = What a coincidence!</li>
+                <li><strong>Wat jammer!</strong> = What a pity!</li>
+                <li><strong>Wat gezellig!</strong> = How fun/great/awesome!</li>
+                <li><strong>Wat lekker!</strong> = How delicious/tasty!</li>
+                <li><strong>Wat interessant!</strong> = How interesting!</li>
+                <li><strong>Wat vervelend!</strong> = How annoying!</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-bold text-amber-300 text-sm mb-1">Reacties (Tepkiler)</h4>
+              <ul className="text-sm text-slate-200 list-disc pl-5 space-y-1">
+                <li>Ik ga naar het park. ➔ <strong>Veel plezier!</strong> (Enjoy!/Have fun!)</li>
+                <li>Ik ben moe vandaag. ➔ <strong>Wat jammer!</strong></li>
+                <li>Ik ga vandaag naar een feest. ➔ <strong>Wat gezellig!</strong></li>
+                <li><strong>Gefeliciteerd!</strong> = Congratulations! / Happy birthday!</li>
+                <li><strong>Beterschap!</strong> = Get well soon!</li>
+                <li><strong>Sterkte!</strong> = Good luck / Strength!</li>
+                <li><strong>Eet smakelijk!</strong> = Enjoy your meal!</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #6366f1' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#93c5fd' }}>📝 Dialogue Lesson 11 (Q&A)</h3>
+          <ul className="text-sm text-slate-200 space-y-2 list-disc pl-5">
+            <li><strong>kantoor</strong> = office</li>
+            <li><strong>Ik ben geworden.</strong> = I have become / I became.</li>
+            <li><strong>Hij heeft zijn eigen bedrijf.</strong> = He has his own company.</li>
+            <li><strong>Hij heeft het druk.</strong> = He is busy. (He has it busy.)</li>
+            <li><strong>Hij verveelt zich nooit.</strong> = He is never bored. (zich vervelen = to be bored)</li>
+            <li><strong>veel</strong> = much/many/a lot of</li>
+            <li>Marit is jarig. Tom is de buurman van Marit. Zij vindt Cubaanse muziek leuk. (Marit is gek op Cubaans muziek.)</li>
+            <li>Tom en Kirsten kennen <strong>elkaar</strong> nog niet.</li>
+            <li>Kirsten werkt iedere donderdag in de bioscoop. Zij studeert logopedie.</li>
+          </ul>
+        </div>
+      </>
+    ),
+    exerciseGroups: [
+      {
+        instruction: "On-Class Oefening 1: Wederkerende Werkwoorden (Reflexive Verbs)",
+        isExtra: false,
+        questions: [
+          { id: "11_onclass_1_1", type: "fill_in", question: "Ik interesseer ________ voor rock muziek. (myself)", correctAnswer: "me" },
+          { id: "11_onclass_1_2", type: "fill_in", question: "Zij voelt ________ niet lekker. (herself)", correctAnswer: "zich" },
+          { id: "11_onclass_1_3", type: "fill_in", question: "Wij bereiden ________ voor op een wandelreis. (ourselves)", correctAnswer: "ons" },
+          { id: "11_onclass_1_4", type: "fill_in", question: "Jullie vervelen ________ niet. (yourselves)", correctAnswer: "je" },
+          { id: "11_onclass_1_5", type: "multiple_choice", question: "Kies het juiste woord: Je vergist ________.", options: ["je", "me", "zich"], correctAnswer: "je" }
+        ]
+      },
+      {
+        instruction: "On-Class Oefening 2: Bij zich & Elkaar",
+        isExtra: false,
+        questions: [
+          { id: "11_onclass_2_1", type: "fill_in", question: "Kennen jullie ________? (each other)", correctAnswer: "elkaar" },
+          { id: "11_onclass_2_2", type: "fill_in", question: "Ik heb een pen bij ________. (me)", correctAnswer: "me" },
+          { id: "11_onclass_2_3", type: "fill_in", question: "Hij heeft zijn telefoon bij ________. (himself)", correctAnswer: "zich" },
+          { id: "11_onclass_2_4", type: "multiple_choice", question: "Vertaal: 'We help each other.'", options: ["Wij helpen elkaar.", "Wij helpen ons.", "Wij helpen zich."], correctAnswer: "Wij helpen elkaar." }
+        ]
+      },
+      {
+        instruction: "On-Class Oefening 3: Wat...! (Exclamations)",
+        isExtra: false,
+        questions: [
+          { id: "11_onclass_3_1", type: "multiple_choice", question: "Je ziet een vriend onverwachts (unexpectedly) in een andere stad. Wat zeg je?", options: ["Wat jammer!", "Wat toevallig!", "Wat vervelend!"], correctAnswer: "Wat toevallig!" },
+          { id: "11_onclass_3_2", type: "multiple_choice", question: "Je eet een hele goede pizza. Wat zeg je?", options: ["Wat lekker!", "Wat interessant!", "Wat gezellig!"], correctAnswer: "Wat lekker!" },
+          { id: "11_onclass_3_3", type: "multiple_choice", question: "Je mist de trein net. Wat zeg je?", options: ["Wat vervelend!", "Wat toevallig!", "Wat leuk!"], correctAnswer: "Wat vervelend!" },
+          { id: "11_onclass_3_4", type: "fill_in", question: "Vertaal: 'What a pity!' -> Wat ________!", correctAnswer: "jammer" }
+        ]
+      },
+      {
+        instruction: "On-Class Oefening 4: Situational Reactions",
+        isExtra: true,
+        questions: [
+          { id: "11_onclass_4_1", type: "multiple_choice", question: "Iemand zegt: 'Ik ga naar het park.' Wat is een goede reactie?", options: ["Veel plezier!", "Beterschap!", "Eet smakelijk!"], correctAnswer: "Veel plezier!" },
+          { id: "11_onclass_4_2", type: "multiple_choice", question: "Je vriend is ziek. Wat zeg je?", options: ["Sterkte!", "Beterschap! (Ik hoop dat hij snel beter wordt)", "Gefeliciteerd!"], correctAnswer: "Beterschap! (Ik hoop dat hij snel beter wordt)" },
+          { id: "11_onclass_4_3", type: "fill_in", question: "Iemand zegt: 'Ik ben moe vandaag.' Jij antwoordt: 'Wat ________!' (What a pity!)", correctAnswer: "jammer" },
+          { id: "11_onclass_4_4", type: "multiple_choice", question: "Voordat je gaat eten, wat zeg je?", options: ["Eet smakelijk!", "Wat gezellig!", "Veel plezier!"], correctAnswer: "Eet smakelijk!" }
+        ]
+      },
+      {
+        instruction: "On-Class Oefening 5: Dialogue 11 Q&A & Vocab",
+        isExtra: true,
+        questions: [
+          { id: "11_onclass_5_1", type: "multiple_choice", question: "Waar werkt Kirsten iedere donderdag?", options: ["In de bioscoop", "In het kantoor", "In de sportschool"], correctAnswer: "In de bioscoop" },
+          { id: "11_onclass_5_2", type: "fill_in", question: "Wat studeert Kirsten? -> Zij studeert ________.", correctAnswer: "logopedie" },
+          { id: "11_onclass_5_3", type: "multiple_choice", question: "Wat betekent 'Hij heeft het druk'?", options: ["He is busy.", "He is bored.", "He has a company."], correctAnswer: "He is busy." },
+          { id: "11_onclass_5_4", type: "fill_in", question: "Marit is jarig. Zij is gek ________ Cubaanse muziek. (crazy about)", correctAnswer: "op" },
+          { id: "11_onclass_5_5", type: "multiple_choice", question: "Vertaal: 'He is never bored.'", options: ["Hij verveelt zich nooit.", "Hij heeft het druk.", "Hij interesseert zich nooit."], correctAnswer: "Hij verveelt zich nooit." }
+        ]
+      }
+    ]
   }
 ];
