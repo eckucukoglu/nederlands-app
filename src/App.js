@@ -60,13 +60,12 @@ function MainContent({ user, setIsAuthModalOpen }) {
     return saved ? JSON.parse(saved) : {};
   });
 
-  // ARAMA ÇUBUĞU STATE'LERİ
   const [isSearchExpanded, setIsSearchExpanded] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState(null);
 
-  // YENİ: BÖLÜM SEÇİCİ (CHAPTER SELECTOR) STATE'İ
   const [isChapterExpanded, setIsChapterExpanded] = useState(false);
+  const [isSectionExpanded, setIsSectionExpanded] = useState(false); // YENİ: Section seçici animasyon state'i
 
   const [globalWordStatuses, setGlobalWordStatuses] = useState(() => {
     const saved = localStorage.getItem(`dialogueWordStatuses_${currentChapter}`);
@@ -273,34 +272,44 @@ function MainContent({ user, setIsAuthModalOpen }) {
               <i className="fa-solid fa-book-medical text-2xl text-brand-400"></i>
             </div>
             <div>
-              <h1 className="font-bold text-lg leading-tight text-slate-100">Nederlands in Gang</h1>
-              <p className="text-xs text-brand-300">Interactief Oefenportaal (A1 → A2)</p>
+              <h1 className="font-bold text-lg leading-tight text-slate-100 hidden sm:block">Nederlands in Gang</h1>
+              <h1 className="font-bold text-lg leading-tight text-slate-100 sm:hidden">NiG</h1>
+              <p className="text-xs text-brand-300 hidden sm:block">Interactief Oefenportaal (A1 → A2)</p>
             </div>
           </div>
 
-          {/* SAĞ TARAF KONTROLLERİ */}
-          <div className="flex items-center space-x-2 sm:space-x-3">
+          {/* SAĞ TARAF: KOMPAKT VE GENİŞLEYEN KONTROLLER */}
+          <div className="flex items-center space-x-1 sm:space-x-1.5 overflow-visible">
             
-            {/* LOGIN BUTONU */}
+            {/* 1. FLASHCARDS BUTONU (Kırmızı, İkonlu) */}
+            <button 
+              onClick={() => { setActiveTab("flashcards"); setIsChapterExpanded(false); setIsSectionExpanded(false); setIsSearchExpanded(false); }}
+              className={`p-1.5 sm:p-2 rounded-full transition-colors flex items-center justify-center ${activeTab === 'flashcards' ? 'bg-rose-600 text-white shadow-md' : 'bg-rose-900/30 text-rose-400 hover:bg-rose-600 hover:text-white border border-rose-800/30'}`}
+              title="Flashcards"
+            >
+              <i className="fa-solid fa-clone text-lg sm:text-xl"></i>
+            </button>
+
+            {/* 2. LOGIN BUTONU */}
             <button 
               onClick={() => setIsAuthModalOpen(true)}
-              className="p-1.5 rounded-full hover:bg-slate-800 transition-colors flex items-center justify-center relative group"
+              className="p-1.5 sm:p-2 rounded-full hover:bg-slate-800 transition-colors flex items-center justify-center relative group"
               title="Hesap ve Senkronizasyon"
             >
-              <i className={`fa-solid fa-circle-user text-2xl ${user ? 'text-emerald-400' : 'text-slate-400 group-hover:text-brand-400'}`}></i>
+              <i className={`fa-solid fa-circle-user text-xl sm:text-2xl ${user ? 'text-emerald-400' : 'text-slate-400 group-hover:text-brand-400'}`}></i>
               {user && <div className="absolute top-0 right-0 w-2.5 h-2.5 bg-emerald-500 border-2 border-slate-950 rounded-full"></div>}
             </button>
 
-            {/* GENİŞLEYEN ARAMA BUTONU */}
+            {/* 3. GENİŞLEYEN ARAMA BUTONU */}
             <div className="relative flex items-center">
-              <div className={`transition-all duration-300 ease-in-out overflow-hidden flex items-center ${isSearchExpanded ? 'w-36 sm:w-48 opacity-100 mr-2' : 'w-0 opacity-0'}`}>
+              <div className={`transition-all duration-300 ease-in-out overflow-hidden flex items-center ${isSearchExpanded ? 'w-32 sm:w-48 opacity-100 mr-1' : 'w-0 opacity-0'}`}>
                 <form onSubmit={handleGlobalSearch} className="w-full">
                   <input
                     type="text"
                     value={searchQuery}
                     onChange={e => setSearchQuery(e.target.value)}
                     placeholder="Sözlükte ara..."
-                    className="w-full bg-slate-800 border border-slate-700 text-slate-200 text-sm rounded-full px-4 py-1.5 focus:outline-none focus:ring-1 focus:ring-brand-500 shadow-inner"
+                    className="w-full bg-slate-800 border border-slate-700 text-slate-200 text-xs sm:text-sm rounded-full px-3 py-1.5 focus:outline-none focus:ring-1 focus:ring-brand-500 shadow-inner"
                   />
                 </form>
               </div>
@@ -309,13 +318,14 @@ function MainContent({ user, setIsAuthModalOpen }) {
                   if (isSearchExpanded && searchQuery.trim()) handleGlobalSearch();
                   else {
                     setIsSearchExpanded(!isSearchExpanded);
+                    if (!isSearchExpanded) { setIsChapterExpanded(false); setIsSectionExpanded(false); }
                     if (isSearchExpanded) { setSearchResults(null); setSearchQuery(''); }
                   }
                 }}
-                className={`p-1.5 rounded-full transition-colors flex items-center justify-center ${isSearchExpanded ? 'bg-brand-600 hover:bg-brand-500 text-white' : 'hover:bg-slate-800 text-slate-400 hover:text-brand-400'}`}
+                className={`p-1.5 sm:p-2 rounded-full transition-colors flex items-center justify-center ${isSearchExpanded ? 'bg-brand-600 hover:bg-brand-500 text-white' : 'hover:bg-slate-800 text-slate-400 hover:text-brand-400'}`}
                 title="Sözlükte Ara"
               >
-                <i className="fa-solid fa-magnifying-glass text-xl"></i>
+                <i className="fa-solid fa-magnifying-glass text-lg sm:text-xl"></i>
               </button>
 
               {/* ARAMA SONUÇLARI POP-UP */}
@@ -374,26 +384,26 @@ function MainContent({ user, setIsAuthModalOpen }) {
               )}
             </div>
 
-            <div className="h-6 w-[1px] bg-slate-700 my-auto mx-1 sm:mx-2"></div>
+            <div className="h-6 w-[1px] bg-slate-700 my-auto mx-0.5 sm:mx-1.5"></div>
 
-            {/* YENİ: GENİŞLEYEN ÜNİTE (CHAPTER) SEÇİCİ */}
+            {/* 4. GENİŞLEYEN ÜNİTE (CHAPTER) SEÇİCİ */}
             <div className="relative flex items-center">
               <button
-                onClick={() => setIsChapterExpanded(!isChapterExpanded)}
-                className={`flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 rounded-full font-extrabold text-sm transition-all border shadow-sm ${isChapterExpanded ? 'bg-brand-600 text-white border-brand-500' : 'bg-slate-800 text-brand-400 border-slate-700 hover:bg-slate-700'}`}
+                onClick={() => { setIsChapterExpanded(!isChapterExpanded); setIsSectionExpanded(false); setIsSearchExpanded(false); }}
+                className={`flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 rounded-full font-extrabold text-xs sm:text-sm transition-all border shadow-sm ${isChapterExpanded ? 'bg-brand-600 text-white border-brand-500' : 'bg-slate-800 text-brand-400 border-slate-700 hover:bg-slate-700'}`}
                 title="Bölüm Değiştir"
               >
                 {currentChapter}
               </button>
 
-              <div className={`transition-all duration-300 ease-in-out overflow-hidden flex items-center ${isChapterExpanded ? 'w-48 sm:w-60 opacity-100 ml-2' : 'w-0 opacity-0'}`}>
+              <div className={`transition-all duration-300 ease-in-out overflow-hidden flex items-center ${isChapterExpanded ? 'w-32 sm:w-48 opacity-100 ml-1 sm:ml-2' : 'w-0 opacity-0'}`}>
                 <select
                   value={currentChapter}
                   onChange={(e) => {
                     handleChapterChange(e);
-                    setIsChapterExpanded(false); // Seçince otomatik kapat
+                    setIsChapterExpanded(false); 
                   }}
-                  className="w-full bg-slate-800 border border-slate-700 text-slate-200 text-sm rounded-full px-4 py-1.5 focus:outline-none focus:ring-1 focus:ring-brand-500 shadow-inner cursor-pointer appearance-none"
+                  className="w-full bg-slate-800 border border-slate-700 text-slate-200 text-xs sm:text-sm rounded-full px-2 sm:px-4 py-1.5 focus:outline-none focus:ring-1 focus:ring-brand-500 shadow-inner cursor-pointer appearance-none"
                 >
                   {availableChapters.map(ch => (
                     <option key={ch} value={ch}>
@@ -404,36 +414,41 @@ function MainContent({ user, setIsAuthModalOpen }) {
               </div>
             </div>
 
-          </div>
-        </div>
-
-        <div className="bg-slate-900/50 border-t border-slate-800 overflow-x-auto scrollbar-thin">
-          <div className="max-w-7xl mx-auto px-4 flex space-x-1 py-1.5 min-w-max">
-            {currentSections.map(sec => (
+            {/* 5. YENİ: GENİŞLEYEN SECTİON SEÇİCİ (14.1, 14.2 vb.) */}
+            <div className="relative flex items-center ml-1">
               <button
-                key={sec.id}
-                onClick={() => setActiveTab(sec.id)}
-                className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all flex items-center space-x-1.5 ${
-                  activeTab === sec.id ? "bg-brand-600 text-white shadow-md" : "text-slate-400 hover:bg-slate-800 hover:text-slate-200"
+                onClick={() => { setIsSectionExpanded(!isSectionExpanded); setIsChapterExpanded(false); setIsSearchExpanded(false); }}
+                className={`flex items-center justify-center h-8 sm:h-9 px-3 rounded-full font-extrabold text-xs sm:text-sm transition-all border shadow-sm ${
+                  activeTab !== 'flashcards' 
+                    ? 'bg-brand-600 text-white border-brand-500' 
+                    : 'bg-slate-800 text-slate-400 border-slate-700 hover:bg-slate-700'
                 }`}
+                title="Sectie Değiştir"
               >
-                <span>{sec.id.includes('On-Class') ? 'On-Class' : sec.id}</span>
-                <div className="flex items-center space-x-1 ml-1">
-                  {completed[sec.id] && <i className="fa-solid fa-circle-check text-emerald-400"></i>}
-                  {favorites[sec.id] && <i className="fa-solid fa-star text-amber-400"></i>}
-                </div>
+                {activeTab === 'flashcards' ? '-' : (activeTab.includes('On-Class') ? 'On-C' : activeTab)}
               </button>
-            ))}
-            <div className="h-5 w-[1px] bg-slate-700 my-auto mx-1"></div>
-            <button
-              onClick={() => setActiveTab("flashcards")}
-              className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all flex items-center space-x-1 ${
-                activeTab === "flashcards" ? "bg-rose-600 text-white shadow-md" : "text-rose-400 hover:bg-slate-800 hover:text-rose-300"
-              }`}
-            >
-              <i className="fa-solid fa-clone text-xs"></i>
-              <span>Flashcards</span>
-            </button>
+
+              <div className={`transition-all duration-300 ease-in-out overflow-hidden flex items-center ${isSectionExpanded ? 'w-24 sm:w-32 opacity-100 ml-1' : 'w-0 opacity-0'}`}>
+                <select
+                  value={activeTab}
+                  onChange={(e) => {
+                    setActiveTab(e.target.value);
+                    setIsSectionExpanded(false);
+                  }}
+                  className="w-full bg-slate-800 border border-slate-700 text-slate-200 text-xs sm:text-sm rounded-full px-2 sm:px-3 py-1.5 focus:outline-none focus:ring-1 focus:ring-brand-500 shadow-inner cursor-pointer appearance-none"
+                >
+                  {/* On-Class Egzersizleri ve Normal Sectionlar Burada Çıkar */}
+                  {currentSections.map(sec => (
+                    <option key={sec.id} value={sec.id}>
+                      {sec.id.includes('On-Class') ? 'On-Class' : sec.id}
+                      {completed[sec.id] ? ' ✓' : ''}
+                      {favorites[sec.id] ? ' ★' : ''}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+
           </div>
         </div>
       </header>
