@@ -423,7 +423,7 @@ export const chapter5Sections = [
   {
     id: "On-Class-5",
     chapter: 5,
-    title: "5.7 Extra Oefeningen (On-Class)",
+    title: "Extra Oefeningen (On-Class)",
     theory: (
       <>
         <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #3b82f6', marginBottom: '20px' }}>
