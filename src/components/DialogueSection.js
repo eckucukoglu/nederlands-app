@@ -39,9 +39,15 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
   const isFav = favorites && favorites[sectionId];
   const isComp = completed && completed[sectionId];
 
+  // YENİ: Hem ilk yüklemede hem de Arama Çubuğundan gelen değişiklikleri anında dinle
   useEffect(() => {
-    const saved = localStorage.getItem(`dialogueWordStatuses_${chapterId}`);
-    setWordStatuses(saved ? JSON.parse(saved) : {});
+    const fetchStatuses = () => {
+      const saved = localStorage.getItem(`dialogueWordStatuses_${chapterId}`);
+      setWordStatuses(saved ? JSON.parse(saved) : {});
+    };
+    fetchStatuses();
+    window.addEventListener('wordStatusUpdated', fetchStatuses);
+    return () => window.removeEventListener('wordStatusUpdated', fetchStatuses);
   }, [chapterId]);
 
   const speakDutch = (text) => {
@@ -144,10 +150,11 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
 
     setWordStatuses(newStatuses);
     localStorage.setItem(`dialogueWordStatuses_${chapterId}`, JSON.stringify(newStatuses));
+    // Dışarıya da haber ver
+    window.dispatchEvent(new Event('wordStatusUpdated'));
     setSelectedWords(null);
   };
 
-  // YENİ: 3 YÖNLÜ DÜĞME (TOGGLE SWITCH) MANTIĞI
   const handleRawWordToggle = (direction, e) => {
     e.stopPropagation();
     if (!clickedWordRaw) return;
@@ -156,11 +163,11 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
     let newStatus;
 
     if (direction === 'left') {
-      if (currentStatus === 'known') newStatus = undefined; // Yeşilden -> Ortaya (Default)
-      else newStatus = 'unknown'; // Ortadan -> Kırmızıya (Sola)
+      if (currentStatus === 'known') newStatus = undefined; 
+      else newStatus = 'unknown'; 
     } else if (direction === 'right') {
-      if (currentStatus === 'unknown') newStatus = undefined; // Kırmızıdan -> Ortaya (Default)
-      else newStatus = 'known'; // Ortadan -> Yeşile (Sağa)
+      if (currentStatus === 'unknown') newStatus = undefined; 
+      else newStatus = 'known'; 
     }
 
     const storageKey = `dialogueUnknowns_${chapterId}`;
@@ -189,6 +196,7 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
     }
     setWordStatuses(newStatuses);
     localStorage.setItem(`dialogueWordStatuses_${chapterId}`, JSON.stringify(newStatuses));
+    window.dispatchEvent(new Event('wordStatusUpdated'));
   };
 
   const handleStarClick = (e) => {
@@ -204,20 +212,19 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
     setFavNote("");
   };
 
-  // RAW KELİME İÇİN 3 YÖNLÜ DÜĞME (UI HESAPLAMASI)
   const rawStatus = wordStatuses[clickedWordRaw];
   let trackColor = "bg-slate-700/80";
   let thumbColor = "bg-slate-400";
-  let translateClass = "translate-x-[18px]"; // Merkez (Default)
+  let translateClass = "translate-x-[18px]"; 
 
   if (rawStatus === 'unknown') {
     trackColor = "bg-rose-900/60";
     thumbColor = "bg-rose-500";
-    translateClass = "translate-x-[2px]"; // Sol
+    translateClass = "translate-x-[2px]"; 
   } else if (rawStatus === 'known') {
     trackColor = "bg-emerald-900/60";
     thumbColor = "bg-emerald-500";
-    translateClass = "translate-x-[34px]"; // Sağ
+    translateClass = "translate-x-[34px]"; 
   }
 
   return (
@@ -344,7 +351,6 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
             onClick={(e) => e.stopPropagation()}
           >
             
-            {/* YENİ: 3 YÖNLÜ DÜĞME (3-WAY TOGGLE SWITCH) ALANI */}
             <div className="mb-3 pb-3 border-b border-slate-700/80 flex justify-between items-center gap-3">
               <div className="flex flex-col truncate">
                 <span className="text-[13px] font-bold text-slate-200 truncate">
@@ -354,14 +360,9 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
                 <span className="text-[10px] text-slate-400 leading-tight mt-0.5">Sadece kelimeyi işaretle</span>
               </div>
               
-              {/* Toggle Gövdesi */}
               <div className={`relative w-14 h-6 rounded-full transition-colors duration-300 flex-shrink-0 ${trackColor}`}>
-                {/* Sol Tıklama Alanı */}
                 <div className="absolute left-0 w-1/2 h-full z-10 cursor-pointer rounded-l-full" onClick={(e) => handleRawWordToggle('left', e)}></div>
-                {/* Sağ Tıklama Alanı */}
                 <div className="absolute right-0 w-1/2 h-full z-10 cursor-pointer rounded-r-full" onClick={(e) => handleRawWordToggle('right', e)}></div>
-                
-                {/* Hareketli Yuvarlak Top (Thumb) */}
                 <div className={`absolute top-[2px] w-5 h-5 rounded-full shadow-md transition-transform duration-300 ease-in-out ${thumbColor} ${translateClass}`}></div>
               </div>
             </div>
