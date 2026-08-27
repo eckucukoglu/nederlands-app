@@ -4,7 +4,9 @@ import './App.css';
 import DialogueSection from './components/DialogueSection';
 import ExerciseEngine from './components/ExerciseEngine';
 import Flashcards from './components/Flashcards';
+import AuthModal from './components/AuthModal';
 import { bookSections } from './data';
+import { auth, isSignInWithEmailLink, signInWithEmailLink, onAuthStateChanged, handleUserSyncOnLogin } from './firebase';
 
 const chapterTitles = {
   1: "Welkom", 2: "In de kantine", 3: "In het café", 4: "Op straat", 5: "Op de markt",
@@ -15,6 +17,11 @@ const chapterTitles = {
 };
 
 function App() {
+  // YENİ: Auth ve Modal Stateleri
+  const [user, setUser] = useState(null);
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
+  const [isSyncing, setIsSyncing] = useState(false); // Linkten girişteki yükleme ekranı
+
   const availableChapters = [...new Set(bookSections.map(sec => sec.chapter))].filter(Boolean).sort((a, b) => a - b);
   const fallbackChapter = availableChapters[0] || 1;
 
@@ -29,17 +36,46 @@ function App() {
     return savedTab ? savedTab : `${currentChapter}.1`;
   });
 
-  // Favoriler Hafızası
   const [favorites, setFavorites] = useState(() => {
     const saved = localStorage.getItem('favoriteSections');
     return saved ? JSON.parse(saved) : {};
   });
 
-  // YENİ: Tamamlananlar Hafızası
   const [completed, setCompleted] = useState(() => {
     const saved = localStorage.getItem('completedSections');
     return saved ? JSON.parse(saved) : {};
   });
+
+  // YENİ: Oturum İzleme ve Link ile Giriş Yakalama
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+
+    // Eğer kullanıcı maildeki linke tıklayıp geldiyse:
+    if (isSignInWithEmailLink(auth, window.location.href)) {
+      let email = window.localStorage.getItem('emailForSignIn');
+      if (!email) {
+        email = window.prompt('Lütfen doğrulama için mail adresinizi tekrar girin:');
+      }
+      
+      if (email) {
+        setIsSyncing(true); // Yükleme ekranını aç
+        signInWithEmailLink(auth, email, window.location.href)
+          .then(async (result) => {
+            window.localStorage.removeItem('emailForSignIn');
+            // Veri birleştirme ve indirme işlemini başlat
+            await handleUserSyncOnLogin(result.user);
+            window.location.href = window.location.origin; // Linkteki uzun tokenları temizle
+          })
+          .catch((error) => {
+            console.error("Giriş hatası", error);
+            setIsSyncing(false);
+          });
+      }
+    }
+    return () => unsubscribe();
+  }, []);
 
   const toggleFavorite = (sectionId, note) => {
     const newFavs = { ...favorites };
@@ -49,7 +85,6 @@ function App() {
     localStorage.setItem('favoriteSections', JSON.stringify(newFavs));
   };
 
-  // YENİ: Tamamlandı Ekle/Çıkar Fonksiyonu
   const toggleCompleted = (sectionId) => {
     const newComp = { ...completed };
     if (newComp[sectionId]) delete newComp[sectionId];
@@ -75,8 +110,23 @@ function App() {
     setActiveTab(savedTab ? savedTab : `${newChapter}.1`);
   };
 
+  // Mail linkinden tıklandığında kısa bir yükleme ekranı göster
+  if (isSyncing) {
+    return (
+      <div className="min-h-screen bg-slate-900 flex flex-col items-center justify-center text-brand-400">
+        <i className="fa-solid fa-cloud-arrow-down text-6xl animate-bounce mb-4"></i>
+        <h2 className="text-xl font-bold text-slate-200">Verilerin senkronize ediliyor...</h2>
+        <p className="text-sm text-slate-500 mt-2">Lütfen bekleyin.</p>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen flex flex-col bg-slate-900 transition-colors duration-300">
+      
+      {/* AUTH MODAL BİLEŞENİ */}
+      <AuthModal isOpen={isAuthModalOpen} onClose={() => setIsAuthModalOpen(false)} user={user} />
+
       <header className="bg-slate-950 text-white shadow-xl sticky top-0 z-50 border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 py-3 flex flex-wrap justify-between items-center gap-4">
           <div className="flex items-center space-x-3">
@@ -90,8 +140,19 @@ function App() {
           </div>
 
           <div className="flex items-center space-x-3">
-            <label className="text-xs text-slate-400 font-medium hidden sm:inline">
-              <i className="fa-solid fa-layer-group mr-1"></i>Selecteer Hoofdstuk:
+            
+            {/* YENİ: GİRİŞ YAP LOGOSU (Hoofdstuk'un solunda) */}
+            <button 
+              onClick={() => setIsAuthModalOpen(true)}
+              className="p-1.5 rounded-full hover:bg-slate-800 transition-colors flex items-center justify-center relative group"
+              title="Hesap ve Senkronizasyon"
+            >
+              <i className={`fa-solid fa-circle-user text-2xl ${user ? 'text-emerald-400' : 'text-slate-400 group-hover:text-brand-400'}`}></i>
+              {user && <div className="absolute top-0 right-0 w-2.5 h-2.5 bg-emerald-500 border-2 border-slate-950 rounded-full"></div>}
+            </button>
+
+            <label className="text-xs text-slate-400 font-medium hidden sm:inline ml-2">
+              <i className="fa-solid fa-layer-group mr-1"></i>Selecteer:
             </label>
             
             <select 
@@ -119,7 +180,6 @@ function App() {
                 }`}
               >
                 <span>{sec.id.includes('On-Class') ? 'On-Class' : sec.id}</span>
-                {/* YENİ: İkonların Yan Yana Gösterimi */}
                 <div className="flex items-center space-x-1 ml-1">
                   {completed[sec.id] && <i className="fa-solid fa-circle-check text-emerald-400"></i>}
                   {favorites[sec.id] && <i className="fa-solid fa-star text-amber-400"></i>}
