@@ -12,9 +12,15 @@ export default function Flashcards({ initialChapter }) {
   const [mode, setMode] = useState('all'); 
   
   const [sessionStats, setSessionStats] = useState({ known: 0, unknown: 0 });
-  const [globalStats, setGlobalStats] = useState(JSON.parse(localStorage.getItem('flashcardStats')) || {});
+  const [globalStats, setGlobalStats] = useState({});
 
   const chapterVocab = vocabulary.filter(v => v.chapter === targetChapter);
+
+  // Bileşen her yüklendiğinde veya Firebase'den veri geldiğinde en güncel istatistiği al
+  useEffect(() => {
+    const freshStats = JSON.parse(localStorage.getItem('flashcardStats')) || {};
+    setGlobalStats(freshStats);
+  }, [targetChapter, mode]);
 
   useEffect(() => {
     if (mode === 'all') {
@@ -45,17 +51,24 @@ export default function Flashcards({ initialChapter }) {
     
     setSessionStats(prev => ({ ...prev, [isKnown ? 'known' : 'unknown']: prev[isKnown ? 'known' : 'unknown'] + 1 }));
 
-    const currentGlobal = globalStats[wordId] || { known: 0, unknown: 0 };
+    // BUG FIX: Firebase'den gelen veriyi ezmemek için tam tıklama anında taze veriyi okuyoruz
+    const freshStorage = JSON.parse(localStorage.getItem('flashcardStats')) || {};
+    const currentGlobal = freshStorage[wordId] || { known: 0, unknown: 0 };
+    
     const newGlobal = {
-      ...globalStats,
-      [wordId]: { known: currentGlobal.known + (isKnown ? 1 : 0), unknown: currentGlobal.unknown + (!isKnown ? 1 : 0) }
+      ...freshStorage,
+      [wordId]: { 
+        known: currentGlobal.known + (isKnown ? 1 : 0), 
+        unknown: currentGlobal.unknown + (!isKnown ? 1 : 0) 
+      }
     };
+    
     setGlobalStats(newGlobal);
-    localStorage.setItem('flashcardStats', JSON.stringify(newGlobal));
+    localStorage.setItem('flashcardStats', JSON.stringify(newGlobal)); // Bu işlem firebase.js'i tetikler
 
     setIsFlipped(false);
     setCurrentIndex(prev => (prev + 1) % totalWords);
-  }, [currentWord, globalStats, totalWords]);
+  }, [currentWord, totalWords]);
 
   const handleKeyDown = useCallback((e) => {
     if (e.key === 'ArrowUp' || e.key === 'ArrowDown') { e.preventDefault(); setIsFlipped(prev => !prev); } 
