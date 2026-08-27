@@ -34,7 +34,7 @@ const fallbackDictionary = {
   "even": "just/briefly", "kijken": "look", "vanmorgen": "this morning", "goed": "good", "zal": "will", "hele": "whole", 
   "weer": "again", "als": "like/as", "nieuw": "new", "woorden": "words", "morgen": "tomorrow", "overmorgen": "the day after tomorrow", "dag": "day"
 };
-// elbette
+
 function MainContent({ user, setIsAuthModalOpen }) {
   const availableChapters = [...new Set(bookSections.map(sec => sec.chapter))].filter(Boolean).sort((a, b) => a - b);
   const fallbackChapter = availableChapters[0] || 1;
@@ -61,12 +61,11 @@ function MainContent({ user, setIsAuthModalOpen }) {
   });
 
   const [isSearchExpanded, setIsSearchExpanded] = useState(false);
+  const [isMobileSearchOpen, setIsMobileSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState(null);
 
   const [isChapterExpanded, setIsChapterExpanded] = useState(false);
-  
-  // YENİ: Mobilde açılan section menüsü için state
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); 
 
   const [globalWordStatuses, setGlobalWordStatuses] = useState(() => {
@@ -264,7 +263,6 @@ function MainContent({ user, setIsAuthModalOpen }) {
     trackColor = "bg-emerald-900/60"; thumbColor = "bg-emerald-500"; translateClass = "translate-x-[34px]";
   }
 
-  // Section Başlığı Getirici Fallback
   const getSectionTitle = (secId) => {
     if (secId === 'flashcards') return "Flashcards";
     const sec = currentSections.find(s => s.id === secId);
@@ -274,24 +272,69 @@ function MainContent({ user, setIsAuthModalOpen }) {
     return "Oefening";
   };
 
+  const currentIndex = currentSections.findIndex(sec => sec.id === activeTab);
+
+  // ARAMA SONUÇLARI ARAYÜZÜ BİLEŞENİ
+  const SearchResultsUI = () => (
+    <>
+      <div className="mb-3 pb-3 border-b border-slate-700/80 flex justify-between items-center gap-3">
+        <div className="flex flex-col truncate">
+          <span className="text-[13px] font-bold text-slate-200 truncate">
+            <i className="fa-solid fa-pen-nib text-brand-400 mr-1.5"></i>
+            {rawWord}
+          </span>
+          <span className="text-[10px] text-slate-400 leading-tight mt-0.5">Sadece kelimeyi işaretle</span>
+        </div>
+        <div className={`relative w-14 h-6 rounded-full transition-colors duration-300 flex-shrink-0 ${trackColor}`}>
+          <div className="absolute left-0 w-1/2 h-full z-10 cursor-pointer rounded-l-full" onClick={(e) => handleSearchRawWordToggle('left', e)}></div>
+          <div className="absolute right-0 w-1/2 h-full z-10 cursor-pointer rounded-r-full" onClick={(e) => handleSearchRawWordToggle('right', e)}></div>
+          <div className={`absolute top-[2px] w-5 h-5 rounded-full shadow-md transition-transform duration-300 ease-in-out ${thumbColor} ${translateClass}`}></div>
+        </div>
+      </div>
+      <div className="space-y-3">
+        {searchResults.map((wordObj, idx) => {
+          const currentStatus = globalWordStatuses[wordObj.nl.toLowerCase()];
+          return (
+            <div key={idx} className="border-b border-slate-700 last:border-0 pb-3 last:pb-0">
+              <div className="flex justify-between items-center mb-1">
+                <h3 className="font-bold text-brand-400 text-[15px] leading-tight">{wordObj.nl}</h3>
+                <button type="button" onClick={() => speakDutch(wordObj.nl)} className="text-slate-400 hover:text-brand-300 ml-2">
+                  <i className="fa-solid fa-volume-high text-xs"></i>
+                </button>
+              </div>
+              <div className="leading-snug space-y-0.5 mb-1.5">
+                {wordObj.tr && <p className="text-[13px] font-bold text-brand-300">🇹🇷 {wordObj.tr}</p>}
+                {wordObj.en && <p className="text-[12px] font-medium text-slate-300">🇬🇧 {wordObj.en}</p>}
+              </div>
+              {wordObj.example && <p className="text-[11px] text-slate-400 italic mb-2 leading-snug">"{wordObj.example}"</p>}
+              <div className="flex gap-2 mt-1.5">
+                <button type="button" onClick={() => handleSearchWordKnowledge(wordObj, true)} className={`flex-1 py-1.5 rounded-md text-xs transition-all border ${currentStatus === 'known' ? 'bg-emerald-600 border-emerald-500 text-white shadow-inner scale-[0.98]' : 'bg-slate-700/50 border-slate-600 hover:bg-emerald-900/40 hover:border-emerald-700/50 text-slate-300'}`}><i className="fa-solid fa-check"></i></button>
+                <button type="button" onClick={() => handleSearchWordKnowledge(wordObj, false)} className={`flex-1 py-1.5 rounded-md text-xs transition-all border ${currentStatus === 'unknown' ? 'bg-rose-600 border-rose-500 text-white shadow-inner scale-[0.98]' : 'bg-slate-700/50 border-slate-600 hover:bg-rose-900/40 hover:border-rose-700/50 text-slate-300'}`}><i className="fa-solid fa-xmark"></i></button>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </>
+  );
+
   return (
     <div className="min-h-screen flex flex-col bg-slate-900 transition-colors duration-300">
       
-      {/* 1. ÜST HEADER (Sabit) */}
-      <header className="bg-slate-950 text-white shadow-md sticky top-0 z-50 border-b border-slate-800">
-        <div className="max-w-7xl mx-auto px-4 py-3 flex flex-wrap justify-between items-center gap-4">
+      {/* HEADER */}
+      <header className="bg-slate-950 text-white shadow-md sticky top-0 z-50 border-b border-slate-800 flex-none">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 py-3 flex flex-nowrap justify-between items-center gap-2">
           
-          <div className="flex items-center space-x-3">
-            <div className="bg-brand-900/50 border border-brand-500/30 p-2 rounded-xl backdrop-blur">
+          <div className="flex items-center space-x-2 flex-shrink-0">
+            <div className="bg-brand-900/50 p-2 rounded-xl backdrop-blur">
               <i className="fa-solid fa-book-medical text-xl text-brand-400"></i>
             </div>
-            <div>
-              <h1 className="font-bold text-lg leading-tight text-slate-100 hidden sm:block">Nederlands in Gang</h1>
-              <h1 className="font-bold text-lg leading-tight text-slate-100 sm:hidden">NiG</h1>
+            <div className="hidden sm:block">
+              <h1 className="font-bold text-lg leading-tight text-slate-100">Nederlands in Gang</h1>
             </div>
           </div>
 
-          <div className="flex items-center space-x-1 sm:space-x-1.5 overflow-visible">
+          <div className="flex items-center space-x-1 sm:space-x-2 flex-shrink-0 overflow-visible">
             
             <button 
               onClick={() => { setActiveTab("flashcards"); setIsChapterExpanded(false); setIsSearchExpanded(false); }}
@@ -310,125 +353,125 @@ function MainContent({ user, setIsAuthModalOpen }) {
               {user && <div className="absolute top-0 right-0 w-2.5 h-2.5 bg-emerald-500 border-2 border-slate-950 rounded-full"></div>}
             </button>
 
+            {/* ARAMA (Masaüstü: Uzayan / Mobil: Ortada Açılan) */}
             <div className="relative flex items-center">
-              <div className={`transition-all duration-300 ease-in-out overflow-hidden flex items-center ${isSearchExpanded ? 'w-32 sm:w-48 opacity-100 mr-1' : 'w-0 opacity-0'}`}>
+              
+              {/* Sadece Geniş Ekranda Uzayan İnput */}
+              <div className={`hidden sm:flex transition-all duration-300 ease-in-out overflow-hidden items-center ${isSearchExpanded ? 'w-48 opacity-100 mr-1' : 'w-0 opacity-0'}`}>
                 <form onSubmit={handleGlobalSearch} className="w-full">
                   <input
                     type="text"
                     value={searchQuery}
                     onChange={e => setSearchQuery(e.target.value)}
                     placeholder="Sözlükte ara..."
-                    className="w-full bg-slate-800 border border-slate-700 text-slate-200 text-xs sm:text-sm rounded-full px-3 py-1.5 focus:outline-none focus:ring-1 focus:ring-brand-500 shadow-inner"
+                    className="w-full bg-slate-800 border border-slate-700 text-slate-200 text-sm rounded-full px-3 py-1.5 focus:outline-none focus:ring-1 focus:ring-brand-500 shadow-inner"
                   />
                 </form>
               </div>
+              
               <button 
                 onClick={() => {
-                  if (isSearchExpanded && searchQuery.trim()) handleGlobalSearch();
-                  else {
-                    setIsSearchExpanded(!isSearchExpanded);
-                    if (!isSearchExpanded) setIsChapterExpanded(false);
-                    if (isSearchExpanded) { setSearchResults(null); setSearchQuery(''); }
+                  if (window.innerWidth < 640) {
+                    setIsMobileSearchOpen(true);
+                  } else {
+                    if (isSearchExpanded && searchQuery.trim()) handleGlobalSearch();
+                    else {
+                      setIsSearchExpanded(!isSearchExpanded);
+                      if (!isSearchExpanded) setIsChapterExpanded(false);
+                      if (isSearchExpanded) { setSearchResults(null); setSearchQuery(''); }
+                    }
                   }
                 }}
-                className={`p-1.5 sm:p-2 rounded-full transition-colors flex items-center justify-center ${isSearchExpanded ? 'bg-brand-600 hover:bg-brand-500 text-white' : 'hover:bg-slate-800 text-slate-400 hover:text-brand-400'}`}
+                className={`p-1.5 sm:p-2 rounded-full transition-colors flex items-center justify-center ${isSearchExpanded ? 'hidden sm:flex bg-brand-600 hover:bg-brand-500 text-white' : 'hover:bg-slate-800 text-slate-400 hover:text-brand-400'}`}
                 title="Sözlükte Ara"
               >
                 <i className="fa-solid fa-magnifying-glass text-lg sm:text-xl"></i>
               </button>
 
-              {/* Arama Sonuçları Modal */}
+              {/* Masaüstü Arama Sonuçları */}
               {searchResults && searchResults.length > 0 && (
                 <>
-                  <div className="fixed inset-0 z-40" onClick={() => setSearchResults(null)}></div>
-                  <div className="absolute right-0 top-full mt-3 bg-slate-800 border border-slate-600 p-3 rounded-xl shadow-2xl z-50 min-w-[240px] max-w-[280px] max-h-[360px] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-600">
-                    <div className="mb-3 pb-3 border-b border-slate-700/80 flex justify-between items-center gap-3">
-                      <div className="flex flex-col truncate">
-                        <span className="text-[13px] font-bold text-slate-200 truncate">
-                          <i className="fa-solid fa-pen-nib text-brand-400 mr-1.5"></i>
-                          {rawWord}
-                        </span>
-                        <span className="text-[10px] text-slate-400 leading-tight mt-0.5">Sadece kelimeyi işaretle</span>
-                      </div>
-                      
-                      <div className={`relative w-14 h-6 rounded-full transition-colors duration-300 flex-shrink-0 ${trackColor}`}>
-                        <div className="absolute left-0 w-1/2 h-full z-10 cursor-pointer rounded-l-full" onClick={(e) => handleSearchRawWordToggle('left', e)}></div>
-                        <div className="absolute right-0 w-1/2 h-full z-10 cursor-pointer rounded-r-full" onClick={(e) => handleSearchRawWordToggle('right', e)}></div>
-                        <div className={`absolute top-[2px] w-5 h-5 rounded-full shadow-md transition-transform duration-300 ease-in-out ${thumbColor} ${translateClass}`}></div>
-                      </div>
-                    </div>
-
-                    <div className="space-y-3">
-                      {searchResults.map((wordObj, idx) => {
-                        const currentStatus = globalWordStatuses[wordObj.nl.toLowerCase()];
-                        return (
-                          <div key={idx} className="border-b border-slate-700 last:border-0 pb-3 last:pb-0">
-                            <div className="flex justify-between items-center mb-1">
-                              <h3 className="font-bold text-brand-400 text-[15px] leading-tight">{wordObj.nl}</h3>
-                              <button onClick={() => speakDutch(wordObj.nl)} className="text-slate-400 hover:text-brand-300 ml-2">
-                                <i className="fa-solid fa-volume-high text-xs"></i>
-                              </button>
-                            </div>
-                            <div className="leading-snug space-y-0.5 mb-1.5">
-                              {wordObj.tr && <p className="text-[13px] font-bold text-brand-300">🇹🇷 {wordObj.tr}</p>}
-                              {wordObj.en && <p className="text-[12px] font-medium text-slate-300">🇬🇧 {wordObj.en}</p>}
-                            </div>
-                            {wordObj.example && <p className="text-[11px] text-slate-400 italic mb-2 leading-snug">"{wordObj.example}"</p>}
-                            <div className="flex gap-2 mt-1.5">
-                              <button 
-                                onClick={() => handleSearchWordKnowledge(wordObj, true)} 
-                                className={`flex-1 py-1.5 rounded-md text-xs transition-all border ${currentStatus === 'known' ? 'bg-emerald-600 border-emerald-500 text-white shadow-inner scale-[0.98]' : 'bg-slate-700/50 border-slate-600 hover:bg-emerald-900/40 hover:border-emerald-700/50 text-slate-300'}`}
-                              ><i className="fa-solid fa-check"></i></button>
-                              <button 
-                                onClick={() => handleSearchWordKnowledge(wordObj, false)} 
-                                className={`flex-1 py-1.5 rounded-md text-xs transition-all border ${currentStatus === 'unknown' ? 'bg-rose-600 border-rose-500 text-white shadow-inner scale-[0.98]' : 'bg-slate-700/50 border-slate-600 hover:bg-rose-900/40 hover:border-rose-700/50 text-slate-300'}`}
-                              ><i className="fa-solid fa-xmark"></i></button>
-                            </div>
-                          </div>
-                        );
-                      })}
-                    </div>
+                  <div className="hidden sm:block fixed inset-0 z-40" onClick={() => setSearchResults(null)}></div>
+                  <div className="hidden sm:block absolute right-0 top-full mt-3 bg-slate-800 border border-slate-600 p-3 rounded-xl shadow-2xl z-50 min-w-[280px] max-w-[320px] max-h-[400px] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-600">
+                    <SearchResultsUI />
                   </div>
                 </>
               )}
             </div>
 
-            <div className="h-6 w-[1px] bg-slate-700 my-auto mx-0.5 sm:mx-1.5"></div>
+            <div className="h-6 w-[1px] bg-slate-700 my-auto mx-0.5 sm:mx-1"></div>
 
+            {/* CHAPTER SEÇİCİ (Her Ekran Boyutunda Dropdown) */}
             <div className="relative flex items-center">
               <button
                 onClick={() => { setIsChapterExpanded(!isChapterExpanded); setIsSearchExpanded(false); }}
-                className={`flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 rounded-full font-extrabold text-xs sm:text-sm transition-all border shadow-sm ${isChapterExpanded ? 'bg-brand-600 text-white border-brand-500' : 'bg-slate-800 text-brand-400 border-slate-700 hover:bg-slate-700'}`}
+                className={`flex items-center justify-center px-3 sm:px-4 h-9 rounded-full font-extrabold text-xs sm:text-sm transition-all border shadow-sm flex-shrink-0 ${isChapterExpanded ? 'bg-brand-600 text-white border-brand-500' : 'bg-slate-800 text-slate-200 border-slate-700 hover:bg-slate-700'}`}
                 title="Bölüm Değiştir"
               >
-                {currentChapter}
+                <span className="whitespace-nowrap">Hoofdstuk {currentChapter}</span>
+                <i className={`fa-solid fa-chevron-${isChapterExpanded ? 'up' : 'down'} ml-2 text-[10px]`}></i>
               </button>
 
-              <div className={`transition-all duration-300 ease-in-out overflow-hidden flex items-center ${isChapterExpanded ? 'w-32 sm:w-48 opacity-100 ml-1 sm:ml-2' : 'w-0 opacity-0'}`}>
-                <select
-                  value={currentChapter}
-                  onChange={(e) => { handleChapterChange(e); setIsChapterExpanded(false); }}
-                  className="w-full bg-slate-800 border border-slate-700 text-slate-200 text-xs sm:text-sm rounded-full px-2 sm:px-4 py-1.5 focus:outline-none focus:ring-1 focus:ring-brand-500 shadow-inner cursor-pointer appearance-none"
-                >
-                  {availableChapters.map(ch => (
-                    <option key={ch} value={ch}>
-                      Hoofdstuk {ch} {chapterTitles[ch] ? `- ${chapterTitles[ch]}` : ''}
-                    </option>
-                  ))}
-                </select>
-              </div>
+              {isChapterExpanded && (
+                <>
+                  <div className="fixed inset-0 z-40" onClick={() => setIsChapterExpanded(false)}></div>
+                  <div className="absolute right-0 top-full mt-2 w-56 sm:w-64 bg-slate-800 border border-slate-600 rounded-2xl shadow-2xl z-50 overflow-hidden flex flex-col py-1.5 max-h-[60vh] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-600">
+                    {availableChapters.map(ch => (
+                      <button
+                        key={ch}
+                        onClick={() => {
+                          handleChapterChange({ target: { value: ch }});
+                          setIsChapterExpanded(false); 
+                        }}
+                        className={`w-full px-4 py-3 flex flex-col text-left text-sm transition-colors ${currentChapter === ch ? 'bg-slate-700/50 text-brand-300 font-bold border-l-4 border-brand-400' : 'text-slate-300 hover:bg-slate-700/30 border-l-4 border-transparent'}`}
+                      >
+                        <span className="font-bold">Hoofdstuk {ch}</span>
+                        {chapterTitles[ch] && <span className="text-[11px] text-slate-400 mt-0.5 truncate">{chapterTitles[ch]}</span>}
+                      </button>
+                    ))}
+                  </div>
+                </>
+              )}
             </div>
 
           </div>
         </div>
       </header>
 
-      {/* 2. ALT MENÜ - SECTION BAR (Desktop & Mobile) */}
-      <div className="bg-slate-900/40 border-b border-slate-800 w-full shadow-inner z-40">
-        <div className="max-w-7xl mx-auto px-4 py-2.5 flex justify-center">
+      {/* MOBİL MERKEZ ARAMA (Modal) */}
+      {isMobileSearchOpen && (
+        <div className="sm:hidden fixed inset-0 z-[100] bg-slate-950/90 backdrop-blur-sm flex items-center justify-center p-4" onClick={() => setIsMobileSearchOpen(false)}>
+          <div className="w-full max-w-sm bg-slate-900 border border-slate-700 rounded-3xl p-5 shadow-2xl flex flex-col max-h-[85vh]" onClick={e => e.stopPropagation()}>
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-brand-400 font-bold"><i className="fa-solid fa-magnifying-glass mr-2"></i> Sözlükte Ara</h2>
+              <button onClick={() => setIsMobileSearchOpen(false)} className="text-slate-500 hover:text-rose-400"><i className="fa-solid fa-xmark text-xl"></i></button>
+            </div>
+            
+            <form onSubmit={handleGlobalSearch} className="w-full mb-4 flex gap-2">
+              <input 
+                autoFocus 
+                type="text" 
+                value={searchQuery} 
+                onChange={e => setSearchQuery(e.target.value)} 
+                placeholder="Kelime yaz..." 
+                className="flex-1 w-full bg-slate-800 border border-slate-600 text-slate-200 text-sm rounded-xl px-4 py-3 focus:outline-none focus:border-brand-500 shadow-inner" 
+              />
+              <button type="submit" className="bg-brand-600 hover:bg-brand-500 text-white rounded-xl px-4 flex items-center justify-center transition-colors shadow-sm">
+                 <i className="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </form>
+            
+            <div className="overflow-y-auto scrollbar-thin scrollbar-thumb-slate-600 flex-1 pr-1">
+              {searchResults && searchResults.length > 0 ? <SearchResultsUI /> : (searchQuery && searchResults !== null ? <p className="text-center text-slate-500 text-sm mt-4 font-medium">Sonuç bulunamadı.</p> : null)}
+            </div>
+          </div>
+        </div>
+      )}
 
-          {/* DESKTOP: Yanyana Şık Yuvarlak Kapsüller */}
-          <div className="hidden sm:flex items-center justify-center flex-wrap gap-2">
+      {/* ALT MENÜ - SECTION BAR (Desktop) */}
+      <div className="hidden sm:block bg-slate-900/40 border-b border-slate-800 w-full shadow-inner z-40 flex-none">
+        <div className="max-w-7xl mx-auto px-4 py-2.5 flex justify-center">
+          <div className="flex items-center justify-center flex-wrap gap-2">
             {currentSections.map(sec => {
               const isActive = activeTab === sec.id;
               const isC = completed[sec.id];
@@ -438,14 +481,10 @@ function MainContent({ user, setIsAuthModalOpen }) {
                   key={sec.id}
                   onClick={() => setActiveTab(sec.id)}
                   className={`relative flex items-center justify-center h-9 px-3.5 rounded-full text-[11px] font-extrabold transition-all border shadow-sm ${
-                    isActive
-                      ? 'bg-brand-600 text-white border-brand-500 z-10'
-                      : 'bg-slate-800 text-slate-400 border-slate-700 hover:bg-slate-700 hover:text-slate-200'
+                    isActive ? 'bg-brand-600 text-white border-brand-500 z-10' : 'bg-slate-800 text-slate-400 border-slate-700 hover:bg-slate-700 hover:text-slate-200'
                   }`}
                 >
                   {sec.id.includes('On-Class') ? 'On-C' : sec.id}
-
-                  {/* Rozetler */}
                   {(isC || isF) && (
                     <div className="absolute -top-1.5 -right-1.5 flex space-x-[1px]">
                       {isF && <div className="w-[14px] h-[14px] bg-slate-900 rounded-full flex items-center justify-center border border-slate-700"><i className="fa-solid fa-star text-amber-400 text-[8px]"></i></div>}
@@ -456,60 +495,86 @@ function MainContent({ user, setIsAuthModalOpen }) {
               );
             })}
           </div>
-
-          {/* MOBILE: İlerleme Noktaları Taşıyan Akıllı Buton */}
-          <div className="sm:hidden w-full max-w-sm relative">
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`w-full border rounded-full h-10 px-4 flex items-center justify-between shadow-sm transition-all ${isMobileMenuOpen ? 'bg-slate-800 border-brand-500' : 'bg-slate-800 border-slate-700'}`}
-            >
-              {/* Dinamik Noktalar */}
-              <div className="flex items-center space-x-1.5">
-                {currentSections.map(sec => (
-                  <div key={sec.id} className={`rounded-full transition-all ${activeTab === sec.id ? 'w-2 h-2 bg-brand-400' : 'w-1.5 h-1.5 bg-slate-600'}`}></div>
-                ))}
-              </div>
-              
-              {/* Aktif Section İsmi */}
-              <div className="flex items-center space-x-2 text-slate-200 text-xs font-bold">
-                <span>{activeTab === 'flashcards' ? 'Flashcards' : (activeTab.includes('On-Class') ? 'Extra: On-Class' : `Sectie ${activeTab}`)}</span>
-                <i className={`fa-solid fa-chevron-${isMobileMenuOpen ? 'up' : 'down'} text-brand-400`}></i>
-              </div>
-            </button>
-
-            {/* Mobil Açılır Liste (Pop-up) */}
-            {isMobileMenuOpen && (
-              <>
-                <div className="fixed inset-0 z-40" onClick={() => setIsMobileMenuOpen(false)}></div>
-                <div className="absolute top-full left-0 w-full mt-2 bg-slate-800 border border-slate-600 rounded-2xl shadow-2xl z-50 overflow-hidden flex flex-col py-1.5">
-                  {currentSections.map(sec => {
-                    const isC = completed[sec.id];
-                    const isF = favorites[sec.id];
-                    return (
-                      <button
-                        key={sec.id}
-                        onClick={() => { setActiveTab(sec.id); setIsMobileMenuOpen(false); }}
-                        className={`w-full px-4 py-3 flex items-center justify-between text-sm transition-colors ${activeTab === sec.id ? 'bg-slate-700/50 text-brand-300 font-bold border-l-4 border-brand-400' : 'text-slate-300 hover:bg-slate-700/30 border-l-4 border-transparent'}`}
-                      >
-                        <span className="truncate pr-2">{sec.id.includes('On-Class') ? 'Extra: On-Class' : `${sec.id} - ${getSectionTitle(sec.id)}`}</span>
-                        <div className="flex items-center space-x-2 flex-shrink-0">
-                          {isF && <i className="fa-solid fa-star text-amber-400"></i>}
-                          {isC && <i className="fa-solid fa-circle-check text-emerald-400"></i>}
-                        </div>
-                      </button>
-                    );
-                  })}
-                </div>
-              </>
-            )}
-          </div>
-
         </div>
       </div>
 
-      <main className="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 text-slate-200 flex flex-col relative">
+      {/* MOBİL - ZARİF İLERLEME ÇUBUĞU (Mini-Stepper) VE AÇILIR MENÜ */}
+      <div className="sm:hidden bg-slate-900/60 border-b border-slate-800 w-full shadow-inner z-40 flex-none">
+        <div className="px-3 py-3 flex justify-center w-full relative">
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className={`w-full max-w-sm border rounded-2xl p-3 flex flex-col gap-2.5 shadow-sm transition-all ${isMobileMenuOpen ? 'bg-slate-800 border-brand-500' : 'bg-slate-800 border-slate-700'}`}
+          >
+            <div className="flex items-center justify-between w-full">
+              <div className="flex items-center space-x-2 text-slate-200 text-sm font-bold truncate">
+                <span className="truncate">{activeTab === 'flashcards' ? 'Flashcards' : (activeTab.includes('On-Class') ? 'Extra: On-Class' : `Sectie ${activeTab}`)}</span>
+                {activeTab !== 'flashcards' && (completed[activeTab] || favorites[activeTab]) && (
+                   <div className="flex space-x-1 flex-shrink-0">
+                      {favorites[activeTab] && <i className="fa-solid fa-star text-amber-400 text-[10px]"></i>}
+                      {completed[activeTab] && <i className="fa-solid fa-circle-check text-emerald-400 text-[10px]"></i>}
+                   </div>
+                )}
+              </div>
+              <div className="flex items-center gap-2 flex-shrink-0">
+                {activeTab !== 'flashcards' && (
+                  <span className="text-[10px] font-extrabold text-slate-400 bg-slate-900 px-2 py-0.5 rounded-md border border-slate-700">
+                    {currentIndex + 1} / {currentSections.length}
+                  </span>
+                )}
+                <i className={`fa-solid fa-chevron-${isMobileMenuOpen ? 'up' : 'down'} text-brand-400 text-xs`}></i>
+              </div>
+            </div>
+            
+            {/* Zarif Noktalar (Segmented Progress) */}
+            <div className="flex items-center justify-between w-full gap-1">
+              {currentSections.map(sec => {
+                const isActive = activeTab === sec.id;
+                const isC = completed[sec.id];
+                const isF = favorites[sec.id];
+                return (
+                  <div key={sec.id} className="relative flex-1 h-1.5 flex justify-center">
+                     <div className={`w-full h-full rounded-full transition-all duration-300 ${isActive ? 'bg-brand-400 shadow-[0_0_6px_rgba(56,189,248,0.8)]' : 'bg-slate-700'}`}></div>
+                     {!isActive && (isC || isF) && (
+                        <div className="absolute -top-[5px] flex gap-[1px]">
+                           {isC && <div className="w-1 h-1 bg-emerald-400 rounded-full shadow-[0_0_2px_rgba(52,211,153,0.8)]"></div>}
+                           {isF && <div className="w-1 h-1 bg-amber-400 rounded-full shadow-[0_0_2px_rgba(251,191,36,0.8)]"></div>}
+                        </div>
+                     )}
+                  </div>
+                );
+              })}
+            </div>
+          </button>
+
+          {isMobileMenuOpen && (
+            <>
+              <div className="fixed inset-0 z-40" onClick={() => setIsMobileMenuOpen(false)}></div>
+              <div className="absolute top-full left-4 right-4 mt-2 bg-slate-800 border border-slate-600 rounded-2xl shadow-2xl z-50 overflow-hidden flex flex-col py-1.5 max-h-[60vh] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-600">
+                {currentSections.map(sec => {
+                  const isC = completed[sec.id];
+                  const isF = favorites[sec.id];
+                  return (
+                    <button
+                      key={sec.id}
+                      onClick={() => { setActiveTab(sec.id); setIsMobileMenuOpen(false); }}
+                      className={`w-full px-4 py-3 flex items-center justify-between text-sm transition-colors ${activeTab === sec.id ? 'bg-slate-700/50 text-brand-300 font-bold border-l-4 border-brand-400' : 'text-slate-300 hover:bg-slate-700/30 border-l-4 border-transparent'}`}
+                    >
+                      <span className="truncate pr-2 text-left">{sec.id.includes('On-Class') ? 'Extra: On-Class' : `${sec.id} - ${getSectionTitle(sec.id)}`}</span>
+                      <div className="flex items-center space-x-2 flex-shrink-0">
+                        {isF && <i className="fa-solid fa-star text-amber-400"></i>}
+                        {isC && <i className="fa-solid fa-circle-check text-emerald-400"></i>}
+                      </div>
+                    </button>
+                  );
+                })}
+              </div>
+            </>
+          )}
+        </div>
+      </div>
+
+      <main className="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 text-slate-200 flex flex-col relative overflow-hidden">
         
-        {/* ANA KART BİLEŞENLERİ */}
         {(activeTab.includes('.1') && !activeTab.includes('On-Class')) && (
           <DialogueSection 
             sectionId={activeTab} 
