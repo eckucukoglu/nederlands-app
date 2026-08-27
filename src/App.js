@@ -60,10 +60,13 @@ function MainContent({ user, setIsAuthModalOpen }) {
     return saved ? JSON.parse(saved) : {};
   });
 
-  // YENİ: ARAMA ÇUBUĞU STATE'LERİ
+  // ARAMA ÇUBUĞU STATE'LERİ
   const [isSearchExpanded, setIsSearchExpanded] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState(null);
+
+  // YENİ: BÖLÜM SEÇİCİ (CHAPTER SELECTOR) STATE'İ
+  const [isChapterExpanded, setIsChapterExpanded] = useState(false);
 
   const [globalWordStatuses, setGlobalWordStatuses] = useState(() => {
     const saved = localStorage.getItem(`dialogueWordStatuses_${currentChapter}`);
@@ -87,7 +90,6 @@ function MainContent({ user, setIsAuthModalOpen }) {
     window.speechSynthesis.speak(utterance);
   };
 
-  // GLOBAL AKILLI ARAMA ALGORİTMASI
   const handleGlobalSearch = (e) => {
     if (e) e.preventDefault();
     const cleanWord = searchQuery.trim().toLowerCase();
@@ -251,7 +253,6 @@ function MainContent({ user, setIsAuthModalOpen }) {
     setActiveTab(savedTab ? savedTab : `${newChapter}.1`);
   };
 
-  // 3-Way Toggle Hesabı (Arama Çubuğu İçin)
   const rawWord = searchQuery.trim().toLowerCase();
   const rawStatus = globalWordStatuses[rawWord];
   let trackColor = "bg-slate-700/80"; let thumbColor = "bg-slate-400"; let translateClass = "translate-x-[18px]";
@@ -266,6 +267,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
     <div className="min-h-screen flex flex-col bg-slate-900 transition-colors duration-300">
       <header className="bg-slate-950 text-white shadow-xl sticky top-0 z-50 border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 py-3 flex flex-wrap justify-between items-center gap-4">
+          
           <div className="flex items-center space-x-3">
             <div className="bg-brand-900/50 border border-brand-500/30 p-2.5 rounded-xl backdrop-blur">
               <i className="fa-solid fa-book-medical text-2xl text-brand-400"></i>
@@ -276,7 +278,8 @@ function MainContent({ user, setIsAuthModalOpen }) {
             </div>
           </div>
 
-          <div className="flex items-center space-x-1 sm:space-x-3">
+          {/* SAĞ TARAF KONTROLLERİ */}
+          <div className="flex items-center space-x-2 sm:space-x-3">
             
             {/* LOGIN BUTONU */}
             <button 
@@ -288,7 +291,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
               {user && <div className="absolute top-0 right-0 w-2.5 h-2.5 bg-emerald-500 border-2 border-slate-950 rounded-full"></div>}
             </button>
 
-            {/* YENİ: GENİŞLEYEN ARAMA BUTONU VE ÇUBUĞU */}
+            {/* GENİŞLEYEN ARAMA BUTONU */}
             <div className="relative flex items-center">
               <div className={`transition-all duration-300 ease-in-out overflow-hidden flex items-center ${isSearchExpanded ? 'w-36 sm:w-48 opacity-100 mr-2' : 'w-0 opacity-0'}`}>
                 <form onSubmit={handleGlobalSearch} className="w-full">
@@ -315,12 +318,11 @@ function MainContent({ user, setIsAuthModalOpen }) {
                 <i className="fa-solid fa-magnifying-glass text-xl"></i>
               </button>
 
-              {/* ARAMA SONUÇLARI POP-UP (DialogueSection ile aynı tasarım) */}
+              {/* ARAMA SONUÇLARI POP-UP */}
               {searchResults && searchResults.length > 0 && (
                 <>
                   <div className="fixed inset-0 z-40" onClick={() => setSearchResults(null)}></div>
                   <div className="absolute right-0 top-full mt-3 bg-slate-800 border border-slate-600 p-3 rounded-xl shadow-2xl z-50 min-w-[240px] max-w-[280px] max-h-[360px] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-600">
-                    
                     <div className="mb-3 pb-3 border-b border-slate-700/80 flex justify-between items-center gap-3">
                       <div className="flex flex-col truncate">
                         <span className="text-[13px] font-bold text-slate-200 truncate">
@@ -372,21 +374,36 @@ function MainContent({ user, setIsAuthModalOpen }) {
               )}
             </div>
 
-            <label className="text-xs text-slate-400 font-medium hidden sm:inline ml-2">
-              <i className="fa-solid fa-layer-group mr-1"></i>Selecteer:
-            </label>
-            
-            <select 
-              value={currentChapter}
-              onChange={handleChapterChange}
-              className="bg-slate-800 border border-slate-700 text-slate-200 rounded-lg px-3 py-1.5 text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-brand-500 cursor-pointer"
-            >
-              {availableChapters.map(ch => (
-                <option key={ch} value={ch}>
-                  Hoofdstuk {ch} {chapterTitles[ch] ? `- ${chapterTitles[ch]}` : ''}
-                </option>
-              ))}
-            </select>
+            <div className="h-6 w-[1px] bg-slate-700 my-auto mx-1 sm:mx-2"></div>
+
+            {/* YENİ: GENİŞLEYEN ÜNİTE (CHAPTER) SEÇİCİ */}
+            <div className="relative flex items-center">
+              <button
+                onClick={() => setIsChapterExpanded(!isChapterExpanded)}
+                className={`flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 rounded-full font-extrabold text-sm transition-all border shadow-sm ${isChapterExpanded ? 'bg-brand-600 text-white border-brand-500' : 'bg-slate-800 text-brand-400 border-slate-700 hover:bg-slate-700'}`}
+                title="Bölüm Değiştir"
+              >
+                {currentChapter}
+              </button>
+
+              <div className={`transition-all duration-300 ease-in-out overflow-hidden flex items-center ${isChapterExpanded ? 'w-48 sm:w-60 opacity-100 ml-2' : 'w-0 opacity-0'}`}>
+                <select
+                  value={currentChapter}
+                  onChange={(e) => {
+                    handleChapterChange(e);
+                    setIsChapterExpanded(false); // Seçince otomatik kapat
+                  }}
+                  className="w-full bg-slate-800 border border-slate-700 text-slate-200 text-sm rounded-full px-4 py-1.5 focus:outline-none focus:ring-1 focus:ring-brand-500 shadow-inner cursor-pointer appearance-none"
+                >
+                  {availableChapters.map(ch => (
+                    <option key={ch} value={ch}>
+                      Hoofdstuk {ch} {chapterTitles[ch] ? `- ${chapterTitles[ch]}` : ''}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+
           </div>
         </div>
 
