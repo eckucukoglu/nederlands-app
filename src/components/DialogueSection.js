@@ -20,6 +20,16 @@ const fallbackDictionary = {
   "weer": "again", "als": "like/as", "nieuw": "new", "woorden": "words", "morgen": "tomorrow", "overmorgen": "the day after tomorrow", "dag": "day"
 };
 
+// YENİ: Konuşmacılar için Dinamik Renk Paleti
+const speakerColorPalette = [
+  { bg: "bg-slate-800/50", border: "border-slate-500", text: "text-slate-400" },     // 1. Kişi (Genelde anlatan/ana karakter)
+  { bg: "bg-teal-900/20", border: "border-teal-600", text: "text-teal-400" },        // 2. Kişi
+  { bg: "bg-indigo-900/20", border: "border-indigo-500", text: "text-indigo-400" },  // 3. Kişi
+  { bg: "bg-rose-900/20", border: "border-rose-600", text: "text-rose-400" },        // 4. Kişi
+  { bg: "bg-amber-900/20", border: "border-amber-600", text: "text-amber-400" },     // 5. Kişi
+  { bg: "bg-purple-900/20", border: "border-purple-500", text: "text-purple-400" }   // 6. Kişi
+];
+
 export default function DialogueSection({ sectionId, favorites, toggleFavorite, completed, toggleCompleted }) {
   const chapterId = sectionId.split('.')[0];
   
@@ -39,7 +49,15 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
   const isFav = favorites && favorites[sectionId];
   const isComp = completed && completed[sectionId];
 
-  // YENİ: Hem ilk yüklemede hem de Arama Çubuğundan gelen değişiklikleri anında dinle
+  // YENİ: Diyalogdaki benzersiz konuşmacıları tespit etme
+  const uniqueSpeakers = [...new Set(activeDialogue.map(line => line.speaker))];
+  
+  // YENİ: Konuşmacıya özel rengi getirme fonksiyonu
+  const getSpeakerStyle = (speakerName) => {
+    const index = uniqueSpeakers.indexOf(speakerName);
+    return speakerColorPalette[index % speakerColorPalette.length];
+  };
+
   useEffect(() => {
     const fetchStatuses = () => {
       const saved = localStorage.getItem(`dialogueWordStatuses_${chapterId}`);
@@ -150,7 +168,6 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
 
     setWordStatuses(newStatuses);
     localStorage.setItem(`dialogueWordStatuses_${chapterId}`, JSON.stringify(newStatuses));
-    // Dışarıya da haber ver
     window.dispatchEvent(new Event('wordStatusUpdated'));
     setSelectedWords(null);
   };
@@ -282,17 +299,20 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
       
       <div className="space-y-3">
         {activeDialogue.map((line, idx) => {
-          const isDoc = line.speaker.includes("Huisarts") || line.speaker.includes("Fietsenmaker");
           const words = line.text.split(' ');
           const cleanWords = words.map(w => w.replace(/[.,?!:;–-]/g, '').toLowerCase());
+          
+          // YENİ: Konuşmacıya ait stili (renk paletinden) çekme
+          const style = getSpeakerStyle(line.speaker);
 
           return (
-            <div key={idx} className={`p-3.5 rounded-xl flex items-start space-x-3 transition ${isDoc ? "bg-teal-900/20 border-l-4 border-teal-600" : "bg-slate-800/50 border-l-4 border-slate-600"}`}>
+            <div key={idx} className={`p-3.5 rounded-xl flex items-start space-x-3 transition ${style.bg} border-l-4 ${style.border}`}>
               <button onClick={() => speakDutch(line.text)} className="bg-slate-800 border border-slate-600 p-2 rounded-lg shadow-sm hover:bg-slate-700 text-brand-400 transition flex-shrink-0 mt-0.5">
                 <i className="fa-solid fa-volume-high text-sm"></i>
               </button>
               <div className="flex-1">
-                <span className="font-bold text-xs uppercase tracking-wider text-slate-400">{line.speaker}</span>
+                {/* YENİ: Konuşmacı isminin rengi de o konuşmacının stiline uyum sağladı */}
+                <span className={`font-bold text-xs uppercase tracking-wider ${style.text}`}>{line.speaker}</span>
                 <p className="text-sm font-semibold text-slate-200 mt-0.5 leading-relaxed">
                   
                   {words.map((word, i) => {
