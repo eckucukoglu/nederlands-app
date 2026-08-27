@@ -17,23 +17,18 @@ const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const db = getFirestore(app);
 
-// --------------------------------------------------------
-// OTOMATİK BULUT SENKRONİZASYON MOTORU (Local-First Sync)
-// --------------------------------------------------------
+let isPulling = false; // Veri indirilirken kazara geri yüklemeyi durdurmak için
 let syncTimeout = null;
 
-const syncToCloud = async () => {
-  if (!auth.currentUser) return; // Giriş yapılmamışsa buluta gitme, sadece lokalde kal
-  
+export const syncToCloud = async () => {
+  if (!auth.currentUser || isPulling) return;
   const allData = {};
   for (let i = 0; i < localStorage.length; i++) {
     const key = localStorage.key(i);
-    // Sadece uygulamamızın verilerini al (Firebase'in kendi tokenlarını hariç tut)
     if (!key.startsWith('firebase')) {
       allData[key] = localStorage.getItem(key);
     }
   }
-
   try {
     await setDoc(doc(db, "users", auth.currentUser.uid), { localData: allData }, { merge: true });
   } catch (err) {
@@ -41,42 +36,53 @@ const syncToCloud = async () => {
   }
 };
 
-// LocalStorage'a yazılan her şeyi (Favori, Tik, Sözlük) yakalayıp 2 saniye gecikmeyle buluta yollar
 const originalSetItem = localStorage.setItem;
 localStorage.setItem = function(key, value) {
   originalSetItem.apply(this, arguments);
-  if (!key.startsWith('firebase')) {
+  if (!key.startsWith('firebase') && !isPulling) {
     clearTimeout(syncTimeout);
-    syncTimeout = setTimeout(syncToCloud, 2000); 
+    syncTimeout = setTimeout(syncToCloud, 2000);
   }
 };
 
-// --------------------------------------------------------
-// GİRİŞ YAPILDIĞINDAKİ BİRLEŞTİRME (MERGE) MANTIĞI
-// --------------------------------------------------------
+// YENİ: Sayfa yenilendiğinde buluttaki en taze veriyi indiren fonksiyon
+export const pullFromCloud = async (uid) => {
+  isPulling = true;
+  try {
+    const userDocRef = doc(db, "users", uid);
+    const docSnap = await getDoc(userDocRef);
+    if (docSnap.exists() && docSnap.data().localData) {
+      const cloudData = docSnap.data().localData;
+      Object.keys(cloudData).forEach(key => {
+        originalSetItem.call(localStorage, key, cloudData[key]);
+      });
+    }
+  } catch (err) {
+    console.error("Pull error:", err);
+  }
+  isPulling = false;
+};
+
 export const handleUserSyncOnLogin = async (user) => {
+  isPulling = true;
   const userDocRef = doc(db, "users", user.uid);
   const docSnap = await getDoc(userDocRef);
 
   if (docSnap.exists() && docSnap.data().localData) {
-    // ESKİ KULLANICI: Lokal verileri SİL, buluttakileri İNDİR
     const cloudData = docSnap.data().localData;
-    
-    // Firebase auth verilerini silmemek için temizlik
     const keysToRemove = [];
     for (let i = 0; i < localStorage.length; i++) {
       if (!localStorage.key(i).startsWith('firebase')) keysToRemove.push(localStorage.key(i));
     }
     keysToRemove.forEach(k => localStorage.removeItem(k));
 
-    // Buluttan gelenleri yaz
     Object.keys(cloudData).forEach(key => {
       originalSetItem.call(localStorage, key, cloudData[key]);
     });
-    
+    isPulling = false;
     return "restored";
   } else {
-    // YENİ KULLANICI: Mevcut lokal verileri buluta YÜKLE
+    isPulling = false;
     await syncToCloud();
     return "uploaded";
   }

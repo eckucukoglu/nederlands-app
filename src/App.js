@@ -6,7 +6,7 @@ import ExerciseEngine from './components/ExerciseEngine';
 import Flashcards from './components/Flashcards';
 import AuthModal from './components/AuthModal';
 import { bookSections } from './data';
-import { auth, isSignInWithEmailLink, signInWithEmailLink, onAuthStateChanged, handleUserSyncOnLogin } from './firebase';
+import { auth, isSignInWithEmailLink, signInWithEmailLink, onAuthStateChanged, handleUserSyncOnLogin, pullFromCloud } from './firebase';
 
 const chapterTitles = {
   1: "Welkom", 2: "In de kantine", 3: "In het café", 4: "Op straat", 5: "Op de markt",
@@ -16,12 +16,10 @@ const chapterTitles = {
   17: "Thuis", 18: "Bij de politie"
 };
 
-function App() {
-  // YENİ: Auth ve Modal Stateleri
-  const [user, setUser] = useState(null);
-  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
-  const [isSyncing, setIsSyncing] = useState(false); // Linkten girişteki yükleme ekranı
-
+// ==========================================
+// ANA UYGULAMA İÇERİĞİ (Veriler çekildikten SONRA çalışır)
+// ==========================================
+function MainContent({ user, setIsAuthModalOpen }) {
   const availableChapters = [...new Set(bookSections.map(sec => sec.chapter))].filter(Boolean).sort((a, b) => a - b);
   const fallbackChapter = availableChapters[0] || 1;
 
@@ -45,37 +43,6 @@ function App() {
     const saved = localStorage.getItem('completedSections');
     return saved ? JSON.parse(saved) : {};
   });
-
-  // YENİ: Oturum İzleme ve Link ile Giriş Yakalama
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
-    });
-
-    // Eğer kullanıcı maildeki linke tıklayıp geldiyse:
-    if (isSignInWithEmailLink(auth, window.location.href)) {
-      let email = window.localStorage.getItem('emailForSignIn');
-      if (!email) {
-        email = window.prompt('Lütfen doğrulama için mail adresinizi tekrar girin:');
-      }
-      
-      if (email) {
-        setIsSyncing(true); // Yükleme ekranını aç
-        signInWithEmailLink(auth, email, window.location.href)
-          .then(async (result) => {
-            window.localStorage.removeItem('emailForSignIn');
-            // Veri birleştirme ve indirme işlemini başlat
-            await handleUserSyncOnLogin(result.user);
-            window.location.href = window.location.origin; // Linkteki uzun tokenları temizle
-          })
-          .catch((error) => {
-            console.error("Giriş hatası", error);
-            setIsSyncing(false);
-          });
-      }
-    }
-    return () => unsubscribe();
-  }, []);
 
   const toggleFavorite = (sectionId, note) => {
     const newFavs = { ...favorites };
@@ -110,23 +77,8 @@ function App() {
     setActiveTab(savedTab ? savedTab : `${newChapter}.1`);
   };
 
-  // Mail linkinden tıklandığında kısa bir yükleme ekranı göster
-  if (isSyncing) {
-    return (
-      <div className="min-h-screen bg-slate-900 flex flex-col items-center justify-center text-brand-400">
-        <i className="fa-solid fa-cloud-arrow-down text-6xl animate-bounce mb-4"></i>
-        <h2 className="text-xl font-bold text-slate-200">Verilerin senkronize ediliyor...</h2>
-        <p className="text-sm text-slate-500 mt-2">Lütfen bekleyin.</p>
-      </div>
-    );
-  }
-
   return (
     <div className="min-h-screen flex flex-col bg-slate-900 transition-colors duration-300">
-      
-      {/* AUTH MODAL BİLEŞENİ */}
-      <AuthModal isOpen={isAuthModalOpen} onClose={() => setIsAuthModalOpen(false)} user={user} />
-
       <header className="bg-slate-950 text-white shadow-xl sticky top-0 z-50 border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 py-3 flex flex-wrap justify-between items-center gap-4">
           <div className="flex items-center space-x-3">
@@ -140,8 +92,6 @@ function App() {
           </div>
 
           <div className="flex items-center space-x-3">
-            
-            {/* YENİ: GİRİŞ YAP LOGOSU (Hoofdstuk'un solunda) */}
             <button 
               onClick={() => setIsAuthModalOpen(true)}
               className="p-1.5 rounded-full hover:bg-slate-800 transition-colors flex items-center justify-center relative group"
@@ -228,4 +178,61 @@ function App() {
   );
 }
 
-export default App;
+// ==========================================
+// ROOT APP (Yükleme ve Bekletme Ekranı)
+// ==========================================
+export default function App() {
+  const [user, setUser] = useState(null);
+  const [isAppReady, setIsAppReady] = useState(false);
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
+      setUser(currentUser);
+
+      if (isSignInWithEmailLink(auth, window.location.href)) {
+        let email = window.localStorage.getItem('emailForSignIn');
+        if (!email) email = window.prompt('Lütfen doğrulama için mail adresinizi tekrar girin:');
+        
+        if (email) {
+          try {
+            const result = await signInWithEmailLink(auth, email, window.location.href);
+            window.localStorage.removeItem('emailForSignIn');
+            await handleUserSyncOnLogin(result.user);
+            window.location.href = window.location.origin; 
+          } catch (error) {
+            console.error("Giriş hatası", error);
+            setIsAppReady(true);
+          }
+        } else {
+          setIsAppReady(true);
+        }
+      } else if (currentUser) {
+        // YENİ: NORMAL YENİLEMEDE BULUTTAN VERİYİ ÇEK VE BEKLE
+        await pullFromCloud(currentUser.uid);
+        setIsAppReady(true);
+      } else {
+        setIsAppReady(true); // Giriş yapmamış kullanıcı için bekleme, direkt aç
+      }
+    });
+
+    return () => unsubscribe();
+  }, []);
+
+  if (!isAppReady) {
+    return (
+      <div className="min-h-screen bg-slate-900 flex flex-col items-center justify-center text-brand-400">
+        <i className="fa-solid fa-cloud-arrow-down text-6xl animate-bounce mb-4"></i>
+        <h2 className="text-xl font-bold text-slate-200">Verilerin senkronize ediliyor...</h2>
+        <p className="text-sm text-slate-500 mt-2">Lütfen bekleyin.</p>
+      </div>
+    );
+  }
+
+  return (
+    <>
+      <AuthModal isOpen={isAuthModalOpen} onClose={() => setIsAuthModalOpen(false)} user={user} />
+      <MainContent user={user} setIsAuthModalOpen={setIsAuthModalOpen} />
+    </>
+  );
+}
