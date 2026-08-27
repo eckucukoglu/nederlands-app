@@ -16,7 +16,6 @@ export default function Flashcards({ initialChapter }) {
 
   const chapterVocab = vocabulary.filter(v => v.chapter === targetChapter);
 
-  // Bileşen her yüklendiğinde veya Firebase'den veri geldiğinde en güncel istatistiği al
   useEffect(() => {
     const freshStats = JSON.parse(localStorage.getItem('flashcardStats')) || {};
     setGlobalStats(freshStats);
@@ -51,20 +50,20 @@ export default function Flashcards({ initialChapter }) {
     
     setSessionStats(prev => ({ ...prev, [isKnown ? 'known' : 'unknown']: prev[isKnown ? 'known' : 'unknown'] + 1 }));
 
-    // BUG FIX: Firebase'den gelen veriyi ezmemek için tam tıklama anında taze veriyi okuyoruz
     const freshStorage = JSON.parse(localStorage.getItem('flashcardStats')) || {};
-    const currentGlobal = freshStorage[wordId] || { known: 0, unknown: 0 };
+    const currentGlobal = freshStorage[wordId] || { known: 0, unknown: 0, lastStatus: null };
     
     const newGlobal = {
       ...freshStorage,
       [wordId]: { 
         known: currentGlobal.known + (isKnown ? 1 : 0), 
-        unknown: currentGlobal.unknown + (!isKnown ? 1 : 0) 
+        unknown: currentGlobal.unknown + (!isKnown ? 1 : 0),
+        lastStatus: isKnown ? 'known' : 'unknown' // YENİ: Kelimenin en son bilindiği/bilinmediği bilgisini tutuyoruz
       }
     };
     
     setGlobalStats(newGlobal);
-    localStorage.setItem('flashcardStats', JSON.stringify(newGlobal)); // Bu işlem firebase.js'i tetikler
+    localStorage.setItem('flashcardStats', JSON.stringify(newGlobal)); 
 
     setIsFlipped(false);
     setCurrentIndex(prev => (prev + 1) % totalWords);
@@ -95,8 +94,28 @@ export default function Flashcards({ initialChapter }) {
     window.speechSynthesis.speak(utterance);
   };
 
-  const wordGlobalStat = globalStats[currentWord?.id || currentWord?.nl] || { known: 0, unknown: 0 };
+  const wordGlobalStat = globalStats[currentWord?.id || currentWord?.nl] || { known: 0, unknown: 0, lastStatus: null };
   const progressPercentage = totalWords > 0 ? Math.round(((currentIndex + 1) / totalWords) * 100) : 0;
+
+  // YENİ: "Bu Oturum" için Arka Plan Rengi Hesaplama
+  let sessionBgClass = "bg-slate-800 border-slate-700";
+  if (sessionStats.known === 0 && sessionStats.unknown === 0) {
+    sessionBgClass = "bg-slate-800 border-slate-700";
+  } else if (sessionStats.known >= sessionStats.unknown * 3) {
+    sessionBgClass = "bg-emerald-900/20 border-emerald-800/50";
+  } else {
+    sessionBgClass = "bg-rose-900/20 border-rose-800/50";
+  }
+
+  // YENİ: "Geçmiş" için Arka Plan Rengi Hesaplama
+  let globalBgClass = "bg-slate-800 border-slate-700";
+  if (wordGlobalStat.known === 0 && wordGlobalStat.unknown === 0) {
+    globalBgClass = "bg-slate-800 border-slate-700";
+  } else if (wordGlobalStat.known >= wordGlobalStat.unknown * 1.5 && wordGlobalStat.lastStatus === 'known') {
+    globalBgClass = "bg-emerald-900/20 border-emerald-800/50";
+  } else {
+    globalBgClass = "bg-rose-900/20 border-rose-800/50";
+  }
 
   return (
     <div className="space-y-6 max-w-2xl mx-auto mt-4">
@@ -108,7 +127,6 @@ export default function Flashcards({ initialChapter }) {
       </div>
 
       <div className="flex flex-wrap justify-center gap-3">
-        {/* DİNAMİK ÜNİTE SEÇİCİ */}
         <select 
           value={targetChapter} 
           onChange={(e) => setTargetChapter(Number(e.target.value))} 
@@ -146,15 +164,16 @@ export default function Flashcards({ initialChapter }) {
         </div>
       </div>
 
+      {/* DİNAMİK RENKLENEN İSTATİSTİK KARTLARI */}
       <div className="grid grid-cols-2 gap-4">
-        <div className="bg-slate-800 p-4 rounded-2xl shadow-sm border border-slate-700 text-center">
+        <div className={`p-4 rounded-2xl shadow-sm border text-center transition-colors duration-300 ${sessionBgClass}`}>
           <h4 className="text-xs font-extrabold text-slate-500 uppercase tracking-wider mb-3">Bu Oturum (Session)</h4>
           <div className="flex justify-center gap-4 text-sm font-bold">
             <span className="text-emerald-400 bg-emerald-900/40 border border-emerald-800/50 px-3 py-1.5 rounded-lg flex items-center gap-1"><i className="fa-solid fa-check"></i> {sessionStats.known}</span>
             <span className="text-rose-400 bg-rose-900/40 border border-rose-800/50 px-3 py-1.5 rounded-lg flex items-center gap-1"><i className="fa-solid fa-xmark"></i> {sessionStats.unknown}</span>
           </div>
         </div>
-        <div className="bg-slate-800 p-4 rounded-2xl shadow-sm border border-slate-700 text-center">
+        <div className={`p-4 rounded-2xl shadow-sm border text-center transition-colors duration-300 ${globalBgClass}`}>
           <h4 className="text-xs font-extrabold text-slate-500 uppercase tracking-wider mb-3">Geçmiş (Bu Kelime)</h4>
           <div className="flex justify-center gap-4 text-sm font-bold">
             <span className="text-emerald-400 bg-emerald-900/40 border border-emerald-800/50 px-3 py-1.5 rounded-lg flex items-center gap-1"><i className="fa-solid fa-check"></i> {wordGlobalStat.known}</span>
