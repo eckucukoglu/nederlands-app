@@ -576,39 +576,239 @@ export const chapter1Sections = [
       }
     ]
   },
-  {
+{
     id: "On-Class-1",
     chapter: 1,
-    title: "On-Class Extra",
+    title: "Extra Oefeningen (On-Class)",
     theory: (
       <>
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>🎓 On-Class Extra Zinnen & Hobby's</h3>
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #3b82f6', marginBottom: '20px' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#60a5fa' }}>👋 Jezelf Voorstellen & Vragen (Kendini Tanıtma ve Sorular)</h3>
+          <p className="text-sm text-slate-300 mb-3">Hollandacada biriyle tanışırken sorulan temel sorular ve olası cevapları (Mogelijk antwoord):</p>
           
-          <h4 style={{ color: '#a78bfa' }}>Extra vragen en groeten (Nasılsın?):</h4>
-          <ul style={{ margin: '10px 0', paddingLeft: '20px', color: '#cbd5e1' }}>
-            <li><strong>Hoe gaat het met jou?</strong> ➔ Alles goed. / Het gaat goed. (Nasılsın? Her şey yolunda).</li>
-            <li><strong>Tot later!</strong> (Sonra görüşürüz).</li>
-          </ul>
+          <table className="w-full text-sm text-left text-slate-300 border-collapse mb-4">
+            <thead>
+              <tr className="border-b border-slate-700 text-slate-200">
+                <th className="py-2">Question (Soru)</th>
+                <th className="py-2">Mogelijk antwoord (Olası Cevap)</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-700/50">
+              <tr>
+                <td className="py-2 font-semibold text-blue-300">Wie ben jij? (Sen kimsin?)</td>
+                <td className="py-2">Ik ben Maria.</td>
+              </tr>
+              <tr>
+                <td className="py-2 font-semibold text-blue-300">Wat is je naam?</td>
+                <td className="py-2">Mijn naam is Maria Santos. / Ik heet Maria.</td>
+              </tr>
+              <tr>
+                <td className="py-2 font-semibold text-blue-300">Wat is je adres?</td>
+                <td className="py-2">Mijn adres is Dorpstraat 10.</td>
+              </tr>
+              <tr>
+                <td className="py-2 font-semibold text-blue-300">Waar woon je?</td>
+                <td className="py-2">Ik woon in Valkenswaard.</td>
+              </tr>
+              <tr>
+                <td className="py-2 font-semibold text-blue-300">Uit welk land kom je? / Welk land kom jij vandaan?</td>
+                <td className="py-2">Ik kom uit Turkije / Nigeria.</td>
+              </tr>
+              <tr>
+                <td className="py-2 font-semibold text-blue-300">Welke taal spreek je?</td>
+                <td className="py-2">Ik spreek Turks en Engels.</td>
+              </tr>
+              <tr>
+                <td className="py-2 font-semibold text-blue-300">Wat is je nationaliteit?</td>
+                <td className="py-2">Ik ben Turks.</td>
+              </tr>
+            </tbody>
+          </table>
 
-          <h4 style={{ color: '#f472b6', marginTop: '20px' }}>Hobby's (Hobiler):</h4>
-          <ul style={{ margin: '10px 0', paddingLeft: '20px', color: '#cbd5e1' }}>
+          <div className="bg-blue-900/30 p-3 rounded-lg border border-blue-500/30">
+            <h4 className="font-bold text-blue-300 text-xs uppercase mb-1">Extra:</h4>
+            <ul className="text-sm text-blue-100 list-disc pl-5">
+              <li><strong>Mijn werk is...</strong> (Benim işim/mesleğim...)</li>
+              <li><strong>Hoe gaat het met jou?</strong> ➔ Alles goed. / Het gaat goed. (Nasılsın? ➔ Her şey yolunda / İyi gidiyor.)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>⚙️ Werkwoorden (Zijn, Luisteren, Werken)</h3>
+          <p className="text-sm text-slate-300 mb-3">Hollandacada düzenli fiilleri çekerken önce fiilin kökünü (stem) buluruz: <strong>Stem = infinitief - 'en'</strong>. Örn: luisteren ➔ luister, werken ➔ werk.</p>
+          
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm text-left text-slate-300 border-collapse bg-purple-900/20 rounded-xl">
+              <thead className="bg-purple-900/40">
+                <tr>
+                  <th className="py-2 px-2 border-b border-purple-500/30">Pronouns</th>
+                  <th className="py-2 px-2 border-b border-purple-500/30 text-purple-300">Zijn (to be)</th>
+                  <th className="py-2 px-2 border-b border-purple-500/30">Rule (Kural)</th>
+                  <th className="py-2 px-2 border-b border-purple-500/30">luisteren (listen)</th>
+                  <th className="py-2 px-2 border-b border-purple-500/30">werken (work)</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-purple-500/20">
+                <tr>
+                  <td className="py-2 px-2 font-semibold">ik (I)</td>
+                  <td className="py-2 px-2 font-bold text-white">ben</td>
+                  <td className="py-2 px-2 text-slate-400">stem + nothing</td>
+                  <td className="py-2 px-2">luister</td>
+                  <td className="py-2 px-2">werk</td>
+                </tr>
+                <tr>
+                  <td className="py-2 px-2 font-semibold">jij/je (You)</td>
+                  <td className="py-2 px-2 font-bold text-white">bent</td>
+                  <td className="py-2 px-2 text-slate-400">stem + t</td>
+                  <td className="py-2 px-2">luister<strong>t</strong></td>
+                  <td className="py-2 px-2">werk<strong>t</strong></td>
+                </tr>
+                <tr>
+                  <td className="py-2 px-2 font-semibold">hij/zij/het (He/she/it)</td>
+                  <td className="py-2 px-2 font-bold text-white">is</td>
+                  <td className="py-2 px-2 text-slate-400">stem + t</td>
+                  <td className="py-2 px-2">luister<strong>t</strong></td>
+                  <td className="py-2 px-2">werk<strong>t</strong></td>
+                </tr>
+                <tr>
+                  <td className="py-2 px-2 font-semibold">wij/we (We)</td>
+                  <td className="py-2 px-2 font-bold text-white">zijn</td>
+                  <td className="py-2 px-2 text-slate-400">stem + en</td>
+                  <td className="py-2 px-2">luister<strong>en</strong></td>
+                  <td className="py-2 px-2">werk<strong>en</strong></td>
+                </tr>
+                <tr>
+                  <td className="py-2 px-2 font-semibold">jullie (You plural)</td>
+                  <td className="py-2 px-2 font-bold text-white">zijn</td>
+                  <td className="py-2 px-2 text-slate-400">stem + en</td>
+                  <td className="py-2 px-2">luister<strong>en</strong></td>
+                  <td className="py-2 px-2">werk<strong>en</strong></td>
+                </tr>
+                <tr>
+                  <td className="py-2 px-2 font-semibold">zij/ze (They)</td>
+                  <td className="py-2 px-2 font-bold text-white">zijn</td>
+                  <td className="py-2 px-2 text-slate-400">stem + en</td>
+                  <td className="py-2 px-2">luister<strong>en</strong></td>
+                  <td className="py-2 px-2">werk<strong>en</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>👋 Begroeten en Afscheid nemen (Selamlaşma ve Vedalaşma)</h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <h4 className="font-bold text-emerald-300 text-sm mb-1">Begroeten (Greetings)</h4>
+              <ul className="text-sm text-slate-200 list-disc pl-5 space-y-1">
+                <li><strong>goedemorgen:</strong> good morning</li>
+                <li><strong>goedemiddag:</strong> good afternoon</li>
+                <li><strong>goedenavond:</strong> good evening</li>
+                <li><strong>goedendag:</strong> good day</li>
+                <li><strong>hallo / hoi / dag:</strong> hello / hi</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="font-bold text-emerald-300 text-sm mb-1">Afscheid nemen (Farewells)</h4>
+              <ul className="text-sm text-slate-200 list-disc pl-5 space-y-1">
+                <li><strong>tot ziens:</strong> good bye</li>
+                <li><strong>doei / dag:</strong> bye</li>
+                <li><strong>tot later:</strong> see you later</li>
+                <li><strong>tot straks / tot zo:</strong> see you soon</li>
+                <li><strong>tot morgen:</strong> see you tomorrow</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f59e0b', marginBottom: '20px' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#fbbf24' }}>🔤 Het Alfabet & Spellen (Alfabe ve Heceleme)</h3>
+          <p className="text-sm text-slate-300 mb-2"><strong>Kan jij jouw voornaam spellen?</strong> (İsmini heceleyebilir misin?)</p>
+          <div className="bg-amber-900/20 p-3 rounded-lg border border-amber-500/30 text-xs text-slate-300 grid grid-cols-3 sm:grid-cols-6 gap-2 mb-3 font-mono">
+            <div>A ➔ AA</div><div>B ➔ bay</div><div>C ➔ say</div><div>D ➔ day</div><div>E ➔ ay</div><div>F ➔ ef</div>
+            <div>G ➔ G-ay</div><div>H ➔ Ha</div><div>I ➔ ee</div><div>J ➔ y-ay</div><div>K ➔ Kaa</div><div>L ➔ el</div>
+            <div>M ➔ em</div><div>N ➔ en</div><div>O ➔ O</div><div>P ➔ P-ay</div><div>Q ➔ Kue</div><div>R ➔ er</div>
+            <div>S ➔ es</div><div>T ➔ T-ay</div><div>U ➔ Uu</div><div>V ➔ V-ay</div><div>W ➔ W-ay</div><div>X ➔ ix</div>
+            <div className="col-span-2">Y ➔ ij / griekse ij / y-grec</div><div className="col-span-2">Z ➔ Zet</div>
+          </div>
+          
+          <h4 className="font-bold text-amber-300 text-sm mb-1 mt-4">🔢 Getallen (Sayılar)</h4>
+          <p className="text-sm text-slate-200">Hollandacada 21'den sonraki sayılar "birler basamağı + en + onlar basamağı" şeklinde sağdan sola okunur:</p>
+          <ul className="text-sm text-amber-100 list-disc pl-5 mt-1">
+            <li><strong>23</strong> = drieëntwintig (üç ve yirmi)</li>
+            <li><strong>58</strong> = achtenvijftig (sekiz ve elli)</li>
+          </ul>
+        </div>
+
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #ef4444' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#f87171' }}>⚽ Hobby's (Hobiler)</h3>
+          <ul className="text-sm text-slate-200 space-y-1 list-disc pl-5">
             <li><strong>Mijn hobby is...</strong> (Benim hobim...)</li>
-            <li><strong>hardlopen</strong> (koşmak/running)</li>
-            <li><strong>basketbal</strong> (Ik speel basketbal)</li>
-            <li><strong>lezen</strong> (okumak ➔ <em>De krant lezen = reading the newspaper</em>)</li>
+            <li><strong>hardlopen:</strong> running (koşu sporu)</li>
+            <li><strong>basketbal:</strong> basketball ➔ <em>Ik speel basketbal.</em></li>
+            <li><strong>lezen:</strong> reading (okumak)</li>
+            <li><strong>De krant lezen:</strong> reading the newspaper (gazete okumak)</li>
           </ul>
         </div>
       </>
     ),
     exerciseGroups: [
       {
-        instruction: "On-Class Oefeningen",
+        instruction: "On-Class Oefening 1: Jezelf Voorstellen (Kendini Tanıtma)",
+        isExtra: false,
+        questions: [
+          { id: "1_onclass_1_1", type: "fill_in", question: "Uit welk land kom je? -> Ik ________ uit Nederland. (come)", correctAnswer: "kom" },
+          { id: "1_onclass_1_2", type: "fill_in", question: "Waar woon je? -> Ik ________ in Valkenswaard. (live)", correctAnswer: "woon" },
+          { id: "1_onclass_1_3", type: "multiple_choice", question: "Wat is de juiste vraag voor: 'Ik ben Turks.'?", options: ["Wat is je adres?", "Wat is je nationaliteit?", "Wie ben jij?"], correctAnswer: "Wat is je nationaliteit?" },
+          { id: "1_onclass_1_4", type: "fill_in", question: "Welke taal spreek je? -> Ik ________ Turks en Engels. (speak)", correctAnswer: "spreek" },
+          { id: "1_onclass_1_5", type: "multiple_choice", question: "Iemand vraagt: 'Hoe gaat het met jou?'. Wat antwoord je?", options: ["Tot ziens!", "Alles goed.", "Mijn werk is..."], correctAnswer: "Alles goed." }
+        ]
+      },
+      {
+        instruction: "On-Class Oefening 2: Werkwoord 'Zijn' (To be)",
+        isExtra: false,
+        questions: [
+          { id: "1_onclass_2_1", type: "fill_in", question: "Ik ________ Maria. (am)", correctAnswer: "ben" },
+          { id: "1_onclass_2_2", type: "fill_in", question: "Jij ________ student. (are)", correctAnswer: "bent" },
+          { id: "1_onclass_2_3", type: "fill_in", question: "Hij ________ docent. (is)", correctAnswer: "is" },
+          { id: "1_onclass_2_4", type: "fill_in", question: "Wij ________ in de klas. (are)", correctAnswer: "zijn" },
+          { id: "1_onclass_2_5", type: "multiple_choice", question: "Kies de juiste vorm voor 'Jullie':", options: ["bent", "is", "zijn"], correctAnswer: "zijn" }
+        ]
+      },
+      {
+        instruction: "On-Class Oefening 3: Regelmatige Werkwoorden (Düzenli Fiiller)",
+        isExtra: false,
+        questions: [
+          { id: "1_onclass_3_1", type: "fill_in", question: "Ik ________ (werken) in een kantoor.", correctAnswer: "werk" },
+          { id: "1_onclass_3_2", type: "fill_in", question: "Jij ________ (luisteren) naar muziek.", correctAnswer: "luistert" },
+          { id: "1_onclass_3_3", type: "fill_in", question: "Zij (she) ________ (werken) thuis.", correctAnswer: "werkt" },
+          { id: "1_onclass_3_4", type: "fill_in", question: "Wij ________ (luisteren) naar de docent.", correctAnswer: "luisteren" },
+          { id: "1_onclass_3_5", type: "multiple_choice", question: "Wat is de 'stem' (root) van het werkwoord 'werken'?", options: ["werkt", "werken", "werk"], correctAnswer: "werk" }
+        ]
+      },
+      {
+        instruction: "On-Class Oefening 4: Begroeten en Afscheid nemen (Selamlaşma & Vedalaşma)",
         isExtra: true,
         questions: [
-          { id: "1_onclass_1", type: "multiple_choice", question: "A: 'Hoe gaat het met jou?' B: '________'", options: ["Ik ben Maria.", "Alles goed / Het gaat goed.", "Ik speel basketbal."], correctAnswer: "Alles goed / Het gaat goed." },
-          { id: "1_onclass_2", type: "fill_in", question: "Vertaal: 'Mijn hobby is ________.' (Koşmak)", correctAnswer: "hardlopen" },
-          { id: "1_onclass_3", type: "fill_in", question: "Vertaal: 'De krant ________' (Gazete okumak)", correctAnswer: "lezen" }
+          { id: "1_onclass_4_1", type: "multiple_choice", question: "Hoe zeg je 'Good morning' in het Nederlands?", options: ["goedenavond", "goedemorgen", "goedemiddag"], correctAnswer: "goedemorgen" },
+          { id: "1_onclass_4_2", type: "multiple_choice", question: "Hoe zeg je 'See you later'?", options: ["tot morgen", "tot later", "doei"], correctAnswer: "tot later" },
+          { id: "1_onclass_4_3", type: "fill_in", question: "Good evening = goeden________.", correctAnswer: "avond" },
+          { id: "1_onclass_4_4", type: "multiple_choice", question: "Welk woord is een informeel afscheid (bye)?", options: ["tot ziens", "doei", "goedendag"], correctAnswer: "doei" }
+        ]
+      },
+      {
+        instruction: "On-Class Oefening 5: Hobby's, Alfabet & Getallen",
+        isExtra: true,
+        questions: [
+          { id: "1_onclass_5_1", type: "multiple_choice", question: "Wat betekent 'hardlopen'?", options: ["reading", "running", "basketball"], correctAnswer: "running" },
+          { id: "1_onclass_5_2", type: "multiple_choice", question: "Hoe schrijf je het getal '58' in het Nederlands?", options: ["vijftig en acht", "achtenvijftig", "achtvijftig"], correctAnswer: "achtenvijftig" },
+          { id: "1_onclass_5_3", type: "fill_in", question: "Het getal 23 is drieën________.", correctAnswer: "twintig" },
+          { id: "1_onclass_5_4", type: "multiple_choice", question: "Hoe spreek je de letter 'I' uit in het Nederlandse alfabet?", options: ["ay", "ee", "ij"], correctAnswer: "ee" },
+          { id: "1_onclass_5_5", type: "fill_in", question: "Mijn hobby is de krant ________. (reading)", correctAnswer: "lezen" }
         ]
       }
     ]

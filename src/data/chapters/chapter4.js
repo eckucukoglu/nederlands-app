@@ -370,41 +370,168 @@ export const chapter4Sections = [
       }
     ]
   },
-  {
+{
     id: "On-Class-4",
     chapter: 4,
-    title: "On-Class Extra: Inversie & Zinsbouw",
+    title: "Extra Oefeningen (On-Class)",
     theory: (
       <>
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>🎓 On-Class Grammatica: Inversie (Tersine Çevirme)</h3>
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #3b82f6', marginBottom: '20px' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#60a5fa' }}>🔄 Repetitie Les 3: Inversie (Devrik Cümle)</h3>
+          <p className="text-sm text-slate-300 mb-2">Hollandacada soru sorarken <strong>VEYA</strong> cümleye özne (subject) dışında bir kelimeyle (zaman, yer vb.) başladığımızda devrik cümle (inversie) yaparız. Fiil her zaman 2. sırada kalır.</p>
           
-          <p className="text-sm text-slate-300 mb-2">Hollandacada sorular için VE cümleye <strong>özne olmayan</strong> bir şeyle (Örn: Vandaag, Morgen, Deze week) başladığımızda inversiyon (devrik yapı) kullanırız.</p>
-          
-          <h4 className="font-bold text-white mt-4">Kural (Pattern):</h4>
-          <p className="text-sm font-mono text-emerald-300 bg-emerald-900/30 p-2 rounded border border-emerald-500/30">
-            [Moment/Place] + [Verb] + [Subject] + [Rest]
-          </p>
-          
-          <ul className="text-sm text-slate-300 mt-3 space-y-1 list-disc pl-5">
-            <li><strong>Vandaag</strong> (moment) <strong>studeer</strong> (verb) <strong>ik</strong> (subject) Nederlands.</li>
-            <li><strong>Morgen</strong> (moment) <strong>drink</strong> (verb) <strong>ik</strong> (subject) een biertje.</li>
-            <li><strong>Deze week</strong> (moment) <strong>ga</strong> (verb) <strong>ik</strong> (subject) naar het park.</li>
-          </ul>
+          <div className="bg-blue-900/30 p-3 rounded-lg border border-blue-500/30 mb-3">
+            <h4 className="font-bold text-blue-300 text-xs uppercase mb-1">Pattern (Kural):</h4>
+            <p className="text-sm font-mono text-blue-100">moment/place/anything NOT a subject + VERB + SUBJECT + rest</p>
+          </div>
 
-          <h4 className="font-bold text-rose-400 mt-5">Hoe vind je het subject? (Özneyi nasıl buluruz?)</h4>
-          <p className="text-sm text-slate-300">Özne (Subject), fiili yapan kişidir. "Ik ga naar het park." -> Kim gidiyor? <strong>IK!</strong> Demek ki özne 'ik'. Eğer cümlenin başına 'Vandaag' koyarsak, 'ik' ile 'ga' yer değiştirir ➔ <em>Vandaag ga ik naar het park.</em></p>
+          <ul className="text-sm text-slate-200 list-disc pl-5 space-y-1">
+            <li><strong>Waar</strong> <em>kom</em> je vandaan? (Soru kelimesi ile)</li>
+            <li><strong>Vandaag</strong> <em>studeer/leer</em> ik Nederlands. (Zaman zarfı ile)</li>
+            <li><strong>Op maandag</strong> <em>wil</em> ik spaghetti.</li>
+            <li><strong>Morgen</strong> <em>drink</em> ik een biertje.</li>
+            <li><strong>Vandaag</strong> <em>eet</em> ik pizza.</li>
+            <li><strong>Deze week</strong> <em>ga</em> ik naar het park.</li>
+          </ul>
+        </div>
+
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>🤝 Hoe gaat het? (Nasılsın?)</h3>
+          <p className="text-sm text-slate-300 mb-3">Birine nasıl olduğunu sormak ve cevap vermek için yaygın ifadeler:</p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <h4 className="font-bold text-purple-300 text-sm mb-1">Vragen (Sorular)</h4>
+              <ul className="text-sm text-slate-200 list-disc pl-5 space-y-1">
+                <li>Hallo, hoe gaat het?</li>
+                <li>Hoe is het met jou?</li>
+                <li>Alles goed?</li>
+                <li>Hoe gaat het <strong>met hem</strong>? (Onunla / O nasıl - erkek)</li>
+                <li>Hoe gaat het <strong>met haar</strong>? (O nasıl - kadın)</li>
+                <li>Hoe gaat het <strong>met jullie</strong>? (Siz nasılsınız - çoğul)</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-bold text-purple-300 text-sm mb-1">Antwoorden (Cevaplar)</h4>
+              <ul className="text-sm text-slate-200 list-disc pl-5 space-y-1">
+                <li className="text-emerald-400"><strong>uitstekend</strong> (mükemmel)</li>
+                <li className="text-emerald-400"><strong>prima / heel goed</strong> (harika / çok iyi)</li>
+                <li className="text-emerald-400"><strong>best goed</strong> (oldukça iyi / pretty good)</li>
+                <li className="text-amber-400"><strong>het gaat wel</strong> (idare eder / so so)</li>
+                <li className="text-rose-400"><strong>niet zo goed</strong> (pek iyi değil)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>📅 Een voorstel doen (Teklifte Bulunmak: Zal / Zullen)</h3>
+          <p className="text-sm text-slate-300 mb-2">İngilizcedeki "Shall I...?" veya "Shall we...?" (Yapayım mı? / Yapalım mı?) yapılarını kullanırken Hollandacada <strong>Zal ik</strong> ve <strong>Zullen we</strong> kullanırız.</p>
+          
+          <div className="bg-emerald-900/30 p-3 rounded-lg border border-emerald-500/30 mb-4 text-sm text-emerald-100">
+            <ul className="list-disc pl-5 space-y-1">
+              <li><strong>Zullen we</strong> iets afspreken? (Shall we make an appointment/meet?)</li>
+              <li><strong>Zullen we</strong> voor zaterdag een afspraak maken? (Shall we make an appointment for Saturday?)</li>
+              <li><strong>Zal ik</strong> spaghetti carbonara maken? (Shall I make spaghetti carbonara?)</li>
+            </ul>
+          </div>
+
+          <h4 className="font-bold text-emerald-400 text-sm mb-2">Reageren op een voorstel (Teklife Cevap Vermek)</h4>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <h5 className="font-bold text-emerald-300 text-xs mb-1">Positief (Olumlu)</h5>
+              <ul className="text-sm text-slate-200 list-disc pl-5 space-y-1">
+                <li>Ja, leuk!</li>
+                <li>Ja, goed idee.</li>
+                <li>Ja, dat kan. (Olur / Mümkün)</li>
+                <li>Ja, dat is goed.</li>
+                <li>Hartstikke leuk. (Çok/Aşırı eğlenceli-güzel)</li>
+              </ul>
+            </div>
+            <div>
+              <h5 className="font-bold text-rose-400 text-xs mb-1">Negatief (Olumsuz)</h5>
+              <ul className="text-sm text-slate-200 list-disc pl-5 space-y-1">
+                <li>Nee, dat lukt niet. (Hayır, bu işe yaramaz/mümkün değil)</li>
+                <li>Nee, dan kan ik niet. (Hayır, o zaman gelemem/yapamam)</li>
+                <li>Nee, ik heb al een afspraak. (Hayır, zaten bir randevum var)</li>
+                <li>Nee, <strong>ik heb geen zin</strong>. (Hayır, canım istemiyor / I don't feel like it)</li>
+                <li>Nee, dat vind ik niet zo leuk. (Hayır, bunu pek sevmiyorum)</li>
+              </ul>
+            </div>
+          </div>
+          <div className="mt-3 p-2 bg-slate-800 rounded border border-slate-700">
+            <p className="text-xs text-slate-400 italic">Handige zinnetjes (Kullanışlı İfadeler):</p>
+            <ul className="text-xs text-slate-300 list-disc pl-5 mt-1">
+              <li><strong>Ga / kom je mee?</strong> (Are you coming with? / Benimle geliyor musun?)</li>
+              <li><strong>Ik vind leuk</strong> (I like...)</li>
+              <li><strong>Ik heb zin in</strong> (I feel like... / ... canım çekiyor)</li>
+              <li><strong>afspraak</strong> = appointment (randevu/söz)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f59e0b' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#fbbf24' }}>📝 Dialogue Q&A Samenvatting</h3>
+          <ul className="text-sm text-slate-200 space-y-2 list-disc pl-5">
+            <li><strong>Waar zijn Bert en Hans?</strong> ➔ Zij zijn op straat.</li>
+            <li><strong>Hoe gaat het met Hans?</strong> ➔ Het gaat goed met Hans. (Hans is good / It goes good with Hans).</li>
+            <li><strong>Hoe gaat het met Bert?</strong> ➔ Het gaat prima met Bert.</li>
+            <li><strong>Wie is Wilma?</strong> ➔ Wilma is de partner van Hans.</li>
+            <li><strong>Wat gaan Wilma en Hans doen?</strong> ➔ Vakantie in Venetië (Vacation in Venice).</li>
+            <li><strong>Gaat Hans veel foto's maken?</strong> ➔ Nee, hij gaat een romantische film maken. (No, he is going to make a romantic film).</li>
+            <li><strong>Waar ben jij?</strong> ➔ Ik ben in de kantine.</li>
+          </ul>
         </div>
       </>
     ),
     exerciseGroups: [
       {
-        instruction: "On-Class Oefeningen: Maak de zin met Inversie!",
+        instruction: "On-Class Oefening 1: Inversie (Devrik Cümle)",
+        isExtra: false,
+        questions: [
+          { id: "4_onclass_1_1", type: "multiple_choice", question: "Kies de juiste zin (Morgen / ik / drinken / een biertje):", options: ["Morgen ik drink een biertje.", "Morgen drink ik een biertje.", "Morgen een biertje drink ik."], correctAnswer: "Morgen drink ik een biertje." },
+          { id: "4_onclass_1_2", type: "fill_in", question: "Vandaag ________ ik Nederlands. (leren)", correctAnswer: "leer" },
+          { id: "4_onclass_1_3", type: "fill_in", question: "Op maandag ________ ik spaghetti. (willen)", correctAnswer: "wil" },
+          { id: "4_onclass_1_4", type: "multiple_choice", question: "Kies de juiste zin:", options: ["Deze week ik ga naar het park.", "Deze week ga ik naar het park.", "Ik ga deze week naar het park ga."], correctAnswer: "Deze week ga ik naar het park." }
+        ]
+      },
+      {
+        instruction: "On-Class Oefening 2: Hoe gaat het? (Nasılsın?)",
+        isExtra: false,
+        questions: [
+          { id: "4_onclass_2_1", type: "multiple_choice", question: "Iemand vraagt: 'Alles goed?'. Wat is een positief antwoord?", options: ["Niet zo goed.", "Uitstekend.", "Het gaat wel."], correctAnswer: "Uitstekend." },
+          { id: "4_onclass_2_2", type: "fill_in", question: "Hoe gaat het ________ jou? (With you)", correctAnswer: "met" },
+          { id: "4_onclass_2_3", type: "fill_in", question: "Hoe gaat het ________ hem? (With him)", correctAnswer: "met" },
+          { id: "4_onclass_2_4", type: "multiple_choice", question: "Wat betekent 'Het gaat wel'?", options: ["Excellent", "So so / Okay", "Very bad"], correctAnswer: "So so / Okay" }
+        ]
+      },
+      {
+        instruction: "On-Class Oefening 3: Voorstellen (Teklifler: Zal / Zullen)",
+        isExtra: false,
+        questions: [
+          { id: "4_onclass_3_1", type: "fill_in", question: "________ we iets afspreken? (Shall we...)", correctAnswer: "Zullen" },
+          { id: "4_onclass_3_2", type: "fill_in", question: "________ ik spaghetti carbonara maken? (Shall I...)", correctAnswer: "Zal" },
+          { id: "4_onclass_3_3", type: "multiple_choice", question: "Vertaal: 'Shall we make an appointment for Saturday?'", options: ["Zal ik voor zaterdag een afspraak maken?", "Zullen we voor zaterdag een afspraak maken?", "Zullen wij afspreken iets?"], correctAnswer: "Zullen we voor zaterdag een afspraak maken?" },
+          { id: "4_onclass_3_4", type: "fill_in", question: "Zullen we een ________ maken? (appointment)", correctAnswer: "afspraak" }
+        ]
+      },
+      {
+        instruction: "On-Class Oefening 4: Reageren (Tepki Vermek)",
         isExtra: true,
         questions: [
-          { id: "4_onclass_1", type: "fill_in", question: "Normaal: Ik koop vandaag een appel. Begin met Vandaag: 'Vandaag ________ ik een appel.'", correctAnswer: "koop" },
-          { id: "4_onclass_2", type: "fill_in", question: "Normaal: Ik studeer vandaag Nederlands. Begin met Vandaag: 'Vandaag ________ ik Nederlands.'", correctAnswer: "studeer" },
-          { id: "4_onclass_3", type: "fill_in", question: "Normaal: Ik ga op maandag naar school. Begin met Op maandag: 'Op maandag ________ ik naar school.'", correctAnswer: "ga" }
+          { id: "4_onclass_4_1", type: "multiple_choice", question: "Je vriend zegt: 'Zullen we naar de bioscoop gaan?'. Jij wilt heel graag (very much). Wat zeg je?", options: ["Nee, ik heb geen zin.", "Hartstikke leuk!", "Nee, dat lukt niet."], correctAnswer: "Hartstikke leuk!" },
+          { id: "4_onclass_4_2", type: "multiple_choice", question: "Je vriend stelt iets voor, maar je hebt geen tijd. Wat zeg je?", options: ["Ja, dat kan.", "Ja, goed idee.", "Nee, dan kan ik niet."], correctAnswer: "Nee, dan kan ik niet." },
+          { id: "4_onclass_4_3", type: "fill_in", question: "Vertaal 'I don't feel like it': Nee, ik heb geen ________.", correctAnswer: "zin" },
+          { id: "4_onclass_4_4", type: "multiple_choice", question: "Wat zeg je als je wilt vragen of iemand mee gaat? (Are you coming with?)", options: ["Ga / kom je mee?", "Heb je zin in?", "Dat lukt niet?"], correctAnswer: "Ga / kom je mee?" }
+        ]
+      },
+      {
+        instruction: "On-Class Oefening 5: Dialoog Begrip",
+        isExtra: true,
+        questions: [
+          { id: "4_onclass_5_1", type: "multiple_choice", question: "Wat gaan Wilma en Hans doen?", options: ["Ze gaan op straat lopen.", "Vakantie in Venetië.", "Ze gaan naar de bioscoop."], correctAnswer: "Vakantie in Venetië." },
+          { id: "4_onclass_5_2", type: "multiple_choice", question: "Gaat Hans veel foto's maken?", options: ["Ja, heel veel.", "Nee, hij gaat een romantische film maken.", "Hij neemt geen camera mee."], correctAnswer: "Nee, hij gaat een romantische film maken." },
+          { id: "4_onclass_5_3", type: "fill_in", question: "Waar zijn Bert en Hans? Zij zijn ________ straat.", correctAnswer: "op" }
         ]
       }
     ]

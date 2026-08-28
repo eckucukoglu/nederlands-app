@@ -383,40 +383,182 @@ export const chapter3Sections = [
       }
     ]
   },
-  {
+{
     id: "On-Class-3",
     chapter: 3,
-    title: "On-Class Extra",
+    title: "Extra Oefeningen (On-Class)",
     theory: (
       <>
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>🎓 On-Class Extra Grammatica & Zinnen</h3>
-          
-          <h4 style={{ color: '#a78bfa' }}>'Wat voor' (Ne tür / Ne çeşit)</h4>
-          <p className="text-sm text-slate-300"><strong>Wat voor</strong> wijn wil Edit? ➔ Edit wil rode wijn. (Ne tür şarap istiyor?)</p>
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #3b82f6', marginBottom: '20px' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#60a5fa' }}>🔄 Repetitie Les 2 (Tekrar)</h3>
+          <p className="text-sm text-slate-300 mb-2">Önceki derste öğrenilen temel soru ve cevapların tekrarı:</p>
+          <ul className="text-sm text-slate-200 list-disc pl-5 space-y-1">
+            <li><strong>Hoe gaat het met jou?</strong> ➔ Het gaat goed. / Alles goed.</li>
+            <li><strong>Heb jij broers of zussen?</strong> ➔ Nee, ik heb geen broers of zussen.</li>
+            <li><strong>Wanneer ben jij jarig?</strong> ➔ Ik ben jarig op 13 december.</li>
+            <li><strong>Hoe laat is het nu?</strong> ➔ Het is vier uur. / Het is 12 over vier.</li>
+            <li><strong>Welk seizoen is het nu?</strong> ➔ Het is zomer.</li>
+          </ul>
+        </div>
 
-          <h4 style={{ color: '#f472b6', marginTop: '15px' }}>Familie Constructies (Tamlamalar)</h4>
-          <p className="text-sm text-slate-300">İngilizcedeki 's takısı (Edit's brother) Hollandacada da vardır ama genellikle <strong>'van'</strong> (of) kullanılır.<br/>
-          <em>de broer <strong>van</strong> mijn zussen</em> (kız kardeşlerimin abisi).</p>
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>☕ In het café (Bestellen & Afrekenen)</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <h4 className="font-bold text-purple-300 text-sm mb-1">Handige Zinnen (Kullanışlı Cümleler)</h4>
+              <ul className="text-sm text-slate-200 list-disc pl-5 space-y-1">
+                <li><strong>Gefeliciteerd met je verjaardag.</strong> = Happy birthday.</li>
+                <li><strong>Dank je wel.</strong> = Thank you.</li>
+                <li><strong>Zegt u het maar.</strong> = Expression: Go ahead and tell / Buyurun söyleyin.</li>
+                <li><strong>Zullen we nog een keer bestellen?</strong> = Shall we order again? (nog een keer = again)</li>
+                <li><strong>Mogen we afrekenen?</strong> = Can we pay / settle the bill?</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-bold text-purple-300 text-sm mb-1">Bestellen (Sipariş Vermek)</h4>
+              <ul className="text-sm text-slate-200 list-disc pl-5 space-y-1">
+                <li><strong>Ik wil graag cola.</strong> = I would like cola.</li>
+                <li><strong>Doe mij maar een biertje.</strong> = Expression: I'll have a beer.</li>
+                <li><strong>Ik neem rode wijn.</strong> = I get red wine.</li>
+                <li><strong>Mag ik bestellen?</strong> = May I order?</li>
+                <li><strong>Mag ik een cola?</strong> = May I have a cola/coke?</li>
+                <li><strong>Een cola, alstublieft.</strong> = One cola, please.</li>
+                <li><strong>Voor mij een cola.</strong> = One cola for me.</li>
+              </ul>
+            </div>
+          </div>
+          <div className="bg-purple-900/30 p-3 rounded-lg border border-purple-500/30 mt-4 text-sm text-purple-100">
+            <h4 className="font-bold text-white text-xs uppercase mb-1">Extra Woorden (Ekstra Kelimeler):</h4>
+            <ul className="list-disc pl-5">
+              <li><strong>wat voor:</strong> what kind of (Ne tür/çeşit)</li>
+              <li><strong>hetzelfde:</strong> the same (Aynısı)</li>
+              <li><strong>eigenlijk:</strong> actually / by the way (Aslında)</li>
+              <li><strong>kennis te maken:</strong> to make acquaintance (Tanışmak)</li>
+              <li><strong>aangenaam:</strong> nice to meet you (Memnun oldum)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>📚 Grammatica: Artikel (De / Het)</h3>
+          <p className="text-sm text-slate-300 mb-2">İngilizcedeki 'the' kelimesinin Hollandacada iki karşılığı vardır: <strong>de</strong> ve <strong>het</strong>.</p>
           
-          <h4 style={{ color: '#38bdf8', marginTop: '15px' }}>Bestellen (Sipariş Alternatifleri)</h4>
-          <ul className="text-sm text-slate-300 list-disc pl-5">
-            <li>Ik wil graag een cola.</li>
-            <li>Een biertje, alstublieft.</li>
-            <li>Voor mij een sapje (juice).</li>
-            <li>Doe mij maar een sinaasappelsap (orange juice).</li>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="bg-emerald-900/30 p-3 rounded-lg border border-emerald-500/30">
+              <h4 className="font-bold text-emerald-300 text-sm mb-1">Altijd 'HET' (Her Zaman HET)</h4>
+              <p className="text-sm text-emerald-100">Bir nesne küçük olduğunda (diminutive form: -je, -tje, -pje ile bitiyorsa) HER ZAMAN <strong>'het'</strong> artikeli alır.</p>
+              <ul className="text-sm text-white mt-1 list-disc pl-5">
+                <li>het biertje</li>
+                <li>het wijntje</li>
+                <li>het sapje</li>
+                <li>het rondje</li>
+              </ul>
+            </div>
+            <div className="bg-emerald-900/30 p-3 rounded-lg border border-emerald-500/30">
+              <h4 className="font-bold text-emerald-300 text-sm mb-1">Altijd 'DE' (Her Zaman DE)</h4>
+              <p className="text-sm text-emerald-100">Bir kelime çoğul (plural) olduğunda HER ZAMAN <strong>'de'</strong> artikeli alır. Kelime normalde 'het' olsa bile çoğul olunca 'de' olur.</p>
+              <ul className="text-sm text-white mt-1 list-disc pl-5">
+                <li>de mannen</li>
+                <li>de computers</li>
+                <li>de biertjes</li>
+                <li>de zussen</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f59e0b', marginBottom: '20px' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#fbbf24' }}>🔄 Grammatica: Inversie (Devrik Cümle)</h3>
+          <p className="text-sm text-slate-300 mb-2">Hollandacada cümleye özne (subject) DIŞINDA bir kelimeyle (örneğin zaman veya yer) başladığımızda <strong>inversie</strong> yaparız. Bu durumda <strong>Fiil (Verb) ve Özne (Subject) yer değiştirir.</strong></p>
+          
+          <div className="bg-amber-900/30 p-4 rounded-xl border border-amber-500/30 mb-4">
+            <h4 className="font-bold text-amber-300 text-sm mb-2">Hoe werkt het? (Nasıl çalışır?)</h4>
+            <p className="text-sm text-amber-100 mb-2">Özneyi bulmak için: Eylemi/fiili yapan kim? sorusunu sorun (Who does the action?).<br/><em>Ik ga naar het park. ➔ Who goes to the park? ➔ IK!</em></p>
+            <ul className="text-sm text-white list-disc pl-5 space-y-2">
+              <li><strong>Normal sentence:</strong> Ik ga naar het park.</li>
+              <li><strong>Inversie (YANLIŞ):</strong> <span className="text-rose-400 line-through">Vandaag ik ga naar het park.</span></li>
+              <li><strong>Inversie (DOĞRU):</strong> <span className="text-emerald-400 font-bold">Vandaag ga ik naar het park.</span></li>
+            </ul>
+          </div>
+
+          <h4 className="font-bold text-amber-300 text-sm mb-1">Voorbeelden (Örnekler)</h4>
+          <ul className="text-sm text-slate-200 list-disc pl-5 space-y-1">
+            <li>Today I buy an apple. = <strong>Vandaag koop ik</strong> een appel.</li>
+            <li>Tomorrow I want a beer. = <strong>Morgen wil ik</strong> een biertje.</li>
+            <li>Next week I drink cola. = <strong>Volgende week drink ik</strong> cola.</li>
+            <li>Now I am here. = <strong>Nu ben ik</strong> hier.</li>
+            <li>Today I study Dutch. = <strong>Vandaag studeer ik</strong> Nederlands.</li>
+            <li>Now I have a dog. = <strong>Nu heb ik</strong> een hond.</li>
+            <li>On Monday I go to school. = <strong>Op maandag ga ik</strong> naar school.</li>
+          </ul>
+        </div>
+
+        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #6366f1' }}>
+          <h3 style={{ margin: '0 0 10px 0', color: '#93c5fd' }}>📝 Dialogue Q&A Samenvatting</h3>
+          <ul className="text-sm text-slate-200 space-y-1 list-disc pl-5">
+            <li><strong>Waar zijn Edit, Andres en Susy?</strong> ➔ Zij zijn in een café.</li>
+            <li><strong>Waarom zijn ze in het café?</strong> ➔ Het is de verjaardag van Edit.</li>
+            <li><strong>Wie is Andres?</strong> ➔ Andres is de broer van Edit.</li>
+            <li><strong>Wat voor wijn wil Edit?</strong> ➔ Edit wil rode wijn. (wat voor = what kind of)</li>
+            <li><strong>Wie betaalt het eerste rondje?</strong> ➔ Edit betaalt het eerste rondje.</li>
           </ul>
         </div>
       </>
     ),
     exerciseGroups: [
       {
-        instruction: "On-Class Oefeningen",
+        instruction: "On-Class Oefening 1: Repetitie (Tijd & Basisvragen)",
+        isExtra: false,
+        questions: [
+          { id: "3_onclass_1_1", type: "fill_in", question: "Hoe laat is het? Het is 12 ________ vier. (past)", correctAnswer: "over" },
+          { id: "3_onclass_1_2", type: "multiple_choice", question: "Welk seizoen is het in juli?", options: ["Het is zomer.", "Het is winter.", "Het is lente."], correctAnswer: "Het is zomer." },
+          { id: "3_onclass_1_3", type: "fill_in", question: "Wanneer ben jij ________? (birthday/born)", correctAnswer: "jarig" },
+          { id: "3_onclass_1_4", type: "multiple_choice", question: "Heb jij broers of zussen?", options: ["Nee, ik ben jarig op 13 december.", "Nee, ik heb geen broers of zussen.", "Het gaat goed."], correctAnswer: "Nee, ik heb geen broers of zussen." }
+        ]
+      },
+      {
+        instruction: "On-Class Oefening 2: Bestellen en Afrekenen (Opdracht 4 Woorden)",
+        isExtra: false,
+        questions: [
+          { id: "3_onclass_2_1", type: "fill_in", question: "Een cola, ________. (please)", correctAnswer: "alstublieft" },
+          { id: "3_onclass_2_2", type: "fill_in", question: "Zullen we nog een keer ________? (order)", correctAnswer: "bestellen" },
+          { id: "3_onclass_2_3", type: "multiple_choice", question: "Hoe zeg je 'Can we pay the bill?'", options: ["Mogen we bestellen?", "Mogen we afrekenen?", "Mag ik een cola?"], correctAnswer: "Mogen we afrekenen?" },
+          { id: "3_onclass_2_4", type: "fill_in", question: "________ mij maar een biertje. (I'll have / make it a...)", correctAnswer: "Doe" },
+          { id: "3_onclass_2_5", type: "fill_in", question: "________ mij een sinaasappelsap. (For me)", correctAnswer: "Voor" }
+        ]
+      },
+      {
+        instruction: "On-Class Oefening 3: Artikel (De of Het? - Opdracht 5)",
         isExtra: true,
         questions: [
-          { id: "3_onclass_1", type: "multiple_choice", question: "Vertaal: 'What kind of wine?'", options: ["Welke wijn?", "Wat voor wijn?", "Waarom wijn?"], correctAnswer: "Wat voor wijn?" },
-          { id: "3_onclass_2", type: "multiple_choice", question: "Hoe zeg je 'The brother of my sisters' in het Nederlands?", options: ["Mijn zussen broer", "De broer van mijn zussen", "De zussen van mijn broer"], correctAnswer: "De broer van mijn zussen" },
-          { id: "3_onclass_3", type: "fill_in", question: "Vertaal de bestelling: 'Bana bir portakal suyu (ver)'. -> ________ mij maar een sinaasappelsap.", correctAnswer: "Doe" }
+          { id: "3_onclass_3_1", type: "multiple_choice", question: "Wat is het juiste artikel voor 'adres'?", options: ["de", "het"], correctAnswer: "het" },
+          { id: "3_onclass_3_2", type: "multiple_choice", question: "Wat is het juiste artikel voor 'biertje' (klein / diminutief)?", options: ["de", "het"], correctAnswer: "het" },
+          { id: "3_onclass_3_3", type: "multiple_choice", question: "Wat is het juiste artikel voor 'pauze'?", options: ["de", "het"], correctAnswer: "de" },
+          { id: "3_onclass_3_4", type: "multiple_choice", question: "Wat is het juiste artikel voor 'gezin'?", options: ["de", "het"], correctAnswer: "het" },
+          { id: "3_onclass_3_5", type: "multiple_choice", question: "Wat is het juiste artikel voor meervoud (plural), bijvoorbeeld 'biertjes'?", options: ["de", "het"], correctAnswer: "de" },
+          { id: "3_onclass_3_6", type: "multiple_choice", question: "Wat is het juiste artikel voor 'rondje'?", options: ["de", "het"], correctAnswer: "het" }
+        ]
+      },
+      {
+        instruction: "On-Class Oefening 4: Inversie (Opdracht 6 Regels)",
+        isExtra: true,
+        questions: [
+          { id: "3_onclass_4_1", type: "multiple_choice", question: "Kies de juiste zin (Inversie met 'Vandaag'):", options: ["Vandaag studeer ik Nederlands.", "Vandaag ik studeer Nederlands.", "Ik vandaag studeer Nederlands."], correctAnswer: "Vandaag studeer ik Nederlands." },
+          { id: "3_onclass_4_2", type: "fill_in", question: "Donderdag ________ Joyce jarig. (is)", correctAnswer: "is" },
+          { id: "3_onclass_4_3", type: "fill_in", question: "In de kantine ________ we koffie. (drinken)", correctAnswer: "drinken" },
+          { id: "3_onclass_4_4", type: "fill_in", question: "Nu ________ ik hier. (ben)", correctAnswer: "ben" },
+          { id: "3_onclass_4_5", type: "multiple_choice", question: "Kies de juiste zin (Inversie met 'Morgen'):", options: ["Morgen we beginnen met tekst 3.", "Morgen beginnen we met tekst 3.", "Morgen tekst 3 beginnen we."], correctAnswer: "Morgen beginnen we met tekst 3." },
+          { id: "3_onclass_4_6", type: "fill_in", question: "Op maandag ________ ik naar school. (gaan)", correctAnswer: "ga" }
+        ]
+      },
+      {
+        instruction: "On-Class Oefening 5: Dialoog en Extra Woorden",
+        isExtra: true,
+        questions: [
+          { id: "3_onclass_5_1", type: "multiple_choice", question: "Wat betekent 'wat voor'?", options: ["What kind of", "Where for", "Why"], correctAnswer: "What kind of" },
+          { id: "3_onclass_5_2", type: "multiple_choice", question: "Waarom zijn Edit, Andres en Susy in het café?", options: ["Het is de verjaardag van Edit.", "Ze drinken koffie.", "Andres is jarig."], correctAnswer: "Het is de verjaardag van Edit." },
+          { id: "3_onclass_5_3", type: "fill_in", question: "Prettig om ________ te maken. (Nice to meet you / make acquaintance)", correctAnswer: "kennis" },
+          { id: "3_onclass_5_4", type: "fill_in", question: "Edit betaalt het eerste ________. (round of drinks)", correctAnswer: "rondje" }
         ]
       }
     ]
