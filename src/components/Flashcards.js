@@ -1,7 +1,7 @@
 // src/components/Flashcards.js
 import React, { useState, useEffect, useCallback } from 'react';
 import { vocabulary } from '../data';
-import { globalDictionary } from '../data/globalDictionary'; // KESİN ÇÖZÜM: Global sözlük dahil edildi
+import { globalDictionary } from '../data/globalDictionary';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const translations = {
@@ -94,7 +94,6 @@ export default function Flashcards({ initialChapter }) {
 
   const chapterVocab = vocabulary.filter(v => v.chapter === targetChapter);
 
-  // --- KELİMENİN TÜRKÇE VE İNGİLİZCE KARŞILIKLARINI GLOBAL SÖZLÜKTEN BULAN FONKSİYON ---
   const getResolvedWord = (word) => {
     if (!word) return { nl: "", tr: "", en: "", example: "" };
     if (word.id?.startsWith('empty')) return word;
@@ -163,6 +162,7 @@ export default function Flashcards({ initialChapter }) {
   const currentWord = getResolvedWord(deck[currentIndex]);
   const totalWords = deck.length;
 
+  // --- DÜZELTİLEN FONKSİYON: KOPYAYI ÖNLEYEN GEÇİŞ MANTAĞI ---
   const updateStats = useCallback((isKnown) => {
     if (!currentWord || currentWord.id?.startsWith('empty')) return; 
     
@@ -185,9 +185,16 @@ export default function Flashcards({ initialChapter }) {
     setGlobalStats(newGlobal);
     localStorage.setItem('flashcardStats', JSON.stringify(newGlobal)); 
 
-    setIsFlipped(false);
-    setCurrentIndex(prev => (prev + 1) % totalWords);
-  }, [currentWord, totalWords]);
+    // Eğer kart arkası açıkken tıklandıysa, önce kapatıp sonra index değiştiriyoruz (Kopya bug'ı önlenir)
+    if (isFlipped) {
+      setIsFlipped(false);
+      setTimeout(() => {
+        setCurrentIndex(prev => (prev + 1) % totalWords);
+      }, 180); // Animasyon süresiyle uyumlu kısa bir gecikme
+    } else {
+      setCurrentIndex(prev => (prev + 1) % totalWords);
+    }
+  }, [currentWord, totalWords, isFlipped]);
 
   const handleKeyDown = useCallback((e) => {
     if (listModal.isOpen) return;
@@ -259,7 +266,6 @@ export default function Flashcards({ initialChapter }) {
     globalBgClass = "bg-rose-900/20 border-rose-800/50";
   }
 
-  // --- DİL SEÇİMİNE GÖRE ÜST (KALIN) VE ALT (İNCE) METİN DÜZENİ ---
   const trText = currentWord?.tr || "";
   const enText = currentWord?.en || "";
 
@@ -444,7 +450,6 @@ export default function Flashcards({ initialChapter }) {
               </span>
               
               <div className="flex flex-col items-center justify-center my-auto w-full px-2">
-                {/* Üstte Seçili Dil (Kalın), Altta Diğer Dil (İnce) */}
                 <h3 className="text-3xl font-extrabold drop-shadow-md leading-tight">{primaryDisplay}</h3>
                 {secondaryDisplay && (
                   <h4 className="text-base font-normal mt-2 text-rose-100/80">{secondaryDisplay}</h4>
