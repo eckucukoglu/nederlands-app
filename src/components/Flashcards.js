@@ -1,7 +1,8 @@
 // src/components/Flashcards.js
 import React, { useState, useEffect, useCallback } from 'react';
 import { vocabulary } from '../data';
-import { useLanguage } from '../contexts/LanguageContext'; // YENİ: Dil altyapısı eklendi
+import { globalDictionary } from '../data/globalDictionary'; // KESİN ÇÖZÜM: Global sözlük dahil edildi
+import { useLanguage } from '../contexts/LanguageContext';
 
 const translations = {
   tr: {
@@ -93,6 +94,23 @@ export default function Flashcards({ initialChapter }) {
 
   const chapterVocab = vocabulary.filter(v => v.chapter === targetChapter);
 
+  // --- KELİMENİN TÜRKÇE VE İNGİLİZCE KARŞILIKLARINI GLOBAL SÖZLÜKTEN BULAN FONKSİYON ---
+  const getResolvedWord = (word) => {
+    if (!word) return { nl: "", tr: "", en: "", example: "" };
+    if (word.id?.startsWith('empty')) return word;
+
+    const match = globalDictionary.find(
+      item => item.nl.toLowerCase() === word.nl?.toLowerCase()
+    );
+
+    return {
+      ...word,
+      tr: word.tr || match?.tr || "",
+      en: word.en || match?.en || "",
+      example: word.example || match?.example || ""
+    };
+  };
+
   useEffect(() => {
     const freshStats = JSON.parse(localStorage.getItem('flashcardStats')) || {};
     setGlobalStats(freshStats);
@@ -106,7 +124,7 @@ export default function Flashcards({ initialChapter }) {
       const pool = JSON.parse(localStorage.getItem('globalWordPool')) || {};
       newDeck = Object.values(pool);
       if (newDeck.length === 0) {
-        newDeck = [{ id: 'empty_global', nl: "Geen woorden", en: "No words in Global Pool", example: t.emptyGlobalEx }];
+        newDeck = [{ id: 'empty_global', nl: "Geen woorden", en: "No words in Global Pool", tr: "Global havuzda kelime yok", example: t.emptyGlobalEx }];
       }
     } else if (mode === 'all') {
       newDeck = chapterVocab;
@@ -115,7 +133,7 @@ export default function Flashcards({ initialChapter }) {
       if (saved.length > 0) {
         newDeck = saved;
       } else {
-        newDeck = [{ id: 'empty', nl: "Geen woorden", en: "No words selected", example: t.emptyDialogEx }];
+        newDeck = [{ id: 'empty', nl: "Geen woorden", en: "No words selected", tr: "Kelime seçilmedi", example: t.emptyDialogEx }];
       }
     }
 
@@ -132,7 +150,7 @@ export default function Flashcards({ initialChapter }) {
       });
 
       if (newDeck.length === 0) {
-        newDeck = [{ id: 'empty_filter', nl: t.emptyFilterTitle, en: t.emptyFilterEn, example: t.emptyFilterEx }];
+        newDeck = [{ id: 'empty_filter', nl: t.emptyFilterTitle, en: t.emptyFilterEn, tr: t.emptyFilterEn, example: t.emptyFilterEx }];
       }
     }
 
@@ -142,7 +160,7 @@ export default function Flashcards({ initialChapter }) {
     setSessionStats({ known: 0, unknown: 0 });
   }, [targetChapter, mode, studyUnknownsOnly, lang]); // eslint-disable-line
 
-  const currentWord = deck[currentIndex];
+  const currentWord = getResolvedWord(deck[currentIndex]);
   const totalWords = deck.length;
 
   const updateStats = useCallback((isKnown) => {
@@ -199,7 +217,7 @@ export default function Flashcards({ initialChapter }) {
   };
 
   const getListData = () => {
-    let rawList = baseDeck.filter(w => !w.id?.startsWith('empty'));
+    let rawList = baseDeck.filter(w => !w.id?.startsWith('empty')).map(getResolvedWord);
     const freshStats = JSON.parse(localStorage.getItem('flashcardStats')) || {};
 
     if (listModal.type === 'unknown') {
@@ -214,7 +232,7 @@ export default function Flashcards({ initialChapter }) {
 
   const handleCopyClipboard = () => {
     const dataToCopy = getListData();
-    const text = dataToCopy.map(w => `${w.nl} - ${w.tr || w.en || t.noTranslation}`).join('\n');
+    const text = dataToCopy.map(w => `${w.nl} - ${w.tr || ''} (${w.en || ''})`).join('\n');
     navigator.clipboard.writeText(text);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
@@ -239,6 +257,21 @@ export default function Flashcards({ initialChapter }) {
     globalBgClass = "bg-emerald-900/20 border-emerald-800/50";
   } else {
     globalBgClass = "bg-rose-900/20 border-rose-800/50";
+  }
+
+  // --- DİL SEÇİMİNE GÖRE ÜST (KALIN) VE ALT (İNCE) METİN DÜZENİ ---
+  const trText = currentWord?.tr || "";
+  const enText = currentWord?.en || "";
+
+  let primaryDisplay = "";
+  let secondaryDisplay = "";
+
+  if (lang === 'tr') {
+    primaryDisplay = trText || enText || t.noTranslation;
+    secondaryDisplay = (trText && enText && trText.toLowerCase() !== enText.toLowerCase()) ? enText : null;
+  } else {
+    primaryDisplay = enText || trText || t.noTranslation;
+    secondaryDisplay = (enText && trText && enText.toLowerCase() !== trText.toLowerCase()) ? trText : null;
   }
 
   return (
@@ -272,7 +305,12 @@ export default function Flashcards({ initialChapter }) {
                   {getListData().map((w, i) => (
                     <li key={i} className="flex flex-col sm:flex-row sm:items-center justify-between p-3 bg-slate-800/50 rounded-xl border border-slate-700/50">
                       <span className="font-bold text-brand-400 text-sm sm:text-base">{w.nl}</span>
-                      <span className="text-xs sm:text-sm font-medium text-slate-400 mt-1 sm:mt-0 text-left sm:text-right">{lang === 'tr' ? (w.tr || w.en) : (w.en || w.tr)}</span>
+                      <div className="flex flex-col sm:items-end text-xs sm:text-sm mt-1 sm:mt-0">
+                        <span className="font-bold text-slate-200">{lang === 'tr' ? (w.tr || w.en) : (w.en || w.tr)}</span>
+                        {w.tr && w.en && w.tr.toLowerCase() !== w.en.toLowerCase() && (
+                          <span className="text-slate-400 text-xs">{lang === 'tr' ? w.en : w.tr}</span>
+                        )}
+                      </div>
                     </li>
                   ))}
                 </ul>
@@ -401,17 +439,24 @@ export default function Flashcards({ initialChapter }) {
             </div>
 
             <div className="flashcard-back absolute inset-0 rounded-3xl p-6 flex flex-col justify-between items-center text-center bg-gradient-to-br from-rose-600 to-rose-800 text-white">
-              <span className="text-xs font-bold bg-white/20 px-3 py-1 rounded-full uppercase shadow-sm">Engels / Turks</span>
-              <div>
-                <h3 className="text-3xl font-extrabold drop-shadow-md">{currentWord?.en}</h3>
-                {currentWord?.tr && <h4 className="text-xl font-bold mt-2 text-rose-200">{currentWord?.tr}</h4>}
+              <span className="text-xs font-bold bg-white/20 px-3 py-1 rounded-full uppercase shadow-sm">
+                {lang === 'tr' ? 'Türkçe / İngilizce' : 'English / Turkish'}
+              </span>
+              
+              <div className="flex flex-col items-center justify-center my-auto w-full px-2">
+                {/* Üstte Seçili Dil (Kalın), Altta Diğer Dil (İnce) */}
+                <h3 className="text-3xl font-extrabold drop-shadow-md leading-tight">{primaryDisplay}</h3>
+                {secondaryDisplay && (
+                  <h4 className="text-base font-normal mt-2 text-rose-100/80">{secondaryDisplay}</h4>
+                )}
                 
                 {currentWord?.example && !currentWord.id?.startsWith('empty') && (
-                  <div className="mt-4 p-3 bg-black/20 rounded-xl border border-white/10">
-                    <p className="text-sm text-rose-50 italic">"{currentWord?.example}"</p>
+                  <div className="mt-4 p-2.5 bg-black/20 rounded-xl border border-white/10 w-full max-w-md">
+                    <p className="text-xs sm:text-sm text-rose-50 italic">"{currentWord?.example}"</p>
                   </div>
                 )}
               </div>
+
               <span className="text-xs text-rose-300 font-medium tracking-wide">
                 {mode === 'global' ? t.globalPoolLabel : `Hoofdstuk ${targetChapter}`}
               </span>
