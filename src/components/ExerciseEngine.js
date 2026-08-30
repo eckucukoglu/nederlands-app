@@ -153,8 +153,9 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
                     maxLength={100}
                     value={favNote}
                     onChange={e => setFavNote(e.target.value)}
+                    onKeyDown={e => { if (e.key === 'Enter') saveFavorite(e); }}
                     placeholder={t.notePlaceholder}
-                    className="bg-slate-900 border border-slate-600 text-slate-200 text-xs rounded-lg px-2.5 py-1.5 w-48 focus:outline-none focus:border-amber-400"
+                    className="bg-slate-900 border border-slate-600 text-slate-200 text-xs rounded-lg px-2.5 py-1.5 w-36 focus:outline-none focus:border-amber-400"
                   />
                   <button onClick={saveFavorite} className="bg-emerald-600 hover:bg-emerald-500 text-white p-1.5 rounded-lg text-xs transition-colors">
                     <i className="fa-solid fa-check"></i>

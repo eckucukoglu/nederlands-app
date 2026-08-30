@@ -81,6 +81,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
   });
 
   const searchRef = useRef(null);
+  const desktopSearchInputRef = useRef(null); // YENİ: Arama inputuna odaklanmak için ref
   const chapterMenuRef = useRef(null);
   const mobileMenuRef = useRef(null);
   const sectionMeasureRef = useRef(null); 
@@ -91,6 +92,15 @@ function MainContent({ user, setIsAuthModalOpen }) {
 
   const currentSections = bookSections.filter(sec => sec.chapter === currentChapter || sec.id === `On-Class-${currentChapter}`);
   const currentIndex = currentSections.findIndex(sec => sec.id === activeTab);
+
+  // Arama açıldığında input alanına otomatik odaklanma
+  useEffect(() => {
+    if (isSearchExpanded) {
+      setTimeout(() => {
+        desktopSearchInputRef.current?.focus();
+      }, 50);
+    }
+  }, [isSearchExpanded]);
 
   // Klavye ok tuşları ile section geçişi
   useEffect(() => {
@@ -671,6 +681,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
               <div className={`hidden sm:flex transition-all duration-300 ease-in-out overflow-hidden items-center ${isSearchExpanded ? 'w-56 opacity-100 mr-1' : 'w-0 opacity-0'}`}>
                 <form onSubmit={handleGlobalSearch} className="w-full relative">
                   <input
+                    ref={desktopSearchInputRef}
                     type="text"
                     value={searchQuery}
                     onChange={e => setSearchQuery(e.target.value)}
