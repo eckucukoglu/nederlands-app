@@ -315,8 +315,6 @@ function MainContent({ user, setIsAuthModalOpen }) {
   };
 
   const currentIndex = currentSections.findIndex(sec => sec.id === activeTab);
-  const prevSection = currentIndex > 0 ? currentSections[currentIndex - 1] : null;
-  const nextSection = currentIndex !== -1 && currentIndex < currentSections.length - 1 ? currentSections[currentIndex + 1] : null;
 
   const SearchResultsUI = () => (
     <>
@@ -364,7 +362,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
   return (
     <div className="min-h-screen flex flex-col bg-slate-900 transition-colors duration-300 w-full max-w-full">
       
-      {/* 1. HEADER (ÜST MENÜ) - CSS Kilidi (overflow-x-hidden) düzeltildi! */}
+      {/* 1. HEADER (ÜST MENÜ) */}
       <header className="bg-slate-950 text-white shadow-md sticky top-0 z-50 border-b border-slate-800 flex-none w-full">
         <div className="max-w-7xl mx-auto px-3 sm:px-4 py-3 flex flex-nowrap justify-between items-center gap-2">
           
@@ -524,7 +522,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
         </div>
       )}
 
-      {/* 3. SECTION BAR (AKILLI KİLİT MEKANİZMASI) */}
+      {/* 3. SECTION BAR (ORTALANMIŞ VE İLERİ/GERİ BUTONLARI KALDIRILMIŞ) */}
       <div 
         className={`bg-slate-900/40 border-slate-800 w-full max-w-full overflow-hidden shadow-inner z-40 flex-none transition-all duration-300 ${
           isSectionBarOverflowing ? 'absolute top-0 left-0 h-0 invisible opacity-0 pointer-events-none' : 'border-b relative opacity-100'
@@ -533,37 +531,11 @@ function MainContent({ user, setIsAuthModalOpen }) {
         <style>{`.hide-scroll::-webkit-scrollbar { display: none; }`}</style>
         <div 
           ref={sectionMeasureRef} 
-          className="max-w-7xl mx-auto px-2 py-2.5 flex justify-between items-center w-full max-w-full overflow-x-auto hide-scroll whitespace-nowrap gap-2" 
+          className="max-w-7xl mx-auto px-2 py-2.5 flex justify-center items-center w-full max-w-full overflow-x-auto hide-scroll whitespace-nowrap gap-2" 
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
-          {/* SOL (Geri) BUTONU */}
-          <div className="flex-1 flex justify-start min-w-0 pr-1 sm:pr-2">
-            {activeTab !== 'flashcards' && prevSection && (
-              <button 
-                onClick={() => setActiveTab(prevSection.id)}
-                className="group flex items-center text-left space-x-2 sm:space-x-3 text-slate-500 hover:text-brand-400 transition-colors min-w-0"
-              >
-                <div className="w-8 h-8 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center group-hover:border-brand-500 group-hover:bg-brand-900/30 transition-all flex-shrink-0 shadow-sm">
-                  <i className="fa-solid fa-chevron-left text-xs"></i>
-                </div>
-                <div className="flex flex-col min-w-0">
-                  <div className="flex items-center space-x-1.5">
-                    <span className="font-bold text-[11px] sm:text-xs text-slate-400 group-hover:text-brand-300 transition-colors truncate">
-                      {prevSection.id.includes('On-Class') ? 'On-C' : prevSection.id}
-                    </span>
-                    {completed[prevSection.id] && <i className="fa-solid fa-circle-check text-emerald-500 text-[10px]"></i>}
-                    {favorites[prevSection.id] && <i className="fa-solid fa-star text-amber-400 text-[10px]"></i>}
-                  </div>
-                  <span className="text-[9px] sm:text-[10px] text-slate-500 group-hover:text-slate-400 transition-colors truncate max-w-[80px] sm:max-w-[120px] md:max-w-[180px] lg:max-w-[250px]">
-                    {getSectionTitle(prevSection.id)}
-                  </span>
-                </div>
-              </button>
-            )}
-          </div>
-
-          {/* ORTA (Kapsüller) - Taşına kadar yan yana */}
-          <div className="flex items-center justify-center flex-nowrap gap-1 px-1 flex-shrink-0">
+          {/* ORTA (Kapsüller) - Her zaman merkezde */}
+          <div className="flex items-center justify-center flex-nowrap gap-1.5 sm:gap-2 px-1 flex-shrink-0">
             {currentSections.map(sec => {
               const isActive = activeTab === sec.id;
               const isC = completed[sec.id];
@@ -572,7 +544,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
                 <button
                   key={sec.id}
                   onClick={() => setActiveTab(sec.id)}
-                  className={`relative flex items-center justify-center h-9 px-3 rounded-full text-[11px] font-extrabold transition-all border shadow-sm whitespace-nowrap ${
+                  className={`relative flex items-center justify-center h-9 px-3.5 sm:px-4 rounded-full text-[11px] sm:text-xs font-extrabold transition-all border shadow-sm whitespace-nowrap ${
                     isActive ? 'bg-brand-600 text-white border-brand-500 z-10' : 'bg-slate-800 text-slate-400 border-slate-700 hover:bg-slate-700 hover:text-slate-200'
                   }`}
                 >
@@ -587,33 +559,6 @@ function MainContent({ user, setIsAuthModalOpen }) {
               );
             })}
           </div>
-
-          {/* SAĞ (İleri) BUTONU */}
-          <div className="flex-1 flex justify-end min-w-0 pl-1 sm:pl-2">
-            {activeTab !== 'flashcards' && nextSection && (
-              <button 
-                onClick={() => setActiveTab(nextSection.id)}
-                className="group flex items-center text-right space-x-2 sm:space-x-3 text-slate-500 hover:text-brand-400 transition-colors min-w-0"
-              >
-                <div className="flex flex-col items-end min-w-0">
-                  <div className="flex items-center space-x-1.5">
-                    {favorites[nextSection.id] && <i className="fa-solid fa-star text-amber-400 text-[10px]"></i>}
-                    {completed[nextSection.id] && <i className="fa-solid fa-circle-check text-emerald-500 text-[10px]"></i>}
-                    <span className="font-bold text-[11px] sm:text-xs text-slate-400 group-hover:text-brand-300 transition-colors truncate">
-                      {nextSection.id.includes('On-Class') ? 'On-C' : nextSection.id}
-                    </span>
-                  </div>
-                  <span className="text-[9px] sm:text-[10px] text-slate-500 group-hover:text-slate-400 transition-colors truncate max-w-[80px] sm:max-w-[120px] md:max-w-[180px] lg:max-w-[250px]">
-                    {getSectionTitle(nextSection.id)}
-                  </span>
-                </div>
-                <div className="w-8 h-8 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center group-hover:border-brand-500 group-hover:bg-brand-900/30 transition-all flex-shrink-0 shadow-sm">
-                  <i className="fa-solid fa-chevron-right text-xs"></i>
-                </div>
-              </button>
-            )}
-          </div>
-
         </div>
       </div>
 
