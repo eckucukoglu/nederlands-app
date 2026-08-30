@@ -85,64 +85,6 @@ function MainContent({ user, setIsAuthModalOpen }) {
   const mobileMenuRef = useRef(null);
   const sectionMeasureRef = useRef(null); 
 
-  // Touch koordinatları için referanslar (Swipe için)
-  const touchStartX = useRef(0);
-  const touchStartY = useRef(0);
-
-  const currentSections = bookSections.filter(sec => sec.chapter === currentChapter || sec.id === `On-Class-${currentChapter}`);
-  const currentIndex = currentSections.findIndex(sec => sec.id === activeTab);
-
-  // Klavye ok tuşları ile section geçişi
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (activeTab === 'flashcards') return;
-      if (['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement.tagName)) return;
-
-      if (e.key === 'ArrowLeft') {
-        if (currentIndex > 0) {
-          setActiveTab(currentSections[currentIndex - 1].id);
-        }
-      } else if (e.key === 'ArrowRight') {
-        if (currentIndex < currentSections.length - 1) {
-          setActiveTab(currentSections[currentIndex + 1].id);
-        }
-      }
-    };
-
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [currentIndex, currentSections, activeTab]);
-
-  // Mobil Swipe (Sağa/Sola kaydırma) Hareketleri
-  const handleTouchStart = (e) => {
-    touchStartX.current = e.touches[0].clientX;
-    touchStartY.current = e.touches[0].clientY;
-  };
-
-  const handleTouchEnd = (e) => {
-    if (activeTab === 'flashcards') return;
-    const touchEndX = e.changedTouches[0].clientX;
-    const touchEndY = e.changedTouches[0].clientY;
-
-    const deltaX = touchEndX - touchStartX.current;
-    const deltaY = touchEndY - touchStartY.current;
-
-    // Yatay kaydırmanın dikey kaydırmadan baskın ve yeterli uzunlukta olması (> 60px)
-    if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 60) {
-      if (deltaX < 0) {
-        // Sola kaydır -> Sonraki Section (Sağ ok etkisi)
-        if (currentIndex < currentSections.length - 1) {
-          setActiveTab(currentSections[currentIndex + 1].id);
-        }
-      } else {
-        // Sağa kaydır -> Önceki Section (Sol ok etkisi)
-        if (currentIndex > 0) {
-          setActiveTab(currentSections[currentIndex - 1].id);
-        }
-      }
-    }
-  };
-
   useEffect(() => {
     const checkOverflow = () => {
       if (sectionMeasureRef.current) {
@@ -369,6 +311,8 @@ function MainContent({ user, setIsAuthModalOpen }) {
     localStorage.setItem(`lastVisitedTab_${currentChapter}`, activeTab);
   }, [activeTab, currentChapter]);
 
+  const currentSections = bookSections.filter(sec => sec.chapter === currentChapter || sec.id === `On-Class-${currentChapter}`);
+
   const handleChapterChange = (e) => {
     const newChapter = Number(e.target.value);
     setCurrentChapter(newChapter);
@@ -394,6 +338,8 @@ function MainContent({ user, setIsAuthModalOpen }) {
     if (secId.endsWith('.1')) return "Dialoog";
     return "Oefening";
   };
+
+  const currentIndex = currentSections.findIndex(sec => sec.id === activeTab);
 
   const SearchResultsUI = () => (
     <>
@@ -423,6 +369,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
                 </button>
               </div>
               
+              {/* YENİ: Çeviri Gösterimi - Seçili dile göre dinamik sıralama ve stil */}
               <div className="leading-snug mb-1.5 flex flex-col gap-0.5">
                 {lang === 'tr' ? (
                   <>
@@ -470,11 +417,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
   );
 
   return (
-    <div 
-      className="min-h-screen flex flex-col bg-slate-900 transition-colors duration-300 w-full max-w-full relative"
-      onTouchStart={handleTouchStart}
-      onTouchEnd={handleTouchEnd}
-    >
+    <div className="min-h-screen flex flex-col bg-slate-900 transition-colors duration-300 w-full max-w-full relative">
       
       {isInfoModalOpen && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-slate-950/80 backdrop-blur-sm" onClick={() => setIsInfoModalOpen(false)}>
