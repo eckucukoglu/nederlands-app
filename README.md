@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# 🇳🇱 Nederlands in Gang - Interactief Oefenportaal
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase)
+![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
 
-## Available Scripts
+An open-source, interactive, and personalized web companion designed to track and support the 3rd edition of the **"Nederlands in Gang"** textbook (A1 → A2 level). 
 
-In the project directory, you can run:
+🌐 **Bilingual Support:** The application interface, grammar explanations, and word translations are fully available in both **English** and **Turkish**.
 
-### `npm start`
+> **⚠️ Disclaimer:** This application is a strictly **non-commercial**, open-source personal project. It is intended to be used as a supplementary study tool alongside the original "Nederlands in Gang" (Coutinho) textbook.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ✨ Features
 
-### `npm test`
+*   💬 **Interactive Dialogues & Reading:** Read and listen to chapter dialogues using the native Text-to-Speech (TTS) API. Click on any word to see its translation and instantly mark it as "Known" or "Unknown".
+*   🗂️ **Smart Flashcards & Global Pool:** Practice vocabulary with interactive flashcards. Study chapter-specific words or switch to the **Global Pool** to review every word you have ever interacted with. Features keyboard shortcuts (⬅️ ⬆️ ⬇️ ➡️) for quick navigation.
+*   🧠 **Grammar & Exercises:** Interactive exercises (multiple-choice, fill-in-the-blanks) with instant feedback and visual "Correct/Incorrect" states.
+*   🏫 **On-Class Extra Sections:** Comprehensive grammar summaries, pronunciation tips, and extra exercises based on real classroom notes ("On-C" tabs).
+*   🔍 **Smart Dictionary Search:** Search for any Dutch word across the entire curriculum. Mark words as known/unknown directly from the search results to add them to your personal tracking system.
+*   ☁️ **Cloud Sync & Passwordless Login:** Firebase Magic Link (Passwordless) authentication. Your progress—including known/unknown words, favorites, and completed sections—is securely synchronized to the cloud. You never lose your progress across devices.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🛠️ Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+*   **Frontend:** React.js
+*   **Styling:** Tailwind CSS (Custom customized themes and responsive design)
+*   **Backend / Auth:** Firebase (Authentication - Magic Link / Identity Toolkit)
+*   **Database:** Firebase Firestore / Cloud Storage (Progress Synchronization)
+*   **Deployment:** Vercel
+*   **APIs:** Web Speech API (for Dutch `nl-NL` pronunciation)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 Local Development & Setup
 
-### `npm run eject`
+Follow these steps to run the project locally on your machine.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 1. Clone the repository
+```bash
+git clone https://github.com/eckucukoglu/nederlands-app.git
+cd nederlands-app
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 2. Install dependencies
+```bash
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 3. Firebase Configuration
+You need to create a Firebase project and add your web app configuration to your environment variables. 
+Create a `.env` file in the root directory and add the following keys:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```env
+REACT_APP_FIREBASE_API_KEY=your_api_key
+REACT_APP_FIREBASE_AUTH_DOMAIN=your_project_id.firebaseapp.com
+REACT_APP_FIREBASE_PROJECT_ID=your_project_id
+REACT_APP_FIREBASE_STORAGE_BUCKET=your_project_id.appspot.com
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+REACT_APP_FIREBASE_APP_ID=your_app_id
+```
+*(Note: Ensure your Firebase Authentication settings have "Email Link (passwordless sign-in)" enabled, and your authorized domains include `localhost` and your production domain).*
 
-## Learn More
+### 4. Start the development server
+```bash
+npm start
+```
+The app will run in development mode at [http://localhost:3000](http://localhost:3000).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📂 Project Structure
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```text
+src/
+├── components/          # Reusable UI components (AuthModal, Flashcards, ExerciseEngine...)
+├── contexts/            # React Contexts (LanguageContext for i18n TR/EN)
+├── data/                # Data structure
+│   ├── chapters/        # Individual chapter data (chapter3.js, chapter4.js...)
+│   ├── globalDictionary.js # Fallback dictionary mappings
+│   └── index.js         # Centralized export for all book sections
+├── firebase.js          # Firebase configuration and auth/db
