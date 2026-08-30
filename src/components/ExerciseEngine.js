@@ -116,7 +116,14 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
           </div>
           
           <div className="flex items-center space-x-3">
-            <h2 className="text-2xl font-extrabold text-slate-100">{sectionData.title}</h2>
+            <div>
+              <h2 className="text-2xl font-extrabold text-slate-100">{sectionData.title}</h2>
+              {isFav && (
+                <span className="text-xs text-amber-400 font-medium flex items-center gap-1 mt-1">
+                  <i className="fa-solid fa-star text-[10px]"></i> {favorites[sectionData.id]}
+                </span>
+              )}
+            </div>
             
             {/* İKON ALANI (TİK + YILDIZ) */}
             <div className="relative flex items-center space-x-3">
@@ -129,7 +136,7 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
                 )}
               </button>
 
-              <div className="group relative flex items-center">
+              <div className="flex items-center">
                 <button onClick={handleStarClick} className="text-2xl transition-transform hover:scale-110 focus:outline-none mt-1">
                   {isFav ? (
                     <i className="fa-solid fa-star text-amber-400 drop-shadow-[0_0_8px_rgba(251,191,36,0.6)]"></i>
@@ -137,13 +144,6 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
                     <i className="fa-regular fa-star text-slate-500 hover:text-amber-400 transition-colors"></i>
                   )}
                 </button>
-                
-                {isFav && (
-                  <div className="absolute left-full ml-3 top-0 hidden group-hover:block w-56 p-3 bg-slate-800 border border-slate-600 text-slate-200 text-xs rounded-xl shadow-2xl z-50">
-                    <div className="font-bold text-amber-400 mb-1 border-b border-slate-600 pb-1">{t.myNote}</div>
-                    <p className="break-words leading-relaxed">{favorites[sectionData.id]}</p>
-                  </div>
-                )}
               </div>
 
               {showFavInput && (

@@ -19,7 +19,7 @@ const fallbackDictionary = {
   "beetje": "a bit", "van": "from", "onze": "our", "zeg": "say", "je": "you", "heet": "is called", "ook": "also", "erg": "very",
   "sorry": "sorry", "zegt": "say", "oud": "old", "dus": "so", "bent": "are", "hij": "he/it", "prima": "fine", "misschien": "maybe", 
   "even": "just/briefly", "kijken": "look", "vanmorgen": "this morning", "goed": "good", "zal": "will", "hele": "whole", 
-  "weer": "again", "als": "like/as", "nieuw": "new", "woorden": "words", "morgen": "tomorrow", "overmorgen": "the day after tomorrow", "dag": "day"
+  "weer": "again", "als": "like/as", "nieuw": "new", "woorden": "words", "morgen": "tomorrow", "overmorgen": "the day after tomorrow", "dag": "dag"
 };
 
 const speakerColorPalette = [
@@ -261,13 +261,20 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
   return (
     <div className="bg-slate-900 rounded-2xl p-6 shadow-lg border border-slate-700 relative" onClick={() => { setSelectedWords(null); setShowFavInput(false); }}>
       
-      <div className="flex justify-between items-center mb-4">
-        <h3 className="text-lg font-bold text-slate-100 flex items-center space-x-2">
-          <i className="fa-solid fa-comments text-brand-400"></i>
-          <span>Dialoog Lezen en Luisteren</span>
-        </h3>
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-4 gap-2">
+        <div className="flex items-center space-x-2">
+          <i className="fa-solid fa-comments text-brand-400 text-lg"></i>
+          <div>
+            <h3 className="text-lg font-bold text-slate-100 leading-tight">Dialoog Lezen en Luisteren</h3>
+            {isFav && (
+              <span className="text-xs text-amber-400 font-medium flex items-center gap-1 mt-0.5">
+                <i className="fa-solid fa-star text-[10px]"></i> {favorites[sectionId]}
+              </span>
+            )}
+          </div>
+        </div>
 
-        <div className="relative flex items-center space-x-3">
+        <div className="relative flex items-center space-x-3 self-end sm:self-center">
           <button onClick={(e) => { e.stopPropagation(); toggleCompleted(sectionId); }} className="text-xl transition-transform hover:scale-110 focus:outline-none">
             {isComp ? (
               <i className="fa-solid fa-circle-check text-emerald-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.6)]"></i>
@@ -276,7 +283,7 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
             )}
           </button>
 
-          <div className="group relative flex items-center">
+          <div className="relative flex items-center">
             <button onClick={handleStarClick} className="text-xl transition-transform hover:scale-110 focus:outline-none">
               {isFav ? (
                 <i className="fa-solid fa-star text-amber-400 drop-shadow-[0_0_8px_rgba(251,191,36,0.6)]"></i>
@@ -284,13 +291,6 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
                 <i className="fa-regular fa-star text-slate-500 hover:text-amber-400 transition-colors"></i>
               )}
             </button>
-            
-            {isFav && (
-              <div className="absolute right-0 top-full mt-2 hidden group-hover:block w-48 p-3 bg-slate-800 border border-slate-600 text-slate-200 text-xs rounded-xl shadow-2xl z-50">
-                <div className="font-bold text-amber-400 mb-1 border-b border-slate-600 pb-1">Mijn Notitie:</div>
-                <p className="break-words leading-relaxed">{favorites[sectionId]}</p>
-              </div>
-            )}
           </div>
 
           {showFavInput && (
@@ -417,7 +417,6 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
                       </button>
                     </div>
                     
-                    {/* YENİ: Çeviri Gösterimi - Seçili dile göre dinamik sıralama ve stil */}
                     <div className="leading-snug mb-1.5 flex flex-col gap-0.5">
                       {lang === 'tr' ? (
                         <>

@@ -34,7 +34,7 @@ const fallbackDictionary = {
   "beetje": "a bit", "van": "from", "onze": "our", "zeg": "say", "je": "you", "heet": "is called", "ook": "also", "erg": "very",
   "sorry": "sorry", "zegt": "say", "oud": "old", "dus": "so", "bent": "are", "hij": "he/it", "prima": "fine", "misschien": "maybe", 
   "even": "just/briefly", "kijken": "look", "vanmorgen": "this morning", "goed": "good", "zal": "will", "hele": "whole", 
-  "weer": "again", "als": "like/as", "nieuw": "new", "woorden": "words", "morgen": "tomorrow", "overmorgen": "the day after tomorrow", "dag": "day"
+  "weer": "again", "als": "like/as", "nieuw": "new", "woorden": "words", "morgen": "tomorrow", "overmorgen": "the day after tomorrow", "dag": "dag"
 };
 
 function MainContent({ user, setIsAuthModalOpen }) {
@@ -528,6 +528,13 @@ function MainContent({ user, setIsAuthModalOpen }) {
                         </div>
                       </li>
                       <li className="flex items-start gap-3">
+                        <div className="w-8 h-8 rounded-lg bg-purple-900/50 border border-purple-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-purple-400"><i className="fa-solid fa-right-left"></i></div>
+                        <div>
+                          <strong className="text-slate-200 block mb-1">Bölümler Arası Hızlı Geçiş</strong>
+                          Ders bölümleri arasında klavyenizdeki <strong>sol/sağ ok tuşlarını</strong> kullanarak veya mobilde ekranı <strong>sağa/sola kaydırarak (swipe)</strong> anında gezinebilirsiniz.
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-3">
                         <div className="w-8 h-8 rounded-lg bg-teal-900/50 border border-teal-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-teal-400"><i className="fa-solid fa-globe"></i></div>
                         <div>
                           <strong className="text-slate-200 block mb-1">Dil Seçimi</strong>
@@ -579,6 +586,13 @@ function MainContent({ user, setIsAuthModalOpen }) {
                         <div>
                           <strong className="text-slate-200 block mb-1">On-Class Extra Sections</strong>
                           These sections ("On-C") contain comprehensive grammar summaries, pronunciation tips, and extra exercises based on real classroom notes. They are perfect for quick reviews and reinforcing chapter concepts.
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-8 h-8 rounded-lg bg-purple-900/50 border border-purple-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-purple-400"><i className="fa-solid fa-right-left"></i></div>
+                        <div>
+                          <strong className="text-slate-200 block mb-1">Easy Section Navigation</strong>
+                          You can quickly switch between lesson sections using the <strong>left/right arrow keys</strong> on your keyboard or by <strong>swiping left/right</strong> on mobile devices.
                         </div>
                       </li>
                       <li className="flex items-start gap-3">
@@ -798,17 +812,18 @@ function MainContent({ user, setIsAuthModalOpen }) {
                 <button
                   key={sec.id}
                   onClick={() => setActiveTab(sec.id)}
-                  className={`relative flex items-center justify-center h-9 px-3.5 sm:px-4 rounded-full text-[11px] sm:text-xs font-extrabold transition-all border shadow-sm whitespace-nowrap ${
+                  className={`relative flex items-center h-9 px-3.5 sm:px-4 rounded-full text-[11px] sm:text-xs font-extrabold transition-all border shadow-sm whitespace-nowrap gap-1.5 ${
                     isActive ? 'bg-brand-600 text-white border-brand-500 z-10' : 'bg-slate-800 text-slate-400 border-slate-700 hover:bg-slate-700 hover:text-slate-200'
                   }`}
                 >
-                  {sec.id.includes('On-Class') ? 'On-C' : sec.id}
-                  {(isC || isF) && (
-                    <div className="absolute -top-1.5 -right-1.5 flex space-x-[1px]">
-                      {isF && <div className="w-[14px] h-[14px] bg-slate-900 rounded-full flex items-center justify-center border border-slate-700"><i className="fa-solid fa-star text-amber-400 text-[8px]"></i></div>}
-                      {isC && <div className="w-[14px] h-[14px] bg-slate-900 rounded-full flex items-center justify-center border border-slate-700"><i className="fa-solid fa-circle-check text-emerald-400 text-[9px]"></i></div>}
-                    </div>
+                  <span>{sec.id.includes('On-Class') ? 'On-C' : sec.id}</span>
+                  {isF && <i className="fa-solid fa-star text-amber-400 text-[10px]"></i>}
+                  {isF && favorites[sec.id] && (
+                    <span className={`text-[10px] font-normal truncate max-w-[80px] ${isActive ? 'text-amber-200' : 'text-amber-400/80'}`}>
+                      {favorites[sec.id]}
+                    </span>
                   )}
+                  {isC && <i className="fa-solid fa-circle-check text-emerald-400 text-[10px] ml-0.5"></i>}
                 </button>
               );
             })}
@@ -870,7 +885,14 @@ function MainContent({ user, setIsAuthModalOpen }) {
                       onClick={() => { setActiveTab(sec.id); setIsMobileMenuOpen(false); }}
                       className={`w-full px-4 py-3 flex items-center justify-between text-sm transition-colors ${activeTab === sec.id ? 'bg-slate-700/50 text-brand-300 font-bold border-l-4 border-brand-400' : 'text-slate-300 hover:bg-slate-700/30 border-l-4 border-transparent'}`}
                     >
-                      <span className="truncate pr-2 text-left">{sec.id.includes('On-Class') ? 'Extra: On-Class' : `${sec.id} - ${getSectionTitle(sec.id)}`}</span>
+                      <div className="flex flex-col text-left truncate pr-2 flex-1">
+                        <span className="truncate">{sec.id.includes('On-Class') ? 'Extra: On-Class' : `${sec.id} - ${getSectionTitle(sec.id)}`}</span>
+                        {favorites[sec.id] && (
+                          <span className="text-[11px] text-amber-400/90 italic truncate mt-0.5 flex items-center gap-1">
+                            <i className="fa-solid fa-star text-[9px]"></i> {favorites[sec.id]}
+                          </span>
+                        )}
+                      </div>
                       <div className="flex items-center space-x-2 flex-shrink-0">
                         {isF && <i className="fa-solid fa-star text-amber-400"></i>}
                         {isC && <i className="fa-solid fa-circle-check text-emerald-400"></i>}
