@@ -368,10 +368,42 @@ function MainContent({ user, setIsAuthModalOpen }) {
                   <i className="fa-solid fa-volume-high text-xs"></i>
                 </button>
               </div>
-              <div className="leading-snug space-y-0.5 mb-1.5">
-                {wordObj.tr && <p className="text-[13px] font-bold text-brand-300">🇹🇷 {wordObj.tr}</p>}
-                {wordObj.en && <p className="text-[12px] font-medium text-slate-300">🇬🇧 {wordObj.en}</p>}
+              
+              {/* YENİ: Çeviri Gösterimi - Seçili dile göre dinamik sıralama ve stil */}
+              <div className="leading-snug mb-1.5 flex flex-col gap-0.5">
+                {lang === 'tr' ? (
+                  <>
+                    {wordObj.tr && (
+                      <div>
+                        <span className="text-[10px] font-bold text-slate-400 mr-1 tracking-wider">TR</span>
+                        <span className="text-[14px] font-bold text-slate-100">{wordObj.tr}</span>
+                      </div>
+                    )}
+                    {wordObj.en && (
+                      <div>
+                        <span className="text-[10px] font-bold text-slate-500 mr-1 tracking-wider">GB</span>
+                        <span className="text-[13px] font-normal text-slate-400">{wordObj.en}</span>
+                      </div>
+                    )}
+                  </>
+                ) : (
+                  <>
+                    {wordObj.en && (
+                      <div>
+                        <span className="text-[10px] font-bold text-slate-400 mr-1 tracking-wider">GB</span>
+                        <span className="text-[14px] font-bold text-slate-100">{wordObj.en}</span>
+                      </div>
+                    )}
+                    {wordObj.tr && (
+                      <div>
+                        <span className="text-[10px] font-bold text-slate-500 mr-1 tracking-wider">TR</span>
+                        <span className="text-[13px] font-normal text-slate-400">{wordObj.tr}</span>
+                      </div>
+                    )}
+                  </>
+                )}
               </div>
+
               {wordObj.example && <p className="text-[11px] text-slate-400 italic mb-2 leading-snug">"{wordObj.example}"</p>}
               <div className="flex gap-2 mt-1.5">
                 <button type="button" onClick={() => handleSearchWordKnowledge(wordObj, true)} className={`flex-1 py-1.5 rounded-md text-xs transition-all border ${currentStatus === 'known' ? 'bg-emerald-600 border-emerald-500 text-white shadow-inner scale-[0.98]' : 'bg-slate-700/50 border-slate-600 hover:bg-emerald-900/40 hover:border-emerald-700/50 text-slate-300'}`}><i className="fa-solid fa-check"></i></button>

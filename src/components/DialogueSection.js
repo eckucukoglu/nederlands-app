@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { vocabulary, dialogues } from '../data';
 import { globalDictionary } from '../data/globalDictionary'; 
-import { useLanguage } from '../contexts/LanguageContext'; // YENİ: Dil altyapısı eklendi
+import { useLanguage } from '../contexts/LanguageContext'; 
 
 const fallbackDictionary = {
   "de": "the", "een": "a/an", "het": "the", "ik": "I", "u": "you (formal)", "we": "we", "ze": "they", "mijn": "my", "uw": "your",
@@ -32,7 +32,7 @@ const speakerColorPalette = [
 ];
 
 export default function DialogueSection({ sectionId, favorites, toggleFavorite, completed, toggleCompleted }) {
-  const { lang, t } = useLanguage(); // YENİ: Context'ten seçili dili aldık
+  const { lang, t } = useLanguage(); 
   const chapterId = sectionId.split('.')[0];
   
   const [selectedWords, setSelectedWords] = useState(null);
@@ -318,7 +318,6 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
           
           const style = getSpeakerStyle(line.speaker);
 
-          // YENİ: Çeviriyi obje (i18n) veya string (eski bölüm) olarak ayırt etme
           const translationText = typeof line.translation === 'object' 
             ? line.translation[lang] || line.translation.tr 
             : line.translation;
@@ -418,9 +417,39 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
                       </button>
                     </div>
                     
-                    <div className="leading-snug space-y-0.5 mb-1.5">
-                      {wordObj.tr && <p className="text-[13px] font-bold text-brand-300">🇹🇷 {wordObj.tr}</p>}
-                      {wordObj.en && <p className="text-[12px] font-medium text-slate-300">🇬🇧 {wordObj.en}</p>}
+                    {/* YENİ: Çeviri Gösterimi - Seçili dile göre dinamik sıralama ve stil */}
+                    <div className="leading-snug mb-1.5 flex flex-col gap-0.5">
+                      {lang === 'tr' ? (
+                        <>
+                          {wordObj.tr && (
+                            <div>
+                              <span className="text-[10px] font-bold text-slate-400 mr-1 tracking-wider">TR</span>
+                              <span className="text-[14px] font-bold text-slate-100">{wordObj.tr}</span>
+                            </div>
+                          )}
+                          {wordObj.en && (
+                            <div>
+                              <span className="text-[10px] font-bold text-slate-500 mr-1 tracking-wider">GB</span>
+                              <span className="text-[13px] font-normal text-slate-400">{wordObj.en}</span>
+                            </div>
+                          )}
+                        </>
+                      ) : (
+                        <>
+                          {wordObj.en && (
+                            <div>
+                              <span className="text-[10px] font-bold text-slate-400 mr-1 tracking-wider">GB</span>
+                              <span className="text-[14px] font-bold text-slate-100">{wordObj.en}</span>
+                            </div>
+                          )}
+                          {wordObj.tr && (
+                            <div>
+                              <span className="text-[10px] font-bold text-slate-500 mr-1 tracking-wider">TR</span>
+                              <span className="text-[13px] font-normal text-slate-400">{wordObj.tr}</span>
+                            </div>
+                          )}
+                        </>
+                      )}
                     </div>
 
                     {wordObj.example && <p className="text-[11px] text-slate-400 italic mb-2 leading-snug">"{wordObj.example}"</p>}
