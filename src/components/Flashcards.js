@@ -25,6 +25,7 @@ const translations = {
     dialogueOption: "Dialoog (Onbekend)",
     globalPoolOption: "🌐 Global Havuz",
     shuffle: "Karıştır",
+    flipCards: "Kartları Çevir",
     studyUnknowns: "Bilinmeyenleri Çalış",
     listUnknowns: "Bilinmeyenleri Listele",
     listAll: "Hepsini Listele",
@@ -57,6 +58,7 @@ const translations = {
     dialogueOption: "Dialogue (Unknown)",
     globalPoolOption: "🌐 Global Pool",
     shuffle: "Shuffle",
+    flipCards: "Flip Cards",
     studyUnknowns: "Study Unknowns Only",
     listUnknowns: "List Unknowns",
     listAll: "List All",
@@ -82,6 +84,7 @@ export default function Flashcards({ initialChapter }) {
   const [baseDeck, setBaseDeck] = useState([]); 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
+  const [isReversed, setIsReversed] = useState(false); // YENİ: Kartları ters çevirme modu
   
   const [mode, setMode] = useState('all'); 
   
@@ -162,7 +165,6 @@ export default function Flashcards({ initialChapter }) {
   const currentWord = getResolvedWord(deck[currentIndex]);
   const totalWords = deck.length;
 
-  // --- DÜZELTİLEN FONKSİYON: KOPYAYI ÖNLEYEN GEÇİŞ MANTAĞI ---
   const updateStats = useCallback((isKnown) => {
     if (!currentWord || currentWord.id?.startsWith('empty')) return; 
     
@@ -185,12 +187,11 @@ export default function Flashcards({ initialChapter }) {
     setGlobalStats(newGlobal);
     localStorage.setItem('flashcardStats', JSON.stringify(newGlobal)); 
 
-    // Eğer kart arkası açıkken tıklandıysa, önce kapatıp sonra index değiştiriyoruz (Kopya bug'ı önlenir)
     if (isFlipped) {
       setIsFlipped(false);
       setTimeout(() => {
         setCurrentIndex(prev => (prev + 1) % totalWords);
-      }, 180); // Animasyon süresiyle uyumlu kısa bir gecikme
+      }, 180);
     } else {
       setCurrentIndex(prev => (prev + 1) % totalWords);
     }
@@ -368,6 +369,18 @@ export default function Flashcards({ initialChapter }) {
         >
           <i className="fa-solid fa-shuffle"></i> {t.shuffle}
         </button>
+
+        {/* YENİ: Kartları Çevir Butonu */}
+        <button 
+          onClick={() => setIsReversed(!isReversed)}
+          className={`border rounded-xl px-4 py-2.5 text-sm font-semibold shadow-sm transition-colors flex items-center gap-2 ${
+            isReversed 
+              ? 'bg-brand-600 border-brand-500 text-white shadow-brand-500/20' 
+              : 'bg-slate-800 border-slate-600 text-slate-300 hover:bg-slate-700 hover:text-brand-400'
+          }`}
+        >
+          <i className="fa-solid fa-right-left"></i> {t.flipCards}
+        </button>
       </div>
 
       <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-4 bg-slate-800/60 p-3 rounded-xl border border-slate-700/50">
@@ -425,9 +438,12 @@ export default function Flashcards({ initialChapter }) {
         <div onClick={() => setIsFlipped(!isFlipped)} className={`flashcard w-full h-72 cursor-pointer ${isFlipped ? "flipped" : ""}`}>
           <div className="flashcard-inner relative w-full h-full rounded-3xl shadow-2xl border border-slate-700">
             
+            {/* FRONT (ÖN YÜZ) */}
             <div className="flashcard-front absolute inset-0 rounded-3xl p-6 flex flex-col justify-between items-center text-center bg-gradient-to-b from-slate-800 to-slate-900">
               <div className="flex justify-between w-full px-2">
-                <span className="text-xs font-bold text-brand-400 bg-brand-900/30 border border-brand-700/50 px-3 py-1 rounded-full uppercase">Nederlands</span>
+                <span className="text-xs font-bold text-brand-400 bg-brand-900/30 border border-brand-700/50 px-3 py-1 rounded-full uppercase">
+                  {isReversed ? (lang === 'tr' ? 'Türkçe / İngilizce' : 'English / Turkish') : 'Nederlands'}
+                </span>
                 {mode === 'global' && currentWord?.status && !currentWord.id?.startsWith('empty') && (
                   <span className={`text-xs font-bold px-3 py-1 rounded-full uppercase border ${currentWord.status === 'known' ? 'bg-emerald-900/40 text-emerald-400 border-emerald-700/50' : 'bg-rose-900/40 text-rose-400 border-rose-700/50'}`}>
                     {currentWord.status === 'known' ? t.known : t.unknown}
@@ -435,36 +451,79 @@ export default function Flashcards({ initialChapter }) {
                 )}
               </div>
 
-              <div>
-                <h3 className="text-4xl font-extrabold text-slate-100 drop-shadow-md">{currentWord?.nl}</h3>
-                <p className="text-sm text-slate-500 mt-4 font-medium">{t.clickToTranslate}</p>
+              <div className="flex flex-col items-center justify-center my-auto w-full px-2">
+                {isReversed ? (
+                  <>
+                    <h3 className="text-3xl font-extrabold drop-shadow-md leading-tight text-slate-100">{primaryDisplay}</h3>
+                    {secondaryDisplay && (
+                      <h4 className="text-base font-normal mt-2 text-slate-400">{secondaryDisplay}</h4>
+                    )}
+                    <p className="text-sm text-slate-500 mt-4 font-medium">{t.clickToTranslate}</p>
+                  </>
+                ) : (
+                  <>
+                    <h3 className="text-4xl font-extrabold text-slate-100 drop-shadow-md">{currentWord?.nl}</h3>
+                    <p className="text-sm text-slate-500 mt-4 font-medium">{t.clickToTranslate}</p>
+                  </>
+                )}
               </div>
-              <button onClick={(e) => speakDutch(currentWord?.nl, e)} className="text-slate-400 hover:text-brand-400 hover:bg-slate-700 p-3 rounded-full transition-colors text-xl">
-                <i className="fa-solid fa-volume-high"></i>
-              </button>
+
+              {!isReversed ? (
+                <button onClick={(e) => speakDutch(currentWord?.nl, e)} className="text-slate-400 hover:text-brand-400 hover:bg-slate-700 p-3 rounded-full transition-colors text-xl">
+                  <i className="fa-solid fa-volume-high"></i>
+                </button>
+              ) : (
+                <div></div>
+              )}
             </div>
 
+            {/* BACK (ARKA YÜZ) */}
             <div className="flashcard-back absolute inset-0 rounded-3xl p-6 flex flex-col justify-between items-center text-center bg-gradient-to-br from-rose-600 to-rose-800 text-white">
               <span className="text-xs font-bold bg-white/20 px-3 py-1 rounded-full uppercase shadow-sm">
-                {lang === 'tr' ? 'Türkçe / İngilizce' : 'English / Turkish'}
+                {isReversed ? 'Nederlands' : (lang === 'tr' ? 'Türkçe / İngilizce' : 'English / Turkish')}
               </span>
               
               <div className="flex flex-col items-center justify-center my-auto w-full px-2">
-                <h3 className="text-3xl font-extrabold drop-shadow-md leading-tight">{primaryDisplay}</h3>
-                {secondaryDisplay && (
-                  <h4 className="text-base font-normal mt-2 text-rose-100/80">{secondaryDisplay}</h4>
-                )}
-                
-                {currentWord?.example && !currentWord.id?.startsWith('empty') && (
-                  <div className="mt-4 p-2.5 bg-black/20 rounded-xl border border-white/10 w-full max-w-md">
-                    <p className="text-xs sm:text-sm text-rose-50 italic">"{currentWord?.example}"</p>
-                  </div>
+                {isReversed ? (
+                  <>
+                    <h3 className="text-4xl font-extrabold drop-shadow-md">{currentWord?.nl}</h3>
+                    {currentWord?.example && !currentWord.id?.startsWith('empty') && (
+                      <div className="mt-4 p-2.5 bg-black/20 rounded-xl border border-white/10 w-full max-w-md">
+                        <p className="text-xs sm:text-sm text-rose-50 italic">"{currentWord?.example}"</p>
+                      </div>
+                    )}
+                  </>
+                ) : (
+                  <>
+                    <h3 className="text-3xl font-extrabold drop-shadow-md leading-tight">{primaryDisplay}</h3>
+                    {secondaryDisplay && (
+                      <h4 className="text-base font-normal mt-2 text-rose-100/80">{secondaryDisplay}</h4>
+                    )}
+                    
+                    {currentWord?.example && !currentWord.id?.startsWith('empty') && (
+                      <div className="mt-4 p-2.5 bg-black/20 rounded-xl border border-white/10 w-full max-w-md">
+                        <p className="text-xs sm:text-sm text-rose-50 italic">"{currentWord?.example}"</p>
+                      </div>
+                    )}
+                  </>
                 )}
               </div>
 
-              <span className="text-xs text-rose-300 font-medium tracking-wide">
-                {mode === 'global' ? t.globalPoolLabel : `Hoofdstuk ${targetChapter}`}
-              </span>
+              {isReversed ? (
+                <button onClick={(e) => speakDutch(currentWord?.nl, e)} className="text-rose-200 hover:text-white hover:bg-black/20 p-2.5 rounded-full transition-colors text-lg mb-1">
+                  <i className="fa-solid fa-volume-high"></i>
+                </button>
+              ) : (
+                <span className="text-xs text-rose-300 font-medium tracking-wide">
+                  {mode === 'global' ? t.globalPoolLabel : `Hoofdstuk ${targetChapter}`}
+                </span>
+              )}
+
+              {isReversed && (
+                <span className="text-xs text-rose-300 font-medium tracking-wide">
+                  {mode === 'global' ? t.globalPoolLabel : `Hoofdstuk ${targetChapter}`}
+                </span>
+              )}
             </div>
 
           </div>
