@@ -1,12 +1,14 @@
 // src/components/AuthModal.js
 import React, { useState } from 'react';
 import { auth, sendSignInLinkToEmail } from '../firebase';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export default function AuthModal({ isOpen, onClose, user }) {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
-
+  const { lang, setLang, t } = useLanguage();
+  
   if (!isOpen) return null;
 
   const handleLogin = async (e) => {
@@ -22,9 +24,9 @@ export default function AuthModal({ isOpen, onClose, user }) {
     try {
       await sendSignInLinkToEmail(auth, email, actionCodeSettings);
       window.localStorage.setItem('emailForSignIn', email);
-      setMessage("✅ Giriş linki mail adresine gönderildi. Lütfen gelen kutunu kontrol et.");
+      setMessage(t('authSuccess')); // DİNAMİK MESAJ
     } catch (error) {
-      setMessage("❌ Bir hata oluştu: " + error.message);
+      setMessage(t('authError') + error.message); // DİNAMİK MESAJ
     }
     setLoading(false);
   };
@@ -67,10 +69,10 @@ export default function AuthModal({ isOpen, onClose, user }) {
           }
         });
         
-        alert("✅ Veriler başarıyla içe aktarıldı! Sayfa yenileniyor...");
+        alert(t('importSuccess')); // DİNAMİK MESAJ
         window.location.reload();
       } catch (err) {
-        alert("❌ Geçersiz veya bozuk yedek dosyası!");
+        alert(t('importError')); // DİNAMİK MESAJ
       }
     };
     reader.readAsText(file);
@@ -88,20 +90,20 @@ export default function AuthModal({ isOpen, onClose, user }) {
           <div className="bg-brand-900/30 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 border border-brand-500/20">
             <i className="fa-solid fa-cloud-arrow-up text-3xl text-brand-400"></i>
           </div>
-          <h2 className="text-2xl font-extrabold text-slate-100 mb-2">İlerlemeni Senkronize Et</h2>
+          <h2 className="text-2xl font-extrabold text-slate-100 mb-2">{t('syncProgress')}</h2>
           <p className="text-sm text-slate-400 leading-relaxed">
-            Farklı cihazlardan (telefon, tablet, ofis bilgisayarı) kaldığın yerden devam edebilmek ve istatistiklerini güvenle bulutta saklamak için giriş yap. Şifreye gerek yok!
+            {t('syncDesc')}
           </p>
         </div>
 
         {user ? (
           <div className="text-center space-y-4">
             <div className="bg-emerald-900/30 border border-emerald-800/50 p-4 rounded-2xl">
-              <p className="text-sm font-bold text-emerald-400 mb-1">Giriş Yapıldı</p>
+              <p className="text-sm font-bold text-emerald-400 mb-1">{t('loggedIn')}</p>
               <p className="text-xs text-slate-300">{user.email}</p>
             </div>
             <button onClick={handleLogout} className="w-full bg-slate-800 hover:bg-rose-900/40 border border-slate-700 hover:border-rose-700/50 text-slate-300 hover:text-rose-300 font-bold py-3 rounded-xl transition-all">
-              Çıkış Yap
+              {t('logout')}
             </button>
           </div>
         ) : (
@@ -111,25 +113,48 @@ export default function AuthModal({ isOpen, onClose, user }) {
               required
               value={email}
               onChange={e => setEmail(e.target.value)}
-              placeholder="E-posta adresin..." 
+              placeholder={t('emailPlaceholder')}
               className="w-full bg-slate-800 border border-slate-700 text-slate-200 placeholder-slate-500 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-500"
             />
             <button disabled={loading} type="submit" className="w-full bg-brand-600 hover:bg-brand-500 text-white font-bold py-3 rounded-xl shadow-lg transition-all disabled:opacity-50">
-              {loading ? "Bağlanıyor..." : "Giriş Linki Gönder"}
+              {loading ? t('connecting') : t('sendLoginLink')}
             </button>
             {message && <p className={`text-xs text-center font-medium ${message.includes('❌') ? 'text-rose-400' : 'text-emerald-400'}`}>{message}</p>}
           </form>
         )}
-
+        
+        {/* DİL SEÇİMİ (LANGUAGE TOGGLE) */}
+        <div className="bg-slate-800 border border-slate-700 p-4 rounded-xl flex items-center justify-between mt-4">
+          <div className="flex items-center gap-3">
+            <i className="fa-solid fa-globe text-brand-400 text-lg"></i>
+            <span className="font-bold text-slate-200">{t('language')}</span>
+          </div>
+          
+          <div className="flex items-center bg-slate-900 rounded-full p-1 border border-slate-700">
+            <button 
+              onClick={() => setLang('tr')}
+              className={`px-3 py-1 text-xs font-bold rounded-full transition-all ${lang === 'tr' ? 'bg-brand-600 text-white shadow-md' : 'text-slate-500 hover:text-slate-300'}`}
+            >
+              TR
+            </button>
+            <button 
+              onClick={() => setLang('en')}
+              className={`px-3 py-1 text-xs font-bold rounded-full transition-all ${lang === 'en' ? 'bg-brand-600 text-white shadow-md' : 'text-slate-500 hover:text-slate-300'}`}
+            >
+              EN
+            </button>
+          </div>
+        </div>
+        
         <div className="mt-8 pt-6 border-t border-slate-800 space-y-3">
-          <p className="text-xs text-center text-slate-500 font-medium">Giriş yapmak istemiyor musun? Verilerini manuel yönet:</p>
+          <p className="text-xs text-center text-slate-500 font-medium">{t('manualManageInfo')}</p>
           <div className="flex gap-2">
             <button onClick={exportData} className="flex-1 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-300 text-xs font-bold py-2.5 rounded-lg transition-colors flex items-center justify-center gap-2">
-              <i className="fa-solid fa-download"></i> İndir (Yedekle)
+              <i className="fa-solid fa-download"></i> {t('downloadBackup')}
             </button>
             
             <label className="flex-1 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-300 text-xs font-bold py-2.5 rounded-lg transition-colors flex items-center justify-center gap-2 cursor-pointer">
-              <i className="fa-solid fa-upload"></i> İçe Aktar
+              <i className="fa-solid fa-upload"></i> {t('importDataBtn')}
               <input type="file" accept=".json" className="hidden" onChange={importData} />
             </label>
           </div>

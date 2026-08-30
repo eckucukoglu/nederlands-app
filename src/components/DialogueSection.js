@@ -1,6 +1,8 @@
+// src/components/DialogueSection.js
 import React, { useState, useEffect } from 'react';
 import { vocabulary, dialogues } from '../data';
 import { globalDictionary } from '../data/globalDictionary'; 
+import { useLanguage } from '../contexts/LanguageContext'; // YENİ: Dil altyapısı eklendi
 
 const fallbackDictionary = {
   "de": "the", "een": "a/an", "het": "the", "ik": "I", "u": "you (formal)", "we": "we", "ze": "they", "mijn": "my", "uw": "your",
@@ -20,17 +22,17 @@ const fallbackDictionary = {
   "weer": "again", "als": "like/as", "nieuw": "new", "woorden": "words", "morgen": "tomorrow", "overmorgen": "the day after tomorrow", "dag": "day"
 };
 
-// YENİ: Konuşmacılar için Dinamik Renk Paleti
 const speakerColorPalette = [
-  { bg: "bg-slate-800/50", border: "border-slate-500", text: "text-slate-400" },     // 1. Kişi (Genelde anlatan/ana karakter)
-  { bg: "bg-teal-900/20", border: "border-teal-600", text: "text-teal-400" },        // 2. Kişi
-  { bg: "bg-indigo-900/20", border: "border-indigo-500", text: "text-indigo-400" },  // 3. Kişi
-  { bg: "bg-rose-900/20", border: "border-rose-600", text: "text-rose-400" },        // 4. Kişi
-  { bg: "bg-amber-900/20", border: "border-amber-600", text: "text-amber-400" },     // 5. Kişi
-  { bg: "bg-purple-900/20", border: "border-purple-500", text: "text-purple-400" }   // 6. Kişi
+  { bg: "bg-slate-800/50", border: "border-slate-500", text: "text-slate-400" },     
+  { bg: "bg-teal-900/20", border: "border-teal-600", text: "text-teal-400" },        
+  { bg: "bg-indigo-900/20", border: "border-indigo-500", text: "text-indigo-400" },  
+  { bg: "bg-rose-900/20", border: "border-rose-600", text: "text-rose-400" },        
+  { bg: "bg-amber-900/20", border: "border-amber-600", text: "text-amber-400" },     
+  { bg: "bg-purple-900/20", border: "border-purple-500", text: "text-purple-400" }   
 ];
 
 export default function DialogueSection({ sectionId, favorites, toggleFavorite, completed, toggleCompleted }) {
+  const { lang, t } = useLanguage(); // YENİ: Context'ten seçili dili aldık
   const chapterId = sectionId.split('.')[0];
   
   const [selectedWords, setSelectedWords] = useState(null);
@@ -49,10 +51,8 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
   const isFav = favorites && favorites[sectionId];
   const isComp = completed && completed[sectionId];
 
-  // YENİ: Diyalogdaki benzersiz konuşmacıları tespit etme
   const uniqueSpeakers = [...new Set(activeDialogue.map(line => line.speaker))];
   
-  // YENİ: Konuşmacıya özel rengi getirme fonksiyonu
   const getSpeakerStyle = (speakerName) => {
     const index = uniqueSpeakers.indexOf(speakerName);
     return speakerColorPalette[index % speakerColorPalette.length];
@@ -87,7 +87,6 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
     setPopupPos({ x: e.clientX, y: yPosition });
 
     const allVocab = [...vocabulary, ...globalDictionary];
-    
     const uniqueVocabMap = new Map();
     allVocab.forEach(item => {
       uniqueVocabMap.set(item.nl.toLowerCase(), item);
@@ -112,7 +111,7 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
         nl: cleanWord, 
         en: fallback || "Translation not available", 
         tr: "Çeviri bulunamadı",
-        example: fallback ? "Uit de dialoog" : "Sözlükte bulunamadı. Lütfen kelime kökünü (infinitive) kontrol ediniz." 
+        example: fallback ? "Uit de dialoog" : t('notFound')
       }];
     }
 
@@ -124,6 +123,16 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
     });
 
     setSelectedWords(matches);
+  };
+
+  const saveToGlobalPool = (wordObj, status) => {
+    const pool = JSON.parse(localStorage.getItem('globalWordPool')) || {};
+    if (status === undefined) {
+      delete pool[wordObj.nl.toLowerCase()];
+    } else {
+      pool[wordObj.nl.toLowerCase()] = { ...wordObj, status, addedAt: new Date().toISOString() };
+    }
+    localStorage.setItem('globalWordPool', JSON.stringify(pool));
   };
 
   const handleWordKnowledge = (wordObj, isKnown) => {
@@ -139,9 +148,10 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
     }
     localStorage.setItem(storageKey, JSON.stringify(updatedUnknowns));
 
+    saveToGlobalPool(wordObj, isKnown ? 'known' : 'unknown');
+
     const keysToUpdate = new Set();
     const lowerNL = wordObj.nl.toLowerCase();
-    
     keysToUpdate.add(lowerNL);
     
     if (lowerNL.includes('(')) {
@@ -197,13 +207,21 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
           nl: clickedWordRaw, 
           en: "Not found in dictionary", 
           tr: "Sözlükte bulunamadı",
-          example: "Kullanıcı tarafından manuel olarak işaretlendi."
+          example: "Manually marked by the user."
         }];
       }
     } else {
       updatedUnknowns = existingUnknowns.filter(w => w.nl !== clickedWordRaw);
     }
     localStorage.setItem(storageKey, JSON.stringify(updatedUnknowns));
+
+    const wordObj = {
+      nl: clickedWordRaw,
+      en: "Not found in dictionary",
+      tr: "Sözlükte bulunamadı",
+      example: "Manually marked by the user."
+    };
+    saveToGlobalPool(wordObj, newStatus);
 
     const newStatuses = { ...wordStatuses };
     if (newStatus === undefined) {
@@ -235,13 +253,9 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
   let translateClass = "translate-x-[18px]"; 
 
   if (rawStatus === 'unknown') {
-    trackColor = "bg-rose-900/60";
-    thumbColor = "bg-rose-500";
-    translateClass = "translate-x-[2px]"; 
+    trackColor = "bg-rose-900/60"; thumbColor = "bg-rose-500"; translateClass = "translate-x-[2px]"; 
   } else if (rawStatus === 'known') {
-    trackColor = "bg-emerald-900/60";
-    thumbColor = "bg-emerald-500";
-    translateClass = "translate-x-[34px]"; 
+    trackColor = "bg-emerald-900/60"; thumbColor = "bg-emerald-500"; translateClass = "translate-x-[34px]"; 
   }
 
   return (
@@ -302,8 +316,14 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
           const words = line.text.split(' ');
           const cleanWords = words.map(w => w.replace(/[.,?!:;–-]/g, '').toLowerCase());
           
-          // YENİ: Konuşmacıya ait stili (renk paletinden) çekme
           const style = getSpeakerStyle(line.speaker);
+
+          // YENİ: Çeviriyi obje (i18n) veya string (eski bölüm) olarak ayırt etme
+          const translationText = typeof line.translation === 'object' 
+            ? line.translation[lang] || line.translation.tr 
+            : line.translation;
+            
+          const flag = lang === 'tr' ? '🇹🇷' : '🇬🇧';
 
           return (
             <div key={idx} className={`p-3.5 rounded-xl flex items-start space-x-3 transition ${style.bg} border-l-4 ${style.border}`}>
@@ -311,7 +331,6 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
                 <i className="fa-solid fa-volume-high text-sm"></i>
               </button>
               <div className="flex-1">
-                {/* YENİ: Konuşmacı isminin rengi de o konuşmacının stiline uyum sağladı */}
                 <span className={`font-bold text-xs uppercase tracking-wider ${style.text}`}>{line.speaker}</span>
                 <p className="text-sm font-semibold text-slate-200 mt-0.5 leading-relaxed">
                   
@@ -355,7 +374,7 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
                     );
                   })}
                 </p>
-                <p className="text-xs text-slate-400 mt-1 italic">🇹🇷 {line.translation}</p>
+                <p className="text-xs text-slate-400 mt-1 italic">{flag} {translationText}</p>
               </div>
             </div>
           );
@@ -377,7 +396,7 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
                   <i className="fa-solid fa-pen-nib text-brand-400 mr-1.5"></i>
                   {clickedWordRaw}
                 </span>
-                <span className="text-[10px] text-slate-400 leading-tight mt-0.5">Sadece kelimeyi işaretle</span>
+                <span className="text-[10px] text-slate-400 leading-tight mt-0.5">{t('markOnly')}</span>
               </div>
               
               <div className={`relative w-14 h-6 rounded-full transition-colors duration-300 flex-shrink-0 ${trackColor}`}>

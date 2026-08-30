@@ -82,27 +82,27 @@ export const chapter2Vocab = [
 
 export const chapter2Dialogues = {
   "2.1": [
-    { speaker: "Verteller", text: "Susy en Edit hebben pauze en zitten in de kantine.", translation: "Susy ve Edit moladalar ve kantinde oturuyorlar." },
-    { speaker: "Susy", text: "Is deze plaats vrij?", translation: "Bu yer boş mu?" },
-    { speaker: "Edit", text: "Ja hoor.", translation: "Evet tabii ki." },
-    { speaker: "Susy", text: "Zo, een lekker kopje koffie.", translation: "Öyleyse, lezzetli bir fincan kahve." },
-    { speaker: "Edit", text: "Woon je al lang in Utrecht?", translation: "Utrecht'te uzun zamandır mı yaşıyorsun?" },
-    { speaker: "Susy", text: "Nee, pas drie dagen, of vier. Welke dag is het eigenlijk vandaag?", translation: "Hayır, henüz sadece üç veya dört gün. Bugün aslında hangi gün?" },
-    { speaker: "Edit", text: "Het is donderdag 20 augustus. Morgen ben ik jarig.", translation: "Bugün Perşembe, 20 Ağustos. Yarın benim doğum günüm." },
-    { speaker: "Susy", text: "Wat leuk! Ik ben in december jarig, dus in de winter. Krijg je nog bezoek?", translation: "Ne güzel! Benim doğum günüm Aralık'ta, yani kışın. Ziyaretçi alacak mısın (misafirin gelecek mi)?" },
-    { speaker: "Edit", text: "Ja, mijn broer komt.", translation: "Evet, erkek kardeşim geliyor." },
-    { speaker: "Susy", text: "Wie is jonger? Hij of jij?", translation: "Kim daha genç? O mu sen mi?" },
-    { speaker: "Edit", text: "Hij is jonger, maar wel langer.", translation: "O daha genç, ama kesinlikle daha uzun." },
-    { speaker: "Susy", text: "Heb je nog meer broers of zussen?", translation: "Daha fazla erkek veya kız kardeşin var mı?" },
-    { speaker: "Edit", text: "Ja, ik heb nog een zus. Kijk, hier is een foto.", translation: "Evet, bir kız kardeşim daha var. Bak, işte bir fotoğraf." },
-    { speaker: "Susy", text: "Goh, ze is een heel ander type. Ze heeft kort, blond haar en jij donker haar. Komen je ouders ook op bezoek?", translation: "Vay canına, o tamamen farklı bir tip. Onun kısa sarı saçları var, senin ise koyu saçların. Ebeveynlerin de ziyarete geliyor mu?" },
-    { speaker: "Edit", text: "Nee, ze zijn op dit moment in Indonesië.", translation: "Hayır, şu an Endonezya'dalar." },
-    { speaker: "Susy", text: "Wat doen ze daar? Zijn ze daar op vakantie?", translation: "Orada ne yapıyorlar? Orada tatildeler mi?" },
-    { speaker: "Edit", text: "Ja, en mijn vader is daar ook voor zijn werk.", translation: "Evet, ve babam da işi için orada." },
-    { speaker: "Susy", text: "Welk seizoen is het daar nu? Wanneer is het daar zomer?", translation: "Şu an orada hangi mevsim? Orada yaz ne zaman?" },
-    { speaker: "Edit", text: "Ik weet het niet. Maar vertel eens over jouw familie.", translation: "Bilmiyorum. Ama hadi biraz ailenden bahset." },
-    { speaker: "Susy", text: "Dat wil ik wel, maar hoe laat is het eigenlijk?", translation: "Bunu isterim, ama aslında saat kaç?" },
-    { speaker: "Edit", text: "Het is 11.00 uur. We moeten weer naar de les.", translation: "Saat 11.00. Tekrar derse dönmeliyiz." }
+    { speaker: "Verteller", text: "Susy en Edit hebben pauze en zitten in de kantine.", translation: { tr: "Susy ve Edit moladalar ve kantinde oturuyorlar.", en: "Susy and Edit are on a break and sitting in the canteen." } },
+    { speaker: "Susy", text: "Is deze plaats vrij?", translation: { tr: "Bu yer boş mu?", en: "Is this seat free?" } },
+    { speaker: "Edit", text: "Ja hoor.", translation: { tr: "Evet tabii ki.", en: "Yes, sure." } },
+    { speaker: "Susy", text: "Zo, een lekker kopje koffie.", translation: { tr: "Öyleyse, lezzetli bir fincan kahve.", en: "Right, a nice cup of coffee." } },
+    { speaker: "Edit", text: "Woon je al lang in Utrecht?", translation: { tr: "Utrecht'te uzun zamandır mı yaşıyorsun?", en: "Have you been living in Utrecht for a long time?" } },
+    { speaker: "Susy", text: "Nee, pas drie dagen, of vier. Welke dag is het eigenlijk vandaag?", translation: { tr: "Hayır, henüz sadece üç veya dört gün. Bugün aslında hangi gün?", en: "No, only three days, or four. What day is it today actually?" } },
+    { speaker: "Edit", text: "Het is donderdag 20 augustus. Morgen ben ik jarig.", translation: { tr: "Bugün Perşembe, 20 Ağustos. Yarın benim doğum günüm.", en: "It is Thursday, August 20th. Tomorrow is my birthday." } },
+    { speaker: "Susy", text: "Wat leuk! Ik ben in december jarig, dus in de winter. Krijg je nog bezoek?", translation: { tr: "Ne güzel! Benim doğum günüm Aralık'ta, yani kışın. Ziyaretçi alacak mısın (misafirin gelecek mi)?", en: "How nice! My birthday is in December, so in the winter. Are you having any visitors?" } },
+    { speaker: "Edit", text: "Ja, mijn broer komt.", translation: { tr: "Evet, erkek kardeşim geliyor.", en: "Yes, my brother is coming." } },
+    { speaker: "Susy", text: "Wie is jonger? Hij of jij?", translation: { tr: "Kim daha genç? O mu sen mi?", en: "Who is younger? Him or you?" } },
+    { speaker: "Edit", text: "Hij is jonger, maar wel langer.", translation: { tr: "O daha genç, ama kesinlikle daha uzun.", en: "He is younger, but certainly taller." } },
+    { speaker: "Susy", text: "Heb je nog meer broers of zussen?", translation: { tr: "Daha fazla erkek veya kız kardeşin var mı?", en: "Do you have any more brothers or sisters?" } },
+    { speaker: "Edit", text: "Ja, ik heb nog een zus. Kijk, hier is een foto.", translation: { tr: "Evet, bir kız kardeşim daha var. Bak, işte bir fotoğraf.", en: "Yes, I have another sister. Look, here is a photo." } },
+    { speaker: "Susy", text: "Goh, ze is een heel ander type. Ze heeft kort, blond haar en jij donker haar. Komen je ouders ook op bezoek?", translation: { tr: "Vay canına, o tamamen farklı bir tip. Onun kısa sarı saçları var, senin ise koyu saçların. Ebeveynlerin de ziyarete geliyor mu?", en: "Wow, she is a completely different type. She has short, blonde hair and you have dark hair. Are your parents coming to visit too?" } },
+    { speaker: "Edit", text: "Nee, ze zijn op dit moment in Indonesië.", translation: { tr: "Hayır, şu an Endonezya'dalar.", en: "No, they are in Indonesia at the moment." } },
+    { speaker: "Susy", text: "Wat doen ze daar? Zijn ze daar op vakantie?", translation: { tr: "Orada ne yapıyorlar? Orada tatildeler mi?", en: "What are they doing there? Are they on holiday there?" } },
+    { speaker: "Edit", text: "Ja, en mijn vader is daar ook voor zijn werk.", translation: { tr: "Evet, ve babam da işi için orada.", en: "Yes, and my father is also there for his work." } },
+    { speaker: "Susy", text: "Welk seizoen is het daar nu? Wanneer is het daar zomer?", translation: { tr: "Şu an orada hangi mevsim? Orada yaz ne zaman?", en: "What season is it there now? When is it summer there?" } },
+    { speaker: "Edit", text: "Ik weet het niet. Maar vertel eens over jouw familie.", translation: { tr: "Bilmiyorum. Ama hadi biraz ailenden bahset.", en: "I don't know. But tell me about your family." } },
+    { speaker: "Susy", text: "Dat wil ik wel, maar hoe laat is het eigenlijk?", translation: { tr: "Bunu isterim, ama aslında saat kaç?", en: "I would like to do that, but what time is it actually?" } },
+    { speaker: "Edit", text: "Het is 11.00 uur. We moeten weer naar de les.", translation: { tr: "Saat 11.00. Tekrar derse dönmeliyiz.", en: "It is 11:00. We must go back to class." } }
   ]
 };
 
@@ -111,17 +111,24 @@ export const chapter2Sections = [
     id: "2.1",
     chapter: 2,
     title: "2.1 & 2.2 Dialoog en Woordenlijst",
-    theory: (
+    theory: (lang) => (
       <>
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #3b82f6', marginBottom: '20px' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#60a5fa' }}>🗣️ Dialoog: In de kantine</h3>
-          <p>Susy en Edit hebben pauze en zitten in de kantine. Ze praten over verjaardagen, familie en de tijd. (Susy ve Edit kantinde mola veriyorlar. Doğum günleri, aile ve saat hakkında konuşuyorlar.)</p>
-        </div>
+        {lang === 'tr' ? (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #3b82f6', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#60a5fa' }}>🗣️ Dialoog: In de kantine</h3>
+            <p>Susy en Edit hebben pauze en zitten in de kantine. Ze praten over verjaardagen, familie en de tijd. (Susy ve Edit kantinde mola veriyorlar. Doğum günleri, aile ve saat hakkında konuşuyorlar.)</p>
+          </div>
+        ) : (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #3b82f6', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#60a5fa' }}>🗣️ Dialogue: In the canteen</h3>
+            <p>Susy and Edit are on a break and sitting in the canteen. They are talking about birthdays, family, and the time.</p>
+          </div>
+        )}
       </>
     ),
     exerciseGroups: [
       {
-        instruction: "Opdracht 1: Geef een reactie op de vragen (Wat weet je van de tekst?).",
+        instruction: "Opdracht 1: Geef een reactie op de vragen (Wat weet je van de tekst? / Respond to the questions)",
         isExtra: false,
         questions: [
           { id: "2.1_opd1_1", type: "multiple_choice", question: "Waar zijn Susy en Edit?", options: ["In de les.", "In de kantine.", "In Indonesië."], correctAnswer: "In de kantine." },
@@ -137,7 +144,7 @@ export const chapter2Sections = [
         ]
       },
       {
-        instruction: "Extra Oefeningen (Woordenlijst Test)",
+        instruction: "Extra Oefeningen (Woordenlijst Test / Vocabulary Test)",
         isExtra: true,
         questions: generateSmartQuestions(2, "Woordenlijst", 10, chapter2Vocab)
       }
@@ -147,53 +154,91 @@ export const chapter2Sections = [
     id: "2.3",
     chapter: 2,
     title: "2.3 / 2.4 Familierelaties en Mensen beschrijven",
-    theory: (
+    theory: (lang) => (
       <>
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>👨‍👩‍👧 Familierelaties (Aile İlişkileri)</h3>
-          <p className="text-sm text-slate-300 mb-4"><strong>Önemli Fark:</strong> Hollandacada <strong>"het gezin"</strong> sadece çekirdek aileyi (anne, baba ve çocuklar) ifade ederken, <strong>"de familie"</strong> sülaleyi/geniş aileyi (kuzenler, amcalar vb.) kapsar.</p>
-          <div className="grid grid-cols-2 gap-4 text-sm text-slate-200">
-            <div>
-              <strong>het gezin</strong> (çekirdek aile)<br/>
-              <strong>de ouders</strong> (ebeveynler)<br/>
-              <strong>de vader / moeder</strong> (baba/anne)<br/>
-              <strong>de man / vrouw</strong> (koca/eş)<br/>
-              <strong>het kind</strong> (çocuk)
+        {lang === 'tr' ? (
+          <>
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>👨‍👩‍👧 Familierelaties (Aile İlişkileri)</h3>
+              <p className="text-sm text-slate-300 mb-4"><strong>Önemli Fark:</strong> Hollandacada <strong>"het gezin"</strong> sadece çekirdek aileyi (anne, baba ve çocuklar) ifade ederken, <strong>"de familie"</strong> sülaleyi/geniş aileyi (kuzenler, amcalar vb.) kapsar.</p>
+              <div className="grid grid-cols-2 gap-4 text-sm text-slate-200">
+                <div>
+                  <strong>het gezin</strong> (çekirdek aile)<br/>
+                  <strong>de ouders</strong> (ebeveynler)<br/>
+                  <strong>de vader / moeder</strong> (baba/anne)<br/>
+                  <strong>de man / vrouw</strong> (koca/eş)<br/>
+                  <strong>het kind</strong> (çocuk)
+                </div>
+                <div>
+                  <strong>de broer / de zus</strong> (erkek/kız kardeş)<br/>
+                  <strong>de opa / de oma</strong> (dede/nine)<br/>
+                  <strong>de oom / de tante</strong> (amca/dayı - hala/teyze)<br/>
+                  <strong>de neef / de nicht</strong> (kuzen/yeğen)<br/>
+                  <strong>de zwager / de schoonzus</strong> (kayınbirader/baldız)
+                </div>
+              </div>
             </div>
-            <div>
-              <strong>de broer / de zus</strong> (erkek/kız kardeş)<br/>
-              <strong>de opa / de oma</strong> (dede/nine)<br/>
-              <strong>de oom / de tante</strong> (amca/dayı - hala/teyze)<br/>
-              <strong>de neef / de nicht</strong> (kuzen/yeğen)<br/>
-              <strong>de zwager / de schoonzus</strong> (kayınbirader/baldız)
-            </div>
-          </div>
-        </div>
 
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #06b6d4', marginBottom: '20px' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#22d3ee' }}>👤 Beschrijven van mensen (İnsanları Tanımlamak)</h3>
-          <ul className="text-sm text-slate-300 space-y-1 list-disc pl-5">
-            <li>Hij is <strong>jonger</strong>. (O daha genç). / Ik ben <strong>ouder</strong>. (Ben daha yaşlıyım).</li>
-            <li>Hij is <strong>lang</strong>. (O uzun). / Ze is <strong>klein</strong>. (O kısa/küçük).</li>
-            <li>Ze heeft <strong>kort, blond haar</strong>. (Onun kısa, sarı saçları var).</li>
-            <li>Ik heb <strong>lang, donker haar</strong>. (Benim uzun, koyu saçlarım var).</li>
-            <li>Hij heeft een <strong>bril</strong>. (Onun gözlüğü var).</li>
-          </ul>
-        </div>
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #06b6d4', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#22d3ee' }}>👤 Beschrijven van mensen (İnsanları Tanımlamak)</h3>
+              <ul className="text-sm text-slate-300 space-y-1 list-disc pl-5">
+                <li>Hij is <strong>jonger</strong>. (O daha genç). / Ik ben <strong>ouder</strong>. (Ben daha yaşlıyım).</li>
+                <li>Hij is <strong>lang</strong>. (O uzun). / Ze is <strong>klein</strong>. (O kısa/küçük).</li>
+                <li>Ze heeft <strong>kort, blond haar</strong>. (Onun kısa, sarı saçları var).</li>
+                <li>Ik heb <strong>lang, donker haar</strong>. (Benim uzun, koyu saçlarım var).</li>
+                <li>Hij heeft een <strong>bril</strong>. (Onun gözlüğü var).</li>
+              </ul>
+            </div>
+          </>
+        ) : (
+          <>
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>👨‍👩‍👧 Familierelaties (Family Relationships)</h3>
+              <p className="text-sm text-slate-300 mb-4"><strong>Important Difference:</strong> In Dutch, <strong>"het gezin"</strong> refers only to the immediate/nuclear family (mother, father, and children), while <strong>"de familie"</strong> encompasses the extended family (cousins, uncles, etc.).</p>
+              <div className="grid grid-cols-2 gap-4 text-sm text-slate-200">
+                <div>
+                  <strong>het gezin</strong> (nuclear family)<br/>
+                  <strong>de ouders</strong> (parents)<br/>
+                  <strong>de vader / moeder</strong> (father/mother)<br/>
+                  <strong>de man / vrouw</strong> (husband/wife)<br/>
+                  <strong>het kind</strong> (child)
+                </div>
+                <div>
+                  <strong>de broer / de zus</strong> (brother/sister)<br/>
+                  <strong>de opa / de oma</strong> (grandfather/grandmother)<br/>
+                  <strong>de oom / de tante</strong> (uncle/aunt)<br/>
+                  <strong>de neef / de nicht</strong> (cousin/nephew/niece)<br/>
+                  <strong>de zwager / de schoonzus</strong> (brother-in-law/sister-in-law)
+                </div>
+              </div>
+            </div>
+
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #06b6d4', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#22d3ee' }}>👤 Beschrijven van mensen (Describing People)</h3>
+              <ul className="text-sm text-slate-300 space-y-1 list-disc pl-5">
+                <li>Hij is <strong>jonger</strong>. (He is younger). / Ik ben <strong>ouder</strong>. (I am older).</li>
+                <li>Hij is <strong>lang</strong>. (He is tall). / Ze is <strong>klein</strong>. (She is short/small).</li>
+                <li>Ze heeft <strong>kort, blond haar</strong>. (She has short, blonde hair).</li>
+                <li>Ik heb <strong>lang, donker haar</strong>. (I have long, dark hair).</li>
+                <li>Hij heeft een <strong>bril</strong>. (He has glasses).</li>
+              </ul>
+            </div>
+          </>
+        )}
       </>
     ),
     exerciseGroups: [
       {
-        instruction: "Opdracht 2: Een persoon beschrijven. (Vertaal en combineer)",
+        instruction: "Opdracht 2: Een persoon beschrijven. (Vertaal en combineer / Describe a person)",
         isExtra: false,
         questions: [
-          { id: "2.3_opd2_1", type: "multiple_choice", question: "Kies de juiste omschrijving: 'O kısa, sarı saçlara sahip.'", options: ["Ze is kort en blond.", "Ze heeft kort, blond haar.", "Ze heeft lang, donker haar."], correctAnswer: "Ze heeft kort, blond haar." },
+          { id: "2.3_opd2_1", type: "multiple_choice", question: "Kies de juiste omschrijving: 'O kısa, sarı saçlara sahip. / She has short, blonde hair.'", options: ["Ze is kort en blond.", "Ze heeft kort, blond haar.", "Ze heeft lang, donker haar."], correctAnswer: "Ze heeft kort, blond haar." },
           { id: "2.3_opd2_2", type: "multiple_choice", question: "Kies de juiste relatie: De broer van je moeder is je...", options: ["neef", "oom", "opa"], correctAnswer: "oom" },
           { id: "2.3_opd2_3", type: "multiple_choice", question: "Kies de juiste relatie: Het kind van je dochter is je...", options: ["kleinkind", "neef", "zwager"], correctAnswer: "kleinkind" }
         ]
       },
       {
-        instruction: "Slimme Oefeningen: Gezin vs Familie",
+        instruction: "Slimme Oefeningen (Smart Exercises): Gezin vs Familie",
         isExtra: true,
         questions: [
           { id: "2.3_smart_1", type: "multiple_choice", question: "Wat is het verschil tussen 'gezin' en 'familie'?", options: ["Gezin is alleen vader, moeder en kinderen. Familie is iedereen (ooms, tantes, etc).", "Familie is alleen vader en moeder. Gezin is iedereen.", "Er is geen verschil."], correctAnswer: "Gezin is alleen vader, moeder en kinderen. Familie is iedereen (ooms, tantes, etc)." },
@@ -206,36 +251,62 @@ export const chapter2Sections = [
     id: "2.5",
     chapter: 2,
     title: "2.5 - 2.7 Zinnen en Vragen (Cümle ve Soru Yapısı)",
-    theory: (
+    theory: (lang) => (
       <>
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>📌 Cümle Dizilimi (Zinsbouw)</h3>
-          
-          <h4 className="font-bold text-white mt-3">1. Hoofdzin (Düz Cümle):</h4>
-          <p className="text-sm text-slate-300">Özne her zaman birinci sıradadır, fiil ikinci sırada gelir. (S - V - O)<br/>
-          <em><strong>Ik</strong> (1) <strong>woon</strong> (2) nu in Utrecht.</em></p>
+        {lang === 'tr' ? (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>📌 Cümle Dizilimi (Zinsbouw)</h3>
+            
+            <h4 className="font-bold text-white mt-3">1. Hoofdzin (Düz Cümle):</h4>
+            <p className="text-sm text-slate-300">Özne her zaman birinci sıradadır, fiil ikinci sırada gelir. (S - V - O)<br/>
+            <em><strong>Ik</strong> (1) <strong>woon</strong> (2) nu in Utrecht.</em></p>
 
-          <h4 className="font-bold text-white mt-4">2. Ja / Nee - vragen (Evet/Hayır Soruları):</h4>
-          <p className="text-sm text-slate-300">Fiil başa geçer (Inversiyon). (V - S - O)<br/>
-          <em><strong>Woon</strong> (1) <strong>je</strong> (2) al lang in Utrecht?</em><br/>
-          <em><strong>Krijg</strong> (1) <strong>je</strong> (2) nog bezoek?</em></p>
+            <h4 className="font-bold text-white mt-4">2. Ja / Nee - vragen (Evet/Hayır Soruları):</h4>
+            <p className="text-sm text-slate-300">Fiil başa geçer (Inversiyon). (V - S - O)<br/>
+            <em><strong>Woon</strong> (1) <strong>je</strong> (2) al lang in Utrecht?</em><br/>
+            <em><strong>Krijg</strong> (1) <strong>je</strong> (2) nog bezoek?</em></p>
 
-          <h4 className="font-bold text-white mt-4">3. Vraagwoordvragen (Soru Kelimeli Sorular):</h4>
-          <p className="text-sm text-slate-300">Önce Soru Kelimesi, sonra Fiil, sonra Özne gelir. (QW - V - S - O)<br/>
-          <strong>Wie</strong> ben jij?<br/>
-          <strong>Waar</strong> woon je?<br/>
-          <strong>Wanneer</strong> is het in jouw land zomer?</p>
-          
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-4 text-xs font-mono text-emerald-200">
-            <div>Wie? (Kim)</div><div>Wat? (Ne)</div><div>Waar? (Nerede)</div><div>Wanneer? (Ne zaman)</div>
-            <div>Waarom? (Neden)</div><div>Hoe? (Nasıl)</div><div>Hoeveel? (Ne kadar/Kaç tane)</div><div>Welk / Welke? (Hangi)</div>
+            <h4 className="font-bold text-white mt-4">3. Vraagwoordvragen (Soru Kelimeli Sorular):</h4>
+            <p className="text-sm text-slate-300">Önce Soru Kelimesi, sonra Fiil, sonra Özne gelir. (QW - V - S - O)<br/>
+            <strong>Wie</strong> ben jij?<br/>
+            <strong>Waar</strong> woon je?<br/>
+            <strong>Wanneer</strong> is het in jouw land zomer?</p>
+            
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-4 text-xs font-mono text-emerald-200">
+              <div>Wie? (Kim)</div><div>Wat? (Ne)</div><div>Waar? (Nerede)</div><div>Wanneer? (Ne zaman)</div>
+              <div>Waarom? (Neden)</div><div>Hoe? (Nasıl)</div><div>Hoeveel? (Ne kadar/Kaç tane)</div><div>Welk / Welke? (Hangi)</div>
+            </div>
           </div>
-        </div>
+        ) : (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>📌 Sentence Structure (Zinsbouw)</h3>
+            
+            <h4 className="font-bold text-white mt-3">1. Hoofdzin (Main Clause):</h4>
+            <p className="text-sm text-slate-300">The subject is always in the first position, the verb is in the second. (S - V - O)<br/>
+            <em><strong>Ik</strong> (1) <strong>woon</strong> (2) nu in Utrecht.</em></p>
+
+            <h4 className="font-bold text-white mt-4">2. Ja / Nee - vragen (Yes/No Questions):</h4>
+            <p className="text-sm text-slate-300">The verb comes first (Inversion). (V - S - O)<br/>
+            <em><strong>Woon</strong> (1) <strong>je</strong> (2) al lang in Utrecht?</em><br/>
+            <em><strong>Krijg</strong> (1) <strong>je</strong> (2) nog bezoek?</em></p>
+
+            <h4 className="font-bold text-white mt-4">3. Vraagwoordvragen (Questions with a Question Word):</h4>
+            <p className="text-sm text-slate-300">Question Word first, then the Verb, then the Subject. (QW - V - S - O)<br/>
+            <strong>Wie</strong> ben jij?<br/>
+            <strong>Waar</strong> woon je?<br/>
+            <strong>Wanneer</strong> is het in jouw land zomer?</p>
+            
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-4 text-xs font-mono text-emerald-200">
+              <div>Wie? (Who)</div><div>Wat? (What)</div><div>Waar? (Where)</div><div>Wanneer? (When)</div>
+              <div>Waarom? (Why)</div><div>Hoe? (How)</div><div>Hoeveel? (How much/many)</div><div>Welk / Welke? (Which)</div>
+            </div>
+          </div>
+        )}
       </>
     ),
     exerciseGroups: [
       {
-        instruction: "Opdracht 3: Vul een vraagwoord in (wie, wat, waar, wanneer, welke, hoe, hoeveel, waarom). Kijk naar het antwoord!",
+        instruction: "Opdracht 3: Vul een vraagwoord in (wie, wat, waar, wanneer, welke, hoe, hoeveel, waarom).",
         isExtra: false,
         questions: [
           { id: "2.7_opd3_1", type: "multiple_choice", question: "_______ heet jouw zus? -> Mijn zus heet Sandra.", options: ["Wat", "Hoe", "Wie"], correctAnswer: "Hoe" },
@@ -255,11 +326,11 @@ export const chapter2Sections = [
         ]
       },
       {
-        instruction: "Slimme Oefeningen (Vraagzinnen Maken)",
+        instruction: "Slimme Oefeningen (Smart Exercises: Making Questions)",
         isExtra: true,
         questions: [
           { id: "2.7_smart_1", type: "fill_in", question: "Maak een ja/nee-vraag van: 'Jij komt uit Nederland.' -> ________ jij uit Nederland?", correctAnswer: "Kom" },
-          { id: "2.7_smart_2", type: "fill_in", question: "Vertaal: 'Neden ağlıyorsun?' -> ________ huil je?", correctAnswer: "Waarom" }
+          { id: "2.7_smart_2", type: "fill_in", question: "Vertaal: 'Neden ağlıyorsun? / Why are you crying?' -> ________ huil je?", correctAnswer: "Waarom" }
         ]
       }
     ]
@@ -268,34 +339,63 @@ export const chapter2Sections = [
     id: "2.8",
     chapter: 2,
     title: "2.8 Possessief pronomen (İyelik Zamirleri)",
-    theory: (
+    theory: (lang) => (
       <>
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f43f5e', marginBottom: '20px' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#fb7185' }}>🔑 Possessief pronomen (Benim, Senin, Onun...)</h3>
-          
-          <table style={{ width: '100%', marginTop: '10px' }}>
-            <thead><tr><th>Subject (Özne)</th><th>Possessief pronomen (İyelik)</th></tr></thead>
-            <tbody>
-              <tr><td>ik</td><td><strong>mijn</strong> (benim)</td></tr>
-              <tr><td>jij / je</td><td><strong>jouw / je</strong> (senin)</td></tr>
-              <tr><td>u</td><td><strong>uw</strong> (sizin - resmi)</td></tr>
-              <tr><td>hij (o - erkek)</td><td><strong>zijn</strong> (onun)</td></tr>
-              <tr><td>zij / ze (o - kadın)</td><td><strong>haar</strong> (onun)</td></tr>
-              <tr><td>wij / we</td><td><strong>onze / ons</strong> (bizim)</td></tr>
-              <tr><td>jullie</td><td><strong>jullie</strong> (sizin)</td></tr>
-              <tr><td>zij / ze (onlar)</td><td><strong>hun</strong> (onların)</td></tr>
-            </tbody>
-          </table>
+        {lang === 'tr' ? (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f43f5e', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#fb7185' }}>🔑 Possessief pronomen (Benim, Senin, Onun...)</h3>
+            
+            <table style={{ width: '100%', marginTop: '10px' }}>
+              <thead><tr><th className="text-left">Subject (Özne)</th><th className="text-left">Possessief pronomen (İyelik)</th></tr></thead>
+              <tbody>
+                <tr><td>ik</td><td><strong>mijn</strong> (benim)</td></tr>
+                <tr><td>jij / je</td><td><strong>jouw / je</strong> (senin)</td></tr>
+                <tr><td>u</td><td><strong>uw</strong> (sizin - resmi)</td></tr>
+                <tr><td>hij (o - erkek)</td><td><strong>zijn</strong> (onun)</td></tr>
+                <tr><td>zij / ze (o - kadın)</td><td><strong>haar</strong> (onun)</td></tr>
+                <tr><td>wij / we</td><td><strong>onze / ons</strong> (bizim)</td></tr>
+                <tr><td>jullie</td><td><strong>jullie</strong> (sizin)</td></tr>
+                <tr><td>zij / ze (onlar)</td><td><strong>hun</strong> (onların)</td></tr>
+              </tbody>
+            </table>
 
-          <div className="bg-rose-900/30 p-4 rounded-xl mt-4 border border-rose-500/30">
-            <h4 className="font-bold text-rose-300 mb-1">⚠️ ONZE mi, ONS mu?</h4>
-            <p className="text-sm text-slate-300">"Bizim" demek için iki kelime vardır. Hangisini seçeceğimiz, kelimenin artikeline bağlıdır:</p>
-            <ul className="text-sm text-slate-300 mt-2 list-disc pl-5">
-              <li>Kelime <strong>"het"</strong> kelimesiyse ➔ <strong>ons</strong> kullanılır. (<em>het huis ➔ ons huis</em>)</li>
-              <li>Kelime <strong>"de"</strong> kelimesiyse VEYA çoğulsa ➔ <strong>onze</strong> kullanılır. (<em>de auto ➔ onze auto / de kinderen ➔ onze kinderen</em>)</li>
-            </ul>
+            <div className="bg-rose-900/30 p-4 rounded-xl mt-4 border border-rose-500/30">
+              <h4 className="font-bold text-rose-300 mb-1">⚠️ ONZE mi, ONS mu?</h4>
+              <p className="text-sm text-slate-300">"Bizim" demek için iki kelime vardır. Hangisini seçeceğimiz, kelimenin artikeline bağlıdır:</p>
+              <ul className="text-sm text-slate-300 mt-2 list-disc pl-5">
+                <li>Kelime <strong>"het"</strong> kelimesiyse ➔ <strong>ons</strong> kullanılır. (<em>het huis ➔ ons huis</em>)</li>
+                <li>Kelime <strong>"de"</strong> kelimesiyse VEYA çoğulsa ➔ <strong>onze</strong> kullanılır. (<em>de auto ➔ onze auto / de kinderen ➔ onze kinderen</em>)</li>
+              </ul>
+            </div>
           </div>
-        </div>
+        ) : (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f43f5e', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#fb7185' }}>🔑 Possessief pronomen (Possessive Pronouns)</h3>
+            
+            <table style={{ width: '100%', marginTop: '10px' }}>
+              <thead><tr><th className="text-left">Subject (Subject)</th><th className="text-left">Possessief pronomen (Possessive)</th></tr></thead>
+              <tbody>
+                <tr><td>ik</td><td><strong>mijn</strong> (my)</td></tr>
+                <tr><td>jij / je</td><td><strong>jouw / je</strong> (your)</td></tr>
+                <tr><td>u</td><td><strong>uw</strong> (your - formal)</td></tr>
+                <tr><td>hij (he)</td><td><strong>zijn</strong> (his)</td></tr>
+                <tr><td>zij / ze (she)</td><td><strong>haar</strong> (her)</td></tr>
+                <tr><td>wij / we</td><td><strong>onze / ons</strong> (our)</td></tr>
+                <tr><td>jullie</td><td><strong>jullie</strong> (your plural)</td></tr>
+                <tr><td>zij / ze (they)</td><td><strong>hun</strong> (their)</td></tr>
+              </tbody>
+            </table>
+
+            <div className="bg-rose-900/30 p-4 rounded-xl mt-4 border border-rose-500/30">
+              <h4 className="font-bold text-rose-300 mb-1">⚠️ ONZE or ONS?</h4>
+              <p className="text-sm text-slate-300">There are two words for "our". The one you choose depends on the article of the noun:</p>
+              <ul className="text-sm text-slate-300 mt-2 list-disc pl-5">
+                <li>If it is a <strong>"het"</strong> word ➔ use <strong>ons</strong>. (<em>het huis ➔ ons huis</em>)</li>
+                <li>If it is a <strong>"de"</strong> word OR plural ➔ use <strong>onze</strong>. (<em>de auto ➔ onze auto / de kinderen ➔ onze kinderen</em>)</li>
+              </ul>
+            </div>
+          </div>
+        )}
       </>
     ),
     exerciseGroups: [
@@ -316,7 +416,7 @@ export const chapter2Sections = [
         ]
       },
       {
-        instruction: "Slimme Oefeningen (Pedagogisch): Onze vs Ons",
+        instruction: "Slimme Oefeningen (Smart Exercises): Onze vs Ons",
         isExtra: true,
         questions: [
           { id: "2.8_smart_1", type: "multiple_choice", question: "Kies de juiste vorm voor 'boek' (het boek):", options: ["onze boek", "ons boek"], correctAnswer: "ons boek" },
@@ -330,49 +430,79 @@ export const chapter2Sections = [
     id: "2.9",
     chapter: 2,
     title: "2.9 De klok (Saatler)",
-    theory: (
+    theory: (lang) => (
       <>
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f59e0b', marginBottom: '20px' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#fbbf24' }}>⏱️ Hoe laat is het? (Saat Kaç?)</h3>
-          <p className="text-sm text-slate-300">Hollandacada saatler "buçuk (half)" merkez alınarak okunur. <strong>"Half"</strong> her zaman bir sonraki saati işaret eder. (Örn: 11:30 = half 12 ➔ 12'ye yarım var).</p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 text-sm text-slate-200 bg-slate-800/50 p-4 rounded-xl">
-            <div>
-              <ul className="space-y-2">
-                <li><strong>11.00:</strong> Het is elf uur.</li>
-                <li><strong>11.05:</strong> Het is vijf over elf.</li>
-                <li><strong>11.10:</strong> Het is tien over elf.</li>
-                <li><strong>11.15:</strong> Het is kwart over elf. (11'i çeyrek geçiyor)</li>
-                <li><strong>11.20:</strong> Het is tien voor half twaalf. <br/><span className="text-amber-400 text-xs">(12 buçuğa 10 var)</span></li>
-                <li><strong>11.25:</strong> Het is vijf voor half twaalf.</li>
-              </ul>
-            </div>
-            <div>
-              <ul className="space-y-2">
-                <li><strong>11.30:</strong> Het is half twaalf. <br/><span className="text-amber-400 text-xs">(11 buçuk)</span></li>
-                <li><strong>11.35:</strong> Het is vijf over half twaalf.</li>
-                <li><strong>11.40:</strong> Het is tien over half twaalf. <br/><span className="text-amber-400 text-xs">(12 buçuğu 10 geçiyor)</span></li>
-                <li><strong>11.45:</strong> Het is kwart voor twaalf. (12'ye çeyrek var)</li>
-                <li><strong>11.50:</strong> Het is tien voor twaalf.</li>
-                <li><strong>11.55:</strong> Het is vijf voor twaalf.</li>
-              </ul>
+        {lang === 'tr' ? (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f59e0b', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#fbbf24' }}>⏱️ Hoe laat is het? (Saat Kaç?)</h3>
+            <p className="text-sm text-slate-300">Hollandacada saatler "buçuk (half)" merkez alınarak okunur. <strong>"Half"</strong> her zaman bir sonraki saati işaret eder. (Örn: 11:30 = half 12 ➔ 12'ye yarım var).</p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 text-sm text-slate-200 bg-slate-800/50 p-4 rounded-xl">
+              <div>
+                <ul className="space-y-2">
+                  <li><strong>11.00:</strong> Het is elf uur.</li>
+                  <li><strong>11.05:</strong> Het is vijf over elf.</li>
+                  <li><strong>11.10:</strong> Het is tien over elf.</li>
+                  <li><strong>11.15:</strong> Het is kwart over elf. (11'i çeyrek geçiyor)</li>
+                  <li><strong>11.20:</strong> Het is tien voor half twaalf. <br/><span className="text-amber-400 text-xs">(12 buçuğa 10 var)</span></li>
+                  <li><strong>11.25:</strong> Het is vijf voor half twaalf.</li>
+                </ul>
+              </div>
+              <div>
+                <ul className="space-y-2">
+                  <li><strong>11.30:</strong> Het is half twaalf. <br/><span className="text-amber-400 text-xs">(11 buçuk)</span></li>
+                  <li><strong>11.35:</strong> Het is vijf over half twaalf.</li>
+                  <li><strong>11.40:</strong> Het is tien over half twaalf. <br/><span className="text-amber-400 text-xs">(12 buçuğu 10 geçiyor)</span></li>
+                  <li><strong>11.45:</strong> Het is kwart voor twaalf. (12'ye çeyrek var)</li>
+                  <li><strong>11.50:</strong> Het is tien voor twaalf.</li>
+                  <li><strong>11.55:</strong> Het is vijf voor twaalf.</li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
+        ) : (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f59e0b', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#fbbf24' }}>⏱️ Hoe laat is het? (What time is it?)</h3>
+            <p className="text-sm text-slate-300">In Dutch, telling time revolves around the half-hour mark. <strong>"Half"</strong> always points to the NEXT hour. (Ex: 11:30 = half 12 ➔ halfway to 12).</p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 text-sm text-slate-200 bg-slate-800/50 p-4 rounded-xl">
+              <div>
+                <ul className="space-y-2">
+                  <li><strong>11.00:</strong> Het is elf uur.</li>
+                  <li><strong>11.05:</strong> Het is vijf over elf.</li>
+                  <li><strong>11.10:</strong> Het is tien over elf.</li>
+                  <li><strong>11.15:</strong> Het is kwart over elf. (Quarter past 11)</li>
+                  <li><strong>11.20:</strong> Het is tien voor half twaalf. <br/><span className="text-amber-400 text-xs">(10 to half past 11)</span></li>
+                  <li><strong>11.25:</strong> Het is vijf voor half twaalf.</li>
+                </ul>
+              </div>
+              <div>
+                <ul className="space-y-2">
+                  <li><strong>11.30:</strong> Het is half twaalf. <br/><span className="text-amber-400 text-xs">(Half past 11)</span></li>
+                  <li><strong>11.35:</strong> Het is vijf over half twaalf.</li>
+                  <li><strong>11.40:</strong> Het is tien over half twaalf. <br/><span className="text-amber-400 text-xs">(10 past half past 11)</span></li>
+                  <li><strong>11.45:</strong> Het is kwart voor twaalf. (Quarter to 12)</li>
+                  <li><strong>11.50:</strong> Het is tien voor twaalf.</li>
+                  <li><strong>11.55:</strong> Het is vijf voor twaalf.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        )}
       </>
     ),
     exerciseGroups: [
       {
-        instruction: "Opdracht 5: Hoe laat is het nu? (Pratik)",
+        instruction: "Opdracht 5: Hoe laat is het nu? (Pratik / Practice)",
         isExtra: false,
         questions: [
           { id: "2.9_opd5_1", type: "multiple_choice", question: "Hoe zeg je 11:30 in het Nederlands?", options: ["Het is half elf.", "Het is half twaalf.", "Het is dertig over elf."], correctAnswer: "Het is half twaalf." },
           { id: "2.9_opd5_2", type: "multiple_choice", question: "Hoe zeg je 05:50 in het Nederlands?", options: ["Het is tien voor zes.", "Het is tien over zes.", "Het is vijftig na vijf."], correctAnswer: "Het is tien voor zes." },
-          { id: "2.9_opd5_3", type: "multiple_choice", question: "Hoe zeg je 11:20 in het Nederlands?", options: ["Het is twintig over elf.", "Het is tien voor half twaalf.", "Beide zijn correct (Her ikisi de doğru)."], correctAnswer: "Beide zijn correct (Her ikisi de doğru)." }
+          { id: "2.9_opd5_3", type: "multiple_choice", question: "Hoe zeg je 11:20 in het Nederlands?", options: ["Het is twintig over elf.", "Het is tien voor half twaalf.", "Beide zijn correct (Both are correct)."], correctAnswer: "Beide zijn correct (Both are correct)." }
         ]
       },
       {
-        instruction: "Slimme Oefeningen: Klokkijken (Saat Okuma Testi)",
+        instruction: "Slimme Oefeningen (Smart Exercises): Klokkijken (Telling time)",
         isExtra: true,
         questions: [
           { id: "2.9_smart_1", type: "multiple_choice", question: "Hoe zeg je 08:45?", options: ["Het is kwart over acht.", "Het is kwart voor negen.", "Het is half negen."], correctAnswer: "Het is kwart voor negen." },
@@ -385,29 +515,52 @@ export const chapter2Sections = [
     id: "2.10",
     chapter: 2,
     title: "2.10 & 2.11 Dagen, Maanden, Seizoenen & Preposities",
-    theory: (
+    theory: (lang) => (
       <>
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #0ea5e9', marginBottom: '20px' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#38bdf8' }}>📅 Tijd, Dagen, Maanden en Seizoenen</h3>
-          <p className="text-sm text-slate-300"><strong>Dagen:</strong> maandag, dinsdag, woensdag, donderdag, vrijdag, zaterdag, zondag.</p>
-          <p className="text-sm text-slate-300"><strong>Tijdsverloop:</strong> eergisteren (evvelsi gün), gisteren (dün), vandaag (bugün), morgen (yarın), overmorgen (yarından sonraki gün).</p>
-          <p className="text-sm text-slate-300"><strong>Maanden:</strong> januari, februari, maart, april, mei, juni, juli, augustus, september, oktober, november, december.</p>
-          <p className="text-sm text-slate-300"><strong>Seizoenen:</strong> de winter, de lente/het voorjaar (ilkbahar), de zomer, de herfst/het najaar (sonbahar).</p>
-        </div>
+        {lang === 'tr' ? (
+          <>
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #0ea5e9', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#38bdf8' }}>📅 Tijd, Dagen, Maanden en Seizoenen</h3>
+              <p className="text-sm text-slate-300"><strong>Dagen:</strong> maandag, dinsdag, woensdag, donderdag, vrijdag, zaterdag, zondag.</p>
+              <p className="text-sm text-slate-300"><strong>Tijdsverloop:</strong> eergisteren (evvelsi gün), gisteren (dün), vandaag (bugün), morgen (yarın), overmorgen (yarından sonraki gün).</p>
+              <p className="text-sm text-slate-300"><strong>Maanden:</strong> januari, februari, maart, april, mei, juni, juli, augustus, september, oktober, november, december.</p>
+              <p className="text-sm text-slate-300"><strong>Seizoenen:</strong> de winter, de lente/het voorjaar (ilkbahar), de zomer, de herfst/het najaar (sonbahar).</p>
+            </div>
 
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #3b82f6', marginBottom: '20px' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#60a5fa' }}>📍 Preposities: in, op, om (Zaman Edatları)</h3>
-          <ul className="text-sm text-slate-300 space-y-2 list-disc pl-5">
-            <li><strong>in:</strong> Aylarda, yıllarda ve mevsimlerde kullanılır. <em>(in januari, in 2017, in de winter)</em></li>
-            <li><strong>op:</strong> Günlerde ve tam tarihlerde kullanılır. <em>(op maandag, op 12 augustus)</em></li>
-            <li><strong>om:</strong> Saatlerde kullanılır. <em>(om drie uur)</em></li>
-          </ul>
-        </div>
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #3b82f6', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#60a5fa' }}>📍 Preposities: in, op, om (Zaman Edatları)</h3>
+              <ul className="text-sm text-slate-300 space-y-2 list-disc pl-5">
+                <li><strong>in:</strong> Aylarda, yıllarda ve mevsimlerde kullanılır. <em>(in januari, in 2017, in de winter)</em></li>
+                <li><strong>op:</strong> Günlerde ve tam tarihlerde kullanılır. <em>(op maandag, op 12 augustus)</em></li>
+                <li><strong>om:</strong> Saatlerde kullanılır. <em>(om drie uur)</em></li>
+              </ul>
+            </div>
+          </>
+        ) : (
+          <>
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #0ea5e9', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#38bdf8' }}>📅 Tijd, Dagen, Maanden en Seizoenen</h3>
+              <p className="text-sm text-slate-300"><strong>Dagen (Days):</strong> maandag, dinsdag, woensdag, donderdag, vrijdag, zaterdag, zondag.</p>
+              <p className="text-sm text-slate-300"><strong>Tijdsverloop (Time flow):</strong> eergisteren (day before yesterday), gisteren (yesterday), vandaag (today), morgen (tomorrow), overmorgen (day after tomorrow).</p>
+              <p className="text-sm text-slate-300"><strong>Maanden (Months):</strong> januari, februari, maart, april, mei, juni, juli, augustus, september, oktober, november, december.</p>
+              <p className="text-sm text-slate-300"><strong>Seizoenen (Seasons):</strong> de winter, de lente/het voorjaar (spring), de zomer, de herfst/het najaar (autumn/fall).</p>
+            </div>
+
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #3b82f6', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#60a5fa' }}>📍 Preposities: in, op, om (Prepositions of Time)</h3>
+              <ul className="text-sm text-slate-300 space-y-2 list-disc pl-5">
+                <li><strong>in:</strong> Used for months, years, and seasons. <em>(in januari, in 2017, in de winter)</em></li>
+                <li><strong>op:</strong> Used for days and exact dates. <em>(op maandag, op 12 augustus)</em></li>
+                <li><strong>om:</strong> Used for exact times. <em>(om drie uur)</em></li>
+              </ul>
+            </div>
+          </>
+        )}
       </>
     ),
     exerciseGroups: [
       {
-        instruction: "Opdracht 7, 8 & 9: Begrip (Sınıf Pratiği / Okuma Anlaması)",
+        instruction: "Opdracht 7, 8 & 9: Begrip (Sınıf Pratiği / Reading Comprehension)",
         isExtra: false,
         questions: [
           { id: "2.10_opd7_1", type: "multiple_choice", question: "Als vandaag donderdag is, welke dag was het gisteren?", options: ["Vrijdag", "Woensdag", "Dinsdag"], correctAnswer: "Woensdag" },
@@ -438,19 +591,37 @@ export const chapter2Sections = [
     id: "2.12",
     chapter: 2,
     title: "2.12 Tekst & 2.13 Uitspraak",
-    theory: (
+    theory: (lang) => (
       <>
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #6366f1', marginBottom: '20px' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#93c5fd' }}>📄 Tekst: 1-1-2</h3>
-          <p className="text-sm text-slate-300">Afbeelding in het boek: <strong>"1-1-2 ALS ELKE SECONDE TELT"</strong> (Her saniye önemli olduğunda 1-1-2).</p>
-        </div>
+        {lang === 'tr' ? (
+          <>
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #6366f1', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#93c5fd' }}>📄 Tekst: 1-1-2</h3>
+              <p className="text-sm text-slate-300">Afbeelding in het boek: <strong>"1-1-2 ALS ELKE SECONDE TELT"</strong> (Her saniye önemli olduğunda 1-1-2).</p>
+            </div>
 
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f43f5e', marginBottom: '20px' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#fb7185' }}>🗣️ Uitspraak: a – aa & Cultuur</h3>
-          <p className="text-sm text-slate-300"><strong>Opdracht 14, 15, 16 (Vocals):</strong> Hollandacada kısa 'a' (örn: dag, was, land) ile uzun 'aa' (örn: jaar, naam, plaats) arasında anlam değiştiren çok büyük bir telaffuz farkı vardır.</p>
-          <hr className="my-3 border-rose-500/30"/>
-          <p className="text-sm text-slate-300"><strong>Cultuur:</strong> Een vrouw in Nederland krijgt gemiddeld 1,7 kinderen. Hoeveel kinderen krijgt een vrouw gemiddeld in jouw land? (Hollanda'da bir kadın ortalama 1,7 çocuk sahibidir).</p>
-        </div>
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f43f5e', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#fb7185' }}>🗣️ Uitspraak: a – aa & Cultuur</h3>
+              <p className="text-sm text-slate-300"><strong>Opdracht 14, 15, 16 (Vocals):</strong> Hollandacada kısa 'a' (örn: dag, was, land) ile uzun 'aa' (örn: jaar, naam, plaats) arasında anlam değiştiren çok büyük bir telaffuz farkı vardır.</p>
+              <hr className="my-3 border-rose-500/30"/>
+              <p className="text-sm text-slate-300"><strong>Cultuur:</strong> Een vrouw in Nederland krijgt gemiddeld 1,7 kinderen. Hoeveel kinderen krijgt een vrouw gemiddeld in jouw land? (Hollanda'da bir kadın ortalama 1,7 çocuk sahibidir).</p>
+            </div>
+          </>
+        ) : (
+          <>
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #6366f1', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#93c5fd' }}>📄 Tekst: 1-1-2</h3>
+              <p className="text-sm text-slate-300">Image in the book: <strong>"1-1-2 ALS ELKE SECONDE TELT"</strong> (1-1-2 when every second counts).</p>
+            </div>
+
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f43f5e', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#fb7185' }}>🗣️ Uitspraak: a – aa & Cultuur</h3>
+              <p className="text-sm text-slate-300"><strong>Opdracht 14, 15, 16 (Vowels):</strong> In Dutch, there is a huge pronunciation and meaning difference between a short 'a' (e.g. dag, was, land) and a long 'aa' (e.g. jaar, naam, plaats).</p>
+              <hr className="my-3 border-rose-500/30"/>
+              <p className="text-sm text-slate-300"><strong>Cultuur:</strong> A woman in the Netherlands has an average of 1.7 children. How many children does a woman have on average in your country?</p>
+            </div>
+          </>
+        )}
       </>
     ),
     exerciseGroups: [
@@ -462,160 +633,301 @@ export const chapter2Sections = [
         ]
       },
       {
-        instruction: "Slimme Oefeningen (Uitspraak begrip)",
+        instruction: "Slimme Oefeningen (Uitspraak begrip / Pronunciation check)",
         isExtra: true,
         questions: [
-          { id: "2.13_smart_1", type: "multiple_choice", question: "Welk woord heeft een LANGE 'aa' klank?", options: ["dag", "was", "jaar"], correctAnswer: "jaar" },
-          { id: "2.13_smart_2", type: "multiple_choice", question: "Welk woord heeft een KORTE 'a' klank?", options: ["naam", "land", "plaats"], correctAnswer: "land" }
+          { id: "2.13_smart_1", type: "multiple_choice", question: "Welk woord heeft een LANGE 'aa' klank? (Which word has a LONG 'aa' sound?)", options: ["dag", "was", "jaar"], correctAnswer: "jaar" },
+          { id: "2.13_smart_2", type: "multiple_choice", question: "Welk woord heeft een KORTE 'a' klank? (Which word has a SHORT 'a' sound?)", options: ["naam", "land", "plaats"], correctAnswer: "land" }
         ]
       }
     ]
   },
-{
+  {
     id: "On-Class-2",
     chapter: 2,
     title: "Extra Oefeningen (On-Class)",
-    theory: (
+    theory: (lang) => (
       <>
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #3b82f6', marginBottom: '20px' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#60a5fa' }}>🔄 Repetitie Les 1 (Tekrar)</h3>
-          <ul className="text-sm text-slate-300 list-disc pl-5 space-y-1">
-            <li><strong>Waar woon jij?</strong> = Where do you live? <br/>➔ <em>Ik woon in Valkenswaard.</em></li>
-            <li><strong>Waar woont Emre?</strong> ➔ <em>Hij woont in Valkenswaard.</em></li>
-            <li><strong>Waar kom je vandaan?</strong> = Where are you from? <br/>➔ <em>Ik kom uit Nigeria. / Hij komt uit Nigeria.</em></li>
-            <li><strong>Hoe spel je jouw naam?</strong> = How do you spell your name?</li>
-            <li><strong>Hoe oud ben jij?</strong> = How old are you?</li>
-          </ul>
-        </div>
-
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>⚙️ Werkwoorden (Fiillerin Şimdiki Zaman Çekimi)</h3>
-          <p className="text-sm text-slate-300 mb-2">Hollandacada düzenli fiillerin şimdiki zaman (present tense) çekimi çok basittir. Önce fiilin kökünü (stem) buluruz: <strong>Stem = verb - 'en'</strong>. Örnek: werken ➔ werk.</p>
-          
-          <table className="w-full text-sm text-left text-slate-300 border-collapse mb-2 bg-purple-900/20 rounded-xl overflow-hidden">
-            <thead className="bg-purple-900/40">
-              <tr>
-                <th className="py-2 px-3 border-b border-purple-500/30">Persoon</th>
-                <th className="py-2 px-3 border-b border-purple-500/30">Regel (Kural)</th>
-                <th className="py-2 px-3 border-b border-purple-500/30">werken (to work)</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-purple-500/20">
-              <tr><td className="py-2 px-3 font-semibold text-purple-300">ik</td><td className="py-2 px-3">stem + nothing</td><td className="py-2 px-3">werk</td></tr>
-              <tr><td className="py-2 px-3 font-semibold text-purple-300">jij / je</td><td className="py-2 px-3">stem + t</td><td className="py-2 px-3">werk<strong>t</strong></td></tr>
-              <tr><td className="py-2 px-3 font-semibold text-purple-300">hij / zij / het / u</td><td className="py-2 px-3">stem + t</td><td className="py-2 px-3">werk<strong>t</strong></td></tr>
-              <tr><td className="py-2 px-3 font-semibold text-purple-300">wij / we</td><td className="py-2 px-3">stem + en</td><td className="py-2 px-3">werk<strong>en</strong></td></tr>
-              <tr><td className="py-2 px-3 font-semibold text-purple-300">jullie</td><td className="py-2 px-3">stem + en</td><td className="py-2 px-3">werk<strong>en</strong></td></tr>
-              <tr><td className="py-2 px-3 font-semibold text-purple-300">zij / ze</td><td className="py-2 px-3">stem + en</td><td className="py-2 px-3">werk<strong>en</strong></td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>❓ Vraagwoorden & Possessieve Voornaamwoorden</h3>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <h4 className="font-bold text-emerald-300 text-sm mb-1">Question Words (Soru Kelimeleri)</h4>
-              <ul className="text-sm text-slate-200 list-disc pl-5 space-y-1">
-                <li><strong>Wie</strong> = who (kim)</li>
-                <li><strong>Hoe</strong> = how (nasıl)</li>
-                <li><strong>Hoeveel</strong> = how many/much (ne kadar/kaç tane)</li>
-                <li><strong>Wat</strong> = what (ne)</li>
-                <li><strong>Waar</strong> = where (nerede/nereye)</li>
-                <li><strong>Uit</strong> = from (nereden - <em>waar... uit</em>)</li>
-                <li><strong>Welke</strong> = which (hangi)</li>
-                <li><strong>Wanneer</strong> = when (ne zaman)</li>
-                <li><strong>Waarom</strong> = why (neden)</li>
+        {lang === 'tr' ? (
+          <>
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #3b82f6', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#60a5fa' }}>🔄 Repetitie Les 1 (Tekrar)</h3>
+              <ul className="text-sm text-slate-300 list-disc pl-5 space-y-1">
+                <li><strong>Waar woon jij?</strong> = Where do you live? <br/>➔ <em>Ik woon in Valkenswaard.</em></li>
+                <li><strong>Waar woont Emre?</strong> ➔ <em>Hij woont in Valkenswaard.</em></li>
+                <li><strong>Waar kom je vandaan?</strong> = Where are you from? <br/>➔ <em>Ik kom uit Nigeria. / Hij komt uit Nigeria.</em></li>
+                <li><strong>Hoe spel je jouw naam?</strong> = How do you spell your name?</li>
+                <li><strong>Hoe oud ben jij?</strong> = How old are you?</li>
               </ul>
             </div>
-            
-            <div>
-              <h4 className="font-bold text-emerald-300 text-sm mb-1">Possessive Pronouns (İyelik Zamirleri)</h4>
-              <ul className="text-sm text-slate-200 list-disc pl-5 space-y-1">
-                <li><strong>mijn</strong> (my)</li>
-                <li><strong>jouw / je</strong> (your) - <em>Not: 'Je' kelimesi hem YOU hem de YOUR anlamında kullanılabilir.</em></li>
-                <li><strong>zijn</strong> (his)</li>
-                <li><strong>haar</strong> (her)</li>
-                <li className="text-emerald-400 font-bold"><strong>ons / onze</strong> (our) ➔ <em>het huis = ons huis | de kat = onze kat</em></li>
-                <li><strong>jullie</strong> (your plural)</li>
-                <li><strong>hun</strong> (their)</li>
+
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>⚙️ Werkwoorden (Fiillerin Şimdiki Zaman Çekimi)</h3>
+              <p className="text-sm text-slate-300 mb-2">Hollandacada düzenli fiillerin şimdiki zaman (present tense) çekimi çok basittir. Önce fiilin kökünü (stem) buluruz: <strong>Stem = verb - 'en'</strong>. Örnek: werken ➔ werk.</p>
+              
+              <table className="w-full text-sm text-left text-slate-300 border-collapse mb-2 bg-purple-900/20 rounded-xl overflow-hidden">
+                <thead className="bg-purple-900/40">
+                  <tr>
+                    <th className="py-2 px-3 border-b border-purple-500/30">Persoon</th>
+                    <th className="py-2 px-3 border-b border-purple-500/30">Regel (Kural)</th>
+                    <th className="py-2 px-3 border-b border-purple-500/30">werken (to work)</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-purple-500/20">
+                  <tr><td className="py-2 px-3 font-semibold text-purple-300">ik</td><td className="py-2 px-3">stem + nothing</td><td className="py-2 px-3">werk</td></tr>
+                  <tr><td className="py-2 px-3 font-semibold text-purple-300">jij / je</td><td className="py-2 px-3">stem + t</td><td className="py-2 px-3">werk<strong>t</strong></td></tr>
+                  <tr><td className="py-2 px-3 font-semibold text-purple-300">hij / zij / het / u</td><td className="py-2 px-3">stem + t</td><td className="py-2 px-3">werk<strong>t</strong></td></tr>
+                  <tr><td className="py-2 px-3 font-semibold text-purple-300">wij / we</td><td className="py-2 px-3">stem + en</td><td className="py-2 px-3">werk<strong>en</strong></td></tr>
+                  <tr><td className="py-2 px-3 font-semibold text-purple-300">jullie</td><td className="py-2 px-3">stem + en</td><td className="py-2 px-3">werk<strong>en</strong></td></tr>
+                  <tr><td className="py-2 px-3 font-semibold text-purple-300">zij / ze</td><td className="py-2 px-3">stem + en</td><td className="py-2 px-3">werk<strong>en</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>❓ Vraagwoorden & Possessieve Voornaamwoorden</h3>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <h4 className="font-bold text-emerald-300 text-sm mb-1">Question Words (Soru Kelimeleri)</h4>
+                  <ul className="text-sm text-slate-200 list-disc pl-5 space-y-1">
+                    <li><strong>Wie</strong> = who (kim)</li>
+                    <li><strong>Hoe</strong> = how (nasıl)</li>
+                    <li><strong>Hoeveel</strong> = how many/much (ne kadar/kaç tane)</li>
+                    <li><strong>Wat</strong> = what (ne)</li>
+                    <li><strong>Waar</strong> = where (nerede/nereye)</li>
+                    <li><strong>Uit</strong> = from (nereden - <em>waar... uit</em>)</li>
+                    <li><strong>Welke</strong> = which (hangi)</li>
+                    <li><strong>Wanneer</strong> = when (ne zaman)</li>
+                    <li><strong>Waarom</strong> = why (neden)</li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h4 className="font-bold text-emerald-300 text-sm mb-1">Possessive Pronouns (İyelik Zamirleri)</h4>
+                  <ul className="text-sm text-slate-200 list-disc pl-5 space-y-1">
+                    <li><strong>mijn</strong> (my)</li>
+                    <li><strong>jouw / je</strong> (your) - <em>Not: 'Je' kelimesi hem YOU hem de YOUR anlamında kullanılabilir.</em></li>
+                    <li><strong>zijn</strong> (his)</li>
+                    <li><strong>haar</strong> (her)</li>
+                    <li className="text-emerald-400 font-bold"><strong>ons / onze</strong> (our) ➔ <em>het huis = ons huis | de kat = onze kat</em></li>
+                    <li><strong>jullie</strong> (your plural)</li>
+                    <li><strong>hun</strong> (their)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f59e0b', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#fbbf24' }}>⏳ Tijd, Dagen, Maanden & Voorzetsels</h3>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                <div className="bg-amber-900/30 p-3 rounded-lg border border-amber-500/30">
+                  <h4 className="font-bold text-amber-300 text-sm mb-1">Prepositions (Edatlar: in, op, om)</h4>
+                  <ul className="text-sm text-slate-200 space-y-1">
+                    <li><strong>Months (Aylar):</strong> in (in januari)</li>
+                    <li><strong>Days (Günler):</strong> op (op maandag)</li>
+                    <li><strong>Time (Saatler):</strong> om (om drie uur)</li>
+                    <li><strong>Date (Tarihler):</strong> op (op 12 januari)</li>
+                    <li><strong>Season (Mevsimler):</strong> in (in de winter)</li>
+                    <li><strong>Year (Yıllar):</strong> in (in 2017)</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-bold text-amber-300 text-sm mb-1">Vocabulary (Kelime Bilgisi)</h4>
+                  <ul className="text-sm text-slate-200 list-disc pl-5 space-y-1">
+                    <li><strong>Dagen:</strong> maandag, dinsdag, woensdag, donderdag, vrijdag, zaterdag, zondag.</li>
+                    <li><strong>Seizoenen:</strong> zomer, winter, lente, herfst.</li>
+                    <li><strong>Familie:</strong> broer, zus, ouders, vader, moeder. <em>(Gezin = sadece anne, baba ve çocuklar. Familie = tüm sülale/akrabalar)</em>.</li>
+                    <li><strong>Uiterlijk:</strong> jonger, ouder, lang, kort, blond, donker, haar.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <h4 className="font-bold text-amber-300 text-sm mb-2">🕒 Klokkijken (Saat Söyleme Detayları)</h4>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-xs text-slate-200 bg-slate-800 p-3 rounded-lg">
+                <div>11.00 = het is elf uur</div>
+                <div>11.05 = vijf over elf</div>
+                <div>11.10 = tien over elf</div>
+                <div>11.15 = <strong>kwart over</strong> elf</div>
+                <div>11.20 = tien voor half 12 <em>(of twintig over elf)</em></div>
+                <div>11.25 = vijf voor half 12</div>
+                <div>11.30 = <strong>half twaalf</strong> <em>(bir sonraki saati söyleriz)</em></div>
+                <div>11.35 = vijf over half 12</div>
+                <div>11.40 = tien over half 12 <em>(of twintig voor twaalf)</em></div>
+                <div>11.45 = <strong>kwart voor</strong> twaalf</div>
+                <div>5.50 = tien voor zes</div>
+                <div>5.55 = vijf voor zes</div>
+              </div>
+            </div>
+
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #ef4444' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#f87171' }}>💬 Dialogue & Main Sentences (Q&A)</h3>
+              <ul className="text-sm text-slate-200 space-y-1 list-disc pl-5 mb-3">
+                <li><strong>Ik ben jarig.</strong> = It is my birthday. <em>(Hollandacada 'Het is mijn verjaardag' yerine 'Ik ben jarig' kullanımı tercih edilir).</em></li>
+                <li><strong>Is deze plaats vrij?</strong> = Is this spot free?</li>
+                <li><strong>Woon je al lang in Utrecht?</strong> = Have you been living in Utrecht for a long time?</li>
+                <li><strong>Wanneer ben je jarig?</strong> = When is your birthday?</li>
+                <li><strong>Heb je nog meer broers of zussen?</strong> = Do you have any brothers or sisters?</li>
+                <li><strong>We moeten weer naar de les.</strong> = We must go to class again.</li>
+                <li><strong>Ik weet het niet.</strong> = I don't know.</li>
+              </ul>
+
+              <div className="bg-rose-900/30 p-3 rounded-lg border border-rose-500/30">
+                <h4 className="font-bold text-white text-xs uppercase mb-1">Dialoog Begrip (Diyalog Anlama):</h4>
+                <ul className="text-sm text-rose-100 list-disc pl-5">
+                  <li><strong>Waar zijn Susy en Edit?</strong> ➔ In de kantine.</li>
+                  <li><strong>Wat drinkt Susy?</strong> ➔ Zij drinkt koffie.</li>
+                  <li><strong>Welke dag is het in de tekst?</strong> ➔ Het is donderdag.</li>
+                  <li><strong>Wanneer is Edit jarig?</strong> ➔ Morgen is Edit jarig.</li>
+                  <li><strong>Hoe laat is het in de tekst?</strong> ➔ Het is 11 uur.</li>
+                </ul>
+              </div>
+            </div>
+          </>
+        ) : (
+          <>
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #3b82f6', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#60a5fa' }}>🔄 Repetitie Les 1 (Review)</h3>
+              <ul className="text-sm text-slate-300 list-disc pl-5 space-y-1">
+                <li><strong>Waar woon jij?</strong> = Where do you live? <br/>➔ <em>Ik woon in Valkenswaard.</em></li>
+                <li><strong>Waar woont Emre?</strong> ➔ <em>Hij woont in Valkenswaard.</em></li>
+                <li><strong>Waar kom je vandaan?</strong> = Where are you from? <br/>➔ <em>Ik kom uit Nigeria. / Hij komt uit Nigeria.</em></li>
+                <li><strong>Hoe spel je jouw naam?</strong> = How do you spell your name?</li>
+                <li><strong>Hoe oud ben jij?</strong> = How old are you?</li>
               </ul>
             </div>
-          </div>
-        </div>
 
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f59e0b', marginBottom: '20px' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#fbbf24' }}>⏳ Tijd, Dagen, Maanden & Voorzetsels</h3>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-            <div className="bg-amber-900/30 p-3 rounded-lg border border-amber-500/30">
-              <h4 className="font-bold text-amber-300 text-sm mb-1">Prepositions (Edatlar: in, op, om)</h4>
-              <ul className="text-sm text-slate-200 space-y-1">
-                <li><strong>Months (Aylar):</strong> in (in januari)</li>
-                <li><strong>Days (Günler):</strong> op (op maandag)</li>
-                <li><strong>Time (Saatler):</strong> om (om drie uur)</li>
-                <li><strong>Date (Tarihler):</strong> op (op 12 januari)</li>
-                <li><strong>Season (Mevsimler):</strong> in (in de winter)</li>
-                <li><strong>Year (Yıllar):</strong> in (in 2017)</li>
-              </ul>
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>⚙️ Werkwoorden (Present Tense Verbs)</h3>
+              <p className="text-sm text-slate-300 mb-2">Conjugating regular verbs in Dutch is very simple. First, find the verb stem: <strong>Stem = verb - 'en'</strong>. Example: werken ➔ werk.</p>
+              
+              <table className="w-full text-sm text-left text-slate-300 border-collapse mb-2 bg-purple-900/20 rounded-xl overflow-hidden">
+                <thead className="bg-purple-900/40">
+                  <tr>
+                    <th className="py-2 px-3 border-b border-purple-500/30">Persoon</th>
+                    <th className="py-2 px-3 border-b border-purple-500/30">Regel (Rule)</th>
+                    <th className="py-2 px-3 border-b border-purple-500/30">werken (to work)</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-purple-500/20">
+                  <tr><td className="py-2 px-3 font-semibold text-purple-300">ik</td><td className="py-2 px-3">stem + nothing</td><td className="py-2 px-3">werk</td></tr>
+                  <tr><td className="py-2 px-3 font-semibold text-purple-300">jij / je</td><td className="py-2 px-3">stem + t</td><td className="py-2 px-3">werk<strong>t</strong></td></tr>
+                  <tr><td className="py-2 px-3 font-semibold text-purple-300">hij / zij / het / u</td><td className="py-2 px-3">stem + t</td><td className="py-2 px-3">werk<strong>t</strong></td></tr>
+                  <tr><td className="py-2 px-3 font-semibold text-purple-300">wij / we</td><td className="py-2 px-3">stem + en</td><td className="py-2 px-3">werk<strong>en</strong></td></tr>
+                  <tr><td className="py-2 px-3 font-semibold text-purple-300">jullie</td><td className="py-2 px-3">stem + en</td><td className="py-2 px-3">werk<strong>en</strong></td></tr>
+                  <tr><td className="py-2 px-3 font-semibold text-purple-300">zij / ze</td><td className="py-2 px-3">stem + en</td><td className="py-2 px-3">werk<strong>en</strong></td></tr>
+                </tbody>
+              </table>
             </div>
-            <div>
-              <h4 className="font-bold text-amber-300 text-sm mb-1">Vocabulary (Kelime Bilgisi)</h4>
-              <ul className="text-sm text-slate-200 list-disc pl-5 space-y-1">
-                <li><strong>Dagen:</strong> maandag, dinsdag, woensdag, donderdag, vrijdag, zaterdag, zondag.</li>
-                <li><strong>Seizoenen:</strong> zomer, winter, lente, herfst.</li>
-                <li><strong>Familie:</strong> broer, zus, ouders, vader, moeder. <em>(Gezin = sadece anne, baba ve çocuklar. Familie = tüm sülale/akrabalar)</em>.</li>
-                <li><strong>Uiterlijk:</strong> jonger, ouder, lang, kort, blond, donker, haar.</li>
-              </ul>
+
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>❓ Vraagwoorden & Possessieve Voornaamwoorden</h3>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <h4 className="font-bold text-emerald-300 text-sm mb-1">Question Words</h4>
+                  <ul className="text-sm text-slate-200 list-disc pl-5 space-y-1">
+                    <li><strong>Wie</strong> = who</li>
+                    <li><strong>Hoe</strong> = how</li>
+                    <li><strong>Hoeveel</strong> = how many/much</li>
+                    <li><strong>Wat</strong> = what</li>
+                    <li><strong>Waar</strong> = where</li>
+                    <li><strong>Uit</strong> = from (<em>waar... uit</em>)</li>
+                    <li><strong>Welke</strong> = which</li>
+                    <li><strong>Wanneer</strong> = when</li>
+                    <li><strong>Waarom</strong> = why</li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h4 className="font-bold text-emerald-300 text-sm mb-1">Possessive Pronouns</h4>
+                  <ul className="text-sm text-slate-200 list-disc pl-5 space-y-1">
+                    <li><strong>mijn</strong> (my)</li>
+                    <li><strong>jouw / je</strong> (your) - <em>Note: 'Je' can mean both YOU and YOUR.</em></li>
+                    <li><strong>zijn</strong> (his)</li>
+                    <li><strong>haar</strong> (her)</li>
+                    <li className="text-emerald-400 font-bold"><strong>ons / onze</strong> (our) ➔ <em>het huis = ons huis | de kat = onze kat</em></li>
+                    <li><strong>jullie</strong> (your plural)</li>
+                    <li><strong>hun</strong> (their)</li>
+                  </ul>
+                </div>
+              </div>
             </div>
-          </div>
 
-          <h4 className="font-bold text-amber-300 text-sm mb-2">🕒 Klokkijken (Saat Söyleme Detayları)</h4>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-xs text-slate-200 bg-slate-800 p-3 rounded-lg">
-            <div>11.00 = het is elf uur</div>
-            <div>11.05 = vijf over elf</div>
-            <div>11.10 = tien over elf</div>
-            <div>11.15 = <strong>kwart over</strong> elf</div>
-            <div>11.20 = tien voor half 12 <em>(of twintig over elf)</em></div>
-            <div>11.25 = vijf voor half 12</div>
-            <div>11.30 = <strong>half twaalf</strong> <em>(bir sonraki saati söyleriz)</em></div>
-            <div>11.35 = vijf over half 12</div>
-            <div>11.40 = tien over half 12 <em>(of twintig voor twaalf)</em></div>
-            <div>11.45 = <strong>kwart voor</strong> twaalf</div>
-            <div>5.50 = tien voor zes</div>
-            <div>5.55 = vijf voor zes</div>
-          </div>
-        </div>
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f59e0b', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#fbbf24' }}>⏳ Tijd, Dagen, Maanden & Voorzetsels</h3>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                <div className="bg-amber-900/30 p-3 rounded-lg border border-amber-500/30">
+                  <h4 className="font-bold text-amber-300 text-sm mb-1">Prepositions (in, op, om)</h4>
+                  <ul className="text-sm text-slate-200 space-y-1">
+                    <li><strong>Months:</strong> in (in januari)</li>
+                    <li><strong>Days:</strong> op (op maandag)</li>
+                    <li><strong>Time:</strong> om (om drie uur)</li>
+                    <li><strong>Date:</strong> op (op 12 januari)</li>
+                    <li><strong>Season:</strong> in (in de winter)</li>
+                    <li><strong>Year:</strong> in (in 2017)</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-bold text-amber-300 text-sm mb-1">Vocabulary</h4>
+                  <ul className="text-sm text-slate-200 list-disc pl-5 space-y-1">
+                    <li><strong>Dagen:</strong> maandag, dinsdag, woensdag, donderdag, vrijdag, zaterdag, zondag.</li>
+                    <li><strong>Seizoenen:</strong> zomer, winter, lente, herfst.</li>
+                    <li><strong>Familie:</strong> broer, zus, ouders, vader, moeder. <em>(Gezin = nuclear family. Familie = extended family)</em>.</li>
+                    <li><strong>Uiterlijk:</strong> jonger, ouder, lang, kort, blond, donker, haar.</li>
+                  </ul>
+                </div>
+              </div>
 
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #ef4444' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#f87171' }}>💬 Dialogue & Main Sentences (Q&A)</h3>
-          <ul className="text-sm text-slate-200 space-y-1 list-disc pl-5 mb-3">
-            <li><strong>Ik ben jarig.</strong> = It is my birthday. <em>(Hollandacada 'Het is mijn verjaardag' yerine 'Ik ben jarig' kullanımı tercih edilir).</em></li>
-            <li><strong>Is deze plaats vrij?</strong> = Is this spot free?</li>
-            <li><strong>Woon je al lang in Utrecht?</strong> = Have you been living in Utrecht for a long time?</li>
-            <li><strong>Wanneer ben je jarig?</strong> = When is your birthday?</li>
-            <li><strong>Heb je nog meer broers of zussen?</strong> = Do you have any brothers or sisters?</li>
-            <li><strong>We moeten weer naar de les.</strong> = We must go to class again.</li>
-            <li><strong>Ik weet het niet.</strong> = I don't know.</li>
-          </ul>
+              <h4 className="font-bold text-amber-300 text-sm mb-2">🕒 Klokkijken (Telling Time Details)</h4>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-xs text-slate-200 bg-slate-800 p-3 rounded-lg">
+                <div>11.00 = het is elf uur</div>
+                <div>11.05 = vijf over elf</div>
+                <div>11.10 = tien over elf</div>
+                <div>11.15 = <strong>kwart over</strong> elf</div>
+                <div>11.20 = tien voor half 12 <em>(or twintig over elf)</em></div>
+                <div>11.25 = vijf voor half 12</div>
+                <div>11.30 = <strong>half twaalf</strong> <em>(points to the next hour)</em></div>
+                <div>11.35 = vijf over half 12</div>
+                <div>11.40 = tien over half 12 <em>(or twintig voor twaalf)</em></div>
+                <div>11.45 = <strong>kwart voor</strong> twaalf</div>
+                <div>5.50 = tien voor zes</div>
+                <div>5.55 = vijf voor zes</div>
+              </div>
+            </div>
 
-          <div className="bg-rose-900/30 p-3 rounded-lg border border-rose-500/30">
-            <h4 className="font-bold text-white text-xs uppercase mb-1">Dialoog Begrip (Diyalog Anlama):</h4>
-            <ul className="text-sm text-rose-100 list-disc pl-5">
-              <li><strong>Waar zijn Susy en Edit?</strong> ➔ In de kantine.</li>
-              <li><strong>Wat drinkt Susy?</strong> ➔ Zij drinkt koffie.</li>
-              <li><strong>Welke dag is het in de tekst?</strong> ➔ Het is donderdag.</li>
-              <li><strong>Wanneer is Edit jarig?</strong> ➔ Morgen is Edit jarig.</li>
-              <li><strong>Hoe laat is het in de tekst?</strong> ➔ Het is 11 uur.</li>
-            </ul>
-          </div>
-        </div>
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #ef4444' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#f87171' }}>💬 Dialogue & Main Sentences (Q&A)</h3>
+              <ul className="text-sm text-slate-200 space-y-1 list-disc pl-5 mb-3">
+                <li><strong>Ik ben jarig.</strong> = It is my birthday. <em>(In Dutch, saying 'Ik ben jarig' is preferred over 'Het is mijn verjaardag').</em></li>
+                <li><strong>Is deze plaats vrij?</strong> = Is this spot free?</li>
+                <li><strong>Woon je al lang in Utrecht?</strong> = Have you been living in Utrecht for a long time?</li>
+                <li><strong>Wanneer ben je jarig?</strong> = When is your birthday?</li>
+                <li><strong>Heb je nog meer broers of zussen?</strong> = Do you have any brothers or sisters?</li>
+                <li><strong>We moeten weer naar de les.</strong> = We must go to class again.</li>
+                <li><strong>Ik weet het niet.</strong> = I don't know.</li>
+              </ul>
+
+              <div className="bg-rose-900/30 p-3 rounded-lg border border-rose-500/30">
+                <h4 className="font-bold text-white text-xs uppercase mb-1">Dialoog Begrip (Dialogue Comprehension):</h4>
+                <ul className="text-sm text-rose-100 list-disc pl-5">
+                  <li><strong>Waar zijn Susy en Edit?</strong> ➔ In de kantine.</li>
+                  <li><strong>Wat drinkt Susy?</strong> ➔ Zij drinkt koffie.</li>
+                  <li><strong>Welke dag is het in de tekst?</strong> ➔ Het is donderdag.</li>
+                  <li><strong>Wanneer is Edit jarig?</strong> ➔ Morgen is Edit jarig.</li>
+                  <li><strong>Hoe laat is het in de tekst?</strong> ➔ Het is 11 uur.</li>
+                </ul>
+              </div>
+            </div>
+          </>
+        )}
       </>
     ),
     exerciseGroups: [
       {
-        instruction: "On-Class Oefening 1: Werkwoorden (Fiil Çekimi)",
+        instruction: "On-Class Oefening 1: Werkwoorden (Verb Conjugation)",
         isExtra: false,
         questions: [
           { id: "2_onclass_1_1", type: "fill_in", question: "Ik ________ (wonen) in Valkenswaard.", correctAnswer: "woon" },
@@ -626,7 +938,7 @@ export const chapter2Sections = [
         ]
       },
       {
-        instruction: "On-Class Oefening 2: Vraagwoorden (Soru Kelimeleri)",
+        instruction: "On-Class Oefening 2: Vraagwoorden (Question Words)",
         isExtra: false,
         questions: [
           { id: "2_onclass_2_1", type: "fill_in", question: "________ is dat? Dat is mijn broer. (Who)", correctAnswer: "Wie" },
@@ -637,7 +949,7 @@ export const chapter2Sections = [
         ]
       },
       {
-        instruction: "On-Class Oefening 3: Bezittelijke Voornaamwoorden (İyelik Zamirleri)",
+        instruction: "On-Class Oefening 3: Bezittelijke Voornaamwoorden (Possessive Pronouns)",
         isExtra: false,
         questions: [
           { id: "2_onclass_3_1", type: "fill_in", question: "Ik heb een boek. Het is ________ boek. (my)", correctAnswer: "mijn" },
@@ -648,7 +960,7 @@ export const chapter2Sections = [
         ]
       },
       {
-        instruction: "On-Class Oefening 4: Voorzetsels (Edatlar: In, Op, Om)",
+        instruction: "On-Class Oefening 4: Voorzetsels (Prepositions: in, op, om)",
         isExtra: true,
         questions: [
           { id: "2_onclass_4_1", type: "fill_in", question: "Ik ben jarig ________ 12 januari.", correctAnswer: "op" },
@@ -659,7 +971,7 @@ export const chapter2Sections = [
         ]
       },
       {
-        instruction: "On-Class Oefening 5: Klokkijken (Saat Okuma)",
+        instruction: "On-Class Oefening 5: Klokkijken (Telling time)",
         isExtra: true,
         questions: [
           { id: "2_onclass_5_1", type: "multiple_choice", question: "Hoe zeg je 11:30 in het Nederlands?", options: ["half twaalf", "half elf", "dertig over elf"], correctAnswer: "half twaalf" },
@@ -670,7 +982,7 @@ export const chapter2Sections = [
         ]
       },
       {
-        instruction: "On-Class Oefening 6: Dialoog en Zinnen",
+        instruction: "On-Class Oefening 6: Dialoog en Zinnen (Dialogue & Sentences)",
         isExtra: true,
         questions: [
           { id: "2_onclass_6_1", type: "multiple_choice", question: "Wat is de meest natuurlijke (preferred) manier om te zeggen: 'It is my birthday today'?", options: ["Het is mijn verjaardag vandaag.", "Ik ben jarig.", "Vandaag is verjaardag."], correctAnswer: "Ik ben jarig." },

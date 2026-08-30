@@ -9,6 +9,8 @@ import { bookSections, vocabulary } from './data';
 import { globalDictionary } from './data/globalDictionary';
 import { auth, isSignInWithEmailLink, signInWithEmailLink, onAuthStateChanged, handleUserSyncOnLogin, pullFromCloud } from './firebase';
 
+import { LanguageProvider, useLanguage } from './contexts/LanguageContext';
+
 const chapterTitles = {
   1: "Welkom", 2: "In de kantine", 3: "In het café", 4: "Op straat", 5: "Op de markt",
   6: "In een restaurant", 7: "In een kledingzaak", 8: "Bij de makelaar", 9: "Bij de huisarts",
@@ -36,6 +38,8 @@ const fallbackDictionary = {
 };
 
 function MainContent({ user, setIsAuthModalOpen }) {
+  const { lang, t } = useLanguage(); 
+  
   const availableChapters = [...new Set(bookSections.map(sec => sec.chapter))].filter(Boolean).sort((a, b) => a - b);
   const fallbackChapter = availableChapters[0] || 1;
 
@@ -67,6 +71,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
 
   const [isChapterExpanded, setIsChapterExpanded] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); 
+  const [isInfoModalOpen, setIsInfoModalOpen] = useState(false);
 
   const [isSectionBarOverflowing, setIsSectionBarOverflowing] = useState(false);
 
@@ -160,7 +165,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
         nl: cleanWord, 
         en: fallback || "Translation not available", 
         tr: "Çeviri bulunamadı",
-        example: fallback ? "Uit de dialoog" : "Sözlükte bulunamadı. Lütfen kelime kökünü (infinitive) kontrol ediniz." 
+        example: fallback ? "Uit de dialoog" : t('notFound') 
       }];
     }
 
@@ -172,6 +177,16 @@ function MainContent({ user, setIsAuthModalOpen }) {
     });
 
     setSearchResults(matches);
+  };
+
+  const saveToGlobalPool = (wordObj, status) => {
+    const pool = JSON.parse(localStorage.getItem('globalWordPool')) || {};
+    if (status === undefined) {
+      delete pool[wordObj.nl.toLowerCase()];
+    } else {
+      pool[wordObj.nl.toLowerCase()] = { ...wordObj, status, addedAt: new Date().toISOString() };
+    }
+    localStorage.setItem('globalWordPool', JSON.stringify(pool));
   };
 
   const handleSearchWordKnowledge = (wordObj, isKnown) => {
@@ -186,6 +201,8 @@ function MainContent({ user, setIsAuthModalOpen }) {
       updatedUnknowns = existingUnknowns.filter(w => w.nl !== wordObj.nl);
     }
     localStorage.setItem(storageKey, JSON.stringify(updatedUnknowns));
+
+    saveToGlobalPool(wordObj, isKnown ? 'known' : 'unknown');
 
     const keysToUpdate = new Set();
     const lowerNL = wordObj.nl.toLowerCase();
@@ -243,13 +260,21 @@ function MainContent({ user, setIsAuthModalOpen }) {
       if (!existingUnknowns.some(w => w.nl === rawWord)) {
         updatedUnknowns = [...existingUnknowns, {
           nl: rawWord, en: "Not found in dictionary", tr: "Sözlükte bulunamadı",
-          example: "Kullanıcı tarafından manuel olarak işaretlendi."
+          example: "Manually marked by the user."
         }];
       }
     } else {
       updatedUnknowns = existingUnknowns.filter(w => w.nl !== rawWord);
     }
     localStorage.setItem(storageKey, JSON.stringify(updatedUnknowns));
+
+    const wordObj = {
+      nl: rawWord,
+      en: "Not found in dictionary",
+      tr: "Sözlükte bulunamadı",
+      example: "Manually marked by the user."
+    };
+    saveToGlobalPool(wordObj, newStatus);
 
     const newStatuses = { ...globalWordStatuses };
     if (newStatus === undefined) {
@@ -324,7 +349,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
             <i className="fa-solid fa-pen-nib text-brand-400 mr-1.5"></i>
             {rawWord}
           </span>
-          <span className="text-[10px] text-slate-400 leading-tight mt-0.5">Sadece kelimeyi işaretle</span>
+          <span className="text-[10px] text-slate-400 leading-tight mt-0.5">{t('markOnly')}</span>
         </div>
         <div className={`relative w-14 h-6 rounded-full transition-colors duration-300 flex-shrink-0 ${trackColor}`}>
           <div className="absolute left-0 w-1/2 h-full z-10 cursor-pointer rounded-l-full" onClick={(e) => handleSearchRawWordToggle('left', e)}></div>
@@ -360,21 +385,164 @@ function MainContent({ user, setIsAuthModalOpen }) {
   );
 
   return (
-    <div className="min-h-screen flex flex-col bg-slate-900 transition-colors duration-300 w-full max-w-full">
+    <div className="min-h-screen flex flex-col bg-slate-900 transition-colors duration-300 w-full max-w-full relative">
       
-      {/* 1. HEADER (ÜST MENÜ) */}
+      {isInfoModalOpen && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-slate-950/80 backdrop-blur-sm" onClick={() => setIsInfoModalOpen(false)}>
+          <div className="bg-slate-900 w-full max-w-3xl max-h-[85vh] rounded-3xl shadow-2xl border border-slate-700 flex flex-col overflow-hidden" onClick={e => e.stopPropagation()}>
+            <div className="p-5 flex justify-between items-center border-b border-slate-800 bg-slate-800/50">
+              <h3 className="text-lg font-bold text-slate-200 flex items-center gap-2">
+                <i className="fa-solid fa-circle-info text-brand-400"></i> {t('aboutGuide')}
+              </h3>
+              <button onClick={() => setIsInfoModalOpen(false)} className="text-slate-400 hover:text-rose-400 text-xl transition-colors">
+                <i className="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+            
+            <div className="overflow-y-auto p-6 flex-1 scrollbar-thin scrollbar-thumb-slate-700 space-y-6 text-slate-300 text-sm leading-relaxed">
+              
+              {lang === 'tr' ? (
+                <>
+                  <div className="bg-brand-900/20 border border-brand-700/50 p-4 rounded-xl">
+                    <p>Bu uygulama, <em>"Nederlands in Gang"</em> kitabının 3. sürümünü takip etmek amacıyla geliştirilmiş <strong>ticari olmayan</strong>, açık kaynaklı bir projedir. Size kişiselleştirilmiş ve etkileşimli bir Hollandaca öğrenme deneyimi sunmak için <strong>Google Gemini</strong> ile birlikte özenle kodlanmıştır.</p>
+                  </div>
+
+                  <div>
+                    <h4 className="font-bold text-brand-300 text-base mb-3 border-b border-slate-700 pb-2"><i className="fa-solid fa-book-open mr-2"></i>Nasıl Kullanılır?</h4>
+                    <ul className="space-y-4">
+                      <li className="flex items-start gap-3">
+                        <div className="w-8 h-8 rounded-lg bg-indigo-900/50 border border-indigo-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-indigo-400"><i className="fa-solid fa-comments"></i></div>
+                        <div>
+                          <strong className="text-slate-200 block mb-1">Diyaloglar & Etkileşimli Okuma</strong>
+                          Ünite diyaloglarını okuyun ve dinleyin. Çevirisini görmek için <u>altı noktalı kelimelerin</u> üzerine tıklayın. Bir kelimeyi anında "Biliyorum" (<i className="fa-solid fa-check text-emerald-400"></i>) veya "Bilmiyorum" (<i className="fa-solid fa-xmark text-rose-400"></i>) olarak işaretleyebilirsiniz. Bu işlem, kelimeyi otomatik olarak <strong>Global Havuzunuza</strong> kaydeder.
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-8 h-8 rounded-lg bg-rose-900/50 border border-rose-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-rose-400"><i className="fa-solid fa-clone"></i></div>
+                        <div>
+                          <strong className="text-slate-200 block mb-1">Flashcards & Global Havuz</strong>
+                          Etkileşimli flashcard'lar ile kelime pratiği yapın. İsterseniz sadece seçtiğiniz üniteye özel kelimeleri çalışabilir, isterseniz de <strong>Global Havuz</strong> moduna geçerek site genelinde etkileşime girdiğiniz tüm kelimeleri tekrar edebilirsiniz. Yalnızca "Bilinmeyen" kelimeleri filtreleyebilir veya listenizi tek tuşla panoya kopyalayabilirsiniz. Hızlı geçişler için klavye ok tuşlarını (⬅️ ⬆️ ⬇️ ➡️) kullanın.
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-8 h-8 rounded-lg bg-sky-900/50 border border-sky-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-sky-400"><i className="fa-solid fa-magnifying-glass"></i></div>
+                        <div>
+                          <strong className="text-slate-200 block mb-1">Akıllı Sözlük Araması</strong>
+                          Herhangi bir Hollandaca kelimeyi bulmak için üstteki arama çubuğunu kullanın. Aradığınız kelime bulunduğunuz ünitede olmasa bile, arama sonuçlarından doğrudan "biliyorum/bilmiyorum" şeklinde işaretleyebilir ve kişisel takip sisteminize anında ekleyebilirsiniz.
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-8 h-8 rounded-lg bg-amber-900/50 border border-amber-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-amber-400"><i className="fa-solid fa-chalkboard-user"></i></div>
+                        <div>
+                          <strong className="text-slate-200 block mb-1">Sınıf-İçi (On-Class) Ekstra Bölümler</strong>
+                          Bu bölümler ("On-C"), gerçek sınıf notlarına dayanan kapsamlı gramer özetleri, telaffuz ipuçları ve ekstra egzersizler içerir. Hızlı tekrarlar yapmak ve ünite konularını pekiştirmek için mükemmeldir.
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-8 h-8 rounded-lg bg-teal-900/50 border border-teal-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-teal-400"><i className="fa-solid fa-globe"></i></div>
+                        <div>
+                          <strong className="text-slate-200 block mb-1">Dil Seçimi</strong>
+                          Uygulamanın dilini dilediğiniz an değiştirmek için üst menüdeki Profil simgesine (<i className="fa-solid fa-circle-user"></i>) tıklayın. Açılan hesap menüsündeki TR/EN butonlarını kullanarak Türkçe veya İngilizce arasında geçiş yapabilirsiniz.
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-8 h-8 rounded-lg bg-emerald-900/50 border border-emerald-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-emerald-400"><i className="fa-solid fa-cloud-arrow-up"></i></div>
+                        <div>
+                          <strong className="text-slate-200 block mb-1">Bulut Senkronizasyonu & Üyelik</strong>
+                          Profil simgesini (<i className="fa-solid fa-circle-user"></i>) kullanarak giriş yaptığınızda; ilerlemeniz, bilinen/bilinmeyen kelimeleriniz, favorileriniz ve tamamlanan bölümleriniz güvenli bir şekilde buluta kaydedilir. Cihaz değiştirseniz veya tarayıcı önbelleğinizi temizleseniz bile verileriniz asla kaybolmaz.
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="bg-brand-900/20 border border-brand-700/50 p-4 rounded-xl">
+                    <p>This application is a <strong>non-commercial</strong>, open-source project designed to track and support the 3rd edition of the <em>"Nederlands in Gang"</em> textbook. It was meticulously developed in collaboration with <strong>Google Gemini</strong> to create a personalized, interactive Dutch learning experience.</p>
+                  </div>
+
+                  <div>
+                    <h4 className="font-bold text-brand-300 text-base mb-3 border-b border-slate-700 pb-2"><i className="fa-solid fa-book-open mr-2"></i>How to Use the App</h4>
+                    <ul className="space-y-4">
+                      <li className="flex items-start gap-3">
+                        <div className="w-8 h-8 rounded-lg bg-indigo-900/50 border border-indigo-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-indigo-400"><i className="fa-solid fa-comments"></i></div>
+                        <div>
+                          <strong className="text-slate-200 block mb-1">Dialogues & Interactive Reading</strong>
+                          Read and listen to chapter dialogues. Click on <u>any dotted word</u> to see its translation. You can instantly mark it as "Known" (<i className="fa-solid fa-check text-emerald-400"></i>) or "Unknown" (<i className="fa-solid fa-xmark text-rose-400"></i>). This action automatically saves the word to your <strong>Global Word Pool</strong>.
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-8 h-8 rounded-lg bg-rose-900/50 border border-rose-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-rose-400"><i className="fa-solid fa-clone"></i></div>
+                        <div>
+                          <strong className="text-slate-200 block mb-1">Flashcards & Global Pool</strong>
+                          Practice vocabulary with interactive flashcards. You can study chapter-specific words, or switch to the <strong>Global Havuz</strong> to review every word you have ever interacted with. You can also filter the deck to only show "Unknown" words, and copy lists directly to your clipboard. Use keyboard arrows (⬅️ ⬆️ ⬇️ ➡️) for quick navigation.
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-8 h-8 rounded-lg bg-sky-900/50 border border-sky-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-sky-400"><i className="fa-solid fa-magnifying-glass"></i></div>
+                        <div>
+                          <strong className="text-slate-200 block mb-1">Smart Dictionary Search</strong>
+                          Use the search bar at the top to find any Dutch word. Even if it's not in the current chapter, you can still mark it as known/unknown directly from the search results, instantly adding it to your personal tracking system.
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-8 h-8 rounded-lg bg-amber-900/50 border border-amber-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-amber-400"><i className="fa-solid fa-chalkboard-user"></i></div>
+                        <div>
+                          <strong className="text-slate-200 block mb-1">On-Class Extra Sections</strong>
+                          These sections ("On-C") contain comprehensive grammar summaries, pronunciation tips, and extra exercises based on real classroom notes. They are perfect for quick reviews and reinforcing chapter concepts.
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-8 h-8 rounded-lg bg-teal-900/50 border border-teal-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-teal-400"><i className="fa-solid fa-globe"></i></div>
+                        <div>
+                          <strong className="text-slate-200 block mb-1">Language Selection</strong>
+                          Click the profile icon (<i className="fa-solid fa-circle-user"></i>) to open the account menu, where you can instantly switch the application language between English and Turkish using the TR/EN toggle buttons.
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-8 h-8 rounded-lg bg-emerald-900/50 border border-emerald-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-emerald-400"><i className="fa-solid fa-cloud-arrow-up"></i></div>
+                        <div>
+                          <strong className="text-slate-200 block mb-1">Cloud Sync & Membership</strong>
+                          By signing in using the profile icon (<i className="fa-solid fa-circle-user"></i>), your progress—including known/unknown words, favorites, and completed sections—is securely synchronized to the cloud. You will never lose your progress, even if you switch devices or clear your browser cache.
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </>
+              )}
+
+              <div className="bg-slate-800/50 border border-slate-700 p-4 rounded-xl flex items-center justify-between mt-6">
+                <div>
+                  <strong className="block text-slate-200">Open Source Project</strong>
+                  <span className="text-xs text-slate-400">Feel free to contribute or review the code.</span>
+                </div>
+                <a href="https://github.com/eckucukoglu/nederlands-app" target="_blank" rel="noreferrer" className="flex items-center gap-2 bg-slate-700 hover:bg-slate-600 text-white px-4 py-2 rounded-lg transition-colors font-medium shadow-sm">
+                  <i className="fa-brands fa-github text-lg"></i> GitHub
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* 1. HEADER */}
       <header className="bg-slate-950 text-white shadow-md sticky top-0 z-50 border-b border-slate-800 flex-none w-full">
         <div className="max-w-7xl mx-auto px-3 sm:px-4 py-3 flex flex-nowrap justify-between items-center gap-2">
           
-          <div className="flex items-center space-x-2 flex-shrink min-w-0">
-            <div className="bg-brand-900/50 p-2 rounded-xl backdrop-blur flex-shrink-0">
-              <i className="fa-solid fa-book-medical text-xl text-brand-400"></i>
+          <div 
+            className="flex items-center space-x-2 flex-shrink min-w-0 cursor-pointer group"
+            onClick={() => setIsInfoModalOpen(true)}
+            title={t('aboutGuide')}
+          >
+            <div className="bg-brand-900/50 p-2 rounded-xl backdrop-blur flex-shrink-0 group-hover:bg-brand-800/50 transition-colors">
+              <i className="fa-solid fa-book-medical text-xl text-brand-400 group-hover:text-brand-300"></i>
             </div>
             <div className="hidden sm:block truncate">
-              <h1 className="font-bold text-lg leading-tight text-slate-100 truncate">Nederlands in Gang</h1>
+              <h1 className="font-bold text-lg leading-tight text-slate-100 truncate group-hover:text-brand-300 transition-colors">Nederlands in Gang</h1>
               <p className="text-xs text-brand-300 truncate">Interactief Oefenportaal (A1 → A2)</p>
             </div>
-            <h1 className="font-bold text-lg leading-tight text-slate-100 sm:hidden flex-shrink-0">NiG</h1>
+            <h1 className="font-bold text-lg leading-tight text-slate-100 sm:hidden flex-shrink-0 group-hover:text-brand-300 transition-colors">NiG</h1>
           </div>
 
           <div className="flex items-center space-x-1 sm:space-x-2 flex-shrink-0 overflow-visible">
@@ -382,7 +550,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
             <button 
               onClick={() => { setActiveTab("flashcards"); setIsChapterExpanded(false); setIsSearchExpanded(false); }}
               className={`p-1.5 sm:p-2 rounded-full transition-colors flex items-center justify-center ${activeTab === 'flashcards' ? 'bg-rose-600 text-white shadow-md' : 'bg-rose-900/30 text-rose-400 hover:bg-rose-600 hover:text-white border border-rose-800/30'}`}
-              title="Flashcards"
+              title={t('flashcards')}
             >
               <i className="fa-solid fa-clone text-lg sm:text-xl"></i>
             </button>
@@ -390,13 +558,12 @@ function MainContent({ user, setIsAuthModalOpen }) {
             <button 
               onClick={() => setIsAuthModalOpen(true)}
               className="p-1.5 sm:p-2 rounded-full hover:bg-slate-800 transition-colors flex items-center justify-center relative group"
-              title="Hesap ve Senkronizasyon"
+              title={t('accountSync')}
             >
               <i className={`fa-solid fa-circle-user text-xl sm:text-2xl ${user ? 'text-emerald-400' : 'text-slate-400 group-hover:text-brand-400'}`}></i>
               {user && <div className="absolute top-0 right-0 w-2.5 h-2.5 bg-emerald-500 border-2 border-slate-950 rounded-full"></div>}
             </button>
 
-            {/* ARAMA (Masaüstü) */}
             <div className="relative flex items-center" ref={searchRef}>
               <div className={`hidden sm:flex transition-all duration-300 ease-in-out overflow-hidden items-center ${isSearchExpanded ? 'w-56 opacity-100 mr-1' : 'w-0 opacity-0'}`}>
                 <form onSubmit={handleGlobalSearch} className="w-full relative">
@@ -404,7 +571,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
                     type="text"
                     value={searchQuery}
                     onChange={e => setSearchQuery(e.target.value)}
-                    placeholder="Sözlükte ara..."
+                    placeholder={t('searchPlaceholder')}
                     className="w-full bg-slate-800 border border-slate-700 text-slate-200 text-xs sm:text-sm rounded-full pl-3 pr-8 py-1.5 focus:outline-none focus:ring-1 focus:ring-brand-500 shadow-inner"
                   />
                   {searchQuery && (
@@ -433,7 +600,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
                   }
                 }}
                 className={`p-1.5 sm:p-2 rounded-full transition-colors flex items-center justify-center ${isSearchExpanded ? 'hidden sm:flex bg-brand-600 hover:bg-brand-500 text-white' : 'hover:bg-slate-800 text-slate-400 hover:text-brand-400'}`}
-                title="Sözlükte Ara"
+                title={t('searchTitle')}
               >
                 <i className="fa-solid fa-magnifying-glass text-lg sm:text-xl"></i>
               </button>
@@ -447,12 +614,11 @@ function MainContent({ user, setIsAuthModalOpen }) {
 
             <div className="h-6 w-[1px] bg-slate-700 my-auto mx-0.5 sm:mx-1"></div>
 
-            {/* CHAPTER SEÇİCİ DROPDOWN */}
             <div className="relative flex items-center" ref={chapterMenuRef}>
               <button
                 onClick={() => { setIsChapterExpanded(!isChapterExpanded); setIsSearchExpanded(false); }}
                 className={`flex items-center justify-center px-3 sm:px-4 h-9 rounded-full font-extrabold text-xs sm:text-sm transition-all border shadow-sm flex-shrink-0 ${isChapterExpanded ? 'bg-brand-600 text-white border-brand-500' : 'bg-slate-800 text-slate-200 border-slate-700 hover:bg-slate-700'}`}
-                title="Bölüm Değiştir"
+                title={t('changeChapter')}
               >
                 <span className="whitespace-nowrap">Hoofdstuk {currentChapter}</span>
                 <i className={`fa-solid fa-chevron-${isChapterExpanded ? 'up' : 'down'} ml-2 text-[10px]`}></i>
@@ -486,7 +652,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
         <div className="sm:hidden fixed inset-0 z-[100] bg-slate-950/90 backdrop-blur-sm flex items-center justify-center p-4" onClick={() => setIsMobileSearchOpen(false)}>
           <div className="w-full max-w-sm bg-slate-900 border border-slate-700 rounded-3xl p-5 shadow-2xl flex flex-col max-h-[85vh]" onClick={e => e.stopPropagation()}>
             <div className="flex justify-between items-center mb-4">
-              <h2 className="text-brand-400 font-bold"><i className="fa-solid fa-magnifying-glass mr-2"></i> Sözlükte Ara</h2>
+              <h2 className="text-brand-400 font-bold"><i className="fa-solid fa-magnifying-glass mr-2"></i> {t('searchTitle')}</h2>
               <button onClick={() => { setIsMobileSearchOpen(false); setSearchResults(null); }} className="text-slate-500 hover:text-rose-400"><i className="fa-solid fa-xmark text-xl"></i></button>
             </div>
             
@@ -497,7 +663,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
                   type="text" 
                   value={searchQuery} 
                   onChange={e => setSearchQuery(e.target.value)} 
-                  placeholder="Kelime yaz..." 
+                  placeholder={t('searchMobilePlaceholder')}
                   className="w-full bg-slate-800 border border-slate-600 text-slate-200 text-sm rounded-xl pl-4 pr-10 py-3 focus:outline-none focus:border-brand-500 shadow-inner" 
                 />
                 {searchQuery && (
@@ -516,13 +682,13 @@ function MainContent({ user, setIsAuthModalOpen }) {
             </form>
             
             <div className="overflow-y-auto scrollbar-thin scrollbar-thumb-slate-600 flex-1 pr-1">
-              {searchResults && searchResults.length > 0 ? <SearchResultsUI /> : (searchQuery && searchResults !== null ? <p className="text-center text-slate-500 text-sm mt-4 font-medium">Sonuç bulunamadı.</p> : null)}
+              {searchResults && searchResults.length > 0 ? <SearchResultsUI /> : (searchQuery && searchResults !== null ? <p className="text-center text-slate-500 text-sm mt-4 font-medium">{t('noResults')}</p> : null)}
             </div>
           </div>
         </div>
       )}
 
-      {/* 3. SECTION BAR (ORTALANMIŞ VE İLERİ/GERİ BUTONLARI KALDIRILMIŞ) */}
+      {/* 3. SECTION BAR */}
       <div 
         className={`bg-slate-900/40 border-slate-800 w-full max-w-full overflow-hidden shadow-inner z-40 flex-none transition-all duration-300 ${
           isSectionBarOverflowing ? 'absolute top-0 left-0 h-0 invisible opacity-0 pointer-events-none' : 'border-b relative opacity-100'
@@ -534,7 +700,6 @@ function MainContent({ user, setIsAuthModalOpen }) {
           className="max-w-7xl mx-auto px-2 py-2.5 flex justify-center items-center w-full max-w-full overflow-x-auto hide-scroll whitespace-nowrap gap-2" 
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
-          {/* ORTA (Kapsüller) - Her zaman merkezde */}
           <div className="flex items-center justify-center flex-nowrap gap-1.5 sm:gap-2 px-1 flex-shrink-0">
             {currentSections.map(sec => {
               const isActive = activeTab === sec.id;
@@ -562,7 +727,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
         </div>
       </div>
 
-      {/* 4. MOBİL ZARİF İLERLEME ÇUBUĞU (Yalnızca masaüstü menü sıkışınca belirir) */}
+      {/* 4. MOBİL ZARİF İLERLEME ÇUBUĞU */}
       {isSectionBarOverflowing && (
         <div className="w-full relative px-4 py-3 bg-slate-900/60 border-b border-slate-800 shadow-inner z-40 flex-none" ref={mobileMenuRef}>
           <button
@@ -571,7 +736,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
           >
             <div className="flex items-center justify-between w-full">
               <span className="text-slate-200 text-sm font-bold truncate text-left">
-                {activeTab === 'flashcards' ? 'Flashcards' : (activeTab.includes('On-Class') ? 'Extra: On-Class' : `Sectie ${activeTab}`)}
+                {activeTab === 'flashcards' ? t('flashcards') : (activeTab.includes('On-Class') ? 'Extra: On-Class' : `Sectie ${activeTab}`)}
               </span>
               <div className="flex items-center gap-2 flex-shrink-0">
                 {activeTab !== 'flashcards' && (
@@ -701,16 +866,16 @@ export default function App() {
     return (
       <div className="min-h-screen bg-slate-900 flex flex-col items-center justify-center text-brand-400">
         <i className="fa-solid fa-cloud-arrow-down text-6xl animate-bounce mb-4"></i>
-        <h2 className="text-xl font-bold text-slate-200">Verilerin senkronize ediliyor...</h2>
-        <p className="text-sm text-slate-500 mt-2">Lütfen bekleyin.</p>
+        <h2 className="text-xl font-bold text-slate-200">Yükleniyor / Loading...</h2>
+        <p className="text-sm text-slate-500 mt-2">Lütfen bekleyin / Please wait.</p>
       </div>
     );
   }
 
   return (
-    <>
+    <LanguageProvider>
       <AuthModal isOpen={isAuthModalOpen} onClose={() => setIsAuthModalOpen(false)} user={user} />
       <MainContent user={user} setIsAuthModalOpen={setIsAuthModalOpen} />
-    </>
+    </LanguageProvider>
   );
 }

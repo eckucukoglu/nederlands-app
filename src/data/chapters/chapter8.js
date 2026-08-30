@@ -76,17 +76,17 @@ export const chapter8Vocab = [
 
 export const chapter8Dialogues = {
   "8.1": [
-    { speaker: "Verteller", text: "De verkoopster, Patricia, is bij een makelaar om woonruimte te zoeken.", translation: "Satış danışmanı Patricia, ev/yaşam alanı aramak için bir emlakçıdadır." },
-    { speaker: "Makelaar", text: "Dus u zoekt woonruimte in de stad. Voor hoeveel personen?", translation: "Demek şehirde bir ev/yaşam alanı arıyorsunuz. Kaç kişi için?" },
-    { speaker: "Patricia", text: "Twee. Voor mezelf en mijn vriend. Wij gaan samenwonen.", translation: "İki. Kendim ve erkek arkadaşım için. Biz birlikte yaşayacağız." },
-    { speaker: "Makelaar", text: "Zoekt u een bepaald type woning? Met een tuin? Of een bovenwoning? Of een appartement?", translation: "Belirli bir ev tipi mi arıyorsunuz? Bahçeli mi? Yoksa üst kat daire mi? Ya da bir apartman dairesi mi?" },
-    { speaker: "Patricia", text: "Ik heb geen idee. Wat zijn de mogelijkheden?", translation: "Hiçbir fikrim yok. Seçenekler nelerdir?" },
-    { speaker: "Makelaar", text: "Ik zie op uw formulier de maximale huurprijs. Ik zal u een paar woningen laten zien op de computer. Dit is een leuke bovenwoning op de derde verdieping, in een oude buurt, niet ver van het centrum. Het is dicht bij het park. De woning heeft een woonkamer van 35 vierkante meter, een open keuken, twee ruime slaapkamers en een balkon op het westen. In de gang is de wc en een eenvoudige badkamer, met alleen een douche.", translation: "Formunuzda maksimum kira bedelini görüyorum. Size bilgisayarda birkaç ev göstereceğim. Bu, üçüncü katta, eski bir mahallede, merkeze uzak olmayan güzel bir üst kat dairesi. Parka yakın. Evin 35 metrekarelik bir oturma odası, açık mutfağı, iki geniş yatak odası ve batıya bakan bir balkonu var. Koridorda tuvalet ve sadece duşu olan basit bir banyo var." },
-    { speaker: "Patricia", text: "O, wij hoeven geen bad. Dat gebruiken we toch niet. Hebt u nog meer geschikte huizen te huur?", translation: "Oh, bizim küvete ihtiyacımız yok. Onu zaten kullanmıyoruz. Kiralık başka uygun evleriniz var mı?" },
-    { speaker: "Makelaar", text: "Ja, dit huisje is erg leuk voor twee personen. Het is wat duurder want we verhuren dit gemeubileerd.", translation: "Evet, bu küçük ev iki kişi için çok güzel. Biraz daha pahalı çünkü bunu mobilyalı (eşyalı) olarak kiralıyoruz." },
-    { speaker: "Patricia", text: "O, dus met kasten, bedden, een tafel en stoelen?", translation: "Oh, yani dolaplar, yataklar, bir masa ve sandalyelerle birlikte mi?" },
-    { speaker: "Makelaar", text: "Ja, en een bureau en een bank.", translation: "Evet, ayrıca bir çalışma masası ve bir kanepe/koltuk." },
-    { speaker: "Patricia", text: "Dat is wel een voordeel want we hebben nog niets. En het heeft een mooie, zonnige kamer! Is het een benedenwoning? Met een tuin? Dat lijkt me fantastisch! Ja, het is duurder, dat is waar. Ik wil dit even met mijn vriend overleggen. Ik bel u zo snel mogelijk voor een nieuwe afspraak.", translation: "Bu bir avantaj çünkü henüz hiçbir şeyimiz yok. Ve güzel, güneşli bir odası var! Bu bir zemin kat dairesi mi? Bahçeli mi? Bu bana harika (fantastik) görünüyor! Evet, daha pahalı, bu doğru. Bunu erkek arkadaşımla biraz görüşmek (tartışmak) istiyorum. Yeni bir randevu için sizi en kısa sürede arayacağım." }
+    { speaker: "Verteller", text: "De verkoopster, Patricia, is bij een makelaar om woonruimte te zoeken.", translation: { tr: "Satış danışmanı Patricia, ev/yaşam alanı aramak için bir emlakçıdadır.", en: "The saleswoman, Patricia, is at a real estate agent's to look for accommodation." } },
+    { speaker: "Makelaar", text: "Dus u zoekt woonruimte in de stad. Voor hoeveel personen?", translation: { tr: "Demek şehirde bir ev/yaşam alanı arıyorsunuz. Kaç kişi için?", en: "So you are looking for accommodation in the city. For how many people?" } },
+    { speaker: "Patricia", text: "Twee. Voor mezelf en mijn vriend. Wij gaan samenwonen.", translation: { tr: "İki. Kendim ve erkek arkadaşım için. Biz birlikte yaşayacağız.", en: "Two. For myself and my boyfriend. We are going to live together." } },
+    { speaker: "Makelaar", text: "Zoekt u een bepaald type woning? Met een tuin? Of een bovenwoning? Of een appartement?", translation: { tr: "Belirli bir ev tipi mi arıyorsunuz? Bahçeli mi? Yoksa üst kat daire mi? Ya da bir apartman dairesi mi?", en: "Are you looking for a specific type of house? With a garden? Or an upstairs flat? Or an apartment?" } },
+    { speaker: "Patricia", text: "Ik heb geen idee. Wat zijn de mogelijkheden?", translation: { tr: "Hiçbir fikrim yok. Seçenekler nelerdir?", en: "I have no idea. What are the possibilities?" } },
+    { speaker: "Makelaar", text: "Ik zie op uw formulier de maximale huurprijs. Ik zal u een paar woningen laten zien op de computer. Dit is een leuke bovenwoning op de derde verdieping, in een oude buurt, niet ver van het centrum. Het is dicht bij het park. De woning heeft een woonkamer van 35 vierkante meter, een open keuken, twee ruime slaapkamers en een balkon op het westen. In de gang is de wc en een eenvoudige badkamer, met alleen een douche.", translation: { tr: "Formunuzda maksimum kira bedelini görüyorum. Size bilgisayarda birkaç ev göstereceğim. Bu, üçüncü katta, eski bir mahallede, merkeze uzak olmayan güzel bir üst kat dairesi. Parka yakın. Evin 35 metrekarelik bir oturma odası, açık mutfağı, iki geniş yatak odası ve batıya bakan bir balkonu var. Koridorda tuvalet ve sadece duşu olan basit bir banyo var.", en: "I see the maximum rent on your form. I will show you a few houses on the computer. This is a nice upstairs flat on the third floor, in an old neighborhood, not far from the center. It is close to the park. The house has a living room of 35 square meters, an open kitchen, two spacious bedrooms and a west-facing balcony. In the hallway there is the toilet and a simple bathroom, with only a shower." } },
+    { speaker: "Patricia", text: "O, wij hoeven geen bad. Dat gebruiken we toch niet. Hebt u nog meer geschikte huizen te huur?", translation: { tr: "Oh, bizim küvete ihtiyacımız yok. Onu zaten kullanmıyoruz. Kiralık başka uygun evleriniz var mı?", en: "Oh, we don't need a bath. We don't use that anyway. Do you have any other suitable houses for rent?" } },
+    { speaker: "Makelaar", text: "Ja, dit huisje is erg leuk voor twee personen. Het is wat duurder want we verhuren dit gemeubileerd.", translation: { tr: "Evet, bu küçük ev iki kişi için çok güzel. Biraz daha pahalı çünkü bunu mobilyalı (eşyalı) olarak kiralıyoruz.", en: "Yes, this little house is very nice for two people. It is a bit more expensive because we rent this furnished." } },
+    { speaker: "Patricia", text: "O, dus met kasten, bedden, een tafel en stoelen?", translation: { tr: "Oh, yani dolaplar, yataklar, bir masa ve sandalyelerle birlikte mi?", en: "Oh, so with cabinets, beds, a table and chairs?" } },
+    { speaker: "Makelaar", text: "Ja, en een bureau en een bank.", translation: { tr: "Evet, ayrıca bir çalışma masası ve bir kanepe/koltuk.", en: "Yes, and a desk and a sofa." } },
+    { speaker: "Patricia", text: "Dat is wel een voordeel want we hebben nog niets. En het heeft een mooie, zonnige kamer! Is het een benedenwoning? Met een tuin? Dat lijkt me fantastisch! Ja, het is duurder, dat is waar. Ik wil dit even met mijn vriend overleggen. Ik bel u zo snel mogelijk voor een nieuwe afspraak.", translation: { tr: "Bu bir avantaj çünkü henüz hiçbir şeyimiz yok. Ve güzel, güneşli bir odası var! Bu bir zemin kat dairesi mi? Bahçeli mi? Bu bana harika (fantastik) görünüyor! Evet, daha pahalı, bu doğru. Bunu erkek arkadaşımla biraz görüşmek (tartışmak) istiyorum. Yeni bir randevu için sizi en kısa sürede arayacağım.", en: "That is an advantage because we don't have anything yet. And it has a nice, sunny room! Is it a ground-floor flat? With a garden? That sounds fantastic! Yes, it is more expensive, that is true. I want to discuss this with my boyfriend for a moment. I will call you as soon as possible for a new appointment." } }
   ]
 };
 
@@ -95,22 +95,34 @@ export const chapter8Sections = [
     id: "8.1",
     chapter: 8,
     title: "8.1 Dialoog: Bij de makelaar",
-    theory: (
+    theory: (lang) => (
       <>
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #3b82f6', marginBottom: '20px' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#60a5fa' }}>🗣️ Dialoog: Bij de makelaar (Emlakçıda)</h3>
-          <p>Patricia, erkek arkadaşıyla birlikte yaşamak (samenwonen) için kiralık bir ev aramaktadır. Emlakçı (makelaar) ona iki seçenek sunar. Ev ararken kullanılan terimlere dikkat edin:</p>
-          <ul style={{ margin: '10px 0', paddingLeft: '20px', color: '#cbd5e1', listStyleType: 'disc' }}>
-            <li><strong>Te huur:</strong> Kiralık</li>
-            <li><strong>Gemeubileerd:</strong> Mobilyalı (Eşyalı)</li>
-            <li><strong>Zo snel mogelijk:</strong> En kısa sürede (As soon as possible)</li>
-          </ul>
-        </div>
+        {lang === 'tr' ? (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #3b82f6', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#60a5fa' }}>🗣️ Dialoog: Bij de makelaar (Emlakçıda)</h3>
+            <p>Patricia, erkek arkadaşıyla birlikte yaşamak (samenwonen) için kiralık bir ev aramaktadır. Emlakçı (makelaar) ona iki seçenek sunar. Ev ararken kullanılan terimlere dikkat edin:</p>
+            <ul style={{ margin: '10px 0', paddingLeft: '20px', color: '#cbd5e1', listStyleType: 'disc' }}>
+              <li><strong>Te huur:</strong> Kiralık</li>
+              <li><strong>Gemeubileerd:</strong> Mobilyalı (Eşyalı)</li>
+              <li><strong>Zo snel mogelijk:</strong> En kısa sürede (As soon as possible)</li>
+            </ul>
+          </div>
+        ) : (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #3b82f6', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#60a5fa' }}>🗣️ Dialogue: Bij de makelaar (At the real estate agent's)</h3>
+            <p>Patricia is looking for a house to rent in order to live together (samenwonen) with her boyfriend. The real estate agent (makelaar) offers her two options. Pay attention to the terms used when looking for a house:</p>
+            <ul style={{ margin: '10px 0', paddingLeft: '20px', color: '#cbd5e1', listStyleType: 'disc' }}>
+              <li><strong>Te huur:</strong> For rent / to let</li>
+              <li><strong>Gemeubileerd:</strong> Furnished</li>
+              <li><strong>Zo snel mogelijk:</strong> As soon as possible</li>
+            </ul>
+          </div>
+        )}
       </>
     ),
     exerciseGroups: [
       {
-        instruction: "Opdracht 1: Geef een reactie op de vragen over de dialoog.",
+        instruction: "Opdracht 1: Geef een reactie op de vragen over de dialoog. (Respond to the questions about the dialogue.)",
         isExtra: false,
         questions: [
           { id: "8.1_opd1_1", type: "multiple_choice", question: "Waar is Patricia? Waarom?", options: ["In de supermarkt om eten te kopen.", "Bij een makelaar, ze zoekt woonruimte.", "In het ziekenhuis."], correctAnswer: "Bij een makelaar, ze zoekt woonruimte." },
@@ -126,42 +138,70 @@ export const chapter8Sections = [
     id: "8.2",
     chapter: 8,
     title: "8.2 Woordenlijst & 8.3 Soorten woonruimte",
-    theory: (
+    theory: (lang) => (
       <>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6' }}>
-            <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>🏠 Soorten woonruimte (Ev Tipleri)</h3>
-            <ul style={{ color: '#cbd5e1', listStyleType: 'none', padding: 0, margin: 0 }}>
-              <li><strong>het huis / de woning:</strong> Ev (Genel terim)</li>
-              <li><strong>de flat / het appartement:</strong> Apartman dairesi</li>
-              <li><strong>de bovenwoning:</strong> Üst kat dairesi</li>
-              <li><strong>de benedenwoning:</strong> Zemin kat dairesi</li>
-              <li><strong>de begane grond:</strong> Zemin kat (Ground floor)</li>
-              <li><strong>de verdieping:</strong> Kat (Floor/Storey)</li>
-            </ul>
-          </div>
+        {lang === 'tr' ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>🏠 Soorten woonruimte (Ev Tipleri)</h3>
+              <ul style={{ color: '#cbd5e1', listStyleType: 'none', padding: 0, margin: 0 }}>
+                <li><strong>het huis / de woning:</strong> Ev (Genel terim)</li>
+                <li><strong>de flat / het appartement:</strong> Apartman dairesi</li>
+                <li><strong>de bovenwoning:</strong> Üst kat dairesi</li>
+                <li><strong>de benedenwoning:</strong> Zemin kat dairesi</li>
+                <li><strong>de begane grond:</strong> Zemin kat (Ground floor)</li>
+                <li><strong>de verdieping:</strong> Kat (Floor/Storey)</li>
+              </ul>
+            </div>
 
-          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #ec4899' }}>
-            <h3 style={{ margin: '0 0 10px 0', color: '#f472b6' }}>🛋️ In en bij het huis (Ev bölümleri)</h3>
-            <ul style={{ color: '#cbd5e1', listStyleType: 'none', padding: 0, margin: 0 }}>
-              <li><strong>de woonkamer / slaapkamer:</strong> Oturma / yatak odası</li>
-              <li><strong>de keuken:</strong> Mutfak</li>
-              <li><strong>de badkamer / de wc:</strong> Banyo / Tuvalet</li>
-              <li><strong>de gang:</strong> Koridor</li>
-              <li><strong>de deur / het raam:</strong> Kapı / Pencere</li>
-              <li><strong>het balkon / de tuin:</strong> Balkon / Bahçe</li>
-            </ul>
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #ec4899' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#f472b6' }}>🛋️ In en bij het huis (Ev bölümleri)</h3>
+              <ul style={{ color: '#cbd5e1', listStyleType: 'none', padding: 0, margin: 0 }}>
+                <li><strong>de woonkamer / slaapkamer:</strong> Oturma / yatak odası</li>
+                <li><strong>de keuken:</strong> Mutfak</li>
+                <li><strong>de badkamer / de wc:</strong> Banyo / Tuvalet</li>
+                <li><strong>de gang:</strong> Koridor</li>
+                <li><strong>de deur / het raam:</strong> Kapı / Pencere</li>
+                <li><strong>het balkon / de tuin:</strong> Balkon / Bahçe</li>
+              </ul>
+            </div>
           </div>
-        </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>🏠 Soorten woonruimte (Types of accommodation)</h3>
+              <ul style={{ color: '#cbd5e1', listStyleType: 'none', padding: 0, margin: 0 }}>
+                <li><strong>het huis / de woning:</strong> House / Dwelling</li>
+                <li><strong>de flat / het appartement:</strong> Apartment / Flat</li>
+                <li><strong>de bovenwoning:</strong> Upstairs flat</li>
+                <li><strong>de benedenwoning:</strong> Ground-floor flat</li>
+                <li><strong>de begane grond:</strong> Ground floor</li>
+                <li><strong>de verdieping:</strong> Floor / Storey</li>
+              </ul>
+            </div>
+
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #ec4899' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#f472b6' }}>🛋️ In en bij het huis (In and around the house)</h3>
+              <ul style={{ color: '#cbd5e1', listStyleType: 'none', padding: 0, margin: 0 }}>
+                <li><strong>de woonkamer / slaapkamer:</strong> Living room / bedroom</li>
+                <li><strong>de keuken:</strong> Kitchen</li>
+                <li><strong>de badkamer / de wc:</strong> Bathroom / Toilet</li>
+                <li><strong>de gang:</strong> Hallway / Corridor</li>
+                <li><strong>de deur / het raam:</strong> Door / Window</li>
+                <li><strong>het balkon / de tuin:</strong> Balcony / Garden</li>
+              </ul>
+            </div>
+          </div>
+        )}
       </>
     ),
     exerciseGroups: [
       {
-        instruction: "Opdracht 2 & Woordenlijst Oefeningen",
+        instruction: "Opdracht 2 & Woordenlijst Oefeningen (Vocabulary Exercises)",
         isExtra: true,
         questions: [
           { id: "8.2_smart_1", type: "multiple_choice", question: "Wat is 'de begane grond' in het Engels of Turks?", options: ["The basement / Bodrum", "The roof / Çatı", "The ground floor / Zemin kat"], correctAnswer: "The ground floor / Zemin kat" },
-          { id: "8.2_smart_2", type: "fill_in", question: "Vertaal: 'Ben bir apartman dairesi kiralıyorum.' -> Ik huur een ________.", correctAnswer: "appartement" },
+          { id: "8.2_smart_2", type: "fill_in", question: "Vertaal (Translate): 'I rent an apartment.' -> Ik huur een ________.", correctAnswer: "appartement" },
           ...generateSmartQuestions(8, "Woordenlijst", 6, chapter8Vocab)
         ]
       }
@@ -170,42 +210,73 @@ export const chapter8Sections = [
   {
     id: "8.6",
     chapter: 8,
-    title: "8.6 Negatie: Geen vs Niet (Olumsuzluk)",
-    theory: (
+    title: "8.6 Negatie: Geen vs Niet (Olumsuzluk / Negation)",
+    theory: (lang) => (
       <>
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #ef4444', marginBottom: '20px' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#f87171' }}>🚫 Geen vs Niet (Hangisi Ne Zaman Kullanılır?)</h3>
-          <p className="text-sm text-slate-300">Hollandacada olumsuzluk yapmak (İngilizcedeki 'not' veya 'no' karşılığı) öğrencilerin en çok hata yaptığı konudur. Kurallar çok nettir:</p>
-          
-          <h4 className="font-bold text-white mt-4 border-b border-rose-500/30 pb-1">1. GEEN (Sadece Belirsiz İsimlerle Kullanılır)</h4>
-          <p className="text-sm text-slate-300 mt-2"><strong>Geen</strong> kelimesi İngilizcedeki "no" veya "not a/an" anlamına gelir. Sadece önünde artikel (de/het) veya iyelik eki (mijn/jouw) OLMAYAN, genel geçer isimleri olumsuz yaparken kullanılır. İsmin hemen <strong>önüne</strong> gelir.</p>
-          <ul className="text-sm text-slate-200 mt-2 list-disc pl-5">
-            <li>Ik heb <strong>een</strong> auto. ➔ Ik heb <strong>geen</strong> auto. (Ik heb niet een auto DENMEZ!)</li>
-            <li>Zij drinkt koffie. ➔ Zij drinkt <strong>geen</strong> koffie. (Koffie belirsiz bir isimdir).</li>
-            <li>Wij hebben kinderen. ➔ Wij hebben <strong>geen</strong> kinderen.</li>
-          </ul>
+        {lang === 'tr' ? (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #ef4444', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#f87171' }}>🚫 Geen vs Niet (Hangisi Ne Zaman Kullanılır?)</h3>
+            <p className="text-sm text-slate-300">Hollandacada olumsuzluk yapmak (İngilizcedeki 'not' veya 'no' karşılığı) öğrencilerin en çok hata yaptığı konudur. Kurallar çok nettir:</p>
+            
+            <h4 className="font-bold text-white mt-4 border-b border-rose-500/30 pb-1">1. GEEN (Sadece Belirsiz İsimlerle Kullanılır)</h4>
+            <p className="text-sm text-slate-300 mt-2"><strong>Geen</strong> kelimesi İngilizcedeki "no" veya "not a/an" anlamına gelir. Sadece önünde artikel (de/het) veya iyelik eki (mijn/jouw) OLMAYAN, genel geçer isimleri olumsuz yaparken kullanılır. İsmin hemen <strong>önüne</strong> gelir.</p>
+            <ul className="text-sm text-slate-200 mt-2 list-disc pl-5">
+              <li>Ik heb <strong>een</strong> auto. ➔ Ik heb <strong>geen</strong> auto. (Ik heb niet een auto DENMEZ!)</li>
+              <li>Zij drinkt koffie. ➔ Zij drinkt <strong>geen</strong> koffie. (Koffie belirsiz bir isimdir).</li>
+              <li>Wij hebben kinderen. ➔ Wij hebben <strong>geen</strong> kinderen.</li>
+            </ul>
 
-          <h4 className="font-bold text-white mt-5 border-b border-rose-500/30 pb-1">2. NIET (Geri Kalan Her Şey İçin Kullanılır)</h4>
-          <p className="text-sm text-slate-300 mt-2"><strong>Niet</strong> kelimesi fiilleri, sıfatları, yer zarflarını ve BELİRLİ isimleri (önünde de/het, mijn, jouw, deze, dit olan isimler) olumsuz yapar.</p>
-          <ul className="text-sm text-slate-200 mt-2 list-disc pl-5 space-y-2">
-            <li><strong>Sıfatlarla (Önce gelir):</strong> Ik ben <strong>niet</strong> moe. (Yorgun değilim).</li>
-            <li><strong>Yer Zarflarıyla (Önce gelir):</strong> Ik woon <strong>niet</strong> in Amsterdam. (Amsterdam'da yaşamıyorum).</li>
-            <li><strong>Belirli İsimlerle (Önce gelir):</strong> Dat is <strong>niet</strong> mijn fiets. (Bu benim bisikletim değil. - <em>Geen mijn fiets DENMEZ!</em>) / Dat is <strong>niet</strong> de auto.</li>
-            <li><strong>Basit Fiillerle (Sonra gelir):</strong> Ik werk <strong>niet</strong>. (Çalışmıyorum). / Ik slaap <strong>niet</strong>.</li>
-            <li><strong>Zaman Zarflarıyla (Fiilden sonra, zamandan önce):</strong> Ik werk <strong>niet</strong> vandaag.</li>
-          </ul>
+            <h4 className="font-bold text-white mt-5 border-b border-rose-500/30 pb-1">2. NIET (Geri Kalan Her Şey İçin Kullanılır)</h4>
+            <p className="text-sm text-slate-300 mt-2"><strong>Niet</strong> kelimesi fiilleri, sıfatları, yer zarflarını ve BELİRLİ isimleri (önünde de/het, mijn, jouw, deze, dit olan isimler) olumsuz yapar.</p>
+            <ul className="text-sm text-slate-200 mt-2 list-disc pl-5 space-y-2">
+              <li><strong>Sıfatlarla (Önce gelir):</strong> Ik ben <strong>niet</strong> moe. (Yorgun değilim).</li>
+              <li><strong>Yer Zarflarıyla (Önce gelir):</strong> Ik woon <strong>niet</strong> in Amsterdam. (Amsterdam'da yaşamıyorum).</li>
+              <li><strong>Belirli İsimlerle (Önce gelir):</strong> Dat is <strong>niet</strong> mijn fiets. (Bu benim bisikletim değil. - <em>Geen mijn fiets DENMEZ!</em>) / Dat is <strong>niet</strong> de auto.</li>
+              <li><strong>Basit Fiillerle (Sonra gelir):</strong> Ik werk <strong>niet</strong>. (Çalışmıyorum). / Ik slaap <strong>niet</strong>.</li>
+              <li><strong>Zaman Zarflarıyla (Fiilden sonra, zamandan önce):</strong> Ik werk <strong>niet</strong> vandaag.</li>
+            </ul>
 
-          <div className="bg-rose-900/40 p-3 rounded-xl mt-4 border border-rose-500/40 text-center text-sm font-bold text-rose-200">
-            Kıyaslayın: <br/>
-            "Ik heb GEEN fiets." (Bisikletim yok - Genel) <br/>
-            "Dat is NIET mijn fiets." (O benim bisikletim değil - Belirli)
+            <div className="bg-rose-900/40 p-3 rounded-xl mt-4 border border-rose-500/40 text-center text-sm font-bold text-rose-200">
+              Kıyaslayın: <br/>
+              "Ik heb GEEN fiets." (Bisikletim yok - Genel) <br/>
+              "Dat is NIET mijn fiets." (O benim bisikletim değil - Belirli)
+            </div>
           </div>
-        </div>
+        ) : (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #ef4444', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#f87171' }}>🚫 Geen vs Niet (Which one to use when?)</h3>
+            <p className="text-sm text-slate-300">Making negations in Dutch (equivalent to 'not' or 'no' in English) is where students make the most mistakes. The rules are very clear:</p>
+            
+            <h4 className="font-bold text-white mt-4 border-b border-rose-500/30 pb-1">1. GEEN (Only used with Indefinite Nouns)</h4>
+            <p className="text-sm text-slate-300 mt-2">The word <strong>geen</strong> means "no" or "not a/an" in English. It is ONLY used to negate generic nouns that DO NOT have a definite article (de/het) or a possessive pronoun (mijn/jouw) in front of them. It comes directly <strong>before</strong> the noun.</p>
+            <ul className="text-sm text-slate-200 mt-2 list-disc pl-5">
+              <li>Ik heb <strong>een</strong> auto. ➔ Ik heb <strong>geen</strong> auto. (You NEVER say "Ik heb niet een auto"!)</li>
+              <li>Zij drinkt koffie. ➔ Zij drinkt <strong>geen</strong> koffie. (Coffee is an indefinite noun).</li>
+              <li>Wij hebben kinderen. ➔ Wij hebben <strong>geen</strong> kinderen.</li>
+            </ul>
+
+            <h4 className="font-bold text-white mt-5 border-b border-rose-500/30 pb-1">2. NIET (Used for everything else)</h4>
+            <p className="text-sm text-slate-300 mt-2">The word <strong>niet</strong> negates verbs, adjectives, adverbs of place, and DEFINITE nouns (nouns preceded by de/het, mijn, jouw, deze, dit).</p>
+            <ul className="text-sm text-slate-200 mt-2 list-disc pl-5 space-y-2">
+              <li><strong>With Adjectives (Comes before):</strong> Ik ben <strong>niet</strong> moe. (I am not tired).</li>
+              <li><strong>With Adverbs of Place (Comes before):</strong> Ik woon <strong>niet</strong> in Amsterdam. (I do not live in Amsterdam).</li>
+              <li><strong>With Definite Nouns (Comes before):</strong> Dat is <strong>niet</strong> mijn fiets. (That is not my bike. - <em>You CANNOT say "Geen mijn fiets"!</em>) / Dat is <strong>niet</strong> de auto.</li>
+              <li><strong>With Simple Verbs (Comes after):</strong> Ik werk <strong>niet</strong>. (I am not working). / Ik slaap <strong>niet</strong>.</li>
+              <li><strong>With Adverbs of Time (After the verb, before the time):</strong> Ik werk <strong>niet</strong> vandaag.</li>
+            </ul>
+
+            <div className="bg-rose-900/40 p-3 rounded-xl mt-4 border border-rose-500/40 text-center text-sm font-bold text-rose-200">
+              Compare: <br/>
+              "Ik heb GEEN fiets." (I have no bike - Generic) <br/>
+              "Dat is NIET mijn fiets." (That is not my bike - Definite)
+            </div>
+          </div>
+        )}
       </>
     ),
     exerciseGroups: [
       {
-        instruction: "Opdracht 3: Maak de zin negatief. B leest de ontkennende zin.",
+        instruction: "Opdracht 3: Maak de zin negatief. B leest de ontkennende zin. (Make the sentence negative.)",
         isExtra: false,
         questions: [
           { id: "8.6_opd3_1", type: "fill_in", question: "Ik bestel een toetje. -> Ik bestel ________ toetje.", correctAnswer: "geen" },
@@ -221,7 +292,7 @@ export const chapter8Sections = [
         ]
       },
       {
-        instruction: "Opdracht 4: Geef een reactie op de vragen. Gebruik niet en geen.",
+        instruction: "Opdracht 4: Geef een reactie op de vragen. Gebruik niet en geen. (Respond using niet and geen.)",
         isExtra: false,
         questions: [
           { id: "8.6_opd4_1", type: "fill_in", question: "Is de flat ver van het centrum? -> Nee, de flat is ________ ver van het centrum.", correctAnswer: "niet" },
@@ -234,11 +305,11 @@ export const chapter8Sections = [
         ]
       },
       {
-        instruction: "Slimme Oefeningen (Pedagogisch): NIET of GEEN?",
+        instruction: "Slimme Oefeningen (Smart Exercises): NIET of GEEN?",
         isExtra: true,
         questions: [
-          { id: "8.6_smart_1", type: "multiple_choice", question: "Vertaal: 'Bu benim köpeğim değil.'", options: ["Dat is geen mijn hond.", "Dat is niet mijn hond.", "Dat is mijn hond niet."], correctAnswer: "Dat is niet mijn hond." },
-          { id: "8.6_smart_2", type: "multiple_choice", question: "Waarom gebruik je GEEN in de zin: 'Ik heb geen tijd'?", options: ["Omdat tijd een werkwoord is.", "Omdat tijd een substantief (isim) is zonder artikel of bezittelijk voornaamwoord.", "Omdat het in de toekomst is."], correctAnswer: "Omdat tijd een substantief (isim) is zonder artikel of bezittelijk voornaamwoord." }
+          { id: "8.6_smart_1", type: "multiple_choice", question: "Vertaal (Translate): 'Bu benim köpeğim değil. / This is not my dog.'", options: ["Dat is geen mijn hond.", "Dat is niet mijn hond.", "Dat is mijn hond niet."], correctAnswer: "Dat is niet mijn hond." },
+          { id: "8.6_smart_2", type: "multiple_choice", question: "Waarom gebruik je GEEN in de zin: 'Ik heb geen tijd'?", options: ["Omdat tijd een werkwoord is.", "Omdat tijd een substantief (isim/noun) is zonder artikel of bezittelijk voornaamwoord.", "Omdat het in de toekomst is."], correctAnswer: "Omdat tijd een substantief (isim/noun) is zonder artikel of bezittelijk voornaamwoord." }
         ]
       }
     ]
@@ -246,39 +317,67 @@ export const chapter8Sections = [
   {
     id: "8.7",
     chapter: 8,
-    title: "8.7 Preposities (Yer Bildiren Edatlar)",
-    theory: (
+    title: "8.7 Preposities (Yer Bildiren Edatlar / Prepositions of Place)",
+    theory: (lang) => (
       <>
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>📍 Preposities (Edatlar)</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-200">
-            <div>
-              <ul className="space-y-1">
-                <li><strong>in:</strong> içinde <em>(in de slaapkamer)</em></li>
-                <li><strong>op:</strong> üstünde <em>(op het balkon)</em></li>
-                <li><strong>aan:</strong> asılı/bitişik <em>(aan de muur)</em></li>
-                <li><strong>naast:</strong> yanında <em>(naast het huis)</em></li>
-                <li><strong>voor:</strong> önünde <em>(voor de lamp)</em></li>
-                <li><strong>achter:</strong> arkasında <em>(achter het huis)</em></li>
-              </ul>
-            </div>
-            <div>
-              <ul className="space-y-1">
-                <li><strong>boven:</strong> yukarısında <em>(boven de keuken)</em></li>
-                <li><strong>onder:</strong> altında <em>(onder het balkon)</em></li>
-                <li><strong>bij:</strong> yanında/civarında <em>(bij de tafel)</em></li>
-                <li><strong>tussen:</strong> arasında <em>(tussen keuken en zolder)</em></li>
-                <li><strong>tegenover:</strong> karşısında <em>(tegenover de deur)</em></li>
-                <li><strong>tegen:</strong> yaslanmış/karşı <em>(tegen de muur)</em></li>
-              </ul>
+        {lang === 'tr' ? (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>📍 Preposities (Edatlar)</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-200">
+              <div>
+                <ul className="space-y-1">
+                  <li><strong>in:</strong> içinde <em>(in de slaapkamer)</em></li>
+                  <li><strong>op:</strong> üstünde <em>(op het balkon)</em></li>
+                  <li><strong>aan:</strong> asılı/bitişik <em>(aan de muur)</em></li>
+                  <li><strong>naast:</strong> yanında <em>(naast het huis)</em></li>
+                  <li><strong>voor:</strong> önünde <em>(voor de lamp)</em></li>
+                  <li><strong>achter:</strong> arkasında <em>(achter het huis)</em></li>
+                </ul>
+              </div>
+              <div>
+                <ul className="space-y-1">
+                  <li><strong>boven:</strong> yukarısında <em>(boven de keuken)</em></li>
+                  <li><strong>onder:</strong> altında <em>(onder het balkon)</em></li>
+                  <li><strong>bij:</strong> yanında/civarında <em>(bij de tafel)</em></li>
+                  <li><strong>tussen:</strong> arasında <em>(tussen keuken en zolder)</em></li>
+                  <li><strong>tegenover:</strong> karşısında <em>(tegenover de deur)</em></li>
+                  <li><strong>tegen:</strong> yaslanmış/karşı <em>(tegen de muur)</em></li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
+        ) : (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>📍 Preposities (Prepositions of Place)</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-200">
+              <div>
+                <ul className="space-y-1">
+                  <li><strong>in:</strong> inside / in <em>(in de slaapkamer)</em></li>
+                  <li><strong>op:</strong> on top of / on <em>(op het balkon)</em></li>
+                  <li><strong>aan:</strong> attached to / on <em>(aan de muur)</em></li>
+                  <li><strong>naast:</strong> next to <em>(naast het huis)</em></li>
+                  <li><strong>voor:</strong> in front of <em>(voor de lamp)</em></li>
+                  <li><strong>achter:</strong> behind <em>(achter het huis)</em></li>
+                </ul>
+              </div>
+              <div>
+                <ul className="space-y-1">
+                  <li><strong>boven:</strong> above <em>(boven de keuken)</em></li>
+                  <li><strong>onder:</strong> under <em>(onder het balkon)</em></li>
+                  <li><strong>bij:</strong> near / at <em>(bij de tafel)</em></li>
+                  <li><strong>tussen:</strong> between <em>(tussen keuken en zolder)</em></li>
+                  <li><strong>tegenover:</strong> opposite <em>(tegenover de deur)</em></li>
+                  <li><strong>tegen:</strong> against <em>(tegen de muur)</em></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        )}
       </>
     ),
     exerciseGroups: [
       {
-        instruction: "Opdracht 7: Vul de prepositie in (in de dialoog van de makelaar).",
+        instruction: "Opdracht 7: Vul de prepositie in (in de dialoog van de makelaar). (Fill in the preposition)",
         isExtra: false,
         questions: [
           { id: "8.7_opd7_1", type: "fill_in", question: "Makelaar: Dus u zoekt woonruimte ________ de stad.", correctAnswer: "in" },
@@ -287,18 +386,18 @@ export const chapter8Sections = [
           { id: "8.7_opd7_4", type: "fill_in", question: "Makelaar: Ik zie op uw formulier de maximale huurprijs. Ik zal u een paar woningen laten zien ________ de computer.", correctAnswer: "op" },
           { id: "8.7_opd7_5", type: "fill_in", question: "Makelaar: Dit is een leuke bovenwoning ________ de derde verdieping.", correctAnswer: "op" },
           { id: "8.7_opd7_6", type: "fill_in", question: "Makelaar: Niet ver van het centrum. Het is dicht ________ het park.", correctAnswer: "bij" },
-          { id: "8.7_opd7_7", type: "fill_in", question: "Makelaar: Een balkon ________ het westen. (Batıya bakan)", correctAnswer: "op" },
+          { id: "8.7_opd7_7", type: "fill_in", question: "Makelaar: Een balkon ________ het westen. (Batıya bakan / West-facing)", correctAnswer: "op" },
           { id: "8.7_opd7_8", type: "fill_in", question: "Makelaar: ________ de gang is de wc.", correctAnswer: "In" },
           { id: "8.7_opd7_9", type: "fill_in", question: "Makelaar: Een eenvoudige badkamer, ________ alleen een douche.", correctAnswer: "met" },
           { id: "8.7_opd7_10", type: "fill_in", question: "Patricia: Dat lijkt me fantastisch! Ik wil dit even ________ mijn vriend overleggen.", correctAnswer: "met" }
         ]
       },
       {
-        instruction: "Slimme Oefeningen (Pedagogisch): Preposities",
+        instruction: "Slimme Oefeningen (Smart Exercises): Preposities",
         isExtra: true,
         questions: [
-          { id: "8.7_smart_1", type: "multiple_choice", question: "De foto hangt ________ de muur (duvar).", options: ["op", "in", "aan"], correctAnswer: "aan" },
-          { id: "8.7_smart_2", type: "multiple_choice", question: "De wasmachine staat ________ de deur (kapının karşısında).", options: ["naast", "tegenover", "tussen"], correctAnswer: "tegenover" }
+          { id: "8.7_smart_1", type: "multiple_choice", question: "De foto hangt ________ de muur (duvar / wall).", options: ["op", "in", "aan"], correctAnswer: "aan" },
+          { id: "8.7_smart_2", type: "multiple_choice", question: "De wasmachine staat ________ de deur (kapının karşısında / opposite the door).", options: ["naast", "tegenover", "tussen"], correctAnswer: "tegenover" }
         ]
       }
     ]
@@ -307,27 +406,48 @@ export const chapter8Sections = [
     id: "8.8",
     chapter: 8,
     title: "8.8 Tekst & 8.9 Uitspraak",
-    theory: (
+    theory: (lang) => (
       <>
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #6366f1', marginBottom: '20px' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#93c5fd' }}>📄 Tekst: Hart van mijn huis</h3>
-          <p className="text-sm text-slate-300">11 yaşındaki Anne Koning, evdeki favori alanını (de wc) anlatıyor. Eskiden tuvaletleri mavi, beyaz ve gri renkliymiş ve çok çirkinmiş (lelijk). Şimdi ise kırmızı ve beyaz noktalıymış (rood met witte stippen). Anne kırmızıyı çok sevse de babası ve kardeşi sevmiyormuş. Tuvalet rulo tutucusu (toiletrolhouder) ise İspanyol bir kadını tasvir ediyormuş.</p>
-        </div>
+        {lang === 'tr' ? (
+          <>
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #6366f1', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#93c5fd' }}>📄 Tekst: Hart van mijn huis</h3>
+              <p className="text-sm text-slate-300">11 yaşındaki Anne Koning, evdeki favori alanını (de wc) anlatıyor. Eskiden tuvaletleri mavi, beyaz ve gri renkliymiş ve çok çirkinmiş (lelijk). Şimdi ise kırmızı ve beyaz noktalıymış (rood met witte stippen). Anne kırmızıyı çok sevse de babası ve kardeşi sevmiyormuş. Tuvalet rulo tutucusu (toiletrolhouder) ise İspanyol bir kadını tasvir ediyormuş.</p>
+            </div>
 
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f43f5e', marginBottom: '20px' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#fb7185' }}>🗣️ Cultuur: Huizen in Nederland</h3>
-          <p className="text-sm text-slate-300">Yabancılar Hollanda evleri hakkında ne düşünüyor?</p>
-          <ul className="text-sm text-slate-200 mt-2 list-disc pl-5">
-            <li><strong>Julia (İrlanda):</strong> Evler çok küçük, merdivenler çok dik (steile trappen).</li>
-            <li><strong>Hannah (Çekya):</strong> Pencereler çok büyük, içerisi çok aydınlık ama mahremiyet (privacy) yok. İnsanlar akşamları içeri bakabiliyor.</li>
-            <li><strong>Margaret (ABD):</strong> Tuvaletler çok küçük (piepklein).</li>
-          </ul>
-        </div>
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f43f5e', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#fb7185' }}>🗣️ Cultuur: Huizen in Nederland</h3>
+              <p className="text-sm text-slate-300">Yabancılar Hollanda evleri hakkında ne düşünüyor?</p>
+              <ul className="text-sm text-slate-200 mt-2 list-disc pl-5">
+                <li><strong>Julia (İrlanda):</strong> Evler çok küçük, merdivenler çok dik (steile trappen).</li>
+                <li><strong>Hannah (Çekya):</strong> Pencereler çok büyük, içerisi çok aydınlık ama mahremiyet (privacy) yok. İnsanlar akşamları içeri bakabiliyor.</li>
+                <li><strong>Margaret (ABD):</strong> Tuvaletler çok küçük (piepklein).</li>
+              </ul>
+            </div>
+          </>
+        ) : (
+          <>
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #6366f1', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#93c5fd' }}>📄 Text: Hart van mijn huis (Heart of my house)</h3>
+              <p className="text-sm text-slate-300">11-year-old Anne Koning describes her favorite space in the house (the toilet). Previously, the toilets were blue, white, and gray and very ugly (lelijk). Now it is red with white polka dots (rood met witte stippen). Although Anne loves red very much, her father and brother do not. The toilet roll holder (toiletrolhouder) depicts a Spanish woman.</p>
+            </div>
+
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f43f5e', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#fb7185' }}>🗣️ Cultuur: Huizen in Nederland</h3>
+              <p className="text-sm text-slate-300">What do foreigners think about Dutch houses?</p>
+              <ul className="text-sm text-slate-200 mt-2 list-disc pl-5">
+                <li><strong>Julia (Ireland):</strong> Houses are too small, stairs are too steep (steile trappen).</li>
+                <li><strong>Hannah (Czech Republic):</strong> The windows are very big, it is very bright inside but there is no privacy. People can look inside in the evenings.</li>
+                <li><strong>Margaret (USA):</strong> The toilets are tiny (piepklein).</li>
+              </ul>
+            </div>
+          </>
+        )}
       </>
     ),
     exerciseGroups: [
       {
-        instruction: "Opdracht 11: Begrip over de tekst 'Hart van mijn huis'.",
+        instruction: "Opdracht 11: Begrip over de tekst 'Hart van mijn huis'. (Reading comprehension)",
         isExtra: false,
         questions: [
           { id: "8.8_opd11_1", type: "multiple_choice", question: "Hoe ziet de wc er nu uit?", options: ["Blauw, wit en grijs", "Rood met witte stippen", "Helemaal zwart"], correctAnswer: "Rood met witte stippen" },
@@ -335,7 +455,7 @@ export const chapter8Sections = [
         ]
       },
       {
-        instruction: "Cultuur Test: Wat vinden buitenlanders van de huizen in Nederland?",
+        instruction: "Cultuur Test: Wat vinden buitenlanders van de huizen in Nederland? (What do foreigners think about Dutch houses?)",
         isExtra: true,
         questions: [
           { id: "8.9_cult_1", type: "multiple_choice", question: "Wat is een typisch kenmerk van Hollandse huizen volgens buitenlanders?", options: ["De trappen zijn erg makkelijk.", "Grote ramen met veel licht, maar geen privacy 's avonds.", "De wc's zijn erg groot."], correctAnswer: "Grote ramen met veel licht, maar geen privacy 's avonds." }
@@ -343,98 +463,186 @@ export const chapter8Sections = [
       }
     ]
   },
-{
+  {
     id: "On-Class-8",
     chapter: 8,
     title: "Extra Oefeningen (On-Class)",
-    theory: (
+    theory: (lang) => (
       <>
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #3b82f6', marginBottom: '20px' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#60a5fa' }}>🚫 Ontkenning (Olumsuzluk): GEEN vs. NIET</h3>
-          <p className="text-sm text-slate-300 mb-2">Hollandacada İngilizcedeki "not" kelimesinin karşılığı olarak iki farklı kelime kullanılır: <strong>niet</strong> ve <strong>geen</strong>.</p>
-        </div>
+        {lang === 'tr' ? (
+          <>
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #3b82f6', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#60a5fa' }}>🚫 Ontkenning (Olumsuzluk): GEEN vs. NIET</h3>
+              <p className="text-sm text-slate-300 mb-2">Hollandacada İngilizcedeki "not" kelimesinin karşılığı olarak iki farklı kelime kullanılır: <strong>niet</strong> ve <strong>geen</strong>.</p>
+            </div>
 
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>❌ GEEN (No / Not a / Not any)</h3>
-          <p className="text-sm text-slate-300 mb-3"><strong>Geen</strong> yalnızca <strong>isimleri (nouns)</strong> olumsuz yapmak için kullanılır. Önünde "een" (bir) olan veya hiçbir artikel almayan (belirsiz) isimlerle kullanılır.</p>
-          
-          <div className="bg-purple-900/30 p-4 rounded-xl border border-purple-500/30">
-            <h4 className="font-bold text-purple-300 text-sm mb-2">Structure: Subject + Verb + Geen + Noun</h4>
-            <ul className="text-sm text-slate-200 list-disc pl-5 space-y-2">
-              <li>Ik heb <strong>geen</strong> auto. (I don't have a car.)</li>
-              <li>Zij drinkt <strong>geen</strong> koffie. (She doesn't drink coffee.)</li>
-              <li>Wij hebben <strong>geen</strong> kinderen. (We don't have children.)</li>
-              <li>Hij heeft <strong>geen</strong> werk. (He has no work.)</li>
-            </ul>
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>❌ GEEN (No / Not a / Not any)</h3>
+              <p className="text-sm text-slate-300 mb-3"><strong>Geen</strong> yalnızca <strong>isimleri (nouns)</strong> olumsuz yapmak için kullanılır. Önünde "een" (bir) olan veya hiçbir artikel almayan (belirsiz) isimlerle kullanılır.</p>
+              
+              <div className="bg-purple-900/30 p-4 rounded-xl border border-purple-500/30">
+                <h4 className="font-bold text-purple-300 text-sm mb-2">Structure: Subject + Verb + Geen + Noun</h4>
+                <ul className="text-sm text-slate-200 list-disc pl-5 space-y-2">
+                  <li>Ik heb <strong>geen</strong> auto. (I don't have a car.)</li>
+                  <li>Zij drinkt <strong>geen</strong> koffie. (She doesn't drink coffee.)</li>
+                  <li>Wij hebben <strong>geen</strong> kinderen. (We don't have children.)</li>
+                  <li>Hij heeft <strong>geen</strong> werk. (He has no work.)</li>
+                </ul>
 
-            <h4 className="font-bold text-rose-400 text-sm mt-4 mb-1">🚨 Belangrijk (Önemli Kural):</h4>
-            <p className="text-sm text-slate-300">Hollandacada ASLA "geen een" denmez. Sadece "geen" kullanılır.</p>
-            <ul className="text-sm text-slate-200 list-disc pl-5 mt-1">
-              <li className="text-rose-300 line-through">Ik heb geen een auto. (YANLIŞ)</li>
-              <li className="text-emerald-400">Ik heb <strong>geen</strong> auto. (DOĞRU)</li>
-              <li>Ik heb katten. ➔ Ik heb <strong>geen</strong> katten. (I have no cats.)</li>
-            </ul>
-          </div>
-        </div>
+                <h4 className="font-bold text-rose-400 text-sm mt-4 mb-1">🚨 Belangrijk (Önemli Kural):</h4>
+                <p className="text-sm text-slate-300">Hollandacada ASLA "geen een" denmez. Sadece "geen" kullanılır.</p>
+                <ul className="text-sm text-slate-200 list-disc pl-5 mt-1">
+                  <li className="text-rose-300 line-through">Ik heb geen een auto. (YANLIŞ)</li>
+                  <li className="text-emerald-400">Ik heb <strong>geen</strong> auto. (DOĞRU)</li>
+                  <li>Ik heb katten. ➔ Ik heb <strong>geen</strong> katten. (I have no cats.)</li>
+                </ul>
+              </div>
+            </div>
 
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>🙅‍♂️ NIET (Not) & Positioning</h3>
-          <p className="text-sm text-slate-300 mb-3"><strong>Niet</strong>, isimler dışındaki diğer her şeyi (fiilleri, sıfatları, yerleri veya belirli isimleri) olumsuz yapmak için kullanılır. Cümledeki yeri, neyi olumsuz yaptığınıza bağlıdır.</p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <h4 className="font-bold text-emerald-300 text-sm mb-1">1. Met een adjectief (Sıfatlarla)</h4>
-              <p className="text-xs text-slate-400 mb-1">Kural: <strong>niet + adjective</strong> (Sıfattan önce gelir)</p>
-              <ul className="text-sm text-slate-200 list-disc pl-5 mb-3">
-                <li>Ik ben <strong>niet</strong> moe. (I'm not tired.)</li>
-                <li>Het huis is <strong>niet</strong> groot. (The house isn't big.)</li>
-                <li>De film is <strong>niet</strong> interessant.</li>
-              </ul>
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>🙅‍♂️ NIET (Not) & Positioning</h3>
+              <p className="text-sm text-slate-300 mb-3"><strong>Niet</strong>, isimler dışındaki diğer her şeyi (fiilleri, sıfatları, yerleri veya belirli isimleri) olumsuz yapmak için kullanılır. Cümledeki yeri, neyi olumsuz yaptığınıza bağlıdır.</p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <h4 className="font-bold text-emerald-300 text-sm mb-1">1. Met een adjectief (Sıfatlarla)</h4>
+                  <p className="text-xs text-slate-400 mb-1">Kural: <strong>niet + adjective</strong> (Sıfattan önce gelir)</p>
+                  <ul className="text-sm text-slate-200 list-disc pl-5 mb-3">
+                    <li>Ik ben <strong>niet</strong> moe. (I'm not tired.)</li>
+                    <li>Het huis is <strong>niet</strong> groot. (The house isn't big.)</li>
+                    <li>De film is <strong>niet</strong> interessant.</li>
+                  </ul>
 
-              <h4 className="font-bold text-emerald-300 text-sm mb-1">2. Met een plaats (Yer bildiren kelimelerle)</h4>
-              <p className="text-xs text-slate-400 mb-1">Kural: <strong>niet + place</strong> (Yer kelimesinden önce gelir)</p>
-              <ul className="text-sm text-slate-200 list-disc pl-5">
-                <li>Ik woon <strong>niet</strong> in Amsterdam.</li>
-                <li>Hij is <strong>niet</strong> thuis.</li>
-                <li>Zij werkt <strong>niet</strong> in Rotterdam.</li>
+                  <h4 className="font-bold text-emerald-300 text-sm mb-1">2. Met een plaats (Yer bildiren kelimelerle)</h4>
+                  <p className="text-xs text-slate-400 mb-1">Kural: <strong>niet + place</strong> (Yer kelimesinden önce gelir)</p>
+                  <ul className="text-sm text-slate-200 list-disc pl-5">
+                    <li>Ik woon <strong>niet</strong> in Amsterdam.</li>
+                    <li>Hij is <strong>niet</strong> thuis.</li>
+                    <li>Zij werkt <strong>niet</strong> in Rotterdam.</li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h4 className="font-bold text-emerald-300 text-sm mb-1">3. Met een werkwoord (Fiillerle)</h4>
+                  <p className="text-xs text-slate-400 mb-1">Kural: Fiilden sonra (genellikle cümlenin ilerleyen kısmında) gelir.</p>
+                  <ul className="text-sm text-slate-200 list-disc pl-5 mb-3">
+                    <li>Ik weet het <strong>niet</strong>. (I don't know it.)</li>
+                    <li>Ik werk <strong>niet</strong>. (I don't work.)</li>
+                    <li>Ik slaap <strong>niet</strong>.</li>
+                    <li className="mt-1 italic text-slate-400">Ekstra bilgi varsa (Extra information):</li>
+                    <li>Ik werk <strong>niet</strong> vandaag.</li>
+                    <li>Hij komt <strong>niet</strong> morgen.</li>
+                  </ul>
+
+                  <h4 className="font-bold text-emerald-300 text-sm mb-1">4. Met specifieke nouns (Belirli isimlerle)</h4>
+                  <p className="text-xs text-slate-400 mb-1">Kural: İsmin önünde <strong>de, het, mijn, jouw, deze, dit, dat</strong> varsa GEEN değil NIET kullanılır.</p>
+                  <ul className="text-sm text-slate-200 list-disc pl-5">
+                    <li>Dat is <strong>niet</strong> mijn fiets. (That isn't my bike.)</li>
+                    <li>Dat is <strong>niet</strong> de auto.</li>
+                    <li>Dit is <strong>niet</strong> het boek.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f59e0b' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#fbbf24' }}>⚖️ Vergelijken (Karşılaştırma)</h3>
+              <ul className="text-sm text-slate-200 list-disc pl-5 space-y-2">
+                <li>Ik heb <strong>geen</strong> fiets. <span className="text-slate-400 italic">(I don't have a bike. - Belirsiz isim)</span></li>
+                <li>Dat is <strong>niet</strong> mijn fiets. <span className="text-slate-400 italic">(That isn't my bike. - Belirli isim 'mijn')</span></li>
               </ul>
             </div>
-            
-            <div>
-              <h4 className="font-bold text-emerald-300 text-sm mb-1">3. Met een werkwoord (Fiillerle)</h4>
-              <p className="text-xs text-slate-400 mb-1">Kural: Fiilden sonra (genellikle cümlenin ilerleyen kısmında) gelir.</p>
-              <ul className="text-sm text-slate-200 list-disc pl-5 mb-3">
-                <li>Ik weet het <strong>niet</strong>. (I don't know it.)</li>
-                <li>Ik werk <strong>niet</strong>. (I don't work.)</li>
-                <li>Ik slaap <strong>niet</strong>.</li>
-                <li className="mt-1 italic text-slate-400">Ekstra bilgi varsa (Extra information):</li>
-                <li>Ik werk <strong>niet</strong> vandaag.</li>
-                <li>Hij komt <strong>niet</strong> morgen.</li>
-              </ul>
+          </>
+        ) : (
+          <>
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #3b82f6', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#60a5fa' }}>🚫 Ontkenning (Negation): GEEN vs. NIET</h3>
+              <p className="text-sm text-slate-300 mb-2">In Dutch, two different words are used for the English word "not/no": <strong>niet</strong> and <strong>geen</strong>.</p>
+            </div>
 
-              <h4 className="font-bold text-emerald-300 text-sm mb-1">4. Met specifieke nouns (Belirli isimlerle)</h4>
-              <p className="text-xs text-slate-400 mb-1">Kural: İsmin önünde <strong>de, het, mijn, jouw, deze, dit, dat</strong> varsa GEEN değil NIET kullanılır.</p>
-              <ul className="text-sm text-slate-200 list-disc pl-5">
-                <li>Dat is <strong>niet</strong> mijn fiets. (That isn't my bike.)</li>
-                <li>Dat is <strong>niet</strong> de auto.</li>
-                <li>Dit is <strong>niet</strong> het boek.</li>
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>❌ GEEN (No / Not a / Not any)</h3>
+              <p className="text-sm text-slate-300 mb-3"><strong>Geen</strong> is ONLY used to negate <strong>nouns</strong>. It is used with generic nouns that have "een" (a/an) in front of them or no article at all (indefinite).</p>
+              
+              <div className="bg-purple-900/30 p-4 rounded-xl border border-purple-500/30">
+                <h4 className="font-bold text-purple-300 text-sm mb-2">Structure: Subject + Verb + Geen + Noun</h4>
+                <ul className="text-sm text-slate-200 list-disc pl-5 space-y-2">
+                  <li>Ik heb <strong>geen</strong> auto. (I don't have a car.)</li>
+                  <li>Zij drinkt <strong>geen</strong> koffie. (She doesn't drink coffee.)</li>
+                  <li>Wij hebben <strong>geen</strong> kinderen. (We don't have children.)</li>
+                  <li>Hij heeft <strong>geen</strong> werk. (He has no work.)</li>
+                </ul>
+
+                <h4 className="font-bold text-rose-400 text-sm mt-4 mb-1">🚨 Belangrijk (Important Rule):</h4>
+                <p className="text-sm text-slate-300">You NEVER say "geen een" in Dutch. Just use "geen".</p>
+                <ul className="text-sm text-slate-200 list-disc pl-5 mt-1">
+                  <li className="text-rose-300 line-through">Ik heb geen een auto. (INCORRECT)</li>
+                  <li className="text-emerald-400">Ik heb <strong>geen</strong> auto. (CORRECT)</li>
+                  <li>Ik heb katten. ➔ Ik heb <strong>geen</strong> katten. (I have no cats.)</li>
+                </ul>
+              </div>
+            </div>
+
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>🙅‍♂️ NIET (Not) & Positioning</h3>
+              <p className="text-sm text-slate-300 mb-3"><strong>Niet</strong> is used to negate everything else EXCEPT indefinite nouns (so it negates verbs, adjectives, places, or definite nouns). Its position in the sentence depends on what you are negating.</p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <h4 className="font-bold text-emerald-300 text-sm mb-1">1. Met een adjectief (With adjectives)</h4>
+                  <p className="text-xs text-slate-400 mb-1">Rule: <strong>niet + adjective</strong> (Comes before the adjective)</p>
+                  <ul className="text-sm text-slate-200 list-disc pl-5 mb-3">
+                    <li>Ik ben <strong>niet</strong> moe. (I'm not tired.)</li>
+                    <li>Het huis is <strong>niet</strong> groot. (The house isn't big.)</li>
+                    <li>De film is <strong>niet</strong> interessant.</li>
+                  </ul>
+
+                  <h4 className="font-bold text-emerald-300 text-sm mb-1">2. Met een plaats (With places)</h4>
+                  <p className="text-xs text-slate-400 mb-1">Rule: <strong>niet + place</strong> (Comes before the place)</p>
+                  <ul className="text-sm text-slate-200 list-disc pl-5">
+                    <li>Ik woon <strong>niet</strong> in Amsterdam.</li>
+                    <li>Hij is <strong>niet</strong> thuis.</li>
+                    <li>Zij werkt <strong>niet</strong> in Rotterdam.</li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h4 className="font-bold text-emerald-300 text-sm mb-1">3. Met een werkwoord (With verbs)</h4>
+                  <p className="text-xs text-slate-400 mb-1">Rule: Comes after the verb (usually later in the sentence).</p>
+                  <ul className="text-sm text-slate-200 list-disc pl-5 mb-3">
+                    <li>Ik weet het <strong>niet</strong>. (I don't know it.)</li>
+                    <li>Ik werk <strong>niet</strong>. (I don't work.)</li>
+                    <li>Ik slaap <strong>niet</strong>.</li>
+                    <li className="mt-1 italic text-slate-400">If there is extra information:</li>
+                    <li>Ik werk <strong>niet</strong> vandaag.</li>
+                    <li>Hij komt <strong>niet</strong> morgen.</li>
+                  </ul>
+
+                  <h4 className="font-bold text-emerald-300 text-sm mb-1">4. Met specifieke nouns (With definite nouns)</h4>
+                  <p className="text-xs text-slate-400 mb-1">Rule: If there is <strong>de, het, mijn, jouw, deze, dit, dat</strong> in front of the noun, you use NIET, not GEEN.</p>
+                  <ul className="text-sm text-slate-200 list-disc pl-5">
+                    <li>Dat is <strong>niet</strong> mijn fiets. (That isn't my bike.)</li>
+                    <li>Dat is <strong>niet</strong> de auto.</li>
+                    <li>Dit is <strong>niet</strong> het boek.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f59e0b' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#fbbf24' }}>⚖️ Vergelijken (Comparison)</h3>
+              <ul className="text-sm text-slate-200 list-disc pl-5 space-y-2">
+                <li>Ik heb <strong>geen</strong> fiets. <span className="text-slate-400 italic">(I don't have a bike. - Indefinite noun)</span></li>
+                <li>Dat is <strong>niet</strong> mijn fiets. <span className="text-slate-400 italic">(That isn't my bike. - Definite noun 'mijn')</span></li>
               </ul>
             </div>
-          </div>
-        </div>
-
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f59e0b' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#fbbf24' }}>⚖️ Vergelijken (Karşılaştırma)</h3>
-          <ul className="text-sm text-slate-200 list-disc pl-5 space-y-2">
-            <li>Ik heb <strong>geen</strong> fiets. <span className="text-slate-400 italic">(I don't have a bike. - Belirsiz isim)</span></li>
-            <li>Dat is <strong>niet</strong> mijn fiets. <span className="text-slate-400 italic">(That isn't my bike. - Belirli isim 'mijn')</span></li>
-          </ul>
-        </div>
+          </>
+        )}
       </>
     ),
     exerciseGroups: [
       {
-        instruction: "On-Class Oefening 1: Geen of Niet?",
+        instruction: "On-Class Oefening 1: Geen of Niet? (Geen or Niet?)",
         isExtra: false,
         questions: [
           { id: "8_onclass_1_1", type: "multiple_choice", question: "Ik heb ________ auto.", options: ["geen", "niet"], correctAnswer: "geen" },
@@ -445,7 +653,7 @@ export const chapter8Sections = [
         ]
       },
       {
-        instruction: "On-Class Oefening 2: Zinnen Negatief Maken met GEEN",
+        instruction: "On-Class Oefening 2: Zinnen Negatief Maken met GEEN (Making Sentences Negative with GEEN)",
         isExtra: false,
         questions: [
           { id: "8_onclass_2_1", type: "multiple_choice", question: "Maak de zin negatief: 'Ik heb een fiets.'", options: ["Ik heb niet een fiets.", "Ik heb geen een fiets.", "Ik heb geen fiets."], correctAnswer: "Ik heb geen fiets." },
@@ -455,17 +663,17 @@ export const chapter8Sections = [
         ]
       },
       {
-        instruction: "On-Class Oefening 3: De positie van NIET",
+        instruction: "On-Class Oefening 3: De positie van NIET (Position of NIET)",
         isExtra: true,
         questions: [
           { id: "8_onclass_3_1", type: "multiple_choice", question: "Kies de juiste zin (Adjectief):", options: ["Het huis is groot niet.", "Het huis is niet groot.", "Niet het huis is groot."], correctAnswer: "Het huis is niet groot." },
           { id: "8_onclass_3_2", type: "multiple_choice", question: "Kies de juiste zin (Plaats/Location):", options: ["Ik woon niet in Amsterdam.", "Ik woon in Amsterdam niet.", "Niet ik woon in Amsterdam."], correctAnswer: "Ik woon niet in Amsterdam." },
-          { id: "8_onclass_3_3", type: "multiple_choice", question: "Kies de juiste zin (Werkwoord):", options: ["Ik niet weet het.", "Ik weet het niet.", "Niet ik weet het."], correctAnswer: "Ik weet het niet." },
+          { id: "8_onclass_3_3", type: "multiple_choice", question: "Kies de juiste zin (Werkwoord/Verb):", options: ["Ik niet weet het.", "Ik weet het niet.", "Niet ik weet het."], correctAnswer: "Ik weet het niet." },
           { id: "8_onclass_3_4", type: "multiple_choice", question: "Kies de juiste zin met extra informatie:", options: ["Hij komt morgen niet.", "Hij komt niet morgen.", "Hij niet komt morgen."], correctAnswer: "Hij komt niet morgen." }
         ]
       },
       {
-        instruction: "On-Class Oefening 4: Specifieke Nouns (Belirli İsimler)",
+        instruction: "On-Class Oefening 4: Specifieke Nouns (Belirli İsimler / Definite Nouns)",
         isExtra: true,
         questions: [
           { id: "8_onclass_4_1", type: "multiple_choice", question: "Dat is ________ het boek.", options: ["geen", "niet"], correctAnswer: "niet" },

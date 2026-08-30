@@ -1,6 +1,42 @@
+// src/components/ExerciseEngine.js
 import React, { useState, useEffect } from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
+
+const translations = {
+  tr: {
+    chapter: "Bölüm",
+    section: "Sectie",
+    myNote: "Mijn Notitie (Notum):",
+    notePlaceholder: "Notun (max 100 kar.)...",
+    defaultNote: "Önemli Bölüm",
+    bookQuestions: "Kitaptaki Sorular",
+    extraPractice: "Ekstra Pratik",
+    typeAnswer: "Cevabını yaz...",
+    correct: "✔️ Juist! (Doğru)",
+    incorrect: "❌ Onjuist. (Yanlış)",
+    correctAnswerIs: "Doğru cevap (Het goede antwoord is): ",
+    verifyAnswers: "Cevapları Kontrol Et"
+  },
+  en: {
+    chapter: "Chapter",
+    section: "Section",
+    myNote: "Mijn Notitie (My Note):",
+    notePlaceholder: "Your note (max 100 char.)...",
+    defaultNote: "Important Section",
+    bookQuestions: "Book Exercises",
+    extraPractice: "Extra Practice",
+    typeAnswer: "Type your answer...",
+    correct: "✔️ Juist! (Correct)",
+    incorrect: "❌ Onjuist. (Incorrect)",
+    correctAnswerIs: "The correct answer is (Het goede antwoord is): ",
+    verifyAnswers: "Verify Answers"
+  }
+};
 
 export default function ExerciseEngine({ sectionData, chapterNum, favorites, toggleFavorite, completed, toggleCompleted }) {
+  const { lang } = useLanguage();
+  const t = translations[lang] || translations['tr'];
+
   const [subTab, setSubTab] = useState("book");
   const [answers, setAnswers] = useState({});
   const [showResults, setShowResults] = useState(false);
@@ -64,7 +100,7 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
 
   const saveFavorite = (e) => {
     e.stopPropagation();
-    toggleFavorite(sectionData.id, favNote.trim() || "Önemli Bölüm");
+    toggleFavorite(sectionData.id, favNote.trim() || t.defaultNote);
     setShowFavInput(false);
     setFavNote("");
   };
@@ -76,7 +112,7 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
         <div className="flex-1">
           <div className="inline-flex items-center space-x-2 bg-brand-900/30 border border-brand-500/20 text-brand-400 font-bold px-3 py-1 rounded-full text-xs mb-3">
             <i className="fa-solid fa-stethoscope"></i>
-            <span>Hoofdstuk {chapterNum} • Sectie {sectionData.id}</span>
+            <span>Hoofdstuk ({t.chapter}) {chapterNum} • {t.section} {sectionData.id}</span>
           </div>
           
           <div className="flex items-center space-x-3">
@@ -104,7 +140,7 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
                 
                 {isFav && (
                   <div className="absolute left-full ml-3 top-0 hidden group-hover:block w-56 p-3 bg-slate-800 border border-slate-600 text-slate-200 text-xs rounded-xl shadow-2xl z-50">
-                    <div className="font-bold text-amber-400 mb-1 border-b border-slate-600 pb-1">Mijn Notitie:</div>
+                    <div className="font-bold text-amber-400 mb-1 border-b border-slate-600 pb-1">{t.myNote}</div>
                     <p className="break-words leading-relaxed">{favorites[sectionData.id]}</p>
                   </div>
                 )}
@@ -117,7 +153,7 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
                     maxLength={100}
                     value={favNote}
                     onChange={e => setFavNote(e.target.value)}
-                    placeholder="Notun (max 100 kar.)..."
+                    placeholder={t.notePlaceholder}
                     className="bg-slate-900 border border-slate-600 text-slate-200 text-xs rounded-lg px-2.5 py-1.5 w-48 focus:outline-none focus:border-amber-400"
                   />
                   <button onClick={saveFavorite} className="bg-emerald-600 hover:bg-emerald-500 text-white p-1.5 rounded-lg text-xs transition-colors">
@@ -136,7 +172,7 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
               subTab === "book" ? "bg-slate-700 text-brand-300 shadow-sm" : "text-slate-400 hover:text-slate-200 hover:bg-slate-800"
             }`}
           >
-            <i className="fa-solid fa-book-open"></i><span>Kitaptaki Sorular</span>
+            <i className="fa-solid fa-book-open"></i><span>{t.bookQuestions}</span>
           </button>
           <button
             onClick={() => { setSubTab("extra"); setShowResults(false); }}
@@ -144,7 +180,7 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
               subTab === "extra" ? "bg-brand-600 text-white shadow-sm" : "text-slate-400 hover:text-slate-200 hover:bg-slate-800"
             }`}
           >
-            <i className="fa-solid fa-fire text-amber-400"></i><span>Ekstra Pratik</span>
+            <i className="fa-solid fa-fire text-amber-400"></i><span>{t.extraPractice}</span>
           </button>
         </div>
       </div>
@@ -152,7 +188,7 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
       {sectionData.theory && (
         <div className="bg-slate-800 rounded-2xl p-6 shadow-lg border border-slate-700">
           <div className="text-slate-300 leading-relaxed font-medium">
-            {sectionData.theory}
+            {typeof sectionData.theory === 'function' ? sectionData.theory(lang) : sectionData.theory}
           </div>
         </div>
       )}
@@ -202,7 +238,7 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
                       <input 
                         type="text" 
                         disabled={showResults}
-                        placeholder="Typ je antwoord..." 
+                        placeholder={t.typeAnswer} 
                         value={userAns || ''} 
                         onChange={(e) => handleAnswerChange(q.id, e.target.value)}
                         className="p-3 w-full max-w-sm text-sm rounded-xl border border-slate-600 bg-slate-900 text-slate-200 placeholder-slate-500 focus:ring-2 focus:ring-brand-500 outline-none"
@@ -212,8 +248,8 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
 
                   {showResults && (
                     <div className={`p-3 rounded-lg text-xs leading-relaxed ${isCorrect ? "bg-emerald-900/30 text-emerald-300 border border-emerald-800" : "bg-rose-900/30 text-rose-300 border border-rose-800"}`}>
-                      <span className="font-bold">{isCorrect ? "✔️ Juist! (Doğru)" : "❌ Onjuist. (Yanlış)"} </span>
-                      {!isCorrect && <span>Het goede antwoord is: <strong className="text-white">{q.correctAnswer}</strong></span>}
+                      <span className="font-bold">{isCorrect ? t.correct : t.incorrect} </span>
+                      {!isCorrect && <span>{t.correctAnswerIs}<strong className="text-white">{q.correctAnswer}</strong></span>}
                     </div>
                   )}
                 </div>
@@ -225,7 +261,7 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
         {currentGroups.length > 0 && (
           <div className="flex justify-end pt-4 border-t border-slate-700">
             <button onClick={handleVerify} className="px-6 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white text-sm font-bold shadow-lg transition">
-              Verifieer Antwoorden (Kontrol Et)
+              {t.verifyAnswers}
             </button>
           </div>
         )}
