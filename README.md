@@ -41,7 +41,7 @@ Follow these steps to run the project locally on your machine.
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/eckucukoglu/nederlands-app.git
+git clone https://github.com/yourusername/nederlands-app.git
 cd nederlands-app
 ```
 
@@ -82,4 +82,27 @@ src/
 │   ├── chapters/        # Individual chapter data (chapter3.js, chapter4.js...)
 │   ├── globalDictionary.js # Fallback dictionary mappings
 │   └── index.js         # Centralized export for all book sections
-├── firebase.js          # Firebase configuration and auth/db
+├── firebase.js          # Firebase configuration and auth/db helper functions
+├── App.js               # Main application layout and routing
+├── App.css              # Custom CSS and Tailwind directives
+└── index.js             # Entry point
+```
+
+---
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! 
+If you find a typo in the translations, want to add a new chapter, or improve a feature:
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+## 📝 License
+
+This project is open-source. However, the linguistic structures, vocabulary, and core dialogue concepts are based on the *Nederlands in Gang* curriculum. Please respect the copyright of the original authors (Berna de Boer, Margaret van der Kamp, Birgit Lijmbach - Uitgeverij Coutinho) and do not use this software for commercial purposes.
