@@ -76,24 +76,24 @@ export const chapter13Vocab = [
 
 export const chapter13Dialogues = {
   "13.1": [
-    { speaker: "Verteller", text: "De portier van de Evenementenhal in Amsterdam, Bas, bezoekt voor het eerst zijn nieuwe vrienden Paul en Janine.", translation: "Amsterdam'daki Evenementenhal'ın kapıcısı Bas, yeni arkadaşları Paul ve Janine'i ilk kez ziyaret ediyor." },
-    { speaker: "Paul", text: "Hallo Bas, welkom, kom binnen. Kon je het makkelijk vinden?", translation: "Merhaba Bas, hoş geldin, içeri gel. Kolayca bulabildin mi?" },
-    { speaker: "Bas", text: "Ja, het was geen probleem. Het huis naast de kerk, zei je. Dat kon niet missen.", translation: "Evet, hiç sorun olmadı. Kilisenin yanındaki ev, demiştin. Kaçırılamazdı (Gözden kaçacak gibi değildi)." },
-    { speaker: "Paul", text: "Gelukkig. Heb je Maria niet meegenomen?", translation: "Çok şükür. Maria'yı getirmedin mi?" },
-    { speaker: "Bas", text: "Nee, ze moest de auto naar de garage brengen en ze voelde zich niet zo lekker. Jullie moeten de groeten hebben.", translation: "Hayır, arabayı servise götürmesi gerekiyordu ve kendini pek iyi hissetmiyordu. Size selamı var." },
-    { speaker: "Paul", text: "Bedankt, doe haar de groeten terug.", translation: "Teşekkürler, sen de ona selam söyle." },
-    { speaker: "Bas", text: "Dat zal ik doen. Ik ben wel een beetje vroeg.", translation: "Söylerim (Bunu yapacağım). Biraz erken geldim galiba." },
-    { speaker: "Paul", text: "O, je hoeft je niet te verontschuldigen. Leuk dat je er bent. Doe je jas maar gauw uit. Wat een weer, hè?", translation: "Oh, özür dilemene gerek yok. Burada olman ne güzel. Montunu hemen çıkar. Bu ne biçim hava, değil mi?" },
-    { speaker: "Bas", text: "Zeg dat wel! Het is koud en nat. Ik ben al twee weken verkouden. Ik ben toe aan mooi weer.", translation: "Sorma (Haklısın)! Hava soğuk ve ıslak. İki haftadır nezleyim. Güzel bir havaya ihtiyacım var." },
-    { speaker: "Paul", text: "Ja, ik ook. We hebben de verwarming aan en het is juni! Belachelijk hè? Ik geloof het nog niet, maar het schijnt morgen mooi weer te worden.", translation: "Evet, benim de. Haziran ayındayız ve kalorifer açık! Saçma değil mi? Henüz inanamıyorum ama görünüşe göre yarın hava güzel olacakmış." },
-    { speaker: "Janine", text: "Hallo Bas, kom verder.", translation: "Merhaba Bas, buyur geç." },
-    { speaker: "Bas", text: "Hallo Janine. Ah, hier is het lekker warm. Alsjeblieft, ik heb iets voor jullie meegenomen.", translation: "Merhaba Janine. Ah, burası çok güzel sıcakmış. Buyurun, sizin için bir şeyler getirdim." },
-    { speaker: "Janine", text: "O, wat lekker, een doos bonbons, en een mooie bos bloemen. Dank je wel. Paul, wil jij de bloemen in een vaas zetten? Snijd je ze wel ...?", translation: "Oh, ne kadar lezzetli, bir kutu çikolata ve güzel bir buket çiçek. Teşekkür ederim. Paul, çiçekleri vazoya koyar mısın? Onları kesersin değil mi...?" },
-    { speaker: "Paul", text: "Ja, ja, ik zal ze schuin afsnijden.", translation: "Evet, evet, onları çapraz (eğik) keseceğim." },
-    { speaker: "Bas", text: "Wat een mooie kamer! Jullie houden wel van dieren zie ik; een hond, twee, nee drie katten en vissen.", translation: "Ne güzel bir oda! Görüyorum ki hayvanları seviyorsunuz; bir köpek, iki, hayır üç kedi ve balıklar." },
-    { speaker: "Janine", text: "Ja, vind je dat niet leuk?", translation: "Evet, bunu sevmiyor musun?" },
-    { speaker: "Bas", text: "Jawel, ik vind dieren meestal heel leuk en gezellig. Wij hadden ook een kat, Tony, maar hij heeft een ongeluk gehad, hij is onder een auto gekomen. We hebben veel verdriet om zijn dood gehad. Maar we willen nu graag weer een nieuwe kat. Volgens mij zijn dieren heel goed voor je gezondheid. Je kunt om ze lachen en lachen is gezond.", translation: "Yok canım (severim), bence hayvanlar genellikle çok tatlı ve eğlencelidir. Bizim de Tony adında bir kedimiz vardı ama bir kaza geçirdi, arabanın altında kaldı. Ölümü üzerine çok üzüldük. Ama şimdi tekrar yeni bir kedi istiyoruz. Bence hayvanlar sağlığınız için çok iyi. Onlara gülebilirsiniz ve gülmek sağlıklıdır." },
-    { speaker: "Paul", text: "Kom dan maar even mee naar de schuur. Onze Minoes heeft twee weken geleden jongen gekregen en we zoeken nog iemand voor het laatste katje.", translation: "Öyleyse benimle kulübeye gel. Bizim Minoes iki hafta önce yavrular doğurdu ve son yavru kedi için hala birini arıyoruz." }
+    { speaker: "Verteller", text: "De portier van de Evenementenhal in Amsterdam, Bas, bezoekt voor het eerst zijn nieuwe vrienden Paul en Janine.", translation: { tr: "Amsterdam'daki Evenementenhal'ın kapıcısı Bas, yeni arkadaşları Paul ve Janine'i ilk kez ziyaret ediyor.", en: "The porter of the Evenementenhal in Amsterdam, Bas, visits his new friends Paul and Janine for the first time." } },
+    { speaker: "Paul", text: "Hallo Bas, welkom, kom binnen. Kon je het makkelijk vinden?", translation: { tr: "Merhaba Bas, hoş geldin, içeri gel. Kolayca bulabildin mi?", en: "Hello Bas, welcome, come in. Could you find it easily?" } },
+    { speaker: "Bas", text: "Ja, het was geen probleem. Het huis naast de kerk, zei je. Dat kon niet missen.", translation: { tr: "Evet, hiç sorun olmadı. Kilisenin yanındaki ev, demiştin. Kaçırılamazdı (Gözden kaçacak gibi değildi).", en: "Yes, it was no problem. The house next to the church, you said. I couldn't miss it." } },
+    { speaker: "Paul", text: "Gelukkig. Heb je Maria niet meegenomen?", translation: { tr: "Çok şükür. Maria'yı getirmedin mi?", en: "Fortunately/Glad to hear it. Didn't you bring Maria?" } },
+    { speaker: "Bas", text: "Nee, ze moest de auto naar de garage brengen en ze voelde zich niet zo lekker. Jullie moeten de groeten hebben.", translation: { tr: "Hayır, arabayı servise götürmesi gerekiyordu ve kendini pek iyi hissetmiyordu. Size selamı var.", en: "No, she had to take the car to the garage and she wasn't feeling very well. She sends her regards to you." } },
+    { speaker: "Paul", text: "Bedankt, doe haar de groeten terug.", translation: { tr: "Teşekkürler, sen de ona selam söyle.", en: "Thanks, give her our regards back." } },
+    { speaker: "Bas", text: "Dat zal ik doen. Ik ben wel een beetje vroeg.", translation: { tr: "Söylerim (Bunu yapacağım). Biraz erken geldim galiba.", en: "I will do that. I am a bit early though." } },
+    { speaker: "Paul", text: "O, je hoeft je niet te verontschuldigen. Leuk dat je er bent. Doe je jas maar gauw uit. Wat een weer, hè?", translation: { tr: "Oh, özür dilemene gerek yok. Burada olman ne güzel. Montunu hemen çıkar. Bu ne biçim hava, değil mi?", en: "Oh, you don't have to apologize. Nice that you're here. Just take off your coat quickly. What a weather, right?" } },
+    { speaker: "Bas", text: "Zeg dat wel! Het is koud en nat. Ik ben al twee weken verkouden. Ik ben toe aan mooi weer.", translation: { tr: "Sorma (Haklısın)! Hava soğuk ve ıslak. İki haftadır nezleyim. Güzel bir havaya ihtiyacım var.", en: "You can say that again! It's cold and wet. I've had a cold for two weeks already. I'm ready for some nice weather." } },
+    { speaker: "Paul", text: "Ja, ik ook. We hebben de verwarming aan en het is juni! Belachelijk hè? Ik geloof het nog niet, maar het schijnt morgen mooi weer te worden.", translation: { tr: "Evet, benim de. Haziran ayındayız ve kalorifer açık! Saçma değil mi? Henüz inanamıyorum ama görünüşe göre yarın hava güzel olacakmış.", en: "Yes, me too. We have the heating on and it's June! Ridiculous, isn't it? I still don't believe it, but it seems it's going to be nice weather tomorrow." } },
+    { speaker: "Janine", text: "Hallo Bas, kom verder.", translation: { tr: "Merhaba Bas, buyur geç.", en: "Hello Bas, come on in." } },
+    { speaker: "Bas", text: "Hallo Janine. Ah, hier is het lekker warm. Alsjeblieft, ik heb iets voor jullie meegenomen.", translation: { tr: "Merhaba Janine. Ah, burası çok güzel sıcakmış. Buyurun, sizin için bir şeyler getirdim.", en: "Hello Janine. Ah, it's nice and warm in here. Here you go, I brought something for you." } },
+    { speaker: "Janine", text: "O, wat lekker, een doos bonbons, en een mooie bos bloemen. Dank je wel. Paul, wil jij de bloemen in een vaas zetten? Snijd je ze wel ...?", translation: { tr: "Oh, ne kadar lezzetli, bir kutu çikolata ve güzel bir buket çiçek. Teşekkür ederim. Paul, çiçekleri vazoya koyar mısın? Onları kesersin değil mi...?", en: "Oh, how nice, a box of chocolates, and a beautiful bunch of flowers. Thank you. Paul, would you put the flowers in a vase? Make sure to cut them...?" } },
+    { speaker: "Paul", text: "Ja, ja, ik zal ze schuin afsnijden.", translation: { tr: "Evet, evet, onları çapraz (eğik) keseceğim.", en: "Yes, yes, I will cut them at an angle." } },
+    { speaker: "Bas", text: "Wat een mooie kamer! Jullie houden wel van dieren zie ik; een hond, twee, nee drie katten en vissen.", translation: { tr: "Ne güzel bir oda! Görüyorum ki hayvanları seviyorsunuz; bir köpek, iki, hayır üç kedi ve balıklar.", en: "What a beautiful room! I see you like animals; a dog, two, no three cats and fish." } },
+    { speaker: "Janine", text: "Ja, vind je dat niet leuk?", translation: { tr: "Evet, bunu sevmiyor musun?", en: "Yes, don't you like that?" } },
+    { speaker: "Bas", text: "Jawel, ik vind dieren meestal heel leuk en gezellig. Wij hadden ook een kat, Tony, maar hij heeft een ongeluk gehad, hij is onder een auto gekomen. We hebben veel verdriet om zijn dood gehad. Maar we willen nu graag weer een nieuwe kat. Volgens mij zijn dieren heel goed voor je gezondheid. Je kunt om ze lachen en lachen is gezond.", translation: { tr: "Yok canım (severim), bence hayvanlar genellikle çok tatlı ve eğlencelidir. Bizim de Tony adında bir kedimiz vardı ama bir kaza geçirdi, arabanın altında kaldı. Ölümü üzerine çok üzüldük. Ama şimdi tekrar yeni bir kedi istiyoruz. Bence hayvanlar sağlığınız için çok iyi. Onlara gülebilirsiniz ve gülmek sağlıklıdır.", en: "Oh yes, I usually find animals very nice and cozy. We also had a cat, Tony, but he had an accident, he was run over by a car. We grieved a lot over his death. But we would love to have a new cat now. I think animals are very good for your health. You can laugh at them and laughing is healthy." } },
+    { speaker: "Paul", text: "Kom dan maar even mee naar de schuur. Onze Minoes heeft twee weken geleden jongen gekregen en we zoeken nog iemand voor het laatste katje.", translation: { tr: "Öyleyse benimle kulübeye gel. Bizim Minoes iki hafta önce yavrular doğurdu ve son yavru kedi için hala birini arıyoruz.", en: "Then just come along to the shed. Our Minoes had kittens two weeks ago and we are still looking for someone for the last kitten." } }
   ]
 };
 
@@ -102,22 +102,34 @@ export const chapter13Sections = [
     id: "13.1",
     chapter: 13,
     title: "13.1 Dialoog: Bij vrienden",
-    theory: (
+    theory: (lang) => (
       <>
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #3b82f6', marginBottom: '20px' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#60a5fa' }}>🗣️ Dialoog: Op bezoek (Misafirlikte)</h3>
-          <p>Bas, yeni arkadaşları Paul ve Janine'i evlerinde ziyaret ediyor (op bezoek). Hollandacada birine misafirliğe gidildiğinde kapıda yapılan konuşmalara (hava durumu, yol vb.) dikkat edin:</p>
-          <ul style={{ margin: '10px 0', paddingLeft: '20px', color: '#cbd5e1', listStyleType: 'disc' }}>
-            <li><strong>Kon je het makkelijk vinden?</strong> (Evi kolay bulabildin mi?)</li>
-            <li><strong>Doe je jas maar gauw uit.</strong> (Montunu hemen çıkar).</li>
-            <li><strong>Ik heb iets voor jullie meegenomen.</strong> (Sizin için bir şeyler getirdim ➔ Hollanda'da misafirliğe giderken çiçek veya çikolata götürmek yaygındır).</li>
-          </ul>
-        </div>
+        {lang === 'tr' ? (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #3b82f6', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#60a5fa' }}>🗣️ Dialoog: Op bezoek (Misafirlikte)</h3>
+            <p>Bas, yeni arkadaşları Paul ve Janine'i evlerinde ziyaret ediyor (op bezoek). Hollandacada birine misafirliğe gidildiğinde kapıda yapılan konuşmalara (hava durumu, yol vb.) dikkat edin:</p>
+            <ul style={{ margin: '10px 0', paddingLeft: '20px', color: '#cbd5e1', listStyleType: 'disc' }}>
+              <li><strong>Kon je het makkelijk vinden?</strong> (Evi kolay bulabildin mi?)</li>
+              <li><strong>Doe je jas maar gauw uit.</strong> (Montunu hemen çıkar).</li>
+              <li><strong>Ik heb iets voor jullie meegenomen.</strong> (Sizin için bir şeyler getirdim ➔ Hollanda'da misafirliğe giderken çiçek veya çikolata götürmek yaygındır).</li>
+            </ul>
+          </div>
+        ) : (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #3b82f6', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#60a5fa' }}>🗣️ Dialogue: Op bezoek (Visiting)</h3>
+            <p>Bas is visiting his new friends Paul and Janine at their home. Pay attention to the small talk at the door when visiting someone in the Netherlands (weather, directions, etc.):</p>
+            <ul style={{ margin: '10px 0', paddingLeft: '20px', color: '#cbd5e1', listStyleType: 'disc' }}>
+              <li><strong>Kon je het makkelijk vinden?</strong> (Could you find it easily?)</li>
+              <li><strong>Doe je jas maar gauw uit.</strong> (Take off your coat quickly).</li>
+              <li><strong>Ik heb iets voor jullie meegenomen.</strong> (I brought something for you ➔ In the Netherlands, it is common to bring flowers or chocolates when visiting someone).</li>
+            </ul>
+          </div>
+        )}
       </>
     ),
     exerciseGroups: [
       {
-        instruction: "Opdracht 1: Kies het goede vervolg: a of b.",
+        instruction: "Opdracht 1: Kies het goede vervolg: a of b. (Choose the correct continuation: a or b.)",
         isExtra: false,
         questions: [
           { id: "13.1_opd1_1", type: "multiple_choice", question: "1. Bas gaat op bezoek bij...", options: ["a) zijn vrienden.", "b) zijn broer."], correctAnswer: "a) zijn vrienden." },
@@ -134,17 +146,24 @@ export const chapter13Sections = [
     id: "13.2",
     chapter: 13,
     title: "13.2 Woordenlijst",
-    theory: (
+    theory: (lang) => (
       <>
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>📖 Woordenlijst Analizi</h3>
-          <p>Günlük sohbetler (small talk) ve duyguları ifade etmeyle ilgili kelimeleri içerir. <strong>Gelukkig</strong> (çok şükür/neyse ki), <strong>verdriet</strong> (üzüntü) ve <strong>verkoudheid</strong> (soğuk algınlığı) kelimelerine dikkat edin.</p>
-        </div>
+        {lang === 'tr' ? (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>📖 Woordenlijst Analizi</h3>
+            <p>Günlük sohbetler (small talk) ve duyguları ifade etmeyle ilgili kelimeleri içerir. <strong>Gelukkig</strong> (çok şükür/neyse ki), <strong>verdriet</strong> (üzüntü) ve <strong>verkoudheid</strong> (soğuk algınlığı) kelimelerine dikkat edin.</p>
+          </div>
+        ) : (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>📖 Vocabulary Analysis</h3>
+            <p>This section contains words related to everyday small talk and expressing emotions. Pay attention to the words <strong>Gelukkig</strong> (fortunately/gladly), <strong>verdriet</strong> (sorrow/grief) and <strong>verkoudheid</strong> (a cold).</p>
+          </div>
+        )}
       </>
     ),
     exerciseGroups: [
       {
-        instruction: "Woordenlijst Test: Wat is de juiste vertaling?",
+        instruction: "Woordenlijst Test: Wat is de juiste vertaling? (What is the correct translation?)",
         isExtra: true,
         questions: generateSmartQuestions(13, "Woordenlijst", 10, chapter13Vocab)
       }
@@ -154,41 +173,65 @@ export const chapter13Sections = [
     id: "13.3",
     chapter: 13,
     title: "13.3 Mening vragen en geven",
-    theory: (
+    theory: (lang) => (
       <>
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #06b6d4', marginBottom: '20px' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#22d3ee' }}>💭 Mening vragen en geven (Fikir Sormak ve Söylemek)</h3>
-          
-          <h4 className="font-bold text-white mt-2">Mening vragen (Sormak):</h4>
-          <ul style={{ color: '#cbd5e1', listStyleType: 'disc', paddingLeft: '20px', marginBottom: '10px' }}>
-            <li><strong>Wat vind je van ...?</strong> (... hakkında ne düşünüyorsun?)</li>
-            <li><strong>Hoe vind je ...?</strong> (... nasıl buldun?)</li>
-          </ul>
+        {lang === 'tr' ? (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #06b6d4', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#22d3ee' }}>💭 Mening vragen en geven (Fikir Sormak ve Söylemek)</h3>
+            
+            <h4 className="font-bold text-white mt-2">Mening vragen (Sormak):</h4>
+            <ul style={{ color: '#cbd5e1', listStyleType: 'disc', paddingLeft: '20px', marginBottom: '10px' }}>
+              <li><strong>Wat vind je van ...?</strong> (... hakkında ne düşünüyorsun?)</li>
+              <li><strong>Hoe vind je ...?</strong> (... nasıl buldun?)</li>
+            </ul>
 
-          <h4 className="font-bold text-white mt-4">Mening geven (Cevaplamak):</h4>
-          <ul style={{ color: '#cbd5e1', listStyleType: 'disc', paddingLeft: '20px' }}>
-            <li><strong>Ik vind ... (leuk/mooi/lekker).</strong> (Ben ... güzel buluyorum).</li>
-            <li><strong>Volgens mij ...</strong> (Bana göre / Bence ...) ➔ <em>Volgens mij zijn dieren goed voor de gezondheid.</em></li>
-          </ul>
+            <h4 className="font-bold text-white mt-4">Mening geven (Cevaplamak):</h4>
+            <ul style={{ color: '#cbd5e1', listStyleType: 'disc', paddingLeft: '20px' }}>
+              <li><strong>Ik vind ... (leuk/mooi/lekker).</strong> (Ben ... güzel buluyorum).</li>
+              <li><strong>Volgens mij ...</strong> (Bana göre / Bence ...) ➔ <em>Volgens mij zijn dieren goed voor de gezondheid.</em></li>
+            </ul>
 
-          <div className="bg-cyan-900/30 p-4 rounded-xl mt-4 border border-cyan-500/30">
-            <h4 className="font-bold text-cyan-300 mb-2">💡 Jawel (Yok canım / Aksine)</h4>
-            <p className="text-sm text-cyan-100">Birisi size olumsuz bir soru sorduğunda ("Bunu sevmiyor musun?" gibi), cevabınız olumluysa "Ja" yerine <strong>"Jawel"</strong> denir.<br/>
-            <em>Vind je dat niet leuk? ➔ <strong>Jawel</strong>, ik vind dieren heel leuk.</em></p>
+            <div className="bg-cyan-900/30 p-4 rounded-xl mt-4 border border-cyan-500/30">
+              <h4 className="font-bold text-cyan-300 mb-2">💡 Jawel (Yok canım / Aksine)</h4>
+              <p className="text-sm text-cyan-100">Birisi size olumsuz bir soru sorduğunda ("Bunu sevmiyor musun?" gibi), cevabınız olumluysa "Ja" yerine <strong>"Jawel"</strong> denir.<br/>
+              <em>Vind je dat niet leuk? ➔ <strong>Jawel</strong>, ik vind dieren heel leuk.</em></p>
+            </div>
           </div>
-        </div>
+        ) : (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #06b6d4', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#22d3ee' }}>💭 Mening vragen en geven (Asking and giving opinions)</h3>
+            
+            <h4 className="font-bold text-white mt-2">Mening vragen (Asking):</h4>
+            <ul style={{ color: '#cbd5e1', listStyleType: 'disc', paddingLeft: '20px', marginBottom: '10px' }}>
+              <li><strong>Wat vind je van ...?</strong> (What do you think of ...?)</li>
+              <li><strong>Hoe vind je ...?</strong> (How do you find ...?)</li>
+            </ul>
+
+            <h4 className="font-bold text-white mt-4">Mening geven (Answering/Giving):</h4>
+            <ul style={{ color: '#cbd5e1', listStyleType: 'disc', paddingLeft: '20px' }}>
+              <li><strong>Ik vind ... (leuk/mooi/lekker).</strong> (I find ... nice/beautiful/tasty).</li>
+              <li><strong>Volgens mij ...</strong> (In my opinion / According to me ...) ➔ <em>Volgens mij zijn dieren goed voor de gezondheid.</em></li>
+            </ul>
+
+            <div className="bg-cyan-900/30 p-4 rounded-xl mt-4 border border-cyan-500/30">
+              <h4 className="font-bold text-cyan-300 mb-2">💡 Jawel (Oh yes / On the contrary)</h4>
+              <p className="text-sm text-cyan-100">When someone asks you a negative question (like "Don't you like that?"), if your answer is positive, you say <strong>"Jawel"</strong> instead of "Ja".<br/>
+              <em>Vind je dat niet leuk? ➔ <strong>Jawel</strong>, ik vind dieren heel leuk. (Oh yes, I really like animals.)</em></p>
+            </div>
+          </div>
+        )}
       </>
     ),
     exerciseGroups: [
       {
-        instruction: "Opdracht 2: Vul in deze dialogen het goede woord in.",
+        instruction: "Opdracht 2: Vul in deze dialogen het goede woord in. (Fill in the correct word in these dialogues.)",
         isExtra: false,
         questions: [
           { id: "13.3_opd2_1", type: "fill_in", question: "1. ________ vind je van dit boek? (Ik vind het erg interessant).", correctAnswer: "Wat" },
           { id: "13.3_opd2_2", type: "fill_in", question: "2. ________ vond je de film? (Heel goed!).", correctAnswer: "Hoe" },
           { id: "13.3_opd2_3", type: "fill_in", question: "3. Wat vind je ________ dit restaurant? (Het is heel gezellig).", correctAnswer: "van" },
           { id: "13.3_opd2_4", type: "fill_in", question: "4. Kijk eens, we hebben jonge katjes. ________ je ze niet lief? (Ja, heel lief).", correctAnswer: "Vind" },
-          { id: "13.3_opd2_5", type: "fill_in", question: "5. Waarom wil je niet in de Bloemenbuurt wonen? ________ mij is die buurt niet zo leuk. (Bence)", correctAnswer: "Volgens" }
+          { id: "13.3_opd2_5", type: "fill_in", question: "5. Waarom wil je niet in de Bloemenbuurt wonen? ________ mij is die buurt niet zo leuk. (In my opinion / Bence)", correctAnswer: "Volgens" }
         ]
       }
     ]
@@ -197,34 +240,58 @@ export const chapter13Sections = [
     id: "13.4",
     chapter: 13,
     title: "13.4 Praten over koetjes en kalfjes (Small Talk)",
-    theory: (
+    theory: (lang) => (
       <>
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #ec4899', marginBottom: '20px' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#f472b6' }}>🗣️ Praten over koetjes en kalfjes (Havadan Sudan Konuşmak)</h3>
-          <p className="text-sm text-slate-300">Kelime anlamı "İnekler ve buzağılar hakkında konuşmak" olsa da, bu deyim Hollandacada <strong>Small Talk</strong> (Havadan sudan / önemsiz konulardan sohbet etmek) anlamına gelir. En popüler konular: Hava durumu, trafik ve hal-hatır sormaktır.</p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-            <div className="bg-pink-900/20 p-3 rounded border border-pink-500/20">
-              <h4 className="text-pink-300 font-bold mb-1">Het weer (Hava Durumu)</h4>
-              <ul className="text-sm text-slate-200 list-disc pl-5">
-                <li>Wat een weer, hè? (Bu ne biçim hava, değil mi?) ➔ <strong>Zeg dat wel!</strong> (Sorma / Aynen öyle!)</li>
-                <li>Het wordt nu echt voorjaar. (Artık gerçekten ilkbahar oluyor.) ➔ Ja, lekker hè!</li>
-              </ul>
-            </div>
-            <div className="bg-pink-900/20 p-3 rounded border border-pink-500/20">
-              <h4 className="text-pink-300 font-bold mb-1">Het verkeer (Trafik)</h4>
-              <ul className="text-sm text-slate-200 list-disc pl-5">
-                <li>Was het druk op de weg? (Yolda trafik var mıydı?) ➔ Nee, het was niet zo druk.</li>
-                <li>Ja, op de A28 stond twaalf kilometer file! (Evet, 12 kilometre kuyruk vardı!)</li>
-              </ul>
+        {lang === 'tr' ? (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #ec4899', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#f472b6' }}>🗣️ Praten over koetjes en kalfjes (Havadan Sudan Konuşmak)</h3>
+            <p className="text-sm text-slate-300">Kelime anlamı "İnekler ve buzağılar hakkında konuşmak" olsa da, bu deyim Hollandacada <strong>Small Talk</strong> (Havadan sudan / önemsiz konulardan sohbet etmek) anlamına gelir. En popüler konular: Hava durumu, trafik ve hal-hatır sormaktır.</p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+              <div className="bg-pink-900/20 p-3 rounded border border-pink-500/20">
+                <h4 className="text-pink-300 font-bold mb-1">Het weer (Hava Durumu)</h4>
+                <ul className="text-sm text-slate-200 list-disc pl-5">
+                  <li>Wat een weer, hè? (Bu ne biçim hava, değil mi?) ➔ <strong>Zeg dat wel!</strong> (Sorma / Aynen öyle!)</li>
+                  <li>Het wordt nu echt voorjaar. (Artık gerçekten ilkbahar oluyor.) ➔ Ja, lekker hè!</li>
+                </ul>
+              </div>
+              <div className="bg-pink-900/20 p-3 rounded border border-pink-500/20">
+                <h4 className="text-pink-300 font-bold mb-1">Het verkeer (Trafik)</h4>
+                <ul className="text-sm text-slate-200 list-disc pl-5">
+                  <li>Was het druk op de weg? (Yolda trafik var mıydı?) ➔ Nee, het was niet zo druk.</li>
+                  <li>Ja, op de A28 stond twaalf kilometer file! (Evet, 12 kilometre kuyruk vardı!)</li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
+        ) : (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #ec4899', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#f472b6' }}>🗣️ Praten over koetjes en kalfjes (Small Talk)</h3>
+            <p className="text-sm text-slate-300">Although it literally translates to "talking about cows and calves", this idiom means <strong>Small Talk</strong> (chatting about trivial things) in Dutch. The most popular topics are: The weather, traffic, and asking how someone is doing.</p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+              <div className="bg-pink-900/20 p-3 rounded border border-pink-500/20">
+                <h4 className="text-pink-300 font-bold mb-1">Het weer (The weather)</h4>
+                <ul className="text-sm text-slate-200 list-disc pl-5">
+                  <li>Wat een weer, hè? (What a weather, huh?) ➔ <strong>Zeg dat wel!</strong> (You can say that again! / For sure!)</li>
+                  <li>Het wordt nu echt voorjaar. (It's really becoming spring now.) ➔ Ja, lekker hè!</li>
+                </ul>
+              </div>
+              <div className="bg-pink-900/20 p-3 rounded border border-pink-500/20">
+                <h4 className="text-pink-300 font-bold mb-1">Het verkeer (Traffic)</h4>
+                <ul className="text-sm text-slate-200 list-disc pl-5">
+                  <li>Was het druk op de weg? (Was it busy on the road?) ➔ Nee, het was niet zo druk.</li>
+                  <li>Ja, op de A28 stond twaalf kilometer file! (Yes, there was a 12-kilometer traffic jam on the A28!)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        )}
       </>
     ),
     exerciseGroups: [
       {
-        instruction: "Opdracht 4: Kies het beste woord. De gesprekken zijn steeds dialogen.",
+        instruction: "Opdracht 4: Kies het beste woord. De gesprekken zijn steeds dialogen. (Choose the best word. The conversations are all dialogues.)",
         isExtra: false,
         questions: [
           { id: "13.4_opd4_1", type: "multiple_choice", question: "1. Wil je koffie? Ja, ________.", options: ["graag", "oké"], correctAnswer: "graag" },
@@ -238,7 +305,7 @@ export const chapter13Sections = [
         ]
       },
       {
-        instruction: "Opdracht 5: Welke reactie uit het rechterrijtje past bij de zin of vraag? (Eşleştirme)",
+        instruction: "Opdracht 5: Welke reactie uit het rechterrijtje past bij de zin of vraag? (Match the reaction to the sentence/question)",
         isExtra: false,
         questions: [
           { id: "13.4_opd5_1", type: "multiple_choice", question: "1. Ik ben toe aan koffie.", options: ["d) Ja, ik ook.", "h) Prima. En met jou?", "c) Zeg dat wel."], correctAnswer: "d) Ja, ik ook." },
@@ -256,27 +323,43 @@ export const chapter13Sections = [
   {
     id: "13.5",
     chapter: 13,
-    title: "13.5 Zullen (2) - Belofte (Söz Vermek)",
-    theory: (
+    title: "13.5 Zullen (2) - Belofte (Söz Vermek / Promise)",
+    theory: (lang) => (
       <>
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>🤝 Zullen: Belofte (Söz Vermek)</h3>
-          <p className="text-sm text-slate-300">Daha önce <em>zullen</em> fiilini bir teklif yaparken (Zullen we afspreken? - Buluşalım mı?) kullanmıştık. Şimdi ise gelecekte bir şeyi yapacağımıza <strong>söz verirken (belofte)</strong> kullanıyoruz.</p>
-          
-          <div className="bg-emerald-900/30 p-4 rounded-xl mt-4 border border-emerald-500/40">
-            <h4 className="font-bold text-emerald-300 mb-2">Voorbeelden (Örnekler):</h4>
-            <ul className="text-sm text-emerald-100 space-y-2 list-disc pl-5">
-              <li>"Doe je de groeten aan je vriend?" ➔ "Ja, dat <strong>zal</strong> ik doen." (Evet, yapacağım/söyleyeceğim).</li>
-              <li>"Wil jij de bloemen in de vaas zetten?" ➔ "Ik <strong>zal</strong> de bloemen schuin afsnijden." (Çiçekleri eğik keseceğim).</li>
-            </ul>
-            <p className="text-xs text-slate-300 mt-3 border-t border-emerald-500/30 pt-2"><em>Not: Modale werkwoorden kuralı aynen geçerlidir; 'zal' veya 'zullen' 2. sırada olur, asıl fiil ise cümlenin en sonuna (mastar halinde) gider.</em></p>
+        {lang === 'tr' ? (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>🤝 Zullen: Belofte (Söz Vermek)</h3>
+            <p className="text-sm text-slate-300">Daha önce <em>zullen</em> fiilini bir teklif yaparken (Zullen we afspreken? - Buluşalım mı?) kullanmıştık. Şimdi ise gelecekte bir şeyi yapacağımıza <strong>söz verirken (belofte)</strong> kullanıyoruz.</p>
+            
+            <div className="bg-emerald-900/30 p-4 rounded-xl mt-4 border border-emerald-500/40">
+              <h4 className="font-bold text-emerald-300 mb-2">Voorbeelden (Örnekler):</h4>
+              <ul className="text-sm text-emerald-100 space-y-2 list-disc pl-5">
+                <li>"Doe je de groeten aan je vriend?" ➔ "Ja, dat <strong>zal</strong> ik doen." (Evet, yapacağım/söyleyeceğim).</li>
+                <li>"Wil jij de bloemen in de vaas zetten?" ➔ "Ik <strong>zal</strong> de bloemen schuin afsnijden." (Çiçekleri eğik keseceğim).</li>
+              </ul>
+              <p className="text-xs text-slate-300 mt-3 border-t border-emerald-500/30 pt-2"><em>Not: Modale werkwoorden kuralı aynen geçerlidir; 'zal' veya 'zullen' 2. sırada olur, asıl fiil ise cümlenin en sonuna (mastar halinde) gider.</em></p>
+            </div>
           </div>
-        </div>
+        ) : (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>🤝 Zullen: Belofte (Making a Promise)</h3>
+            <p className="text-sm text-slate-300">We previously used the verb <em>zullen</em> when making a proposal (Zullen we afspreken? - Shall we meet?). Now we are using it when <strong>making a promise (belofte)</strong> to do something in the future.</p>
+            
+            <div className="bg-emerald-900/30 p-4 rounded-xl mt-4 border border-emerald-500/40">
+              <h4 className="font-bold text-emerald-300 mb-2">Voorbeelden (Examples):</h4>
+              <ul className="text-sm text-emerald-100 space-y-2 list-disc pl-5">
+                <li>"Doe je de groeten aan je vriend?" ➔ "Ja, dat <strong>zal</strong> ik doen." (Yes, I will do that).</li>
+                <li>"Wil jij de bloemen in de vaas zetten?" ➔ "Ik <strong>zal</strong> de bloemen schuin afsnijden." (I will cut the flowers at an angle).</li>
+              </ul>
+              <p className="text-xs text-slate-300 mt-3 border-t border-emerald-500/30 pt-2"><em>Note: The rule for modal verbs still applies; 'zal' or 'zullen' is placed in the 2nd position, while the main verb goes to the very end of the sentence (as an infinitive).</em></p>
+            </div>
+          </div>
+        )}
       </>
     ),
     exerciseGroups: [
       {
-        instruction: "Opdracht 8: Maak van de zin een belofte. Je gebruikt Ik zal / We zullen.",
+        instruction: "Opdracht 8: Maak van de zin een belofte. Je gebruikt Ik zal / We zullen. (Turn the sentence into a promise using Ik zal / We zullen.)",
         isExtra: false,
         questions: [
           { id: "13.5_opd8_1", type: "fill_in", question: "We kopen een cadeau voor Nadja. -> We ________ een cadeau voor Nadja ________.", correctAnswer: "zullen, kopen" },
@@ -287,10 +370,10 @@ export const chapter13Sections = [
         ]
       },
       {
-        instruction: "Slimme Oefeningen: Zullen als Belofte",
+        instruction: "Slimme Oefeningen (Smart Exercises): Zullen als Belofte",
         isExtra: true,
         questions: [
-          { id: "13.5_smart_1", type: "multiple_choice", question: "Iemand zegt: 'Vergeet niet te bellen!' (Aramayı unutma). Wat is een goede belofte?", options: ["Dat zal ik doen.", "Dat wil ik doen.", "Zullen we bellen?"], correctAnswer: "Dat zal ik doen." },
+          { id: "13.5_smart_1", type: "multiple_choice", question: "Iemand zegt: 'Vergeet niet te bellen!' (Aramayı unutma / Don't forget to call). Wat is een goede belofte?", options: ["Dat zal ik doen.", "Dat wil ik doen.", "Zullen we bellen?"], correctAnswer: "Dat zal ik doen." },
           { id: "13.5_smart_2", type: "fill_in", question: "Maak een belofte: Ik ruim de kamer op. -> Ik ________ de kamer ________.", correctAnswer: "zal, opruimen" }
         ]
       }
@@ -300,20 +383,30 @@ export const chapter13Sections = [
     id: "13.6",
     chapter: 13,
     title: "13.6 Tekst: Mijn passie!",
-    theory: (
+    theory: (lang) => (
       <>
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f59e0b', marginBottom: '20px' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#fbbf24' }}>📄 Tekst: Mijn passie!</h3>
-          <p className="text-sm text-slate-300">Sanat akademisi öğrencisi Evelyn Koster'in müzik tutkusu hakkında okuma parçası:</p>
-          <p className="text-sm text-slate-200 mt-2 italic bg-amber-900/20 p-3 rounded border border-amber-500/30">
-            "Vroeger wilde ik graag in een koor popliedjes zingen, maar van mijn zangdocent moest ik met klassiek beginnen. Ik vond het vreselijk, want mijn ouders houden van klassieke muziek. Als puber wil je niets liever dan je daartegen afzetten. Maar er waren klassieke stukken die ik echt heel leuk vond. Toen ben ik gaan solliciteren... en aangenomen bij een operakoor... Zingen is mijn passie."
-          </p>
-        </div>
+        {lang === 'tr' ? (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f59e0b', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#fbbf24' }}>📄 Tekst: Mijn passie!</h3>
+            <p className="text-sm text-slate-300">Sanat akademisi öğrencisi Evelyn Koster'in müzik tutkusu hakkında okuma parçası:</p>
+            <p className="text-sm text-slate-200 mt-2 italic bg-amber-900/20 p-3 rounded border border-amber-500/30">
+              "Vroeger wilde ik graag in een koor popliedjes zingen, maar van mijn zangdocent moest ik met klassiek beginnen. Ik vond het vreselijk, want mijn ouders houden van klassieke muziek. Als puber wil je niets liever dan je daartegen afzetten. Maar er waren klassieke stukken die ik echt heel leuk vond. Toen ben ik gaan solliciteren... en aangenomen bij een operakoor... Zingen is mijn passie."
+            </p>
+          </div>
+        ) : (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f59e0b', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#fbbf24' }}>📄 Text: Mijn passie! (My passion!)</h3>
+            <p className="text-sm text-slate-300">A reading piece about art academy student Evelyn Koster's passion for music:</p>
+            <p className="text-sm text-slate-200 mt-2 italic bg-amber-900/20 p-3 rounded border border-amber-500/30">
+              "In the past I wanted to sing pop songs in a choir, but my singing teacher made me start with classical. I thought it was terrible, because my parents love classical music. As an adolescent, you want nothing more than to rebel against that. But there were classical pieces that I really liked a lot. Then I started applying... and got accepted at an opera choir... Singing is my passion."
+            </p>
+          </div>
+        )}
       </>
     ),
     exerciseGroups: [
       {
-        instruction: "Opdracht 12: Zijn de volgende zinnen waar of niet waar?",
+        instruction: "Opdracht 12: Zijn de volgende zinnen waar of niet waar? (Are the following sentences true or false?)",
         isExtra: false,
         questions: [
           { id: "13.6_opd12_1", type: "multiple_choice", question: "1. Evelyn begon met popliedjes, later zong ze klassiek.", options: ["waar", "niet waar"], correctAnswer: "niet waar" },
@@ -330,25 +423,37 @@ export const chapter13Sections = [
     id: "13.7",
     chapter: 13,
     title: "13.7 Uitspraak & Cultuur (Cadeaus)",
-    theory: (
+    theory: (lang) => (
       <>
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f43f5e', marginBottom: '20px' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#fb7185' }}>🇳🇱 Cultuur: Op bezoek gaan (Misafirliğe Gitmek)</h3>
-          <p className="text-sm text-slate-300">Hollanda kültüründe birine misafirliğe (özellikle ilk kez veya akşam yemeği için) gittiğinizde eli boş gidilmez.</p>
-          <ul className="text-sm text-slate-200 mt-2 list-disc pl-5">
-            <li><strong>Wat geef je als je bij iemand op bezoek gaat?</strong> (Birisini ziyaret ettiğinizde ne verirsiniz?)</li>
-            <li>En yaygın hediyeler: <strong>Een bos bloemen</strong> (bir buket çiçek), <strong>een doosje bonbons</strong> (bir kutu çikolata) veya <strong>een fles wijn</strong> (bir şişe şarap).</li>
-            <li>Hollandalılar çiçek almayı çok severler ve genellikle hemen bir vazoya koyarlar (in een vaas zetten).</li>
-          </ul>
-        </div>
+        {lang === 'tr' ? (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f43f5e', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#fb7185' }}>🇳🇱 Cultuur: Op bezoek gaan (Misafirliğe Gitmek)</h3>
+            <p className="text-sm text-slate-300">Hollanda kültüründe birine misafirliğe (özellikle ilk kez veya akşam yemeği için) gittiğinizde eli boş gidilmez.</p>
+            <ul className="text-sm text-slate-200 mt-2 list-disc pl-5">
+              <li><strong>Wat geef je als je bij iemand op bezoek gaat?</strong> (Birisini ziyaret ettiğinizde ne verirsiniz?)</li>
+              <li>En yaygın hediyeler: <strong>Een bos bloemen</strong> (bir buket çiçek), <strong>een doosje bonbons</strong> (bir kutu çikolata) veya <strong>een fles wijn</strong> (bir şişe şarap).</li>
+              <li>Hollandalılar çiçek almayı çok severler ve genellikle hemen bir vazoya koyarlar (in een vaas zetten).</li>
+            </ul>
+          </div>
+        ) : (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f43f5e', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#fb7185' }}>🇳🇱 Cultuur: Op bezoek gaan (Visiting someone)</h3>
+            <p className="text-sm text-slate-300">In Dutch culture, when you visit someone (especially for the first time or for dinner), you don't go empty-handed.</p>
+            <ul className="text-sm text-slate-200 mt-2 list-disc pl-5">
+              <li><strong>Wat geef je als je bij iemand op bezoek gaat?</strong> (What do you give when you visit someone?)</li>
+              <li>The most common gifts are: <strong>Een bos bloemen</strong> (a bunch of flowers), <strong>een doosje bonbons</strong> (a box of chocolates), or <strong>een fles wijn</strong> (a bottle of wine).</li>
+              <li>Dutch people love receiving flowers and they usually put them in a vase immediately (in een vaas zetten).</li>
+            </ul>
+          </div>
+        )}
       </>
     ),
     exerciseGroups: [
       {
-        instruction: "Cultuur Oefening: Typische cadeaus in Nederland",
+        instruction: "Cultuur Oefening: Typische cadeaus in Nederland (Typical gifts in the Netherlands)",
         isExtra: true,
         questions: [
-          { id: "13.7_cult_1", type: "multiple_choice", question: "Je bent uitgenodigd voor een etentje (dinner) bij Nederlandse vrienden. Wat neem je mee?", options: ["Kleding (kıyafet)", "Geld (para)", "Een bos bloemen of wijn (çiçek veya şarap)"], correctAnswer: "Een bos bloemen of wijn (çiçek of şarap)" }
+          { id: "13.7_cult_1", type: "multiple_choice", question: "Je bent uitgenodigd voor een etentje (dinner) bij Nederlandse vrienden. Wat neem je mee?", options: ["Kleding (kıyafet / clothes)", "Geld (para / money)", "Een bos bloemen of wijn (çiçek of şarap / flowers or wine)"], correctAnswer: "Een bos bloemen of wijn (çiçek of şarap / flowers or wine)" }
         ]
       }
     ]
@@ -357,127 +462,248 @@ export const chapter13Sections = [
     id: "On-Class-13",
     chapter: 13,
     title: "13.9 Extra Oefeningen (On-Class)",
-    theory: (
+    theory: (lang) => (
       <>
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #3b82f6', marginBottom: '20px' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#60a5fa' }}>🔄 Repetitie Les 12 & Uitspraak</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <h4 className="font-bold text-blue-300 text-sm mb-1">Indirecte Vragen & Perfectum</h4>
-              <ul className="text-sm text-slate-300 list-disc pl-5 space-y-1">
-                <li><strong>Waar is het station?</strong> ➔ Weet je <em>waar het station is</em>? (Fiil sona gider)</li>
-                <li><strong>Ga rechtdoor:</strong> Düz git (Go straight ahead)</li>
-                <li><strong>Kan je herhalen?:</strong> Tekrar edebilir misin?</li>
-                <li><strong>Perfectum:</strong> Ik heb ge + stem + t/d ➔ <em>Ik heb gewerkt.</em> (I have worked)</li>
-                <li><strong>Aan-komen (Ayrılabilen Fiil):</strong> Ik kom aan (I arrive) ➔ Ik <em>ben</em> aan+ge+komen ➔ <em>Ik ben aangekomen.</em> (I have arrived)</li>
+        {lang === 'tr' ? (
+          <>
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #3b82f6', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#60a5fa' }}>🔄 Repetitie Les 12 & Uitspraak</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <h4 className="font-bold text-blue-300 text-sm mb-1">Indirecte Vragen & Perfectum</h4>
+                  <ul className="text-sm text-slate-300 list-disc pl-5 space-y-1">
+                    <li><strong>Waar is het station?</strong> ➔ Weet je <em>waar het station is</em>? (Fiil sona gider)</li>
+                    <li><strong>Ga rechtdoor:</strong> Düz git (Go straight ahead)</li>
+                    <li><strong>Kan je herhalen?:</strong> Tekrar edebilir misin?</li>
+                    <li><strong>Perfectum:</strong> Ik heb ge + stem + t/d ➔ <em>Ik heb gewerkt.</em> (Çalıştım)</li>
+                    <li><strong>Aan-komen (Ayrılabilen Fiil):</strong> Ik kom aan (Varıyorum) ➔ Ik <em>ben</em> aan+ge+komen ➔ <em>Ik ben aangekomen.</em> (Vardım)</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-bold text-blue-300 text-sm mb-1">Uitspraak (Telaffuz)</h4>
+                  <ul className="text-sm text-slate-300 list-disc pl-5 space-y-1">
+                    <li><strong>Korte vs Lange vocalen:</strong> man-maan, bed-beet, bos-boos, put-puur</li>
+                    <li><strong>ie:</strong> İngilizcedeki 'freeze' gibi okunur (vis vs <em>vies</em>)</li>
+                    <li><strong>ui:</strong> 'a' ve 'ü' seslerinin hızlı birleşimi gibidir (reis-reus, hout-<em>huid</em>)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>☕ Praten over koetjes en kalfjes (Small talk)</h3>
+              <p className="text-sm text-slate-300 mb-2">Hollandacada havadan sudan konuşmak (small talk) ve misafirlikte kullanılan ifadeler:</p>
+              <ul className="text-sm text-slate-200 grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-2 list-disc pl-5">
+                <li><strong>Welkom, kom binnen.</strong> (Hoş geldin, içeri gel)</li>
+                <li><strong>Kon je het makkelijk vinden?</strong> (Kolayca bulabildin mi?)</li>
+                <li><strong>Jullie moeten de groeten hebben.</strong> (Size selamı var)</li>
+                <li><strong>Doe haar de groeten terug.</strong> (Sen de ona selam söyle)</li>
+                <li><strong>Ik ben wel een beetje vroeg.</strong> (Biraz erken geldim galiba)</li>
+                <li><strong>Je hoeft je niet te verontschuldigen.</strong> (Özür dilemene gerek yok)</li>
+                <li><strong>Wat een weer, hè?</strong> (Bu ne biçim hava, değil mi?)</li>
+                <li><strong>Zeg dat wel!</strong> (Kesinlikle! / Aynen öyle!)</li>
+                <li><strong>Alsjeblieft, ik heb iets voor jullie meegenomen.</strong> (Buyurun, sizin için bir şeyler getirdim)</li>
+                <li><strong>O, wat lekker. Dank je wel.</strong> (Oh ne lezzetli. Teşekkürler)</li>
+                <li><strong>Ja, lekker hè.</strong> (Evet, güzel değil mi?)</li>
+                <li><strong>Nee klopt.</strong> (Hayır, doğru)</li>
+                <li><strong>Prima. Met jou ook?</strong> (Harika. Sen nasılsın?)</li>
+                <li><strong>Gelukkig.</strong> (Çok şükür! / Neyse ki)</li>
               </ul>
             </div>
-            <div>
-              <h4 className="font-bold text-blue-300 text-sm mb-1">Uitspraak (Telaffuz)</h4>
-              <ul className="text-sm text-slate-300 list-disc pl-5 space-y-1">
-                <li><strong>Korte vs Lange vocalen:</strong> man-maan, bed-beet, bos-boos, put-puur</li>
-                <li><strong>ie:</strong> İngilizcedeki 'freeze' gibi okunur (vis vs <em>vies</em>)</li>
-                <li><strong>ui:</strong> 'a' ve 'ü' seslerinin hızlı birleşimi gibidir (reis-reus, hout-<em>huid</em>)</li>
+
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>✅ Zullen as a Promise</h3>
+              <p className="text-sm text-slate-300 mb-2"><strong>Zullen</strong> fiili (shall/will) gelecekteki niyetleri veya başkasına verilen sözleri ifade etmek için kullanılır. Asıl fiil cümlenin <strong>en sonuna mastar (infinitief)</strong> olarak gider.</p>
+              
+              <table className="w-full text-sm text-left text-slate-300 border-collapse mb-3">
+                <thead>
+                  <tr className="border-b border-slate-700 text-slate-200">
+                    <th className="py-2">Onderwerp / Subject</th>
+                    <th className="py-2">Zullen</th>
+                    <th className="py-2">Rest</th>
+                    <th className="py-2">Infinitief (Mastar)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-slate-700/50">
+                    <td className="py-2">Ik</td>
+                    <td className="py-2 text-emerald-400 font-bold">zal</td>
+                    <td className="py-2">de bloemen schuin</td>
+                    <td className="py-2 font-bold">afsnijden</td>
+                  </tr>
+                  <tr>
+                    <td className="py-2">We / wij</td>
+                    <td className="py-2 text-emerald-400 font-bold">zullen</td>
+                    <td className="py-2">een cadeau</td>
+                    <td className="py-2 font-bold">kopen</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div className="bg-emerald-900/30 p-3 rounded-lg border border-emerald-500/30">
+                <h4 className="text-emerald-300 font-bold text-xs uppercase mb-1">Yaygın Örnekler:</h4>
+                <ul className="text-sm text-emerald-100 list-disc pl-5 grid grid-cols-1 md:grid-cols-2 gap-1">
+                  <li>Ik zal het volgende rondje betalen.</li>
+                  <li>Ik zal het in mijn agenda schrijven.</li>
+                  <li>We zullen de vakantiefoto's meebrengen.</li>
+                  <li>Ik zal dit met mijn vriend overleggen.</li>
+                  <li>We zullen het proberen.</li>
+                  <li>We zullen je naar huis brengen.</li>
+                  <li>Ik zal het adres even opschrijven.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f59e0b' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#fbbf24' }}>🤔 Ask / Express Opinions (Fikir Sormak ve Belirtmek)</h3>
+              <p className="text-sm text-slate-300 mb-2">Bir konu veya nesne hakkındaki fikrinizi ifade etmek için belirli kalıplar kullanılır:</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <h4 className="font-bold text-amber-300 text-sm mb-1">Mening vragen (Fikir Sormak)</h4>
+                  <ul className="text-sm text-slate-200 list-disc pl-5 space-y-1">
+                    <li><strong>Wat vind je van</strong> deze film?</li>
+                    <li><strong>Hoe vind je</strong> mijn nieuwe broek?</li>
+                    <li><strong>Vind je</strong> jonge dieren leuk?</li>
+                    <li><strong>Vind je</strong> dat niet duur?</li>
+                  </ul>
+                  <p className="text-xs text-slate-400 mt-2">Pattern: Wat vind je van ...? / Hoe vind je ...?</p>
+                </div>
+                <div>
+                  <h4 className="font-bold text-amber-300 text-sm mb-1">Mening geven (Fikir Belirtmek)</h4>
+                  <ul className="text-sm text-slate-200 list-disc pl-5 space-y-1">
+                    <li><strong>Ik vind</strong> de film interessant.</li>
+                    <li><strong>Ik vind</strong> hem een beetje saai.</li>
+                    <li><strong>Volgens mij</strong> is die buurt heel gezellig. (Bence...)</li>
+                    <li><em>Ja, dat vind ik ook.</em> (Evet, ben de öyle düşünüyorum.)</li>
+                    <li><em>Nee, dat vind ik niet.</em> (Hayır, öyle düşünmüyorum.)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </>
+        ) : (
+          <>
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #3b82f6', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#60a5fa' }}>🔄 Repetitie Les 12 & Uitspraak (Review & Pronunciation)</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <h4 className="font-bold text-blue-300 text-sm mb-1">Indirecte Vragen & Perfectum</h4>
+                  <ul className="text-sm text-slate-300 list-disc pl-5 space-y-1">
+                    <li><strong>Waar is het station?</strong> ➔ Weet je <em>waar het station is</em>? (Verb goes to the end)</li>
+                    <li><strong>Ga rechtdoor:</strong> Go straight ahead</li>
+                    <li><strong>Kan je herhalen?:</strong> Can you repeat?</li>
+                    <li><strong>Perfectum:</strong> Ik heb ge + stem + t/d ➔ <em>Ik heb gewerkt.</em> (I have worked)</li>
+                    <li><strong>Aan-komen (Separable Verb):</strong> Ik kom aan (I arrive) ➔ Ik <em>ben</em> aan+ge+komen ➔ <em>Ik ben aangekomen.</em> (I have arrived)</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-bold text-blue-300 text-sm mb-1">Uitspraak (Pronunciation)</h4>
+                  <ul className="text-sm text-slate-300 list-disc pl-5 space-y-1">
+                    <li><strong>Korte vs Lange vocalen (Short vs Long vowels):</strong> man-maan, bed-beet, bos-boos, put-puur</li>
+                    <li><strong>ie:</strong> pronounced like 'freeze' in English (vis vs <em>vies</em>)</li>
+                    <li><strong>ui:</strong> sounds like a quick combination of 'a' and 'ü' (reis-reus, hout-<em>huid</em>)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>☕ Praten over koetjes en kalfjes (Small talk)</h3>
+              <p className="text-sm text-slate-300 mb-2">Expressions used in Dutch for small talk and when visiting someone:</p>
+              <ul className="text-sm text-slate-200 grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-2 list-disc pl-5">
+                <li><strong>Welkom, kom binnen.</strong> (Welcome, come in)</li>
+                <li><strong>Kon je het makkelijk vinden?</strong> (Could you find it easily?)</li>
+                <li><strong>Jullie moeten de groeten hebben.</strong> (I have to say hi to you from...)</li>
+                <li><strong>Doe haar de groeten terug.</strong> (Say hi back to her)</li>
+                <li><strong>Ik ben wel een beetje vroeg.</strong> (I am a bit early though)</li>
+                <li><strong>Je hoeft je niet te verontschuldigen.</strong> (You do not have to apologize)</li>
+                <li><strong>Wat een weer, hè?</strong> (What a weather, right?)</li>
+                <li><strong>Zeg dat wel!</strong> (For sure! / You can say that again!)</li>
+                <li><strong>Alsjeblieft, ik heb iets voor jullie meegenomen.</strong> (Here you go, I brought something for you)</li>
+                <li><strong>O, wat lekker. Dank je wel.</strong> (Oh how tasty. Thank you)</li>
+                <li><strong>Ja, lekker hè.</strong> (Yeah, nice huh?)</li>
+                <li><strong>Nee klopt.</strong> (No, correct)</li>
+                <li><strong>Prima. Met jou ook?</strong> (Fine. You too?)</li>
+                <li><strong>Gelukkig.</strong> (Thank god! / Expression of relief)</li>
               </ul>
             </div>
-          </div>
-        </div>
 
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>☕ Praten over koetjes en kalfjes (Small talk)</h3>
-          <p className="text-sm text-slate-300 mb-2">Hollandacada havadan sudan konuşmak (small talk) ve misafirlikte kullanılan ifadeler:</p>
-          <ul className="text-sm text-slate-200 grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-2 list-disc pl-5">
-            <li><strong>Welkom, kom binnen.</strong> (Welcome, come in)</li>
-            <li><strong>Kon je het makkelijk vinden?</strong> (Could you find it easily?)</li>
-            <li><strong>Jullie moeten de groeten hebben.</strong> (I have to say hi to you / Size selamı var)</li>
-            <li><strong>Doe haar de groeten terug.</strong> (Say hi back to her / Aleykümselam)</li>
-            <li><strong>Ik ben wel een beetje vroeg.</strong> (I am a bit early though)</li>
-            <li><strong>Je hoeft je niet te verontschuldigen.</strong> (You do not have to apologize)</li>
-            <li><strong>Wat een weer, hè?</strong> (What a weather, right?)</li>
-            <li><strong>Zeg dat wel!</strong> (For sure! / Kesinlikle!)</li>
-            <li><strong>Alsjeblieft, ik heb iets voor jullie meegenomen.</strong> (Here you go, I brought something for you)</li>
-            <li><strong>O, wat lekker. Dank je wel.</strong> (Oh how tasty. Thank you)</li>
-            <li><strong>Ja, lekker hè.</strong> (Yeah, nice huh?)</li>
-            <li><strong>Nee klopt.</strong> (No, correct)</li>
-            <li><strong>Prima. Met jou ook?</strong> (Fine. You too?)</li>
-            <li><strong>Gelukkig.</strong> (Thank god! / Expression of relief)</li>
-          </ul>
-        </div>
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>✅ Zullen as a Promise</h3>
+              <p className="text-sm text-slate-300 mb-2">The verb <strong>zullen</strong> (shall/will) is used to express future intentions or promises made to someone else. The main verb goes to the <strong>very end of the sentence as an infinitive</strong>.</p>
+              
+              <table className="w-full text-sm text-left text-slate-300 border-collapse mb-3">
+                <thead>
+                  <tr className="border-b border-slate-700 text-slate-200">
+                    <th className="py-2">Onderwerp / Subject</th>
+                    <th className="py-2">Zullen</th>
+                    <th className="py-2">Rest</th>
+                    <th className="py-2">Infinitief (Infinitive)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-slate-700/50">
+                    <td className="py-2">Ik</td>
+                    <td className="py-2 text-emerald-400 font-bold">zal</td>
+                    <td className="py-2">de bloemen schuin</td>
+                    <td className="py-2 font-bold">afsnijden</td>
+                  </tr>
+                  <tr>
+                    <td className="py-2">We / wij</td>
+                    <td className="py-2 text-emerald-400 font-bold">zullen</td>
+                    <td className="py-2">een cadeau</td>
+                    <td className="py-2 font-bold">kopen</td>
+                  </tr>
+                </tbody>
+              </table>
 
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>✅ Zullen as a Promise</h3>
-          <p className="text-sm text-slate-300 mb-2"><strong>Zullen</strong> fiili (shall/will) gelecekteki niyetleri veya başkasına verilen sözleri ifade etmek için kullanılır. Asıl fiil cümlenin <strong>en sonuna mastar (infinitief)</strong> olarak gider.</p>
-          
-          <table className="w-full text-sm text-left text-slate-300 border-collapse mb-3">
-            <thead>
-              <tr className="border-b border-slate-700 text-slate-200">
-                <th className="py-2">Onderwerp / Subject</th>
-                <th className="py-2">Zullen</th>
-                <th className="py-2">Rest</th>
-                <th className="py-2">Infinitief (Mastar)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className="border-b border-slate-700/50">
-                <td className="py-2">Ik</td>
-                <td className="py-2 text-emerald-400 font-bold">zal</td>
-                <td className="py-2">de bloemen schuin</td>
-                <td className="py-2 font-bold">afsnijden</td>
-              </tr>
-              <tr>
-                <td className="py-2">We / wij</td>
-                <td className="py-2 text-emerald-400 font-bold">zullen</td>
-                <td className="py-2">een cadeau</td>
-                <td className="py-2 font-bold">kopen</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <div className="bg-emerald-900/30 p-3 rounded-lg border border-emerald-500/30">
-            <h4 className="text-emerald-300 font-bold text-xs uppercase mb-1">Yaygın Örnekler:</h4>
-            <ul className="text-sm text-emerald-100 list-disc pl-5 grid grid-cols-1 md:grid-cols-2 gap-1">
-              <li>Ik zal het volgende rondje betalen.</li>
-              <li>Ik zal het in mijn agenda schrijven.</li>
-              <li>We zullen de vakantiefoto's meebrengen.</li>
-              <li>Ik zal dit met mijn vriend overleggen.</li>
-              <li>We zullen het proberen.</li>
-              <li>We zullen je naar huis brengen.</li>
-              <li>Ik zal het adres even opschrijven.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f59e0b' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#fbbf24' }}>🤔 Ask / Express Opinions (Fikir Sormak ve Belirtmek)</h3>
-          <p className="text-sm text-slate-300 mb-2">Bir konu veya nesne hakkındaki fikrinizi ifade etmek için belirli kalıplar kullanılır:</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <h4 className="font-bold text-amber-300 text-sm mb-1">Mening vragen (Fikir Sormak)</h4>
-              <ul className="text-sm text-slate-200 list-disc pl-5 space-y-1">
-                <li><strong>Wat vind je van</strong> deze film?</li>
-                <li><strong>Hoe vind je</strong> mijn nieuwe broek?</li>
-                <li><strong>Vind je</strong> jonge dieren leuk?</li>
-                <li><strong>Vind je</strong> dat niet duur?</li>
-              </ul>
-              <p className="text-xs text-slate-400 mt-2">Pattern: Wat vind je van ...? / Hoe vind je ...?</p>
+              <div className="bg-emerald-900/30 p-3 rounded-lg border border-emerald-500/30">
+                <h4 className="text-emerald-300 font-bold text-xs uppercase mb-1">Common Examples:</h4>
+                <ul className="text-sm text-emerald-100 list-disc pl-5 grid grid-cols-1 md:grid-cols-2 gap-1">
+                  <li>Ik zal het volgende rondje betalen.</li>
+                  <li>Ik zal het in mijn agenda schrijven.</li>
+                  <li>We zullen de vakantiefoto's meebrengen.</li>
+                  <li>Ik zal dit met mijn vriend overleggen.</li>
+                  <li>We zullen het proberen.</li>
+                  <li>We zullen je naar huis brengen.</li>
+                  <li>Ik zal het adres even opschrijven.</li>
+                </ul>
+              </div>
             </div>
-            <div>
-              <h4 className="font-bold text-amber-300 text-sm mb-1">Mening geven (Fikir Belirtmek)</h4>
-              <ul className="text-sm text-slate-200 list-disc pl-5 space-y-1">
-                <li><strong>Ik vind</strong> de film interessant.</li>
-                <li><strong>Ik vind</strong> hem een beetje saai.</li>
-                <li><strong>Volgens mij</strong> is die buurt heel gezellig. (According to me...)</li>
-                <li><em>Ja, dat vind ik ook.</em> (Yes, I think so too.)</li>
-                <li><em>Nee, dat vind ik niet.</em> (No, I don't think so.)</li>
-              </ul>
+
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f59e0b' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#fbbf24' }}>🤔 Ask / Express Opinions</h3>
+              <p className="text-sm text-slate-300 mb-2">Specific phrases are used to express your opinion about a topic or object:</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <h4 className="font-bold text-amber-300 text-sm mb-1">Mening vragen (Asking Opinions)</h4>
+                  <ul className="text-sm text-slate-200 list-disc pl-5 space-y-1">
+                    <li><strong>Wat vind je van</strong> deze film?</li>
+                    <li><strong>Hoe vind je</strong> mijn nieuwe broek?</li>
+                    <li><strong>Vind je</strong> jonge dieren leuk?</li>
+                    <li><strong>Vind je</strong> dat niet duur?</li>
+                  </ul>
+                  <p className="text-xs text-slate-400 mt-2">Pattern: Wat vind je van ...? / Hoe vind je ...?</p>
+                </div>
+                <div>
+                  <h4 className="font-bold text-amber-300 text-sm mb-1">Mening geven (Giving Opinions)</h4>
+                  <ul className="text-sm text-slate-200 list-disc pl-5 space-y-1">
+                    <li><strong>Ik vind</strong> de film interessant.</li>
+                    <li><strong>Ik vind</strong> hem een beetje saai.</li>
+                    <li><strong>Volgens mij</strong> is die buurt heel gezellig. (According to me...)</li>
+                    <li><em>Ja, dat vind ik ook.</em> (Yes, I think so too.)</li>
+                    <li><em>Nee, dat vind ik niet.</em> (No, I don't think so.)</li>
+                  </ul>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
+          </>
+        )}
       </>
     ),
     exerciseGroups: [
       {
-        instruction: "On-Class Oefening 1: Meningen Vragen en Geven",
+        instruction: "On-Class Oefening 1: Meningen Vragen en Geven (Asking and Giving Opinions)",
         isExtra: false,
         questions: [
           { id: "13_onclass_1_1", type: "fill_in", question: "________ vind je van deze film? (What do you think of this movie?)", correctAnswer: "Wat" },
@@ -508,7 +734,7 @@ export const chapter13Sections = [
         ]
       },
       {
-        instruction: "On-Class Oefening 4: Repetitie (Perfectum & Indirecte Vraag)",
+        instruction: "On-Class Oefening 4: Repetitie (Perfectum & Indirecte Vraag / Review)",
         isExtra: true,
         questions: [
           { id: "13_onclass_4_1", type: "fill_in", question: "Ik kom aan. -> Ik ________ ________. (I have arrived)", correctAnswer: "ben, aangekomen" },

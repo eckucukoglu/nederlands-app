@@ -798,7 +798,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
       {/* 5. ANA İÇERİK */}
       <main className="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 text-slate-200 flex flex-col relative overflow-hidden">
         
-        {(activeTab.includes('.1') && !activeTab.includes('On-Class')) && (
+        {(activeTab.endsWith('.1') && !activeTab.includes('On-Class')) && (
           <DialogueSection 
             sectionId={activeTab} 
             favorites={favorites} 

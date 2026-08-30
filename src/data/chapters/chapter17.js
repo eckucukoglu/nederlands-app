@@ -63,11 +63,11 @@ export const chapter17Vocab = [
 
 export const chapter17Dialogues = {
   "17.2": [
-    { speaker: "Sam", text: "Goedemorgen schat, heb je lekker geslapen?", translation: "Günaydın sevgilim, iyi uyudun mu?" },
-    { speaker: "Tina", text: "Ja heel goed, en ik heb zo heerlijk gedroomd. We waren op vakantie op een tropisch eiland met prachtige vogels. Het was geweldig. En jij?", translation: "Evet çok iyi, ve rüyamda harika şeyler gördüm. Muhteşem kuşların olduğu tropikal bir adada tatildeydik. Harikaydı. Ya sen?" },
-    { speaker: "Sam", text: "Ik kon helemaal niet slapen. Ik heb de halve nacht wakker gelegen.", translation: "Hiç uyuyamadım. Gecenin yarısı uyanık yattım." },
-    { speaker: "Tina", text: "Wat vervelend. Ben je wel uitgerust?", translation: "Ne kadar sinir bozucu. Dinlenebildin mi?" },
-    { speaker: "Sam", text: "Ja hoor, ik ben nog jong. Ik sta op. Ik ga douchen en een lekker ontbijtje voor je maken.", translation: "Evet ya, ben hala gencim. Kalkıyorum. Duş alıp sana lezzetli bir kahvaltı hazırlayacağım." }
+    { speaker: "Sam", text: "Goedemorgen schat, heb je lekker geslapen?", translation: { tr: "Günaydın sevgilim, iyi uyudun mu?", en: "Good morning darling, did you sleep well?" } },
+    { speaker: "Tina", text: "Ja heel goed, en ik heb zo heerlijk gedroomd. We waren op vakantie op een tropisch eiland met prachtige vogels. Het was geweldig. En jij?", translation: { tr: "Evet çok iyi, ve rüyamda harika şeyler gördüm. Muhteşem kuşların olduğu tropikal bir adada tatildeydik. Harikaydı. Ya sen?", en: "Yes very well, and I had such a wonderful dream. We were on holiday on a tropical island with beautiful birds. It was amazing. And you?" } },
+    { speaker: "Sam", text: "Ik kon helemaal niet slapen. Ik heb de halve nacht wakker gelegen.", translation: { tr: "Hiç uyuyamadım. Gecenin yarısı uyanık yattım.", en: "I couldn't sleep at all. I lay awake for half the night." } },
+    { speaker: "Tina", text: "Wat vervelend. Ben je wel uitgerust?", translation: { tr: "Ne kadar sinir bozucu. Dinlenebildin mi?", en: "How annoying. Are you well-rested though?" } },
+    { speaker: "Sam", text: "Ja hoor, ik ben nog jong. Ik sta op. Ik ga douchen en een lekker ontbijtje voor je maken.", translation: { tr: "Evet ya, ben hala gencim. Kalkıyorum. Duş alıp sana lezzetli bir kahvaltı hazırlayacağım.", en: "Yes sure, I'm still young. I'm getting up. I'm going to shower and make a nice breakfast for you." } }
   ]
 };
 
@@ -76,25 +76,40 @@ export const chapter17Sections = [
     id: "17.1",
     chapter: 17,
     title: "17.1 Tekst: De dag van Tina en Sam",
-    theory: (
+    theory: (lang) => (
       <>
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #3b82f6', marginBottom: '20px' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#60a5fa' }}>📄 Tekst: Een dag uit het leven van Tina en Sam</h3>
-          <p>Sinema kasiyeri Tina ve bilgisayar programcısı Sam'in bir gününü saat saat takip ediyoruz[cite: 15]:</p>
-          <ul style={{ margin: '10px 0', paddingLeft: '20px', color: '#cbd5e1', listStyleType: 'disc' }}>
-            <li><strong>07.15 uur:</strong> Uyanma, kahvaltı hazırlama, planlar[cite: 15].</li>
-            <li><strong>08.35 uur:</strong> Otobüsle yola çıkış, fakülte, kütüphane ve tentamen (sınav) dönemi[cite: 15].</li>
-            <li><strong>13.00 uur:</strong> İş yerinde öğle yemeği ve sistem arızası (storing)[cite: 15].</li>
-            <li><strong>17.30 uur:</strong> Eve dönüş ve akşam yemeği hazırlığı (pasta met gehaktballetjes)[cite: 15].</li>
-            <li><strong>18.45 uur:</strong> Tina'nın sinemadaki iş mesaisi[cite: 15].</li>
-            <li><strong>23.00 uur:</strong> Eve dönüş, çay molası ve Sam'in iş yerindeki problemi düşünmesi[cite: 15].</li>
-          </ul>
-        </div>
+        {lang === 'tr' ? (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #3b82f6', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#60a5fa' }}>📄 Tekst: Een dag uit het leven van Tina en Sam</h3>
+            <p>Sinema kasiyeri Tina ve bilgisayar programcısı Sam'in bir gününü saat saat takip ediyoruz:</p>
+            <ul style={{ margin: '10px 0', paddingLeft: '20px', color: '#cbd5e1', listStyleType: 'disc' }}>
+              <li><strong>07.15 uur:</strong> Uyanma, kahvaltı hazırlama, planlar.</li>
+              <li><strong>08.35 uur:</strong> Otobüsle yola çıkış, fakülte, kütüphane ve tentamen (sınav) dönemi.</li>
+              <li><strong>13.00 uur:</strong> İş yerinde öğle yemeği ve sistem arızası (storing).</li>
+              <li><strong>17.30 uur:</strong> Eve dönüş ve akşam yemeği hazırlığı (pasta met gehaktballetjes).</li>
+              <li><strong>18.45 uur:</strong> Tina'nın sinemadaki iş mesaisi.</li>
+              <li><strong>23.00 uur:</strong> Eve dönüş, çay molası ve Sam'in iş yerindeki problemi düşünmesi.</li>
+            </ul>
+          </div>
+        ) : (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #3b82f6', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#60a5fa' }}>📄 Text: A day in the life of Tina and Sam</h3>
+            <p>We follow a day in the life of cinema cashier Tina and computer programmer Sam, hour by hour:</p>
+            <ul style={{ margin: '10px 0', paddingLeft: '20px', color: '#cbd5e1', listStyleType: 'disc' }}>
+              <li><strong>07.15 uur:</strong> Waking up, preparing breakfast, plans.</li>
+              <li><strong>08.35 uur:</strong> Leaving by bus, faculty, library and exam (tentamen) period.</li>
+              <li><strong>13.00 uur:</strong> Lunch at work and system breakdown (storing).</li>
+              <li><strong>17.30 uur:</strong> Return home and dinner preparation (pasta met gehaktballetjes).</li>
+              <li><strong>18.45 uur:</strong> Tina's work shift at the cinema.</li>
+              <li><strong>23.00 uur:</strong> Return home, tea break and Sam thinking about the problem at work.</li>
+            </ul>
+          </div>
+        )}
       </>
     ),
     exerciseGroups: [
       {
-        instruction: "Opdracht 1: Bedenk zelf vragen bij de tekst (Okuduğunu Anlama).",
+        instruction: "Opdracht 1: Bedenk zelf vragen bij de tekst (Okuduğunu Anlama / Reading Comprehension).",
         isExtra: false,
         questions: [
           { id: "17.1_opd1_1", type: "multiple_choice", question: "Wat studeert Tina?", options: ["Informatietechnologie", "Filosofie", "Geschiedenis"], correctAnswer: "Filosofie" },
@@ -108,17 +123,24 @@ export const chapter17Sections = [
     id: "17.2",
     chapter: 17,
     title: "17.2 Woordenlijst",
-    theory: (
+    theory: (lang) => (
       <>
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>📖 Woordenlijst Analizi</h3>
-          <p>Günlük rutinler, üniversite terimleri (college, tentamen, bibliotheek) ve teknoloji/iş dünyası kelimeleri bu ünitenin odak noktasıdır[cite: 15]. Flashcards bölümünden pratik yapabilirsiniz.</p>
-        </div>
+        {lang === 'tr' ? (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>📖 Woordenlijst Analizi</h3>
+            <p>Günlük rutinler, üniversite terimleri (college, tentamen, bibliotheek) ve teknoloji/iş dünyası kelimeleri bu ünitenin odak noktasıdır. Flashcards bölümünden pratik yapabilirsiniz.</p>
+          </div>
+        ) : (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>📖 Vocabulary Analysis</h3>
+            <p>Daily routines, university terms (college, tentamen, bibliotheek), and technology/business words are the focus of this unit. You can practice in the Flashcards section.</p>
+          </div>
+        )}
       </>
     ),
     exerciseGroups: [
       {
-        instruction: "Woordenlijst Test: Wat is de juiste vertaling?",
+        instruction: "Woordenlijst Test: Wat is de juiste vertaling? (What is the correct translation?)",
         isExtra: true,
         questions: generateSmartQuestions(17, "Woordenlijst", 10, chapter17Vocab)
       }
@@ -127,28 +149,45 @@ export const chapter17Sections = [
   {
     id: "17.4",
     chapter: 17,
-    title: "17.4 Er / Daar (Yer ve Konum Zamirleri)",
-    theory: (
+    title: "17.4 Er / Daar (Yer ve Konum Zamirleri / Pronouns of Place)",
+    theory: (lang) => (
       <>
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #06b6d4', marginBottom: '20px' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#22d3ee' }}>📍 Er vs Daar (Var / Orada)</h3>
-          <p className="text-sm text-slate-300">Hollandacada <strong>"Er is / Er zijn"</strong> kalıbı İngilizcedeki "There is / There are" (Var) anlamını verir.</p>
-          <ul className="text-sm text-slate-200 mt-2 list-disc pl-5 space-y-1">
-            <li><strong>Er is</strong> een ongeluk gebeurd. (Bir kaza gerçekleşti/oldu).</li>
-            <li><strong>Er zijn</strong> veel buitenlanders. (Çok sayıda yabancı var).</li>
-          </ul>
+        {lang === 'tr' ? (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #06b6d4', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#22d3ee' }}>📍 Er vs Daar (Var / Orada)</h3>
+            <p className="text-sm text-slate-300">Hollandacada <strong>"Er is / Er zijn"</strong> kalıbı İngilizcedeki "There is / There are" (Var) anlamını verir.</p>
+            <ul className="text-sm text-slate-200 mt-2 list-disc pl-5 space-y-1">
+              <li><strong>Er is</strong> een ongeluk gebeurd. (Bir kaza gerçekleşti/oldu).</li>
+              <li><strong>Er zijn</strong> veel buitenlanders. (Çok sayıda yabancı var).</li>
+            </ul>
 
-          <div className="bg-cyan-900/30 p-4 rounded-xl mt-4 border border-cyan-500/30">
-            <h4 className="font-bold text-cyan-300 mb-1">ER mi, DAAR mı?</h4>
-            <p className="text-sm text-cyan-100"><strong>Er:</strong> Belirtisiz bir durumu veya genel varoluşu söylerken kullanılır (There is...).<br/>
-            <strong>Daar:</strong> Spesifik bir yeri (uzaktaki bir noktayı) parmakla gösterir gibi işaret ederken kullanılır (Over there / Orada).</p>
+            <div className="bg-cyan-900/30 p-4 rounded-xl mt-4 border border-cyan-500/30">
+              <h4 className="font-bold text-cyan-300 mb-1">ER mi, DAAR mı?</h4>
+              <p className="text-sm text-cyan-100"><strong>Er:</strong> Belirtisiz bir durumu veya genel varoluşu söylerken kullanılır (There is...).<br/>
+              <strong>Daar:</strong> Spesifik bir yeri (uzaktaki bir noktayı) parmakla gösterir gibi işaret ederken kullanılır (Over there / Orada).</p>
+            </div>
           </div>
-        </div>
+        ) : (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #06b6d4', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#22d3ee' }}>📍 Er vs Daar (There is / Over there)</h3>
+            <p className="text-sm text-slate-300">In Dutch, the pattern <strong>"Er is / Er zijn"</strong> gives the meaning of "There is / There are".</p>
+            <ul className="text-sm text-slate-200 mt-2 list-disc pl-5 space-y-1">
+              <li><strong>Er is</strong> een ongeluk gebeurd. (An accident has happened / There was an accident).</li>
+              <li><strong>Er zijn</strong> veel buitenlanders. (There are many foreigners).</li>
+            </ul>
+
+            <div className="bg-cyan-900/30 p-4 rounded-xl mt-4 border border-cyan-500/30">
+              <h4 className="font-bold text-cyan-300 mb-1">ER or DAAR?</h4>
+              <p className="text-sm text-cyan-100"><strong>Er:</strong> Used when stating an indefinite situation or general existence (There is...).<br/>
+              <strong>Daar:</strong> Used when pointing to a specific place (a distant point) as if pointing with a finger (Over there).</p>
+            </div>
+          </div>
+        )}
       </>
     ),
     exerciseGroups: [
       {
-        instruction: "Opdracht 6: Geef antwoord op de volgende vragen. Gebruik er of daar.",
+        instruction: "Opdracht 6: Geef antwoord op de volgende vragen. Gebruik er of daar. (Answer the following questions. Use er or daar.)",
         isExtra: false,
         questions: [
           { id: "17.4_opd6_1", type: "multiple_choice", question: "1. Is er een sportschool? -> Ja, ________ is een sportschool in de straat.", options: ["er", "daar"], correctAnswer: "er" },
@@ -157,7 +196,7 @@ export const chapter17Sections = [
         ]
       },
       {
-        instruction: "Slimme Oefeningen (Pedagogisch): Er vs Daar",
+        instruction: "Slimme Oefeningen (Smart Exercises): Er vs Daar",
         isExtra: true,
         questions: [
           { id: "17.4_smart_1", type: "multiple_choice", question: "Kies de correcte vorm: 'Look at that building! ________ is an old church.'", options: ["Er", "Daar"], correctAnswer: "Daar" },
@@ -169,29 +208,47 @@ export const chapter17Sections = [
   {
     id: "17.5",
     chapter: 17,
-    title: "17.5 Zijn – aan het + infinitief (Şimdiki Zaman - Sürüp Giden Eylem)",
-    theory: (
+    title: "17.5 Zijn – aan het + infinitief (Şimdiki Zaman - Sürüp Giden Eylem / Present Continuous)",
+    theory: (lang) => (
       <>
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>⏳ Şimdiki Zaman Vurgusu: "Aan het + Infinitief"</h3>
-          <p className="text-sm text-slate-300">Hollandacada normal şimdiki zaman (Presens) hem geniş zamanı hem de o an yapılan eylemi karşılar (Örn: *Ik werk* = Çalışıyorum veya Çalışırım).</p>
-          <p className="text-sm text-slate-300 mt-2">Ancak karşıdakine <strong>"Şu anda tam bu saniyede bu eylemi yapmaktayım"</strong> vurgusunu (İngilizcedeki Present Continuous: *I am working*) vermek istiyorsanız <strong>"zijn + aan het + mastar fiil"</strong> kalıbını kullanırsınız.</p>
+        {lang === 'tr' ? (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>⏳ Şimdiki Zaman Vurgusu: "Aan het + Infinitief"</h3>
+            <p className="text-sm text-slate-300">Hollandacada normal şimdiki zaman (Presens) hem geniş zamanı hem de o an yapılan eylemi karşılar (Örn: *Ik werk* = Çalışıyorum veya Çalışırım).</p>
+            <p className="text-sm text-slate-300 mt-2">Ancak karşıdakine <strong>"Şu anda tam bu saniyede bu eylemi yapmaktayım"</strong> vurgusunu (İngilizcedeki Present Continuous: *I am working*) vermek istiyorsanız <strong>"zijn + aan het + mastar fiil"</strong> kalıbını kullanırsınız.</p>
 
-          <div className="bg-emerald-900/40 p-4 rounded-xl mt-4 border border-emerald-500/50">
-            <h4 className="text-emerald-300 font-bold mb-2">Formül ve Örnekler:</h4>
-            <p className="text-sm font-mono text-white bg-black/20 p-2 rounded mb-2">[Özne] + [Zijn çekimi] + [aan het] + [Mastar Fiil]</p>
-            <ul className="text-sm text-emerald-100 space-y-1 list-disc pl-5">
-              <li>Sam <strong>is</strong> met een collega in Engeland <strong>aan het telefoneren</strong>. (Sam şu an telefonla konuşuyor).</li>
-              <li>Tina <strong>is</strong> boodschappen <strong>aan het doen</strong>. (Tina şu an alışveriş yapıyor).</li>
-              <li>Wij <strong>zijn</strong> Nederlands <strong>aan het leren</strong>. (Biz şu an Hollandaca öğreniyoruz).</li>
-            </ul>
+            <div className="bg-emerald-900/40 p-4 rounded-xl mt-4 border border-emerald-500/50">
+              <h4 className="text-emerald-300 font-bold mb-2">Formül ve Örnekler:</h4>
+              <p className="text-sm font-mono text-white bg-black/20 p-2 rounded mb-2">[Özne] + [Zijn çekimi] + [aan het] + [Mastar Fiil]</p>
+              <ul className="text-sm text-emerald-100 space-y-1 list-disc pl-5">
+                <li>Sam <strong>is</strong> met een collega in Engeland <strong>aan het telefoneren</strong>. (Sam şu an telefonla konuşuyor).</li>
+                <li>Tina <strong>is</strong> boodschappen <strong>aan het doen</strong>. (Tina şu an alışveriş yapıyor).</li>
+                <li>Wij <strong>zijn</strong> Nederlands <strong>aan het leren</strong>. (Biz şu an Hollandaca öğreniyoruz).</li>
+              </ul>
+            </div>
           </div>
-        </div>
+        ) : (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>⏳ Present Continuous: "Aan het + Infinitive"</h3>
+            <p className="text-sm text-slate-300">In Dutch, the normal present tense (Presens) covers both the simple present and the present continuous (Ex: *Ik werk* = I work or I am working).</p>
+            <p className="text-sm text-slate-300 mt-2">However, if you want to emphasize to the listener <strong>"I am doing this action right now at this exact second"</strong> (Present Continuous in English: *I am working*), you use the <strong>"zijn + aan het + infinitive verb"</strong> pattern.</p>
+
+            <div className="bg-emerald-900/40 p-4 rounded-xl mt-4 border border-emerald-500/50">
+              <h4 className="text-emerald-300 font-bold mb-2">Formula and Examples:</h4>
+              <p className="text-sm font-mono text-white bg-black/20 p-2 rounded mb-2">[Subject] + [Conjugation of zijn] + [aan het] + [Infinitive Verb]</p>
+              <ul className="text-sm text-emerald-100 space-y-1 list-disc pl-5">
+                <li>Sam <strong>is</strong> met een collega in Engeland <strong>aan het telefoneren</strong>. (Sam is currently talking on the phone with a colleague).</li>
+                <li>Tina <strong>is</strong> boodschappen <strong>aan het doen</strong>. (Tina is currently grocery shopping).</li>
+                <li>Wij <strong>zijn</strong> Nederlands <strong>aan het leren</strong>. (We are currently learning Dutch).</li>
+              </ul>
+            </div>
+          </div>
+        )}
       </>
     ),
     exerciseGroups: [
       {
-        instruction: "Opdracht 8: Gebruik voor deze zin de constructie zijn – aan het + infinitief.",
+        instruction: "Opdracht 8: Gebruik voor deze zin de constructie zijn – aan het + infinitief. (Use the construction zijn - aan het + infinitive for this sentence.)",
         isExtra: false,
         questions: [
           { id: "17.5_opd8_1", type: "fill_in", question: "1. Hans traint. -> Hans ________ aan het ________.", correctAnswer: "is, trainen" },
@@ -203,7 +260,7 @@ export const chapter17Sections = [
         ]
       },
       {
-        instruction: "Slimme Oefeningen (Pedagogisch): Aan het + Infinitief",
+        instruction: "Slimme Oefeningen (Smart Exercises): Aan het + Infinitief",
         isExtra: true,
         questions: [
           { id: "17.5_smart_1", type: "multiple_choice", question: "Welke zin drukt uit dat een handeling *nu op dit exact moment* aan de gang is?", options: ["Ik kook pasta.", "Ik ben pasta aan het koken.", "Ik ga pasta koken."], correctAnswer: "Ik ben pasta aan het koken." },
@@ -216,22 +273,38 @@ export const chapter17Sections = [
     id: "17.6",
     chapter: 17,
     title: "17.6 Uitspraak & Cultuur (Wonen)",
-    theory: (
+    theory: (lang) => (
       <>
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f43f5e', marginBottom: '20px' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#fb7185' }}>🗣️ Uitspraak: r – l</h3>
-          <p className="text-sm text-slate-300"><strong>Opdracht 12 & 13:</strong> Hollandacada <strong>r</strong> ile <strong>l</strong> seslerinin ayrımı çok önemlidir (Örn: rug vs lug, roepen vs lopen). Özellikle kelime başında veya sonunda bu iki akıcı ünsüzün karıştırılmaması gerekir.</p>
-        </div>
+        {lang === 'tr' ? (
+          <>
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f43f5e', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#fb7185' }}>🗣️ Uitspraak: r – l</h3>
+              <p className="text-sm text-slate-300"><strong>Opdracht 12 & 13:</strong> Hollandacada <strong>r</strong> ile <strong>l</strong> seslerinin ayrımı çok önemlidir (Örn: rug vs lug, roepen vs lopen). Özellikle kelime başında veya sonunda bu iki akıcı ünsüzün karıştırılmaması gerekir.</p>
+            </div>
 
-        <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #3b82f6', marginBottom: '20px' }}>
-          <h3 style={{ margin: '0 0 10px 0', color: '#60a5fa'}}>🇳🇱 Cultuur: Samen uit of samen thuis? (Misafirlik Alışkanlıkları)</h3>
-          <p className="text-sm text-slate-300">Hollanda'da arkadaşlarla buluşma yeri genellikle ev değil, <strong>café veya restaurant</strong>tur. Evde misafirlik ağırlamak daha samimi/özel bir çember (aile veya çok yakın arkadaşlar) için geçerlidir. Birçok Hollandalı evlerinin "fazla özel" (privé) olduğuna inanır.</p>
-        </div>
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #3b82f6', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#60a5fa'}}>🇳🇱 Cultuur: Samen uit of samen thuis? (Misafirlik Alışkanlıkları)</h3>
+              <p className="text-sm text-slate-300">Hollanda'da arkadaşlarla buluşma yeri genellikle ev değil, <strong>café veya restaurant</strong>tur. Evde misafirlik ağırlamak daha samimi/özel bir çember (aile veya çok yakın arkadaşlar) için geçerlidir. Birçok Hollandalı evlerinin "fazla özel" (privé) olduğuna inanır.</p>
+            </div>
+          </>
+        ) : (
+          <>
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f43f5e', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#fb7185' }}>🗣️ Uitspraak: r – l (Pronunciation)</h3>
+              <p className="text-sm text-slate-300"><strong>Opdracht 12 & 13:</strong> In Dutch, the distinction between the <strong>r</strong> and <strong>l</strong> sounds is very important (e.g. rug vs lug, roepen vs lopen). Especially at the beginning or end of a word, these two liquid consonants should not be mixed up.</p>
+            </div>
+
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #3b82f6', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#60a5fa'}}>🇳🇱 Cultuur: Samen uit of samen thuis? (Hosting habits)</h3>
+              <p className="text-sm text-slate-300">In the Netherlands, the meeting place with friends is usually not at home, but a <strong>café or restaurant</strong>. Hosting guests at home applies to a more intimate/private circle (family or very close friends). Many Dutch people believe their homes are "too private" (privé).</p>
+            </div>
+          </>
+        )}
       </>
     ),
     exerciseGroups: [
       {
-        instruction: "Slimme Oefeningen: Uitspraak en Cultuur",
+        instruction: "Slimme Oefeningen: Uitspraak en Cultuur (Pronunciation and Culture)",
         isExtra: true,
         questions: [
           { id: "17.6_smart_1", type: "multiple_choice", question: "Waar spreken Nederlanders af met vrienden (meestal)?", options: ["Alleen thuis achter closed doors", "In een café of restaurant", "Op het station"], correctAnswer: "In een café of restaurant" },
