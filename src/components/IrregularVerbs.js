@@ -1,6 +1,7 @@
 // src/components/IrregularVerbs.js
 import React, { useState, useMemo } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
+import QuizModule from './QuizModule';
 
 // Kitaptaki listeye dayalı, özel örnek cümlelerle zenginleştirilmiş düzensiz fiiller veritabanı
 const irregularVerbsData = [
@@ -126,7 +127,7 @@ const irregularVerbsData = [
     ex: { pres: "Ik zie een vogel.", imp: "Ik zag je gisteren op straat.", perf: "Heb je die nieuwe film al gezien?" } },
   { inf: "zijn", imp: "was, waren", perf: "geweest", aux: "zijn", freq: true, en: "be", tr: "olmak",
     ex: { pres: "Ik ben ziek.", imp: "Waar was jij gisteren?", perf: "Ik ben in Parijs geweest." } },
-  { inf: "zitten", imp: "zat, zaten", perf: "gezeten", aux: "hebben", freq: true, en: "sit", tr: "oturmak",
+  { inf: "zitten", imp: "zat, zitten", perf: "gezeten", aux: "hebben", freq: true, en: "sit", tr: "oturmak",
     ex: { pres: "We zitten in de tuin.", imp: "Hij zat de hele dag binnen.", perf: "We hebben lang in de auto gezeten." } },
   { inf: "zoeken", imp: "zocht, zochten", perf: "gezocht", aux: "hebben", freq: true, en: "search, look", tr: "aramak",
     ex: { pres: "Ik zoek mijn boek.", imp: "Ik zocht je overal.", perf: "Heb je in de kast gezocht?" } },
@@ -137,6 +138,7 @@ const irregularVerbsData = [
 export default function IrregularVerbs() {
   const { lang } = useLanguage();
   const [searchTerm, setSearchTerm] = useState('');
+  const [isQuizOpen, setIsQuizOpen] = useState(false);
 
   const isTr = lang === 'tr';
 
@@ -159,11 +161,24 @@ export default function IrregularVerbs() {
         <div className="absolute top-0 right-0 p-8 opacity-10 pointer-events-none">
            <i className="fa-solid fa-list-check text-9xl text-sky-400"></i>
         </div>
-        <h2 className="text-2xl sm:text-3xl font-extrabold text-sky-400 mb-2 relative z-10 flex items-center gap-3">
-          <i className="fa-solid fa-bolt"></i> 
-          {isTr ? 'Onregelmatige Werkwoorden (Düzensiz Fiiller)' : 'Onregelmatige Werkwoorden (Irregular Verbs)'}
-        </h2>
-        <p className="text-sm text-slate-300 mb-6 relative z-10">
+        
+        {/* BAŞLIK VE QUIZ BUTONU */}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-2 relative z-10">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-sky-400 flex items-center gap-3">
+            <i className="fa-solid fa-bolt"></i> 
+            {isTr ? 'Onregelmatige Werkwoorden' : 'Irregular Verbs'}
+          </h2>
+          
+          <button 
+             onClick={() => setIsQuizOpen(true)}
+             className="flex-shrink-0 flex items-center justify-center gap-2 bg-sky-600/20 text-sky-400 hover:bg-sky-600 hover:text-white border border-sky-500/50 hover:border-sky-500 px-5 py-2.5 rounded-xl font-bold transition-all shadow-sm group"
+           >
+             <i className="fa-solid fa-dumbbell group-hover:animate-bounce"></i> 
+             {isTr ? 'Çalış & Test Et' : 'Practice'}
+           </button>
+        </div>
+
+        <p className="text-sm text-slate-300 mb-6 relative z-10 max-w-2xl">
           {isTr 
             ? 'Bu listedeki fiiller geçmiş zamanda kuralsız (güçlü) olarak değişir. Mavi yıldızlı olanlar günlük hayatta ve diyaloglarda en sık kullanılan fiillerdir.' 
             : 'These verbs change irregularly (strong verbs) in the past tense. The blue starred ones are highly frequent verbs used in daily dialogues.'}
@@ -246,6 +261,15 @@ export default function IrregularVerbs() {
           </div>
         )}
       </div>
+
+      {/* QUIZ MODÜLÜ BAĞLANTISI */}
+      {isQuizOpen && (
+        <QuizModule 
+          tags={["irregular_verbs"]} 
+          onClose={() => setIsQuizOpen(false)} 
+          title={isTr ? "Düzensiz Fiiller Testi" : "Irregular Verbs Quiz"}
+        />
+      )}
     </div>
   );
 }

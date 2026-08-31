@@ -1,6 +1,7 @@
 // src/components/Grammar.js
 import React, { useState, useMemo } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
+import QuizModule from './QuizModule';
 
 const grammarData = [
   {
@@ -1820,6 +1821,7 @@ export default function Grammar() {
   const isTr = lang === 'tr';
   const [searchTerm, setSearchTerm] = useState('');
   const [activeTopic, setActiveTopic] = useState(grammarData[0].id);
+  const [isQuizOpen, setIsQuizOpen] = useState(false); // YENİ EKLENEN STATE
 
   const filteredTopics = useMemo(() => {
     if (!searchTerm) return grammarData;
@@ -1831,6 +1833,8 @@ export default function Grammar() {
   }, [searchTerm]);
 
   const activeContent = grammarData.find(t => t.id === activeTopic);
+
+
 
   return (
     <div className="w-full max-w-6xl mx-auto flex flex-col md:flex-row gap-6 animate-fadeIn pb-12">
@@ -1882,7 +1886,7 @@ export default function Grammar() {
         </div>
       </div>
 
-      {/* SAĞ İÇERİK (Detaylar) */}
+{/* SAĞ İÇERİK (Detaylar) */}
       <div className="w-full md:w-2/3 lg:w-3/4">
         {activeContent ? (
           <div className="bg-slate-800 border border-slate-700 rounded-3xl p-6 sm:p-8 shadow-xl relative overflow-hidden h-full">
@@ -1890,13 +1894,33 @@ export default function Grammar() {
                 <i className="fa-solid fa-pen-ruler text-9xl text-indigo-400"></i>
              </div>
              
-             <h3 className="text-2xl sm:text-3xl font-extrabold text-white mb-6 border-b border-slate-700 pb-4 relative z-10 leading-tight">
-               {isTr ? activeContent.titleTr : activeContent.titleEn}
-             </h3>
+             {/* BAŞLIK VE BUTON ALANI GÜNCELLENDİ */}
+             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 border-b border-slate-700 pb-4 relative z-10">
+               <h3 className="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
+                 {isTr ? activeContent.titleTr : activeContent.titleEn}
+               </h3>
+               
+               <button 
+                 onClick={() => setIsQuizOpen(true)}
+                 className="flex-shrink-0 flex items-center justify-center gap-2 bg-indigo-600/20 text-indigo-400 hover:bg-indigo-600 hover:text-white border border-indigo-500/50 hover:border-indigo-500 px-5 py-2.5 rounded-xl font-bold transition-all shadow-sm group"
+               >
+                 <i className="fa-solid fa-dumbbell group-hover:animate-bounce"></i> 
+                 {isTr ? 'Çalış & Test Et' : 'Practice'}
+               </button>
+             </div>
              
              <div className="relative z-10">
                 {activeContent.content(isTr)}
              </div>
+
+             {/* QUIZ MODAL ÇAĞRISI */}
+             {isQuizOpen && (
+               <QuizModule 
+                 tags={[activeContent.id]} 
+                 onClose={() => setIsQuizOpen(false)} 
+                 title={isTr ? activeContent.titleTr : activeContent.titleEn}
+               />
+             )}
           </div>
         ) : (
           <div className="bg-slate-800 border border-slate-700 rounded-3xl p-8 text-center flex flex-col items-center justify-center shadow-xl h-full min-h-[300px]">
