@@ -7,19 +7,18 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
   const { lang } = useLanguage();
   const isTr = lang === 'tr';
 
-  // Soruları verilen tag'lere göre filtrele ve Fisher-Yates algoritması ile KARIŞTIR
+  // Soruları filtregle (tags boşsa tüm soruları al) ve Fisher-Yates algoritması ile KARIŞTIR
   const filteredQuestions = useMemo(() => {
     let filtered = tags.length === 0 
         ? [...quizQuestions] 
         : quizQuestions.filter(q => q.tags.some(tag => tags.includes(tag)));
     
-    // Gerçek rastgelelik için Fisher-Yates karıştırma algoritması
     for (let i = filtered.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [filtered[i], filtered[j]] = [filtered[j], filtered[i]];
     }
     return filtered;
-  }, [tags]); // Sadece modül açıldığında (tag'ler değiştiğinde) 1 kez karıştırır.
+  }, [tags]);
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [userAnswer, setUserAnswer] = useState('');
@@ -27,14 +26,12 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
   const [isCorrect, setIsCorrect] = useState(false);
   const [quizHistory, setQuizHistory] = useState({});
 
-  // Component yüklendiğinde geçmiş istatistikleri çek
   useEffect(() => {
     const history = JSON.parse(localStorage.getItem('quizHistory')) || {};
     setQuizHistory(history);
   }, []);
 
   const currentQ = filteredQuestions[currentIndex];
-  // Mevcut sorunun daha önceki performansını getir
   const qHistory = currentQ ? quizHistory[currentQ.id] || { correct: 0, incorrect: 0 } : null;
 
   const handleCheck = () => {
@@ -44,7 +41,6 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
     setIsCorrect(correct);
     setIsAnswered(true);
 
-    // İstatistiği güncelle ve LocalStorage'a kaydet (Bulut senkronizasyonu için hazır hale gelir)
     const newHistory = { ...quizHistory };
     if (!newHistory[currentQ.id]) newHistory[currentQ.id] = { correct: 0, incorrect: 0 };
     
@@ -65,7 +61,7 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
       setIsAnswered(false);
       setIsCorrect(false);
     } else {
-      onClose(); // Test bittiğinde modülü kapat
+      onClose();
     }
   };
 
@@ -75,7 +71,7 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
         <div className="bg-slate-900 w-full max-w-md rounded-3xl shadow-2xl border border-slate-700 p-8 text-center" onClick={e => e.stopPropagation()}>
           <i className="fa-solid fa-ghost text-4xl text-slate-500 mb-4"></i>
           <h3 className="text-xl font-bold text-slate-200 mb-2">{isTr ? 'Soru Bulunamadı' : 'No Questions Found'}</h3>
-          <p className="text-slate-400 text-sm mb-6">{isTr ? 'Bu konuyla ilgili henüz soru eklenmemiş.' : 'No questions have been added for this topic yet.'}</p>
+          <p className="text-slate-400 text-sm mb-6">{isTr ? 'Bu kriterlere uygun soru bulunamadı.' : 'No questions found matching these criteria.'}</p>
           <button onClick={onClose} className="bg-slate-800 text-white px-6 py-2.5 rounded-xl border border-slate-600 hover:bg-slate-700 transition-colors">
             {isTr ? 'Kapat' : 'Close'}
           </button>
@@ -84,7 +80,6 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
     );
   }
 
-  // Cümledeki "___" kısmını bulup input veya durum kutusu olarak render etmek için yardımcı fonksiyon
   const renderQuestionText = () => {
     if (!currentQ.questionNl.includes('___')) return currentQ.questionNl;
     
@@ -118,16 +113,15 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
         {/* Header */}
         <div className="p-4 sm:p-5 flex justify-between items-center border-b border-slate-800 bg-slate-800/50">
           <h3 className="text-base sm:text-lg font-bold text-slate-200 flex items-center gap-2">
-            <i className="fa-solid fa-dumbbell text-brand-400"></i> {title}
+            <i className="fa-solid fa-graduation-cap text-brand-400"></i> {title}
           </h3>
           
           <div className="flex items-center gap-4">
-            {/* Soru Geçmişi İstatistiği */}
             <div className="flex items-center gap-2 text-[10px] sm:text-xs font-bold bg-slate-950/50 px-2 sm:px-3 py-1.5 rounded-lg border border-slate-700">
                <span className="text-slate-400 font-normal mr-1 hidden sm:inline">{isTr ? 'Bu Soru:' : 'This Q:'}</span>
-               <span className="text-emerald-400 flex items-center gap-1" title={isTr ? 'Doğru (Correct)' : 'Correct'}><i className="fa-solid fa-check"></i> {qHistory.correct}</span>
+               <span className="text-emerald-400 flex items-center gap-1" title={isTr ? 'Doğru' : 'Correct'}><i className="fa-solid fa-check"></i> {qHistory.correct}</span>
                <span className="text-slate-600">|</span>
-               <span className="text-rose-400 flex items-center gap-1" title={isTr ? 'Yanlış (Incorrect)' : 'Incorrect'}><i className="fa-solid fa-xmark"></i> {qHistory.incorrect}</span>
+               <span className="text-rose-400 flex items-center gap-1" title={isTr ? 'Yanlış' : 'Incorrect'}><i className="fa-solid fa-xmark"></i> {qHistory.incorrect}</span>
             </div>
             
             <button onClick={onClose} className="text-slate-400 hover:text-rose-400 text-xl transition-colors">
@@ -144,6 +138,18 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
         {/* Content */}
         <div className="p-6 sm:p-8 flex-1 flex flex-col justify-center">
            <div className="text-center mb-8">
+              
+              {/* SORU ETİKETLERİ (TAGS) GÖSTERİMİ */}
+              {currentQ.tags && currentQ.tags.length > 0 && (
+                <div className="flex flex-wrap justify-center gap-1.5 mb-3">
+                  {currentQ.tags.map(tag => (
+                    <span key={tag} className="text-[10px] font-semibold bg-indigo-950/60 text-indigo-300 px-2.5 py-0.5 rounded-md border border-indigo-800/50 shadow-sm">
+                      #{tag}
+                    </span>
+                  ))}
+                </div>
+              )}
+
               <span className="text-xs font-extrabold text-slate-500 uppercase tracking-wider mb-2 block">
                 {isTr ? 'Soru' : 'Question'} {currentIndex + 1} / {filteredQuestions.length}
               </span>
@@ -152,7 +158,6 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
               </h2>
            </div>
 
-           {/* Seçenekler (Çoktan seçmeli için) */}
            {currentQ.type === 'multiple_choice' && (
              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
                 {currentQ.options.map(opt => {
@@ -179,7 +184,6 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
              </div>
            )}
 
-           {/* Sonuç & Açıklama */}
            {isAnswered && (
              <div className={`mt-4 p-5 rounded-xl border animate-fadeIn flex flex-col gap-2 ${isCorrect ? 'bg-emerald-900/10 border-emerald-800/50' : 'bg-rose-900/10 border-rose-800/50'}`}>
                <h4 className={`text-lg font-bold flex items-center gap-2 ${isCorrect ? 'text-emerald-400' : 'text-rose-400'}`}>
@@ -198,7 +202,6 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
              </div>
            )}
 
-           {/* Aksiyon Butonu */}
            <div className="mt-8 flex justify-center">
              {!isAnswered ? (
                <button 

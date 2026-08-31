@@ -6,6 +6,7 @@ import QuizModule from './QuizModule';
 const grammarData = [
   {
     id: "verbs_present",
+    tags: ["verbs_present"],
     titleTr: "Zamirler ve Şimdiki Zaman (Pronouns & Present Tense)",
     titleEn: "Personal Pronouns & Present Tense",
     content: (isTr) => (
@@ -124,6 +125,7 @@ const grammarData = [
   },
   {
     id: "word_order",
+    tags: ["word_order", "inversion", "questions"],
     titleTr: "Cümle Dizilimi ve Sorular (Word Order & Questions)",
     titleEn: "Word Order & Questions",
     content: (isTr) => (
@@ -316,6 +318,7 @@ const grammarData = [
   },
   {
     id: "articles_plurals",
+    tags: ["articles_plurals", "diminutives"],
     titleTr: "Artikeller, Çoğullar ve Küçültme (Articles, Plurals, Diminutives)",
     titleEn: "Articles, Plurals & Diminutives",
     content: (isTr) => (
@@ -429,6 +432,7 @@ const grammarData = [
   },
   {
     id: "adjectives",
+    tags: ["adjectives"],
     titleTr: "Sıfatlar (Adjectief)",
     titleEn: "Adjectives (Adjectief)",
     content: (isTr) => (
@@ -531,6 +535,7 @@ const grammarData = [
   },
   {
     id: "modal_imperative",
+    tags: ["modal_verbs", "imperative"],
     titleTr: "Kipler ve Emir Cümlesi (Modal Verbs & Imperative)",
     titleEn: "Modal Verbs & Imperative",
     content: (isTr) => (
@@ -673,6 +678,7 @@ const grammarData = [
   },
   {
     id: "comparative_superlative",
+    tags: ["comparative_superlative"],
     titleTr: "Karşılaştırma ve Üstünlük (Comparative & Superlative)",
     titleEn: "Comparative & Superlative",
     content: (isTr) => (
@@ -814,6 +820,7 @@ const grammarData = [
   },
   {
     id: "pronouns_negation",
+    tags: ["pronouns_object", "pronouns_demonstrative", "negation"],
     titleTr: "Nesne ve İşaret Zamirleri & Olumsuzluk",
     titleEn: "Object & Demonstrative Pronouns & Negation",
     content: (isTr) => (
@@ -1006,6 +1013,7 @@ const grammarData = [
   },
   {
     id: "past_tenses",
+    tags: ["past_tenses", "perfectum", "imperfectum"],
     titleTr: "Geçmiş Zamanlar (Perfectum & Imperfectum)",
     titleEn: "Past Tenses (Perfectum & Imperfectum)",
     content: (isTr) => (
@@ -1203,6 +1211,7 @@ const grammarData = [
   },
   {
     id: "verbs_special",
+    tags: ["separable_verbs", "reflexive_verbs"],
     titleTr: "Ayrılabilen ve Dönüşlü Fiiller (Separable & Reflexive)",
     titleEn: "Separable & Reflexive Verbs",
     content: (isTr) => (
@@ -1326,6 +1335,7 @@ const grammarData = [
   },
   {
     id: "future_zullen",
+    tags: ["future_tenses", "future_presens", "future_gaan", "zullen", "zullen_proposal", "zullen_promise", "zullen_probability"],
     titleTr: "Gelecek Zaman ve 'Zullen' (Future & Zullen)",
     titleEn: "Future Tense & Zullen",
     content: (isTr) => (
@@ -1420,6 +1430,7 @@ const grammarData = [
   },
   {
     id: "er_daar_continuous",
+    tags: ["er_daar", "continuous"],
     titleTr: "Er/Daar Kullanımı ve Şimdiki Zaman Hikayesi (Er/Daar & Continuous)",
     titleEn: "Er/Daar & Continuous Form",
     content: (isTr) => (
@@ -1491,6 +1502,7 @@ const grammarData = [
   },
   {
     id: "conjunctions_independent",
+    tags: ["conjunctions", "independent_pronouns"],
     titleTr: "Bağlaçlar ve Bağımsız İşaret Zamirleri (Conjunctions & Pronouns)",
     titleEn: "Conjunctions & Independent Pronouns",
     content: (isTr) => (
@@ -1586,6 +1598,7 @@ const grammarData = [
   },
   {
     id: "conjunctions_subclauses",
+    tags: ["subclauses", "conjunctions", "want_omdat"],
     titleTr: "Yan Cümleler ve Bağlaçlar (Bijzin & Conjuncties)",
     titleEn: "Subclauses & Conjunctions (Bijzin)",
     content: (isTr) => (
@@ -1732,6 +1745,7 @@ const grammarData = [
   },
   {
     id: "pronouns_summary",
+    tags: ["schema_pronomina", "pronouns_object", "pronouns_possessive"],
     titleTr: "Tüm Zamirler Tablosu (Schema Pronomina)",
     titleEn: "All Pronouns Summary (Schema Pronomina)",
     content: (isTr) => (
@@ -1821,7 +1835,7 @@ export default function Grammar() {
   const isTr = lang === 'tr';
   const [searchTerm, setSearchTerm] = useState('');
   const [activeTopic, setActiveTopic] = useState(grammarData[0].id);
-  const [isQuizOpen, setIsQuizOpen] = useState(false); // YENİ EKLENEN STATE
+  const [isQuizOpen, setIsQuizOpen] = useState(false);
 
   const filteredTopics = useMemo(() => {
     if (!searchTerm) return grammarData;
@@ -1833,8 +1847,6 @@ export default function Grammar() {
   }, [searchTerm]);
 
   const activeContent = grammarData.find(t => t.id === activeTopic);
-
-
 
   return (
     <div className="w-full max-w-6xl mx-auto flex flex-col md:flex-row gap-6 animate-fadeIn pb-12">
@@ -1886,7 +1898,7 @@ export default function Grammar() {
         </div>
       </div>
 
-{/* SAĞ İÇERİK (Detaylar) */}
+      {/* SAĞ İÇERİK (Detaylar) */}
       <div className="w-full md:w-2/3 lg:w-3/4">
         {activeContent ? (
           <div className="bg-slate-800 border border-slate-700 rounded-3xl p-6 sm:p-8 shadow-xl relative overflow-hidden h-full">
@@ -1894,7 +1906,6 @@ export default function Grammar() {
                 <i className="fa-solid fa-pen-ruler text-9xl text-indigo-400"></i>
              </div>
              
-             {/* BAŞLIK VE BUTON ALANI GÜNCELLENDİ */}
              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 border-b border-slate-700 pb-4 relative z-10">
                <h3 className="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
                  {isTr ? activeContent.titleTr : activeContent.titleEn}
@@ -1913,10 +1924,10 @@ export default function Grammar() {
                 {activeContent.content(isTr)}
              </div>
 
-             {/* QUIZ MODAL ÇAĞRISI */}
+             {/* QUIZ MODAL ÇAĞRISI (Doğru etiketleri dizi olarak gönderir) */}
              {isQuizOpen && (
                <QuizModule 
-                 tags={[activeContent.id]} 
+                 tags={activeContent.tags} 
                  onClose={() => setIsQuizOpen(false)} 
                  title={isTr ? activeContent.titleTr : activeContent.titleEn}
                />
