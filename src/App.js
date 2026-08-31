@@ -1,5 +1,5 @@
 // src/App.js
-import React, { useState, useEffect, useRef, useMemo } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './App.css';
 import DialogueSection from './components/DialogueSection';
 import ExerciseEngine from './components/ExerciseEngine';
