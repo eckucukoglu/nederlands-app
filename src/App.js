@@ -691,9 +691,8 @@ function MainContent({ user, setIsAuthModalOpen }) {
   }, [currentChapter]);
 
   useEffect(() => {
-    if (activeTab !== 'home') {
-      localStorage.setItem(`lastVisitedTab_${currentChapter}`, activeTab);
-    }
+    // Artık 'home' (Ana Sayfa) da dahil olmak üzere, kullanıcının kaldığı son sekmeyi kaydediyoruz.
+    localStorage.setItem(`lastVisitedTab_${currentChapter}`, activeTab);
   }, [activeTab, currentChapter]);
 
   const handleChapterChange = (e) => {
