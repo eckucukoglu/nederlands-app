@@ -10536,5 +10536,4009 @@ export const quizQuestions = [
     correctAnswer: "-",
     explanationTr: "'zullen' fiilinin perfectum formu bulunmadığı için listede '-' olarak belirtilmiştir.",
     explanationEn: "Since the verb 'zullen' has no perfectum form, it is indicated as '-' in the list."
+  },
+  
+  // YENİ EKLENEN 15 DÜZENSİZ FİİL İÇİN QUIZ VERİLERİ (HER FİİL İÇİN PRESENT, IMPERFECTUM VE PERFECTUM - 2'ŞER SORU)
+
+  // 1. aandoen
+  {
+    id: "q_irreg_aandoen_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Ik ___ (aandoen) vandaag een mooie rode jas aan.",
+    correctAnswer: "doe",
+    explanationTr: "'aandoen' ayrılabilen bir fiildir. Şimdiki zamanda 'ik' ile 'doe' özneden sonra, 'aan' ise cümlenin sonuna gider.",
+    explanationEn: "'aandoen' is a separable verb. In the present tense with 'ik', 'doe' follows the subject and 'aan' goes to the end."
+  },
+  {
+    id: "q_irreg_aandoen_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Hij ___ elke dag een nette broek aan.",
+    options: ["doe", "doet", "doen"],
+    correctAnswer: "doet",
+    explanationTr: "3. tekil şahıs (hij) için çekim 'doet' olur.",
+    explanationEn: "For 3rd person singular (hij), the conjugation is 'doet'."
+  },
+  {
+    id: "q_irreg_aandoen_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Gisteren ___ (aandoen) ik een warme trui aan vanwege de kou.",
+    correctAnswer: "deed",
+    explanationTr: "'aandoen' fiilinin imperfectum tekil hali 'deed'dir.",
+    explanationEn: "The singular imperfectum form of 'aandoen' is 'deed'."
+  },
+  {
+    id: "q_irreg_aandoen_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Zij ___ gisteren een prachtige jurk aan op het feest.",
+    options: ["deed", "deden", "deed aan"],
+    correctAnswer: "deed",
+    explanationTr: "Tekil 'zij' için imperfectum hali 'deed'dir, 'aan' eklemesi sonda yer alır.",
+    explanationEn: "The imperfectum form for singular 'zij' is 'deed', with 'aan' at the end."
+  },
+  {
+    id: "q_irreg_aandoen_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Heb je je warme winterjas al ___ (aandoen)?",
+    correctAnswer: "aangedaan",
+    explanationTr: "'aandoen' fiilinin 3. hali (perfectum) 'aangedaan'dır.",
+    explanationEn: "The past participle (perfectum) of 'aandoen' is 'aangedaan'."
+  },
+  {
+    id: "q_irreg_aandoen_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Ik heb vandaag voor het eerst deze schoenen ___.",
+    options: ["aangedaan", "aandeed", "gedaan aan"],
+    correctAnswer: "aangedaan",
+    explanationTr: "Perfectum yapısında 'hebben' ile birlikte 'aangedaan' kullanılır.",
+    explanationEn: "In the perfectum, 'aangedaan' is used with 'hebben'."
+  },
+
+  // 2. aankomen
+  {
+    id: "q_irreg_aankomen_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "De trein ___ (aankomen) over precies vijf minuten op het station aan.",
+    correctAnswer: "komt",
+    explanationTr: "'aankomen' ayrılabilen bir fiildir. 'De trein' tekil olduğu için 'komt' olur, 'aan' sonda yer alır.",
+    explanationEn: "'aankomen' is separable. Since 'De trein' is singular, it takes 'komt' with 'aan' at the end."
+  },
+  {
+    id: "q_irreg_aankomen_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Hoe laat ___ de bus in Utrecht aan?",
+    options: ["kom", "komt", "komen"],
+    correctAnswer: "komt",
+    explanationTr: "Tekil özne (de bus) için 'komt' kullanılır.",
+    explanationEn: "For a singular subject (de bus), 'komt' is used."
+  },
+  {
+    id: "q_irreg_aankomen_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De trein van Amsterdam ___ (aankomen) gisteren veel te laat aan.",
+    correctAnswer: "kwam",
+    explanationTr: "'aankomen' fiilinin imperfectum tekil hali 'kwam'dir.",
+    explanationEn: "The singular imperfectum form of 'aankomen' is 'kwam'."
+  },
+  {
+    id: "q_irreg_aankomen_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Onze gasten ___ gisterenavond heel laat aan.",
+    options: ["kwam", "kwamen", "komen"],
+    correctAnswer: "kwamen",
+    explanationTr: "Çoğul özne (onze gasten) için imperfectum hali 'kwamen' olur.",
+    explanationEn: "For the plural subject (onze gasten), the imperfectum form is 'kwamen'."
+  },
+  {
+    id: "q_irreg_aankomen_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "De vlucht is zojuist op Schiphol ___ (aankomen).",
+    correctAnswer: "aangekomen",
+    explanationTr: "'aankomen' hareket/varış bildirdiği için 'zijn' ile kurulur, 3. hali 'aangekomen'dir.",
+    explanationEn: "'aankomen' indicates arrival, uses 'zijn', and its past participle is 'aangekomen'."
+  },
+  {
+    id: "q_irreg_aankomen_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Ben je al veilig op de bestemming ___?",
+    options: ["aangekomen", "aankwam", "gekomen aan"],
+    correctAnswer: "aangekomen",
+    explanationTr: "Perfectum formunda 'aangekomen' kullanılır.",
+    explanationEn: "'aangekomen' is used in the perfectum form."
+  },
+
+  // 3. bederven
+  {
+    id: "q_irreg_bederven_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Het vlees ___ (bederven) heel snel in deze warme zomer.",
+    correctAnswer: "bederft",
+    explanationTr: "'Het vlees' (het) 3. tekil şahıstır, kök 'bederv' + t = bederft.",
+    explanationEn: "'Het vlees' is 3rd person singular, stem 'bederv' + t = bederft."
+  },
+  {
+    id: "q_irreg_bederven_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Als je het in de zon laat liggen, ___ het eten.",
+    options: ["bederf", "bederft", "bederven"],
+    correctAnswer: "bederft",
+    explanationTr: "3. tekil şahıs için '-t' takısı eklenir.",
+    explanationEn: "The '-t' suffix is added for 3rd person singular."
+  },
+  {
+    id: "q_irreg_bederven_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Het eten ___ (bederven) gisteren door de hitte in de keuken.",
+    correctAnswer: "bedierf",
+    explanationTr: "Tekil imperfectum hali 'bedierf'dir.",
+    explanationEn: "The singular imperfectum form is 'bedierf'."
+  },
+  {
+    id: "q_irreg_bederven_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Door de stroomuitval ___ al de melk in de koelkast.",
+    options: ["bedierf", "bedierven", "bedorven"],
+    correctAnswer: "bedierven",
+    explanationTr: "Çoğul (al de melk / ürünler anlamında çoklu durum) imperfectum hali 'bedierven'dir.",
+    explanationEn: "The plural imperfectum form is 'bedierven'."
+  },
+  {
+    id: "q_irreg_bederven_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Helaas is de melk in de koelkast ___ (bederven).",
+    correctAnswer: "bedorven",
+    explanationTr: "'bederven' fiilinin 3. hali 'bedorven'dür ve 'zijn' ile kurulabilir.",
+    explanationEn: "The past participle of 'bederven' is 'bedorven' and can use 'zijn'."
+  },
+  {
+    id: "q_irreg_bederven_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Al het fruit is door de warmte ___.",
+    options: ["bedorven", "bedierf", "bedorven zijn"],
+    correctAnswer: "bedorven",
+    explanationTr: "Perfectum formunda 'bedorven' kullanılır.",
+    explanationEn: "'bedorven' is used in the perfectum form."
+  },
+
+  // 4. bezoeken
+  {
+    id: "q_irreg_bezoeken_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Ik ___ (bezoeken) elk weekend mijn oude grootouders.",
+    correctAnswer: "bezoek",
+    explanationTr: "'beheren/bezoeken' gibi 'be-' ile başlayan fiillerde 'ik' için kök kullanılır: bezoek.",
+    explanationEn: "For verbs starting with 'be-', the 'ik' form uses the stem: bezoek."
+  },
+  {
+    id: "q_irreg_bezoeken_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Wie ___ volgende week het museum in Amsterdam?",
+    options: ["bezoek", "bezoekt", "bezoeken"],
+    correctAnswer: "bezoekt",
+    explanationTr: "'Wie' (kim) tekil şahıs kabul edilir, bu yüzden 'bezoekt' olur.",
+    explanationEn: "'Wie' (who) is treated as singular, so it takes 'bezoekt'."
+  },
+  {
+    id: "q_irreg_bezoeken_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Hij ___ (bezoeken) gisteren zijn zieke vriend in het ziekenhuis.",
+    correctAnswer: "bezocht",
+    explanationTr: "Tekil imperfectum hali 'bezocht'tur.",
+    explanationEn: "The singular imperfectum form is 'bezocht'."
+  },
+  {
+    id: "q_irreg_bezoeken_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Wij ___ vorig jaar al onze familieleden in Spanje.",
+    options: ["bezocht", "bezochten", "bezoeken"],
+    correctAnswer: "bezochten",
+    explanationTr: "Çoğul imperfectum hali 'bezochten'dir.",
+    explanationEn: "The plural imperfectum form is 'bezochten'."
+  },
+  {
+    id: "q_irreg_bezoeken_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "We hebben vorig jaar het Rijksmuseum ___ (bezoeken).",
+    correctAnswer: "bezocht",
+    explanationTr: "'be-' ile başlayan fiiller 'ge-' ek almaz. 3. hali 'bezocht'tur.",
+    explanationEn: "Verbs starting with 'be-' do not take 'ge-'. Past participle is 'bezocht'."
+  },
+  {
+    id: "q_irreg_bezoeken_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Heb je je tante al eens ___?",
+    options: ["bezocht", "gebezocht", "bezochten"],
+    correctAnswer: "bezocht",
+    explanationTr: "Perfectum formunda 'bezocht' kullanılır.",
+    explanationEn: "'bezocht' is used in the perfectum form."
+  },
+
+  // 5. braden
+  {
+    id: "q_irreg_braden_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Hij ___ (braden) het vlees langzaam in de braadpan.",
+    correctAnswer: "braadt",
+    explanationTr: "3. tekil şahıs için kök 'braad' + t = braadt (dt uyumu).",
+    explanationEn: "For 3rd person singular, stem 'braad' + t = braadt."
+  },
+  {
+    id: "q_irreg_braden_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "In dit recept ___ we de kip in de oven.",
+    options: ["braad", "braadt", "braden"],
+    correctAnswer: "braden",
+    explanationTr: "Çoğul 'we' için fiil mastar (braden) halindedir.",
+    explanationEn: "For the plural 'we', the verb remains in the infinitive (braden)."
+  },
+  {
+    id: "q_irreg_braden_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Ze ___ (braden) gisteren een heerlijke kip voor het diner.",
+    correctAnswer: "braadde",
+    explanationTr: "Tekil imperfectum hali 'braadde'dir.",
+    explanationEn: "The singular imperfectum form is 'braadde'."
+  },
+  {
+    id: "q_irreg_braden_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De koks ___ het vlees met veel kruiden.",
+    options: ["braadde", "braadden", "gebraden"],
+    correctAnswer: "braadden",
+    explanationTr: "Çoğul imperfectum hali 'braadden'dir.",
+    explanationEn: "The plural imperfectum form is 'braadden'."
+  },
+  {
+    id: "q_irreg_braden_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "We hebben gisteren heerlijk vlees ___ (braden).",
+    correctAnswer: "gebraden",
+    explanationTr: "'braden' fiilinin 3. hali 'gebraden'dir.",
+    explanationEn: "The past participle of 'braden' is 'gebraden'."
+  },
+  {
+    id: "q_irreg_braden_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Heb je de kip al ___?",
+    options: ["gebraden", "braadde", "braden"],
+    correctAnswer: "gebraden",
+    explanationTr: "Hebben + gebraden yapısı kullanılır.",
+    explanationEn: "The combination hebben + gebraden is used."
+  },
+
+  // 6. buigen
+  {
+    id: "q_irreg_buigen_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "De koning komt eraan, dus we ___ (buigen) voor hem.",
+    correctAnswer: "buigen",
+    explanationTr: "Çoğul 'we' için fiil mastar (buigen) kalır.",
+    explanationEn: "For the plural 'we', the verb remains in the infinitive (buigen)."
+  },
+  {
+    id: "q_irreg_buigen_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Hij ___ die ijzeren stang met zijn handen.",
+    options: ["buig", "buigt", "buigen"],
+    correctAnswer: "buigt",
+    explanationTr: "3. tekil şahıs için kök 'buig' + t = buigt.",
+    explanationEn: "For 3rd person singular, stem 'buig' + t = buigt."
+  },
+  {
+    id: "q_irreg_buigen_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De sterke tak ___ (buigen) ver door tijdens de storm.",
+    correctAnswer: "boog",
+    explanationTr: "Tekil imperfectum hali 'boog'dur.",
+    explanationEn: "The singular imperfectum form is 'boog'."
+  },
+  {
+    id: "q_irreg_buigen_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Alle mensen ___ diep voor de keizer.",
+    options: ["boog", "bogen", "buigt"],
+    correctAnswer: "bogen",
+    explanationTr: "Çoğul imperfectum hali 'bogen'dir.",
+    explanationEn: "The plural imperfectum form is 'bogen'."
+  },
+  {
+    id: "q_irreg_buigen_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Ze hebben het metaal in de juiste vorm ___ (buigen).",
+    correctAnswer: "gebogen",
+    explanationTr: "'buigen' fiilinin 3. hali 'gebogen'dir.",
+    explanationEn: "The past participle of 'buigen' is 'gebogen'."
+  },
+  {
+    id: "q_irreg_buigen_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "De boom is door de wind helemaal ___.",
+    options: ["gebogen", "boog", "buigen"],
+    correctAnswer: "gebogen",
+    explanationTr: "Perfectum formunda 'gebogen' kullanılır.",
+    explanationEn: "'gebogen' is used in the perfectum form."
+  },
+
+  // 7. drijven
+  {
+    id: "q_irreg_drijven_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Het hout ___ (drijven) gemakkelijk op het water.",
+    correctAnswer: "drijft",
+    explanationTr: "3. tekil şahıs için kök 'drijf' + t = drijft.",
+    explanationEn: "For 3rd person singular, stem 'drijf' + t = drijft."
+  },
+  {
+    id: "q_irreg_drijven_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Waarom ___ die plastic fles in de rivier?",
+    options: ["drijf", "drijft", "drijven"],
+    correctAnswer: "drijft",
+    explanationTr: "Tekil nesne (die plastic fles) için 'drijft' kullanılır.",
+    explanationEn: "For the singular object (die plastic fles), 'drijft' is used."
+  },
+  {
+    id: "q_irreg_drijven_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De lege boot ___ (drijven) langzaam weg van de kant.",
+    correctAnswer: "dreef",
+    explanationTr: "Tekil imperfectum hali 'dreef'dir.",
+    explanationEn: "The singular imperfectum form is 'dreef'."
+  },
+  {
+    id: "q_irreg_drijven_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Verschillende takken ___ op de golven van de zee.",
+    options: ["dreef", "dreven", "drijft"],
+    correctAnswer: "dreven",
+    explanationTr: "Çoğul imperfectum hali 'dreven'dir.",
+    explanationEn: "The plural imperfectum form is 'dreven'."
+  },
+  {
+    id: "q_irreg_drijven_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "De bal heeft de hele dag op het water ___ (drijven).",
+    correctAnswer: "gedreven",
+    explanationTr: "'drijven' fiilinin 3. hali 'gedreven'dir.",
+    explanationEn: "The past participle of 'drijven' is 'gedreven'."
+  },
+  {
+    id: "q_irreg_drijven_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Het vlot is naar de overkant ___.",
+    options: ["gedreven", "dreef", "drijven"],
+    correctAnswer: "gedreven",
+    explanationTr: "Perfectum formunda 'gedreven' kullanılır.",
+    explanationEn: "'gedreven' is used in the perfectum form."
+  },
+
+  // 8. druipen
+  {
+    id: "q_irreg_druipen_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "De oude kraan ___ (druipen) de hele dag door.",
+    correctAnswer: "druipt",
+    explanationTr: "3. tekil şahıs için kök 'druip' + t = druipt.",
+    explanationEn: "For 3rd person singular, stem 'druip' + t = druipt."
+  },
+  {
+    id: "q_irreg_druipen_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Kijk, er ___ water van het dak.",
+    options: ["druip", "druipt", "druipen"],
+    correctAnswer: "druipt",
+    explanationTr: "Su (water) tekil kabul edildiği için 'druipt' olur.",
+    explanationEn: "Since water is treated as singular, it takes 'druipt'."
+  },
+  {
+    id: "q_irreg_druipen_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Het regenwater ___ (druipen) van zijn natte haren.",
+    correctAnswer: "droop",
+    explanationTr: "Tekil imperfectum hali 'droop'tur.",
+    explanationEn: "The singular imperfectum form is 'droop'."
+  },
+  {
+    id: "q_irreg_druipen_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De druppels ___ langzaam van de bladeren.",
+    options: ["droop", "dropen", "druipt"],
+    correctAnswer: "dropen",
+    explanationTr: "Çoğul imperfectum hali 'dropen'dir.",
+    explanationEn: "The plural imperfectum form is 'dropen'."
+  },
+  {
+    id: "q_irreg_druipen_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Door de lekkage is de verf van de muur ___ (druipen).",
+    correctAnswer: "gedropen",
+    explanationTr: "'druipen' fiilinin 3. hali 'gedropen'dir.",
+    explanationEn: "The past participle of 'druipen' is 'gedropen'."
+  },
+  {
+    id: "q_irreg_druipen_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Het zweet heeft over zijn gezicht ___.",
+    options: ["gedropen", "droop", "druipen"],
+    correctAnswer: "gedropen",
+    explanationTr: "Hebben + gedropen yapısı kullanılır.",
+    explanationEn: "The combination hebben + gedropen is used."
+  },
+
+  // 9. fluiten
+  {
+    id: "q_irreg_fluiten_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "De scheidsrechter ___ (fluiten) voor het einde.",
+    correctAnswer: "fluit",
+    explanationTr: "3. tekil şahıs için kök 'fluit' (zaten t ile bittiği için ekstra t almaz).",
+    explanationEn: "For 3rd person singular, stem 'fluit' (already ends in t, no extra t)."
+  },
+  {
+    id: "q_irreg_fluiten_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "De man ___ een vrolijk deuntje op straat.",
+    options: ["fluit", "fluiten", "floot"],
+    correctAnswer: "fluit",
+    explanationTr: "3. tekil şahıs için 'fluit' kullanılır.",
+    explanationEn: "For 3rd person singular, 'fluit' is used."
+  },
+  {
+    id: "q_irreg_fluiten_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Hij ___ (fluiten) naar zijn hond om terug te komen.",
+    correctAnswer: "floot",
+    explanationTr: "Tekil imperfectum hali 'floot'tur.",
+    explanationEn: "The singular imperfectum form is 'floot'."
+  },
+  {
+    id: "q_irreg_fluiten_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De supporters ___ hard na de beslissing.",
+    options: ["floot", "floten", "fluit"],
+    correctAnswer: "floten",
+    explanationTr: "Çoğul imperfectum hali 'floten'dir.",
+    explanationEn: "The plural imperfectum form is 'floten'."
+  },
+  {
+    id: "q_irreg_fluiten_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "De arbiter heeft al op de fluit ___ (fluiten).",
+    correctAnswer: "gefloten",
+    explanationTr: "'fluiten' fiilinin 3. hali 'gefloten'dir.",
+    explanationEn: "The past participle of 'fluiten' is 'gefloten'."
+  },
+  {
+    id: "q_irreg_fluiten_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Heb je tijdens de wedstrijd een melodie ___?",
+    options: ["gefloten", "floot", "fluiten"],
+    correctAnswer: "gefloten",
+    explanationTr: "Perfectum formunda 'gefloten' kullanılır.",
+    explanationEn: "'gefloten' is used in the perfectum form."
+  },
+
+  // 10. gelden
+  {
+    id: "q_irreg_gelden_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Deze strenge regel ___ (gelden) voor alle studenten.",
+    correctAnswer: "geldt",
+    explanationTr: "3. tekil şahıs için kök 'geld' + t = geldt.",
+    explanationEn: "For 3rd person singular, stem 'geld' + t = geldt."
+  },
+  {
+    id: "q_irreg_gelden_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Welke voorwaarden ___ er voor deze actie?",
+    options: ["geldt", "gelden", "gold"],
+    correctAnswer: "gelden",
+    explanationTr: "Çoğul özne (voorwaarden) için fiil mastar (gelden) olur.",
+    explanationEn: "For the plural subject (voorwaarden), the verb is in the infinitive (gelden)."
+  },
+  {
+    id: "q_irreg_gelden_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Dit speciale treinticket ___ (gelden) alleen gisteren.",
+    correctAnswer: "gold",
+    explanationTr: "Tekil imperfectum hali 'gold'dur.",
+    explanationEn: "The singular imperfectum form is 'gold'."
+  },
+  {
+    id: "q_irreg_gelden_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Die oude wetten ___ vroeger in het hele land.",
+    options: ["gold", "golden", "geldt"],
+    correctAnswer: "golden",
+    explanationTr: "Çoğul imperfectum hali 'golden'dir.",
+    explanationEn: "The plural imperfectum form is 'golden'."
+  },
+  {
+    id: "q_irreg_gelden_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Dat contract heeft jarenlang ongewijzigd ___ (gelden).",
+    correctAnswer: "gegolden",
+    explanationTr: "'gelden' fiilinin 3. hali 'gegolden'dir.",
+    explanationEn: "The past participle of 'gelden' is 'gegolden'."
+  },
+  {
+    id: "q_irreg_gelden_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "De afspraak heeft altijd ___.",
+    options: ["gegolden", "gold", "gelden"],
+    correctAnswer: "gegolden",
+    explanationTr: "Hebben + gegolden yapısı kullanılır.",
+    explanationEn: "The combination hebben + gegolden is used."
+  },
+
+  // 11. genezen
+  {
+    id: "q_irreg_genezen_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "De ervaren arts ___ (genezen) de zieke patiënt.",
+    correctAnswer: "geneest",
+    explanationTr: "3. tekil şahıs için kök 'genees' + t = geneest.",
+    explanationEn: "For 3rd person singular, stem 'genees' + t = geneest."
+  },
+  {
+    id: "q_irreg_genezen_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Sommige wonden ___ gelukkig heel snel vanzelf.",
+    options: ["genees", "geneest", "genezen"],
+    correctAnswer: "genezen",
+    explanationTr: "Çoğul özne (wonden) için fiil mastar (genezen) kalır.",
+    explanationEn: "For the plural subject (wonden), the verb remains in the infinitive (genezen)."
+  },
+  {
+    id: "q_irreg_genezen_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De ernstige wond ___ (genezen) gelukkig erg snel.",
+    correctAnswer: "genas",
+    explanationTr: "Tekil imperfectum hali 'genas'tır.",
+    explanationEn: "The singular imperfectum form is 'genas'."
+  },
+  {
+    id: "q_irreg_genezen_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Dankzij de nieuwe medicijnen ___ alle zieken.",
+    options: ["genas", "genazen", "geneest"],
+    correctAnswer: "genazen",
+    explanationTr: "Çoğul imperfectum hali 'genazen'dir.",
+    explanationEn: "The plural imperfectum form is 'genazen'."
+  },
+  {
+    id: "q_irreg_genezen_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "De patiënt is na een lange operatie volledig ___ (genezen).",
+    correctAnswer: "genezen",
+    explanationTr: "'genezen' fiilinin 3. hali yine 'genezen'dir ve 'zijn' ile kurulabilir.",
+    explanationEn: "The past participle of 'genezen' is also 'genezen' and can use 'zijn'."
+  },
+  {
+    id: "q_irreg_genezen_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Hij heeft zijn ziekte overwonnen en is ___.",
+    options: ["genezen", "genas", "genezen zijn"],
+    correctAnswer: "genezen",
+    explanationTr: "Perfectum formunda 'genezen' kullanılır.",
+    explanationEn: "'genezen' is used in the perfectum form."
+  },
+
+  // 12. gieten
+  {
+    id: "q_irreg_gieten_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Hij ___ (gieten) zorgvuldig water in het lege glas.",
+    correctAnswer: "giet",
+    explanationTr: "3. tekil şahıs için kök 'giet' (zaten t ile bittiği için ekstra t almaz).",
+    explanationEn: "For 3rd person singular, stem 'giet' (already ends in t)."
+  },
+  {
+    id: "q_irreg_gieten_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Buiten ___ het van de regen op dit moment.",
+    options: ["giet", "gieten", "goot"],
+    correctAnswer: "giet",
+    explanationTr: "Hava olayı tekil kabul edilir ('het giet').",
+    explanationEn: "Weather impersonal subject takes singular form ('het giet')."
+  },
+  {
+    id: "q_irreg_gieten_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Gisteren ___ (gieten) het de hele middag onophoudelijk.",
+    correctAnswer: "goot",
+    explanationTr: "Tekil imperfectum hali 'goot'tur.",
+    explanationEn: "The singular imperfectum form is 'goot'."
+  },
+  {
+    id: "q_irreg_gieten_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De tuiniers ___ water over de droge planten.",
+    options: ["goot", "goten", "giet"],
+    correctAnswer: "goten",
+    explanationTr: "Çoğul imperfectum hali 'goten'dir.",
+    explanationEn: "The plural imperfectum form is 'goten'."
+  },
+  {
+    id: "q_irreg_gieten_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Ze hebben betonnen funderingen in de mal ___ (gieten).",
+    correctAnswer: "gegoten",
+    explanationTr: "'gieten' fiilinin 3. hali 'gegoten'dir.",
+    explanationEn: "The past participle of 'gieten' is 'gegoten'."
+  },
+  {
+    id: "q_irreg_gieten_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Heb je de planten vandaag al water ___?",
+    options: ["gegoten", "goot", "gieten"],
+    correctAnswer: "gegoten",
+    explanationTr: "Hebben + gegoten yapısı kullanılır.",
+    explanationEn: "The combination hebben + gegoten is used."
+  },
+
+  // 13. glijden
+  {
+    id: "q_irreg_glijden_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "De jongen ___ (glijden) plezierig over het gladde ijs.",
+    correctAnswer: "glijdt",
+    explanationTr: "3. tekil şahıs için kök 'glijd' + t = glijdt.",
+    explanationEn: "For 3rd person singular, stem 'glijd' + t = glijdt."
+  },
+  {
+    id: "q_irreg_glijden_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Voorzichtig! Je ___ zo uit op deze natte vloer.",
+    options: ["glijd", "glijdt", "gleden"],
+    correctAnswer: "glijdt",
+    explanationTr: "'je' öznesi fiilden ÖNCE gelince '-t' alır (glijdt).",
+    explanationEn: "When the subject 'je' comes BEFORE the verb, it takes '-t' (glijdt)."
+  },
+  {
+    id: "q_irreg_glijden_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Hij ___ (glijden) gisteren uit op de besneeuwde trap.",
+    correctAnswer: "gleed",
+    explanationTr: "Tekil imperfectum hali 'gleed'dir.",
+    explanationEn: "The singular imperfectum form is 'gleed'."
+  },
+  {
+    id: "q_irreg_glijden_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De kinderen ___ van de hoge glijbaan.",
+    options: ["gleed", "gleden", "glijdt"],
+    correctAnswer: "gleden",
+    explanationTr: "Çoğul imperfectum hali 'gleden'dir.",
+    explanationEn: "The plural imperfectum form is 'gleden'."
+  },
+  {
+    id: "q_irreg_glijden_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Door de gladheid is de auto van de weg ___ (glijden).",
+    correctAnswer: "gegleden",
+    explanationTr: "'glijden' hareket/kayma bildirdiği için 'zijn' ile kurulur, 3. hali 'gegleden'dir.",
+    explanationEn: "'glijden' indicates sliding motion, uses 'zijn', and its past participle is 'gegleden'."
+  },
+  {
+    id: "q_irreg_glijden_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Ben je op het ijs ___?",
+    options: ["gegleden", "gleed", "glijden"],
+    correctAnswer: "gegleden",
+    explanationTr: "Perfectum formunda 'gegleden' kullanılır.",
+    explanationEn: "'gegleden' is used in the perfectum form."
+  },
+
+  // 14. graven
+  {
+    id: "q_irreg_graven_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "De sterke hond ___ (graven) een diep gat in de tuin.",
+    correctAnswer: "graaft",
+    explanationTr: "3. tekil şahıs için kök 'graaf' + t = graaft.",
+    explanationEn: "For 3rd person singular, stem 'graaf' + t = graaft."
+  },
+  {
+    id: "q_irreg_graven_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Waarom ___ die dieren zo diep in de grond?",
+    options: ["graaf", "graaft", "graven"],
+    correctAnswer: "graven",
+    explanationTr: "Çoğul özne (dieren) için fiil mastar (graven) kalır.",
+    explanationEn: "For the plural subject (dieren), the verb remains in the infinitive (graven)."
+  },
+  {
+    id: "q_irreg_graven_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De hond ___ (graven) gisteren een groot gat in de wei.",
+    correctAnswer: "groef",
+    explanationTr: "Tekil imperfectum hali 'groef'dür.",
+    explanationEn: "The singular imperfectum form is 'groef'."
+  },
+  {
+    id: "q_irreg_graven_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De arbeiders ___ een sleuf voor de kabels.",
+    options: ["groef", "groven", "graaft"],
+    correctAnswer: "groven",
+    explanationTr: "Çoğul imperfectum hali 'groven'dir.",
+    explanationEn: "The plural imperfectum form is 'groven'."
+  },
+  {
+    id: "q_irreg_graven_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "We hebben een grote vijver in de achtertuin ___ (graven).",
+    correctAnswer: "gegraven",
+    explanationTr: "'graven' fiilinin 3. hali 'gegraven'dir.",
+    explanationEn: "The past participle of 'graven' is 'gegraven'."
+  },
+  {
+    id: "q_irreg_graven_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Heb je al een gat voor de boom ___?",
+    options: ["gegraven", "groef", "graven"],
+    correctAnswer: "gegraven",
+    explanationTr: "Hebben + gegraven yapısı kullanılır.",
+    explanationEn: "The combination hebben + gegraven is used."
+  },
+
+  // 15. grijpen
+  {
+    id: "q_irreg_grijpen_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Hij ___ (grijpen) meteen zijn kans toen hij het zag.",
+    correctAnswer: "grijpt",
+    explanationTr: "3. tekil şahıs için kök 'grijp' + t = grijpt.",
+    explanationEn: "For 3rd person singular, stem 'grijp' + t = grijpt."
+  },
+  {
+    id: "q_irreg_grijpen_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Waarom ___ je niet in om te helpen?",
+    options: ["grijp", "grijpt", "grijpen"],
+    correctAnswer: "grijpt",
+    explanationTr: "'je' öznesi fiilden ÖNCE gelince '-t' alır (grijpt).",
+    explanationEn: "When the subject 'je' comes BEFORE the verb, it takes '-t' (grijpt)."
+  },
+  {
+    id: "q_irreg_grijpen_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De snelle kat ___ (grijpen) de muis in een seconde.",
+    correctAnswer: "greep",
+    explanationTr: "Tekil imperfectum hali 'greep'dir.",
+    explanationEn: "The singular imperfectum form is 'greep'."
+  },
+  {
+    id: "q_irreg_grijpen_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De agenten ___ de verdachte bij zijn arm.",
+    options: ["greep", "grepen", "grijpt"],
+    correctAnswer: "grepen",
+    explanationTr: "Çoğul imperfectum hali 'grepen'dir.",
+    explanationEn: "The plural imperfectum form is 'grepen'."
+  },
+  {
+    id: "q_irreg_grijpen_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "De politie heeft de gevaarlijke dief ___ (grijpen).",
+    correctAnswer: "gegrepen",
+    explanationTr: "'grijpen' fiilinin 3. hali 'gegrepen'dir.",
+    explanationEn: "The past participle of 'grijpen' is 'gegrepen'."
+  },
+  {
+    id: "q_irreg_grijpen_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Heb je de gelegenheid met beide handen ___?",
+    options: ["gegrepen", "greep", "grijpen"],
+    correctAnswer: "gegrepen",
+    explanationTr: "Perfectum formunda 'gegrepen' kullanılır.",
+    explanationEn: "'gegrepen' is used in the perfectum form."
+  },
+  
+  // YENİ EKLENEN 16 DÜZENSİZ FİİL İÇİN QUIZ VERİLERİ (HER FİİL İÇİN PRESENT, IMPERFECTUM VE PERFECTUM - 2'ŞER SORU)
+
+  // 1. heten (Present)
+  {
+    id: "q_irreg_heten_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Hoe ___ (heten) jij eigenlijk?",
+    correctAnswer: "heet",
+    explanationTr: "'jij' zamiri fiilden ÖNCE geldiğinde 'heten' fiili köküne '-t' alır (heet).",
+    explanationEn: "When the subject 'jij' comes BEFORE the verb, it takes '-t' (heet)."
+  },
+  {
+    id: "q_irreg_heten_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Mijn nieuwe collega ___ Mark.",
+    options: ["heet", "heetst", "heten"],
+    correctAnswer: "heet",
+    explanationTr: "3. tekil şahıs (hij) için kök zaten 'heet' ile bittiği için ekstra 't' almaz.",
+    explanationEn: "For 3rd person singular (hij), the stem already ends in 't', so no extra 't'."
+  },
+  // heten (Imperfectum)
+  {
+    id: "q_irreg_heten_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Mijn vader ___ (heten) vroeger Willem.",
+    correctAnswer: "heette",
+    explanationTr: "'heten' fiilinin tekil imperfectum hali 'heette'dir.",
+    explanationEn: "The singular imperfectum form of 'heten' is 'heette'."
+  },
+  {
+    id: "q_irreg_heten_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De straten ___ vroeger heel anders.",
+    options: ["heette", "heetten", "heten"],
+    correctAnswer: "heetten",
+    explanationTr: "Çoğul imperfectum hali 'heetten'dir.",
+    explanationEn: "The plural imperfectum form is 'heetten'."
+  },
+  // heten (Perfectum)
+  {
+    id: "q_irreg_heten_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Hij heeft altijd zo ___ (heten).",
+    correctAnswer: "geheten",
+    explanationTr: "'heten' fiilinin 3. hali 'geheten'dir ve 'hebben' ile kurulur.",
+    explanationEn: "The past participle of 'heten' is 'geheten' and it uses 'hebben'."
+  },
+  {
+    id: "q_irreg_heten_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Weet je hoe deze straat vroeger heeft ___?",
+    options: ["geheten", "heette", "heten"],
+    correctAnswer: "geheten",
+    explanationTr: "Perfectum formunda 'geheten' kullanılır.",
+    explanationEn: "'geheten' is used in the perfectum form."
+  },
+
+  // 2. jagen (Present)
+  {
+    id: "q_irreg_jagen_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "De kat ___ (jagen) op kleine muizen in de schuur.",
+    correctAnswer: "jagt",
+    explanationTr: "Kitaptaki örnek cümleye göre 'jagen' fiilinin 3. tekil şahıs formu 'jagt'tır.",
+    explanationEn: "According to the textbook example, the 3rd person singular form of 'jagen' is 'jagt'."
+  },
+  {
+    id: "q_irreg_jagen_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Waarom ___ jagers op wilde dieren?",
+    options: ["jagt", "jagen", "joeg"],
+    correctAnswer: "jagen",
+    explanationTr: "Çoğul özne (jagers) için fiil mastar (jagen) kalır.",
+    explanationEn: "For the plural subject (jagers), the verb remains in the infinitive (jagen)."
+  },
+  // jagen (Imperfectum)
+  {
+    id: "q_irreg_jagen_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De hond ___ (jagen) gisteren de kat weg.",
+    correctAnswer: "joeg",
+    explanationTr: "'jagen' fiilinin güçlü imperfectum tekil hali 'joeg'dür.",
+    explanationEn: "The strong singular imperfectum form of 'jagen' is 'joeg'."
+  },
+  {
+    id: "q_irreg_jagen_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De jagers ___ vroeger op herten in het bos.",
+    options: ["joeg", "joegen", "jaagde"],
+    correctAnswer: "joegen",
+    explanationTr: "Çoğul imperfectum hali 'joegen'dir.",
+    explanationEn: "The plural imperfectum form is 'joegen'."
+  },
+  // jagen (Perfectum)
+  {
+    id: "q_irreg_jagen_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Ze hebben vroeger op herten ___ (jagen).",
+    correctAnswer: "gejaagd",
+    explanationTr: "'jagen' fiilinin 3. hali 'gejaagd'dir.",
+    explanationEn: "The past participle of 'jagen' is 'gejaagd'."
+  },
+  {
+    id: "q_irreg_jagen_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Heb je weleens op vossen ___?",
+    options: ["gejaagd", "joeg", "jagen"],
+    correctAnswer: "gejaagd",
+    explanationTr: "Hebben + gejaagd kalıbı kullanılır.",
+    explanationEn: "The combination hebben + gejaagd is used."
+  },
+
+  // 3. klimmen (Present)
+  {
+    id: "q_irreg_klimmen_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "De kat ___ (klimmen) hoog in de boom.",
+    correctAnswer: "klimt",
+    explanationTr: "3. tekil şahıs için kök 'klim' + t = klimt.",
+    explanationEn: "For 3rd person singular, stem 'klim' + t = klimt."
+  },
+  {
+    id: "q_irreg_klimmen_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Waarom ___ jij zo graag in bergen?",
+    options: ["klim", "klimt", "klimmen"],
+    correctAnswer: "klimt",
+    explanationTr: "'jij' öznesi fiilden ÖNCE gelince '-t' alır (klimt).",
+    explanationEn: "When the subject 'jij' comes BEFORE the verb, it takes '-t' (klimt)."
+  },
+  // klimmen (Imperfectum)
+  {
+    id: "q_irreg_klimmen_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De jonge jongen ___ (klimmen) over het hoge hek.",
+    correctAnswer: "klom",
+    explanationTr: "Tekil imperfectum hali 'klom'dur.",
+    explanationEn: "The singular imperfectum form is 'klom'."
+  },
+  {
+    id: "q_irreg_klimmen_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De alpinisten ___ naar de top van de berg.",
+    options: ["klom", "klommen", "klimt"],
+    correctAnswer: "klommen",
+    explanationTr: "Çoğul imperfectum hali 'klommen'dir.",
+    explanationEn: "The plural imperfectum form is 'klommen'."
+  },
+  // klimmen (Perfectum)
+  {
+    id: "q_irreg_klimmen_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Hij is naar de top van de berg ___ (klimmen).",
+    correctAnswer: "geklommen",
+    explanationTr: "'klimmen' hareket bildirdiği için 'zijn' ile kurulur, 3. hali 'geklommen'dir.",
+    explanationEn: "'klimmen' indicates climbing motion, uses 'zijn', and its past participle is 'geklommen'."
+  },
+  {
+    id: "q_irreg_klimmen_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Ben je ooit in deze oude boom ___?",
+    options: ["geklommen", "klom", "klimmen"],
+    correctAnswer: "geklommen",
+    explanationTr: "Perfectum formunda 'geklommen' kullanılır.",
+    explanationEn: "'geklommen' is used in the perfectum form."
+  },
+
+  // 4. klinken (Present)
+  {
+    id: "q_irreg_klinken_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Dat fantastische plan ___ (klinken) erg goed.",
+    correctAnswer: "klinkt",
+    explanationTr: "3. tekil şahıs için kök 'klink' + t = klinkt.",
+    explanationEn: "For 3rd person singular, stem 'klink' + t = klinkt."
+  },
+  {
+    id: "q_irreg_klinken_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Hoe ___ deze muziek in je oren?",
+    options: ["klink", "klinkt", "klinken"],
+    correctAnswer: "klinkt",
+    explanationTr: "Tekil özne (deze muziek) için 'klinkt' kullanılır.",
+    explanationEn: "For the singular subject (deze muziek), 'klinkt' is used."
+  },
+  // klinken (Imperfectum)
+  {
+    id: "q_irreg_klinken_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De oude kerkklok ___ (klinken) luid over het dorp.",
+    correctAnswer: "klonk",
+    explanationTr: "Tekil imperfectum hali 'klonk'tur.",
+    explanationEn: "The singular imperfectum form is 'klonk'."
+  },
+  {
+    id: "q_irreg_klinken_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Haar woorden ___ erg verdrietig door de telefoon.",
+    options: ["klonk", "klonken", "klinkt"],
+    correctAnswer: "klonken",
+    explanationTr: "Çoğul imperfectum hali 'klonken'dir.",
+    explanationEn: "The plural imperfectum form is 'klonken'."
+  },
+  // klinken (Perfectum)
+  {
+    id: "q_irreg_klinken_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Dat heeft heel vreemd ___ (klinken).",
+    correctAnswer: "geklonken",
+    explanationTr: "'klinken' fiilinin 3. hali 'geklonken'dir.",
+    explanationEn: "The past participle of 'klinken' is 'geklonken'."
+  },
+  {
+    id: "q_irreg_klinken_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Heb je gehoord hoe het heeft ___?",
+    options: ["geklonken", "klonk", "klinken"],
+    correctAnswer: "geklonken",
+    explanationTr: "Hebben + geklonken yapısı kullanılır.",
+    explanationEn: "The combination hebben + geklonken is used."
+  },
+
+  // 5. krimpen (Present)
+  {
+    id: "q_irreg_krimpen_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Dit nieuwe katoenen shirt ___ (krimpen) in de hete was.",
+    correctAnswer: "krimpt",
+    explanationTr: "3. tekil şahıs için kök 'krimp' + t = krimpt.",
+    explanationEn: "For 3rd person singular, stem 'krimp' + t = krimpt."
+  },
+  {
+    id: "q_irreg_krimpen_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Waarom ___ wollen truien in warm water?",
+    options: ["krimp", "krimpt", "krimpen"],
+    correctAnswer: "krimpen",
+    explanationTr: "Çoğul özne (wollen truien) için fiil mastar (krimpen) kalır.",
+    explanationEn: "For the plural subject (wollen truien), the verb remains in the infinitive (krimpen)."
+  },
+  // krimpen (Imperfectum)
+  {
+    id: "q_irreg_krimpen_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Mijn favoriete trui ___ (krimpen) door het hete water.",
+    correctAnswer: "kromp",
+    explanationTr: "Tekil imperfectum hali 'kromp'tur.",
+    explanationEn: "The singular imperfectum form is 'kromp'."
+  },
+  {
+    id: "q_irreg_krimpen_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Alle broeken ___ enorm na de eerste wasbeurt.",
+    options: ["kromp", "krompen", "krimpt"],
+    correctAnswer: "krompen",
+    explanationTr: "Çoğul imperfectum hali 'krompen'dir.",
+    explanationEn: "The plural imperfectum form is 'krompen'."
+  },
+  // krimpen (Perfectum)
+  {
+    id: "q_irreg_krimpen_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "De wollen trui is in de was helemaal ___ (krimpen).",
+    correctAnswer: "gekrompen",
+    explanationTr: "'krimpen' durum değişikliği bildirdiği için 'zijn' ile kurulur, 3. hali 'gekrompen'dir.",
+    explanationEn: "'krimpen' indicates state change, uses 'zijn', and its past participle is 'gekrompen'."
+  },
+  {
+    id: "q_irreg_krimpen_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Is je jas door de regen ___?",
+    options: ["gekrompen", "kromp", "krimpen"],
+    correctAnswer: "gekrompen",
+    explanationTr: "Perfectum formunda 'gekrompen' kullanılır.",
+    explanationEn: "'gekrompen' is used in the perfectum form."
+  },
+
+  // 6. kruipen (Present)
+  {
+    id: "q_irreg_kruipen_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "De kleine baby ___ (kruipen) over de woonkamervloer.",
+    correctAnswer: "kruipt",
+    explanationTr: "3. tekil şahıs için kök 'kruip' + t = kruipt.",
+    explanationEn: "For 3rd person singular, stem 'kruip' + t = kruipt."
+  },
+  {
+    id: "q_irreg_kruipen_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Waarom ___ die spin langzaam over de muur?",
+    options: ["kruip", "kruipt", "kruipen"],
+    correctAnswer: "kruipt",
+    explanationTr: "Tekil özne (die spin) için 'kruipt' kullanılır.",
+    explanationEn: "For the singular subject (die spin), 'kruipt' is used."
+  },
+  // kruipen (Imperfectum)
+  {
+    id: "q_irreg_kruipen_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Een grote spin ___ (kruipen) gisteren over de muur.",
+    correctAnswer: "kroop",
+    explanationTr: "Tekil imperfectum hali 'kroop'tur.",
+    explanationEn: "The singular imperfectum form is 'kroop'."
+  },
+  {
+    id: "q_irreg_kruipen_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De soldaten ___ door de modder tijdens de training.",
+    options: ["kroop", "kropen", "kruipt"],
+    correctAnswer: "kropen",
+    explanationTr: "Çoğul imperfectum hali 'kropen'dir.",
+    explanationEn: "The plural imperfectum form is 'kropen'."
+  },
+  // kruipen (Perfectum)
+  {
+    id: "q_irreg_kruipen_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "De kat is onder het warme bed ___ (kruipen).",
+    correctAnswer: "gekropen",
+    explanationTr: "'kruipen' hareket bildirdiği için 'zijn' ile kurulur, 3. hali 'gekropen'dir.",
+    explanationEn: "'kruipen' indicates crawling motion, uses 'zijn', and its past participle is 'gekropen'."
+  },
+  {
+    id: "q_irreg_kruipen_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Is de baby al over de vloer ___?",
+    options: ["gekropen", "kroop", "kruipen"],
+    correctAnswer: "gekropen",
+    explanationTr: "Perfectum formunda 'gekropen' kullanılır.",
+    explanationEn: "'gekropen' is used in the perfectum form."
+  },
+
+  // 7. liegen (Present)
+  {
+    id: "q_irreg_liegen_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Jij ___ (liegen) tegen je beste vriend over de prijs.",
+    correctAnswer: "liegt",
+    explanationTr: "'jij' öznesi fiilden ÖNCE gelince '-t' alır (liegt).",
+    explanationEn: "When the subject 'jij' comes BEFORE the verb, it takes '-t' (liegt)."
+  },
+  {
+    id: "q_irreg_liegen_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Wie ___ er nu eigenlijk over zo'n belangrijk onderwerp?",
+    options: ["lieg", "liegt", "liegen"],
+    correctAnswer: "liegt",
+    explanationTr: "'Wie' tekil kabul edilir, bu yüzden 'liegt' olur.",
+    explanationEn: "'Wie' is treated as singular, so it takes 'liegt'."
+  },
+  // liegen (Imperfectum)
+  {
+    id: "q_irreg_liegen_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Hij ___ (liegen) gisteren tegen de politie over zijn leeftijd.",
+    correctAnswer: "loog",
+    explanationTr: "Tekil imperfectum hali 'loog'dur.",
+    explanationEn: "The singular imperfectum form is 'loog'."
+  },
+  {
+    id: "q_irreg_liegen_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De verdachten ___ tegen de rechter.",
+    options: ["loog", "logen", "liegt"],
+    correctAnswer: "logen",
+    explanationTr: "Çoğul imperfectum hali 'logen'dir.",
+    explanationEn: "The plural imperfectum form is 'logen'."
+  },
+  // liegen (Perfectum)
+  {
+    id: "q_irreg_liegen_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Hij heeft nog nooit in zijn hele leven ___ (liegen).",
+    correctAnswer: "gelogen",
+    explanationTr: "'liegen' fiilinin 3. hali 'gelogen'dur.",
+    explanationEn: "The past participle of 'liegen' is 'gelogen'."
+  },
+  {
+    id: "q_irreg_liegen_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Heb je tegen mij ___?",
+    options: ["gelogen", "loog", "liegen"],
+    correctAnswer: "gelogen",
+    explanationTr: "Hebben + gelogen yapısı kullanılır.",
+    explanationEn: "The combination hebben + gelogen is used."
+  },
+
+  // 8. lijden (Present)
+  {
+    id: "q_irreg_lijden_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Hij ___ (lijden) veel pijn door zijn ernstige blessure.",
+    correctAnswer: "lijdt",
+    explanationTr: "3. tekil şahıs için kök 'lijd' + t = lijdt.",
+    explanationEn: "For 3rd person singular, stem 'lijd' + t = lijdt."
+  },
+  {
+    id: "q_irreg_lijden_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Waarom ___ zoveel mensen onder deze economische crisis?",
+    options: ["lijd", "lijdt", "lijden"],
+    correctAnswer: "lijden",
+    explanationTr: "Çoğul özne (zoveel mensen) için fiil mastar (lijden) kalır.",
+    explanationEn: "For the plural subject (zoveel mensen), the verb remains in the infinitive (lijden)."
+  },
+  // lijden (Imperfectum)
+  {
+    id: "q_irreg_lijden_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De arme bevolking ___ (lijden) honger tijdens de oorlog.",
+    correctAnswer: "leed",
+    explanationTr: "Tekil imperfectum hali 'leed'dir.",
+    explanationEn: "The singular imperfectum form is 'leed'."
+  },
+  {
+    id: "q_irreg_lijden_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Veel patiënten ___ jarenlang onder deze zieke toestand.",
+    options: ["leed", "leden", "lijdt"],
+    correctAnswer: "leden",
+    explanationTr: "Çoğul imperfectum hali 'leden'dir.",
+    explanationEn: "The plural imperfectum form is 'leden'."
+  },
+  // lijden (Perfectum)
+  {
+    id: "q_irreg_lijden_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Ze hebben door de kou erg veel ___ (lijden).",
+    correctAnswer: "geleden",
+    explanationTr: "'lijden' fiilinin 3. hali 'geleden'dir.",
+    explanationEn: "The past participle of 'lijden' is 'geleden'."
+  },
+  {
+    id: "q_irreg_lijden_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Heb je lang aan deze ziekte ___?",
+    options: ["geleden", "leed", "lijden"],
+    correctAnswer: "geleden",
+    explanationTr: "Perfectum formunda 'geleden' kullanılır.",
+    explanationEn: "'geleden' is used in the perfectum form."
+  },
+
+  // 9. ontbijten (Present)
+  {
+    id: "q_irreg_ontbijten_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Ik ___ (ontbijten) elke dag om precies acht uur.",
+    correctAnswer: "ontbijt",
+    explanationTr: "'ik' öznesi için kök 'ontbijt' (zaten t ile bittiği için ek almaz).",
+    explanationEn: "For the subject 'ik', the stem is 'ontbijt' (no extra t needed)."
+  },
+  {
+    id: "q_irreg_ontbijten_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Hoe laat ___ jij meestal in de ochtend?",
+    options: ["ontbijt", "ontbijten", "ontbeet"],
+    correctAnswer: "ontbijt",
+    explanationTr: "Soru cümlesinde 'jij' fiilden sonra gelince 't' düşer, ama kök 'ontbijt' zaten t ile biter.",
+    explanationEn: "In questions with 'jij', the stem 'ontbijt' already ends in 't'."
+  },
+  // ontbijten (Imperfectum)
+  {
+    id: "q_irreg_ontbijten_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Hij ___ (ontbijten) vanmorgen heel erg snel.",
+    correctAnswer: "ontbeet",
+    explanationTr: "Tekil imperfectum hali 'ontbeet'dir.",
+    explanationEn: "The singular imperfectum form is 'ontbeet'."
+  },
+  {
+    id: "q_irreg_ontbijten_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Wij ___ gisteren in een gezellig café in de stad.",
+    options: ["ontbeet", "ontbeten", "ontbijt"],
+    correctAnswer: "ontbeten",
+    explanationTr: "Çoğul imperfectum hali 'ontbeten'dir.",
+    explanationEn: "The plural imperfectum form is 'ontbeten'."
+  },
+  // ontbijten (Perfectum)
+  {
+    id: "q_irreg_ontbijten_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "We hebben vanmorgen al uitgebreid ___ (ontbijten).",
+    correctAnswer: "ontbeten",
+    explanationTr: "'ont-' ile başlayan fiiller 'ge-' almaz. 3. hali 'ontbeten'dir.",
+    explanationEn: "Verbs starting with 'ont-' do not take 'ge-'. Past participle is 'ontbeten'."
+  },
+  {
+    id: "q_irreg_ontbijten_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Heb je al ___ voordat je naar school kwam?",
+    options: ["ontbeten", "ontbeet", "ontbijten"],
+    correctAnswer: "ontbeten",
+    explanationTr: "Perfectum formunda 'ontbeten' kullanılır.",
+    explanationEn: "'ontbeten' is used in the perfectum form."
+  },
+
+  // 10. overlijden (Present)
+  {
+    id: "q_irreg_overlijden_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Zijn oude opa ___ (overlijden) bijna op hoge leeftijd.",
+    correctAnswer: "overlijdt",
+    explanationTr: "3. tekil şahıs için kök 'overlijd' + t = overlijdt.",
+    explanationEn: "For 3rd person singular, stem 'overlijd' + t = overlijdt."
+  },
+  {
+    id: "q_irreg_overlijden_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Helaas ___ er elk jaar veel oude bomen door ziektes.",
+    options: ["overlijdt", "overlijden", "overleed"],
+    correctAnswer: "overlijden",
+    explanationTr: "Çoğul özne (bomen) için fiil mastar (overlijden) kalır.",
+    explanationEn: "For the plural subject (bomen), the verb remains in the infinitive (overlijden)."
+  },
+  // overlijden (Imperfectum)
+  {
+    id: "q_irreg_overlijden_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Haar oude kat ___ (overlijden) vorig jaar in de winter.",
+    correctAnswer: "overleed",
+    explanationTr: "Tekil imperfectum hali 'overleed'dir.",
+    explanationEn: "The singular imperfectum form is 'overleed'."
+  },
+  {
+    id: "q_irreg_overlijden_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Veel dappere soldaten ___ in die verschrikkelijke oorlog.",
+    options: ["overleed", "overleden", "overlijdt"],
+    correctAnswer: "overleden",
+    explanationTr: "Çoğul imperfectum hali 'overleden'dir.",
+    explanationEn: "The plural imperfectum form is 'overleden'."
+  },
+  // overlijden (Perfectum)
+  {
+    id: "q_irreg_overlijden_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Zijn vader is vorig jaar helaas ___ (overlijden).",
+    correctAnswer: "overleden",
+    explanationTr: "'overlijden' durum değişikliği/ölüm bildirdiği için 'zijn' ile kurulur, 3. hali 'overleden'dir.",
+    explanationEn: "'overlijden' indicates passing away, uses 'zijn', and its past participle is 'overleden'."
+  },
+  {
+    id: "q_irreg_overlijden_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Is de koning al lang geleden ___?",
+    options: ["overleden", "overleed", "overlijden"],
+    correctAnswer: "overleden",
+    explanationTr: "Perfectum formunda 'overleden' kullanılır.",
+    explanationEn: "'overleden' is used in the perfectum form."
+  },
+
+  // 11. plegen (Present)
+  {
+    id: "q_irreg_plegen_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Hij ___ (plegen) elke ochtend vroeg op te staan.",
+    correctAnswer: "pleegt",
+    explanationTr: "3. tekil şahıs için kök 'pleeg' + t = pleegt.",
+    explanationEn: "For 3rd person singular, stem 'pleeg' + t = pleegt."
+  },
+  {
+    id: "q_irreg_plegen_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Wat ___ jij zoal te doen op zondag?",
+    options: ["pleeg", "pleegt", "plegen"],
+    correctAnswer: "pleeg",
+    explanationTr: "'ik' öznesi için fiil kökü 'pleeg' kullanılır.",
+    explanationEn: "For the subject 'ik', the stem 'pleeg' is used."
+  },
+  // plegen (Imperfectum)
+  {
+    id: "q_irreg_plegen_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Hij ___ (plegen) vroeger vaak in dit park te wandelen.",
+    correctAnswer: "placht",
+    explanationTr: "'plegen' fiilinin imperfectum tekil hali 'placht'tır (eski/edebi kullanım).",
+    explanationEn: "The singular imperfectum form of 'plegen' is 'placht'."
+  },
+  {
+    id: "q_irreg_plegen_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De burgers ___ vroeger gehoorzaam te zijn.",
+    options: ["placht", "plachten", "pleegt"],
+    correctAnswer: "plachten",
+    explanationTr: "Çoğul imperfectum hali 'plachten'dir.",
+    explanationEn: "The plural imperfectum form is 'plachten'."
+  },
+  // plegen (Perfectum)
+  {
+    id: "q_irreg_plegen_f1",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Wat is de aanduiding in de lijst voor de perfectum vorm van plegen?",
+    options: ["--- (Geen vorm)", "Gepleegd", "Plegend"],
+    correctAnswer: "--- (Geen vorm)",
+    explanationTr: "Listede 'plegen' fiilinin bu anlamdaki perfectum formu '---' olarak belirtilmiştir.",
+    explanationEn: "In the list, the perfectum form for 'plegen' in this meaning is indicated as '---'."
+  },
+  {
+    id: "q_irreg_plegen_f2",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Heeft het werkwoord plegen in deze betekenis een actieve perfectum vorm? Vul in (Nee / Ja): ___",
+    correctAnswer: "Nee",
+    explanationTr: "Listede perfectum sütununda '---' yazmaktadır, yani bu anlamda aktif perfectum formu yoktur.",
+    explanationEn: "The list shows '---' under perfectum, meaning there is no active perfectum form."
+  },
+
+  // 12. rijzen (Present)
+  {
+    id: "q_irreg_rijzen_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "De ochtendmist ___ (rijzen) langzaam op boven het veld.",
+    correctAnswer: "rijst",
+    explanationTr: "3. tekil şahıs için kök 'rijs' + t = rijst.",
+    explanationEn: "For 3rd person singular, stem 'rijs' + t = rijst."
+  },
+  {
+    id: "q_irreg_rijzen_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Waarom ___ de spanning in de vergaderzaal zo snel?",
+    options: ["rijs", "rijst", "rijzen"],
+    correctAnswer: "rijst",
+    explanationTr: "Tekil özne (de spanning) için 'rijst' kullanılır.",
+    explanationEn: "For the singular subject (de spanning), 'rijst' is used."
+  },
+  // rijzen (Imperfectum)
+  {
+    id: "q_irreg_rijzen_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De witte deken van nevel ___ (rijzen) omhoog.",
+    correctAnswer: "rees",
+    explanationTr: "Tekil imperfectum hali 'rees'dir.",
+    explanationEn: "The singular imperfectum form is 'rees'."
+  },
+  {
+    id: "q_irreg_rijzen_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De prijzen ___ de pan uit in die periode.",
+    options: ["rees", "rezen", "rijst"],
+    correctAnswer: "rezen",
+    explanationTr: "Çoğul imperfectum hali 'rezen'dir.",
+    explanationEn: "The plural imperfectum form is 'rezen'."
+  },
+  // rijzen (Perfectum)
+  {
+    id: "q_irreg_rijzen_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "De spanning tussen de landen is flink ___ (rijzen).",
+    correctAnswer: "gerezen",
+    explanationTr: "'rijzen' yükselme/durum bildirdiği için 'zijn' ile kurulur, 3. hali 'gerezen'dir.",
+    explanationEn: "'rijzen' indicates rising, uses 'zijn', and its past participle is 'gerezen'."
+  },
+  {
+    id: "q_irreg_rijzen_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Is de mist inmiddels al ___?",
+    options: ["gerezen", "rees", "rijzen"],
+    correctAnswer: "gerezen",
+    explanationTr: "Perfectum formunda 'gerezen' kullanılır.",
+    explanationEn: "'gerezen' is used in the perfectum form."
+  },
+
+  // 13. ruiken (Present)
+  {
+    id: "q_irreg_ruiken_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Deze mooie rode bloem ___ (ruiken) heerlijk zoet.",
+    correctAnswer: "ruikt",
+    explanationTr: "3. tekil şahıs için kök 'ruik' + t = ruikt.",
+    explanationEn: "For 3rd person singular, stem 'ruik' + t = ruikt."
+  },
+  {
+    id: "q_irreg_ruiken_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Wat ___ jij in de keuken klaarmaken?",
+    options: ["ruik", "ruikt", "ruiken"],
+    correctAnswer: "ruik",
+    explanationTr: "'ik' öznesi için fiil kökü 'ruik' kullanılır.",
+    explanationEn: "For the subject 'ik', the stem 'ruik' is used."
+  },
+  // ruiken (Imperfectum)
+  {
+    id: "q_irreg_ruiken_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Hij ___ (ruiken) gisteren gas in de keuken.",
+    correctAnswer: "rook",
+    explanationTr: "Tekil imperfectum hali 'rook'tur.",
+    explanationEn: "The singular imperfectum form is 'rook'."
+  },
+  {
+    id: "q_irreg_ruiken_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De bloemen in de vaas ___ ontzettend lekker.",
+    options: ["rook", "roken", "ruikt"],
+    correctAnswer: "roken",
+    explanationTr: "Çoğul imperfectum hali 'roken'dir.",
+    explanationEn: "The plural imperfectum form is 'roken'."
+  },
+  // ruiken (Perfectum)
+  {
+    id: "q_irreg_ruiken_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Heb jij de heerlijke geur van soep ___ (ruiken)?",
+    correctAnswer: "geroken",
+    explanationTr: "'ruiken' fiilinin 3. hali 'geroken'dir.",
+    explanationEn: "The past participle of 'ruiken' is 'geroken'."
+  },
+  {
+    id: "q_irreg_ruiken_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Ik heb gas in de kelder ___.",
+    options: ["geroken", "rook", "ruiken"],
+    correctAnswer: "geroken",
+    explanationTr: "Hebben + geroken yapısı kullanılır.",
+    explanationEn: "The combination hebben + geroken is used."
+  },
+
+  // 14. scheiden (Present)
+  {
+    id: "q_irreg_scheiden_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "De grote weg ___ (scheiden) de twee dorpen van elkaar.",
+    correctAnswer: "scheidt",
+    explanationTr: "3. tekil şahıs için kök 'scheid' + t = scheidt.",
+    explanationEn: "For 3rd person singular, stem 'scheid' + t = scheidt."
+  },
+  {
+    id: "q_irreg_scheiden_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Waarom ___ die mensen na zo lang?",
+    options: ["scheid", "scheidt", "scheiden"],
+    correctAnswer: "scheiden",
+    explanationTr: "Çoğul özne (mensen) için fiil mastar (scheiden) kalır.",
+    explanationEn: "For the plural subject (mensen), the verb remains in the infinitive (scheiden)."
+  },
+  // scheiden (Imperfectum)
+  {
+    id: "q_irreg_scheiden_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Ze ___ (scheiden) vorig jaar na een huwelijk van tien jaar.",
+    correctAnswer: "scheidden",
+    explanationTr: "Çoğul/özneye göre imperfectum hali 'scheidden'dir.",
+    explanationEn: "The imperfectum form is 'scheidden'."
+  },
+  {
+    id: "q_irreg_scheiden_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De partners ___ officieel in de rechtbank.",
+    options: ["scheidde", "scheidden", "scheidt"],
+    correctAnswer: "scheidden",
+    explanationTr: "Çoğul imperfectum hali 'scheidden'dir.",
+    explanationEn: "The plural imperfectum form is 'scheidden'."
+  },
+  // scheiden (Perfectum)
+  {
+    id: "q_irreg_scheiden_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Ze zijn na vele jaren gelukkig te zijn geweest toch ___ (scheiden).",
+    correctAnswer: "gescheiden",
+    explanationTr: "'scheiden' fiilinin 3. hali 'gescheiden'dir ve 'zijn' ile kurulur.",
+    explanationEn: "The past participle of 'scheiden' is 'gescheiden' and it uses 'zijn'."
+  },
+  {
+    id: "q_irreg_scheiden_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Zijn jouw ouders al lang ___?",
+    options: ["gescheiden", "scheidden", "scheiden"],
+    correctAnswer: "gescheiden",
+    explanationTr: "Perfectum formunda 'gescheiden' kullanılır.",
+    explanationEn: "'gescheiden' is used in the perfectum form."
+  },
+
+  // 15. schenken (Present)
+  {
+    id: "q_irreg_schenken_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Ik ___ (schenken) wat warme thee in voor onze gasten.",
+    correctAnswer: "schenk",
+    explanationTr: "'ik' öznesi için fiil kökü 'schenk' kullanılır.",
+    explanationEn: "For the subject 'ik', the stem 'schenk' is used."
+  },
+  {
+    id: "q_irreg_schenken_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Wie ___ er een glas wijn in voor iedereen?",
+    options: ["schenk", "schenkt", "schenken"],
+    correctAnswer: "schenkt",
+    explanationTr: "3. tekil şahıs için kök 'schenk' + t = schenkt.",
+    explanationEn: "For 3rd person singular, stem 'schenk' + t = schenkt."
+  },
+  // schenken (Imperfectum)
+  {
+    id: "q_irreg_schenken_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Hij ___ (schenken) haar gisterenavond een glas wijn in.",
+    correctAnswer: "schonk",
+    explanationTr: "Tekil imperfectum hali 'schonk'tır.",
+    explanationEn: "The singular imperfectum form is 'schonk'."
+  },
+  {
+    id: "q_irreg_schenken_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De gastheren ___ de glazen vol tijdens het feest.",
+    options: ["schonk", "schonken", "schenkt"],
+    correctAnswer: "schonken",
+    explanationTr: "Çoğul imperfectum hali 'schonken'dir.",
+    explanationEn: "The plural imperfectum form is 'schonken'."
+  },
+  // schenken (Perfectum)
+  {
+    id: "q_irreg_schenken_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Ze hebben veel geld aan het goede doel ___ (schenken).",
+    correctAnswer: "geschonken",
+    explanationTr: "'schenken' fiilinin 3. hali 'geschonken'dir.",
+    explanationEn: "The past participle of 'schenken' is 'geschonken'."
+  },
+  {
+    id: "q_irreg_schenken_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Heb je al wat drinken ___?",
+    options: ["geschonken", "schonk", "schenken"],
+    correctAnswer: "geschonken",
+    explanationTr: "Hebben + geschonken yapısı kullanılır.",
+    explanationEn: "The combination hebben + geschonken is used."
+  },
+
+  // 16. scheppen (Present)
+  {
+    id: "q_irreg_scheppen_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Volgens het verhaal ___ (scheppen) God de hemel en aarde.",
+    correctAnswer: "schept",
+    explanationTr: "3. tekil şahıs için kök 'schep' + t = schept.",
+    explanationEn: "For 3rd person singular, stem 'schep' + t = schept."
+  },
+  {
+    id: "q_irreg_scheppen_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Wat ___ de kunstenaar met zijn verf en kwast?",
+    options: ["schep", "schept", "scheppen"],
+    correctAnswer: "schept",
+    explanationTr: "Tekil özne (de kunstenaar) için 'schept' kullanılır.",
+    explanationEn: "For the singular subject (de kunstenaar), 'schept' is used."
+  },
+  // scheppen (Imperfectum)
+  {
+    id: "q_irreg_scheppen_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De beroemde kunstenaar ___ (scheppen) een prachtig meesterwerk.",
+    correctAnswer: "schiep",
+    explanationTr: "Tekil imperfectum hali 'schiep'tir.",
+    explanationEn: "The singular imperfectum form is 'schiep'."
+  },
+  {
+    id: "q_irreg_scheppen_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De nieuwe regels ___ heel veel verwarring in het bedrijf.",
+    options: ["schiep", "schiepen", "schept"],
+    correctAnswer: "schiepen",
+    explanationTr: "Çoğul imperfectum hali 'schiepen'dir.",
+    explanationEn: "The plural imperfectum form is 'schiepen'."
+  },
+  // scheppen (Perfectum)
+  {
+    id: "q_irreg_scheppen_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Deze beslissing heeft nieuwe kansen ___ (scheppen).",
+    correctAnswer: "geschapen",
+    explanationTr: "'scheppen' fiilinin 3. hali 'geschapen'dir.",
+    explanationEn: "The past participle of 'scheppen' is 'geschapen'."
+  },
+  {
+    id: "q_irreg_scheppen_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Welke mogelijkheden zijn er door dit plan ___?",
+    options: ["geschapen", "schiep", "scheppen"],
+    correctAnswer: "geschapen",
+    explanationTr: "Perfectum formunda 'geschapen' kullanılır.",
+    explanationEn: "'geschapen' is used in the perfectum form."
+  },
+  
+  // YENİ EKLENEN 16 DÜZENSİZ FİİL İÇİN QUIZ VERİLERİ (SCHEREN t/m VANGEN - HER FİİL İÇİN PRESENT, IMPERFECTUM VE PERFECTUM - 2'ŞER SORU)
+
+  // 1. scheren (Present)
+  {
+    id: "q_irreg_scheren_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Hij ___ (scheren) elke ochtend zorgvuldig zijn baard.",
+    correctAnswer: "scheert",
+    explanationTr: "3. tekil şahıs (hij) için kök 'scheer' + t = scheert.",
+    explanationEn: "For 3rd person singular (hij), stem 'scheer' + t = scheert."
+  },
+  {
+    id: "q_irreg_scheren_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Waarom ___ jij je baard zo s'ochtends?",
+    options: ["scheer", "scheert", "scheren"],
+    correctAnswer: "scheer",
+    explanationTr: "Soru cümlesinde 'jij' fiilden sonra gelince 't' düşer: scheer.",
+    explanationEn: "In a question where 'jij' follows the verb, the 't' drops: scheer."
+  },
+  // scheren (Imperfectum)
+  {
+    id: "q_irreg_scheren_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Hij ___ (scheren) zich vroeger elke ochtend voor zijn werk.",
+    correctAnswer: "schoor",
+    explanationTr: "Tekil imperfectum hali 'schoor'dur.",
+    explanationEn: "The singular imperfectum form is 'schoor'."
+  },
+  {
+    id: "q_irreg_scheren_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De mannen ___ zich allemaal in de kazerne.",
+    options: ["schoor", "schoren", "scheert"],
+    correctAnswer: "schoren",
+    explanationTr: "Çoğul imperfectum hali 'schoren'dir.",
+    explanationEn: "The plural imperfectum form is 'schoren'."
+  },
+  // scheren (Perfectum)
+  {
+    id: "q_irreg_scheren_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Hij heeft zich vanmorgen helemaal glad ___ (scheren).",
+    correctAnswer: "geschoren",
+    explanationTr: "'scheren' fiilinin 3. hali 'geschoren'dir.",
+    explanationEn: "The past participle of 'scheren' is 'geschoren'."
+  },
+  {
+    id: "q_irreg_scheren_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Heb je jezelf vandaag al ___?",
+    options: ["geschoren", "schoor", "scheren"],
+    correctAnswer: "geschoren",
+    explanationTr: "Hebben + geschoren yapısı kullanılır.",
+    explanationEn: "The combination hebben + geschoren is used."
+  },
+
+  // 2. schieten (Present)
+  {
+    id: "q_irreg_schieten_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "De spits ___ (schieten) de bal hard in het doel.",
+    correctAnswer: "schiet",
+    explanationTr: "3. tekil şahıs için kök 'schiet' (zaten t ile bittiği için ekstra t almaz).",
+    explanationEn: "For 3rd person singular, stem 'schiet' (already ends in t)."
+  },
+  {
+    id: "q_irreg_schieten_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Waarom ___ die soldaat in de lucht?",
+    options: ["schiet", "schieten", "schoot"],
+    correctAnswer: "schiet",
+    explanationTr: "Tekil özne (die soldaat) için 'schiet' kullanılır.",
+    explanationEn: "For the singular subject (die soldaat), 'schiet' is used."
+  },
+  // schieten (Imperfectum)
+  {
+    id: "q_irreg_schieten_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De soldaat ___ (schieten) gisteren een schot in de lucht.",
+    correctAnswer: "schoot",
+    explanationTr: "Tekil imperfectum hali 'schoot'tur.",
+    explanationEn: "The singular imperfectum form is 'schoot'."
+  },
+  {
+    id: "q_irreg_schieten_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De aanvallers ___ op het doel tijdens de training.",
+    options: ["schoot", "schoten", "schiet"],
+    correctAnswer: "schoten",
+    explanationTr: "Çoğul imperfectum hali 'schoten'dir.",
+    explanationEn: "The plural imperfectum form is 'schoten'."
+  },
+  // schieten (Perfectum)
+  {
+    id: "q_irreg_schieten_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Hij heeft een prachtig doelpunt ___ (schieten).",
+    correctAnswer: "geschoten",
+    explanationTr: "'schieten' fiilinin 3. hali 'geschoten'dir.",
+    explanationEn: "The past participle of 'schieten' is 'geschoten'."
+  },
+  {
+    id: "q_irreg_schieten_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Is de bal in het doel ___?",
+    options: ["geschoten", "schoot", "schieten"],
+    correctAnswer: "geschoten",
+    explanationTr: "Perfectum formunda 'geschoten' kullanılır.",
+    explanationEn: "'geschoten' is used in the perfectum form."
+  },
+
+  // 3. schijnen (Present)
+  {
+    id: "q_irreg_schijnen_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "De felle zon ___ (schijnen) vandaag aan de hemel.",
+    correctAnswer: "schijnt",
+    explanationTr: "3. tekil şahıs için kök 'schijn' + t = schijnt.",
+    explanationEn: "For 3rd person singular, stem 'schijn' + t = schijnt."
+  },
+  {
+    id: "q_irreg_schijnen_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Wat ___ vandaag erg mooi te zijn?",
+    options: ["schijn", "schijnt", "schijnen"],
+    correctAnswer: "schijnt",
+    explanationTr: "3. tekil şahıs durumu için 'schijnt' kullanılır.",
+    explanationEn: "For 3rd person singular situations, 'schijnt' is used."
+  },
+  // schijnen (Imperfectum)
+  {
+    id: "q_irreg_schijnen_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De maan ___ (schijnen) vannacht helder door het raam.",
+    correctAnswer: "scheen",
+    explanationTr: "Tekil imperfectum hali 'scheen'dir.",
+    explanationEn: "The singular imperfectum form is 'scheen'."
+  },
+  {
+    id: "q_irreg_schijnen_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De sterren ___ helder in de winternacht.",
+    options: ["scheen", "schenen", "schijnt"],
+    correctAnswer: "schenen",
+    explanationTr: "Çoğul imperfectum hali 'schenen'dir.",
+    explanationEn: "The plural imperfectum form is 'schenen'."
+  },
+  // schijnen (Perfectum)
+  {
+    id: "q_irreg_schijnen_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "De zon heeft vandaag de hele dag ___ (schijnen).",
+    correctAnswer: "geschenen",
+    explanationTr: "'schijnen' fiilinin 3. hali 'geschenen'dir.",
+    explanationEn: "The past participle of 'schijnen' is 'geschenen'."
+  },
+  {
+    id: "q_irreg_schijnen_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Het heeft gisteren volop ___.",
+    options: ["geschenen", "scheen", "schijnen"],
+    correctAnswer: "geschenen",
+    explanationTr: "Hebben + geschenen yapısı kullanılır.",
+    explanationEn: "The combination hebben + geschenen is used."
+  },
+
+  // 4. schrikken (Present)
+  {
+    id: "q_irreg_schrikken_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Ik ___ (schrikken) altijd van dat harde geluid.",
+    correctAnswer: "schrik",
+    explanationTr: "'ik' öznesi için fiil kökü 'schrik' kullanılır.",
+    explanationEn: "For the subject 'ik', the stem 'schrik' is used."
+  },
+  {
+    id: "q_irreg_schrikken_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Waarom ___ dat kind van die kleine hond?",
+    options: ["schrik", "schrikt", "schrikken"],
+    correctAnswer: "schrikt",
+    explanationTr: "3. tekil şahıs için kök 'schrik' + t = schrikt.",
+    explanationEn: "For 3rd person singular, stem 'schrik' + t = schrikt."
+  },
+  // schrikken (Imperfectum)
+  {
+    id: "q_irreg_schrikken_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Het kind ___ (schrikken) gisteren erg van de grote hond.",
+    correctAnswer: "schrok",
+    explanationTr: "Tekil imperfectum hali 'schrok'tür.",
+    explanationEn: "The singular imperfectum form is 'schrok'."
+  },
+  {
+    id: "q_irreg_schrikken_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Wij ___ toen we dat luide geluid hoorden.",
+    options: ["schrok", "schrokken", "schrikt"],
+    correctAnswer: "schrokken",
+    explanationTr: "Çoğul imperfectum hali 'schrokken'dir.",
+    explanationEn: "The plural imperfectum form is 'schrokken'."
+  },
+  // schrikken (Perfectum)
+  {
+    id: "q_irreg_schrikken_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Ik ben me kapot ___ (schrikken) door die enge film.",
+    correctAnswer: "geschrokken",
+    explanationTr: "'schrikken' durum değişikliği bildirdiği için 'zijn' ile kurulur, 3. hali 'geschrokken'dir.",
+    explanationEn: "'schrikken' indicates a change of state, uses 'zijn', and its past participle is 'geschrokken'."
+  },
+  {
+    id: "q_irreg_schrikken_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Ben je erg van dat slechte nieuws ___?",
+    options: ["geschrokken", "schrok", "schrikken"],
+    correctAnswer: "geschrokken",
+    explanationTr: "Perfectum formunda 'geschrokken' kullanılır.",
+    explanationEn: "'geschrokken' is used in the perfectum form."
+  },
+
+  // 5. schuiven (Present)
+  {
+    id: "q_irreg_schuiven_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Hij ___ (schuiven) de stoel langzaam aan de tafel.",
+    correctAnswer: "schuift",
+    explanationTr: "3. tekil şahıs için kök 'schuif' + t = schuift.",
+    explanationEn: "For 3rd person singular, stem 'schuif' + t = schuift."
+  },
+  {
+    id: "q_irreg_schuiven_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Wat ___ je daar naar voren?",
+    options: ["schuif", "schuift", "schuiven"],
+    correctAnswer: "schuif",
+    explanationTr: "'ik' öznesi için fiil kökü 'schuif' kullanılır.",
+    explanationEn: "For the subject 'ik', the stem 'schuif' is used."
+  },
+  // schuiven (Imperfectum)
+  {
+    id: "q_irreg_schuiven_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Ze ___ (schuiven) gisteren het zware gordijn open.",
+    correctAnswer: "schoof",
+    explanationTr: "Tekil imperfectum hali 'schoof'dur.",
+    explanationEn: "The singular imperfectum form is 'schoof'."
+  },
+  {
+    id: "q_irreg_schuiven_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De leerlingen ___ hun banken naar achteren.",
+    options: ["schoof", "schoven", "schuift"],
+    correctAnswer: "schoven",
+    explanationTr: "Çoğul imperfectum hali 'schoven'dir.",
+    explanationEn: "The plural imperfectum form is 'schoven'."
+  },
+  // schuiven (Perfectum)
+  {
+    id: "q_irreg_schuiven_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "De zware kast is naar voren ___ (schuiven).",
+    correctAnswer: "geschoven",
+    explanationTr: "'schuiven' fiilinin 3. hali 'geschoven'dir.",
+    explanationEn: "The past participle of 'schuiven' is 'geschoven'."
+  },
+  {
+    id: "q_irreg_schuiven_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Heb je de tafel al aan de kant ___?",
+    options: ["geschoven", "schoof", "schuiven"],
+    correctAnswer: "geschoven",
+    explanationTr: "Hebben + geschoven yapısı kullanılır.",
+    explanationEn: "The combination hebben + geschoven is used."
+  },
+
+  // 6. slaan (Present)
+  {
+    id: "q_irreg_slaan_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "De grote klok ___ (slaan) precies twaalf uur.",
+    correctAnswer: "slaat",
+    explanationTr: "3. tekil şahıs için kök 'slaa' + t = slaat.",
+    explanationEn: "For 3rd person singular, stem + t = slaat."
+  },
+  {
+    id: "q_irreg_slaan_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Waarom ___ die jongen die bal zo hard weg?",
+    options: ["sla", "slaat", "slaan"],
+    correctAnswer: "slaat",
+    explanationTr: "Tekil özne (die jongen) için 'slaat' kullanılır.",
+    explanationEn: "For the singular subject (die jongen), 'slaat' is used."
+  },
+  // slaan (Imperfectum)
+  {
+    id: "q_irreg_slaan_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Hij ___ (slaan) de bal gisteren heel hard weg.",
+    correctAnswer: "sloeg",
+    explanationTr: "Tekil imperfectum hali 'sloeg'dür.",
+    explanationEn: "The singular imperfectum form is 'sloeg'."
+  },
+  {
+    id: "q_irreg_slaan_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De boze mannen ___ met hun vuisten op de tafel.",
+    options: ["sloeg", "sloegen", "slaat"],
+    correctAnswer: "sloegen",
+    explanationTr: "Çoğul imperfectum hali 'sloegen'dir.",
+    explanationEn: "The plural imperfectum form is 'sloegen'."
+  },
+  // slaan (Perfectum)
+  {
+    id: "q_irreg_slaan_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "De dief heeft de ruit kapot ___ (slaan).",
+    correctAnswer: "geslagen",
+    explanationTr: "'slaan' fiilinin 3. hali 'geslagen'dir.",
+    explanationEn: "The past participle of 'slaan' is 'geslagen'."
+  },
+  {
+    id: "q_irreg_slaan_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Heef iemand op de grote trommel ___?",
+    options: ["geslagen", "sloeg", "slaan"],
+    correctAnswer: "geslagen",
+    explanationTr: "Perfectum formunda 'geslagen' kullanılır.",
+    explanationEn: "'geslagen' is used in the perfectum form."
+  },
+
+  // 7. smelten (Present)
+  {
+    id: "q_irreg_smelten_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "De ijsmuts ___ (smelten) al snel in de felle zon.",
+    correctAnswer: "smelt",
+    explanationTr: "3. tekil şahıs için kök 'smelt' (zaten t ile bittiği için ekstra t almaz).",
+    explanationEn: "For 3rd person singular, stem 'smelt' (already ends in t)."
+  },
+  {
+    id: "q_irreg_smelten_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Wat ___ daar op de warme stoep door de zon?",
+    options: ["smelt", "smelten", "smolt"],
+    correctAnswer: "smelt",
+    explanationTr: "Tekil durumlar için 'smelt' kullanılır.",
+    explanationEn: "For singular situations, 'smelt' is used."
+  },
+  // smelten (Imperfectum)
+  {
+    id: "q_irreg_smelten_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De dikke sneeuw ___ (smelten) gisteren heel snel.",
+    correctAnswer: "smolt",
+    explanationTr: "Tekil imperfectum hali 'smolt'tur.",
+    explanationEn: "The singular imperfectum form is 'smolt'."
+  },
+  {
+    id: "q_irreg_smelten_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Alle ijsblokjes ___ in het warme glas water.",
+    options: ["smolt", "smolten", "smelt"],
+    correctAnswer: "smolten",
+    explanationTr: "Çoğul imperfectum hali 'smolten'dir.",
+    explanationEn: "The plural imperfectum form is 'smolten'."
+  },
+  // smelten (Perfectum)
+  {
+    id: "q_irreg_smelten_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Het ijs op de weg is door de zon helemaal ___ (smelten).",
+    correctAnswer: "gesmolten",
+    explanationTr: "'smelten' durum değişikliği bildirdiği için 'zijn' ile kurulur, 3. hali 'gesmolten'dir.",
+    explanationEn: "'smelten' indicates state change, uses 'zijn', and its past participle is 'gesmolten'."
+  },
+  {
+    id: "q_irreg_smelten_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Is de chocolade in de pan al ___?",
+    options: ["gesmolten", "smolt", "smelten"],
+    correctAnswer: "gesmolten",
+    explanationTr: "Perfectum formunda 'gesmolten' kullanılır.",
+    explanationEn: "'gesmolten' is used in the perfectum form."
+  },
+
+  // 8. springen (Present)
+  {
+    id: "q_irreg_springen_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "De blije kat ___ (springen) in één keer op tafel.",
+    correctAnswer: "springt",
+    explanationTr: "3. tekil şahıs için kök 'spring' + t = springt.",
+    explanationEn: "For 3rd person singular, stem 'spring' + t = springt."
+  },
+  {
+    id: "q_irreg_springen_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Waarom ___ dat kind zo hoog in de lucht?",
+    options: ["spring", "springt", "springen"],
+    correctAnswer: "springt",
+    explanationTr: "Tekil özne (dat kind) için 'springt' kullanılır.",
+    explanationEn: "For the singular subject (dat kind), 'springt' is used."
+  },
+  // springen (Imperfectum)
+  {
+    id: "q_irreg_springen_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Hij ___ (springen) gisteren vrolijk in het zwembad.",
+    correctAnswer: "sprong",
+    explanationTr: "Tekil imperfectum hali 'sprong'dur.",
+    explanationEn: "The singular imperfectum form is 'sprong'."
+  },
+  {
+    id: "q_irreg_springen_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De atleten ___ over de hoge hindernis.",
+    options: ["sprong", "sprongen", "springt"],
+    correctAnswer: "sprongen",
+    explanationTr: "Çoğul imperfectum hali 'sprongen'dir.",
+    explanationEn: "The plural imperfectum form is 'sprongen'."
+  },
+  // springen (Perfectum)
+  {
+    id: "q_irreg_springen_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Het oude glas is op de stenen grond ___ (springen).",
+    correctAnswer: "gesprongen",
+    explanationTr: "'springen' fiilinin 3. hali 'gesprongen'dir.",
+    explanationEn: "The past participle of 'springen' is 'gesprongen'."
+  },
+  {
+    id: "q_irreg_springen_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Ben je in het diepe water ___?",
+    options: ["gesprongen", "sprong", "springen"],
+    correctAnswer: "gesprongen",
+    explanationTr: "Perfectum formunda 'gesprongen' kullanılır.",
+    explanationEn: "'gesprongen' is used in the perfectum form."
+  },
+
+  // 9. steken (Present)
+  {
+    id: "q_irreg_steken_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Pas op, die gevaarlijke bij ___ (steken) heel snel!",
+    correctAnswer: "steekt",
+    explanationTr: "3. tekil şahıs için kök 'steek' + t = steekt.",
+    explanationEn: "For 3rd person singular, stem 'steek' + t = steekt."
+  },
+  {
+    id: "q_irreg_steken_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Waarom ___ je jouw hand in de tas?",
+    options: ["steek", "steekt", "steken"],
+    correctAnswer: "steek",
+    explanationTr: "'ik' öznesi için fiil kökü 'steek' kullanılır.",
+    explanationEn: "For the subject 'ik', the stem 'steek' is used."
+  },
+  // steken (Imperfectum)
+  {
+    id: "q_irreg_steken_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Hij ___ (steken) gisteren zijn hand op om iets te vragen.",
+    correctAnswer: "stak",
+    explanationTr: "Tekil imperfectum hali 'stak'tır.",
+    explanationEn: "The singular imperfectum form is 'stak'."
+  },
+  {
+    id: "q_irreg_steken_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De rovers ___ alle oude huizen in brand.",
+    options: ["stak", "staken", "steekt"],
+    correctAnswer: "staken",
+    explanationTr: "Çoğul imperfectum hali 'staken'dir.",
+    explanationEn: "The plural imperfectum form is 'staken'."
+  },
+  // steken (Perfectum)
+  {
+    id: "q_irreg_steken_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Ik ben gisteren door een gemene wesp ___ (steken).",
+    correctAnswer: "gestoken",
+    explanationTr: "'steken' fiilinin 3. hali 'gestoken'dir.",
+    explanationEn: "The past participle of 'steken' is 'gestoken'."
+  },
+  {
+    id: "q_irreg_steken_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Heb je de sleutel in het slot ___?",
+    options: ["gestoken", "stak", "steken"],
+    correctAnswer: "gestoken",
+    explanationTr: "Hebben + gestoken yapısı kullanılır.",
+    explanationEn: "The combination hebben + gestoken is used."
+  },
+
+  // 10. stelen (Present)
+  {
+    id: "q_irreg_stelen_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Wie ___ (stelen) er nu zomaar mijn mooie fiets?",
+    correctAnswer: "steelt",
+    explanationTr: "3. tekil şahıs için kök 'steel' + t = steelt.",
+    explanationEn: "For 3rd person singular, stem 'steel' + t = steelt."
+  },
+  {
+    id: "q_irreg_stelen_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Waarom ___ die man een appel uit de winkel?",
+    options: ["steel", "steelt", "stelen"],
+    correctAnswer: "steelt",
+    explanationTr: "Tekil özne (die man) için 'steelt' kullanılır.",
+    explanationEn: "For the singular subject (die man), 'steelt' is used."
+  },
+  // stelen (Imperfectum)
+  {
+    id: "q_irreg_stelen_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De slimme dief ___ (stelen) gisteren de dure auto.",
+    correctAnswer: "stal",
+    explanationTr: "Tekil imperfectum hali 'stal'dır.",
+    explanationEn: "The singular imperfectum form is 'stal'."
+  },
+  {
+    id: "q_irreg_stelen_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De criminelen ___ alle waardevolle spullen uit het huis.",
+    options: ["stal", "stalen", "steelt"],
+    correctAnswer: "stalen",
+    explanationTr: "Çoğul imperfectum hali 'stalen'dir.",
+    explanationEn: "The plural imperfectum form is 'stalen'."
+  },
+  // stelen (Perfectum)
+  {
+    id: "q_irreg_stelen_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Mijn mooie nieuwe fiets is vannacht ___ (stelen).",
+    correctAnswer: "gestolen",
+    explanationTr: "'stelen' fiilinin 3. hali 'gestolen'dir.",
+    explanationEn: "The past participle of 'stelen' is 'gestolen'."
+  },
+  {
+    id: "q_irreg_stelen_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Is jouw auto uit de straat ___?",
+    options: ["gestolen", "stal", "stelen"],
+    correctAnswer: "gestolen",
+    explanationTr: "Perfectum formunda 'gestolen' kullanılır.",
+    explanationEn: "'gestolen' is used in the perfectum form."
+  },
+
+  // 11. sterven (Present)
+  {
+    id: "q_irreg_sterven_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Bloemen ___ (sterven) snel zonder genoeg water.",
+    correctAnswer: "sterven",
+    explanationTr: "Çoğul özne (bloemen) için fiil mastar (sterven) kalır.",
+    explanationEn: "For the plural subject (bloemen), the verb remains in the infinitive (sterven)."
+  },
+  {
+    id: "q_irreg_sterven_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Waarom ___ die arme plant in de droge grond?",
+    options: ["sterf", "sterft", "sterven"],
+    correctAnswer: "sterft",
+    explanationTr: "3. tekil şahıs için kök 'sterf' + t = sterft.",
+    explanationEn: "For 3rd person singular, stem 'sterf' + t = sterft."
+  },
+  // sterven (Imperfectum)
+  {
+    id: "q_irreg_sterven_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De oude man ___ (sterven) gisteren heel rustig in zijn slaap.",
+    correctAnswer: "stierf",
+    explanationTr: "Tekil imperfectum hali 'stierf'tir.",
+    explanationEn: "The singular imperfectum form is 'stierf'."
+  },
+  {
+    id: "q_irreg_sterven_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Veel bomen ___ door de erge droogte van dit jaar.",
+    options: ["stierf", "stierven", "sterft"],
+    correctAnswer: "stierven",
+    explanationTr: "Çoğul imperfectum hali 'stierven'dir.",
+    explanationEn: "The plural imperfectum form is 'stierven'."
+  },
+  // sterven (Perfectum)
+  {
+    id: "q_irreg_sterven_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Zijn oude hond is vorig jaar helaas ___ (sterven).",
+    correctAnswer: "gestorven",
+    explanationTr: "'sterven' ölüm bildirdiği için 'zijn' ile kurulur, 3. hali 'gestorven'dir.",
+    explanationEn: "'sterven' indicates death, uses 'zijn', and its past participle is 'gestorven'."
+  },
+  {
+    id: "q_irreg_sterven_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Is die oude boom al lang geleden ___?",
+    options: ["gestorven", "stierf", "sterven"],
+    correctAnswer: "gestorven",
+    explanationTr: "Perfectum formunda 'gestorven' kullanılır.",
+    explanationEn: "'gestorven' is used in the perfectum form."
+  },
+
+  // 12. stijgen (Present)
+  {
+    id: "q_irreg_stijgen_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "De prijzen in de supermarkt ___ (stijgen) enorm snel.",
+    correctAnswer: "stijgen",
+    explanationTr: "Çoğul özne (prijzen) için fiil mastar (stijgen) kalır.",
+    explanationEn: "For the plural subject (prijzen), the verb remains in the infinitive (stijgen)."
+  },
+  {
+    id: "q_irreg_stijgen_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Wat ___ er nu zo snel in de lucht?",
+    options: ["stijg", "stijgt", "stijgen"],
+    correctAnswer: "stijgt",
+    explanationTr: "3. tekil şahıs için kök 'stijg' + t = stijgt.",
+    explanationEn: "For 3rd person singular, stem 'stijg' + t = stijgt."
+  },
+  // stijgen (Imperfectum)
+  {
+    id: "q_irreg_stijgen_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De temperatuur ___ (stijgen) gisteren tot boven de dertig graden.",
+    correctAnswer: "steeg",
+    explanationTr: "Tekil imperfectum hali 'steeg'dir.",
+    explanationEn: "The singular imperfectum form is 'steeg'."
+  },
+  {
+    id: "q_irreg_stijgen_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De kosten van de huur ___ vorig jaar flink.",
+    options: ["steeg", "stegen", "stijgt"],
+    correctAnswer: "stegen",
+    explanationTr: "Çoğul imperfectum hali 'stegen'dir.",
+    explanationEn: "The plural imperfectum form is 'stegen'."
+  },
+  // stijgen (Perfectum)
+  {
+    id: "q_irreg_stijgen_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "De inflatie is de laatste maanden flink ___ (stijgen).",
+    correctAnswer: "gestegen",
+    explanationTr: "'stijgen' artış bildirdiği için 'zijn' ile kurulur, 3. hali 'gestegen'dir.",
+    explanationEn: "'stijgen' indicates increase, uses 'zijn', and its past participle is 'gestegen'."
+  },
+  {
+    id: "q_irreg_stijgen_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Zijn de prijzen van huizen alweer ___?",
+    options: ["gestegen", "steeg", "stijgen"],
+    correctAnswer: "gestegen",
+    explanationTr: "Perfectum formunda 'gestegen' kullanılır.",
+    explanationEn: "'gestegen' is used in the perfectum form."
+  },
+
+  // 13. treden (Present)
+  {
+    id: "q_irreg_treden_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Hij ___ (treden) dapper naar voren op het grote podium.",
+    correctAnswer: "treedt",
+    explanationTr: "3. tekil şahıs için kök 'treed' + t = treedt.",
+    explanationEn: "For 3rd person singular, stem 'treed' + t = treedt."
+  },
+  {
+    id: "q_irreg_treden_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Wie ___ er vandaag in het officiële huwelijk?",
+    options: ["treed", "treedt", "treden"],
+    correctAnswer: "treden",
+    explanationTr: "Çoğul/genel durum için 'treden' kullanılır.",
+    explanationEn: "For plural/general situations, 'treden' is used."
+  },
+  // treden (Imperfectum)
+  {
+    id: "q_irreg_treden_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De koning ___ (treden) gisteren binnen in de zaal.",
+    correctAnswer: "trad",
+    explanationTr: "Tekil imperfectum hali 'trad'dir.",
+    explanationEn: "The singular imperfectum form is 'trad'."
+  },
+  {
+    id: "q_irreg_treden_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De genode gasten ___ de mooie kerk binnen.",
+    options: ["trad", "traden", "treedt"],
+    correctAnswer: "traden",
+    explanationTr: "Çoğul imperfectum hali 'traden'dir.",
+    explanationEn: "The plural imperfectum form is 'traden'."
+  },
+  // treden (Perfectum)
+  {
+    id: "q_irreg_treden_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Hij is vorig jaar in het huwelijk ___ (treden).",
+    correctAnswer: "getreden",
+    explanationTr: "'treden' hareket bildirdiği için 'zijn' ile kurulur, 3. hali 'getreden'dir.",
+    explanationEn: "'treden' indicates stepping motion, uses 'zijn', and its past participle is 'getreden'."
+  },
+  {
+    id: "q_irreg_treden_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Ben je al naar voren ___?",
+    options: ["getreden", "trad", "treden"],
+    correctAnswer: "getreden",
+    explanationTr: "Perfectum formunda 'getreden' kullanılır.",
+    explanationEn: "'getreden' is used in the perfectum form."
+  },
+
+  // 14. treffen (Present)
+  {
+    id: "q_irreg_treffen_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Ik ___ (treffen) vandaag een goede oude vriend in de stad.",
+    correctAnswer: "treff",
+    explanationTr: "'ik' öznesi için fiil kökü 'treff' kullanılır.",
+    explanationEn: "For the subject 'ik', the stem 'treff' is used."
+  },
+  {
+    id: "q_irreg_treffen_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "De zware storm ___ de kust van het land.",
+    options: ["treff", "treft", "treffen"],
+    correctAnswer: "treft",
+    explanationTr: "3. tekil şahıs için kök 'tref/treff' + t = treft.",
+    explanationEn: "For 3rd person singular, stem + t = treft."
+  },
+  // treffen (Imperfectum)
+  {
+    id: "q_irreg_treffen_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Een hevige storm ___ (treffen) gisteren de westkust.",
+    correctAnswer: "trof",
+    explanationTr: "Tekil imperfectum hali 'trof'tur.",
+    explanationEn: "The singular imperfectum form is 'trof'."
+  },
+  {
+    id: "q_irreg_treffen_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Wij ___ elkaar toevallig in het centrum.",
+    options: ["trof", "troffen", "treft"],
+    correctAnswer: "troffen",
+    explanationTr: "Çoğul imperfectum hali 'troffen'dir.",
+    explanationEn: "The plural imperfectum form is 'troffen'."
+  },
+  // treffen (Perfectum)
+  {
+    id: "q_irreg_treffen_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "We hebben elkaar daar vorige week ___ (treffen).",
+    correctAnswer: "getroffen",
+    explanationTr: "'treffen' fiilinin 3. hali 'getroffen'dir.",
+    explanationEn: "The past participle of 'treffen' is 'getroffen'."
+  },
+  {
+    id: "q_irreg_treffen_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Is jouw huis door de brand ___?",
+    options: ["getroffen", "trof", "treffen"],
+    correctAnswer: "getroffen",
+    explanationTr: "Hebben + getroffen yapısı kullanılır.",
+    explanationEn: "The combination hebben + getroffen is used."
+  },
+
+  // 15. trekken (Present)
+  {
+    id: "q_irreg_trekken_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Hij ___ (trekken) heel hard aan de gesloten deur.",
+    correctAnswer: "trekt",
+    explanationTr: "3. tekil şahıs için kök 'trek' + t = trekt.",
+    explanationEn: "For 3rd person singular, stem 'trek' + t = trekt."
+  },
+  {
+    id: "q_irreg_trekken_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Waarom ___ je aan dat touw?",
+    options: ["trek", "trekt", "trekken"],
+    correctAnswer: "trek",
+    explanationTr: "'ik' öznesi için fiil kökü 'trek' kullanılır.",
+    explanationEn: "For the subject 'ik', the stem 'trek' is used."
+  },
+  // trekken (Imperfectum)
+  {
+    id: "q_irreg_trekken_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Ze ___ (trekken) vorig jaar naar het zonnige zuiden.",
+    correctAnswer: "trokken",
+    explanationTr: "Çoğul imperfectum hali 'trokken'dür.",
+    explanationEn: "The plural imperfectum form is 'trokken'."
+  },
+  {
+    id: "q_irreg_trekken_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Hij ___ zijn jas aan en ging meteen weg.",
+    options: ["trok", "trokken", "trekt"],
+    correctAnswer: "trok",
+    explanationTr: "Tekil imperfectum hali 'trok'tür.",
+    explanationEn: "The singular imperfectum form is 'trok'."
+  },
+  // trekken (Perfectum)
+  {
+    id: "q_irreg_trekken_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Heb je hard aan het touw ___ (trekken)?",
+    correctAnswer: "getrokken",
+    explanationTr: "'trekken' fiilinin 3. hali 'getrokken'dür.",
+    explanationEn: "The past participle of 'trekken' is 'getrokken'."
+  },
+  {
+    id: "q_irreg_trekken_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Ze zijn naar het buitenland ___.",
+    options: ["getrokken", "trok", "trekken"],
+    correctAnswer: "getrokken",
+    explanationTr: "Perfectum formunda 'getrokken' kullanılır.",
+    explanationEn: "'getrokken' is used in the perfectum form."
+  },
+
+  // 16. vangen (Present)
+  {
+    id: "q_irreg_vangen_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "De snelle kat ___ (vangen) een kleine muis in de schuur.",
+    correctAnswer: "vangt",
+    explanationTr: "3. tekil şahıs için kök 'vang' + t = vangt.",
+    explanationEn: "For 3rd person singular, stem 'vang' + t = vangt."
+  },
+  {
+    id: "q_irreg_vangen_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Hoe ___ je zo'n snelle bal?",
+    options: ["vang", "vangt", "vangen"],
+    correctAnswer: "vang",
+    explanationTr: "'ik' öznesi için fiil kökü 'vang' kullanılır.",
+    explanationEn: "For the subject 'ik', the stem 'vang' is used."
+  },
+  // vangen (Imperfectum)
+  {
+    id: "q_irreg_vangen_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De keeper ___ (vangen) de bal in de laatste minuut.",
+    correctAnswer: "ving",
+    explanationTr: "Tekil imperfectum hali 'ving'dir.",
+    explanationEn: "The singular imperfectum form is 'ving'."
+  },
+  {
+    id: "q_irreg_vangen_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De politie ___ de gevaarlijke dief na een lange zoektocht.",
+    options: ["ving", "vingen", "vangt"],
+    correctAnswer: "vingen",
+    explanationTr: "Çoğul imperfectum hali 'vingen'dir.",
+    explanationEn: "The plural imperfectum form is 'vingen'."
+  },
+  // vangen (Perfectum)
+  {
+    id: "q_irreg_vangen_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "De politie heeft de gevaarlijke dief ___ (vangen).",
+    correctAnswer: "gevangen",
+    explanationTr: "'vangen' fiilinin 3. hali 'gevangen'dir.",
+    explanationEn: "The past participle of 'vangen' is 'gevangen'."
+  },
+  {
+    id: "q_irreg_vangen_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Heb je de bal goed ___?",
+    options: ["gevangen", "ving", "vangen"],
+    correctAnswer: "gevangen",
+    explanationTr: "Hebben + gevragnen/gevangen yapısı kullanılır.",
+    explanationEn: "The combination hebben + gevangen is used."
+  },
+  
+  // YENİ EKLENEN 19 DÜZENSİZ FİİL İÇİN QUIZ VERİLERİ (VAREN t/m ZWIJGEN - HER FİİL İÇİN PRESENT, IMPERFECTUM VE PERFECTUM - 2'ŞER SORU)
+
+  // 1. varen (Present)
+  {
+    id: "q_irreg_varen_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "De grote veerboot ___ (varen) elke dag naar Texel.",
+    correctAnswer: "vaart",
+    explanationTr: "3. tekil şahıs için kök 'vaar' + t = vaart.",
+    explanationEn: "For 3rd person singular, stem 'vaar' + t = vaart."
+  },
+  {
+    id: "q_irreg_varen_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Waarheen ___ al die boten op de rivier?",
+    options: ["vaar", "vaart", "varen"],
+    correctAnswer: "varen",
+    explanationTr: "Çoğul özne (al die boten) için fiil mastar (varen) kalır.",
+    explanationEn: "For the plural subject (al die boten), the verb remains in the infinitive (varen)."
+  },
+  // varen (Imperfectum)
+  {
+    id: "q_irreg_varen_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Wij ___ (varen) gisteren met een boot over de rustige rivier.",
+    correctAnswer: "voeren",
+    explanationTr: "Çoğul imperfectum hali 'voeren'dir.",
+    explanationEn: "The plural imperfectum form is 'voeren'."
+  },
+  {
+    id: "q_irreg_varen_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De schipper ___ urenlang over de open zee.",
+    options: ["voer", "voeren", "vaart"],
+    correctAnswer: "voer",
+    explanationTr: "Tekil imperfectum hali 'voer'dür.",
+    explanationEn: "The singular imperfectum form is 'voer'."
+  },
+  // varen (Perfectum)
+  {
+    id: "q_irreg_varen_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Ze hebben vorig jaar op de grote oceaan ___ (varen).",
+    correctAnswer: "gevaren",
+    explanationTr: "'varen' fiilinin 3. hali 'gevaren'dir.",
+    explanationEn: "The past participle of 'varen' is 'gevaren'."
+  },
+  {
+    id: "q_irreg_varen_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Ben je weleens met een groot schip ___?",
+    options: ["gevaren", "voer", "varen"],
+    correctAnswer: "gevaren",
+    explanationTr: "Perfectum formunda 'gevaren' kullanılır.",
+    explanationEn: "'gevaren' is used in the perfectum form."
+  },
+
+  // 2. vechten (Present)
+  {
+    id: "q_irreg_vechten_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "De twee honden ___ (vechten) om een lekker bot.",
+    correctAnswer: "vechten",
+    explanationTr: "Çoğul özne (twee honden) için fiil mastar (vechten) kalır.",
+    explanationEn: "For the plural subject (twee honden), the verb remains in the infinitive (vechten)."
+  },
+  {
+    id: "q_irreg_vechten_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Waarom ___ die soldaten voor hun land?",
+    options: ["vecht", "vechten", "vocht"],
+    correctAnswer: "vechten",
+    explanationTr: "Çoğul özne (die soldaten) için 'vechten' kullanılır.",
+    explanationEn: "For the plural subject (die soldaten), 'vechten' is used."
+  },
+  // vechten (Imperfectum)
+  {
+    id: "q_irreg_vechten_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De dappere ridders ___ (vechten) dapper voor hun rechten.",
+    correctAnswer: "vochten",
+    explanationTr: "Çoğul imperfectum hali 'vochten'dir.",
+    explanationEn: "The plural imperfectum form is 'vochten'."
+  },
+  {
+    id: "q_irreg_vechten_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De ridder ___ tegen de gevaarlijke draak.",
+    options: ["vocht", "vochten", "vecht"],
+    correctAnswer: "vocht",
+    explanationTr: "Tekil imperfectum hali 'vocht'tur.",
+    explanationEn: "The singular imperfectum form is 'vocht'."
+  },
+  // vechten (Perfectum)
+  {
+    id: "q_irreg_vechten_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Ze hebben heel lang voor hun vrijheid ___ (vechten).",
+    correctAnswer: "gevochten",
+    explanationTr: "'vechten' fiilinin 3. hali 'gevochten'dur.",
+    explanationEn: "The past participle of 'vechten' is 'gevochten'."
+  },
+  {
+    id: "q_irreg_vechten_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Heb je lang tegen de ziekte ___?",
+    options: ["gevochten", "vocht", "vechten"],
+    correctAnswer: "gevochten",
+    explanationTr: "Hebben + gevochten yapısı kullanılır.",
+    explanationEn: "The combination hebben + gevochten is used."
+  },
+
+  // 3. verbieden (Present)
+  {
+    id: "q_irreg_verbieden_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "De strenge directie ___ (verbieden) roken in het hele gebouw.",
+    correctAnswer: "verbiedt",
+    explanationTr: "3. tekil şahıs için kök 'verbied' + t = verbiedt.",
+    explanationEn: "For 3rd person singular, stem 'verbied' + t = verbiedt."
+  },
+  {
+    id: "q_irreg_verbieden_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Waarom ___ de wet dit soort gevaarlijke praktijken?",
+    options: ["verbied", "verbiedt", "verbieden"],
+    correctAnswer: "verbiedt",
+    explanationTr: "Tekil özne (de wet) için 'verbiedt' kullanılır.",
+    explanationEn: "For the singular subject (de wet), 'verbiedt' is used."
+  },
+  // verbieden (Imperfectum)
+  {
+    id: "q_irreg_verbieden_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Het duidelijke bord ___ (verbieden) de toegang tot het terrein.",
+    correctAnswer: "verbood",
+    explanationTr: "Tekil imperfectum hali 'verbood'dur.",
+    explanationEn: "The singular imperfectum form is 'verbood'."
+  },
+  {
+    id: "q_irreg_verbieden_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De nieuwe regels ___ het gebruik van telefoons.",
+    options: ["verbood", "verbooden", "verbiedt"],
+    correctAnswer: "verbooden",
+    explanationTr: "Çoğul imperfectum hali 'verbooden'dir (veya verboden).",
+    explanationEn: "The plural imperfectum form is 'verbooden'."
+  },
+  // verbieden (Perfectum)
+  {
+    id: "q_irreg_verbieden_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Roken in dit openbare gebouw is streng ___ (verbieden).",
+    correctAnswer: "verboden",
+    explanationTr: "'verbieden' fiilinin 3. hali 'verboden'dir ve 'be-' ile başladığı için 'ge-' almaz.",
+    explanationEn: "The past participle of 'verbiden' is 'verboden' and starts with 'be-', taking no 'ge-'."
+  },
+  {
+    id: "q_irreg_verbieden_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Is deze actie door de wet ___?",
+    options: ["verboden", "verbood", "verbieden"],
+    correctAnswer: "verboden",
+    explanationTr: "Perfectum formunda 'verboden' kullanılır.",
+    explanationEn: "'verboden' is used in the perfectum form."
+  },
+
+  // 4. verdwijnen (Present)
+  {
+    id: "q_irreg_verdwijnen_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "De donkere wolken ___ (verdwijnen) langzaam achter de heuvel.",
+    correctAnswer: "verdwijnen",
+    explanationTr: "Çoğul özne (wolken) için fiil mastar (verdwijnen) kalır.",
+    explanationEn: "For the plural subject (wolken), the verb remains in the infinitive (verdwijnen)."
+  },
+  {
+    id: "q_irreg_verdwijnen_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Waarom ___ de zon zo snel achter de wolken?",
+    options: ["verdwijn", "verdwijnt", "verdwijnen"],
+    correctAnswer: "verdwijnt",
+    explanationTr: "3. tekil şahıs için kök 'verdwijn' + t = verdwijnt.",
+    explanationEn: "For 3rd person singular, stem 'verdwijn' + t = verdwijnt."
+  },
+  // verdwijnen (Imperfectum)
+  {
+    id: "q_irreg_verdwijnen_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De snelle auto ___ (verdwijnen) gisteren in de verre verte.",
+    correctAnswer: "verdween",
+    explanationTr: "Tekil imperfectum hali 'verdween'dir.",
+    explanationEn: "The singular imperfectum form is 'verdween'."
+  },
+  {
+    id: "q_irreg_verdwijnen_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Alle sneeuwvlokken ___ plotseling in de warme zon.",
+    options: ["verdween", "verdwenen", "verdwijnt"],
+    correctAnswer: "verdwenen",
+    explanationTr: "Çoğul imperfectum hali 'verdwenen'dir.",
+    explanationEn: "The plural imperfectum form is 'verdwenen'."
+  },
+  // verdwijnen (Perfectum)
+  {
+    id: "q_irreg_verdwijnen_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Mijn portemonnee is uit mijn tas ___ (verdwijnen).",
+    correctAnswer: "verdwenen",
+    explanationTr: "'verdwijnen' durum değişikliği bildirdiği için 'zijn' ile kurulur, 3. hali 'verdwenen'dir ve 'ver-' ile başlar.",
+    explanationEn: "'verdwijnen' indicates change of state, uses 'zijn', and its past participle is 'verdwenen'."
+  },
+  {
+    id: "q_irreg_verdwijnen_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Is de sleutel al lang ___?",
+    options: ["verdwenen", "verdween", "verdwijnen"],
+    correctAnswer: "verdwenen",
+    explanationTr: "Perfectum formunda 'verdwenen' kullanılır.",
+    explanationEn: "'verdwenen' is used in the perfectum form."
+  },
+
+  // 5. vermijden (Present)
+  {
+    id: "q_irreg_vermijden_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Ik ___ (vermijden) drukke plaatsen tijdens de spits.",
+    correctAnswer: "vermijd",
+    explanationTr: "'ik' öznesi için fiil kökü 'vermijd' kullanılır.",
+    explanationEn: "For the subject 'ik', the stem 'vermijd' is used."
+  },
+  {
+    id: "q_irreg_vermijden_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Waarom ___ jij gevaarlijke situaties?",
+    options: ["vermijd", "vermijdt", "vermijden"],
+    correctAnswer: "vermijdt",
+    explanationTr: "'jij' öznesi fiilden ÖNCE gelince '-t' alır (vermijdt).",
+    explanationEn: "When the subject 'jij' comes BEFORE the verb, it takes '-t' (vermijdt)."
+  },
+  // vermijden (Imperfectum)
+  {
+    id: "q_irreg_vermijden_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Hij ___ (vermijden) elk contact met zijn oude buren.",
+    correctAnswer: "vermeed",
+    explanationTr: "Tekil imperfectum hali 'vermeed'dir.",
+    explanationEn: "The singular imperfectum form is 'vermeed'."
+  },
+  {
+    id: "q_irreg_vermijden_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De burgers ___ alle risico's tijdens de storm.",
+    options: ["vermeed", "vermeden", "vermijdt"],
+    correctAnswer: "vermeden",
+    explanationTr: "Çoğul imperfectum hali 'vermeden'dir.",
+    explanationEn: "The plural imperfectum form is 'vermeden'."
+  },
+  // vermijden (Perfectum)
+  {
+    id: "q_irreg_vermijden_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "We hebben dat grote risico gelukkig ___ (vermijden).",
+    correctAnswer: "vermeden",
+    explanationTr: "'vermijden' fiilinin 3. hali 'vermeden'dir ve 'ver-' ile başlar.",
+    explanationEn: "The past participle of 'vermijden' is 'vermeden'."
+  },
+  {
+    id: "q_irreg_vermijden_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Heb je de confrontatie kunnen ___?",
+    options: ["vermeden", "vermeed", "vermijden"],
+    correctAnswer: "vermeden",
+    explanationTr: "Hebben + vermeden yapısı kullanılır.",
+    explanationEn: "The combination hebben + vermeden is used."
+  },
+
+  // 6. vouwen (Present)
+  {
+    id: "q_irreg_vouwen_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Ik ___ (vouwen) netjes al de schone kleren op.",
+    correctAnswer: "vouw",
+    explanationTr: "'ik' öznesi için fiil kökü 'vouw' kullanılır.",
+    explanationEn: "For the subject 'ik', the stem 'vouw' is used."
+  },
+  {
+    id: "q_irreg_vouwen_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Wie ___ al deze papieren vliegtuigtjes?",
+    options: ["vouw", "vouwt", "vouwen"],
+    correctAnswer: "vouwt",
+    explanationTr: "3. tekil şahıs için kök 'vouw' + t = vouwt.",
+    explanationEn: "For 3rd person singular, stem 'vouw' + t = vouwt."
+  },
+  // vouwen (Imperfectum)
+  {
+    id: "q_irreg_vouwen_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Zij ___ (vouwen) gisteren een mooie brief voor haar moeder.",
+    correctAnswer: "vouwde",
+    explanationTr: "Tekil imperfectum hali 'vouwde'dir.",
+    explanationEn: "The singular imperfectum form is 'vouwde'."
+  },
+  {
+    id: "q_irreg_vouwen_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De kinderen ___ prachtige figuren van papier.",
+    options: ["vouwde", "vouwden", "vouwt"],
+    correctAnswer: "vouwden",
+    explanationTr: "Çoğul imperfectum hali 'vouwden'dir.",
+    explanationEn: "The plural imperfectum form is 'vouwden'."
+  },
+  // vouwen (Perfectum)
+  {
+    id: "q_irreg_vouwen_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Hij heeft de belangrijke brief netjes ___ (vouwen).",
+    correctAnswer: "gevouwen",
+    explanationTr: "'vouwen' fiilinin 3. hali 'gevouwen'dur.",
+    explanationEn: "The past participle of 'vouwen' is 'gevouwen'."
+  },
+  {
+    id: "q_irreg_vouwen_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Heb je alle schone kleren al ___?",
+    options: ["gevouwen", "vouwde", "vouwen"],
+    correctAnswer: "gevouwen",
+    explanationTr: "Hebben + gevouwen yapısı kullanılır.",
+    explanationEn: "The combination hebben + gevouwen is used."
+  },
+
+  // 7. vriezen (Present)
+  {
+    id: "q_irreg_vriezen_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Het ___ (vriezen) buiten vandaag erg hard.",
+    correctAnswer: "vriest",
+    explanationTr: "Hava olayı het-woord olduğu için kök 'vries' + t = vriest.",
+    explanationEn: "Impersonal weather verb, stem 'vries' + t = vriest."
+  },
+  {
+    id: "q_irreg_vriezen_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Het ___ vannacht flink volgens de weerman.",
+    options: ["vries", "vriest", "vriezen"],
+    correctAnswer: "vriest",
+    explanationTr: "3. tekil 'het' için 'vriest' kullanılır.",
+    explanationEn: "For 3rd person singular 'het', 'vriest' is used."
+  },
+  // vriezen (Imperfectum)
+  {
+    id: "q_irreg_vriezen_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Het ___ (vriezen) vannacht ontzettend hard in het land.",
+    correctAnswer: "vroor",
+    explanationTr: "Tekil imperfectum hali 'vroor'dur.",
+    explanationEn: "The singular imperfectum form is 'vroor'."
+  },
+  {
+    id: "q_irreg_vriezen_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Vorige week ___ het flink in heel Nederland.",
+    options: ["vroor", "vroeren", "vriest"],
+    correctAnswer: "vroor",
+    explanationTr: "Hava fiilleri tekil ('het') çekimlenir: vroor.",
+    explanationEn: "Weather verbs are conjugated in singular ('het'): vroor."
+  },
+  // vriezen (Perfectum)
+  {
+    id: "q_irreg_vriezen_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Het heeft de afgelopen nacht flink ___ (vriezen).",
+    correctAnswer: "gevroren",
+    explanationTr: "'vriezen' fiilinin 3. hali 'gevroren'dür.",
+    explanationEn: "The past participle of 'vriezen' is 'gevroren'."
+  },
+  {
+    id: "q_irreg_vriezen_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Is het vannacht al ___ geweest?",
+    options: ["gevroren", "vroor", "vriezen"],
+    correctAnswer: "gevroren",
+    explanationTr: "Perfectum formunda 'gevroren' kullanılır.",
+    explanationEn: "'gevroren' is used in the perfectum form."
+  },
+
+  // 8. waaien (Present)
+  {
+    id: "q_irreg_waaien_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Het ___ (waaien) vandaag erg hard aan de kust.",
+    correctAnswer: "waait",
+    explanationTr: "3. tekil şahıs için kök 'waai' + t = waait.",
+    explanationEn: "For 3rd person singular, stem 'waai' + t = waait."
+  },
+  {
+    id: "q_irreg_waaien_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Waarom ___ het zo krachtig buiten?",
+    options: ["waai", "waait", "waaien"],
+    correctAnswer: "waait",
+    explanationTr: "Hava durumu için 'waait' kullanılır.",
+    explanationEn: "For weather, 'waait' is used."
+  },
+  // waaien (Imperfectum)
+  {
+    id: "q_irreg_waaien_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De harde wind ___ (waaien) gisteren door de bomen.",
+    correctAnswer: "woei", // veya waaide
+    explanationTr: "'waaien' fiilinin imperfectum hali 'woei' (veya waaide) olabilir.",
+    explanationEn: "The imperfectum form of 'waaien' is 'woei' (or waaide)."
+  },
+  {
+    id: "q_irreg_waaien_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Het ___ gisteren stormachtig in het hele land.",
+    options: ["woei", "woeien", "waait"],
+    correctAnswer: "woei",
+    explanationTr: "Tekil imperfectum hali 'woei'dür.",
+    explanationEn: "The singular imperfectum form is 'woei'."
+  },
+  // waaien (Perfectum)
+  {
+    id: "q_irreg_waaien_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "De storm heeft gisteren heel hard ___ (waaien).",
+    correctAnswer: "gewaaid",
+    explanationTr: "'waaien' fiilinin 3. hali 'gewaaid'dir.",
+    explanationEn: "The past participle of 'waaien' is 'gewaaid'."
+  },
+  {
+    id: "q_irreg_waaien_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Het heeft vandaag behoorlijk ___.",
+    options: ["gewaaid", "woei", "waaien"],
+    correctAnswer: "gewaaid",
+    explanationTr: "Hebben + gewaaid yapısı kullanılır.",
+    explanationEn: "The combination hebben + gewaaid is used."
+  },
+
+  // 9. wegen (Present)
+  {
+    id: "q_irreg_wegen_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Hoeveel ___ (wegen) jij eigenlijk tegenwoordig?",
+    correctAnswer: "weeg",
+    explanationTr: "'jij' öznesi fiilden ÖNCE gelince 'weeg' köküne '-t' alır (weegt), ama soru cümlesinde 'jij' sonraya gelirse 't' düşer: weeg.",
+    explanationEn: "When 'jij' follows the verb in a question, the 't' drops: weeg."
+  },
+  {
+    id: "q_irreg_wegen_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "De koffer ___ meer dan twintig kilo.",
+    options: ["weeg", "weegt", "wegen"],
+    correctAnswer: "weegt",
+    explanationTr: "3. tekil şahıs için kök 'weeg' + t = weegt.",
+    explanationEn: "For 3rd person singular, stem 'weeg' + t = weegt."
+  },
+  // wegen (Imperfectum)
+  {
+    id: "q_irreg_wegen_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De zware koffer ___ (wegen) gisteren twintig kilo.",
+    correctAnswer: "woog",
+    explanationTr: "Tekil imperfectum hali 'woog'dur.",
+    explanationEn: "The singular imperfectum form is 'woog'."
+  },
+  {
+    id: "q_irreg_wegen_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De pakketjes ___ samen tien kilo.",
+    options: ["woog", "wogen", "weegt"],
+    correctAnswer: "wogen",
+    explanationTr: "Çoğul imperfectum hali 'wogen'dir.",
+    explanationEn: "The plural imperfectum form is 'wogen'."
+  },
+  // wegen (Perfectum)
+  {
+    id: "q_irreg_wegen_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Ik heb me vanmorgen op de weegschaal ___ (wegen).",
+    correctAnswer: "gewogen",
+    explanationTr: "'wegen' fiilinin 3. hali 'gewogen'dir.",
+    explanationEn: "The past participle of 'wegen' is 'gewogen'."
+  },
+  {
+    id: "q_irreg_wegen_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Heb je de bagage al ___?",
+    options: ["gewogen", "woog", "wegen"],
+    correctAnswer: "gewogen",
+    explanationTr: "Perfectum formunda 'gewogen' kullanılır.",
+    explanationEn: "'gewogen' is used in the perfectum form."
+  },
+
+  // 10. werpen (Present)
+  {
+    id: "q_irreg_werpen_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Hij ___ (werpen) de bal naar zijn trouwe hond.",
+    correctAnswer: "werpt",
+    explanationTr: "3. tekil şahıs için kök 'werp' + t = werpt.",
+    explanationEn: "For 3rd person singular, stem 'werp' + t = werpt."
+  },
+  {
+    id: "q_irreg_werpen_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Waarom ___ jij die steen in het water?",
+    options: ["werp", "werpt", "werpen"],
+    correctAnswer: "werpt",
+    explanationTr: "'jij' öznesi fiilden ÖNCE gelince '-t' alır (werpt).",
+    explanationEn: "When the subject 'jij' comes BEFORE the verb, it takes '-t' (werpt)."
+  },
+  // werpen (Imperfectum)
+  {
+    id: "q_irreg_werpen_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De jongen ___ (werpen) een steen in de vijver.",
+    correctAnswer: "wierp",
+    explanationTr: "Tekil imperfectum hali 'wierp'tir.",
+    explanationEn: "The singular imperfectum form is 'wierp'."
+  },
+  {
+    id: "q_irreg_werpen_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De spelers ___ de bal naar elkaar.",
+    options: ["wierp", "wierpen", "werpt"],
+    correctAnswer: "wierpen",
+    explanationTr: "Çoğul imperfectum hali 'wierpen'dir.",
+    explanationEn: "The plural imperfectum form is 'wierpen'."
+  },
+  // werpen (Perfectum)
+  {
+    id: "q_irreg_werpen_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Ze hebben het lege blikje in de prullenbak ___ (werpen).",
+    correctAnswer: "geworpen",
+    explanationTr: "'werpen' fiilinin 3. hali 'geworpen'dir.",
+    explanationEn: "The past participle of 'werpen' is 'geworpen'."
+  },
+  {
+    id: "q_irreg_werpen_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Heb je de bal ver weg ___?",
+    options: ["geworpen", "wierp", "werpen"],
+    correctAnswer: "geworpen",
+    explanationTr: "Hebben + geworpen yapısı kullanılır.",
+    explanationEn: "The combination hebben + geworpen is used."
+  },
+
+  // 11. wijzen (Present)
+  {
+    id: "q_irreg_wijzen_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "De leraar ___ (wijzen) naar het bord in het lokaal.",
+    correctAnswer: "wijst",
+    explanationTr: "3. tekil şahıs için kök 'wijs' + t = wijst.",
+    explanationEn: "For 3rd person singular, stem 'wijs' + t = wijst."
+  },
+  {
+    id: "q_irreg_wijzen_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Waarom ___ jij naar die man op straat?",
+    options: ["wijs", "wijst", "wijzen"],
+    correctAnswer: "wijst",
+    explanationTr: "'jij' öznesi fiilden ÖNCE gelince '-t' alır (wijst).",
+    explanationEn: "When the subject 'jij' comes BEFORE the verb, it takes '-t' (wijst)."
+  },
+  // wijzen (Imperfectum)
+  {
+    id: "q_irreg_wijzen_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Hij ___ (wijzen) naar de kaart om de route te tonen.",
+    correctAnswer: "wees",
+    explanationTr: "Tekil imperfectum hali 'wees'tir.",
+    explanationEn: "The singular imperfectum form is 'wees'."
+  },
+  {
+    id: "q_irreg_wijzen_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De gidsen ___ de toeristen de juiste richting.",
+    options: ["wees", "wezen", "wijst"],
+    correctAnswer: "wezen",
+    explanationTr: "Çoğul imperfectum hali 'wezen'dir.",
+    explanationEn: "The plural imperfectum form is 'wezen'."
+  },
+  // wijzen (Perfectum)
+  {
+    id: "q_irreg_wijzen_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Ze hebben ons de juiste weg naar het station ___ (wijzen).",
+    correctAnswer: "gewezen",
+    explanationTr: "'wijzen' fiilinin 3. hali 'gewezen'dir.",
+    explanationEn: "The past participle of 'wijzen' is 'gewezen'."
+  },
+  {
+    id: "q_irreg_wijzen_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Heb je naar de fout ___?",
+    options: ["gewezen", "wees", "wijzen"],
+    correctAnswer: "gewezen",
+    explanationTr: "Perfectum formunda 'gewezen' kullanılır.",
+    explanationEn: "'gewezen' is used in the perfectum form."
+  },
+
+  // 12. winnen (Present)
+  {
+    id: "q_irreg_winnen_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Ons favoriete voetbalteam ___ (winnen) elke wedstrijd.",
+    correctAnswer: "wint",
+    explanationTr: "3. tekil şahıs için kök 'win' + t = wint.",
+    explanationEn: "For 3rd person singular, stem 'win' + t = wint."
+  },
+  {
+    id: "q_irreg_winnen_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Denk je dat wij deze prijs gaan ___?",
+    options: ["win", "wint", "winnen"],
+    correctAnswer: "winnen",
+    explanationTr: "Modal fiil (gaan) olduğu için asıl fiil mastar (winnen) kalır.",
+    explanationEn: "With the modal verb (gaan), the main verb stays in the infinitive (winnen)."
+  },
+  // winnen (Imperfectum)
+  {
+    id: "q_irreg_winnen_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Wij ___ (winnen) vorig jaar de eerste prijs in de competitie.",
+    correctAnswer: "wonnen",
+    explanationTr: "Çoğul imperfectum hali 'wonnen'dir.",
+    explanationEn: "The plural imperfectum form is 'wonnen'."
+  },
+  {
+    id: "q_irreg_winnen_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Wie ___ de gouden medaille op de Olympische Spelen?",
+    options: ["won", "wonnen", "wint"],
+    correctAnswer: "won",
+    explanationTr: "Tekil imperfectum hali 'won'dur.",
+    explanationEn: "The singular imperfectum form is 'won'."
+  },
+  // winnen (Perfectum)
+  {
+    id: "q_irreg_winnen_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Ze hebben de grote hoofdprijs in de loterij ___ (winnen).",
+    correctAnswer: "gewonnen",
+    explanationTr: "'winnen' fiilinin 3. hali 'gewonnen'dir.",
+    explanationEn: "The past participle of 'winnen' is 'gewonnen'."
+  },
+  {
+    id: "q_irreg_winnen_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Heb je de wedstrijd van gisteren ___?",
+    options: ["gewonnen", "won", "winnen"],
+    correctAnswer: "gewonnen",
+    explanationTr: "Hebben + gewonnen yapısı kullanılır.",
+    explanationEn: "The combination hebben + gewonnen is used."
+  },
+
+  // 13. wrijven (Present)
+  {
+    id: "q_irreg_wrijven_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Hij ___ (wrijven) slaapdronken in zijn ogen.",
+    correctAnswer: "wrijft",
+    explanationTr: "3. tekil şahıs için kök 'wrijf' + t = wrijft.",
+    explanationEn: "For 3rd person singular, stem 'wrijf' + t = wrijft."
+  },
+  {
+    id: "q_irreg_wrijven_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Waarom ___ je zolang in je vermoeide ogen?",
+    options: ["wrijf", "wrijft", "wrijven"],
+    correctAnswer: "wrijft",
+    explanationTr: "'jij' öznesi fiilden ÖNCE gelince '-t' alır (wrijft).",
+    explanationEn: "When the subject 'jij' comes BEFORE the verb, it takes '-t' (wrijft)."
+  },
+  // wrijven (Imperfectum)
+  {
+    id: "q_irreg_wrijven_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Ze ___ (wrijven) haar koude handen warm tegen elkaar.",
+    correctAnswer: "wreef",
+    explanationTr: "Tekil imperfectum hali 'wreef'dir.",
+    explanationEn: "The singular imperfectum form is 'wreef'."
+  },
+  {
+    id: "q_irreg_wrijven_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De kinderen ___ over hun pijnlijke knie.",
+    options: ["wreef", "wreven", "wrijft"],
+    correctAnswer: "wreven",
+    explanationTr: "Çoğul imperfectum hali 'wreven'dir.",
+    explanationEn: "The plural imperfectum form is 'wreven'."
+  },
+  // wrijven (Perfectum)
+  {
+    id: "q_irreg_wrijven_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Hij heeft verzachtende zalf op zijn been ___ (wrijven).",
+    correctAnswer: "gewreven",
+    explanationTr: "'wrijven' fiilinin 3. hali 'gewreven'dir.",
+    explanationEn: "The past participle of 'wrijven' is 'gewreven'."
+  },
+  {
+    id: "q_irreg_wrijven_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Heb je de zalf goed ingesmeerd en ___?",
+    options: ["gewreven", "wreef", "wrijven"],
+    correctAnswer: "gewreven",
+    explanationTr: "Perfectum formunda 'gewreven' kullanılır.",
+    explanationEn: "'gewreven' is used in the perfectum form."
+  },
+
+  // 14. zenden (Present)
+  {
+    id: "q_irreg_zenden_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Ik ___ (zenden) vandaag een belangrijk pakketje naar haar.",
+    correctAnswer: "zend",
+    explanationTr: "'ik' öznesi için fiil kökü 'zend' kullanılır.",
+    explanationEn: "For the subject 'ik', the stem 'zend' is used."
+  },
+  {
+    id: "q_irreg_zenden_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Wie ___ er een e-mail naar de klantenservice?",
+    options: ["zend", "zendt", "zenden"],
+    correctAnswer: "zendt",
+    explanationTr: "3. tekil şahıs için kök 'zend' + t = zendt.",
+    explanationEn: "For 3rd person singular, stem 'zend' + t = zendt."
+  },
+  // zenden (Imperfectum)
+  {
+    id: "q_irreg_zenden_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Hij ___ (zenden) gisteren een officiële brief naar het kantoor.",
+    correctAnswer: "zond",
+    explanationTr: "Tekil imperfectum hali 'zond'dur.",
+    explanationEn: "The singular imperfectum form is 'zond'."
+  },
+  {
+    id: "q_irreg_zenden_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De bedrijven ___ hun offertes op tijd in.",
+    options: ["zond", "zonden", "zendt"],
+    correctAnswer: "zonden",
+    explanationTr: "Çoğul imperfectum hali 'zonden'dir.",
+    explanationEn: "The plural imperfectum form is 'zonden'."
+  },
+  // zenden (Perfectum)
+  {
+    id: "q_irreg_zenden_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Ze hebben een belangrijk document naar ons ___ (zenden).",
+    correctAnswer: "gezonden",
+    explanationTr: "'zenden' fiilinin 3. hali 'gezonden'dir.",
+    explanationEn: "The past participle of 'zenden' is 'gezonden'."
+  },
+  {
+    id: "q_irreg_zenden_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Heb je de e-mail op tijd ___?",
+    options: ["gezonden", "zond", "zenden"],
+    correctAnswer: "gezonden",
+    explanationTr: "Hebben + gezonden yapısı kullanılır.",
+    explanationEn: "The combination hebben + gezonden is used."
+  },
+
+  // 15. zingen (Present)
+  {
+    id: "q_irreg_zingen_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "De vogels ___ (zingen) vrolijk in de hoge boom.",
+    correctAnswer: "zingen",
+    explanationTr: "Çoğul özne (vogels) için fiil mastar (zingen) kalır.",
+    explanationEn: "For the plural subject (vogels), the verb remains in the infinitive (zingen)."
+  },
+  {
+    id: "q_irreg_zingen_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Waarom ___ jij zo vals tijdens de les?",
+    options: ["zing", "zingt", "zingen"],
+    correctAnswer: "zingt",
+    explanationTr: "'jij' öznesi fiilden ÖNCE gelince '-t' alır (zingt).",
+    explanationEn: "When the subject 'jij' comes BEFORE the verb, it takes '-t' (zingt)."
+  },
+  // zingen (Imperfectum)
+  {
+    id: "q_irreg_zingen_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Zij ___ (zingen) gisteren een heel mooi lied op het podium.",
+    correctAnswer: "zong",
+    explanationTr: "Tekil imperfectum hali 'zong'dur.",
+    explanationEn: "The singular imperfectum form is 'zong'."
+  },
+  {
+    id: "q_irreg_zingen_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Het hele koor ___ prachtige liederen tijdens het concert.",
+    options: ["zong", "zongen", "zingt"],
+    correctAnswer: "zongen",
+    explanationTr: "Çoğul imperfectum hali 'zongen'dir.",
+    explanationEn: "The plural imperfectum form is 'zongen'."
+  },
+  // zingen (Perfectum)
+  {
+    id: "q_irreg_zingen_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "We hebben vroeger heel vaak samen ___ (zingen).",
+    correctAnswer: "gezongen",
+    explanationTr: "'zingen' fiilinin 3. hali 'gezongen'dir.",
+    explanationEn: "The past participle of 'zingen' is 'gezongen'."
+  },
+  {
+    id: "q_irreg_zingen_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Heb je dat mooie liedje al eens ___?",
+    options: ["gezongen", "zong", "zingen"],
+    correctAnswer: "gezongen",
+    explanationTr: "Perfectum formunda 'gezongen' kullanılır.",
+    explanationEn: "'gezongen' is used in the perfectum form."
+  },
+
+  // 16. zinken (Present)
+  {
+    id: "q_irreg_zinken_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Zware metalen stenen ___ (zinken) direct naar de bodem.",
+    correctAnswer: "zinken",
+    explanationTr: "Çoğul özne (stenen) için fiil mastar (zinken) kalır.",
+    explanationEn: "For the plural subject (stenen), the verb remains in the infinitive (zinken)."
+  },
+  {
+    id: "q_irreg_zinken_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Waarom ___ een zwaar schip niet zomaar in de zee?",
+    options: ["zink", "zinkt", "zinken"],
+    correctAnswer: "zinkt",
+    explanationTr: "3. tekil şahıs için kök 'zink' + t = zinkt.",
+    explanationEn: "For 3rd person singular, stem 'zink' + t = zinkt."
+  },
+  // zinken (Imperfectum)
+  {
+    id: "q_irreg_zinken_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De zware steen ___ (zinken) meteen naar de bodem van de put.",
+    correctAnswer: "zonk",
+    explanationTr: "Tekil imperfectum hali 'zonk'tur.",
+    explanationEn: "The singular imperfectum form is 'zonk'."
+  },
+  {
+    id: "q_irreg_zinken_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Oude schepen ___ in de diepe oceaan.",
+    options: ["zonk", "zonken", "zinkt"],
+    correctAnswer: "zonken",
+    explanationTr: "Çoğul imperfectum hali 'zonken'dir.",
+    explanationEn: "The plural imperfectum form is 'zonken'."
+  },
+  // zinken (Perfectum)
+  {
+    id: "q_irreg_zinken_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Het beschadigde schip is naar de bodem ___ (zinken).",
+    correctAnswer: "gezonken",
+    explanationTr: "'zinken' batma/hareket bildirdiği için 'zijn' ile kurulur, 3. hali 'gezonken'dür.",
+    explanationEn: "'zinken' indicates sinking, uses 'zijn', and its past participle is 'gezonken'."
+  },
+  {
+    id: "q_irreg_zinken_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Is de boot naar de bodem ___?",
+    options: ["gezonken", "zonk", "zinken"],
+    correctAnswer: "gezonken",
+    explanationTr: "Perfectum formunda 'gezonken' kullanılır.",
+    explanationEn: "'gezonken' is used in the perfectum form."
+  },
+
+  // 17. zwemmen (Present)
+  {
+    id: "q_irreg_zwemmen_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Ik ___ (zwemmen) elke zomer graag in de frisse zee.",
+    correctAnswer: "zwem",
+    explanationTr: "'ik' öznesi için fiil kökü 'zwem' kullanılır.",
+    explanationEn: "For the subject 'ik', the stem 'zwem' is used."
+  },
+  {
+    id: "q_irreg_zwemmen_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Waarom ___ jij zo snel in het zwembad?",
+    options: ["zwem", "zwemt", "zwemmen"],
+    correctAnswer: "zwemt",
+    explanationTr: "'jij' öznesi fiilden ÖNCE gelince '-t' alır (zwemt).",
+    explanationEn: "When the subject 'jij' comes BEFORE the verb, it takes '-t' (zwemt)."
+  },
+  // zwemmen (Imperfectum)
+  {
+    id: "q_irreg_zwemmen_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Hij ___ (zwemmen) gisteren naar de overkant van het meer.",
+    correctAnswer: "zwom",
+    explanationTr: "Tekil imperfectum hali 'zwom'dur.",
+    explanationEn: "The singular imperfectum form is 'zwom'."
+  },
+  {
+    id: "q_irreg_zwemmen_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De kinderen ___ de hele middag in het buitenbad.",
+    options: ["zwom", "zwommen", "zwemt"],
+    correctAnswer: "zwommen",
+    explanationTr: "Çoğul imperfectum hali 'zwommen'dir.",
+    explanationEn: "The plural imperfectum form is 'zwommen'."
+  },
+  // zwemmen (Perfectum)
+  {
+    id: "q_irreg_zwemmen_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "We hebben gisteren in het koude meer ___ (zwemmen).",
+    correctAnswer: "gezwommen",
+    explanationTr: "'zwemmen' fiilinin 3. hali 'gezwommen'dür.",
+    explanationEn: "The past participle of 'zwemmen' is 'gezwommen'."
+  },
+  {
+    id: "q_irreg_zwemmen_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Heb je in de zomer in zee ___?",
+    options: ["gezwommen", "zwom", "zwemmen"],
+    correctAnswer: "gezwommen",
+    explanationTr: "Hebben + gezwommen yapısı kullanılır.",
+    explanationEn: "The combination hebben + gezwommen is used."
+  },
+
+  // 18. zweren (Present)
+  {
+    id: "q_irreg_zweren_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Ik ___ (zweren) dat ik de waarheid spreek.",
+    correctAnswer: "zweer",
+    explanationTr: "'ik' öznesi için fiil kökü 'zweer' kullanılır.",
+    explanationEn: "For the subject 'ik', the stem 'zweer' is used."
+  },
+  {
+    id: "q_irreg_zweren_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Waarom ___ jij op je moeder?",
+    options: ["zweer", "zweert", "zweren"],
+    correctAnswer: "zweert",
+    explanationTr: "'jij' öznesi fiilden ÖNCE gelince '-t' alır (zweert).",
+    explanationEn: "When the subject 'jij' comes BEFORE the verb, it takes '-t' (zweert)."
+  },
+  // zweren (Imperfectum)
+  {
+    id: "q_irreg_zweren_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "Hij ___ (zweren) destijds op zijn moeder dat hij onschuldig was.",
+    correctAnswer: "zwoer",
+    explanationTr: "Tekil imperfectum hali 'zwoer'dür.",
+    explanationEn: "The singular imperfectum form is 'zwoer'."
+  },
+  {
+    id: "q_irreg_zweren_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De getuigen ___ trouw in de rechtbank.",
+    options: ["zwoer", "zwoeren", "zweert"],
+    correctAnswer: "zwoeren",
+    explanationTr: "Çoğul imperfectum hali 'zwoeren'dir.",
+    explanationEn: "The plural imperfectum form is 'zwoeren'."
+  },
+  // zweren (Perfectum)
+  {
+    id: "q_irreg_zweren_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Ze hebben elkaar eeuwige trouw ___ (zweren).",
+    correctAnswer: "gezworen",
+    explanationTr: "'zweren' fiilinin 3. hali 'gezworen'dür.",
+    explanationEn: "The past participle of 'zweren' is 'gezworen'."
+  },
+  {
+    id: "q_irreg_zweren_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Heb je op je eer ___?",
+    options: ["gezworen", "zwoer", "zweren"],
+    correctAnswer: "gezworen",
+    explanationTr: "Hebben + gezworen yapısı kullanılır.",
+    explanationEn: "The combination hebben + gezworen is used."
+  },
+
+  // 19. zwijgen (Present)
+  {
+    id: "q_irreg_zwijgen_p1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Hij ___ (zwijgen) tijdens de hele les als een graf.",
+    correctAnswer: "zwijgt",
+    explanationTr: "3. tekil şahıs için kök 'zwijg' + t = zwijgt.",
+    explanationEn: "For 3rd person singular, stem 'zwijg' + t = zwijgt."
+  },
+  {
+    id: "q_irreg_zwijgen_p2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "verbs_present"],
+    questionNl: "Waarom ___ jij nu ineens zo stil?",
+    options: ["zwijg", "zwijgt", "zwijgen"],
+    correctAnswer: "zwijgt",
+    explanationTr: "'jij' öznesi fiilden ÖNCE gelince '-t' alır (zwijgt).",
+    explanationEn: "When the subject 'jij' comes BEFORE the verb, it takes '-t' (zwijgt)."
+  },
+  // zwijgen (Imperfectum)
+  {
+    id: "q_irreg_zwijgen_i1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De getuige ___ (zwijgen) in alle talen tijdens het proces.",
+    correctAnswer: "zweeg",
+    explanationTr: "Tekil imperfectum hali 'zweeg'dir.",
+    explanationEn: "The singular imperfectum form is 'zweeg'."
+  },
+  {
+    id: "q_irreg_zwijgen_i2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "imperfectum"],
+    questionNl: "De verdachten ___ over wat er werkelijk gebeurd was.",
+    options: ["zweeg", "zwegen", "zwijgt"],
+    correctAnswer: "zwegen",
+    explanationTr: "Çoğul imperfectum hali 'zwegen'dir.",
+    explanationEn: "The plural imperfectum form is 'zwegen'."
+  },
+  // zwijgen (Perfectum)
+  {
+    id: "q_irreg_zwijgen_f1",
+    type: "fill_in",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Ze heeft altijd over dit gevoelige onderwerp ___ (zwijgen).",
+    correctAnswer: "gezwegen",
+    explanationTr: "'zwijgen' fiilinin 3. hali 'gezwegen'dir.",
+    explanationEn: "The past participle of 'zwijgen' is 'gezwegen'."
+  },
+  {
+    id: "q_irreg_zwijgen_f2",
+    type: "multiple_choice",
+    tags: ["irregular_verbs", "past_tenses", "perfectum"],
+    questionNl: "Heb je over de hele zaak ___?",
+    options: ["gezwegen", "zweeg", "zwijgen"],
+    correctAnswer: "gezwegen",
+    explanationTr: "Hebben + gezwegen yapısı kullanılır.",
+    explanationEn: "The combination hebben + gezwrogen/gezwegen is used."
   }
 ];
