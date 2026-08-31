@@ -6767,7 +6767,6 @@ export const quizQuestions = [
     id: "q_irreg_bakken_p2",
     type: "multiple_choice",
     tags: ["irregular_verbs", "verbs_present"],
-    questionNl: "Hij ___ (bakken) gisteren vlees.", // wait, ex says pres: "Hij bakte gisteren vlees" in imp, let's fix pres example:
     questionNl: "Mijn vader ___ (bakken) elke zondag brood.",
     options: ["bak", "bakt", "bakken"],
     correctAnswer: "bakt",
