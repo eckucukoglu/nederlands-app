@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import './App.css';
 import DialogueSection from './components/DialogueSection';
 import ExerciseEngine from './components/ExerciseEngine';
+import IrregularVerbs from './components/IrregularVerbs';
 import Flashcards from './components/Flashcards';
 import AuthModal from './components/AuthModal';
 import { bookSections, vocabulary } from './data';
@@ -805,6 +806,15 @@ function MainContent({ user, setIsAuthModalOpen }) {
               <i className="fa-solid fa-clone text-lg sm:text-xl"></i>
             </button>
 
+			<button 
+              onClick={() => { setActiveTab("verbs"); setIsChapterExpanded(false); setIsSearchExpanded(false); }}
+              className={`p-1.5 sm:p-2 rounded-full transition-colors flex items-center justify-center ${activeTab === 'verbs' ? 'bg-sky-600 text-white shadow-md' : 'bg-sky-900/30 text-sky-400 hover:bg-sky-600 hover:text-white border border-sky-800/30'}`}
+              title={lang === 'tr' ? 'Düzensiz Fiiller' : 'Irregular Verbs'}
+            >
+              <i className="fa-solid fa-bolt text-lg sm:text-xl"></i>
+            </button>
+
+
             <button 
               onClick={() => setIsAuthModalOpen(true)}
               className="p-1.5 sm:p-2 rounded-full hover:bg-slate-800 transition-colors flex items-center justify-center relative group"
@@ -1094,6 +1104,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
         )}
 
         {activeTab === 'flashcards' && <Flashcards initialChapter={currentChapter} />}
+		{activeTab === 'verbs' && <IrregularVerbs />}
       </main>
     </div>
   );
