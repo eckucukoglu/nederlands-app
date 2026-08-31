@@ -57,7 +57,7 @@ const irregularVerbsData = [
     ex: { pres: "De kraan druipt.", imp: "Het water droop van zijn haar.", perf: "De verf is gedropen." } },
   { inf: "eten", imp: "at, aten", perf: "gegeten", aux: "hebben", freq: true, en: "eat", tr: "yemek",
     ex: { pres: "Wij eten vanavond pizza.", imp: "Ik at een lekkere appel.", perf: "Heb je al gegeten?" } },
-  { inf: "fluiten", imp: "floot, floten", perf: "gefloten", aux: "hebben", freq: false, en: "whistle", tr:çalmak, islık çalmak",
+  { inf: "fluiten", imp: "floot, floten", perf: "gefloten", aux: "hebben", freq: false, en: "whistle", tr:"çalmak, islık çalmak",
     ex: { pres: "De scheidsrechter fluit.", imp: "Hij floot een liedje.", perf: "De arbiter heeft gefloten." } },
   { inf: "gaan", imp: "ging, gingen", perf: "gegaan", aux: "zijn", freq: true, en: "go", tr: "gitmek",
     ex: { pres: "Ik ga naar de stad.", imp: "We gingen gisteren sporten.", perf: "Zij is naar huis gegaan." } },
