@@ -37,6 +37,198 @@ const fallbackDictionary = {
   "weer": "again", "als": "like/as", "nieuw": "new", "woorden": "words", "morgen": "tomorrow", "overmorgen": "the day after tomorrow", "dag": "dag"
 };
 
+// --- ORTAK KILAVUZ (ABOUT) BİLEŞENİ ---
+const GuideContent = ({ lang }) => (
+  <div className="space-y-6 text-slate-300 text-sm leading-relaxed">
+    {lang === 'tr' ? (
+      <>
+        <div className="bg-brand-900/20 border border-brand-700/50 p-4 rounded-xl">
+          <p>Bu uygulama, <em>"Nederlands in Gang"</em> kitabının 3. sürümünü takip etmek amacıyla geliştirilmiş <strong>ticari olmayan</strong>, açık kaynaklı bir projedir. Size kişiselleştirilmiş ve etkileşimli bir Hollandaca öğrenme deneyimi sunmak için <strong>Google Gemini</strong> ile birlikte özenle kodlanmıştır.</p>
+        </div>
+        <div>
+          <h4 className="font-bold text-brand-300 text-base mb-3 border-b border-slate-700 pb-2"><i className="fa-solid fa-book-open mr-2"></i>Nasıl Kullanılır?</h4>
+          <ul className="space-y-4">
+            <li className="flex items-start gap-3">
+              <div className="w-8 h-8 rounded-lg bg-indigo-900/50 border border-indigo-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-indigo-400"><i className="fa-solid fa-comments"></i></div>
+              <div>
+                <strong className="text-slate-200 block mb-1">Diyaloglar & Etkileşimli Okuma</strong>
+                Ünite diyaloglarını okuyun ve dinleyin. Çevirisini görmek için <u>altı noktalı kelimelerin</u> üzerine tıklayın. Bir kelimeyi anında "Biliyorum" (<i className="fa-solid fa-check text-emerald-400"></i>) veya "Bilmiyorum" (<i className="fa-solid fa-xmark text-rose-400"></i>) olarak işaretleyebilirsiniz. Bu işlem, kelimeyi otomatik olarak <strong>Global Havuzunuza</strong> kaydeder.
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <div className="w-8 h-8 rounded-lg bg-rose-900/50 border border-rose-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-rose-400"><i className="fa-solid fa-clone"></i></div>
+              <div>
+                <strong className="text-slate-200 block mb-1">Flashcards & Global Havuz</strong>
+                Etkileşimli flashcard'lar ile kelime pratiği yapın. İsterseniz sadece seçtiğiniz üniteye özel kelimeleri çalışabilir, isterseniz de <strong>Global Havuz</strong> moduna geçerek site genelinde etkileşime girdiğiniz tüm kelimeleri tekrar edebilirsiniz. Yalnızca "Bilinmeyen" kelimeleri filtreleyebilir veya listenizi tek tuşla panoya kopyalayabilirsiniz.
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <div className="w-8 h-8 rounded-lg bg-sky-900/50 border border-sky-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-sky-400"><i className="fa-solid fa-magnifying-glass"></i></div>
+              <div>
+                <strong className="text-slate-200 block mb-1">Akıllı Sözlük Araması (Tersten Arama Destekli)</strong>
+                Herhangi bir Hollandaca, Türkçe veya İngilizce kelimeyi bulmak için üstteki arama çubuğunu kullanın. Aradığınız kelime bulunduğunuz ünitede olmasa bile, arama sonuçlarından doğrudan "biliyorum/bilmiyorum" şeklinde işaretleyebilir ve kişisel takip sisteminize anında ekleyebilirsiniz.
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <div className="w-8 h-8 rounded-lg bg-amber-900/50 border border-amber-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-amber-400"><i className="fa-solid fa-chalkboard-user"></i></div>
+              <div>
+                <strong className="text-slate-200 block mb-1">Sınıf-İçi (On-Class) Ekstra Bölümler</strong>
+                Bu bölümler ("On-C"), gerçek sınıf notlarına dayanan kapsamlı gramer özetleri, telaffuz ipuçları ve ekstra egzersizler içerir. Hızlı tekrarlar yapmak ve ünite konularını pekiştirmek için mükemmeldir.
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <div className="w-8 h-8 rounded-lg bg-purple-900/50 border border-purple-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-purple-400"><i className="fa-solid fa-right-left"></i></div>
+              <div>
+                <strong className="text-slate-200 block mb-1">Bölümler Arası Hızlı Geçiş</strong>
+                Ders bölümleri arasında klavyenizdeki <strong>sol/sağ ok tuşlarını</strong> kullanarak veya mobilde ekranı <strong>sağa/sola kaydırarak (swipe)</strong> anında gezinebilirsiniz.
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <div className="w-8 h-8 rounded-lg bg-emerald-900/50 border border-emerald-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-emerald-400"><i className="fa-solid fa-cloud-arrow-up"></i></div>
+              <div>
+                <strong className="text-slate-200 block mb-1">Bulut Senkronizasyonu & Üyelik</strong>
+                Profil simgesini (<i className="fa-solid fa-circle-user"></i>) kullanarak giriş yaptığınızda ilerlemeniz güvenli bir şekilde buluta kaydedilir. Cihaz değiştirseniz bile verileriniz asla kaybolmaz.
+              </div>
+            </li>
+          </ul>
+        </div>
+      </>
+    ) : (
+      <>
+        <div className="bg-brand-900/20 border border-brand-700/50 p-4 rounded-xl">
+          <p>This application is a <strong>non-commercial</strong>, open-source project designed to track and support the 3rd edition of the <em>"Nederlands in Gang"</em> textbook. It was meticulously developed in collaboration with <strong>Google Gemini</strong> to create a personalized, interactive Dutch learning experience.</p>
+        </div>
+        <div>
+          <h4 className="font-bold text-brand-300 text-base mb-3 border-b border-slate-700 pb-2"><i className="fa-solid fa-book-open mr-2"></i>How to Use the App</h4>
+          <ul className="space-y-4">
+            <li className="flex items-start gap-3">
+              <div className="w-8 h-8 rounded-lg bg-indigo-900/50 border border-indigo-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-indigo-400"><i className="fa-solid fa-comments"></i></div>
+              <div>
+                <strong className="text-slate-200 block mb-1">Dialogues & Interactive Reading</strong>
+                Read and listen to chapter dialogues. Click on <u>any dotted word</u> to see its translation. You can instantly mark it as "Known" (<i className="fa-solid fa-check text-emerald-400"></i>) or "Unknown" (<i className="fa-solid fa-xmark text-rose-400"></i>). This action automatically saves the word to your <strong>Global Word Pool</strong>.
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <div className="w-8 h-8 rounded-lg bg-rose-900/50 border border-rose-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-rose-400"><i className="fa-solid fa-clone"></i></div>
+              <div>
+                <strong className="text-slate-200 block mb-1">Flashcards & Global Pool</strong>
+                Practice vocabulary with interactive flashcards. You can study chapter-specific words, or switch to the <strong>Global Havuz</strong> to review every word you have ever interacted with.
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <div className="w-8 h-8 rounded-lg bg-sky-900/50 border border-sky-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-sky-400"><i className="fa-solid fa-magnifying-glass"></i></div>
+              <div>
+                <strong className="text-slate-200 block mb-1">Smart Dictionary Search (Reverse Search Supported)</strong>
+                Use the search bar at the top to find any Dutch, English or Turkish word. Even if it's not in the current chapter, you can still mark it as known/unknown directly from the search results.
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <div className="w-8 h-8 rounded-lg bg-amber-900/50 border border-amber-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-amber-400"><i className="fa-solid fa-chalkboard-user"></i></div>
+              <div>
+                <strong className="text-slate-200 block mb-1">On-Class Extra Sections</strong>
+                These sections ("On-C") contain comprehensive grammar summaries, pronunciation tips, and extra exercises based on real classroom notes.
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <div className="w-8 h-8 rounded-lg bg-purple-900/50 border border-purple-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-purple-400"><i className="fa-solid fa-right-left"></i></div>
+              <div>
+                <strong className="text-slate-200 block mb-1">Easy Section Navigation</strong>
+                You can quickly switch between lesson sections using the <strong>left/right arrow keys</strong> on your keyboard or by <strong>swiping left/right</strong> on mobile devices.
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <div className="w-8 h-8 rounded-lg bg-emerald-900/50 border border-emerald-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-emerald-400"><i className="fa-solid fa-cloud-arrow-up"></i></div>
+              <div>
+                <strong className="text-slate-200 block mb-1">Cloud Sync & Membership</strong>
+                By signing in using the profile icon (<i className="fa-solid fa-circle-user"></i>), your progress is securely synchronized to the cloud. You will never lose your progress.
+              </div>
+            </li>
+          </ul>
+        </div>
+      </>
+    )}
+  </div>
+);
+
+// --- ANA SAYFA (HOME VIEW) BİLEŞENİ ---
+const HomeView = ({ favorites, completed, goToSection, lang, bookSections }) => {
+  const hasData = Object.keys(favorites).length > 0 || Object.keys(completed).length > 0;
+
+  const getSecTitle = (secId) => {
+    const sec = bookSections.find(s => s.id === secId);
+    if (sec && sec.title) return sec.title;
+    return secId.includes('On-Class') ? 'Extra Oefeningen' : 'Dialoog / Oefening';
+  };
+
+  if (!hasData) {
+    return (
+      <div className="bg-slate-800 rounded-3xl shadow-2xl border border-slate-700 p-6 sm:p-8 max-w-4xl mx-auto">
+         <h2 className="text-2xl sm:text-3xl font-extrabold text-brand-400 mb-6 flex items-center gap-3">
+           <i className="fa-solid fa-hands-clapping"></i> {lang === 'tr' ? 'Nederlands in Gang\'a Hoş Geldiniz!' : 'Welcome to Nederlands in Gang!'}
+         </h2>
+         <GuideContent lang={lang} />
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-8 max-w-6xl mx-auto w-full">
+       <div className="border-b border-slate-800 pb-4">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-100 mb-2 tracking-tight">Mijn Dashboard</h2>
+          <p className="text-sm text-slate-400">{lang === 'tr' ? 'Favori ve tamamladığınız bölümler.' : 'Your favorite and completed sections.'}</p>
+       </div>
+
+       {Object.keys(favorites).length > 0 && (
+         <div>
+            <h3 className="text-lg font-bold text-amber-400 mb-4 flex items-center gap-2">
+              <i className="fa-solid fa-star"></i> {lang === 'tr' ? 'Favorilerim' : 'Favorites'}
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+               {Object.entries(favorites).map(([secId, note]) => (
+                   <div 
+                     key={secId} 
+                     onClick={() => goToSection(secId)} 
+                     className="cursor-pointer bg-slate-800 p-4 rounded-xl border border-amber-500/30 hover:border-amber-400 hover:shadow-[0_0_15px_rgba(251,191,36,0.15)] hover:-translate-y-1 transition-all shadow-md group flex flex-col gap-3"
+                   >
+                       <div className="flex justify-between items-start gap-2">
+                           <h4 className="font-bold text-slate-200 text-[15px] leading-snug group-hover:text-white transition-colors">{secId} - {getSecTitle(secId)}</h4>
+                           <div className="bg-amber-900/30 p-1.5 rounded-lg flex items-center justify-center border border-amber-500/20">
+                             <i className="fa-solid fa-star text-amber-400 text-xs"></i>
+                           </div>
+                       </div>
+                       <div className="bg-slate-900/60 p-3 rounded-lg border border-slate-700/50 flex-1 relative overflow-hidden">
+                           <i className="fa-solid fa-quote-left absolute top-2 left-2 text-slate-700 text-xl opacity-30"></i>
+                           <p className="text-[13px] text-amber-200/90 italic line-clamp-3 leading-relaxed relative z-10 pl-4">{note}</p>
+                       </div>
+                   </div>
+               ))}
+            </div>
+         </div>
+       )}
+
+       {Object.keys(completed).length > 0 && (
+         <div>
+            <h3 className="text-lg font-bold text-emerald-400 mb-4 flex items-center gap-2">
+              <i className="fa-solid fa-circle-check"></i> {lang === 'tr' ? 'Tamamlananlar' : 'Completed'}
+            </h3>
+            <div className="flex flex-wrap gap-3">
+               {Object.keys(completed).map(secId => (
+                   <button 
+                     key={secId} 
+                     onClick={() => goToSection(secId)} 
+                     className="bg-slate-800/80 border border-emerald-700/50 text-emerald-400 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold hover:bg-emerald-600 hover:text-white hover:border-emerald-500 hover:shadow-[0_0_10px_rgba(52,211,153,0.3)] hover:-translate-y-0.5 transition-all flex items-center gap-2"
+                   >
+                       <i className="fa-solid fa-check"></i> {secId} - {getSecTitle(secId)}
+                   </button>
+               ))}
+            </div>
+         </div>
+       )}
+    </div>
+  );
+};
+
+
 function MainContent({ user, setIsAuthModalOpen }) {
   const { lang, t } = useLanguage(); 
   
@@ -49,11 +241,6 @@ function MainContent({ user, setIsAuthModalOpen }) {
     return fallbackChapter;
   });
 
-  const [activeTab, setActiveTab] = useState(() => {
-    const savedTab = localStorage.getItem(`lastVisitedTab_${currentChapter}`);
-    return savedTab ? savedTab : `${currentChapter}.1`;
-  });
-
   const [favorites, setFavorites] = useState(() => {
     const saved = localStorage.getItem('favoriteSections');
     return saved ? JSON.parse(saved) : {};
@@ -62,6 +249,13 @@ function MainContent({ user, setIsAuthModalOpen }) {
   const [completed, setCompleted] = useState(() => {
     const saved = localStorage.getItem('completedSections');
     return saved ? JSON.parse(saved) : {};
+  });
+
+  const [activeTab, setActiveTab] = useState(() => {
+    const savedTab = localStorage.getItem(`lastVisitedTab_${currentChapter}`);
+    const hasData = (Object.keys(favorites).length > 0) || (Object.keys(completed).length > 0);
+    if (!savedTab && !hasData) return 'home';
+    return savedTab ? savedTab : `${currentChapter}.1`;
   });
 
   const [isSearchExpanded, setIsSearchExpanded] = useState(false);
@@ -81,19 +275,28 @@ function MainContent({ user, setIsAuthModalOpen }) {
   });
 
   const searchRef = useRef(null);
-  const desktopSearchInputRef = useRef(null); // YENİ: Arama inputuna odaklanmak için ref
+  const desktopSearchInputRef = useRef(null); 
   const chapterMenuRef = useRef(null);
   const mobileMenuRef = useRef(null);
   const sectionMeasureRef = useRef(null); 
 
-  // Touch koordinatları için referanslar (Swipe için)
   const touchStartX = useRef(0);
   const touchStartY = useRef(0);
 
   const currentSections = bookSections.filter(sec => sec.chapter === currentChapter || sec.id === `On-Class-${currentChapter}`);
   const currentIndex = currentSections.findIndex(sec => sec.id === activeTab);
 
-  // Arama açıldığında input alanına otomatik odaklanma
+  const goToSection = (secId) => {
+    let chapter = fallbackChapter;
+    if (secId.startsWith('On-Class-')) {
+      chapter = Number(secId.replace('On-Class-', ''));
+    } else {
+      chapter = Number(secId.split('.')[0]);
+    }
+    if (!isNaN(chapter)) setCurrentChapter(chapter);
+    setActiveTab(secId);
+  };
+
   useEffect(() => {
     if (isSearchExpanded) {
       setTimeout(() => {
@@ -102,20 +305,15 @@ function MainContent({ user, setIsAuthModalOpen }) {
     }
   }, [isSearchExpanded]);
 
-  // Klavye ok tuşları ile section geçişi
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (activeTab === 'flashcards') return;
+      if (activeTab === 'flashcards' || activeTab === 'home') return;
       if (['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement.tagName)) return;
 
       if (e.key === 'ArrowLeft') {
-        if (currentIndex > 0) {
-          setActiveTab(currentSections[currentIndex - 1].id);
-        }
+        if (currentIndex > 0) setActiveTab(currentSections[currentIndex - 1].id);
       } else if (e.key === 'ArrowRight') {
-        if (currentIndex < currentSections.length - 1) {
-          setActiveTab(currentSections[currentIndex + 1].id);
-        }
+        if (currentIndex < currentSections.length - 1) setActiveTab(currentSections[currentIndex + 1].id);
       }
     };
 
@@ -123,32 +321,24 @@ function MainContent({ user, setIsAuthModalOpen }) {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [currentIndex, currentSections, activeTab]);
 
-  // Mobil Swipe (Sağa/Sola kaydırma) Hareketleri
   const handleTouchStart = (e) => {
     touchStartX.current = e.touches[0].clientX;
     touchStartY.current = e.touches[0].clientY;
   };
 
   const handleTouchEnd = (e) => {
-    if (activeTab === 'flashcards') return;
+    if (activeTab === 'flashcards' || activeTab === 'home') return;
     const touchEndX = e.changedTouches[0].clientX;
     const touchEndY = e.changedTouches[0].clientY;
 
     const deltaX = touchEndX - touchStartX.current;
     const deltaY = touchEndY - touchStartY.current;
 
-    // Yatay kaydırmanın dikey kaydırmadan baskın ve yeterli uzunlukta olması (> 60px)
     if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 60) {
       if (deltaX < 0) {
-        // Sola kaydır -> Sonraki Section (Sağ ok etkisi)
-        if (currentIndex < currentSections.length - 1) {
-          setActiveTab(currentSections[currentIndex + 1].id);
-        }
+        if (currentIndex < currentSections.length - 1) setActiveTab(currentSections[currentIndex + 1].id);
       } else {
-        // Sağa kaydır -> Önceki Section (Sol ok etkisi)
-        if (currentIndex > 0) {
-          setActiveTab(currentSections[currentIndex - 1].id);
-        }
+        if (currentIndex > 0) setActiveTab(currentSections[currentIndex - 1].id);
       }
     }
   };
@@ -205,6 +395,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
     window.speechSynthesis.speak(utterance);
   };
 
+  // --- GELİŞMİŞ TERSTEN ARAMA (NL, EN, TR DESTEKLİ) ---
   const handleGlobalSearch = (e) => {
     if (e) e.preventDefault();
     const cleanWord = searchQuery.trim().toLowerCase();
@@ -220,11 +411,19 @@ function MainContent({ user, setIsAuthModalOpen }) {
     let matches = [];
     try {
       const regex = new RegExp(`\\b${cleanWord}\\b`, 'i');
-      matches = uniqueVocab.filter(v => regex.test(v.nl));
+      matches = uniqueVocab.filter(v => 
+        regex.test(v.nl) || 
+        (v.en && regex.test(v.en)) || 
+        (v.tr && regex.test(v.tr))
+      );
     } catch (err) { console.error("Regex error:", err); }
 
     if (matches.length === 0) {
-      matches = uniqueVocab.filter(v => v.nl.toLowerCase().includes(cleanWord));
+      matches = uniqueVocab.filter(v => 
+        v.nl.toLowerCase().includes(cleanWord) || 
+        (v.en && v.en.toLowerCase().includes(cleanWord)) || 
+        (v.tr && v.tr.toLowerCase().includes(cleanWord))
+      );
     }
 
     if (matches.length === 0) {
@@ -237,10 +436,18 @@ function MainContent({ user, setIsAuthModalOpen }) {
       }];
     }
 
+    // Sıralama Mantığı: Önce NL tam eşleşmesi, sonra EN/TR tam eşleşmesi, en son içerik eşleşmesi
     matches.sort((a, b) => {
-      const aIsExact = a.nl.toLowerCase() === cleanWord ? -1 : 1;
-      const bIsExact = b.nl.toLowerCase() === cleanWord ? -1 : 1;
-      if (aIsExact !== bIsExact) return aIsExact - bIsExact;
+      const aExactNl = a.nl.toLowerCase() === cleanWord ? -2 : 0;
+      const bExactNl = b.nl.toLowerCase() === cleanWord ? -2 : 0;
+      
+      const aExactOther = (a.en?.toLowerCase() === cleanWord || a.tr?.toLowerCase() === cleanWord) ? -1 : 0;
+      const bExactOther = (b.en?.toLowerCase() === cleanWord || b.tr?.toLowerCase() === cleanWord) ? -1 : 0;
+
+      const aScore = aExactNl + aExactOther;
+      const bScore = bExactNl + bExactOther;
+
+      if (aScore !== bScore) return aScore - bScore;
       return a.nl.length - b.nl.length;
     });
 
@@ -376,7 +583,9 @@ function MainContent({ user, setIsAuthModalOpen }) {
   }, [currentChapter]);
 
   useEffect(() => {
-    localStorage.setItem(`lastVisitedTab_${currentChapter}`, activeTab);
+    if (activeTab !== 'home') {
+      localStorage.setItem(`lastVisitedTab_${currentChapter}`, activeTab);
+    }
   }, [activeTab, currentChapter]);
 
   const handleChapterChange = (e) => {
@@ -498,133 +707,9 @@ function MainContent({ user, setIsAuthModalOpen }) {
               </button>
             </div>
             
-            <div className="overflow-y-auto p-6 flex-1 scrollbar-thin scrollbar-thumb-slate-700 space-y-6 text-slate-300 text-sm leading-relaxed">
-              
-              {lang === 'tr' ? (
-                <>
-                  <div className="bg-brand-900/20 border border-brand-700/50 p-4 rounded-xl">
-                    <p>Bu uygulama, <em>"Nederlands in Gang"</em> kitabının 3. sürümünü takip etmek amacıyla geliştirilmiş <strong>ticari olmayan</strong>, açık kaynaklı bir projedir. Size kişiselleştirilmiş ve etkileşimli bir Hollandaca öğrenme deneyimi sunmak için <strong>Google Gemini</strong> ile birlikte özenle kodlanmıştır.</p>
-                  </div>
-
-                  <div>
-                    <h4 className="font-bold text-brand-300 text-base mb-3 border-b border-slate-700 pb-2"><i className="fa-solid fa-book-open mr-2"></i>Nasıl Kullanılır?</h4>
-                    <ul className="space-y-4">
-                      <li className="flex items-start gap-3">
-                        <div className="w-8 h-8 rounded-lg bg-indigo-900/50 border border-indigo-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-indigo-400"><i className="fa-solid fa-comments"></i></div>
-                        <div>
-                          <strong className="text-slate-200 block mb-1">Diyaloglar & Etkileşimli Okuma</strong>
-                          Ünite diyaloglarını okuyun ve dinleyin. Çevirisini görmek için <u>altı noktalı kelimelerin</u> üzerine tıklayın. Bir kelimeyi anında "Biliyorum" (<i className="fa-solid fa-check text-emerald-400"></i>) veya "Bilmiyorum" (<i className="fa-solid fa-xmark text-rose-400"></i>) olarak işaretleyebilirsiniz. Bu işlem, kelimeyi otomatik olarak <strong>Global Havuzunuza</strong> kaydeder.
-                        </div>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-8 h-8 rounded-lg bg-rose-900/50 border border-rose-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-rose-400"><i className="fa-solid fa-clone"></i></div>
-                        <div>
-                          <strong className="text-slate-200 block mb-1">Flashcards & Global Havuz</strong>
-                          Etkileşimli flashcard'lar ile kelime pratiği yapın. İsterseniz sadece seçtiğiniz üniteye özel kelimeleri çalışabilir, isterseniz de <strong>Global Havuz</strong> moduna geçerek site genelinde etkileşime girdiğiniz tüm kelimeleri tekrar edebilirsiniz. Yalnızca "Bilinmeyen" kelimeleri filtreleyebilir veya listenizi tek tuşla panoya kopyalayabilirsiniz. Hızlı geçişler için klavye ok tuşlarını (⬅️ ⬆️ ⬇️ ➡️) kullanın.
-                        </div>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-8 h-8 rounded-lg bg-sky-900/50 border border-sky-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-sky-400"><i className="fa-solid fa-magnifying-glass"></i></div>
-                        <div>
-                          <strong className="text-slate-200 block mb-1">Akıllı Sözlük Araması</strong>
-                          Herhangi bir Hollandaca kelimeyi bulmak için üstteki arama çubuğunu kullanın. Aradığınız kelime bulunduğunuz ünitede olmasa bile, arama sonuçlarından doğrudan "biliyorum/bilmiyorum" şeklinde işaretleyebilir ve kişisel takip sisteminize anında ekleyebilirsiniz.
-                        </div>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-8 h-8 rounded-lg bg-amber-900/50 border border-amber-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-amber-400"><i className="fa-solid fa-chalkboard-user"></i></div>
-                        <div>
-                          <strong className="text-slate-200 block mb-1">Sınıf-İçi (On-Class) Ekstra Bölümler</strong>
-                          Bu bölümler ("On-C"), gerçek sınıf notlarına dayanan kapsamlı gramer özetleri, telaffuz ipuçları ve ekstra egzersizler içerir. Hızlı tekrarlar yapmak ve ünite konularını pekiştirmek için mükemmeldir.
-                        </div>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-8 h-8 rounded-lg bg-purple-900/50 border border-purple-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-purple-400"><i className="fa-solid fa-right-left"></i></div>
-                        <div>
-                          <strong className="text-slate-200 block mb-1">Bölümler Arası Hızlı Geçiş</strong>
-                          Ders bölümleri arasında klavyenizdeki <strong>sol/sağ ok tuşlarını</strong> kullanarak veya mobilde ekranı <strong>sağa/sola kaydırarak (swipe)</strong> anında gezinebilirsiniz.
-                        </div>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-8 h-8 rounded-lg bg-teal-900/50 border border-teal-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-teal-400"><i className="fa-solid fa-globe"></i></div>
-                        <div>
-                          <strong className="text-slate-200 block mb-1">Dil Seçimi</strong>
-                          Uygulamanın dilini dilediğiniz an değiştirmek için üst menüdeki Profil simgesine (<i className="fa-solid fa-circle-user"></i>) tıklayın. Açılan hesap menüsündeki TR/EN butonlarını kullanarak Türkçe veya İngilizce arasında geçiş yapabilirsiniz.
-                        </div>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-8 h-8 rounded-lg bg-emerald-900/50 border border-emerald-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-emerald-400"><i className="fa-solid fa-cloud-arrow-up"></i></div>
-                        <div>
-                          <strong className="text-slate-200 block mb-1">Bulut Senkronizasyonu & Üyelik</strong>
-                          Profil simgesini (<i className="fa-solid fa-circle-user"></i>) kullanarak giriş yaptığınızda; ilerlemeniz, bilinen/bilinmeyen kelimeleriniz, favorileriniz ve tamamlanan bölümleriniz güvenli bir şekilde buluta kaydedilir. Cihaz değiştirseniz veya tarayıcı önbelleğinizi temizleseniz bile verileriniz asla kaybolmaz.
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </>
-              ) : (
-                <>
-                  <div className="bg-brand-900/20 border border-brand-700/50 p-4 rounded-xl">
-                    <p>This application is a <strong>non-commercial</strong>, open-source project designed to track and support the 3rd edition of the <em>"Nederlands in Gang"</em> textbook. It was meticulously developed in collaboration with <strong>Google Gemini</strong> to create a personalized, interactive Dutch learning experience.</p>
-                  </div>
-
-                  <div>
-                    <h4 className="font-bold text-brand-300 text-base mb-3 border-b border-slate-700 pb-2"><i className="fa-solid fa-book-open mr-2"></i>How to Use the App</h4>
-                    <ul className="space-y-4">
-                      <li className="flex items-start gap-3">
-                        <div className="w-8 h-8 rounded-lg bg-indigo-900/50 border border-indigo-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-indigo-400"><i className="fa-solid fa-comments"></i></div>
-                        <div>
-                          <strong className="text-slate-200 block mb-1">Dialogues & Interactive Reading</strong>
-                          Read and listen to chapter dialogues. Click on <u>any dotted word</u> to see its translation. You can instantly mark it as "Known" (<i className="fa-solid fa-check text-emerald-400"></i>) or "Unknown" (<i className="fa-solid fa-xmark text-rose-400"></i>). This action automatically saves the word to your <strong>Global Word Pool</strong>.
-                        </div>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-8 h-8 rounded-lg bg-rose-900/50 border border-rose-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-rose-400"><i className="fa-solid fa-clone"></i></div>
-                        <div>
-                          <strong className="text-slate-200 block mb-1">Flashcards & Global Pool</strong>
-                          Practice vocabulary with interactive flashcards. You can study chapter-specific words, or switch to the <strong>Global Havuz</strong> to review every word you have ever interacted with. You can also filter the deck to only show "Unknown" words, and copy lists directly to your clipboard. Use keyboard arrows (⬅️ ⬆️ ⬇️ ➡️) for quick navigation.
-                        </div>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-8 h-8 rounded-lg bg-sky-900/50 border border-sky-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-sky-400"><i className="fa-solid fa-magnifying-glass"></i></div>
-                        <div>
-                          <strong className="text-slate-200 block mb-1">Smart Dictionary Search</strong>
-                          Use the search bar at the top to find any Dutch word. Even if it's not in the current chapter, you can still mark it as known/unknown directly from the search results, instantly adding it to your personal tracking system.
-                        </div>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-8 h-8 rounded-lg bg-amber-900/50 border border-amber-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-amber-400"><i className="fa-solid fa-chalkboard-user"></i></div>
-                        <div>
-                          <strong className="text-slate-200 block mb-1">On-Class Extra Sections</strong>
-                          These sections ("On-C") contain comprehensive grammar summaries, pronunciation tips, and extra exercises based on real classroom notes. They are perfect for quick reviews and reinforcing chapter concepts.
-                        </div>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-8 h-8 rounded-lg bg-purple-900/50 border border-purple-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-purple-400"><i className="fa-solid fa-right-left"></i></div>
-                        <div>
-                          <strong className="text-slate-200 block mb-1">Easy Section Navigation</strong>
-                          You can quickly switch between lesson sections using the <strong>left/right arrow keys</strong> on your keyboard or by <strong>swiping left/right</strong> on mobile devices.
-                        </div>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-8 h-8 rounded-lg bg-teal-900/50 border border-teal-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-teal-400"><i className="fa-solid fa-globe"></i></div>
-                        <div>
-                          <strong className="text-slate-200 block mb-1">Language Selection</strong>
-                          Click the profile icon (<i className="fa-solid fa-circle-user"></i>) to open the account menu, where you can instantly switch the application language between English and Turkish using the TR/EN toggle buttons.
-                        </div>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-8 h-8 rounded-lg bg-emerald-900/50 border border-emerald-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-emerald-400"><i className="fa-solid fa-cloud-arrow-up"></i></div>
-                        <div>
-                          <strong className="text-slate-200 block mb-1">Cloud Sync & Membership</strong>
-                          By signing in using the profile icon (<i className="fa-solid fa-circle-user"></i>), your progress—including known/unknown words, favorites, and completed sections—is securely synchronized to the cloud. You will never lose your progress, even if you switch devices or clear your browser cache.
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </>
-              )}
-
-              <div className="bg-slate-800/50 border border-slate-700 p-4 rounded-xl flex items-center justify-between mt-6">
+            <div className="overflow-y-auto p-6 flex-1 scrollbar-thin scrollbar-thumb-slate-700 space-y-6">
+               <GuideContent lang={lang} />
+               <div className="bg-slate-800/50 border border-slate-700 p-4 rounded-xl flex items-center justify-between mt-6">
                 <div>
                   <strong className="block text-slate-200">Open Source Project</strong>
                   <span className="text-xs text-slate-400">Feel free to contribute or review the code.</span>
@@ -633,7 +718,6 @@ function MainContent({ user, setIsAuthModalOpen }) {
                   <i className="fa-brands fa-github text-lg"></i> GitHub
                 </a>
               </div>
-
             </div>
           </div>
         </div>
@@ -644,9 +728,10 @@ function MainContent({ user, setIsAuthModalOpen }) {
         <div className="max-w-7xl mx-auto px-3 sm:px-4 py-3 flex flex-nowrap justify-between items-center gap-2">
           
           <div 
-            className="flex items-center space-x-2 flex-shrink min-w-0 cursor-pointer group"
-            onClick={() => setIsInfoModalOpen(true)}
-            title={t('aboutGuide')}
+            className="flex items-center space-x-2 flex-shrink min-w-0 cursor-pointer group select-none"
+            onClick={() => setActiveTab('home')}
+            onDoubleClick={(e) => { e.preventDefault(); setIsInfoModalOpen(true); }}
+            title={lang === 'tr' ? '1 Tık: Ana Sayfa | 2 Tık: Kılavuz' : '1 Click: Home | 2 Clicks: Guide'}
           >
             <div className="bg-brand-900/50 p-2 rounded-xl backdrop-blur flex-shrink-0 group-hover:bg-brand-800/50 transition-colors">
               <i className="fa-solid fa-book-medical text-xl text-brand-400 group-hover:text-brand-300"></i>
@@ -823,6 +908,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
                 <button
                   key={sec.id}
                   onClick={() => setActiveTab(sec.id)}
+                  title={favorites[sec.id] ? `Favori Notu: ${favorites[sec.id]}` : ''}
                   className={`relative flex items-center h-9 px-3.5 sm:px-4 rounded-full text-[11px] sm:text-xs font-extrabold transition-all border shadow-sm whitespace-nowrap gap-1.5 ${
                     isActive ? 'bg-brand-600 text-white border-brand-500 z-10' : 'bg-slate-800 text-slate-400 border-slate-700 hover:bg-slate-700 hover:text-slate-200'
                   }`}
@@ -851,10 +937,10 @@ function MainContent({ user, setIsAuthModalOpen }) {
           >
             <div className="flex items-center justify-between w-full">
               <span className="text-slate-200 text-sm font-bold truncate text-left">
-                {activeTab === 'flashcards' ? t('flashcards') : (activeTab.includes('On-Class') ? 'Extra: On-Class' : `Sectie ${activeTab}`)}
+                {activeTab === 'home' ? 'Dashboard' : (activeTab === 'flashcards' ? t('flashcards') : (activeTab.includes('On-Class') ? 'Extra: On-Class' : `Sectie ${activeTab}`))}
               </span>
               <div className="flex items-center gap-2 flex-shrink-0">
-                {activeTab !== 'flashcards' && (
+                {activeTab !== 'flashcards' && activeTab !== 'home' && (
                   <span className="text-[10px] font-extrabold text-slate-400 bg-slate-900 px-2 py-0.5 rounded-md border border-slate-700">
                     {currentIndex + 1} / {currentSections.length}
                   </span>
@@ -920,7 +1006,17 @@ function MainContent({ user, setIsAuthModalOpen }) {
       {/* 5. ANA İÇERİK */}
       <main className="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 text-slate-200 flex flex-col relative overflow-hidden">
         
-        {(activeTab.endsWith('.1') && !activeTab.includes('On-Class')) && (
+        {activeTab === 'home' && (
+          <HomeView 
+            favorites={favorites} 
+            completed={completed} 
+            goToSection={goToSection} 
+            lang={lang} 
+            bookSections={bookSections}
+          />
+        )}
+
+        {(activeTab !== 'home' && activeTab.endsWith('.1') && !activeTab.includes('On-Class')) && (
           <DialogueSection 
             sectionId={activeTab} 
             favorites={favorites} 
@@ -930,7 +1026,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
           />
         )}
         
-        {activeTab !== 'flashcards' && bookSections.find(s => s.id === activeTab) && (
+        {activeTab !== 'home' && activeTab !== 'flashcards' && bookSections.find(s => s.id === activeTab) && !activeTab.endsWith('.1') && (
           <ExerciseEngine 
             sectionData={bookSections.find(s => s.id === activeTab)} 
             chapterNum={currentChapter} 
