@@ -23,7 +23,8 @@ const translations = {
     know: "Biliyorum",
     allWordsOption: "Alle Woorden",
     dialogueOption: "Dialoog (Onbekend)",
-    globalPoolOption: "🌐 Global Havuz",
+    globalPoolOption: "👤 Benim Kelime Havuzum",
+    bookPoolOption: "📚 Kitabın Kelime Havuzu",
     shuffle: "Karıştır",
     flipCards: "Kartları Çevir",
     studyUnknowns: "Bilinmeyenleri Çalış",
@@ -36,7 +37,8 @@ const translations = {
     known: "Biliniyor",
     unknown: "Bilinmiyor",
     clickToTranslate: "(Çeviri için tıkla of ⬆️ / ⬇️)",
-    globalPoolLabel: "Global Havuz"
+    globalPoolLabel: "Benim Kelime Havuzum",
+    bookPoolLabel: "Kitabın Kelime Havuzu"
   },
   en: {
     emptyGlobalEx: "You haven't marked any words on the site yet.",
@@ -56,7 +58,8 @@ const translations = {
     know: "Know",
     allWordsOption: "All Words",
     dialogueOption: "Dialogue (Unknown)",
-    globalPoolOption: "🌐 Global Pool",
+    globalPoolOption: "👤 My Word Pool",
+    bookPoolOption: "📚 Book's Word Pool",
     shuffle: "Shuffle",
     flipCards: "Flip Cards",
     studyUnknowns: "Study Unknowns Only",
@@ -69,7 +72,8 @@ const translations = {
     known: "Known",
     unknown: "Unknown",
     clickToTranslate: "(Click to translate or ⬆️ / ⬇️)",
-    globalPoolLabel: "Global Pool"
+    globalPoolLabel: "My Word Pool",
+    bookPoolLabel: "Book's Word Pool"
   }
 };
 
@@ -84,7 +88,7 @@ export default function Flashcards({ initialChapter }) {
   const [baseDeck, setBaseDeck] = useState([]); 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
-  const [isReversed, setIsReversed] = useState(false); // YENİ: Kartları ters çevirme modu
+  const [isReversed, setIsReversed] = useState(false);
   
   const [mode, setMode] = useState('all'); 
   
@@ -126,8 +130,10 @@ export default function Flashcards({ initialChapter }) {
       const pool = JSON.parse(localStorage.getItem('globalWordPool')) || {};
       newDeck = Object.values(pool);
       if (newDeck.length === 0) {
-        newDeck = [{ id: 'empty_global', nl: "Geen woorden", en: "No words in Global Pool", tr: "Global havuzda kelime yok", example: t.emptyGlobalEx }];
+        newDeck = [{ id: 'empty_global', nl: "Geen woorden", en: "No words in My Word Pool", tr: "Benim Kelime Havuzumda kelime yok", example: t.emptyGlobalEx }];
       }
+    } else if (mode === 'book_pool') {
+      newDeck = [...globalDictionary];
     } else if (mode === 'all') {
       newDeck = chapterVocab;
     } else {
@@ -341,7 +347,7 @@ export default function Flashcards({ initialChapter }) {
       </div>
 
       <div className="flex flex-wrap justify-center gap-3">
-        {mode !== 'global' && (
+        {mode !== 'global' && mode !== 'book_pool' && (
           <select 
             value={targetChapter} 
             onChange={(e) => setTargetChapter(Number(e.target.value))} 
@@ -356,11 +362,12 @@ export default function Flashcards({ initialChapter }) {
         <select 
           value={mode} 
           onChange={(e) => setMode(e.target.value)} 
-          className={`bg-slate-800 border text-sm font-semibold shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-500 cursor-pointer rounded-xl px-4 py-2.5 ${mode === 'global' ? 'border-amber-500 text-amber-400' : 'border-slate-600 text-slate-200'}`}
+          className={`bg-slate-800 border text-sm font-semibold shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-500 cursor-pointer rounded-xl px-4 py-2.5 ${(mode === 'global' || mode === 'book_pool') ? 'border-amber-500 text-amber-400' : 'border-slate-600 text-slate-200'}`}
         >
           <option value="all">{t.allWordsOption} ({chapterVocab.length})</option>
           <option value="dialogue">{t.dialogueOption}</option>
           <option value="global">{t.globalPoolOption}</option>
+          <option value="book_pool">{t.bookPoolOption} ({globalDictionary.length})</option>
         </select>
 
         <button 
@@ -370,7 +377,6 @@ export default function Flashcards({ initialChapter }) {
           <i className="fa-solid fa-shuffle"></i> {t.shuffle}
         </button>
 
-        {/* YENİ: Kartları Çevir Butonu */}
         <button 
           onClick={() => setIsReversed(!isReversed)}
           className={`border rounded-xl px-4 py-2.5 text-sm font-semibold shadow-sm transition-colors flex items-center gap-2 ${
@@ -515,13 +521,13 @@ export default function Flashcards({ initialChapter }) {
                 </button>
               ) : (
                 <span className="text-xs text-rose-300 font-medium tracking-wide">
-                  {mode === 'global' ? t.globalPoolLabel : `Hoofdstuk ${targetChapter}`}
+                  {mode === 'global' ? t.globalPoolLabel : mode === 'book_pool' ? t.bookPoolLabel : `Hoofdstuk ${targetChapter}`}
                 </span>
               )}
 
               {isReversed && (
                 <span className="text-xs text-rose-300 font-medium tracking-wide">
-                  {mode === 'global' ? t.globalPoolLabel : `Hoofdstuk ${targetChapter}`}
+                  {mode === 'global' ? t.globalPoolLabel : mode === 'book_pool' ? t.bookPoolLabel : `Hoofdstuk ${targetChapter}`}
                 </span>
               )}
             </div>

@@ -6,6 +6,7 @@ import ExerciseEngine from './components/ExerciseEngine';
 import Flashcards from './components/Flashcards';
 import AuthModal from './components/AuthModal';
 import IrregularVerbs from './components/IrregularVerbs';
+import Grammar from './components/Grammar'; // GRAMMAR EKLENDİ
 import { bookSections, vocabulary } from './data';
 import { globalDictionary } from './data/globalDictionary';
 import { auth, isSignInWithEmailLink, signInWithEmailLink, onAuthStateChanged, handleUserSyncOnLogin, pullFromCloud } from './firebase';
@@ -53,14 +54,21 @@ const GuideContent = ({ lang }) => (
               <div className="w-8 h-8 rounded-lg bg-indigo-900/50 border border-indigo-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-indigo-400"><i className="fa-solid fa-comments"></i></div>
               <div>
                 <strong className="text-slate-200 block mb-1">Diyaloglar & Etkileşimli Okuma</strong>
-                Ünite diyaloglarını okuyun ve dinleyin. Çevirisini görmek için <u>altı noktalı kelimelerin</u> üzerine tıklayın. Bir kelimeyi anında "Biliyorum" (<i className="fa-solid fa-check text-emerald-400"></i>) veya "Bilmiyorum" (<i className="fa-solid fa-xmark text-rose-400"></i>) olarak işaretleyebilirsiniz. Bu işlem, kelimeyi otomatik olarak <strong>Global Havuzunuza</strong> kaydeder.
+                Ünite diyaloglarını okuyun ve dinleyin. Çevirisini görmek için <u>altı noktalı kelimelerin</u> üzerine tıklayın. Bir kelimeyi anında "Biliyorum" (<i className="fa-solid fa-check text-emerald-400"></i>) veya "Bilmiyorum" (<i className="fa-solid fa-xmark text-rose-400"></i>) olarak işaretleyebilirsiniz. Bu işlem, kelimeyi otomatik olarak <strong>Benim Kelime Havuzum</strong>'a kaydeder.
               </div>
             </li>
             <li className="flex items-start gap-3">
               <div className="w-8 h-8 rounded-lg bg-rose-900/50 border border-rose-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-rose-400"><i className="fa-solid fa-clone"></i></div>
               <div>
-                <strong className="text-slate-200 block mb-1">Flashcards & Global Havuz</strong>
-                Etkileşimli flashcard'lar ile kelime pratiği yapın. İsterseniz sadece seçtiğiniz üniteye özel kelimeleri çalışabilir, isterseniz de <strong>Global Havuz</strong> moduna geçerek site genelinde etkileşime girdiğiniz tüm kelimeleri tekrar edebilirsiniz. Yalnızca "Bilinmeyen" kelimeleri filtreleyebilir veya listenizi tek tuşla panoya kopyalayabilirsiniz.
+                <strong className="text-slate-200 block mb-1">Flashcards & Benim Kelime Havuzum</strong>
+                Etkileşimli flashcard'lar ile kelime pratiği yapın. İsterseniz sadece seçtiğiniz üniteye özel kelimeleri çalışabilir, isterseniz de <strong>Benim Kelime Havuzum</strong> moduna geçerek site genelinde etkileşime girdiğiniz tüm kelimeleri tekrar edebilirsiniz. Yalnızca "Bilinmeyen" kelimeleri filtreleyebilir veya listenizi tek tuşla panoya kopyalayabilirsiniz.
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <div className="w-8 h-8 rounded-lg bg-indigo-900/50 border border-indigo-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-indigo-400"><i className="fa-solid fa-spell-check"></i></div>
+              <div>
+                <strong className="text-slate-200 block mb-1">Gramer Referansı & Fiiller</strong>
+                Arama çubuğunun solundaki butonları kullanarak Hollandaca gramer kurallarına, detaylı örneklere, istisnalara ve en sık kullanılan düzensiz fiil listelerine anında ulaşabilirsiniz.
               </div>
             </li>
             <li className="flex items-start gap-3">
@@ -106,14 +114,21 @@ const GuideContent = ({ lang }) => (
               <div className="w-8 h-8 rounded-lg bg-indigo-900/50 border border-indigo-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-indigo-400"><i className="fa-solid fa-comments"></i></div>
               <div>
                 <strong className="text-slate-200 block mb-1">Dialogues & Interactive Reading</strong>
-                Read and listen to chapter dialogues. Click on <u>any dotted word</u> to see its translation. You can instantly mark it as "Known" (<i className="fa-solid fa-check text-emerald-400"></i>) or "Unknown" (<i className="fa-solid fa-xmark text-rose-400"></i>). This action automatically saves the word to your <strong>Global Word Pool</strong>.
+                Read and listen to chapter dialogues. Click on <u>any dotted word</u> to see its translation. You can instantly mark it as "Known" (<i className="fa-solid fa-check text-emerald-400"></i>) or "Unknown" (<i className="fa-solid fa-xmark text-rose-400"></i>). This action automatically saves the word to <strong>My Word Pool</strong>.
               </div>
             </li>
             <li className="flex items-start gap-3">
               <div className="w-8 h-8 rounded-lg bg-rose-900/50 border border-rose-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-rose-400"><i className="fa-solid fa-clone"></i></div>
               <div>
-                <strong className="text-slate-200 block mb-1">Flashcards & Global Pool</strong>
-                Practice vocabulary with interactive flashcards. You can study chapter-specific words, or switch to the <strong>Global Havuz</strong> to review every word you have ever interacted with.
+                <strong className="text-slate-200 block mb-1">Flashcards & My Word Pool</strong>
+                Practice vocabulary with interactive flashcards. You can study chapter-specific words, or switch to <strong>My Word Pool</strong> to review every word you have ever interacted with.
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <div className="w-8 h-8 rounded-lg bg-indigo-900/50 border border-indigo-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-indigo-400"><i className="fa-solid fa-spell-check"></i></div>
+              <div>
+                <strong className="text-slate-200 block mb-1">Grammar Reference & Verbs</strong>
+                Use the buttons next to the search bar to instantly access Dutch grammar rules, detailed examples, exceptions, and lists of frequently used irregular verbs.
               </div>
             </li>
             <li className="flex items-start gap-3">
@@ -318,7 +333,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
 
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (activeTab === 'flashcards' || activeTab === 'verbs' || activeTab === 'home') return;
+      if (activeTab === 'flashcards' || activeTab === 'verbs' || activeTab === 'grammar' || activeTab === 'home') return;
       if (['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement.tagName)) return;
 
       if (e.key === 'ArrowLeft') {
@@ -338,7 +353,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
   };
 
   const handleTouchEnd = (e) => {
-    if (activeTab === 'flashcards' || activeTab === 'verbs' || activeTab === 'home') return;
+    if (activeTab === 'flashcards' || activeTab === 'verbs' || activeTab === 'grammar' || activeTab === 'home') return;
     const touchEndX = e.changedTouches[0].clientX;
     const touchEndY = e.changedTouches[0].clientY;
 
@@ -441,7 +456,6 @@ function MainContent({ user, setIsAuthModalOpen }) {
     }, 2800);
   };
 
-  // HELPER: Kelimenin kendi sözlüğümüzde, fallback'te VEYA kullanıcının kendi havuzunda olup olmadığını kontrol eder
   const checkIsCustom = (word) => {
     const customPool = JSON.parse(localStorage.getItem('globalWordPool')) || {};
     const customVocab = Object.values(customPool);
@@ -449,7 +463,6 @@ function MainContent({ user, setIsAuthModalOpen }) {
     const isMatched = allVocab.some(v => v.nl.toLowerCase() === word.toLowerCase());
     const hasFallback = !!fallbackDictionary[word.toLowerCase()];
     
-    // Eğer hiçbir yerde yoksa (gerçekten custom eklenecek bir kelimeyse) true döner.
     return !isMatched && !hasFallback;
   };
 
@@ -460,7 +473,6 @@ function MainContent({ user, setIsAuthModalOpen }) {
 
     setLastSearchedQuery(cleanWord);
 
-    // KULLANICININ KENDİ EKLediği KELİMELERİ ÇEK
     const customPool = JSON.parse(localStorage.getItem('globalWordPool')) || {};
     const customVocab = Object.values(customPool).map(wordObj => ({
       nl: wordObj.nl,
@@ -469,7 +481,6 @@ function MainContent({ user, setIsAuthModalOpen }) {
       example: wordObj.example || ""
     }));
 
-    // SİSTEM SÖZLÜĞÜ VE KULLANICI SÖZLÜĞÜNÜ BİRLEŞTİR
     const allVocab = [...vocabulary, ...globalDictionary, ...customVocab];
     const uniqueVocabMap = new Map();
     allVocab.forEach(item => {
@@ -502,7 +513,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
         en: fallback || "Translation not available", 
         tr: fallback ? "Çeviri bulunamadı" : "Çeviri bulunamadı",
         example: fallback ? "Uit de dialoog" : t('notFound'),
-        isCustom: !fallback // Flag for custom entry
+        isCustom: !fallback 
       }];
     }
 
@@ -542,7 +553,6 @@ function MainContent({ user, setIsAuthModalOpen }) {
       if (!existingUnknowns.some(w => w.nl === wordObj.nl)) {
         updatedUnknowns = [...existingUnknowns, wordObj];
       } else {
-        // Eğer zaten varsa ama özel çeviriyle güncelliyorsak üzerine yaz
         updatedUnknowns = updatedUnknowns.map(w => w.nl === wordObj.nl ? wordObj : w);
       }
     } else {
@@ -589,7 +599,6 @@ function MainContent({ user, setIsAuthModalOpen }) {
     showToast(getToastMessage(wordObj.nl, status === undefined ? 'removed' : status));
   };
 
-  // CUSTOM TRANSLATION SAVE
   const handleCustomSave = (e) => {
     e.preventDefault();
     if (!customTr.trim() && !customEn.trim()) {
@@ -602,12 +611,11 @@ function MainContent({ user, setIsAuthModalOpen }) {
       nl: customWordModal.word,
       tr: customTr.trim(),
       en: customEn.trim(),
-      example: lang === 'tr' ? "Kullanıcı tarafından eklendi." : "Manually added by user."
+      example: lang === 'tr' ? "Benim Kelime Havuzum'a eklendi." : "Manually added to My Word Pool."
     };
 
     executeStorageUpdate(wordObj, customWordModal.status);
 
-    // Kapat ve temizle
     setCustomWordModal({ isOpen: false, word: '', status: '' });
     setSearchResults(null);
     if (window.innerWidth < 640) {
@@ -644,7 +652,6 @@ function MainContent({ user, setIsAuthModalOpen }) {
       else newStatus = 'known';
     }
 
-    // Eğer custom kelime eklenmek isteniyorsa ve durum 'removed' değilse
     if (newStatus !== undefined && checkIsCustom(targetWord)) {
        setCustomWordModal({ isOpen: true, word: targetWord, status: newStatus });
        setCustomTr('');
@@ -699,6 +706,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
   const getSectionTitle = (secId) => {
     if (secId === 'flashcards') return "Flashcards";
     if (secId === 'verbs') return lang === 'tr' ? "Düzensiz Fiiller" : "Irregular Verbs";
+    if (secId === 'grammar') return lang === 'tr' ? "Gramer Referansı" : "Grammar Reference";
     const sec = currentSections.find(s => s.id === secId);
     if (sec && sec.title) return sec.title;
     if (secId.includes('On-Class')) return "Extra Oefeningen";
@@ -821,8 +829,8 @@ function MainContent({ user, setIsAuthModalOpen }) {
             
             <p className="text-[13px] text-slate-300 mb-5 leading-relaxed relative z-10">
               {lang === 'tr' 
-                ? 'Bu kelime sözlükte bulunmuyor. Kendi kelime listenize eklemek için lütfen en az bir dilde çevirisini girin.' 
-                : 'This word is not in the dictionary. Please provide a translation in at least one language to add it to your list.'}
+                ? 'Bu kelime sözlükte bulunmuyor. Benim Kelime Havuzum\'a eklemek için lütfen en az bir dilde çevirisini girin.' 
+                : 'This word is not in the dictionary. Please provide a translation in at least one language to add it to My Word Pool.'}
             </p>
 
             <form onSubmit={handleCustomSave} className="space-y-4 relative z-10">
@@ -918,6 +926,15 @@ function MainContent({ user, setIsAuthModalOpen }) {
               title={t('flashcards')}
             >
               <i className="fa-solid fa-clone text-lg sm:text-xl"></i>
+            </button>
+
+            {/* YENİ: GRAMMAR BUTONU */}
+            <button 
+              onClick={() => { setActiveTab("grammar"); setIsChapterExpanded(false); setIsSearchExpanded(false); }}
+              className={`p-1.5 sm:p-2 rounded-full transition-colors flex items-center justify-center ${activeTab === 'grammar' ? 'bg-indigo-600 text-white shadow-md' : 'bg-indigo-900/30 text-indigo-400 hover:bg-indigo-600 hover:text-white border border-indigo-800/30'}`}
+              title={lang === 'tr' ? 'Gramer Referansı' : 'Grammar Reference'}
+            >
+              <i className="fa-solid fa-spell-check text-lg sm:text-xl"></i>
             </button>
 
             <button 
@@ -1116,10 +1133,10 @@ function MainContent({ user, setIsAuthModalOpen }) {
           >
             <div className="flex items-center justify-between w-full">
               <span className="text-slate-200 text-sm font-bold truncate text-left">
-                {activeTab === 'home' ? 'Dashboard' : (activeTab === 'flashcards' ? t('flashcards') : activeTab === 'verbs' ? (lang === 'tr' ? 'Düzensiz Fiiller' : 'Irregular Verbs') : (activeTab.includes('On-Class') ? 'Extra: On-Class' : `Sectie ${activeTab}`))}
+                {activeTab === 'home' ? 'Dashboard' : (activeTab === 'flashcards' ? t('flashcards') : activeTab === 'verbs' ? (lang === 'tr' ? 'Düzensiz Fiiller' : 'Irregular Verbs') : activeTab === 'grammar' ? (lang === 'tr' ? 'Gramer Referansı' : 'Grammar Reference') : (activeTab.includes('On-Class') ? 'Extra: On-Class' : `Sectie ${activeTab}`))}
               </span>
               <div className="flex items-center gap-2 flex-shrink-0">
-                {activeTab !== 'flashcards' && activeTab !== 'verbs' && activeTab !== 'home' && (
+                {activeTab !== 'flashcards' && activeTab !== 'verbs' && activeTab !== 'grammar' && activeTab !== 'home' && (
                   <span className="text-[10px] font-extrabold text-slate-400 bg-slate-900 px-2 py-0.5 rounded-md border border-slate-700">
                     {currentIndex + 1} / {currentSections.length}
                   </span>
@@ -1195,7 +1212,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
           />
         )}
 
-        {(activeTab !== 'home' && activeTab !== 'verbs' && activeTab !== 'flashcards' && activeTab.endsWith('.1') && !activeTab.includes('On-Class')) && (
+        {(activeTab !== 'home' && activeTab !== 'verbs' && activeTab !== 'grammar' && activeTab !== 'flashcards' && activeTab.endsWith('.1') && !activeTab.includes('On-Class')) && (
           <DialogueSection 
             sectionId={activeTab} 
             favorites={favorites} 
@@ -1205,7 +1222,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
           />
         )}
         
-        {activeTab !== 'home' && activeTab !== 'flashcards' && activeTab !== 'verbs' && bookSections.find(s => s.id === activeTab) && !activeTab.endsWith('.1') && (
+        {activeTab !== 'home' && activeTab !== 'flashcards' && activeTab !== 'verbs' && activeTab !== 'grammar' && bookSections.find(s => s.id === activeTab) && !activeTab.endsWith('.1') && (
           <ExerciseEngine 
             sectionData={bookSections.find(s => s.id === activeTab)} 
             chapterNum={currentChapter} 
@@ -1218,6 +1235,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
 
         {activeTab === 'flashcards' && <Flashcards initialChapter={currentChapter} />}
         {activeTab === 'verbs' && <IrregularVerbs />}
+        {activeTab === 'grammar' && <Grammar />}
       </main>
     </div>
   );
