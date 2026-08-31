@@ -308,5 +308,222 @@ export const chapter16Sections = [
         ]
       }
     ]
+  },
+  {
+    id: "On-Class-16",
+    chapter: 16,
+    title: "Extra Oefeningen (On-Class: Exam Prep)",
+    theory: (lang) => (
+      <>
+        {lang === 'tr' ? (
+          <>
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>🎓 Sınav Tekrarı: Önemli Konular (Herhaling)</h3>
+              
+              <h4 style={{ color: '#a78bfa', marginTop: '15px' }}>1. Aanwijzende Voornaamwoorden (die/dat, dit/dat)</h4>
+              <p className="text-sm text-slate-300 mb-2"><strong>A. İnsanları Tanıtma (Presenting people):</strong> İnsanları tanıtırken her zaman <strong>dit</strong> veya <strong>dat</strong> kullanırız, isim çoğul olsa bile değişmez.</p>
+              <ul className="text-sm text-slate-400 list-disc pl-5 mb-3">
+                <li><em>Dit zijn mijn ouders.</em> (Bunlar benim ebeveynlerim.)</li>
+                <li><em>Dat is mijn broer.</em> (Şu benim erkek kardeşim.)</li>
+                <li><em>Dat zijn mijn zussen.</em> (Şunlar benim kız kardeşlerim.)</li>
+              </ul>
+
+              <p className="text-sm text-slate-300 mb-2"><strong>B. Nesnelere veya Kişilere Atıfta Bulunma (Referring to things/people):</strong></p>
+              <ul className="text-sm text-slate-400 list-disc pl-5 mb-3">
+                <li><strong>Die:</strong> 'de' kelimeleri ve insanlar için kullanılır.<br/>
+                <em>Wat vind je van de kaas? ➔ <strong>Die/Hem</strong> vind ik lekker.</em><br/>
+                <em>Waar is John? ➔ <strong>Die/Hij</strong> is niet hier.</em></li>
+                <li><strong>Dat:</strong> 'het' kelimeleri, fikirler veya koskoca bir cümleye atıfta bulunmak için kullanılır.<br/>
+                <em>Het is een mooi huis. ➔ <strong>Dat/Het</strong> is het huis van mijn vader.</em><br/>
+                <em>Jij hebt koffie meegenomen, toch? ➔ Natuurlijk heb ik <strong>dat</strong> gedaan.</em> (Burada 'dat', kahve getirme eyleminin tamamını kapsar).</li>
+              </ul>
+
+              <h4 style={{ color: '#f472b6', marginTop: '20px' }}>2. Voegwoorden (Conjunctions - Bağlaçlar)</h4>
+              <p className="text-sm text-slate-300 mb-2">İki ana cümleyi birbirine "yapıştıran" bağlaçlardır. Bu bağlaçlar kelime sırasını (word order) bozmazlar.</p>
+              <table className="w-full text-sm text-left text-slate-300 border-collapse mb-2 mt-2">
+                <thead>
+                  <tr className="border-b border-slate-700">
+                    <th className="py-1">Conjunctie</th>
+                    <th className="py-1">Functie (İşlev)</th>
+                    <th className="py-1">Voorbeeld (Örnek)</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-700/50">
+                  <tr><td className="font-bold text-white">en (and)</td><td>toevoeging (ekleme)</td><td>Ik werk in Amsterdam <strong>en</strong> ik kom uit Lelystad.</td></tr>
+                  <tr><td className="font-bold text-white">of (or)</td><td>keuze/alternatief (seçenek)</td><td>Ik wil pizza eten <strong>of</strong> ik wil naar het museum gaan.</td></tr>
+                  <tr><td className="font-bold text-white">maar (but)</td><td>tegenstelling (zıtlık)</td><td>Ik wil komen, <strong>maar</strong> ik heb geen tijd.</td></tr>
+                  <tr><td className="font-bold text-white">want (because)</td><td>reden (sebep)</td><td>Ik slaap, <strong>want</strong> ik ben heel moe.</td></tr>
+                  <tr><td className="font-bold text-white">dus (so)</td><td>gevolg/conclusie (sonuç)</td><td>Het regent, <strong>dus</strong> ik blijf thuis.</td></tr>
+                </tbody>
+              </table>
+
+              <h4 style={{ color: '#38bdf8', marginTop: '20px' }}>3. Perfectum & Imperfectum (Geçmiş Zamanlar)</h4>
+              <p className="text-sm text-slate-300 mb-2">Sınav için DÜZENSİZ (irregular) fiillerin ezberlenmesi çok önemlidir!</p>
+              <ul className="text-sm text-slate-400 list-disc pl-5 mb-3">
+                <li><strong>Perfectum Kuralı:</strong> Nesne (object), her zaman geçmiş zaman fiilinden (past participle) hemen önce gelir.<br/>
+                <em>Ik heb <strong>de film</strong> gekeken/gezien.</em> (Ik heb gekeken de film YANLIŞTIR.)<br/>
+                <em>Ik heb <strong>pizza</strong> gegeten.</em></li>
+                <li><strong>Zijn ile yapılanlar:</strong> <em>Ik <strong>ben</strong> (komen) gekomen. Ik <strong>ben</strong> vergeten. Ik <strong>ben</strong> begonnen.</em></li>
+                <li><strong>Imperfectum Düzensizler:</strong> -te veya -ten eklenmez! Form tamamen değişir.<br/>
+                <em>Ik werkte bij de bioscoop.</em> (Düzenli)<br/>
+                <em>Ik <span className="line-through text-rose-400">drinkte</span> <strong>dronk</strong> een cola.</em> (Düzensiz)<br/>
+                <em>Wij <strong>kochten</strong> een t-shirt.</em> (Düzensiz)</li>
+              </ul>
+
+              <h4 style={{ color: '#fbbf24', marginTop: '20px' }}>4. Gescheiden Werkwoorden (Ayrılabilen Fiiller)</h4>
+              <p className="text-sm text-slate-300 mb-2">Ayrılabilen fiillerin 3 zamanda (Present, Imperfectum, Perfectum) çekimlerine dikkat edin:</p>
+              <ul className="text-sm text-slate-400 list-disc pl-5 mb-3">
+                <li><strong>Present (Geniş Zaman):</strong> Nesne, ayrılan parçaların arasına girer.<br/><em>meenemen ➔ Ik neem <strong>een vriend</strong> mee.</em></li>
+                <li><strong>Imperfectum (Hikaye Geçmiş):</strong> Fiil çekimlenir, ayrılan parça sona gider.<br/><em>instappen ➔ Ik stapte de bus in.</em></li>
+                <li><strong>Perfectum (Yakın Geçmiş):</strong> Ayrılan parça ile 'ge' birleşir.<br/><em>aankomen ➔ Ik ben aangekomen.</em></li>
+              </ul>
+
+              <h4 style={{ color: '#ec4899', marginTop: '20px' }}>5. Toekomst (Gelecek Zaman) & Diğer Önemli Konular</h4>
+              <ul className="text-sm text-slate-400 list-disc pl-5">
+                <li><strong>Zullen vs Gaan:</strong> Gelecek zamanı ifade ederken kullanılır.<br/>
+                <em>Ik <strong>ga</strong> een afspraak maken.</em> (Bir randevu yapacağım.)<br/>
+                <em>Ik <strong>zal</strong> pizza maken. / Ik <strong>ga</strong> pizza eten.</em></li>
+                <li><strong>Fikir Belirtme:</strong> Sınavda hobileriniz ve fikirleriniz sorulabilir.<br/>
+                <em>Welke film heb je het laatst gezien? ➔ Ik heb Jackass gezien.</em><br/>
+                <em>Waar ging die film over? ➔ De film ging over natuur.</em></li>
+                <li><strong>Eskiden (Past Habits):</strong> Geçmişteki alışkanlıkları anlatırken <strong>vroeger</strong> (eskiden) veya <strong>in het verleden</strong> (geçmişte) kullanılır ve cümle Imperfectum ile kurulur.</li>
+              </ul>
+            </div>
+          </>
+        ) : (
+          <>
+             <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>🎓 Exam Review: Crucial Topics (Herhaling)</h3>
+              
+              <h4 style={{ color: '#a78bfa', marginTop: '15px' }}>1. Demonstrative Pronouns (die/dat, dit/dat)</h4>
+              <p className="text-sm text-slate-300 mb-2"><strong>A. Presenting people:</strong> When introducing people, always use <strong>dit</strong> or <strong>dat</strong>, even if the noun is plural.</p>
+              <ul className="text-sm text-slate-400 list-disc pl-5 mb-3">
+                <li><em>Dit zijn mijn ouders.</em> (These are my parents.)</li>
+                <li><em>Dat is mijn broer.</em> (That is my brother.)</li>
+                <li><em>Dat zijn mijn zussen.</em> (Those are my sisters.)</li>
+              </ul>
+
+              <p className="text-sm text-slate-300 mb-2"><strong>B. Referring back to things/people:</strong></p>
+              <ul className="text-sm text-slate-400 list-disc pl-5 mb-3">
+                <li><strong>Die:</strong> Used for 'de' words and people.<br/>
+                <em>Wat vind je van de kaas? ➔ <strong>Die/Hem</strong> vind ik lekker.</em><br/>
+                <em>Waar is John? ➔ <strong>Die/Hij</strong> is niet hier.</em></li>
+                <li><strong>Dat:</strong> Used for 'het' words, ideas, or to refer back to an entire sentence.<br/>
+                <em>Het is een mooi huis. ➔ <strong>Dat/Het</strong> is het huis van mijn vader.</em><br/>
+                <em>Jij hebt koffie meegenomen, toch? ➔ Natuurlijk heb ik <strong>dat</strong> gedaan.</em> (Here 'dat' refers to the whole action).</li>
+              </ul>
+
+              <h4 style={{ color: '#f472b6', marginTop: '20px' }}>2. Conjunctions (Voegwoorden)</h4>
+              <p className="text-sm text-slate-300 mb-2">They act as the "glue" between two sentences. They do NOT change the word order.</p>
+              <table className="w-full text-sm text-left text-slate-300 border-collapse mb-2 mt-2">
+                <thead>
+                  <tr className="border-b border-slate-700">
+                    <th className="py-1">Conjunctie</th>
+                    <th className="py-1">Function</th>
+                    <th className="py-1">Example</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-700/50">
+                  <tr><td className="font-bold text-white">en (and)</td><td>toevoeging (addition)</td><td>Ik werk in Amsterdam <strong>en</strong> ik kom uit Lelystad.</td></tr>
+                  <tr><td className="font-bold text-white">of (or)</td><td>keuze/alternatief (choice)</td><td>Ik wil pizza eten <strong>of</strong> ik wil naar het museum gaan.</td></tr>
+                  <tr><td className="font-bold text-white">maar (but)</td><td>tegenstelling (contrast)</td><td>Ik wil komen, <strong>maar</strong> ik heb geen tijd.</td></tr>
+                  <tr><td className="font-bold text-white">want (because)</td><td>reden (reason)</td><td>Ik slaap, <strong>want</strong> ik ben heel moe.</td></tr>
+                  <tr><td className="font-bold text-white">dus (so)</td><td>gevolg/conclusie (result)</td><td>Het regent, <strong>dus</strong> ik blijf thuis.</td></tr>
+                </tbody>
+              </table>
+
+              <h4 style={{ color: '#38bdf8', marginTop: '20px' }}>3. Perfectum & Imperfectum (Past Tenses)</h4>
+              <p className="text-sm text-slate-300 mb-2">For the exam, studying IRREGULAR verbs is extremely important!</p>
+              <ul className="text-sm text-slate-400 list-disc pl-5 mb-3">
+                <li><strong>Perfectum Rule:</strong> Objects come right before the past participle.<br/>
+                <em>Ik heb <strong>de film</strong> gekeken/gezien.</em> (Ik heb gekeken de film is WRONG.)<br/>
+                <em>Ik heb <strong>pizza</strong> gegeten.</em></li>
+                <li><strong>Verbs with zijn:</strong> <em>Ik <strong>ben</strong> (komen) gekomen. Ik <strong>ben</strong> vergeten. Ik <strong>ben</strong> begonnen.</em></li>
+                <li><strong>Imperfectum Irregulars:</strong> Do not add -te or -ten! The form changes completely.<br/>
+                <em>Ik werkte bij de bioscoop.</em> (Regular)<br/>
+                <em>Ik <span className="line-through text-rose-400">drinkte</span> <strong>dronk</strong> een cola.</em> (Irregular)<br/>
+                <em>Wij <strong>kochten</strong> een t-shirt.</em> (Irregular)</li>
+              </ul>
+
+              <h4 style={{ color: '#fbbf24', marginTop: '20px' }}>4. Splittable Verbs (Gescheiden Werkwoorden)</h4>
+              <p className="text-sm text-slate-300 mb-2">Pay attention to splittable verbs across 3 different tenses:</p>
+              <ul className="text-sm text-slate-400 list-disc pl-5 mb-3">
+                <li><strong>Present:</strong> The object goes between the split parts.<br/><em>meenemen ➔ Ik neem <strong>een vriend</strong> mee.</em></li>
+                <li><strong>Imperfectum:</strong> The verb gets conjugated, the prefix goes to the end.<br/><em>instappen ➔ Ik stapte de bus in.</em></li>
+                <li><strong>Perfectum:</strong> The prefix merges with 'ge-'.<br/><em>aankomen ➔ Ik ben aangekomen.</em></li>
+              </ul>
+
+              <h4 style={{ color: '#ec4899', marginTop: '20px' }}>5. Future Tense & Other Exam Topics</h4>
+              <ul className="text-sm text-slate-400 list-disc pl-5">
+                <li><strong>Future Tense:</strong> Use <em>zullen/zal</em> (will) or <em>ga/gaat/gaan</em> (going to).<br/>
+                <em>Ik <strong>ga</strong> een afspraak maken.</em><br/>
+                <em>Ik <strong>zal</strong> pizza maken. / Ik <strong>ga</strong> pizza eten.</em></li>
+                <li><strong>Opinions & Hobbies:</strong> Learn to express your opinions clearly.<br/>
+                <em>Welke film heb je het laatst gezien? ➔ Ik heb Jackass gezien.</em><br/>
+                <em>Waar ging die film over? ➔ De film ging over natuur.</em></li>
+                <li><strong>Past Habits:</strong> Express yourself in the past about how things used to be using <strong>vroeger</strong> (back in the day) or <strong>in het verleden</strong> (in the past) with the Imperfectum.</li>
+              </ul>
+            </div>
+          </>
+        )}
+      </>
+    ),
+    exerciseGroups: [
+      {
+        instruction: "Deel 1: Dit, Dat, Die of Deze? (Referans Zamirleri)",
+        isExtra: false,
+        questions: [
+          { id: "16_onclass_1_1", type: "multiple_choice", question: "_______ zijn mijn ouders uit Turkije.", options: ["Dit", "Die", "Dat"], correctAnswer: "Dit" },
+          { id: "16_onclass_1_2", type: "fill_in", question: "Ik vind de kaas heel lekker. Wat vind jij van _______? (the cheese - de kaas)", correctAnswer: "die" },
+          { id: "16_onclass_1_3", type: "multiple_choice", question: "Het is een mooi huis. _______ is het huis van mijn oom.", options: ["Die", "Dat", "Deze"], correctAnswer: "Dat" },
+          { id: "16_onclass_1_4", type: "fill_in", question: "Heb jij het raam dichtgedaan? -> Natuurlijk heb ik _______ gedaan. (that action)", correctAnswer: "dat" },
+          { id: "16_onclass_1_5", type: "multiple_choice", question: "Waar is John? _______ is vandaag niet hier.", options: ["Dat", "Die", "Dit"], correctAnswer: "Die" },
+          { id: "16_onclass_1_6", type: "fill_in", question: "Kijk naar die bril! _______ is van mijn vader.", correctAnswer: "Die" }
+        ]
+      },
+      {
+        instruction: "Deel 2: Conjuncties - Voegwoorden (Bağlaçlar)",
+        isExtra: false,
+        questions: [
+          { id: "16_onclass_2_1", type: "multiple_choice", question: "Ik werk in Amsterdam _______ ik kom uit Lelystad. (toevoeging / and)", options: ["of", "en", "want", "dus"], correctAnswer: "en" },
+          { id: "16_onclass_2_2", type: "fill_in", question: "Ik wil graag naar het feest komen, _______ ik ben ziek. (tegenstelling / but)", correctAnswer: "maar" },
+          { id: "16_onclass_2_3", type: "multiple_choice", question: "Zij gaat slapen, _______ ze heeft de hele dag gewerkt. (reden / because)", options: ["want", "dus", "of", "maar"], correctAnswer: "want" },
+          { id: "16_onclass_2_4", type: "fill_in", question: "We hebben geen melk meer, _______ ik ga naar de supermarkt. (gevolg / so)", correctAnswer: "dus" },
+          { id: "16_onclass_2_5", type: "multiple_choice", question: "Wil je liever pizza eten _______ wil je naar het museum gaan? (keuze / or)", options: ["en", "of", "dus", "want"], correctAnswer: "of" }
+        ]
+      },
+      {
+        instruction: "Deel 3: Perfectum & Imperfectum (Düzensiz Fiiller & Nesne Sırası)",
+        isExtra: false,
+        questions: [
+          { id: "16_onclass_3_1", type: "multiple_choice", question: "Welke zin is correct in het perfectum?", options: ["Ik heb gekeken de film.", "Ik heb de film gekeken.", "Ik de film heb gekeken."], correctAnswer: "Ik heb de film gekeken." },
+          { id: "16_onclass_3_2", type: "fill_in", question: "Vroeger _______ (drinken) ik altijd een cola. (Imperfectum)", correctAnswer: "dronk" },
+          { id: "16_onclass_3_3", type: "fill_in", question: "Gisteren _______ (kopen) wij een t-shirt in de stad. (Imperfectum, wij)", correctAnswer: "kochten" },
+          { id: "16_onclass_3_4", type: "multiple_choice", question: "Welk hulpwerkwoord (hebben/zijn) gebruik je voor 'komen' in het perfectum?", options: ["Ik heb gekomen", "Ik ben gekomen", "Ik word gekomen"], correctAnswer: "Ik ben gekomen" },
+          { id: "16_onclass_3_5", type: "fill_in", question: "Oeps! Ik _______ mijn boek vergeten! (Perfectum of 'vergeten' - use the auxiliary verb)", correctAnswer: "ben" },
+          { id: "16_onclass_3_6", type: "fill_in", question: "Waar ging de film over? -> De film _______ over natuur. (Imperfectum of 'gaan')", correctAnswer: "ging" }
+        ]
+      },
+      {
+        instruction: "Deel 4: Gescheiden Werkwoorden (Ayrılabilen Fiiller)",
+        isExtra: true,
+        questions: [
+          { id: "16_onclass_4_1", type: "multiple_choice", question: "Present: Hoe schrijf je 'Ik - meenemen - een vriend' correct?", options: ["Ik neem mee een vriend.", "Ik meeneem een vriend.", "Ik neem een vriend mee."], correctAnswer: "Ik neem een vriend mee." },
+          { id: "16_onclass_4_2", type: "fill_in", question: "Imperfectum: Gisteren _______ ik de bus in. (instappen)", correctAnswer: "stapte" },
+          { id: "16_onclass_4_3", type: "fill_in", question: "Perfectum: De trein is te laat _______. (aankomen)", correctAnswer: "aangekomen" },
+          { id: "16_onclass_4_4", type: "fill_in", question: "Present: Tjeerd _______ haar op. (ophalen)", correctAnswer: "haalt" }
+        ]
+      },
+      {
+        instruction: "Deel 5: Gelecek Zaman ve İfadeler (Exam Mix)",
+        isExtra: true,
+        questions: [
+          { id: "16_onclass_5_1", type: "multiple_choice", question: "Welke zin drukt de toekomst (future) uit?", options: ["Ik maakte pizza.", "Ik heb een afspraak gemaakt.", "Ik ga een afspraak maken."], correctAnswer: "Ik ga een afspraak maken." },
+          { id: "16_onclass_5_2", type: "fill_in", question: "Morgen _______ ik pizza eten. (will - zullen)", correctAnswer: "zal" },
+          { id: "16_onclass_5_3", type: "multiple_choice", question: "Hoe vertaal je: 'Which film did you watch most recently?'", options: ["Waar ging die film over?", "Welke film heb je het laatst gezien?", "Kijk je vaak naar films?"], correctAnswer: "Welke film heb je het laatst gezien?" },
+          { id: "16_onclass_5_4", type: "fill_in", question: "_______ (In the past), werkte ik bij de bioscoop. (Starts with v...)", correctAnswer: "Vroeger" }
+        ]
+      }
+    ]
   }
 ];
