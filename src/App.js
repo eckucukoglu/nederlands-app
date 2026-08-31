@@ -1,11 +1,11 @@
 // src/App.js
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import './App.css';
 import DialogueSection from './components/DialogueSection';
 import ExerciseEngine from './components/ExerciseEngine';
-import IrregularVerbs from './components/IrregularVerbs';
 import Flashcards from './components/Flashcards';
 import AuthModal from './components/AuthModal';
+import IrregularVerbs from './components/IrregularVerbs';
 import { bookSections, vocabulary } from './data';
 import { globalDictionary } from './data/globalDictionary';
 import { auth, isSignInWithEmailLink, signInWithEmailLink, onAuthStateChanged, handleUserSyncOnLogin, pullFromCloud } from './firebase';
@@ -277,13 +277,19 @@ function MainContent({ user, setIsAuthModalOpen }) {
   });
 
   const [searchToast, setSearchToast] = useState(null);
+  
+  // Custom Translation Modal States
+  const [customWordModal, setCustomWordModal] = useState({ isOpen: false, word: '', status: '' });
+  const [customTr, setCustomTr] = useState('');
+  const [customEn, setCustomEn] = useState('');
+  const [customError, setCustomError] = useState(false);
 
   const searchRef = useRef(null);
   const desktopSearchInputRef = useRef(null); 
   const chapterMenuRef = useRef(null);
   const mobileMenuRef = useRef(null);
   const sectionMeasureRef = useRef(null); 
-  const mobileSearchRef = useRef(null); // MOBİL MODAL TIKLAMA HATASI İÇİN YENİ REF
+  const mobileSearchRef = useRef(null); 
 
   const touchStartX = useRef(0);
   const touchStartY = useRef(0);
@@ -312,7 +318,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
 
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (activeTab === 'flashcards' || activeTab === 'home') return;
+      if (activeTab === 'flashcards' || activeTab === 'verbs' || activeTab === 'home') return;
       if (['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement.tagName)) return;
 
       if (e.key === 'ArrowLeft') {
@@ -332,7 +338,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
   };
 
   const handleTouchEnd = (e) => {
-    if (activeTab === 'flashcards' || activeTab === 'home') return;
+    if (activeTab === 'flashcards' || activeTab === 'verbs' || activeTab === 'home') return;
     const touchEndX = e.changedTouches[0].clientX;
     const touchEndY = e.changedTouches[0].clientY;
 
@@ -367,7 +373,9 @@ function MainContent({ user, setIsAuthModalOpen }) {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      // Tıklamanın hem masaüstü arama çubuğu DIŞINDA hem de mobil modal DIŞINDA olduğundan emin ol
+      // Custom Modal açıksa dışarı tıklamaları umursama ki yanlışlıkla kapanmasın
+      if (customWordModal.isOpen) return;
+
       const isOutsideDesktopSearch = searchRef.current && !searchRef.current.contains(event.target);
       const isOutsideMobileSearch = mobileSearchRef.current ? !mobileSearchRef.current.contains(event.target) : true;
 
@@ -390,7 +398,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
       document.removeEventListener("mousedown", handleClickOutside);
       document.removeEventListener("touchstart", handleClickOutside);
     }
-  }, []);
+  }, [customWordModal.isOpen]);
 
   useEffect(() => {
     const fetchStatuses = () => {
@@ -433,6 +441,18 @@ function MainContent({ user, setIsAuthModalOpen }) {
     }, 2800);
   };
 
+  // HELPER: Kelimenin kendi sözlüğümüzde, fallback'te VEYA kullanıcının kendi havuzunda olup olmadığını kontrol eder
+  const checkIsCustom = (word) => {
+    const customPool = JSON.parse(localStorage.getItem('globalWordPool')) || {};
+    const customVocab = Object.values(customPool);
+    const allVocab = [...vocabulary, ...globalDictionary, ...customVocab];
+    const isMatched = allVocab.some(v => v.nl.toLowerCase() === word.toLowerCase());
+    const hasFallback = !!fallbackDictionary[word.toLowerCase()];
+    
+    // Eğer hiçbir yerde yoksa (gerçekten custom eklenecek bir kelimeyse) true döner.
+    return !isMatched && !hasFallback;
+  };
+
   const handleGlobalSearch = (e) => {
     if (e) e.preventDefault();
     const cleanWord = searchQuery.trim().toLowerCase();
@@ -440,7 +460,17 @@ function MainContent({ user, setIsAuthModalOpen }) {
 
     setLastSearchedQuery(cleanWord);
 
-    const allVocab = [...vocabulary, ...globalDictionary];
+    // KULLANICININ KENDİ EKLediği KELİMELERİ ÇEK
+    const customPool = JSON.parse(localStorage.getItem('globalWordPool')) || {};
+    const customVocab = Object.values(customPool).map(wordObj => ({
+      nl: wordObj.nl,
+      en: wordObj.en || "",
+      tr: wordObj.tr || "",
+      example: wordObj.example || ""
+    }));
+
+    // SİSTEM SÖZLÜĞÜ VE KULLANICI SÖZLÜĞÜNÜ BİRLEŞTİR
+    const allVocab = [...vocabulary, ...globalDictionary, ...customVocab];
     const uniqueVocabMap = new Map();
     allVocab.forEach(item => {
       uniqueVocabMap.set(item.nl.toLowerCase(), item);
@@ -470,8 +500,9 @@ function MainContent({ user, setIsAuthModalOpen }) {
       matches = [{ 
         nl: cleanWord, 
         en: fallback || "Translation not available", 
-        tr: "Çeviri bulunamadı",
-        example: fallback ? "Uit de dialoog" : t('notFound') 
+        tr: fallback ? "Çeviri bulunamadı" : "Çeviri bulunamadı",
+        example: fallback ? "Uit de dialoog" : t('notFound'),
+        isCustom: !fallback // Flag for custom entry
       }];
     }
 
@@ -502,20 +533,24 @@ function MainContent({ user, setIsAuthModalOpen }) {
     localStorage.setItem('globalWordPool', JSON.stringify(pool));
   };
 
-  const handleSearchWordKnowledge = (wordObj, isKnown) => {
+  const executeStorageUpdate = (wordObj, status) => {
     const storageKey = `dialogueUnknowns_${currentChapter}`;
     const existingUnknowns = JSON.parse(localStorage.getItem(storageKey)) || [];
-    let updatedUnknowns;
+    let updatedUnknowns = existingUnknowns;
 
-    if (!isKnown) {
-      if (!existingUnknowns.some(w => w.nl === wordObj.nl)) updatedUnknowns = [...existingUnknowns, wordObj];
-      else updatedUnknowns = existingUnknowns;
+    if (status === 'unknown') {
+      if (!existingUnknowns.some(w => w.nl === wordObj.nl)) {
+        updatedUnknowns = [...existingUnknowns, wordObj];
+      } else {
+        // Eğer zaten varsa ama özel çeviriyle güncelliyorsak üzerine yaz
+        updatedUnknowns = updatedUnknowns.map(w => w.nl === wordObj.nl ? wordObj : w);
+      }
     } else {
       updatedUnknowns = existingUnknowns.filter(w => w.nl !== wordObj.nl);
     }
     localStorage.setItem(storageKey, JSON.stringify(updatedUnknowns));
 
-    saveToGlobalPool(wordObj, isKnown ? 'known' : 'unknown');
+    saveToGlobalPool(wordObj, status);
 
     const keysToUpdate = new Set();
     const lowerNL = wordObj.nl.toLowerCase();
@@ -540,15 +575,57 @@ function MainContent({ user, setIsAuthModalOpen }) {
 
     const newStatuses = { ...globalWordStatuses };
     keysToUpdate.forEach(key => {
-      newStatuses[key] = isKnown ? 'known' : 'unknown';
+      if (status === undefined) {
+         delete newStatuses[key];
+      } else {
+         newStatuses[key] = status;
+      }
     });
 
     setGlobalWordStatuses(newStatuses);
     localStorage.setItem(`dialogueWordStatuses_${currentChapter}`, JSON.stringify(newStatuses));
     window.dispatchEvent(new Event('wordStatusUpdated'));
     
-    const statusKey = isKnown ? 'known' : 'unknown';
-    showToast(getToastMessage(wordObj.nl, statusKey));
+    showToast(getToastMessage(wordObj.nl, status === undefined ? 'removed' : status));
+  };
+
+  // CUSTOM TRANSLATION SAVE
+  const handleCustomSave = (e) => {
+    e.preventDefault();
+    if (!customTr.trim() && !customEn.trim()) {
+      setCustomError(true);
+      return;
+    }
+    setCustomError(false);
+
+    const wordObj = {
+      nl: customWordModal.word,
+      tr: customTr.trim(),
+      en: customEn.trim(),
+      example: lang === 'tr' ? "Kullanıcı tarafından eklendi." : "Manually added by user."
+    };
+
+    executeStorageUpdate(wordObj, customWordModal.status);
+
+    // Kapat ve temizle
+    setCustomWordModal({ isOpen: false, word: '', status: '' });
+    setSearchResults(null);
+    if (window.innerWidth < 640) {
+      setIsMobileSearchOpen(false);
+      setSearchQuery('');
+    }
+  };
+
+  const handleSearchWordKnowledge = (wordObj, isKnown) => {
+    if (wordObj.isCustom) {
+       setCustomWordModal({ isOpen: true, word: wordObj.nl, status: isKnown ? 'known' : 'unknown' });
+       setCustomTr('');
+       setCustomEn('');
+       setCustomError(false);
+       return;
+    }
+    
+    executeStorageUpdate(wordObj, isKnown ? 'known' : 'unknown');
   };
 
   const handleSearchRawWordToggle = (direction, targetWord, e) => {
@@ -567,21 +644,14 @@ function MainContent({ user, setIsAuthModalOpen }) {
       else newStatus = 'known';
     }
 
-    const storageKey = `dialogueUnknowns_${currentChapter}`;
-    const existingUnknowns = JSON.parse(localStorage.getItem(storageKey)) || [];
-    let updatedUnknowns = existingUnknowns;
-
-    if (newStatus === 'unknown') {
-      if (!existingUnknowns.some(w => w.nl === targetWord)) {
-        updatedUnknowns = [...existingUnknowns, {
-          nl: targetWord, en: "Not found in dictionary", tr: "Sözlükte bulunamadı",
-          example: "Manually marked by the user."
-        }];
-      }
-    } else {
-      updatedUnknowns = existingUnknowns.filter(w => w.nl !== targetWord);
+    // Eğer custom kelime eklenmek isteniyorsa ve durum 'removed' değilse
+    if (newStatus !== undefined && checkIsCustom(targetWord)) {
+       setCustomWordModal({ isOpen: true, word: targetWord, status: newStatus });
+       setCustomTr('');
+       setCustomEn('');
+       setCustomError(false);
+       return;
     }
-    localStorage.setItem(storageKey, JSON.stringify(updatedUnknowns));
 
     const wordObj = {
       nl: targetWord,
@@ -589,20 +659,8 @@ function MainContent({ user, setIsAuthModalOpen }) {
       tr: "Sözlükte bulunamadı",
       example: "Manually marked by the user."
     };
-    saveToGlobalPool(wordObj, newStatus);
 
-    const newStatuses = { ...globalWordStatuses };
-    if (newStatus === undefined) {
-      delete newStatuses[targetWord];
-    } else {
-      newStatuses[targetWord] = newStatus;
-    }
-    setGlobalWordStatuses(newStatuses);
-    localStorage.setItem(`dialogueWordStatuses_${currentChapter}`, JSON.stringify(newStatuses));
-    window.dispatchEvent(new Event('wordStatusUpdated'));
-
-    const statusKey = newStatus === 'known' ? 'known' : newStatus === 'unknown' ? 'unknown' : 'removed';
-    showToast(getToastMessage(targetWord, statusKey));
+    executeStorageUpdate(wordObj, newStatus);
   };
 
   const toggleFavorite = (sectionId, note) => {
@@ -640,6 +698,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
 
   const getSectionTitle = (secId) => {
     if (secId === 'flashcards') return "Flashcards";
+    if (secId === 'verbs') return lang === 'tr' ? "Düzensiz Fiiller" : "Irregular Verbs";
     const sec = currentSections.find(s => s.id === secId);
     if (sec && sec.title) return sec.title;
     if (secId.includes('On-Class')) return "Extra Oefeningen";
@@ -748,6 +807,61 @@ function MainContent({ user, setIsAuthModalOpen }) {
         </div>
       )}
 
+      {/* CUSTOM WORD MODAL */}
+      {customWordModal.isOpen && (
+        <div className="fixed inset-0 z-[120] flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm" onClick={() => setCustomWordModal({ isOpen: false, word: '', status: '' })}>
+          <div className="bg-slate-900 w-full max-w-sm rounded-3xl shadow-2xl border border-slate-700 p-6 flex flex-col relative overflow-hidden" onClick={e => e.stopPropagation()}>
+            <div className="absolute top-0 right-0 p-6 opacity-10 pointer-events-none">
+               <i className="fa-solid fa-book-medical text-8xl text-brand-400"></i>
+            </div>
+            <h3 className="text-xl font-extrabold text-brand-400 mb-4 flex items-center gap-2 relative z-10">
+              <i className="fa-solid fa-plus"></i>
+              {lang === 'tr' ? 'Kelime Ekle' : 'Add Word'}
+            </h3>
+            
+            <p className="text-[13px] text-slate-300 mb-5 leading-relaxed relative z-10">
+              {lang === 'tr' 
+                ? 'Bu kelime sözlükte bulunmuyor. Kendi kelime listenize eklemek için lütfen en az bir dilde çevirisini girin.' 
+                : 'This word is not in the dictionary. Please provide a translation in at least one language to add it to your list.'}
+            </p>
+
+            <form onSubmit={handleCustomSave} className="space-y-4 relative z-10">
+              <div>
+                <label className="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1">Nederlands</label>
+                <input type="text" value={customWordModal.word} disabled className="w-full bg-slate-800/80 border border-slate-700 text-slate-400 text-sm font-bold rounded-xl px-4 py-2.5 cursor-not-allowed shadow-inner" />
+              </div>
+
+              <div>
+                <label className="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1">Türkçe</label>
+                <input autoFocus type="text" value={customTr} onChange={e => {setCustomTr(e.target.value); setCustomError(false);}} placeholder={lang === 'tr' ? "Türkçe anlamı..." : "Turkish meaning..."} className="w-full bg-slate-800 border border-slate-600 text-slate-200 text-sm rounded-xl px-4 py-2.5 focus:outline-none focus:border-brand-400 focus:ring-1 focus:ring-brand-400 shadow-inner transition-colors" />
+              </div>
+
+              <div>
+                <label className="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1">English</label>
+                <input type="text" value={customEn} onChange={e => {setCustomEn(e.target.value); setCustomError(false);}} placeholder={lang === 'tr' ? "İngilizce anlamı..." : "English meaning..."} className="w-full bg-slate-800 border border-slate-600 text-slate-200 text-sm rounded-xl px-4 py-2.5 focus:outline-none focus:border-brand-400 focus:ring-1 focus:ring-brand-400 shadow-inner transition-colors" />
+              </div>
+
+              {customError && (
+                <p className="text-[12px] text-rose-400 font-bold flex items-center gap-1.5 mt-2 bg-rose-900/20 p-2 rounded-lg border border-rose-800/50">
+                  <i className="fa-solid fa-triangle-exclamation"></i>
+                  {lang === 'tr' ? 'Lütfen en az bir dilde çeviri girin.' : 'Please enter at least one translation.'}
+                </p>
+              )}
+
+              <div className="flex gap-3 pt-3">
+                <button type="button" onClick={() => setCustomWordModal({ isOpen: false, word: '', status: '' })} className="flex-1 py-2.5 rounded-xl text-sm font-bold bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white border border-slate-600 transition-colors shadow-sm">
+                  {lang === 'tr' ? 'İptal' : 'Cancel'}
+                </button>
+                <button type="submit" className="flex-1 py-2.5 rounded-xl text-sm font-bold bg-brand-600 text-white hover:bg-brand-500 shadow-md shadow-brand-900/30 transition-all active:scale-[0.98]">
+                  <i className="fa-solid fa-floppy-disk mr-2"></i>
+                  {lang === 'tr' ? 'Kaydet' : 'Save'}
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+
       {isInfoModalOpen && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-slate-950/80 backdrop-blur-sm" onClick={() => setIsInfoModalOpen(false)}>
           <div className="bg-slate-900 w-full max-w-3xl max-h-[85vh] rounded-3xl shadow-2xl border border-slate-700 flex flex-col overflow-hidden" onClick={e => e.stopPropagation()}>
@@ -806,14 +920,13 @@ function MainContent({ user, setIsAuthModalOpen }) {
               <i className="fa-solid fa-clone text-lg sm:text-xl"></i>
             </button>
 
-			<button 
+            <button 
               onClick={() => { setActiveTab("verbs"); setIsChapterExpanded(false); setIsSearchExpanded(false); }}
               className={`p-1.5 sm:p-2 rounded-full transition-colors flex items-center justify-center ${activeTab === 'verbs' ? 'bg-sky-600 text-white shadow-md' : 'bg-sky-900/30 text-sky-400 hover:bg-sky-600 hover:text-white border border-sky-800/30'}`}
               title={lang === 'tr' ? 'Düzensiz Fiiller' : 'Irregular Verbs'}
             >
               <i className="fa-solid fa-bolt text-lg sm:text-xl"></i>
             </button>
-
 
             <button 
               onClick={() => setIsAuthModalOpen(true)}
@@ -1003,10 +1116,10 @@ function MainContent({ user, setIsAuthModalOpen }) {
           >
             <div className="flex items-center justify-between w-full">
               <span className="text-slate-200 text-sm font-bold truncate text-left">
-                {activeTab === 'home' ? 'Dashboard' : (activeTab === 'flashcards' ? t('flashcards') : (activeTab.includes('On-Class') ? 'Extra: On-Class' : `Sectie ${activeTab}`))}
+                {activeTab === 'home' ? 'Dashboard' : (activeTab === 'flashcards' ? t('flashcards') : activeTab === 'verbs' ? (lang === 'tr' ? 'Düzensiz Fiiller' : 'Irregular Verbs') : (activeTab.includes('On-Class') ? 'Extra: On-Class' : `Sectie ${activeTab}`))}
               </span>
               <div className="flex items-center gap-2 flex-shrink-0">
-                {activeTab !== 'flashcards' && activeTab !== 'home' && (
+                {activeTab !== 'flashcards' && activeTab !== 'verbs' && activeTab !== 'home' && (
                   <span className="text-[10px] font-extrabold text-slate-400 bg-slate-900 px-2 py-0.5 rounded-md border border-slate-700">
                     {currentIndex + 1} / {currentSections.length}
                   </span>
@@ -1082,7 +1195,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
           />
         )}
 
-        {(activeTab !== 'home' && activeTab.endsWith('.1') && !activeTab.includes('On-Class')) && (
+        {(activeTab !== 'home' && activeTab !== 'verbs' && activeTab !== 'flashcards' && activeTab.endsWith('.1') && !activeTab.includes('On-Class')) && (
           <DialogueSection 
             sectionId={activeTab} 
             favorites={favorites} 
@@ -1092,7 +1205,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
           />
         )}
         
-        {activeTab !== 'home' && activeTab !== 'flashcards' && bookSections.find(s => s.id === activeTab) && !activeTab.endsWith('.1') && (
+        {activeTab !== 'home' && activeTab !== 'flashcards' && activeTab !== 'verbs' && bookSections.find(s => s.id === activeTab) && !activeTab.endsWith('.1') && (
           <ExerciseEngine 
             sectionData={bookSections.find(s => s.id === activeTab)} 
             chapterNum={currentChapter} 
@@ -1104,7 +1217,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
         )}
 
         {activeTab === 'flashcards' && <Flashcards initialChapter={currentChapter} />}
-		{activeTab === 'verbs' && <IrregularVerbs />}
+        {activeTab === 'verbs' && <IrregularVerbs />}
       </main>
     </div>
   );
