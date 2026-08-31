@@ -261,6 +261,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
   const [isSearchExpanded, setIsSearchExpanded] = useState(false);
   const [isMobileSearchOpen, setIsMobileSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const [lastSearchedQuery, setLastSearchedQuery] = useState(""); 
   const [searchResults, setSearchResults] = useState(null);
 
   const [isChapterExpanded, setIsChapterExpanded] = useState(false);
@@ -274,11 +275,14 @@ function MainContent({ user, setIsAuthModalOpen }) {
     return saved ? JSON.parse(saved) : {};
   });
 
+  const [searchToast, setSearchToast] = useState(null);
+
   const searchRef = useRef(null);
   const desktopSearchInputRef = useRef(null); 
   const chapterMenuRef = useRef(null);
   const mobileMenuRef = useRef(null);
   const sectionMeasureRef = useRef(null); 
+  const mobileSearchRef = useRef(null); // MOBİL MODAL TIKLAMA HATASI İÇİN YENİ REF
 
   const touchStartX = useRef(0);
   const touchStartY = useRef(0);
@@ -362,10 +366,15 @@ function MainContent({ user, setIsAuthModalOpen }) {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (searchRef.current && !searchRef.current.contains(event.target)) {
+      // Tıklamanın hem masaüstü arama çubuğu DIŞINDA hem de mobil modal DIŞINDA olduğundan emin ol
+      const isOutsideDesktopSearch = searchRef.current && !searchRef.current.contains(event.target);
+      const isOutsideMobileSearch = mobileSearchRef.current ? !mobileSearchRef.current.contains(event.target) : true;
+
+      if (isOutsideDesktopSearch && isOutsideMobileSearch) {
         setIsSearchExpanded(false);
         setSearchResults(null);
       }
+      
       if (chapterMenuRef.current && !chapterMenuRef.current.contains(event.target)) {
         setIsChapterExpanded(false);
       }
@@ -375,7 +384,11 @@ function MainContent({ user, setIsAuthModalOpen }) {
     };
 
     document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    document.addEventListener("touchstart", handleClickOutside, { passive: true });
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+    }
   }, []);
 
   useEffect(() => {
@@ -395,11 +408,36 @@ function MainContent({ user, setIsAuthModalOpen }) {
     window.speechSynthesis.speak(utterance);
   };
 
-  // --- GELİŞMİŞ TERSTEN ARAMA (NL, EN, TR DESTEKLİ) ---
+  const getToastMessage = (word, statusKey) => {
+    const isTr = lang === 'tr';
+    let statusLabel = "";
+    
+    if (statusKey === 'known') statusLabel = isTr ? "Biliyorum" : "Known";
+    else if (statusKey === 'unknown') statusLabel = isTr ? "Bilmiyorum" : "Unknown";
+    else statusLabel = isTr ? "İşaret kaldırıldı" : "Mark removed";
+
+    if (isTr) {
+      if (statusKey === 'removed') return `"${word}" kelimesinin işareti kaldırıldı.`;
+      return `"${word}" kelimesi "${statusLabel}" olarak güncellendi.`;
+    } else {
+      if (statusKey === 'removed') return `Mark removed for "${word}".`;
+      return `Word "${word}" marked as "${statusLabel}".`;
+    }
+  };
+
+  const showToast = (message) => {
+    setSearchToast(message);
+    setTimeout(() => {
+      setSearchToast(null);
+    }, 2800);
+  };
+
   const handleGlobalSearch = (e) => {
     if (e) e.preventDefault();
     const cleanWord = searchQuery.trim().toLowerCase();
     if (!cleanWord) return;
+
+    setLastSearchedQuery(cleanWord);
 
     const allVocab = [...vocabulary, ...globalDictionary];
     const uniqueVocabMap = new Map();
@@ -436,7 +474,6 @@ function MainContent({ user, setIsAuthModalOpen }) {
       }];
     }
 
-    // Sıralama Mantığı: Önce NL tam eşleşmesi, sonra EN/TR tam eşleşmesi, en son içerik eşleşmesi
     matches.sort((a, b) => {
       const aExactNl = a.nl.toLowerCase() === cleanWord ? -2 : 0;
       const bExactNl = b.nl.toLowerCase() === cleanWord ? -2 : 0;
@@ -508,15 +545,17 @@ function MainContent({ user, setIsAuthModalOpen }) {
     setGlobalWordStatuses(newStatuses);
     localStorage.setItem(`dialogueWordStatuses_${currentChapter}`, JSON.stringify(newStatuses));
     window.dispatchEvent(new Event('wordStatusUpdated'));
-    setSearchResults(null);
+    
+    const statusKey = isKnown ? 'known' : 'unknown';
+    showToast(getToastMessage(wordObj.nl, statusKey));
   };
 
-  const handleSearchRawWordToggle = (direction, e) => {
+  const handleSearchRawWordToggle = (direction, targetWord, e) => {
+    e.preventDefault();
     e.stopPropagation();
-    const rawWord = searchQuery.trim().toLowerCase();
-    if (!rawWord) return;
+    if (!targetWord) return;
 
-    const currentStatus = globalWordStatuses[rawWord];
+    const currentStatus = globalWordStatuses[targetWord];
     let newStatus;
 
     if (direction === 'left') {
@@ -532,19 +571,19 @@ function MainContent({ user, setIsAuthModalOpen }) {
     let updatedUnknowns = existingUnknowns;
 
     if (newStatus === 'unknown') {
-      if (!existingUnknowns.some(w => w.nl === rawWord)) {
+      if (!existingUnknowns.some(w => w.nl === targetWord)) {
         updatedUnknowns = [...existingUnknowns, {
-          nl: rawWord, en: "Not found in dictionary", tr: "Sözlükte bulunamadı",
+          nl: targetWord, en: "Not found in dictionary", tr: "Sözlükte bulunamadı",
           example: "Manually marked by the user."
         }];
       }
     } else {
-      updatedUnknowns = existingUnknowns.filter(w => w.nl !== rawWord);
+      updatedUnknowns = existingUnknowns.filter(w => w.nl !== targetWord);
     }
     localStorage.setItem(storageKey, JSON.stringify(updatedUnknowns));
 
     const wordObj = {
-      nl: rawWord,
+      nl: targetWord,
       en: "Not found in dictionary",
       tr: "Sözlükte bulunamadı",
       example: "Manually marked by the user."
@@ -553,13 +592,16 @@ function MainContent({ user, setIsAuthModalOpen }) {
 
     const newStatuses = { ...globalWordStatuses };
     if (newStatus === undefined) {
-      delete newStatuses[rawWord];
+      delete newStatuses[targetWord];
     } else {
-      newStatuses[rawWord] = newStatus;
+      newStatuses[targetWord] = newStatus;
     }
     setGlobalWordStatuses(newStatuses);
     localStorage.setItem(`dialogueWordStatuses_${currentChapter}`, JSON.stringify(newStatuses));
     window.dispatchEvent(new Event('wordStatusUpdated'));
+
+    const statusKey = newStatus === 'known' ? 'known' : newStatus === 'unknown' ? 'unknown' : 'removed';
+    showToast(getToastMessage(targetWord, statusKey));
   };
 
   const toggleFavorite = (sectionId, note) => {
@@ -595,16 +637,6 @@ function MainContent({ user, setIsAuthModalOpen }) {
     setActiveTab(savedTab ? savedTab : `${newChapter}.1`);
   };
 
-  const rawWord = searchQuery.trim().toLowerCase();
-  const rawStatus = globalWordStatuses[rawWord];
-  let trackColor = "bg-slate-700/80"; let thumbColor = "bg-slate-400"; let translateClass = "translate-x-[18px]";
-
-  if (rawStatus === 'unknown') {
-    trackColor = "bg-rose-900/60"; thumbColor = "bg-rose-500"; translateClass = "translate-x-[2px]";
-  } else if (rawStatus === 'known') {
-    trackColor = "bg-emerald-900/60"; thumbColor = "bg-emerald-500"; translateClass = "translate-x-[34px]";
-  }
-
   const getSectionTitle = (secId) => {
     if (secId === 'flashcards') return "Flashcards";
     const sec = currentSections.find(s => s.id === secId);
@@ -614,79 +646,91 @@ function MainContent({ user, setIsAuthModalOpen }) {
     return "Oefening";
   };
 
-  const SearchResultsUI = () => (
-    <>
-      <div className="mb-3 pb-3 border-b border-slate-700/80 flex justify-between items-center gap-3">
-        <div className="flex flex-col truncate">
-          <span className="text-[13px] font-bold text-slate-200 truncate">
-            <i className="fa-solid fa-pen-nib text-brand-400 mr-1.5"></i>
-            {rawWord}
-          </span>
-          <span className="text-[10px] text-slate-400 leading-tight mt-0.5">{t('markOnly')}</span>
-        </div>
-        <div className={`relative w-14 h-6 rounded-full transition-colors duration-300 flex-shrink-0 ${trackColor}`}>
-          <div className="absolute left-0 w-1/2 h-full z-10 cursor-pointer rounded-l-full" onClick={(e) => handleSearchRawWordToggle('left', e)}></div>
-          <div className="absolute right-0 w-1/2 h-full z-10 cursor-pointer rounded-r-full" onClick={(e) => handleSearchRawWordToggle('right', e)}></div>
-          <div className={`absolute top-[2px] w-5 h-5 rounded-full shadow-md transition-transform duration-300 ease-in-out ${thumbColor} ${translateClass}`}></div>
-        </div>
-      </div>
-      <div className="space-y-3">
-        {searchResults.map((wordObj, idx) => {
-          const currentStatus = globalWordStatuses[wordObj.nl.toLowerCase()];
-          return (
-            <div key={idx} className="border-b border-slate-700 last:border-0 pb-3 last:pb-0">
-              <div className="flex justify-between items-center mb-1">
-                <h3 className="font-bold text-brand-400 text-[15px] leading-tight">{wordObj.nl}</h3>
-                <button type="button" onClick={() => speakDutch(wordObj.nl)} className="text-slate-400 hover:text-brand-300 ml-2">
-                  <i className="fa-solid fa-volume-high text-xs"></i>
-                </button>
-              </div>
-              
-              <div className="leading-snug mb-1.5 flex flex-col gap-0.5">
-                {lang === 'tr' ? (
-                  <>
-                    {wordObj.tr && (
-                      <div>
-                        <span className="text-[10px] font-bold text-slate-400 mr-1 tracking-wider">TR</span>
-                        <span className="text-[14px] font-bold text-slate-100">{wordObj.tr}</span>
-                      </div>
-                    )}
-                    {wordObj.en && (
-                      <div>
-                        <span className="text-[10px] font-bold text-slate-500 mr-1 tracking-wider">GB</span>
-                        <span className="text-[13px] font-normal text-slate-400">{wordObj.en}</span>
-                      </div>
-                    )}
-                  </>
-                ) : (
-                  <>
-                    {wordObj.en && (
-                      <div>
-                        <span className="text-[10px] font-bold text-slate-400 mr-1 tracking-wider">GB</span>
-                        <span className="text-[14px] font-bold text-slate-100">{wordObj.en}</span>
-                      </div>
-                    )}
-                    {wordObj.tr && (
-                      <div>
-                        <span className="text-[10px] font-bold text-slate-500 mr-1 tracking-wider">TR</span>
-                        <span className="text-[13px] font-normal text-slate-400">{wordObj.tr}</span>
-                      </div>
-                    )}
-                  </>
-                )}
-              </div>
+  const renderSearchResults = () => {
+    const rawWord = lastSearchedQuery || searchQuery.trim().toLowerCase();
+    const rawStatus = globalWordStatuses[rawWord];
+    let trackColor = "bg-slate-700/80"; let thumbColor = "bg-slate-400"; let translateClass = "translate-x-[18px]";
 
-              {wordObj.example && <p className="text-[11px] text-slate-400 italic mb-2 leading-snug">"{wordObj.example}"</p>}
-              <div className="flex gap-2 mt-1.5">
-                <button type="button" onClick={() => handleSearchWordKnowledge(wordObj, true)} className={`flex-1 py-1.5 rounded-md text-xs transition-all border ${currentStatus === 'known' ? 'bg-emerald-600 border-emerald-500 text-white shadow-inner scale-[0.98]' : 'bg-slate-700/50 border-slate-600 hover:bg-emerald-900/40 hover:border-emerald-700/50 text-slate-300'}`}><i className="fa-solid fa-check"></i></button>
-                <button type="button" onClick={() => handleSearchWordKnowledge(wordObj, false)} className={`flex-1 py-1.5 rounded-md text-xs transition-all border ${currentStatus === 'unknown' ? 'bg-rose-600 border-rose-500 text-white shadow-inner scale-[0.98]' : 'bg-slate-700/50 border-slate-600 hover:bg-rose-900/40 hover:border-rose-700/50 text-slate-300'}`}><i className="fa-solid fa-xmark"></i></button>
+    if (rawStatus === 'unknown') {
+      trackColor = "bg-rose-900/60"; thumbColor = "bg-rose-500"; translateClass = "translate-x-[2px]";
+    } else if (rawStatus === 'known') {
+      trackColor = "bg-emerald-900/60"; thumbColor = "bg-emerald-500"; translateClass = "translate-x-[34px]";
+    }
+
+    return (
+      <React.Fragment>
+        <div className="mb-3 pb-3 border-b border-slate-700/80 flex justify-between items-center gap-3">
+          <div className="flex flex-col truncate">
+            <span className="text-[13px] font-bold text-slate-200 truncate">
+              <i className="fa-solid fa-pen-nib text-brand-400 mr-1.5"></i>
+              {rawWord}
+            </span>
+            <span className="text-[10px] text-slate-400 leading-tight mt-0.5">{t('markOnly')}</span>
+          </div>
+          <div className={`relative w-14 h-6 rounded-full transition-colors duration-300 flex-shrink-0 ${trackColor}`}>
+            <button type="button" className="absolute left-0 w-1/2 h-full z-10 cursor-pointer rounded-l-full outline-none" onClick={(e) => handleSearchRawWordToggle('left', rawWord, e)}></button>
+            <button type="button" className="absolute right-0 w-1/2 h-full z-10 cursor-pointer rounded-r-full outline-none" onClick={(e) => handleSearchRawWordToggle('right', rawWord, e)}></button>
+            <div className={`absolute top-[2px] w-5 h-5 rounded-full shadow-md transition-transform duration-300 ease-in-out pointer-events-none ${thumbColor} ${translateClass}`}></div>
+          </div>
+        </div>
+        <div className="space-y-3">
+          {searchResults.map((wordObj, idx) => {
+            const currentStatus = globalWordStatuses[wordObj.nl.toLowerCase()];
+            return (
+              <div key={idx} className="border-b border-slate-700 last:border-0 pb-3 last:pb-0">
+                <div className="flex justify-between items-center mb-1">
+                  <h3 className="font-bold text-brand-400 text-[15px] leading-tight">{wordObj.nl}</h3>
+                  <button type="button" onClick={() => speakDutch(wordObj.nl)} className="text-slate-400 hover:text-brand-300 ml-2">
+                    <i className="fa-solid fa-volume-high text-xs"></i>
+                  </button>
+                </div>
+                
+                <div className="leading-snug mb-1.5 flex flex-col gap-0.5">
+                  {lang === 'tr' ? (
+                    <>
+                      {wordObj.tr && (
+                        <div>
+                          <span className="text-[10px] font-bold text-slate-400 mr-1 tracking-wider">TR</span>
+                          <span className="text-[14px] font-bold text-slate-100">{wordObj.tr}</span>
+                        </div>
+                      )}
+                      {wordObj.en && (
+                        <div>
+                          <span className="text-[10px] font-bold text-slate-500 mr-1 tracking-wider">GB</span>
+                          <span className="text-[13px] font-normal text-slate-400">{wordObj.en}</span>
+                        </div>
+                      )}
+                    </>
+                  ) : (
+                    <>
+                      {wordObj.en && (
+                        <div>
+                          <span className="text-[10px] font-bold text-slate-400 mr-1 tracking-wider">GB</span>
+                          <span className="text-[14px] font-bold text-slate-100">{wordObj.en}</span>
+                        </div>
+                      )}
+                      {wordObj.tr && (
+                        <div>
+                          <span className="text-[10px] font-bold text-slate-500 mr-1 tracking-wider">TR</span>
+                          <span className="text-[13px] font-normal text-slate-400">{wordObj.tr}</span>
+                        </div>
+                      )}
+                    </>
+                  )}
+                </div>
+
+                {wordObj.example && <p className="text-[11px] text-slate-400 italic mb-2 leading-snug">"{wordObj.example}"</p>}
+                <div className="flex gap-2 mt-1.5">
+                  <button type="button" onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleSearchWordKnowledge(wordObj, true); }} className={`flex-1 py-1.5 rounded-md text-xs transition-all border ${currentStatus === 'known' ? 'bg-emerald-600 border-emerald-500 text-white shadow-inner scale-[0.98]' : 'bg-slate-700/50 border-slate-600 hover:bg-emerald-900/40 hover:border-emerald-700/50 text-slate-300'}`}><i className="fa-solid fa-check"></i></button>
+                  <button type="button" onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleSearchWordKnowledge(wordObj, false); }} className={`flex-1 py-1.5 rounded-md text-xs transition-all border ${currentStatus === 'unknown' ? 'bg-rose-600 border-rose-500 text-white shadow-inner scale-[0.98]' : 'bg-slate-700/50 border-slate-600 hover:bg-rose-900/40 hover:border-rose-700/50 text-slate-300'}`}><i className="fa-solid fa-xmark"></i></button>
+                </div>
               </div>
-            </div>
-          );
-        })}
-      </div>
-    </>
-  );
+            );
+          })}
+        </div>
+      </React.Fragment>
+    );
+  };
 
   return (
     <div 
@@ -695,6 +739,14 @@ function MainContent({ user, setIsAuthModalOpen }) {
       onTouchEnd={handleTouchEnd}
     >
       
+      {/* TOAST BİLDİRİM */}
+      {searchToast && (
+        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[110] bg-slate-800 text-slate-100 px-4 py-2.5 rounded-2xl shadow-2xl border border-slate-600 text-xs sm:text-sm font-medium flex items-center gap-2.5 animate-bounce w-max max-w-[90%]">
+          <i className="fa-solid fa-circle-check text-emerald-400"></i>
+          <span>{searchToast}</span>
+        </div>
+      )}
+
       {isInfoModalOpen && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-slate-950/80 backdrop-blur-sm" onClick={() => setIsInfoModalOpen(false)}>
           <div className="bg-slate-900 w-full max-w-3xl max-h-[85vh] rounded-3xl shadow-2xl border border-slate-700 flex flex-col overflow-hidden" onClick={e => e.stopPropagation()}>
@@ -769,7 +821,10 @@ function MainContent({ user, setIsAuthModalOpen }) {
                     ref={desktopSearchInputRef}
                     type="text"
                     value={searchQuery}
-                    onChange={e => setSearchQuery(e.target.value)}
+                    onChange={e => {
+                      setSearchQuery(e.target.value);
+                    }}
+                    onClick={() => { if (searchResults) setSearchResults(null); }}
                     placeholder={t('searchPlaceholder')}
                     className="w-full bg-slate-800 border border-slate-700 text-slate-200 text-xs sm:text-sm rounded-full pl-3 pr-8 py-1.5 focus:outline-none focus:ring-1 focus:ring-brand-500 shadow-inner"
                   />
@@ -806,7 +861,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
 
               {isSearchExpanded && searchResults && searchResults.length > 0 && (
                 <div className="hidden sm:block absolute right-0 top-full mt-3 bg-slate-800 border border-slate-600 p-3 rounded-xl shadow-2xl z-50 min-w-[280px] max-w-[320px] max-h-[400px] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-600">
-                  <SearchResultsUI />
+                  {renderSearchResults()}
                 </div>
               )}
             </div>
@@ -848,8 +903,8 @@ function MainContent({ user, setIsAuthModalOpen }) {
 
       {/* 2. MOBİL MERKEZ ARAMA (Modal) */}
       {isMobileSearchOpen && (
-        <div className="sm:hidden fixed inset-0 z-[100] bg-slate-950/90 backdrop-blur-sm flex items-center justify-center p-4" onClick={() => setIsMobileSearchOpen(false)}>
-          <div className="w-full max-w-sm bg-slate-900 border border-slate-700 rounded-3xl p-5 shadow-2xl flex flex-col max-h-[85vh]" onClick={e => e.stopPropagation()}>
+        <div className="sm:hidden fixed inset-0 z-[100] bg-slate-950/90 backdrop-blur-sm flex items-center justify-center p-4" onClick={() => { setIsMobileSearchOpen(false); setSearchResults(null); }}>
+          <div ref={mobileSearchRef} className="w-full max-w-sm bg-slate-900 border border-slate-700 rounded-3xl p-5 shadow-2xl flex flex-col max-h-[85vh]" onClick={e => e.stopPropagation()}>
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-brand-400 font-bold"><i className="fa-solid fa-magnifying-glass mr-2"></i> {t('searchTitle')}</h2>
               <button onClick={() => { setIsMobileSearchOpen(false); setSearchResults(null); }} className="text-slate-500 hover:text-rose-400"><i className="fa-solid fa-xmark text-xl"></i></button>
@@ -861,7 +916,8 @@ function MainContent({ user, setIsAuthModalOpen }) {
                   autoFocus 
                   type="text" 
                   value={searchQuery} 
-                  onChange={e => setSearchQuery(e.target.value)} 
+                  onChange={e => { setSearchQuery(e.target.value); }} 
+                  onClick={() => { if (searchResults) setSearchResults(null); }}
                   placeholder={t('searchMobilePlaceholder')}
                   className="w-full bg-slate-800 border border-slate-600 text-slate-200 text-sm rounded-xl pl-4 pr-10 py-3 focus:outline-none focus:border-brand-500 shadow-inner" 
                 />
@@ -881,7 +937,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
             </form>
             
             <div className="overflow-y-auto scrollbar-thin scrollbar-thumb-slate-600 flex-1 pr-1">
-              {searchResults && searchResults.length > 0 ? <SearchResultsUI /> : (searchQuery && searchResults !== null ? <p className="text-center text-slate-500 text-sm mt-4 font-medium">{t('noResults')}</p> : null)}
+              {searchResults && searchResults.length > 0 ? renderSearchResults() : (searchQuery && searchResults !== null ? <p className="text-center text-slate-500 text-sm mt-4 font-medium">{t('noResults')}</p> : null)}
             </div>
           </div>
         </div>
