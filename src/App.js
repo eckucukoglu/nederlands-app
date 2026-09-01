@@ -326,11 +326,10 @@ function MainContent({ user, setIsAuthModalOpen }) {
 
   const [searchToast, setSearchToast] = useState(null);
   
-  // Custom Translation Modal States
   const [customWordModal, setCustomWordModal] = useState({ isOpen: false, word: '', status: '' });
   const [customTr, setCustomTr] = useState('');
   const [customEn, setCustomEn] = useState('');
-  const [customExample, setCustomExample] = useState(''); // YENİ EKLENEN ÖRNEK CÜMLE STATE'İ
+  const [customExample, setCustomExample] = useState('');
   const [customError, setCustomError] = useState(false);
 
   const searchRef = useRef(null);
@@ -823,7 +822,6 @@ function MainContent({ user, setIsAuthModalOpen }) {
                 <input type="text" value={customEn} onChange={e => {setCustomEn(e.target.value); setCustomError(false);}} placeholder={lang === 'tr' ? "İngilizce anlamı..." : "English meaning..."} className="w-full bg-slate-800 border border-slate-600 text-slate-200 text-sm rounded-xl px-4 py-2.5 focus:outline-none focus:border-brand-400 focus:ring-1 focus:ring-brand-400 shadow-inner transition-colors" />
               </div>
 
-              {/* YENİ EKLENEN ÖRNEK CÜMLE ALANI */}
               <div>
                 <label className="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1">
                   {lang === 'tr' ? 'Örnek Cümle (İsteğe Bağlı)' : 'Example Sentence (Optional)'}

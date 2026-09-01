@@ -1,5 +1,5 @@
 // src/components/Flashcards.js
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { vocabulary } from '../data';
 import { globalDictionary } from '../data/globalDictionary';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -13,7 +13,10 @@ const translations = {
     emptyFilterEx: "Harika! Bu kategoride bilinmeyen kelime kalmadı.",
     unknownWords: "Bilinmeyen Kelimeler",
     allWords: "Tüm Kelimeler",
+    copied: "Kopyalandı",
+    copyToClipboard: "Panoya Kopyala",
     noTranslation: "Çeviri yok",
+    noWordsInList: "Bu listede gösterilecek kelime yok.",
     keyboard: "Klavye",
     flip: "Çevir",
     dontKnow: "Bilmiyorum",
@@ -47,7 +50,10 @@ const translations = {
     emptyFilterEx: "Great! There are no unknown words left in this category.",
     unknownWords: "Unknown Words",
     allWords: "All Words",
+    copied: "Copied",
+    copyToClipboard: "Copy to Clipboard",
     noTranslation: "No translation",
+    noWordsInList: "No words to show in this list.",
     keyboard: "Keyboard",
     flip: "Flip",
     dontKnow: "Don't Know",
@@ -82,26 +88,27 @@ export default function Flashcards({ initialChapter }) {
   const availableChapters = [...new Set(vocabulary.map(v => v.chapter))].filter(Boolean).sort((a, b) => a - b);
   
   const [targetChapter, setTargetChapter] = useState(initialChapter || availableChapters[availableChapters.length - 1] || 9);
-  const [deck, setDeck] = useState([]);
-  const [setBaseDeck] = useState([]); 
+  
+  // Vercel Bug Çözümü: Tek bir deck kaynağı kullanıyoruz.
+  const [deckData, setDeckData] = useState([]); 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
   const [isReversed, setIsReversed] = useState(false);
   
   const [mode, setMode] = useState('global'); 
-  
   const [sessionStats, setSessionStats] = useState({ known: 0, unknown: 0 });
   const [globalStats, setGlobalStats] = useState({});
 
   const [studyUnknownsOnly, setStudyUnknownsOnly] = useState(false);
+  const [listModal, setListModal] = useState({ isOpen: false, type: null }); 
+  const [copied, setCopied] = useState(false);
   
-  // TOAST BİLDİRİMİ İÇİN STATE
   const [toastMessage, setToastMessage] = useState(null);
   const [globalPool, setGlobalPool] = useState({});
 
-  const chapterVocab = vocabulary.filter(v => v.chapter === targetChapter);
+  const chapterVocab = useMemo(() => vocabulary.filter(v => v.chapter === targetChapter), [targetChapter]);
 
-  const getResolvedWord = (word) => {
+  const getResolvedWord = useCallback((word) => {
     if (!word) return { nl: "", tr: "", en: "", example: "" };
     if (word.id?.startsWith('empty')) return word;
 
@@ -115,7 +122,7 @@ export default function Flashcards({ initialChapter }) {
       en: word.en || match?.en || "",
       example: word.example || match?.example || ""
     };
-  };
+  }, []);
 
   const fetchGlobalPool = useCallback(() => {
     const pool = JSON.parse(localStorage.getItem('globalWordPool')) || {};
@@ -133,12 +140,12 @@ export default function Flashcards({ initialChapter }) {
     setGlobalStats(freshStats);
   }, [targetChapter, mode]);
 
+  // Vercel Bug Çözümü: Effect içerisinde ardışık useState zinciri engellendi.
   useEffect(() => {
     let newDeck = [];
-    const freshStats = JSON.parse(localStorage.getItem('flashcardStats')) || {};
-
     if (mode === 'global') {
-      newDeck = Object.values(globalPool);
+      const pool = JSON.parse(localStorage.getItem('globalWordPool')) || {};
+      newDeck = Object.values(pool);
       if (newDeck.length === 0) {
         newDeck = [{ id: 'empty_global', nl: "Geen woorden", en: "No words in My Word Pool", tr: "Benim Kelime Havuzumda kelime yok", example: t.emptyGlobalEx }];
       }
@@ -155,31 +162,39 @@ export default function Flashcards({ initialChapter }) {
       }
     }
 
-    setBaseDeck(newDeck);
-
-    if (studyUnknownsOnly) {
-      newDeck = newDeck.filter(word => {
-        if (word.id?.startsWith('empty')) return false;
-        const wordId = word.id || word.nl;
-        const stat = freshStats[wordId];
-        const isUnknownGlobally = stat?.lastStatus === 'unknown';
-        const isUnknownInPool = word.status === 'unknown';
-        return isUnknownGlobally || isUnknownInPool;
-      });
-
-      if (newDeck.length === 0) {
-        newDeck = [{ id: 'empty_filter', nl: t.emptyFilterTitle, en: t.emptyFilterEn, tr: t.emptyFilterEn, example: t.emptyFilterEx }];
-      }
-    }
-
-    setDeck(newDeck);
+    setDeckData(newDeck);
     setCurrentIndex(0);
     setIsFlipped(false);
     setSessionStats({ known: 0, unknown: 0 });
-  }, [targetChapter, mode, studyUnknownsOnly, lang, globalPool]); // eslint-disable-line
+  }, [targetChapter, mode, lang, globalPool, chapterVocab, t.emptyGlobalEx, t.emptyDialogEx]);
 
-  const currentWord = getResolvedWord(deck[currentIndex]);
-  const totalWords = deck.length;
+  useEffect(() => {
+    setCurrentIndex(0);
+    setIsFlipped(false);
+  }, [studyUnknownsOnly]);
+
+  // Filtrelemeyi Memo ile yaparak minifier (k is not a function) hatalarını engelliyoruz
+  const displayDeck = useMemo(() => {
+    if (!studyUnknownsOnly) return deckData;
+    
+    const freshStats = JSON.parse(localStorage.getItem('flashcardStats')) || {};
+    const filtered = deckData.filter(word => {
+      if (word.id?.startsWith('empty')) return false;
+      const wordId = word.id || word.nl;
+      const stat = freshStats[wordId];
+      const isUnknownGlobally = stat?.lastStatus === 'unknown';
+      const isUnknownInPool = word.status === 'unknown';
+      return isUnknownGlobally || isUnknownInPool;
+    });
+
+    if (filtered.length === 0) {
+      return [{ id: 'empty_filter', nl: t.emptyFilterTitle, en: t.emptyFilterEn, tr: t.emptyFilterEn, example: t.emptyFilterEx }];
+    }
+    return filtered;
+  }, [deckData, studyUnknownsOnly, t.emptyFilterTitle, t.emptyFilterEn, t.emptyFilterEx]);
+
+  const currentWord = getResolvedWord(displayDeck[currentIndex] || displayDeck[0]);
+  const totalWords = displayDeck.length;
 
   const updateStats = useCallback((isKnown) => {
     if (!currentWord || currentWord.id?.startsWith('empty')) return; 
@@ -227,8 +242,10 @@ export default function Flashcards({ initialChapter }) {
   }, [handleKeyDown]);
 
   const shuffleDeck = () => {
-    const shuffled = [...deck].sort(() => Math.random() - 0.5);
-    setDeck(shuffled);
+    setDeckData(prev => {
+      const shuffled = [...prev].sort(() => Math.random() - 0.5);
+      return shuffled;
+    });
     setCurrentIndex(0);
     setIsFlipped(false);
   };
@@ -240,7 +257,6 @@ export default function Flashcards({ initialChapter }) {
     window.speechSynthesis.speak(utterance);
   };
 
-  // KESİN İZOLE EDİLMİŞ SİLME FONKSİYONU
   const removeCurrentWord = (e) => {
     if (e) e.stopPropagation();
     if (!currentWord || currentWord.id?.startsWith('empty')) return;
@@ -248,13 +264,11 @@ export default function Flashcards({ initialChapter }) {
     const lowerNL = currentWord.nl.toLowerCase();
     let deletedFrom = ""; 
 
-    // YALNIZCA İLGİLİ HAVUZDAN SİL (TAM İZOLASYON)
     if (mode === 'global') {
       const pool = JSON.parse(localStorage.getItem('globalWordPool')) || {};
       delete pool[lowerNL];
       localStorage.setItem('globalWordPool', JSON.stringify(pool));
       deletedFrom = lang === 'tr' ? "Benim Kelime Havuzum'dan" : "My Word Pool";
-      // Not: Diyalog verilerine (dialogueWordStatuses / dialogueUnknowns) DOKUNULMUYOR!
     } else if (mode === 'dialogue') {
       const storageKey = `dialogueUnknowns_${targetChapter}`;
       let existingUnknowns = JSON.parse(localStorage.getItem(storageKey)) || [];
@@ -263,13 +277,11 @@ export default function Flashcards({ initialChapter }) {
       
       const statusKey = `dialogueWordStatuses_${targetChapter}`;
       const statuses = JSON.parse(localStorage.getItem(statusKey)) || {};
-      delete statuses[lowerNL]; // Statüyü silersek kelime diyalogda renksiz (beyaz) olur
+      delete statuses[lowerNL]; 
       localStorage.setItem(statusKey, JSON.stringify(statuses));
       deletedFrom = lang === 'tr' ? "Diyalog Kelimelerim listesinden" : "Dialogue Words";
-      // Not: Genel kelime havuzuna (globalWordPool) DOKUNULMUYOR!
     }
 
-    // TOAST BİLDİRİMİNİ GÖSTER
     const msg = lang === 'tr' 
       ? `"${currentWord.nl}" kelimesi ${deletedFrom} silindi.` 
       : `"${currentWord.nl}" has been deleted from ${deletedFrom}.`;
@@ -277,25 +289,43 @@ export default function Flashcards({ initialChapter }) {
     setToastMessage(msg);
     setTimeout(() => setToastMessage(null), 2800);
 
-    // Diğer bileşenleri tetikle (Diyalog renkleri anında güncellensin)
     window.dispatchEvent(new Event('wordStatusUpdated'));
 
-    // Mevcut kartları anlık olarak filtrele ve sıradaki karta geç
-    setDeck(prevDeck => {
-      const newDeck = prevDeck.filter(w => w.nl?.toLowerCase() !== lowerNL);
+    setDeckData(prev => {
+      const newDeck = prev.filter(w => w.nl?.toLowerCase() !== lowerNL);
       if (newDeck.length === 0) {
-         return [{ id: 'empty_deleted', nl: t.emptyFilterTitle, en: t.emptyFilterEn, tr: t.emptyFilterEn, example: t.emptyFilterEx }];
+         return [{ id: 'empty_deleted', nl: t.emptyFilterTitle, en: t.noWordsInList, tr: t.noWordsInList, example: t.emptyFilterEx }];
       }
       return newDeck;
     });
-    
-    setBaseDeck(prevBase => prevBase.filter(w => w.nl?.toLowerCase() !== lowerNL));
 
     setCurrentIndex(prev => {
-      if (prev > 0 && prev >= deck.length - 1) return prev - 1;
+      if (prev > 0 && prev >= displayDeck.length - 1) return prev - 1;
       return prev;
     });
     setIsFlipped(false);
+  };
+
+  const getListData = () => {
+    let rawList = deckData.filter(w => !w.id?.startsWith('empty')).map(getResolvedWord);
+    const freshStats = JSON.parse(localStorage.getItem('flashcardStats')) || {};
+
+    if (listModal.type === 'unknown') {
+      rawList = rawList.filter(word => {
+        const wordId = word.id || word.nl;
+        const stat = freshStats[wordId];
+        return stat?.lastStatus === 'unknown' || word.status === 'unknown';
+      });
+    }
+    return rawList;
+  };
+
+  const handleCopyClipboard = () => {
+    const dataToCopy = getListData();
+    const text = dataToCopy.map(w => `${w.nl} - ${lang === 'tr' ? (w.tr || w.en) : (w.en || w.tr)}`).join('\n');
+    navigator.clipboard.writeText(text);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
   };
 
   const wordGlobalStat = globalStats[currentWord?.id || currentWord?.nl] || { known: 0, unknown: 0, lastStatus: null };
@@ -336,7 +366,6 @@ export default function Flashcards({ initialChapter }) {
   return (
     <div className="space-y-6 max-w-2xl mx-auto mt-4 relative">
       
-      {/* SİLİNME BİLDİRİMİ (TOAST) - Uygulama geneliyle aynı görsel yapı */}
       {toastMessage && (
         <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[110] bg-slate-800 text-slate-100 px-4 py-2.5 rounded-2xl shadow-2xl border border-slate-600 text-xs sm:text-sm font-medium flex items-center gap-2.5 animate-bounce w-max max-w-[90%]">
           <i className="fa-solid fa-circle-check text-emerald-400"></i>
@@ -344,11 +373,54 @@ export default function Flashcards({ initialChapter }) {
         </div>
       )}
 
+      {listModal.isOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-slate-950/80 backdrop-blur-sm" onClick={() => setListModal({ isOpen: false, type: null })}>
+          <div className="bg-slate-900 w-full max-w-2xl max-h-[85vh] rounded-3xl shadow-2xl border border-slate-700 flex flex-col overflow-hidden" onClick={e => e.stopPropagation()}>
+            <div className="p-4 sm:p-5 flex justify-between items-center border-b border-slate-800 bg-slate-800/50">
+              <h3 className="text-lg font-bold text-slate-200">
+                {listModal.type === 'unknown' ? t.unknownWords : t.allWords}
+                <span className="ml-2 text-sm font-medium text-slate-500">({getListData().length})</span>
+              </h3>
+              <div className="flex items-center gap-3">
+                <button onClick={handleCopyClipboard} className="text-xs font-semibold bg-slate-800 hover:bg-slate-700 border border-slate-600 px-3 py-1.5 rounded-lg text-slate-300 transition-colors flex items-center gap-1.5">
+                  {copied ? <><i className="fa-solid fa-check text-emerald-400"></i> {t.copied}</> : <><i className="fa-regular fa-copy"></i> {t.copyToClipboard}</>}
+                </button>
+                <button onClick={() => setListModal({ isOpen: false, type: null })} className="text-slate-400 hover:text-rose-400 text-xl transition-colors ml-1">
+                  <i className="fa-solid fa-xmark"></i>
+                </button>
+              </div>
+            </div>
+            
+            <div className="overflow-y-auto p-4 sm:p-5 flex-1 scrollbar-thin scrollbar-thumb-slate-700">
+              {getListData().length > 0 ? (
+                <ul className="space-y-2">
+                  {getListData().map((w, i) => (
+                    <li key={i} className="flex flex-col sm:flex-row sm:items-center justify-between p-3 bg-slate-800/50 rounded-xl border border-slate-700/50">
+                      <span className="font-bold text-brand-400 text-sm sm:text-base">{w.nl}</span>
+                      <div className="flex flex-col sm:items-end text-xs sm:text-sm mt-1 sm:mt-0">
+                        <span className="font-bold text-slate-200">{lang === 'tr' ? (w.tr || w.en) : (w.en || w.tr)}</span>
+                        {w.tr && w.en && w.tr.toLowerCase() !== w.en.toLowerCase() && (
+                          <span className="text-slate-400 text-xs">{lang === 'tr' ? w.en : w.tr}</span>
+                        )}
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <div className="text-center text-slate-500 py-12 flex flex-col items-center">
+                   <i className="fa-solid fa-ghost text-4xl mb-3 opacity-50"></i>
+                   <p className="font-medium">{t.noWordsInList}</p>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+
       <div className="text-center space-y-2 mb-6">
         <h2 className="text-2xl font-extrabold text-slate-100">Vocabulaire Flashcards</h2>
       </div>
 
-      {/* 1. ÜST 3 SEÇENEK */}
       <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 mb-6">
         <button 
           onClick={() => { setMode('global'); setStudyUnknownsOnly(false); }}
@@ -376,11 +448,8 @@ export default function Flashcards({ initialChapter }) {
         </button>
       </div>
 
-      {/* 2. OPTION 3 İÇİN (CHAPTER KELİMELERİ) EKSTRA MENÜ VE TOGGLE */}
       {(mode === 'all' || mode === 'dialogue') && (
         <div className="flex flex-col sm:flex-row gap-4 bg-slate-800/80 p-4 rounded-2xl border border-slate-700 items-center justify-between shadow-inner animate-fadeIn mb-6">
-           
-           {/* SOLA-SAĞA KAYAN TOGGLE */}
            <div className="flex bg-slate-900 p-1.5 rounded-xl relative w-full sm:w-80 items-center border border-slate-700">
               <div 
                 className={`absolute top-1.5 bottom-1.5 w-[calc(50%-4px)] bg-brand-600 rounded-lg transition-transform duration-300 ease-in-out shadow-sm ${
@@ -400,8 +469,6 @@ export default function Flashcards({ initialChapter }) {
                  {t.dialogueOption}
               </button>
            </div>
-
-           {/* CHAPTER SEÇİMİ */}
            <div className="w-full sm:w-auto flex items-center gap-2">
              <i className="fa-solid fa-filter text-slate-400 hidden sm:block"></i>
              <select 
@@ -417,15 +484,13 @@ export default function Flashcards({ initialChapter }) {
         </div>
       )}
 
-      {/* 3. ANA KONTROLLER (Karıştır, Çevir, Sil vs.) */}
-      <div className="flex flex-wrap justify-center gap-3 mb-6">
+      <div className="flex flex-wrap justify-center gap-3 mb-4">
         <button 
           onClick={shuffleDeck}
           className="bg-slate-800 border border-slate-600 text-slate-300 hover:bg-slate-700 hover:text-brand-400 rounded-xl px-4 py-2.5 text-sm font-semibold shadow-sm transition-colors flex items-center gap-2"
         >
           <i className="fa-solid fa-shuffle"></i> {t.shuffle}
         </button>
-
         <button 
           onClick={() => setIsReversed(!isReversed)}
           className={`border rounded-xl px-4 py-2.5 text-sm font-semibold shadow-sm transition-colors flex items-center gap-2 ${
@@ -436,8 +501,6 @@ export default function Flashcards({ initialChapter }) {
         >
           <i className="fa-solid fa-right-left"></i> {t.flipCards}
         </button>
-
-        {/* SİLME BUTONU (GLOBAL & DİALOGUE İÇİN) */}
         {(mode === 'global' || mode === 'dialogue') && (
           <button 
             onClick={removeCurrentWord}
@@ -447,8 +510,6 @@ export default function Flashcards({ initialChapter }) {
             <i className="fa-solid fa-trash-can"></i> {t.deleteWord}
           </button>
         )}
-
-        {/* YALNIZCA BİLİNMEYENLERİ ÇALIŞ BUTONU (SADECE GLOBAL İÇİN) */}
         {mode === 'global' && (
           <button 
             onClick={() => setStudyUnknownsOnly(!studyUnknownsOnly)}
@@ -494,7 +555,6 @@ export default function Flashcards({ initialChapter }) {
         <div onClick={() => setIsFlipped(!isFlipped)} className={`flashcard w-full h-72 cursor-pointer ${isFlipped ? "flipped" : ""}`}>
           <div className="flashcard-inner relative w-full h-full rounded-3xl shadow-2xl border border-slate-700">
             
-            {/* FRONT (ÖN YÜZ) */}
             <div className="flashcard-front absolute inset-0 rounded-3xl p-6 flex flex-col justify-between items-center text-center bg-gradient-to-b from-slate-800 to-slate-900">
               <div className="flex justify-between w-full px-2">
                 <span className="text-xs font-bold text-brand-400 bg-brand-900/30 border border-brand-700/50 px-3 py-1 rounded-full uppercase">
@@ -533,7 +593,6 @@ export default function Flashcards({ initialChapter }) {
               )}
             </div>
 
-            {/* BACK (ARKA YÜZ) */}
             <div className="flashcard-back absolute inset-0 rounded-3xl p-6 flex flex-col justify-between items-center text-center bg-gradient-to-br from-rose-600 to-rose-800 text-white">
               <span className="text-xs font-bold bg-white/20 px-3 py-1 rounded-full uppercase shadow-sm">
                 {isReversed ? 'Nederlands' : (lang === 'tr' ? 'Türkçe / İngilizce' : 'English / Turkish')}
@@ -600,7 +659,6 @@ export default function Flashcards({ initialChapter }) {
            </button>
         </div>
 
-        {/* KLAVYE KISAYOLLARI (BİLİYORUM/BİLMİYORUM KUTUSUNUN ALTINDA) */}
         <div className="text-center mt-6">
           <div className="text-slate-500 text-[11px] sm:text-xs font-medium bg-slate-800/50 py-2 px-4 rounded-lg inline-block border border-slate-700/50">
              <i className="fa-regular fa-keyboard mr-1.5"></i> {t.keyboard}: <strong>⬆️/⬇️</strong> {t.flip} &nbsp;•&nbsp; <strong>⬅️</strong> {t.dontKnow} &nbsp;•&nbsp; <strong>➡️</strong> {t.know}
