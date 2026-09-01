@@ -21,10 +21,13 @@ const translations = {
     flip: "Çevir",
     dontKnow: "Bilmiyorum",
     know: "Biliyorum",
-    allWordsOption: "Alle Woorden",
-    dialogueOption: "Dialoog (Onbekend)",
+    allWordsOption: "Tüm Kelimeler",
+    dialogueOption: "Diyalog Kelimelerim",
     globalPoolOption: "👤 Benim Kelime Havuzum",
     bookPoolOption: "📚 Kitabın Kelime Havuzu",
+    myPool: "Benim Kelime Havuzum",
+    bookPool: "Kitabın Kelime Havuzu",
+    chapterWords: "Chapter Kelimeleri",
     shuffle: "Karıştır",
     flipCards: "Kartları Çevir",
     studyUnknowns: "Bilinmeyenleri Çalış",
@@ -57,9 +60,12 @@ const translations = {
     dontKnow: "Don't Know",
     know: "Know",
     allWordsOption: "All Words",
-    dialogueOption: "Dialogue (Unknown)",
+    dialogueOption: "Dialogue Words",
     globalPoolOption: "👤 My Word Pool",
     bookPoolOption: "📚 Book's Word Pool",
+    myPool: "My Word Pool",
+    bookPool: "Book's Word Pool",
+    chapterWords: "Chapter Words",
     shuffle: "Shuffle",
     flipCards: "Flip Cards",
     studyUnknowns: "Study Unknowns Only",
@@ -246,7 +252,7 @@ export default function Flashcards({ initialChapter }) {
 
   const handleCopyClipboard = () => {
     const dataToCopy = getListData();
-    const text = dataToCopy.map(w => `${w.nl} - ${w.tr || ''} (${w.en || ''})`).join('\n');
+    const text = dataToCopy.map(w => `${w.nl} - ${lang === 'tr' ? (w.tr || w.en) : (w.en || w.tr)}`).join('\n');
     navigator.clipboard.writeText(text);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
@@ -339,37 +345,81 @@ export default function Flashcards({ initialChapter }) {
         </div>
       )}
 
-      <div className="text-center space-y-2">
+      <div className="text-center space-y-2 mb-6">
         <h2 className="text-2xl font-extrabold text-slate-100">Vocabulaire Flashcards</h2>
-        <div className="text-sm font-medium text-slate-400 bg-slate-800 inline-block px-4 py-2 rounded-xl shadow-sm border border-slate-700">
-          {t.keyboard}: <strong>⬆️/⬇️</strong> {t.flip} &nbsp;•&nbsp; <strong>⬅️</strong> {t.dontKnow} &nbsp;•&nbsp; <strong>➡️</strong> {t.know}
-        </div>
       </div>
 
-      <div className="flex flex-wrap justify-center gap-3">
-        {mode !== 'global' && mode !== 'book_pool' && (
-          <select 
-            value={targetChapter} 
-            onChange={(e) => setTargetChapter(Number(e.target.value))} 
-            className="bg-slate-800 border border-slate-600 text-slate-200 rounded-xl px-4 py-2.5 text-sm font-semibold shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-500 cursor-pointer"
-          >
-            {availableChapters.map(ch => (
-              <option key={ch} value={ch}>Hoofdstuk {ch}</option>
-            ))}
-          </select>
-        )}
-        
-        <select 
-          value={mode} 
-          onChange={(e) => setMode(e.target.value)} 
-          className={`bg-slate-800 border text-sm font-semibold shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-500 cursor-pointer rounded-xl px-4 py-2.5 ${(mode === 'global' || mode === 'book_pool') ? 'border-amber-500 text-amber-400' : 'border-slate-600 text-slate-200'}`}
+{/* 1. ÜST 3 SEÇENEK (BİRİ SEÇİLİNCE DİĞERLERİ KAPANIR, RENK DEĞİŞTİRİR) */}
+      <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 mb-6">
+        <button 
+          onClick={() => { setMode('global'); setStudyUnknownsOnly(false); }}
+          className={`flex-1 py-3 px-4 rounded-xl font-bold transition-all shadow-sm flex items-center justify-center gap-2 border ${
+            mode === 'global' ? 'bg-emerald-600 text-white border-emerald-500 shadow-md' : 'bg-slate-800 text-slate-300 border-slate-700 hover:bg-slate-700'
+          }`}
         >
-          <option value="all">{t.allWordsOption} ({chapterVocab.length})</option>
-          <option value="dialogue">{t.dialogueOption}</option>
-          <option value="global">{t.globalPoolOption}</option>
-          <option value="book_pool">{t.bookPoolOption} ({globalDictionary.length})</option>
-        </select>
+          <i className="fa-solid fa-box-open"></i> {t.myPool}
+        </button>
+        <button 
+          onClick={() => { setMode('book_pool'); setStudyUnknownsOnly(false); }}
+          className={`flex-1 py-3 px-4 rounded-xl font-bold transition-all shadow-sm flex items-center justify-center gap-2 border ${
+            mode === 'book_pool' ? 'bg-indigo-600 text-white border-indigo-500 shadow-md' : 'bg-slate-800 text-slate-300 border-slate-700 hover:bg-slate-700'
+          }`}
+        >
+          <i className="fa-solid fa-book"></i> {t.bookPool}
+        </button>
+        <button 
+          onClick={() => { setMode('all'); setStudyUnknownsOnly(false); }}
+          className={`flex-1 py-3 px-4 rounded-xl font-bold transition-all shadow-sm flex items-center justify-center gap-2 border ${
+            (mode === 'all' || mode === 'dialogue') ? 'bg-sky-600 text-white border-sky-500 shadow-md' : 'bg-slate-800 text-slate-300 border-slate-700 hover:bg-slate-700'
+          }`}
+        >
+          <i className="fa-solid fa-layer-group"></i> {t.chapterWords}
+        </button>
+      </div>
 
+      {/* 2. OPTION 3 İÇİN (CHAPTER KELİMELERİ) EKSTRA MENÜ VE TOGGLE */}
+      {(mode === 'all' || mode === 'dialogue') && (
+        <div className="flex flex-col sm:flex-row gap-4 bg-slate-800/80 p-4 rounded-2xl border border-slate-700 items-center justify-between shadow-inner animate-fadeIn mb-6">
+           
+           {/* SOLA-SAĞA KAYAN TOGGLE */}
+           <div className="flex bg-slate-900 p-1.5 rounded-xl relative w-full sm:w-80 items-center border border-slate-700">
+              <div 
+                className={`absolute top-1.5 bottom-1.5 w-[calc(50%-4px)] bg-brand-600 rounded-lg transition-transform duration-300 ease-in-out shadow-sm ${
+                  mode === 'dialogue' ? 'translate-x-[calc(100%+2px)]' : 'translate-x-1'
+                }`}
+              ></div>
+              <button 
+                 className={`flex-1 z-10 text-[11px] sm:text-xs font-bold py-2 text-center transition-colors ${mode === 'all' ? 'text-white' : 'text-slate-400 hover:text-slate-200'}`} 
+                 onClick={() => { setMode('all'); setStudyUnknownsOnly(false); }}
+              >
+                 {t.allWordsOption}
+              </button>
+              <button 
+                 className={`flex-1 z-10 text-[11px] sm:text-xs font-bold py-2 text-center transition-colors ${mode === 'dialogue' ? 'text-white' : 'text-slate-400 hover:text-slate-200'}`} 
+                 onClick={() => { setMode('dialogue'); setStudyUnknownsOnly(false); }}
+              >
+                 {t.dialogueOption}
+              </button>
+           </div>
+
+           {/* CHAPTER SEÇİMİ */}
+           <div className="w-full sm:w-auto flex items-center gap-2">
+             <i className="fa-solid fa-filter text-slate-400 hidden sm:block"></i>
+             <select 
+                value={targetChapter} 
+                onChange={(e) => setTargetChapter(Number(e.target.value))}
+                className="w-full sm:w-auto bg-slate-900 text-slate-200 border border-slate-600 rounded-xl px-4 py-2.5 text-sm font-semibold focus:outline-none focus:border-brand-400 shadow-sm cursor-pointer"
+             >
+                {availableChapters.map(ch => (
+                   <option key={ch} value={ch}>Hoofdstuk {ch}</option>
+                ))}
+             </select>
+           </div>
+        </div>
+      )}
+
+      {/* 3. ANA KONTROLLER (Karıştır, Çevir, vs.) */}
+      <div className="flex flex-wrap justify-center gap-3 mb-4">
         <button 
           onClick={shuffleDeck}
           className="bg-slate-800 border border-slate-600 text-slate-300 hover:bg-slate-700 hover:text-brand-400 rounded-xl px-4 py-2.5 text-sm font-semibold shadow-sm transition-colors flex items-center gap-2"
@@ -389,7 +439,7 @@ export default function Flashcards({ initialChapter }) {
         </button>
       </div>
 
-      <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-4 bg-slate-800/60 p-3 rounded-xl border border-slate-700/50">
+      <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-4 bg-slate-800/60 p-3 rounded-xl border border-slate-700/50 mb-6">
         <label className="flex items-center gap-2 cursor-pointer text-xs sm:text-sm font-semibold text-slate-300 hover:text-brand-400 transition-colors select-none">
           <input 
             type="checkbox" 
@@ -549,6 +599,14 @@ export default function Flashcards({ initialChapter }) {
              <i className="fa-solid fa-check text-lg"></i> {t.know}
            </button>
         </div>
+
+        {/* KLAVYE KISAYOLLARI (BİLİYORUM/BİLMİYORUM KUTUSUNUN ALTINDA) */}
+        <div className="text-center mt-6">
+          <div className="text-slate-500 text-[11px] sm:text-xs font-medium bg-slate-800/50 py-2 px-4 rounded-lg inline-block border border-slate-700/50">
+             <i className="fa-regular fa-keyboard mr-1.5"></i> {t.keyboard}: <strong>⬆️/⬇️</strong> {t.flip} &nbsp;•&nbsp; <strong>⬅️</strong> {t.dontKnow} &nbsp;•&nbsp; <strong>➡️</strong> {t.know}
+          </div>
+        </div>
+
       </div>
     </div>
   );

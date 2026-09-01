@@ -834,8 +834,8 @@ const grammarData = [
            
            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
              {/* Persons Table */}
-             <div className="bg-slate-900/50 rounded-xl border border-slate-700 overflow-hidden shadow-sm">
-                <table className="w-full text-sm text-left text-slate-300">
+             <div className="bg-slate-900/50 rounded-xl border border-slate-700 overflow-x-auto shadow-sm">
+                <table className="w-full text-sm text-left text-slate-300 min-w-[250px]">
                    <thead className="text-xs uppercase bg-slate-800 text-slate-400">
                       <tr>
                          <th className="px-4 py-2 text-white">Subject (Personen)</th>
@@ -857,8 +857,8 @@ const grammarData = [
              </div>
              
              {/* Non-Persons Table */}
-             <div className="bg-slate-900/50 rounded-xl border border-slate-700 overflow-hidden shadow-sm h-fit">
-                <table className="w-full text-sm text-left text-slate-300">
+             <div className="bg-slate-900/50 rounded-xl border border-slate-700 overflow-x-auto shadow-sm h-fit">
+                <table className="w-full text-sm text-left text-slate-300 min-w-[350px]">
                    <thead className="text-xs uppercase bg-slate-800 text-slate-400">
                       <tr>
                          <th className="px-4 py-2"></th>

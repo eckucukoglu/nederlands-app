@@ -7,19 +7,7 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
   const { lang } = useLanguage();
   const isTr = lang === 'tr';
 
-  // Soruları filtregle (tags boşsa tüm soruları al) ve Fisher-Yates algoritması ile KARIŞTIR
-  const filteredQuestions = useMemo(() => {
-    let filtered = tags.length === 0 
-        ? [...quizQuestions] 
-        : quizQuestions.filter(q => q.tags.some(tag => tags.includes(tag)));
-    
-    for (let i = filtered.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [filtered[i], filtered[j]] = [filtered[j], filtered[i]];
-    }
-    return filtered;
-  }, [tags]);
-
+  const [activeTags, setActiveTags] = useState(tags);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [userAnswer, setUserAnswer] = useState('');
   const [isAnswered, setIsAnswered] = useState(false);
@@ -31,8 +19,30 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
     setQuizHistory(history);
   }, []);
 
+  // Aktif etiketler (activeTags) değiştiğinde soruları filtrele ve karıştır
+  const filteredQuestions = useMemo(() => {
+    let filtered = activeTags.length === 0 
+        ? [...quizQuestions] 
+        : quizQuestions.filter(q => q.tags && q.tags.some(tag => activeTags.includes(tag)));
+    
+    for (let i = filtered.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [filtered[i], filtered[j]] = [filtered[j], filtered[i]];
+    }
+    return filtered;
+  }, [activeTags]);
+
   const currentQ = filteredQuestions[currentIndex];
   const qHistory = currentQ ? quizHistory[currentQ.id] || { correct: 0, incorrect: 0 } : null;
+
+  // Herhangi bir taja tıklandığında tetiklenecek fonksiyon
+  const handleTagClick = (clickedTag) => {
+    setActiveTags([clickedTag]);
+    setCurrentIndex(0);
+    setUserAnswer('');
+    setIsAnswered(false);
+    setIsCorrect(false);
+  };
 
   const handleCheck = () => {
     if (!userAnswer.trim()) return;
@@ -52,6 +62,30 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
     
     setQuizHistory(newHistory);
     localStorage.setItem('quizHistory', JSON.stringify(newHistory));
+  };
+
+  const handleDontKnow = () => {
+    setIsCorrect(false);
+    setIsAnswered(true);
+    setUserAnswer(isTr ? 'Bilinmiyor / Pas' : 'Unknown');
+
+    const newHistory = { ...quizHistory };
+    if (!newHistory[currentQ.id]) newHistory[currentQ.id] = { correct: 0, incorrect: 0 };
+    newHistory[currentQ.id].incorrect += 1;
+    
+    setQuizHistory(newHistory);
+    localStorage.setItem('quizHistory', JSON.stringify(newHistory));
+  };
+
+  const handleSkip = () => {
+    if (currentIndex < filteredQuestions.length - 1) {
+      setCurrentIndex(prev => prev + 1);
+      setUserAnswer('');
+      setIsAnswered(false);
+      setIsCorrect(false);
+    } else {
+      onClose();
+    }
   };
 
   const handleNext = () => {
@@ -139,13 +173,18 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
         <div className="p-6 sm:p-8 flex-1 flex flex-col justify-center">
            <div className="text-center mb-8">
               
-              {/* SORU ETİKETLERİ (TAGS) GÖSTERİMİ */}
+              {/* Tıklanabilir Etiketler (Tags) */}
               {currentQ.tags && currentQ.tags.length > 0 && (
                 <div className="flex flex-wrap justify-center gap-1.5 mb-3">
                   {currentQ.tags.map(tag => (
-                    <span key={tag} className="text-[10px] font-semibold bg-indigo-950/60 text-indigo-300 px-2.5 py-0.5 rounded-md border border-indigo-800/50 shadow-sm">
+                    <button
+                      key={tag}
+                      onClick={() => handleTagClick(tag)}
+                      className="text-[10px] font-semibold bg-indigo-950/60 text-indigo-300 px-2.5 py-0.5 rounded-md border border-indigo-800/50 shadow-sm hover:bg-indigo-900 hover:text-white transition-all cursor-pointer"
+                      title={isTr ? `Bu etiketle ilgili sorulara geç: #${tag}` : `Filter by tag: #${tag}`}
+                    >
                       #{tag}
-                    </span>
+                    </button>
                   ))}
                 </div>
               )}
@@ -202,15 +241,35 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
              </div>
            )}
 
-           <div className="mt-8 flex justify-center">
+           <div className="mt-8 flex flex-col sm:flex-row justify-center items-center gap-3">
              {!isAnswered ? (
-               <button 
-                 onClick={handleCheck}
-                 disabled={!userAnswer}
-                 className="bg-brand-600 text-white px-10 py-3.5 rounded-xl font-bold border border-brand-500 shadow-[0_0_15px_rgba(56,189,248,0.3)] disabled:opacity-50 disabled:shadow-none hover:bg-brand-500 transition-all"
-               >
-                 <i className="fa-solid fa-check mr-2"></i> {isTr ? 'Kontrol Et' : 'Check'}
-               </button>
+               <>
+                 <button 
+                   onClick={handleCheck}
+                   disabled={!userAnswer}
+                   className="w-full sm:w-auto bg-brand-600 text-white px-8 py-3.5 rounded-xl font-bold border border-brand-500 shadow-[0_0_15px_rgba(56,189,248,0.3)] disabled:opacity-50 disabled:shadow-none hover:bg-brand-500 transition-all"
+                 >
+                   <i className="fa-solid fa-check mr-2"></i> {isTr ? 'Kontrol Et' : 'Check'}
+                 </button>
+
+                 <div className="flex gap-2 w-full sm:w-auto">
+                   <button 
+                     onClick={handleDontKnow}
+                     className="flex-1 sm:flex-initial bg-slate-800 hover:bg-rose-950/50 text-slate-300 hover:text-rose-300 px-5 py-3.5 rounded-xl font-bold border border-slate-700 hover:border-rose-800/50 transition-all text-xs sm:text-sm"
+                     title={isTr ? 'Yanlış kabul edilir' : 'Counts as incorrect'}
+                   >
+                     <i className="fa-solid fa-circle-question mr-1.5 text-rose-400"></i> {isTr ? 'Bilmiyorum' : "Don't know"}
+                   </button>
+
+                   <button 
+                     onClick={handleSkip}
+                     className="flex-1 sm:flex-initial bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white px-5 py-3.5 rounded-xl font-bold border border-slate-700 hover:border-slate-600 transition-all text-xs sm:text-sm"
+                     title={isTr ? 'Skoru etkilemeden sonraki soruya geçer' : 'Skip without affecting score'}
+                   >
+                     <i className="fa-solid fa-forward mr-1.5 text-amber-400"></i> {isTr ? 'Soruyu Geç' : 'Skip'}
+                   </button>
+                 </div>
+               </>
              ) : (
                <button 
                  onClick={handleNext}

@@ -293,8 +293,9 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
             </button>
           </div>
 
+          {/* Kutunun her zaman yıldızın hemen altına ve içeriye doğru (sola) açılması için güncellendi */}
           {showFavInput && (
-            <div className="absolute right-0 top-full mt-2 bg-slate-800 p-2 rounded-xl shadow-2xl border border-slate-600 z-50 flex items-center gap-2" onClick={e => e.stopPropagation()}>
+            <div className="absolute right-0 top-full mt-3 bg-slate-800 p-2 rounded-xl shadow-2xl border border-slate-600 z-50 flex items-center gap-2" onClick={e => e.stopPropagation()}>
               <input
                 autoFocus
                 maxLength={100}
