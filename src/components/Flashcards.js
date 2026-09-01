@@ -83,7 +83,7 @@ export default function Flashcards({ initialChapter }) {
   
   const [targetChapter, setTargetChapter] = useState(initialChapter || availableChapters[availableChapters.length - 1] || 9);
   const [deck, setDeck] = useState([]);
-  const [baseDeck, setBaseDeck] = useState([]); 
+  const [setBaseDeck] = useState([]); 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
   const [isReversed, setIsReversed] = useState(false);
