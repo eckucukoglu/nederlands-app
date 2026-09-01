@@ -96,7 +96,7 @@ export default function Flashcards({ initialChapter }) {
   const [isFlipped, setIsFlipped] = useState(false);
   const [isReversed, setIsReversed] = useState(false);
   
-  const [mode, setMode] = useState('all'); 
+  const [mode, setMode] = useState('global');
   
   const [sessionStats, setSessionStats] = useState({ known: 0, unknown: 0 });
   const [globalStats, setGlobalStats] = useState({});
