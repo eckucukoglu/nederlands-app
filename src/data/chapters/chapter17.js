@@ -62,7 +62,7 @@ export const chapter17Vocab = [
 ];
 
 export const chapter17Dialogues = {
-  "17.2": [
+  "17.1": [
     { speaker: "Sam", text: "Goedemorgen schat, heb je lekker geslapen?", translation: { tr: "Günaydın sevgilim, iyi uyudun mu?", en: "Good morning darling, did you sleep well?" } },
     { speaker: "Tina", text: "Ja heel goed, en ik heb zo heerlijk gedroomd. We waren op vakantie op een tropisch eiland met prachtige vogels. Het was geweldig. En jij?", translation: { tr: "Evet çok iyi, ve rüyamda harika şeyler gördüm. Muhteşem kuşların olduğu tropikal bir adada tatildeydik. Harikaydı. Ya sen?", en: "Yes very well, and I had such a wonderful dream. We were on holiday on a tropical island with beautiful birds. It was amazing. And you?" } },
     { speaker: "Sam", text: "Ik kon helemaal niet slapen. Ik heb de halve nacht wakker gelegen.", translation: { tr: "Hiç uyuyamadım. Gecenin yarısı uyanık yattım.", en: "I couldn't sleep at all. I lay awake for half the night." } },

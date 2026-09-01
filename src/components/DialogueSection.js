@@ -1,6 +1,6 @@
 // src/components/DialogueSection.js
 import React, { useState, useEffect } from 'react';
-import { vocabulary, dialogues } from '../data';
+import { vocabulary, dialogues, bookSections } from '../data';
 import { globalDictionary } from '../data/globalDictionary'; 
 import { useLanguage } from '../contexts/LanguageContext'; 
 
@@ -34,6 +34,7 @@ const speakerColorPalette = [
 export default function DialogueSection({ sectionId, favorites, toggleFavorite, completed, toggleCompleted }) {
   const { lang, t } = useLanguage(); 
   const chapterId = sectionId.split('.')[0];
+  const sectionData = bookSections.find(s => s.id === sectionId);
   
   const [selectedWords, setSelectedWords] = useState(null);
   const [popupPos, setPopupPos] = useState({ x: 0, y: 0 });
@@ -46,6 +47,11 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
     const saved = localStorage.getItem(`dialogueWordStatuses_${chapterId}`);
     return saved ? JSON.parse(saved) : {};
   });
+
+  // Egzersizler için State'ler
+  const [answers, setAnswers] = useState({});
+  const [showResults, setShowResults] = useState(false);
+  const [qStats, setQStats] = useState(JSON.parse(localStorage.getItem('questionStats')) || {});
 
   const activeDialogue = dialogues[sectionId] || [];
   const isFav = favorites && favorites[sectionId];
@@ -68,7 +74,14 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
     return () => window.removeEventListener('wordStatusUpdated', fetchStatuses);
   }, [chapterId]);
 
-  const speakDutch = (text) => {
+  // Section değiştiğinde egzersiz cevaplarını sıfırla
+  useEffect(() => {
+    setAnswers({});         
+    setShowResults(false);  
+  }, [sectionId]);
+
+  const speakDutch = (text, e) => {
+    if (e) e.stopPropagation();
     window.speechSynthesis.cancel();
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = 'nl-NL';
@@ -242,9 +255,35 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
 
   const saveFavorite = (e) => {
     e.stopPropagation();
-    toggleFavorite(sectionId, favNote.trim() || "Önemli Bölüm");
+    toggleFavorite(sectionId, favNote.trim() || (lang === 'tr' ? "Önemli Bölüm" : "Important Section"));
     setShowFavInput(false);
     setFavNote("");
+  };
+
+  // Egzersiz Fonksiyonları
+  const handleAnswerChange = (qId, value) => {
+    setAnswers({ ...answers, [qId]: value });
+  };
+
+  const handleVerify = () => {
+    setShowResults(true);
+    const newStats = { ...qStats };
+    const groups = sectionData?.exerciseGroups || [];
+    groups.forEach(group => {
+      group.questions.forEach(q => {
+        const userAns = answers[q.id]?.toLowerCase().trim() || "";
+        const isCorrect = userAns === q.correctAnswer.toLowerCase();
+        if (userAns !== "") {
+          const current = newStats[q.id] || { correct: 0, incorrect: 0 };
+          newStats[q.id] = {
+            correct: current.correct + (isCorrect ? 1 : 0),
+            incorrect: current.incorrect + (!isCorrect ? 1 : 0)
+          };
+        }
+      });
+    });
+    setQStats(newStats);
+    localStorage.setItem('questionStats', JSON.stringify(newStats));
   };
 
   const rawStatus = wordStatuses[clickedWordRaw];
@@ -259,129 +298,219 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
   }
 
   return (
-    <div className="bg-slate-900 rounded-2xl p-6 shadow-lg border border-slate-700 relative" onClick={() => { setSelectedWords(null); setShowFavInput(false); }}>
+    <div className="space-y-6" onClick={() => { setSelectedWords(null); setShowFavInput(false); }}>
       
-      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-4 gap-2">
-        <div className="flex items-center space-x-2">
-          <i className="fa-solid fa-comments text-brand-400 text-lg"></i>
-          <div>
-            <h3 className="text-lg font-bold text-slate-100 leading-tight">Dialoog Lezen en Luisteren</h3>
-            {isFav && (
-              <span className="text-xs text-amber-400 font-medium flex items-center gap-1 mt-0.5">
-                <i className="fa-solid fa-star text-[10px]"></i> {favorites[sectionId]}
-              </span>
-            )}
+      {/* 1. DİYALOG ALANI */}
+      <div className="bg-slate-900 rounded-2xl p-6 shadow-lg border border-slate-700 relative">
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-4 gap-2">
+          <div className="flex items-center space-x-2">
+            <i className="fa-solid fa-comments text-brand-400 text-lg"></i>
+            <div>
+              <h3 className="text-lg font-bold text-slate-100 leading-tight">Dialoog Lezen en Luisteren</h3>
+              {isFav && (
+                <span className="text-xs text-amber-400 font-medium flex items-center gap-1 mt-0.5">
+                  <i className="fa-solid fa-star text-[10px]"></i> {favorites[sectionId]}
+                </span>
+              )}
+            </div>
           </div>
-        </div>
 
-        <div className="relative flex items-center space-x-3 self-end sm:self-center">
-          <button onClick={(e) => { e.stopPropagation(); toggleCompleted(sectionId); }} className="text-xl transition-transform hover:scale-110 focus:outline-none">
-            {isComp ? (
-              <i className="fa-solid fa-circle-check text-emerald-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.6)]"></i>
-            ) : (
-              <i className="fa-regular fa-circle-check text-slate-500 hover:text-emerald-400 transition-colors"></i>
-            )}
-          </button>
-
-          <div className="relative flex items-center">
-            <button onClick={handleStarClick} className="text-xl transition-transform hover:scale-110 focus:outline-none">
-              {isFav ? (
-                <i className="fa-solid fa-star text-amber-400 drop-shadow-[0_0_8px_rgba(251,191,36,0.6)]"></i>
+          <div className="relative flex items-center space-x-3 self-end sm:self-center">
+            <button onClick={(e) => { e.stopPropagation(); toggleCompleted(sectionId); }} className="text-xl transition-transform hover:scale-110 focus:outline-none">
+              {isComp ? (
+                <i className="fa-solid fa-circle-check text-emerald-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.6)]"></i>
               ) : (
-                <i className="fa-regular fa-star text-slate-500 hover:text-amber-400 transition-colors"></i>
+                <i className="fa-regular fa-circle-check text-slate-500 hover:text-emerald-400 transition-colors"></i>
               )}
             </button>
-          </div>
 
-          {/* Kutunun her zaman yıldızın hemen altına ve içeriye doğru (sola) açılması için güncellendi */}
-          {showFavInput && (
-            <div className="absolute right-0 top-full mt-3 bg-slate-800 p-2 rounded-xl shadow-2xl border border-slate-600 z-50 flex items-center gap-2" onClick={e => e.stopPropagation()}>
-              <input
-                autoFocus
-                maxLength={100}
-                value={favNote}
-                onChange={e => setFavNote(e.target.value)}
-                onKeyDown={e => { if (e.key === 'Enter') saveFavorite(e); }}
-                placeholder="Notun (max 100 kar.)..."
-                className="bg-slate-900 border border-slate-600 text-slate-200 text-xs rounded-lg px-2.5 py-1.5 w-36 focus:outline-none focus:border-amber-400"
-              />
-              <button onClick={saveFavorite} className="bg-emerald-600 hover:bg-emerald-500 text-white p-1.5 rounded-lg text-xs transition-colors">
-                <i className="fa-solid fa-check"></i>
+            <div className="relative flex items-center">
+              <button onClick={handleStarClick} className="text-xl transition-transform hover:scale-110 focus:outline-none">
+                {isFav ? (
+                  <i className="fa-solid fa-star text-amber-400 drop-shadow-[0_0_8px_rgba(251,191,36,0.6)]"></i>
+                ) : (
+                  <i className="fa-regular fa-star text-slate-500 hover:text-amber-400 transition-colors"></i>
+                )}
               </button>
             </div>
-          )}
+
+            {showFavInput && (
+              <div className="absolute right-0 top-full mt-3 bg-slate-800 p-2 rounded-xl shadow-2xl border border-slate-600 z-50 flex items-center gap-2" onClick={e => e.stopPropagation()}>
+                <input
+                  autoFocus
+                  maxLength={100}
+                  value={favNote}
+                  onChange={e => setFavNote(e.target.value)}
+                  onKeyDown={e => { if (e.key === 'Enter') saveFavorite(e); }}
+                  placeholder={lang === 'tr' ? "Notun (max 100 kar.)..." : "Your note (max 100 char.)..."}
+                  className="bg-slate-900 border border-slate-600 text-slate-200 text-xs rounded-lg px-2.5 py-1.5 w-36 focus:outline-none focus:border-amber-400"
+                />
+                <button onClick={saveFavorite} className="bg-emerald-600 hover:bg-emerald-500 text-white p-1.5 rounded-lg text-xs transition-colors">
+                  <i className="fa-solid fa-check"></i>
+                </button>
+              </div>
+            )}
+          </div>
         </div>
-      </div>
-      
-      <div className="space-y-3">
-        {activeDialogue.map((line, idx) => {
-          const words = line.text.split(' ');
-          const cleanWords = words.map(w => w.replace(/[.,?!:;–-]/g, '').toLowerCase());
-          
-          const style = getSpeakerStyle(line.speaker);
-
-          const translationText = typeof line.translation === 'object' 
-            ? line.translation[lang] || line.translation.tr 
-            : line.translation;
+        
+        <div className="space-y-3">
+          {activeDialogue.map((line, idx) => {
+            const words = line.text.split(' ');
+            const cleanWords = words.map(w => w.replace(/[.,?!:;–-]/g, '').toLowerCase());
             
-          const flag = lang === 'tr' ? '🇹🇷' : '🇬🇧';
+            const style = getSpeakerStyle(line.speaker);
 
-          return (
-            <div key={idx} className={`p-3.5 rounded-xl flex items-start space-x-3 transition ${style.bg} border-l-4 ${style.border}`}>
-              <button onClick={() => speakDutch(line.text)} className="bg-slate-800 border border-slate-600 p-2 rounded-lg shadow-sm hover:bg-slate-700 text-brand-400 transition flex-shrink-0 mt-0.5">
-                <i className="fa-solid fa-volume-high text-sm"></i>
-              </button>
-              <div className="flex-1">
-                <span className={`font-bold text-xs uppercase tracking-wider ${style.text}`}>{line.speaker}</span>
-                <p className="text-sm font-semibold text-slate-200 mt-0.5 leading-relaxed">
-                  
-                  {words.map((word, i) => {
-                    let status = wordStatuses[cleanWords[i]]; 
-                    
-                    if (!status) {
-                      const checkPhrases = [
-                        [[i-4, i-3, i-2, i-1, i], [i-3, i-2, i-1, i, i+1], [i-2, i-1, i, i+1, i+2], [i-1, i, i+1, i+2, i+3], [i, i+1, i+2, i+3, i+4]],
-                        [[i-3, i-2, i-1, i], [i-2, i-1, i, i+1], [i-1, i, i+1, i+2], [i, i+1, i+2, i+3]],
-                        [[i-2, i-1, i], [i-1, i, i+1], [i, i+1, i+2]],
-                        [[i-1, i], [i, i+1]]
-                      ];
+            const translationText = typeof line.translation === 'object' 
+              ? line.translation[lang] || line.translation.tr 
+              : line.translation;
+              
+            const flag = lang === 'tr' ? '🇹🇷' : '🇬🇧';
 
-                      for (const group of checkPhrases) {
-                        for (const indices of group) {
-                          if (indices.every(idx => idx >= 0 && idx < cleanWords.length)) {
-                            const phrase = indices.map(idx => cleanWords[idx]).join(' ');
-                            if (wordStatuses[phrase]) {
-                              status = wordStatuses[phrase];
-                              break;
+            return (
+              <div key={idx} className={`p-3.5 rounded-xl flex items-start space-x-3 transition ${style.bg} border-l-4 ${style.border}`}>
+                <button onClick={(e) => speakDutch(line.text, e)} className="bg-slate-800 border border-slate-600 p-2 rounded-lg shadow-sm hover:bg-slate-700 text-brand-400 transition flex-shrink-0 mt-0.5">
+                  <i className="fa-solid fa-volume-high text-sm"></i>
+                </button>
+                <div className="flex-1">
+                  <span className={`font-bold text-xs uppercase tracking-wider ${style.text}`}>{line.speaker}</span>
+                  <p className="text-sm font-semibold text-slate-200 mt-0.5 leading-relaxed">
+                    {words.map((word, i) => {
+                      let status = wordStatuses[cleanWords[i]]; 
+                      
+                      if (!status) {
+                        const checkPhrases = [
+                          [[i-4, i-3, i-2, i-1, i], [i-3, i-2, i-1, i, i+1], [i-2, i-1, i, i+1, i+2], [i-1, i, i+1, i+2, i+3], [i, i+1, i+2, i+3, i+4]],
+                          [[i-3, i-2, i-1, i], [i-2, i-1, i, i+1], [i-1, i, i+1, i+2], [i, i+1, i+2, i+3]],
+                          [[i-2, i-1, i], [i-1, i, i+1], [i, i+1, i+2]],
+                          [[i-1, i], [i, i+1]]
+                        ];
+
+                        for (const group of checkPhrases) {
+                          for (const indices of group) {
+                            if (indices.every(idx => idx >= 0 && idx < cleanWords.length)) {
+                              const phrase = indices.map(idx => cleanWords[idx]).join(' ');
+                              if (wordStatuses[phrase]) {
+                                status = wordStatuses[phrase];
+                                break;
+                              }
                             }
                           }
+                          if (status) break;
                         }
-                        if (status) break;
                       }
-                    }
 
-                    let wordColor = 'inherit';
-                    if (status === 'known') wordColor = '#34d399'; 
-                    if (status === 'unknown') wordColor = '#fb7185';
+                      let wordColor = 'inherit';
+                      if (status === 'known') wordColor = '#34d399'; 
+                      if (status === 'unknown') wordColor = '#fb7185';
 
-                    return (
-                      <span 
-                        key={i} 
-                        style={{ color: wordColor, textDecoration: 'underline', textDecorationStyle: 'dotted', cursor: 'pointer' }} 
-                        onClick={(e) => handleWordClick(e, i, cleanWords)}
-                      >
-                        {word}{' '}
-                      </span>
-                    );
-                  })}
-                </p>
-                <p className="text-xs text-slate-400 mt-1 italic">{flag} {translationText}</p>
+                      return (
+                        <span 
+                          key={i} 
+                          style={{ color: wordColor, textDecoration: 'underline', textDecorationStyle: 'dotted', cursor: 'pointer' }} 
+                          onClick={(e) => handleWordClick(e, i, cleanWords)}
+                        >
+                          {word}{' '}
+                        </span>
+                      );
+                    })}
+                  </p>
+                  <p className="text-xs text-slate-400 mt-1 italic">{flag} {translationText}</p>
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
 
+      {/* 2. TEORİ / GRAMER ALANI (Eğer varsa) */}
+      {sectionData?.theory && (
+        <div className="bg-slate-800 rounded-2xl p-6 shadow-lg border border-slate-700 animate-fadeIn">
+          <div className="text-slate-300 leading-relaxed font-medium">
+            {typeof sectionData.theory === 'function' ? sectionData.theory(lang) : sectionData.theory}
+          </div>
+        </div>
+      )}
+
+      {/* 3. EGZERSİZ ALANI (Eğer varsa) */}
+      {sectionData?.exerciseGroups && sectionData.exerciseGroups.length > 0 && (
+        <div className="bg-slate-800 rounded-2xl p-6 shadow-lg border border-slate-700 space-y-6 animate-fadeIn">
+          <h3 className="text-xl font-bold text-slate-100 border-b border-slate-700 pb-2 mb-4 flex items-center space-x-2">
+            <i className="fa-solid fa-pen-to-square text-brand-400"></i>
+            <span>{lang === 'tr' ? 'Bölüm Egzersizleri' : 'Section Exercises'}</span>
+          </h3>
+
+          {sectionData.exerciseGroups.map((group, gIdx) => (
+            <div key={gIdx} className="space-y-6 mb-8">
+              <h4 className="font-bold text-brand-400 border-b border-slate-700/50 pb-2 flex items-center space-x-2">
+                <span>{group.instruction}</span>
+              </h4>
+
+              {group.questions.map((q, idx) => {
+                const userAns = answers[q.id];
+                const isCorrect = userAns?.toLowerCase().trim() === q.correctAnswer.toLowerCase();
+
+                return (
+                  <div key={q.id} className="p-4 rounded-xl border border-slate-700 bg-slate-900/50 space-y-3">
+                    <div className="flex items-start justify-between gap-3">
+                      <span className="font-extrabold text-xs bg-slate-700 text-slate-300 px-2.5 py-1 rounded-md">Q{idx + 1}</span>
+                      <p className="flex-1 font-semibold text-sm text-slate-200">{q.question}</p>
+                      <button onClick={(e) => speakDutch(q.question, e)} className="text-slate-500 hover:text-brand-400 text-xs transition-colors">
+                        <i className="fa-solid fa-volume-high"></i>
+                      </button>
+                    </div>
+
+                    <div className="pt-1">
+                      {q.type === 'multiple_choice' ? (
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                          {q.options.map(opt => {
+                            let btnClass = "bg-slate-800 border-slate-600 text-slate-300 hover:border-brand-500 hover:bg-slate-700";
+                            if (userAns === opt) btnClass = "bg-brand-600 text-white border-brand-500 shadow-sm";
+                            if (showResults) {
+                              if (opt === q.correctAnswer) btnClass = "bg-emerald-600 text-white border-emerald-500 font-bold";
+                              else if (userAns === opt && !isCorrect) btnClass = "bg-rose-600 text-white border-rose-500";
+                            }
+                            return (
+                              <button key={opt} disabled={showResults} onClick={() => handleAnswerChange(q.id, opt)} className={`p-3 rounded-lg border text-xs text-left font-medium transition-all flex items-center justify-between ${btnClass}`}>
+                                <span>{opt}</span>
+                                {showResults && opt === q.correctAnswer && <i className="fa-solid fa-circle-check text-emerald-200 text-sm"></i>}
+                                {showResults && userAns === opt && !isCorrect && <i className="fa-solid fa-circle-xmark text-rose-200 text-sm"></i>}
+                              </button>
+                            );
+                          })}
+                        </div>
+                      ) : (
+                        <input 
+                          type="text" 
+                          disabled={showResults}
+                          placeholder={lang === 'tr' ? "Cevabını yaz..." : "Type your answer..."} 
+                          value={userAns || ''} 
+                          onChange={(e) => handleAnswerChange(q.id, e.target.value)}
+                          className="p-3 w-full max-w-sm text-sm rounded-xl border border-slate-600 bg-slate-900 text-slate-200 placeholder-slate-500 focus:ring-2 focus:ring-brand-500 outline-none"
+                        />
+                      )}
+                    </div>
+
+                    {showResults && (
+                      <div className={`p-3 rounded-lg text-xs leading-relaxed ${isCorrect ? "bg-emerald-900/30 text-emerald-300 border border-emerald-800" : "bg-rose-900/30 text-rose-300 border border-rose-800"}`}>
+                        <span className="font-bold">{isCorrect ? (lang === 'tr' ? "✔️ Juist! (Doğru)" : "✔️ Juist! (Correct)") : (lang === 'tr' ? "❌ Onjuist. (Yanlış)" : "❌ Onjuist. (Incorrect)")} </span>
+                        {!isCorrect && <span>{lang === 'tr' ? "Doğru cevap (Het goede antwoord is): " : "The correct answer is (Het goede antwoord is): "}<strong className="text-white">{q.correctAnswer}</strong></span>}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          ))}
+
+          <div className="flex justify-end pt-4 border-t border-slate-700">
+            <button onClick={handleVerify} className="px-6 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white text-sm font-bold shadow-lg transition">
+              {lang === 'tr' ? 'Cevapları Kontrol Et' : 'Verify Answers'}
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* 4. MODALS (Kelime Çeviri) */}
       {selectedWords && selectedWords.length > 0 && (
         <>
           <div className="fixed inset-0 z-40" onClick={(e) => { e.stopPropagation(); setSelectedWords(null); }}></div>
@@ -397,7 +526,7 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
                   <i className="fa-solid fa-pen-nib text-brand-400 mr-1.5"></i>
                   {clickedWordRaw}
                 </span>
-                <span className="text-[10px] text-slate-400 leading-tight mt-0.5">{t('markOnly')}</span>
+                <span className="text-[10px] text-slate-400 leading-tight mt-0.5">{lang === 'tr' ? "Sadece İşaretle" : "Mark Only"}</span>
               </div>
               
               <div className={`relative w-14 h-6 rounded-full transition-colors duration-300 flex-shrink-0 ${trackColor}`}>
@@ -414,7 +543,7 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
                   <div key={idx} className="border-b border-slate-700 last:border-0 pb-3 last:pb-0">
                     <div className="flex justify-between items-center mb-1">
                       <h3 className="font-bold text-brand-400 text-[15px] leading-tight">{wordObj.nl}</h3>
-                      <button onClick={() => speakDutch(wordObj.nl)} className="text-slate-400 hover:text-brand-300 ml-2">
+                      <button onClick={(e) => speakDutch(wordObj.nl, e)} className="text-slate-400 hover:text-brand-300 ml-2">
                         <i className="fa-solid fa-volume-high text-xs"></i>
                       </button>
                     </div>
