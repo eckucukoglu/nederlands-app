@@ -70,7 +70,9 @@ export const uiDictionary = {
 
 export const LanguageProvider = ({ children }) => {
   const [lang, setLang] = useState(() => {
-    return localStorage.getItem('appLanguage') || 'tr';
+	const savedLang = localStorage.getItem('appLanguage');
+	
+    return savedLang ? savedLang : 'en';
   });
 
   useEffect(() => {
