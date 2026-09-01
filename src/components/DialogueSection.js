@@ -48,7 +48,6 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
     return saved ? JSON.parse(saved) : {};
   });
 
-  // Egzersizler için State'ler
   const [answers, setAnswers] = useState({});
   const [showResults, setShowResults] = useState(false);
   const [qStats, setQStats] = useState(JSON.parse(localStorage.getItem('questionStats')) || {});
@@ -74,7 +73,6 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
     return () => window.removeEventListener('wordStatusUpdated', fetchStatuses);
   }, [chapterId]);
 
-  // Section değiştiğinde egzersiz cevaplarını sıfırla
   useEffect(() => {
     setAnswers({});         
     setShowResults(false);  
@@ -87,6 +85,100 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
     utterance.lang = 'nl-NL';
     window.speechSynthesis.speak(utterance);
   };
+
+// --- YENİ EKLENEN BULK (TOPLU) İŞARETLEME FONKSİYONU ---
+  const handleMarkLineAsKnown = (e, cleanWords) => {
+    e.stopPropagation();
+
+    const allVocab = [...vocabulary, ...globalDictionary];
+    const uniqueVocabMap = new Map();
+    allVocab.forEach(item => uniqueVocabMap.set(item.nl.toLowerCase(), item));
+
+    const pool = JSON.parse(localStorage.getItem('globalWordPool')) || {};
+    const storageKey = `dialogueUnknowns_${chapterId}`;
+    let existingUnknowns = JSON.parse(localStorage.getItem(storageKey)) || [];
+    const newStatuses = { ...wordStatuses };
+    let hasChanges = false;
+
+    cleanWords.forEach(cleanWord => {
+      if (!cleanWord) return;
+      if (newStatuses[cleanWord] === 'known') return; // Zaten biliniyorsa geç
+
+      let wordObj = null;
+
+      // 1. Önce tam eşleşme ara (Exact match)
+      if (uniqueVocabMap.has(cleanWord)) {
+        wordObj = uniqueVocabMap.get(cleanWord);
+      } else {
+        // 2. "de", "het", "een" gibi article ile başlayanları ara
+        const articleMatch = allVocab.find(v => 
+          v.nl.toLowerCase() === `de ${cleanWord}` || 
+          v.nl.toLowerCase() === `het ${cleanWord}` || 
+          v.nl.toLowerCase() === `een ${cleanWord}`
+        );
+
+        if (articleMatch) {
+          wordObj = articleMatch;
+        } else {
+          // 3. Parantez içi veya cümle içi kelimeleri regex ile ara (örn: "gedroomd (dromen)")
+          try {
+            const regex = new RegExp(`\\b${cleanWord}\\b`, 'i');
+            const boundaryMatch = allVocab.find(v => regex.test(v.nl));
+            if (boundaryMatch) {
+              wordObj = boundaryMatch;
+            }
+          } catch(err) { console.error(err); }
+        }
+      }
+
+      // 4. Eğer sözlükte hiç yoksa, fallback listesine bak (bağlaçlar vb.)
+      if (!wordObj) {
+        const fallback = fallbackDictionary[cleanWord];
+        if (fallback) {
+          wordObj = {
+            nl: cleanWord,
+            en: fallback,
+            tr: "Çeviri bulunamadı",
+            example: "Uit de dialoog"
+          };
+        }
+      }
+
+      // Eğer geçerli bir sözlük/fallback kelimesi bulunduysa listeye ekle
+      if (wordObj) {
+        hasChanges = true;
+        pool[wordObj.nl.toLowerCase()] = { ...wordObj, status: 'known', addedAt: new Date().toISOString() };
+        existingUnknowns = existingUnknowns.filter(w => w.nl.toLowerCase() !== wordObj.nl.toLowerCase());
+        
+        newStatuses[cleanWord] = 'known';
+        
+        const lowerNL = wordObj.nl.toLowerCase();
+        newStatuses[lowerNL] = 'known';
+        
+        if (lowerNL.includes('(')) {
+          const parts = lowerNL.split('(');
+          const mainPart = parts[0].trim();
+          const insideParen = parts[1].replace(')', '').trim();
+          if (mainPart) newStatuses[mainPart] = 'known';
+          if (insideParen) newStatuses[insideParen] = 'known';
+        }
+
+        const articleMatch = lowerNL.match(/^(de|het|een)\s+(.+)$/);
+        if (articleMatch) {
+          newStatuses[articleMatch[2].trim()] = 'known';
+        }
+      }
+    });
+
+    if (hasChanges) {
+      localStorage.setItem('globalWordPool', JSON.stringify(pool));
+      localStorage.setItem(storageKey, JSON.stringify(existingUnknowns));
+      localStorage.setItem(`dialogueWordStatuses_${chapterId}`, JSON.stringify(newStatuses));
+      setWordStatuses(newStatuses);
+      window.dispatchEvent(new Event('wordStatusUpdated'));
+    }
+  };
+  // -------------------------------------------------------
 
   const handleWordClick = (e, wordIndex, cleanWords) => {
     e.stopPropagation();
@@ -260,7 +352,6 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
     setFavNote("");
   };
 
-  // Egzersiz Fonksiyonları
   const handleAnswerChange = (qId, value) => {
     setAnswers({ ...answers, [qId]: value });
   };
@@ -368,9 +459,17 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
 
             return (
               <div key={idx} className={`p-3.5 rounded-xl flex items-start space-x-3 transition ${style.bg} border-l-4 ${style.border}`}>
-                <button onClick={(e) => speakDutch(line.text, e)} className="bg-slate-800 border border-slate-600 p-2 rounded-lg shadow-sm hover:bg-slate-700 text-brand-400 transition flex-shrink-0 mt-0.5">
-                  <i className="fa-solid fa-volume-high text-sm"></i>
-                </button>
+                
+                {/* --- DİNLEME VE TOPLU İŞARETLEME BUTONLARI --- */}
+                <div className="flex flex-col gap-2 flex-shrink-0 mt-0.5">
+                  <button onClick={(e) => speakDutch(line.text, e)} className="bg-slate-800 border border-slate-600 p-2 rounded-lg shadow-sm hover:bg-slate-700 text-brand-400 transition" title={lang === 'tr' ? 'Dinle' : 'Listen'}>
+                    <i className="fa-solid fa-volume-high text-sm"></i>
+                  </button>
+                  <button onClick={(e) => handleMarkLineAsKnown(e, cleanWords)} className="bg-slate-800 border border-slate-600 p-2 rounded-lg shadow-sm hover:bg-emerald-900/40 hover:border-emerald-500 hover:text-emerald-400 text-slate-500 transition" title={lang === 'tr' ? 'Tüm cümleyi biliyorum olarak işaretle' : 'Mark all words as known'}>
+                    <i className="fa-solid fa-check-double text-sm"></i>
+                  </button>
+                </div>
+                
                 <div className="flex-1">
                   <span className={`font-bold text-xs uppercase tracking-wider ${style.text}`}>{line.speaker}</span>
                   <p className="text-sm font-semibold text-slate-200 mt-0.5 leading-relaxed">
@@ -422,7 +521,7 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
         </div>
       </div>
 
-      {/* 2. TEORİ / GRAMER ALANI (Eğer varsa) */}
+      {/* 2. TEORİ / GRAMER ALANI */}
       {sectionData?.theory && (
         <div className="bg-slate-800 rounded-2xl p-6 shadow-lg border border-slate-700 animate-fadeIn">
           <div className="text-slate-300 leading-relaxed font-medium">
@@ -431,7 +530,7 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
         </div>
       )}
 
-      {/* 3. EGZERSİZ ALANI (Eğer varsa) */}
+      {/* 3. EGZERSİZ ALANI */}
       {sectionData?.exerciseGroups && sectionData.exerciseGroups.length > 0 && (
         <div className="bg-slate-800 rounded-2xl p-6 shadow-lg border border-slate-700 space-y-6 animate-fadeIn">
           <h3 className="text-xl font-bold text-slate-100 border-b border-slate-700 pb-2 mb-4 flex items-center space-x-2">
