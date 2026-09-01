@@ -806,7 +806,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
 
   return (
     <div 
-      className="min-h-screen flex flex-col bg-slate-900 transition-colors duration-300 w-full max-w-full relative"
+      className="min-h-screen flex flex-col bg-slate-900 transition-colors duration-300 w-full max-w-full relative overflow-x-hidden"
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
