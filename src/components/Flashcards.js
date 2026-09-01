@@ -13,16 +13,13 @@ const translations = {
     emptyFilterEx: "Harika! Bu kategoride bilinmeyen kelime kalmadı.",
     unknownWords: "Bilinmeyen Kelimeler",
     allWords: "Tüm Kelimeler",
-    copied: "Kopyalandı",
-    copyToClipboard: "Panoya Kopyala",
     noTranslation: "Çeviri yok",
-    noWordsInList: "Bu listede gösterilecek kelime yok.",
     keyboard: "Klavye",
     flip: "Çevir",
     dontKnow: "Bilmiyorum",
     know: "Biliyorum",
     allWordsOption: "Tüm Kelimeler",
-    dialogueOption: "Diyalog Kelimelerim",
+    dialogueOption: "Diyalog (Bilinmeyenler)",
     globalPoolOption: "👤 Benim Kelime Havuzum",
     bookPoolOption: "📚 Kitabın Kelime Havuzu",
     myPool: "Benim Kelime Havuzum",
@@ -30,9 +27,8 @@ const translations = {
     chapterWords: "Chapter Kelimeleri",
     shuffle: "Karıştır",
     flipCards: "Kartları Çevir",
-    studyUnknowns: "Bilinmeyenleri Çalış",
-    listUnknowns: "Bilinmeyenleri Listele",
-    listAll: "Hepsini Listele",
+    deleteWord: "Kelimeyi Sil",
+    onlyUnknowns: "Yalnızca Bilinmeyenler",
     card: "Kart",
     progress: "İlerleme",
     thisSession: "Bu Oturum (Session)",
@@ -51,16 +47,13 @@ const translations = {
     emptyFilterEx: "Great! There are no unknown words left in this category.",
     unknownWords: "Unknown Words",
     allWords: "All Words",
-    copied: "Copied",
-    copyToClipboard: "Copy to Clipboard",
     noTranslation: "No translation",
-    noWordsInList: "No words to show in this list.",
     keyboard: "Keyboard",
     flip: "Flip",
     dontKnow: "Don't Know",
     know: "Know",
     allWordsOption: "All Words",
-    dialogueOption: "Dialogue Words",
+    dialogueOption: "Dialogue (Unknowns)",
     globalPoolOption: "👤 My Word Pool",
     bookPoolOption: "📚 Book's Word Pool",
     myPool: "My Word Pool",
@@ -68,9 +61,8 @@ const translations = {
     chapterWords: "Chapter Words",
     shuffle: "Shuffle",
     flipCards: "Flip Cards",
-    studyUnknowns: "Study Unknowns Only",
-    listUnknowns: "List Unknowns",
-    listAll: "List All",
+    deleteWord: "Delete Word",
+    onlyUnknowns: "Only Unknowns",
     card: "Card",
     progress: "Progress",
     thisSession: "This Session",
@@ -96,14 +88,16 @@ export default function Flashcards({ initialChapter }) {
   const [isFlipped, setIsFlipped] = useState(false);
   const [isReversed, setIsReversed] = useState(false);
   
-  const [mode, setMode] = useState('global');
+  const [mode, setMode] = useState('global'); 
   
   const [sessionStats, setSessionStats] = useState({ known: 0, unknown: 0 });
   const [globalStats, setGlobalStats] = useState({});
 
   const [studyUnknownsOnly, setStudyUnknownsOnly] = useState(false);
-  const [listModal, setListModal] = useState({ isOpen: false, type: null }); 
-  const [copied, setCopied] = useState(false);
+  
+  // TOAST BİLDİRİMİ İÇİN STATE
+  const [toastMessage, setToastMessage] = useState(null);
+  const [globalPool, setGlobalPool] = useState({});
 
   const chapterVocab = vocabulary.filter(v => v.chapter === targetChapter);
 
@@ -123,6 +117,17 @@ export default function Flashcards({ initialChapter }) {
     };
   };
 
+  const fetchGlobalPool = useCallback(() => {
+    const pool = JSON.parse(localStorage.getItem('globalWordPool')) || {};
+    setGlobalPool(pool);
+  }, []);
+
+  useEffect(() => {
+    fetchGlobalPool();
+    window.addEventListener('wordStatusUpdated', fetchGlobalPool);
+    return () => window.removeEventListener('wordStatusUpdated', fetchGlobalPool);
+  }, [fetchGlobalPool]);
+
   useEffect(() => {
     const freshStats = JSON.parse(localStorage.getItem('flashcardStats')) || {};
     setGlobalStats(freshStats);
@@ -133,8 +138,7 @@ export default function Flashcards({ initialChapter }) {
     const freshStats = JSON.parse(localStorage.getItem('flashcardStats')) || {};
 
     if (mode === 'global') {
-      const pool = JSON.parse(localStorage.getItem('globalWordPool')) || {};
-      newDeck = Object.values(pool);
+      newDeck = Object.values(globalPool);
       if (newDeck.length === 0) {
         newDeck = [{ id: 'empty_global', nl: "Geen woorden", en: "No words in My Word Pool", tr: "Benim Kelime Havuzumda kelime yok", example: t.emptyGlobalEx }];
       }
@@ -172,7 +176,7 @@ export default function Flashcards({ initialChapter }) {
     setCurrentIndex(0);
     setIsFlipped(false);
     setSessionStats({ known: 0, unknown: 0 });
-  }, [targetChapter, mode, studyUnknownsOnly, lang]); // eslint-disable-line
+  }, [targetChapter, mode, studyUnknownsOnly, lang, globalPool]); // eslint-disable-line
 
   const currentWord = getResolvedWord(deck[currentIndex]);
   const totalWords = deck.length;
@@ -210,12 +214,12 @@ export default function Flashcards({ initialChapter }) {
   }, [currentWord, totalWords, isFlipped]);
 
   const handleKeyDown = useCallback((e) => {
-    if (listModal.isOpen) return;
-
+    if (['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) return;
+    
     if (e.key === 'ArrowUp' || e.key === 'ArrowDown') { e.preventDefault(); setIsFlipped(prev => !prev); } 
     else if (e.key === 'ArrowRight') { updateStats(true); } 
     else if (e.key === 'ArrowLeft') { updateStats(false); }
-  }, [updateStats, listModal.isOpen]);
+  }, [updateStats]);
 
   useEffect(() => {
     window.addEventListener('keydown', handleKeyDown);
@@ -236,26 +240,62 @@ export default function Flashcards({ initialChapter }) {
     window.speechSynthesis.speak(utterance);
   };
 
-  const getListData = () => {
-    let rawList = baseDeck.filter(w => !w.id?.startsWith('empty')).map(getResolvedWord);
-    const freshStats = JSON.parse(localStorage.getItem('flashcardStats')) || {};
+  // KESİN İZOLE EDİLMİŞ SİLME FONKSİYONU
+  const removeCurrentWord = (e) => {
+    if (e) e.stopPropagation();
+    if (!currentWord || currentWord.id?.startsWith('empty')) return;
+    
+    const lowerNL = currentWord.nl.toLowerCase();
+    let deletedFrom = ""; 
 
-    if (listModal.type === 'unknown') {
-      rawList = rawList.filter(word => {
-        const wordId = word.id || word.nl;
-        const stat = freshStats[wordId];
-        return stat?.lastStatus === 'unknown' || word.status === 'unknown';
-      });
+    // YALNIZCA İLGİLİ HAVUZDAN SİL (TAM İZOLASYON)
+    if (mode === 'global') {
+      const pool = JSON.parse(localStorage.getItem('globalWordPool')) || {};
+      delete pool[lowerNL];
+      localStorage.setItem('globalWordPool', JSON.stringify(pool));
+      deletedFrom = lang === 'tr' ? "Benim Kelime Havuzum'dan" : "My Word Pool";
+      // Not: Diyalog verilerine (dialogueWordStatuses / dialogueUnknowns) DOKUNULMUYOR!
+    } else if (mode === 'dialogue') {
+      const storageKey = `dialogueUnknowns_${targetChapter}`;
+      let existingUnknowns = JSON.parse(localStorage.getItem(storageKey)) || [];
+      existingUnknowns = existingUnknowns.filter(w => w.nl?.toLowerCase() !== lowerNL);
+      localStorage.setItem(storageKey, JSON.stringify(existingUnknowns));
+      
+      const statusKey = `dialogueWordStatuses_${targetChapter}`;
+      const statuses = JSON.parse(localStorage.getItem(statusKey)) || {};
+      delete statuses[lowerNL]; // Statüyü silersek kelime diyalogda renksiz (beyaz) olur
+      localStorage.setItem(statusKey, JSON.stringify(statuses));
+      deletedFrom = lang === 'tr' ? "Diyalog Kelimelerim listesinden" : "Dialogue Words";
+      // Not: Genel kelime havuzuna (globalWordPool) DOKUNULMUYOR!
     }
-    return rawList;
-  };
 
-  const handleCopyClipboard = () => {
-    const dataToCopy = getListData();
-    const text = dataToCopy.map(w => `${w.nl} - ${lang === 'tr' ? (w.tr || w.en) : (w.en || w.tr)}`).join('\n');
-    navigator.clipboard.writeText(text);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    // TOAST BİLDİRİMİNİ GÖSTER
+    const msg = lang === 'tr' 
+      ? `"${currentWord.nl}" kelimesi ${deletedFrom} silindi.` 
+      : `"${currentWord.nl}" has been deleted from ${deletedFrom}.`;
+    
+    setToastMessage(msg);
+    setTimeout(() => setToastMessage(null), 2800);
+
+    // Diğer bileşenleri tetikle (Diyalog renkleri anında güncellensin)
+    window.dispatchEvent(new Event('wordStatusUpdated'));
+
+    // Mevcut kartları anlık olarak filtrele ve sıradaki karta geç
+    setDeck(prevDeck => {
+      const newDeck = prevDeck.filter(w => w.nl?.toLowerCase() !== lowerNL);
+      if (newDeck.length === 0) {
+         return [{ id: 'empty_deleted', nl: t.emptyFilterTitle, en: t.emptyFilterEn, tr: t.emptyFilterEn, example: t.emptyFilterEx }];
+      }
+      return newDeck;
+    });
+    
+    setBaseDeck(prevBase => prevBase.filter(w => w.nl?.toLowerCase() !== lowerNL));
+
+    setCurrentIndex(prev => {
+      if (prev > 0 && prev >= deck.length - 1) return prev - 1;
+      return prev;
+    });
+    setIsFlipped(false);
   };
 
   const wordGlobalStat = globalStats[currentWord?.id || currentWord?.nl] || { known: 0, unknown: 0, lastStatus: null };
@@ -296,52 +336,11 @@ export default function Flashcards({ initialChapter }) {
   return (
     <div className="space-y-6 max-w-2xl mx-auto mt-4 relative">
       
-      {listModal.isOpen && (
-        <div 
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-slate-950/80 backdrop-blur-sm" 
-          onClick={() => setListModal({ isOpen: false, type: null })}
-        >
-          <div className="bg-slate-900 w-full max-w-2xl max-h-[85vh] rounded-3xl shadow-2xl border border-slate-700 flex flex-col overflow-hidden" onClick={e => e.stopPropagation()}>
-            
-            <div className="p-4 sm:p-5 flex justify-between items-center border-b border-slate-800 bg-slate-800/50">
-              <h3 className="text-lg font-bold text-slate-200">
-                {listModal.type === 'unknown' ? t.unknownWords : t.allWords}
-                <span className="ml-2 text-sm font-medium text-slate-500">({getListData().length})</span>
-              </h3>
-              <div className="flex items-center gap-3">
-                <button onClick={handleCopyClipboard} className="text-xs font-semibold bg-slate-800 hover:bg-slate-700 border border-slate-600 px-3 py-1.5 rounded-lg text-slate-300 transition-colors flex items-center gap-1.5">
-                  {copied ? <><i className="fa-solid fa-check text-emerald-400"></i> {t.copied}</> : <><i className="fa-regular fa-copy"></i> {t.copyToClipboard}</>}
-                </button>
-                <button onClick={() => setListModal({ isOpen: false, type: null })} className="text-slate-400 hover:text-rose-400 text-xl transition-colors ml-1">
-                  <i className="fa-solid fa-xmark"></i>
-                </button>
-              </div>
-            </div>
-            
-            <div className="overflow-y-auto p-4 sm:p-5 flex-1 scrollbar-thin scrollbar-thumb-slate-700">
-              {getListData().length > 0 ? (
-                <ul className="space-y-2">
-                  {getListData().map((w, i) => (
-                    <li key={i} className="flex flex-col sm:flex-row sm:items-center justify-between p-3 bg-slate-800/50 rounded-xl border border-slate-700/50">
-                      <span className="font-bold text-brand-400 text-sm sm:text-base">{w.nl}</span>
-                      <div className="flex flex-col sm:items-end text-xs sm:text-sm mt-1 sm:mt-0">
-                        <span className="font-bold text-slate-200">{lang === 'tr' ? (w.tr || w.en) : (w.en || w.tr)}</span>
-                        {w.tr && w.en && w.tr.toLowerCase() !== w.en.toLowerCase() && (
-                          <span className="text-slate-400 text-xs">{lang === 'tr' ? w.en : w.tr}</span>
-                        )}
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <div className="text-center text-slate-500 py-12 flex flex-col items-center">
-                   <i className="fa-solid fa-ghost text-4xl mb-3 opacity-50"></i>
-                   <p className="font-medium">{t.noWordsInList}</p>
-                </div>
-              )}
-            </div>
-
-          </div>
+      {/* SİLİNME BİLDİRİMİ (TOAST) - Uygulama geneliyle aynı görsel yapı */}
+      {toastMessage && (
+        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[110] bg-slate-800 text-slate-100 px-4 py-2.5 rounded-2xl shadow-2xl border border-slate-600 text-xs sm:text-sm font-medium flex items-center gap-2.5 animate-bounce w-max max-w-[90%]">
+          <i className="fa-solid fa-circle-check text-emerald-400"></i>
+          <span>{toastMessage}</span>
         </div>
       )}
 
@@ -349,7 +348,7 @@ export default function Flashcards({ initialChapter }) {
         <h2 className="text-2xl font-extrabold text-slate-100">Vocabulaire Flashcards</h2>
       </div>
 
-{/* 1. ÜST 3 SEÇENEK (BİRİ SEÇİLİNCE DİĞERLERİ KAPANIR, RENK DEĞİŞTİRİR) */}
+      {/* 1. ÜST 3 SEÇENEK */}
       <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 mb-6">
         <button 
           onClick={() => { setMode('global'); setStudyUnknownsOnly(false); }}
@@ -418,8 +417,8 @@ export default function Flashcards({ initialChapter }) {
         </div>
       )}
 
-      {/* 3. ANA KONTROLLER (Karıştır, Çevir, vs.) */}
-      <div className="flex flex-wrap justify-center gap-3 mb-4">
+      {/* 3. ANA KONTROLLER (Karıştır, Çevir, Sil vs.) */}
+      <div className="flex flex-wrap justify-center gap-3 mb-6">
         <button 
           onClick={shuffleDeck}
           className="bg-slate-800 border border-slate-600 text-slate-300 hover:bg-slate-700 hover:text-brand-400 rounded-xl px-4 py-2.5 text-sm font-semibold shadow-sm transition-colors flex items-center gap-2"
@@ -437,30 +436,31 @@ export default function Flashcards({ initialChapter }) {
         >
           <i className="fa-solid fa-right-left"></i> {t.flipCards}
         </button>
-      </div>
 
-      <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-4 bg-slate-800/60 p-3 rounded-xl border border-slate-700/50 mb-6">
-        <label className="flex items-center gap-2 cursor-pointer text-xs sm:text-sm font-semibold text-slate-300 hover:text-brand-400 transition-colors select-none">
-          <input 
-            type="checkbox" 
-            checked={studyUnknownsOnly} 
-            onChange={e => setStudyUnknownsOnly(e.target.checked)} 
-            className="w-4 h-4 rounded bg-slate-900 border-slate-600 text-brand-500 focus:ring-brand-500 focus:ring-offset-slate-800" 
-          />
-          {t.studyUnknowns}
-        </label>
+        {/* SİLME BUTONU (GLOBAL & DİALOGUE İÇİN) */}
+        {(mode === 'global' || mode === 'dialogue') && (
+          <button 
+            onClick={removeCurrentWord}
+            disabled={!currentWord || currentWord.id?.startsWith('empty')}
+            className="bg-slate-800 border border-slate-600 text-rose-400 hover:bg-rose-900/40 hover:text-rose-300 hover:border-rose-500 rounded-xl px-4 py-2.5 text-sm font-semibold shadow-sm transition-colors flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            <i className="fa-solid fa-trash-can"></i> {t.deleteWord}
+          </button>
+        )}
 
-        <div className="w-[1px] h-5 bg-slate-600 hidden sm:block"></div>
-
-        <button onClick={() => setListModal({ isOpen: true, type: 'unknown' })} className="text-xs sm:text-sm font-semibold text-slate-300 hover:text-rose-400 transition-colors flex items-center gap-1.5">
-          <i className="fa-solid fa-list-ul"></i> {t.listUnknowns}
-        </button>
-
-        <div className="w-[1px] h-5 bg-slate-600 hidden sm:block"></div>
-
-        <button onClick={() => setListModal({ isOpen: true, type: 'all' })} className="text-xs sm:text-sm font-semibold text-slate-300 hover:text-emerald-400 transition-colors flex items-center gap-1.5">
-          <i className="fa-solid fa-layer-group"></i> {t.listAll}
-        </button>
+        {/* YALNIZCA BİLİNMEYENLERİ ÇALIŞ BUTONU (SADECE GLOBAL İÇİN) */}
+        {mode === 'global' && (
+          <button 
+            onClick={() => setStudyUnknownsOnly(!studyUnknownsOnly)}
+            className={`border rounded-xl px-4 py-2.5 text-sm font-semibold shadow-sm transition-colors flex items-center gap-2 ${
+              studyUnknownsOnly 
+                ? 'bg-rose-600 border-rose-500 text-white shadow-rose-500/20' 
+                : 'bg-slate-800 border-slate-600 text-slate-300 hover:bg-slate-700 hover:text-rose-400'
+            }`}
+          >
+            <i className="fa-solid fa-filter"></i> {t.onlyUnknowns}
+          </button>
+        )}
       </div>
 
       <div className="bg-slate-800 p-5 rounded-2xl shadow-sm border border-slate-700">
