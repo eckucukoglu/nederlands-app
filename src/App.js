@@ -72,7 +72,6 @@ const GuideContent = ({ lang }) => (
                 Arama çubuğunun solundaki butonları kullanarak Hollandaca gramer kurallarına, detaylı örneklere, istisnalara ve en sık kullanılan düzensiz fiil listelerine anında ulaşabilirsiniz.
               </div>
             </li>
-            {/* YENİ EKLENEN QUIZ MADDESİ */}
             <li className="flex items-start gap-3">
               <div className="w-8 h-8 rounded-lg bg-teal-900/50 border border-teal-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-teal-400"><i className="fa-solid fa-graduation-cap"></i></div>
               <div>
@@ -140,7 +139,6 @@ const GuideContent = ({ lang }) => (
                 Use the buttons next to the search bar to instantly access Dutch grammar rules, detailed examples, exceptions, and lists of frequently used irregular verbs.
               </div>
             </li>
-            {/* YENİ EKLENEN QUIZ MADDESİ */}
             <li className="flex items-start gap-3">
               <div className="w-8 h-8 rounded-lg bg-teal-900/50 border border-teal-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-teal-400"><i className="fa-solid fa-graduation-cap"></i></div>
               <div>
@@ -291,7 +289,6 @@ function MainContent({ user, setIsAuthModalOpen }) {
     return savedTab ? savedTab : `${currentChapter}.1`;
   });
 
-  // Önceki aktif sekme takibi (Flashcards, Grammar, Verbs kapatıldığında geri dönmek için)
   const [previousTab, setPreviousTab] = useState('home');
 
   const [isSearchExpanded, setIsSearchExpanded] = useState(false);
@@ -304,19 +301,32 @@ function MainContent({ user, setIsAuthModalOpen }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); 
   const [isInfoModalOpen, setIsInfoModalOpen] = useState(false);
 
-  // Full Quiz Modalı için state
   const [isFullQuizOpen, setIsFullQuizOpen] = useState(false);
 
   const [isSectionBarOverflowing, setIsSectionBarOverflowing] = useState(false);
 
+  // Arama sonuçları artık diyalog statülerine değil, doğrudan Global Havuza bakar
   const [globalWordStatuses, setGlobalWordStatuses] = useState(() => {
-    const saved = localStorage.getItem(`dialogueWordStatuses_${currentChapter}`);
-    return saved ? JSON.parse(saved) : {};
+    const pool = JSON.parse(localStorage.getItem('globalWordPool')) || {};
+    const statuses = {};
+    Object.keys(pool).forEach(key => { statuses[key] = pool[key].status; });
+    return statuses;
   });
+
+  useEffect(() => {
+    const fetchStatuses = () => {
+      const pool = JSON.parse(localStorage.getItem('globalWordPool')) || {};
+      const statuses = {};
+      Object.keys(pool).forEach(key => { statuses[key] = pool[key].status; });
+      setGlobalWordStatuses(statuses);
+    };
+    fetchStatuses();
+    window.addEventListener('wordStatusUpdated', fetchStatuses);
+    return () => window.removeEventListener('wordStatusUpdated', fetchStatuses);
+  }, []);
 
   const [searchToast, setSearchToast] = useState(null);
   
-  // Custom Translation Modal States
   const [customWordModal, setCustomWordModal] = useState({ isOpen: false, word: '', status: '' });
   const [customTr, setCustomTr] = useState('');
   const [customEn, setCustomEn] = useState('');
@@ -436,16 +446,6 @@ function MainContent({ user, setIsAuthModalOpen }) {
       document.removeEventListener("touchstart", handleClickOutside);
     }
   }, [customWordModal.isOpen]);
-
-  useEffect(() => {
-    const fetchStatuses = () => {
-      const saved = localStorage.getItem(`dialogueWordStatuses_${currentChapter}`);
-      setGlobalWordStatuses(saved ? JSON.parse(saved) : {});
-    };
-    fetchStatuses();
-    window.addEventListener('wordStatusUpdated', fetchStatuses);
-    return () => window.removeEventListener('wordStatusUpdated', fetchStatuses);
-  }, [currentChapter]);
 
   const speakDutch = (text) => {
     window.speechSynthesis.cancel();
@@ -567,57 +567,13 @@ function MainContent({ user, setIsAuthModalOpen }) {
   };
 
   const executeStorageUpdate = (wordObj, status) => {
-    const storageKey = `dialogueUnknowns_${currentChapter}`;
-    const existingUnknowns = JSON.parse(localStorage.getItem(storageKey)) || [];
-    let updatedUnknowns = existingUnknowns;
-
-    if (status === 'unknown') {
-      if (!existingUnknowns.some(w => w.nl === wordObj.nl)) {
-        updatedUnknowns = [...existingUnknowns, wordObj];
-      } else {
-        updatedUnknowns = updatedUnknowns.map(w => w.nl === wordObj.nl ? wordObj : w);
-      }
-    } else {
-      updatedUnknowns = existingUnknowns.filter(w => w.nl !== wordObj.nl);
-    }
-    localStorage.setItem(storageKey, JSON.stringify(updatedUnknowns));
-
+    // 1. SADECE GLOBAL HAVUZA KAYDET (Diyalog listelerine asla dokunmaz)
     saveToGlobalPool(wordObj, status);
 
-    const keysToUpdate = new Set();
-    const lowerNL = wordObj.nl.toLowerCase();
-    keysToUpdate.add(lowerNL);
-    
-    if (lowerNL.includes('(')) {
-      const parts = lowerNL.split('(');
-      const mainPart = parts[0].trim();
-      const insideParen = parts[1].replace(')', '').trim();
-      if (mainPart) keysToUpdate.add(mainPart);
-      if (insideParen) keysToUpdate.add(insideParen);
-    }
-
-    const articleMatch = lowerNL.match(/^(de|het|een)\s+(.+)$/);
-    if (articleMatch) {
-      keysToUpdate.add(articleMatch[2].trim());
-    }
-
-    if (searchQuery.trim()) {
-      keysToUpdate.add(searchQuery.trim().toLowerCase());
-    }
-
-    const newStatuses = { ...globalWordStatuses };
-    keysToUpdate.forEach(key => {
-      if (status === undefined) {
-         delete newStatuses[key];
-      } else {
-         newStatuses[key] = status;
-      }
-    });
-
-    setGlobalWordStatuses(newStatuses);
-    localStorage.setItem(`dialogueWordStatuses_${currentChapter}`, JSON.stringify(newStatuses));
+    // 2. Diğer bileşenleri (ve arama kutusunun renklerini) anında güncelle
     window.dispatchEvent(new Event('wordStatusUpdated'));
     
+    // 3. Kullanıcıya bildirim göster
     showToast(getToastMessage(wordObj.nl, status === undefined ? 'removed' : status));
   };
 
