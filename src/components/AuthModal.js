@@ -7,6 +7,7 @@ export default function AuthModal({ isOpen, onClose, user }) {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState(false); // SİLME ONAYI İÇİN STATE
   const { lang, setLang, t } = useLanguage();
   
   if (!isOpen) return null;
@@ -78,6 +79,15 @@ export default function AuthModal({ isOpen, onClose, user }) {
     reader.readAsText(file);
   };
 
+  // TÜM VERİYİ SIFIRLAMA FONKSİYONU
+  const handleDeleteAllData = async () => {
+    if (user) {
+      await auth.signOut();
+    }
+    localStorage.clear();
+    window.location.reload();
+  };
+
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center bg-slate-950/80 backdrop-blur-sm" onClick={onClose}>
       <div className="bg-slate-900 border border-slate-700 p-8 rounded-3xl shadow-2xl max-w-md w-full m-4 relative" onClick={e => e.stopPropagation()}>
@@ -146,9 +156,10 @@ export default function AuthModal({ isOpen, onClose, user }) {
           </div>
         </div>
         
+        {/* VERİ YÖNETİMİ BÖLÜMÜ */}
         <div className="mt-8 pt-6 border-t border-slate-800 space-y-3">
           <p className="text-xs text-center text-slate-500 font-medium">{t('manualManageInfo')}</p>
-          <div className="flex gap-2">
+          <div className="flex gap-2 mb-2">
             <button onClick={exportData} className="flex-1 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-300 text-xs font-bold py-2.5 rounded-lg transition-colors flex items-center justify-center gap-2">
               <i className="fa-solid fa-download"></i> {t('downloadBackup')}
             </button>
@@ -158,6 +169,39 @@ export default function AuthModal({ isOpen, onClose, user }) {
               <input type="file" accept=".json" className="hidden" onChange={importData} />
             </label>
           </div>
+
+          {/* TÜM VERİYİ SİL BUTONU VE ONAY ALANI */}
+          {!showDeleteConfirm ? (
+            <button 
+              onClick={() => setShowDeleteConfirm(true)} 
+              className="w-full bg-rose-950/30 hover:bg-rose-900/40 border border-rose-900/50 hover:border-rose-700/50 text-rose-400 text-xs font-bold py-2.5 rounded-lg transition-colors flex items-center justify-center gap-2 mt-2"
+            >
+              <i className="fa-solid fa-triangle-exclamation"></i> 
+              {lang === 'tr' ? 'Tüm Site Verisini Sıfırla' : 'Erase All Site Data'}
+            </button>
+          ) : (
+            <div className="mt-4 p-4 bg-rose-950/60 border border-rose-800/80 rounded-xl space-y-3 animate-fadeIn">
+              <p className="text-xs text-rose-300 text-center font-bold leading-relaxed">
+                {lang === 'tr' 
+                  ? 'Tüm ilerlemeniz, eklediğiniz kelimeler ve ayarlarınız kalıcı olarak silinecek. Emin misiniz?' 
+                  : 'All your progress, words, and settings will be permanently deleted. Are you sure?'}
+              </p>
+              <div className="flex gap-2">
+                <button 
+                  onClick={() => setShowDeleteConfirm(false)} 
+                  className="flex-1 bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-bold py-2 rounded-lg transition-colors border border-slate-600"
+                >
+                  {lang === 'tr' ? 'İptal' : 'Cancel'}
+                </button>
+                <button 
+                  onClick={handleDeleteAllData} 
+                  className="flex-1 bg-rose-600 hover:bg-rose-500 text-white text-xs font-bold py-2 rounded-lg transition-colors shadow-sm"
+                >
+                  {lang === 'tr' ? 'Evet, Sıfırla' : 'Yes, Erase'}
+                </button>
+              </div>
+            </div>
+          )}
         </div>
 
       </div>
