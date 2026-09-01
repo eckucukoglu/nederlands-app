@@ -1,10 +1,12 @@
 // src/components/Grammar.js
 import React, { useState, useMemo } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
+import QuizModule from './QuizModule';
 
 const grammarData = [
   {
     id: "verbs_present",
+    tags: ["verbs_present"],
     titleTr: "Zamirler ve Şimdiki Zaman (Pronouns & Present Tense)",
     titleEn: "Personal Pronouns & Present Tense",
     content: (isTr) => (
@@ -123,6 +125,7 @@ const grammarData = [
   },
   {
     id: "word_order",
+    tags: ["word_order", "inversion", "questions"],
     titleTr: "Cümle Dizilimi ve Sorular (Word Order & Questions)",
     titleEn: "Word Order & Questions",
     content: (isTr) => (
@@ -315,6 +318,7 @@ const grammarData = [
   },
   {
     id: "articles_plurals",
+    tags: ["articles_plurals", "diminutives"],
     titleTr: "Artikeller, Çoğullar ve Küçültme (Articles, Plurals, Diminutives)",
     titleEn: "Articles, Plurals & Diminutives",
     content: (isTr) => (
@@ -428,6 +432,7 @@ const grammarData = [
   },
   {
     id: "adjectives",
+    tags: ["adjectives"],
     titleTr: "Sıfatlar (Adjectief)",
     titleEn: "Adjectives (Adjectief)",
     content: (isTr) => (
@@ -530,6 +535,7 @@ const grammarData = [
   },
   {
     id: "modal_imperative",
+    tags: ["modal_verbs", "imperative"],
     titleTr: "Kipler ve Emir Cümlesi (Modal Verbs & Imperative)",
     titleEn: "Modal Verbs & Imperative",
     content: (isTr) => (
@@ -672,6 +678,7 @@ const grammarData = [
   },
   {
     id: "comparative_superlative",
+    tags: ["comparative_superlative"],
     titleTr: "Karşılaştırma ve Üstünlük (Comparative & Superlative)",
     titleEn: "Comparative & Superlative",
     content: (isTr) => (
@@ -813,6 +820,7 @@ const grammarData = [
   },
   {
     id: "pronouns_negation",
+    tags: ["pronouns_object", "pronouns_demonstrative", "negation"],
     titleTr: "Nesne ve İşaret Zamirleri & Olumsuzluk",
     titleEn: "Object & Demonstrative Pronouns & Negation",
     content: (isTr) => (
@@ -1005,6 +1013,7 @@ const grammarData = [
   },
   {
     id: "past_tenses",
+    tags: ["past_tenses", "perfectum", "imperfectum"],
     titleTr: "Geçmiş Zamanlar (Perfectum & Imperfectum)",
     titleEn: "Past Tenses (Perfectum & Imperfectum)",
     content: (isTr) => (
@@ -1202,6 +1211,7 @@ const grammarData = [
   },
   {
     id: "verbs_special",
+    tags: ["separable_verbs", "reflexive_verbs"],
     titleTr: "Ayrılabilen ve Dönüşlü Fiiller (Separable & Reflexive)",
     titleEn: "Separable & Reflexive Verbs",
     content: (isTr) => (
@@ -1325,6 +1335,7 @@ const grammarData = [
   },
   {
     id: "future_zullen",
+    tags: ["future_tenses", "future_presens", "future_gaan", "zullen", "zullen_proposal", "zullen_promise", "zullen_probability"],
     titleTr: "Gelecek Zaman ve 'Zullen' (Future & Zullen)",
     titleEn: "Future Tense & Zullen",
     content: (isTr) => (
@@ -1419,6 +1430,7 @@ const grammarData = [
   },
   {
     id: "er_daar_continuous",
+    tags: ["er_daar", "continuous"],
     titleTr: "Er/Daar Kullanımı ve Şimdiki Zaman Hikayesi (Er/Daar & Continuous)",
     titleEn: "Er/Daar & Continuous Form",
     content: (isTr) => (
@@ -1490,6 +1502,7 @@ const grammarData = [
   },
   {
     id: "conjunctions_independent",
+    tags: ["conjunctions", "independent_pronouns"],
     titleTr: "Bağlaçlar ve Bağımsız İşaret Zamirleri (Conjunctions & Pronouns)",
     titleEn: "Conjunctions & Independent Pronouns",
     content: (isTr) => (
@@ -1585,6 +1598,7 @@ const grammarData = [
   },
   {
     id: "conjunctions_subclauses",
+    tags: ["subclauses", "conjunctions", "want_omdat"],
     titleTr: "Yan Cümleler ve Bağlaçlar (Bijzin & Conjuncties)",
     titleEn: "Subclauses & Conjunctions (Bijzin)",
     content: (isTr) => (
@@ -1731,6 +1745,7 @@ const grammarData = [
   },
   {
     id: "pronouns_summary",
+    tags: ["schema_pronomina", "pronouns_object", "pronouns_possessive"],
     titleTr: "Tüm Zamirler Tablosu (Schema Pronomina)",
     titleEn: "All Pronouns Summary (Schema Pronomina)",
     content: (isTr) => (
@@ -1820,6 +1835,7 @@ export default function Grammar() {
   const isTr = lang === 'tr';
   const [searchTerm, setSearchTerm] = useState('');
   const [activeTopic, setActiveTopic] = useState(grammarData[0].id);
+  const [isQuizOpen, setIsQuizOpen] = useState(false);
 
   const filteredTopics = useMemo(() => {
     if (!searchTerm) return grammarData;
@@ -1890,13 +1906,32 @@ export default function Grammar() {
                 <i className="fa-solid fa-pen-ruler text-9xl text-indigo-400"></i>
              </div>
              
-             <h3 className="text-2xl sm:text-3xl font-extrabold text-white mb-6 border-b border-slate-700 pb-4 relative z-10 leading-tight">
-               {isTr ? activeContent.titleTr : activeContent.titleEn}
-             </h3>
+             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 border-b border-slate-700 pb-4 relative z-10">
+               <h3 className="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
+                 {isTr ? activeContent.titleTr : activeContent.titleEn}
+               </h3>
+               
+               <button 
+                 onClick={() => setIsQuizOpen(true)}
+                 className="flex-shrink-0 flex items-center justify-center gap-2 bg-indigo-600/20 text-indigo-400 hover:bg-indigo-600 hover:text-white border border-indigo-500/50 hover:border-indigo-500 px-5 py-2.5 rounded-xl font-bold transition-all shadow-sm group"
+               >
+                 <i className="fa-solid fa-dumbbell group-hover:animate-bounce"></i> 
+                 {isTr ? 'Çalış & Test Et' : 'Practice'}
+               </button>
+             </div>
              
              <div className="relative z-10">
                 {activeContent.content(isTr)}
              </div>
+
+             {/* QUIZ MODAL ÇAĞRISI (Doğru etiketleri dizi olarak gönderir) */}
+             {isQuizOpen && (
+               <QuizModule 
+                 tags={activeContent.tags} 
+                 onClose={() => setIsQuizOpen(false)} 
+                 title={isTr ? activeContent.titleTr : activeContent.titleEn}
+               />
+             )}
           </div>
         ) : (
           <div className="bg-slate-800 border border-slate-700 rounded-3xl p-8 text-center flex flex-col items-center justify-center shadow-xl h-full min-h-[300px]">
