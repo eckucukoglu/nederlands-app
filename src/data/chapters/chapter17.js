@@ -336,5 +336,204 @@ export const chapter17Sections = [
         ]
       }
     ]
+  },
+  {
+    id: "On-Class-17",
+    chapter: 17,
+    title: "17. Extra: On-Class Notes",
+    theory: (lang) => (
+      <div className="space-y-6">
+        {lang === 'tr' ? (
+          <>
+            {/* 1. Conjunctions (Bağlaçlar) */}
+            <div className="bg-slate-800/80 p-5 rounded-2xl border border-indigo-500/30">
+              <h3 className="text-lg font-bold text-indigo-400 mb-3 border-b border-indigo-500/20 pb-2">
+                <i className="fa-solid fa-link mr-2"></i> 1. Conjunctions (Bağlaçlar: en, of, want, dus, maar)
+              </h3>
+              <p className="text-sm text-slate-300 mb-4">
+                İki ana cümleyi birbirine bağlayan temel bağlaçlardır. Bu bağlaçlardan sonra normal cümle dizilimi (Özne + Fiil) devam eder.
+              </p>
+              <ul className="space-y-2 text-sm text-slate-200">
+                <li><span className="text-indigo-300 font-bold">maar (ama):</span> Ik wilde naar de bioscoop gaan, <strong className="text-white">maar</strong> ik had geen tijd.</li>
+                <li><span className="text-indigo-300 font-bold">en (ve):</span> Ik ben op kantoor <strong className="text-white">en</strong> ik eet pizza.</li>
+                <li><span className="text-indigo-300 font-bold">want (çünkü):</span> Ik ga naar huis <strong className="text-white">want</strong> ik ben moe. <span className="text-slate-400 italic">(Sebep bildirir)</span></li>
+                <li><span className="text-indigo-300 font-bold">dus (bu yüzden):</span> Ik ben moe <strong className="text-white">dus</strong> ik ga naar huis. <span className="text-slate-400 italic">(Sonuç bildirir)</span></li>
+              </ul>
+              <div className="bg-indigo-900/30 p-3 rounded-lg mt-3 text-xs text-indigo-200">
+                <strong>💡 İpucu:</strong> Sebep-sonuç ilişkisine dikkat edin. "Hasta olduğum için (want) gelemiyorum" ile "Hastayım bu yüzden (dus) gelemiyorum" ifadeleri farklı bağlaçlar gerektirir.
+              </div>
+            </div>
+
+            {/* 2. Er / Daar */}
+            <div className="bg-slate-800/80 p-5 rounded-2xl border border-sky-500/30">
+              <h3 className="text-lg font-bold text-sky-400 mb-3 border-b border-sky-500/20 pb-2">
+                <i className="fa-solid fa-location-dot mr-2"></i> 2. Het gebruik van "Er" (Er Kullanımı)
+              </h3>
+              <p className="text-sm text-slate-300 mb-3">Sınıf notlarına göre "er" kullanımının iki temel kuralı:</p>
+              <ol className="list-decimal pl-5 space-y-3 text-sm text-slate-200">
+                <li>
+                  <strong className="text-sky-300">Belirtisiz Özne (A/An kuralı):</strong> İngilizcede cümlenin öznesi "a" veya "an" (belirtisiz) ile başlıyorsa, Hollandacada cümleye "Er" ile başlarız.
+                  <ul className="list-disc pl-5 mt-1 text-slate-300">
+                    <li><span className="text-slate-400 italic">An</span> accident has happened. = <strong className="text-white">Er</strong> is een ongeluk gebeurd.</li>
+                    <li><span className="text-slate-400 italic">A</span> storm is coming. = <strong className="text-white">Er</strong> komt een storm.</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong className="text-sky-300">Konum Bildirme (Location):</strong> İngilizcedeki "there" (orada) anlamında, daha önce bahsedilmiş bir yeri belirtmek için kullanılır.
+                  <ul className="list-disc pl-5 mt-1 text-slate-300">
+                    <li>Het is <strong className="text-white">er</strong> druk. <span className="text-slate-400 italic">(Orası kalabalık.)</span></li>
+                    <li>Ik ben in Rome. → Ik was <strong className="text-white">er</strong> ook. <span className="text-slate-400 italic">(Ben de oradaydım.)</span></li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
+
+            {/* 3. Zijn + aan het + infinitief */}
+            <div className="bg-slate-800/80 p-5 rounded-2xl border border-emerald-500/30">
+              <h3 className="text-lg font-bold text-emerald-400 mb-3 border-b border-emerald-500/20 pb-2">
+                <i className="fa-solid fa-spinner mr-2"></i> 3. [zijn] [...] [aan het + infinitief] (Şimdiki Zaman Dizilimi)
+              </h3>
+              <p className="text-sm text-slate-300 mb-3">Bir eylemin <strong>şu anda</strong> yapıldığını belirtir. Sınıf notlarındaki en önemli detay, nesnenin veya yerin <strong>"zijn"</strong> ile <strong>"aan het"</strong> arasına girmesidir:</p>
+              <ul className="space-y-2 text-sm text-slate-200">
+                <li>Ik <strong className="text-emerald-300">ben</strong> een pizza <strong className="text-emerald-300">aan het eten</strong>. <span className="text-slate-400 italic">(I am eating a pizza.)</span></li>
+                <li>Ik <strong className="text-emerald-300">ben</strong> de cola <strong className="text-emerald-300">aan het drinken</strong>.</li>
+                <li>Ik <strong className="text-emerald-300">ben</strong> een reservering in het hotel <strong className="text-emerald-300">aan het maken</strong>.</li>
+                <li>Ik <strong className="text-emerald-300">ben</strong> in de bar <strong className="text-emerald-300">aan het dansen</strong>.</li>
+              </ul>
+            </div>
+
+            {/* 4. Imperfectum Sneak Peek */}
+            <div className="bg-slate-800/80 p-5 rounded-2xl border border-amber-500/30">
+              <h3 className="text-lg font-bold text-amber-400 mb-3 border-b border-amber-500/20 pb-2">
+                <i className="fa-solid fa-clock-rotate-left mr-2"></i> 4. Intro: Imperfectum (Geçmiş Zamana Giriş)
+              </h3>
+              <p className="text-sm text-slate-300">Düzenli fiillerin (örneğin <em>werken</em>) geçmiş zaman (imperfectum) çekim ekleri şunlardır:</p>
+              <div className="grid grid-cols-2 gap-4 mt-2 text-sm text-slate-200 font-mono bg-slate-900/50 p-3 rounded-xl">
+                <div>
+                  <p>ik werk<strong className="text-amber-400">-te</strong></p>
+                  <p>jij werk<strong className="text-amber-400">-te</strong></p>
+                  <p>hij werk<strong className="text-amber-400">-te</strong></p>
+                </div>
+                <div>
+                  <p>wij werk<strong className="text-amber-400">-ten</strong></p>
+                  <p>jullie werk<strong className="text-amber-400">-ten</strong></p>
+                  <p>zij werk<strong className="text-amber-400">-ten</strong></p>
+                </div>
+              </div>
+            </div>
+          </>
+        ) : (
+          <>
+            {/* 1. Conjunctions */}
+            <div className="bg-slate-800/80 p-5 rounded-2xl border border-indigo-500/30">
+              <h3 className="text-lg font-bold text-indigo-400 mb-3 border-b border-indigo-500/20 pb-2">
+                <i className="fa-solid fa-link mr-2"></i> 1. Conjunctions (en, of, want, dus, maar)
+              </h3>
+              <p className="text-sm text-slate-300 mb-4">
+                These are coordinating conjunctions connecting two main clauses. Normal word order (Subject + Verb) applies after them.
+              </p>
+              <ul className="space-y-2 text-sm text-slate-200">
+                <li><span className="text-indigo-300 font-bold">maar (but):</span> Ik wilde naar de bioscoop gaan, <strong className="text-white">maar</strong> ik had geen tijd.</li>
+                <li><span className="text-indigo-300 font-bold">en (and):</span> Ik ben op kantoor <strong className="text-white">en</strong> ik eet pizza.</li>
+                <li><span className="text-indigo-300 font-bold">want (because):</span> Ik ga naar huis <strong className="text-white">want</strong> ik ben moe. <span className="text-slate-400 italic">(Provides reason)</span></li>
+                <li><span className="text-indigo-300 font-bold">dus (so):</span> Ik ben moe <strong className="text-white">dus</strong> ik ga naar huis. <span className="text-slate-400 italic">(Provides conclusion/result)</span></li>
+              </ul>
+              <div className="bg-indigo-900/30 p-3 rounded-lg mt-3 text-xs text-indigo-200">
+                <strong>💡 Tip:</strong> Pay attention to cause and effect. "I can't come because (want) I am sick" vs "I am sick so (dus) I can't come".
+              </div>
+            </div>
+
+            {/* 2. Er / Daar */}
+            <div className="bg-slate-800/80 p-5 rounded-2xl border border-sky-500/30">
+              <h3 className="text-lg font-bold text-sky-400 mb-3 border-b border-sky-500/20 pb-2">
+                <i className="fa-solid fa-location-dot mr-2"></i> 2. The use of "Er"
+              </h3>
+              <p className="text-sm text-slate-300 mb-3">According to the class notes, two main rules for "er":</p>
+              <ol className="list-decimal pl-5 space-y-3 text-sm text-slate-200">
+                <li>
+                  <strong className="text-sky-300">Indefinite Subject (A/An rule):</strong> If the subject of a sentence in English starts with "a" or "an", in Dutch we start with "Er".
+                  <ul className="list-disc pl-5 mt-1 text-slate-300">
+                    <li><span className="text-slate-400 italic">An</span> accident has happened. = <strong className="text-white">Er</strong> is een ongeluk gebeurd.</li>
+                    <li><span className="text-slate-400 italic">A</span> storm is coming. = <strong className="text-white">Er</strong> komt een storm.</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong className="text-sky-300">Replacing Location:</strong> It replaces a location, i.e., like "there" in English.
+                  <ul className="list-disc pl-5 mt-1 text-slate-300">
+                    <li>Het is <strong className="text-white">er</strong> druk. <span className="text-slate-400 italic">(It is busy there.)</span></li>
+                    <li>Ik ben in Rome. → Ik was <strong className="text-white">er</strong> ook. <span className="text-slate-400 italic">(I was there too.)</span></li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
+
+            {/* 3. Zijn + aan het + infinitief */}
+            <div className="bg-slate-800/80 p-5 rounded-2xl border border-emerald-500/30">
+              <h3 className="text-lg font-bold text-emerald-400 mb-3 border-b border-emerald-500/20 pb-2">
+                <i className="fa-solid fa-spinner mr-2"></i> 3. [zijn] [...] [aan het + infinitief] (Word Order)
+              </h3>
+              <p className="text-sm text-slate-300 mb-3">Indicates an action is happening <strong>right now</strong>. The crucial detail from class is that the object or location goes <strong>between "zijn" and "aan het"</strong>:</p>
+              <ul className="space-y-2 text-sm text-slate-200">
+                <li>Ik <strong className="text-emerald-300">ben</strong> een pizza <strong className="text-emerald-300">aan het eten</strong>. <span className="text-slate-400 italic">(I am eating a pizza.)</span></li>
+                <li>Ik <strong className="text-emerald-300">ben</strong> de cola <strong className="text-emerald-300">aan het drinken</strong>.</li>
+                <li>Ik <strong className="text-emerald-300">ben</strong> een reservering in het hotel <strong className="text-emerald-300">aan het maken</strong>.</li>
+                <li>Ik <strong className="text-emerald-300">ben</strong> in de bar <strong className="text-emerald-300">aan het dansen</strong>.</li>
+              </ul>
+            </div>
+
+            {/* 4. Imperfectum Sneak Peek */}
+            <div className="bg-slate-800/80 p-5 rounded-2xl border border-amber-500/30">
+              <h3 className="text-lg font-bold text-amber-400 mb-3 border-b border-amber-500/20 pb-2">
+                <i className="fa-solid fa-clock-rotate-left mr-2"></i> 4. Intro: Imperfectum (Past Tense)
+              </h3>
+              <p className="text-sm text-slate-300">The past tense suffixes for regular verbs (like <em>werken</em>) are as follows:</p>
+              <div className="grid grid-cols-2 gap-4 mt-2 text-sm text-slate-200 font-mono bg-slate-900/50 p-3 rounded-xl">
+                <div>
+                  <p>ik werk<strong className="text-amber-400">-te</strong></p>
+                  <p>jij werk<strong className="text-amber-400">-te</strong></p>
+                  <p>hij werk<strong className="text-amber-400">-te</strong></p>
+                </div>
+                <div>
+                  <p>wij werk<strong className="text-amber-400">-ten</strong></p>
+                  <p>jullie werk<strong className="text-amber-400">-ten</strong></p>
+                  <p>zij werk<strong className="text-amber-400">-ten</strong></p>
+                </div>
+              </div>
+            </div>
+          </>
+        )}
+      </div>
+    ),
+    exerciseGroups: [
+      {
+        instruction: "1. Conjunctions: Kies het juiste woord (want, dus, maar, en, of).",
+        isExtra: true,
+        questions: [
+          { id: "oc17_1_1", type: "multiple_choice", question: "Ik ga naar bed, ______ ik ben erg moe.", options: ["maar", "want", "dus"], correctAnswer: "want" },
+          { id: "oc17_1_2", type: "multiple_choice", question: "Ik ben ziek, ______ ik ga niet naar kantoor.", options: ["of", "maar", "dus"], correctAnswer: "dus" },
+          { id: "oc17_1_3", type: "multiple_choice", question: "Ik wil iets eten, ______ ik heb helaas geen geld.", options: ["maar", "want", "en"], correctAnswer: "maar" },
+          { id: "oc17_1_4", type: "multiple_choice", question: "In het weekend ben ik op kantoor ______ ik eet een pizza.", options: ["en", "of", "want"], correctAnswer: "en" }
+        ]
+      },
+      {
+        instruction: "2. Er of Daar? (Kies op basis van de a/an regel of specifieke locatie).",
+        isExtra: true,
+        questions: [
+          { id: "oc17_2_1", type: "multiple_choice", question: "A storm is coming. = ______ komt een storm.", options: ["Er", "Daar"], correctAnswer: "Er" },
+          { id: "oc17_2_2", type: "multiple_choice", question: "An accident has happened. = ______ is een ongeluk gebeurd.", options: ["Er", "Daar"], correctAnswer: "Er" },
+          { id: "oc17_2_3", type: "multiple_choice", question: "Ik woon in Amsterdam. Het is ______ druk.", options: ["er", "daar"], correctAnswer: "er" },
+          { id: "oc17_2_4", type: "multiple_choice", question: "Zie je dat grote gebouw? ______ woont mijn baas.", options: ["Er", "Daar"], correctAnswer: "Daar" }
+        ]
+      },
+      {
+        instruction: "3. Woordvolgorde (Word order): Zijn ... aan het + infinitief.",
+        isExtra: true,
+        questions: [
+          { id: "oc17_3_1", type: "multiple_choice", question: "Wat is de juiste zin? (I am eating a pizza)", options: ["Ik ben aan het eten een pizza.", "Ik ben een pizza aan het eten.", "Ik een pizza ben aan het eten."], correctAnswer: "Ik ben een pizza aan het eten." },
+          { id: "oc17_3_2", type: "multiple_choice", question: "Wat is de juiste zin? (I am dancing in the bar)", options: ["Ik ben in de bar aan het dansen.", "Ik ben aan het dansen in de bar.", "Ik in de bar ben aan het dansen."], correctAnswer: "Ik ben in de bar aan het dansen." },
+          { id: "oc17_3_3", type: "multiple_choice", question: "Wat is de juiste zin? (We are making a reservation in the hotel)", options: ["Wij zijn aan het maken een reservering in het hotel.", "Wij zijn een reservering in het hotel aan het maken.", "Wij maken zijn een reservering in het hotel."], correctAnswer: "Wij zijn een reservering in het hotel aan het maken." }
+        ]
+      }
+    ]
   }
 ];
