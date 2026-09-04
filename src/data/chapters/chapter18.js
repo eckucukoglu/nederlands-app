@@ -323,5 +323,237 @@ export const chapter18Sections = [
         ]
       }
     ]
+  },
+  ,
+  {
+    id: "On-Class-18",
+    chapter: 18,
+    title: "18. Extra: On-Class Notes",
+    theory: (lang) => (
+      <div className="space-y-6">
+        {lang === 'tr' ? (
+          <>
+            {/* 1. Normal vs Subordinating Conjunctions */}
+            <div className="bg-slate-800/80 p-5 rounded-2xl border border-indigo-500/30">
+              <h3 className="text-lg font-bold text-indigo-400 mb-3 border-b border-indigo-500/20 pb-2">
+                <i className="fa-solid fa-frog mr-2"></i> 1. De 'Kikker' Regel (Kurbağa Kuralı: Fiilin Sona Zıplaması)
+              </h3>
+              <p className="text-sm text-slate-300 mb-3">
+                Normal bağlaçlar (<strong className="text-white">want, maar, of, en</strong>) cümlenin kelime dizilimini değiştirmez. <br/>
+                Örnek: Ik ben hier <strong className="text-indigo-300">want</strong> <u>ik heb</u> honger.
+              </p>
+              <p className="text-sm text-slate-300 mb-3">
+                Ancak bazı <strong>yan cümle bağlaçları</strong>, cümlenin TÜM FİİLLERİNİ cümlenin EN SONUNA fırlatır. Öğretmenimiz bu fiilin sona zıplaması olayına <strong>'kikker' (kurbağa)</strong> adını veriyor.
+              </p>
+              <div className="bg-indigo-900/30 p-3 rounded-lg mt-3 text-sm text-indigo-100">
+                <strong className="text-white block mb-2">Kikker (Fiili Sona Atan) Bağlaçlar:</strong>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li><strong className="text-indigo-300">omdat</strong> = because (çünkü)</li>
+                  <li><strong className="text-indigo-300">zodat</strong> = so that (böylece, -sın diye)</li>
+                  <li><strong className="text-indigo-300">dat</strong> = that (-dığını/-diğini)</li>
+                  <li><strong className="text-indigo-300">hoewel</strong> = although (-e rağmen)</li>
+                  <li><strong className="text-indigo-300">terwijl</strong> = while (iken)</li>
+                  <li><strong className="text-indigo-300">nadat</strong> = after (-den sonra)</li>
+                </ul>
+              </div>
+              <p className="text-sm text-slate-200 mt-3 font-mono bg-black/20 p-2 rounded">
+                Ik ben hier <strong className="text-indigo-400">omdat</strong> ik honger <strong className="text-rose-400 underline">heb</strong>. (heb sona gitti)
+              </p>
+            </div>
+
+            {/* 2. Inversion with Subclauses */}
+            <div className="bg-slate-800/80 p-5 rounded-2xl border border-rose-500/30">
+              <h3 className="text-lg font-bold text-rose-400 mb-3 border-b border-rose-500/20 pb-2">
+                <i className="fa-solid fa-rotate mr-2"></i> 2. Yan Cümle ile Başlamak (Inversion)
+              </h3>
+              <p className="text-sm text-slate-300 mb-3">
+                Eğer cümleye yan cümle ile başlarsak, ana cümlede <strong>devrik yapı (inversion)</strong> yapmak zorundayız. Formül şudur:
+              </p>
+              <div className="text-center font-bold text-sm bg-rose-900/40 p-3 rounded-xl border border-rose-500/50 mb-3 text-white">
+                TRIGGER WORD + KIKKER (Fiil sonda) + <span className="text-rose-400">INVERSION (Fiil + Özne)</span>
+              </div>
+              <p className="text-sm text-slate-300 mb-2"><strong>Tetikleyici Kelimeler (Trigger words):</strong> als, toen, zodra, wanneer</p>
+              <ul className="space-y-3 text-sm text-slate-200 bg-black/20 p-3 rounded-lg">
+                <li>
+                  <strong className="text-rose-300">Als</strong> ik geen eten <strong className="text-emerald-400">eet</strong>, <strong className="text-rose-400">heb ik</strong> honger.
+                  <br/><span className="text-xs text-slate-400">(Yemek yemezsem, aç kalırım.)</span>
+                </li>
+                <li>
+                  <strong className="text-rose-300">Als</strong> je niet <strong className="text-emerald-400">studeert</strong>, <strong className="text-rose-400">ga je</strong> niet slagen.
+                  <br/><span className="text-xs text-slate-400">(Çalışmazsan, başaramayacaksın.)</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* 3. Separable Verbs */}
+            <div className="bg-slate-800/80 p-5 rounded-2xl border border-emerald-500/30">
+              <h3 className="text-lg font-bold text-emerald-400 mb-3 border-b border-emerald-500/20 pb-2">
+                <i className="fa-solid fa-scissors mr-2"></i> 3. Ayrılabilen Fiillerin 3 Hali (Separable Verbs)
+              </h3>
+              <p className="text-sm text-slate-300 mb-4">
+                Ayrılabilen fiillerin geniş zaman (present), hikaye geçmiş zaman (imperfectum) ve di'li geçmiş zaman (perfectum) çekimleri:
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-slate-200">
+                <div className="bg-slate-900/50 p-3 rounded-xl">
+                  <strong className="text-emerald-300 block mb-2">opbellen (aramak)</strong>
+                  <ul className="space-y-1">
+                    <li><span className="text-slate-400">Present:</span> Ik <strong>bel</strong> mijn vriend <strong>op</strong>.</li>
+                    <li><span className="text-slate-400">Imperfectum:</span> Ik <strong>belde</strong> mijn vriend <strong>op</strong>.</li>
+                    <li><span className="text-slate-400">Perfectum:</span> Ik heb mijn moeder <strong>opgebeld</strong>.</li>
+                  </ul>
+                </div>
+                <div className="bg-slate-900/50 p-3 rounded-xl">
+                  <strong className="text-emerald-300 block mb-2">aankomen (varmak)</strong>
+                  <ul className="space-y-1">
+                    <li><span className="text-slate-400">Present:</span> Ik <strong>kom</strong> <strong>aan</strong>.</li>
+                    <li><span className="text-slate-400">Imperfectum:</span> Ik <strong>kwam</strong> <strong>aan</strong>.</li>
+                    <li><span className="text-slate-400">Perfectum:</span> Ik ben <strong>aangekomen</strong>.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* 4. Pronunciation */}
+            <div className="bg-slate-800/80 p-4 rounded-2xl border border-amber-500/30">
+              <h3 className="text-sm font-bold text-amber-400 mb-2 border-b border-amber-500/20 pb-2">
+                🗣️ Telaffuz İpuçları (Pronunciation)
+              </h3>
+              <div className="flex flex-wrap gap-4 text-xs text-slate-300 font-mono">
+                <span>ie → ee</span>
+                <span>oe → oo</span>
+                <span>ou/au → (n)ow</span>
+                <span>ee → A</span>
+                <span>ei → I</span>
+              </div>
+            </div>
+          </>
+        ) : (
+          <>
+            {/* 1. Normal vs Subordinating Conjunctions */}
+            <div className="bg-slate-800/80 p-5 rounded-2xl border border-indigo-500/30">
+              <h3 className="text-lg font-bold text-indigo-400 mb-3 border-b border-indigo-500/20 pb-2">
+                <i className="fa-solid fa-frog mr-2"></i> 1. The 'Kikker' Rule (The Frog: Verbs to the end)
+              </h3>
+              <p className="text-sm text-slate-300 mb-3">
+                Normal conjunctions (<strong className="text-white">want, maar, of, en</strong>) do not change the word order. <br/>
+                Example: Ik ben hier <strong className="text-indigo-300">want</strong> <u>ik heb</u> honger.
+              </p>
+              <p className="text-sm text-slate-300 mb-3">
+                However, for certain conjunctions, we place ALL VERBS of the secondary clause at the END. The teacher calls this the <strong>'kikker' (frog)</strong> jump.
+              </p>
+              <div className="bg-indigo-900/30 p-3 rounded-lg mt-3 text-sm text-indigo-100">
+                <strong className="text-white block mb-2">Kikker (Verb-kicking) Conjunctions:</strong>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li><strong className="text-indigo-300">omdat</strong> = because</li>
+                  <li><strong className="text-indigo-300">zodat</strong> = so that</li>
+                  <li><strong className="text-indigo-300">dat</strong> = that</li>
+                  <li><strong className="text-indigo-300">hoewel</strong> = although</li>
+                  <li><strong className="text-indigo-300">terwijl</strong> = while</li>
+                  <li><strong className="text-indigo-300">nadat</strong> = after</li>
+                </ul>
+              </div>
+              <p className="text-sm text-slate-200 mt-3 font-mono bg-black/20 p-2 rounded">
+                Ik ben hier <strong className="text-indigo-400">omdat</strong> ik honger <strong className="text-rose-400 underline">heb</strong>. (heb jumped to the end)
+              </p>
+            </div>
+
+            {/* 2. Inversion with Subclauses */}
+            <div className="bg-slate-800/80 p-5 rounded-2xl border border-rose-500/30">
+              <h3 className="text-lg font-bold text-rose-400 mb-3 border-b border-rose-500/20 pb-2">
+                <i className="fa-solid fa-rotate mr-2"></i> 2. Starting with a Secondary Clause (Inversion)
+              </h3>
+              <p className="text-sm text-slate-300 mb-3">
+                When we start a sentence with the secondary clause, and after it we have the main clause, we use <strong>inversion</strong>. The pattern is:
+              </p>
+              <div className="text-center font-bold text-sm bg-rose-900/40 p-3 rounded-xl border border-rose-500/50 mb-3 text-white">
+                TRIGGER WORD + KIKKER (Verb at end) + <span className="text-rose-400">INVERSION (Verb + Subject)</span>
+              </div>
+              <p className="text-sm text-slate-300 mb-2"><strong>Trigger words:</strong> als, toen, zodra, wanneer</p>
+              <ul className="space-y-3 text-sm text-slate-200 bg-black/20 p-3 rounded-lg">
+                <li>
+                  <strong className="text-rose-300">Als</strong> ik geen eten <strong className="text-emerald-400">eet</strong>, <strong className="text-rose-400">heb ik</strong> honger.
+                  <br/><span className="text-xs text-slate-400">(If I don't eat food, I get hungry.)</span>
+                </li>
+                <li>
+                  <strong className="text-rose-300">Als</strong> je niet <strong className="text-emerald-400">studeert</strong>, <strong className="text-rose-400">ga je</strong> niet slagen.
+                  <br/><span className="text-xs text-slate-400">(If you don't study, you won't pass.)</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* 3. Separable Verbs */}
+            <div className="bg-slate-800/80 p-5 rounded-2xl border border-emerald-500/30">
+              <h3 className="text-lg font-bold text-emerald-400 mb-3 border-b border-emerald-500/20 pb-2">
+                <i className="fa-solid fa-scissors mr-2"></i> 3. Separable Verbs in 3 Tenses
+              </h3>
+              <p className="text-sm text-slate-300 mb-4">
+                How separable verbs behave in present, imperfectum, and perfectum tenses:
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-slate-200">
+                <div className="bg-slate-900/50 p-3 rounded-xl">
+                  <strong className="text-emerald-300 block mb-2">opbellen (to call up)</strong>
+                  <ul className="space-y-1">
+                    <li><span className="text-slate-400">Present:</span> Ik <strong>bel</strong> mijn vriend <strong>op</strong>.</li>
+                    <li><span className="text-slate-400">Imperfectum:</span> Ik <strong>belde</strong> mijn vriend <strong>op</strong>.</li>
+                    <li><span className="text-slate-400">Perfectum:</span> Ik heb mijn moeder <strong>opgebeld</strong>.</li>
+                  </ul>
+                </div>
+                <div className="bg-slate-900/50 p-3 rounded-xl">
+                  <strong className="text-emerald-300 block mb-2">aankomen (to arrive)</strong>
+                  <ul className="space-y-1">
+                    <li><span className="text-slate-400">Present:</span> Ik <strong>kom</strong> <strong>aan</strong>.</li>
+                    <li><span className="text-slate-400">Imperfectum:</span> Ik <strong>kwam</strong> <strong>aan</strong>.</li>
+                    <li><span className="text-slate-400">Perfectum:</span> Ik ben <strong>aangekomen</strong>.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* 4. Pronunciation */}
+            <div className="bg-slate-800/80 p-4 rounded-2xl border border-amber-500/30">
+              <h3 className="text-sm font-bold text-amber-400 mb-2 border-b border-amber-500/20 pb-2">
+                🗣️ Pronunciation Tricks (NL - EN)
+              </h3>
+              <div className="flex flex-wrap gap-4 text-xs text-slate-300 font-mono">
+                <span>ie → ee</span>
+                <span>oe → oo</span>
+                <span>ou/au → (n)ow</span>
+                <span>ee → A</span>
+                <span>ei → I</span>
+              </div>
+            </div>
+          </>
+        )}
+      </div>
+    ),
+    exerciseGroups: [
+      {
+        instruction: "1. De Kikker Regel: Kies de juiste woordvolgorde (Choose the correct word order).",
+        isExtra: true,
+        questions: [
+          { id: "oc18_1_1", type: "multiple_choice", question: "Ik kan het internet niet gebruiken omdat er een storing ________.", options: ["is", "is er", "er is"], correctAnswer: "is" },
+          { id: "oc18_1_2", type: "multiple_choice", question: "We vonden een plaats op het terras hoewel het erg druk ________.", options: ["was", "was het", "het was"], correctAnswer: "was" },
+          { id: "oc18_1_3", type: "multiple_choice", question: "Bas kookt het eten terwijl Maria de auto naar de garage ________.", options: ["brengt", "brengen", "brengt de auto"], correctAnswer: "brengt" }
+        ]
+      },
+      {
+        instruction: "2. Inversie: Als / Toen / Zodra + Kikker + Inversie.",
+        isExtra: true,
+        questions: [
+          { id: "oc18_2_1", type: "multiple_choice", question: "Als je niet studeert, ________.", options: ["je gaat niet slagen", "ga je niet slagen", "niet slagen ga je"], correctAnswer: "ga je niet slagen" },
+          { id: "oc18_2_2", type: "multiple_choice", question: "Zodra ik een nieuwe computer koop, ________ deze computer kapot.", options: ["gaat", "hij gaat", "ga"], correctAnswer: "gaat" },
+          { id: "oc18_2_3", type: "multiple_choice", question: "Toen ik even met iemand naast ons praatte, ________ mijn portemonnee gestolen.", options: ["is", "was", "zijn"], correctAnswer: "was" }
+        ]
+      },
+      {
+        instruction: "3. Separable Verbs (opbellen / aankomen) & Perfectum/Imperfectum.",
+        isExtra: true,
+        questions: [
+          { id: "oc18_3_1", type: "multiple_choice", question: "Imperfectum: Ik ________ mijn vriend ________. (opbellen)", options: ["heb opgebeld", "belde ... op", "bel ... op"], correctAnswer: "belde ... op" },
+          { id: "oc18_3_2", type: "multiple_choice", question: "Perfectum: Wij ________ monopoly ________. (spelen)", options: ["hebben ... gespeeld", "speelden", "hebben ... spelen"], correctAnswer: "hebben ... gespeeld" },
+          { id: "oc18_3_3", type: "multiple_choice", question: "Perfectum: Ik ________ mijn broertje naar school ________. (brengen)", options: ["heb ... gebracht", "ben ... gebracht", "heb ... brengen"], correctAnswer: "heb ... gebracht" }
+        ]
+      }
+    ]
   }
 ];
