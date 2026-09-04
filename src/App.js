@@ -90,7 +90,7 @@ const GuideContent = ({ lang }) => (
               <div className="w-8 h-8 rounded-lg bg-amber-900/50 border border-amber-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-amber-400"><i className="fa-solid fa-chalkboard-user"></i></div>
               <div>
                 <strong className="text-slate-200 block mb-1">Özet (Summary) Bölümleri</strong>
-                Bu bölümler ("Sum"), gerçek sınıf notlarına dayanan kapsamlı gramer özetleri, telaffuz ipuçları ve ekstra egzersizler içerir. Hızlı tekrarlar yapmak ve ünite konularını pekiştirmek için mükemmeldir.
+                Üst menüdeki tahta ikonundan ulaşabileceğiniz bu bölümler, gerçek sınıf notlarına dayanan kapsamlı gramer özetleri, telaffuz ipuçları ve ekstra egzersizler içerir.
               </div>
             </li>
             <li className="flex items-start gap-3">
@@ -157,7 +157,7 @@ const GuideContent = ({ lang }) => (
               <div className="w-8 h-8 rounded-lg bg-amber-900/50 border border-amber-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-amber-400"><i className="fa-solid fa-chalkboard-user"></i></div>
               <div>
                 <strong className="text-slate-200 block mb-1">Summary Sections</strong>
-                These sections ("Sum") contain comprehensive grammar summaries, pronunciation tips, and extra exercises based on real classroom notes.
+                These sections in the top menu contain comprehensive grammar summaries, pronunciation tips, and extra exercises based on real classroom notes.
               </div>
             </li>
             <li className="flex items-start gap-3">
@@ -188,7 +188,11 @@ const HomeView = ({ favorites, completed, goToSection, lang, bookSections }) => 
   const getSecTitle = (secId) => {
     const sec = bookSections.find(s => s.id === secId);
     if (sec && sec.title) return sec.title;
-    return secId.includes('On-Class') ? 'Summary' : 'Dialoog / Oefening';
+    if (secId.includes('On-Class')) {
+       const ch = secId.replace('On-Class-', '');
+       return lang === 'tr' ? `Ünite ${ch} Özeti` : `Chapter ${ch} Summary`;
+    }
+    return lang === 'tr' ? 'Diyalog / Alıştırma' : 'Dialogue / Exercise';
   };
 
   if (!hasData) {
@@ -222,7 +226,9 @@ const HomeView = ({ favorites, completed, goToSection, lang, bookSections }) => 
                      className="cursor-pointer bg-slate-800 p-4 rounded-xl border border-amber-500/30 hover:border-amber-400 hover:shadow-[0_0_15px_rgba(251,191,36,0.15)] hover:-translate-y-1 transition-all shadow-md group flex flex-col gap-3"
                    >
                        <div className="flex justify-between items-start gap-2">
-                           <h4 className="font-bold text-slate-200 text-[15px] leading-snug group-hover:text-white transition-colors">{secId} - {getSecTitle(secId)}</h4>
+                           <h4 className="font-bold text-slate-200 text-[15px] leading-snug group-hover:text-white transition-colors">
+                              {secId.includes('On-Class') ? (lang === 'tr' ? `Özet ${secId.replace('On-Class-','')}` : `Sum ${secId.replace('On-Class-','')}`) : secId} - {getSecTitle(secId)}
+                           </h4>
                            <div className="bg-amber-900/30 p-1.5 rounded-lg flex items-center justify-center border border-amber-500/20">
                              <i className="fa-solid fa-star text-amber-400 text-xs"></i>
                            </div>
@@ -249,7 +255,8 @@ const HomeView = ({ favorites, completed, goToSection, lang, bookSections }) => 
                      onClick={() => goToSection(secId)} 
                      className="bg-slate-800/80 border border-emerald-700/50 text-emerald-400 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold hover:bg-emerald-600 hover:text-white hover:border-emerald-500 hover:shadow-[0_0_10px_rgba(52,211,153,0.3)] hover:-translate-y-0.5 transition-all flex items-center gap-2"
                    >
-                       <i className="fa-solid fa-check"></i> {secId} - {getSecTitle(secId)}
+                       <i className="fa-solid fa-check"></i> 
+                       {secId.includes('On-Class') ? (lang === 'tr' ? `Ünite ${secId.replace('On-Class-','')} Özeti` : `Chapter ${secId.replace('On-Class-','')} Summary`) : secId} - {getSecTitle(secId)}
                    </button>
                ))}
             </div>
@@ -342,12 +349,14 @@ function MainContent({ user, setIsAuthModalOpen }) {
   const touchStartX = useRef(0);
   const touchStartY = useRef(0);
 
-  const currentSections = bookSections.filter(sec => sec.chapter === currentChapter || sec.id === `On-Class-${currentChapter}`);
+  const currentSections = bookSections.filter(sec => sec.chapter === currentChapter && !sec.id.includes('On-Class'));
   const currentIndex = currentSections.findIndex(sec => sec.id === activeTab);
 
-  // YENİ EKLENEN FONKSİYON: Bir ünitenin (tüm derslerinin) tamamen bitip bitmediğini kontrol eder
+  const isSummaryMode = activeTab.startsWith('On-Class-');
+  const summaryChaptersList = availableChapters.filter(ch => bookSections.some(s => s.id === `On-Class-${ch}`));
+
   const isChapterFullyCompleted = (chNum) => {
-    const chapterSections = bookSections.filter(s => s.chapter === chNum);
+    const chapterSections = bookSections.filter(s => s.chapter === chNum && !s.id.includes('On-Class'));
     if (chapterSections.length === 0) return false;
     return chapterSections.every(s => completed[s.id]);
   };
@@ -376,16 +385,30 @@ function MainContent({ user, setIsAuthModalOpen }) {
       if (activeTab === 'flashcards' || activeTab === 'verbs' || activeTab === 'grammar' || activeTab === 'home') return;
       if (['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement.tagName)) return;
 
-      if (e.key === 'ArrowLeft') {
-        if (currentIndex > 0) setActiveTab(currentSections[currentIndex - 1].id);
-      } else if (e.key === 'ArrowRight') {
-        if (currentIndex < currentSections.length - 1) setActiveTab(currentSections[currentIndex + 1].id);
+      if (isSummaryMode) {
+        const sumList = summaryChaptersList.map(ch => `On-Class-${ch}`);
+        const sumIdx = sumList.indexOf(activeTab);
+        if (e.key === 'ArrowLeft' && sumIdx > 0) {
+           const newId = sumList[sumIdx - 1];
+           setActiveTab(newId);
+           setCurrentChapter(Number(newId.replace('On-Class-', '')));
+        } else if (e.key === 'ArrowRight' && sumIdx < sumList.length - 1) {
+           const newId = sumList[sumIdx + 1];
+           setActiveTab(newId);
+           setCurrentChapter(Number(newId.replace('On-Class-', '')));
+        }
+      } else {
+        if (e.key === 'ArrowLeft') {
+          if (currentIndex > 0) setActiveTab(currentSections[currentIndex - 1].id);
+        } else if (e.key === 'ArrowRight') {
+          if (currentIndex < currentSections.length - 1) setActiveTab(currentSections[currentIndex + 1].id);
+        }
       }
     };
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [currentIndex, currentSections, activeTab]);
+  }, [currentIndex, currentSections, activeTab, isSummaryMode, summaryChaptersList]);
 
   const handleTouchStart = (e) => {
     touchStartX.current = e.touches[0].clientX;
@@ -401,10 +424,24 @@ function MainContent({ user, setIsAuthModalOpen }) {
     const deltaY = touchEndY - touchStartY.current;
 
     if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 60) {
-      if (deltaX < 0) {
-        if (currentIndex < currentSections.length - 1) setActiveTab(currentSections[currentIndex + 1].id);
+      if (isSummaryMode) {
+        const sumList = summaryChaptersList.map(ch => `On-Class-${ch}`);
+        const sumIdx = sumList.indexOf(activeTab);
+        if (deltaX < 0 && sumIdx < sumList.length - 1) {
+           const newId = sumList[sumIdx + 1];
+           setActiveTab(newId);
+           setCurrentChapter(Number(newId.replace('On-Class-', '')));
+        } else if (deltaX > 0 && sumIdx > 0) {
+           const newId = sumList[sumIdx - 1];
+           setActiveTab(newId);
+           setCurrentChapter(Number(newId.replace('On-Class-', '')));
+        }
       } else {
-        if (currentIndex > 0) setActiveTab(currentSections[currentIndex - 1].id);
+        if (deltaX < 0) {
+          if (currentIndex < currentSections.length - 1) setActiveTab(currentSections[currentIndex + 1].id);
+        } else {
+          if (currentIndex > 0) setActiveTab(currentSections[currentIndex - 1].id);
+        }
       }
     }
   };
@@ -680,18 +717,26 @@ function MainContent({ user, setIsAuthModalOpen }) {
     const newChapter = Number(e.target.value);
     setCurrentChapter(newChapter);
     const savedTab = localStorage.getItem(`lastVisitedTab_${newChapter}`);
-    setActiveTab(savedTab ? savedTab : `${newChapter}.1`);
+    
+    if (savedTab && !savedTab.includes('On-Class')) {
+       setActiveTab(savedTab);
+    } else {
+       setActiveTab(`${newChapter}.1`);
+    }
   };
 
   const getSectionTitle = (secId) => {
     if (secId === 'flashcards') return "Flashcards";
     if (secId === 'verbs') return lang === 'tr' ? "Düzensiz Fiiller" : "Irregular Verbs";
     if (secId === 'grammar') return lang === 'tr' ? "Gramer Referansı" : "Grammar Reference";
+    if (secId.includes('On-Class')) {
+       const ch = secId.replace('On-Class-', '');
+       return lang === 'tr' ? `Ünite ${ch} Özeti` : `Chapter ${ch} Summary`;
+    }
     const sec = currentSections.find(s => s.id === secId);
     if (sec && sec.title) return sec.title;
-    if (secId.includes('On-Class')) return "Summary";
-    if (secId.endsWith('.1')) return "Dialoog";
-    return "Oefening";
+    if (secId.endsWith('.1')) return lang === 'tr' ? "Diyalog" : "Dialogue";
+    return lang === 'tr' ? "Alıştırma" : "Exercise";
   };
 
   const renderSearchResults = () => {
@@ -925,10 +970,36 @@ function MainContent({ user, setIsAuthModalOpen }) {
             {/* FULL QUIZ BUTONU */}
             <button 
               onClick={() => setIsFullQuizOpen(true)}
-              className="p-1.5 sm:p-2 rounded-full transition-colors flex items-center justify-center bg-amber-900/30 text-amber-400 hover:bg-amber-600 hover:text-white border border-amber-800/30 shadow-sm"
+              className="p-1.5 sm:p-2 rounded-full transition-colors flex items-center justify-center bg-teal-900/30 text-teal-400 hover:bg-teal-600 hover:text-white border border-teal-800/30 shadow-sm"
               title={lang === 'tr' ? 'Genel Sınav & Full Quiz' : 'Full Quiz Mode'}
             >
               <i className="fa-solid fa-graduation-cap text-lg sm:text-xl"></i>
+            </button>
+
+            {/* SUMMARY BUTONU */}
+            <button 
+              onClick={() => {
+                if (isSummaryMode) {
+                  setActiveTab(previousTab);
+                } else {
+                  if (activeTab !== 'home' && activeTab !== 'verbs' && activeTab !== 'flashcards' && activeTab !== 'grammar' && !activeTab.startsWith('On-Class-')) setPreviousTab(activeTab);
+                  
+                  // O anki chapter'ın summary'si var mı bak, yoksa ilk bulduğuna git
+                  const currentSum = `On-Class-${currentChapter}`;
+                  if (bookSections.some(s => s.id === currentSum)) {
+                    setActiveTab(currentSum);
+                  } else {
+                    const firstSum = bookSections.find(s => s.id.startsWith('On-Class-'))?.id || 'On-Class-17';
+                    setActiveTab(firstSum);
+                  }
+                }
+                setIsChapterExpanded(false); 
+                setIsSearchExpanded(false);
+              }}
+              className={`p-1.5 sm:p-2 rounded-full transition-colors flex items-center justify-center ${isSummaryMode ? 'bg-amber-600 text-white shadow-md' : 'bg-amber-900/30 text-amber-400 hover:bg-amber-600 hover:text-white border border-amber-800/30'}`}
+              title={lang === 'tr' ? 'Özet (Summary)' : 'Summary'}
+            >
+              <i className="fa-solid fa-chalkboard-user text-lg sm:text-xl"></i>
             </button>
 
             <button 
@@ -936,7 +1007,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
                 if (activeTab === 'flashcards') {
                   setActiveTab(previousTab);
                 } else {
-                  if (activeTab !== 'home' && activeTab !== 'verbs' && activeTab !== 'grammar') setPreviousTab(activeTab);
+                  if (activeTab !== 'home' && activeTab !== 'verbs' && activeTab !== 'grammar' && !activeTab.startsWith('On-Class-')) setPreviousTab(activeTab);
                   setActiveTab("flashcards");
                 }
                 setIsChapterExpanded(false); 
@@ -953,7 +1024,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
                 if (activeTab === 'grammar') {
                   setActiveTab(previousTab);
                 } else {
-                  if (activeTab !== 'home' && activeTab !== 'verbs' && activeTab !== 'flashcards') setPreviousTab(activeTab);
+                  if (activeTab !== 'home' && activeTab !== 'verbs' && activeTab !== 'flashcards' && !activeTab.startsWith('On-Class-')) setPreviousTab(activeTab);
                   setActiveTab("grammar");
                 }
                 setIsChapterExpanded(false); 
@@ -970,7 +1041,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
                 if (activeTab === 'verbs') {
                   setActiveTab(previousTab);
                 } else {
-                  if (activeTab !== 'home' && activeTab !== 'flashcards' && activeTab !== 'grammar') setPreviousTab(activeTab);
+                  if (activeTab !== 'home' && activeTab !== 'flashcards' && activeTab !== 'grammar' && !activeTab.startsWith('On-Class-')) setPreviousTab(activeTab);
                   setActiveTab("verbs");
                 }
                 setIsChapterExpanded(false); 
@@ -1051,12 +1122,12 @@ function MainContent({ user, setIsAuthModalOpen }) {
                 className={`flex items-center justify-center px-3 sm:px-4 h-9 rounded-full font-extrabold text-xs sm:text-sm transition-all border shadow-sm flex-shrink-0 ${isChapterExpanded ? 'bg-brand-600 text-white border-brand-500' : 'bg-slate-800 text-slate-200 border-slate-700 hover:bg-slate-700'}`}
                 title={t('changeChapter')}
               >
-                {/* Mobilde sadece H10 vb. gösterilir, masaüstünde tam metin */}
+                {/* Mobilde sadece Ü17 vb. gösterilir, masaüstünde tam metin */}
                 <span className="sm:hidden whitespace-nowrap flex items-center gap-1">
-                   H{currentChapter} {isChapterFullyCompleted(currentChapter) && <i className="fa-solid fa-circle-check text-emerald-400"></i>}
+                   {lang === 'tr' ? 'Ü' : 'Ch'}{currentChapter} {isChapterFullyCompleted(currentChapter) && <i className="fa-solid fa-circle-check text-emerald-400"></i>}
                 </span>
                 <span className="hidden sm:flex items-center gap-1.5 whitespace-nowrap">
-                   Hoofdstuk {currentChapter} {isChapterFullyCompleted(currentChapter) && <i className="fa-solid fa-circle-check text-emerald-400"></i>}
+                   {lang === 'tr' ? 'Ünite' : 'Chapter'} {currentChapter} {isChapterFullyCompleted(currentChapter) && <i className="fa-solid fa-circle-check text-emerald-400"></i>}
                 </span>
                 <i className={`fa-solid fa-chevron-${isChapterExpanded ? 'up' : 'down'} ml-2 text-[10px]`}></i>
               </button>
@@ -1075,7 +1146,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
                         className={`w-full px-4 py-3 flex flex-col text-left text-sm transition-colors ${currentChapter === ch ? 'bg-slate-700/50 text-brand-300 font-bold border-l-4 border-brand-400' : 'text-slate-300 hover:bg-slate-700/30 border-l-4 border-transparent'}`}
                       >
                         <div className="flex justify-between items-center w-full">
-                          <span className="font-bold">Hoofdstuk {ch}</span>
+                          <span className="font-bold">{lang === 'tr' ? 'Ünite' : 'Chapter'} {ch}</span>
                           {isFullyCompleted && <i className="fa-solid fa-circle-check text-emerald-400"></i>}
                         </div>
                         {chapterTitles[ch] && <span className="text-[11px] text-slate-400 mt-0.5 truncate">{chapterTitles[ch]}</span>}
@@ -1132,7 +1203,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
         </div>
       )}
 
-      {/* 3. SECTION BAR */}
+      {/* 3. SECTION BAR (SUMMARY VS NORMAL SECTIONS RENDER) */}
       <div 
         className={`bg-slate-900/40 border-slate-800 w-full max-w-full overflow-hidden shadow-inner z-40 flex-none transition-all duration-300 ${
           isSectionBarOverflowing ? 'absolute top-0 left-0 h-0 invisible opacity-0 pointer-events-none' : 'border-b relative opacity-100'
@@ -1145,35 +1216,68 @@ function MainContent({ user, setIsAuthModalOpen }) {
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           <div className="flex items-center justify-center flex-nowrap gap-1.5 sm:gap-2 px-1 flex-shrink-0">
-            {currentSections.map(sec => {
-              const isActive = activeTab === sec.id;
-              const isC = completed[sec.id];
-              const isF = favorites[sec.id];
-              return (
-                <button
-                  key={sec.id}
-                  onClick={() => {
-                    if (activeTab !== 'home' && activeTab !== 'flashcards' && activeTab !== 'verbs' && activeTab !== 'grammar') {
-                      setPreviousTab(sec.id);
-                    }
-                    setActiveTab(sec.id);
-                  }}
-                  title={favorites[sec.id] ? `Favori Notu: ${favorites[sec.id]}` : ''}
-                  className={`relative flex items-center h-9 px-3.5 sm:px-4 rounded-full text-[11px] sm:text-xs font-extrabold transition-all border shadow-sm whitespace-nowrap gap-1.5 ${
-                    isActive ? 'bg-brand-600 text-white border-brand-500 z-10' : 'bg-slate-800 text-slate-400 border-slate-700 hover:bg-slate-700 hover:text-slate-200'
-                  }`}
-                >
-                  <span>{sec.id.includes('On-Class') ? 'Sum' : sec.id}</span>
-                  {isF && <i className="fa-solid fa-star text-amber-400 text-[10px]"></i>}
-                  {isF && favorites[sec.id] && (
-                    <span className={`text-[10px] font-normal truncate max-w-[80px] ${isActive ? 'text-amber-200' : 'text-amber-400/80'}`}>
-                      {favorites[sec.id]}
-                    </span>
-                  )}
-                  {isC && <i className="fa-solid fa-circle-check text-emerald-400 text-[10px] ml-0.5"></i>}
-                </button>
-              );
-            })}
+            {isSummaryMode ? (
+              // SUMMARY MODUNDA İSE: SADECE RAKAM GÖSTER (GÖRSEL SADELEŞTİRME)
+              summaryChaptersList.map(ch => {
+                const sumId = `On-Class-${ch}`;
+                const isActive = activeTab === sumId;
+                const isC = completed[sumId];
+                const isF = favorites[sumId];
+                return (
+                  <button
+                    key={sumId}
+                    onClick={() => {
+                      setActiveTab(sumId);
+                      setCurrentChapter(ch); // Summary'ye tıklandığında Chapter'ı da güncelle
+                    }}
+                    title={favorites[sumId] ? `Favori Notu: ${favorites[sumId]}` : ''}
+                    className={`relative flex items-center h-9 px-3.5 sm:px-4 rounded-full text-[11px] sm:text-xs font-extrabold transition-all border shadow-sm whitespace-nowrap gap-1.5 ${
+                      isActive ? 'bg-amber-600 text-white border-amber-500 z-10' : 'bg-slate-800 text-slate-400 border-slate-700 hover:bg-slate-700 hover:text-slate-200'
+                    }`}
+                  >
+                    <span>{ch}</span>
+                    {isF && <i className="fa-solid fa-star text-amber-400 text-[10px]"></i>}
+                    {isF && favorites[sumId] && (
+                      <span className={`text-[10px] font-normal truncate max-w-[80px] ${isActive ? 'text-amber-200' : 'text-amber-400/80'}`}>
+                        {favorites[sumId]}
+                      </span>
+                    )}
+                    {isC && <i className="fa-solid fa-circle-check text-emerald-400 text-[10px] ml-0.5"></i>}
+                  </button>
+                );
+              })
+            ) : (
+              // NORMAL MODDA İSE: O anki chapter'ın alt bölümlerini listele
+              currentSections.map(sec => {
+                const isActive = activeTab === sec.id;
+                const isC = completed[sec.id];
+                const isF = favorites[sec.id];
+                return (
+                  <button
+                    key={sec.id}
+                    onClick={() => {
+                      if (activeTab !== 'home' && activeTab !== 'flashcards' && activeTab !== 'verbs' && activeTab !== 'grammar') {
+                        setPreviousTab(sec.id);
+                      }
+                      setActiveTab(sec.id);
+                    }}
+                    title={favorites[sec.id] ? `Favori Notu: ${favorites[sec.id]}` : ''}
+                    className={`relative flex items-center h-9 px-3.5 sm:px-4 rounded-full text-[11px] sm:text-xs font-extrabold transition-all border shadow-sm whitespace-nowrap gap-1.5 ${
+                      isActive ? 'bg-brand-600 text-white border-brand-500 z-10' : 'bg-slate-800 text-slate-400 border-slate-700 hover:bg-slate-700 hover:text-slate-200'
+                    }`}
+                  >
+                    <span>{sec.id}</span>
+                    {isF && <i className="fa-solid fa-star text-amber-400 text-[10px]"></i>}
+                    {isF && favorites[sec.id] && (
+                      <span className={`text-[10px] font-normal truncate max-w-[80px] ${isActive ? 'text-amber-200' : 'text-amber-400/80'}`}>
+                        {favorites[sec.id]}
+                      </span>
+                    )}
+                    {isC && <i className="fa-solid fa-circle-check text-emerald-400 text-[10px] ml-0.5"></i>}
+                  </button>
+                );
+              })
+            )}
           </div>
         </div>
       </div>
@@ -1187,12 +1291,14 @@ function MainContent({ user, setIsAuthModalOpen }) {
           >
             <div className="flex items-center justify-between w-full">
               <span className="text-slate-200 text-sm font-bold truncate text-left">
-                {activeTab === 'home' ? 'Dashboard' : (activeTab === 'flashcards' ? t('flashcards') : activeTab === 'verbs' ? (lang === 'tr' ? 'Düzensiz Fiiller' : 'Irregular Verbs') : activeTab === 'grammar' ? (lang === 'tr' ? 'Gramer Referansı' : 'Grammar Reference') : (activeTab.includes('On-Class') ? 'Summary' : `Sectie ${activeTab}`))}
+                {activeTab === 'home' ? 'Dashboard' : (activeTab === 'flashcards' ? t('flashcards') : activeTab === 'verbs' ? (lang === 'tr' ? 'Düzensiz Fiiller' : 'Irregular Verbs') : activeTab === 'grammar' ? (lang === 'tr' ? 'Gramer Referansı' : 'Grammar Reference') : (isSummaryMode ? (lang === 'tr' ? `Ünite ${activeTab.replace('On-Class-', '')} Özeti` : `Chapter ${activeTab.replace('On-Class-', '')} Summary`) : (lang === 'tr' ? `Bölüm ${activeTab}` : `Section ${activeTab}`)))}
               </span>
               <div className="flex items-center gap-2 flex-shrink-0">
                 {activeTab !== 'flashcards' && activeTab !== 'verbs' && activeTab !== 'grammar' && activeTab !== 'home' && (
                   <span className="text-[10px] font-extrabold text-slate-400 bg-slate-900 px-2 py-0.5 rounded-md border border-slate-700">
-                    {currentIndex + 1} / {currentSections.length}
+                    {isSummaryMode 
+                      ? `${summaryChaptersList.map(ch => `On-Class-${ch}`).indexOf(activeTab) + 1} / ${summaryChaptersList.length}` 
+                      : `${currentIndex + 1} / ${currentSections.length}`}
                   </span>
                 )}
                 <i className={`fa-solid fa-chevron-${isMobileMenuOpen ? 'up' : 'down'} text-brand-400 text-xs`}></i>
@@ -1200,22 +1306,42 @@ function MainContent({ user, setIsAuthModalOpen }) {
             </div>
             
             <div className="flex items-center justify-between w-full gap-1">
-              {currentSections.map((sec) => {
-                const isActive = activeTab === sec.id;
-                const isC = completed[sec.id];
-                const isF = favorites[sec.id];
-                return (
-                  <div key={sec.id} className="relative flex-1 h-1.5 flex justify-center">
-                     <div className={`w-full h-full rounded-full transition-all duration-300 ${isActive ? 'bg-brand-400 shadow-[0_0_6px_rgba(56,189,248,0.8)]' : 'bg-slate-700'}`}></div>
-                     {!isActive && (isC || isF) && (
-                        <div className="absolute -top-[4px] flex gap-[2px]">
-                           {isC && <div className="w-[5px] h-[5px] bg-emerald-400 rounded-full shadow-[0_0_2px_rgba(52,211,153,0.8)]"></div>}
-                           {isF && <div className="w-[5px] h-[5px] bg-amber-400 rounded-full shadow-[0_0_2px_rgba(251,191,36,0.8)]"></div>}
-                        </div>
-                     )}
-                  </div>
-                );
-              })}
+              {isSummaryMode ? (
+                summaryChaptersList.map(ch => {
+                  const sumId = `On-Class-${ch}`;
+                  const isActive = activeTab === sumId;
+                  const isC = completed[sumId];
+                  const isF = favorites[sumId];
+                  return (
+                    <div key={sumId} className="relative flex-1 h-1.5 flex justify-center">
+                       <div className={`w-full h-full rounded-full transition-all duration-300 ${isActive ? 'bg-amber-400 shadow-[0_0_6px_rgba(251,191,36,0.8)]' : 'bg-slate-700'}`}></div>
+                       {!isActive && (isC || isF) && (
+                          <div className="absolute -top-[4px] flex gap-[2px]">
+                             {isC && <div className="w-[5px] h-[5px] bg-emerald-400 rounded-full shadow-[0_0_2px_rgba(52,211,153,0.8)]"></div>}
+                             {isF && <div className="w-[5px] h-[5px] bg-amber-400 rounded-full shadow-[0_0_2px_rgba(251,191,36,0.8)]"></div>}
+                          </div>
+                       )}
+                    </div>
+                  );
+                })
+              ) : (
+                currentSections.map((sec) => {
+                  const isActive = activeTab === sec.id;
+                  const isC = completed[sec.id];
+                  const isF = favorites[sec.id];
+                  return (
+                    <div key={sec.id} className="relative flex-1 h-1.5 flex justify-center">
+                       <div className={`w-full h-full rounded-full transition-all duration-300 ${isActive ? 'bg-brand-400 shadow-[0_0_6px_rgba(56,189,248,0.8)]' : 'bg-slate-700'}`}></div>
+                       {!isActive && (isC || isF) && (
+                          <div className="absolute -top-[4px] flex gap-[2px]">
+                             {isC && <div className="w-[5px] h-[5px] bg-emerald-400 rounded-full shadow-[0_0_2px_rgba(52,211,153,0.8)]"></div>}
+                             {isF && <div className="w-[5px] h-[5px] bg-amber-400 rounded-full shadow-[0_0_2px_rgba(251,191,36,0.8)]"></div>}
+                          </div>
+                       )}
+                    </div>
+                  );
+                })
+              )}
             </div>
           </button>
 
@@ -1223,36 +1349,68 @@ function MainContent({ user, setIsAuthModalOpen }) {
             <>
               <div className="fixed inset-0 z-40" onClick={() => setIsMobileMenuOpen(false)}></div>
               <div className="absolute top-full left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-3xl mt-2 bg-slate-800 border border-slate-600 rounded-2xl shadow-2xl z-50 overflow-hidden flex flex-col py-1.5 max-h-[50vh] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-600">
-                {currentSections.map(sec => {
-                  const isC = completed[sec.id];
-                  const isF = favorites[sec.id];
-                  return (
-                    <button
-                      key={sec.id}
-                      onClick={() => { 
-                        if (activeTab !== 'home' && activeTab !== 'flashcards' && activeTab !== 'verbs' && activeTab !== 'grammar') {
-                          setPreviousTab(sec.id);
-                        }
-                        setActiveTab(sec.id); 
-                        setIsMobileMenuOpen(false); 
-                      }}
-                      className={`w-full px-4 py-3 flex items-center justify-between text-sm transition-colors ${activeTab === sec.id ? 'bg-slate-700/50 text-brand-300 font-bold border-l-4 border-brand-400' : 'text-slate-300 hover:bg-slate-700/30 border-l-4 border-transparent'}`}
-                    >
-                      <div className="flex flex-col text-left truncate pr-2 flex-1">
-                        <span className="truncate">{sec.id.includes('On-Class') ? 'Summary' : `${sec.id} - ${getSectionTitle(sec.id)}`}</span>
-                        {favorites[sec.id] && (
-                          <span className="text-[11px] text-amber-400/90 italic truncate mt-0.5 flex items-center gap-1">
-                            <i className="fa-solid fa-star text-[9px]"></i> {favorites[sec.id]}
-                          </span>
-                        )}
-                      </div>
-                      <div className="flex items-center space-x-2 flex-shrink-0">
-                        {isF && <i className="fa-solid fa-star text-amber-400"></i>}
-                        {isC && <i className="fa-solid fa-circle-check text-emerald-400"></i>}
-                      </div>
-                    </button>
-                  );
-                })}
+                {isSummaryMode ? (
+                  summaryChaptersList.map(ch => {
+                    const sumId = `On-Class-${ch}`;
+                    const isC = completed[sumId];
+                    const isF = favorites[sumId];
+                    return (
+                      <button
+                        key={sumId}
+                        onClick={() => { 
+                          setActiveTab(sumId);
+                          setCurrentChapter(ch);
+                          setIsMobileMenuOpen(false); 
+                        }}
+                        className={`w-full px-4 py-3 flex items-center justify-between text-sm transition-colors ${activeTab === sumId ? 'bg-slate-700/50 text-amber-300 font-bold border-l-4 border-amber-400' : 'text-slate-300 hover:bg-slate-700/30 border-l-4 border-transparent'}`}
+                      >
+                        <div className="flex flex-col text-left truncate pr-2 flex-1">
+                          <span className="truncate">{lang === 'tr' ? `Ünite ${ch} Özeti` : `Chapter ${ch} Summary`}</span>
+                          {favorites[sumId] && (
+                            <span className="text-[11px] text-amber-400/90 italic truncate mt-0.5 flex items-center gap-1">
+                              <i className="fa-solid fa-star text-[9px]"></i> {favorites[sumId]}
+                            </span>
+                          )}
+                        </div>
+                        <div className="flex items-center space-x-2 flex-shrink-0">
+                          {isF && <i className="fa-solid fa-star text-amber-400"></i>}
+                          {isC && <i className="fa-solid fa-circle-check text-emerald-400"></i>}
+                        </div>
+                      </button>
+                    );
+                  })
+                ) : (
+                  currentSections.map(sec => {
+                    const isC = completed[sec.id];
+                    const isF = favorites[sec.id];
+                    return (
+                      <button
+                        key={sec.id}
+                        onClick={() => { 
+                          if (activeTab !== 'home' && activeTab !== 'flashcards' && activeTab !== 'verbs' && activeTab !== 'grammar') {
+                            setPreviousTab(sec.id);
+                          }
+                          setActiveTab(sec.id); 
+                          setIsMobileMenuOpen(false); 
+                        }}
+                        className={`w-full px-4 py-3 flex items-center justify-between text-sm transition-colors ${activeTab === sec.id ? 'bg-slate-700/50 text-brand-300 font-bold border-l-4 border-brand-400' : 'text-slate-300 hover:bg-slate-700/30 border-l-4 border-transparent'}`}
+                      >
+                        <div className="flex flex-col text-left truncate pr-2 flex-1">
+                          <span className="truncate">{`${sec.id} - ${getSectionTitle(sec.id)}`}</span>
+                          {favorites[sec.id] && (
+                            <span className="text-[11px] text-amber-400/90 italic truncate mt-0.5 flex items-center gap-1">
+                              <i className="fa-solid fa-star text-[9px]"></i> {favorites[sec.id]}
+                            </span>
+                          )}
+                        </div>
+                        <div className="flex items-center space-x-2 flex-shrink-0">
+                          {isF && <i className="fa-solid fa-star text-amber-400"></i>}
+                          {isC && <i className="fa-solid fa-circle-check text-emerald-400"></i>}
+                        </div>
+                      </button>
+                    );
+                  })
+                )}
               </div>
             </>
           )}
@@ -1272,7 +1430,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
           />
         )}
 
-        {(activeTab !== 'home' && activeTab !== 'verbs' && activeTab !== 'grammar' && activeTab !== 'flashcards' && activeTab.endsWith('.1') && !activeTab.includes('On-Class')) && (
+        {(activeTab !== 'home' && activeTab !== 'verbs' && activeTab !== 'grammar' && activeTab !== 'flashcards' && activeTab.endsWith('.1') && !isSummaryMode) && (
           <DialogueSection 
             sectionId={activeTab} 
             favorites={favorites} 

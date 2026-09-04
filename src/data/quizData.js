@@ -14540,5 +14540,515 @@ export const quizQuestions = [
     correctAnswer: "gezwegen",
     explanationTr: "Hebben + gezwegen yapısı kullanılır.",
     explanationEn: "The combination hebben + gezwrogen/gezwegen is used."
-  }
+  },
+  
+  {
+    id: "sum_ch1_01",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "personal_info"],
+    questionNl: "Hoe beantwoord je de vraag: 'Wie ben jij?'",
+    options: ["Ik ben Maria.", "Ik kom uit Spanje.", "Mijn adres is Utrecht.", "Ik spreek Nederlands."],
+    correctAnswer: "Ik ben Maria.",
+    explanationTr: "'Wie ben jij?' sorusuna 'Ik ben [İsim]' şeklinde cevap verilir.",
+    explanationEn: "The question 'Wie ben jij?' is answered with 'Ik ben [Name]'."
+  },
+  {
+    id: "sum_ch1_02",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "personal_info"],
+    questionNl: "Wat is het juiste antwoord op 'Wat is je naam?'",
+    options: ["Mijn naam is Maria Santos.", "Ik ben Spanje.", "Ik woon in Amsterdam.", "Ik spreek Engels."],
+    correctAnswer: "Mijn naam is Maria Santos.",
+    explanationTr: "'Wat is je naam?' sorusuna 'Mijn naam is...' şeklinde cevap verilir.",
+    explanationEn: "'Wat is je naam?' is answered with 'Mijn naam is...'."
+  },
+  {
+    id: "sum_ch1_03",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "personal_info"],
+    questionNl: "Hoe vraag je naar iemands adres in het Nederlands?",
+    options: ["Wat is je adres?", "Waar woon je?", "Hoe heet je?", "Uit welk land kom je?"],
+    correctAnswer: "Wat is je adres?",
+    explanationTr: "Adres sormak için 'Wat is je adres?' kalıbı kullanılır.",
+    explanationEn: "To ask for someone's address, use 'Wat is je adres?'."
+  },
+  {
+    id: "sum_ch1_04",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "personal_info"],
+    questionNl: "Welk antwoord hoort bij de vraag 'Waar woon je?'?",
+    options: ["Ik woon in Amsterdam.", "Mijn naam is Jan.", "Ik kom uit Duitsland.", "Ik ben moe."],
+    correctAnswer: "Ik woon in Amsterdam.",
+    explanationTr: "'Waar woon je?' sorusuna 'Ik woon in...' ile cevap verilir.",
+    explanationEn: "You answer 'Waar woon je?' with 'Ik woon in...'."
+  },
+  {
+    id: "sum_ch1_05",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "personal_info"],
+    questionNl: "Hoe beantwoord je de vraag 'Uit welk land kom je?'",
+    options: ["Ik kom uit Turkije.", "Ik woon in Turkije.", "Mijn land is Turkije.", "Ik ben Turkije."],
+    correctAnswer: "Ik kom uit Turkije.",
+    explanationTr: "Menşei ülkeyi belirtmek için 'Ik kom uit...' kalıbı kullanılır.",
+    explanationEn: "To state your origin country, use 'Ik kom uit...'."
+  },
+  {
+    id: "sum_ch1_06",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "personal_info"],
+    questionNl: "Welke vraag stel je om te weten welke taal iemand spreekt?",
+    options: ["Welke taal spreek je?", "Wat is je taal?", "Spreek je taal?", "Welke land spreek je?"],
+    correctAnswer: "Welke taal spreek je?",
+    explanationTr: "Konuşulan dili sormak için 'Welke taal spreek je?' sorusu kullanılır.",
+    explanationEn: "To ask which language someone speaks, use 'Welke taal spreek je?'."
+  },
+  {
+    id: "sum_ch1_07",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "personal_info"],
+    questionNl: "Hoe beantwoord je de vraag 'Wat is je nationaliteit?'",
+    options: ["Ik ben Turks.", "Ik kom uit Turkije.", "Ik spreek Turks.", "Mijn naam is Turks."],
+    correctAnswer: "Ik ben Turks.",
+    explanationTr: "Uyruk belirtilirken 'Ik ben...' kalıbı kullanılır.",
+    explanationEn: "When stating nationality, use 'Ik ben...'."
+  },
+  {
+    id: "sum_ch1_08",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "pronouns"],
+    questionNl: "Wat is de Nederlandse vertaling van het Engels pronomen 'I'?",
+    options: ["ik", "jij", "hij", "wij"],
+    correctAnswer: "ik",
+    explanationTr: "'Ben' zamirinin Hollandaca karşılığı 'ik' kelimesidir.",
+    explanationEn: "The Dutch word for 'I' is 'ik'."
+  },
+  {
+    id: "sum_ch1_09",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "pronouns"],
+    questionNl: "Welk pronomen betekent 'you' (enkelvoud/informeel)?",
+    options: ["jij / je", "jullie", "u", "zij"],
+    correctAnswer: "jij / je",
+    explanationTr: "Tekil 'sen' anlamında 'jij' veya 'je' kullanılır.",
+    explanationEn: "'jij' or 'je' is used for the singular 'you'."
+  },
+  {
+    id: "sum_ch1_10",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "pronouns"],
+    questionNl: "Wat is de juiste set voor 'he / she / it' in het Nederlands?",
+    options: ["hij / zij(ze) / het", "wij / jullie / zij", "ik / jij / hij", "het / zij / wij"],
+    correctAnswer: "hij / zij(ze) / het",
+    explanationTr: "Erkek için 'hij', kadın için 'zij/ze', nötr nesne için 'het' kullanılır.",
+    explanationEn: "'hij' for he, 'zij/ze' for she, and 'het' for it."
+  },
+  {
+    id: "sum_ch1_11",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "pronouns"],
+    questionNl: "Welk pronomen betekent 'we'?",
+    options: ["wij / we", "jullie", "zij / ze", "ik"],
+    correctAnswer: "wij / we",
+    explanationTr: "'Biz' anlamında 'wij' veya 'we' kullanılır.",
+    explanationEn: "'wij' or 'we' translates to 'We'."
+  },
+  {
+    id: "sum_ch1_12",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "pronouns"],
+    questionNl: "Wat is de meervoudsvorm van 'you' (jij) in het Nederlands?",
+    options: ["jullie", "wij", "zij", "u"],
+    correctAnswer: "jullie",
+    explanationTr: "Çoğul 'siz' anlamında 'jullie' kullanılır.",
+    explanationEn: "'jullie' is used for the plural 'you'."
+  },
+  {
+    id: "sum_ch1_13",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "pronouns"],
+    questionNl: "Wat kan het pronomen 'zij / ze' in een zin betekenen?",
+    options: ["O (kadın) of Onlar", "Ik of Jij", "Wij of Jullie", "Het of Hij"],
+    correctAnswer: "O (kadın) of Onlar",
+    explanationTr: "'Zij/ze' hem tekil dişil (o) hem de çoğul (onlar) anlamlarına gelebilir.",
+    explanationEn: "'Zij/ze' can mean singular 'she' or plural 'they'."
+  },
+  {
+    id: "sum_ch1_14",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "verbs_present"],
+    questionNl: "Ik ___ (zijn) student.",
+    options: ["ben", "bent", "is", "zijn"],
+    correctAnswer: "ben",
+    explanationTr: "'ik' öznesi ile 'zijn' fiili 'ben' olarak çekimlenir.",
+    explanationEn: "For 'ik', the verb 'zijn' is conjugated as 'ben'."
+  },
+  {
+    id: "sum_ch1_15",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "verbs_present"],
+    questionNl: "Jij ___ (zijn) erg aardig.",
+    options: ["ben", "bent", "is", "zijn"],
+    correctAnswer: "bent",
+    explanationTr: "'jij' öznesi ile 'zijn' fiili 'bent' olur.",
+    explanationEn: "The correct form of 'zijn' for 'jij' is 'bent'."
+  },
+  {
+    id: "sum_ch1_16",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "verbs_present"],
+    questionNl: "Hij ___ (zijn) leraar.",
+    options: ["ben", "bent", "is", "zijn"],
+    correctAnswer: "is",
+    explanationTr: "Tekil 3. şahıslar için 'zijn' fiili 'is' olur.",
+    explanationEn: "For 3rd person singular, 'zijn' becomes 'is'."
+  },
+  {
+    id: "sum_ch1_17",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "verbs_present"],
+    questionNl: "Wij ___ (zijn) op school.",
+    options: ["ben", "bent", "is", "zijn"],
+    correctAnswer: "zijn",
+    explanationTr: "Çoğul şahıslarda 'zijn' fiili mastar halinde kalır.",
+    explanationEn: "Plural pronouns take the infinitive form 'zijn'."
+  },
+  {
+    id: "sum_ch1_18",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "verbs_present"],
+    questionNl: "Wat is de stam (kök) van het werkwoord 'luisteren'?",
+    options: ["luister", "luistert", "luisteren", "luist"],
+    correctAnswer: "luister",
+    explanationTr: "Mastar ekinden (-en) arındırıldığında kalan kısım köktür: 'luister'.",
+    explanationEn: "Removing '-en' gives the stem: 'luister'."
+  },
+  {
+    id: "sum_ch1_19",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "verbs_present"],
+    questionNl: "Ik ___ (luisteren) naar de cd.",
+    options: ["luister", "luistert", "luisteren"],
+    correctAnswer: "luister",
+    explanationTr: "'Ik' şahsı için düzenli fiiller sadece kök halindedir.",
+    explanationEn: "For 'Ik', regular verbs use only the stem."
+  },
+  {
+    id: "sum_ch1_20",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "verbs_present"],
+    questionNl: "Jij ___ (luisteren) naar de muziek.",
+    options: ["luister", "luistert", "luisteren"],
+    correctAnswer: "luistert",
+    explanationTr: "'jij' öznesi için 'kök + t' kuralı uygulanır: luister + t = luistert.",
+    explanationEn: "For 'jij', the rule is 'stem + t': luistert."
+  },
+  {
+    id: "sum_ch1_21",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "verbs_present"],
+    questionNl: "Zij (meervoud) ___ (luisteren) naar de docent.",
+    options: ["luister", "luistert", "luisteren"],
+    correctAnswer: "luisteren",
+    explanationTr: "Çoğul şahıslarda fiil mastar (luisteren) halindedir.",
+    explanationEn: "For plurals, the infinitive form is used."
+  },
+  {
+    id: "sum_ch1_22",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "verbs_present"],
+    questionNl: "Wat is de stam van het werkwoord 'werken'?",
+    options: ["werk", "werkt", "werken", "wer"],
+    correctAnswer: "werk",
+    explanationTr: "'werken' fiilinin kökü 'werk'tir.",
+    explanationEn: "The stem of 'werken' is 'werk'."
+  },
+  {
+    id: "sum_ch1_23",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "verbs_present"],
+    questionNl: "Hij ___ (werken) op kantoor.",
+    options: ["werk", "werkt", "werken"],
+    correctAnswer: "werkt",
+    explanationTr: "'Hij' 3. tekil şahıs olduğu için 'kök + t' uygulanır: werkt.",
+    explanationEn: "For 'Hij', the rule is 'stem + t': werkt."
+  },
+  {
+    id: "sum_ch1_24",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "verbs_present"],
+    questionNl: "Jullie ___ (werken) vandaag thuis.",
+    options: ["werk", "werkt", "werken"],
+    correctAnswer: "werken",
+    explanationTr: "Çoğul 'jullie' zamiri ile fiil mastar halinde kalır.",
+    explanationEn: "Plural subjects take the infinitive form."
+  },
+  {
+    id: "sum_ch1_25",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "alphabet"],
+    questionNl: "Hoe wordt de letter 'A' in het Nederlandse alfabet uitgesproken?",
+    options: ["AA", "ay", "ah", "ee"],
+    correctAnswer: "AA",
+    explanationTr: "Hollandacada A harfi uzun bir 'AA' sesiyle okunur.",
+    explanationEn: "The letter A is pronounced with a long 'AA' sound."
+  },
+  {
+    id: "sum_ch1_26",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "alphabet"],
+    questionNl: "Hoe wordt de letter 'E' fonetisch uitgesproken?",
+    options: ["ay", "ee", "eh", "ef"],
+    correctAnswer: "ay",
+    explanationTr: "'E' harfi Hollandacada 'ay' olarak okunur.",
+    explanationEn: "The letter 'E' is pronounced as 'ay'."
+  },
+  {
+    id: "sum_ch1_27",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "alphabet"],
+    questionNl: "Hoe spreek je de letter 'G' uit in het Nederlands?",
+    options: ["G-ay", "Gee", "Ha", "Kaa"],
+    correctAnswer: "G-ay",
+    explanationTr: "'G' harfi boğazdan gelen sesle 'G-ay' şeklinde okunur.",
+    explanationEn: "'G' is pronounced with a guttural sound 'G-ay'."
+  },
+  {
+    id: "sum_ch1_28",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "alphabet"],
+    questionNl: "Wat is de fonetische klank van de letter 'J'?",
+    options: ["y-ay", "Jay", "Gee", "Yee"],
+    correctAnswer: "y-ay",
+    explanationTr: "'J' harfi İngilizcedeki Y sesine benzer şekilde 'y-ay' okunur.",
+    explanationEn: "The letter 'J' is pronounced like an English Y as 'y-ay'."
+  },
+  {
+    id: "sum_ch1_29",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "alphabet"],
+    questionNl: "Hoe spreek je de letter 'U' uit?",
+    options: ["Uu", "Yu", "Ou", "Oo"],
+    correctAnswer: "Uu",
+    explanationTr: "'U' harfi dudaklar büzülerek uzun bir 'Uu' olarak okunur.",
+    explanationEn: "The letter 'U' is pronounced with pursed lips as 'Uu'."
+  },
+  {
+    id: "sum_ch1_30",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "alphabet"],
+    questionNl: "Wat is de uitspraak van de letter 'W'?",
+    options: ["W-ay", "V-ay", "Wee", "Double-V"],
+    correctAnswer: "W-ay",
+    explanationTr: "'W' harfinin fonetik karşılığı 'W-ay' şeklindedir.",
+    explanationEn: "The phonetic representation of 'W' is 'W-ay'."
+  },
+  {
+    id: "sum_ch1_31",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "alphabet"],
+    questionNl: "Hoe wordt de letter 'Y' in het Nederlandse alfabet ook wel genoemd?",
+    options: ["Griekse ij / i-grec", "Ypsilon", "Hollandse i", "Dubbel-i"],
+    correctAnswer: "Griekse ij / i-grec",
+    explanationTr: "Y harfi 'Griekse ij' veya 'i-grec' olarak adlandırılır.",
+    explanationEn: "The letter Y is called 'Griekse ij' or 'i-grec'."
+  },
+  {
+    id: "sum_ch1_32",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "alphabet"],
+    questionNl: "Hoe spreken we de letter 'C' uit?",
+    options: ["say", "kay", "see", "ch"],
+    correctAnswer: "say",
+    explanationTr: "'C' harfi fonetik olarak 'say' okunur.",
+    explanationEn: "The letter 'C' is phonetically pronounced as 'say'."
+  },
+  {
+    id: "sum_ch1_33",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "alphabet"],
+    questionNl: "Wat is de uitspraak van de letter 'V'?",
+    options: ["V-ay", "Ef", "Wee", "Vee"],
+    correctAnswer: "V-ay",
+    explanationTr: "'V' harfi Hollandacada 'V-ay' olarak telaffuz edilir.",
+    explanationEn: "The letter 'V' is pronounced as 'V-ay'."
+  },
+  {
+    id: "sum_ch1_34",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "alphabet"],
+    questionNl: "Hoe spel je de naam 'PEM' in het Nederlands?",
+    options: ["P-ay, ay, em", "Pee, ee, em", "Puu, ay, em", "P-ay, ee, em"],
+    correctAnswer: "P-ay, ay, em",
+    explanationTr: "Harfler sırasıyla P-ay, ay, em şeklinde okunur.",
+    explanationEn: "The letters are read as P-ay, ay, em."
+  },
+  {
+    id: "sum_ch1_35",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "greetings"],
+    questionNl: "Welke begroeting gebruik je 's ochtends (Good morning)?",
+    options: ["goedemorgen", "goedemiddag", "goedenavond", "goedendag"],
+    correctAnswer: "goedemorgen",
+    explanationTr: "Sabahları 'goedemorgen' denir.",
+    explanationEn: "In the morning, use 'goedemorgen'."
+  },
+  {
+    id: "sum_ch1_36",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "greetings"],
+    questionNl: "Wanneer zeg je 'goedemiddag'?",
+    options: ["In de middag (öğleden sonra)", "In de ochtend", "In de avond", "'s Nachts"],
+    correctAnswer: "In de middag (öğleden sonra)",
+    explanationTr: "'Goedemiddag' öğleden sonra kullanılır.",
+    explanationEn: "'Goedemiddag' is used in the afternoon."
+  },
+  {
+    id: "sum_ch1_37",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "greetings"],
+    questionNl: "Welke groet past bij de avond (Good evening)?",
+    options: ["goedenavond", "goedemorgen", "tot ziens", "hallo"],
+    correctAnswer: "goedenavond",
+    explanationTr: "Akşamları 'goedenavond' kullanılır.",
+    explanationEn: "In the evening, use 'goedenavond'."
+  },
+  {
+    id: "sum_ch1_38",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "greetings"],
+    questionNl: "Wat betekent 'Goedendag'?",
+    options: ["İyi günler (Good day)", "Günaydın", "İyi akşamlar", "Hoşça kal"],
+    correctAnswer: "İyi günler (Good day)",
+    explanationTr: "'Goedendag' genel bir 'İyi günler' selamıdır.",
+    explanationEn: "'Goedendag' means 'Good day'."
+  },
+  {
+    id: "sum_ch1_39",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "greetings"],
+    questionNl: "Wat is een informele begroeting (Hello)?",
+    options: ["hallo / hoi", "tot ziens", "goedenavond", "goedendag"],
+    correctAnswer: "hallo / hoi",
+    explanationTr: "Günlük dilde 'hallo' veya 'hoi' informel bir selamlamadır.",
+    explanationEn: "'hallo' or 'hoi' is an informal greeting."
+  },
+  {
+    id: "sum_ch1_40",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "greetings"],
+    questionNl: "Wat is de standaard formele/neutrale uitdrukking voor 'Goodbye'?",
+    options: ["Tot ziens", "Tot later", "Doei", "Tot morgen"],
+    correctAnswer: "Tot ziens",
+    explanationTr: "Standart vedalaşma 'Tot ziens'dir.",
+    explanationEn: "The standard farewell is 'Tot ziens'."
+  },
+  {
+    id: "sum_ch1_41",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "greetings"],
+    questionNl: "Wat zeg je als je iemand dezelfde dag nog kort daarna weer ziet (See you soon)?",
+    options: ["Tot straks / tot zo", "Tot morgen", "Tot ziens", "Tot later"],
+    correctAnswer: "Tot straks / tot zo",
+    explanationTr: "Aynı gün içinde kısa süre sonra görüşmek üzere 'tot straks' denir.",
+    explanationEn: "For seeing someone shortly on the same day, use 'tot straks / tot zo'."
+  },
+  {
+    id: "sum_ch1_42",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "greetings"],
+    questionNl: "Wat is de vertaling van 'See you later'?",
+    options: ["Tot later", "Tot straks", "Tot morgen", "Doei"],
+    correctAnswer: "Tot later",
+    explanationTr: "'See you later' ifadesi 'Tot later' olarak çevrilir.",
+    explanationEn: "'See you later' translates to 'Tot later'."
+  },
+  {
+    id: "sum_ch1_43",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "greetings"],
+    questionNl: "Wat betekent 'Tot morgen'?",
+    options: ["Yarın görüşürüz", "Sonra görüşürüz", "Görüşmek üzere", "İyi günler"],
+    correctAnswer: "Yarın görüşürüz",
+    explanationTr: "'Tot morgen' yarına kadar / yarın görüşürüz demektir.",
+    explanationEn: "'Tot morgen' means 'See you tomorrow'."
+  },
+  {
+    id: "sum_ch1_44",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "phrases"],
+    questionNl: "Hoe beantwoord je de vraag 'Hoe gaat het met jou?'",
+    options: ["Alles goed / Het gaat goed.", "Mijn naam is Jan.", "Ik woon in Den Haag.", "Tot ziens!"],
+    correctAnswer: "Alles goed / Het gaat goed.",
+    explanationTr: "Nasılsın sorusuna 'Alles goed' veya 'Het gaat goed' ile cevap verilir.",
+    explanationEn: "Answer 'Hoe gaat het met jou?' with 'Alles goed / Het gaat goed'."
+  },
+  {
+    id: "sum_ch1_45",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "hobbies"],
+    questionNl: "Wat betekent de hobby 'hardlopen'?",
+    options: ["Koşu sporu (Running)", "Kitap okumak", "Basketbol oynamak", "Gazete okumak"],
+    correctAnswer: "Koşu sporu (Running)",
+    explanationTr: "'hardlopen' koşu sporu anlamına gelir.",
+    explanationEn: "'hardlopen' means running."
+  },
+  {
+    id: "sum_ch1_46",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "hobbies"],
+    questionNl: "Wat betekent 'De krant lezen'?",
+    options: ["Gazete okumak", "Kitap okumak", "Televizyon izlemek", "Spor yapmak"],
+    correctAnswer: "Gazete okumak",
+    explanationTr: "'De krant lezen' gazete okumak demektir.",
+    explanationEn: "'De krant lezen' means reading the newspaper."
+  },
+  {
+    id: "sum_ch1_47",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "hobbies"],
+    questionNl: "Wat is de betekenis van 'Ik speel basketbal'?",
+    options: ["Ben basketbol oynarım.", "Ben basketbol izlerim.", "Mijn hobby is basketbal.", "Basketbolu severim."],
+    correctAnswer: "Ben basketbol oynarım.",
+    explanationTr: "'Ik speel basketbal' cümlesi 'Ben basketbol oynarım' demektir.",
+    explanationEn: "'Ik speel basketbal' means 'I play basketball'."
+  },
+  {
+    id: "sum_ch1_48",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "numbers"],
+    questionNl: "Hoe schrijf je het getal '58' in het Nederlands?",
+    options: ["achtenvijftig", "vijftigacht", "achtvijftig", "vijfenachttig"],
+    correctAnswer: "achtenvijftig",
+    explanationTr: "21'den büyük sayılarda önce birler basamağı söylenir: achtenvijftig.",
+    explanationEn: "For numbers over 20, ones come first: achtenvijftig."
+  },
+  {
+    id: "sum_ch1_49",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "numbers"],
+    questionNl: "Hoe schrijf je het getal '23' in het Nederlands?",
+    options: ["drieëntwintig", "twintigdrie", "drietwintig", "twintigen-drie"],
+    correctAnswer: "drieëntwintig",
+    explanationTr: "23 sayısı 'drieëntwintig' olarak yazılır.",
+    explanationEn: "The number 23 is written as 'drieëntwintig'."
+  },
+  {
+    id: "sum_ch1_50",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "grammar"],
+    questionNl: "Welke vorm krijgen reguliere werkwoorden met de meervoudsvormen (wij, jullie, zij)?",
+    options: [
+      "De infinitief (mastar / -en)",
+      "De stam (kök)",
+      "Stam + t"
+    ],
+    correctAnswer: "De infinitief (mastar / -en)",
+    explanationTr: "Çoğul şahıs zamirleriyle fiiller mastar halinde kalır.",
+    explanationEn: "With plural pronouns, verbs remain in the infinitive."
+  },
+  
+  
+  
+  
+  
 ];
