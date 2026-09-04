@@ -271,20 +271,48 @@ export default function IrregularVerbs() {
   const { lang } = useLanguage();
   const [searchTerm, setSearchTerm] = useState('');
   const [isQuizOpen, setIsQuizOpen] = useState(false);
+  
+  const [starredVerbs, setStarredVerbs] = useState(() => {
+    const saved = localStorage.getItem('starredIrregularVerbs');
+    return saved ? JSON.parse(saved) : [];
+  });
 
   const isTr = lang === 'tr';
 
   const filteredVerbs = useMemo(() => {
-    if (!searchTerm) return irregularVerbsData;
-    const lower = searchTerm.toLowerCase();
-    return irregularVerbsData.filter(v => 
-      v.inf?.toLowerCase().includes(lower) || 
-      v.en.toLowerCase().includes(lower) || 
-      v.tr.toLowerCase().includes(lower) ||
-      v.imp.toLowerCase().includes(lower) ||
-      v.perf.toLowerCase().includes(lower)
-    );
-  }, [searchTerm]);
+    let list = irregularVerbsData;
+    
+    if (searchTerm) {
+      const lower = searchTerm.toLowerCase();
+      list = irregularVerbsData.filter(v => 
+        v.inf?.toLowerCase().includes(lower) || 
+        v.en.toLowerCase().includes(lower) || 
+        v.tr.toLowerCase().includes(lower) ||
+        v.imp.toLowerCase().includes(lower) ||
+        v.perf.toLowerCase().includes(lower)
+      );
+    }
+
+    return [...list].sort((a, b) => {
+      const aStarred = starredVerbs.includes(a.inf);
+      const bStarred = starredVerbs.includes(b.inf);
+      
+      if (aStarred && !bStarred) return -1;
+      if (!aStarred && bStarred) return 1;
+      return 0; 
+    });
+  }, [searchTerm, starredVerbs]);
+
+  const toggleStar = (verbInf) => {
+    setStarredVerbs(prev => {
+      const newStarred = prev.includes(verbInf) 
+        ? prev.filter(v => v !== verbInf)
+        : [...prev, verbInf];
+      
+      localStorage.setItem('starredIrregularVerbs', JSON.stringify(newStarred));
+      return newStarred;
+    });
+  };
 
   return (
     <div className="w-full max-w-6xl mx-auto space-y-6 animate-fadeIn pb-12">
@@ -310,10 +338,17 @@ export default function IrregularVerbs() {
            </button>
         </div>
 
-        <p className="text-sm text-slate-300 mb-6 relative z-10 max-w-2xl">
-          {isTr 
-            ? 'Bu listedeki fiiller geçmiş zamanda kuralsız (güçlü) olarak değişir. Mavi yıldızlı olanlar günlük hayatta ve diyaloglarda en sık kullanılan fiillerdir.' 
-            : 'These verbs change irregularly (strong verbs) in the past tense. The blue starred ones are highly frequent verbs used in daily dialogues.'}
+        {/* AÇIKLAMA METNİ - Düzeltildi */}
+        <p className="text-sm text-slate-300 mb-6 relative z-10 max-w-2xl leading-relaxed">
+          {isTr ? (
+            <>
+              Bu listedeki fiiller geçmiş zamanda kuralsız (güçlü) olarak değişir. Kartın sağ üstündeki yıldıza tıklayarak zorlandığınız fiilleri sarı renkle (<i className="fa-solid fa-star text-amber-400"></i>) en üste sabitleyebilirsiniz. İsimlerin yanındaki mavi küçük rozet (<i className="fa-solid fa-star text-sky-400"></i>) taşıyanlar ise günlük hayatta en sık kullanılan fiillerdir.
+            </>
+          ) : (
+            <>
+              These verbs change irregularly (strong verbs) in the past tense. You can pin difficult verbs to the top by clicking the star, which turns yellow (<i className="fa-solid fa-star text-amber-400"></i>). The small blue badge (<i className="fa-solid fa-star text-sky-400"></i>) next to names indicates highly frequent verbs.
+            </>
+          )}
         </p>
 
         <div className="relative max-w-xl z-10">
@@ -335,58 +370,102 @@ export default function IrregularVerbs() {
 
       {/* Grid List */}
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-        {filteredVerbs.length > 0 ? filteredVerbs.map((verb, idx) => (
-          <div key={idx} className={`bg-slate-800 rounded-2xl border transition-all shadow-md overflow-hidden flex flex-col ${verb.freq ? 'border-sky-500/50 shadow-[0_0_15px_rgba(14,165,233,0.1)]' : 'border-slate-700/60'}`}>
-            
-            {/* Card Header */}
-            <div className={`p-4 border-b flex justify-between items-start gap-2 ${verb.freq ? 'bg-sky-900/20 border-sky-800/50' : 'bg-slate-800/80 border-slate-700'}`}>
-              <div>
-                <h3 className="text-xl font-extrabold text-white flex items-center gap-2">
-                  {verb.inf || verb.nl}
-                  {verb.freq && <i className="fa-solid fa-star text-sky-400 text-xs" title="Highly Frequent"></i>}
-                </h3>
-                <div className="flex gap-2 text-xs font-medium mt-1">
-                  <span className="text-slate-400 tracking-wide bg-slate-900/50 px-2 py-0.5 rounded-md border border-slate-700">{isTr ? verb.tr : verb.en}</span>
-                  {!isTr && verb.tr && <span className="text-slate-500 tracking-wide bg-slate-900/50 px-2 py-0.5 rounded-md border border-slate-700">{verb.tr}</span>}
-                </div>
-              </div>
-            </div>
+        {filteredVerbs.length > 0 ? filteredVerbs.map((verb, idx) => {
+          
+          const isUserStarred = starredVerbs.includes(verb.inf);
+          
+          // AYIRICI ÇİZGİ KONTROLÜ
+          // Eğer bu öğe yıldızlanmamışsa VE ondan önceki öğe yıldızlanmışsa, çizgi gösterilir.
+          const prevVerb = idx > 0 ? filteredVerbs[idx - 1] : null;
+          const prevWasStarred = prevVerb ? starredVerbs.includes(prevVerb.inf) : false;
+          const showDivider = !isUserStarred && prevWasStarred;
 
-            {/* Verb Forms */}
-            <div className="p-4 grid grid-cols-2 gap-3 bg-slate-900/30 text-sm border-b border-slate-700/50">
-               <div className="flex flex-col">
-                  <span className="text-[10px] uppercase font-bold text-slate-500 tracking-wider mb-0.5">Imperfectum</span>
-                  <span className="text-slate-300 font-medium">{verb.imp}</span>
-               </div>
-               <div className="flex flex-col">
-                  <span className="text-[10px] uppercase font-bold text-slate-500 tracking-wider mb-0.5">Perfectum</span>
-                  <div className="flex items-center gap-1">
-                     <span className={`text-[10px] px-1.5 py-0.5 rounded font-bold ${verb.aux?.includes('zijn') ? 'bg-rose-900/40 text-rose-300 border border-rose-800' : 'bg-emerald-900/40 text-emerald-300 border border-emerald-800'}`}>
-                       {verb.aux === 'zijn' ? 'is' : verb.aux === 'hebben/zijn' ? 'is/heeft' : 'heeft'}
-                     </span>
-                     <span className="text-slate-200 font-bold">{verb.perf}</span>
+          let borderClass = 'border-slate-700/60';
+          if (isUserStarred) {
+             borderClass = 'border-amber-500/50 shadow-[0_0_15px_rgba(251,191,36,0.15)]';
+          } else if (verb.freq) {
+             borderClass = 'border-sky-500/50 shadow-[0_0_15px_rgba(14,165,233,0.1)]';
+          }
+
+          return (
+            <React.Fragment key={idx}>
+              {/* ZARİF AYIRICI ÇİZGİ (DIVIDER) */}
+              {showDivider && (
+                <div className="col-span-full flex items-center justify-center pt-4 pb-2 opacity-60">
+                  <div className="w-1/4 h-[1px] bg-gradient-to-r from-transparent to-slate-500"></div>
+                  <div className="px-4 text-[11px] font-extrabold text-slate-400 uppercase tracking-widest flex items-center gap-2">
+                    <i className="fa-solid fa-list"></i> {isTr ? 'Diğer Fiiller' : 'Other Verbs'}
                   </div>
-               </div>
-            </div>
+                  <div className="w-1/4 h-[1px] bg-gradient-to-l from-transparent to-slate-500"></div>
+                </div>
+              )}
 
-            {/* Example Sentences */}
-            <div className="p-4 space-y-3 flex-1 flex flex-col justify-center bg-slate-800/40">
-               <div className="flex gap-2.5 items-start">
-                  <div className="w-5 h-5 rounded flex items-center justify-center bg-slate-700 text-slate-400 text-[10px] font-bold flex-shrink-0 mt-0.5" title="Present">Pr</div>
-                  <p className="text-[13px] text-slate-300 leading-snug italic">{verb.ex?.pres || '-'}</p>
-               </div>
-               <div className="flex gap-2.5 items-start">
-                  <div className="w-5 h-5 rounded flex items-center justify-center bg-indigo-900/50 text-indigo-300 border border-indigo-800/50 text-[10px] font-bold flex-shrink-0 mt-0.5" title="Imperfectum">Im</div>
-                  <p className="text-[13px] text-indigo-200/90 leading-snug italic">{verb.ex?.imp || '-'}</p>
-               </div>
-               <div className="flex gap-2.5 items-start">
-                  <div className="w-5 h-5 rounded flex items-center justify-center bg-emerald-900/50 text-emerald-300 border border-emerald-800/50 text-[10px] font-bold flex-shrink-0 mt-0.5" title="Perfectum">Pf</div>
-                  <p className="text-[13px] text-emerald-200/90 leading-snug italic">{verb.ex?.perf || '-'}</p>
-               </div>
-            </div>
+              <div className={`bg-slate-800 rounded-2xl border transition-all shadow-md overflow-hidden flex flex-col ${borderClass}`}>
+                
+                {/* Card Header */}
+                <div className={`p-4 border-b flex justify-between items-start gap-2 ${verb.freq && !isUserStarred ? 'bg-sky-900/20 border-sky-800/50' : 'bg-slate-800/80 border-slate-700'}`}>
+                  <div>
+                    <h3 className="text-xl font-extrabold text-white flex items-center gap-2">
+                      {verb.inf || verb.nl}
+                      {verb.freq && <i className="fa-solid fa-star text-sky-400 text-[10px]" title="Highly Frequent"></i>}
+                    </h3>
+                    <div className="flex gap-2 text-xs font-medium mt-1">
+                      <span className="text-slate-400 tracking-wide bg-slate-900/50 px-2 py-0.5 rounded-md border border-slate-700">{isTr ? verb.tr : verb.en}</span>
+                      {!isTr && verb.tr && <span className="text-slate-500 tracking-wide bg-slate-900/50 px-2 py-0.5 rounded-md border border-slate-700">{verb.tr}</span>}
+                    </div>
+                  </div>
 
-          </div>
-        )) : (
+                  {/* YILDIZLAMA BUTONU */}
+                  <button 
+                    onClick={() => toggleStar(verb.inf)}
+                    className="text-xl p-1.5 transition-transform hover:scale-110 focus:outline-none"
+                    title={isTr ? (isUserStarred ? "Sabitlemeyi kaldır" : "En üste sabitle") : (isUserStarred ? "Unpin" : "Pin to top")}
+                  >
+                    {isUserStarred ? (
+                      <i className="fa-solid fa-star text-amber-400 drop-shadow-[0_0_8px_rgba(251,191,36,0.6)]"></i>
+                    ) : (
+                      <i className="fa-regular fa-star text-slate-500 hover:text-amber-400 transition-colors"></i>
+                    )}
+                  </button>
+                </div>
+
+                {/* Verb Forms */}
+                <div className="p-4 grid grid-cols-2 gap-3 bg-slate-900/30 text-sm border-b border-slate-700/50">
+                   <div className="flex flex-col">
+                      <span className="text-[10px] uppercase font-bold text-slate-500 tracking-wider mb-0.5">Imperfectum</span>
+                      <span className="text-slate-300 font-medium">{verb.imp}</span>
+                   </div>
+                   <div className="flex flex-col">
+                      <span className="text-[10px] uppercase font-bold text-slate-500 tracking-wider mb-0.5">Perfectum</span>
+                      <div className="flex items-center gap-1">
+                         <span className={`text-[10px] px-1.5 py-0.5 rounded font-bold ${verb.aux?.includes('zijn') ? 'bg-rose-900/40 text-rose-300 border border-rose-800' : 'bg-emerald-900/40 text-emerald-300 border border-emerald-800'}`}>
+                           {verb.aux === 'zijn' ? 'is' : verb.aux === 'hebben/zijn' ? 'is/heeft' : 'heeft'}
+                         </span>
+                         <span className="text-slate-200 font-bold">{verb.perf}</span>
+                      </div>
+                   </div>
+                </div>
+
+                {/* Example Sentences */}
+                <div className="p-4 space-y-3 flex-1 flex flex-col justify-center bg-slate-800/40">
+                   <div className="flex gap-2.5 items-start">
+                      <div className="w-5 h-5 rounded flex items-center justify-center bg-slate-700 text-slate-400 text-[10px] font-bold flex-shrink-0 mt-0.5" title="Present">Pr</div>
+                      <p className="text-[13px] text-slate-300 leading-snug italic">{verb.ex?.pres || '-'}</p>
+                   </div>
+                   <div className="flex gap-2.5 items-start">
+                      <div className="w-5 h-5 rounded flex items-center justify-center bg-indigo-900/50 text-indigo-300 border border-indigo-800/50 text-[10px] font-bold flex-shrink-0 mt-0.5" title="Imperfectum">Im</div>
+                      <p className="text-[13px] text-indigo-200/90 leading-snug italic">{verb.ex?.imp || '-'}</p>
+                   </div>
+                   <div className="flex gap-2.5 items-start">
+                      <div className="w-5 h-5 rounded flex items-center justify-center bg-emerald-900/50 text-emerald-300 border border-emerald-800/50 text-[10px] font-bold flex-shrink-0 mt-0.5" title="Perfectum">Pf</div>
+                      <p className="text-[13px] text-emerald-200/90 leading-snug italic">{verb.ex?.perf || '-'}</p>
+                   </div>
+                </div>
+
+              </div>
+            </React.Fragment>
+          );
+        }) : (
           <div className="col-span-full py-12 text-center text-slate-500">
              <i className="fa-regular fa-face-frown text-4xl mb-3"></i>
              <p>{isTr ? "Aradığınız fiil bulunamadı." : "No verbs found matching your search."}</p>
