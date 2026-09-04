@@ -340,7 +340,7 @@ export const chapter17Sections = [
   {
     id: "On-Class-17",
     chapter: 17,
-    title: "17. Extra: On-Class Notes",
+    title: "Summary",
     theory: (lang) => (
       <div className="space-y-6">
         {lang === 'tr' ? (

@@ -327,7 +327,7 @@ export const chapter18Sections = [
   {
     id: "On-Class-18",
     chapter: 18,
-    title: "18. Extra: On-Class Notes",
+    title: "Summary",
     theory: (lang) => (
       <div className="space-y-6">
         {lang === 'tr' ? (

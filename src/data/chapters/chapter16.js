@@ -312,7 +312,7 @@ export const chapter16Sections = [
   {
     id: "On-Class-16",
     chapter: 16,
-    title: "Extra Oefeningen (On-Class: Exam Prep)",
+    title: "Summary",
     theory: (lang) => (
       <>
         {lang === 'tr' ? (

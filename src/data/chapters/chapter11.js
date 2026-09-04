@@ -561,7 +561,7 @@ export const chapter11Sections = [
   {
     id: "On-Class-11",
     chapter: 11,
-    title: "11.7 Extra Oefeningen (On-Class)",
+    title: "Summary",
     theory: (lang) => (
       <>
         {lang === 'tr' ? (
