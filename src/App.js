@@ -345,6 +345,13 @@ function MainContent({ user, setIsAuthModalOpen }) {
   const currentSections = bookSections.filter(sec => sec.chapter === currentChapter || sec.id === `On-Class-${currentChapter}`);
   const currentIndex = currentSections.findIndex(sec => sec.id === activeTab);
 
+  // YENİ EKLENEN FONKSİYON: Bir ünitenin (tüm derslerinin) tamamen bitip bitmediğini kontrol eder
+  const isChapterFullyCompleted = (chNum) => {
+    const chapterSections = bookSections.filter(s => s.chapter === chNum);
+    if (chapterSections.length === 0) return false;
+    return chapterSections.every(s => completed[s.id]);
+  };
+
   const goToSection = (secId) => {
     let chapter = fallbackChapter;
     if (secId.startsWith('On-Class-')) {
@@ -1045,26 +1052,36 @@ function MainContent({ user, setIsAuthModalOpen }) {
                 title={t('changeChapter')}
               >
                 {/* Mobilde sadece H10 vb. gösterilir, masaüstünde tam metin */}
-                <span className="sm:hidden whitespace-nowrap">H{currentChapter}</span>
-                <span className="hidden sm:inline whitespace-nowrap">Hoofdstuk {currentChapter}</span>
+                <span className="sm:hidden whitespace-nowrap flex items-center gap-1">
+                   H{currentChapter} {isChapterFullyCompleted(currentChapter) && <i className="fa-solid fa-circle-check text-emerald-400"></i>}
+                </span>
+                <span className="hidden sm:flex items-center gap-1.5 whitespace-nowrap">
+                   Hoofdstuk {currentChapter} {isChapterFullyCompleted(currentChapter) && <i className="fa-solid fa-circle-check text-emerald-400"></i>}
+                </span>
                 <i className={`fa-solid fa-chevron-${isChapterExpanded ? 'up' : 'down'} ml-2 text-[10px]`}></i>
               </button>
 
               {isChapterExpanded && (
                 <div className="absolute right-0 top-full mt-2 w-56 sm:w-64 bg-slate-800 border border-slate-600 rounded-2xl shadow-2xl z-50 overflow-hidden flex flex-col py-1.5 max-h-[60vh] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-600">
-                  {availableChapters.map(ch => (
-                    <button
-                      key={ch}
-                      onClick={() => {
-                        handleChapterChange({ target: { value: ch }});
-                        setIsChapterExpanded(false); 
-                      }}
-                      className={`w-full px-4 py-3 flex flex-col text-left text-sm transition-colors ${currentChapter === ch ? 'bg-slate-700/50 text-brand-300 font-bold border-l-4 border-brand-400' : 'text-slate-300 hover:bg-slate-700/30 border-l-4 border-transparent'}`}
-                    >
-                      <span className="font-bold">Hoofdstuk {ch}</span>
-                      {chapterTitles[ch] && <span className="text-[11px] text-slate-400 mt-0.5 truncate">{chapterTitles[ch]}</span>}
-                    </button>
-                  ))}
+                  {availableChapters.map(ch => {
+                    const isFullyCompleted = isChapterFullyCompleted(ch);
+                    return (
+                      <button
+                        key={ch}
+                        onClick={() => {
+                          handleChapterChange({ target: { value: ch }});
+                          setIsChapterExpanded(false); 
+                        }}
+                        className={`w-full px-4 py-3 flex flex-col text-left text-sm transition-colors ${currentChapter === ch ? 'bg-slate-700/50 text-brand-300 font-bold border-l-4 border-brand-400' : 'text-slate-300 hover:bg-slate-700/30 border-l-4 border-transparent'}`}
+                      >
+                        <div className="flex justify-between items-center w-full">
+                          <span className="font-bold">Hoofdstuk {ch}</span>
+                          {isFullyCompleted && <i className="fa-solid fa-circle-check text-emerald-400"></i>}
+                        </div>
+                        {chapterTitles[ch] && <span className="text-[11px] text-slate-400 mt-0.5 truncate">{chapterTitles[ch]}</span>}
+                      </button>
+                    );
+                  })}
                 </div>
               )}
             </div>
