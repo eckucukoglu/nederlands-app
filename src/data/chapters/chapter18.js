@@ -324,7 +324,6 @@ export const chapter18Sections = [
       }
     ]
   },
-  ,
   {
     id: "On-Class-18",
     chapter: 18,
