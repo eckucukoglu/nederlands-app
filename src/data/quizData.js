@@ -19494,8 +19494,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
       "Er is geen verschil, ze betekenen hetzelfde."
     ],
     correctAnswer: "'Bedoelen' is voor wat een persoon wil zeggen (intend), 'betekenen' is voor de betekenis van een woord of situatie (mean).",
-    explanationTr: "'Bedoelen' bir kişinin ne demek/kastetmek istediğini (intend) ifade ederken, 'betekenen' bir kelimenin, işaretin veya durumun anlamını (mean) ifade eder[cite: 1].",
-    explanationEn: "'Bedoelen' expresses what a person intends to say, while 'betekenen' refers to the meaning of a word, sign, or situation[cite: 1]."
+    explanationTr: "'Bedoelen' bir kişinin ne demek/kastetmek istediğini (intend) ifade ederken, 'betekenen' bir kelimenin, işaretin veya durumun anlamını (mean) ifade eder.",
+    explanationEn: "'Bedoelen' expresses what a person intends to say, while 'betekenen' refers to the meaning of a word, sign, or situation."
   },
   {
     id: "sum_ch10_002",
@@ -19504,8 +19504,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Kies het juiste woord: Wat ___ dat woord?",
     options: ["betekent", "bedoelt", "begrijpt"],
     correctAnswer: "betekent",
-    explanationTr: "Bir kelimenin anlamını sorarken 'betekenen' (anlamına gelmek) fiili kullanılır[cite: 1].",
-    explanationEn: "When asking for the meaning of a word, the verb 'betekenen' (to mean) is used[cite: 1]."
+    explanationTr: "Bir kelimenin anlamını sorarken 'betekenen' (anlamına gelmek) fiili kullanılır.",
+    explanationEn: "When asking for the meaning of a word, the verb 'betekenen' (to mean) is used."
   },
   {
     id: "sum_ch10_003",
@@ -19514,8 +19514,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Kies het juiste woord: Wat ___ u met 'tiptop'?",
     options: ["bedoelt", "betekent", "verstaat"],
     correctAnswer: "bedoelt",
-    explanationTr: "Bir kişinin ne kastettiğini sorarken 'bedoelen' (kastetmek/demek istemek) fiili kullanılır[cite: 1].",
-    explanationEn: "When asking what a person intends to say, the verb 'bedoelen' (to intend/mean) is used[cite: 1]."
+    explanationTr: "Bir kişinin ne kastettiğini sorarken 'bedoelen' (kastetmek/demek istemek) fiili kullanılır.",
+    explanationEn: "When asking what a person intends to say, the verb 'bedoelen' (to intend/mean) is used."
   },
   {
     id: "sum_ch10_004",
@@ -19528,8 +19528,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
       "Het zijn synoniemen."
     ],
     correctAnswer: "'Verstaan' betekent dat je iemand fysiek hoort, 'begrijpen' betekent dat je de betekenis snapt.",
-    explanationTr: "'Verstaan' fiziksel olarak sesi duymak ve ayırt etmek, 'begrijpen' ise duyulan şeyin anlamını kavramak (anlamak) demektir[cite: 1].",
-    explanationEn: "'Verstaan' means to physically hear and discern words, while 'begrijpen' means to understand their meaning[cite: 1]."
+    explanationTr: "'Verstaan' fiziksel olarak sesi duymak ve ayırt etmek, 'begrijpen' ise duyulan şeyin anlamını kavramak (anlamak) demektir.",
+    explanationEn: "'Verstaan' means to physically hear and discern words, while 'begrijpen' means to understand their meaning."
   },
   {
     id: "sum_ch10_005",
@@ -19538,8 +19538,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Kies het juiste woord: De radio staat te zacht. Sorry, ik ___ u niet goed.",
     options: ["versta", "begrijp", "bedoel"],
     correctAnswer: "versta",
-    explanationTr: "Fiziksel olarak iyi duyamadığınızda 'verstaan' fiilini kullanırsınız[cite: 1].",
-    explanationEn: "When you cannot physically hear well, you use the verb 'verstaan'[cite: 1]."
+    explanationTr: "Fiziksel olarak iyi duyamadığınızda 'verstaan' fiilini kullanırsınız.",
+    explanationEn: "When you cannot physically hear well, you use the verb 'verstaan'."
   },
   {
     id: "sum_ch10_006",
@@ -19548,8 +19548,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Kies het juiste woord: Ik hoor de woorden wel, maar ik ___ het niet. Kunt u het uitleggen?",
     options: ["begrijp", "versta", "beteken"],
     correctAnswer: "begrijp",
-    explanationTr: "Duyduğunuz kelimelerin anlamını kavrayamadığınızda 'begrijpen' (anlamak) fiilini kullanırsınız[cite: 1].",
-    explanationEn: "When you hear the words but don't know their meaning, you use the verb 'begrijpen' (to understand)[cite: 1]."
+    explanationTr: "Duyduğunuz kelimelerin anlamını kavrayamadığınızda 'begrijpen' (anlamak) fiilini kullanırsınız.",
+    explanationEn: "When you hear the words but don't know their meaning, you use the verb 'begrijpen' (to understand)."
   },
   {
     id: "sum_ch10_007",
@@ -19558,8 +19558,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Hoe vraag je beleefd: 'Can you repeat?' in het Nederlands?",
     options: ["Kunt u het even herhalen?", "Wat zegt u?", "Kan u het nog een keer zeggen?"],
     correctAnswer: "Kunt u het even herhalen?",
-    explanationTr: "'Tekrar edebilir misiniz?' sorusunun tam karşılığı 'Kunt u het even herhalen?' cümlesidir[cite: 1].",
-    explanationEn: "'Can you repeat?' translates precisely to 'Kunt u het even herhalen?'[cite: 1]."
+    explanationTr: "'Tekrar edebilir misiniz?' sorusunun tam karşılığı 'Kunt u het even herhalen?' cümlesidir.",
+    explanationEn: "'Can you repeat?' translates precisely to 'Kunt u het even herhalen?'."
   },
   {
     id: "sum_ch10_008",
@@ -19568,8 +19568,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat betekent de zin: 'Wat zegt u?'",
     options: ["What are you saying?", "What is that called?", "Can you repeat?"],
     correctAnswer: "What are you saying?",
-    explanationTr: "'Wat zegt u?' cümlesi 'Ne söylüyorsunuz / Ne dediniz?' anlamına gelir[cite: 1].",
-    explanationEn: "'Wat zegt u?' translates to 'What are you saying?'[cite: 1]."
+    explanationTr: "'Wat zegt u?' cümlesi 'Ne söylüyorsunuz / Ne dediniz?' anlamına gelir.",
+    explanationEn: "'Wat zegt u?' translates to 'What are you saying?'."
   },
   {
     id: "sum_ch10_009",
@@ -19578,8 +19578,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat zeg je als je niet weet hoe een object in het Nederlands heet (What is that called)?",
     options: ["Hoe heet dat?", "Wat zegt u?", "Kunt u het even herhalen?"],
     correctAnswer: "Hoe heet dat?",
-    explanationTr: "Bir nesnenin adının ne olduğunu sorarken 'Hoe heet dat?' (Bunun adı ne?) kalıbı kullanılır[cite: 1].",
-    explanationEn: "When asking for the name of an object, use 'Hoe heet dat?' (What is that called?)[cite: 1]."
+    explanationTr: "Bir nesnenin adının ne olduğunu sorarken 'Hoe heet dat?' (Bunun adı ne?) kalıbı kullanılır.",
+    explanationEn: "When asking for the name of an object, use 'Hoe heet dat?' (What is that called?)."
   },
   {
     id: "sum_ch10_010",
@@ -19588,8 +19588,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Hoe zeg je 'Can you say it again?' in het Nederlands?",
     options: ["Kan u het nog een keer zeggen?", "Wat bedoelt u?", "Kunt u het even herhalen?"],
     correctAnswer: "Kan u het nog een keer zeggen?",
-    explanationTr: "'Bunu bir kez daha söyleyebilir misiniz?' sorusunun karşılığı 'Kan u het nog een keer zeggen?' cümlesidir[cite: 1].",
-    explanationEn: "'Can you say it again?' translates to 'Kan u het nog een keer zeggen?'[cite: 1]."
+    explanationTr: "'Bunu bir kez daha söyleyebilir misiniz?' sorusunun karşılığı 'Kan u het nog een keer zeggen?' cümlesidir.",
+    explanationEn: "'Can you say it again?' translates to 'Kan u het nog een keer zeggen?'."
   },
   {
     id: "sum_ch10_011",
@@ -19598,8 +19598,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat is de Nederlandse vertaling van 'the wheel' (tekerlek)?",
     options: ["het wiel", "de band", "het stuur"],
     correctAnswer: "het wiel",
-    explanationTr: "Bisiklet tekerleği Hollandacada 'het wiel'dir[cite: 1].",
-    explanationEn: "'The wheel' translates to 'het wiel'[cite: 1]."
+    explanationTr: "Bisiklet tekerleği Hollandacada 'het wiel'dir.",
+    explanationEn: "'The wheel' translates to 'het wiel'."
   },
   {
     id: "sum_ch10_012",
@@ -19608,8 +19608,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat is de Nederlandse vertaling van 'the tire' (lastik)?",
     options: ["de band", "het wiel", "de bel"],
     correctAnswer: "de band",
-    explanationTr: "Lastik Hollandacada 'de band' kelimesiyle ifade edilir[cite: 1].",
-    explanationEn: "'The tire' translates to 'de band'[cite: 1]."
+    explanationTr: "Lastik Hollandacada 'de band' kelimesiyle ifade edilir.",
+    explanationEn: "'The tire' translates to 'de band'."
   },
   {
     id: "sum_ch10_013",
@@ -19618,8 +19618,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Hoe noem je 'the steering wheel / handlebar' (direksiyon/gidon) van een fiets?",
     options: ["het stuur", "het zadel", "de trapper"],
     correctAnswer: "het stuur",
-    explanationTr: "Bisiklet gidonu 'het stuur' olarak adlandırılır[cite: 1].",
-    explanationEn: "The handlebar/steering wheel is called 'het stuur'[cite: 1]."
+    explanationTr: "Bisiklet gidonu 'het stuur' olarak adlandırılır.",
+    explanationEn: "The handlebar/steering wheel is called 'het stuur'."
   },
   {
     id: "sum_ch10_014",
@@ -19628,8 +19628,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat is 'the saddle' (sele) van een fiets in het Nederlands?",
     options: ["het zadel", "de rem", "de ketting"],
     correctAnswer: "het zadel",
-    explanationTr: "Bisiklet selesi 'het zadel'dir[cite: 1].",
-    explanationEn: "'The saddle' translates to 'het zadel'[cite: 1]."
+    explanationTr: "Bisiklet selesi 'het zadel'dir.",
+    explanationEn: "'The saddle' translates to 'het zadel'."
   },
   {
     id: "sum_ch10_015",
@@ -19638,8 +19638,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Hoe noem je de 'parcel shelf / rear rack' (bagaj taşıyıcı) van een fiets?",
     options: ["de bagagedrager", "de trapper", "het wiel"],
     correctAnswer: "de bagagedrager",
-    explanationTr: "Bisikletin arka tarafındaki eşya taşıyıcı kısma 'de bagagedrager' denir[cite: 1].",
-    explanationEn: "The rear rack or parcel shelf is called 'de bagagedrager'[cite: 1]."
+    explanationTr: "Bisikletin arka tarafındaki eşya taşıyıcı kısma 'de bagagedrager' denir.",
+    explanationEn: "The rear rack or parcel shelf is called 'de bagagedrager'."
   },
   {
     id: "sum_ch10_016",
@@ -19648,8 +19648,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat is de Nederlandse vertaling van 'the pedal' (pedal)?",
     options: ["de trapper", "het stuur", "de rem"],
     correctAnswer: "de trapper",
-    explanationTr: "Bisiklet pedalı 'de trapper' kelimesiyle ifade edilir[cite: 1].",
-    explanationEn: "'The pedal' translates to 'de trapper'[cite: 1]."
+    explanationTr: "Bisiklet pedalı 'de trapper' kelimesiyle ifade edilir.",
+    explanationEn: "'The pedal' translates to 'de trapper'."
   },
   {
     id: "sum_ch10_017",
@@ -19658,8 +19658,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat is 'the brake' (fren) van een fiets in het Nederlands?",
     options: ["de rem", "de bel", "de band"],
     correctAnswer: "de rem",
-    explanationTr: "Fren Hollandacada 'de rem'dir[cite: 1].",
-    explanationEn: "'The brake' translates to 'de rem'[cite: 1]."
+    explanationTr: "Fren Hollandacada 'de rem'dir.",
+    explanationEn: "'The brake' translates to 'de rem'."
   },
   {
     id: "sum_ch10_018",
@@ -19668,8 +19668,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Hoe noem je 'the bell' (zil) van een fiets?",
     options: ["de bel", "het stuur", "het voorlicht"],
     correctAnswer: "de bel",
-    explanationTr: "Bisiklet zili 'de bel'dir[cite: 1].",
-    explanationEn: "'The bell' translates to 'de bel'[cite: 1]."
+    explanationTr: "Bisiklet zili 'de bel'dir.",
+    explanationEn: "'The bell' translates to 'de bel'."
   },
   {
     id: "sum_ch10_019",
@@ -19678,8 +19678,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Welke woorden gebruik je voor de fietsverlichting (lights)?",
     options: ["het voorlicht en het achterlicht", "de rem en de ketting", "het zadel en het wiel"],
     correctAnswer: "het voorlicht en het achterlicht",
-    explanationTr: "Ön lamba 'het voorlicht', arka lamba 'het achterlicht'tir[cite: 1].",
-    explanationEn: "The front light is 'het voorlicht' and the back light is 'het achterlicht'[cite: 1]."
+    explanationTr: "Ön lamba 'het voorlicht', arka lamba 'het achterlicht'tir.",
+    explanationEn: "The front light is 'het voorlicht' and the back light is 'het achterlicht'."
   },
   {
     id: "sum_ch10_020",
@@ -19688,8 +19688,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat is 'the chain' (zincir) van een fiets in het Nederlands?",
     options: ["de ketting", "de trapper", "de bagagedrager"],
     correctAnswer: "de ketting",
-    explanationTr: "Bisiklet zinciri 'de ketting' kelimesiyle ifade edilir[cite: 1].",
-    explanationEn: "'The chain' translates to 'de ketting'[cite: 1]."
+    explanationTr: "Bisiklet zinciri 'de ketting' kelimesiyle ifade edilir.",
+    explanationEn: "'The chain' translates to 'de ketting'."
   },
   {
     id: "sum_ch10_021",
@@ -19698,8 +19698,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat is de Engelse vertaling van 'vogelbekdier'?",
     options: ["platypus", "ladybug", "bird"],
     correctAnswer: "platypus",
-    explanationTr: "'vogelbekdier' ornitorenk (platypus) demektir[cite: 1].",
-    explanationEn: "'vogelbekdier' translates to 'platypus' in English[cite: 1]."
+    explanationTr: "'vogelbekdier' ornitorenk (platypus) demektir.",
+    explanationEn: "'vogelbekdier' translates to 'platypus' in English."
   },
   {
     id: "sum_ch10_022",
@@ -19708,8 +19708,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat is de Engelse vertaling van 'lieveheersbeestje'?",
     options: ["ladybug / dear lord animal", "butterfly", "platypus"],
     correctAnswer: "ladybug / dear lord animal",
-    explanationTr: "'lieveheersbeestje' uğur böceği (ladybug) demektir. Kelime anlamı 'dear lord animal'dır[cite: 1].",
-    explanationEn: "'lieveheersbeestje' translates to 'ladybug' (literally: dear lord animal)[cite: 1]."
+    explanationTr: "'lieveheersbeestje' uğur böceği (ladybug) demektir. Kelime anlamı 'dear lord animal'dır.",
+    explanationEn: "'lieveheersbeestje' translates to 'ladybug' (literally: dear lord animal)."
   },
   {
     id: "sum_ch10_023",
@@ -19718,8 +19718,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat antwoord je op de vraag: 'Mijn fiets is kapot.' als je wilt zeggen 'How annoying!'?",
     options: ["Wat vervelend!", "Wat is er gebeurd?", "Dat is heel slim."],
     correctAnswer: "Wat vervelend!",
-    explanationTr: "Birinin kötü durumuna karşı empati göstermek için 'Wat vervelend!' (Ne kadar can sıkıcı!) denir[cite: 1].",
-    explanationEn: "To express empathy like 'How annoying!' or 'What a pity!', use 'Wat vervelend!'[cite: 1]."
+    explanationTr: "Birinin kötü durumuna karşı empati göstermek için 'Wat vervelend!' (Ne kadar can sıkıcı!) denir.",
+    explanationEn: "To express empathy like 'How annoying!' or 'What a pity!', use 'Wat vervelend!'."
   },
   {
     id: "sum_ch10_024",
@@ -19728,8 +19728,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Hoe vraag je 'What happened?' in het Nederlands?",
     options: ["Wat is er gebeurd?", "Wat is kapot?", "Hoe heet dat?"],
     correctAnswer: "Wat is er gebeurd?",
-    explanationTr: "'Wat is er gebeurd?' cümlesi 'Ne oldu?' anlamına gelir[cite: 1].",
-    explanationEn: "'Wat is er gebeurd?' translates to 'What happened?'[cite: 1]."
+    explanationTr: "'Wat is er gebeurd?' cümlesi 'Ne oldu?' anlamına gelir.",
+    explanationEn: "'Wat is er gebeurd?' translates to 'What happened?'."
   },
   {
     id: "sum_ch10_025",
@@ -19738,8 +19738,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Vertaal de opmerking 'That is not very smart' naar het Nederlands:",
     options: ["Dat is niet heel slim.", "Dat is niet goed.", "Dat is vervelend."],
     correctAnswer: "Dat is niet heel slim.",
-    explanationTr: "'slim' akıllı demektir. 'Dat is niet heel slim' cümlesi 'Bu çok akıllıca değil' anlamına gelir[cite: 1].",
-    explanationEn: "'slim' means smart. 'Dat is niet heel slim' translates to 'That is not very smart'[cite: 1]."
+    explanationTr: "'slim' akıllı demektir. 'Dat is niet heel slim' cümlesi 'Bu çok akıllıca değil' anlamına gelir.",
+    explanationEn: "'slim' means smart. 'Dat is niet heel slim' translates to 'That is not very smart'."
   },
   {
     id: "sum_ch10_026",
@@ -19748,8 +19748,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat is de regel voor de stam van regelmatige werkwoorden in het imperfectum voor de personen 'ik, jij, hij, u'?",
     options: ["stam + te/de", "stam + ten/den", "stam + en"],
     correctAnswer: "stam + te/de",
-    explanationTr: "Düzenli fiillerin tekil şahıs hikaye geçmiş zaman (imperfectum) formunda köke '-te' veya '-de' eklenir[cite: 1].",
-    explanationEn: "For regular verbs in the singular imperfectum, the suffix '-te' or '-de' is added to the stem[cite: 1]."
+    explanationTr: "Düzenli fiillerin tekil şahıs hikaye geçmiş zaman (imperfectum) formunda köke '-te' veya '-de' eklenir.",
+    explanationEn: "For regular verbs in the singular imperfectum, the suffix '-te' or '-de' is added to the stem."
   },
   {
     id: "sum_ch10_027",
@@ -19762,8 +19762,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
       "Wanneer het werkwoord onregelmatig is."
     ],
     correctAnswer: "Wanneer de laatste letter van de stam in 'soft ketchup' zit.",
-    explanationTr: "Fiil kökünün son harfi 'soft ketchup' kelimelerindeki ünsüzlerden biriyse '-te/-ten' eklenir[cite: 1].",
-    explanationEn: "When the last letter of the stem is a consonant from 'soft ketchup', the suffix is '-te/-ten'[cite: 1]."
+    explanationTr: "Fiil kökünün son harfi 'soft ketchup' kelimelerindeki ünsüzlerden biriyse '-te/-ten' eklenir.",
+    explanationEn: "When the last letter of the stem is a consonant from 'soft ketchup', the suffix is '-te/-ten'."
   },
   {
     id: "sum_ch10_028",
@@ -19772,8 +19772,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat is de correcte imperfectum vorm van 'werken' voor het subject 'ik'?",
     options: ["werkte", "werkde", "werkten"],
     correctAnswer: "werkte",
-    explanationTr: "'werken' kökü 'werk', 'k' harfi 'soft ketchup' kuralına uyduğu için '+te' alır (werkte)[cite: 1].",
-    explanationEn: "The stem of 'werken' is 'werk'. 'k' is in 'soft ketchup', so it takes '+te' (werkte)[cite: 1]."
+    explanationTr: "'werken' kökü 'werk', 'k' harfi 'soft ketchup' kuralına uyduğu için '+te' alır (werkte).",
+    explanationEn: "The stem of 'werken' is 'werk'. 'k' is in 'soft ketchup', so it takes '+te' (werkte)."
   },
   {
     id: "sum_ch10_029",
@@ -19782,8 +19782,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat is de correcte imperfectum vorm van 'fietsen' voor het subject 'wij'?",
     options: ["fietsten", "fietste", "fietsden"],
     correctAnswer: "fietsten",
-    explanationTr: "'fiets' kökü 's' ile bittiğinden '+te' kuralına uyar. Çoğul 'wij' olduğu için '+ten' eklenir (fietsten)[cite: 1].",
-    explanationEn: "Stem 'fiets' ends in 's', taking '+te'. For plural 'wij', it becomes '+ten' (fietsten)[cite: 1]."
+    explanationTr: "'fiets' kökü 's' ile bittiğinden '+te' kuralına uyar. Çoğul 'wij' olduğu için '+ten' eklenir (fietsten).",
+    explanationEn: "Stem 'fiets' ends in 's', taking '+te'. For plural 'wij', it becomes '+ten' (fietsten)."
   },
   {
     id: "sum_ch10_030",
@@ -19792,8 +19792,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat is de imperfectum vorm van het onregelmatige werkwoord 'zijn' voor 'ik / hij'?",
     options: ["was", "waren", "werd"],
     correctAnswer: "was",
-    explanationTr: "'zijn' (olmak) fiilinin tekil geçmiş zaman hali 'was'tır[cite: 1].",
-    explanationEn: "The singular past tense of 'zijn' (to be) is 'was'[cite: 1]."
+    explanationTr: "'zijn' (olmak) fiilinin tekil geçmiş zaman hali 'was'tır.",
+    explanationEn: "The singular past tense of 'zijn' (to be) is 'was'."
   },
   {
     id: "sum_ch10_031",
@@ -19802,8 +19802,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat is de imperfectum vorm van het onregelmatige werkwoord 'zijn' voor 'wij / jullie / zij'?",
     options: ["waren", "was", "werden"],
     correctAnswer: "waren",
-    explanationTr: "'zijn' (olmak) fiilinin çoğul geçmiş zaman hali 'waren'dir[cite: 1].",
-    explanationEn: "The plural past tense of 'zijn' (to be) is 'waren'[cite: 1]."
+    explanationTr: "'zijn' (olmak) fiilinin çoğul geçmiş zaman hali 'waren'dir.",
+    explanationEn: "The plural past tense of 'zijn' (to be) is 'waren'."
   },
   {
     id: "sum_ch10_032",
@@ -19812,8 +19812,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Kies het juiste onregelmatige werkwoord in het imperfectum: Hij ___ (hebben) gisteren geen tijd.",
     options: ["had", "hadden", "heeft"],
     correctAnswer: "had",
-    explanationTr: "'hebben' (sahip olmak) fiilinin tekil geçmiş zaman hali 'had'dir[cite: 1].",
-    explanationEn: "The singular past tense of 'hebben' (to have) is 'had'[cite: 1]."
+    explanationTr: "'hebben' (sahip olmak) fiilinin tekil geçmiş zaman hali 'had'dir.",
+    explanationEn: "The singular past tense of 'hebben' (to have) is 'had'."
   },
   {
     id: "sum_ch10_033",
@@ -19822,8 +19822,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Kies het juiste onregelmatige werkwoord in het imperfectum: Wij ___ (gaan) samen naar de stad.",
     options: ["gingen", "ging", "gingte"],
     correctAnswer: "gingen",
-    explanationTr: "'gaan' (gitmek) fiilinin çoğul geçmiş zaman hali 'gingen'dir[cite: 1].",
-    explanationEn: "The plural past tense of 'gaan' (to go) is 'gingen'[cite: 1]."
+    explanationTr: "'gaan' (gitmek) fiilinin çoğul geçmiş zaman hali 'gingen'dir.",
+    explanationEn: "The plural past tense of 'gaan' (to go) is 'gingen'."
   },
   {
     id: "sum_ch10_034",
@@ -19832,8 +19832,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Kies het juiste onregelmatige werkwoord in het imperfectum: Zij (enkelvoud/she) ___ (komen) te laat.",
     options: ["kwam", "kwamen", "komde"],
     correctAnswer: "kwam",
-    explanationTr: "'komen' (gelmek) fiilinin tekil geçmiş zaman hali 'kwam'dır[cite: 1].",
-    explanationEn: "The singular past tense of 'komen' (to come) is 'kwam'[cite: 1]."
+    explanationTr: "'komen' (gelmek) fiilinin tekil geçmiş zaman hali 'kwam'dır.",
+    explanationEn: "The singular past tense of 'komen' (to come) is 'kwam'."
   },
   {
     id: "sum_ch10_035",
@@ -19842,8 +19842,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Kies het juiste onregelmatige werkwoord in het imperfectum: Jullie ___ (zien) een mooie vogel.",
     options: ["zagen", "zag", "zieden"],
     correctAnswer: "zagen",
-    explanationTr: "'zien' (görmek) fiilinin çoğul geçmiş zaman hali 'zagen'dir[cite: 1].",
-    explanationEn: "The plural past tense of 'zien' (to see) is 'zagen'[cite: 1]."
+    explanationTr: "'zien' (görmek) fiilinin çoğul geçmiş zaman hali 'zagen'dir.",
+    explanationEn: "The plural past tense of 'zien' (to see) is 'zagen'."
   },
   {
     id: "sum_ch10_036",
@@ -19852,8 +19852,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Kies het juiste onregelmatige werkwoord in het imperfectum: Ik ___ (vinden) het heel grappig.",
     options: ["vond", "vonden", "vondte"],
     correctAnswer: "vond",
-    explanationTr: "'vinden' (bulmak/düşünmek) fiilinin tekil geçmiş zaman hali 'vond'dur[cite: 1].",
-    explanationEn: "The singular past tense of 'vinden' (to find) is 'vond'[cite: 1]."
+    explanationTr: "'vinden' (bulmak/düşünmek) fiilinin tekil geçmiş zaman hali 'vond'dur.",
+    explanationEn: "The singular past tense of 'vinden' (to find) is 'vond'."
   },
   {
     id: "sum_ch10_037",
@@ -19862,8 +19862,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Kies het juiste onregelmatige werkwoord in het imperfectum: Hij ___ (doen) gisteren de deur open.",
     options: ["deed", "deden", "doede"],
     correctAnswer: "deed",
-    explanationTr: "'doen' (yapmak) fiilinin tekil geçmiş zaman hali 'deed'dir[cite: 1].",
-    explanationEn: "The singular past tense of 'doen' (to do) is 'deed'[cite: 1]."
+    explanationTr: "'doen' (yapmak) fiilinin tekil geçmiş zaman hali 'deed'dir.",
+    explanationEn: "The singular past tense of 'doen' (to do) is 'deed'."
   },
   {
     id: "sum_ch10_038",
@@ -19872,8 +19872,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Kies het juiste onregelmatige werkwoord in het imperfectum: Wij ___ (staan) voor het museum te wachten.",
     options: ["stonden", "stond", "staanden"],
     correctAnswer: "stonden",
-    explanationTr: "'staan' (ayakta durmak) fiilinin çoğul geçmiş zaman hali 'stonden'dir[cite: 1].",
-    explanationEn: "The plural past tense of 'staan' (to stand) is 'stonden'[cite: 1]."
+    explanationTr: "'staan' (ayakta durmak) fiilinin çoğul geçmiş zaman hali 'stonden'dir.",
+    explanationEn: "The plural past tense of 'staan' (to stand) is 'stonden'."
   },
   {
     id: "sum_ch10_039",
@@ -19882,8 +19882,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Kies het juiste onregelmatige werkwoord in het imperfectum: Ik ___ (vallen) van mijn fiets.",
     options: ["viel", "vielen", "valde"],
     correctAnswer: "viel",
-    explanationTr: "'vallen' (düşmek) fiilinin tekil geçmiş zaman hali 'viel'dir[cite: 1].",
-    explanationEn: "The singular past tense of 'vallen' (to fall) is 'viel'[cite: 1]."
+    explanationTr: "'vallen' (düşmek) fiilinin tekil geçmiş zaman hali 'viel'dir.",
+    explanationEn: "The singular past tense of 'vallen' (to fall) is 'viel'."
   },
   {
     id: "sum_ch10_040",
@@ -19892,8 +19892,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Kies het juiste onregelmatige werkwoord in het imperfectum: Zij (meervoud) ___ (zeggen) niets.",
     options: ["zeiden", "zei", "zegden"],
     correctAnswer: "zeiden",
-    explanationTr: "'zeggen' (söylemek) fiilinin çoğul geçmiş zaman hali 'zeiden'dir[cite: 1].",
-    explanationEn: "The plural past tense of 'zeggen' (to say) is 'zeiden'[cite: 1]."
+    explanationTr: "'zeggen' (söylemek) fiilinin çoğul geçmiş zaman hali 'zeiden'dir.",
+    explanationEn: "The plural past tense of 'zeggen' (to say) is 'zeiden'."
   },
   {
     id: "sum_ch10_041",
@@ -19902,8 +19902,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat is de imperfectum vorm van het modale werkwoord 'mogen' voor 'ik'?",
     options: ["mocht", "mochten", "mogde"],
     correctAnswer: "mocht",
-    explanationTr: "'mogen' (izinli olmak) fiilinin tekil geçmiş zamanı 'mocht' olur[cite: 1].",
-    explanationEn: "The singular past tense of the modal verb 'mogen' (may/allowed) is 'mocht'[cite: 1]."
+    explanationTr: "'mogen' (izinli olmak) fiilinin tekil geçmiş zamanı 'mocht' olur.",
+    explanationEn: "The singular past tense of the modal verb 'mogen' (may/allowed) is 'mocht'."
   },
   {
     id: "sum_ch10_042",
@@ -19912,8 +19912,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat is de imperfectum vorm van het modale werkwoord 'willen' voor 'hij'?",
     options: ["wilde / wou", "wilden", "wilte"],
     correctAnswer: "wilde / wou",
-    explanationTr: "'willen' (istemek) fiilinin tekil geçmiş zamanı 'wilde' (veya konuşma dilinde 'wou') şeklindedir[cite: 1].",
-    explanationEn: "The singular past tense of 'willen' (to want) is 'wilde' (or 'wou' informally)[cite: 1]."
+    explanationTr: "'willen' (istemek) fiilinin tekil geçmiş zamanı 'wilde' (veya konuşma dilinde 'wou') şeklindedir.",
+    explanationEn: "The singular past tense of 'willen' (to want) is 'wilde' (or 'wou' informally)."
   },
   {
     id: "sum_ch10_043",
@@ -19922,8 +19922,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat is de imperfectum vorm van het modale werkwoord 'moeten' voor 'wij'?",
     options: ["moesten", "moest", "moetden"],
     correctAnswer: "moesten",
-    explanationTr: "'moeten' (zorunda olmak) fiilinin çoğul geçmiş zamanı 'moesten'dir[cite: 1].",
-    explanationEn: "The plural past tense of the modal verb 'moeten' (must) is 'moesten'[cite: 1]."
+    explanationTr: "'moeten' (zorunda olmak) fiilinin çoğul geçmiş zamanı 'moesten'dir.",
+    explanationEn: "The plural past tense of the modal verb 'moeten' (must) is 'moesten'."
   },
   {
     id: "sum_ch10_044",
@@ -19932,8 +19932,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat is de imperfectum vorm van het modale werkwoord 'kunnen' voor 'jij'?",
     options: ["kon", "konden", "kunde"],
     correctAnswer: "kon",
-    explanationTr: "'kunnen' (yapabilmek) fiilinin tekil geçmiş zamanı 'kon' şeklindedir[cite: 1].",
-    explanationEn: "The singular past tense of the modal verb 'kunnen' (can) is 'kon'[cite: 1]."
+    explanationTr: "'kunnen' (yapabilmek) fiilinin tekil geçmiş zamanı 'kon' şeklindedir.",
+    explanationEn: "The singular past tense of the modal verb 'kunnen' (can) is 'kon'."
   },
   {
     id: "sum_ch10_045",
@@ -19942,8 +19942,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat is de imperfectum vorm van het modale werkwoord 'zullen' voor 'wij'?",
     options: ["zouden", "zou", "zullen"],
     correctAnswer: "zouden",
-    explanationTr: "'zullen' (-ecek/-acak) fiilinin çoğul geçmiş zamanı 'zouden'dir[cite: 1].",
-    explanationEn: "The plural past tense of the modal verb 'zullen' (shall/will) is 'zouden'[cite: 1]."
+    explanationTr: "'zullen' (-ecek/-acak) fiilinin çoğul geçmiş zamanı 'zouden'dir.",
+    explanationEn: "The plural past tense of the modal verb 'zullen' (shall/will) is 'zouden'."
   },
   {
     id: "sum_ch10_046",
@@ -19952,8 +19952,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Hoe vertaal je 'would' in het Nederlands? (The past tense of will is would).",
     options: ["zou / zouden", "wilde / wilden", "mocht / mochten"],
     correctAnswer: "zou / zouden",
-    explanationTr: "İngilizcedeki 'would' kelimesi Hollandacada 'zou' veya çoğul 'zouden' ile ifade edilir (zullen fiilinin geçmiş hali)[cite: 1].",
-    explanationEn: "The past tense of will is would, so 'would' translates to 'zou/zouden' in Dutch[cite: 1]."
+    explanationTr: "İngilizcedeki 'would' kelimesi Hollandacada 'zou' veya çoğul 'zouden' ile ifade edilir (zullen fiilinin geçmiş hali).",
+    explanationEn: "The past tense of will is would, so 'would' translates to 'zou/zouden' in Dutch."
   },
   {
     id: "sum_ch10_047",
@@ -19962,8 +19962,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat is de juiste perfectumvorm in de zin: 'Ik ben met mijn fiets tegen een huis ___'?",
     options: ["gereden", "gereden hebben", "gerijdt"],
     correctAnswer: "gereden",
-    explanationTr: "'rijden' (sürmek) hareket/yönelme fiili olduğu için 'zijn' (ben) ile kullanılmıştır, 3. hali 'gereden'dir[cite: 1].",
-    explanationEn: "'rijden' (to ride) implies movement/direction, so it uses 'zijn' (ben). The past participle is 'gereden'[cite: 1]."
+    explanationTr: "'rijden' (sürmek) hareket/yönelme fiili olduğu için 'zijn' (ben) ile kullanılmıştır, 3. hali 'gereden'dir.",
+    explanationEn: "'rijden' (to ride) implies movement/direction, so it uses 'zijn' (ben). The past participle is 'gereden'."
   },
   {
     id: "sum_ch10_048",
@@ -19972,8 +19972,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wanneer gebruik je een vorm van 'zijn' in de present perfect (voltooid tegenwoordige tijd)?",
     options: ["Voor beweging (movement) of verandering van situatie (state change).", "Voor alle regelmatige werkwoorden.", "Als de laatste letter in soft ketchup zit."],
     correctAnswer: "Voor beweging (movement) of verandering van situatie (state change).",
-    explanationTr: "'zijn' yardımcı fiili yön bildiren hareketlerde veya durum değişikliklerinde kullanılır. Aksi halde 'hebben' kullanılır[cite: 1].",
-    explanationEn: "The verb 'zijn' is used for movement (direction) or a change in state; otherwise 'hebben' is used[cite: 1]."
+    explanationTr: "'zijn' yardımcı fiili yön bildiren hareketlerde veya durum değişikliklerinde kullanılır. Aksi halde 'hebben' kullanılır.",
+    explanationEn: "The verb 'zijn' is used for movement (direction) or a change in state; otherwise 'hebben' is used."
   },
   {
     id: "sum_ch10_049",
@@ -19982,8 +19982,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat betekent de uitdrukking 'Kom over drie dagen terug' uit de fietsreparatie-dialoog?",
     options: ["Come back in three days.", "The bike is repaired in three hours.", "Come back yesterday."],
     correctAnswer: "Come back in three days.",
-    explanationTr: "'over drie dagen', üç gün içinde / üç gün sonra anlamına gelir[cite: 1].",
-    explanationEn: "'over drie dagen' translates to 'in three days'[cite: 1]."
+    explanationTr: "'over drie dagen', üç gün içinde / üç gün sonra anlamına gelir.",
+    explanationEn: "'over drie dagen' translates to 'in three days'."
   },
   {
     id: "sum_ch10_050",
@@ -19992,8 +19992,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat zeg je als iemand vraagt: 'Hoe gaat het?' en je voelt je geweldig?",
     options: ["Het gaat fantastisch.", "Mijn fiets is kapot.", "Wat vervelend."],
     correctAnswer: "Het gaat fantastisch.",
-    explanationTr: "Çok iyi hissettiğinizi 'Het gaat fantastisch' (Harika gidiyor) diyerek belirtebilirsiniz[cite: 1].",
-    explanationEn: "To say you are doing great, you can answer with 'Het gaat fantastisch'[cite: 1]."
+    explanationTr: "Çok iyi hissettiğinizi 'Het gaat fantastisch' (Harika gidiyor) diyerek belirtebilirsiniz.",
+    explanationEn: "To say you are doing great, you can answer with 'Het gaat fantastisch'."
   },
   
   
@@ -22421,8 +22421,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat betekenen de uitdrukkingen 'in het verleden' en 'vroeger' in het Engels?",
     options: ["in the past / back in the day", "tomorrow / next week", "now / today"],
     correctAnswer: "in the past / back in the day",
-    explanationTr: "'in het verleden' in the past, 'vroeger' ise back in the day anlamına gelir[cite: 1].",
-    explanationEn: "'in het verleden' means in the past and 'vroeger' means back in the day[cite: 1]."
+    explanationTr: "'in het verleden' in the past, 'vroeger' ise back in the day anlamına gelir.",
+    explanationEn: "'in het verleden' means in the past and 'vroeger' means back in the day."
   },
   {
     id: "sum_ch16_037",
@@ -22452,7 +22452,7 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     options: ["tegenstelling", "reden", "keuze"],
     correctAnswer: "tegenstelling",
     explanationTr: "'maar' bağlacı zıtlık / tegenstelling (but) bildirir.",
-    explanationEn: "The conjunction 'maar' indicates contrast (tegenstelling)[cite: 1]."
+    explanationEn: "The conjunction 'maar' indicates contrast (tegenstelling)."
   },
   {
     id: "sum_ch16_040",
@@ -22462,7 +22462,7 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     options: ["reden", "conclusie", "toevoeging"],
     correctAnswer: "reden",
     explanationTr: "'want' bağlacı sebep / reden (because) bildirir.",
-    explanationEn: "The conjunction 'want' indicates a reason (reden)[cite: 1]."
+    explanationEn: "The conjunction 'want' indicates a reason (reden)."
   },
   {
     id: "sum_ch16_041",
@@ -22472,7 +22472,7 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     options: ["gevolg / conclusie", "tegenstelling", "keuze"],
     correctAnswer: "gevolg / conclusie",
     explanationTr: "'dus' bağlacı sonuç veya netice / gevolg / conclusie (so) bildirir.",
-    explanationEn: "The conjunction 'dus' indicates a consequence or conclusion (gevolg / conclusie)[cite: 1]."
+    explanationEn: "The conjunction 'dus' indicates a consequence or conclusion (gevolg / conclusie)."
   },
   {
     id: "sum_ch16_042",
@@ -22482,7 +22482,7 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     options: ["keuze / alternatief", "reden", "toevoeging"],
     correctAnswer: "keuze / alternatief",
     explanationTr: "'of' bağlacı seçenek veya alternatif / keuze / alternatief (or) sunar.",
-    explanationEn: "The conjunction 'of' indicates a choice or alternative (keuze / alternatief)[cite: 1]."
+    explanationEn: "The conjunction 'of' indicates a choice or alternative (keuze / alternatief)."
   },
   {
     id: "sum_ch16_043",
@@ -24149,8 +24149,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat is een correct voorbeeld van de constructie 'zijn + aan het + infinitief' met 'eten' in de herhaling van les 17?",
     options: ["Ik ben pizza aan het eten.", "Ik heb pizza gegeten.", "Ik ga pizza eten."],
     correctAnswer: "Ik ben pizza aan het eten.",
-    explanationTr: "Özet sayfasının başındaki herhaling kısmında 'Ik ben pizza aan het eten' örneği verilmiştir[cite: 1].",
-    explanationEn: "The repetition section at the top of the summary gives the example 'Ik ben pizza aan het eten'[cite: 1]."
+    explanationTr: "Özet sayfasının başındaki herhaling kısmında 'Ik ben pizza aan het eten' örneği verilmiştir.",
+    explanationEn: "The repetition section at the top of the summary gives the example 'Ik ben pizza aan het eten'."
   },
   {
     id: "sum_ch18_052",
@@ -24159,8 +24159,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Hoe luidt het voorbeeld met het werkwoord 'reizen' in de herhaling van les 17?",
     options: ["Ik ben aan het reizen.", "Ik heb gereisd.", "Ik reis."],
     correctAnswer: "Ik ben aan het reizen.",
-    explanationTr: "Özet notlarındaki seyahat etme örneği 'Ik ben aan het reizen' şeklindedir[cite: 1].",
-    explanationEn: "The travel example in the summary notes is 'Ik ben aan het reizen'[cite: 1]."
+    explanationTr: "Özet notlarındaki seyahat etme örneği 'Ik ben aan het reizen' şeklindedir.",
+    explanationEn: "The travel example in the summary notes is 'Ik ben aan het reizen'."
   },
   {
     id: "sum_ch18_053",
@@ -24169,8 +24169,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat is het voorbeeld van 'hardlopen' in de sportschool uit de herhaling van les 17?",
     options: ["Ik ben in de sportschool aan het hardlopen.", "Ik heb in de sportschool hardgelopen.", "Ik ga in de sportschool hardlopen."],
     correctAnswer: "Ik ben in de sportschool aan het hardlopen.",
-    explanationTr: "Spor salonunda koşu yapma örneği 'Ik ben in de sportschool aan het hardlopen' olarak belirtilmiştir[cite: 1].",
-    explanationEn: "Running at the gym is exemplified as 'Ik ben in de sportschool aan het hardlopen'[cite: 1]."
+    explanationTr: "Spor salonunda koşu yapma örneği 'Ik ben in de sportschool aan het hardlopen' olarak belirtilmiştir.",
+    explanationEn: "Running at the gym is exemplified as 'Ik ben in de sportschool aan het hardlopen'."
   },
   {
     id: "sum_ch18_054",
@@ -24179,8 +24179,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Welk voorbeeld van 'er is' wordt genoemd in de herhaling van les 17?",
     options: ["Er is een sportschool.", "Er zijn bananen.", "Er zijn geen studenten."],
     correctAnswer: "Er is een sportschool.",
-    explanationTr: "Tekil spor salonu varlığı için 'Er is een sportschool' örneği verilmiştir[cite: 1].",
-    explanationEn: "The existence of a singular gym is exemplified by 'Er is een sportschool'[cite: 1]."
+    explanationTr: "Tekil spor salonu varlığı için 'Er is een sportschool' örneği verilmiştir.",
+    explanationEn: "The existence of a singular gym is exemplified by 'Er is een sportschool'."
   },
   {
     id: "sum_ch18_055",
@@ -24189,8 +24189,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Welk voorbeeld van 'er zijn' met meervoud wordt genoemd in de herhaling?",
     options: ["Er zijn bananen.", "Er is bananen.", "Bananen zijn er."],
     correctAnswer: "Er zijn bananen.",
-    explanationTr: "Çoğul varlık için 'Er zijn bananen' örneği yer almaktadır[cite: 1].",
-    explanationEn: "Plural existence is exemplified by 'Er zijn bananen'[cite: 1]."
+    explanationTr: "Çoğul varlık için 'Er zijn bananen' örneği yer almaktadır.",
+    explanationEn: "Plural existence is exemplified by 'Er zijn bananen'."
   },
   {
     id: "sum_ch18_056",
@@ -24199,8 +24199,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Hoe luidt het ontkennende voorbeeld met 'er zijn' in de herhaling?",
     options: ["Er zijn geen studenten.", "Er zijn niet studenten.", "Studenten zijn er niet."],
     correctAnswer: "Er zijn geen studenten.",
-    explanationTr: "Belirsiz çoğul isimlerin olumsuzu 'Er zijn geen studenten' şeklinde verilmiştir[cite: 1].",
-    explanationEn: "The negative plural example is given as 'Er zijn geen studenten'[cite: 1]."
+    explanationTr: "Belirsiz çoğul isimlerin olumsuzu 'Er zijn geen studenten' şeklinde verilmiştir.",
+    explanationEn: "The negative plural example is given as 'Er zijn geen studenten'."
   },
   {
     id: "sum_ch18_057",
@@ -24209,8 +24209,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Welke zin uit de toelichting over 'want' staat in de notities?",
     options: ["Ik ben hier | want | ik heb honger.", "Ik ben hier omdat ik honger heb.", "Ik ben honger want ik ben hier."],
     correctAnswer: "Ik ben hier | want | ik heb honger.",
-    explanationTr: "Notlarda ana cümle bağlacı 'want' için 'Ik ben hier | want | ik heb honger.' örneği geçmektedir[cite: 1].",
-    explanationEn: "The notes illustrate the main clause conjunction 'want' with 'Ik ben hier | want | ik heb honger.'[cite: 1]."
+    explanationTr: "Notlarda ana cümle bağlacı 'want' için 'Ik ben hier | want | ik heb honger.' örneği geçmektedir.",
+    explanationEn: "The notes illustrate the main clause conjunction 'want' with 'Ik ben hier | want | ik heb honger.'."
   },
   {
     id: "sum_ch18_058",
@@ -24219,8 +24219,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Welke zin uit de toelichting over 'omdat' staat in de notities?",
     options: ["Ik ben hier omdat ik honger heb.", "Ik ben hier want ik honger heb.", "Omdat ik honger heb, ben ik hier."],
     correctAnswer: "Ik ben hier omdat ik honger heb.",
-    explanationTr: "Yan cümle bağlacı 'omdat' için 'Ik ben hier omdat ik honger heb.' örneği verilmiştir[cite: 1].",
-    explanationEn: "The secondary clause conjunction 'omdat' is illustrated by 'Ik ben hier omdat ik honger heb.'[cite: 1]."
+    explanationTr: "Yan cümle bağlacı 'omdat' için 'Ik ben hier omdat ik honger heb.' örneği verilmiştir.",
+    explanationEn: "The secondary clause conjunction 'omdat' is illustrated by 'Ik ben hier omdat ik honger heb.'."
   },
   {
     id: "sum_ch18_059",
@@ -24229,8 +24229,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat gebeurt er met alle werkwoorden in een secundaire clause (bijzin) bij bepaalde voegwoorden zoals 'omdat'?",
     options: ["We plaatsen ALLE verba (verbs) van de bijzin aan het EINDE van de bijzin.", "De verba blijven vooraan staan.", "De verba worden weggelaten."],
     correctAnswer: "We plaatsen ALLE verba (verbs) van de bijzin aan het EINDE van de bijzin.",
-    explanationTr: "Notlarda açıkça 'we place ALL VERBS of the secondary clause at the END of the SECONDARY CLAUSE' ifadesi yer alır[cite: 1].",
-    explanationEn: "The notes explicitly state that we place ALL VERBS of the secondary clause at the END of the SECONDARY CLAUSE[cite: 1]."
+    explanationTr: "Notlarda açıkça 'we place ALL VERBS of the secondary clause at the END of the SECONDARY CLAUSE' ifadesi yer alır.",
+    explanationEn: "The notes explicitly state that we place ALL VERBS of the secondary clause at the END of the SECONDARY CLAUSE."
   },
   {
     id: "sum_ch18_060",
@@ -24239,8 +24239,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Welke voegwoorden worden in de lijst genoemd die alle werkwoorden naar het einde sturen?",
     options: ["omdat, zodat, dat, hoewel, terwijl, nadat", "want, maar, of, en", "als, toen, zodra, wanneer"],
     correctAnswer: "omdat, zodat, dat, hoewel, terwijl, nadat",
-    explanationTr: "Notlarda bu 6 bağlaç alt alta sıralanmıştır: omdat, zodat, dat, hoewel, terwijl, nadat[cite: 1].",
-    explanationEn: "The summary lists these exact 6 conjunctions: omdat, zodat, dat, hoewel, terwijl, nadat[cite: 1]."
+    explanationTr: "Notlarda bu 6 bağlaç alt alta sıralanmıştır: omdat, zodat, dat, hoewel, terwijl, nadat.",
+    explanationEn: "The summary lists these exact 6 conjunctions: omdat, zodat, dat, hoewel, terwijl, nadat."
   },
   {
     id: "sum_ch18_061",
@@ -24249,8 +24249,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Hoe wordt het fenomeen genoemd wanneer het werkwoord naar het einde van de zin 'springt'?",
     options: ["De 'kikker' (frog)", "De 'vis' (fish)", "De 'vogel' (bird)"],
     correctAnswer: "De 'kikker' (frog)",
-    explanationTr: "Notlarda fiilin sona atlaması eğlenceli bir benzetmeyle 'kikker' (kurbağa) olarak adlandırılır[cite: 1].",
-    explanationEn: "When the verb jumps to the end, it is playfully called the 'kikker' (frog)[cite: 1]."
+    explanationTr: "Notlarda fiilin sona atlaması eğlenceli bir benzetmeyle 'kikker' (kurbağa) olarak adlandırılır.",
+    explanationEn: "When the verb jumps to the end, it is playfully called the 'kikker' (frog)."
   },
   {
     id: "sum_ch18_062",
@@ -24259,8 +24259,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat gebeurt er met de hoofdzin als we beginnen met een secundaire clause en deze wordt gevolgd door de hoofdzin?",
     options: ["Na de secondary clause en daarna hebben we de main clause met inversie.", "De hoofdzin blijft exact hetzelfde.", "De hoofdzin krijgt geen werkwoord."],
     correctAnswer: "Na de secondary clause en daarna hebben we de main clause met inversie.",
-    explanationTr: "Notlarda 'secondary clause + main clause: When we start with the secondary clause and after it we have the main clause we use the inversion' denmektedir[cite: 1].",
-    explanationEn: "The notes state: 'secondary clause + main clause: When we start with the secondary clause and after it we have the main clause we use the inversion'[cite: 1]."
+    explanationTr: "Notlarda 'secondary clause + main clause: When we start with the secondary clause and after it we have the main clause we use the inversion' denmektedir.",
+    explanationEn: "The notes state: 'secondary clause + main clause: When we start with the secondary clause and after it we have the main clause we use the inversion'."
   },
   {
     id: "sum_ch18_063",
@@ -24269,8 +24269,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Bij welke specifieke triggerwoorden gebeurt deze inversie in de hoofdzin wanneer we ermee starten?",
     options: ["als, toen, zodra, wanneer", "omdat, zodat, dat", "want, maar, of, en"],
     correctAnswer: "als, toen, zodra, wanneer",
-    explanationTr: "Notlarda bu kuralın şu kelimelerle başladığında geçerli olduğu belirtilir: als, toen, zodra, wanneer[cite: 1].",
-    explanationEn: "The notes list these trigger words for this pattern: als, toen, zodra, wanneer[cite: 1]."
+    explanationTr: "Notlarda bu kuralın şu kelimelerle başladığında geçerli olduğu belirtilir: als, toen, zodra, wanneer.",
+    explanationEn: "The notes list these trigger words for this pattern: als, toen, zodra, wanneer."
   },
   {
     id: "sum_ch18_064",
@@ -24279,8 +24279,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat is het exacte patroon dat in de notities wordt gegeven voor deze zinnen?",
     options: ["trigger word + kikker + inversion", "subject + verb + object", "verb + subject + rest"],
     correctAnswer: "trigger word + kikker + inversion",
-    explanationTr: "Notlardaki formül: trigger word + kikker + inversion[cite: 1].",
-    explanationEn: "The formula given in the notes is: trigger word + kikker + inversion[cite: 1]."
+    explanationTr: "Notlardaki formül: trigger word + kikker + inversion.",
+    explanationEn: "The formula given in the notes is: trigger word + kikker + inversion."
   },
   {
     id: "sum_ch18_065",
@@ -24289,8 +24289,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat is het voorbeeld van dit patroon in de notities?",
     options: ["Als ik geen eten eet, heb ik honger.", "Ik heb honger als ik geen eten eet.", "Omdat ik geen eten eet, heb ik honger."],
     correctAnswer: "Als ik geen eten eet, heb ik honger.",
-    explanationTr: "Notlardaki örnek: 'Als ik geen eten eet, heb ik honger.'[cite: 1].",
-    explanationEn: "The example given is: 'Als ik geen eten eet, heb ik honger.'[cite: 1]."
+    explanationTr: "Notlardaki örnek: 'Als ik geen eten eet, heb ik honger.'.",
+    explanationEn: "The example given is: 'Als ik geen eten eet, heb ik honger.'."
   },
   {
     id: "sum_ch18_066",
@@ -24299,8 +24299,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Welke Engelse vertaling wordt in de notities gegeven bij de conditionele zin: 'If you don't study you won't pass'?",
     options: ["Als - je niet studeert - ga je niet slagen.", "Omdat je niet studeert, slaag je niet.", "Als je studeert, slaag je."],
     correctAnswer: "Als - je niet studeert - ga je niet slagen.",
-    explanationTr: "Notlarda 'If you don't study you won't pass. = Als - je niet studeert - ga je niet slagen.' yazmaktadır[cite: 1].",
-    explanationEn: "The notes state: 'If you don't study you won't pass. = Als - je niet studeert - ga je niet slagen.'[cite: 1]."
+    explanationTr: "Notlarda 'If you don't study you won't pass. = Als - je niet studeert - ga je niet slagen.' yazmaktadır.",
+    explanationEn: "The notes state: 'If you don't study you won't pass. = Als - je niet studeert - ga je niet slagen.'."
   },
   {
     id: "sum_ch18_067",
@@ -24309,8 +24309,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat is het perfectum voorbeeld in de notities voor 'ik - naar het park - gaan'?",
     options: ["Ik ben naar het park gegaan.", "Ik heb naar het park gegaan.", "Ik ben naar het park gaan."],
     correctAnswer: "Ik ben naar het park gegaan.",
-    explanationTr: "Notlardaki perfectum tablosunda 'ik - naar het park - gaan = Ik ben naar het park gegaan.' yer alır[cite: 1].",
-    explanationEn: "The perfectum table lists 'ik - naar het park - gaan = Ik ben naar het park gegaan.'[cite: 1]."
+    explanationTr: "Notlardaki perfectum tablosunda 'ik - naar het park - gaan = Ik ben naar het park gegaan.' yer alır.",
+    explanationEn: "The perfectum table lists 'ik - naar het park - gaan = Ik ben naar het park gegaan.'."
   },
   {
     id: "sum_ch18_068",
@@ -24319,8 +24319,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat is het perfectum voorbeeld voor 'Wij - een glas cola - drinken'?",
     options: ["Wij hebben een glas cola gedronken.", "Wij zijn een glas cola gedronken.", "Wij hebben een glas cola gedrinkt."],
     correctAnswer: "Wij hebben een glas cola gedronken.",
-    explanationTr: "Tablodaki örnek: 'Wij - een glas cola - drinken = Wij hebben een glas cola gedronken.'[cite: 1].",
-    explanationEn: "The table example is: 'Wij - een glas cola - drinken = Wij hebben een glas cola gedronken.'[cite: 1]."
+    explanationTr: "Tablodaki örnek: 'Wij - een glas cola - drinken = Wij hebben een glas cola gedronken.'.",
+    explanationEn: "The table example is: 'Wij - een glas cola - drinken = Wij hebben een glas cola gedronken.'."
   },
   {
     id: "sum_ch18_069",
@@ -24329,8 +24329,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat is het perfectum voorbeeld voor 'Jullie - een computer - kopen'?",
     options: ["Jullie hebben een computer gekocht.", "Jullie zijn een computer gekocht.", "Jullie hebben een computer koopd."],
     correctAnswer: "Jullie hebben een computer gekocht.",
-    explanationTr: "Tablodaki örnek: 'Jullie - een computer - kopen. = Jullie hebben een computer gekocht.'[cite: 1].",
-    explanationEn: "The table example is: 'Jullie - een computer - kopen. = Jullie hebben een computer gekocht.'[cite: 1]."
+    explanationTr: "Tablodaki örnek: 'Jullie - een computer - kopen. = Jullie hebben een computer gekocht.'.",
+    explanationEn: "The table example is: 'Jullie - een computer - kopen. = Jullie hebben een computer gekocht.'."
   },
   {
     id: "sum_ch18_070",
@@ -24339,8 +24339,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat is het perfectum voorbeeld voor 'Zij - een taart - maken'?",
     options: ["Zij heeft een taart gemaakt.", "Zij is een taart gemaakt.", "Zij heeft een taart maakd."],
     correctAnswer: "Zij heeft een taart gemaakt.",
-    explanationTr: "Tablodaki örnek: 'Zij - een taart - maken. = Zij heeft een taart gemaakt.'[cite: 1].",
-    explanationEn: "The table example is: 'Zij - een taart - maken. = Zij heeft een taart gemaakt.'[cite: 1]."
+    explanationTr: "Tablodaki örnek: 'Zij - een taart - maken. = Zij heeft een taart gemaakt.'.",
+    explanationEn: "The table example is: 'Zij - een taart - maken. = Zij heeft een taart gemaakt.'."
   },
   {
     id: "sum_ch18_071",
@@ -24349,8 +24349,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat is het perfectum voorbeeld voor 'wij - een pizza - eten'?",
     options: ["Wij hebben een pizza gegeten.", "Wij zijn een pizza gegeten.", "Wij hebben een pizza geëten."],
     correctAnswer: "Wij hebben een pizza gegeten.",
-    explanationTr: "Tablodaki örnek: 'wij - een pizza - eten. = Wij hebben een pizza gegeten.'[cite: 1].",
-    explanationEn: "The table example is: 'wij - een pizza - eten. = Wij hebben een pizza gegeten.'[cite: 1]."
+    explanationTr: "Tablodaki örnek: 'wij - een pizza - eten. = Wij hebben een pizza gegeten.'.",
+    explanationEn: "The table example is: 'wij - een pizza - eten. = Wij hebben een pizza gegeten.'."
   },
   {
     id: "sum_ch18_072",
@@ -24359,20 +24359,18 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat is het perfectum voorbeeld voor 'wij - monopoly - spelen'?",
     options: ["Wij hebben monopoly gespeeld.", "Wij zijn monopoly gespeeld.", "Wij hebben monopoly gespeelt."],
     correctAnswer: "Wij hebben monopoly gespeeld.",
-    explanationTr: "Tablodaki örnek: 'wij - monopoly - spelen. = Wij hebben monopoly gespeeld.'[cite: 1].",
-    explanationEn: "The table example is: 'wij - monopoly - spelen. = Wij hebben monopoly gespeeld.'[cite: 1]."
+    explanationTr: "Tablodaki örnek: 'wij - monopoly - spelen. = Wij hebben monopoly gespeeld.'.",
+    explanationEn: "The table example is: 'wij - monopoly - spelen. = Wij hebben monopoly gespeeld.'."
   },
   {
     id: "sum_ch18_073",
     type: "multiple_choice",
     tags: ["summary_ch18", "perfectum"],
     questionNl: "Wat is het perfectum voorbeeld voor 'ik - mijn broertje naar school - brengen'?",
-    options: ["Ik ben heb mijn broertje naar school gebracht.", "Ik heb mijn broertje naar school gebracht.", "Ik ben mijn broertje naar school gebracht."],
-    correctAnswer: "Ik ben heb mijn broertje naar school gebracht.", // Wait, the image says "ik - mijn broertje naar school - brengen. = Ik ben heb mijn broertje naar school gebracht" -> Ah, let's check the image text: "ik - mijn broertje naar school - brengen. = Ik ben heb mijn broertje naar school gebracht." Wait, "Ik ben heb" is a typo in the user's notes, let's look closely at image: "ik - mijn broertje naar school - brengen. = Ik ben heb mijn broertje naar school gebracht". Wait, let's make sure the option matches the image text or correct grammar. Let's see what the image actually has: "ik - mijn broertje naar school - brengen. = Ik ben heb..." Wait, let's check standard Dutch: "Ik heb mijn broertje naar school gebracht." But let's check what the image literally shows: "ik - mijn broertje naar school - brengen. = Ik ben heb...". Let's provide options based on the sheet or standard grammar. Let's look at the options:
     options: ["Ik heb mijn broertje naar school gebracht.", "Ik ben mijn broertje naar school gebracht.", "Ik heb mijn broertje naar school gebrengd."],
     correctAnswer: "Ik heb mijn broertje naar school gebracht.",
-    explanationTr: "'brengen' fiilinin perfectum hali 'gebracht'tir ve 'hebben' ile kullanılır[cite: 1].",
-    explanationEn: "The perfectum of 'brengen' uses 'hebben' and forms 'gebracht'[cite: 1]."
+    explanationTr: "'brengen' fiilinin perfectum hali 'gebracht'tir ve 'hebben' ile kullanılır.",
+    explanationEn: "The perfectum of 'brengen' uses 'hebben' and forms 'gebracht'."
   },
   {
     id: "sum_ch18_074",
@@ -24381,8 +24379,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat is het imperfectum voorbeeld voor 'rennen' in de notities?",
     options: ["ik rende", "ik rente", "ik gerend"],
     correctAnswer: "ik rende",
-    explanationTr: "Notlardaki imperfectum bölümünde 'rennen -> ik rende' verilmiştir[cite: 1].",
-    explanationEn: "The imperfectum section lists 'rennen -> ik rende'[cite: 1]."
+    explanationTr: "Notlardaki imperfectum bölümünde 'rennen -> ik rende' verilmiştir.",
+    explanationEn: "The imperfectum section lists 'rennen -> ik rende'."
   },
   {
     id: "sum_ch18_075",
@@ -24391,8 +24389,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat is het imperfectum voorbeeld voor 'gebruiken' in de notities?",
     options: ["wij gebruikten", "wij gebruikte", "wij gebruikden"],
     correctAnswer: "wij gebruikten",
-    explanationTr: "Notlardaki imperfectum bölümünde 'gebruiken -> wij gebruikten' verilmiştir[cite: 1].",
-    explanationEn: "The imperfectum section lists 'gebruiken -> wij gebruikten'[cite: 1]."
+    explanationTr: "Notlardaki imperfectum bölümünde 'gebruiken -> wij gebruikten' verilmiştir.",
+    explanationEn: "The imperfectum section lists 'gebruiken -> wij gebruikten'."
   },
   {
     id: "sum_ch18_076",
@@ -24401,8 +24399,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat is het imperfectum voorbeeld voor 'luisteren' in de notities?",
     options: ["zij (singular) luisterde", "zij (singular) luisterte", "zij geluisterd"],
     correctAnswer: "zij (singular) luisterde",
-    explanationTr: "Notlardaki imperfectum bölümünde 'luisteren -> zij (singular) luisterde' verilmiştir[cite: 1].",
-    explanationEn: "The imperfectum section lists 'luisteren -> zij (singular) luisterde'[cite: 1]."
+    explanationTr: "Notlardaki imperfectum bölümünde 'luisteren -> zij (singular) luisterde' verilmiştir.",
+    explanationEn: "The imperfectum section lists 'luisteren -> zij (singular) luisterde'."
   },
   {
     id: "sum_ch18_077",
@@ -24411,8 +24409,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat is het imperfectum voorbeeld voor 'kopen' in de notities?",
     options: ["jullie kochten", "jullie koopten", "jullie koopden"],
     correctAnswer: "jullie kochten",
-    explanationTr: "Notlardaki imperfectum bölümünde 'kopen -> jullie kochten' verilmiştir[cite: 1].",
-    explanationEn: "The imperfectum section lists 'kopen -> jullie kochten'[cite: 1]."
+    explanationTr: "Notlardaki imperfectum bölümünde 'kopen -> jullie kochten' verilmiştir.",
+    explanationEn: "The imperfectum section lists 'kopen -> jullie kochten'."
   },
   {
     id: "sum_ch18_078",
@@ -24421,8 +24419,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat is het imperfectum voorbeeld voor 'maken' in de notities?",
     options: ["hij maakte", "hij maakde", "hij gemaakt"],
     correctAnswer: "hij maakte",
-    explanationTr: "Notlardaki imperfectum bölümünde 'maken -> hij maakte' verilmiştir[cite: 1].",
-    explanationEn: "The imperfectum section lists 'maken -> hij maakte'[cite: 1]."
+    explanationTr: "Notlardaki imperfectum bölümünde 'maken -> hij maakte' verilmiştir.",
+    explanationEn: "The imperfectum section lists 'maken -> hij maakte'."
   },
   {
     id: "sum_ch18_079",
@@ -24431,8 +24429,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Welk voorbeeld van een scheidbaar werkwoord wordt in de notities gebruikt als hoofdcategorie?",
     options: ["opbellen -> Ik bel mijn moeder op.", "aankomen -> Ik kom aan.", "Beide voorbeelden worden getoond."],
     correctAnswer: "Beide voorbeelden worden getoond.",
-    explanationTr: "Notlarda hem 'opbellen' hem de 'aankomen' örnekleri ayrıntılı olarak işlenmiştir[cite: 1].",
-    explanationEn: "Both 'opbellen' and 'aankomen' are detailed in the notes[cite: 1]."
+    explanationTr: "Notlarda hem 'opbellen' hem de 'aankomen' örnekleri ayrıntılı olarak işlenmiştir.",
+    explanationEn: "Both 'opbellen' and 'aankomen' are detailed in the notes."
   },
   {
     id: "sum_ch18_080",
@@ -24441,8 +24439,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat is de present (tegenwoordige tijd) vorm van 'opbellen' in de notities?",
     options: ["Ik bel mijn vriend op.", "Ik opbel mijn vriend.", "Ik bel op mijn vriend."],
     correctAnswer: "Ik bel mijn vriend op.",
-    explanationTr: "Notlardaki present örneği: 'Ik bel mijn vriend op.'[cite: 1].",
-    explanationEn: "The present tense example in the notes is: 'Ik bel mijn vriend op.'[cite: 1]."
+    explanationTr: "Notlardaki present örneği: 'Ik bel mijn vriend op.'.",
+    explanationEn: "The present tense example in the notes is: 'Ik bel mijn vriend op.'."
   },
   {
     id: "sum_ch18_081",
@@ -24451,8 +24449,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat is de imperfectum vorm van 'opbellen' in de notities?",
     options: ["Ik belde mijn vriend op.", "Ik opbelde mijn vriend.", "Ik bel opde mijn vriend."],
     correctAnswer: "Ik belde mijn vriend op.",
-    explanationTr: "Notlardaki imperfectum örneği: 'Ik belde mijn vriend op.'[cite: 1].",
-    explanationEn: "The imperfectum example in the notes is: 'Ik belde mijn vriend op.'[cite: 1]."
+    explanationTr: "Notlardaki imperfectum örneği: 'Ik belde mijn vriend op.'.",
+    explanationEn: "The imperfectum example in the notes is: 'Ik belde mijn vriend op.'."
   },
   {
     id: "sum_ch18_082",
@@ -24461,8 +24459,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat is de perfectum vorm van 'opbellen' in de notities?",
     options: ["ik heb mijn moeder opgebeld", "ik heb opgebeld mijn moeder", "ik ben mijn moeder opgebeld"],
     correctAnswer: "ik heb mijn moeder opgebeld",
-    explanationTr: "Notlardaki perfectum örneği: 'ik heb mijn moeder opgebeld.'[cite: 1].",
-    explanationEn: "The perfectum example in the notes is: 'ik heb mijn moeder opgebeld.'[cite: 1]."
+    explanationTr: "Notlardaki perfectum örneği: 'ik heb mijn moeder opgebeld.'.",
+    explanationEn: "The perfectum example in the notes is: 'ik heb mijn moeder opgebeld.'."
   },
   {
     id: "sum_ch18_083",
@@ -24471,8 +24469,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat is de present vorm van 'aankomen' in de notities?",
     options: ["ik kom aan.", "ik aankom.", "ik kom."],
     correctAnswer: "ik kom aan.",
-    explanationTr: "Notlardaki present örneği: 'ik kom aan.'[cite: 1].",
-    explanationEn: "The present tense example in the notes is: 'ik kom aan.'[cite: 1]."
+    explanationTr: "Notlardaki present örneği: 'ik kom aan.'.",
+    explanationEn: "The present tense example in the notes is: 'ik kom aan.'."
   },
   {
     id: "sum_ch18_084",
@@ -24481,8 +24479,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat is de imperfectum vorm van 'aankomen' in de notities?",
     options: ["ik kwam aan.", "ik aankwam.", "ik kwam."],
     correctAnswer: "ik kwam aan.",
-    explanationTr: "Notlardaki imperfectum örneği: 'ik kwam aan.'[cite: 1].",
-    explanationEn: "The imperfectum example in the notes is: 'ik kwam aan.'[cite: 1]."
+    explanationTr: "Notlardaki imperfectum örneği: 'ik kwam aan.'.",
+    explanationEn: "The imperfectum example in the notes is: 'ik kwam aan.'."
   },
   {
     id: "sum_ch18_085",
@@ -24491,8 +24489,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat is de perfectum vorm van 'aankomen' in de notities?",
     options: ["Ik ben aangekomen.", "Ik heb aangekomen.", "Ik ben aangekom."],
     correctAnswer: "Ik ben aangekomen.",
-    explanationTr: "Notlardaki perfectum örneği: 'Ik ben aangekomen.'[cite: 1].",
-    explanationEn: "The perfectum example in the notes is: 'Ik ben aangekomen.'[cite: 1]."
+    explanationTr: "Notlardaki perfectum örneği: 'Ik ben aangekomen.'.",
+    explanationEn: "The perfectum example in the notes is: 'Ik ben aangekomen.'."
   },
   {
     id: "sum_ch18_086",
@@ -24501,8 +24499,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Welke Nederlandse klank komt overeen met de Engelse klank 'ee' in de spellingtabel onderaan?",
     options: ["ie", "oe", "ui"],
     correctAnswer: "ie",
-    explanationTr: "Tablodaki eşleşme: 'ie - ee'[cite: 1].",
-    explanationEn: "The table mapping shows: 'ie - ee'[cite: 1]."
+    explanationTr: "Tablodaki eşleşme: 'ie - ee'.",
+    explanationEn: "The table mapping shows: 'ie - ee'."
   },
   {
     id: "sum_ch18_087",
@@ -24511,8 +24509,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Welke Nederlandse klank komt overeen met de Engelse klank 'oo' in de spellingtabel onderaan?",
     options: ["oe", "ie", "ei"],
     correctAnswer: "oe",
-    explanationTr: "Tablodaki eşleşme: 'oe - oo'[cite: 1].",
-    explanationEn: "The table mapping shows: 'oe - oo'[cite: 1]."
+    explanationTr: "Tablodaki eşleşme: 'oe - oo'.",
+    explanationEn: "The table mapping shows: 'oe - oo'."
   },
   {
     id: "sum_ch18_088",
@@ -24521,8 +24519,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Welke Nederlandse klank komt overeen met '(n)ow' in de spellingtabel onderaan?",
     options: ["ou / au", "ui", "ei"],
     correctAnswer: "ou / au",
-    explanationTr: "Tablodaki eşleşme: 'ou/au - (n)ow'[cite: 1].",
-    explanationEn: "The table mapping shows: 'ou/au - (n)ow'[cite: 1]."
+    explanationTr: "Tablodaki eşleşme: 'ou/au - (n)ow'.",
+    explanationEn: "The table mapping shows: 'ou/au - (n)ow'."
   },
   {
     id: "sum_ch18_089",
@@ -24531,8 +24529,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Welke Nederlandse klankcombinatie staat gelijk aan 'aa + uu' in de spellingtabel onderaan?",
     options: ["ui", "ie", "ee"],
     correctAnswer: "ui",
-    explanationTr: "Tablodaki eşleşme: 'ui - aa + uu'[cite: 1].",
-    explanationEn: "The table mapping shows: 'ui - aa + uu'[cite: 1]."
+    explanationTr: "Tablodaki eşleşme: 'ui - aa + uu'.",
+    explanationEn: "The table mapping shows: 'ui - aa + uu'."
   },
   {
     id: "sum_ch18_090",
@@ -24541,8 +24539,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Welke Nederlandse klank komt overeen met de Engelse klank 'A' in de spellingtabel onderaan?",
     options: ["ee", "ie", "ei"],
     correctAnswer: "ee",
-    explanationTr: "Tablodaki eşleşme: 'ee - A'[cite: 1].",
-    explanationEn: "The table mapping shows: 'ee - A'[cite: 1]."
+    explanationTr: "Tablodaki eşleşme: 'ee - A'.",
+    explanationEn: "The table mapping shows: 'ee - A'."
   },
   {
     id: "sum_ch18_091",
@@ -24551,8 +24549,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat staat er in de spellingtabel genoteerd voor de klank 'eu'?",
     options: ["look it up", "A", "ee"],
     correctAnswer: "look it up",
-    explanationTr: "Tabloda 'eu -> look it up' şeklinde esprili/açıklayıcı bir ibare yer alır[cite: 1].",
-    explanationEn: "The table lists 'eu -> look it up' for this sound[cite: 1]."
+    explanationTr: "Tabloda 'eu -> look it up' şeklinde esprili/açıklayıcı bir ibare yer alır.",
+    explanationEn: "The table lists 'eu -> look it up' for this sound."
   },
   {
     id: "sum_ch18_092",
@@ -24561,8 +24559,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Welke Nederlandse klank komt overeen met de Engelse klank 'I' in de spellingtabel onderaan?",
     options: ["ei", "ui", "oe"],
     correctAnswer: "ei",
-    explanationTr: "Tablodaki eşleşme: 'ei - I'[cite: 1].",
-    explanationEn: "The table mapping shows: 'ei - I'[cite: 1]."
+    explanationTr: "Tablodaki eşleşme: 'ei - I'.",
+    explanationEn: "The table mapping shows: 'ei - I'."
   },
   {
     id: "sum_ch18_093",
@@ -24571,8 +24569,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Wat is het doel van de 'kikker' (frog) metafoor in de les?",
     options: ["Het beschrijft hoe het werkwoord naar het einde van de bijzin 'springt'.", "Het beschrijft de vervoeging van modale werkwoorden.", "Het beschrijft de uitspraak van de letter g."],
     correctAnswer: "Het beschrijft hoe het werkwoord naar het einde van de bijzin 'springt'.",
-    explanationTr: "Notlarda fiilin yan cümlenin sonuna zıplaması 'kikker' (kurbağa) olarak tanımlanmıştır[cite: 1].",
-    explanationEn: "The notes describe the verb jumping to the end of the clause as a 'kikker' (frog)[cite: 1]."
+    explanationTr: "Notlarda fiilin yan cümlenin sonuna zıplaması 'kikker' (kurbağa) olarak tanımlanmıştır.",
+    explanationEn: "The notes describe the verb jumping to the end of the clause as a 'kikker' (frog)."
   },
   {
     id: "sum_ch18_094",
@@ -24581,8 +24579,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Welke zin uit Opdracht 3 toont het gebruik van 'hoewel'?",
     options: ["We vonden een plaats op het terras hoewel het erg druk was.", "Ik ga slapen omdat ik moe ben.", "Als het regent, blijf ik thuis."],
     correctAnswer: "We vonden een plaats op het terras hoewel het erg druk was.",
-    explanationTr: "Opdracht 3'ün 1. maddesinde 'hoewel' bağlacı geçmektedir[cite: 1].",
-    explanationEn: "Item 1 of Opdracht 3 uses 'hoewel'[cite: 1]."
+    explanationTr: "Opdracht 3'ün 1. maddesinde 'hoewel' bağlacı geçmektedir.",
+    explanationEn: "Item 1 of Opdracht 3 uses 'hoewel'."
   },
   {
     id: "sum_ch18_095",
@@ -24591,8 +24589,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Welke zin uit Opdracht 3 toont het gebruik van 'zodat'?",
     options: ["We wonen met vijf studenten in een huis zodat wij niet zo duur wonen.", "Omdat ik honger heb, eet ik.", "Als ik tijd heb, kom ik."],
     correctAnswer: "We wonen met vijf studenten in een huis zodat wij niet zo duur wonen.",
-    explanationTr: "Opdracht 3'ün 3. maddesinde 'zodat' bağlacı yer alır[cite: 1].",
-    explanationEn: "Item 3 of Opdracht 3 uses 'zodat'[cite: 1]."
+    explanationTr: "Opdracht 3'ün 3. maddesinde 'zodat' bağlacı yer alır.",
+    explanationEn: "Item 3 of Opdracht 3 uses 'zodat'."
   },
   {
     id: "sum_ch18_096",
@@ -24601,8 +24599,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Welke zin uit Opdracht 3 toont het gebruik van 'voordat'?",
     options: ["Je moet een kaartje kopen voordat je naar binnen mag.", "Voordat ik ging slapen, las ik een boek.", "Beide opties."],
     correctAnswer: "Je moet een kaartje kopen voordat je naar binnen mag.",
-    explanationTr: "Opdracht 3'ün 5. maddesinde 'voordat' geçmektedir[cite: 1].",
-    explanationEn: "Item 5 of Opdracht 3 uses 'voordat'[cite: 1]."
+    explanationTr: "Opdracht 3'ün 5. maddesinde 'voordat' geçmektedir.",
+    explanationEn: "Item 5 of Opdracht 3 uses 'voordat'."
   },
   {
     id: "sum_ch18_097",
@@ -24611,8 +24609,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Welke zin uit Opdracht 3 toont het gebruik van 'nadat'?",
     options: ["Ik ga pas een nieuwe kast kopen nadat ik een kamer gevonden heb.", "Nadat ik at, ging ik weg.", "Beide opties."],
     correctAnswer: "Ik ga pas een nieuwe kast kopen nadat ik een kamer gevonden heb.",
-    explanationTr: "Opdracht 3'ün 9. maddesinde 'nadat' geçmektedir[cite: 1].",
-    explanationEn: "Item 9 of Opdracht 3 uses 'nadat'[cite: 1]."
+    explanationTr: "Opdracht 3'ün 9. maddesinde 'nadat' geçmektedir.",
+    explanationEn: "Item 9 of Opdracht 3 uses 'nadat'."
   },
   {
     id: "sum_ch18_098",
@@ -24621,8 +24619,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Welke zin uit Opdracht 3 toont het gebruik van 'terwijl'?",
     options: ["Bas kookt het eten terwijl Maria de auto naar de garage brengt.", "Terwijl ik werkte, belde hij.", "Beide opties."],
     correctAnswer: "Bas kookt het eten terwijl Maria de auto naar de garage brengt.",
-    explanationTr: "Opdracht 3'ün 10. maddesinde 'terwijl' geçmektedir[cite: 1].",
-    explanationEn: "Item 10 of Opdracht 3 uses 'terwijl'[cite: 1]."
+    explanationTr: "Opdracht 3'ün 10. maddesinde 'terwijl' geçmektedir.",
+    explanationEn: "Item 10 of Opdracht 3 uses 'terwijl'."
   },
   {
     id: "sum_ch18_099",
@@ -24631,8 +24629,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Welke zin uit Opdracht 3 toont het gebruik van 'als'?",
     options: ["Je mag niet naar binnen als de film al begonnen is.", "Als het mooi weer is, gaan we naar buiten.", "Beide opties."],
     correctAnswer: "Je mag niet naar binnen als de film al begonnen is.",
-    explanationTr: "Opdracht 3'ün 7. maddesinde 'als' geçmektedir[cite: 1].",
-    explanationEn: "Item 7 of Opdracht 3 uses 'als'[cite: 1]."
+    explanationTr: "Opdracht 3'ün 7. maddesinde 'als' geçmektedir.",
+    explanationEn: "Item 7 of Opdracht 3 uses 'als'."
   },
   {
     id: "sum_ch18_0100",
@@ -24641,8 +24639,8 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     questionNl: "Welke zin uit Opdracht 3 toont het gebruik van 'omdat'?",
     options: ["Je kan het internet niet gebruiken omdat er een storing is.", "Omdat ik moe ben, ga ik slapen.", "Beide opties."],
     correctAnswer: "Je kan het internet niet gebruiken omdat er een storing is.",
-    explanationTr: "Opdracht 3'ün 2. maddesinde 'omdat' geçmektedir[cite: 1].",
-    explanationEn: "Item 2 of Opdracht 3 uses 'omdat'[cite: 1]."
+    explanationTr: "Opdracht 3'ün 2. maddesinde 'omdat' geçmektedir.",
+    explanationEn: "Item 2 of Opdracht 3 uses 'omdat'."
   }
   
   
