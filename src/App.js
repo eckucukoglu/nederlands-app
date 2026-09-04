@@ -89,8 +89,8 @@ const GuideContent = ({ lang }) => (
             <li className="flex items-start gap-3">
               <div className="w-8 h-8 rounded-lg bg-amber-900/50 border border-amber-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-amber-400"><i className="fa-solid fa-chalkboard-user"></i></div>
               <div>
-                <strong className="text-slate-200 block mb-1">Sınıf-İçi (On-Class) Ekstra Bölümler</strong>
-                Bu bölümler ("On-C"), gerçek sınıf notlarına dayanan kapsamlı gramer özetleri, telaffuz ipuçları ve ekstra egzersizler içerir. Hızlı tekrarlar yapmak ve ünite konularını pekiştirmek için mükemmeldir.
+                <strong className="text-slate-200 block mb-1">Özet (Summary) Bölümleri</strong>
+                Bu bölümler ("Sum"), gerçek sınıf notlarına dayanan kapsamlı gramer özetleri, telaffuz ipuçları ve ekstra egzersizler içerir. Hızlı tekrarlar yapmak ve ünite konularını pekiştirmek için mükemmeldir.
               </div>
             </li>
             <li className="flex items-start gap-3">
@@ -156,8 +156,8 @@ const GuideContent = ({ lang }) => (
             <li className="flex items-start gap-3">
               <div className="w-8 h-8 rounded-lg bg-amber-900/50 border border-amber-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-amber-400"><i className="fa-solid fa-chalkboard-user"></i></div>
               <div>
-                <strong className="text-slate-200 block mb-1">On-Class Extra Sections</strong>
-                These sections ("On-C") contain comprehensive grammar summaries, pronunciation tips, and extra exercises based on real classroom notes.
+                <strong className="text-slate-200 block mb-1">Summary Sections</strong>
+                These sections ("Sum") contain comprehensive grammar summaries, pronunciation tips, and extra exercises based on real classroom notes.
               </div>
             </li>
             <li className="flex items-start gap-3">
@@ -188,7 +188,7 @@ const HomeView = ({ favorites, completed, goToSection, lang, bookSections }) => 
   const getSecTitle = (secId) => {
     const sec = bookSections.find(s => s.id === secId);
     if (sec && sec.title) return sec.title;
-    return secId.includes('On-Class') ? 'Extra Oefeningen' : 'Dialoog / Oefening';
+    return secId.includes('On-Class') ? 'Summary' : 'Dialoog / Oefening';
   };
 
   if (!hasData) {
@@ -682,7 +682,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
     if (secId === 'grammar') return lang === 'tr' ? "Gramer Referansı" : "Grammar Reference";
     const sec = currentSections.find(s => s.id === secId);
     if (sec && sec.title) return sec.title;
-    if (secId.includes('On-Class')) return "Extra Oefeningen";
+    if (secId.includes('On-Class')) return "Summary";
     if (secId.endsWith('.1')) return "Dialoog";
     return "Oefening";
   };
@@ -1146,7 +1146,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
                     isActive ? 'bg-brand-600 text-white border-brand-500 z-10' : 'bg-slate-800 text-slate-400 border-slate-700 hover:bg-slate-700 hover:text-slate-200'
                   }`}
                 >
-                  <span>{sec.id.includes('On-Class') ? 'On-C' : sec.id}</span>
+                  <span>{sec.id.includes('On-Class') ? 'Sum' : sec.id}</span>
                   {isF && <i className="fa-solid fa-star text-amber-400 text-[10px]"></i>}
                   {isF && favorites[sec.id] && (
                     <span className={`text-[10px] font-normal truncate max-w-[80px] ${isActive ? 'text-amber-200' : 'text-amber-400/80'}`}>
@@ -1170,7 +1170,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
           >
             <div className="flex items-center justify-between w-full">
               <span className="text-slate-200 text-sm font-bold truncate text-left">
-                {activeTab === 'home' ? 'Dashboard' : (activeTab === 'flashcards' ? t('flashcards') : activeTab === 'verbs' ? (lang === 'tr' ? 'Düzensiz Fiiller' : 'Irregular Verbs') : activeTab === 'grammar' ? (lang === 'tr' ? 'Gramer Referansı' : 'Grammar Reference') : (activeTab.includes('On-Class') ? 'Extra: On-Class' : `Sectie ${activeTab}`))}
+                {activeTab === 'home' ? 'Dashboard' : (activeTab === 'flashcards' ? t('flashcards') : activeTab === 'verbs' ? (lang === 'tr' ? 'Düzensiz Fiiller' : 'Irregular Verbs') : activeTab === 'grammar' ? (lang === 'tr' ? 'Gramer Referansı' : 'Grammar Reference') : (activeTab.includes('On-Class') ? 'Summary' : `Sectie ${activeTab}`))}
               </span>
               <div className="flex items-center gap-2 flex-shrink-0">
                 {activeTab !== 'flashcards' && activeTab !== 'verbs' && activeTab !== 'grammar' && activeTab !== 'home' && (
@@ -1222,7 +1222,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
                       className={`w-full px-4 py-3 flex items-center justify-between text-sm transition-colors ${activeTab === sec.id ? 'bg-slate-700/50 text-brand-300 font-bold border-l-4 border-brand-400' : 'text-slate-300 hover:bg-slate-700/30 border-l-4 border-transparent'}`}
                     >
                       <div className="flex flex-col text-left truncate pr-2 flex-1">
-                        <span className="truncate">{sec.id.includes('On-Class') ? 'Extra: On-Class' : `${sec.id} - ${getSectionTitle(sec.id)}`}</span>
+                        <span className="truncate">{sec.id.includes('On-Class') ? 'Summary' : `${sec.id} - ${getSectionTitle(sec.id)}`}</span>
                         {favorites[sec.id] && (
                           <span className="text-[11px] text-amber-400/90 italic truncate mt-0.5 flex items-center gap-1">
                             <i className="fa-solid fa-star text-[9px]"></i> {favorites[sec.id]}
