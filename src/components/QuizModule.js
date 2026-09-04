@@ -19,7 +19,7 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
     setQuizHistory(history);
   }, []);
 
-  // Aktif etiketler (activeTags) değiştiğinde soruları filtrele ve karıştır
+  // Aktif etiketler (activeTags) değiştiğinde soruları filtrele ve karıştır[cite: 1]
   const filteredQuestions = useMemo(() => {
     let filtered = activeTags.length === 0 
         ? [...quizQuestions] 
@@ -34,6 +34,17 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
 
   const currentQ = filteredQuestions[currentIndex];
   const qHistory = currentQ ? quizHistory[currentQ.id] || { correct: 0, incorrect: 0 } : null;
+
+  // Her soru değiştiğinde seçenekleri karıştırmak için useMemo veya state kullanımı
+  const shuffledOptions = useMemo(() => {
+    if (!currentQ || !currentQ.options) return [];
+    let optionsCopy = [...currentQ.options];
+    for (let i = optionsCopy.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [optionsCopy[i], optionsCopy[j]] = [optionsCopy[j], optionsCopy[i]];
+    }
+    return optionsCopy;
+  }, [currentQ]);
 
   // Herhangi bir taja tıklandığında tetiklenecek fonksiyon
   const handleTagClick = (clickedTag) => {
@@ -199,7 +210,7 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
 
            {currentQ.type === 'multiple_choice' && (
              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
-                {currentQ.options.map(opt => {
+                {shuffledOptions.map(opt => {
                   let btnClass = "bg-slate-800 border-slate-600 text-slate-300 hover:bg-slate-700";
                   if (isAnswered) {
                     if (opt === currentQ.correctAnswer) btnClass = "bg-emerald-900/40 border-emerald-500 text-emerald-300 shadow-[0_0_15px_rgba(16,185,129,0.2)]";
