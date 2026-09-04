@@ -24641,10 +24641,5647 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     correctAnswer: "Je kan het internet niet gebruiken omdat er een storing is.",
     explanationTr: "Opdracht 3'ün 2. maddesinde 'omdat' geçmektedir.",
     explanationEn: "Item 2 of Opdracht 3 uses 'omdat'."
-  }
+  },
+  
+  ////////////////////////////sss//1
+  {
+    id: "sum_ch1_100",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "vocabulary", "greetings"],
+    questionNl: "Wat is de Nederlandse vertaling van 'good morning'?",
+    options: ["goedemorgen", "goedenavond", "goedemiddag"],
+    correctAnswer: "goedemorgen",
+    explanationTr: "Kelime listesine göre 'good morning' ifadesinin Hollandaca karşılığı 'goedemorgen'dır[cite: 1].",
+    explanationEn: "According to the vocabulary list, 'good morning' translates to 'goedemorgen' in Dutch[cite: 1]."
+  },
+  {
+    id: "sum_ch1_101",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "vocabulary", "greetings"],
+    questionNl: "Welke groet gebruik je in de middag ('good afternoon')?",
+    options: ["goedemiddag", "goedemorgen", "goedenavond"],
+    correctAnswer: "goedemiddag",
+    explanationTr: "Öğleden sonra (good afternoon) selamlaşmak için 'goedemiddag' kullanılır.",
+    explanationEn: "To greet someone in the afternoon (good afternoon), you use 'goedemiddag'."
+  },
+  {
+    id: "sum_ch1_102",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "vocabulary", "greetings"],
+    questionNl: "Hoe zeg je 'good evening' in het Nederlands?",
+    options: ["goedenavond", "goedendag", "hallo"],
+    correctAnswer: "goedenavond",
+    explanationTr: "İyi akşamlar (good evening) demek için 'goedenavond' kullanılır.",
+    explanationEn: "To say good evening, you use 'goedenavond'."
+  },
+  {
+    id: "sum_ch1_103",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "vocabulary", "greetings"],
+    questionNl: "Welk woord kun je gebruiken voor zowel begroeten (hello) als afscheid nemen (bye)?",
+    options: ["dag", "doeg", "tot ziens"],
+    correctAnswer: "dag",
+    explanationTr: "'dag' kelimesi hem merhaba hem de hoşça kal (bye) anlamında kullanılabilir.",
+    explanationEn: "The word 'dag' can be used for both greeting (hello) and saying goodbye (bye)."
+  },
+  {
+    id: "sum_ch1_104",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "vocabulary", "farewells"],
+    questionNl: "Hoe zeg je 'see you soon' in het Nederlands?",
+    options: ["tot zo", "tot straks", "tot morgen"],
+    correctAnswer: "tot zo",
+    explanationTr: "Kısa süre sonra görüşmek üzere (see you soon) demek için 'tot zo' denir.",
+    explanationEn: "To say 'see you soon', you use 'tot zo'."
+  },
+  {
+    id: "sum_ch1_105",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "vocabulary", "farewells"],
+    questionNl: "Hoe zeg je 'see you tomorrow' in het Nederlands?",
+    options: ["tot morgen", "tot ziens", "tot straks"],
+    correctAnswer: "tot morgen",
+    explanationTr: "Yarın görüşürüz (see you tomorrow) demek için 'tot morgen' kullanılır.",
+    explanationEn: "To say 'see you tomorrow', you use 'tot morgen'."
+  },
+  {
+    id: "sum_ch1_106",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "vocabulary", "farewells"],
+    questionNl: "Welke formele uitdrukking gebruik je voor 'goodbye'?",
+    options: ["tot ziens", "doei", "doeg"],
+    correctAnswer: "tot ziens",
+    explanationTr: "Resmi vedalaşmalarda hoşça kal (goodbye) demek için 'tot ziens' tercih edilir.",
+    explanationEn: "For formal goodbyes (goodbye / so long), 'tot ziens' is used."
+  },
+  {
+    id: "sum_ch1_107",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "phrases", "introducing"],
+    questionNl: "Welke vraag gebruik je om te vragen: 'Who are you?'",
+    options: ["Wie ben jij?", "Wat is je naam?", "Hoe heet jij?"],
+    correctAnswer: "Wie ben jij?",
+    explanationTr: "Birine kim olduğunu (Who are you?) sormak için 'Wie ben jij?' kalıbı kullanılır.",
+    explanationEn: "To ask 'Who are you?', the phrase 'Wie ben jij?' is used."
+  },
+  {
+    id: "sum_ch1_108",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "phrases", "introducing"],
+    questionNl: "Hoe vraag je naar iemands voornaam (first name)?",
+    options: ["Wat is je voornaam?", "Wat is je achternaam?", "Hoe heet jij?"],
+    correctAnswer: "Wat is je voornaam?",
+    explanationTr: "İlk adı (voornaam) sormak için 'Wat is je voornaam?' sorusu sorulur.",
+    explanationEn: "To ask for a first name (voornaam), you ask 'Wat is je voornaam?'."
+  },
+  {
+    id: "sum_ch1_109",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "phrases", "introducing"],
+    questionNl: "Hoe vraag je naar iemands achternaam (surname)?",
+    options: ["Wat is je achternaam?", "Wat is je voornaam?", "Waar kom je vandaan?"],
+    correctAnswer: "Wat is je achternaam?",
+    explanationTr: "Soyadını (achternaam) öğrenmek için 'Wat is je achternaam?' diye sorulur.",
+    explanationEn: "To find out a surname (achternaam), you ask 'Wat is je achternaam?'."
+  },
+  {
+    id: "sum_ch1_110",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "phrases", "introducing"],
+    questionNl: "Welke vraag betekent 'Where do you come from?'",
+    options: ["Waar kom je vandaan?", "Waar woon je?", "Uit welk land kom je?"],
+    correctAnswer: "Waar kom je vandaan?",
+    explanationTr: "Nereden geldiğini (Where do you come from?) sormak için 'Waar kom je vandaan?' kullanılır.",
+    explanationEn: "To ask where someone comes from, you use 'Waar kom je vandaan?'."
+  },
+  {
+    id: "sum_ch1_111",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "phrases", "introducing"],
+    questionNl: "Welke vraag betekent 'From which country do you come?'",
+    options: ["Uit welk land kom je?", "Waar kom je vandaan?", "Waar woon je?"],
+    correctAnswer: "Uit welk land kom je?",
+    explanationTr: "Hangi ülkeden geldiğini sormak için 'Uit welk land kom je?' sorusu yöneltilir.",
+    explanationEn: "To ask specifically from which country someone comes, use 'Uit welk land kom je?'."
+  },
+  {
+    id: "sum_ch1_112",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "phrases", "introducing"],
+    questionNl: "Welke vraag betekent 'Where do you live?'",
+    options: ["Waar woon je?", "Wat is je adres?", "Waar kom je vandaan?"],
+    correctAnswer: "Waar woon je?",
+    explanationTr: "Nerede yaşadığını (Where do you live?) sormak için 'Waar woon je?' kullanılır.",
+    explanationEn: "To ask where someone lives, you use 'Waar woon je?'."
+  },
+  {
+    id: "sum_ch1_113",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "phrases", "introducing"],
+    questionNl: "Wat is de juiste vraag om iemands adres te weten te komen?",
+    options: ["Wat is jouw / je adres?", "Waar woon jij?", "Wat is je postcode?"],
+    correctAnswer: "Wat is jouw / je adres?",
+    explanationTr: "Birinin adresini doğrudan sormak için 'Wat is jouw / je adres?' denir.",
+    explanationEn: "To directly ask for someone's address, you say 'Wat is jouw / je adres?'."
+  },
+  {
+    id: "sum_ch1_114",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "phrases", "introducing"],
+    questionNl: "Hoe vraag je naar de postcode (postal code)?",
+    options: ["Wat is je postcode?", "Wat is je huisnummer?", "Waar woon je?"],
+    correctAnswer: "Wat is je postcode?",
+    explanationTr: "Posta kodunu öğrenmek için 'Wat is je postcode?' sorusu kullanılır.",
+    explanationEn: "To find out the postal code, the question 'Wat is je postcode?' is used."
+  },
+  {
+    id: "sum_ch1_115",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "vocabulary", "countries"],
+    questionNl: "Vul in: 'Ik kom uit Nederland. Ik spreek ___.'",
+    options: ["Nederlands", "Engels", "Chinees"],
+    correctAnswer: "Nederlands",
+    explanationTr: "Hollanda'dan (Nederland) gelen biri Hollandaca (Nederlands) konuşur.",
+    explanationEn: "Someone from the Netherlands (Nederland) speaks Dutch (Nederlands)."
+  },
+  {
+    id: "sum_ch1_116",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "vocabulary", "countries"],
+    questionNl: "Vul in: 'Ik kom uit Engeland. Ik ben ___.'",
+    options: ["Engelsman / Engelse", "Engels", "Engeland"],
+    correctAnswer: "Engelsman / Engelse",
+    explanationTr: "İngiltere'den (Engeland) gelen bir erkek Engelsman, bir kadın ise Engelse olarak adlandırılır.",
+    explanationEn: "Someone from England (Engeland) is referred to as Engelsman (male) or Engelse (female)."
+  },
+  {
+    id: "sum_ch1_117",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "vocabulary", "countries"],
+    questionNl: "Vul in: 'Ik kom uit China. Ik spreek ___.'",
+    options: ["Chinees", "Chinezen", "China"],
+    correctAnswer: "Chinees",
+    explanationTr: "Çin'den (China) gelen biri Çince (Chinees) konuşur.",
+    explanationEn: "Someone from China speaks Chinese (Chinees)."
+  },
+  {
+    id: "sum_ch1_118",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "grammar", "verbs"],
+    questionNl: "Kies de juiste vorm van het werkwoord 'zijn' voor 'ik': 'Ik ___ Susy.'",
+    options: ["ben", "is", "bent"],
+    correctAnswer: "ben",
+    explanationTr: "'ik' (ben) öznesi için 'zijn' (olmak) fiilinin çekimi 'ben' şeklindedir.",
+    explanationEn: "For the subject 'ik' (I), the conjugation of 'zijn' (to be) is 'ben'."
+  },
+  {
+    id: "sum_ch1_119",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "grammar", "verbs"],
+    questionNl: "Kies de juiste vorm van het werkwoord 'zijn' voor 'jij/je': 'Jij ___ docent.'",
+    options: ["bent", "is", "zijn"],
+    correctAnswer: "bent",
+    explanationTr: "'jij / je' (sen) öznesi için 'zijn' fiili 'bent' olarak çekimlenir.",
+    explanationEn: "For the subject 'jij / je' (you), the verb 'zijn' is conjugated as 'bent'."
+  },
+  {
+    id: "sum_ch1_120",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "grammar", "verbs"],
+    questionNl: "Kies de juiste vorm van het werkwoord 'zijn' voor 'hij': 'Hij ___ uit China.'",
+    options: ["is", "ben", "zijn"],
+    correctAnswer: "is",
+    explanationTr: "Üçüncü tekil şahıs 'hij' (o) için 'zijn' fiili 'is' olarak çekimlenir.",
+    explanationEn: "For the third person singular 'hij' (he), the verb 'zijn' is conjugated as 'is'."
+  },
+  {
+    id: "sum_ch1_121",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "grammar", "verbs"],
+    questionNl: "Kies de juiste vorm van het werkwoord 'zijn' voor 'wij/we': 'We ___ cursisten.'",
+    options: ["zijn", "is", "bent"],
+    correctAnswer: "zijn",
+    explanationTr: "Çoğul 'wij / we' (biz) öznesi için 'zijn' fiili mastar halinde ('zijn') kalır.",
+    explanationEn: "For the plural subject 'wij / we' (we), the verb 'zijn' remains in its infinitive form ('zijn')."
+  },
+  {
+    id: "sum_ch1_122",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "grammar", "verbs"],
+    questionNl: "Kies de juiste vorm van het werkwoord 'zijn' voor 'jullie': 'Jullie ___ docenten.'",
+    options: ["zijn", "is", "bent"],
+    correctAnswer: "zijn",
+    explanationTr: "Çoğul 'jullie' (siz) öznesi için 'zijn' fiili 'zijn' olarak çekimlenir.",
+    explanationEn: "For the plural subject 'jullie' (you all), the verb 'zijn' is conjugated as 'zijn'."
+  },
+  {
+    id: "sum_ch1_123",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "grammar", "verbs"],
+    questionNl: "Kies de juiste vorm van het werkwoord 'hebben' voor 'ik': 'Ik ___ een boek.'",
+    options: ["heb", "heeft", "hebt"],
+    correctAnswer: "heb",
+    explanationTr: "'ik' öznesi için 'hebben' (sahip olmak) fiili 'heb' olarak çekimlenir.",
+    explanationEn: "For the subject 'ik', the verb 'hebben' (to have) is conjugated as 'heb'."
+  },
+  {
+    id: "sum_ch1_124",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "grammar", "verbs"],
+    questionNl: "Kies de juiste vorm van het werkwoord 'hebben' voor 'jij/je': 'Jij ___ twee docenten.'",
+    options: ["hebt", "heb", "heeft"],
+    correctAnswer: "hebt",
+    explanationTr: "'jij' öznesi için 'hebben' fiili 'hebt' şeklini alır.",
+    explanationEn: "For the subject 'jij', the verb 'hebben' takes the form 'hebt'."
+  },
+  {
+    id: "sum_ch1_125",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "grammar", "verbs"],
+    questionNl: "Kies de juiste vorm van het werkwoord 'hebben' voor de formele vorm 'u': 'U ___ een vraag.'",
+    options: ["heeft / hebt", "heb", "hebben"],
+    correctAnswer: "heeft / hebt",
+    explanationTr: "Resmi 'u' zamiri için 'hebben' fiilinin hem 'heeft' hem de 'hebt' kullanımları doğrudur.",
+    explanationEn: "For the formal 'u', both 'heeft' and 'hebt' are correct conjugations for 'hebben'."
+  },
+  {
+    id: "sum_ch1_126",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "grammar", "verbs"],
+    questionNl: "Kies de juiste vorm van het werkwoord 'hebben' voor 'hij': 'Hij ___ een zus.'",
+    options: ["heeft", "heb", "hebt"],
+    correctAnswer: "heeft",
+    explanationTr: "Üçüncü tekil şahıs 'hij' (o) için 'hebben' fiili 'heeft' olarak çekimlenir.",
+    explanationEn: "For the third person singular 'hij' (he), the verb 'hebben' is conjugated as 'heeft'."
+  },
+  {
+    id: "sum_ch1_127",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "grammar", "verbs"],
+    questionNl: "Kies de juiste vorm van het werkwoord 'hebben' voor 'wij/we': 'Wij ___ pauze.'",
+    options: ["hebben", "heb", "heeft"],
+    correctAnswer: "hebben",
+    explanationTr: "Çoğul şahıs 'wij' için 'hebben' fiili mastar halinde kalır ('hebben').",
+    explanationEn: "For the plural 'wij', the verb 'hebben' remains in the infinitive ('hebben')."
+  },
+  {
+    id: "sum_ch1_128",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "grammar", "verbs"],
+    questionNl: "Kies de juiste vorm van het werkwoord 'luisteren' voor 'ik': 'Ik ___ naar de tekst.'",
+    options: ["luister", "luistert", "luisteren"],
+    correctAnswer: "luister",
+    explanationTr: "'ik' öznesi için fiil sadece kök (stam) halindedir, '-t' almaz.",
+    explanationEn: "For the subject 'ik', the verb is just the stem, without a '-t'."
+  },
+  {
+    id: "sum_ch1_129",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "grammar", "verbs"],
+    questionNl: "Kies de juiste vorm van het werkwoord 'luisteren' voor 'hij': 'Hij ___ naar de docent.'",
+    options: ["luistert", "luister", "luisteren"],
+    correctAnswer: "luistert",
+    explanationTr: "Üçüncü tekil şahıs 'hij' için fiil köküne '-t' eklenir.",
+    explanationEn: "For the third person singular 'hij', a '-t' is added to the verb stem."
+  },
+  {
+    id: "sum_ch1_130",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "grammar", "verbs"],
+    questionNl: "Kies de juiste vorm van het werkwoord 'luisteren' voor 'jullie': 'Jullie ___ naar de docent.'",
+    options: ["luisteren", "luister", "luistert"],
+    correctAnswer: "luisteren",
+    explanationTr: "Çoğul 'jullie' öznesi için fiil mastar halinde (luisteren) kalır.",
+    explanationEn: "For the plural subject 'jullie', the verb remains in the infinitive (luisteren)."
+  },
+  {
+    id: "sum_ch1_131",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "grammar", "inversion"],
+    questionNl: "Welke vorm van het werkwoord 'wonen' is correct in een vraagzin met 'je' of 'jij' achter het werkwoord? 'Waar ___ je?'",
+    options: ["woon", "woont", "wonen"],
+    correctAnswer: "woon",
+    explanationTr: "Soru cümlelerinde (inversie) fiil 'jij' veya 'je'den önce geldiğinde fiilin sonundaki '-t' düşer.",
+    explanationEn: "In question sentences (inversion) where the verb precedes 'jij' or 'je', the '-t' suffix is dropped."
+  },
+  {
+    id: "sum_ch1_132",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "grammar", "inversion"],
+    questionNl: "Welke vorm van het werkwoord 'wonen' is correct in een vraagzin met het formele 'u' achter het werkwoord? '___ u ook in Utrecht?'",
+    options: ["Woont", "Woon", "Wonen"],
+    correctAnswer: "Woont",
+    explanationTr: "Resmi 'u' zamiri kullanıldığında, soru cümlesinde devrik yapı olsa bile fiildeki '-t' harfi düşmez.",
+    explanationEn: "When using the formal 'u', the '-t' suffix on the verb is NOT dropped, even in inversion."
+  },
+  {
+    id: "sum_ch1_133",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "numbers"],
+    questionNl: "Hoe schrijf je het getal 12 in het Nederlands?",
+    options: ["twaalf", "dertien", "twintig"],
+    correctAnswer: "twaalf",
+    explanationTr: "12 sayısı Hollandacada 'twaalf' olarak yazılır.",
+    explanationEn: "The number 12 is written as 'twaalf' in Dutch."
+  },
+  {
+    id: "sum_ch1_134",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "numbers"],
+    questionNl: "Hoe schrijf je het getal 13 in het Nederlands?",
+    options: ["dertien", "dertig", "drie"],
+    correctAnswer: "dertien",
+    explanationTr: "13 sayısı 'dertien'dir.",
+    explanationEn: "The number 13 is 'dertien'."
+  },
+  {
+    id: "sum_ch1_135",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "numbers"],
+    questionNl: "Hoe schrijf je het getal 14 in het Nederlands?",
+    options: ["veertien", "veertig", "vier"],
+    correctAnswer: "veertien",
+    explanationTr: "14 sayısı 'veertien'dir.",
+    explanationEn: "The number 14 is 'veertien'."
+  },
+  {
+    id: "sum_ch1_136",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "numbers"],
+    questionNl: "Hoe schrijf je het getal 20 in het Nederlands?",
+    options: ["twintig", "twaalf", "twee"],
+    correctAnswer: "twintig",
+    explanationTr: "20 sayısı 'twintig' olarak yazılır.",
+    explanationEn: "The number 20 is written as 'twintig'."
+  },
+  {
+    id: "sum_ch1_137",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "numbers"],
+    questionNl: "Hoe schrijf je het getal 30 in het Nederlands?",
+    options: ["dertig", "dertien", "drie"],
+    correctAnswer: "dertig",
+    explanationTr: "30 sayısı 'dertig' olarak yazılır.",
+    explanationEn: "The number 30 is written as 'dertig'."
+  },
+  {
+    id: "sum_ch1_138",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "numbers"],
+    questionNl: "Hoe schrijf je het getal 80 in het Nederlands?",
+    options: ["tachtig", "achttien", "acht"],
+    correctAnswer: "tachtig",
+    explanationTr: "80 sayısı 'tachtig' olarak yazılır.",
+    explanationEn: "The number 80 is written as 'tachtig'."
+  },
+  {
+    id: "sum_ch1_139",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "numbers"],
+    questionNl: "Hoe schrijf je het getal 100 in het Nederlands?",
+    options: ["honderd", "duizend", "tien"],
+    correctAnswer: "honderd",
+    explanationTr: "100 sayısı 'honderd' olarak yazılır.",
+    explanationEn: "The number 100 is written as 'honderd'."
+  },
+  {
+    id: "sum_ch1_140",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "numbers"],
+    questionNl: "Hoe schrijf je het getal 1000 in het Nederlands?",
+    options: ["duizend", "honderd", "tien"],
+    correctAnswer: "duizend",
+    explanationTr: "1000 sayısı 'duizend' olarak yazılır.",
+    explanationEn: "The number 1000 is written as 'duizend'."
+  },
+  {
+    id: "sum_ch1_141",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "spelling", "alphabet"],
+    questionNl: "Hoe noem je de lettercombinatie 'ij' in het Nederlandse alfabet?",
+    options: ["lange ij", "korte ei", "Griekse ij"],
+    correctAnswer: "lange ij",
+    explanationTr: "'ij' harfleri Hollandacada 'lange ij' (uzun ij) olarak adlandırılır.",
+    explanationEn: "The letter combination 'ij' is called 'lange ij' (long ij) in Dutch."
+  },
+  {
+    id: "sum_ch1_142",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "spelling", "alphabet"],
+    questionNl: "Hoe noem je de lettercombinatie 'ei' in het Nederlandse alfabet?",
+    options: ["korte ei", "lange ij", "Griekse ij"],
+    correctAnswer: "korte ei",
+    explanationTr: "'ei' harfleri Hollandacada 'korte ei' (kısa ei) olarak adlandırılır.",
+    explanationEn: "The letter combination 'ei' is called 'korte ei' (short ei) in Dutch."
+  },
+  {
+    id: "sum_ch1_143",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "spelling", "alphabet"],
+    questionNl: "Hoe noem je de letter 'y' in het Nederlandse alfabet?",
+    options: ["Griekse ij / Griekse y", "lange ij", "korte ei"],
+    correctAnswer: "Griekse ij / Griekse y",
+    explanationTr: "'y' harfi Hollandacada 'Griekse ij' veya 'Griekse y' (Yunan ij) olarak bilinir.",
+    explanationEn: "The letter 'y' is known as 'Griekse ij' or 'Griekse y' (Greek ij) in Dutch."
+  },
+  {
+    id: "sum_ch1_144",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "forms", "vocabulary"],
+    questionNl: "Wat betekent 'Voornaam' op een formulier?",
+    options: ["First name", "Surname", "Street"],
+    correctAnswer: "First name",
+    explanationTr: "Formlarda 'Voornaam' ilk ad (first name) anlamına gelir.",
+    explanationEn: "On forms, 'Voornaam' means first name."
+  },
+  {
+    id: "sum_ch1_145",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "forms", "vocabulary"],
+    questionNl: "Wat betekent 'Achternaam' op een formulier?",
+    options: ["Surname", "First name", "City"],
+    correctAnswer: "Surname",
+    explanationTr: "Formlarda 'Achternaam' soyadı (surname) anlamına gelir.",
+    explanationEn: "On forms, 'Achternaam' means surname."
+  },
+  {
+    id: "sum_ch1_146",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "forms", "vocabulary"],
+    questionNl: "Wat vul je in bij 'Woonplaats' op een formulier?",
+    options: ["De stad of het dorp waar je woont (City / Place of residence)", "Je postcode", "Je land"],
+    correctAnswer: "De stad of het dorp waar je woont (City / Place of residence)",
+    explanationTr: "'Woonplaats' yaşanılan şehir veya yerleşim yerini (city/residence) ifade eder.",
+    explanationEn: "'Woonplaats' refers to the city or place of residence."
+  },
+  {
+    id: "sum_ch1_147",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "forms", "vocabulary"],
+    questionNl: "Wat vul je in bij 'Geslacht' op een formulier?",
+    options: ["man of vrouw (Gender)", "je naam", "je leeftijd"],
+    correctAnswer: "man of vrouw (Gender)",
+    explanationTr: "'Geslacht' cinsiyet (man/vrouw) anlamına gelir.",
+    explanationEn: "'Geslacht' means gender (male/female)."
+  },
+  {
+    id: "sum_ch1_148",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "forms", "vocabulary"],
+    questionNl: "Wat betekent 'Geboortedatum' op een formulier?",
+    options: ["Date of birth", "Country of birth", "Today's date"],
+    correctAnswer: "Date of birth",
+    explanationTr: "'Geboortedatum' doğum tarihi (date of birth) demektir.",
+    explanationEn: "'Geboortedatum' means date of birth."
+  },
+  {
+    id: "sum_ch1_149",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "culture", "grammar"],
+    questionNl: "Tegen wie zeg je 'u' volgens de cultuurregels in het boek?",
+    options: ["Tegen een oudere buurvrouw van 82, een docent of meneer/mevrouw Smit.", "Tegen een buurman van 20 en medecursisten.", "Tegen iedereen."],
+    correctAnswer: "Tegen een oudere buurvrouw van 82, een docent of meneer/mevrouw Smit.",
+    explanationTr: "Resmi veya yaşlı kişilere (örneğin öğretmen, 82 yaşındaki komşu veya Bay/Bayan Smit) saygı ifadesi olarak 'u' (siz) denir.",
+    explanationEn: "The formal 'u' is used for older people or figures of authority, such as an 82-year-old neighbor, a teacher, or Mr./Mrs. Smit."
+  },
+  {
+    id: "sum_ch1_150",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "culture", "grammar"],
+    questionNl: "Tegen wie zeg je 'jij' of 'je' volgens de cultuurregels in het boek?",
+    options: ["Tegen een jonge buurman van 20 en medecursisten zoals Susy en Ning.", "Tegen een docent of een oudere buurvrouw.", "Tegen de koning."],
+    correctAnswer: "Tegen een jonge buurman van 20 en medecursisten zoals Susy en Ning.",
+    explanationTr: "Gençlere veya samimi ortamlardaki kişilere (örneğin 20 yaşındaki komşu veya sınıf arkadaşları Susy ve Ning) sen (jij) diye hitap edilir.",
+    explanationEn: "The informal 'jij' is used for younger people or peers, such as a 20-year-old neighbor or classmates like Susy and Ning."
+  },
+  {
+    id: "sum_ch1_151",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "culture", "vocabulary"],
+    questionNl: "Wat is de meest voorkomende familienaam (achternaam) in de top 10 van Nederland volgens het boek?",
+    options: ["de Jong", "van Dijk", "Smit"],
+    correctAnswer: "de Jong",
+    explanationTr: "Kitaptaki top 10 soyadı listesinde 'de Jong' 1. sırada yer alır.",
+    explanationEn: "In the top 10 family names list provided in the book, 'de Jong' is ranked number 1."
+  },
+  
+  //////////////////sadas////////////2
+
+  {
+    id: "sum_ch2_1000",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary", "dialogue"],
+    questionNl: "Waar zitten Susy en Edit in het begin van hoofdstuk 2?",
+    options: ["in de kantine", "op het station", "in de klas"],
+    correctAnswer: "in de kantine",
+    explanationTr: "Bölüm 2'nin başındaki diyaloga göre Susy ve Edit kantinde oturmaktadır.",
+    explanationEn: "According to the dialogue at the beginning of chapter 2, Susy and Edit are sitting in the canteen."
+  },
+  {
+    id: "sum_ch2_1001",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary", "dialogue"],
+    questionNl: "Wat drinkt Susy als ze in de kantine zitten?",
+    options: ["een kop koffie", "thee", "cola"],
+    correctAnswer: "een kop koffie",
+    explanationTr: "Diyalogda Susy 'Zo, een lekker kopje koffie' diyerek kahve içtiğini belirtir.",
+    explanationEn: "In the dialogue, Susy mentions having a nice cup of coffee."
+  },
+  {
+    id: "sum_ch2_1002",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary", "time"],
+    questionNl: "Welke dag is het in het verhaal van de dialoog?",
+    options: ["donderdag", "maandag", "zaterdag"],
+    correctAnswer: "donderdag",
+    explanationTr: "Diyalogda Edit bugünün perşembe (donderdag) olduğunu söyler.",
+    explanationEn: "Edit states in the dialogue that today is Thursday (donderdag)."
+  },
+  {
+    id: "sum_ch2_1003",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary", "dialogue"],
+    questionNl: "Wat is er speciaal aan de volgende dag in de dialoog?",
+    options: ["Edit is jarig", "Susy is jarig", "Het is kerst"],
+    correctAnswer: "Edit is jarig",
+    explanationTr: "Edit 'Morgen ben ik jarig' diyerek ertesi gün doğum günü olduğunu belirtir.",
+    explanationEn: "Edit says 'Tomorrow is my birthday'."
+  },
+  {
+    id: "sum_ch2_1004",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary", "dialogue"],
+    questionNl: "Waar zijn de ouders van Edit op dat moment?",
+    options: ["op bezoek in Indonesië", "in Utrecht", "in Engeland"],
+    correctAnswer: "op bezoek in Indonesië",
+    explanationTr: "Edit'in anne ve babası iş için Endonezya'dadır ve ziyaret amaçlı oradadırlar.",
+    explanationEn: "Edit's parents are visiting Indonesia."
+  },
+  {
+    id: "sum_ch2_1005",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary", "family"],
+    questionNl: "Wie is jonger volgens de dialoog tussen Edit en haar broer?",
+    options: ["haar broer is jonger", "Edit is jonger", "ze zijn even oud"],
+    correctAnswer: "haar broer is jonger",
+    explanationTr: "Edit, kardeşinin kendisinden daha genç (jonger) olduğunu söyler.",
+    explanationEn: "Edit states that her brother is younger."
+  },
+  {
+    id: "sum_ch2_1006",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary", "family"],
+    questionNl: "Hoeveel zussen heeft Edit?",
+    options: ["één zus", "twee zussen", "geen zussen"],
+    correctAnswer: "één zus",
+    explanationTr: "Edit diyalogda 'Ja, ik heb nog een zus' diyerek bir kız kardeşi olduğunu belirtir.",
+    explanationEn: "Edit states in the dialogue that she has one sister."
+  },
+  {
+    id: "sum_ch2_1007",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary", "appearance"],
+    questionNl: "Hoe wordt de zus van Edit omschreven qua uiterlijk?",
+    options: ["kort, blond haar", "lang, donker haar", "kort, donker haar"],
+    correctAnswer: "kort, blond haar",
+    explanationTr: "Edit'in zuzu kısa ve sarı saçlıdır ('kort, blond haar').",
+    explanationEn: "Edit's sister is described as having short, blonde hair."
+  },
+  {
+    id: "sum_ch2_1008",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary", "appearance"],
+    questionNl: "Hoe wordt Edit zelf omschreven qua haarkleur in vergelijking met haar zus?",
+    options: ["donker haar", "blond haar", "rood haar"],
+    correctAnswer: "donker haar",
+    explanationTr: "Susy Edit'in saçının koyu (donker haar) olduğunu söyler.",
+    explanationEn: "Susy points out that Edit has dark hair."
+  },
+  {
+    id: "sum_ch2_1009",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary", "time"],
+    questionNl: "Hoe laat is het aan het einde van de dialoog in de kantine?",
+    options: ["11.00 uur", "12.00 uur", "10.00 uur"],
+    correctAnswer: "11.00 uur",
+    explanationTr: "Diyalogun sonunda saat 11.00 olduğu ve derse dönmeleri gerektiği söylenir.",
+    explanationEn: "At the end of the dialogue, it is stated that it is 11.00 o'clock."
+  },
+  {
+    id: "sum_ch2_1010",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary"],
+    questionNl: "Wat betekent het Nederlandse woord 'de kantine' in het Engels?",
+    options: ["canteen", "kitchen", "classroom"],
+    correctAnswer: "canteen",
+    explanationTr: "Sözlükte 'de kantine' kelimesinin karşılığı 'canteen' olarak verilmiştir.",
+    explanationEn: "In the vocabulary list, 'de kantine' translates to 'canteen'."
+  },
+  {
+    id: "sum_ch2_1011",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary"],
+    questionNl: "Wat betekent 'vrij' in de zin 'Is deze plaats vrij?'?",
+    options: ["free / available", "busy", "expensive"],
+    correctAnswer: "free / available",
+    explanationTr: "'vrij' kelimesi bu bağlamda boş / müsait (free) anlamındadır.",
+    explanationEn: "'vrij' means free or available in this context."
+  },
+  {
+    id: "sum_ch2_1012",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary"],
+    questionNl: "Wat betekent het woord 'dus' in het Nederlands?",
+    options: ["so / therefore", "but", "because"],
+    correctAnswer: "so / therefore",
+    explanationTr: "'dus' kelimesi 'bu yüzden / sonrasında' (so / therefore) anlamı katar.",
+    explanationEn: "'dus' translates to 'so / therefore'."
+  },
+  {
+    id: "sum_ch2_1013",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary"],
+    questionNl: "Wat is de betekenis van het woord 'de winter'?",
+    options: ["winter", "summer", "spring"],
+    correctAnswer: "winter",
+    explanationTr: "'de winter' kış mevsimidir.",
+    explanationEn: "'de winter' means winter."
+  },
+  {
+    id: "sum_ch2_1014",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary"],
+    questionNl: "Wat betekent 'krijg' (van krijgen)?",
+    options: ["get / receive", "give", "take"],
+    correctAnswer: "get / receive",
+    explanationTr: "'krijg' fiili almak / elde etmek (get / receive) anlamına gelir.",
+    explanationEn: "'krijg' means to get or receive."
+  },
+  {
+    id: "sum_ch2_1015",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary"],
+    questionNl: "Wat betekent 'nog' in het Nederlands?",
+    options: ["any / still / yet", "never", "always"],
+    correctAnswer: "any / still / yet",
+    explanationTr: "'nog' kelimesi daha/hala/hiç anlamlarına gelebilir ('nog meer' = any more).",
+    explanationEn: "'nog' translates to any, still, or yet depending on context."
+  },
+  {
+    id: "sum_ch2_1016",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary", "family"],
+    questionNl: "Wat is de betekenis van 'de broer'?",
+    options: ["brother", "sister", "father"],
+    correctAnswer: "brother",
+    explanationTr: "'de broer' erkek kardeş (brother) demektir.",
+    explanationEn: "'de broer' means brother."
+  },
+  {
+    id: "sum_ch2_1017",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary"],
+    questionNl: "Wat is het tegenovergestelde van 'jonger' (younger)?",
+    options: ["ouder / lichter / groter", "kleiner", "langer"],
+    correctAnswer: "ouder / lichter / groter",
+    explanationTr: "Jonger (daha genç) kelimesinin zıt anlamlısı yaşlı/daha yaşlı (ouder) anlamını barındırır.",
+    explanationEn: "The opposite of younger is older (ouder)."
+  },
+  {
+    id: "sum_ch2_1018",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary"],
+    questionNl: "Wat betekent het woord 'wel' in het Nederlands?",
+    options: ["certainly / indeed", "not", "never"],
+    correctAnswer: "certainly / indeed",
+    explanationTr: "'wel' kelimesi vurgu veya olumlama (certainly / indeed) bildirir.",
+    explanationEn: "'wel' means certainly or indeed."
+  },
+  {
+    id: "sum_ch2_1019",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary"],
+    questionNl: "Wat is de betekenis van 'langer' (lang)?",
+    options: ["taller / longer", "shorter", "smaller"],
+    correctAnswer: "taller / longer",
+    explanationTr: "'langer' daha uzun (taller / longer) anlamındadır.",
+    explanationEn: "'langer' means taller or longer."
+  },
+  {
+    id: "sum_ch2_1020",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary", "family"],
+    questionNl: "Wat betekent 'de zus' (of 'de zuster')?",
+    options: ["sister", "brother", "mother"],
+    correctAnswer: "sister",
+    explanationTr: "'de zus' kız kardeş (sister) demektir.",
+    explanationEn: "'de zus' means sister."
+  },
+  {
+    id: "sum_ch2_1021",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary"],
+    questionNl: "Wat betekent 'kijk' (van kijken)?",
+    options: ["look", "see", "read"],
+    correctAnswer: "look",
+    explanationTr: "'kijk' bakmak (look) fiilinin emir veya çekim halidir.",
+    explanationEn: "'kijk' means look."
+  },
+  {
+    id: "sum_ch2_1022",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary"],
+    questionNl: "Wat betekent het woord 'de foto'?",
+    options: ["photo", "book", "letter"],
+    correctAnswer: "photo",
+    explanationTr: "'de foto' fotoğraf demektir.",
+    explanationEn: "'de foto' means photo."
+  },
+  {
+    id: "sum_ch2_1023",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary"],
+    questionNl: "Wat drukt de uitdrukking 'goh' uit?",
+    options: ["oh (surprise / realization)", "angry", "sadness"],
+    correctAnswer: "oh (surprise / realization)",
+    explanationTr: "'goh' şaşırma veya fark etme belirten 'vah / hani / oh' tarzı bir nidadır.",
+    explanationEn: "'goh' expresses surprise or realization (oh)."
+  },
+  {
+    id: "sum_ch2_1024",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary"],
+    questionNl: "Wat betekent 'heel' in het Nederlands?",
+    options: ["very", "little", "none"],
+    correctAnswer: "very",
+    explanationTr: "'heel' kelimesi sıfatların önüne gelerek 'çok' (very) anlamı katar.",
+    explanationEn: "'heel' translates to 'very'."
+  },
+  {
+    id: "sum_ch2_1025",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary"],
+    questionNl: "Wat betekent 'ander'?",
+    options: ["different / other", "same", "new"],
+    correctAnswer: "different / other",
+    explanationTr: "'ander' diğer veya farklı (different / other) demektir.",
+    explanationEn: "'ander' means different or other."
+  },
+  {
+    id: "sum_ch2_1026",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary"],
+    questionNl: "Wat is de betekenis van 'het type'?",
+    options: ["type", "color", "size"],
+    correctAnswer: "type",
+    explanationTr: "'het type' tip / çeşit (type) anlamına gelir.",
+    explanationEn: "'het type' means type."
+  },
+  {
+    id: "sum_ch2_1027",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary"],
+    questionNl: "Wat betekent het woord 'kort'?",
+    options: ["short", "long", "tall"],
+    correctAnswer: "short",
+    explanationTr: "'kort' kısa demektir.",
+    explanationEn: "'kort' means short."
+  },
+  {
+    id: "sum_ch2_1028",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary"],
+    questionNl: "Wat betekent 'blond'?",
+    options: ["blonde", "dark", "red"],
+    correctAnswer: "blonde",
+    explanationTr: "'blond' sarışın (blonde) demektir.",
+    explanationEn: "'blond' means blonde."
+  },
+  {
+    id: "sum_ch2_1029",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary"],
+    questionNl: "Wat is de betekenis van 'het haar'?",
+    options: ["hair", "head", "face"],
+    correctAnswer: "hair",
+    explanationTr: "'het haar' saç demektir.",
+    explanationEn: "'het haar' means hair."
+  },
+  {
+    id: "sum_ch2_1030",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary"],
+    questionNl: "Wat betekent het woord 'donker'?",
+    options: ["dark", "light", "bright"],
+    correctAnswer: "dark",
+    explanationTr: "'donker' koyu / karanlık (dark) demektir.",
+    explanationEn: "'donker' means dark."
+  },
+  {
+    id: "sum_ch2_1031",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary", "family"],
+    questionNl: "Wat betekent 'de ouders'?",
+    options: ["parents", "grandparents", "children"],
+    correctAnswer: "parents",
+    explanationTr: "'de ouders' anne ve baba (parents) demektir.",
+    explanationEn: "'de ouders' means parents."
+  },
+  {
+    id: "sum_ch2_1032",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary"],
+    questionNl: "Wat betekent de uitdrukking 'komen op bezoek'?",
+    options: ["pay a visit", "go to work", "stay at home"],
+    correctAnswer: "pay a visit",
+    explanationTr: "'komen op bezoek' ziyarete gelmek (pay a visit) anlamına gelir.",
+    explanationEn: "'komen op bezoek' means to pay a visit."
+  },
+  {
+    id: "sum_ch2_1033",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary"],
+    questionNl: "Wat betekent 'op dit moment'?",
+    options: ["at the moment", "yesterday", "tomorrow"],
+    correctAnswer: "at the moment",
+    explanationTr: "'op dit moment' şu anda (at the moment) demektir.",
+    explanationEn: "'op dit moment' means at the moment."
+  },
+  {
+    id: "sum_ch2_1034",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary"],
+    questionNl: "Wat betekent het woord 'daar'?",
+    options: ["there", "here", "where"],
+    correctAnswer: "there",
+    explanationTr: "'daar' orası / orada (there) demektir.",
+    explanationEn: "'daar' means there."
+  },
+  {
+    id: "sum_ch2_1035",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary"],
+    questionNl: "Wat is de betekenis van 'op vakantie'?",
+    options: ["on holiday", "at work", "at school"],
+    correctAnswer: "on holiday",
+    explanationTr: "'op vakantie' tatilde (on holiday) demektir.",
+    explanationEn: "'op vakantie' means on holiday."
+  },
+  {
+    id: "sum_ch2_1036",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary", "family"],
+    questionNl: "Wat betekent 'de vakantie'?",
+    options: ["holiday / vacation", "weekend", "season"],
+    correctAnswer: "holiday / vacation",
+    explanationTr: "'de vakantie' tatil (holiday) demektir.",
+    explanationEn: "'de vakantie' means holiday / vacation."
+  },
+  {
+    id: "sum_ch2_1037",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary", "family"],
+    questionNl: "Wat betekent 'de vader'?",
+    options: ["father", "mother", "son"],
+    correctAnswer: "father",
+    explanationTr: "'de vader' baba (father) demektir.",
+    explanationEn: "'de vader' means father."
+  },
+  {
+    id: "sum_ch2_1038",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary"],
+    questionNl: "Wat is de betekenis van het voorzetsel 'voor' in deze context?",
+    options: ["for", "before", "behind"],
+    correctAnswer: "for",
+    explanationTr: "'voor' kelimesi 'için' (for) anlamında kullanılır.",
+    explanationEn: "'voor' translates to 'for' in this context."
+  },
+  {
+    id: "sum_ch2_1039",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary"],
+    questionNl: "Wat is de betekenis van het bezittelijk woord 'zijn'?",
+    options: ["his", "her", "our"],
+    correctAnswer: "his",
+    explanationTr: "'zijn' iyelik zamiri olarak erkekler için 'onun' (his) anlamı verir.",
+    explanationEn: "'zijn' as a possessive pronoun means 'his'."
+  },
+  {
+    id: "sum_ch2_1040",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary"],
+    questionNl: "Wat betekent 'het werk'?",
+    options: ["work", "school", "home"],
+    correctAnswer: "work",
+    explanationTr: "'het werk' iş demektir.",
+    explanationEn: "'het werk' means work."
+  },
+  {
+    id: "sum_ch2_1041",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary"],
+    questionNl: "Wat betekent 'het seizoen'?",
+    options: ["season", "month", "year"],
+    correctAnswer: "season",
+    explanationTr: "'het seizoen' mevsim (season) demektir.",
+    explanationEn: "'het seizoen' means season."
+  },
+  {
+    id: "sum_ch2_1042",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary"],
+    questionNl: "Wat betekent het vraagwoord 'wanneer'?",
+    options: ["when", "where", "why"],
+    correctAnswer: "when",
+    explanationTr: "'wanneer' ne zaman (when) sorusudur.",
+    explanationEn: "'wanneer' means when."
+  },
+  {
+    id: "sum_ch2_1043",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary"],
+    questionNl: "Wat betekent 'de zomer'?",
+    options: ["summer", "winter", "spring"],
+    correctAnswer: "summer",
+    explanationTr: "'de zomer' yaz mevsimidir.",
+    explanationEn: "'de zomer' means summer."
+  },
+  {
+    id: "sum_ch2_1044",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary"],
+    questionNl: "Wat betekent het werkwoord 'weet' (van weten)?",
+    options: ["know", "want", "tell"],
+    correctAnswer: "know",
+    explanationTr: "'weet' bilmek (know) fiilinin çekimidir.",
+    explanationEn: "'weet' means to know."
+  },
+  {
+    id: "sum_ch2_1045",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary", "negation"],
+    questionNl: "Wat betekent het ontkennende woord 'niet'?",
+    options: ["not", "no", "never"],
+    correctAnswer: "not",
+    explanationTr: "'niet' kelimesi 'değil / not' anlamında olumsuzluk katar.",
+    explanationEn: "'niet' means not."
+  },
+  {
+    id: "sum_ch2_1046",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary"],
+    questionNl: "Wat betekent het werkwoord 'vertel' (van vertellen)?",
+    options: ["tell", "ask", "answer"],
+    correctAnswer: "tell",
+    explanationTr: "'vertel' anlatmak (tell) demektir.",
+    explanationEn: "'vertel' means to tell."
+  },
+  {
+    id: "sum_ch2_1047",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary"],
+    questionNl: "Wat is de functie van het stopwoordje 'eens' in een zin?",
+    options: ["makes it more casual / usually untranslated", "means always", "means never"],
+    correctAnswer: "makes it more casual / usually untranslated",
+    explanationTr: "'eens' kelimesi cümlelere samimiyet katar ve genellikle çevrilmez (usually untranslated).",
+    explanationEn: "'eens' is a conversational particle, usually untranslated."
+  },
+  {
+    id: "sum_ch2_1048",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary"],
+    questionNl: "Wat betekent het prepositionele woord 'over'?",
+    options: ["about / over", "under", "in"],
+    correctAnswer: "about / over",
+    explanationTr: "'over' hakkında / üzerinde (about / over) anlamlarına gelir.",
+    explanationEn: "'over' means about or over."
+  },
+  {
+    id: "sum_ch2_1049",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary", "family"],
+    questionNl: "Wat betekent 'de familie'?",
+    options: ["family", "friends", "colleagues"],
+    correctAnswer: "family",
+    explanationTr: "'de familie' aile (family) demektir.",
+    explanationEn: "'de familie' means family."
+  },
+  {
+    id: "sum_ch2_1050",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary"],
+    questionNl: "Wat is de betekenis van het aanwijzend voornaamwoord 'dat'?",
+    options: ["that", "this", "these"],
+    correctAnswer: "that",
+    explanationTr: "'dat' kelimesi 'şu / o' (that) anlamına gelir.",
+    explanationEn: "'dat' means that."
+  },
+  {
+    id: "sum_ch2_1051",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary"],
+    questionNl: "Wat betekent het werkwoord 'wil' (van willen)?",
+    options: ["want / would like", "must", "can"],
+    correctAnswer: "want / would like",
+    explanationTr: "'wil' istemek (want / would like) anlamındadır.",
+    explanationEn: "'wil' means want or would like."
+  },
+  {
+    id: "sum_ch2_1052",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary"],
+    questionNl: "Wat betekent het woord 'laat'?",
+    options: ["late", "early", "slow"],
+    correctAnswer: "late",
+    explanationTr: "'laat' geç (late) demektir.",
+    explanationEn: "'laat' means late."
+  },
+  {
+    id: "sum_ch2_1053",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary"],
+    questionNl: "Wat betekent 'moeten'?",
+    options: ["should / have to / must", "can", "may"],
+    correctAnswer: "should / have to / must",
+    explanationTr: "'moeten' zorunda olmak / meli malı (should / have to) anlamı verir.",
+    explanationEn: "'moeten' means should, have to, or must."
+  },
+  {
+    id: "sum_ch2_1054",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary"],
+    questionNl: "Wat betekent het woord 'weer'?",
+    options: ["again", "weather", "white"],
+    correctAnswer: "again",
+    explanationTr: "'weer' kelimesi bu bağlamda 'tekrar / yeniden' (again) demektir.",
+    explanationEn: "'weer' means again."
+  },
+  {
+    id: "sum_ch2_1055",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary"],
+    questionNl: "Wat betekent het voorzetsel 'naar'?",
+    options: ["to", "from", "in"],
+    correctAnswer: "to",
+    explanationTr: "'naar' yönelme bildirerek 'e doğru / -e' (to) anlamı katar.",
+    explanationEn: "'naar' translates to 'to'."
+  },
+  {
+    id: "sum_ch2_1056",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary", "family"],
+    questionNl: "Wat betekent 'de moeder' in het Nederlands?",
+    options: ["mother", "father", "sister"],
+    correctAnswer: "mother",
+    explanationTr: "Bölüm 2 aile ilişkileri (familierelaties) listesinde 'de moeder' anne (mother) demektir.",
+    explanationEn: "In the family relations list, 'de moeder' means mother."
+  },
+  {
+    id: "sum_ch2_1057",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary", "family"],
+    questionNl: "Wat betekent 'de echtgenoot' of 'de man'?",
+    options: ["husband", "wife", "son"],
+    correctAnswer: "husband",
+    explanationTr: "'de echtgenoot' veya 'de man' koca / eş (husband) anlamındadır.",
+    explanationEn: "'de echtgenoot' or 'de man' means husband."
+  },
+  {
+    id: "sum_ch2_1058",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary", "family"],
+    questionNl: "Wat betekent 'de echtgenote' of 'de vrouw'?",
+    options: ["wife", "husband", "daughter"],
+    correctAnswer: "wife",
+    explanationTr: "'de echtgenote' veya 'de vrouw' eş / karısı (wife) demektir.",
+    explanationEn: "'de echtgenote' or 'de vrouw' means wife."
+  },
+  {
+    id: "sum_ch2_1059",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary", "family"],
+    questionNl: "Wat betekent 'het kind'?",
+    options: ["child", "parent", "brother"],
+    correctAnswer: "child",
+    explanationTr: "'het kind' çocuk (child) demektir.",
+    explanationEn: "'het kind' means child."
+  },
+  {
+    id: "sum_ch2_1060",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary", "family"],
+    questionNl: "Wat betekent 'de zoon'?",
+    options: ["son", "daughter", "father"],
+    correctAnswer: "son",
+    explanationTr: "'de zoon' erkek evlat / oğul (son) demektir.",
+    explanationEn: "'de zoon' means son."
+  },
+  {
+    id: "sum_ch2_1061",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary", "family"],
+    questionNl: "Wat betekent 'de dochter'?",
+    options: ["daughter", "son", "mother"],
+    correctAnswer: "daughter",
+    explanationTr: "'de dochter' kız evlat / evlatlık / kız çocuk (daughter) demektir.",
+    explanationEn: "'de dochter' means daughter."
+  },
+  {
+    id: "sum_ch2_1062",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary", "family"],
+    questionNl: "Wat betekent 'de schoonzus'?",
+    options: ["sister in law", "brother in law", "mother in law"],
+    correctAnswer: "sister in law",
+    explanationTr: "'de schoonzus' yenge / baldız / görümce (sister in law) demektir.",
+    explanationEn: "'de schoonzus' means sister in law."
+  },
+  {
+    id: "sum_ch2_1063",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary", "family"],
+    questionNl: "Wat betekent 'de zwager'?",
+    options: ["brother in law", "sister in law", "uncle"],
+    correctAnswer: "brother in law",
+    explanationTr: "'de zwager' enişte / kayınbirader (brother in law) demektir.",
+    explanationEn: "'de zwager' means brother in law."
+  },
+  {
+    id: "sum_ch2_1064",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary", "family"],
+    questionNl: "Wat betekent 'de opa' (of grootvader)?",
+    options: ["grandfather", "grandmother", "uncle"],
+    correctAnswer: "grandfather",
+    explanationTr: "'de opa' büyükbaba / dede (grandfather) demektir.",
+    explanationEn: "'de opa' means grandfather."
+  },
+  {
+    id: "sum_ch2_1065",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary", "family"],
+    questionNl: "Wat betekent 'de oma' (of grootmoeder)?",
+    options: ["grandmother", "grandfather", "aunt"],
+    correctAnswer: "grandmother",
+    explanationTr: "'de oma' büyükanne / nine (grandmother) demektir.",
+    explanationEn: "'de oma' means grandmother."
+  },
+  {
+    id: "sum_ch2_1066",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary", "family"],
+    questionNl: "Wat betekent 'het kleinkind'?",
+    options: ["grandchild", "child", "nephew"],
+    correctAnswer: "grandchild",
+    explanationTr: "'het kleinkind' torun (grandchild) demektir.",
+    explanationEn: "'het kleinkind' means grandchild."
+  },
+  {
+    id: "sum_ch2_1067",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary", "family"],
+    questionNl: "Wat betekent 'de oom'?",
+    options: ["uncle", "aunt", "nephew"],
+    correctAnswer: "uncle",
+    explanationTr: "'de oom' amca / dayı (uncle) demektir.",
+    explanationEn: "'de oom' means uncle."
+  },
+  {
+    id: "sum_ch2_1068",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary", "family"],
+    questionNl: "Wat betekent 'de tante'?",
+    options: ["aunt", "uncle", "niece"],
+    correctAnswer: "aunt",
+    explanationTr: "'de tante' teyze / hala (aunt) demektir.",
+    explanationEn: "'de tante' means aunt."
+  },
+  {
+    id: "sum_ch2_1069",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary", "family"],
+    questionNl: "Wat betekent 'de neef'?",
+    options: ["nephew / cousin", "uncle", "grandfather"],
+    correctAnswer: "nephew / cousin",
+    explanationTr: "'de neef' yeğen veya kuzen (nephew / cousin) anlamlarına gelir.",
+    explanationEn: "'de neef' means nephew or cousin."
+  },
+  {
+    id: "sum_ch2_1070",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "vocabulary", "family"],
+    questionNl: "Wat betekent 'de nicht'?",
+    options: ["niece / cousin", "aunt", "grandmother"],
+    correctAnswer: "niece / cousin",
+    explanationTr: "'de nicht' yeğen veya kuzen kız çocukları için (niece / cousin) kullanılır.",
+    explanationEn: "'de nicht' means niece or cousin."
+  },
+  {
+    id: "sum_ch2_1071",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "grammar", "sentences"],
+    questionNl: "Wat is de juiste volgorde van een hoofdzin (hoofdzinstructuur) met tijd of plaats op de eerste plaats? 'Ik kom uit Engeland' of 'Ik woon nu in Utrecht'. Wat staat er na het onderwerp?",
+    options: ["Het werkwoord staat op de tweede plaats (subject + verb + rest).", "Het werkwoord staat altijd achteraan.", "Het werkwoord staat vooraan."],
+    correctAnswer: "Het werkwoord staat op de tweede plaats (subject + verb + rest).",
+    explanationTr: "Ana cümlelerde (hoofdzin) çekimli fiir her zaman ikinci sırada (position 2) yer alır.",
+    explanationEn: "In main clauses, the conjugated verb always occupies the second position."
+  },
+  {
+    id: "sum_ch2_1072",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "grammar", "questions"],
+    questionNl: "Hoe vorm je een ja/nee-vraag (ja / nee-vragen) in het Nederlands?",
+    options: ["Door het werkwoord bovenaan/vooraan te plaatsen (inversie: verb + subject).", "Door het vraagwoord 'waarom' te gebruiken.", "Door de zin ongemoeid te laten."],
+    correctAnswer: "Door het werkwoord bovenaan/vooraan te plaatsen (inversie: verb + subject).",
+    explanationTr: "Evet/hayır soruları fiilin başa gelmesiyle (inversie) yani 'werkwoord + onderwerp' şeklinde kurulur.",
+    explanationEn: "Yes/no questions are formed by putting the verb first (inversion: verb + subject)."
+  },
+  {
+    id: "sum_ch2_1073",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "grammar", "questions"],
+    questionNl: "Welke vraagwoorden (vraagwoordvragen) worden in het overzicht genoemd?",
+    options: ["Wie, Welke, Hoe, Hoeveel, Wat, Waar, Wanneer, Waarom", "Niet, geen, wel", "En, of, maar"],
+    correctAnswer: "Wie, Welke, Hoe, Hoeveel, Wat, Waar, Wanneer, Waarom",
+    explanationTr: "Özet tablosunda Wie, Wie is jonger, Hoe, Hoeveel, Wat, Waar, Welke, Wanneer, Waarom soru kelimeleri listelenmiştir.",
+    explanationEn: "The overview lists question words like Wie, Welke, Hoe, Hoeveel, Wat, Waar, Wanneer, and Waarom."
+  },
+  {
+    id: "sum_ch2_1074",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "grammar", "possessive_pronouns"],
+    questionNl: "Welk possessief pronomen (bezittelijk voornaamwoord) hoort bij het subject 'ik'?",
+    options: ["mijn", "jouw / je", "zijn"],
+    correctAnswer: "mijn",
+    explanationTr: "'ik' öznesi için iyelik zamiri 'mijn' (benim) kelimesidir.",
+    explanationEn: "The possessive pronoun for the subject 'ik' is 'mijn'."
+  },
+  {
+    id: "sum_ch2_1075",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "grammar", "possessive_pronouns"],
+    questionNl: "Welk possessief pronomen hoort bij het subject 'jij / je'?",
+    options: ["jouw / je", "mijn", "haar"],
+    correctAnswer: "jouw / je",
+    explanationTr: "'jij / je' öznesi için iyelik zamiri 'jouw / je' (senin) kelimesidir.",
+    explanationEn: "The possessive pronoun for 'jij / je' is 'jouw / je'."
+  },
+  {
+    id: "sum_ch2_1076",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "grammar", "possessive_pronouns"],
+    questionNl: "Welk possessief pronomen hoort bij het formele subject 'u'?",
+    options: ["uw", "jouw", "zijn"],
+    correctAnswer: "uw",
+    explanationTr: "Resmi 'u' zamiri için iyelik zamiri 'uw' (sizin) olur.",
+    explanationEn: "The possessive pronoun for the formal 'u' is 'uw'."
+  },
+  {
+    id: "sum_ch2_1077",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "grammar", "possessive_pronouns"],
+    questionNl: "Welk possessief pronomen hoort bij het subject 'hij'?",
+    options: ["zijn", "haar", "onze"],
+    correctAnswer: "zijn",
+    explanationTr: "'hij' (o - erkek) için iyelik zamiri 'zijn' (onun) olur.",
+    explanationEn: "The possessive pronoun for 'hij' (he) is 'zijn'."
+  },
+  {
+    id: "sum_ch2_1078",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "grammar", "possessive_pronouns"],
+    questionNl: "Welk possessief pronomen hoort bij het subject 'zij / ze' (female singular)?",
+    options: ["haar", "zijn", "hun"],
+    correctAnswer: "haar",
+    explanationTr: "'zij / ze' (o - kadın) için iyelik zamiri 'haar' (onun) olur.",
+    explanationEn: "The possessive pronoun for 'zij / ze' (she) is 'haar'."
+  },
+  {
+    id: "sum_ch2_1079",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "grammar", "possessive_pronouns"],
+    questionNl: "Welk possessief pronomen hoort bij het subject 'wij / we'?",
+    options: ["onze / ons", "jullie", "hun"],
+    correctAnswer: "onze / ons",
+    explanationTr: "'wij / we' (biz) için iyelik zamiri 'onze' veya 'ons' (bizim) olur.",
+    explanationEn: "The possessive pronoun for 'wij / we' is 'onze / ons'."
+  },
+  {
+    id: "sum_ch2_1080",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "grammar", "possessive_pronouns"],
+    questionNl: "Welk possessief pronomen hoort bij het subject 'jullie'?",
+    options: ["jullie", "uw", "haar"],
+    correctAnswer: "jullie",
+    explanationTr: "'jullie' (siz) için iyelik zamiri yine 'jullie' (sizin) kalır.",
+    explanationEn: "The possessive pronoun for 'jullie' is 'jullie'."
+  },
+  {
+    id: "sum_ch2_1081",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "grammar", "possessive_pronouns"],
+    questionNl: "Welk possessief pronomen hoort bij het meervoud subject 'zij / ze' (they)?",
+    options: ["hun", "haar", "zijn"],
+    correctAnswer: "hun",
+    explanationTr: "Çoğul 'zij / ze' (onlar) için iyelik zamiri 'hun' (onların) olur.",
+    explanationEn: "The possessive pronoun for plural 'zij / ze' (they) is 'hun'."
+  },
+  {
+    id: "sum_ch2_1082",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "time", "vocabulary"],
+    questionNl: "Hoe zeg je '11.00 uur' (exact uur) in het Nederlands volgens het klokoverzicht?",
+    options: ["Het is elf uur.", "Het is half elf.", "Het is kwart over elf."],
+    correctAnswer: "Het is elf uur.",
+    explanationTr: "Tam saatlerde '... uur' kalıbı kullanılır (Het is elf uur).",
+    explanationEn: "For exact hours, the format '... uur' is used (Het is elf uur)."
+  },
+  {
+    id: "sum_ch2_1083",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "time", "vocabulary"],
+    questionNl: "Hoe zeg je '11.05' in het Nederlands?",
+    options: ["Het is vijf over elf.", "Het is vijf voor elf.", "Het is half twaalf."],
+    correctAnswer: "Het is vijf over elf.",
+    explanationTr: "5 geçe için 'vijf over' ifadesi kullanılır.",
+    explanationEn: "For five past the hour, 'vijf over' is used."
+  },
+  {
+    id: "sum_ch2_1084",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "time", "vocabulary"],
+    questionNl: "Hoe zeg je '11.15' (quarter past) in het Nederlands?",
+    options: ["Het is kwart over elf.", "Het is kwart voor elf.", "Het is half twaalf."],
+    correctAnswer: "Het is kwart over elf.",
+    explanationTr: "Çeyrek geçe için 'kwart over' kullanılır.",
+    explanationEn: "For quarter past, 'kwart over' is used."
+  },
+  {
+    id: "sum_ch2_1085",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "time", "vocabulary"],
+    questionNl: "Hoe zeg je '11.30' (half past) in het Nederlands?",
+    options: ["Het is half twaalf.", "Het is half elf.", "Het is twaalf uur."],
+    correctAnswer: "Het is half twaalf.",
+    explanationTr: "Hollandacada buçuk saatler söylenirken bir sonraki saat söylenir: 11.30 için 'half twaalf' (12'ye buçuk) denir.",
+    explanationEn: "In Dutch, half past uses the *next* hour: 11.30 is 'half twaalf' (half to twelve)."
+  },
+  {
+    id: "sum_ch2_1086",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "time", "vocabulary"],
+    questionNl: "Hoe zeg je '11.45' (quarter to) in het Nederlands?",
+    options: ["Het is kwart voor twaalf.", "Het is kwart over elf.", "Het is half twaalf."],
+    correctAnswer: "Het is kwart voor twaalf.",
+    explanationTr: "Çeyrek kala için 'kwart voor' ve bir sonraki saat kullanılır.",
+    explanationEn: "For quarter to, 'kwart voor' with the next hour is used."
+  },
+  {
+    id: "sum_ch2_1087",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "time", "vocabulary"],
+    questionNl: "Wat betekent 'een uur' in de tijdnotatie?",
+    options: ["11.00 - 12.00 (one hour / 60 minutes)", "30 minutes", "15 minutes"],
+    correctAnswer: "11.00 - 12.00 (one hour / 60 minutes)",
+    explanationTr: "'een uur' bir tam saati (60 dakika) ifade eder.",
+    explanationEn: "'een uur' refers to a full hour (60 minutes)."
+  },
+  {
+    id: "sum_ch2_1088",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "time", "vocabulary"],
+    questionNl: "Wat betekent 'een halfuur'?",
+    options: ["30 minutes (half an hour)", "60 minutes", "15 minutes"],
+    correctAnswer: "30 minutes (half an hour)",
+    explanationTr: "'een halfuur' yarım saat (30 dakika) demektir.",
+    explanationEn: "'een halfuur' means half an hour (30 minutes)."
+  },
+  {
+    id: "sum_ch2_1089",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "time", "vocabulary"],
+    questionNl: "Wat betekent 'een kwartier'?",
+    options: ["15 minutes (a quarter of an hour)", "30 minutes", "60 minutes"],
+    correctAnswer: "15 minutes (a quarter of an hour)",
+    explanationTr: "'een kwartier' bir çeyrek saati (15 dakika) ifade eder.",
+    explanationEn: "'een kwartier' means a quarter of an hour (15 minutes)."
+  },
+  {
+    id: "sum_ch2_1090",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "days", "vocabulary"],
+    questionNl: "Wat is de volgorde van de dagen in de week (dagen van de week)? Welke dag komt na dinsdag (tuesday)?",
+    options: ["woensdag", "donderdag", "maandag"],
+    correctAnswer: "woensdag",
+    explanationTr: "Salı gününden (dinsdag) sonra çarşamba (woensdag) gelir.",
+    explanationEn: "After Tuesday (dinsdag), Wednesday (woensdag) follows."
+  },
+  {
+    id: "sum_ch2_1091",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "days", "vocabulary"],
+    questionNl: "Als eergisteren (eergisteren) dinsdag was, gisteren woensdag, wat is het dan vandaag in het voorbeeld van het boek?",
+    options: ["donderdag", "vrijdag", "zaterdag"],
+    correctAnswer: "donderdag",
+    explanationTr: "Kitaptaki örnekte 'Vandaag is het donderdag' denmektedir.",
+    explanationEn: "In the book's example, it states 'Today is Thursday'."
+  },
+  {
+    id: "sum_ch2_1092",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "days", "vocabulary"],
+    questionNl: "Als vandaag donderdag is, welke dag is het dan morgen (tomorrow)?",
+    options: ["vrijdag", "zaterdag", "woensdag"],
+    correctAnswer: "vrijdag",
+    explanationTr: "Perşembeden sonraki gün cuma (vrijdag) olur.",
+    explanationEn: "The day after Thursday is Friday (vrijdag)."
+  },
+  {
+    id: "sum_ch2_1093",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "days", "vocabulary"],
+    questionNl: "Als vandaag donderdag is, welke dag is het dan overmorgen (the day after tomorrow)?",
+    options: ["zaterdag", "zondag", "vrijdag"],
+    correctAnswer: "zaterdag",
+    explanationTr: "Perşembeden iki gün sonra cumartesi (zaterdag) olur.",
+    explanationEn: "Two days after Thursday is Saturday (zaterdag)."
+  },
+  {
+    id: "sum_ch2_1094",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "months", "vocabulary"],
+    questionNl: "Welke maanden behoren tot de lente / het voorjaar (spring)?",
+    options: ["maart, april, mei", "juni, juli, augustus", "december, januari, februari"],
+    correctAnswer: "maart, april, mei",
+    explanationTr: "İlkbahar / voorjaar ayları mart, nisan ve mayıstır.",
+    explanationEn: "The spring months are March, April, and May."
+  },
+  {
+    id: "sum_ch2_1095",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "months", "vocabulary"],
+    questionNl: "Welke maanden behoren tot de zomer (summer)?",
+    options: ["juni, juli, augustus", "september, oktober, november", "maart, april, mei"],
+    correctAnswer: "juni, juli, augustus",
+    explanationTr: "Yaz ayları haziran, temmuz ve ağustostur.",
+    explanationEn: "The summer months are June, July, and August."
+  },
+  {
+    id: "sum_ch2_1096",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "months", "vocabulary"],
+    questionNl: "Welke maanden behoren tot de herfst / het najaar (autumn)?",
+    options: ["september, oktober, november", "december, januari, februari", "juni, juli, augustus"],
+    correctAnswer: "september, oktober, november",
+    explanationTr: "Sonbahar ayları eylül, ekim ve kasımdır.",
+    explanationEn: "The autumn months are September, October, and November."
+  },
+  {
+    id: "sum_ch2_1097",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "months", "vocabulary"],
+    questionNl: "Welke maanden behoren tot de winter (winter)?",
+    options: ["december, januari, februari", "maart, april, mei", "september, oktober, november"],
+    correctAnswer: "december, januari, februari",
+    explanationTr: "Kış ayları aralık, ocak ve şubattır.",
+    explanationEn: "The winter months are December, January, and February."
+  },
+  {
+    id: "sum_ch2_1098",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "prepositions", "grammar"],
+    questionNl: "Welk prepositie (edat) günlerden ve tarihlerden önce kullanılır? (Bijv. ___ maandag 8 april)",
+    options: ["op", "in", "om"],
+    correctAnswer: "op",
+    explanationTr: "Günlerden ve tam tarihlerden önce 'op' edatı kullanılır (op maandag).",
+    explanationEn: "Before days and specific dates, the preposition 'op' is used."
+  },
+  {
+    id: "sum_ch2_1099",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "prepositions", "grammar"],
+    questionNl: "Welk prepositie gebruik je voor aylar (months) ve mevsimler (seasons)? (Bijv. ___ januari, ___ de zomer)",
+    options: ["in", "op", "om"],
+    correctAnswer: "in",
+    explanationTr: "Aylardan ve mevsimlerden önce 'in' edatı kullanılır (in januari).",
+    explanationEn: "Before months and seasons, the preposition 'in' is used."
+  },
+  {
+    id: "sum_ch2_1100",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "prepositions", "grammar"],
+    questionNl: "Welk prepositie gebruik je voor exacte tijdstippen (kloktijden)? (Bijv. ___ 9.00 uur)",
+    options: ["om", "op", "in"],
+    correctAnswer: "om",
+    explanationTr: "Kesin saatlerden önce 'om' edatı kullanılır (om 9.00 uur).",
+    explanationEn: "Before exact times (clock hours), the preposition 'om' is used."
+  },
+  
+  //////////////////sadas////////////3
+  {
+    id: "sum_ch3_1000",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "vocabulary", "dialogue"],
+    questionNl: "Wat betekent 'gefeliciteerd met je verjaardag' in het Engels?",
+    options: ["Happy birthday", "Pleased to meet you", "Thank you very much"],
+    correctAnswer: "Happy birthday",
+    explanationTr: "'gefeliciteerd met je verjaardag' doğum günün kutlu olsun (happy birthday) demektir.",
+    explanationEn: "'gefeliciteerd met je verjaardag' translates to happy birthday."
+  },
+  {
+    id: "sum_ch3_1001",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "vocabulary"],
+    questionNl: "Wat is de betekenis van het werkwoord 'vieren' (bijv. Edit viert haar verjaardag)?",
+    options: ["is celebrating / to celebrate", "is sleeping", "is working"],
+    correctAnswer: "is celebrating / to celebrate",
+    explanationTr: "'vieren' kutlamak (celebrate) demektir.",
+    explanationEn: "'vieren' means to celebrate."
+  },
+  {
+    id: "sum_ch3_1002",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "vocabulary"],
+    questionNl: "Hoe zeg je 'together' in het Nederlands?",
+    options: ["samen", "alleen", "elkaar"],
+    correctAnswer: "samen",
+    explanationTr: "'samen' kelimesi birlikte/beraber (together) anlamına gelir.",
+    explanationEn: "'samen' translates to together."
+  },
+  {
+    id: "sum_ch3_1003",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "vocabulary", "dialogue"],
+    questionNl: "Wat betekent de uitdrukking 'Prettig met je kennis te maken'?",
+    options: ["Pleased to meet you", "How do you do?", "What is your name?"],
+    correctAnswer: "Pleased to meet you",
+    explanationTr: "Biriyle tanıştığınızda 'Tanıştığıma memnun oldum' demek için bu ifade kullanılır.",
+    explanationEn: "To say 'Pleased to meet you', use 'Prettig met je kennis te maken'."
+  },
+  {
+    id: "sum_ch3_1004",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "vocabulary"],
+    questionNl: "Wat betekent het werkwoord 'kennen' in de context van personen?",
+    options: ["know (people)", "can / able to", "buy"],
+    correctAnswer: "know (people)",
+    explanationTr: "Kişiler bağlamında 'kennen' tanımak/bilmek (know) anlamına gelir.",
+    explanationEn: "In the context of people, 'kennen' means to know someone."
+  },
+  {
+    id: "sum_ch3_1005",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "vocabulary"],
+    questionNl: "Wat is de vertaling van 'elkaar' (bijv. Hoe kennen jullie elkaar)?",
+    options: ["one another / each other", "together", "always"],
+    correctAnswer: "one another / each other",
+    explanationTr: "'elkaar' birbirini/birbirinizi (each other) demektir.",
+    explanationEn: "'elkaar' means one another or each other."
+  },
+  {
+    id: "sum_ch3_1006",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "vocabulary", "dialogue"],
+    questionNl: "Wat betekent de uitdrukking 'Ik trakteer' in een café?",
+    options: ["It's my treat / I am paying", "I am leaving", "I am drinking"],
+    correctAnswer: "It's my treat / I am paying",
+    explanationTr: "'Ik trakteer' hesabı benim ödeyeceğim, bendensin (it's my treat) anlamına gelir.",
+    explanationEn: "'Ik trakteer' means 'It's my treat' or 'I am paying'."
+  },
+  {
+    id: "sum_ch3_1007",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "vocabulary"],
+    questionNl: "Hoe noem je de persoon die in een café werkt en je drankjes brengt (waiter)?",
+    options: ["de ober", "de docent", "de cursist"],
+    correctAnswer: "de ober",
+    explanationTr: "Kafede veya restoranda çalışan garsona 'de ober' denir.",
+    explanationEn: "The waiter is called 'de ober'."
+  },
+  {
+    id: "sum_ch3_1008",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "vocabulary"],
+    questionNl: "Wat betekent het werkwoord 'bestellen'?",
+    options: ["to order", "to pay", "to drink"],
+    correctAnswer: "to order",
+    explanationTr: "'bestellen' sipariş vermek (to order) demektir.",
+    explanationEn: "'bestellen' means to order."
+  },
+  {
+    id: "sum_ch3_1009",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "vocabulary", "dialogue"],
+    questionNl: "Wat zegt de ober vaak als hij vraagt wat je wilt bestellen (Go ahead / Tell me)?",
+    options: ["Zegt u het maar.", "Mag ik afrekenen?", "Proost."],
+    correctAnswer: "Zegt u het maar.",
+    explanationTr: "Garson siparişi alırken buyrun/dinliyorum anlamında 'Zegt u het maar' der.",
+    explanationEn: "A waiter often says 'Zegt u het maar' meaning 'Go ahead / Tell me (your order)'."
+  },
+  {
+    id: "sum_ch3_1010",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "vocabulary", "dialogue"],
+    questionNl: "Wat zeg je als je met glazen klinkt (cheers) in het Nederlands?",
+    options: ["Proost", "Bedankt", "Graag"],
+    correctAnswer: "Proost",
+    explanationTr: "Kadeh tokuştururken (şerefe) 'Proost' denir.",
+    explanationEn: "When clinking glasses (cheers), you say 'Proost'."
+  },
+  {
+    id: "sum_ch3_1011",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "vocabulary"],
+    questionNl: "Wat betekent 'het poosje' (bijv. een poosje later)?",
+    options: ["short while", "a long time", "never"],
+    correctAnswer: "short while",
+    explanationTr: "'het poosje' kısa bir süre (short while) anlamına gelir.",
+    explanationEn: "'het poosje' means a short while."
+  },
+  {
+    id: "sum_ch3_1012",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "vocabulary"],
+    questionNl: "Wat is 'het rondje' in een café?",
+    options: ["the round (of drinks)", "the table", "the bill"],
+    correctAnswer: "the round (of drinks)",
+    explanationTr: "'het rondje' kafede ısmarlanan bir tur içki (the round of drinks) demektir.",
+    explanationEn: "'het rondje' refers to a round of drinks."
+  },
+  {
+    id: "sum_ch3_1013",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "vocabulary", "dialogue"],
+    questionNl: "Wat betekent het werkwoord 'afrekenen'?",
+    options: ["pay / settle the bill", "order drinks", "call the waiter"],
+    correctAnswer: "pay / settle the bill",
+    explanationTr: "'afrekenen' hesabı ödemek (pay/settle the bill) anlamına gelir.",
+    explanationEn: "'afrekenen' means to pay or settle the bill."
+  },
+  {
+    id: "sum_ch3_1014",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "phrases", "ordering"],
+    questionNl: "Hoe vraag je beleefd om een biertje?",
+    options: ["Mag ik een biertje?", "Jij geeft mij bier.", "Waar is het bier?"],
+    correctAnswer: "Mag ik een biertje?",
+    explanationTr: "Bira siparişi verirken 'Bir bira alabilir miyim?' anlamında 'Mag ik een biertje?' kalıbı kullanılır.",
+    explanationEn: "To politely order a beer, use 'Mag ik een biertje?'."
+  },
+  {
+    id: "sum_ch3_1015",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "phrases", "paying"],
+    questionNl: "Hoe vraag je om de rekening in een café?",
+    options: ["Mag ik de rekening (alstublieft)?", "Waar is de ober?", "Ik wil gratis drinken."],
+    correctAnswer: "Mag ik de rekening (alstublieft)?",
+    explanationTr: "Hesabı isterken 'Mag ik de rekening (alstublieft)?' denir.",
+    explanationEn: "To ask for the bill, say 'Mag ik de rekening (alstublieft)?'."
+  },
+  {
+    id: "sum_ch3_1016",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "phrases", "thanking"],
+    questionNl: "Welke woorden gebruik je om iemand te bedanken (to thank)?",
+    options: ["dank je / dank je wel / bedankt", "alsjeblieft", "proost"],
+    correctAnswer: "dank je / dank je wel / bedankt",
+    explanationTr: "Teşekkür etmek için 'dank je', 'dank je wel' veya 'bedankt' kullanılır.",
+    explanationEn: "To thank someone, you can use 'dank je', 'dank je wel', or 'bedankt'."
+  },
+  {
+    id: "sum_ch3_1017",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "grammar", "articles"],
+    questionNl: "Wat is het definitieve artikel (de/het) voor diminutieven (verkleinwoorden) zoals 'rondje' of 'kopje'?",
+    options: ["het", "de", "een"],
+    correctAnswer: "het",
+    explanationTr: "Bütün küçültme sözcükleri (diminutief) istisnasız 'het' artikeli alır.",
+    explanationEn: "All diminutives (verkleinwoorden) always take the article 'het'."
+  },
+  {
+    id: "sum_ch3_1018",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "grammar", "articles"],
+    questionNl: "Wat is het definitieve artikel voor meervoudsvormen (pluralis) zoals 'cursussen' of 'cafés'?",
+    options: ["de", "het", "een"],
+    correctAnswer: "de",
+    explanationTr: "Bütün çoğul isimler (pluralis) istisnasız 'de' artikeli alır.",
+    explanationEn: "All plural words always take the article 'de'."
+  },
+  {
+    id: "sum_ch3_1019",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "grammar", "articles"],
+    questionNl: "Welk artikel hoort bij het woord 'cursus' in het enkelvoud?",
+    options: ["de", "het", "een"],
+    correctAnswer: "de",
+    explanationTr: "'cursus' kelimesi tekil halinde 'de' artikeli alır (de cursus).",
+    explanationEn: "The singular word 'cursus' takes the article 'de' (de cursus)."
+  },
+  {
+    id: "sum_ch3_1020",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "grammar", "articles"],
+    questionNl: "Welk artikel hoort bij het woord 'café' in het enkelvoud?",
+    options: ["het", "de", "een"],
+    correctAnswer: "het",
+    explanationTr: "'café' kelimesi tekil halinde 'het' artikeli alır (het café).",
+    explanationEn: "The singular word 'café' takes the article 'het' (het café)."
+  },
+  {
+    id: "sum_ch3_1021",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "grammar", "diminutives"],
+    questionNl: "Wat is het diminutief (verkleinwoord) van 'kop'?",
+    options: ["het kopje", "de kopje", "het koppen"],
+    correctAnswer: "het kopje",
+    explanationTr: "'kop' kelimesinin küçültme hali 'kopje'dir ve her zaman 'het' artikeli alır.",
+    explanationEn: "The diminutive of 'kop' is 'het kopje'."
+  },
+  {
+    id: "sum_ch3_1022",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "grammar", "diminutives"],
+    questionNl: "Wat is het diminutief (verkleinwoord) van 'zus'?",
+    options: ["het zusje", "de zusje", "het zussen"],
+    correctAnswer: "het zusje",
+    explanationTr: "'zus' kelimesinin küçültme hali 'zusje'dir ve 'het' artikeli alır.",
+    explanationEn: "The diminutive of 'zus' is 'het zusje'."
+  },
+  {
+    id: "sum_ch3_1023",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "grammar", "articles"],
+    questionNl: "Wat is het indefiniete (onbepaalde) artikel voor enkelvoudige woorden zoals 'cursus' of 'café'?",
+    options: ["een", "de", "het"],
+    correctAnswer: "een",
+    explanationTr: "Belgisiz (indefinite) tekil isimler için 'een' artikeli (bir) kullanılır.",
+    explanationEn: "The indefinite article for singular words is 'een' (a/an)."
+  },
+  {
+    id: "sum_ch3_1024",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "grammar", "inversion"],
+    questionNl: "Wat is de regel voor 'inversie' als de zin begint met een ander zinsdeel dan het onderwerp (bijv. tijd of plaats)?",
+    options: ["Het werkwoord komt vóór het onderwerp (op positie 2).", "Het werkwoord staat aan het einde van de zin.", "Het werkwoord verdwijnt."],
+    correctAnswer: "Het werkwoord komt vóór het onderwerp (op positie 2).",
+    explanationTr: "Cümle zaman veya yer gibi başka bir öğe ile başladığında devrik yapı (inversie) olur; fiil ikinci sıraya geçer ve özne ondan sonra gelir.",
+    explanationEn: "When a sentence starts with something other than the subject (like time or place), inversion occurs: the verb stays in position 2, and the subject follows it."
+  },
+  {
+    id: "sum_ch3_1025",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "grammar", "inversion"],
+    questionNl: "Kies de juiste zin met inversie: (De zin start met 'Nu')",
+    options: ["Nu wil ik ook een biertje.", "Nu ik wil ook een biertje.", "Nu wil ook een biertje ik."],
+    correctAnswer: "Nu wil ik ook een biertje.",
+    explanationTr: "'Nu' (Şimdi) kelimesi başa geldiği için fiil 'wil' ikinci sırada, özne 'ik' ise üçüncü sırada yer alır.",
+    explanationEn: "Starting with 'Nu' causes inversion: verb 'wil' in position 2, subject 'ik' in position 3."
+  },
+  {
+    id: "sum_ch3_1026",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "grammar", "inversion"],
+    questionNl: "Kies de juiste zin met inversie: (De zin start met 'Dit rondje')",
+    options: ["Dit rondje betaal ik.", "Dit rondje ik betaal.", "Betaal ik dit rondje."],
+    correctAnswer: "Dit rondje betaal ik.",
+    explanationTr: "Nesne ('Dit rondje') başa geldiğinde, fiil ('betaal') ikinci sırayı alır, özne ('ik') ise fiilden sonra gelir.",
+    explanationEn: "When the object ('Dit rondje') is first, the verb ('betaal') takes position 2, followed by the subject ('ik')."
+  },
+  {
+    id: "sum_ch3_1027",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "grammar", "inversion"],
+    questionNl: "Vertaal 'Tomorrow we begin' met de juiste woordvolgorde (start de zin met 'Morgen'):",
+    options: ["Morgen beginnen we.", "Morgen we beginnen.", "Beginnen we morgen."],
+    correctAnswer: "Morgen beginnen we.",
+    explanationTr: "'Morgen' (Yarın) kelimesi başa geldiği için devrik yapı uygulanır ve fiil özneden önce gelir (Morgen beginnen we).",
+    explanationEn: "Starting with 'Morgen' triggers inversion: verb ('beginnen') comes before the subject ('we')."
+  },
+  {
+    id: "sum_ch3_1028",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "grammar", "inversion"],
+    questionNl: "Vertaal 'Today Eddy teaches' met de juiste woordvolgorde (start met 'Vandaag'):",
+    options: ["Vandaag geeft Eddy les.", "Vandaag Eddy geeft les.", "Geef Eddy vandaag les."],
+    correctAnswer: "Vandaag geeft Eddy les.",
+    explanationTr: "Zaman bildiren 'Vandaag' başa geldiği için fiil ('geeft') özneden ('Eddy') önce gelmelidir.",
+    explanationEn: "Starting with 'Vandaag' causes inversion: the verb ('geeft') precedes the subject ('Eddy')."
+  },
+  {
+    id: "sum_ch3_1029",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "numbers", "ordinals"],
+    questionNl: "Wat is het rangtelwoord (ordinal number) voor 1 in het Nederlands?",
+    options: ["eerste", "eende", "één"],
+    correctAnswer: "eerste",
+    explanationTr: "1 sayısının sıra sayısı 'eerste' (birinci) şeklindedir.",
+    explanationEn: "The ordinal number for 1 is 'eerste' (first)."
+  },
+  {
+    id: "sum_ch3_1030",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "numbers", "ordinals"],
+    questionNl: "Wat is het rangtelwoord (ordinal number) voor 3 in het Nederlands?",
+    options: ["derde", "drie", "drietigste"],
+    correctAnswer: "derde",
+    explanationTr: "3 sayısının sıra sayısı düzensizdir ve 'derde' (üçüncü) olur.",
+    explanationEn: "The ordinal number for 3 is 'derde' (third)."
+  },
+  {
+    id: "sum_ch3_1031",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "numbers", "ordinals"],
+    questionNl: "Wat is het rangtelwoord (ordinal number) voor 8 in het Nederlands?",
+    options: ["achtste", "acht", "achtende"],
+    correctAnswer: "achtste",
+    explanationTr: "8 sayısının sıra sayısı 'achtste' (sekizinci) şeklindedir.",
+    explanationEn: "The ordinal number for 8 is 'achtste' (eighth)."
+  },
+  {
+    id: "sum_ch3_1032",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "numbers", "ordinals"],
+    questionNl: "Wat is het rangtelwoord voor 12 in het Nederlands?",
+    options: ["twaalfde", "twaalf", "tweede"],
+    correctAnswer: "twaalfde",
+    explanationTr: "12 sayısının sıra sayısı 'twaalfde' (on ikinci) olur.",
+    explanationEn: "The ordinal number for 12 is 'twaalfde' (twelfth)."
+  },
+  {
+    id: "sum_ch3_1033",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "numbers", "ordinals"],
+    questionNl: "Wat is het rangtelwoord voor 20 in het Nederlands?",
+    options: ["twintigste", "twintig", "tweede"],
+    correctAnswer: "twintigste",
+    explanationTr: "20 sayısının sıra sayısı 'twintigste' (yirminci) şeklindedir.",
+    explanationEn: "The ordinal number for 20 is 'twintigste' (twentieth)."
+  },
+  {
+    id: "sum_ch3_1034",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "numbers", "ordinals"],
+    questionNl: "Wat is het rangtelwoord voor 100 in het Nederlands?",
+    options: ["honderdste", "honderdde", "honderd"],
+    correctAnswer: "honderdste",
+    explanationTr: "100 sayısının sıra sayısı 'honderdste' (yüzüncü) olur.",
+    explanationEn: "The ordinal number for 100 is 'honderdste' (hundredth)."
+  },
+  {
+    id: "sum_ch3_1035",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "culture", "vocabulary"],
+    questionNl: "Wat betekent de zin 'Ik trakteer op taart' bij een verjaardag?",
+    options: ["I treat to cake / I am bringing cake", "I bake a cake", "I don't like cake"],
+    correctAnswer: "I treat to cake / I am bringing cake",
+    explanationTr: "Hollanda kültüründe doğum gününde 'Ik trakteer op taart' diyerek pasta ikram edildiği belirtilir.",
+    explanationEn: "'Ik trakteer op taart' means 'I am treating to cake' or 'I am bringing cake'."
+  },
+  {
+    id: "sum_ch3_1036",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "vocabulary", "text"],
+    questionNl: "Wat betekent 'het terras' in het Nederlands?",
+    options: ["the terrace / outdoor seating", "the kitchen", "the toilet"],
+    correctAnswer: "the terrace / outdoor seating",
+    explanationTr: "'het terras' kafelerin dış oturma alanı (teras) demektir.",
+    explanationEn: "'het terras' refers to the terrace or outdoor seating of a café."
+  },
+  {
+    id: "sum_ch3_1037",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "vocabulary", "text"],
+    questionNl: "Wat zie je in de zomer vanaf het café in het water volgens de tekst op pagina 54?",
+    options: ["de boten (the boats)", "de auto's (the cars)", "de fietsen (the bikes)"],
+    correctAnswer: "de boten (the boats)",
+    explanationTr: "Metne göre yaz aylarında sudaki teknelere (de boten) bakılır.",
+    explanationEn: "According to the text, in summer you look at the boats (de boten) in the water."
+  },
+  {
+    id: "sum_ch3_1038",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "vocabulary"],
+    questionNl: "Wat is de betekenis van 'de uitnodiging'?",
+    options: ["the invitation", "the bill", "the party"],
+    correctAnswer: "the invitation",
+    explanationTr: "'de uitnodiging' davetiye veya davet (invitation) demektir.",
+    explanationEn: "'de uitnodiging' means the invitation."
+  },
+  {
+    id: "sum_ch3_1039",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "vocabulary"],
+    questionNl: "Wat betekent het woord 'hetzelfde' (bijv. Willen jullie hetzelfde?)?",
+    options: ["the same", "different", "nothing"],
+    correctAnswer: "the same",
+    explanationTr: "'hetzelfde' kelimesi 'aynısı / aynı' (the same) anlamına gelir.",
+    explanationEn: "'hetzelfde' translates to 'the same'."
+  },
+  {
+    id: "sum_ch3_1040",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "vocabulary"],
+    questionNl: "Wat betekent het woord 'daarom'?",
+    options: ["that's why / therefore", "because", "never"],
+    correctAnswer: "that's why / therefore",
+    explanationTr: "'daarom' bu yüzden / bu sebeple (that's why) demektir.",
+    explanationEn: "'daarom' means 'that's why' or 'therefore'."
+  },
+  {
+    id: "sum_ch3_1041",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "vocabulary"],
+    questionNl: "Wat betekent het woord 'alles' (bijv. Alles samen?)?",
+    options: ["everything", "nothing", "something"],
+    correctAnswer: "everything",
+    explanationTr: "'alles' her şey veya hepsi (everything) anlamına gelir.",
+    explanationEn: "'alles' translates to 'everything'."
+  },
+  {
+    id: "sum_ch3_1042",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "vocabulary"],
+    questionNl: "Wat is de vertaling van 'red wine' in het Nederlands?",
+    options: ["rode wijn", "witte wijn", "rode cola"],
+    correctAnswer: "rode wijn",
+    explanationTr: "Kırmızı şarap Hollandacada 'rode wijn' olarak adlandırılır.",
+    explanationEn: "'Red wine' translates to 'rode wijn' in Dutch."
+  },
+  {
+    id: "sum_ch3_1043",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "vocabulary"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'French' (bijv. French wine)?",
+    options: ["Franse (Frans)", "Spaanse (Spaans)", "Duitse (Duits)"],
+    correctAnswer: "Franse (Frans)",
+    explanationTr: "Fransız (şarabı gibi) derken 'Franse' kelimesi kullanılır.",
+    explanationEn: "'French' translates to 'Franse' (or Frans)."
+  },
+  {
+    id: "sum_ch3_1044",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "vocabulary"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'Spanish'?",
+    options: ["Spaanse (Spaans)", "Franse (Frans)", "Engelse (Engels)"],
+    correctAnswer: "Spaanse (Spaans)",
+    explanationTr: "İspanyol (şarabı gibi) derken 'Spaanse' kullanılır.",
+    explanationEn: "'Spanish' translates to 'Spaanse' (or Spaans)."
+  },
+  {
+    id: "sum_ch3_1045",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "vocabulary"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'South African'?",
+    options: ["Zuid-Afrikaanse (Zuid-Afrikaans)", "Noord-Amerikaanse", "Spaanse"],
+    correctAnswer: "Zuid-Afrikaanse (Zuid-Afrikaans)",
+    explanationTr: "Güney Afrikalı demek için 'Zuid-Afrikaanse' kullanılır.",
+    explanationEn: "'South African' translates to 'Zuid-Afrikaanse'."
+  },
+  {
+    id: "sum_ch3_1046",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "vocabulary"],
+    questionNl: "Wat betekent 'het idee' (bijv. Dat is een goed idee)?",
+    options: ["the idea", "the glass", "the order"],
+    correctAnswer: "the idea",
+    explanationTr: "'het idee' fikir / düşünce (the idea) anlamına gelir.",
+    explanationEn: "'het idee' means 'the idea'."
+  },
+  {
+    id: "sum_ch3_1047",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "vocabulary", "dialogue"],
+    questionNl: "Wat betekent de uitdrukking 'Doe mij maar een biertje'?",
+    options: ["I'll have a beer / Give me a beer", "I don't want a beer", "Who has a beer?"],
+    correctAnswer: "I'll have a beer / Give me a beer",
+    explanationTr: "'Doe mij maar een biertje' sipariş verirken 'Bana bir bira verin' demenin yaygın bir yoludur.",
+    explanationEn: "'Doe mij maar een biertje' is a common way to say 'I'll have a beer' or 'Give me a beer'."
+  },
+  {
+    id: "sum_ch3_1048",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "vocabulary", "dialogue"],
+    questionNl: "Wat betekent 'Zullen we nog een keer bestellen?'?",
+    options: ["Shall we order once more / again?", "Are we ready to pay?", "Do you want to go home?"],
+    correctAnswer: "Shall we order once more / again?",
+    explanationTr: "'Zullen we nog een keer bestellen?' bir kez daha sipariş verelim mi anlamına gelir.",
+    explanationEn: "'Zullen we nog een keer bestellen?' means 'Shall we order once more / again?'."
+  },
+  {
+    id: "sum_ch3_1049",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "grammar", "plurals"],
+    questionNl: "Wat is de correcte meervoudsvorm (pluralis) van 'het rondje'?",
+    options: ["de rondjes", "het rondjes", "de rondjen"],
+    correctAnswer: "de rondjes",
+    explanationTr: "Çoğul kelimeler daima 'de' artikeli alır; 'rondje' kelimesinin çoğulu 'de rondjes' olur.",
+    explanationEn: "Plurals always take 'de'; the plural of 'rondje' is 'de rondjes'."
+  },
+  {
+    id: "sum_ch3_1050",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "grammar", "plurals"],
+    questionNl: "Wat is de correcte meervoudsvorm (pluralis) van 'de cursus'?",
+    options: ["de cursussen", "het cursussen", "de cursus"],
+    correctAnswer: "de cursussen",
+    explanationTr: "'cursus' kelimesinin çoğul hali 'de cursussen' şeklindedir.",
+    explanationEn: "The plural of 'cursus' is 'de cursussen'."
+  },
+  
+  //////////////////sadas////////////4
+  {
+    id: "sum_ch4_1000",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "vocabulary"],
+    questionNl: "Wat betekent het woord 'de straat' in het Engels?",
+    options: ["the street", "the shop", "the neighbour"],
+    correctAnswer: "the street",
+    explanationTr: "'de straat' sokak / cadde (the street) demektir.",
+    explanationEn: "'de straat' translates to 'the street'."
+  },
+  {
+    id: "sum_ch4_1001",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "vocabulary"],
+    questionNl: "Wat betekent de uitdrukking 'komt tegen' (tegenkomen)?",
+    options: ["meets / runs into", "says goodbye", "takes a photo"],
+    correctAnswer: "meets / runs into",
+    explanationTr: "'tegenkomen' (komt tegen) biriyle karşılaşmak veya buluşmak (meets) anlamına gelir.",
+    explanationEn: "'tegenkomen' means to meet or run into someone."
+  },
+  {
+    id: "sum_ch4_1002",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "vocabulary", "dialogue"],
+    questionNl: "Wat betekent 'geleden' in de zin 'Dat is lang geleden'?",
+    options: ["ago", "later", "now"],
+    correctAnswer: "ago",
+    explanationTr: "'geleden' önce (ago) demektir. 'Dat is lang geleden' uzun zaman oldu anlamına gelir.",
+    explanationEn: "'geleden' means 'ago'. 'Dat is lang geleden' means 'That was a long time ago'."
+  },
+  {
+    id: "sum_ch4_1003",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "vocabulary", "dialogue"],
+    questionNl: "Wat betekent 'het gaat wel' als antwoord op de vraag 'Hoe gaat het?'?",
+    options: ["all right / so-so", "excellent", "very bad"],
+    correctAnswer: "all right / so-so",
+    explanationTr: "'het gaat wel' idare eder / fena değil (all right) anlamındadır.",
+    explanationEn: "'het gaat wel' translates to 'all right' or 'so-so'."
+  },
+  {
+    id: "sum_ch4_1004",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "vocabulary"],
+    questionNl: "Wat is de betekenis van het woord 'de buren'?",
+    options: ["the neighbours", "the friends", "the parents"],
+    correctAnswer: "the neighbours",
+    explanationTr: "'de buren' komşular (the neighbours) demektir.",
+    explanationEn: "'de buren' means 'the neighbours'."
+  },
+  {
+    id: "sum_ch4_1005",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "vocabulary"],
+    questionNl: "Wat betekent het woord 'belangrijk'?",
+    options: ["important", "beautiful", "new"],
+    correctAnswer: "important",
+    explanationTr: "'belangrijk' önemli (important) demektir.",
+    explanationEn: "'belangrijk' translates to 'important'."
+  },
+  {
+    id: "sum_ch4_1006",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "vocabulary"],
+    questionNl: "Wat is 'een paar dagen' in het Engels?",
+    options: ["a few days", "a few weeks", "a pair of shoes"],
+    correctAnswer: "a few days",
+    explanationTr: "'een paar dagen' birkaç gün (a few days) demektir.",
+    explanationEn: "'een paar dagen' means 'a few days'."
+  },
+  {
+    id: "sum_ch4_1007",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "vocabulary"],
+    questionNl: "Wat betekent 'prachtig' in het Nederlands?",
+    options: ["fine / splendid / beautiful", "ugly / bad", "expensive"],
+    correctAnswer: "fine / splendid / beautiful",
+    explanationTr: "'prachtig' harika / muhteşem (splendid/beautiful) anlamına gelir.",
+    explanationEn: "'prachtig' means 'fine', 'splendid', or 'beautiful'."
+  },
+  {
+    id: "sum_ch4_1008",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "vocabulary"],
+    questionNl: "Wat betekent 'foto\\'s maken'?",
+    options: ["take photos", "buy a camera", "make a movie"],
+    correctAnswer: "take photos",
+    explanationTr: "'foto's maken' fotoğraf çekmek (take photos) demektir.",
+    explanationEn: "'foto\\'s maken' translates to 'take photos'."
+  },
+  {
+    id: "sum_ch4_1009",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "vocabulary"],
+    questionNl: "Wat betekent 'sinds' in het Engels?",
+    options: ["since", "until", "before"],
+    correctAnswer: "since",
+    explanationTr: "'sinds' -den beri (since) demektir.",
+    explanationEn: "'sinds' translates to 'since'."
+  },
+  {
+    id: "sum_ch4_1010",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "vocabulary"],
+    questionNl: "Wat is de betekenis van 'direct' in de zin 'Zullen we direct iets afspreken?'",
+    options: ["right now / immediately", "later", "tomorrow"],
+    correctAnswer: "right now / immediately",
+    explanationTr: "'direct' hemen / doğrudan (right now/immediately) anlamına gelir.",
+    explanationEn: "'direct' means 'right now' or 'immediately'."
+  },
+  {
+    id: "sum_ch4_1011",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "vocabulary"],
+    questionNl: "Wat betekent het werkwoord 'afspreken'?",
+    options: ["set a date / make an appointment", "pay the bill", "speak loudly"],
+    correctAnswer: "set a date / make an appointment",
+    explanationTr: "'afspreken' sözleşmek, buluşma ayarlamak (make an appointment) demektir.",
+    explanationEn: "'afspreken' means to set a date or make an appointment."
+  },
+  {
+    id: "sum_ch4_1012",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "vocabulary"],
+    questionNl: "Wat betekent 'dat lukt niet' (van lukken)?",
+    options: ["that doesn't work / I can't", "that is okay", "that is expensive"],
+    correctAnswer: "that doesn't work / I can't",
+    explanationTr: "'dat lukt niet' o iş olmaz / uymuyor (that doesn't work) anlamına gelir.",
+    explanationEn: "'dat lukt niet' translates to 'that doesn't work' or 'that is not possible'."
+  },
+  {
+    id: "sum_ch4_1013",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "vocabulary"],
+    questionNl: "Wat betekent 'de agenda' in het Nederlands?",
+    options: ["diary / agenda", "newspaper", "book"],
+    correctAnswer: "diary / agenda",
+    explanationTr: "'de agenda' ajanda / takvim (diary/agenda) demektir.",
+    explanationEn: "'de agenda' means diary or agenda."
+  },
+  {
+    id: "sum_ch4_1014",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "vocabulary"],
+    questionNl: "Wat is de betekenis van 'hartstikke' (bijv. hartstikke leuk)?",
+    options: ["very / completely / terrific", "not at all", "a little bit"],
+    correctAnswer: "very / completely / terrific",
+    explanationTr: "'hartstikke' aşırı / son derece (very/completely) anlamı katan bir pekiştireçtir.",
+    explanationEn: "'hartstikke' is an intensifier meaning 'very', 'completely', or 'terrific'."
+  },
+  {
+    id: "sum_ch4_1015",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "vocabulary"],
+    questionNl: "Wat betekent 'ik moet ervandoor'?",
+    options: ["I have to go / I'm off", "I have to stay", "I have to eat"],
+    correctAnswer: "I have to go / I'm off",
+    explanationTr: "'ik moet ervandoor' gitmem gerek / kaçmam lazım (I have to go) anlamına gelir.",
+    explanationEn: "'ik moet ervandoor' translates to 'I have to go' or 'I'm off'."
+  },
+  {
+    id: "sum_ch4_1016",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "vocabulary"],
+    questionNl: "Wat betekent het woord 'gauw'?",
+    options: ["quickly / soon", "slowly", "never"],
+    correctAnswer: "quickly / soon",
+    explanationTr: "'gauw' çabucak / hızlıca (quickly/soon) demektir.",
+    explanationEn: "'gauw' means quickly or soon."
+  },
+  {
+    id: "sum_ch4_1017",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "vocabulary"],
+    questionNl: "Wat betekent 'de winkel'?",
+    options: ["the shop / store", "the street", "the cinema"],
+    correctAnswer: "the shop / store",
+    explanationTr: "'de winkel' dükkan / mağaza (the shop) demektir.",
+    explanationEn: "'de winkel' translates to the shop or store."
+  },
+  {
+    id: "sum_ch4_1018",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "vocabulary"],
+    questionNl: "Wat betekent de uitdrukking 'doe de groeten aan'?",
+    options: ["give my regards to / say hi to", "congratulations to", "buy a gift for"],
+    correctAnswer: "give my regards to / say hi to",
+    explanationTr: "'doe de groeten aan' ...'a selam söyle (give my regards to) demektir.",
+    explanationEn: "'doe de groeten aan' means to give one's regards to someone."
+  },
+  {
+    id: "sum_ch4_1019",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "vocabulary"],
+    questionNl: "Wat is de betekenis van 'volgende' (bijv. volgende week)?",
+    options: ["next", "last", "this"],
+    correctAnswer: "next",
+    explanationTr: "'volgende' sonraki / gelecek (next) anlamına gelir.",
+    explanationEn: "'volgende' translates to 'next'."
+  },
+  {
+    id: "sum_ch4_1020",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "dialogue", "comprehension"],
+    questionNl: "Waar gaan Hans en Wilma naartoe in de dialoog?",
+    options: ["Naar Venetië", "Naar de bioscoop", "Naar de winkel"],
+    correctAnswer: "Naar Venetië",
+    explanationTr: "Diyalogda Hans ve Wilma'nın Venedik'e (Venetië) gideceği belirtilir.",
+    explanationEn: "In the dialogue, Hans and Wilma are going to Venice (Venetië)."
+  },
+  {
+    id: "sum_ch4_1021",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "dialogue", "comprehension"],
+    questionNl: "Wat gaan Hans en Wilma doen in Venetië?",
+    options: ["Een romantische film maken.", "Spaghetti carbonara eten.", "Winkelen."],
+    correctAnswer: "Een romantische film maken.",
+    explanationTr: "Hans, Venedik'te yeni kameralarıyla romantik bir film çekeceklerini söyler.",
+    explanationEn: "Hans mentions they are going to make a romantic film in Venice."
+  },
+  {
+    id: "sum_ch4_1022",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "dialogue", "comprehension"],
+    questionNl: "Waarom kan Bert niet afspreken op zaterdag de 29ste?",
+    options: ["Omdat hij al een afspraak heeft.", "Omdat hij naar Venetië gaat.", "Omdat hij moet werken."],
+    correctAnswer: "Omdat hij al een afspraak heeft.",
+    explanationTr: "Bert, 29'u cumartesi günü için 'Dan heb ik al een afspraak' (Zaten bir randevum var) der.",
+    explanationEn: "Bert says 'Dan heb ik al een afspraak' (I already have an appointment then)."
+  },
+  {
+    id: "sum_ch4_1023",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "dialogue", "comprehension"],
+    questionNl: "Op welke datum en tijd maken Bert en Hans uiteindelijk een afspraak?",
+    options: ["Zondag 30 augustus om 16.00 uur", "Zaterdag 29 augustus om 16.00 uur", "Zondag 30 augustus om 20.00 uur"],
+    correctAnswer: "Zondag 30 augustus om 16.00 uur",
+    explanationTr: "Bert ve Hans 30 Ağustos Pazar saat 16.00'da buluşmak üzere anlaşırlar.",
+    explanationEn: "They agree to meet on Sunday, August 30th at 16:00."
+  },
+  {
+    id: "sum_ch4_1024",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "dialogue", "comprehension"],
+    questionNl: "Wat gaat Hans koken als Bert op bezoek komt?",
+    options: ["Spaghetti carbonara", "Pizza", "Een Nederlandse maaltijd"],
+    correctAnswer: "Spaghetti carbonara",
+    explanationTr: "Hans buluşmada 'spaghetti carbonara' yapmayı teklif eder.",
+    explanationEn: "Hans proposes making spaghetti carbonara for their meeting."
+  },
+  {
+    id: "sum_ch4_1025",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "phrases", "greetings"],
+    questionNl: "Wat is een andere manier om te vragen 'Hoe gaat het?'",
+    options: ["Alles goed?", "Wat is je naam?", "Waar woon je?"],
+    correctAnswer: "Alles goed?",
+    explanationTr: "'Hoe gaat het?' (Nasılsın?) yerine 'Alles goed?' (Her şey yolunda mı?) da kullanılır.",
+    explanationEn: "'Alles goed?' (Is everything alright?) is another way to ask 'Hoe gaat het?' (How are you?)."
+  },
+  {
+    id: "sum_ch4_1026",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "phrases", "greetings"],
+    questionNl: "Wat is de meest positieve reactie (++) op de vraag 'Hoe gaat het?'",
+    options: ["Uitstekend / fantastisch", "Het gaat wel", "Niet zo goed"],
+    correctAnswer: "Uitstekend / fantastisch",
+    explanationTr: "En olumlu tepkiler (++) 'uitstekend' (mükemmel) ve 'fantastisch' (harika) kelimeleridir.",
+    explanationEn: "The most positive responses (++) are 'uitstekend' (excellent) and 'fantastisch' (fantastic)."
+  },
+  {
+    id: "sum_ch4_1027",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "phrases", "greetings"],
+    questionNl: "Wat betekent de beoordeling 'slechte' in reactie op 'Hoe gaat het?'",
+    options: ["Bad / poorly", "Excellent", "Okay"],
+    correctAnswer: "Bad / poorly",
+    explanationTr: "'slecht' kötü (bad/poorly) anlamına gelir.",
+    explanationEn: "'slecht' means bad or poorly."
+  },
+  {
+    id: "sum_ch4_1028",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "grammar", "zullen"],
+    questionNl: "Welk werkwoord gebruik je om samen met iemand een voorstel te doen (Shall we...)?",
+    options: ["Zullen we", "Zal ik", "Hebben we"],
+    correctAnswer: "Zullen we",
+    explanationTr: "Birlikte bir şey yapmayı teklif ederken 'Zullen we...' (Yapalım mı?) kalıbı kullanılır.",
+    explanationEn: "To make a suggestion together, use 'Zullen we...' (Shall we...)."
+  },
+  {
+    id: "sum_ch4_1029",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "grammar", "zullen"],
+    questionNl: "Hoe bied je aan om iets voor een ander te doen (Shall I...)?",
+    options: ["Zal ik", "Zullen we", "Ga je mee"],
+    correctAnswer: "Zal ik",
+    explanationTr: "Kendi adınıza bir teklifte bulunurken 'Zal ik...' (Yapayım mı?) kalıbı kullanılır.",
+    explanationEn: "To offer to do something yourself, use 'Zal ik...' (Shall I...)."
+  },
+  {
+    id: "sum_ch4_1030",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "grammar", "zullen"],
+    questionNl: "Vertaal de volgende zin naar het Nederlands: 'Shall we set a date?'",
+    options: ["Zullen we iets afspreken?", "Zal ik iets afspreken?", "Gaan we mee afspreken?"],
+    correctAnswer: "Zullen we iets afspreken?",
+    explanationTr: "'Bir buluşma ayarlayalım mı?' sorusu 'Zullen we iets afspreken?' şeklinde çevrilir.",
+    explanationEn: "'Shall we set a date?' translates to 'Zullen we iets afspreken?'."
+  },
+  {
+    id: "sum_ch4_1031",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "grammar", "zullen"],
+    questionNl: "Vertaal de volgende zin naar het Nederlands: 'Shall I make spaghetti carbonara?'",
+    options: ["Zal ik spaghetti carbonara maken?", "Zullen we spaghetti carbonara maken?", "Ik wil spaghetti carbonara maken."],
+    correctAnswer: "Zal ik spaghetti carbonara maken?",
+    explanationTr: "'Spagetti carbonara yapayım mı?' sorusu 'Zal ik spaghetti carbonara maken?' şeklinde çevrilir.",
+    explanationEn: "'Shall I make spaghetti carbonara?' translates to 'Zal ik spaghetti carbonara maken?'."
+  },
+  {
+    id: "sum_ch4_1032",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "phrases", "inviting"],
+    questionNl: "Hoe nodig je iemand uit met de vraag 'Are you coming along to...?'",
+    options: ["Ga je mee (naar)...?", "Heb je zin om...?", "Zal ik...?"],
+    correctAnswer: "Ga je mee (naar)...?",
+    explanationTr: "'Benimle (şuraya) gelir misin?' anlamında 'Ga je mee (naar)...?' kullanılır.",
+    explanationEn: "'Are you coming along to...?' translates to 'Ga je mee (naar)...?'."
+  },
+  {
+    id: "sum_ch4_1033",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "phrases", "inviting"],
+    questionNl: "Hoe vraag je of iemand ergens trek in heeft of wil doen ('Do you feel like / Are you in the mood to')?",
+    options: ["Heb je zin om...?", "Ga je mee...?", "Zullen we...?"],
+    correctAnswer: "Heb je zin om...?",
+    explanationTr: "'Canın istiyor mu / Keyfin var mı?' anlamında 'Heb je zin om...?' kalıbı kullanılır.",
+    explanationEn: "'Do you feel like / Are you in the mood to...' translates to 'Heb je zin om...?'."
+  },
+  {
+    id: "sum_ch4_1034",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "phrases", "inviting"],
+    questionNl: "Wat is een positieve reactie op 'Zullen we zaterdag afspreken?'?",
+    options: ["Ja, dat kan. / Ja, dat is goed.", "Nee, dat lukt niet.", "Nee, ik heb geen zin."],
+    correctAnswer: "Ja, dat kan. / Ja, dat is goed.",
+    explanationTr: "Teklife olumlu yanıt verirken 'Ja, dat kan.' veya 'Ja, dat is goed.' denir.",
+    explanationEn: "To respond positively, you can say 'Ja, dat kan.' or 'Ja, dat is goed.'."
+  },
+  {
+    id: "sum_ch4_1035",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "phrases", "inviting"],
+    questionNl: "Wat is een negatieve reactie als je het druk hebt of als het niet uitkomt?",
+    options: ["Nee, dat lukt niet.", "Ja, leuk.", "Ja, dat is goed."],
+    correctAnswer: "Nee, dat lukt niet.",
+    explanationTr: "Teklif edilen zaman uymuyorsa 'Nee, dat lukt niet.' (Hayır, uymuyor/olmaz) denir.",
+    explanationEn: "If the time doesn't work for you, you say 'Nee, dat lukt niet.'."
+  },
+  {
+    id: "sum_ch4_1036",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "phrases", "inviting"],
+    questionNl: "Wat zeg je als je de uitnodiging afwijst omdat je al andere plannen hebt?",
+    options: ["Nee, ik heb al een afspraak.", "Nee, dat vind ik niet zo leuk.", "Nee, ik heb geen zin."],
+    correctAnswer: "Nee, ik heb al een afspraak.",
+    explanationTr: "Zaten bir planınız varsa 'Nee, ik heb al een afspraak.' (Hayır, zaten randevum var) denir.",
+    explanationEn: "If you already have plans, you say 'Nee, ik heb al een afspraak.'."
+  },
+  {
+    id: "sum_ch4_1037",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "phrases", "inviting"],
+    questionNl: "Wat zeg je als je wordt uitgenodigd maar je wilt niet (I don't feel like it)?",
+    options: ["Nee, ik heb geen zin.", "Nee, dat lukt niet.", "Ja, goed idee."],
+    correctAnswer: "Nee, ik heb geen zin.",
+    explanationTr: "Canınız istemiyorsa 'Nee, ik heb geen zin.' (Hayır, canım istemiyor) denir.",
+    explanationEn: "If you don't feel like it, you say 'Nee, ik heb geen zin.'."
+  },
+  {
+    id: "sum_ch4_1038",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "phrases", "inviting"],
+    questionNl: "Wat is een enthousiaste, positieve reactie op 'Ga je mee naar de bioscoop?'",
+    options: ["Ja, leuk! / Ja, goed idee!", "Nee, dan kan ik niet.", "Niet zo goed."],
+    correctAnswer: "Ja, leuk! / Ja, goed idee!",
+    explanationTr: "Harika bir fikir olduğunu belirtmek için 'Ja, leuk!' veya 'Ja, goed idee!' denir.",
+    explanationEn: "To respond enthusiastically, use 'Ja, leuk!' or 'Ja, goed idee!'."
+  },
+  {
+    id: "sum_ch4_1039",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "text_comprehension"],
+    questionNl: "Over welk centrum gaat de informatieve tekst op pagina 64-65?",
+    options: ["Talencentrum van de Rijksuniversiteit Groningen", "Een ziekenhuis in Amsterdam", "Een sportschool in Utrecht"],
+    correctAnswer: "Talencentrum van de Rijksuniversiteit Groningen",
+    explanationTr: "Metin Groningen Üniversitesi Dil Merkezi (Talencentrum) hakkındadır.",
+    explanationEn: "The text provides information about the Language Centre (Talencentrum) of the University of Groningen."
+  },
+  {
+    id: "sum_ch4_1040",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "text_comprehension"],
+    questionNl: "Waar kun je de diensten van het Talencentrum vinden volgens de tekst?",
+    options: ["Op de website (www.rug.nl/talencentrum)", "In de bibliotheek", "In het woordenboek"],
+    correctAnswer: "Op de website (www.rug.nl/talencentrum)",
+    explanationTr: "Hizmetler hakkındaki bilgilerin web sitesinde (www.rug.nl/talencentrum) bulunabileceği belirtilir.",
+    explanationEn: "Information about services can be found on their website."
+  },
+  {
+    id: "sum_ch4_1041",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "text_comprehension"],
+    questionNl: "Wat zijn de openingstijden van het secretariaat op maandag t/m vrijdag (behalve de avond op donderdag)?",
+    options: ["12.00-16.00 uur", "9.00-17.00 uur", "12.00-20.00 uur"],
+    correctAnswer: "12.00-16.00 uur",
+    explanationTr: "Pazartesiden Cumaya normal açılış saatleri 12.00-16.00 arasıdır.",
+    explanationEn: "Regular opening hours from Monday to Friday are 12.00-16.00."
+  },
+  {
+    id: "sum_ch4_1042",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "text_comprehension"],
+    questionNl: "Wat is er speciaal aan de openingstijden op donderdag?",
+    options: ["Ze zijn open van 12.00 tot 20.00 uur.", "Ze zijn gesloten.", "Ze openen om 9.00 uur."],
+    correctAnswer: "Ze zijn open van 12.00 tot 20.00 uur.",
+    explanationTr: "Perşembe günleri 12.00 ile 20.00 arasında açıktırlar.",
+    explanationEn: "On Thursdays, they are open from 12.00 to 20.00."
+  },
+  {
+    id: "sum_ch4_1043",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "text_comprehension"],
+    questionNl: "Tot hoe laat is het secretariaat telefonisch bereikbaar op werkdagen?",
+    options: ["Tot 17.00 uur (van 9.00 tot 17.00 uur)", "Tot 16.00 uur", "Tot 20.00 uur"],
+    correctAnswer: "Tot 17.00 uur (van 9.00 tot 17.00 uur)",
+    explanationTr: "Telefonla ulaşılabilirlik saatleri iş günleri 9.00 ile 17.00 arasıdır.",
+    explanationEn: "They are reachable by phone on workdays from 9.00 to 17.00."
+  },
+  {
+    id: "sum_ch4_1044",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "text_comprehension"],
+    questionNl: "Wat moet je doen als je vragen niet worden beantwoord op de website?",
+    options: ["Een e-mail sturen", "Naar de winkel gaan", "Een brief schrijven"],
+    correctAnswer: "Een e-mail sturen",
+    explanationTr: "Eğer sorularınıza web sitesinde yanıt bulamazsanız, e-posta göndermeniz istenir.",
+    explanationEn: "If your questions are not answered on the website, you should send an e-mail."
+  },
+  {
+    id: "sum_ch4_1045",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "vocabulary"],
+    questionNl: "Wat betekent het woord 'bereikbaar' in de tekst?",
+    options: ["reachable / accessible", "closed", "expensive"],
+    correctAnswer: "reachable / accessible",
+    explanationTr: "'bereikbaar' ulaşılabilir / erişilebilir (reachable/accessible) demektir.",
+    explanationEn: "'bereikbaar' means reachable or accessible."
+  },
+  {
+    id: "sum_ch4_1046",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "vocabulary"],
+    questionNl: "Wat betekent 'het plan' in het Engels?",
+    options: ["the plan", "the shop", "the street"],
+    correctAnswer: "the plan",
+    explanationTr: "'het plan' plan demektir.",
+    explanationEn: "'het plan' translates to 'the plan'."
+  },
+  {
+    id: "sum_ch4_1047",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "vocabulary"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'romantic'?",
+    options: ["romantische (romantisch)", "prachtig", "belangrijk"],
+    correctAnswer: "romantische (romantisch)",
+    explanationTr: "'romantische' romantik (romantic) anlamına gelir.",
+    explanationEn: "'romantische' translates to 'romantic'."
+  },
+  {
+    id: "sum_ch4_1048",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "vocabulary"],
+    questionNl: "Wat betekent 'de datum'?",
+    options: ["the date", "the data", "the time"],
+    correctAnswer: "the date",
+    explanationTr: "'de datum' tarih (date) demektir.",
+    explanationEn: "'de datum' means 'the date'."
+  },
+  {
+    id: "sum_ch4_1049",
+    type: "fill_in",
+    tags: ["summary_ch4", "grammar", "zullen"],
+    questionNl: "Vul het juiste woord in (Zal of Zullen): '___ we morgen naar de film gaan?'",
+    correctAnswer: "Zullen",
+    explanationTr: "Özne 'we' (biz) olduğu için öneri cümlesi 'Zullen' ile başlar.",
+    explanationEn: "With the subject 'we', the suggestion starts with 'Zullen'."
+  },
+  {
+    id: "sum_ch4_1050",
+    type: "fill_in",
+    tags: ["summary_ch4", "grammar", "zullen"],
+    questionNl: "Vul het juiste woord in (Zal of Zullen): '___ ik de rekening betalen?'",
+    correctAnswer: "Zal",
+    explanationTr: "Özne 'ik' (ben) olduğu için teklif cümlesi 'Zal' ile başlar.",
+    explanationEn: "With the subject 'ik', the offer starts with 'Zal'."
+  },
+  {
+    id: "sum_ch4_1051",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "vocabulary"],
+    questionNl: "Wat betekent het woord 'tot dan'?",
+    options: ["until then", "see you later", "goodbye"],
+    correctAnswer: "until then",
+    explanationTr: "'tot dan' o zamana kadar / o zaman görüşürüz (until then) demektir.",
+    explanationEn: "'tot dan' translates to 'until then'."
+  },
+  {
+    id: "sum_ch4_1052",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "vocabulary"],
+    questionNl: "Wat betekent 'fijne' in de zin 'fijne vakantie'?",
+    options: ["nice / good", "bad", "long"],
+    correctAnswer: "nice / good",
+    explanationTr: "'fijne' iyi / güzel (nice/good) anlamına gelir.",
+    explanationEn: "'fijne' translates to 'nice' or 'good'."
+  },
+  {
+    id: "sum_ch4_1053",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "culture"],
+    questionNl: "Is het in Nederland gebruikelijk om een afspraak te maken als je bij vrienden wilt gaan eten?",
+    options: ["Ja, het is gebruikelijk om een afspraak te maken.", "Nee, je kunt altijd onverwacht langskomen.", "Alleen in het weekend."],
+    correctAnswer: "Ja, het is gebruikelijk om een afspraak te maken.",
+    explanationTr: "Hollanda kültüründe arkadaşlara yemeğe giderken önceden buluşma/randevu ayarlamak yaygındır.",
+    explanationEn: "In Dutch culture, it is common to make an appointment before visiting friends for dinner."
+  },
+  {
+    id: "sum_ch4_1054",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "vocabulary"],
+    questionNl: "Wat betekent de uitdrukking 'vind ik ook' in de dialoog?",
+    options: ["I think so too / I agree", "I don't know", "I can't find it"],
+    correctAnswer: "I think so too / I agree",
+    explanationTr: "'vind ik ook' bence de öyle / katılıyorum (I think so too) anlamına gelir.",
+    explanationEn: "'vind ik ook' translates to 'I think so too' or 'I agree'."
+  },
+  {
+    id: "sum_ch4_1055",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "vocabulary"],
+    questionNl: "Wat is de betekenis van het werkwoord 'kijken naar'?",
+    options: ["look at / watch", "listen to", "talk about"],
+    correctAnswer: "look at / watch",
+    explanationTr: "'kijken naar' bir şeye bakmak veya izlemek (look at / watch) demektir.",
+    explanationEn: "'kijken naar' means to look at or watch."
+  },
+  {
+    id: "sum_ch4_1056",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "vocabulary"],
+    questionNl: "Wat is de betekenis van 'iets' in de zin 'Zullen we direct iets afspreken?'",
+    options: ["something", "nothing", "everything"],
+    correctAnswer: "something",
+    explanationTr: "'iets' bir şey (something) demektir.",
+    explanationEn: "'iets' translates to 'something'."
+  },
+  
+  
+  //////////////////sadas////////////5
+  {
+    id: "sum_ch5_1000",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "vocabulary", "shopping"],
+    questionNl: "Wat betekent 'boodschappen doen' in het Engels?",
+    options: ["go shopping / grocery shopping", "do homework", "cook dinner"],
+    correctAnswer: "go shopping / grocery shopping",
+    explanationTr: "'boodschappen doen' market/pazar alışverişi yapmak (go shopping) demektir[cite: 1].",
+    explanationEn: "'boodschappen doen' translates to 'go shopping' or 'grocery shopping'[cite: 1]."
+  },
+  {
+    id: "sum_ch5_1001",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "vocabulary", "professions"],
+    questionNl: "Wat is 'de groenteboer' in het Engels?",
+    options: ["greengrocer", "butcher", "baker"],
+    correctAnswer: "greengrocer",
+    explanationTr: "'de groenteboer' manav (greengrocer) demektir[cite: 1].",
+    explanationEn: "'de groenteboer' means 'greengrocer'[cite: 1]."
+  },
+  {
+    id: "sum_ch5_1002",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "vocabulary", "vegetables"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'courgette/zucchini'?",
+    options: ["de courgette", "de komkommer", "de aubergine"],
+    correctAnswer: "de courgette",
+    explanationTr: "Kabak kelimesi Hollandacada 'de courgette' olarak geçer[cite: 1].",
+    explanationEn: "Courgette/zucchini translates to 'de courgette'[cite: 1]."
+  },
+  {
+    id: "sum_ch5_1003",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "vocabulary", "vegetables"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'cauliflower'?",
+    options: ["de bloemkool", "de boerenkool", "de rode kool"],
+    correctAnswer: "de bloemkool",
+    explanationTr: "Karnabahar Hollandacada 'de bloemkool' olarak adlandırılır[cite: 1, 2].",
+    explanationEn: "Cauliflower translates to 'de bloemkool'[cite: 1, 2]."
+  },
+  {
+    id: "sum_ch5_1004",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "vocabulary", "vegetables"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'garlic'?",
+    options: ["de knoflook", "de ui", "de prei"],
+    correctAnswer: "de knoflook",
+    explanationTr: "Sarımsak Hollandacada 'de knoflook' kelimesiyle ifade edilir[cite: 1, 2].",
+    explanationEn: "Garlic translates to 'de knoflook'[cite: 1, 2]."
+  },
+  {
+    id: "sum_ch5_1005",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "vocabulary", "vegetables"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'onion'?",
+    options: ["de ui", "de knoflook", "de wortel"],
+    correctAnswer: "de ui",
+    explanationTr: "Soğan Hollandacada 'de ui' olarak geçer[cite: 2].",
+    explanationEn: "Onion translates to 'de ui'[cite: 2]."
+  },
+  {
+    id: "sum_ch5_1006",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "vocabulary", "vegetables"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'carrot'?",
+    options: ["de wortel", "de aardappel", "de tomaat"],
+    correctAnswer: "de wortel",
+    explanationTr: "Havuç Hollandacada 'de wortel' demektir[cite: 2].",
+    explanationEn: "Carrot translates to 'de wortel'[cite: 2]."
+  },
+  {
+    id: "sum_ch5_1007",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "vocabulary", "fruit"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'strawberry'?",
+    options: ["de aardbei", "de kers", "de druif"],
+    correctAnswer: "de aardbei",
+    explanationTr: "Çilek Hollandacada 'de aardbei' olarak geçer[cite: 2].",
+    explanationEn: "Strawberry translates to 'de aardbei'[cite: 2]."
+  },
+  {
+    id: "sum_ch5_1008",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "vocabulary", "fruit"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'pear'?",
+    options: ["de peer", "de appel", "de perzik"],
+    correctAnswer: "de peer",
+    explanationTr: "Armut Hollandacada 'de peer' demektir[cite: 2].",
+    explanationEn: "Pear translates to 'de peer'[cite: 2]."
+  },
+  {
+    id: "sum_ch5_1009",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "vocabulary", "fruit"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'orange' (fruit)?",
+    options: ["de sinaasappel", "de mandarijn", "de banaan"],
+    correctAnswer: "de sinaasappel",
+    explanationTr: "Portakal Hollandacada 'de sinaasappel' olarak geçer[cite: 2].",
+    explanationEn: "Orange translates to 'de sinaasappel'[cite: 2]."
+  },
+  {
+    id: "sum_ch5_1010",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "vocabulary", "packaging"],
+    questionNl: "Wat is 'het bakje' in het Engels?",
+    options: ["punnet / small container", "bag", "box"],
+    correctAnswer: "punnet / small container",
+    explanationTr: "Meyve/sebze satılan küçük plastik/karton kaplara 'het bakje' denir (punnet/small container)[cite: 1].",
+    explanationEn: "'het bakje' translates to a punnet or small container[cite: 1]."
+  },
+  {
+    id: "sum_ch5_1011",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "vocabulary", "packaging"],
+    questionNl: "Wat is 'het bosje' (bijv. een bosje peterselie)?",
+    options: ["bunch", "slice", "piece"],
+    correctAnswer: "bunch",
+    explanationTr: "'het bosje' demet/bağ (bunch) anlamına gelir (örneğin bir demet maydanoz)[cite: 1].",
+    explanationEn: "'het bosje' translates to a bunch (e.g., a bunch of parsley)[cite: 1]."
+  },
+  {
+    id: "sum_ch5_1012",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "vocabulary", "professions"],
+    questionNl: "Wat is 'de slager' in het Engels?",
+    options: ["butcher", "baker", "greengrocer"],
+    correctAnswer: "butcher",
+    explanationTr: "'de slager' kasap (butcher) demektir[cite: 1].",
+    explanationEn: "'de slager' translates to butcher[cite: 1]."
+  },
+  {
+    id: "sum_ch5_1013",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "vocabulary"],
+    questionNl: "Wat betekent het woord 'buitenlanders'?",
+    options: ["foreigners", "locals", "neighbors"],
+    correctAnswer: "foreigners",
+    explanationTr: "'buitenlanders' yabancılar (foreigners) demektir[cite: 1].",
+    explanationEn: "'buitenlanders' translates to foreigners[cite: 1]."
+  },
+  {
+    id: "sum_ch5_1014",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "vocabulary", "phrases"],
+    questionNl: "Hoe vraag je 'Who's next?' in een winkel of op de markt?",
+    options: ["Wie is er aan de beurt?", "Wie is dat?", "Wat wil je kopen?"],
+    correctAnswer: "Wie is er aan de beurt?",
+    explanationTr: "Sıranın kimde olduğunu sormak için 'Wie is er aan de beurt?' kullanılır[cite: 1].",
+    explanationEn: "To ask 'Who's next?', you say 'Wie is er aan de beurt?'[cite: 1]."
+  },
+  {
+    id: "sum_ch5_1015",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "vocabulary", "phrases"],
+    questionNl: "Wat zegt een verkoper om te vragen wat je wilt hebben ('Go ahead / tell me')?",
+    options: ["Zeg het maar.", "Dat was het?", "Hoeveel kost het?"],
+    correctAnswer: "Zeg het maar.",
+    explanationTr: "Satıcılar size söz vermek ve siparişinizi sormak için 'Zeg het maar' (Buyrun/Söyleyin) derler[cite: 1].",
+    explanationEn: "Shopkeepers use 'Zeg het maar' to mean 'Go ahead / tell me your order'[cite: 1]."
+  },
+  {
+    id: "sum_ch5_1016",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "vocabulary", "phrases"],
+    questionNl: "Hoe vraagt een verkoper 'Anything else?' in het Nederlands?",
+    options: ["Anders nog iets? / Verder nog iets?", "Wie is er aan de beurt?", "Geef het maar."],
+    correctAnswer: "Anders nog iets? / Verder nog iets?",
+    explanationTr: "Başka bir şey isteyip istemediğinizi sormak için 'Anders nog iets?' veya 'Verder nog iets?' kullanılır[cite: 1].",
+    explanationEn: "To ask 'Anything else?', shopkeepers use 'Anders nog iets?' or 'Verder nog iets?'[cite: 1]."
+  },
+  {
+    id: "sum_ch5_1017",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "vocabulary", "phrases"],
+    questionNl: "Hoe vraagt een verkoper 'Was that all?'",
+    options: ["Dat was het?", "Anders nog iets?", "Hoeveel?"],
+    correctAnswer: "Dat was het?",
+    explanationTr: "Siparişinizin bitip bitmediğini teyit etmek için 'Dat was het?' (Hepsi bu kadar mı?) derler[cite: 1].",
+    explanationEn: "To ask 'Was that all?', they say 'Dat was het?'[cite: 1]."
+  },
+  {
+    id: "sum_ch5_1018",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "dialogue", "comprehension"],
+    questionNl: "Met wie praat Hans op de markt in hoofdstuk 5?",
+    options: ["Met Jasper, de groenteboer.", "Met Tim, de kok.", "Met zijn buren."],
+    correctAnswer: "Met Jasper, de groenteboer.",
+    explanationTr: "Diyalogda Hans, manav Jasper (de groenteboer) ile konuşmaktadır[cite: 1].",
+    explanationEn: "In the dialogue, Hans is talking to Jasper, the greengrocer[cite: 1]."
+  },
+  {
+    id: "sum_ch5_1019",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "dialogue", "comprehension"],
+    questionNl: "Waarom koopt Hans andijvie op de markt?",
+    options: ["Hij wil een typisch Nederlands gerecht maken voor zijn buitenlandse buren.", "Hij is op dieet.", "Hij gaat een salade maken voor zichzelf."],
+    correctAnswer: "Hij wil een typisch Nederlands gerecht maken voor zijn buitenlandse buren.",
+    explanationTr: "Hans, yabancı komşuları için tipik bir Hollanda yemeği (stamppot andijvie) yapmak amacıyla andijvie alır[cite: 1].",
+    explanationEn: "Hans buys endive because he wants to make a typical Dutch dish for his foreign neighbors[cite: 1]."
+  },
+  {
+    id: "sum_ch5_1020",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "dialogue", "comprehension"],
+    questionNl: "Waar moet Hans de 'spekjes' (bacon) kopen volgens Jasper?",
+    options: ["Bij de slager", "Bij de bakker", "Op het postkantoor"],
+    correctAnswer: "Bij de slager",
+    explanationTr: "Jasper, Hans'a pastırmaları (spekjes) kasaptan (de slager) alması gerektiğini söyler[cite: 1].",
+    explanationEn: "Jasper tells Hans he needs to go to the butcher (de slager) for the bacon[cite: 1]."
+  },
+  {
+    id: "sum_ch5_1021",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "dialogue", "comprehension"],
+    questionNl: "Waar gaat Hans volgende week naartoe op vakantie?",
+    options: ["Venetië", "Parijs", "Londen"],
+    correctAnswer: "Venetië",
+    explanationTr: "Diyalogda Hans'ın haftaya Venedik'e (Venetië) tatile gideceği belirtilir[cite: 1].",
+    explanationEn: "The dialogue mentions that Hans is going on holiday to Venice (Venetië) next week[cite: 1]."
+  },
+  {
+    id: "sum_ch5_1022",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "grammar", "plurals"],
+    questionNl: "Hoe vorm je het meervoud (pluralis) van 'de tomaat'?",
+    options: ["de tomaten", "de tomaats", "de tomaten's"],
+    correctAnswer: "de tomaten",
+    explanationTr: "Hollandacada 'tomaat' kelimesinin çoğulu '-en' eki alarak 'tomaten' olur[cite: 2].",
+    explanationEn: "The plural of 'tomaat' takes '-en' to become 'tomaten'[cite: 2]."
+  },
+  {
+    id: "sum_ch5_1023",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "grammar", "plurals"],
+    questionNl: "Hoe vorm je het meervoud (pluralis) van 'de persoon'?",
+    options: ["de personen", "de persoons", "de personens"],
+    correctAnswer: "de personen",
+    explanationTr: "'persoon' kelimesinin çoğulu '-en' eki alarak 'personen' olur[cite: 2].",
+    explanationEn: "The plural of 'persoon' takes '-en' to become 'personen'[cite: 2]."
+  },
+  {
+    id: "sum_ch5_1024",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "grammar", "plurals"],
+    questionNl: "Hoe vorm je het meervoud (pluralis) van 'de buitenlander'?",
+    options: ["de buitenlanders", "de buitenlanderen", "de buitenlander's"],
+    correctAnswer: "de buitenlanders",
+    explanationTr: "'buitenlander' gibi '-er' ile biten kelimeler çoğulda genellikle '-s' alır: buitenlanders[cite: 2].",
+    explanationEn: "Words ending in '-er' like 'buitenlander' usually take '-s' for plural: buitenlanders[cite: 2]."
+  },
+  {
+    id: "sum_ch5_1025",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "grammar", "plurals"],
+    questionNl: "Hoe vorm je het meervoud van 'de komkommer'?",
+    options: ["de komkommers", "de komkommeren", "de komkommer's"],
+    correctAnswer: "de komkommers",
+    explanationTr: "'komkommer' kelimesinin çoğulu '-s' alarak 'komkommers' olur[cite: 2].",
+    explanationEn: "The plural of 'komkommer' takes '-s' to become 'komkommers'[cite: 2]."
+  },
+  {
+    id: "sum_ch5_1026",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "grammar", "plurals"],
+    questionNl: "Wat is het meervoud van diminutieven (verkleinwoorden) zoals 'het spekje' en 'het boontje'?",
+    options: ["de spekjes, de boontjes", "de spekjen, de boontjen", "de spekje's, de boontje's"],
+    correctAnswer: "de spekjes, de boontjes",
+    explanationTr: "Bütün küçültme sözcükleri (diminutief) çoğul yapıldığında '-s' alır (spekjes, boontjes)[cite: 2].",
+    explanationEn: "All diminutives take '-s' in the plural (spekjes, boontjes)[cite: 2]."
+  },
+  {
+    id: "sum_ch5_1027",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "grammar", "plurals"],
+    questionNl: "Hoe vorm je het meervoud van woorden die eindigen op een lange klinker zoals 'de paprika' en 'de foto'?",
+    options: ["de paprika's, de foto's", "de paprikas, de fotos", "de paprikaen, de fotoen"],
+    correctAnswer: "de paprika's, de foto's",
+    explanationTr: "Uzun ünlü harfle biten kelimeler çoğul yapıldığında kesme işareti ve s (-'s) alır: paprika's, foto's[cite: 2].",
+    explanationEn: "Words ending in a long vowel take an apostrophe and s (-'s) in the plural: paprika's, foto's[cite: 2]."
+  },
+  {
+    id: "sum_ch5_1028",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "grammar", "plurals", "exceptions"],
+    questionNl: "Welke regel geldt voor maat- en tijdwoorden zoals cent, jaar, uur, euro en kilo als ze achter een getal staan?",
+    options: ["Ze krijgen geen meervoudsvorm (geen pluralis).", "Ze krijgen altijd een -s.", "Ze krijgen altijd een -en."],
+    correctAnswer: "Ze krijgen geen meervoudsvorm (geen pluralis).",
+    explanationTr: "Ölçü ve zaman bildiren cent, jaar, uur, euro ve kilo kelimeleri bir sayıdan sonra geldiklerinde çoğul eki almazlar.",
+    explanationEn: "Measurement and time words like cent, jaar, uur, euro, and kilo do not take a plural form when following a number."
+  },
+  {
+    id: "sum_ch5_1029",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "grammar", "plurals", "exceptions"],
+    questionNl: "Wat is de correcte manier om 'two kilos' te schrijven in het Nederlands?",
+    options: ["twee kilo", "twee kilo's", "twee kilos"],
+    correctAnswer: "twee kilo",
+    explanationTr: "'kilo' ölçü birimi çoğul eki almaz, 'twee kilo' olarak yazılır.",
+    explanationEn: "'kilo' as a unit of measurement does not take a plural suffix, it is written as 'twee kilo'."
+  },
+  {
+    id: "sum_ch5_1030",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "grammar", "plurals", "exceptions"],
+    questionNl: "Wat is de correcte manier om 'eight euros' te schrijven in het Nederlands?",
+    options: ["acht euro", "acht euro's", "acht euros"],
+    correctAnswer: "acht euro",
+    explanationTr: "'euro' para birimi miktar belirtirken çoğul eki almaz, 'acht euro' olur.",
+    explanationEn: "The currency 'euro' does not take a plural suffix when stating amounts, it remains 'acht euro'."
+  },
+  {
+    id: "sum_ch5_1031",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "grammar", "plurals", "exceptions"],
+    questionNl: "Wat is de correcte manier om 'twenty years' te schrijven in het Nederlands?",
+    options: ["twintig jaar", "twintig jaren", "twintig jaars"],
+    correctAnswer: "twintig jaar",
+    explanationTr: "'jaar' zaman bildiren kelimesi miktar belirtirken çoğul eki almaz, 'twintig jaar' olur.",
+    explanationEn: "The time word 'jaar' does not take a plural suffix when stating amounts, it is 'twintig jaar'."
+  },
+  {
+    id: "sum_ch5_1032",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "grammar", "adjectives"],
+    questionNl: "Wanneer krijgt het adjectief (bijvoeglijk naamwoord) GEEN -e op het einde?",
+    options: ["Bij 'een' + het-woord in het enkelvoud (bijv. een klein bosje).", "Bij 'de' + de-woord (bijv. de kleine courgette).", "In het meervoud (bijv. kleine courgettes)."],
+    correctAnswer: "Bij 'een' + het-woord in het enkelvoud (bijv. een klein bosje).",
+    explanationTr: "Sıfatlar yalnızca 'een + het-woord' (veya artikelsiz het-woord) durumunda sonuna -e almaz. Diğer tüm tanımlayıcı durumlarda -e alır.",
+    explanationEn: "Adjectives do NOT get an -e ONLY when used with 'een' (or no article) before a singular het-word."
+  },
+  {
+    id: "sum_ch5_1033",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "grammar", "adjectives"],
+    questionNl: "Kies de juiste combinatie voor het de-woord 'courgette' met het adjectief 'klein' en het artikel 'de':",
+    options: ["de kleine courgette", "de klein courgette", "het kleine courgette"],
+    correctAnswer: "de kleine courgette",
+    explanationTr: "'de-woord' olan kelimelerde sıfat her zaman -e eki alır: de kleine courgette.",
+    explanationEn: "With de-words, the adjective always gets an -e: de kleine courgette."
+  },
+  {
+    id: "sum_ch5_1034",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "grammar", "adjectives"],
+    questionNl: "Kies de juiste combinatie voor het het-woord 'bosje' met het adjectief 'klein' en het artikel 'het':",
+    options: ["het kleine bosje", "het klein bosje", "een kleine bosje"],
+    correctAnswer: "het kleine bosje",
+    explanationTr: "Belirli (definite) 'het' artikeli kullanıldığında sıfat -e eki alır: het kleine bosje.",
+    explanationEn: "When using the definite article 'het', the adjective gets an -e: het kleine bosje."
+  },
+  {
+    id: "sum_ch5_1035",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "grammar", "adjectives"],
+    questionNl: "Kies de juiste combinatie voor het het-woord 'bosje' met het adjectief 'klein' en het artikel 'een':",
+    options: ["een klein bosje", "een kleine bosje", "het klein bosje"],
+    correctAnswer: "een klein bosje",
+    explanationTr: "Belgisiz (indefinite) 'een' artikeli ile 'het-woord' kullanıldığında sıfat -e EKİ ALMAZ: een klein bosje.",
+    explanationEn: "When using the indefinite 'een' with a het-word, the adjective DOES NOT get an -e: een klein bosje."
+  },
+  {
+    id: "sum_ch5_1036",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "grammar", "adjectives"],
+    questionNl: "Kies de juiste combinatie voor het meervoud (pluralis) 'tomaten' met het adjectief 'mooi':",
+    options: ["mooie tomaten", "mooi tomaten", "moois tomaten"],
+    correctAnswer: "mooie tomaten",
+    explanationTr: "Çoğul isimlerin önündeki sıfatlar her zaman -e eki alır: mooie tomaten.",
+    explanationEn: "Adjectives before plural nouns always get an -e: mooie tomaten."
+  },
+  {
+    id: "sum_ch5_1037",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "grammar", "adjectives"],
+    questionNl: "Hoe schrijf je het adjectief als het ná het zelfstandig naamwoord staat en er een vorm van 'zijn' tussen staat? (Predicatief gebruik: De courgette is ...)",
+    options: ["De courgette is klein.", "De courgette is kleine.", "De courgette is kleintje."],
+    correctAnswer: "De courgette is klein.",
+    explanationTr: "Sıfat ismin önünde değil de cümlenin sonunda yüklem (predicative) olarak kullanıldığında -e eki almaz: De courgette is klein.",
+    explanationEn: "When the adjective is used predicatively (after the noun and verb 'zijn'), it does not get an -e: De courgette is klein."
+  },
+  {
+    id: "sum_ch5_1038",
+    type: "fill_in",
+    tags: ["summary_ch5", "grammar", "adjectives"],
+    questionNl: "Kies de juiste vorm (goed of goede): 'Dat is een ___ idee.' (Let op: het idee)",
+    correctAnswer: "goed",
+    explanationTr: "'het idee' bir het-woord'dur. 'een' ile kullanıldığında sıfat ek almaz: een goed idee.",
+    explanationEn: "'het idee' is a het-word. With 'een', the adjective takes no -e: een goed idee."
+  },
+  {
+    id: "sum_ch5_1039",
+    type: "fill_in",
+    tags: ["summary_ch5", "grammar", "adjectives"],
+    questionNl: "Kies de juiste vorm (lekker of lekkere): 'Ha, een ___ kopje koffie!' (Let op: het kopje)",
+    correctAnswer: "lekker",
+    explanationTr: "'het kopje' bir diminutief yani het-woord'dur. 'een' ile sıfat ek almaz: een lekker kopje.",
+    explanationEn: "'het kopje' is a diminutive (het-word). With 'een', the adjective takes no -e: een lekker kopje."
+  },
+  {
+    id: "sum_ch5_1040",
+    type: "fill_in",
+    tags: ["summary_ch5", "grammar", "adjectives"],
+    questionNl: "Kies de juiste vorm (Arabisch of Arabische): 'Irene heeft een ___ achternaam.' (Let op: de achternaam)",
+    correctAnswer: "Arabische",
+    explanationTr: "'de achternaam' de-woord'dur. de-woord'lerde sıfat her zaman -e alır: een Arabische achternaam.",
+    explanationEn: "'de achternaam' is a de-word. With de-words, the adjective always gets an -e: een Arabische achternaam."
+  },
+  {
+    id: "sum_ch5_1041",
+    type: "fill_in",
+    tags: ["summary_ch5", "grammar", "adjectives"],
+    questionNl: "Kies de juiste vorm (groot of grote): 'Hans komt uit een ___ gezin.' (Let op: het gezin)",
+    correctAnswer: "groot",
+    explanationTr: "'het gezin' bir het-woord'dur. 'een' ile kullanıldığında sıfat ek almaz: een groot gezin.",
+    explanationEn: "'het gezin' is a het-word. With 'een', the adjective takes no -e: een groot gezin."
+  },
+  {
+    id: "sum_ch5_1042",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "grammar", "imperative"],
+    questionNl: "Hoe vorm je de neutraal (gewone) imperatief (gebiedende wijs) in het Nederlands?",
+    options: ["Door alleen de stam van het werkwoord te gebruiken (bijv. Zeg, Doe).", "Door de hele infinitief te gebruiken (bijv. Zeggen, Doen).", "Door de stam + t te gebruiken (bijv. Zegt, Doet)."],
+    correctAnswer: "Door alleen de stam van het werkwoord te gebruiken (bijv. Zeg, Doe).",
+    explanationTr: "Hollandacada standart emir kipi fiilin kök (stam) halinin kullanılmasıyla oluşturulur: Zeg het maar, Doe maar.",
+    explanationEn: "The standard imperative in Dutch is formed using just the stem of the verb: Zeg het maar, Doe maar."
+  },
+  {
+    id: "sum_ch5_1043",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "grammar", "imperative"],
+    questionNl: "Hoe maak je een imperatief (bevel) vriendelijker in het Nederlands?",
+    options: ["Door woordjes als 'maar, even, eens' toe te voegen.", "Door te schreeuwen.", "Door de verleden tijd te gebruiken."],
+    correctAnswer: "Door woordjes als 'maar, even, eens' toe te voegen.",
+    explanationTr: "Emir cümlelerini daha nazik ve samimi hale getirmek için 'maar, even, eens' gibi küçük kelimeler (particles) eklenir.",
+    explanationEn: "To make an imperative more friendly and polite, particles like 'maar, even, eens' are added."
+  },
+  {
+    id: "sum_ch5_1044",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "grammar", "imperative"],
+    questionNl: "Hoe vorm je een zeer beleefde (polite) imperatief met 'u'?",
+    options: ["Stam + t + u (bijv. Doet u maar een kilo aardappels.)", "Stam + u (bijv. Doe u maar...)", "Infinitief + u (bijv. Doen u maar...)"],
+    correctAnswer: "Stam + t + u (bijv. Doet u maar een kilo aardappels.)",
+    explanationTr: "Çok resmi ve kibar rica cümlelerinde 'stam + t + u' yapısı kullanılır: Doet u maar....",
+    explanationEn: "For very polite imperatives with 'u', the structure 'stem + t + u' is used: Doet u maar...."
+  },
+  {
+    id: "sum_ch5_1045",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "text_comprehension"],
+    questionNl: "Wat is 'stamppot' precies volgens de context van de les?",
+    options: ["Een gerecht met gestampte aardappels en groenten (mashed potato and vegetables).", "Een soort Italiaanse pasta.", "Een traditionele Franse soep."],
+    correctAnswer: "Een gerecht met gestampte aardappels en groenten (mashed potato and vegetables).",
+    explanationTr: "'stamppot' patates ve sebzelerin ezilerek karıştırıldığı tipik bir Hollanda yemeğidir[cite: 1].",
+    explanationEn: "'stamppot' is a typical Dutch dish made of mashed potatoes and vegetables[cite: 1]."
+  },
+  {
+    id: "sum_ch5_1046",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "text_comprehension"],
+    questionNl: "Welk gerecht maken Tim en Jorik in de tekst 'Echte Hollandse winterkost'?",
+    options: ["Andijviestamppot met spekjes", "Spaghetti carbonara", "Pizza Margherita"],
+    correctAnswer: "Andijviestamppot met spekjes",
+    explanationTr: "Metne göre Tim ve Jorik 'Andijviestamppot met spekjes' (pastırmalı hindiba ezmesi) yapmaktadır.",
+    explanationEn: "According to the text, Tim and Jorik are making 'Andijviestamppot met spekjes'."
+  },
+  {
+    id: "sum_ch5_1047",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "text_comprehension"],
+    questionNl: "Hoeveel tijd kost het koken van de aardappels volgens de tekst?",
+    options: ["20 minuten", "1 uur", "5 minuten"],
+    correctAnswer: "20 minuten",
+    explanationTr: "Tarifte patateslerin pişmesinin yaklaşık 20 dakika (20 minuten gaar) sürdüğü belirtilmiştir.",
+    explanationEn: "The recipe states that the potatoes need to boil for about 20 minutes."
+  },
+  {
+    id: "sum_ch5_1048",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "text_comprehension", "imperative"],
+    questionNl: "Wat betekent de kookinstructie 'schil de aardappels'?",
+    options: ["Peel the potatoes", "Boil the potatoes", "Mash the potatoes"],
+    correctAnswer: "Peel the potatoes",
+    explanationTr: "'schillen' fiili soymak demektir; 'schil de aardappels' patatesleri soy anlamına gelir.",
+    explanationEn: "'schillen' means to peel; 'schil de aardappels' translates to peel the potatoes."
+  },
+  {
+    id: "sum_ch5_1049",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "text_comprehension", "imperative"],
+    questionNl: "Wat betekent de kookinstructie 'roer' (bijv. melk erdoor roeren)?",
+    options: ["stir", "bake", "cut"],
+    correctAnswer: "stir",
+    explanationTr: "'roeren' fiili karıştırmak (stir) demektir.",
+    explanationEn: "'roeren' translates to stir."
+  },
+  {
+    id: "sum_ch5_1050",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "vocabulary"],
+    questionNl: "Wat betekent het woord 'heerlijk'?",
+    options: ["delicious / wonderful", "expensive", "ugly"],
+    correctAnswer: "delicious / wonderful",
+    explanationTr: "'heerlijk' lezzetli veya harika (delicious / wonderful) anlamına gelir[cite: 1].",
+    explanationEn: "'heerlijk' translates to delicious or wonderful[cite: 1]."
+  },
+  {
+    id: "sum_ch5_1051",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "vocabulary"],
+    questionNl: "Wat is de betekenis van het woord 'ongeveer'?",
+    options: ["about / approximately", "exactly", "never"],
+    correctAnswer: "about / approximately",
+    explanationTr: "'ongeveer' yaklaşık / takriben (about / approximately) demektir[cite: 1].",
+    explanationEn: "'ongeveer' means about or approximately[cite: 1]."
+  },
+  {
+    id: "sum_ch5_1052",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "culture"],
+    questionNl: "Wat is een bekende culturele gewoonte over etenstijd in Nederland (zoals indirect besproken in het cultuurdeel)?",
+    options: ["Nederlanders eten vaak relatief vroeg in de avond (rond 18.00 uur).", "Nederlanders eten warm om 22.00 uur 's avonds.", "Nederlanders eten nooit stamppot."],
+    correctAnswer: "Nederlanders eten vaak relatief vroeg in de avond (rond 18.00 uur).",
+    explanationTr: "Hollandalılar genellikle akşam yemeğini nispeten erken saatlerde (yaklaşık 18:00 civarı) yerler.",
+    explanationEn: "Dutch people generally eat their dinner relatively early in the evening, around 18:00."
+  },
+  
+  //////////////////sadas////////////6
+  {
+    id: "sum_ch6_1000",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "vocabulary", "restaurant"],
+    questionNl: "Wat betekent 'de serveerster' in het Engels?",
+    options: ["waitress", "waiter", "customer"],
+    correctAnswer: "waitress",
+    explanationTr: "'de serveerster' kadın garson (waitress) demektir[cite: 1].",
+    explanationEn: "'de serveerster' translates to 'waitress'[cite: 1]."
+  },
+  {
+    id: "sum_ch6_1001",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "vocabulary", "restaurant"],
+    questionNl: "Wat betekent 'de menukaart'?",
+    options: ["menu", "bill", "table"],
+    correctAnswer: "menu",
+    explanationTr: "'de menukaart' menü (menu) anlamına gelir[cite: 1].",
+    explanationEn: "'de menukaart' means 'menu'[cite: 1]."
+  },
+  {
+    id: "sum_ch6_1002",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "vocabulary", "drinks"],
+    questionNl: "Wat is 'het mineraalwater' in het Engels?",
+    options: ["mineral water", "tap water", "soda"],
+    correctAnswer: "mineral water",
+    explanationTr: "'het mineraalwater' maden suyu (mineral water) demektir[cite: 1].",
+    explanationEn: "'het mineraalwater' translates to 'mineral water'[cite: 1]."
+  },
+  {
+    id: "sum_ch6_1003",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "vocabulary"],
+    questionNl: "Wat betekent 'Ik heb dorst'?",
+    options: ["I'm thirsty", "I'm hungry", "I'm tired"],
+    correctAnswer: "I'm thirsty",
+    explanationTr: "'Ik heb dorst' susadım (I'm thirsty) demektir[cite: 1].",
+    explanationEn: "'Ik heb dorst' means 'I'm thirsty'[cite: 1]."
+  },
+  {
+    id: "sum_ch6_1004",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "vocabulary"],
+    questionNl: "Wat betekent 'Ik heb honger'?",
+    options: ["I'm hungry", "I'm thirsty", "I'm angry"],
+    correctAnswer: "I'm hungry",
+    explanationTr: "'Ik heb honger' acıktım (I'm hungry) demektir[cite: 1].",
+    explanationEn: "'Ik heb honger' means 'I'm hungry'[cite: 1]."
+  },
+  {
+    id: "sum_ch6_1005",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "vocabulary", "courses"],
+    questionNl: "Welke gang eet je als eerste in een restaurant?",
+    options: ["het voorgerecht", "het hoofdgerecht", "het nagerecht"],
+    correctAnswer: "het voorgerecht",
+    explanationTr: "Yemeklerin ilk servisine başlangıç (het voorgerecht / starter) denir[cite: 1, 2].",
+    explanationEn: "The first course is the starter (het voorgerecht)[cite: 1, 2]."
+  },
+  {
+    id: "sum_ch6_1006",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "vocabulary", "courses"],
+    questionNl: "Wat is 'het hoofdgerecht'?",
+    options: ["main course", "starter", "dessert"],
+    correctAnswer: "main course",
+    explanationTr: "'het hoofdgerecht' ana yemek (main course) demektir[cite: 1, 2].",
+    explanationEn: "'het hoofdgerecht' translates to 'main course'[cite: 1, 2]."
+  },
+  {
+    id: "sum_ch6_1007",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "vocabulary", "courses"],
+    questionNl: "Wat is een ander woord voor 'het nagerecht'?",
+    options: ["het toetje", "de dagschotel", "het voorgerecht"],
+    correctAnswer: "het toetje",
+    explanationTr: "'het nagerecht' tatlı/kapanış anlamına gelir ve eşanlamlısı 'het toetje'dir[cite: 1, 2].",
+    explanationEn: "'het nagerecht' means dessert, and its synonym is 'het toetje'[cite: 1, 2]."
+  },
+  {
+    id: "sum_ch6_1008",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "vocabulary", "food"],
+    questionNl: "Wat betekent 'de biefstuk'?",
+    options: ["steak", "chicken", "pork"],
+    correctAnswer: "steak",
+    explanationTr: "'de biefstuk' biftek (steak) demektir[cite: 1].",
+    explanationEn: "'de biefstuk' translates to 'steak'[cite: 1]."
+  },
+  {
+    id: "sum_ch6_1009",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "vocabulary", "food"],
+    questionNl: "Wat betekent 'de kip'?",
+    options: ["chicken", "rice", "meat"],
+    correctAnswer: "chicken",
+    explanationTr: "'de kip' tavuk (chicken) demektir[cite: 1].",
+    explanationEn: "'de kip' means 'chicken'[cite: 1]."
+  },
+  {
+    id: "sum_ch6_1010",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "vocabulary", "food"],
+    questionNl: "Wat betekent 'het vlees'?",
+    options: ["meat", "fish", "vegetables"],
+    correctAnswer: "meat",
+    explanationTr: "'het vlees' et (meat) anlamına gelir[cite: 1].",
+    explanationEn: "'het vlees' translates to 'meat'[cite: 1]."
+  },
+  {
+    id: "sum_ch6_1011",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "vocabulary", "food"],
+    questionNl: "Wat is 'de dagschotel' in een restaurant?",
+    options: ["today's special", "the menu", "the bill"],
+    correctAnswer: "today's special",
+    explanationTr: "'de dagschotel' günün yemeği (today's special) demektir[cite: 1].",
+    explanationEn: "'de dagschotel' means 'today's special'[cite: 1]."
+  },
+  {
+    id: "sum_ch6_1012",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "vocabulary", "cutlery"],
+    questionNl: "Wat is de verzamelnaam voor lepel, mes en vork?",
+    options: ["het bestek (cutlery)", "de borden", "de glazen"],
+    correctAnswer: "het bestek (cutlery)",
+    explanationTr: "Kaşık, bıçak ve çatalın genel adı 'het bestek' (çatal bıçak takımı) olarak geçer.",
+    explanationEn: "The collective name for spoon, knife, and fork is 'het bestek' (cutlery)."
+  },
+  {
+    id: "sum_ch6_1013",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "vocabulary", "cutlery"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'spoon'?",
+    options: ["de lepel", "het mes", "de vork"],
+    correctAnswer: "de lepel",
+    explanationTr: "Kaşık kelimesinin Hollandacası 'de lepel'dir[cite: 1].",
+    explanationEn: "'spoon' translates to 'de lepel' in Dutch[cite: 1]."
+  },
+  {
+    id: "sum_ch6_1014",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "vocabulary", "cutlery"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'knife'?",
+    options: ["het mes", "de vork", "de lepel"],
+    correctAnswer: "het mes",
+    explanationTr: "Bıçak kelimesinin Hollandacası 'het mes'tir[cite: 1].",
+    explanationEn: "'knife' translates to 'het mes' in Dutch[cite: 1]."
+  },
+  {
+    id: "sum_ch6_1015",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "vocabulary", "cutlery"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'fork'?",
+    options: ["de vork", "het mes", "de lepel"],
+    correctAnswer: "de vork",
+    explanationTr: "Çatal kelimesinin Hollandacası 'de vork'tur[cite: 1].",
+    explanationEn: "'fork' translates to 'de vork' in Dutch[cite: 1]."
+  },
+  {
+    id: "sum_ch6_1016",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "phrases", "opinions"],
+    questionNl: "Hoe vraag je iemand naar zijn/haar mening over het eten (asking someone's opinion)?",
+    options: ["Hoe vind je de soep? / Wat vind je van de soep?", "Wat is de soep?", "Hoeveel kost de soep?"],
+    correctAnswer: "Hoe vind je de soep? / Wat vind je van de soep?",
+    explanationTr: "Birinin yemek hakkındaki fikrini sorarken 'Hoe vind je...?' veya 'Wat vind je van...?' kalıpları kullanılır[cite: 2].",
+    explanationEn: "To ask for an opinion about food, use 'Hoe vind je...?' or 'Wat vind je van...?'[cite: 2]."
+  },
+  {
+    id: "sum_ch6_1017",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "phrases", "opinions"],
+    questionNl: "Wat is de meest positieve (++) beoordeling voor eten?",
+    options: ["(ik vind het) heerlijk", "(ik vind het) lekker", "het gaat wel"],
+    correctAnswer: "(ik vind het) heerlijk",
+    explanationTr: "En olumlu derece (++) 'heerlijk' (harika/nefis) kelimesiyle ifade edilir[cite: 2].",
+    explanationEn: "The most positive rating (++) is expressed with 'heerlijk' (delicious/wonderful)[cite: 2]."
+  },
+  {
+    id: "sum_ch6_1018",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "phrases", "opinions"],
+    questionNl: "Wat betekent de uitdrukking 'het gaat wel' over eten (+-)?",
+    options: ["it's okay / idare eder", "it's delicious / harika", "it's disgusting / iğrenç"],
+    correctAnswer: "it's okay / idare eder",
+    explanationTr: "'het gaat wel' fena değil, idare eder (it's okay) anlamına gelir[cite: 2].",
+    explanationEn: "'het gaat wel' means it's okay or so-so[cite: 2]."
+  },
+  {
+    id: "sum_ch6_1019",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "phrases", "opinions"],
+    questionNl: "Wat is de meest negatieve (--) beoordeling voor eten?",
+    options: ["(ik vind het) vies", "ik houd niet van ...", "het gaat wel"],
+    correctAnswer: "(ik vind het) vies",
+    explanationTr: "Yemek için en olumsuz derece (--) 'vies' (iğrenç/kötü) kelimesidir[cite: 2].",
+    explanationEn: "The most negative rating (--) for food is 'vies' (disgusting/nasty)[cite: 2]."
+  },
+  {
+    id: "sum_ch6_1020",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "vocabulary", "adjectives"],
+    questionNl: "Wat betekent het woord 'vet' in de context van eten (bijv. een beetje vet)?",
+    options: ["greasy / rich", "healthy", "spicy"],
+    correctAnswer: "greasy / rich",
+    explanationTr: "Yemek bağlamında 'vet' yağlı veya ağır (greasy / rich) anlamına gelir[cite: 1].",
+    explanationEn: "In the context of food, 'vet' means greasy or rich[cite: 1]."
+  },
+  {
+    id: "sum_ch6_1021",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "vocabulary", "dessert"],
+    questionNl: "Wat betekent 'zonder slagroom'?",
+    options: ["without whipped cream", "with chocolate", "without ice cream"],
+    correctAnswer: "without whipped cream",
+    explanationTr: "'slagroom' krem şanti (whipped cream) demektir, 'zonder' ise '-sız' (without) anlamına gelir[cite: 1, 2].",
+    explanationEn: "'slagroom' is whipped cream, and 'zonder' means without[cite: 1, 2]."
+  },
+  {
+    id: "sum_ch6_1022",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "vocabulary", "dessert"],
+    questionNl: "Wat is de vertaling van 'ijs met vruchten'?",
+    options: ["ice cream with fruit", "ice cream with chocolate", "ice cream with whipped cream"],
+    correctAnswer: "ice cream with fruit",
+    explanationTr: "'ijs' dondurma, 'vruchten' ise meyveler demektir[cite: 1, 2].",
+    explanationEn: "'ijs' is ice cream and 'vruchten' means fruit[cite: 1, 2]."
+  },
+  {
+    id: "sum_ch6_1023",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "phrases", "paying"],
+    questionNl: "Hoe vraag je om de rekening in een restaurant?",
+    options: ["Mogen we de rekening?", "Waar is de menukaart?", "Zullen we bestellen?"],
+    correctAnswer: "Mogen we de rekening?",
+    explanationTr: "Hesabı isterken 'Mogen we de rekening?' (Hesabı alabilir miyiz?) denir[cite: 1, 2].",
+    explanationEn: "To ask for the bill, say 'Mogen we de rekening?'[cite: 1, 2]."
+  },
+  {
+    id: "sum_ch6_1024",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "phrases", "tipping"],
+    questionNl: "Wat zeg je als je de ober een fooi (tip) wilt geven en het wisselgeld niet terug hoeft?",
+    options: ["Laat de rest maar zitten. / Het is goed zo.", "Ik wil wisselgeld.", "De rekening klopt niet."],
+    correctAnswer: "Laat de rest maar zitten. / Het is goed zo.",
+    explanationTr: "Üstü kalsın (Keep the change) demek için 'Laat de rest maar zitten' veya 'Het is goed zo' kalıpları kullanılır[cite: 2].",
+    explanationEn: "To say 'Keep the change', use 'Laat de rest maar zitten' or 'Het is goed zo'[cite: 2]."
+  },
+  {
+    id: "sum_ch6_1025",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "culture", "tipping"],
+    questionNl: "Hoeveel procent fooi geven mensen meestal in Nederlandse restaurants?",
+    options: ["Tussen de 5 en 10 procent", "Ongeveer 20 procent", "Nederlanders geven geen fooi"],
+    correctAnswer: "Tussen de 5 en 10 procent",
+    explanationTr: "Hollanda'da restoranlarda genellikle yüzde 5 ile 10 arası bahşiş (fooi) verilir.",
+    explanationEn: "In Dutch restaurants, it is customary to give between 5 and 10 percent tip."
+  },
+  {
+    id: "sum_ch6_1026",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "culture", "tipping"],
+    questionNl: "Aan wie geef je normaal gesproken WEL een fooi in Nederland?",
+    options: ["Serveerster / ober en taxichauffeur", "Groenteboer en docent", "Dokter en kapper"],
+    correctAnswer: "Serveerster / ober en taxichauffeur",
+    explanationTr: "Kültür notuna göre garsonlara ve taksicilere bahşiş verilirken manav, öğretmen veya doktora verilmez.",
+    explanationEn: "According to the culture notes, waiters and taxi drivers get tips, but not greengrocers, teachers, or doctors."
+  },
+  {
+    id: "sum_ch6_1027",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "grammar", "modal_verbs"],
+    questionNl: "Welk modaal werkwoord gebruik je voor toestemming (permission / may)?",
+    options: ["Mogen (bijv. Mogen we bij het raam zitten?)", "Moeten", "Willen"],
+    correctAnswer: "Mogen (bijv. Mogen we bij het raam zitten?)",
+    explanationTr: "İzin istemek veya vermek için (may/allowed to) 'mogen' fiili kullanılır.",
+    explanationEn: "The modal verb 'mogen' is used for permission (may)."
+  },
+  {
+    id: "sum_ch6_1028",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "grammar", "modal_verbs"],
+    questionNl: "Welk modaal werkwoord gebruik je om een wens of verlangen (desire / want) uit te drukken?",
+    options: ["Willen (bijv. Ik wil graag ijs...)", "Kunnen", "Zullen"],
+    correctAnswer: "Willen (bijv. Ik wil graag ijs...)",
+    explanationTr: "İstek veya arzu belirtirken (want) 'willen' fiili kullanılır.",
+    explanationEn: "To express a desire or want, the modal verb 'willen' is used."
+  },
+  {
+    id: "sum_ch6_1029",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "grammar", "modal_verbs"],
+    questionNl: "Welk modaal werkwoord drukt een verplichting of noodzaak (obligation / must) uit?",
+    options: ["Moeten (bijv. Ik moet even een lepel halen.)", "Mogen", "Willen"],
+    correctAnswer: "Moeten (bijv. Ik moet even een lepel halen.)",
+    explanationTr: "Zorunluluk (must/have to) belirtmek için 'moeten' fiili kullanılır.",
+    explanationEn: "To express an obligation or necessity (must), the modal verb 'moeten' is used."
+  },
+  {
+    id: "sum_ch6_1030",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "grammar", "modal_verbs"],
+    questionNl: "Welk modaal werkwoord gebruik je voor vaardigheid of mogelijkheid (ability / possibility / can)?",
+    options: ["Kunnen (bijv. Jullie kunnen daar gaan zitten.)", "Zullen", "Moeten"],
+    correctAnswer: "Kunnen (bijv. Jullie kunnen daar gaan zitten.)",
+    explanationTr: "Yetenek veya olasılık (can/able to) ifade ederken 'kunnen' fiili kullanılır.",
+    explanationEn: "To express ability or possibility (can), the modal verb 'kunnen' is used."
+  },
+  {
+    id: "sum_ch6_1031",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "grammar", "modal_verbs"],
+    questionNl: "Welk modaal werkwoord gebruik je vaak voor een voorstel of in de toekomstige tijd (proposal / shall)?",
+    options: ["Zullen (bijv. Zullen we dat later doen?)", "Mogen", "Moeten"],
+    correctAnswer: "Zullen (bijv. Zullen we dat later doen?)",
+    explanationTr: "Birlikte bir şey yapmayı teklif ederken veya gelecek zamandan bahsederken (shall/will) 'zullen' kullanılır.",
+    explanationEn: "For proposals (shall we...) or future tense, the modal verb 'zullen' is used."
+  },
+  {
+    id: "sum_ch6_1032",
+    type: "fill_in",
+    tags: ["summary_ch6", "grammar", "modal_verbs", "conjugation"],
+    questionNl: "Vervoeg het werkwoord 'mogen' voor 'ik': Ik ___",
+    correctAnswer: "mag",
+    explanationTr: "'mogen' fiilinin 1. tekil şahıs çekimi 'mag'dır.",
+    explanationEn: "The conjugation of 'mogen' for 'ik' is 'mag'."
+  },
+  {
+    id: "sum_ch6_1033",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "grammar", "modal_verbs", "conjugation"],
+    questionNl: "Wat is de juiste vorm van 'willen' voor 'jij' of 'u'?",
+    options: ["wil / wilt", "wilt", "willen"],
+    correctAnswer: "wil / wilt",
+    explanationTr: "Hollandacada 'jij' ve 'u' için 'willen' fiili hem 'wil' hem de 'wilt' olarak doğru kabul edilir.",
+    explanationEn: "For 'jij' and 'u', both 'wil' and 'wilt' are acceptable conjugations of 'willen'."
+  },
+  {
+    id: "sum_ch6_1034",
+    type: "fill_in",
+    tags: ["summary_ch6", "grammar", "modal_verbs", "conjugation"],
+    questionNl: "Vervoeg het werkwoord 'kunnen' voor 'ik': Ik ___",
+    correctAnswer: "kan",
+    explanationTr: "'kunnen' fiilinin 1. tekil şahıs çekimi 'kan'dır.",
+    explanationEn: "The conjugation of 'kunnen' for 'ik' is 'kan'."
+  },
+  {
+    id: "sum_ch6_1035",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "grammar", "modal_verbs", "conjugation"],
+    questionNl: "Wat is de juiste vorm van 'kunnen' voor 'jij' of 'u'?",
+    options: ["kan / kunt", "kunnen", "kant"],
+    correctAnswer: "kan / kunt",
+    explanationTr: "'jij' ve 'u' özneleri için 'kunnen' fiili 'kan' veya 'kunt' şeklinde çekimlenir.",
+    explanationEn: "For 'jij' and 'u', 'kunnen' is conjugated as 'kan' or 'kunt'."
+  },
+  {
+    id: "sum_ch6_1036",
+    type: "fill_in",
+    tags: ["summary_ch6", "grammar", "modal_verbs", "conjugation"],
+    questionNl: "Vervoeg het werkwoord 'moeten' voor 'hij/zij/het': Hij ___",
+    correctAnswer: "moet",
+    explanationTr: "'moeten' fiili tüm tekil şahıslar için 'moet' olarak çekimlenir.",
+    explanationEn: "The conjugation of 'moeten' for singular subjects is 'moet'."
+  },
+  {
+    id: "sum_ch6_1037",
+    type: "fill_in",
+    tags: ["summary_ch6", "grammar", "modal_verbs", "conjugation"],
+    questionNl: "Vervoeg het werkwoord 'zullen' voor 'ik': Ik ___",
+    correctAnswer: "zal",
+    explanationTr: "'zullen' fiilinin 1. tekil şahıs çekimi 'zal'dır.",
+    explanationEn: "The conjugation of 'zullen' for 'ik' is 'zal'."
+  },
+  {
+    id: "sum_ch6_1038",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "grammar", "modal_verbs", "conjugation"],
+    questionNl: "Wat is de vorm van modale werkwoorden (mogen, willen, moeten, kunnen, zullen) in het meervoud (wij, jullie, zij)?",
+    options: ["Ze krijgen allemaal de infinitief (stam + en).", "Ze krijgen een -t.", "Ze veranderen compleet."],
+    correctAnswer: "Ze krijgen allemaal de infinitief (stam + en).",
+    explanationTr: "Modaal fiillerin çoğul çekimleri her zaman mastar (infinitief) halindedir.",
+    explanationEn: "Plural conjugations of modal verbs always take the infinitive form."
+  },
+  {
+    id: "sum_ch6_1039",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "text_comprehension"],
+    questionNl: "In de tekst 'Eetafspraak', waarom is het hoofd van de verteller rood?",
+    options: ["Van het fietsen", "Omdat hij boos is", "Van de zon"],
+    correctAnswer: "Van het fietsen",
+    explanationTr: "Metne göre anlatıcının yüzü bisiklete bindiği için ('van het fietsen') kızarmıştır.",
+    explanationEn: "According to the text, the narrator's head is red from cycling ('van het fietsen')."
+  },
+  {
+    id: "sum_ch6_1040",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "text_comprehension"],
+    questionNl: "Is er in de tekst 'Eetafspraak' meteen een vrij tafeltje in het restaurant?",
+    options: ["Nee, niet één tafeltje is vrij.", "Ja, er zijn veel tafels vrij.", "Ja, er is één tafel vrij."],
+    correctAnswer: "Nee, niet één tafeltje is vrij.",
+    explanationTr: "Metinde restoranda tek bir boş masa bile olmadığı ('Niet één tafeltje is vrij') belirtilir.",
+    explanationEn: "The text states that not a single table is free in the restaurant."
+  },
+  {
+    id: "sum_ch6_1041",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "text_comprehension"],
+    questionNl: "Wat zegt de serveerster als de verteller zomaar bij zijn vrienden wil gaan zitten?",
+    options: ["Dat moet u eerst aan die mensen vragen, meneer!", "Gaat u uw gang.", "U moet hier wachten."],
+    correctAnswer: "Dat moet u eerst aan die mensen vragen, meneer!",
+    explanationTr: "Garson, anlatıcıya 'Bunu önce o insanlara sormalısınız beyefendi!' der.",
+    explanationEn: "The waitress says: 'You must first ask those people, sir!'."
+  },
+  {
+    id: "sum_ch6_1042",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "pronunciation"],
+    questionNl: "Opdracht 11 en 12 behandelen het verschil in uitspraak tussen welke twee klinkers (vowels)?",
+    options: ["i - ie", "a - aa", "o - oo"],
+    correctAnswer: "i - ie",
+    explanationTr: "Sayfa 93 ve 94'te yer alan telaffuz alıştırmaları 'i' ve 'ie' sesleri arasındaki farka odaklanır.",
+    explanationEn: "The pronunciation exercises focus on the difference between 'i' and 'ie' sounds."
+  },
+  {
+    id: "sum_ch6_1043",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "vocabulary"],
+    questionNl: "Wat is de betekenis van het woord 'proef' (van proeven)?",
+    options: ["try / taste", "pay", "order"],
+    correctAnswer: "try / taste",
+    explanationTr: "'proeven' (proef) tatmak veya denemek (try/taste) anlamına gelir[cite: 1].",
+    explanationEn: "'proeven' means to taste or try food[cite: 1]."
+  },
+  {
+    id: "sum_ch6_1044",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "vocabulary"],
+    questionNl: "Wat betekent 'halen' in de context van de serveerster ('ik moet even een lepel halen')?",
+    options: ["fetch / get", "buy", "clean"],
+    correctAnswer: "fetch / get",
+    explanationTr: "'halen' bir şeyi alıp getirmek (fetch/get) demektir[cite: 1].",
+    explanationEn: "'halen' means to fetch or get something[cite: 1]."
+  },
+  {
+    id: "sum_ch6_1045",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "vocabulary"],
+    questionNl: "Wat betekent 'alvast' in de zin 'Willen jullie alvast iets te drinken bestellen?'?",
+    options: ["in the meantime / already", "never", "only"],
+    correctAnswer: "in the meantime / already",
+    explanationTr: "'alvast' şimdiden / bu arada (in the meantime) anlamına gelir[cite: 1].",
+    explanationEn: "'alvast' translates to 'in the meantime' or 'already'[cite: 1]."
+  },
+  {
+    id: "sum_ch6_1046",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "vocabulary", "dialogue"],
+    questionNl: "Hoe vraag je om een tafel in een restaurant?",
+    options: ["Hebt u een tafel voor ons?", "Waar is de rekening?", "Zullen we bestellen?"],
+    correctAnswer: "Hebt u een tafel voor ons?",
+    explanationTr: "Restoranda masa sormak için 'Hebt u een tafel voor ons?' (Bizim için bir masanız var mı?) kullanılır[cite: 1].",
+    explanationEn: "To ask for a table, use 'Hebt u een tafel voor ons?'[cite: 1]."
+  },
+  {
+    id: "sum_ch6_1047",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "vocabulary"],
+    questionNl: "Wat betekent 'toch' in de zin 'doe toch maar de vegetarische dagschotel'?",
+    options: ["after all / actually", "never", "without"],
+    correctAnswer: "after all / actually",
+    explanationTr: "'toch' fikrini değiştirirken 'yine de / aslında / en iyisi' (after all) anlamı katar[cite: 1].",
+    explanationEn: "'toch' here means 'after all' or indicates a change of mind[cite: 1]."
+  },
+  {
+    id: "sum_ch6_1048",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "grammar", "modal_verbs"],
+    questionNl: "Welk modaal werkwoord vult de zin correct aan? '___ ik een mineraalwater alstublieft?'",
+    options: ["Mag", "Moet", "Zal"],
+    correctAnswer: "Mag",
+    explanationTr: "Bir şey rica ederken 'Mag ik...?' (Alabilir miyim?) kalıbı yaygındır[cite: 1].",
+    explanationEn: "When requesting something politely, 'Mag ik...?' is commonly used[cite: 1]."
+  },
+  {
+    id: "sum_ch6_1049",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "grammar", "modal_verbs"],
+    questionNl: "Welk modaal werkwoord vult de zin correct aan? 'Jullie ___ daar gaan zitten.' (toestemming / mogelijkheid)",
+    options: ["kunnen", "moeten", "willen"],
+    correctAnswer: "kunnen",
+    explanationTr: "Yer gösterme ve imkan belirtmek için 'kunnen' (oturabilirsiniz) kullanılır[cite: 1].",
+    explanationEn: "To indicate possibility or direct someone, 'kunnen' is used: 'Jullie kunnen daar gaan zitten'[cite: 1]."
+  },
+  {
+    id: "sum_ch6_1050",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "vocabulary"],
+    questionNl: "Wat betekent 'het raam' in het Engels?",
+    options: ["the window", "the door", "the table"],
+    correctAnswer: "the window",
+    explanationTr: "'het raam' pencere/cam (the window) demektir[cite: 1].",
+    explanationEn: "'het raam' translates to 'the window'[cite: 1]."
+  },
+  {
+    id: "sum_ch6_1051",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "vocabulary"],
+    questionNl: "Wat is 'de salade' in het Engels?",
+    options: ["salad", "soup", "bread"],
+    correctAnswer: "salad",
+    explanationTr: "'de salade' salata (salad) demektir[cite: 1].",
+    explanationEn: "'de salade' means 'salad'[cite: 1]."
+  },
+  {
+    id: "sum_ch6_1052",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "vocabulary"],
+    questionNl: "Wat betekent 'de soort' (bijv. een soort paella)?",
+    options: ["kind / type", "plate", "taste"],
+    correctAnswer: "kind / type",
+    explanationTr: "'de soort' bir çeşit / tür (kind/type) anlamına gelir[cite: 1].",
+    explanationEn: "'de soort' means a kind or type[cite: 1]."
+  },
+  {
+    id: "sum_ch6_1053",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "vocabulary"],
+    questionNl: "Wat betekent 'een beetje'?",
+    options: ["a bit / a little", "a lot", "nothing"],
+    correctAnswer: "a bit / a little",
+    explanationTr: "'een beetje' biraz (a bit/a little) demektir[cite: 1].",
+    explanationEn: "'een beetje' translates to 'a bit' or 'a little'[cite: 1]."
+  },
+  //////////////////sadas////////////7
+
+  {
+    id: "sum_ch7_1000",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "shopping"],
+    questionNl: "Wat betekent 'de kledingzaak' in het Engels?",
+    options: ["clothes shop", "grocery store", "restaurant"],
+    correctAnswer: "clothes shop",
+    explanationTr: "'de kledingzaak' giyim mağazası (clothes shop) demektir[cite: 1].",
+    explanationEn: "'de kledingzaak' translates to 'clothes shop'[cite: 1]."
+  },
+  {
+    id: "sum_ch7_1001",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "clothing"],
+    questionNl: "Wat is 'de kleding' in het Engels?",
+    options: ["clothes", "shoes", "accessories"],
+    correctAnswer: "clothes",
+    explanationTr: "'de kleding' kıyafetler / giyim (clothes) demektir[cite: 1].",
+    explanationEn: "'de kleding' means 'clothes'[cite: 1]."
+  },
+  {
+    id: "sum_ch7_1002",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "shopping"],
+    questionNl: "Wat betekent 'de zaak' in de context van winkelen?",
+    options: ["shop / store", "business deal", "lawsuit"],
+    correctAnswer: "shop / store",
+    explanationTr: "Alışveriş bağlamında 'de zaak' dükkan / mağaza (shop / store) anlamına gelir[cite: 1].",
+    explanationEn: "In a shopping context, 'de zaak' means 'shop' or 'store'[cite: 1]."
+  },
+  {
+    id: "sum_ch7_1003",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "clothing"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'trousers'?",
+    options: ["de broek", "de rok", "het pak"],
+    correctAnswer: "de broek",
+    explanationTr: "Pantolon Hollandacada 'de broek' olarak adlandırılır[cite: 1].",
+    explanationEn: "'trousers' translates to 'de broek' in Dutch[cite: 1]."
+  },
+  {
+    id: "sum_ch7_1004",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "shopping"],
+    questionNl: "Wat betekent het werkwoord 'kopen'?",
+    options: ["buy", "sell", "try on"],
+    correctAnswer: "buy",
+    explanationTr: "'kopen' satın almak (buy) demektir[cite: 1].",
+    explanationEn: "'kopen' means 'to buy'[cite: 1]."
+  },
+  {
+    id: "sum_ch7_1005",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "professions"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'saleswoman'?",
+    options: ["de verkoopster", "de serveerster", "de docent"],
+    correctAnswer: "de verkoopster",
+    explanationTr: "Kadın satış görevlisi / tezgahtar 'de verkoopster' olarak adlandırılır[cite: 1].",
+    explanationEn: "'saleswoman' translates to 'de verkoopster'[cite: 1]."
+  },
+  {
+    id: "sum_ch7_1006",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary"],
+    questionNl: "Wat betekent 'het meisje'?",
+    options: ["girl", "boy", "woman"],
+    correctAnswer: "girl",
+    explanationTr: "'het meisje' kız çocuğu (girl) demektir[cite: 1].",
+    explanationEn: "'het meisje' means 'girl'[cite: 1]."
+  },
+  {
+    id: "sum_ch7_1007",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary"],
+    questionNl: "Wat betekent 'de jongen'?",
+    options: ["boy", "girl", "man"],
+    correctAnswer: "boy",
+    explanationTr: "'de jongen' erkek çocuğu (boy) demektir[cite: 1].",
+    explanationEn: "'de jongen' means 'boy'[cite: 1]."
+  },
+  {
+    id: "sum_ch7_1008",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary"],
+    questionNl: "Wat betekent het werkwoord 'zoeken' (bijv. ik zoek)?",
+    options: ["look for / search", "find", "buy"],
+    correctAnswer: "look for / search",
+    explanationTr: "'zoeken' aramak (look for / search) anlamına gelir[cite: 1].",
+    explanationEn: "'zoeken' means to 'look for' or 'search'[cite: 1]."
+  },
+  {
+    id: "sum_ch7_1009",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "clothing"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'jeans'?",
+    options: ["de spijkerbroek", "de trui", "het overhemd"],
+    correctAnswer: "de spijkerbroek",
+    explanationTr: "Kot pantolon Hollandacada 'de spijkerbroek' olarak adlandırılır[cite: 1].",
+    explanationEn: "'jeans' translates to 'de spijkerbroek' in Dutch[cite: 1]."
+  },
+  {
+    id: "sum_ch7_1010",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "clothing"],
+    questionNl: "Wat betekent 'de maat' in de context van kleding?",
+    options: ["size", "color", "brand"],
+    correctAnswer: "size",
+    explanationTr: "Kıyafet bağlamında 'de maat' beden / ölçü (size) demektir[cite: 1].",
+    explanationEn: "In the context of clothing, 'de maat' means 'size'[cite: 1]."
+  },
+  {
+    id: "sum_ch7_1011",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary"],
+    questionNl: "Wat betekent 'soms' in het Engels?",
+    options: ["sometimes", "always", "never"],
+    correctAnswer: "sometimes",
+    explanationTr: "'soms' bazen (sometimes) anlamına gelir[cite: 1].",
+    explanationEn: "'soms' translates to 'sometimes'[cite: 1]."
+  },
+  {
+    id: "sum_ch7_1012",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "clothing"],
+    questionNl: "Wat is 'de kleur' in het Engels?",
+    options: ["colour / color", "shape", "size"],
+    correctAnswer: "colour / color",
+    explanationTr: "'de kleur' renk (colour) demektir[cite: 1].",
+    explanationEn: "'de kleur' means 'colour'[cite: 1]."
+  },
+  {
+    id: "sum_ch7_1013",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "clothing"],
+    questionNl: "Wat betekent 'het model' als je kleding koopt?",
+    options: ["style", "brand", "size"],
+    correctAnswer: "style",
+    explanationTr: "Kıyafet alırken 'het model' tarz veya stil (style) anlamına gelir[cite: 1].",
+    explanationEn: "When buying clothes, 'het model' refers to the 'style'[cite: 1]."
+  },
+  {
+    id: "sum_ch7_1014",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "adjectives"],
+    questionNl: "Wat betekent 'lichte' (licht) als we het over kleuren hebben?",
+    options: ["light", "dark", "bright"],
+    correctAnswer: "light",
+    explanationTr: "Renkler bağlamında 'licht' açık (light) renk demektir[cite: 1, 2].",
+    explanationEn: "In the context of colors, 'licht' means 'light'[cite: 1, 2]."
+  },
+  {
+    id: "sum_ch7_1015",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "adjectives"],
+    questionNl: "Wat betekent 'laag' (bijv. een laag model)?",
+    options: ["low", "high", "wide"],
+    correctAnswer: "low",
+    explanationTr: "'laag' düşük (low) demektir; örneğin düşük bel[cite: 1].",
+    explanationEn: "'laag' means 'low', such as a low-rise style[cite: 1]."
+  },
+  {
+    id: "sum_ch7_1016",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "adjectives"],
+    questionNl: "Wat betekent het woord 'verschillende'?",
+    options: ["different", "same", "many"],
+    correctAnswer: "different",
+    explanationTr: "'verschillende' farklı veya çeşitli (different) anlamına gelir[cite: 1].",
+    explanationEn: "'verschillende' translates to 'different'[cite: 1]."
+  },
+  {
+    id: "sum_ch7_1017",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "shopping"],
+    questionNl: "Wat is 'het merk' (plural: merken) in het Engels?",
+    options: ["brand", "price", "size"],
+    correctAnswer: "brand",
+    explanationTr: "'het merk' marka (brand) demektir[cite: 1].",
+    explanationEn: "'het merk' means 'brand'[cite: 1]."
+  },
+  {
+    id: "sum_ch7_1018",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "shopping"],
+    questionNl: "Wat betekent het werkwoord 'proberen'?",
+    options: ["try on / try", "buy", "sell"],
+    correctAnswer: "try on / try",
+    explanationTr: "'proberen' denemek (try on / try) anlamına gelir[cite: 1].",
+    explanationEn: "'proberen' means to 'try' or 'try on'[cite: 1]."
+  },
+  {
+    id: "sum_ch7_1019",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary"],
+    questionNl: "Wat is de betekenis van 'allebei'?",
+    options: ["both", "none", "all"],
+    correctAnswer: "both",
+    explanationTr: "'allebei' ikisi de / her ikisi (both) demektir[cite: 1].",
+    explanationEn: "'allebei' translates to 'both'[cite: 1]."
+  },
+  {
+    id: "sum_ch7_1020",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "shopping"],
+    questionNl: "Wat is 'de paskamer' (plural: paskamers) in het Engels?",
+    options: ["changing room", "cash register", "store window"],
+    correctAnswer: "changing room",
+    explanationTr: "'de paskamer' deneme kabini (changing room) demektir[cite: 1].",
+    explanationEn: "'de paskamer' means 'changing room'[cite: 1]."
+  },
+  {
+    id: "sum_ch7_1021",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "shopping"],
+    questionNl: "Wat betekent het werkwoord 'passen' in een kledingzaak?",
+    options: ["try on", "pay", "return"],
+    correctAnswer: "try on",
+    explanationTr: "Giyim mağazasında 'passen' kıyafet denemek (try on) anlamına gelir[cite: 1].",
+    explanationEn: "In a clothing store, 'passen' means to 'try on'[cite: 1]."
+  },
+  {
+    id: "sum_ch7_1022",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "clothing"],
+    questionNl: "Hoe vraag je 'How does it fit?' of 'How do they fit?' in het Nederlands?",
+    options: ["En, hoe zitten ze?", "Wat is je maat?", "Waar is de paskamer?"],
+    correctAnswer: "En, hoe zitten ze?",
+    explanationTr: "Kıyafetin nasıl oturduğunu / uyduğunu sormak için 'Hoe zitten ze?' kalıbı kullanılır[cite: 1].",
+    explanationEn: "To ask how clothes fit, you use the phrase 'Hoe zitten ze?'[cite: 1]."
+  },
+  {
+    id: "sum_ch7_1023",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "adjectives"],
+    questionNl: "Wat betekent 'wijd' in de context van kleding?",
+    options: ["wide / loose", "tight", "long"],
+    correctAnswer: "wide / loose",
+    explanationTr: "Kıyafet bağlamında 'wijd' bol veya geniş (wide/loose) anlamına gelir[cite: 1].",
+    explanationEn: "In the context of clothing, 'wijd' means 'wide' or 'loose'[cite: 1]."
+  },
+  {
+    id: "sum_ch7_1024",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "shopping"],
+    questionNl: "Wat betekent het werkwoord 'ruilen'?",
+    options: ["exchange", "buy", "try on"],
+    correctAnswer: "exchange",
+    explanationTr: "'ruilen' değiştirmek / değişim yapmak (exchange) demektir[cite: 1].",
+    explanationEn: "'ruilen' means to 'exchange'[cite: 1]."
+  },
+  {
+    id: "sum_ch7_1025",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "shopping"],
+    questionNl: "Wat betekent 'binnen 14 dagen'?",
+    options: ["within 14 days", "after 14 days", "exactly 14 days"],
+    correctAnswer: "within 14 days",
+    explanationTr: "'binnen 14 dagen' 14 gün içinde (within 14 days) anlamına gelir[cite: 1].",
+    explanationEn: "'binnen 14 dagen' translates to 'within 14 days'[cite: 1]."
+  },
+  {
+    id: "sum_ch7_1026",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "shopping"],
+    questionNl: "Wat is 'de bon' in het Engels?",
+    options: ["receipt", "bill", "menu"],
+    correctAnswer: "receipt",
+    explanationTr: "'de bon' alışveriş fişi (receipt) demektir[cite: 1].",
+    explanationEn: "'de bon' means 'receipt'[cite: 1]."
+  },
+  {
+    id: "sum_ch7_1027",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary"],
+    questionNl: "Wat betekent 'beslissen' in het Engels?",
+    options: ["decide", "buy", "think"],
+    correctAnswer: "decide",
+    explanationTr: "'beslissen' karar vermek (decide) anlamına gelir[cite: 1].",
+    explanationEn: "'beslissen' translates to 'decide'[cite: 1]."
+  },
+  {
+    id: "sum_ch7_1028",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "phrases"],
+    questionNl: "Wat betekent de uitdrukking 'staat me het best' (staan)?",
+    options: ["suits me best", "looks the worst", "is too big"],
+    correctAnswer: "suits me best",
+    explanationTr: "'staat me het best' bana en çok yakışıyor (suits me best) demektir[cite: 1].",
+    explanationEn: "'staat me het best' means 'suits me best'[cite: 1]."
+  },
+  {
+    id: "sum_ch7_1029",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "shopping"],
+    questionNl: "Wat betekent het werkwoord 'pinnen' in Nederland?",
+    options: ["pay by debit card", "pay with cash", "exchange items"],
+    correctAnswer: "pay by debit card",
+    explanationTr: "'pinnen' banka kartıyla ödeme yapmak (pay by debit card) anlamına gelir[cite: 1].",
+    explanationEn: "'pinnen' means to 'pay by debit card'[cite: 1]."
+  },
+  {
+    id: "sum_ch7_1030",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "colors"],
+    questionNl: "Welke kleur is 'wit' in het Engels?",
+    options: ["white", "black", "grey"],
+    correctAnswer: "white",
+    explanationTr: "'wit' beyaz (white) demektir[cite: 1, 2].",
+    explanationEn: "'wit' means 'white'[cite: 1, 2]."
+  },
+  {
+    id: "sum_ch7_1031",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "colors"],
+    questionNl: "Welke kleur is 'zwart' in het Engels?",
+    options: ["black", "white", "blue"],
+    correctAnswer: "black",
+    explanationTr: "'zwart' siyah (black) demektir[cite: 1, 2].",
+    explanationEn: "'zwart' means 'black'[cite: 1, 2]."
+  },
+  {
+    id: "sum_ch7_1032",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "colors"],
+    questionNl: "Welke kleur is 'grijs' in het Engels?",
+    options: ["grey", "green", "brown"],
+    correctAnswer: "grey",
+    explanationTr: "'grijs' gri (grey) demektir[cite: 2].",
+    explanationEn: "'grijs' means 'grey'[cite: 2]."
+  },
+  {
+    id: "sum_ch7_1033",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "colors"],
+    questionNl: "Welke kleur is 'rood' in het Engels?",
+    options: ["red", "pink", "orange"],
+    correctAnswer: "red",
+    explanationTr: "'rood' kırmızı (red) demektir[cite: 1, 2].",
+    explanationEn: "'rood' means 'red'[cite: 1, 2]."
+  },
+  {
+    id: "sum_ch7_1034",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "colors"],
+    questionNl: "Welke kleur is 'blauw' in het Engels?",
+    options: ["blue", "brown", "black"],
+    correctAnswer: "blue",
+    explanationTr: "'blauw' mavi (blue) demektir[cite: 1, 2].",
+    explanationEn: "'blauw' means 'blue'[cite: 1, 2]."
+  },
+  {
+    id: "sum_ch7_1035",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "colors"],
+    questionNl: "Welke kleur is 'geel' in het Engels?",
+    options: ["yellow", "green", "grey"],
+    correctAnswer: "yellow",
+    explanationTr: "'geel' sarı (yellow) demektir[cite: 2].",
+    explanationEn: "'geel' means 'yellow'[cite: 2]."
+  },
+  {
+    id: "sum_ch7_1036",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "colors"],
+    questionNl: "Welke kleur is 'groen' in het Engels?",
+    options: ["green", "grey", "yellow"],
+    correctAnswer: "green",
+    explanationTr: "'groen' yeşil (green) demektir[cite: 1, 2].",
+    explanationEn: "'groen' means 'green'[cite: 1, 2]."
+  },
+  {
+    id: "sum_ch7_1037",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "colors"],
+    questionNl: "Welke kleur is 'bruin' in het Engels?",
+    options: ["brown", "blue", "black"],
+    correctAnswer: "brown",
+    explanationTr: "'bruin' kahverengi (brown) demektir[cite: 2].",
+    explanationEn: "'bruin' means 'brown'[cite: 2]."
+  },
+  {
+    id: "sum_ch7_1038",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "colors"],
+    questionNl: "Welke kleur is 'paars' in het Engels?",
+    options: ["purple", "pink", "orange"],
+    correctAnswer: "purple",
+    explanationTr: "'paars' mor (purple) demektir[cite: 2].",
+    explanationEn: "'paars' means 'purple'[cite: 2]."
+  },
+  {
+    id: "sum_ch7_1039",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "colors"],
+    questionNl: "Welke kleur is 'roze' in het Engels?",
+    options: ["pink", "red", "purple"],
+    correctAnswer: "pink",
+    explanationTr: "'roze' pembe (pink) demektir[cite: 1, 2].",
+    explanationEn: "'roze' means 'pink'[cite: 1, 2]."
+  },
+  {
+    id: "sum_ch7_1040",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "colors"],
+    questionNl: "Welke kleur is 'oranje' in het Engels?",
+    options: ["orange", "red", "yellow"],
+    correctAnswer: "orange",
+    explanationTr: "'oranje' turuncu (orange) demektir[cite: 2].",
+    explanationEn: "'oranje' means 'orange'[cite: 2]."
+  },
+  {
+    id: "sum_ch7_1041",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "patterns"],
+    questionNl: "Wat betekent 'effen' als we het over patronen op kleding hebben?",
+    options: ["solid", "checkered", "striped"],
+    correctAnswer: "solid",
+    explanationTr: "'effen' desensiz, düz renk (solid) anlamına gelir[cite: 2].",
+    explanationEn: "'effen' means a 'solid' color without patterns[cite: 2]."
+  },
+  {
+    id: "sum_ch7_1042",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "patterns"],
+    questionNl: "Wat betekent 'geruit'?",
+    options: ["checkered", "flowered", "striped"],
+    correctAnswer: "checkered",
+    explanationTr: "'geruit' kareli (checkered) demektir[cite: 2].",
+    explanationEn: "'geruit' means 'checkered'[cite: 2]."
+  },
+  {
+    id: "sum_ch7_1043",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "patterns"],
+    questionNl: "Wat betekent 'gebloemd'?",
+    options: ["flowered", "checkered", "solid"],
+    correctAnswer: "flowered",
+    explanationTr: "'gebloemd' çiçek desenli (flowered) anlamına gelir[cite: 2].",
+    explanationEn: "'gebloemd' means 'flowered'[cite: 2]."
+  },
+  {
+    id: "sum_ch7_1044",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "patterns"],
+    questionNl: "Wat betekent 'gestreept'?",
+    options: ["striped", "solid", "flowered"],
+    correctAnswer: "striped",
+    explanationTr: "'gestreept' çizgili (striped) demektir[cite: 2].",
+    explanationEn: "'gestreept' means 'striped'[cite: 2]."
+  },
+  {
+    id: "sum_ch7_1045",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "clothing"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'jumper / pullover'?",
+    options: ["de trui", "de jas", "het overhemd"],
+    correctAnswer: "de trui",
+    explanationTr: "Kazak veya süveter Hollandacada 'de trui' olarak geçer[cite: 2].",
+    explanationEn: "'jumper / pullover' translates to 'de trui'[cite: 2]."
+  },
+  {
+    id: "sum_ch7_1046",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "clothing"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'blouse'?",
+    options: ["de bloes", "het t-shirt", "de jurk"],
+    correctAnswer: "de bloes",
+    explanationTr: "Bluz Hollandacada 'de bloes' olarak adlandırılır[cite: 2].",
+    explanationEn: "'blouse' translates to 'de bloes'[cite: 2]."
+  },
+  {
+    id: "sum_ch7_1047",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "clothing"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'shirt'?",
+    options: ["het overhemd", "de trui", "het t-shirt"],
+    correctAnswer: "het overhemd",
+    explanationTr: "Gömlek Hollandacada 'het overhemd' demektir[cite: 2].",
+    explanationEn: "'shirt' translates to 'het overhemd'[cite: 2]."
+  },
+  {
+    id: "sum_ch7_1048",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "clothing"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'skirt'?",
+    options: ["de rok", "de broek", "de jurk"],
+    correctAnswer: "de rok",
+    explanationTr: "Etek Hollandacada 'de rok' olarak adlandırılır[cite: 2].",
+    explanationEn: "'skirt' translates to 'de rok'[cite: 2]."
+  },
+  {
+    id: "sum_ch7_1049",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "clothing"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'dress'?",
+    options: ["de jurk", "de jas", "de rok"],
+    correctAnswer: "de jurk",
+    explanationTr: "Elbise Hollandacada 'de jurk' demektir[cite: 2].",
+    explanationEn: "'dress' translates to 'de jurk'[cite: 2]."
+  },
+  {
+    id: "sum_ch7_1050",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "clothing"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'coat'?",
+    options: ["de jas", "het pak", "de trui"],
+    correctAnswer: "de jas",
+    explanationTr: "Ceket veya mont Hollandacada 'de jas' olarak geçer[cite: 2].",
+    explanationEn: "'coat' translates to 'de jas'[cite: 2]."
+  },
+  {
+    id: "sum_ch7_1051",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "clothing"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'shoes'?",
+    options: ["de schoenen", "de sokken", "de broeken"],
+    correctAnswer: "de schoenen",
+    explanationTr: "Ayakkabılar Hollandacada 'de schoenen' olarak adlandırılır[cite: 2].",
+    explanationEn: "'shoes' translates to 'de schoenen'[cite: 2]."
+  },
+  {
+    id: "sum_ch7_1052",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "clothing"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'suit'?",
+    options: ["het pak", "de jas", "het overhemd"],
+    correctAnswer: "het pak",
+    explanationTr: "Takım elbise Hollandacada 'het pak' demektir[cite: 2].",
+    explanationEn: "'suit' translates to 'het pak'[cite: 2]."
+  },
+  {
+    id: "sum_ch7_1053",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "grammar", "object_pronouns"],
+    questionNl: "Welk objectvorm (persoonlijk voornaamwoord als lijdend voorwerp) hoort bij 'ik'?",
+    options: ["mij / me", "jou / je", "hem"],
+    correctAnswer: "mij / me",
+    explanationTr: "'ik' (ben) öznesinin nesne hali 'mij' veya 'me' (beni/bana) şeklindedir.",
+    explanationEn: "The object form of 'ik' is 'mij / me'."
+  },
+  {
+    id: "sum_ch7_1054",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "grammar", "object_pronouns"],
+    questionNl: "Welk objectvorm hoort bij 'jij / je'?",
+    options: ["jou / je", "mij / me", "hem"],
+    correctAnswer: "jou / je",
+    explanationTr: "'jij / je' (sen) öznesinin nesne hali 'jou' veya 'je' (seni/sana) şeklindedir.",
+    explanationEn: "The object form of 'jij / je' is 'jou / je'."
+  },
+  {
+    id: "sum_ch7_1055",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "grammar", "object_pronouns"],
+    questionNl: "Welk objectvorm hoort bij het formele 'u'?",
+    options: ["u", "jou", "hem"],
+    correctAnswer: "u",
+    explanationTr: "Resmi 'u' zamirinin nesne hali de 'u' (sizi/size) olarak kalır.",
+    explanationEn: "The object form of formal 'u' remains 'u'."
+  },
+  {
+    id: "sum_ch7_1056",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "grammar", "object_pronouns"],
+    questionNl: "Welk objectvorm hoort bij 'hij'?",
+    options: ["hem", "haar", "het"],
+    correctAnswer: "hem",
+    explanationTr: "'hij' (o-erkek) öznesinin nesne hali 'hem' (onu/ona) şeklindedir.",
+    explanationEn: "The object form of 'hij' is 'hem'."
+  },
+  {
+    id: "sum_ch7_1057",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "grammar", "object_pronouns"],
+    questionNl: "Welk objectvorm hoort bij 'zij / ze' (female singular)?",
+    options: ["haar", "hem", "hen"],
+    correctAnswer: "haar",
+    explanationTr: "'zij / ze' (o-kadın) öznesinin nesne hali 'haar' (onu/ona) şeklindedir.",
+    explanationEn: "The object form of female 'zij / ze' is 'haar'."
+  },
+  {
+    id: "sum_ch7_1058",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "grammar", "object_pronouns"],
+    questionNl: "Welk objectvorm hoort bij 'wij / we'?",
+    options: ["ons", "jullie", "hen"],
+    correctAnswer: "ons",
+    explanationTr: "'wij / we' (biz) öznesinin nesne hali 'ons' (bizi/bize) şeklindedir.",
+    explanationEn: "The object form of 'wij / we' is 'ons'."
+  },
+  {
+    id: "sum_ch7_1059",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "grammar", "object_pronouns"],
+    questionNl: "Welk objectvorm hoort bij 'jullie'?",
+    options: ["jullie", "ons", "ze"],
+    correctAnswer: "jullie",
+    explanationTr: "'jullie' (siz) öznesinin nesne hali de 'jullie' (sizi/size) olarak kalır.",
+    explanationEn: "The object form of 'jullie' remains 'jullie'."
+  },
+  {
+    id: "sum_ch7_1060",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "grammar", "object_pronouns"],
+    questionNl: "Welk objectvorm hoort bij 'zij / ze' (pluralis/personen)?",
+    options: ["hen / ze / hun", "haar", "jullie"],
+    correctAnswer: "hen / ze / hun",
+    explanationTr: "Çoğul kişiler için nesne hali 'hen', 'ze' veya duruma göre 'hun' (onları/onlara) olur.",
+    explanationEn: "The object form of plural 'zij / ze' for people is 'hen / ze / hun'."
+  },
+  {
+    id: "sum_ch7_1061",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "grammar", "object_pronouns"],
+    questionNl: "Welk objectvorm (niet-personen) gebruik je om te verwijzen naar een de-woord (bijv. de fiets)?",
+    options: ["hem", "het", "ze"],
+    correctAnswer: "hem",
+    explanationTr: "Cansız de-woord isimleri nesne olarak kullanırken 'hem' ile atıfta bulunulur.",
+    explanationEn: "For non-person de-words acting as objects, 'hem' is used."
+  },
+  {
+    id: "sum_ch7_1062",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "grammar", "object_pronouns"],
+    questionNl: "Welk objectvorm (niet-personen) gebruik je om te verwijzen naar een het-woord (bijv. het boek)?",
+    options: ["het", "hem", "ze"],
+    correctAnswer: "het",
+    explanationTr: "Cansız het-woord isimleri nesne olarak kullanırken 'het' ile atıfta bulunulur.",
+    explanationEn: "For non-person het-words acting as objects, 'het' is used."
+  },
+  {
+    id: "sum_ch7_1063",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "grammar", "object_pronouns"],
+    questionNl: "Welk objectvorm (niet-personen) gebruik je om te verwijzen naar een meervoud (bijv. schoenen)?",
+    options: ["ze", "hem", "het"],
+    correctAnswer: "ze",
+    explanationTr: "Çoğul cansız varlıklara (niet-personen pluralis) nesne olarak atıfta bulunurken 'ze' kullanılır.",
+    explanationEn: "For non-person plural objects, 'ze' is used."
+  },
+  {
+    id: "sum_ch7_1064",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "grammar", "demonstrative_pronouns"],
+    questionNl: "Welk demonstratief pronomen (aanwijzend voornaamwoord) gebruik je voor een de-woord dichtbij (hier)?",
+    options: ["deze", "die", "dit"],
+    correctAnswer: "deze",
+    explanationTr: "Yakındaki bir de-woord için 'deze' (bu) kullanılır.",
+    explanationEn: "For a de-word that is close (hier), 'deze' is used."
+  },
+  {
+    id: "sum_ch7_1065",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "grammar", "demonstrative_pronouns"],
+    questionNl: "Welk demonstratief pronomen gebruik je voor een de-woord verder weg (daar)?",
+    options: ["die", "deze", "dat"],
+    correctAnswer: "die",
+    explanationTr: "Uzaktaki bir de-woord için 'die' (şu/o) kullanılır.",
+    explanationEn: "For a de-word that is further away (daar), 'die' is used."
+  },
+  {
+    id: "sum_ch7_1066",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "grammar", "demonstrative_pronouns"],
+    questionNl: "Welk demonstratief pronomen gebruik je voor een het-woord dichtbij (hier)?",
+    options: ["dit", "dat", "deze"],
+    correctAnswer: "dit",
+    explanationTr: "Yakındaki bir het-woord için 'dit' (bu) kullanılır.",
+    explanationEn: "For a het-word that is close (hier), 'dit' is used."
+  },
+  {
+    id: "sum_ch7_1067",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "grammar", "demonstrative_pronouns"],
+    questionNl: "Welk demonstratief pronomen gebruik je voor een het-woord verder weg (daar)?",
+    options: ["dat", "dit", "die"],
+    correctAnswer: "dat",
+    explanationTr: "Uzaktaki bir het-woord için 'dat' (şu/o) kullanılır.",
+    explanationEn: "For a het-word that is further away (daar), 'dat' is used."
+  },
+  {
+    id: "sum_ch7_1068",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "grammar", "demonstrative_pronouns"],
+    questionNl: "Welk demonstratief pronomen gebruik je voor meervoudige woorden (pluralis) dichtbij (hier)?",
+    options: ["deze", "die", "dit"],
+    correctAnswer: "deze",
+    explanationTr: "Yakındaki çoğul isimler için her zaman 'deze' (bunlar) kullanılır.",
+    explanationEn: "For plural words that are close (hier), 'deze' is always used."
+  },
+  {
+    id: "sum_ch7_1069",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "grammar", "demonstrative_pronouns"],
+    questionNl: "Welk demonstratief pronomen gebruik je voor meervoudige woorden (pluralis) verder weg (daar)?",
+    options: ["die", "deze", "dat"],
+    correctAnswer: "die",
+    explanationTr: "Uzaktaki çoğul isimler için her zaman 'die' (şunlar/onlar) kullanılır.",
+    explanationEn: "For plural words that are further away (daar), 'die' is always used."
+  },
+  {
+    id: "sum_ch7_1070",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "grammar", "comparatives"],
+    questionNl: "Wat is de comparatief (vergrotende trap) van het regelmatige adjectief 'klein'?",
+    options: ["kleiner (dan)", "kleinst", "meest klein"],
+    correctAnswer: "kleiner (dan)",
+    explanationTr: "Düzenli sıfatların karşılaştırma hali sonuna '-er' alarak yapılır: kleiner (dan) [daha küçük].",
+    explanationEn: "Regular adjectives form the comparative by adding '-er': kleiner (dan) [smaller than]."
+  },
+  {
+    id: "sum_ch7_1071",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "grammar", "comparatives"],
+    questionNl: "Wat is de superlatief (overtreffende trap) van het regelmatige adjectief 'klein'?",
+    options: ["(het) kleinst", "kleiner", "meest klein"],
+    correctAnswer: "(het) kleinst",
+    explanationTr: "Düzenli sıfatların en üstünlük hali sonuna '-st' alarak yapılır: (het) kleinst [en küçük].",
+    explanationEn: "Regular adjectives form the superlative by adding '-st': (het) kleinst [smallest]."
+  },
+  {
+    id: "sum_ch7_1072",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "grammar", "comparatives", "irregular_adjectives"],
+    questionNl: "Wat is de comparatief van het onregelmatige adjectief 'goed'?",
+    options: ["beter (dan)", "goeder", "meer goed"],
+    correctAnswer: "beter (dan)",
+    explanationTr: "'goed' (iyi) sıfatı düzensizdir, karşılaştırma hali 'beter (dan)' (daha iyi) olur.",
+    explanationEn: "The irregular adjective 'goed' (good) becomes 'beter (dan)' (better) in the comparative."
+  },
+  {
+    id: "sum_ch7_1073",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "grammar", "comparatives", "irregular_adjectives"],
+    questionNl: "Wat is de superlatief van het onregelmatige adjectief 'goed'?",
+    options: ["(het) best", "(het) beterst", "(het) goedst"],
+    correctAnswer: "(het) best",
+    explanationTr: "'goed' sıfatının en üstünlük hali '(het) best' (en iyi) şeklindedir.",
+    explanationEn: "The superlative of 'goed' is '(het) best' (best)."
+  },
+  {
+    id: "sum_ch7_1074",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "grammar", "comparatives", "irregular_adjectives"],
+    questionNl: "Wat is de comparatief van 'veel' (much/many)?",
+    options: ["meer (dan)", "veeler", "beter"],
+    correctAnswer: "meer (dan)",
+    explanationTr: "'veel' (çok) sıfatının karşılaştırma hali 'meer (dan)' (daha fazla) şeklindedir.",
+    explanationEn: "The comparative of 'veel' is 'meer (dan)' (more)."
+  },
+  {
+    id: "sum_ch7_1075",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "grammar", "comparatives", "irregular_adjectives"],
+    questionNl: "Wat is de superlatief van 'veel'?",
+    options: ["(het) meest", "(het) meerst", "(het) veelst"],
+    correctAnswer: "(het) meest",
+    explanationTr: "'veel' sıfatının en üstünlük hali '(het) meest' (en çok) olur.",
+    explanationEn: "The superlative of 'veel' is '(het) meest' (most)."
+  },
+  {
+    id: "sum_ch7_1076",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "grammar", "comparatives", "irregular_adjectives"],
+    questionNl: "Wat is de comparatief van 'weinig' (little/few)?",
+    options: ["minder (dan)", "weiniger", "meer"],
+    correctAnswer: "minder (dan)",
+    explanationTr: "'weinig' (az) sıfatının karşılaştırma hali 'minder (dan)' (daha az) olur.",
+    explanationEn: "The comparative of 'weinig' is 'minder (dan)' (less/fewer)."
+  },
+  {
+    id: "sum_ch7_1077",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "grammar", "comparatives", "irregular_adjectives"],
+    questionNl: "Wat is de superlatief van 'weinig'?",
+    options: ["(het) minst", "(het) minder", "(het) weinigst"],
+    correctAnswer: "(het) minst",
+    explanationTr: "'weinig' sıfatının en üstünlük hali '(het) minst' (en az) şeklindedir.",
+    explanationEn: "The superlative of 'weinig' is '(het) minst' (least)."
+  },
+  {
+    id: "sum_ch7_1078",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "grammar", "comparatives", "irregular_adjectives"],
+    questionNl: "Wat is de comparatief van 'graag' (gladly/like to)?",
+    options: ["liever (dan)", "graager", "meer graag"],
+    correctAnswer: "liever (dan)",
+    explanationTr: "'graag' (memnuniyetle/severek) kelimesinin karşılaştırma hali 'liever (dan)' (tercihen/daha çok severek) olur.",
+    explanationEn: "The comparative of 'graag' is 'liever (dan)' (rather/prefer)."
+  },
+  {
+    id: "sum_ch7_1079",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "grammar", "comparatives", "irregular_adjectives"],
+    questionNl: "Wat is de superlatief van 'graag'?",
+    options: ["(het) liefst", "(het) graags", "(het) meest graag"],
+    correctAnswer: "(het) liefst",
+    explanationTr: "'graag' kelimesinin en üstünlük hali '(het) liefst' (en tercihen/en çok severek) şeklindedir.",
+    explanationEn: "The superlative of 'graag' is '(het) liefst' (most preferably)."
+  },
+  {
+    id: "sum_ch7_1080",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "grammar", "comparatives"],
+    questionNl: "Hoe druk je uit dat twee dingen gelijk of evenredig zijn (as... as)?",
+    options: ["even + basisvorm + als (bijv. even klein als)", "meer + basisvorm + als", "zo + comparatief + als"],
+    correctAnswer: "even + basisvorm + als (bijv. even klein als)",
+    explanationTr: "Eşitlik durumunda 'even [sıfatın yalın hali] als' (kadar ...) yapısı kullanılır.",
+    explanationEn: "To express equality (as... as), use 'even [base form] als' (e.g. even klein als)."
+  },
+  {
+    id: "sum_ch7_1081",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "text"],
+    questionNl: "Wat voor soort directeur is Jos Schomaker in de tekst op pagina 107?",
+    options: ["directeur Schomaker Mannenmode", "directeur van een supermarkt", "directeur van een school"],
+    correctAnswer: "directeur Schomaker Mannenmode",
+    explanationTr: "Metinde Jos Schomaker'in 'Schomaker Mannenmode' (erkek giyimi) direktörü olduğu belirtilir.",
+    explanationEn: "The text states that Jos Schomaker is the director of 'Schomaker Mannenmode' (men's fashion)."
+  },
+  {
+    id: "sum_ch7_1082",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "text"],
+    questionNl: "Draagt Jos Schomaker zijn kleding lang?",
+    options: ["Nee, hij draagt zijn kleding niet te lang.", "Ja, hij draagt zijn kleding heel lang.", "Hij draagt nooit eigen kleding."],
+    correctAnswer: "Nee, hij draagt zijn kleding niet te lang.",
+    explanationTr: "Metinde 'Ik draag mijn kleren niet te lang' diyerek kıyafetlerini çok uzun süre giymediğini söyler.",
+    explanationEn: "He states 'Ik draag mijn kleren niet te lang', meaning he does not wear his clothes for too long."
+  },
+  {
+    id: "sum_ch7_1083",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "vocabulary", "text"],
+    questionNl: "Wat is belangrijk voor de kleren van Jos tijdens het werk?",
+    options: ["Ze moeten absoluut comfortabel zijn.", "Ze moeten de duurste zijn.", "Ze moeten zwart zijn."],
+    correctAnswer: "Ze moeten absoluut comfortabel zijn.",
+    explanationTr: "Çalışırken odaklanabilmek için kıyafetlerinin 'absoluut comfortabel' (kesinlikle rahat) olması gerektiğini belirtir.",
+    explanationEn: "He mentions his clothes must be 'absoluut comfortabel' (absolutely comfortable) so he can concentrate."
+  },
+  //////////////////sadas////////////8
+  {
+    id: "sum_ch8_1000",
+    type: "multiple_choice",
+    tags: ["summary_ch8", "vocabulary", "housing"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'real estate agent'?",
+    options: ["de makelaar", "de woonruimte", "de koper"],
+    correctAnswer: "de makelaar",
+    explanationTr: "'de makelaar' emlakçı (real estate agent) demektir[cite: 1].",
+    explanationEn: "'de makelaar' translates to 'real estate agent'[cite: 1]."
+  },
+  {
+    id: "sum_ch8_1001",
+    type: "multiple_choice",
+    tags: ["summary_ch8", "vocabulary", "housing"],
+    questionNl: "Wat betekent 'de woonruimte' in het Engels?",
+    options: ["accommodation / somewhere to live", "living room", "real estate"],
+    correctAnswer: "accommodation / somewhere to live",
+    explanationTr: "'de woonruimte' yaşayacak yer / konaklama (accommodation) anlamına gelir[cite: 1].",
+    explanationEn: "'de woonruimte' means 'accommodation' or 'somewhere to live'[cite: 1]."
+  },
+  {
+    id: "sum_ch8_1002",
+    type: "multiple_choice",
+    tags: ["summary_ch8", "vocabulary", "verbs"],
+    questionNl: "Wat betekent het werkwoord 'samenwonen'?",
+    options: ["live together", "rent a house", "buy together"],
+    correctAnswer: "live together",
+    explanationTr: "'samenwonen' birlikte yaşamak (live together) demektir[cite: 1].",
+    explanationEn: "'samenwonen' translates to 'live together'[cite: 1]."
+  },
+  {
+    id: "sum_ch8_1003",
+    type: "multiple_choice",
+    tags: ["summary_ch8", "vocabulary", "housing"],
+    questionNl: "Wat is de betekenis van 'de huurprijs'?",
+    options: ["rent (price)", "buying price", "deposit"],
+    correctAnswer: "rent (price)",
+    explanationTr: "'de huurprijs' kira bedeli / kira fiyatı (rent price) demektir[cite: 1].",
+    explanationEn: "'de huurprijs' means 'rent (price)'[cite: 1]."
+  },
+  {
+    id: "sum_ch8_1004",
+    type: "multiple_choice",
+    tags: ["summary_ch8", "vocabulary", "verbs"],
+    questionNl: "Wat betekent het werkwoord 'huren'?",
+    options: ["rent", "buy", "sell"],
+    correctAnswer: "rent",
+    explanationTr: "'huren' kiralamak (rent) anlamına gelir[cite: 1].",
+    explanationEn: "'huren' translates to 'rent'[cite: 1]."
+  },
+  {
+    id: "sum_ch8_1005",
+    type: "multiple_choice",
+    tags: ["summary_ch8", "vocabulary", "housing"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'upstairs flat'?",
+    options: ["de bovenwoning", "de benedenwoning", "het appartement"],
+    correctAnswer: "de bovenwoning",
+    explanationTr: "Üst kat dairesi Hollandacada 'de bovenwoning' olarak adlandırılır[cite: 1, 2].",
+    explanationEn: "'upstairs flat' translates to 'de bovenwoning'[cite: 1, 2]."
+  },
+  {
+    id: "sum_ch8_1006",
+    type: "multiple_choice",
+    tags: ["summary_ch8", "vocabulary", "housing"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'ground-floor flat'?",
+    options: ["de benedenwoning", "de bovenwoning", "de begane grond"],
+    correctAnswer: "de benedenwoning",
+    explanationTr: "Zemin kat dairesi Hollandacada 'de benedenwoning' olarak geçer[cite: 2].",
+    explanationEn: "'ground-floor flat' translates to 'de benedenwoning'[cite: 2]."
+  },
+  {
+    id: "sum_ch8_1007",
+    type: "multiple_choice",
+    tags: ["summary_ch8", "vocabulary", "housing"],
+    questionNl: "Wat betekent 'de begane grond'?",
+    options: ["ground floor", "first floor", "basement"],
+    correctAnswer: "ground floor",
+    explanationTr: "'de begane grond' giriş katı / zemin kat (ground floor) demektir[cite: 2].",
+    explanationEn: "'de begane grond' translates to 'ground floor'[cite: 2]."
+  },
+  {
+    id: "sum_ch8_1008",
+    type: "multiple_choice",
+    tags: ["summary_ch8", "vocabulary", "housing"],
+    questionNl: "Wat is 'de verdieping' in het Engels?",
+    options: ["floor / storey", "building", "apartment"],
+    correctAnswer: "floor / storey",
+    explanationTr: "'de verdieping' kat (floor/storey) anlamına gelir[cite: 1, 2].",
+    explanationEn: "'de verdieping' means 'floor' or 'storey'[cite: 1, 2]."
+  },
+  {
+    id: "sum_ch8_1009",
+    type: "multiple_choice",
+    tags: ["summary_ch8", "vocabulary"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'neighbourhood'?",
+    options: ["de buurt", "het centrum", "de stad"],
+    correctAnswer: "de buurt",
+    explanationTr: "Mahalle veya semt Hollandacada 'de buurt' olarak adlandırılır[cite: 1].",
+    explanationEn: "'neighbourhood' translates to 'de buurt'[cite: 1]."
+  },
+  {
+    id: "sum_ch8_1010",
+    type: "multiple_choice",
+    tags: ["summary_ch8", "vocabulary", "housing"],
+    questionNl: "Wat betekent 'vierkante meter'?",
+    options: ["square metre", "cubic metre", "kilometre"],
+    correctAnswer: "square metre",
+    explanationTr: "'vierkante meter' metrekare (square metre) demektir[cite: 1].",
+    explanationEn: "'vierkante meter' translates to 'square metre'[cite: 1]."
+  },
+  {
+    id: "sum_ch8_1011",
+    type: "multiple_choice",
+    tags: ["summary_ch8", "vocabulary", "rooms"],
+    questionNl: "Wat betekent 'de gang' in een huis?",
+    options: ["passage(way) / hall", "kitchen", "bathroom"],
+    correctAnswer: "passage(way) / hall",
+    explanationTr: "Evin içindeki 'de gang' koridor / hol (passageway) anlamına gelir[cite: 1, 2].",
+    explanationEn: "'de gang' means 'passage(way)' or 'hall'[cite: 1, 2]."
+  },
+  {
+    id: "sum_ch8_1012",
+    type: "multiple_choice",
+    tags: ["summary_ch8", "vocabulary", "rooms"],
+    questionNl: "Wat is 'het schuurtje'?",
+    options: ["small shed", "balcony", "garage"],
+    correctAnswer: "small shed",
+    explanationTr: "'het schuurtje' küçük depo / baraka (small shed) demektir[cite: 2].",
+    explanationEn: "'het schuurtje' translates to 'small shed'[cite: 2]."
+  },
+  {
+    id: "sum_ch8_1013",
+    type: "multiple_choice",
+    tags: ["summary_ch8", "vocabulary"],
+    questionNl: "Wat betekent het bijvoeglijk naamwoord 'geschikte' (geschikt)?",
+    options: ["suitable", "expensive", "furnished"],
+    correctAnswer: "suitable",
+    explanationTr: "'geschikt(e)' uygun (suitable) anlamına gelir[cite: 1].",
+    explanationEn: "'geschikte' means 'suitable'[cite: 1]."
+  },
+  {
+    id: "sum_ch8_1014",
+    type: "multiple_choice",
+    tags: ["summary_ch8", "vocabulary"],
+    questionNl: "Wat betekent 'gemeubileerd'?",
+    options: ["furnished", "empty", "renovated"],
+    correctAnswer: "furnished",
+    explanationTr: "'gemeubileerd' eşyalı / mobilyalı (furnished) demektir[cite: 1].",
+    explanationEn: "'gemeubileerd' translates to 'furnished'[cite: 1]."
+  },
+  {
+    id: "sum_ch8_1015",
+    type: "multiple_choice",
+    tags: ["summary_ch8", "vocabulary"],
+    questionNl: "Wat betekent 'het voordeel'?",
+    options: ["advantage", "disadvantage", "price"],
+    correctAnswer: "advantage",
+    explanationTr: "'het voordeel' avantaj (advantage) demektir[cite: 1].",
+    explanationEn: "'het voordeel' means 'advantage'[cite: 1]."
+  },
+  {
+    id: "sum_ch8_1016",
+    type: "multiple_choice",
+    tags: ["summary_ch8", "vocabulary", "verbs"],
+    questionNl: "Wat betekent het werkwoord 'overleggen'?",
+    options: ["discuss", "buy", "sign"],
+    correctAnswer: "discuss",
+    explanationTr: "'overleggen' tartışmak / görüşmek (discuss) anlamına gelir[cite: 1].",
+    explanationEn: "'overleggen' means to 'discuss'[cite: 1]."
+  },
+  {
+    id: "sum_ch8_1017",
+    type: "multiple_choice",
+    tags: ["summary_ch8", "vocabulary", "phrases"],
+    questionNl: "Wat betekent de uitdrukking 'zo snel mogelijk'?",
+    options: ["as soon as possible", "very slow", "not possible"],
+    correctAnswer: "as soon as possible",
+    explanationTr: "'zo snel mogelijk' mümkün olan en kısa sürede (as soon as possible) demektir[cite: 1].",
+    explanationEn: "'zo snel mogelijk' translates to 'as soon as possible'[cite: 1]."
+  },
+  {
+    id: "sum_ch8_1018",
+    type: "multiple_choice",
+    tags: ["summary_ch8", "vocabulary", "furniture"],
+    questionNl: "Wat is 'de tafel' in het Engels?",
+    options: ["table", "chair", "desk"],
+    correctAnswer: "table",
+    explanationTr: "'de tafel' masa (table) demektir.",
+    explanationEn: "'de tafel' means 'table'."
+  },
+  {
+    id: "sum_ch8_1019",
+    type: "multiple_choice",
+    tags: ["summary_ch8", "vocabulary", "furniture"],
+    questionNl: "Wat is 'de stoel' in het Engels?",
+    options: ["chair", "table", "sofa"],
+    correctAnswer: "chair",
+    explanationTr: "'de stoel' sandalye (chair) demektir.",
+    explanationEn: "'de stoel' means 'chair'."
+  },
+  {
+    id: "sum_ch8_1020",
+    type: "multiple_choice",
+    tags: ["summary_ch8", "vocabulary", "furniture"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'couch / sofa'?",
+    options: ["de bank", "het bed", "de kast"],
+    correctAnswer: "de bank",
+    explanationTr: "Kanepe / koltuk Hollandacada 'de bank' olarak adlandırılır.",
+    explanationEn: "'couch / sofa' translates to 'de bank'."
+  },
+  {
+    id: "sum_ch8_1021",
+    type: "multiple_choice",
+    tags: ["summary_ch8", "vocabulary", "furniture"],
+    questionNl: "Wat betekent 'het bureau' in de context van meubels?",
+    options: ["desk", "office", "table"],
+    correctAnswer: "desk",
+    explanationTr: "Mobilya bağlamında 'het bureau' çalışma masası (desk) demektir.",
+    explanationEn: "In the context of furniture, 'het bureau' means 'desk'."
+  },
+  {
+    id: "sum_ch8_1022",
+    type: "multiple_choice",
+    tags: ["summary_ch8", "vocabulary", "furniture"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'cupboard'?",
+    options: ["de kast", "het bed", "de stoel"],
+    correctAnswer: "de kast",
+    explanationTr: "Dolap kelimesinin Hollandacası 'de kast'tır.",
+    explanationEn: "'cupboard' translates to 'de kast'."
+  },
+  {
+    id: "sum_ch8_1023",
+    type: "multiple_choice",
+    tags: ["summary_ch8", "grammar", "negation"],
+    questionNl: "Wanneer gebruik je 'geen' in plaats van 'niet'?",
+    options: ["Om zelfstandige naamwoorden (met 'een' of zonder lidwoord) te ontkennen (bijv. Ik heb geen idee).", "Om werkwoorden te ontkennen.", "Om bijvoeglijke naamwoorden te ontkennen."],
+    correctAnswer: "Om zelfstandige naamwoorden (met 'een' of zonder lidwoord) te ontkennen (bijv. Ik heb geen idee).",
+    explanationTr: "'geen' kelimesi belirsiz isimleri (önünde 'een' olan veya artikeli olmayan) olumsuz yapmak için kullanılır.",
+    explanationEn: "'geen' is used to negate indefinite nouns (nouns with 'een' or no article)."
+  },
+  {
+    id: "sum_ch8_1024",
+    type: "multiple_choice",
+    tags: ["summary_ch8", "grammar", "negation"],
+    questionNl: "Wanneer gebruik je 'niet' in plaats van 'geen'?",
+    options: ["Om de rest van de zin te ontkennen, zoals bijvoeglijke naamwoorden, werkwoorden of specifieke plaatsen (bijv. niet ver, dat gebruiken we niet).", "Alleen voor meervoudsvormen.", "Om een nieuw zelfstandig naamwoord te introduceren."],
+    correctAnswer: "Om de rest van de zin te ontkennen, zoals bijvoeglijke naamwoorden, werkwoorden of specifieke plaatsen (bijv. niet ver, dat gebruiken we niet).",
+    explanationTr: "'niet' fiilleri, sıfatları veya belirli durumları olumsuzlaştırmak için kullanılır.",
+    explanationEn: "'niet' is used to negate adjectives, verbs, or specific statements."
+  },
+  {
+    id: "sum_ch8_1025",
+    type: "fill_in",
+    tags: ["summary_ch8", "grammar", "negation"],
+    questionNl: "Vul 'niet' of 'geen' in: 'Ik heb ___ idee.'",
+    correctAnswer: "geen",
+    explanationTr: "'idee' belirsiz bir isim olduğu için 'geen' ile olumsuz yapılır: Ik heb geen idee.",
+    explanationEn: "Since 'idee' is an indefinite noun here, it is negated with 'geen': Ik heb geen idee."
+  },
+  {
+    id: "sum_ch8_1026",
+    type: "fill_in",
+    tags: ["summary_ch8", "grammar", "negation"],
+    questionNl: "Vul 'niet' of 'geen' in: 'Dit is een leuke bovenwoning, ___ ver van het centrum.'",
+    correctAnswer: "niet",
+    explanationTr: "'ver' (uzak) bir sıfat/zarf olduğu için 'niet' ile olumsuzlaştırılır: niet ver.",
+    explanationEn: "'ver' is an adjective/adverb, so it is negated with 'niet': niet ver."
+  },
+  {
+    id: "sum_ch8_1027",
+    type: "fill_in",
+    tags: ["summary_ch8", "grammar", "negation"],
+    questionNl: "Vul 'niet' of 'geen' in: 'Wij hoeven ___ bad.'",
+    correctAnswer: "geen",
+    explanationTr: "'bad' belirsiz bir isimdir, dolayısıyla 'geen' kullanılır: Wij hoeven geen bad.",
+    explanationEn: "'bad' is an indefinite noun, so it takes 'geen': Wij hoeven geen bad."
+  },
+  {
+    id: "sum_ch8_1028",
+    type: "fill_in",
+    tags: ["summary_ch8", "grammar", "negation"],
+    questionNl: "Vul 'niet' of 'geen' in: 'Dat gebruiken we toch ___.'",
+    correctAnswer: "niet",
+    explanationTr: "Burada 'gebruiken' (kullanmak) fiili olumsuz yapıldığından 'niet' kullanılır: Dat gebruiken we toch niet.",
+    explanationEn: "The verb 'gebruiken' is being negated, so 'niet' is used: Dat gebruiken we toch niet."
+  },
+  {
+    id: "sum_ch8_1029",
+    type: "fill_in",
+    tags: ["summary_ch8", "grammar", "negation"],
+    questionNl: "Vul 'niet' of 'geen' in: 'Anton wil de mosterdsoep ___ proeven.'",
+    correctAnswer: "niet",
+    explanationTr: "Belirli bir nesne (de mosterdsoep) ve fiil (proeven) söz konusu olduğunda 'niet' kullanılır.",
+    explanationEn: "With a definite object (de mosterdsoep) and a verb (proeven), 'niet' is used."
+  },
+  {
+    id: "sum_ch8_1030",
+    type: "fill_in",
+    tags: ["summary_ch8", "grammar", "negation"],
+    questionNl: "Vul 'niet' of 'geen' in: 'Ik heb ___ nieuwe broek nodig.'",
+    correctAnswer: "geen",
+    explanationTr: "Belirsiz isim tamlaması (nieuwe broek) 'geen' ile olumsuz yapılır.",
+    explanationEn: "An indefinite noun phrase (nieuwe broek) is negated with 'geen'."
+  },
+  {
+    id: "sum_ch8_1031",
+    type: "fill_in",
+    tags: ["summary_ch8", "grammar", "prepositions"],
+    questionNl: "Kies de juiste prepositie: 'De fiets staat ___ de muur.'",
+    correctAnswer: "tegen",
+    explanationTr: "Bisiklet duvara yaslanmış durumdaysa 'tegen' (karşı/yaslanmış) edatı kullanılır.",
+    explanationEn: "When a bicycle is leaning on a wall, the preposition 'tegen' (against) is used."
+  },
+  {
+    id: "sum_ch8_1032",
+    type: "fill_in",
+    tags: ["summary_ch8", "grammar", "prepositions"],
+    questionNl: "Kies de juiste prepositie: 'De boom staat ___ het huis.'",
+    correctAnswer: "achter",
+    explanationTr: "Ağaç evin arkasındaysa 'achter' (arkasında) edatı kullanılır.",
+    explanationEn: "If the tree is behind the house, the preposition 'achter' is used."
+  },
+  {
+    id: "sum_ch8_1033",
+    type: "fill_in",
+    tags: ["summary_ch8", "grammar", "prepositions"],
+    questionNl: "Kies de juiste prepositie: 'De auto staat ___ het huis.'",
+    options: ["naast", "in", "tegen"],
+    correctAnswer: "naast",
+    explanationTr: "Araba evin yanındaysa 'naast' (yanında) edatı kullanılır.",
+    explanationEn: "If the car is next to the house, the preposition 'naast' is used."
+  },
+  {
+    id: "sum_ch8_1034",
+    type: "fill_in",
+    tags: ["summary_ch8", "grammar", "prepositions"],
+    questionNl: "Kies de juiste prepositie: 'De foto hangt ___ de muur.'",
+    correctAnswer: "aan",
+    explanationTr: "Duvarda asılı olan şeyler için 'aan' edatı kullanılır.",
+    explanationEn: "For things hanging on a wall, the preposition 'aan' is used."
+  },
+  {
+    id: "sum_ch8_1035",
+    type: "fill_in",
+    tags: ["summary_ch8", "grammar", "prepositions"],
+    questionNl: "Kies de juiste prepositie: 'De stoelen staan ___ de tafel.'",
+    correctAnswer: "om",
+    explanationTr: "Sandalyeler masanın etrafındaysa 'om' (etrafında) edatı kullanılır.",
+    explanationEn: "If the chairs are around the table, the preposition 'om' is used."
+  },
+  {
+    id: "sum_ch8_1036",
+    type: "fill_in",
+    tags: ["summary_ch8", "grammar", "prepositions"],
+    questionNl: "Kies de juiste prepositie: 'De boompjes staan ___ het balkon.'",
+    correctAnswer: "op",
+    explanationTr: "Balkonun üstündeki nesneler için 'op' (üzerinde) edatı kullanılır.",
+    explanationEn: "For items on the balcony, the preposition 'op' is used."
+  },
+  {
+    id: "sum_ch8_1037",
+    type: "fill_in",
+    tags: ["summary_ch8", "grammar", "prepositions"],
+    questionNl: "Kies de juiste prepositie: 'De slaapkamer is ___ de keuken.' (hoger gelegen)",
+    correctAnswer: "boven",
+    explanationTr: "Yatak odası mutfağın üstündeyse 'boven' (yukarısında/üstünde) edatı kullanılır.",
+    explanationEn: "If the bedroom is higher than the kitchen, the preposition 'boven' (above) is used."
+  },
+  {
+    id: "sum_ch8_1038",
+    type: "fill_in",
+    tags: ["summary_ch8", "grammar", "prepositions"],
+    questionNl: "Kies de juiste prepositie: 'De woonkamer is ___ het balkon.' (lager gelegen)",
+    correctAnswer: "onder",
+    explanationTr: "Oturma odası balkonun altındaysa 'onder' (altında) edatı kullanılır.",
+    explanationEn: "If the living room is below the balcony, the preposition 'onder' (under) is used."
+  },
+  {
+    id: "sum_ch8_1039",
+    type: "fill_in",
+    tags: ["summary_ch8", "grammar", "prepositions"],
+    questionNl: "Kies de juiste prepositie: 'Het bed staat ___ de slaapkamer.'",
+    correctAnswer: "in",
+    explanationTr: "Yatak odanın içindeyse 'in' (içinde) edatı kullanılır.",
+    explanationEn: "If the bed is inside the bedroom, the preposition 'in' is used."
+  },
+  {
+    id: "sum_ch8_1040",
+    type: "fill_in",
+    tags: ["summary_ch8", "grammar", "prepositions"],
+    questionNl: "Kies de juiste prepositie: 'De slaapkamer is ___ de keuken en de zolder.'",
+    correctAnswer: "tussen",
+    explanationTr: "İki şeyin arasında olma durumu 'tussen' (arasında) edatıyla ifade edilir.",
+    explanationEn: "Being between two things is expressed with the preposition 'tussen'."
+  },
+  {
+    id: "sum_ch8_1041",
+    type: "fill_in",
+    tags: ["summary_ch8", "grammar", "prepositions"],
+    questionNl: "Kies de juiste prepositie: 'De wasmachine staat ___ de deur.'",
+    correctAnswer: "tegenover",
+    explanationTr: "Çamaşır makinesi kapının karşısındaysa 'tegenover' (karşısında) edatı kullanılır.",
+    explanationEn: "If the washing machine is opposite the door, the preposition 'tegenover' is used."
+  },
+  {
+    id: "sum_ch8_1042",
+    type: "fill_in",
+    tags: ["summary_ch8", "grammar", "prepositions"],
+    questionNl: "Kies de juiste prepositie: 'Dit is een huis ___ een balkon.'",
+    correctAnswer: "met",
+    explanationTr: "Balkonlu bir ev derken 'met' (ile) edatı kullanılır.",
+    explanationEn: "When saying a house with a balcony, the preposition 'met' (with) is used."
+  },
+  {
+    id: "sum_ch8_1043",
+    type: "multiple_choice",
+    tags: ["summary_ch8", "culture", "housing"],
+    questionNl: "Wat is een veelgehoorde mening van buitenlanders over trappen in Nederlandse huizen?",
+    options: ["Ze vinden de trappen erg steil.", "Ze vinden de trappen erg breed.", "Ze vinden dat er geen trappen zijn."],
+    correctAnswer: "Ze vinden de trappen erg steil.",
+    explanationTr: "Yabancılar genellikle Hollanda evlerindeki merdivenleri çok dik (steil) bulurlar.",
+    explanationEn: "Foreigners often find the stairs in Dutch houses to be very steep (steil)."
+  },
+  {
+    id: "sum_ch8_1044",
+    type: "multiple_choice",
+    tags: ["summary_ch8", "culture", "housing"],
+    questionNl: "Wat is een positief kenmerk van Nederlandse huizen volgens buitenlanders?",
+    options: ["Grote ramen en veel licht.", "Heel grote kamers.", "Veel privacy."],
+    correctAnswer: "Grote ramen en veel licht.",
+    explanationTr: "Büyük pencereler (grote ramen) ve çok ışık (veel licht) alması olumlu özelliklerdendir.",
+    explanationEn: "Big windows (grote ramen) and lots of light (veel licht) are considered positive features."
+  },
+  {
+    id: "sum_ch8_1045",
+    type: "multiple_choice",
+    tags: ["summary_ch8", "culture", "housing"],
+    questionNl: "Wat is een nadeel (disadvantage) van de grote ramen volgens buitenlanders in Nederland?",
+    options: ["Je hebt geen privacy, mensen kunnen 's avonds naar binnen kijken.", "Ze zijn te zwaar om te openen.", "Ze maken het huis te koud."],
+    correctAnswer: "Je hebt geen privacy, mensen kunnen 's avonds naar binnen kijken.",
+    explanationTr: "Büyük pencereler yüzünden gece dışarıdan içerisinin görünmesi gizlilik (privacy) eksikliğine neden olur.",
+    explanationEn: "The big windows mean no privacy, as people can look inside at night."
+  },
+  {
+    id: "sum_ch8_1046",
+    type: "multiple_choice",
+    tags: ["summary_ch8", "culture", "housing"],
+    questionNl: "Wat wordt in Nederland vaak 'het kleinste kamertje' genoemd?",
+    options: ["De wc / het toilet", "De slaapkamer", "De meterkast"],
+    correctAnswer: "De wc / het toilet",
+    explanationTr: "Metinde tuvalet genellikle evdeki 'en küçük oda' (kleinste kamertje) olarak adlandırılır.",
+    explanationEn: "In the text, the toilet is often referred to as the 'smallest room' (kleinste kamertje)."
+  },
+  {
+    id: "sum_ch8_1047",
+    type: "multiple_choice",
+    tags: ["summary_ch8", "dialogue", "comprehension"],
+    questionNl: "Hoeveel vierkante meter is de woonkamer in de dialoog met de makelaar?",
+    options: ["35 vierkante meter", "50 vierkante meter", "20 vierkante meter"],
+    correctAnswer: "35 vierkante meter",
+    explanationTr: "Diyalogda oturma odasının 35 metrekare (35 vierkante meter) olduğu belirtilmektedir[cite: 1].",
+    explanationEn: "The dialogue mentions that the living room is 35 square metres[cite: 1]."
+  },
+  {
+    id: "sum_ch8_1048",
+    type: "multiple_choice",
+    tags: ["summary_ch8", "dialogue", "comprehension"],
+    questionNl: "Op welke verdieping bevindt zich de bovenwoning uit de dialoog?",
+    options: ["Op de derde verdieping", "Op de begane grond", "Op de eerste verdieping"],
+    correctAnswer: "Op de derde verdieping",
+    explanationTr: "Emlakçı dairenin üçüncü katta (derde verdieping) olduğunu söyler[cite: 1].",
+    explanationEn: "The real estate agent says the flat is on the third floor (derde verdieping)[cite: 1]."
+  },
+  {
+    id: "sum_ch8_1049",
+    type: "multiple_choice",
+    tags: ["summary_ch8", "vocabulary"],
+    questionNl: "Wat is de Engelse vertaling van 'de woonkamer'?",
+    options: ["living room", "bedroom", "kitchen"],
+    correctAnswer: "living room",
+    explanationTr: "'de woonkamer' oturma odası (living room) demektir[cite: 1, 2].",
+    explanationEn: "'de woonkamer' translates to 'living room'[cite: 1, 2]."
+  },
+  {
+    id: "sum_ch8_1050",
+    type: "multiple_choice",
+    tags: ["summary_ch8", "vocabulary", "adjectives"],
+    questionNl: "Wat betekent het woord 'rustige' in de advertentie (een rustige straat)?",
+    options: ["quiet / calm", "busy", "expensive"],
+    correctAnswer: "quiet / calm",
+    explanationTr: "Kiralık oda ilanında geçen 'rustige straat' sakin/sessiz sokak (quiet street) anlamına gelir.",
+    explanationEn: "In the room ad, 'rustige straat' means 'quiet street'."
+  },
+  {
+    id: "sum_ch8_1051",
+    type: "multiple_choice",
+    tags: ["summary_ch8", "dialogue", "comprehension"],
+    questionNl: "Waarom wil Patricia een afspraak maken om de woning te bekijken?",
+    options: ["Omdat ze het een leuke, zonnige kamer vindt en met haar vriend wil overleggen.", "Omdat ze de huurprijs te hoog vindt.", "Omdat ze een bad wil."],
+    correctAnswer: "Omdat ze het een leuke, zonnige kamer vindt en met haar vriend wil overleggen.",
+    explanationTr: "Patricia evi güzel ve güneşli bulduğu için erkek arkadaşıyla görüşüp (overleggen) randevu almak ister[cite: 1].",
+    explanationEn: "Patricia thinks it's a nice, sunny room and wants to discuss (overleggen) it with her boyfriend before making an appointment[cite: 1]."
+  },
+  {
+    id: "sum_ch8_1052",
+    type: "multiple_choice",
+    tags: ["summary_ch8", "vocabulary"],
+    questionNl: "Wat is 'de slaapkamer' in het Engels?",
+    options: ["bedroom", "bathroom", "kitchen"],
+    correctAnswer: "bedroom",
+    explanationTr: "'de slaapkamer' yatak odası (bedroom) demektir[cite: 1, 2].",
+    explanationEn: "'de slaapkamer' translates to 'bedroom'[cite: 1, 2]."
+  },
+  
+  
+  //////////////////sadas////////////9
+  
+  {
+    id: "sum_ch9_1000",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "vocabulary", "body_parts"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'head'?",
+    options: ["het hoofd", "de nek", "de buik"],
+    correctAnswer: "het hoofd",
+    explanationTr: "Kitaptaki vücut bölümleri listesine göre 'head' (baş) kelimesinin Felemenkçesi 'het hoofd'dur.",
+    explanationEn: "According to the body parts list in the book, 'head' translates to 'het hoofd'."
+  },
+  {
+    id: "sum_ch9_1001",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "vocabulary", "body_parts"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'stomach'?",
+    options: ["de buik", "de rug", "het been"],
+    correctAnswer: "de buik",
+    explanationTr: "Vücut bölümleri listesine göre 'stomach' (mide/karın) kelimesinin Felemenkçesi 'de buik'tir.",
+    explanationEn: "According to the body parts list, 'stomach' translates to 'de buik'."
+  },
+  {
+    id: "sum_ch9_1002",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "vocabulary", "body_parts"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'back'?",
+    options: ["de rug", "de nek", "de schouder"],
+    correctAnswer: "de rug",
+    explanationTr: "Vücut bölümleri listesine göre 'back' (sırt) kelimesinin Felemenkçesi 'de rug'dur.",
+    explanationEn: "According to the body parts list, 'back' translates to 'de rug'."
+  },
+  {
+    id: "sum_ch9_1003",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "vocabulary", "body_parts"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'shoulder'?",
+    options: ["de schouder", "de pols", "de arm"],
+    correctAnswer: "de schouder",
+    explanationTr: "Vücut bölümleri listesinde 'shoulder' (omuz) kelimesi 'de schouder' olarak verilmiştir.",
+    explanationEn: "In the body parts list, 'shoulder' is given as 'de schouder'."
+  },
+  {
+    id: "sum_ch9_1004",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "vocabulary", "body_parts"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'wrist'?",
+    options: ["de pols", "de hand", "de vinger"],
+    correctAnswer: "de pols",
+    explanationTr: "Vücut bölümleri listesine göre 'wrist' (el bileği) kelimesinin Felemenkçesi 'de pols'dur.",
+    explanationEn: "According to the body parts list, 'wrist' translates to 'de pols'."
+  },
+  {
+    id: "sum_ch9_1005",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "vocabulary", "body_parts"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'leg'?",
+    options: ["het been", "de voet", "de knie"],
+    correctAnswer: "het been",
+    explanationTr: "Vücut bölümleri listesinde 'leg' (bacak) kelimesi 'het been' olarak verilmiştir.",
+    explanationEn: "In the body parts list, 'leg' is given as 'het been'."
+  },
+  {
+    id: "sum_ch9_1006",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "vocabulary", "body_parts"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'knee'?",
+    options: ["de knie", "de enkel", "de voet"],
+    correctAnswer: "de knie",
+    explanationTr: "Vücut bölümleri listesinde 'knee' (diz) kelimesi 'de knie' olarak geçer.",
+    explanationEn: "In the body parts list, 'knee' translates to 'de knie'."
+  },
+  {
+    id: "sum_ch9_1007",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "vocabulary", "body_parts"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'ankle'?",
+    options: ["de enkel", "de voet", "het been"],
+    correctAnswer: "de enkel",
+    explanationTr: "Vücut bölümleri listesinde 'ankle' (ayak bileği) kelimesi 'de enkel' olarak verilmiştir.",
+    explanationEn: "In the body parts list, 'ankle' is given as 'de enkel'."
+  },
+  {
+    id: "sum_ch9_1008",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "vocabulary", "body_parts"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'face'?",
+    options: ["het gezicht", "de mond", "het oog"],
+    correctAnswer: "het gezicht",
+    explanationTr: "Vücut bölümleri listesine göre 'face' (yüz) kelimesi 'het gezicht'tir.",
+    explanationEn: "According to the body parts list, 'face' translates to 'het gezicht'."
+  },
+  {
+    id: "sum_ch9_1009",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "vocabulary", "body_parts"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'eye'?",
+    options: ["het oog", "het oor", "de neus"],
+    correctAnswer: "het oog",
+    explanationTr: "Vücut bölümleri listesinde 'eye' (göz) kelimesi 'het oog' olarak geçer.",
+    explanationEn: "In the body parts list, 'eye' translates to 'het oog'."
+  },
+  {
+    id: "sum_ch9_1010",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "vocabulary", "body_parts"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'mouth'?",
+    options: ["de mond", "het gezicht", "de neus"],
+    correctAnswer: "de mond",
+    explanationTr: "Vücut bölümleri listesinde 'mouth' (ağız) kelimesi 'de mond' olarak verilmiştir.",
+    explanationEn: "In the body parts list, 'mouth' is given as 'de mond'."
+  },
+  {
+    id: "sum_ch9_1011",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "vocabulary", "body_parts"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'ear'?",
+    options: ["het oor", "het oog", "de neus"],
+    correctAnswer: "het oor",
+    explanationTr: "Vücut bölümleri listesinde 'ear' (kulak) kelimesi 'het oor' olarak geçer.",
+    explanationEn: "In the body parts list, 'ear' translates to 'het oor'."
+  },
+  {
+    id: "sum_ch9_1012",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "phrases", "doctor"],
+    questionNl: "Hoe vraagt de huisarts 'What is the matter?' of 'What's wrong?'",
+    options: ["Wat is er aan de hand?", "Waar hebt u pijn?", "Hebt u koorts?"],
+    correctAnswer: "Wat is er aan de hand?",
+    explanationTr: "Hekimin 'Sorun nedir / Ne oldu?' anlamında sorduğu soru 'Wat is er aan de hand?' şeklindedir.",
+    explanationEn: "The doctor's question 'What's wrong?' translates to 'Wat is er aan de hand?'."
+  },
+  {
+    id: "sum_ch9_1013",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "phrases", "doctor"],
+    questionNl: "Hoe vraagt de huisarts 'What are your symptoms/complaints?'",
+    options: ["Wat zijn de klachten?", "Wat is er aan de hand?", "Hoelang hebt u die al?"],
+    correctAnswer: "Wat zijn de klachten?",
+    explanationTr: "Hekim şikayetlerinizi veya belirtilerinizi sormak için 'Wat zijn de klachten?' ifadesini kullanır.",
+    explanationEn: "To ask about your symptoms or complaints, the doctor says 'Wat zijn de klachten?'."
+  },
+  {
+    id: "sum_ch9_1014",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "phrases", "doctor"],
+    questionNl: "Hoe vraagt de huisarts 'How long have you had them / it?'",
+    options: ["Hoelang hebt u die / dat al?", "Wanneer is dat begonnen?", "Hebt u koorts?"],
+    correctAnswer: "Hoelang hebt u die / dat al?",
+    explanationTr: "Hastalık belirtilerinin ne kadar süredir var olduğunu sormak için 'Hoelang hebt u die / dat al?' sorusu sorulur.",
+    explanationEn: "To ask how long you've had the symptoms, the doctor asks 'Hoelang hebt u die / dat al?'."
+  },
+  {
+    id: "sum_ch9_1015",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "phrases", "doctor"],
+    questionNl: "Hoe vraagt de huisarts 'Do you have a fever?'",
+    options: ["Hebt u koorts?", "Waar hebt u pijn?", "Wat zijn de klachten?"],
+    correctAnswer: "Hebt u koorts?",
+    explanationTr: "Ateşiniz olup olmadığını sormak için 'Hebt u koorts?' kullanılır.",
+    explanationEn: "To ask if you have a fever, the doctor asks 'Hebt u koorts?'."
+  },
+  {
+    id: "sum_ch9_1016",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "phrases", "patient"],
+    questionNl: "Hoe zegt de patiënt 'My throat hurts / is sore'?",
+    options: ["Mijn keel doet pijn / zeer.", "Ik heb hoofdpijn.", "Ik ben ziek."],
+    correctAnswer: "Mijn keel doet pijn / zeer.",
+    explanationTr: "Hasta boğazının ağrıdığını ifade etmek için 'Mijn keel doet pijn / zeer' der.",
+    explanationEn: "The patient says 'Mijn keel doet pijn / zeer' to express that their throat hurts."
+  },
+  {
+    id: "sum_ch9_1017",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "phrases", "patient"],
+    questionNl: "Hoe zegt de patiënt 'The bumps/lumps itch terribly'?",
+    options: ["De bultjes jeuken verschrikkelijk.", "Ik voel me niet goed.", "Mijn keel doet pijn."],
+    correctAnswer: "De bultjes jeuken verschrikkelijk.",
+    explanationTr: "Kızarıklık veya kabarcıkların korkunç derecede kaşındığını söylemek için 'De bultjes jeuken verschrikkelijk' kalıbı kullanılır.",
+    explanationEn: "To say the lumps itch terribly, the phrase 'De bultjes jeuken verschrikkelijk' is used."
+  },
+  {
+    id: "sum_ch9_1018",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "phrases", "patient"],
+    questionNl: "Hoe zegt de patiënt 'I am sick / ill'?",
+    options: ["Ik ben ziek.", "Ik voel me goed.", "Ik slaap slecht."],
+    correctAnswer: "Ik ben ziek.",
+    explanationTr: "Hasta olduğunu belirtmek için 'Ik ben ziek' ifadesi kullanılır.",
+    explanationEn: "The phrase 'Ik ben ziek' is used to say 'I am sick / ill'."
+  },
+  {
+    id: "sum_ch9_1019",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "vocabulary", "doctor"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'ointment'?",
+    options: ["de zalf", "de bultjes", "de dokter"],
+    correctAnswer: "de zalf",
+    explanationTr: "Merhem kelimesinin Felemenkçesi 'de zalf'tır.",
+    explanationEn: "The Dutch word for 'ointment' is 'de zalf'."
+  },
+  {
+    id: "sum_ch9_1020",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "vocabulary", "doctor"],
+    questionNl: "Wat is de Nederlandse vertaling voor 'doctor / GP'?",
+    options: ["de huisarts / de dokter", "de verpleegkundige", "de patiënt"],
+    correctAnswer: "de huisarts / de dokter",
+    explanationTr: "Doktor veya pratisyen hekim Felemenkçede 'de huisarts' veya 'de dokter' olarak adlandırılır.",
+    explanationEn: "A doctor or GP translates to 'de huisarts' or 'de dokter' in Dutch."
+  },
+  {
+    id: "sum_ch9_1021",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "phrases", "reactions"],
+    questionNl: "Welke reactie gebruik je om iemand beterschap te wensen ('Get well soon')?",
+    options: ["Beterschap.", "Gefeliciteerd.", "Smakelijk eten."],
+    correctAnswer: "Beterschap.",
+    explanationTr: "Hasta olan birine 'Geçmiş olsun' (Get well soon) demek için 'Beterschap' denir.",
+    explanationEn: "To wish someone a speedy recovery ('Get well soon'), you say 'Beterschap'."
+  },
+  {
+    id: "sum_ch9_1022",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "phrases", "reactions"],
+    questionNl: "Welke reactie betekent 'Be strong / Good luck' in moeilijke situaties?",
+    options: ["Sterkte.", "Proost.", "Beterschap."],
+    correctAnswer: "Sterkte.",
+    explanationTr: "Zor durumlarda 'Güçlü ol / Kolay gelsin' (Be strong / Good luck) anlamında 'Sterkte' ifadesi kullanılır.",
+    explanationEn: "To say 'Be strong' or 'Good luck' in difficult times, you use the expression 'Sterkte'."
+  },
+  {
+    id: "sum_ch9_1023",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "vocabulary", "time"],
+    questionNl: "Hoe zeg je 'yesterday morning' in het Nederlands?",
+    options: ["gisterochtend / gistermorgen", "gistermiddag", "gisteravond"],
+    correctAnswer: "gisterochtend / gistermorgen",
+    explanationTr: "'Dün sabah' (yesterday morning) ifadesi Felemenkçede 'gisterochtend' veya 'gistermorgen' olarak söylenir.",
+    explanationEn: "'Yesterday morning' translates to 'gisterochtend' or 'gistermorgen' in Dutch."
+  },
+  {
+    id: "sum_ch9_1024",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "vocabulary", "time"],
+    questionNl: "Hoe zeg je 'tonight / this evening' in het Nederlands?",
+    options: ["vanavond", "vannacht", "gisteravond"],
+    correctAnswer: "vanavond",
+    explanationTr: "'Bu akşam' (tonight / this evening) ifadesi 'vanavond' olarak kullanılır.",
+    explanationEn: "'Tonight' or 'this evening' translates to 'vanavond'."
+  },
+  {
+    id: "sum_ch9_1025",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "vocabulary", "time"],
+    questionNl: "Hoe zeg je 'tomorrow night' in het Nederlands?",
+    options: ["morgennacht", "vanavond", "morgenochtend"],
+    correctAnswer: "morgennacht",
+    explanationTr: "'Yarın gece' (tomorrow night) ifadesinin karşılığı 'morgennacht'tır.",
+    explanationEn: "'Tomorrow night' translates to 'morgennacht'."
+  },
+  {
+    id: "sum_ch9_1026",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "vocabulary", "time"],
+    questionNl: "Hoe zeg je 'every afternoon' in het Nederlands?",
+    options: ["'s middags", "elke ochtend", "'s avonds"],
+    correctAnswer: "'s middags",
+    explanationTr: "'Her öğleden sonra' (every afternoon) ifadesi günlük dilde kısaca ''s middags' olarak geçer.",
+    explanationEn: "'Every afternoon' translates to ''s middags'."
+  },
+  {
+    id: "sum_ch9_1027",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "grammar", "perfectum"],
+    questionNl: "Bij de regelmatige werkwoorden in het perfectum, wanneer krijgt het participium een '-t' op het einde (ge + stam + t)?",
+    options: ["Als de laatste letter van de stam in 'soft ketchup' zit (s, f, t, k, c, h, p).", "Als het werkwoord met een klinker eindigt.", "Als het subject 'ik' is."],
+    correctAnswer: "Als de laatste letter van de stam in 'soft ketchup' zit (s, f, t, k, c, h, p).",
+    explanationTr: "Düzenli fiillerin perfectum (geçmiş zaman) halinde, fiil kökünün son harfi 'soft ketchup' (s, f, t, k, c, h, p) ünsüzlerinden biriyse sona '-t' eklenir.",
+    explanationEn: "In the regular perfectum, a '-t' is added if the last letter of the verb stem is in 'soft ketchup' (s, f, t, k, c, h, p)."
+  },
+  {
+    id: "sum_ch9_1028",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "grammar", "perfectum"],
+    questionNl: "Wat is het participium (voltooid deelwoord) van het werkwoord 'werken'?",
+    options: ["gewerkt", "gewerkd", "gewerken"],
+    correctAnswer: "gewerkt",
+    explanationTr: "'werken' fiilinin kökü 'werk' ile biter. 'k' harfi 'soft ketchup' içinde yer aldığı için sonuna '-t' alır: 'gewerkt'.",
+    explanationEn: "The stem of 'werken' is 'werk'. Since 'k' is in 'soft ketchup', it takes a '-t': 'gewerkt'."
+  },
+  {
+    id: "sum_ch9_1029",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "grammar", "perfectum"],
+    questionNl: "Wat is het participium (voltooid deelwoord) van het werkwoord 'spelen'?",
+    options: ["gespeeld", "gespeelt", "gespelen"],
+    correctAnswer: "gespeeld",
+    explanationTr: "'spelen' fiilinin kökü 'speel' ile biter. 'l' harfi 'soft ketchup' içinde olmadığından sonuna '-d' alır: 'gespeeld'.",
+    explanationEn: "The stem of 'spelen' is 'speel'. Since 'l' is not in 'soft ketchup', it takes a '-d': 'gespeeld'."
+  },
+  {
+    id: "sum_ch9_1030",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "grammar", "perfectum", "prefixes"],
+    questionNl: "Wat gebeurt er in het perfectum met werkwoorden die beginnen met be-, ge-, her-, ver-, of ont-?",
+    options: ["Ze krijgen geen extra 'ge-' als prefix.", "Ze krijgen een dubbele 'ge-'.", "Ze veranderen in onregelmatige werkwoorden."],
+    correctAnswer: "Ze krijgen geen extra 'ge-' als prefix.",
+    explanationTr: "be-, ge-, her-, ver- veya ont- ile başlayan fiiller perfectum (geçmiş zaman) formunda fazladan 'ge-' ön eki almazlar.",
+    explanationEn: "Verbs starting with be-, ge-, her-, ver-, or ont- do not get an extra 'ge-' prefix in the perfectum."
+  },
+  {
+    id: "sum_ch9_1031",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "grammar", "perfectum"],
+    questionNl: "Wat is het participium van het werkwoord 'gebruiken'?",
+    options: ["gebruikt", "gegebruikt", "gebruiken"],
+    correctAnswer: "gebruikt",
+    explanationTr: "'gebruiken' fiili zaten 'ge-' ile başladığı için ekstra 'ge-' almaz ve köküne göre '-t' eklenir: 'gebruikt'.",
+    explanationEn: "Since 'gebruiken' already starts with 'ge-', it does not take an extra 'ge-' and ends with '-t': 'gebruikt'."
+  },
+  {
+    id: "sum_ch9_1032",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "grammar", "perfectum"],
+    questionNl: "Wat is het participium van het werkwoord 'betalen'?",
+    options: ["betaald", "gebetaald", "betaalt"],
+    correctAnswer: "betaald",
+    explanationTr: "'betalen' fiili 'be-' ile başladığı için fazladan 'ge-' almaz, kurala göre sonuna '-d' gelir: 'betaald'.",
+    explanationEn: "Since 'betalen' starts with 'be-', it does not take an extra 'ge-' and ends with '-d': 'betaald'."
+  },
+  {
+    id: "sum_ch9_1033",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "grammar", "perfectum"],
+    questionNl: "Wat is het participium van het werkwoord 'verhuren'?",
+    options: ["verhuurd", "geverhuurd", "verhuurt"],
+    correctAnswer: "verhuurd",
+    explanationTr: "'verhuren' fiili 'ver-' ile başladığı için 'ge-' almaz ve sonuna '-d' eklenir: 'verhuurd'.",
+    explanationEn: "Since 'verhuren' starts with 'ver-', it does not take an extra 'ge-' and ends with '-d': 'verhuurd'."
+  },
+  {
+    id: "sum_ch9_1034",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "grammar", "perfectum"],
+    questionNl: "Wat is het participium van het werkwoord 'ontmoeten'?",
+    options: ["ontmoet", "geontmoet", "ontmoeten"],
+    correctAnswer: "ontmoet",
+    explanationTr: "'ontmoeten' fiili 'ont-' ile başladığı için 'ge-' almaz. Kökü 't' ile bittiği için kendi formunda kalır: 'ontmoet'.",
+    explanationEn: "Since 'ontmoeten' starts with 'ont-', it does not take an extra 'ge-'. The stem ends in 't', so it remains 'ontmoet'."
+  },
+  {
+    id: "sum_ch9_1035",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "grammar", "perfectum"],
+    questionNl: "Wanneer gebruik je het hulpwerkwoord 'zijn' in plaats van 'hebben' in het perfectum?",
+    options: ["Bij werkwoorden van richting of verandering van situatie (bijv. gaan, komen, beginnen).", "Bij alle onregelmatige werkwoorden.", "Als de zin ontkennend is."],
+    correctAnswer: "Bij werkwoorden van richting of verandering van situatie (bijv. gaan, komen, beginnen).",
+    explanationTr: "Perfectum formunda, yön veya durum değişikliği bildiren fiiller (gaan, komen, beginnen gibi) ile 'hebben' yerine 'zijn' kullanılır.",
+    explanationEn: "In the perfectum, the auxiliary 'zijn' is used instead of 'hebben' for verbs expressing direction or change of situation (e.g., gaan, komen, beginnen)."
+  },
+  {
+    id: "sum_ch9_1036",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "grammar", "perfectum"],
+    questionNl: "Kies het juiste hulpwerkwoord voor 'gaan' in het perfectum: Ik ___ gegaan.",
+    options: ["ben", "heb", "had"],
+    correctAnswer: "ben",
+    explanationTr: "'gaan' fiili yönelme ve hareket bildirdiği için 'zijn' yardımcı fiiliyle kullanılır: Ik ben gegaan.",
+    explanationEn: "Because 'gaan' implies direction/movement, it is used with the auxiliary 'zijn': Ik ben gegaan."
+  },
+  {
+    id: "sum_ch9_1037",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "grammar", "perfectum"],
+    questionNl: "Kies het juiste hulpwerkwoord voor 'komen' in het perfectum: Wanneer ___ je naar Nederland gekomen?",
+    options: ["ben", "heb", "is"],
+    correctAnswer: "ben",
+    explanationTr: "'komen' (gelmek) fiili de yön ve hareket bildirdiği için 'zijn' ile çekimlenir.",
+    explanationEn: "The verb 'komen' (to come) also implies movement and direction, so it uses 'zijn'."
+  },
+  {
+    id: "sum_ch9_1038",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "grammar", "perfectum"],
+    questionNl: "Kies het juiste hulpwerkwoord voor 'beginnen' in het perfectum: We ___ met de les begonnen.",
+    options: ["zijn", "hebben", "worden"],
+    correctAnswer: "zijn",
+    explanationTr: "'beginnen' durumu değişikliği (change of situation) ifade ettiği için 'zijn' yardımcı fiilini alır.",
+    explanationEn: "'beginnen' implies a change of situation, so it takes the auxiliary 'zijn'."
+  },
+  {
+    id: "sum_ch9_1039",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "grammar", "perfectum"],
+    questionNl: "Welke andere twee belangrijke werkwoorden gebruiken 'zijn' in het perfectum volgens de theorie?",
+    options: ["zijn en blijven", "hebben en doen", "kijken en luisteren"],
+    correctAnswer: "zijn en blijven",
+    explanationTr: "Kitaptaki notlara göre, hareket fiillerinin dışında 'zijn' (olmak) ve 'blijven' (kalmak) fiilleri de perfectumda 'zijn' ile kullanılır.",
+    explanationEn: "According to the notes, besides movement verbs, 'zijn' and 'blijven' also use 'zijn' in the perfectum."
+  },
+  {
+    id: "sum_ch9_1040",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "grammar", "perfectum", "irregular_verbs"],
+    questionNl: "Wat is het participium van het onregelmatige werkwoord 'doen'?",
+    options: ["gedaan", "gedoen", "gedoend"],
+    correctAnswer: "gedaan",
+    explanationTr: "'doen' fiili düzensizdir ve geçmiş zaman ortacı (participium) 'gedaan' şeklindedir.",
+    explanationEn: "The verb 'doen' is irregular, and its past participle is 'gedaan'."
+  },
+  {
+    id: "sum_ch9_1041",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "grammar", "perfectum", "irregular_verbs"],
+    questionNl: "Wat is het participium van het onregelmatige werkwoord 'krijgen'?",
+    options: ["gekregen", "gekrijgd", "gekrijgt"],
+    correctAnswer: "gekregen",
+    explanationTr: "'krijgen' fiilinin geçmiş zaman ortacı 'gekregen'dir.",
+    explanationEn: "The past participle of 'krijgen' is 'gekregen'."
+  },
+  {
+    id: "sum_ch9_1042",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "grammar", "perfectum", "irregular_verbs"],
+    questionNl: "Wat is het participium van het onregelmatige werkwoord 'kijken'?",
+    options: ["gekeken", "gekijkd", "gekijk"],
+    correctAnswer: "gekeken",
+    explanationTr: "'kijken' fiili düzensizdir ve 3. hali 'gekeken'dir.",
+    explanationEn: "The verb 'kijken' is irregular, and its past participle is 'gekeken'."
+  },
+  {
+    id: "sum_ch9_1043",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "grammar", "perfectum", "irregular_verbs"],
+    questionNl: "Wat is het participium van het onregelmatige werkwoord 'helpen'?",
+    options: ["geholpen", "gehelpd", "gehielp"],
+    correctAnswer: "geholpen",
+    explanationTr: "'helpen' fiilinin geçmiş zaman ortacı 'geholpen' olarak kullanılır.",
+    explanationEn: "The past participle of 'helpen' is 'geholpen'."
+  },
+  {
+    id: "sum_ch9_1044",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "grammar", "perfectum", "irregular_verbs"],
+    questionNl: "Wat is het participium van het onregelmatige werkwoord 'geven'?",
+    options: ["gegeven", "gegeefd", "gegeeft"],
+    correctAnswer: "gegeven",
+    explanationTr: "'geven' fiili düzensiz olup, geçmiş zaman ortacı 'gegeven' şeklindedir.",
+    explanationEn: "The verb 'geven' is irregular, and its past participle is 'gegeven'."
+  },
+  {
+    id: "sum_ch9_1045",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "grammar", "perfectum", "irregular_verbs"],
+    questionNl: "Wat is het participium van het onregelmatige werkwoord 'zien'?",
+    options: ["gezien", "geziend", "geziet"],
+    correctAnswer: "gezien",
+    explanationTr: "'zien' fiilinin geçmiş zaman ortacı 'gezien'dir.",
+    explanationEn: "The past participle of 'zien' is 'gezien'."
+  },
+  {
+    id: "sum_ch9_1046",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "grammar", "pronouns"],
+    questionNl: "Hoe schrijf je 'something special' in het Nederlands door 'iets' te combineren met een adjectief?",
+    options: ["iets bijzonders", "iets bijzonder", "iets bijzonderes"],
+    correctAnswer: "iets bijzonders",
+    explanationTr: "Kurala göre 'iets' kelimesinden sonra gelen sıfatlara '-s' takısı eklenir: iets bijzonders.",
+    explanationEn: "According to the rule, adjectives following 'iets' get an '-s' suffix: iets bijzonders."
+  },
+  {
+    id: "sum_ch9_1047",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "grammar", "pronouns"],
+    questionNl: "Hoe vertaal je 'nothing new' in het Nederlands met de correcte spelling?",
+    options: ["niets nieuws", "niets nieuw", "niets nieuwt"],
+    correctAnswer: "niets nieuws",
+    explanationTr: "'niets' kelimesinden sonra gelen sıfatlara '-s' takısı eklenir: niets nieuws.",
+    explanationEn: "Adjectives following 'niets' get an '-s' suffix: niets nieuws."
+  },
+  {
+    id: "sum_ch9_1048",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "reading_comprehension", "health"],
+    questionNl: "Wat had Jenny volgens de tekst 'Verkouden zijn of griep hebben'?",
+    options: ["Zij had griep (met hoge koorts, pijn en moest in bed blijven).", "Zij had een lichte verkoudheid.", "Zij had een gebroken been."],
+    correctAnswer: "Zij had griep (met hoge koorts, pijn en moest in bed blijven).",
+    explanationTr: "Okuma parçasına ve cevap anahtarına göre Jenny gribe (griep) yakalanmıştır; ateşi vardı, her yeri ağrıyordu ve yataktan çıkamadı.",
+    explanationEn: "According to the text and answer key, Jenny had the flu (griep); she had a fever, everything hurt, and she stayed in bed."
+  },
+  {
+    id: "sum_ch9_1049",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "reading_comprehension", "health"],
+    questionNl: "Wat had Peter volgens dezelfde tekst?",
+    options: ["Hij was verkouden (hij werkte, maar moest hoesten, niezen en zijn neus snuiten).", "Hij had griep en kon niet lopen.", "Hij had hoofdpijn en moest naar het ziekenhuis."],
+    correctAnswer: "Hij was verkouden (hij werkte, maar moest hoesten, niezen en zijn neus snuiten).",
+    explanationTr: "Okuma parçasına ve cevap anahtarına göre Peter soğuk algınlığı (verkoudheid) geçirmiştir; öksürüyor, hapşırıyor ve burnunu siliyordu ama çalışabiliyordu.",
+    explanationEn: "According to the text and answer key, Peter had a cold (verkoudheid); he was coughing, sneezing, and blowing his nose but still worked."
+  },
+  {
+    id: "sum_ch9_1050",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "culture", "health"],
+    questionNl: "Wat zijn over het algemeen de reguliere praktijktijden (office hours) van een huisarts in Nederland volgens het boek?",
+    options: ["Op werkdagen van 8.00 tot 12.00 uur en van 13.30 tot 17.00 uur.", "24 uur per dag, 7 dagen per week.", "Alleen in de ochtend tot 13.00 uur."],
+    correctAnswer: "Op werkdagen van 8.00 tot 12.00 uur en van 13.30 tot 17.00 uur.",
+    explanationTr: "Kitaptaki kültürel bilgilere göre aile hekimlerinin (huisarts) standart çalışma saatleri iş günleri 8.00-12.00 ile 13.30-17.00 arasıdır.",
+    explanationEn: "According to the cultural notes, regular office hours for a GP are working days 8.00-12.00 and 13.30-17.00."
+  },
+  {
+    id: "sum_ch9_1051",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "culture", "health"],
+    questionNl: "Wie bel je voor medische spoedgevallen buiten de reguliere praktijktijden in Nederland?",
+    options: ["De spoedlijn of huisartsenpost.", "De politie.", "Je buren."],
+    correctAnswer: "De spoedlijn of huisartsenpost.",
+    explanationTr: "Çalışma saatleri dışında veya acil durumlarda nöbetçi doktora 'de spoedlijn' (acil durum hattı) üzerinden ulaşılır.",
+    explanationEn: "For medical emergencies outside regular hours, you contact the 'spoedlijn' (emergency line)."
+  },
+  {
+    id: "sum_ch9_1052",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "grammar", "prepositions"],
+    questionNl: "Welke prepositie vul je in: 'Zoals u ziet, zit ik ___ de rode bultjes.'",
+    options: ["onder", "in", "op"],
+    correctAnswer: "onder",
+    explanationTr: "Felemenkçede vücudun bir şeyle (örneğin kızarıklıkla) kaplı olduğunu belirtirken 'onder zitten' (altında kalmak / kaplanmak) deyimi kullanılır.",
+    explanationEn: "In Dutch, the expression 'onder zitten' is used to indicate being covered in something, like a rash."
+  },
+  {
+    id: "sum_ch9_1053",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "vocabulary", "health"],
+    questionNl: "Wat is de betekenis van het werkwoord 'jeuken' in het Engels?",
+    options: ["to itch", "to bleed", "to sneeze"],
+    correctAnswer: "to itch",
+    explanationTr: "Tıbbi terimler arasında geçen 'jeuken' kelimesi kaşınmak (to itch) anlamına gelir.",
+    explanationEn: "In the medical vocabulary, 'jeuken' translates to 'to itch'."
+  },
+  {
+    id: "sum_ch9_1054",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "vocabulary"],
+    questionNl: "Wat is de betekenis van het bijvoeglijk naamwoord 'verschrikkelijk'?",
+    options: ["terrible", "beautiful", "easy"],
+    correctAnswer: "terrible",
+    explanationTr: "'verschrikkelijk' kelimesi korkunç veya berbat (terrible) anlamına gelir.",
+    explanationEn: "'verschrikkelijk' translates to 'terrible'."
+  },
+  
+  //////////////////sadas////////////10
   
   
   
+  //////////////////sadas////////////11
   
-  //////////////////////////////end
+  
+  
+  //////////////////sadas////////////12
+  
+  
+  
+  //////////////////sadas////////////13
+  
+  
+  
+  //////////////////sadas////////////14
+  
+  
+  
+  //////////////////sadas////////////15
+  
+  
+  
+  //////////////////sadas////////////16
+  
+  
+  
+  //////////////////sadas////////////17
+  
+  
+  
+  //////////////////sadas////////////18
+  
+  
+  
+  //////////////////sadas////////////vocabulary
+  
+  
+  
+  //////////////////sadas////////////verbs
+  
+  
+  //////////////////sadas////////////grammatica
+  
+  
+  //////////////////sadas////////////end
 ];
