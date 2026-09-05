@@ -962,7 +962,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
               <h1 className="font-bold text-lg leading-tight text-slate-100 truncate group-hover:text-brand-300 transition-colors">Nederlands in Gang</h1>
               <p className="text-xs text-brand-300 truncate">Interactief Oefenportaal (A1 → A2)</p>
             </div>
-            <h1 className="font-bold text-lg leading-tight text-slate-100 sm:hidden flex-shrink-0 group-hover:text-brand-300 transition-colors">NiG</h1>
+            
           </div>
 
           <div className="flex items-center space-x-1 sm:space-x-2 flex-shrink-0 overflow-visible">
