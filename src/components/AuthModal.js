@@ -1,6 +1,6 @@
 // src/components/AuthModal.js
 import React, { useState } from 'react';
-import { auth, sendSignInLinkToEmail } from '../firebase';
+import { auth, sendSignInLinkToEmail, deleteCloudData } from '../firebase';
 import { useLanguage } from '../contexts/LanguageContext';
 
 export default function AuthModal({ isOpen, onClose, user }) {
@@ -79,13 +79,36 @@ export default function AuthModal({ isOpen, onClose, user }) {
     reader.readAsText(file);
   };
 
-  // TÜM VERİYİ SIFIRLAMA FONKSİYONU
+// TÜM VERİYİ SIFIRLAMA FONKSİYONU (BULUT + LOKAL)
   const handleDeleteAllData = async () => {
-    if (user) {
-      await auth.signOut();
+    try {
+      // 1. BULUTTAKİ (FIREBASE) VERİLERİ SİL
+      if (user) {
+        await deleteCloudData(user.uid);
+      }
+
+      // 2. LOKAL VERİLERİ SEÇİCİ OLARAK SİLME (Oturumu Koruma)
+      const keysToRemove = [];
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key && !key.startsWith('firebase') && key !== 'emailForSignIn') {
+          keysToRemove.push(key);
+        }
+      }
+      
+      // Tespit edilen key'leri lokalden kaldır
+      keysToRemove.forEach(key => localStorage.removeItem(key));
+
+      // 3. BAŞARI MESAJI VE YENİLEME
+      alert(lang === 'tr' ? 'Tüm gelişiminiz en başa sarıldı ve verileriniz silindi.' : 'All your progress and data have been reset.');
+      
+      // Sayfayı yenile (Artık bulutta da veri kalmadığı için tertemiz başlayacak)
+      window.location.reload();
+
+    } catch (error) {
+      console.error("Veriler sıfırlanırken hata oluştu:", error);
+      alert(lang === 'tr' ? 'Veriler sıfırlanırken bir hata oluştu.' : 'An error occurred while resetting data.');
     }
-    localStorage.clear();
-    window.location.reload();
   };
 
   return (

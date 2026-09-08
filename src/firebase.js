@@ -2,6 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, isSignInWithEmailLink, signInWithEmailLink, sendSignInLinkToEmail, onAuthStateChanged } from "firebase/auth";
 import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
+import { deleteDoc } from "firebase/firestore"; // Eğer bu import henüz yoksa en üste ekle
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -85,6 +86,20 @@ export const handleUserSyncOnLogin = async (user) => {
     isPulling = false;
     await syncToCloud();
     return "uploaded";
+  }
+};
+
+// YENİ: Buluttaki kullanıcı verilerini tamamen silen fonksiyon
+export const deleteCloudData = async (uid) => {
+  try {
+    const userDocRef = doc(db, "users", uid);
+    // İster dokümanı tamamen silebilirsin:
+    await deleteDoc(userDocRef);
+    
+    // Veya dokümanı silmek yerine içini boşaltmak istersen:
+    // await setDoc(userDocRef, { localData: {} });
+  } catch (err) {
+    console.error("Cloud delete error:", err);
   }
 };
 
