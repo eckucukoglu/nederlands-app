@@ -9,6 +9,8 @@ import IrregularVerbs from './components/IrregularVerbs';
 import Grammar from './components/Grammar'; 
 import QuizModule from './components/QuizModule'; 
 import FloatingFeedback from './components/FloatingFeedback';
+import AdminReports from './components/AdminReports';
+
 import { bookSections, vocabulary } from './data';
 import { globalDictionary } from './data/globalDictionary';
 import { auth, isSignInWithEmailLink, signInWithEmailLink, onAuthStateChanged, handleUserSyncOnLogin, pullFromCloud } from './firebase';
@@ -1466,7 +1468,17 @@ export default function App() {
   const [isAppReady, setIsAppReady] = useState(false);
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
 
+  // YENİ EKLENEN KISIM: URL'yi kontrol et
+  const currentPath = window.location.pathname;
+  const isAdminRoute = currentPath === '/feedbacks';
+  
   useEffect(() => {
+	// Admin sayfasındaysak gereksiz veritabanı indirmelerini çalıştırmaya gerek yok
+    if (isAdminRoute) {
+      setIsAppReady(true);
+      return; 
+    }
+	
     const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
       setUser(currentUser);
 
@@ -1496,7 +1508,7 @@ export default function App() {
     });
 
     return () => unsubscribe();
-  }, []);
+  }, [isAdminRoute]);
 
   if (!isAppReady) {
     return (
@@ -1504,6 +1516,14 @@ export default function App() {
         <i className="fa-solid fa-cloud-arrow-down text-6xl animate-bounce mb-4"></i>
         <h2 className="text-xl font-bold text-slate-200">Yükleniyor / Loading...</h2>
         <p className="text-sm text-slate-500 mt-2">Lütfen bekleyin / Please wait.</p>
+      </div>
+    );
+  }
+  
+  if (isAdminRoute) {
+    return (
+      <div className="min-h-screen bg-slate-950">
+        <AdminReports />
       </div>
     );
   }

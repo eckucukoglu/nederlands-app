@@ -67,7 +67,7 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
     return optionsCopy;
   }, [currentQ]);
 
-  // YENİ: Hatalı Soru Bildirim Fonksiyonu
+// YÜKSELTİLMİŞ: Hatalı Soru Bildirim Fonksiyonu (Hata Yakalamalı)
   const handleReportToggle = async () => {
     if (!currentQ) return;
     if (!auth.currentUser) {
@@ -77,13 +77,23 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
 
     const newStatus = !isReported;
     
-    // Lokal state'i güncelle (kullanıcı anında geri bildirim görsün)
-    const updatedReports = { ...reportedQuestions, [currentQ.id]: newStatus };
-    setReportedQuestions(updatedReports);
-    localStorage.setItem('reportedQuestions', JSON.stringify(updatedReports));
+    try {
+      // 1. Önce Firebase'e kaydetmeyi dene
+      await toggleReportQuestion(currentQ, auth.currentUser, newStatus);
+      
+      // 2. Eğer Firebase hata vermezse (işlem başarılıysa) lokal state'i ve görünümü güncelle
+      const updatedReports = { ...reportedQuestions, [currentQ.id]: newStatus };
+      setReportedQuestions(updatedReports);
+      localStorage.setItem('reportedQuestions', JSON.stringify(updatedReports));
 
-    // Firebase'e gönder/sil
-    await toggleReportQuestion(currentQ, auth.currentUser, newStatus);
+    } catch (error) {
+      // 3. Bir hata olursa kullanıcıyı uyar
+      console.error(error);
+      alert(isTr 
+        ? "Soru bildirilirken bir hata oluştu. Lütfen bağlantınızı veya izinleri kontrol edin." 
+        : "An error occurred while reporting. Please check your connection."
+      );
+    }
   };
 
   const handleTagClick = (clickedTag) => {

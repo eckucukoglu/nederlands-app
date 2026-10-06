@@ -106,28 +106,29 @@ export const deleteCloudData = async (uid) => {
 
 export { isSignInWithEmailLink, signInWithEmailLink, sendSignInLinkToEmail, onAuthStateChanged };
 
+// YENİ: Hatalı Soruyu Bildirme veya Geri Alma
 export const toggleReportQuestion = async (question, user, isReporting) => {
-  if (!user) return; // Kullanıcı giriş yapmamışsa işlem yapma
+  if (!user) throw new Error("Kullanıcı bulunamadı"); 
   
-  // Doküman ID'sini SoruID_KullanıcıID şeklinde yapıyoruz ki aynı kullanıcı aynı soruyu 1 kez bildirebilsin
   const docId = `${question.id}_${user.uid}`;
   const docRef = doc(db, "reported_questions", docId);
   
   try {
     if (isReporting) {
       await setDoc(docRef, {
-        questionId: question.id,
-        questionNl: question.questionNl,
+        questionId: question.id || "ID Yok",
+        questionNl: question.questionNl || "Soru metni yok",
         tags: question.tags || [],
         userId: user.uid,
-        userEmail: user.email,
+        userEmail: user.email || "Email belirtilmemiş",
         timestamp: new Date().toISOString()
       });
     } else {
       await deleteDoc(docRef);
     }
   } catch (err) {
-    console.error("Soru bildirim hatası:", err);
+    console.error("Soru bildirim hatası (Firebase):", err);
+    throw err; // Hatayı ekrana yansıtmak için fırlatıyoruz
   }
 };
 
