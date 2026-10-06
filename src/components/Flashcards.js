@@ -38,7 +38,7 @@ const translations = {
     history: "Geçmiş (Bu Kelime)",
     known: "Biliniyor",
     unknown: "Bilinmiyor",
-    clickToTranslate: "(Çeviri için tıkla of ⬆️ / ⬇️)",
+    clickToTranslate: "(Çeviri için tıkla of ⬆️ / Seslendir: ⬇️)",
     globalPoolLabel: "Benim Kelime Havuzum",
     bookPoolLabel: "Kitabın Kelime Havuzu"
   },
@@ -75,7 +75,7 @@ const translations = {
     history: "History (This Word)",
     known: "Known",
     unknown: "Unknown",
-    clickToTranslate: "(Click to translate or ⬆️️ / ⬇️)",
+    clickToTranslate: "(Click to translate or ⬆️ / Speak: ⬇️)",
     globalPoolLabel: "My Word Pool",
     bookPoolLabel: "Book's Word Pool"
   }
@@ -193,14 +193,56 @@ export default function Flashcards({ initialChapter }) {
   const currentWord = getResolvedWord(displayDeck[currentIndex] || displayDeck[0]);
   const totalWords = displayDeck.length;
 
-  // Sesli okuma fonksiyonunu yukarı taşıdık ki handleKeyDown içinde kullanabilelim
-  const speakDutch = useCallback((text, e) => {
+  const trText = currentWord?.tr || "";
+  const enText = currentWord?.en || "";
+
+  let primaryDisplay = "";
+  let secondaryDisplay = "";
+
+  if (lang === 'tr') {
+    primaryDisplay = trText || enText || t.noTranslation;
+    secondaryDisplay = (trText && enText && trText.toLowerCase() !== enText.toLowerCase()) ? enText : null;
+  } else {
+    primaryDisplay = enText || trText || t.noTranslation;
+    secondaryDisplay = (enText && trText && enText.toLowerCase() !== trText.toLowerCase()) ? trText : null;
+  }
+
+  // --- SESLİ OKUMA FONKSİYONU ---
+  // Ekrandaki dile göre doğru dili seçer
+  const speakWord = useCallback((e) => {
+    if(e) e.stopPropagation();
+    if(!currentWord || currentWord.id?.startsWith('empty')) return;
+
+    let textToSpeak = "";
+    let speechLang = "nl-NL";
+
+    // Kart çevrilmiş mi, ters modda mı? (Hangi yüz görünüyorsa ona göre metin seç)
+    const showingDutch = (!isReversed && !isFlipped) || (isReversed && isFlipped);
+    
+    if (showingDutch) {
+      textToSpeak = currentWord.nl;
+      speechLang = "nl-NL";
+    } else {
+      textToSpeak = primaryDisplay;
+      speechLang = lang === 'tr' ? "tr-TR" : "en-US";
+    }
+
+    if (textToSpeak && textToSpeak !== t.noTranslation) {
+      const utterance = new SpeechSynthesisUtterance(textToSpeak);
+      utterance.lang = speechLang;
+      window.speechSynthesis.speak(utterance);
+    }
+  }, [currentWord, isFlipped, isReversed, primaryDisplay, lang, t.noTranslation]);
+
+  // Sadece Felemenkçe olanı manuel okutmak için buton fonksiyonu
+  const speakDutchOnly = (text, e) => {
     if(e) e.stopPropagation();
     if(!text || text === "Geen woorden" || text === t.emptyFilterTitle) return;
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = 'nl-NL';
     window.speechSynthesis.speak(utterance);
-  }, [t.emptyFilterTitle]);
+  };
+
 
   const updateStats = useCallback((isKnown) => {
     if (!currentWord || currentWord.id?.startsWith('empty')) return; 
@@ -244,8 +286,7 @@ export default function Flashcards({ initialChapter }) {
     } 
     else if (e.key === 'ArrowDown') { 
       e.preventDefault(); 
-      setIsFlipped(prev => !prev); 
-      speakDutch(currentWord?.nl); // Kelimeyi sesli oku
+      speakWord(); // Yalnızca okur, kartı çevirmez
     }
     else if (e.key === 'ArrowRight') { 
       updateStats(true); 
@@ -253,7 +294,7 @@ export default function Flashcards({ initialChapter }) {
     else if (e.key === 'ArrowLeft') { 
       updateStats(false); 
     }
-  }, [updateStats, speakDutch, currentWord]);
+  }, [updateStats, speakWord]);
 
   useEffect(() => {
     window.addEventListener('keydown', handleKeyDown);
@@ -359,20 +400,6 @@ export default function Flashcards({ initialChapter }) {
     globalBgClass = "bg-emerald-900/20 border-emerald-800/50";
   } else {
     globalBgClass = "bg-rose-900/20 border-rose-800/50";
-  }
-
-  const trText = currentWord?.tr || "";
-  const enText = currentWord?.en || "";
-
-  let primaryDisplay = "";
-  let secondaryDisplay = "";
-
-  if (lang === 'tr') {
-    primaryDisplay = trText || enText || t.noTranslation;
-    secondaryDisplay = (trText && enText && trText.toLowerCase() !== enText.toLowerCase()) ? enText : null;
-  } else {
-    primaryDisplay = enText || trText || t.noTranslation;
-    secondaryDisplay = (enText && trText && enText.toLowerCase() !== trText.toLowerCase()) ? trText : null;
   }
 
   return (
@@ -596,8 +623,9 @@ export default function Flashcards({ initialChapter }) {
                 )}
               </div>
 
+              {/* BUTON: Ön yüz için (Felemenkçe ise ses butonu göster) */}
               {!isReversed ? (
-                <button onClick={(e) => speakDutch(currentWord?.nl, e)} className="text-slate-400 hover:text-brand-400 hover:bg-slate-700 p-3 rounded-full transition-colors text-xl">
+                <button onClick={(e) => speakDutchOnly(currentWord?.nl, e)} className="text-slate-400 hover:text-brand-400 hover:bg-slate-700 p-3 rounded-full transition-colors text-xl">
                   <i className="fa-solid fa-volume-high"></i>
                 </button>
               ) : (
@@ -636,8 +664,9 @@ export default function Flashcards({ initialChapter }) {
                 )}
               </div>
 
+              {/* BUTON: Arka yüz için (Felemenkçe ise ses butonu göster) */}
               {isReversed ? (
-                <button onClick={(e) => speakDutch(currentWord?.nl, e)} className="text-rose-200 hover:text-white hover:bg-black/20 p-2.5 rounded-full transition-colors text-lg mb-1">
+                <button onClick={(e) => speakDutchOnly(currentWord?.nl, e)} className="text-rose-200 hover:text-white hover:bg-black/20 p-2.5 rounded-full transition-colors text-lg mb-1">
                   <i className="fa-solid fa-volume-high"></i>
                 </button>
               ) : (
@@ -673,7 +702,7 @@ export default function Flashcards({ initialChapter }) {
 
         <div className="text-center mt-6">
           <div className="text-slate-500 text-[11px] sm:text-xs font-medium bg-slate-800/50 py-2 px-4 rounded-lg inline-block border border-slate-700/50">
-             <i className="fa-regular fa-keyboard mr-1.5"></i> {t.keyboard}: <strong>⬆️/⬇️</strong> {t.flip} &nbsp;•&nbsp; <strong>⬅️</strong> {t.dontKnow} &nbsp;•&nbsp; <strong>➡️</strong> {t.know}
+             <i className="fa-regular fa-keyboard mr-1.5"></i> {t.keyboard}: <strong>⬆️</strong> {t.flip} &nbsp;•&nbsp; <strong>⬇️</strong> Oku &nbsp;•&nbsp; <strong>⬅️</strong> {t.dontKnow} &nbsp;•&nbsp; <strong>➡️</strong> {t.know}
           </div>
         </div>
 
