@@ -3,6 +3,7 @@ import { initializeApp } from "firebase/app";
 import { getAuth, isSignInWithEmailLink, signInWithEmailLink, sendSignInLinkToEmail, onAuthStateChanged } from "firebase/auth";
 import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
 import { deleteDoc } from "firebase/firestore"; // Eğer bu import henüz yoksa en üste ekle
+import { collection, addDoc } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -104,3 +105,45 @@ export const deleteCloudData = async (uid) => {
 };
 
 export { isSignInWithEmailLink, signInWithEmailLink, sendSignInLinkToEmail, onAuthStateChanged };
+
+export const toggleReportQuestion = async (question, user, isReporting) => {
+  if (!user) return; // Kullanıcı giriş yapmamışsa işlem yapma
+  
+  // Doküman ID'sini SoruID_KullanıcıID şeklinde yapıyoruz ki aynı kullanıcı aynı soruyu 1 kez bildirebilsin
+  const docId = `${question.id}_${user.uid}`;
+  const docRef = doc(db, "reported_questions", docId);
+  
+  try {
+    if (isReporting) {
+      await setDoc(docRef, {
+        questionId: question.id,
+        questionNl: question.questionNl,
+        tags: question.tags || [],
+        userId: user.uid,
+        userEmail: user.email,
+        timestamp: new Date().toISOString()
+      });
+    } else {
+      await deleteDoc(docRef);
+    }
+  } catch (err) {
+    console.error("Soru bildirim hatası:", err);
+  }
+};
+
+// YENİ: Genel Text Feedback Gönderme
+export const submitFeedback = async (text, user) => {
+  const collRef = collection(db, "feedbacks");
+  try {
+    await addDoc(collRef, {
+      text: text,
+      userId: user ? user.uid : "anonymous",
+      userEmail: user ? user.email : "Ziyaretçi",
+      timestamp: new Date().toISOString(),
+      userAgent: navigator.userAgent // Hangi cihazdan gönderildiğini bilmek faydalı olabilir
+    });
+  } catch (err) {
+    console.error("Feedback gönderim hatası:", err);
+    throw err;
+  }
+};

@@ -6,8 +6,9 @@ import ExerciseEngine from './components/ExerciseEngine';
 import Flashcards from './components/Flashcards';
 import AuthModal from './components/AuthModal';
 import IrregularVerbs from './components/IrregularVerbs';
-import Grammar from './components/Grammar'; // GRAMMAR EKLENDİ
-import QuizModule from './components/QuizModule'; // FULL QUIZ MODÜLÜ EKLENDİ
+import Grammar from './components/Grammar'; 
+import QuizModule from './components/QuizModule'; 
+import FloatingFeedback from './components/FloatingFeedback';
 import { bookSections, vocabulary } from './data';
 import { globalDictionary } from './data/globalDictionary';
 import { auth, isSignInWithEmailLink, signInWithEmailLink, onAuthStateChanged, handleUserSyncOnLogin, pullFromCloud } from './firebase';
@@ -1455,6 +1456,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
         {activeTab === 'verbs' && <IrregularVerbs />}
         {activeTab === 'grammar' && <Grammar />}
       </main>
+	  <FloatingFeedback/>
     </div>
   );
 }

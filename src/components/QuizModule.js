@@ -2,28 +2,28 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { quizQuestions } from '../data/quizData';
+import { auth, toggleReportQuestion } from '../firebase'; // YENİ IMPORT
 
 export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
   const { lang } = useLanguage();
   const isTr = lang === 'tr';
 
   const [activeTags, setActiveTags] = useState(tags);
-  const [deck, setDeck] = useState([]); // Soruların sabitlendiği deste
+  const [deck, setDeck] = useState([]); 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [userAnswer, setUserAnswer] = useState('');
   const [isAnswered, setIsAnswered] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
   
-  // LocalStorage'dan geçmişi senkronize olarak ilk seferde alıyoruz
   const [quizHistory, setQuizHistory] = useState(() => JSON.parse(localStorage.getItem('quizHistory')) || {});
 
   // YENİ STATE'LER
-  const [studyWeakOnly, setStudyWeakOnly] = useState(false); // Zorlanılan Sorular Filtresi
+  const [studyWeakOnly, setStudyWeakOnly] = useState(false); 
   const [isFinished, setIsFinished] = useState(false);
   const [sessionScore, setSessionScore] = useState({ correct: 0, incorrect: 0, skipped: 0 });
   const [wrongTagsCloud, setWrongTagsCloud] = useState({}); 
+  const [reportedQuestions, setReportedQuestions] = useState(() => JSON.parse(localStorage.getItem('reportedQuestions')) || {}); // Hatalı Sorular
 
-  // Etiketler veya Filtre değiştiğinde desteyi oluştur (Cevap verildiğinde destenin karışmasını önler)
   useEffect(() => {
     const history = JSON.parse(localStorage.getItem('quizHistory')) || {};
     
@@ -31,7 +31,6 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
         ? [...quizQuestions] 
         : quizQuestions.filter(q => q.tags && q.tags.some(tag => activeTags.includes(tag)));
     
-    // YENİ: Yalnızca Yanlış Sayısı > Doğru Sayısı olanları filtrele
     if (studyWeakOnly) {
       filtered = filtered.filter(q => {
         const hist = history[q.id];
@@ -39,7 +38,6 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
       });
     }
     
-    // Soruları Karıştır
     for (let i = filtered.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [filtered[i], filtered[j]] = [filtered[j], filtered[i]];
@@ -57,8 +55,8 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
 
   const currentQ = deck[currentIndex];
   const qHistory = currentQ ? quizHistory[currentQ.id] || { correct: 0, incorrect: 0 } : null;
+  const isReported = currentQ ? reportedQuestions[currentQ.id] : false; // YENİ: Soru bildirildi mi?
 
-  // Soru değiştiğinde seçenekleri karıştır
   const shuffledOptions = useMemo(() => {
     if (!currentQ || !currentQ.options) return [];
     let optionsCopy = [...currentQ.options];
@@ -68,6 +66,25 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
     }
     return optionsCopy;
   }, [currentQ]);
+
+  // YENİ: Hatalı Soru Bildirim Fonksiyonu
+  const handleReportToggle = async () => {
+    if (!currentQ) return;
+    if (!auth.currentUser) {
+      alert(isTr ? "Hata bildirmek için giriş yapmalısınız." : "You must be logged in to report an error.");
+      return;
+    }
+
+    const newStatus = !isReported;
+    
+    // Lokal state'i güncelle (kullanıcı anında geri bildirim görsün)
+    const updatedReports = { ...reportedQuestions, [currentQ.id]: newStatus };
+    setReportedQuestions(updatedReports);
+    localStorage.setItem('reportedQuestions', JSON.stringify(updatedReports));
+
+    // Firebase'e gönder/sil
+    await toggleReportQuestion(currentQ, auth.currentUser, newStatus);
+  };
 
   const handleTagClick = (clickedTag) => {
     setActiveTags([clickedTag]);
@@ -146,7 +163,6 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
     }
   };
 
-  // HİÇ SORU BULUNAMADIĞINDA ÇIKAN EKRAN (FİLTRE İPTAL BUTONU EKLENDİ)
   if (deck.length === 0) {
     return (
       <div className="fixed inset-0 z-[150] flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm" onClick={onClose}>
@@ -174,7 +190,6 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
     );
   }
 
-  // SONUÇ EKRANI
   if (isFinished) {
     const totalAnswered = sessionScore.correct + sessionScore.incorrect;
     const successRate = totalAnswered > 0 ? Math.round((sessionScore.correct / totalAnswered) * 100) : 0;
@@ -293,7 +308,7 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
             <i className="fa-solid fa-graduation-cap text-brand-400"></i> {title}
           </h3>
           
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 sm:gap-4">
             <div className="flex items-center gap-2 text-[10px] sm:text-xs font-bold bg-slate-950/50 px-2 sm:px-3 py-1.5 rounded-lg border border-slate-700">
                <span className="text-slate-400 font-normal mr-1 hidden sm:inline">{isTr ? 'Bu Soru:' : 'This Q:'}</span>
                <span className="text-emerald-400 flex items-center gap-1" title={isTr ? 'Doğru' : 'Correct'}><i className="fa-solid fa-check"></i> {qHistory.correct}</span>
@@ -301,7 +316,16 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
                <span className="text-rose-400 flex items-center gap-1" title={isTr ? 'Yanlış' : 'Incorrect'}><i className="fa-solid fa-xmark"></i> {qHistory.incorrect}</span>
             </div>
             
-            <button onClick={onClose} className="text-slate-400 hover:text-rose-400 text-xl transition-colors">
+            {/* YENİ: HATALI SORU BİLDİRME BUTONU */}
+            <button 
+              onClick={handleReportToggle}
+              title={isTr ? "Hatalı Soru Bildir" : "Report Question Error"}
+              className={`text-lg transition-colors px-2 ${isReported ? 'text-amber-400 hover:text-amber-300' : 'text-slate-500 hover:text-amber-400'}`}
+            >
+              <i className={isReported ? "fa-solid fa-flag" : "fa-regular fa-flag"}></i>
+            </button>
+            
+            <button onClick={onClose} className="text-slate-400 hover:text-rose-400 text-xl transition-colors ml-1">
               <i className="fa-solid fa-xmark"></i>
             </button>
           </div>
