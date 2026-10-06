@@ -26,8 +26,11 @@ export default function AdminReports() {
       const repData = repSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
       setReports(repData.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp)));
       
-    } catch (error) {
+	} catch (error) {
       console.error("Veriler çekilirken hata:", error);
+      if (error.message.includes('permission')) {
+        alert("Yetki Hatası: Raporları görebilmek için rapor panelini açtığınız bu tarayıcıda da siteye giriş (Login) yapmış olmanız gerekmektedir.");
+      }
     }
     setLoading(false);
   };

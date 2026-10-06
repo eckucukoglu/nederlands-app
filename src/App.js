@@ -1473,15 +1473,15 @@ export default function App() {
   const isAdminRoute = currentPath === '/feedbacks';
   
   useEffect(() => {
-	// Admin sayfasındaysak gereksiz veritabanı indirmelerini çalıştırmaya gerek yok
-    if (isAdminRoute) {
-      setIsAppReady(true);
-      return; 
-    }
-	
     const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
       setUser(currentUser);
 
+      // Firebase kullanıcının kim olduğunu anladıktan sonra admin sayfasındaysak devam et.
+      if (isAdminRoute) {
+        setIsAppReady(true);
+        return; 
+      }
+	  
       if (isSignInWithEmailLink(auth, window.location.href)) {
         let email = window.localStorage.getItem('emailForSignIn');
         if (!email) email = window.prompt('Lütfen doğrulama için mail adresinizi tekrar girin:');
