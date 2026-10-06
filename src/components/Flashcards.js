@@ -38,7 +38,7 @@ const translations = {
     history: "Geçmiş (Bu Kelime)",
     known: "Biliniyor",
     unknown: "Bilinmiyor",
-    clickToTranslate: "(Çeviri için tıkla of ⬆️ / Seslendir: ⬇️)",
+    clickToTranslate: "(Çeviri için tıkla of ⬆️ / Seslendir: ⬇️️)",
     globalPoolLabel: "Benim Kelime Havuzum",
     bookPoolLabel: "Kitabın Kelime Havuzu"
   },
@@ -207,8 +207,6 @@ export default function Flashcards({ initialChapter }) {
     secondaryDisplay = (enText && trText && enText.toLowerCase() !== trText.toLowerCase()) ? trText : null;
   }
 
-  // --- SESLİ OKUMA FONKSİYONU ---
-  // Ekrandaki dile göre doğru dili seçer
   const speakWord = useCallback((e) => {
     if(e) e.stopPropagation();
     if(!currentWord || currentWord.id?.startsWith('empty')) return;
@@ -216,7 +214,6 @@ export default function Flashcards({ initialChapter }) {
     let textToSpeak = "";
     let speechLang = "nl-NL";
 
-    // Kart çevrilmiş mi, ters modda mı? (Hangi yüz görünüyorsa ona göre metin seç)
     const showingDutch = (!isReversed && !isFlipped) || (isReversed && isFlipped);
     
     if (showingDutch) {
@@ -234,7 +231,6 @@ export default function Flashcards({ initialChapter }) {
     }
   }, [currentWord, isFlipped, isReversed, primaryDisplay, lang, t.noTranslation]);
 
-  // Sadece Felemenkçe olanı manuel okutmak için buton fonksiyonu
   const speakDutchOnly = (text, e) => {
     if(e) e.stopPropagation();
     if(!text || text === "Geen woorden" || text === t.emptyFilterTitle) return;
@@ -242,7 +238,6 @@ export default function Flashcards({ initialChapter }) {
     utterance.lang = 'nl-NL';
     window.speechSynthesis.speak(utterance);
   };
-
 
   const updateStats = useCallback((isKnown) => {
     if (!currentWord || currentWord.id?.startsWith('empty')) return; 
@@ -276,7 +271,6 @@ export default function Flashcards({ initialChapter }) {
     }
   }, [currentWord, totalWords, isFlipped]);
 
-  // GÜNCELLENMİŞ KEYDOWN FONKSİYONU
   const handleKeyDown = useCallback((e) => {
     if (['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) return;
     
@@ -286,7 +280,7 @@ export default function Flashcards({ initialChapter }) {
     } 
     else if (e.key === 'ArrowDown') { 
       e.preventDefault(); 
-      speakWord(); // Yalnızca okur, kartı çevirmez
+      speakWord(); 
     }
     else if (e.key === 'ArrowRight') { 
       updateStats(true); 
@@ -540,16 +534,9 @@ export default function Flashcards({ initialChapter }) {
         >
           <i className="fa-solid fa-right-left"></i> {t.flipCards}
         </button>
-        {(mode === 'global' || mode === 'dialogue') && (
-          <button 
-            onClick={removeCurrentWord}
-            disabled={!currentWord || currentWord.id?.startsWith('empty')}
-            className="bg-slate-800 border border-slate-600 text-rose-400 hover:bg-rose-900/40 hover:text-rose-300 hover:border-rose-500 rounded-xl px-4 py-2.5 text-sm font-semibold shadow-sm transition-colors flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
-          >
-            <i className="fa-solid fa-trash-can"></i> {t.deleteWord}
-          </button>
-        )}
-        {mode === 'global' && (
+        
+        {/* Yalnızca Bilinmeyenler Butonu: Hem global havuzda hem de tüm kelimeler modunda görünür yapıldı */}
+        {(mode === 'global' || mode === 'all') && (
           <button 
             onClick={() => setStudyUnknownsOnly(!studyUnknownsOnly)}
             className={`border rounded-xl px-4 py-2.5 text-sm font-semibold shadow-sm transition-colors flex items-center gap-2 ${
@@ -559,6 +546,16 @@ export default function Flashcards({ initialChapter }) {
             }`}
           >
             <i className="fa-solid fa-filter"></i> {t.onlyUnknowns}
+          </button>
+        )}
+
+        {(mode === 'global' || mode === 'dialogue') && (
+          <button 
+            onClick={removeCurrentWord}
+            disabled={!currentWord || currentWord.id?.startsWith('empty')}
+            className="bg-slate-800 border border-slate-600 text-rose-400 hover:bg-rose-900/40 hover:text-rose-300 hover:border-rose-500 rounded-xl px-4 py-2.5 text-sm font-semibold shadow-sm transition-colors flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            <i className="fa-solid fa-trash-can"></i> {t.deleteWord}
           </button>
         )}
       </div>
@@ -623,7 +620,6 @@ export default function Flashcards({ initialChapter }) {
                 )}
               </div>
 
-              {/* BUTON: Ön yüz için (Felemenkçe ise ses butonu göster) */}
               {!isReversed ? (
                 <button onClick={(e) => speakDutchOnly(currentWord?.nl, e)} className="text-slate-400 hover:text-brand-400 hover:bg-slate-700 p-3 rounded-full transition-colors text-xl">
                   <i className="fa-solid fa-volume-high"></i>
@@ -664,7 +660,6 @@ export default function Flashcards({ initialChapter }) {
                 )}
               </div>
 
-              {/* BUTON: Arka yüz için (Felemenkçe ise ses butonu göster) */}
               {isReversed ? (
                 <button onClick={(e) => speakDutchOnly(currentWord?.nl, e)} className="text-rose-200 hover:text-white hover:bg-black/20 p-2.5 rounded-full transition-colors text-lg mb-1">
                   <i className="fa-solid fa-volume-high"></i>
