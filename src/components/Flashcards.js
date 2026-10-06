@@ -75,7 +75,7 @@ const translations = {
     history: "History (This Word)",
     known: "Known",
     unknown: "Unknown",
-    clickToTranslate: "(Click to translate or ⬆️ / ⬇️)",
+    clickToTranslate: "(Click to translate or ⬆️️ / ⬇️)",
     globalPoolLabel: "My Word Pool",
     bookPoolLabel: "Book's Word Pool"
   }
@@ -89,7 +89,6 @@ export default function Flashcards({ initialChapter }) {
   
   const [targetChapter, setTargetChapter] = useState(initialChapter || availableChapters[availableChapters.length - 1] || 9);
   
-  // Vercel Bug Çözümü: Tek bir deck kaynağı kullanıyoruz.
   const [deckData, setDeckData] = useState([]); 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
@@ -140,7 +139,6 @@ export default function Flashcards({ initialChapter }) {
     setGlobalStats(freshStats);
   }, [targetChapter, mode]);
 
-  // Vercel Bug Çözümü: Effect içerisinde ardışık useState zinciri engellendi.
   useEffect(() => {
     let newDeck = [];
     if (mode === 'global') {
@@ -173,7 +171,6 @@ export default function Flashcards({ initialChapter }) {
     setIsFlipped(false);
   }, [studyUnknownsOnly]);
 
-  // Filtrelemeyi Memo ile yaparak minifier (k is not a function) hatalarını engelliyoruz
   const displayDeck = useMemo(() => {
     if (!studyUnknownsOnly) return deckData;
     
@@ -195,6 +192,15 @@ export default function Flashcards({ initialChapter }) {
 
   const currentWord = getResolvedWord(displayDeck[currentIndex] || displayDeck[0]);
   const totalWords = displayDeck.length;
+
+  // Sesli okuma fonksiyonunu yukarı taşıdık ki handleKeyDown içinde kullanabilelim
+  const speakDutch = useCallback((text, e) => {
+    if(e) e.stopPropagation();
+    if(!text || text === "Geen woorden" || text === t.emptyFilterTitle) return;
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'nl-NL';
+    window.speechSynthesis.speak(utterance);
+  }, [t.emptyFilterTitle]);
 
   const updateStats = useCallback((isKnown) => {
     if (!currentWord || currentWord.id?.startsWith('empty')) return; 
@@ -228,13 +234,26 @@ export default function Flashcards({ initialChapter }) {
     }
   }, [currentWord, totalWords, isFlipped]);
 
+  // GÜNCELLENMİŞ KEYDOWN FONKSİYONU
   const handleKeyDown = useCallback((e) => {
     if (['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) return;
     
-    if (e.key === 'ArrowUp' || e.key === 'ArrowDown') { e.preventDefault(); setIsFlipped(prev => !prev); } 
-    else if (e.key === 'ArrowRight') { updateStats(true); } 
-    else if (e.key === 'ArrowLeft') { updateStats(false); }
-  }, [updateStats]);
+    if (e.key === 'ArrowUp') { 
+      e.preventDefault(); 
+      setIsFlipped(prev => !prev); 
+    } 
+    else if (e.key === 'ArrowDown') { 
+      e.preventDefault(); 
+      setIsFlipped(prev => !prev); 
+      speakDutch(currentWord?.nl); // Kelimeyi sesli oku
+    }
+    else if (e.key === 'ArrowRight') { 
+      updateStats(true); 
+    } 
+    else if (e.key === 'ArrowLeft') { 
+      updateStats(false); 
+    }
+  }, [updateStats, speakDutch, currentWord]);
 
   useEffect(() => {
     window.addEventListener('keydown', handleKeyDown);
@@ -248,13 +267,6 @@ export default function Flashcards({ initialChapter }) {
     });
     setCurrentIndex(0);
     setIsFlipped(false);
-  };
-
-  const speakDutch = (text, e) => {
-    if(e) e.stopPropagation();
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = 'nl-NL';
-    window.speechSynthesis.speak(utterance);
   };
 
   const removeCurrentWord = (e) => {
