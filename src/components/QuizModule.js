@@ -8,34 +8,57 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
   const isTr = lang === 'tr';
 
   const [activeTags, setActiveTags] = useState(tags);
+  const [deck, setDeck] = useState([]); // Soruların sabitlendiği deste
   const [currentIndex, setCurrentIndex] = useState(0);
   const [userAnswer, setUserAnswer] = useState('');
   const [isAnswered, setIsAnswered] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
-  const [quizHistory, setQuizHistory] = useState({});
+  
+  // LocalStorage'dan geçmişi senkronize olarak ilk seferde alıyoruz
+  const [quizHistory, setQuizHistory] = useState(() => JSON.parse(localStorage.getItem('quizHistory')) || {});
 
+  // YENİ STATE'LER
+  const [studyWeakOnly, setStudyWeakOnly] = useState(false); // Zorlanılan Sorular Filtresi
+  const [isFinished, setIsFinished] = useState(false);
+  const [sessionScore, setSessionScore] = useState({ correct: 0, incorrect: 0, skipped: 0 });
+  const [wrongTagsCloud, setWrongTagsCloud] = useState({}); 
+
+  // Etiketler veya Filtre değiştiğinde desteyi oluştur (Cevap verildiğinde destenin karışmasını önler)
   useEffect(() => {
     const history = JSON.parse(localStorage.getItem('quizHistory')) || {};
-    setQuizHistory(history);
-  }, []);
-
-  // Aktif etiketler (activeTags) değiştiğinde soruları filtrele ve karıştır[cite: 1]
-  const filteredQuestions = useMemo(() => {
+    
     let filtered = activeTags.length === 0 
         ? [...quizQuestions] 
         : quizQuestions.filter(q => q.tags && q.tags.some(tag => activeTags.includes(tag)));
     
+    // YENİ: Yalnızca Yanlış Sayısı > Doğru Sayısı olanları filtrele
+    if (studyWeakOnly) {
+      filtered = filtered.filter(q => {
+        const hist = history[q.id];
+        return hist && hist.incorrect > hist.correct;
+      });
+    }
+    
+    // Soruları Karıştır
     for (let i = filtered.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [filtered[i], filtered[j]] = [filtered[j], filtered[i]];
     }
-    return filtered;
-  }, [activeTags]);
 
-  const currentQ = filteredQuestions[currentIndex];
+    setDeck(filtered);
+    setCurrentIndex(0);
+    setUserAnswer('');
+    setIsAnswered(false);
+    setIsCorrect(false);
+    setIsFinished(false);
+    setSessionScore({ correct: 0, incorrect: 0, skipped: 0 });
+    setWrongTagsCloud({});
+  }, [activeTags, studyWeakOnly]);
+
+  const currentQ = deck[currentIndex];
   const qHistory = currentQ ? quizHistory[currentQ.id] || { correct: 0, incorrect: 0 } : null;
 
-  // Her soru değiştiğinde seçenekleri karıştırmak için useMemo veya state kullanımı
+  // Soru değiştiğinde seçenekleri karıştır
   const shuffledOptions = useMemo(() => {
     if (!currentQ || !currentQ.options) return [];
     let optionsCopy = [...currentQ.options];
@@ -46,13 +69,8 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
     return optionsCopy;
   }, [currentQ]);
 
-  // Herhangi bir taja tıklandığında tetiklenecek fonksiyon
   const handleTagClick = (clickedTag) => {
     setActiveTags([clickedTag]);
-    setCurrentIndex(0);
-    setUserAnswer('');
-    setIsAnswered(false);
-    setIsCorrect(false);
   };
 
   const handleCheck = () => {
@@ -67,8 +85,18 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
     
     if (correct) {
       newHistory[currentQ.id].correct += 1;
+      setSessionScore(prev => ({ ...prev, correct: prev.correct + 1 }));
     } else {
       newHistory[currentQ.id].incorrect += 1;
+      setSessionScore(prev => ({ ...prev, incorrect: prev.incorrect + 1 }));
+      
+      if (currentQ.tags) {
+        const newCloud = { ...wrongTagsCloud };
+        currentQ.tags.forEach(t => {
+          newCloud[t] = (newCloud[t] || 0) + 1;
+        });
+        setWrongTagsCloud(newCloud);
+      }
     }
     
     setQuizHistory(newHistory);
@@ -84,42 +112,146 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
     if (!newHistory[currentQ.id]) newHistory[currentQ.id] = { correct: 0, incorrect: 0 };
     newHistory[currentQ.id].incorrect += 1;
     
+    setSessionScore(prev => ({ ...prev, incorrect: prev.incorrect + 1 }));
+
+    if (currentQ.tags) {
+      const newCloud = { ...wrongTagsCloud };
+      currentQ.tags.forEach(t => {
+        newCloud[t] = (newCloud[t] || 0) + 1;
+      });
+      setWrongTagsCloud(newCloud);
+    }
+
     setQuizHistory(newHistory);
     localStorage.setItem('quizHistory', JSON.stringify(newHistory));
   };
 
   const handleSkip = () => {
-    if (currentIndex < filteredQuestions.length - 1) {
-      setCurrentIndex(prev => prev + 1);
-      setUserAnswer('');
-      setIsAnswered(false);
-      setIsCorrect(false);
-    } else {
-      onClose();
-    }
+    setSessionScore(prev => ({ ...prev, skipped: prev.skipped + 1 }));
+    goToNextState();
   };
 
   const handleNext = () => {
-    if (currentIndex < filteredQuestions.length - 1) {
+    goToNextState();
+  };
+
+  const goToNextState = () => {
+    if (currentIndex < deck.length - 1) {
       setCurrentIndex(prev => prev + 1);
       setUserAnswer('');
       setIsAnswered(false);
       setIsCorrect(false);
     } else {
-      onClose();
+      setIsFinished(true); 
     }
   };
 
-  if (filteredQuestions.length === 0) {
+  // HİÇ SORU BULUNAMADIĞINDA ÇIKAN EKRAN (FİLTRE İPTAL BUTONU EKLENDİ)
+  if (deck.length === 0) {
     return (
       <div className="fixed inset-0 z-[150] flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm" onClick={onClose}>
         <div className="bg-slate-900 w-full max-w-md rounded-3xl shadow-2xl border border-slate-700 p-8 text-center" onClick={e => e.stopPropagation()}>
           <i className="fa-solid fa-ghost text-4xl text-slate-500 mb-4"></i>
           <h3 className="text-xl font-bold text-slate-200 mb-2">{isTr ? 'Soru Bulunamadı' : 'No Questions Found'}</h3>
           <p className="text-slate-400 text-sm mb-6">{isTr ? 'Bu kriterlere uygun soru bulunamadı.' : 'No questions found matching these criteria.'}</p>
-          <button onClick={onClose} className="bg-slate-800 text-white px-6 py-2.5 rounded-xl border border-slate-600 hover:bg-slate-700 transition-colors">
-            {isTr ? 'Kapat' : 'Close'}
+          
+          <div className="flex flex-col sm:flex-row justify-center gap-3">
+            {studyWeakOnly && (
+              <button 
+                onClick={() => setStudyWeakOnly(false)} 
+                className="bg-rose-900/40 text-rose-300 px-5 py-2.5 rounded-xl border border-rose-800/50 hover:bg-rose-900/60 transition-colors font-bold"
+              >
+                <i className="fa-solid fa-filter-circle-xmark mr-2"></i>
+                {isTr ? 'Filtreyi Kaldır' : 'Clear Filter'}
+              </button>
+            )}
+            <button onClick={onClose} className="bg-slate-800 text-white px-6 py-2.5 rounded-xl border border-slate-600 hover:bg-slate-700 transition-colors font-bold">
+              {isTr ? 'Kapat' : 'Close'}
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // SONUÇ EKRANI
+  if (isFinished) {
+    const totalAnswered = sessionScore.correct + sessionScore.incorrect;
+    const successRate = totalAnswered > 0 ? Math.round((sessionScore.correct / totalAnswered) * 100) : 0;
+    
+    let resultMessage = "";
+    let resultIcon = "";
+    let resultColor = "";
+
+    if (successRate >= 80) {
+      resultMessage = isTr ? "Mükemmel İş Çıkardın!" : "Excellent Work!";
+      resultIcon = "fa-trophy";
+      resultColor = "text-emerald-400";
+    } else if (successRate >= 50) {
+      resultMessage = isTr ? "İyi Gidiyorsun, Ama Biraz Daha Pratik Şart." : "Good, But Needs More Practice.";
+      resultIcon = "fa-thumbs-up";
+      resultColor = "text-brand-400";
+    } else {
+      resultMessage = isTr ? "Bu Konuda Eksiklerin Var, Tekrar Etmelisin." : "You Need to Review This Topic.";
+      resultIcon = "fa-book-open";
+      resultColor = "text-rose-400";
+    }
+
+    return (
+      <div className="fixed inset-0 z-[150] flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm" onClick={onClose}>
+        <div className="bg-slate-900 w-full max-w-lg rounded-3xl shadow-2xl border border-slate-700 p-8 flex flex-col items-center animate-fadeIn" onClick={e => e.stopPropagation()}>
+          
+          <button onClick={onClose} className="absolute top-5 right-5 text-slate-400 hover:text-rose-400 text-xl transition-colors">
+            <i className="fa-solid fa-xmark"></i>
           </button>
+
+          <i className={`fa-solid ${resultIcon} ${resultColor} text-6xl drop-shadow-lg mb-4`}></i>
+          <h2 className="text-2xl font-extrabold text-white mb-2">{isTr ? 'Test Tamamlandı!' : 'Quiz Completed!'}</h2>
+          <p className={`${resultColor} font-bold text-center mb-6`}>{resultMessage}</p>
+
+          <div className="grid grid-cols-3 gap-4 w-full mb-8">
+            <div className="bg-emerald-900/20 border border-emerald-800/50 rounded-2xl p-4 flex flex-col items-center">
+              <span className="text-3xl font-black text-emerald-400">{sessionScore.correct}</span>
+              <span className="text-xs font-bold text-slate-400 uppercase mt-1">{isTr ? 'Doğru' : 'Correct'}</span>
+            </div>
+            <div className="bg-rose-900/20 border border-rose-800/50 rounded-2xl p-4 flex flex-col items-center">
+              <span className="text-3xl font-black text-rose-400">{sessionScore.incorrect}</span>
+              <span className="text-xs font-bold text-slate-400 uppercase mt-1">{isTr ? 'Yanlış' : 'Incorrect'}</span>
+            </div>
+            <div className="bg-slate-800 border border-slate-700 rounded-2xl p-4 flex flex-col items-center">
+              <span className="text-3xl font-black text-slate-300">{sessionScore.skipped}</span>
+              <span className="text-xs font-bold text-slate-400 uppercase mt-1">{isTr ? 'Boş' : 'Skipped'}</span>
+            </div>
+          </div>
+
+          {Object.keys(wrongTagsCloud).length > 0 && (
+            <div className="w-full bg-slate-800/50 border border-slate-700 p-5 rounded-2xl mb-8">
+              <p className="text-xs text-slate-400 mb-3 text-center">
+                <i className="fa-solid fa-magnifying-glass-chart mr-1.5 text-brand-400"></i>
+                {isTr ? 'Ağırlıklı Olarak Yanlış Yaptığınız Konular:' : 'Topics you missed most:'}
+              </p>
+              <div className="flex flex-wrap justify-center gap-2">
+                {Object.entries(wrongTagsCloud)
+                  .sort((a, b) => b[1] - a[1]) 
+                  .map(([tag, count]) => (
+                  <button 
+                    key={tag}
+                    onClick={() => handleTagClick(tag)}
+                    className="group bg-rose-950/40 border border-rose-900/50 hover:bg-rose-900 hover:border-rose-500 rounded-lg px-3 py-1.5 flex items-center gap-2 transition-all cursor-pointer"
+                    title={isTr ? 'Sadece bu konudan tekrar test çöz' : 'Test again with this topic only'}
+                  >
+                    <span className="text-rose-300 font-bold text-sm">#{tag}</span>
+                    <span className="bg-rose-900 group-hover:bg-rose-700 text-rose-200 text-[10px] px-1.5 py-0.5 rounded-md font-black">{count}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+
+          <button onClick={onClose} className="w-full bg-brand-600 text-white py-3.5 rounded-xl font-bold border border-brand-500 hover:bg-brand-500 transition-all shadow-lg">
+            {isTr ? 'Kapat ve Dön' : 'Close and Return'}
+          </button>
+
         </div>
       </div>
     );
@@ -177,31 +309,47 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
 
         {/* Progress Bar */}
         <div className="w-full bg-slate-800 h-1.5">
-          <div className="bg-brand-500 h-full transition-all duration-300" style={{ width: `${((currentIndex) / filteredQuestions.length) * 100}%` }}></div>
+          <div className="bg-brand-500 h-full transition-all duration-300" style={{ width: `${((currentIndex) / deck.length) * 100}%` }}></div>
         </div>
         
         {/* Content */}
         <div className="p-6 sm:p-8 flex-1 flex flex-col justify-center">
            <div className="text-center mb-8">
               
-              {/* Tıklanabilir Etiketler (Tags) */}
-              {currentQ.tags && currentQ.tags.length > 0 && (
-                <div className="flex flex-wrap justify-center gap-1.5 mb-3">
-                  {currentQ.tags.map(tag => (
-                    <button
-                      key={tag}
-                      onClick={() => handleTagClick(tag)}
-                      className="text-[10px] font-semibold bg-indigo-950/60 text-indigo-300 px-2.5 py-0.5 rounded-md border border-indigo-800/50 shadow-sm hover:bg-indigo-900 hover:text-white transition-all cursor-pointer"
-                      title={isTr ? `Bu etiketle ilgili sorulara geç: #${tag}` : `Filter by tag: #${tag}`}
-                    >
-                      #{tag}
-                    </button>
-                  ))}
-                </div>
-              )}
+              {/* Filtre ve Etiketler */}
+              <div className="flex flex-col items-center gap-3 mb-4">
+                
+                {/* Zayıf Sorular Filtresi Butonu */}
+                <button 
+                  onClick={() => setStudyWeakOnly(!studyWeakOnly)}
+                  className={`text-[11px] sm:text-xs font-bold px-4 py-2 rounded-full border transition-all flex items-center gap-2 ${
+                    studyWeakOnly 
+                      ? 'bg-rose-900/50 text-rose-300 border-rose-700 shadow-[0_0_10px_rgba(225,29,72,0.2)]' 
+                      : 'bg-slate-800 text-slate-400 border-slate-700 hover:text-slate-200 hover:border-slate-500'
+                  }`}
+                >
+                  <i className="fa-solid fa-filter"></i>
+                  {isTr ? 'Sadece Zorlandıklarım' : 'Weakest Questions Only'}
+                </button>
+
+                {currentQ.tags && currentQ.tags.length > 0 && (
+                  <div className="flex flex-wrap justify-center gap-1.5 mt-2">
+                    {currentQ.tags.map(tag => (
+                      <button
+                        key={tag}
+                        onClick={() => handleTagClick(tag)}
+                        className="text-[10px] font-semibold bg-indigo-950/60 text-indigo-300 px-2.5 py-0.5 rounded-md border border-indigo-800/50 shadow-sm hover:bg-indigo-900 hover:text-white transition-all cursor-pointer"
+                        title={isTr ? `Bu etiketle ilgili sorulara geç: #${tag}` : `Filter by tag: #${tag}`}
+                      >
+                        #{tag}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
 
               <span className="text-xs font-extrabold text-slate-500 uppercase tracking-wider mb-2 block">
-                {isTr ? 'Soru' : 'Question'} {currentIndex + 1} / {filteredQuestions.length}
+                {isTr ? 'Soru' : 'Question'} {currentIndex + 1} / {deck.length}
               </span>
               <h2 className="text-xl sm:text-3xl font-bold text-white drop-shadow-sm">
                 {renderQuestionText()}
@@ -286,7 +434,7 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
                  onClick={handleNext}
                  className="bg-indigo-600 text-white px-10 py-3.5 rounded-xl font-bold border border-indigo-500 shadow-[0_0_15px_rgba(79,70,229,0.3)] hover:bg-indigo-500 transition-all"
                >
-                 {currentIndex < filteredQuestions.length - 1 ? (isTr ? 'Sıradaki Soru' : 'Next Question') : (isTr ? 'Testi Bitir' : 'Finish')} <i className="fa-solid fa-arrow-right ml-2"></i>
+                 {currentIndex < deck.length - 1 ? (isTr ? 'Sıradaki Soru' : 'Next Question') : (isTr ? 'Testi Bitir' : 'Finish')} <i className="fa-solid fa-arrow-right ml-2"></i>
                </button>
              )}
            </div>
