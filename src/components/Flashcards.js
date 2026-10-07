@@ -38,7 +38,7 @@ const translations = {
     history: "Geçmiş (Bu Kelime)",
     known: "Biliniyor",
     unknown: "Bilinmiyor",
-    clickToTranslate: "(Çeviri için tıkla of ⬆️ / Seslendir: ⬇️️)",
+    clickToTranslate: "(Çeviri için tıkla of ⬆️ / Seslendir: ⬇️)",
     globalPoolLabel: "Benim Kelime Havuzum",
     bookPoolLabel: "Kitabın Kelime Havuzu"
   },
@@ -535,8 +535,8 @@ export default function Flashcards({ initialChapter }) {
           <i className="fa-solid fa-right-left"></i> {t.flipCards}
         </button>
         
-        {/* Yalnızca Bilinmeyenler Butonu: Hem global havuzda hem de tüm kelimeler modunda görünür yapıldı */}
-        {(mode === 'global' || mode === 'all') && (
+        {/* Yalnızca Bilinmeyenler Butonu: dialogue HARİÇ tüm modlarda (global, all, book_pool) görünür. */}
+        {mode !== 'dialogue' && (
           <button 
             onClick={() => setStudyUnknownsOnly(!studyUnknownsOnly)}
             className={`border rounded-xl px-4 py-2.5 text-sm font-semibold shadow-sm transition-colors flex items-center gap-2 ${
@@ -596,7 +596,8 @@ export default function Flashcards({ initialChapter }) {
                 <span className="text-xs font-bold text-brand-400 bg-brand-900/30 border border-brand-700/50 px-3 py-1 rounded-full uppercase">
                   {isReversed ? (lang === 'tr' ? 'Türkçe / İngilizce' : 'English / Turkish') : 'Nederlands'}
                 </span>
-                {mode === 'global' && currentWord?.status && !currentWord.id?.startsWith('empty') && (
+                {/* Durum etiketi artık her modda görünebilecek */}
+                {currentWord?.status && !currentWord.id?.startsWith('empty') && (
                   <span className={`text-xs font-bold px-3 py-1 rounded-full uppercase border ${currentWord.status === 'known' ? 'bg-emerald-900/40 text-emerald-400 border-emerald-700/50' : 'bg-rose-900/40 text-rose-400 border-rose-700/50'}`}>
                     {currentWord.status === 'known' ? t.known : t.unknown}
                   </span>
