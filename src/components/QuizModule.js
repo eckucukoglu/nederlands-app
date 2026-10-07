@@ -182,10 +182,11 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
     }
   };
 
+  // HİÇ SORU BULUNAMADIĞINDA ÇIKAN EKRAN (Scroll Eklendi)
   if (deck.length === 0) {
     return (
       <div className="fixed inset-0 z-[150] flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm" onClick={onClose}>
-        <div className="bg-slate-900 w-full max-w-md rounded-3xl shadow-2xl border border-slate-700 p-8 text-center" onClick={e => e.stopPropagation()}>
+        <div className="bg-slate-900 w-full max-w-md rounded-3xl shadow-2xl border border-slate-700 p-6 sm:p-8 text-center max-h-[90vh] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-700" onClick={e => e.stopPropagation()}>
           <i className="fa-solid fa-ghost text-4xl text-slate-500 mb-4"></i>
           <h3 className="text-xl font-bold text-slate-200 mb-2">{isTr ? 'Soru Bulunamadı' : 'No Questions Found'}</h3>
           <p className="text-slate-400 text-sm mb-6">{isTr ? 'Bu kriterlere uygun soru bulunamadı.' : 'No questions found matching these criteria.'}</p>
@@ -209,6 +210,7 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
     );
   }
 
+  // SONUÇ EKRANI (Scroll Eklendi)
   if (isFinished) {
     const totalAnswered = sessionScore.correct + sessionScore.incorrect;
     const successRate = totalAnswered > 0 ? Math.round((sessionScore.correct / totalAnswered) * 100) : 0;
@@ -233,13 +235,13 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
 
     return (
       <div className="fixed inset-0 z-[150] flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm" onClick={onClose}>
-        <div className="bg-slate-900 w-full max-w-lg rounded-3xl shadow-2xl border border-slate-700 p-8 flex flex-col items-center animate-fadeIn" onClick={e => e.stopPropagation()}>
+        <div className="bg-slate-900 w-full max-w-lg rounded-3xl shadow-2xl border border-slate-700 p-6 sm:p-8 flex flex-col items-center animate-fadeIn max-h-[90vh] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-700 relative" onClick={e => e.stopPropagation()}>
           
-          <button onClick={onClose} className="absolute top-5 right-5 text-slate-400 hover:text-rose-400 text-xl transition-colors">
+          <button onClick={onClose} className="absolute top-4 right-4 text-slate-500 hover:text-rose-400 text-xl transition-colors bg-slate-900 w-8 h-8 flex items-center justify-center rounded-full z-10">
             <i className="fa-solid fa-xmark"></i>
           </button>
 
-          <i className={`fa-solid ${resultIcon} ${resultColor} text-6xl drop-shadow-lg mb-4`}></i>
+          <i className={`fa-solid ${resultIcon} ${resultColor} text-6xl drop-shadow-lg mb-4 mt-2`}></i>
           <h2 className="text-2xl font-extrabold text-white mb-2">{isTr ? 'Test Tamamlandı!' : 'Quiz Completed!'}</h2>
           <p className={`${resultColor} font-bold text-center mb-6`}>{resultMessage}</p>
 
@@ -282,7 +284,7 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
             </div>
           )}
 
-          <button onClick={onClose} className="w-full bg-brand-600 text-white py-3.5 rounded-xl font-bold border border-brand-500 hover:bg-brand-500 transition-all shadow-lg">
+          <button onClick={onClose} className="w-full flex-shrink-0 bg-brand-600 text-white py-3.5 rounded-xl font-bold border border-brand-500 hover:bg-brand-500 transition-all shadow-lg">
             {isTr ? 'Kapat ve Dön' : 'Close and Return'}
           </button>
 
@@ -319,17 +321,16 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
 
   return (
     <div className="fixed inset-0 z-[150] flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm" onClick={onClose}>
-      <div className="bg-slate-900 w-full max-w-2xl rounded-3xl shadow-2xl border border-slate-700 flex flex-col overflow-hidden relative" onClick={e => e.stopPropagation()}>
+      {/* ANA TEST EKRANI - Kutuya max-h-[90vh] eklendi */}
+      <div className="bg-slate-900 w-full max-w-2xl rounded-3xl shadow-2xl border border-slate-700 flex flex-col overflow-hidden relative max-h-[90vh] sm:max-h-[95vh]" onClick={e => e.stopPropagation()}>
         
-        {/* Header */}
-        <div className="p-4 sm:p-5 flex justify-between items-start sm:items-center border-b border-slate-800 bg-slate-800/50">
+        {/* Header (Flex-none ile sabit kalır) */}
+        <div className="p-4 sm:p-5 flex justify-between items-start sm:items-center border-b border-slate-800 bg-slate-800/50 flex-none">
           <h3 className="text-base sm:text-lg font-bold text-slate-200 flex items-center gap-2 mt-1 sm:mt-0">
             <i className="fa-solid fa-graduation-cap text-brand-400"></i> {title}
           </h3>
           
           <div className="flex items-start sm:items-center gap-3">
-            
-            {/* 1. Sütun: Soru İstatistiği ve Filtreler (Alt Alta ve Ortalanmış, Aynı Genişlikte) */}
             <div className="flex flex-col items-stretch gap-1.5">
               <div className="flex justify-center items-center gap-2 text-[10px] sm:text-xs font-bold bg-slate-950/50 px-2 sm:px-3 py-1.5 rounded-lg border border-slate-700 w-full">
                  <span className="text-slate-400 font-normal mr-1 hidden sm:inline">{isTr ? 'Bu Soru:' : 'This Q:'}</span>
@@ -363,7 +364,6 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
               </div>
             </div>
 
-            {/* 2. Sütun: Aksiyon Butonları (Bayrak ve Kapat) */}
             <div className="flex items-center gap-1 sm:gap-2 mt-1 sm:mt-1.5">
               <button 
                 onClick={handleReportToggle}
@@ -380,18 +380,16 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
           </div>
         </div>
 
-        {/* Progress Bar */}
+        {/* Progress Bar (Flex-none) */}
         <div className="w-full bg-slate-800 h-1.5 flex-none">
           <div className="bg-brand-500 h-full transition-all duration-300" style={{ width: `${((currentIndex) / deck.length) * 100}%` }}></div>
         </div>
         
-        {/* Content */}
-        <div className="px-6 sm:px-8 pb-6 pt-5 flex-1 flex flex-col justify-center">
-           <div className="text-center mb-8">
-              
-              {/* Etiketler (Filtreler yukarı taşındığı için sadece Tag'ler kaldı) */}
+        {/* Content (Flex-1 overflow-y-auto ile burası kaydırılır hale geldi) */}
+        <div className="px-6 sm:px-8 pb-6 pt-5 flex-1 flex flex-col justify-start sm:justify-center overflow-y-auto scrollbar-thin scrollbar-thumb-slate-700">
+           <div className="text-center mb-8 mt-2 sm:mt-0">
               {currentQ.tags && currentQ.tags.length > 0 && (
-                <div className="flex flex-wrap justify-center gap-1.5 mb-4 mt-1">
+                <div className="flex flex-wrap justify-center gap-1.5 mb-4">
                   {currentQ.tags.map(tag => (
                     <button
                       key={tag}
@@ -463,7 +461,7 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
                  <button 
                    onClick={handleCheck}
                    disabled={!userAnswer}
-                   className="w-full sm:w-auto bg-brand-600 text-white px-8 py-3.5 rounded-xl font-bold border border-brand-500 shadow-[0_0_15px_rgba(56,189,248,0.3)] disabled:opacity-50 disabled:shadow-none hover:bg-brand-500 transition-all"
+                   className="w-full sm:w-auto flex-shrink-0 bg-brand-600 text-white px-8 py-3.5 rounded-xl font-bold border border-brand-500 shadow-[0_0_15px_rgba(56,189,248,0.3)] disabled:opacity-50 disabled:shadow-none hover:bg-brand-500 transition-all"
                  >
                    <i className="fa-solid fa-check mr-2"></i> {isTr ? 'Kontrol Et' : 'Check'}
                  </button>
@@ -489,7 +487,7 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
              ) : (
                <button 
                  onClick={handleNext}
-                 className="bg-indigo-600 text-white px-10 py-3.5 rounded-xl font-bold border border-indigo-500 shadow-[0_0_15px_rgba(79,70,229,0.3)] hover:bg-indigo-500 transition-all"
+                 className="w-full sm:w-auto bg-indigo-600 text-white px-10 py-3.5 rounded-xl font-bold border border-indigo-500 shadow-[0_0_15px_rgba(79,70,229,0.3)] hover:bg-indigo-500 transition-all"
                >
                  {currentIndex < deck.length - 1 ? (isTr ? 'Sıradaki Soru' : 'Next Question') : (isTr ? 'Testi Bitir' : 'Finish')} <i className="fa-solid fa-arrow-right ml-2"></i>
                </button>

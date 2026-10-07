@@ -12,12 +12,10 @@ export default function FloatingFeedback() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [user, setUser] = useState(auth.currentUser);
   
-  // Drag (Sürükleme) State'leri
   const [pos, setPos] = useState({ x: window.innerWidth - 60, y: window.innerHeight - 120 });
   const isDragging = useRef(false);
   const dragStart = useRef(null);
 
-  // Kullanıcı giriş durumunu dinle
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
@@ -25,7 +23,6 @@ export default function FloatingFeedback() {
     return () => unsubscribe();
   }, []);
 
-  // Pencere boyutu değiştiğinde butonun ekranın dışında kalmasını önlemek için
   useEffect(() => {
     const handleResize = () => {
       setPos(p => {
@@ -61,7 +58,6 @@ export default function FloatingFeedback() {
     e.target.releasePointerCapture(e.pointerId);
     dragStart.current = null;
     
-    // Yüzde 50'yi geçtiyse sağa veya sola yapış (Snap to edge)
     const midX = window.innerWidth / 2;
     if (pos.x < midX) {
       setPos(p => ({ ...p, x: 10 })); 
@@ -69,7 +65,6 @@ export default function FloatingFeedback() {
       setPos(p => ({ ...p, x: window.innerWidth - 50 }));
     }
 
-    // Sürüklenmediyse, sadece tıklandıysa modalı aç
     if (!isDragging.current) {
       setIsOpen(true);
     }
@@ -94,7 +89,6 @@ export default function FloatingFeedback() {
 
   return (
     <>
-      {/* Sürüklenen Yüzen Buton */}
       {!isOpen && (
         <div 
           onPointerDown={handlePointerDown}
@@ -104,7 +98,7 @@ export default function FloatingFeedback() {
             left: `${pos.x}px`, 
             top: `${pos.y}px`, 
             position: 'fixed',
-            touchAction: 'none' // Mobilde sayfayı kaydırmayı önler
+            touchAction: 'none' 
           }}
           className="z-[100] w-10 h-10 bg-slate-800 border-2 border-brand-500 rounded-full flex items-center justify-center text-brand-400 shadow-[0_0_12px_rgba(56,189,248,0.4)] cursor-pointer hover:bg-brand-500 hover:text-white transition-all duration-200"
           title={isTr ? "Geri Bildirim" : "Feedback"}
@@ -113,21 +107,20 @@ export default function FloatingFeedback() {
         </div>
       )}
 
-      {/* Geri Bildirim Formu Modalı */}
       {isOpen && (
         <div className="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-slate-950/60 backdrop-blur-sm" onClick={() => setIsOpen(false)}>
-          <div className="bg-slate-900 border border-slate-700 w-full max-w-sm rounded-3xl p-6 shadow-2xl relative animate-fadeIn" onClick={e => e.stopPropagation()}>
-            <button onClick={() => setIsOpen(false)} className="absolute top-4 right-4 text-slate-500 hover:text-rose-400 text-xl transition-colors">
+          {/* Modal içine max-h-[90vh] ve overflow-y-auto eklendi */}
+          <div className="bg-slate-900 border border-slate-700 w-full max-w-sm rounded-3xl p-6 shadow-2xl relative animate-fadeIn max-h-[90vh] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-700" onClick={e => e.stopPropagation()}>
+            <button onClick={() => setIsOpen(false)} className="absolute top-4 right-4 text-slate-500 hover:text-rose-400 text-xl transition-colors bg-slate-900 rounded-full w-8 h-8 flex items-center justify-center">
               <i className="fa-solid fa-xmark"></i>
             </button>
 
-            <h3 className="text-lg font-bold text-slate-100 mb-2 flex items-center gap-2">
+            <h3 className="text-lg font-bold text-slate-100 mb-2 flex items-center gap-2 mt-1">
               <i className="fa-solid fa-paper-plane text-brand-400"></i>
               {isTr ? 'Geri Bildirim Gönder' : 'Send Feedback'}
             </h3>
 
             {!user ? (
-              // Giriş Yapmamış Kullanıcı Ekranı
               <div className="flex flex-col items-center justify-center py-8 text-center space-y-3">
                  <div className="w-14 h-14 bg-slate-800 rounded-full flex items-center justify-center border border-slate-700 shadow-inner">
                      <i className="fa-solid fa-user-lock text-slate-400 text-2xl"></i>
@@ -137,7 +130,6 @@ export default function FloatingFeedback() {
                  </p>
               </div>
             ) : (
-              // Giriş Yapmış Kullanıcı Ekranı
               <>
                 <p className="text-xs text-slate-400 mb-4">
                   {isTr 
@@ -161,7 +153,7 @@ export default function FloatingFeedback() {
                   <button 
                     type="submit" 
                     disabled={!feedbackText.trim() || isSubmitting}
-                    className="w-full bg-brand-600 hover:bg-brand-500 text-white font-bold py-2.5 rounded-xl transition-colors disabled:opacity-50 flex justify-center items-center gap-2 shadow-lg"
+                    className="w-full flex-shrink-0 bg-brand-600 hover:bg-brand-500 text-white font-bold py-2.5 rounded-xl transition-colors disabled:opacity-50 flex justify-center items-center gap-2 shadow-lg"
                   >
                     {isSubmitting ? (
                       <i className="fa-solid fa-circle-notch fa-spin"></i>

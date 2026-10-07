@@ -1,13 +1,13 @@
 // src/components/AuthModal.js
 import React, { useState } from 'react';
-import { auth, sendSignInLinkToEmail, deleteCloudData } from '../firebase';
+import { auth, sendSignInLinkToEmail, deleteCloudData } from '../firebase'; 
 import { useLanguage } from '../contexts/LanguageContext';
 
 export default function AuthModal({ isOpen, onClose, user }) {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
-  const [showDeleteConfirm, setShowDeleteConfirm] = useState(false); // SİLME ONAYI İÇİN STATE
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
   const { lang, setLang, t } = useLanguage();
   
   if (!isOpen) return null;
@@ -25,9 +25,9 @@ export default function AuthModal({ isOpen, onClose, user }) {
     try {
       await sendSignInLinkToEmail(auth, email, actionCodeSettings);
       window.localStorage.setItem('emailForSignIn', email);
-      setMessage(t('authSuccess')); // DİNAMİK MESAJ
+      setMessage(t('authSuccess')); 
     } catch (error) {
-      setMessage(t('authError') + error.message); // DİNAMİK MESAJ
+      setMessage(t('authError') + error.message); 
     }
     setLoading(false);
   };
@@ -37,7 +37,6 @@ export default function AuthModal({ isOpen, onClose, user }) {
     window.location.reload();
   };
 
-  // MANUEL EXPORT (Dışa Aktar)
   const exportData = () => {
     const data = {};
     for (let i = 0; i < localStorage.length; i++) {
@@ -52,7 +51,6 @@ export default function AuthModal({ isOpen, onClose, user }) {
     link.click();
   };
 
-  // MANUEL IMPORT (İçe Aktar) Güvenlik Korumalı
   const importData = (e) => {
     const file = e.target.files[0];
     if (!file) return;
@@ -63,31 +61,27 @@ export default function AuthModal({ isOpen, onClose, user }) {
         const data = JSON.parse(event.target.result);
         if (typeof data !== 'object' || data === null) throw new Error("Geçersiz format");
         
-        // Sadece beklenen key'leri kabul ederek güvenlik sağla
         Object.keys(data).forEach(key => {
           if(typeof data[key] === 'string') {
              localStorage.setItem(key, data[key]);
           }
         });
         
-        alert(t('importSuccess')); // DİNAMİK MESAJ
+        alert(t('importSuccess')); 
         window.location.reload();
       } catch (err) {
-        alert(t('importError')); // DİNAMİK MESAJ
+        alert(t('importError')); 
       }
     };
     reader.readAsText(file);
   };
 
-// TÜM VERİYİ SIFIRLAMA FONKSİYONU (BULUT + LOKAL)
   const handleDeleteAllData = async () => {
     try {
-      // 1. BULUTTAKİ (FIREBASE) VERİLERİ SİL
       if (user) {
         await deleteCloudData(user.uid);
       }
 
-      // 2. LOKAL VERİLERİ SEÇİCİ OLARAK SİLME (Oturumu Koruma)
       const keysToRemove = [];
       for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
@@ -96,13 +90,9 @@ export default function AuthModal({ isOpen, onClose, user }) {
         }
       }
       
-      // Tespit edilen key'leri lokalden kaldır
       keysToRemove.forEach(key => localStorage.removeItem(key));
 
-      // 3. BAŞARI MESAJI VE YENİLEME
       alert(lang === 'tr' ? 'Tüm gelişiminiz en başa sarıldı ve verileriniz silindi.' : 'All your progress and data have been reset.');
-      
-      // Sayfayı yenile (Artık bulutta da veri kalmadığı için tertemiz başlayacak)
       window.location.reload();
 
     } catch (error) {
@@ -112,14 +102,16 @@ export default function AuthModal({ isOpen, onClose, user }) {
   };
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-slate-950/80 backdrop-blur-sm" onClick={onClose}>
-      <div className="bg-slate-900 border border-slate-700 p-8 rounded-3xl shadow-2xl max-w-md w-full m-4 relative" onClick={e => e.stopPropagation()}>
+    // Dış kapsayıcıya p-4 eklendi
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm" onClick={onClose}>
+      {/* Modal içine max-h-[90vh] ve overflow-y-auto eklendi */}
+      <div className="bg-slate-900 border border-slate-700 p-6 sm:p-8 rounded-3xl shadow-2xl max-w-md w-full relative max-h-[90vh] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-700" onClick={e => e.stopPropagation()}>
         
-        <button onClick={onClose} className="absolute top-4 right-4 text-slate-500 hover:text-rose-400 transition-colors">
+        <button onClick={onClose} className="absolute top-4 right-4 text-slate-500 hover:text-rose-400 transition-colors z-10 bg-slate-900 rounded-full w-8 h-8 flex items-center justify-center">
           <i className="fa-solid fa-xmark text-2xl"></i>
         </button>
 
-        <div className="text-center mb-6">
+        <div className="text-center mb-6 mt-2">
           <div className="bg-brand-900/30 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 border border-brand-500/20">
             <i className="fa-solid fa-cloud-arrow-up text-3xl text-brand-400"></i>
           </div>
@@ -193,7 +185,6 @@ export default function AuthModal({ isOpen, onClose, user }) {
             </label>
           </div>
 
-          {/* TÜM VERİYİ SİL BUTONU VE ONAY ALANI */}
           {!showDeleteConfirm ? (
             <button 
               onClick={() => setShowDeleteConfirm(true)} 
