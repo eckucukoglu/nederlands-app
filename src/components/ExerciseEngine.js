@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import QuizModule from './QuizModule';
+import { speakDutch as speakDutchAudio } from '../utils/speech';
 
 const translations = {
   tr: {
@@ -95,10 +96,7 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
   };
 
   const speakDutch = (text) => {
-    window.speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = 'nl-NL';
-    window.speechSynthesis.speak(utterance);
+    speakDutchAudio(text);
   };
 
   const handleStarClick = (e) => {

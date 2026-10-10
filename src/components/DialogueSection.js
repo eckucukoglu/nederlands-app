@@ -1,8 +1,8 @@
-// src/components/DialogueSection.js
 import React, { useState, useEffect } from 'react';
 import { vocabulary, dialogues, bookSections } from '../data';
 import { globalDictionary } from '../data/globalDictionary'; 
 import { useLanguage } from '../contexts/LanguageContext'; 
+import { speakDutch as speakDutchAudio, getSpeechRate, setSpeechRate } from '../utils/speech'; 
 
 const fallbackDictionary = {
   "de": "the", "een": "a/an", "het": "the", "ik": "I", "u": "you (formal)", "we": "we", "ze": "they", "mijn": "my", "uw": "your",
@@ -51,6 +51,9 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
   const [answers, setAnswers] = useState({});
   const [showResults, setShowResults] = useState(false);
   const [qStats, setQStats] = useState(JSON.parse(localStorage.getItem('questionStats')) || {});
+  const [currentSpeechRate, setCurrentSpeechRate] = useState(getSpeechRate());
+  const [isPlayingAll, setIsPlayingAll] = useState(false);
+  const [playingLineIdx, setPlayingLineIdx] = useState(null);
 
   const activeDialogue = dialogues[sectionId] || [];
   const isFav = favorites && favorites[sectionId];
@@ -64,6 +67,14 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
   };
 
   useEffect(() => {
+    const handleRateUpdate = (e) => {
+      setCurrentSpeechRate(e.detail || getSpeechRate());
+    };
+    window.addEventListener('speechRateChanged', handleRateUpdate);
+    return () => window.removeEventListener('speechRateChanged', handleRateUpdate);
+  }, []);
+
+  useEffect(() => {
     const fetchStatuses = () => {
       const saved = localStorage.getItem(`dialogueWordStatuses_${chapterId}`);
       setWordStatuses(saved ? JSON.parse(saved) : {});
@@ -75,15 +86,72 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
 
   useEffect(() => {
     setAnswers({});         
-    setShowResults(false);  
+    setShowResults(false);
+    stopPlayingAll();
   }, [sectionId]);
 
-  const speakDutch = (text, e) => {
-    if (e) e.stopPropagation();
-    window.speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = 'nl-NL';
-    window.speechSynthesis.speak(utterance);
+  const stopPlayingAll = () => {
+    if (typeof window !== 'undefined' && window.speechSynthesis) {
+      window.speechSynthesis.cancel();
+    }
+    setIsPlayingAll(false);
+    setPlayingLineIdx(null);
+  };
+
+  const cycleSpeechRate = (e) => {
+    if (e && e.stopPropagation) e.stopPropagation();
+    const rates = [0.75, 0.85, 1.0, 1.15];
+    const currentIndex = rates.indexOf(currentSpeechRate);
+    const nextRate = rates[(currentIndex + 1) % rates.length] || 0.85;
+    setCurrentSpeechRate(nextRate);
+    setSpeechRate(nextRate);
+  };
+
+  const speakDutch = (text, e, speaker) => {
+    if (e && e.stopPropagation) e.stopPropagation();
+    if (isPlayingAll) stopPlayingAll();
+    speakDutchAudio(text, { speaker, rate: currentSpeechRate });
+  };
+
+  const handlePlayAllDialogue = (e) => {
+    if (e && e.stopPropagation) e.stopPropagation();
+    if (isPlayingAll) {
+      stopPlayingAll();
+      return;
+    }
+
+    if (!activeDialogue || activeDialogue.length === 0) return;
+
+    setIsPlayingAll(true);
+    let index = 0;
+
+    const playNext = () => {
+      if (index >= activeDialogue.length) {
+        setIsPlayingAll(false);
+        setPlayingLineIdx(null);
+        return;
+      }
+
+      setPlayingLineIdx(index);
+      const line = activeDialogue[index];
+      index++;
+
+      speakDutchAudio(line.text, {
+        speaker: line.speaker,
+        rate: currentSpeechRate,
+        onEnd: () => {
+          setTimeout(() => {
+            playNext();
+          }, 450);
+        },
+        onError: () => {
+          setIsPlayingAll(false);
+          setPlayingLineIdx(null);
+        }
+      });
+    };
+
+    playNext();
   };
 
 // --- YENİ EKLENEN BULK (TOPLU) İŞARETLEME FONKSİYONU ---
@@ -406,8 +474,36 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
             </div>
           </div>
 
-          <div className="relative flex items-center space-x-3 self-end sm:self-center">
-            <button onClick={(e) => { e.stopPropagation(); toggleCompleted(sectionId); }} className="text-xl transition-transform hover:scale-110 focus:outline-none">
+          <div className="relative flex items-center space-x-2 sm:space-x-3 self-end sm:self-center">
+            {/* TÜM DİYALOĞU OYNAT / DURDUR BUTONU */}
+            {activeDialogue.length > 0 && (
+              <button 
+                onClick={handlePlayAllDialogue}
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold border transition-all shadow-sm ${
+                  isPlayingAll 
+                    ? 'bg-rose-900/50 text-rose-300 border-rose-600/80 shadow-rose-950/50' 
+                    : 'bg-slate-800 text-brand-300 hover:text-white hover:bg-slate-700 border-slate-600'
+                }`}
+                title={isPlayingAll 
+                  ? (lang === 'tr' ? 'Okumayı Durdur' : 'Stop Playing') 
+                  : (lang === 'tr' ? 'Tüm Diyaloğu Karşılıklı Dinle' : 'Listen to Full Dialogue')}
+              >
+                <i className={`fa-solid ${isPlayingAll ? 'fa-stop text-rose-400' : 'fa-play text-brand-400 text-[10px]'}`}></i>
+                <span className="hidden sm:inline">{isPlayingAll ? (lang === 'tr' ? 'Durdur' : 'Stop') : (lang === 'tr' ? 'Diyaloğu Dinle' : 'Play All')}</span>
+              </button>
+            )}
+
+            {/* HIZLI KONUŞMA HIZI BUTONU */}
+            <button 
+              onClick={cycleSpeechRate}
+              className="flex items-center gap-1.5 bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 border border-slate-600 px-2.5 py-1.5 rounded-xl text-xs font-bold transition-all shadow-sm"
+              title={lang === 'tr' ? `Konuşma Hızı: ${currentSpeechRate}x (Hızı değiştirmek için tıkla)` : `Speech Speed: ${currentSpeechRate}x (Click to change)`}
+            >
+              <i className="fa-solid fa-gauge-high text-brand-400 text-xs"></i>
+              <span>{currentSpeechRate}x</span>
+            </button>
+
+            <button onClick={(e) => { e.stopPropagation(); toggleCompleted(sectionId); }} className="text-xl transition-transform hover:scale-110 focus:outline-none ml-1">
               {isComp ? (
                 <i className="fa-solid fa-circle-check text-emerald-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.6)]"></i>
               ) : (
@@ -456,14 +552,15 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
               : line.translation;
               
             const flag = lang === 'tr' ? '🇹🇷' : '🇬🇧';
+            const isLinePlaying = isPlayingAll && playingLineIdx === idx;
 
             return (
-              <div key={idx} className={`p-3.5 rounded-xl flex items-start space-x-3 transition ${style.bg} border-l-4 ${style.border}`}>
+              <div key={idx} className={`p-3.5 rounded-xl flex items-start space-x-3 transition-all ${style.bg} border-l-4 ${style.border} ${isLinePlaying ? 'ring-2 ring-brand-400 border-l-brand-400 bg-brand-950/40 shadow-lg shadow-brand-950/50' : ''}`}>
                 
                 {/* --- DİNLEME VE TOPLU İŞARETLEME BUTONLARI --- */}
                 <div className="flex flex-col gap-2 flex-shrink-0 mt-0.5">
-                  <button onClick={(e) => speakDutch(line.text, e)} className="bg-slate-800 border border-slate-600 p-2 rounded-lg shadow-sm hover:bg-slate-700 text-brand-400 transition" title={lang === 'tr' ? 'Dinle' : 'Listen'}>
-                    <i className="fa-solid fa-volume-high text-sm"></i>
+                  <button onClick={(e) => speakDutch(line.text, e, line.speaker)} className={`border p-2 rounded-lg shadow-sm transition ${isLinePlaying ? 'bg-brand-600 border-brand-400 text-white shadow-md' : 'bg-slate-800 border-slate-600 hover:bg-slate-700 text-brand-400'}`} title={lang === 'tr' ? 'Dinle' : 'Listen'}>
+                    <i className={`fa-solid fa-volume-high text-sm ${isLinePlaying ? 'animate-pulse' : ''}`}></i>
                   </button>
                   <button onClick={(e) => handleMarkLineAsKnown(e, cleanWords)} className="bg-slate-800 border border-slate-600 p-2 rounded-lg shadow-sm hover:bg-emerald-900/40 hover:border-emerald-500 hover:text-emerald-400 text-slate-500 transition" title={lang === 'tr' ? 'Tüm cümleyi biliyorum olarak işaretle' : 'Mark all words as known'}>
                     <i className="fa-solid fa-check-double text-sm"></i>

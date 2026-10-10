@@ -16,6 +16,7 @@ import { globalDictionary } from './data/globalDictionary';
 import { auth, isSignInWithEmailLink, signInWithEmailLink, onAuthStateChanged, handleUserSyncOnLogin, pullFromCloud } from './firebase';
 
 import { LanguageProvider, useLanguage } from './contexts/LanguageContext';
+import { speakDutch as speakDutchAudio } from './utils/speech';
 
 const chapterTitles = {
   1: "Welkom", 2: "In de kantine", 3: "In het café", 4: "Op straat", 5: "Op de markt",
@@ -495,10 +496,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
   }, [customWordModal.isOpen]);
 
   const speakDutch = (text) => {
-    window.speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = 'nl-NL';
-    window.speechSynthesis.speak(utterance);
+    speakDutchAudio(text);
   };
 
   const getToastMessage = (word, statusKey) => {

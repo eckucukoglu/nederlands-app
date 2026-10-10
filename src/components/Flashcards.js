@@ -3,6 +3,7 @@ import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { vocabulary } from '../data';
 import { globalDictionary } from '../data/globalDictionary';
 import { useLanguage } from '../contexts/LanguageContext';
+import { speakDutch as speakDutchAudio, getSpeechRate } from '../utils/speech';
 
 const translations = {
   tr: {
@@ -218,25 +219,26 @@ export default function Flashcards({ initialChapter }) {
     
     if (showingDutch) {
       textToSpeak = currentWord.nl;
-      speechLang = "nl-NL";
+      speakDutchAudio(textToSpeak);
+      return;
     } else {
       textToSpeak = primaryDisplay;
       speechLang = lang === 'tr' ? "tr-TR" : "en-US";
     }
 
     if (textToSpeak && textToSpeak !== t.noTranslation) {
+      window.speechSynthesis.cancel();
       const utterance = new SpeechSynthesisUtterance(textToSpeak);
       utterance.lang = speechLang;
+      utterance.rate = getSpeechRate();
       window.speechSynthesis.speak(utterance);
     }
   }, [currentWord, isFlipped, isReversed, primaryDisplay, lang, t.noTranslation]);
 
   const speakDutchOnly = (text, e) => {
-    if(e) e.stopPropagation();
+    if(e && e.stopPropagation) e.stopPropagation();
     if(!text || text === "Geen woorden" || text === t.emptyFilterTitle) return;
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = 'nl-NL';
-    window.speechSynthesis.speak(utterance);
+    speakDutchAudio(text);
   };
 
   const updateStats = useCallback((isKnown) => {

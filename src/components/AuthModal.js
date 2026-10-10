@@ -2,12 +2,14 @@
 import React, { useState } from 'react';
 import { auth, sendSignInLinkToEmail, deleteCloudData } from '../firebase'; 
 import { useLanguage } from '../contexts/LanguageContext';
+import { getSpeechRate, setSpeechRate, testDutchSpeech } from '../utils/speech';
 
 export default function AuthModal({ isOpen, onClose, user }) {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
+  const [speechRate, setLocalSpeechRate] = useState(getSpeechRate());
   const { lang, setLang, t } = useLanguage();
   
   if (!isOpen) return null;
@@ -168,6 +170,59 @@ export default function AuthModal({ isOpen, onClose, user }) {
             >
               EN
             </button>
+          </div>
+        </div>
+        
+        {/* SESLENDİRME HIZI AYARI (SPEECH RATE) */}
+        <div className="bg-slate-800 border border-slate-700 p-4 rounded-xl mt-3 space-y-3">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <i className="fa-solid fa-gauge-high text-brand-400 text-lg"></i>
+              <div>
+                <span className="font-bold text-slate-200 block text-sm">
+                  {lang === 'tr' ? 'Seslendirme Hızı' : 'Speech Speed'}
+                </span>
+                <span className="text-[11px] text-slate-400">
+                  {lang === 'tr' ? 'Diyalog ve kelime okuma hızı' : 'Playback speed for dialogues & words'}
+                </span>
+              </div>
+            </div>
+            
+            <button 
+              type="button"
+              onClick={() => testDutchSpeech(speechRate)}
+              className="bg-brand-600/30 hover:bg-brand-600 text-brand-300 hover:text-white border border-brand-500/40 px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 shadow-sm active:scale-95"
+              title={lang === 'tr' ? 'Örnek Sesi Dinle' : 'Play Sample Audio'}
+            >
+              <i className="fa-solid fa-volume-high"></i>
+              <span>{lang === 'tr' ? 'Test Et' : 'Test'}</span>
+            </button>
+          </div>
+
+          <div className="grid grid-cols-4 gap-2 pt-1">
+            {[
+              { value: 0.75, label: '0.75x', desc: lang === 'tr' ? 'Yavaş' : 'Slow' },
+              { value: 0.85, label: '0.85x', desc: lang === 'tr' ? 'Rahat' : 'Learner' },
+              { value: 1.0, label: '1.0x', desc: lang === 'tr' ? 'Normal' : 'Normal' },
+              { value: 1.15, label: '1.15x', desc: lang === 'tr' ? 'Hızlı' : 'Fast' },
+            ].map(item => (
+              <button
+                key={item.value}
+                type="button"
+                onClick={() => {
+                  setLocalSpeechRate(item.value);
+                  setSpeechRate(item.value);
+                }}
+                className={`py-2 px-1 rounded-xl font-bold text-xs flex flex-col items-center transition-all border ${
+                  speechRate === item.value
+                    ? 'bg-brand-600 text-white border-brand-500 shadow-md shadow-brand-900/30 scale-[1.02]'
+                    : 'bg-slate-900 text-slate-400 hover:text-slate-200 border-slate-700 hover:bg-slate-800'
+                }`}
+              >
+                <span className="text-xs font-extrabold">{item.label}</span>
+                <span className="text-[10px] font-normal opacity-80">{item.desc}</span>
+              </button>
+            ))}
           </div>
         </div>
         
