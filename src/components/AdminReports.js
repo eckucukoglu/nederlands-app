@@ -7,6 +7,8 @@ import { onAuthStateChanged } from 'firebase/auth'; // onAuthStateChanged eklend
 export default function AdminReports() {
   const [feedbacks, setFeedbacks] = useState([]);
   const [reports, setReports] = useState([]);
+  const [duplicates, setDuplicates] = useState([]);
+  const [goods, setGoods] = useState([]);
   const [loading, setLoading] = useState(true);
   const [authChecking, setAuthChecking] = useState(true); // Kimlik kontrolü için yeni state
   const [user, setUser] = useState(null);
@@ -40,10 +42,28 @@ export default function AdminReports() {
       const repSnapshot = await getDocs(collection(db, "reported_questions"));
       const repData = repSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
       setReports(repData.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp)));
+
+      // Kopya Soruları Çek
+      try {
+        const dupSnapshot = await getDocs(collection(db, "duplicate_questions"));
+        const dupData = dupSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+        setDuplicates(dupData.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp)));
+      } catch (e) {
+        console.warn("Kopya sorular alınamadı:", e);
+      }
+
+      // İyi Soruları Çek
+      try {
+        const goodSnapshot = await getDocs(collection(db, "good_questions"));
+        const goodData = goodSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+        setGoods(goodData.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp)));
+      } catch (e) {
+        console.warn("İyi sorular alınamadı:", e);
+      }
       
     } catch (error) {
       console.error("Veriler çekilirken hata:", error);
-      if (error.message.includes('permission')) {
+      if (error.message && error.message.includes('permission')) {
         setErrorMsg("Yetki Hatası: Raporları görebilmek için giriş yapmalısınız.");
       } else {
         setErrorMsg("Bir hata oluştu: " + error.message);
@@ -147,6 +167,80 @@ export default function AdminReports() {
                   <td className="p-4 text-right">
                     <button onClick={() => deleteItem("reported_questions", rep.id)} className="bg-rose-950/40 text-rose-400 border border-rose-900/50 hover:bg-rose-600 hover:text-white hover:border-rose-500 px-3 py-1.5 rounded-lg transition-all text-xs font-bold shadow-sm whitespace-nowrap">
                       Çözüldü / Sil
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      {/* KOPYA / MÜKERRER SORULAR TABLOSU */}
+      <section>
+        <h2 className="text-xl font-bold text-sky-400 mb-4 flex items-center gap-2">
+          <i className="fa-solid fa-clone"></i> Mükerrer / Kopya Bildirilen Sorular ({duplicates.length})
+        </h2>
+        <div className="bg-slate-900 border border-slate-700 rounded-xl overflow-x-auto shadow-xl">
+          <table className="w-full text-left text-sm text-slate-300 min-w-[800px]">
+            <thead className="bg-slate-800 text-slate-100">
+              <tr>
+                <th className="p-4 w-40">Tarih</th>
+                <th className="p-4 w-48">Kullanıcı</th>
+                <th className="p-4">Soru ID & Metni</th>
+                <th className="p-4 text-right w-32">İşlem</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-800">
+              {duplicates.length === 0 && <tr><td colSpan="4" className="p-8 text-center text-slate-500 font-medium">Mükerrer soru bildirimi yok.</td></tr>}
+              {duplicates.map(dup => (
+                <tr key={dup.id} className="hover:bg-slate-800/50 transition-colors">
+                  <td className="p-4 text-slate-400 whitespace-nowrap">{new Date(dup.timestamp).toLocaleString('tr-TR')}</td>
+                  <td className="p-4 text-sky-300 font-medium truncate max-w-[12rem]" title={dup.userEmail}>{dup.userEmail}</td>
+                  <td className="p-4">
+                    <span className="bg-slate-950 px-2 py-1 rounded text-xs font-mono text-slate-400 mr-2 border border-slate-800">{dup.questionId}</span>
+                    <span className="font-medium text-slate-200">{dup.questionNl}</span>
+                  </td>
+                  <td className="p-4 text-right">
+                    <button onClick={() => deleteItem("duplicate_questions", dup.id)} className="bg-sky-950/40 text-sky-400 border border-sky-900/50 hover:bg-sky-600 hover:text-white hover:border-sky-500 px-3 py-1.5 rounded-lg transition-all text-xs font-bold shadow-sm whitespace-nowrap">
+                      İncelendi / Sil
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      {/* İYİ / BEĞENİLEN SORULAR TABLOSU */}
+      <section>
+        <h2 className="text-xl font-bold text-emerald-400 mb-4 flex items-center gap-2">
+          <i className="fa-solid fa-thumbs-up"></i> İyi / Kaliteli Olarak İşaretlenen Sorular ({goods.length})
+        </h2>
+        <div className="bg-slate-900 border border-slate-700 rounded-xl overflow-x-auto shadow-xl">
+          <table className="w-full text-left text-sm text-slate-300 min-w-[800px]">
+            <thead className="bg-slate-800 text-slate-100">
+              <tr>
+                <th className="p-4 w-40">Tarih</th>
+                <th className="p-4 w-48">Kullanıcı</th>
+                <th className="p-4">Soru ID & Metni</th>
+                <th className="p-4 text-right w-32">İşlem</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-800">
+              {goods.length === 0 && <tr><td colSpan="4" className="p-8 text-center text-slate-500 font-medium">Beğenilen soru yok.</td></tr>}
+              {goods.map(g => (
+                <tr key={g.id} className="hover:bg-slate-800/50 transition-colors">
+                  <td className="p-4 text-slate-400 whitespace-nowrap">{new Date(g.timestamp).toLocaleString('tr-TR')}</td>
+                  <td className="p-4 text-emerald-300 font-medium truncate max-w-[12rem]" title={g.userEmail}>{g.userEmail}</td>
+                  <td className="p-4">
+                    <span className="bg-slate-950 px-2 py-1 rounded text-xs font-mono text-slate-400 mr-2 border border-slate-800">{g.questionId}</span>
+                    <span className="font-medium text-slate-200">{g.questionNl}</span>
+                  </td>
+                  <td className="p-4 text-right">
+                    <button onClick={() => deleteItem("good_questions", g.id)} className="bg-emerald-900/30 text-emerald-400 border border-emerald-900/50 hover:bg-emerald-600 hover:text-white hover:border-emerald-500 px-3 py-1.5 rounded-lg transition-all text-xs font-bold shadow-sm whitespace-nowrap">
+                      Sil
                     </button>
                   </td>
                 </tr>

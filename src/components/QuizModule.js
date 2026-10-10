@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { quizQuestions } from '../data/quizData';
-import { auth, toggleReportQuestion } from '../firebase'; 
+import { auth, toggleReportQuestion, toggleDuplicateQuestion, toggleGoodQuestion } from '../firebase'; 
 
 export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
   const { lang } = useLanguage();
@@ -23,6 +23,8 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
   const [sessionScore, setSessionScore] = useState({ correct: 0, incorrect: 0, skipped: 0 });
   const [wrongTagsCloud, setWrongTagsCloud] = useState({}); 
   const [reportedQuestions, setReportedQuestions] = useState(() => JSON.parse(localStorage.getItem('reportedQuestions')) || {}); 
+  const [duplicateQuestions, setDuplicateQuestions] = useState(() => JSON.parse(localStorage.getItem('duplicateQuestions')) || {}); 
+  const [goodQuestions, setGoodQuestions] = useState(() => JSON.parse(localStorage.getItem('goodQuestions')) || {}); 
 
   useEffect(() => {
     const history = JSON.parse(localStorage.getItem('quizHistory')) || {};
@@ -60,7 +62,9 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
 
   const currentQ = deck[currentIndex];
   const qHistory = currentQ ? quizHistory[currentQ.id] || { correct: 0, incorrect: 0 } : null;
-  const isReported = currentQ ? reportedQuestions[currentQ.id] : false;
+  const isReported = currentQ ? !!reportedQuestions[currentQ.id] : false;
+  const isDuplicate = currentQ ? !!duplicateQuestions[currentQ.id] : false;
+  const isGood = currentQ ? !!goodQuestions[currentQ.id] : false;
 
   const shuffledOptions = useMemo(() => {
     if (!currentQ || !currentQ.options) return [];
@@ -93,6 +97,56 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
       alert(isTr 
         ? "Soru bildirilirken bir hata oluştu. Lütfen bağlantınızı veya izinleri kontrol edin." 
         : "An error occurred while reporting. Please check your connection."
+      );
+    }
+  };
+
+  const handleDuplicateToggle = async () => {
+    if (!currentQ) return;
+    if (!auth.currentUser) {
+      alert(isTr ? "Kopya soru bildirmek için giriş yapmalısınız." : "You must be logged in to report a duplicate question.");
+      return;
+    }
+
+    const newStatus = !isDuplicate;
+    
+    try {
+      await toggleDuplicateQuestion(currentQ, auth.currentUser, newStatus);
+      
+      const updatedDuplicates = { ...duplicateQuestions, [currentQ.id]: newStatus };
+      setDuplicateQuestions(updatedDuplicates);
+      localStorage.setItem('duplicateQuestions', JSON.stringify(updatedDuplicates));
+
+    } catch (error) {
+      console.error(error);
+      alert(isTr 
+        ? "Kopya soru bildirilirken bir hata oluştu. Lütfen bağlantınızı veya izinleri kontrol edin." 
+        : "An error occurred while reporting duplicate. Please check your connection."
+      );
+    }
+  };
+
+  const handleGoodToggle = async () => {
+    if (!currentQ) return;
+    if (!auth.currentUser) {
+      alert(isTr ? "İyi soru olarak işaretlemek için giriş yapmalısınız." : "You must be logged in to mark as a good question.");
+      return;
+    }
+
+    const newStatus = !isGood;
+    
+    try {
+      await toggleGoodQuestion(currentQ, auth.currentUser, newStatus);
+      
+      const updatedGoods = { ...goodQuestions, [currentQ.id]: newStatus };
+      setGoodQuestions(updatedGoods);
+      localStorage.setItem('goodQuestions', JSON.stringify(updatedGoods));
+
+    } catch (error) {
+      console.error(error);
+      alert(isTr 
+        ? "İyi soru işaretlenirken bir hata oluştu. Lütfen bağlantınızı veya izinleri kontrol edin." 
+        : "An error occurred while marking good question. Please check your connection."
       );
     }
   };
@@ -364,16 +418,37 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
               </div>
             </div>
 
-            <div className="flex items-center gap-1 sm:gap-2 mt-1 sm:mt-1.5">
+            <div className="flex items-center gap-1 sm:gap-1.5 mt-1 sm:mt-1.5">
+              {/* İyi Soru / Good Question */}
+              <button 
+                onClick={handleGoodToggle}
+                title={isTr ? (isGood ? "İyi Soru (İşareti Kaldır)" : "İyi Soru Olarak İşaretle") : (isGood ? "Remove Good Mark" : "Mark as Good Question")}
+                className={`text-base sm:text-lg transition-colors px-1 sm:px-1.5 ${isGood ? 'text-emerald-400 hover:text-emerald-300' : 'text-slate-500 hover:text-emerald-400'}`}
+              >
+                <i className={isGood ? "fa-solid fa-thumbs-up" : "fa-regular fa-thumbs-up"}></i>
+              </button>
+
+              {/* Mükerrer / Kopya Soru / Duplicate Question */}
+              <button 
+                onClick={handleDuplicateToggle}
+                title={isTr ? (isDuplicate ? "Kopya Soru (İşareti Kaldır)" : "Kopya / Mükerrer Soru Bildir") : (isDuplicate ? "Remove Duplicate Mark" : "Mark as Duplicate Question")}
+                className={`text-base sm:text-lg transition-colors px-1 sm:px-1.5 ${isDuplicate ? 'text-sky-400 hover:text-sky-300' : 'text-slate-500 hover:text-sky-400'}`}
+              >
+                <i className={isDuplicate ? "fa-solid fa-clone" : "fa-regular fa-clone"}></i>
+              </button>
+
+              {/* Hatalı Soru Bildir / Report Question */}
               <button 
                 onClick={handleReportToggle}
-                title={isTr ? "Hatalı Soru Bildir" : "Report Question Error"}
-                className={`text-lg transition-colors px-1 sm:px-2 ${isReported ? 'text-amber-400 hover:text-amber-300' : 'text-slate-500 hover:text-amber-400'}`}
+                title={isTr ? (isReported ? "Hatalı Soru (İşareti Kaldır)" : "Hatalı Soru Bildir") : (isReported ? "Remove Report" : "Report Question Error")}
+                className={`text-base sm:text-lg transition-colors px-1 sm:px-1.5 ${isReported ? 'text-amber-400 hover:text-amber-300' : 'text-slate-500 hover:text-amber-400'}`}
               >
                 <i className={isReported ? "fa-solid fa-flag" : "fa-regular fa-flag"}></i>
               </button>
+
+              <div className="h-4 w-[1px] bg-slate-700/60 mx-1"></div>
               
-              <button onClick={onClose} className="text-slate-400 hover:text-rose-400 text-xl transition-colors ml-1">
+              <button onClick={onClose} className="text-slate-400 hover:text-rose-400 text-xl transition-colors ml-0.5">
                 <i className="fa-solid fa-xmark"></i>
               </button>
             </div>
