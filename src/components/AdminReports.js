@@ -38,28 +38,14 @@ export default function AdminReports() {
       const fbData = fbSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
       setFeedbacks(fbData.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp)));
 
-      // Hatalı Soruları Çek
+      // Raporlanan ve İşaretlenen Soruları Çek
       const repSnapshot = await getDocs(collection(db, "reported_questions"));
       const repData = repSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-      setReports(repData.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp)));
+      const sortedReps = repData.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
 
-      // Kopya Soruları Çek
-      try {
-        const dupSnapshot = await getDocs(collection(db, "duplicate_questions"));
-        const dupData = dupSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-        setDuplicates(dupData.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp)));
-      } catch (e) {
-        console.warn("Kopya sorular alınamadı:", e);
-      }
-
-      // İyi Soruları Çek
-      try {
-        const goodSnapshot = await getDocs(collection(db, "good_questions"));
-        const goodData = goodSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-        setGoods(goodData.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp)));
-      } catch (e) {
-        console.warn("İyi sorular alınamadı:", e);
-      }
+      setReports(sortedReps.filter(r => !r.reportType || r.reportType === 'error'));
+      setDuplicates(sortedReps.filter(r => r.reportType === 'duplicate'));
+      setGoods(sortedReps.filter(r => r.reportType === 'good'));
       
     } catch (error) {
       console.error("Veriler çekilirken hata:", error);
@@ -202,7 +188,7 @@ export default function AdminReports() {
                     <span className="font-medium text-slate-200">{dup.questionNl}</span>
                   </td>
                   <td className="p-4 text-right">
-                    <button onClick={() => deleteItem("duplicate_questions", dup.id)} className="bg-sky-950/40 text-sky-400 border border-sky-900/50 hover:bg-sky-600 hover:text-white hover:border-sky-500 px-3 py-1.5 rounded-lg transition-all text-xs font-bold shadow-sm whitespace-nowrap">
+                    <button onClick={() => deleteItem("reported_questions", dup.id)} className="bg-sky-950/40 text-sky-400 border border-sky-900/50 hover:bg-sky-600 hover:text-white hover:border-sky-500 px-3 py-1.5 rounded-lg transition-all text-xs font-bold shadow-sm whitespace-nowrap">
                       İncelendi / Sil
                     </button>
                   </td>
@@ -239,7 +225,7 @@ export default function AdminReports() {
                     <span className="font-medium text-slate-200">{g.questionNl}</span>
                   </td>
                   <td className="p-4 text-right">
-                    <button onClick={() => deleteItem("good_questions", g.id)} className="bg-emerald-900/30 text-emerald-400 border border-emerald-900/50 hover:bg-emerald-600 hover:text-white hover:border-emerald-500 px-3 py-1.5 rounded-lg transition-all text-xs font-bold shadow-sm whitespace-nowrap">
+                    <button onClick={() => deleteItem("reported_questions", g.id)} className="bg-emerald-900/30 text-emerald-400 border border-emerald-900/50 hover:bg-emerald-600 hover:text-white hover:border-emerald-500 px-3 py-1.5 rounded-lg transition-all text-xs font-bold shadow-sm whitespace-nowrap">
                       Sil
                     </button>
                   </td>

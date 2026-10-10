@@ -121,6 +121,7 @@ export const toggleReportQuestion = async (question, user, isReporting) => {
         tags: question.tags || [],
         userId: user.uid,
         userEmail: user.email || "Email belirtilmemiş",
+        reportType: "error",
         timestamp: new Date().toISOString()
       });
     } else {
@@ -136,8 +137,8 @@ export const toggleReportQuestion = async (question, user, isReporting) => {
 export const toggleDuplicateQuestion = async (question, user, isDuplicate) => {
   if (!user) throw new Error("Kullanıcı bulunamadı"); 
   
-  const docId = `${question.id}_${user.uid}`;
-  const docRef = doc(db, "duplicate_questions", docId);
+  const docId = `${question.id}_${user.uid}_duplicate`;
+  const docRef = doc(db, "reported_questions", docId);
   
   try {
     if (isDuplicate) {
@@ -147,6 +148,7 @@ export const toggleDuplicateQuestion = async (question, user, isDuplicate) => {
         tags: question.tags || [],
         userId: user.uid,
         userEmail: user.email || "Email belirtilmemiş",
+        reportType: "duplicate",
         timestamp: new Date().toISOString()
       });
     } else {
@@ -162,8 +164,8 @@ export const toggleDuplicateQuestion = async (question, user, isDuplicate) => {
 export const toggleGoodQuestion = async (question, user, isGood) => {
   if (!user) throw new Error("Kullanıcı bulunamadı"); 
   
-  const docId = `${question.id}_${user.uid}`;
-  const docRef = doc(db, "good_questions", docId);
+  const docId = `${question.id}_${user.uid}_good`;
+  const docRef = doc(db, "reported_questions", docId);
   
   try {
     if (isGood) {
@@ -173,6 +175,7 @@ export const toggleGoodQuestion = async (question, user, isGood) => {
         tags: question.tags || [],
         userId: user.uid,
         userEmail: user.email || "Email belirtilmemiş",
+        reportType: "good",
         timestamp: new Date().toISOString()
       });
     } else {
