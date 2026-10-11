@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { vocabulary, dialogues, bookSections } from '../data';
 import { globalDictionary } from '../data/globalDictionary'; 
 import { useLanguage } from '../contexts/LanguageContext'; 
-import { speakDutch as speakDutchAudio, getSpeechRate, setSpeechRate } from '../utils/speech'; 
+import { speakDutch as speakDutchAudio, getSpeechRate, setSpeechRate, cancelDutchSpeech } from '../utils/speech'; 
 
 const fallbackDictionary = {
   "de": "the", "een": "a/an", "het": "the", "ik": "I", "u": "you (formal)", "we": "we", "ze": "they", "mijn": "my", "uw": "your",
@@ -55,6 +55,9 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
   const [isPlayingAll, setIsPlayingAll] = useState(false);
   const [playingLineIdx, setPlayingLineIdx] = useState(null);
 
+  const playAllSessionRef = useRef(0);
+  const playAllTimeoutRef = useRef(null);
+
   const activeDialogue = dialogues[sectionId] || [];
   const isFav = favorites && favorites[sectionId];
   const isComp = completed && completed[sectionId];
@@ -84,32 +87,49 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
     return () => window.removeEventListener('wordStatusUpdated', fetchStatuses);
   }, [chapterId]);
 
+  const stopPlayingAll = useCallback(() => {
+    // 1. Session ID'yi artırarak devam eden veya tetiklenecek sonraki adımları derhal geçersiz kıl
+    playAllSessionRef.current += 1;
+
+    // 2. Satırlar arası bekleme timer'ını temizle
+    if (playAllTimeoutRef.current) {
+      clearTimeout(playAllTimeoutRef.current);
+      playAllTimeoutRef.current = null;
+    }
+
+    // 3. Web Speech API konuşmasını derhal durdur
+    cancelDutchSpeech();
+
+    // 4. State'leri sıfırla
+    setIsPlayingAll(false);
+    setPlayingLineIdx(null);
+  }, []);
+
+  // Bileşen kapandığında veya sayfa değiştiğinde konuşmayı kes
+  useEffect(() => {
+    return () => {
+      stopPlayingAll();
+    };
+  }, [stopPlayingAll]);
+
   useEffect(() => {
     setAnswers({});         
     setShowResults(false);
     stopPlayingAll();
-  }, [sectionId]);
-
-  const stopPlayingAll = () => {
-    if (typeof window !== 'undefined' && window.speechSynthesis) {
-      window.speechSynthesis.cancel();
-    }
-    setIsPlayingAll(false);
-    setPlayingLineIdx(null);
-  };
+  }, [sectionId, stopPlayingAll]);
 
   const cycleSpeechRate = (e) => {
     if (e && e.stopPropagation) e.stopPropagation();
-    const rates = [0.75, 0.85, 1.0, 1.15];
+    const rates = [1.0, 1.15, 0.75, 0.85];
     const currentIndex = rates.indexOf(currentSpeechRate);
-    const nextRate = rates[(currentIndex + 1) % rates.length] || 0.85;
+    const nextRate = rates[(currentIndex + 1) % rates.length] || 1.0;
     setCurrentSpeechRate(nextRate);
     setSpeechRate(nextRate);
   };
 
   const speakDutch = (text, e, speaker) => {
     if (e && e.stopPropagation) e.stopPropagation();
-    if (isPlayingAll) stopPlayingAll();
+    stopPlayingAll();
     speakDutchAudio(text, { speaker, rate: currentSpeechRate });
   };
 
@@ -122,10 +142,17 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
 
     if (!activeDialogue || activeDialogue.length === 0) return;
 
+    // Önceki herhangi bir seslendirme veya timer'ı tamamen temizle
+    stopPlayingAll();
+
+    const currentSession = ++playAllSessionRef.current;
     setIsPlayingAll(true);
     let index = 0;
 
     const playNext = () => {
+      // Eğer kullanıcı durdurduysa veya yeni bir oynatma başlattıysa oturum geçersizdir
+      if (playAllSessionRef.current !== currentSession) return;
+
       if (index >= activeDialogue.length) {
         setIsPlayingAll(false);
         setPlayingLineIdx(null);
@@ -140,11 +167,14 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
         speaker: line.speaker,
         rate: currentSpeechRate,
         onEnd: () => {
-          setTimeout(() => {
+          if (playAllSessionRef.current !== currentSession) return;
+          playAllTimeoutRef.current = setTimeout(() => {
+            if (playAllSessionRef.current !== currentSession) return;
             playNext();
           }, 450);
         },
         onError: () => {
+          if (playAllSessionRef.current !== currentSession) return;
           setIsPlayingAll(false);
           setPlayingLineIdx(null);
         }
