@@ -12,7 +12,33 @@ export default function FloatingFeedback() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [user, setUser] = useState(auth.currentUser);
   
-  const [pos, setPos] = useState({ x: window.innerWidth - 60, y: window.innerHeight - 120 });
+  const calculateDefaultPos = () => {
+    if (typeof window === 'undefined') return { x: 12, y: 72 };
+    try {
+      const saved = localStorage.getItem('floatingFeedbackPos');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (typeof parsed.x === 'number' && typeof parsed.y === 'number') {
+          const boundedX = Math.min(Math.max(parsed.x, 10), window.innerWidth - 50);
+          const boundedY = Math.min(Math.max(parsed.y, 10), window.innerHeight - 50);
+          return { x: boundedX, y: boundedY };
+        }
+      }
+    } catch (e) {
+      console.error(e);
+    }
+
+    // İlk karşılaşmada varsayılan konum: Header altındaki bölüm/alt gezinme barının sol hizası
+    const header = document.querySelector('header');
+    if (header) {
+      const headerRect = header.getBoundingClientRect();
+      const targetY = Math.round(headerRect.bottom + 6);
+      return { x: 12, y: Math.max(10, targetY) };
+    }
+    return { x: 12, y: 72 };
+  };
+
+  const [pos, setPos] = useState(calculateDefaultPos);
   const isDragging = useRef(false);
   const dragStart = useRef(null);
 
@@ -21,6 +47,28 @@ export default function FloatingFeedback() {
       setUser(currentUser);
     });
     return () => unsubscribe();
+  }, []);
+
+  // İlk açılışta eğer daha önce taşınmamışsa, DOM header yerleşimi tamamlanınca tam hizala
+  useEffect(() => {
+    try {
+      const hasCustomPos = localStorage.getItem('floatingFeedbackPos');
+      if (!hasCustomPos) {
+        const alignDefaultPos = () => {
+          const header = document.querySelector('header');
+          if (header) {
+            const headerRect = header.getBoundingClientRect();
+            const targetY = Math.round(headerRect.bottom + 6);
+            setPos({ x: 12, y: Math.max(10, targetY) });
+          }
+        };
+        alignDefaultPos();
+        const timer = setTimeout(alignDefaultPos, 150);
+        return () => clearTimeout(timer);
+      }
+    } catch (e) {
+      console.error(e);
+    }
   }, []);
 
   useEffect(() => {
@@ -38,7 +86,9 @@ export default function FloatingFeedback() {
   }, []);
 
   const handlePointerDown = (e) => {
-    e.target.setPointerCapture(e.pointerId);
+    if (e.target.setPointerCapture) {
+      e.target.setPointerCapture(e.pointerId);
+    }
     dragStart.current = { x: e.clientX, y: e.clientY, startX: pos.x, startY: pos.y };
     isDragging.current = false;
   };
@@ -55,17 +105,23 @@ export default function FloatingFeedback() {
   };
 
   const handlePointerUp = (e) => {
-    e.target.releasePointerCapture(e.pointerId);
+    if (e.target.releasePointerCapture && e.target.hasPointerCapture && e.target.hasPointerCapture(e.pointerId)) {
+      e.target.releasePointerCapture(e.pointerId);
+    }
     dragStart.current = null;
     
-    const midX = window.innerWidth / 2;
-    if (pos.x < midX) {
-      setPos(p => ({ ...p, x: 10 })); 
+    if (isDragging.current) {
+      const midX = window.innerWidth / 2;
+      const finalX = pos.x < midX ? 12 : Math.max(12, window.innerWidth - 52);
+      const finalY = Math.min(Math.max(pos.y, 10), window.innerHeight - 50);
+      const finalPos = { x: finalX, y: finalY };
+      setPos(finalPos);
+      try {
+        localStorage.setItem('floatingFeedbackPos', JSON.stringify(finalPos));
+      } catch (err) {
+        console.error(err);
+      }
     } else {
-      setPos(p => ({ ...p, x: window.innerWidth - 50 }));
-    }
-
-    if (!isDragging.current) {
       setIsOpen(true);
     }
   };
