@@ -1,6 +1,97 @@
 // src/data/quizData.js
 
 export const quizQuestions = [
+  // --- EŞLEŞTİRME (MATCHING) SORULARI FORMATI (5 Cümle, 7 Kelimelik Havuz) ---
+  {
+    id: "q_matching_ch1_1",
+    type: "matching",
+    tags: ["ch1", "kennismaking", "begroeting"],
+    questionNl: "Kies het juiste woord voor elke zin:",
+    instructionTr: "Aşağıdaki cümlelerdeki boşlukları kelime havuzundaki doğru kelimelerle eşleştirin.",
+    instructionEn: "Match the blanks in each sentence with the correct word from the pool.",
+    items: [
+      { id: "m_ch1_1", sentenceNl: "Hallo, hoe ___ het met jou?", answer: "gaat" },
+      { id: "m_ch1_2", sentenceNl: "Ik ___ Mehmet en ik woon in Utrecht.", answer: "heet" },
+      { id: "m_ch1_3", sentenceNl: "Fijne avond en tot ___!", answer: "morgen" },
+      { id: "m_ch1_4", sentenceNl: "Wat is jouw ___?", answer: "telefoonnummer" },
+      { id: "m_ch1_5", sentenceNl: "Prettig om kennis te ___.", answer: "maken" }
+    ],
+    distractors: ["jaar", "wonen"],
+    explanationTr: "Selamlaşma ve tanışma kalıpları: 'hoe gaat het', 'ik heet...', 'tot morgen', 'wat is jouw telefoonnummer', 'kennis te maken'.",
+    explanationEn: "Standard greetings and introductions phrases: 'hoe gaat het', 'ik heet...', 'tot morgen', 'wat is jouw telefoonnummer', 'kennis te maken'."
+  },
+  {
+    id: "q_matching_ch2_verbs",
+    type: "matching",
+    tags: ["ch2", "verbs_present", "canteen"],
+    questionNl: "Vul het juiste werkwoord in:",
+    instructionTr: "Her cümle için uygun şimdiki zaman fiilini havuzdan seçin.",
+    instructionEn: "Select the correct present tense verb for each sentence from the pool.",
+    items: [
+      { id: "m_ch2_1", sentenceNl: "Ik ___ graag een kopje thee met suiker.", answer: "drink" },
+      { id: "m_ch2_2", sentenceNl: "Jij ___ elke ochtend vroeg op.", answer: "staat" },
+      { id: "m_ch2_3", sentenceNl: "De docent ___ een moeilijke vraag.", answer: "stelt" },
+      { id: "m_ch2_4", sentenceNl: "Wij ___ vanavond samen in een restaurant.", answer: "eten" },
+      { id: "m_ch2_5", sentenceNl: "Zij (meervoud) ___ elke dag nieuwe woorden.", answer: "leren" }
+    ],
+    distractors: ["slaapt", "wonen"],
+    explanationTr: "Özne-fiil uyumu: 'ik drink' (kök), 'jij staat' (stam+t), 'de docent stelt' (hij -> stam+t), 'wij eten' (çoğul -> mastar), 'zij leren' (çoğul -> mastar).",
+    explanationEn: "Subject-verb agreement: 'ik drink' (stem), 'jij staat' (stem+t), 'de docent stelt' (stem+t), 'wij eten' (plural infinitive), 'zij leren' (plural infinitive)."
+  },
+  {
+    id: "q_matching_ch4_directions",
+    type: "matching",
+    tags: ["ch4", "directions", "traffic"],
+    questionNl: "Kies het juiste woord voor de routebeschrijving:",
+    instructionTr: "Yol tarifi cümlelerindeki boşlukları uygun kelimelerle doldurun.",
+    instructionEn: "Fill in the blanks in the directions sentences with the correct words.",
+    items: [
+      { id: "m_ch4_1", sentenceNl: "Ga bij het verkeerslicht naar ___.", answer: "links" },
+      { id: "m_ch4_2", sentenceNl: "Loop rechtdoor tot aan de ___.", answer: "kruising" },
+      { id: "m_ch4_3", sentenceNl: "De supermarkt is aan de over___ van de straat.", answer: "kant" },
+      { id: "m_ch4_4", sentenceNl: "U moet hier bij het zebrapad ___.", answer: "oversteken" },
+      { id: "m_ch4_5", sentenceNl: "Pardon, weet u de ___ naar het station?", answer: "weg" }
+    ],
+    distractors: ["trein", "rijden"],
+    explanationTr: "Yol tarifi kalıpları: 'naar links' (sola), 'tot aan de kruising' (kavşağa kadar), 'overkant' (karşı taraf), 'oversteken' (karşıya geçmek), 'de weg naar...' (yol).",
+    explanationEn: "Direction phrases: 'naar links' (to the left), 'kruising' (intersection), 'overkant' (opposite side), 'oversteken' (cross), 'de weg' (the way)."
+  },
+  {
+    id: "q_matching_ch8_housing",
+    type: "matching",
+    tags: ["ch8", "housing", "makelaar"],
+    questionNl: "Kies het juiste woord over de woning:",
+    instructionTr: "Ev kiralama ve konut ile ilgili cümleleri doğru kelimelerle tamamlayın.",
+    instructionEn: "Complete the housing and apartment sentences with the correct words.",
+    items: [
+      { id: "m_ch8_1", sentenceNl: "De huur bedraagt 950 euro per ___.", answer: "maand" },
+      { id: "m_ch8_2", sentenceNl: "Het appartement heeft een ruime ___ met veel licht.", answer: "woonkamer" },
+      { id: "m_ch8_3", sentenceNl: "De woning is per direct ___ voor een jaar.", answer: "beschikbaar" },
+      { id: "m_ch8_4", sentenceNl: "Achter het huis ligt een zonnige ___.", answer: "tuin" },
+      { id: "m_ch8_5", sentenceNl: "De keuken is voorzien van een ingebouwde ___.", answer: "koelkast" }
+    ],
+    distractors: ["slaapkamer", "duur"],
+    explanationTr: "Konut terminolojisi: 'per maand' (aylık), 'ruime woonkamer' (geniş oturma odası), 'beschikbaar' (müsait/uygun), 'zonnige tuin' (güneşli bahçe), 'ingebouwde koelkast' (ankastre buzdolabı).",
+    explanationEn: "Housing terminology: 'per maand' (per month), 'woonkamer' (living room), 'beschikbaar' (available), 'tuin' (garden), 'koelkast' (refrigerator)."
+  },
+  {
+    id: "q_matching_prepositions",
+    type: "matching",
+    tags: ["prepositions", "word_order"],
+    questionNl: "Kies het juiste voorzetsel:",
+    instructionTr: "Cümlelerdeki boşlukları doğru edatlar (voorzetsels) ile eşleştirin.",
+    instructionEn: "Match the blanks in the sentences with the correct prepositions.",
+    items: [
+      { id: "m_prep_1", sentenceNl: "Zij reist elke dag ___ de trein naar haar werk.", answer: "met" },
+      { id: "m_prep_2", sentenceNl: "Wij gaan vanavond ___ een gezellig restaurant.", answer: "naar" },
+      { id: "m_prep_3", sentenceNl: "Het boek ligt ___ de houten tafel.", answer: "op" },
+      { id: "m_prep_4", sentenceNl: "Ik woon al drie jaar ___ Amsterdam.", answer: "in" },
+      { id: "m_prep_5", sentenceNl: "Mijn broer is heel bang ___ honden.", answer: "voor" }
+    ],
+    distractors: ["bij", "zonder"],
+    explanationTr: "Edat kullanımları: araçla gitmek ('met de trein'), bir yere gitmek ('naar het restaurant'), üzerinde olmak ('op de tafel'), şehirde ikamet ('in Amsterdam'), bir şeyden korkmak ('bang voor').",
+    explanationEn: "Preposition usages: travel by ('met de trein'), direction to ('naar het restaurant'), surface ('op de tafel'), in a city ('in Amsterdam'), afraid of ('bang voor')."
+  },
   {
     id: "q_verb_pres_1",
     type: "multiple_choice",

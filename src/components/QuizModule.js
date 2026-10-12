@@ -12,6 +12,8 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
   const [deck, setDeck] = useState([]); 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [userAnswer, setUserAnswer] = useState('');
+  const [userMatches, setUserMatches] = useState({});
+  const [activeSlotId, setActiveSlotId] = useState(null);
   const [isAnswered, setIsAnswered] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
   
@@ -53,6 +55,8 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
     setDeck(filtered);
     setCurrentIndex(0);
     setUserAnswer('');
+    setUserMatches({});
+    setActiveSlotId(null);
     setIsAnswered(false);
     setIsCorrect(false);
     setIsFinished(false);
@@ -66,6 +70,11 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
   const isDuplicate = currentQ ? !!duplicateQuestions[currentQ.id] : false;
   const isGood = currentQ ? !!goodQuestions[currentQ.id] : false;
 
+  useEffect(() => {
+    setUserMatches({});
+    setActiveSlotId(null);
+  }, [currentQ?.id]);
+
   const shuffledOptions = useMemo(() => {
     if (!currentQ || !currentQ.options) return [];
     let optionsCopy = [...currentQ.options];
@@ -75,6 +84,33 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
     }
     return optionsCopy;
   }, [currentQ]);
+
+  // Eşleştirme Soruları İçin Cümlelerin Sırasını Karıştır (Her karşılaşıldığında)
+  const shuffledMatchingItems = useMemo(() => {
+    if (!currentQ || currentQ.type !== 'matching' || !currentQ.items) return [];
+    let itemsCopy = [...currentQ.items];
+    for (let i = itemsCopy.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [itemsCopy[i], itemsCopy[j]] = [itemsCopy[j], itemsCopy[i]];
+    }
+    return itemsCopy;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentQ, currentIndex]);
+
+  // Eşleştirme Soruları İçin Kelime Havuzunu Karıştır (Doğru cevaplar + Yanıltıcılar)
+  const shuffledWordPool = useMemo(() => {
+    if (!currentQ || currentQ.type !== 'matching') return [];
+    let pool = currentQ.options 
+      ? [...currentQ.options] 
+      : [...(currentQ.items || []).map(i => i.answer), ...(currentQ.distractors || [])];
+    
+    for (let i = pool.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [pool[i], pool[j]] = [pool[j], pool[i]];
+    }
+    return pool;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentQ, currentIndex]);
 
   const handleReportToggle = async () => {
     if (!currentQ) return;
@@ -164,6 +200,44 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
   };
 
   const handleCheck = (answerParam) => {
+    if (currentQ?.type === 'matching') {
+      const items = currentQ.items || [];
+      const total = items.length;
+      let correctCount = 0;
+      items.forEach(item => {
+        if ((userMatches[item.id] || '').trim().toLowerCase() === item.answer.trim().toLowerCase()) {
+          correctCount++;
+        }
+      });
+
+      const allCorrect = total > 0 && correctCount === total;
+      setIsCorrect(allCorrect);
+      setIsAnswered(true);
+
+      const newHistory = { ...quizHistory };
+      if (!newHistory[currentQ.id]) newHistory[currentQ.id] = { correct: 0, incorrect: 0 };
+
+      if (allCorrect) {
+        newHistory[currentQ.id].correct += 1;
+        setSessionScore(prev => ({ ...prev, correct: prev.correct + 1 }));
+      } else {
+        newHistory[currentQ.id].incorrect += 1;
+        setSessionScore(prev => ({ ...prev, incorrect: prev.incorrect + 1 }));
+        
+        if (currentQ.tags) {
+          const newCloud = { ...wrongTagsCloud };
+          currentQ.tags.forEach(t => {
+            newCloud[t] = (newCloud[t] || 0) + 1;
+          });
+          setWrongTagsCloud(newCloud);
+        }
+      }
+
+      setQuizHistory(newHistory);
+      localStorage.setItem('quizHistory', JSON.stringify(newHistory));
+      return;
+    }
+
     const rawAnswer = typeof answerParam === 'string' ? answerParam : userAnswer;
     if (!rawAnswer || !rawAnswer.trim()) return;
 
@@ -201,6 +275,64 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
     handleCheck(opt);
   };
 
+  // Eşleştirme Soruları: Kelimeyi Boşluğa Yerleştir / Kaldır
+  const handlePlaceWord = (word) => {
+    if (isAnswered) return;
+
+    const currentlyInSlot = Object.keys(userMatches).find(id => userMatches[id] === word);
+
+    if (activeSlotId) {
+      setUserMatches(prev => {
+        const next = { ...prev };
+        if (currentlyInSlot && currentlyInSlot !== activeSlotId) {
+          delete next[currentlyInSlot];
+        }
+        next[activeSlotId] = word;
+        return next;
+      });
+
+      const nextEmpty = shuffledMatchingItems.find(it => it.id !== activeSlotId && (!userMatches[it.id] || it.id === currentlyInSlot));
+      setActiveSlotId(nextEmpty ? nextEmpty.id : null);
+      return;
+    }
+
+    if (currentlyInSlot) {
+      setUserMatches(prev => {
+        const next = { ...prev };
+        delete next[currentlyInSlot];
+        return next;
+      });
+      return;
+    }
+
+    const firstEmpty = shuffledMatchingItems.find(it => !userMatches[it.id]);
+    if (firstEmpty) {
+      setUserMatches(prev => ({ ...prev, [firstEmpty.id]: word }));
+    }
+  };
+
+  // Cümledeki Boşluk Butonuna Tıklama (Aktif Slot Yap / Kelimeyi Çıkar)
+  const handleSlotClick = (itemId) => {
+    if (isAnswered) return;
+    if (userMatches[itemId]) {
+      setUserMatches(prev => {
+        const next = { ...prev };
+        delete next[itemId];
+        return next;
+      });
+      setActiveSlotId(itemId);
+    } else {
+      setActiveSlotId(prev => (prev === itemId ? null : itemId));
+    }
+  };
+
+  // Tüm Eşleştirmeleri Sıfırla
+  const handleClearAllMatches = () => {
+    if (isAnswered) return;
+    setUserMatches({});
+    setActiveSlotId(null);
+  };
+
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === 'Enter') {
@@ -208,13 +340,15 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
           goToNextState();
         } else if (currentQ?.type === 'fill_in' && userAnswer.trim()) {
           handleCheck();
+        } else if (currentQ?.type === 'matching' && Object.keys(userMatches).length > 0) {
+          handleCheck();
         }
       }
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isAnswered, currentQ, userAnswer, currentIndex, deck.length]);
+  }, [isAnswered, currentQ, userAnswer, userMatches, currentIndex, deck.length]);
 
   const handleDontKnow = () => {
     setIsCorrect(false);
@@ -252,6 +386,8 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
     if (currentIndex < deck.length - 1) {
       setCurrentIndex(prev => prev + 1);
       setUserAnswer('');
+      setUserMatches({});
+      setActiveSlotId(null);
       setIsAnswered(false);
       setIsCorrect(false);
     } else {
@@ -371,6 +507,14 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
   }
 
   const renderQuestionText = () => {
+    if (currentQ.type === 'matching') {
+      return (
+        <span className="text-sm sm:text-base text-slate-200 font-semibold block">
+          {currentQ.questionNl || (isTr ? (currentQ.instructionTr || 'Aşağıdaki boşlukları kelime havuzundaki doğru kelimelerle eşleştirin:') : (currentQ.instructionEn || 'Match the blanks with the correct words from the pool:'))}
+        </span>
+      );
+    }
+
     if (!currentQ.questionNl.includes('___')) return currentQ.questionNl;
     
     const parts = currentQ.questionNl.split('___');
@@ -495,10 +639,10 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
         </div>
         
         {/* Content */}
-        <div className="px-4 sm:px-6 py-3.5 sm:py-5 flex-1 flex flex-col justify-center overflow-y-auto scrollbar-thin scrollbar-thumb-slate-700">
-           <div className="text-center mb-3 sm:mb-4">
+        <div className="px-4 sm:px-6 py-3 sm:py-4 flex-1 flex flex-col justify-center overflow-y-auto scrollbar-thin scrollbar-thumb-slate-700">
+           <div className="text-center mb-2.5 sm:mb-3">
               {currentQ.tags && currentQ.tags.length > 0 && (
-                <div className="flex flex-wrap justify-center gap-1 mb-2">
+                <div className="flex flex-wrap justify-center gap-1 mb-1.5">
                   {currentQ.tags.map(tag => (
                     <button
                       key={tag}
@@ -512,17 +656,17 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
                 </div>
               )}
 
-              <span className="text-[10px] sm:text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1 block">
+              <span className="text-[10px] sm:text-xs font-semibold text-slate-400 uppercase tracking-wider mb-0.5 block">
                 {isTr ? 'Soru' : 'Question'} {currentIndex + 1} / {deck.length}
               </span>
-              <h2 className="text-base sm:text-lg md:text-xl font-bold text-white leading-snug max-w-xl mx-auto">
+              <h2 className="text-sm sm:text-base md:text-lg font-bold text-white leading-snug max-w-xl mx-auto">
                 {renderQuestionText()}
               </h2>
            </div>
 
-           {/* Çoktan Seçmeli Seçenekler */}
+           {/* 1. Çoktan Seçmeli Seçenekler */}
            {currentQ.type === 'multiple_choice' && (
-             <div className={`grid gap-2 sm:gap-2.5 mb-3 sm:mb-4 w-full max-w-xl mx-auto ${shuffledOptions.some(o => o.length > 28) ? 'grid-cols-1' : 'grid-cols-1 sm:grid-cols-2'}`}>
+             <div className={`grid gap-2 sm:gap-2.5 mb-2.5 sm:mb-3 w-full max-w-xl mx-auto ${shuffledOptions.some(o => o.length > 28) ? 'grid-cols-1' : 'grid-cols-1 sm:grid-cols-2'}`}>
                 {shuffledOptions.map((opt, index) => {
                   const letter = String.fromCharCode(65 + index); // A, B, C, D
                   let containerClass = "bg-slate-800/80 border-slate-700/80 text-slate-200 hover:bg-slate-750 hover:border-teal-500/60 active:scale-[0.99]";
@@ -549,7 +693,7 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
                       key={opt}
                       disabled={isAnswered}
                       onClick={() => handleOptionSelect(opt)}
-                      className={`group flex items-center gap-2.5 px-3 sm:px-3.5 py-2.5 sm:py-3 rounded-xl border text-left font-medium transition-all text-xs sm:text-sm cursor-pointer disabled:cursor-default ${containerClass}`}
+                      className={`group flex items-center gap-2.5 px-3 sm:px-3.5 py-2 sm:py-2.5 rounded-xl border text-left font-medium transition-all text-xs sm:text-sm cursor-pointer disabled:cursor-default ${containerClass}`}
                     >
                       <span className={`w-6 h-6 rounded-md flex items-center justify-center text-xs font-bold flex-shrink-0 transition-colors ${badgeClass}`}>
                         {letter}
@@ -564,26 +708,197 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
              </div>
            )}
 
+           {/* 2. Eşleştirme Sorusu Bölümü (Kelimeler Havuzu + Cümleler Slotları) */}
+           {currentQ.type === 'matching' && (
+             <div className="w-full max-w-xl mx-auto flex flex-col gap-2 mb-2">
+               {/* Kelime Havuzu */}
+               <div className="bg-slate-800/60 border border-slate-700/70 rounded-xl p-2.5 sm:p-3">
+                 <div className="flex items-center justify-between mb-1.5">
+                   <span className="text-[11px] font-bold text-slate-300 flex items-center gap-1.5">
+                     <i className="fa-solid fa-layer-group text-teal-400 text-xs"></i>
+                     {isTr ? 'Kelime Havuzu' : 'Word Pool'}
+                     <span className="text-[10px] text-slate-400 font-normal">
+                       ({shuffledWordPool.length} {isTr ? 'kelime' : 'words'})
+                     </span>
+                   </span>
+                   {!isAnswered && Object.keys(userMatches).length > 0 && (
+                     <button 
+                       onClick={handleClearAllMatches}
+                       className="text-[10px] text-slate-400 hover:text-rose-400 transition-colors flex items-center gap-1 cursor-pointer"
+                       title={isTr ? 'Tüm eşleştirmeleri temizle' : 'Clear all matches'}
+                     >
+                       <i className="fa-solid fa-rotate-left"></i>
+                       {isTr ? 'Temizle' : 'Reset'}
+                     </button>
+                   )}
+                 </div>
+
+                 {/* Kelime Hapları */}
+                 <div className="flex flex-wrap gap-1.5 justify-center">
+                   {shuffledWordPool.map((word, wIdx) => {
+                     const isUsed = Object.values(userMatches).includes(word);
+                     return (
+                       <button
+                         key={`${word}_${wIdx}`}
+                         disabled={isAnswered}
+                         draggable={!isAnswered && !isUsed}
+                         onDragStart={(e) => {
+                           e.dataTransfer.setData('text/plain', word);
+                         }}
+                         onClick={() => handlePlaceWord(word)}
+                         className={`px-2.5 sm:px-3 py-1 rounded-lg text-xs font-semibold transition-all flex items-center gap-1.5 select-none ${
+                           isUsed
+                             ? 'bg-slate-900/60 text-slate-500 border border-slate-800 line-through opacity-50 cursor-pointer'
+                             : 'bg-teal-950/40 border border-teal-500/50 text-teal-200 hover:bg-teal-900/60 hover:border-teal-400 hover:scale-105 active:scale-95 shadow-sm cursor-grab active:cursor-grabbing'
+                         }`}
+                       >
+                         <span>{word}</span>
+                         {isUsed && <i className="fa-solid fa-check text-[9px] text-teal-500 no-underline"></i>}
+                       </button>
+                     );
+                   })}
+                 </div>
+
+                 {!isAnswered && (
+                   <p className="text-[10px] text-slate-400 text-center mt-1.5 italic">
+                     <i className="fa-solid fa-hand-pointer mr-1 text-teal-400"></i>
+                     {activeSlotId 
+                       ? (isTr ? 'Seçili boşluğa yerleştirmek için kelimeye dokunun.' : 'Tap a word to place into selected blank.')
+                       : (isTr ? 'Kelimeye dokunarak veya sürükleyerek boşlukları doldurun.' : 'Tap or drag words to fill the blanks.')}
+                   </p>
+                 )}
+               </div>
+
+               {/* Cümleler Listesi */}
+               <div className="space-y-1.5 max-h-[38vh] overflow-y-auto pr-0.5 scrollbar-thin scrollbar-thumb-slate-700">
+                 {shuffledMatchingItems.map((item, idx) => {
+                   const parts = item.sentenceNl.split('___');
+                   const assignedWord = userMatches[item.id];
+                   const isActiveSlot = activeSlotId === item.id;
+                   const isItemCorrect = isAnswered && (assignedWord || '').trim().toLowerCase() === item.answer.trim().toLowerCase();
+
+                   return (
+                     <div 
+                       key={item.id}
+                       className={`p-2 rounded-xl border transition-all text-xs sm:text-sm flex items-center gap-2 ${
+                         isAnswered
+                           ? isItemCorrect
+                             ? 'bg-emerald-950/20 border-emerald-800/40'
+                             : 'bg-rose-950/20 border-rose-800/40'
+                           : isActiveSlot
+                             ? 'bg-slate-800 border-teal-500/80 shadow-md ring-1 ring-teal-500/30'
+                             : 'bg-slate-800/50 border-slate-700/60 hover:border-slate-600'
+                       }`}
+                     >
+                       <span className="w-5 h-5 rounded-full bg-slate-900 border border-slate-700 text-slate-400 text-[10px] font-bold flex items-center justify-center flex-shrink-0">
+                         {idx + 1}
+                       </span>
+
+                       <div className="flex-1 leading-relaxed text-slate-200">
+                         {parts[0]}
+                         
+                         {/* Boşluk / Slot Butonu */}
+                         <button
+                           type="button"
+                           disabled={isAnswered}
+                           onClick={() => handleSlotClick(item.id)}
+                           onDragOver={(e) => {
+                             if (!isAnswered) e.preventDefault();
+                           }}
+                           onDrop={(e) => {
+                             if (isAnswered) return;
+                             e.preventDefault();
+                             const droppedWord = e.dataTransfer.getData('text/plain');
+                             if (droppedWord) {
+                               setUserMatches(prev => {
+                                 const next = { ...prev };
+                                 const prevSlot = Object.keys(next).find(k => next[k] === droppedWord);
+                                 if (prevSlot) delete next[prevSlot];
+                                 next[item.id] = droppedWord;
+                                 return next;
+                               });
+                               setActiveSlotId(null);
+                             }
+                           }}
+                           className={`mx-1.5 inline-flex items-center justify-center px-2 py-0.5 min-w-[70px] rounded-md text-xs font-bold transition-all align-middle select-none ${
+                             isAnswered
+                               ? isItemCorrect
+                                 ? 'bg-emerald-900/60 border border-emerald-500 text-emerald-300'
+                                 : 'bg-rose-900/60 border border-rose-500 text-rose-300'
+                               : assignedWord
+                                 ? 'bg-teal-900/50 border border-teal-500 text-teal-200 hover:bg-rose-900/40 hover:border-rose-500 hover:text-rose-200 cursor-pointer shadow-sm'
+                                 : isActiveSlot
+                                   ? 'border-2 border-dashed border-teal-400 bg-teal-950/40 text-teal-300 animate-pulse cursor-pointer'
+                                   : 'border-2 border-dashed border-slate-600 hover:border-teal-400/80 bg-slate-900/60 text-slate-400 hover:text-teal-300 cursor-pointer'
+                           }`}
+                           title={assignedWord && !isAnswered ? (isTr ? 'Kaldırmak için tıkla' : 'Click to remove') : undefined}
+                         >
+                           {assignedWord ? (
+                             <>
+                               <span>{assignedWord}</span>
+                               {!isAnswered && <i className="fa-solid fa-xmark text-[9px] ml-1.5 opacity-60"></i>}
+                             </>
+                           ) : (
+                             <span>___</span>
+                           )}
+                         </button>
+
+                         {/* Yanlış ise doğru cevabı hemen yanında yeşil rozetle göster */}
+                         {isAnswered && !isItemCorrect && (
+                           <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-md bg-emerald-950/80 border border-emerald-600 text-emerald-300 text-xs font-bold ml-1 align-middle">
+                             <i className="fa-solid fa-arrow-right text-[9px]"></i>
+                             {item.answer}
+                           </span>
+                         )}
+
+                         {parts[1]}
+                       </div>
+
+                       {/* Durum İkonu */}
+                       {isAnswered && (
+                         <div className="flex-shrink-0 ml-1">
+                           {isItemCorrect ? (
+                             <i className="fa-solid fa-circle-check text-emerald-400 text-sm"></i>
+                           ) : (
+                             <i className="fa-solid fa-circle-xmark text-rose-400 text-sm"></i>
+                           )}
+                         </div>
+                       )}
+                     </div>
+                   );
+                 })}
+               </div>
+             </div>
+           )}
+
            {/* Cevap Geribildirim Kutusu */}
            {isAnswered && (
-             <div className={`mt-1 p-3 sm:p-3.5 rounded-xl border animate-fadeIn flex flex-col gap-1.5 max-w-xl mx-auto w-full ${isCorrect ? 'bg-emerald-950/30 border-emerald-800/60' : 'bg-rose-950/30 border-rose-800/60'}`}>
+             <div className={`mt-1 p-2.5 sm:p-3 rounded-xl border animate-fadeIn flex flex-col gap-1 max-w-xl mx-auto w-full ${isCorrect ? 'bg-emerald-950/30 border-emerald-800/60' : 'bg-rose-950/30 border-rose-800/60'}`}>
                <div className="flex items-center justify-between">
                  <h4 className={`text-xs sm:text-sm font-bold flex items-center gap-1.5 ${isCorrect ? 'text-emerald-400' : 'text-rose-400'}`}>
                    <i className={`fa-solid ${isCorrect ? 'fa-circle-check' : 'fa-circle-xmark'}`}></i>
-                   {isCorrect ? (isTr ? 'Doğru Cevap!' : 'Correct!') : (isTr ? 'Yanlış Cevap' : 'Incorrect')}
+                   {isCorrect ? (isTr ? 'Tebrikler! Doğru Cevap!' : 'Correct!') : (isTr ? 'Yanlış Cevap' : 'Incorrect')}
                  </h4>
                  <span className="text-[10px] text-slate-400 font-mono hidden sm:inline">
                    {isTr ? 'Devam etmek için Enter ↵' : 'Press Enter ↵ to continue'}
                  </span>
                </div>
-               {!isCorrect && (
+
+               {currentQ.type === 'matching' ? (
+                 <p className="text-slate-300 text-xs">
+                   {isTr 
+                     ? `${(currentQ.items || []).filter(it => (userMatches[it.id] || '').trim().toLowerCase() === it.answer.trim().toLowerCase()).length} / ${(currentQ.items || []).length} doğru eşleştirme yapıldı.`
+                     : `${(currentQ.items || []).filter(it => (userMatches[it.id] || '').trim().toLowerCase() === it.answer.trim().toLowerCase()).length} / ${(currentQ.items || []).length} correct matches.`}
+                 </p>
+               ) : (!isCorrect && (
                  <div className="text-slate-300 text-xs flex items-center gap-1.5 flex-wrap">
                    <span>{isTr ? 'Doğru cevap:' : 'Correct answer:'}</span>
                    <span className="text-emerald-300 font-bold px-2 py-0.5 bg-slate-900/90 rounded border border-emerald-700/60">
                      {currentQ.correctAnswer}
                    </span>
                  </div>
-               )}
+               ))}
+
                {(currentQ.explanationTr || currentQ.explanationEn) && (
                  <p className="text-slate-400 text-xs mt-0.5 italic border-t border-slate-800/80 pt-1.5 flex items-start gap-1.5 leading-relaxed">
                    <i className="fa-solid fa-lightbulb text-amber-400 mt-0.5 flex-shrink-0 text-[11px]"></i> 
@@ -594,7 +909,7 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
            )}
 
            {/* Alt Aksiyon Butonları */}
-           <div className="mt-3 sm:mt-4 flex flex-wrap justify-center items-center gap-2 max-w-xl mx-auto w-full">
+           <div className="mt-2.5 sm:mt-3 flex flex-wrap justify-center items-center gap-2 max-w-xl mx-auto w-full">
              {!isAnswered ? (
                <>
                  {currentQ.type === 'fill_in' && (
@@ -604,6 +919,20 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
                      className="flex-1 sm:flex-initial bg-teal-600 hover:bg-teal-500 disabled:opacity-40 disabled:hover:bg-teal-600 text-white px-5 sm:px-6 py-2 rounded-xl font-bold border border-teal-500/80 shadow-md transition-all text-xs sm:text-sm flex items-center justify-center gap-1.5 cursor-pointer disabled:cursor-not-allowed"
                    >
                      <i className="fa-solid fa-check text-xs"></i> {isTr ? 'Kontrol Et' : 'Check'}
+                   </button>
+                 )}
+
+                 {currentQ.type === 'matching' && (
+                   <button 
+                     onClick={() => handleCheck()}
+                     disabled={Object.keys(userMatches).length === 0}
+                     className="flex-1 sm:flex-initial bg-teal-600 hover:bg-teal-500 disabled:opacity-40 disabled:hover:bg-teal-600 text-white px-5 sm:px-6 py-2 rounded-xl font-bold border border-teal-500/80 shadow-md transition-all text-xs sm:text-sm flex items-center justify-center gap-1.5 cursor-pointer disabled:cursor-not-allowed"
+                   >
+                     <i className="fa-solid fa-check text-xs"></i> 
+                     <span>{isTr ? 'Kontrol Et' : 'Check'}</span>
+                     <span className="text-[10px] opacity-80 font-mono">
+                       ({Object.keys(userMatches).length}/{(currentQ.items || []).length})
+                     </span>
                    </button>
                  )}
 
