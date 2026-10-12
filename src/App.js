@@ -1215,16 +1215,6 @@ function MainContent({ user, setIsAuthModalOpen }) {
         <style>{`.hide-scroll::-webkit-scrollbar { display: none; }`}</style>
         <div className="max-w-7xl mx-auto px-2 py-2 flex items-center justify-center relative min-h-[44px]">
           
-          {/* SABİT GERİ BİLDİRİM (+) BUTONU */}
-          <button 
-            type="button"
-            onClick={() => setIsFeedbackOpen(true)}
-            className="absolute left-3 sm:left-4 z-10 w-7 h-7 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-brand-300 border border-slate-700 hover:border-brand-500/60 flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105 active:scale-95 group flex-shrink-0"
-            title={lang === 'tr' ? 'Geri Bildirim / Öneri Ekle (+)' : 'Add Feedback / Suggestion (+)'}
-          >
-            <i className="fa-solid fa-plus text-xs group-hover:rotate-90 transition-transform duration-200"></i>
-          </button>
-
           <div 
             ref={sectionMeasureRef} 
             className="w-full max-w-full overflow-x-auto hide-scroll whitespace-nowrap flex justify-center items-center gap-2 px-10 sm:px-12" 
@@ -1295,6 +1285,16 @@ function MainContent({ user, setIsAuthModalOpen }) {
             )}
             </div>
           </div>
+
+          {/* SABİT GERİ BİLDİRİM (+) BUTONU */}
+          <button 
+            type="button"
+            onClick={() => setIsFeedbackOpen(true)}
+            className="absolute right-3 sm:right-4 z-10 w-7 h-7 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-brand-300 border border-slate-700 hover:border-brand-500/60 flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105 active:scale-95 group flex-shrink-0"
+            title={lang === 'tr' ? 'Geri Bildirim / Öneri Ekle (+)' : 'Add Feedback / Suggestion (+)'}
+          >
+            <i className="fa-solid fa-plus text-xs group-hover:rotate-90 transition-transform duration-200"></i>
+          </button>
         </div>
       </div>
 
@@ -1302,14 +1302,6 @@ function MainContent({ user, setIsAuthModalOpen }) {
       {isSectionBarOverflowing && (
         <div className="w-full relative px-3 sm:px-4 py-2 bg-slate-900/95 backdrop-blur-sm border-b border-slate-800 shadow-inner flex-none" ref={mobileMenuRef}>
           <div className="max-w-3xl mx-auto flex items-center gap-2">
-            <button
-              type="button"
-              onClick={() => setIsFeedbackOpen(true)}
-              className="w-7 h-7 flex-shrink-0 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-brand-300 border border-slate-700 hover:border-brand-500/60 flex items-center justify-center transition-all duration-200 shadow-sm active:scale-95 group"
-              title={lang === 'tr' ? 'Geri Bildirim / Öneri Ekle (+)' : 'Add Feedback / Suggestion (+)'}
-            >
-              <i className="fa-solid fa-plus text-xs group-hover:rotate-90 transition-transform duration-200"></i>
-            </button>
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className={`flex-1 border rounded-2xl p-2.5 sm:p-3 shadow-sm flex flex-col gap-2 transition-all ${isMobileMenuOpen ? 'bg-slate-800 border-brand-500' : 'bg-slate-800 border-slate-700'}`}
@@ -1368,6 +1360,14 @@ function MainContent({ user, setIsAuthModalOpen }) {
                 })
               )}
             </div>
+          </button>
+          <button
+            type="button"
+            onClick={() => setIsFeedbackOpen(true)}
+            className="w-7 h-7 flex-shrink-0 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-brand-300 border border-slate-700 hover:border-brand-500/60 flex items-center justify-center transition-all duration-200 shadow-sm active:scale-95 group"
+            title={lang === 'tr' ? 'Geri Bildirim / Öneri Ekle (+)' : 'Add Feedback / Suggestion (+)'}
+          >
+            <i className="fa-solid fa-plus text-xs group-hover:rotate-90 transition-transform duration-200"></i>
           </button>
         </div>
 
