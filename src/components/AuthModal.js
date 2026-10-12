@@ -216,30 +216,32 @@ export default function AuthModal({ isOpen, onClose, user }) {
             </div>
           </div>
           
-          {/* SESLENDİRME HIZI AYARI (ANALOG SLIDER) */}
-          <div className="bg-slate-950/40 border border-slate-800/80 px-3 py-2 rounded-xl space-y-1.5">
+          {/* SESLENDİRME HIZI AYARI (ANALOG SLIDER - YÜKSEK KONTRAST) */}
+          <div className="bg-slate-950/60 border border-slate-700/80 px-3.5 py-2.5 rounded-xl space-y-2">
             <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2 text-xs font-semibold text-slate-300">
-                <i className="fa-solid fa-sliders text-brand-400 text-xs"></i>
+              <div className="flex items-center gap-2 text-xs font-bold text-slate-100">
+                <i className="fa-solid fa-sliders text-teal-400 text-xs"></i>
                 <span>{lang === 'tr' ? 'Seslendirme Hızı' : 'Speech Speed'}</span>
               </div>
               
               <div className="flex items-center gap-2">
-                <span className="font-mono text-xs font-bold text-brand-300">{Number(speechRate).toFixed(2)}x</span>
+                <span className="font-mono text-xs font-extrabold text-teal-300 bg-slate-900 border border-slate-700 px-2 py-0.5 rounded-md shadow-sm">
+                  {Number(speechRate).toFixed(2)}x
+                </span>
                 <button 
                   type="button"
                   onClick={() => testDutchSpeech(speechRate)}
-                  className="bg-brand-600/20 hover:bg-brand-600 text-brand-300 hover:text-white border border-brand-500/30 px-2 py-0.5 rounded-md text-[10px] font-bold transition-all flex items-center gap-1 active:scale-95"
+                  className="bg-teal-600 hover:bg-teal-500 text-white font-bold text-xs px-2.5 py-1 rounded-lg border border-teal-400/80 shadow-md transition-all flex items-center gap-1.5 active:scale-95 cursor-pointer"
                   title={lang === 'tr' ? 'Örnek Sesi Dinle' : 'Play Sample Audio'}
                 >
-                  <i className="fa-solid fa-volume-high text-[10px]"></i>
-                  <span>{lang === 'tr' ? 'Test' : 'Test'}</span>
+                  <i className="fa-solid fa-volume-high text-xs text-white"></i>
+                  <span className="text-white font-bold">{lang === 'tr' ? 'Test' : 'Test'}</span>
                 </button>
               </div>
             </div>
 
-            <div className="flex items-center gap-2 pt-0.5">
-              <span className="text-[10px] text-slate-500 font-mono">0.6x</span>
+            <div className="flex items-center gap-2.5 pt-0.5">
+              <span className="text-xs font-mono font-bold text-slate-300">0.6x</span>
               <input 
                 type="range"
                 min="0.6"
@@ -253,7 +255,7 @@ export default function AuthModal({ isOpen, onClose, user }) {
                 }}
                 className="analog-speed-slider flex-1 h-1.5 cursor-ew-resize"
               />
-              <span className="text-[10px] text-slate-500 font-mono">1.4x</span>
+              <span className="text-xs font-mono font-bold text-slate-300">1.4x</span>
             </div>
           </div>
         </div>

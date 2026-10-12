@@ -533,7 +533,7 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
               className="flex items-center gap-1.5 sm:gap-2 bg-slate-950/70 border border-slate-700/80 hover:border-slate-600 rounded-xl px-2 py-1 shadow-inner transition-colors group select-none"
               title={lang === 'tr' ? `Konuşma Hızı: ${Number(currentSpeechRate).toFixed(2)}x (Kaydırarak ayarla, 1.0x için tıkla)` : `Speech Speed: ${Number(currentSpeechRate).toFixed(2)}x (Slide to adjust, click 1.0x to reset)`}
             >
-              <i className="fa-solid fa-gauge-high text-brand-400 text-[11px] flex-shrink-0 group-hover:scale-110 transition-transform"></i>
+              <i className="fa-solid fa-gauge-high text-teal-400 text-[11px] flex-shrink-0 group-hover:scale-110 transition-transform"></i>
               
               <input 
                 type="range"
@@ -549,7 +549,7 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
                 type="button"
                 onClick={resetSpeechRate}
                 title={lang === 'tr' ? "1.00x normal hıza sıfırla" : "Reset to 1.00x"}
-                className="font-mono text-[10px] sm:text-[11px] font-bold text-brand-300 hover:text-white bg-slate-900/90 hover:bg-slate-800 border border-slate-700/70 hover:border-brand-500/50 px-1 py-0.5 rounded transition-all shadow-sm active:scale-95 flex-shrink-0"
+                className="font-mono text-[10px] sm:text-[11px] font-extrabold text-teal-300 hover:text-white bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-teal-500/60 px-1.5 py-0.5 rounded transition-all shadow-sm active:scale-95 flex-shrink-0"
               >
                 {Number(currentSpeechRate).toFixed(2)}x
               </button>

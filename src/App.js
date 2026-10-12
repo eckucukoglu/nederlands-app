@@ -1300,7 +1300,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
 
       {/* 4. MOBİL ZARİF İLERLEME ÇUBUĞU */}
       {isSectionBarOverflowing && (
-        <div className="w-full relative px-3 sm:px-4 py-2 bg-slate-900/95 backdrop-blur-sm border-b border-slate-800 shadow-inner flex-none" ref={mobileMenuRef}>
+        <div className="w-full relative px-3 sm:px-4 py-2 bg-slate-900 border-b border-slate-800 shadow-inner flex-none z-40" ref={mobileMenuRef}>
           <div className="max-w-3xl mx-auto flex items-center gap-2">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
