@@ -37127,7 +37127,1588 @@ explanationEn: "Since 'de telefoon' is a de-word, its object form is 'hem'."
     correctAnswer: "Zijn + aan het + infinitief (bijv. Ik ben aan het koken).",
     explanationTr: "Şu anda devam etmekte olan een eylemi (Şimdiki Zamanın Hikayesi) belirtmek için 'zijn + aan het + mastar fiil' yapısı kullanılır.",
     explanationEn: "To describe an action happening right now (continuous aspect), the construction 'zijn + aan het + infinitive' is used."
-  }
+  },
   
-  //////////////////sadas////////////end
+  // ==========================================
+  // ON-CLASS CURRICULUM QUESTIONS (Chapters 1-18)
+  // Pedagogical, Medium & Hard Level Questions
+  // ==========================================
+  {
+    id: "q_onclass_1_1",
+    type: "fill_in",
+    tags: ["summary_ch1", "verbs_present", "inversion", "question_words"],
+    questionNl: "Waar ___ (komen) jij vandaan?",
+    correctAnswer: "kom",
+    explanationTr: "Soru cümlesinde 'jij' öznesi fiilden hemen sonra geldiğinde (inversie/devrik cümle), fiil köküne '-t' eklenmez; sadece yalın fiil kökü (stam) kullanılır.",
+    explanationEn: "In question inversion when 'jij' immediately follows the verb, the '-t' suffix is dropped and only the bare verb stem (stam) is used."
+  },
+  {
+    id: "q_onclass_1_2",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "numbers", "spelling"],
+    questionNl: "Hoe schrijf je het getal 23 voluit in het Nederlands?",
+    options: ["drieëntwintig", "drieentwintig", "drie en twintig", "drieëntwintich"],
+    correctAnswer: "drieëntwintig",
+    explanationTr: "Hollandacada '23' sayısı yazılırken 'drie' ve 'en' birleştiğinde ses çatışmasını önlemek için 'e' üzerine iki nokta (trema / deelteken) konur: 'drieëntwintig'.",
+    explanationEn: "In Dutch, when writing '23' in full, a diaeresis (trema) is placed on the second 'e' to indicate a new syllable and prevent vowel clash: 'drieëntwintig'."
+  },
+  {
+    id: "q_onclass_1_3",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "numbers", "spelling"],
+    questionNl: "Hoe schrijf je het getal 58 correct in letters?",
+    options: ["achtenvijftig", "vijftigenacht", "achtvijftig", "achtenveertig"],
+    correctAnswer: "achtenvijftig",
+    explanationTr: "Hollandacada basamaklar tersten okunur: önce birler basamağı (acht), ardından 'en', sonra onlar basamağı (vijftig): 'achtenvijftig'.",
+    explanationEn: "In Dutch two-digit numbers, the unit comes first, followed by 'en', then the ten: 'achtenvijftig' (eight-and-fifty)."
+  },
+  {
+    id: "q_onclass_1_4",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "personal_info", "countries"],
+    questionNl: "Welke reactie is grammaticaal correct op de vraag: 'Wat is je nationaliteit?'",
+    options: ["Ik ben Nederlandse.", "Ik kom uit Nederlandse.", "Mijn nationaliteit is Nederland.", "Ik ben Nederland."],
+    correctAnswer: "Ik ben Nederlandse.",
+    explanationTr: "'Wat is je nationaliteit?' sorusuna milliyet sıfatı ile cevap verilir: 'Ik ben Nederlandse' (veya Nederlander / Turkse vb.). 'Nederland' ülke ismidir, milliyet değildir.",
+    explanationEn: "To answer 'Wat is je nationaliteit?', you state your nationality adjective ('Ik ben Nederlandse'), not the country name ('Nederland')."
+  },
+  {
+    id: "q_onclass_1_5",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "farewells", "time_expressions"],
+    questionNl: "Je neemt afscheid van een klasgenoot en je ziet elkaar over twee uur weer (dezelfde dag). Wat zeg je?",
+    options: ["Tot straks!", "Tot morgen!", "Tot ziens voor altijd!", "Gisterochtend!"],
+    correctAnswer: "Tot straks!",
+    explanationTr: "Aynı gün içinde birazdan veya birkaç saat sonra tekrar görüşülecekse 'Tot straks!' veya 'Tot zo!' denir. 'Tot morgen' ertesi gün içindir.",
+    explanationEn: "If you are going to see each other later on the same day, you say 'Tot straks!' (or 'Tot zo!'). 'Tot morgen' is only for tomorrow."
+  },
+  {
+    id: "q_onclass_1_6",
+    type: "fill_in",
+    tags: ["summary_ch1", "verbs_present", "zijn"],
+    questionNl: "Jullie ___ (zijn) de nieuwe cursisten in deze klas.",
+    correctAnswer: "zijn",
+    explanationTr: "'Zijn' (olmak) düzensiz fiilinde 'jullie' (siz çoğul) öznesi için doğru çekim 'zijn'dir.",
+    explanationEn: "For the irregular verb 'zijn' (to be), the plural subject pronoun 'jullie' conjugates as 'zijn'."
+  },
+  {
+    id: "q_onclass_1_7",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "alphabet", "pronunciation"],
+    questionNl: "Hoe wordt de letter 'Y' genoemd en uitgesproken in het traditionele Nederlandse alfabet?",
+    options: ["Griekse ij (of y-grec)", "Lange ij", "Korte ei", "Zachte jee"],
+    correctAnswer: "Griekse ij (of y-grec)",
+    explanationTr: "Hollandaca alfabede 'Y' harfi 'Griekse ij' veya Fransızca kökenli 'y-grec' olarak adlandırılır. Normal 'ij' harfine ise 'lange ij' denir.",
+    explanationEn: "In the Dutch alphabet, the letter 'Y' is officially called 'Griekse ij' (Greek i) or 'y-grec', distinguishing it from 'lange ij' (ij)."
+  },
+  {
+    id: "q_onclass_1_8",
+    type: "fill_in",
+    tags: ["summary_ch1", "hobbies", "verbs_present"],
+    questionNl: "Mijn hobby is de krant ___ (lezen).",
+    correctAnswer: "lezen",
+    explanationTr: "'Mijn hobby is...' kalıbından sonra eylem mastar (infinitief) halinde gelir: 'lezen'.",
+    explanationEn: "After 'Mijn hobby is...', the verb following remains in its infinitive form: 'lezen'."
+  },
+  {
+    id: "q_onclass_1_9",
+    type: "multiple_choice",
+    tags: ["summary_ch1", "introductions", "question_words"],
+    questionNl: "Welke vraag stel je als je wilt weten uit welke stad of welk land iemand oorspronkelijk afkomstig is?",
+    options: ["Waar kom je vandaan?", "Waar woon je nu?", "Hoe heet je adres?", "Wie ben je gisteren?"],
+    correctAnswer: "Waar kom je vandaan?",
+    explanationTr: "Bir kişinin kökenini (nereden geldiğini) sormak için 'Waar kom je vandaan?' veya 'Uit welk land kom je?' sorulur. 'Waar woon je?' şu an ikamet edilen yeri sorar.",
+    explanationEn: "'Waar kom je vandaan?' (Where do you come from?) asks about a person's origin or home country, distinct from 'Waar woon je?' (Where do you currently reside?)."
+  },
+  {
+    id: "q_onclass_2_1",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "time", "telling_time"],
+    questionNl: "Het is 11:30. Hoe spreek je deze kloktijd correct uit in het Nederlands?",
+    options: ["Het is half twaalf.", "Het is half elf.", "Het is dertig over elf.", "Het is elf en dertig."],
+    correctAnswer: "Het is half twaalf.",
+    explanationTr: "Hollandacada buçuklu saatlerde bir sonraki saate bakılır! 11:30 'on ikiye yarım var' mantığıyla 'half twaalf' şeklinde söylenir.",
+    explanationEn: "In Dutch, half hours look forward to the coming hour! 11:30 is 'half twaalf' (halfway to twelve), not 'half elf'."
+  },
+  {
+    id: "q_onclass_2_2",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "time", "telling_time"],
+    questionNl: "Het is 11:20. Hoe zeg je dit met betrekking tot het halve uur?",
+    options: ["Het is tien voor half twaalf.", "Het is tien over half elf.", "Het is twintig over elf.", "Het is tien voor twaalf."],
+    correctAnswer: "Het is tien voor half twaalf.",
+    explanationTr: "Hollandacada 11:20 saati buçuğa (11:30 = half twaalf) göre ifade edilir: Buçuğa 10 dakika kaldığı için 'tien voor half twaalf' denir.",
+    explanationEn: "Dutch tells 11:20 relative to the half hour (11:30 = half twaalf): since it is 10 minutes before 11:30, it is 'tien voor half twaalf'."
+  },
+  {
+    id: "q_onclass_2_3",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "prepositions", "time_days_months"],
+    questionNl: "Kies de juiste voorzetsels: '___ maandag heb ik les, maar ___ juli ga ik op vakantie.'",
+    options: ["Op ... in", "In ... op", "Om ... in", "Op ... om"],
+    correctAnswer: "Op ... in",
+    explanationTr: "Haftanın günleri için 'op' (op maandag), aylar ve mevsimler için 'in' (in juli, in de zomer) kullanılır.",
+    explanationEn: "Days of the week require 'op' (op maandag), while months and seasons take 'in' (in juli, in de zomer)."
+  },
+  {
+    id: "q_onclass_2_4",
+    type: "fill_in",
+    tags: ["summary_ch2", "prepositions", "time"],
+    questionNl: "De les begint precies ___ drie uur.",
+    correctAnswer: "om",
+    explanationTr: "Kesin saat bildirimlerinde (at 3 o'clock) her zaman 'om' edatı kullanılır: 'om drie uur'.",
+    explanationEn: "For exact clock times (at ... o'clock), Dutch always uses the preposition 'om': 'om drie uur'."
+  },
+  {
+    id: "q_onclass_2_5",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "possessive_pronouns", "articles"],
+    questionNl: "Vul in: 'Wij wonen hier. Dit is ___ (het huis) en dat is ___ (de kat).'",
+    options: ["ons huis ... onze kat", "onze huis ... ons kat", "ons huis ... ons kat", "onze huis ... onze kat"],
+    correctAnswer: "ons huis ... onze kat",
+    explanationTr: "'Wij' zamirinin iyelik hali: 'het'-kelimeleri için 'ons' (ons huis), 'de'-kelimeleri ve çoğullar için 'onze' (onze kat) olur.",
+    explanationEn: "The possessive pronoun for 'wij' is 'ons' before 'het'-words (ons huis) and 'onze' before 'de'-words and plurals (onze kat)."
+  },
+  {
+    id: "q_onclass_2_6",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "family", "vocabulary"],
+    questionNl: "Wat is het betekenisverschil tussen 'gezin' en 'familie' volgens de lesnotities?",
+    options: ["'Gezin' is alleen ouders en thuiswonende kinderen; 'familie' omvat ook ooms, tantes, neven en grootouders.", "'Familie' is alleen vader en moeder; 'gezin' is de hele stamboom.", "Er is geen enkel verschil, ze zijn 100% synoniem.", "'Gezin' betekent vriendengroep."],
+    correctAnswer: "'Gezin' is alleen ouders en thuiswonende kinderen; 'familie' omvat ook ooms, tantes, neven en grootouders.",
+    explanationTr: "Hollandacada 'het gezin' çekirdek ailedir (anne, baba ve çocuklar). 'De familie' ise büyükanne, amca, teyze, kuzen gibi geniş aileyi ifade eder.",
+    explanationEn: "In Dutch, 'het gezin' specifically denotes the nuclear family (parents and immediate children), whereas 'de familie' refers to the extended family."
+  },
+  {
+    id: "q_onclass_2_7",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "birthdays", "expressions"],
+    questionNl: "Hoe zeg je op een natuurlijke Nederlandse manier dat het vandaag jouw verjaardag is?",
+    options: ["Ik ben vandaag jarig.", "Ik heb vandaag verjaardag.", "Mijn jaar is vandaag geboren.", "Ik verjaar me nu."],
+    correctAnswer: "Ik ben vandaag jarig.",
+    explanationTr: "Doğum günü olduğunu belirtmenin en doğal ve yaygın yolu 'jarig zijn' sıfatını kullanmaktır: 'Ik ben vandaag jarig.'",
+    explanationEn: "The standard idiomatic expression for having one's birthday in Dutch is 'jarig zijn': 'Ik ben vandaag jarig.'"
+  },
+  {
+    id: "q_onclass_2_8",
+    type: "fill_in",
+    tags: ["summary_ch2", "verbs_present", "conjugation"],
+    questionNl: "Waar ___ (wonen) Emre tegenwoordig?",
+    correctAnswer: "woont",
+    explanationTr: "'Emre' 3. tekil şahıs (hij) olduğu için fiil köküne (woon) '-t' eklenir: 'woont'.",
+    explanationEn: "Because 'Emre' is a third-person singular subject (hij), the verb stem (woon) takes '-t': 'woont'."
+  },
+  {
+    id: "q_onclass_2_9",
+    type: "multiple_choice",
+    tags: ["summary_ch2", "question_words"],
+    questionNl: "Welk vraagwoord past in de zin: '___ ben je zo laat op kantoor?' - 'Omdat de trein vertraging had.'",
+    options: ["Waarom", "Wanneer", "Hoeveel", "Welke"],
+    correctAnswer: "Waarom",
+    explanationTr: "Cevap 'Omdat...' (çünkü) ile sebep belirttiği için soruda neden/niçin anlamına gelen 'Waarom' soru sözcüğü kullanılmalıdır.",
+    explanationEn: "Since the response explains a reason with 'Omdat...', the question must ask 'why' using 'Waarom'."
+  },
+  {
+    id: "q_onclass_3_1",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "ordering", "cafe_phrases"],
+    questionNl: "Welke informele maar zeer gebruikelijke uitdrukking gebruikt een Nederlander aan de toog om een biertje te bestellen?",
+    options: ["Doe mij maar een biertje.", "Geef direct mij bier.", "Ik eis een pilsje.", "Maak mij een bier klaar."],
+    correctAnswer: "Doe mij maar een biertje.",
+    explanationTr: "Hollanda kafelerinde ve barlarında gayet doğal ve yaygın bir sipariş verme kalıbı 'Doe mij maar een...' şeklindedir (Bana bir bira lütfen).",
+    explanationEn: "In Dutch café culture, 'Doe mij maar een...' is a classic, natural idiomatic way to order drinks at the counter or table."
+  },
+  {
+    id: "q_onclass_3_2",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "articles", "diminutives"],
+    questionNl: "Welk lidwoord krijgen verkleinwoorden (diminutieven) zoals 'biertje', 'wijntje' en 'sapje' ALTIJD in het enkelvoud?",
+    options: ["Altijd 'het'", "Altijd 'de'", "Soms 'de', soms 'het'", "Geen lidwoord toegestaan"],
+    correctAnswer: "Altijd 'het'",
+    explanationTr: "Hollandacada sonuna '-tje', '-je', '-pje' vb. küçültme eki almış tüm tekil kelimeler istisnasız 'HET' lidwoord'ü alır.",
+    explanationEn: "In Dutch grammar, all singular diminutive nouns (ending in -je, -tje, -pje, etc.) ALWAYS take the neuter definite article 'het'."
+  },
+  {
+    id: "q_onclass_3_3",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "articles", "plurals"],
+    questionNl: "Welk lidwoord krijgen zelfstandige naamwoorden ALTIJD in het meervoud (bijv. biertjes, huizen, mannen)?",
+    options: ["Altijd 'de'", "Altijd 'het'", "Dat hangt af van het enkelvoud", "'Een'"],
+    correctAnswer: "Altijd 'de'",
+    explanationTr: "Tekilde 'het' olan kelimeler de dahil olmak üzere, Hollandacada TÜM çoğul isimlerin belirli tanımlığı (lidwoord) istisnasız 'DE'dir.",
+    explanationEn: "Regardless of whether a noun is 'de' or 'het' in the singular, ALL plural nouns in Dutch take 'de'."
+  },
+  {
+    id: "q_onclass_3_4",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "inversion", "word_order"],
+    questionNl: "Zet de zin in de juiste inversie-volgorde beginnend met 'Vandaag': (Ik ga naar het café)",
+    options: ["Vandaag ga ik naar het café.", "Vandaag ik ga naar het café.", "Vandaag ga naar het café ik.", "Vandaag naar het café ga ik."],
+    correctAnswer: "Vandaag ga ik naar het café.",
+    explanationTr: "Cümle özne dışında bir ögeyle (zaman: Vandaag) başladığında inversie (devrik cümle) gerçekleşir: Fiil (ga) 2. sıraya, özne (ik) fiilden hemen sonraya geçer.",
+    explanationEn: "When a Dutch sentence begins with an element other than the subject (e.g. time: Vandaag), inversion occurs: Verb (ga) in 2nd position, followed immediately by Subject (ik)."
+  },
+  {
+    id: "q_onclass_3_5",
+    type: "fill_in",
+    tags: ["summary_ch3", "inversion", "verbs_present"],
+    questionNl: "Nu ___ (hebben) ik even geen tijd.",
+    correctAnswer: "heb",
+    explanationTr: "'Nu' ile başlayan devrik cümlede fiil başa gelir. 'Ik' öznesi için 'hebben' fiilinin kökü 'heb'dir.",
+    explanationEn: "With 'Nu' triggering inversion, the verb precedes the subject 'ik'. The present stem of 'hebben' for 'ik' is 'heb'."
+  },
+  {
+    id: "q_onclass_3_6",
+    type: "multiple_choice",
+    tags: ["summary_ch3", "paying", "cafe_phrases"],
+    questionNl: "Wat vraag je aan de ober als je de rekening wilt betalen?",
+    options: ["Mogen we afrekenen?", "Kunnen we opkopen?", "Zullen we betalen nemen?", "Moeten we afhalen?"],
+    correctAnswer: "Mogen we afrekenen?",
+    explanationTr: "Kafede veya restoranda hesabı kapatmak/ödemek için 'Mogen we afrekenen?' veya 'Mag ik de rekening?' denir.",
+    explanationEn: "To request the bill in a café or restaurant, the standard polite phrase is 'Mogen we afrekenen?' or 'Mag ik betalen?'."
+  },
+  {
+    id: "q_onclass_3_7",
+    type: "fill_in",
+    tags: ["summary_ch3", "cafe_phrases", "drinks"],
+    questionNl: "Wie betaalt het eerste ___ (round of drinks)?",
+    correctAnswer: "rondje",
+    explanationTr: "Barda herkese içki ısmarlanan tur için 'het rondje' (een rondje geven / betalen) tabiri kullanılır.",
+    explanationEn: "'Het rondje' is the standard Dutch idiom for buying a round of drinks for the table ('een rondje betalen')."
+  },
+  {
+    id: "q_onclass_3_8",
+    type: "fill_in",
+    tags: ["summary_ch3", "ordering", "cafe_phrases"],
+    questionNl: "Voor mij ___ sapje, alstublieft.",
+    correctAnswer: "een",
+    explanationTr: "Sipariş verirken 'Voor mij een sapje/koffie...' (Benim için bir meyve suyu/kahve...) kalıbı kullanılır.",
+    explanationEn: "When ordering drinks, the polite phrase is 'Voor mij een sapje/koffie, alstublieft.'"
+  },
+  {
+    id: "q_onclass_3_9",
+    type: "fill_in",
+    tags: ["summary_ch3", "inversion", "modal_verbs"],
+    questionNl: "Op maandag ___ (willen) ik graag spaghetti eten.",
+    correctAnswer: "wil",
+    explanationTr: "'Op maandag' zaman ifadesi devrik cümle yapar. 'Ik' öznesi için 'willen' fiili 'wil' şeklindedir.",
+    explanationEn: "'Op maandag' triggers inversion. For subject 'ik', the modal verb 'willen' conjugates as 'wil'."
+  },
+  {
+    id: "q_onclass_4_1",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "inversion", "word_order"],
+    questionNl: "Wat is de vaste grammaticale structuur van inversie wanneer een zin start met een tijd of plaats?",
+    options: ["Tijd/Plaats + persoonsvorm (werkwoord) + onderwerp + rest", "Tijd/Plaats + onderwerp + persoonsvorm + rest", "Onderwerp + tijd/plaats + persoonsvorm + rest", "Persoonsvorm + tijd/plaats + onderwerp + rest"],
+    correctAnswer: "Tijd/Plaats + persoonsvorm (werkwoord) + onderwerp + rest",
+    explanationTr: "Devrik cümle kuralı: Zaman/Yer + Çekimli Fiil (V) + Özne (S) + Cümlenin kalanı. Fiil daima 2. pozisyondadır.",
+    explanationEn: "Inversion rule: Time/Place + conjugated verb (V) + subject (S) + rest. The finite verb strictly retains 2nd position."
+  },
+  {
+    id: "q_onclass_4_2",
+    type: "fill_in",
+    tags: ["summary_ch4", "inversion", "verbs_present"],
+    questionNl: "Morgen ___ (drinken) ik een biertje met mijn collega.",
+    correctAnswer: "drink",
+    explanationTr: "'Morgen' devrik cümle başlatır: fiil başa gelir. 'Ik' için 'drinken' fiilinin çekimi 'drink'tir.",
+    explanationEn: "'Morgen' triggers inversion. With 'ik' as subject, the verb conjugates as 'drink'."
+  },
+  {
+    id: "q_onclass_4_3",
+    type: "fill_in",
+    tags: ["summary_ch4", "proposals", "zullen_proposal"],
+    questionNl: "___ we zaterdag samen een afspraak maken?",
+    correctAnswer: "Zullen",
+    explanationTr: "'Biz' (we) ile öneri veya teklif yaparken 'Zullen we...?' (Yapalım mı?) kalıbı kullanılır.",
+    explanationEn: "To make a joint suggestion or proposal with 'we' (shall we...?), Dutch uses 'Zullen we...?'."
+  },
+  {
+    id: "q_onclass_4_4",
+    type: "fill_in",
+    tags: ["summary_ch4", "proposals", "zullen_proposal"],
+    questionNl: "___ ik vanavond spaghetti carbonara maken?",
+    correctAnswer: "Zal",
+    explanationTr: "'Ben' (ik) öznesiyle bir teklifte bulunurken (Shall I...?) 'Zal ik...?' kalıbı kullanılır.",
+    explanationEn: "To make an offer or proposal with first-person singular 'I' (Shall I...?), Dutch uses 'Zal ik...?'."
+  },
+  {
+    id: "q_onclass_4_5",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "how_are_you", "reactions"],
+    questionNl: "Hoe reageer je neutraal op de vraag 'Hoe gaat het?' als het niet super maar ook niet echt slecht gaat (so-so)?",
+    options: ["Het gaat wel.", "Hartstikke leuk!", "Uitstekend!", "Geen probleem."],
+    correctAnswer: "Het gaat wel.",
+    explanationTr: "'Het gaat wel', Türkçedeki 'Şöyle böyle / Fena değil / İdare eder' (so-so) anlamına gelen nötr bir yanıttır.",
+    explanationEn: "'Het gaat wel' is the classic Dutch neutral answer to 'Hoe gaat het?', meaning 'so-so / okay / fair enough'."
+  },
+  {
+    id: "q_onclass_4_6",
+    type: "multiple_choice",
+    tags: ["summary_ch4", "proposals", "reactions"],
+    questionNl: "Iemand vraagt: 'Zullen we vanavond iets drinken?' Je hebt al plannen en het kan echt niet. Wat zeg je?",
+    options: ["Nee, dat lukt niet.", "Ja, dat lukt niet.", "Nee, ik wil leuk.", "Prima, geen zin."],
+    correctAnswer: "Nee, dat lukt niet.",
+    explanationTr: "Bir teklifi 'Mümkün değil / Uymuyor / Olmuyor' diyerek kibarca ve doğal biçimde reddetmek için 'Nee, dat lukt niet' denir.",
+    explanationEn: "A very natural, polite refusal for an appointment or invitation is 'Nee, dat lukt niet' (No, that won't work out)."
+  },
+  {
+    id: "q_onclass_4_7",
+    type: "fill_in",
+    tags: ["summary_ch4", "reactions", "expressions"],
+    questionNl: "Nee, ik ga niet mee naar de film, want ik heb geen ___ (zin / taste / mood).",
+    correctAnswer: "zin",
+    explanationTr: "'Canı istememek / hevesi olmamak' anlamındaki kalıp 'geen zin hebben'dir: 'Ik heb geen zin.'",
+    explanationEn: "To express lack of motivation or not being in the mood, Dutch uses 'geen zin hebben': 'Ik heb geen zin.'"
+  },
+  {
+    id: "q_onclass_4_8",
+    type: "fill_in",
+    tags: ["summary_ch4", "inviting", "proposals"],
+    questionNl: "Wij gaan lunchen in het park. ___ je mee? (Are you coming along?)",
+    correctAnswer: "Ga",
+    explanationTr: "'Bizimle geliyor musun / katılıyor musun?' diye sormak için 'Ga je mee?' veya 'Kom je mee?' kalıbı kullanılır.",
+    explanationEn: "To ask someone if they are coming along with you, Dutch uses 'Ga je mee?' or 'Kom je mee?'."
+  },
+  {
+    id: "q_onclass_4_9",
+    type: "fill_in",
+    tags: ["summary_ch4", "inversion", "verbs_present"],
+    questionNl: "Vandaag ___ (leren) Jan hard voor zijn toets.",
+    correctAnswer: "leert",
+    explanationTr: "'Vandaag' devrik cümle oluşturur: fiil özneden önce gelir. 'Jan' (hij) için 'leren' fiilinin köküne -t eklenir: 'leert'.",
+    explanationEn: "'Vandaag' causes inversion. For subject 'Jan' (hij), the verb stem takes '-t': 'leert'."
+  },
+  {
+    id: "q_onclass_5_1",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "plurals", "plural_rules"],
+    questionNl: "Waarom krijgen woorden als 'tafel' (tafels), 'bezem' (bezems) en 'jongen' (jongens) een -s in het meervoud (zonder apostrof)?",
+    options: ["Omdat ze eindigen op een onbeklemtoonde lettergreep met -el, -em, -en of -er.", "Omdat het leenwoorden uit het Frans zijn.", "Omdat ze verkleinwoorden zijn.", "Omdat het altijd onregelmatige woorden zijn."],
+    correctAnswer: "Omdat ze eindigen op een onbeklemtoonde lettergreep met -el, -em, -en of -er.",
+    explanationTr: "Vurgusuz -el, -em, -en, -er heceleriyle biten Hollandaca kelimeler çoğulda kesme işaretsiz düz '-s' eki alır (tafels, bezems, jongens, kamers).",
+    explanationEn: "Dutch words with unstressed final syllables ending in -el, -em, -en, or -er take a plain '-s' in the plural without an apostrophe."
+  },
+  {
+    id: "q_onclass_5_2",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "adjectives", "adjectives_inflection"],
+    questionNl: "Vul het juiste adjectief in: 'Dit is een ___ (groot) café in het centrum.'",
+    options: ["groot", "grote", "groots", "groten"],
+    correctAnswer: "groot",
+    explanationTr: "'Café' bir 'het'-kelimesidir. Belirsiz tanımlık 'een' ile kullanıldığında 'het'-kelimelerinin önündeki sıfat '-e' ALMAZ: 'een groot café'.",
+    explanationEn: "'Café' is a 'het'-word. Preceded by indefinite article 'een', adjectives before singular 'het'-words do NOT take '-e': 'een groot café'."
+  },
+  {
+    id: "q_onclass_5_3",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "adjectives", "adjectives_inflection"],
+    questionNl: "Vul het juiste adjectief in: 'Het ___ (groot) café op de hoek is erg populair.'",
+    options: ["grote", "groot", "grooten", "grootse"],
+    correctAnswer: "grote",
+    explanationTr: "'Het' belirli tanımlığı kullanıldığında, 'het'-kelimesinin önündeki sıfat '-e' eki alır: 'het grote café'. (Tek ünlü 'o' açık hecede uzar: groot -> grote).",
+    explanationEn: "When the definite article 'het' is used, the adjective before a 'het'-word DOES take an '-e': 'het grote café'."
+  },
+  {
+    id: "q_onclass_5_4",
+    type: "fill_in",
+    tags: ["summary_ch5", "adjectives", "adjectives_inflection"],
+    questionNl: "Ik koop op de markt een ___ (groot) komkommer.",
+    correctAnswer: "grote",
+    explanationTr: "'De komkommer' bir 'de'-kelimesidir. 'De'-kelimelerinin önündeki sıfatlar her zaman (hem 'de' hem 'een' ile) '-e' alır: 'een grote komkommer'.",
+    explanationEn: "'Komkommer' is a 'de'-word. Adjectives preceding 'de'-words ALWAYS take an '-e', even with 'een': 'een grote komkommer'."
+  },
+  {
+    id: "q_onclass_5_5",
+    type: "fill_in",
+    tags: ["summary_ch5", "adjectives", "spelling"],
+    questionNl: "Ik wil die soep niet eten, want het ruikt naar ___ (vies) vis.",
+    correctAnswer: "vieze",
+    explanationTr: "'Vies' sıfatına '-e' eklenirken sonundaki 's' harfi sesli harf öncesinde yumuşayarak 'z'ye dönüşür: 'vieze'.",
+    explanationEn: "When '-e' is added to 'vies', the final 's' softens between vowels into 'z': 'vieze'."
+  },
+  {
+    id: "q_onclass_5_6",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "plurals", "groente_fruit"],
+    questionNl: "Wat gebeurt er met maataanduidingen zoals 'kilo', 'uur' en 'euro' na een telwoord groter dan één?",
+    options: ["Ze blijven in het enkelvoud (bijv. twee kilo, drie uur, acht euro).", "Ze krijgen altijd een -en (twee kiloen, drie uren).", "Ze krijgen altijd een apostrof-s (twee kilo's).", "Ze worden altijd verkleinwoorden."],
+    correctAnswer: "Ze blijven in het enkelvoud (bijv. twee kilo, drie uur, acht euro).",
+    explanationTr: "Ağırlık, para, zaman birimleri (kilo, euro, uur, cent, jaar vb.) sayıların ardından çoğul eki almaz, yalın tekil kalır: 'twee kilo aardappels, drie uur, acht euro'.",
+    explanationEn: "Units of weight, currency, and time (kilo, euro, uur, cent, jaar) remain singular after numbers: 'twee kilo', 'drie uur', 'acht euro'."
+  },
+  {
+    id: "q_onclass_5_7",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "vegetables", "vocabulary"],
+    questionNl: "Wat is het Nederlandse woord voor 'karnabahar' (cauliflower)?",
+    options: ["de bloemkool", "de courgette", "de champignon", "de andijvie"],
+    correctAnswer: "de bloemkool",
+    explanationTr: "'Karnabahar' sebzesinin Hollandacası 'de bloemkool'dur.",
+    explanationEn: "The Dutch word for cauliflower is 'de bloemkool'."
+  },
+  {
+    id: "q_onclass_5_8",
+    type: "fill_in",
+    tags: ["summary_ch5", "groente_fruit", "vocabulary"],
+    questionNl: "Mag ik van u een ___ (head of lettuce) sla, alstublieft?",
+    correctAnswer: "krop",
+    explanationTr: "Marul adedi/göbeği için Hollandacada 'een krop sla' (bir baş marul) birim ifadesi kullanılır.",
+    explanationEn: "The measure word for a whole head of lettuce in Dutch is 'een krop sla'."
+  },
+  {
+    id: "q_onclass_5_9",
+    type: "multiple_choice",
+    tags: ["summary_ch5", "adjectives", "adjectives_inflection"],
+    questionNl: "Waarom krijgt het adjectief in 'De soep is lekker' géén -e?",
+    options: ["Omdat het adjectief ná het werkwoord staat (predicatief).", "Omdat 'soep' een het-woord is.", "Omdat het een vraagzin is.", "Omdat 'lekker' nooit een -e kan krijgen."],
+    correctAnswer: "Omdat het adjectief ná het werkwoord staat (predicatief).",
+    explanationTr: "Sıfat isimden önce gelmeyip fiilden sonra (yüklem/predicatief olarak) yer aldığında asla '-e' eki almaz: 'De soep is lekker', 'Het café is groot'.",
+    explanationEn: "When an adjective is placed after the verb (predicative position), it never receives an '-e' inflection: 'De soep is lekker'."
+  },
+  {
+    id: "q_onclass_6_1",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "restaurant", "courses"],
+    questionNl: "Wat is de juiste traditionele volgorde van de gangen (courses) in een diner?",
+    options: ["voorgerecht, hoofdgerecht, nagerecht", "hoofdgerecht, voorgerecht, toetje", "nagerecht, tussengerecht, voorgerecht", "voorgerecht, nagerecht, hoofdgerecht"],
+    correctAnswer: "voorgerecht, hoofdgerecht, nagerecht",
+    explanationTr: "Yemek kursları sırasıyla: Başlangıç (voorgerecht), Ana yemek (hoofdgerecht), Tatlı/Son yemek (nagerecht / toetje).",
+    explanationEn: "The courses of a Dutch dinner are: starter (voorgerecht), main course (hoofdgerecht), and dessert (nagerecht / toetje)."
+  },
+  {
+    id: "q_onclass_6_2",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "restaurant", "cutlery"],
+    questionNl: "Met welk bestek eet je soep, en met welk bestek snijd je een biefstuk?",
+    options: ["Soep met een lepel; biefstuk met een mes.", "Soep met een vork; biefstuk met een lepel.", "Soep met een mes; biefstuk met een vork.", "Soep met een bordje; biefstuk met een servet."],
+    correctAnswer: "Soep met een lepel; biefstuk met een mes.",
+    explanationTr: "Çorba kaşıkla (met een lepel) içilir/yenir, et ise bıçakla (met een mes) kesilir. Çatal ise 'de vork'tur.",
+    explanationEn: "Soup is eaten with a spoon ('de lepel') and meat is cut with a knife ('het mes'). A fork is 'de vork'."
+  },
+  {
+    id: "q_onclass_6_3",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "modal_verbs", "word_order"],
+    questionNl: "Waar staat het tweede werkwoord (infinitief) in een zin met een modaal werkwoord zoals 'willen', 'moeten' of 'mogen'?",
+    options: ["Helemaal aan het einde van de zin.", "Direct achter het modale werkwoord.", "Op de tweede positie in plaats van het modale werkwoord.", "Vooraan in de zin."],
+    correctAnswer: "Helemaal aan het einde van de zin.",
+    explanationTr: "Modal fiil (willen, moeten, mogen, kunnen, zullen) 2. sıraya gelir, cümlenin asıl fiili ise mastar (infinitief) halinde cümlenin EN SONUNA gider: 'Ik wil soep bestellen.'",
+    explanationEn: "In a sentence with a modal auxiliary verb, the finite modal takes 2nd position, while the main lexical infinitive jumps to the VERY END: 'Ik wil soep bestellen.'"
+  },
+  {
+    id: "q_onclass_6_4",
+    type: "fill_in",
+    tags: ["summary_ch6", "modal_verbs", "restaurant"],
+    questionNl: "Pardon mevrouw, ___ (mogen) wij aan dat tafeltje bij het raam zitten?",
+    correctAnswer: "mogen",
+    explanationTr: "'İzin / müsaade' anlamında izin istemek için 'mogen' fiili kullanılır. 'Wij' öznesi için çekim 'mogen'dir.",
+    explanationEn: "To politely ask for permission (are we allowed to...?), the modal verb 'mogen' is used. For subject 'wij', the conjugation is 'mogen'."
+  },
+  {
+    id: "q_onclass_6_5",
+    type: "fill_in",
+    tags: ["summary_ch6", "modal_verbs"],
+    questionNl: "De ober heeft het erg druk; hij ___ (moeten) nog vier drankjes klaarmaken.",
+    correctAnswer: "moet",
+    explanationTr: "'Hij' (o) 3. tekil şahıs olduğu için zorunluluk bildiren 'moeten' fiili 'moet' şeklinde çekimlenir.",
+    explanationEn: "For 3rd person singular 'hij', the modal verb of obligation 'moeten' conjugates as 'moet'."
+  },
+  {
+    id: "q_onclass_6_6",
+    type: "fill_in",
+    tags: ["summary_ch6", "opinions", "food"],
+    questionNl: "___ (houden) jij van pittig eten? - Nee, ik houd niet van hete pepers.",
+    correctAnswer: "Houd",
+    explanationTr: "Devrik soru cümlesinde 'jij' fiilden hemen sonra geldiği için 'houden van' fiilinin '-t'si düşer ve sadece kök kalır: 'Houd je/jij van...'.",
+    explanationEn: "In question inversion with 'jij', the verb stem drops its '-t', leaving 'Houd je/jij van...'."
+  },
+  {
+    id: "q_onclass_6_7",
+    type: "multiple_choice",
+    tags: ["summary_ch6", "opinions", "restaurant"],
+    questionNl: "Hoe reageer je enthousiast als het eten buitengewoon lekker smaakt?",
+    options: ["Ik vind het heerlijk!", "Ik vind het vies.", "Het gaat wel.", "Ik vind het stom."],
+    correctAnswer: "Ik vind het heerlijk!",
+    explanationTr: "Yemeğin olağanüstü lezzetli olduğunu ifade etmek için 'heerlijk' (enfes, muhteşem lezzetli) kelimesi kullanılır.",
+    explanationEn: "To express enthusiastic praise for delicious food, Dutch speakers use 'heerlijk' ('Ik vind het heerlijk!')."
+  },
+  {
+    id: "q_onclass_6_8",
+    type: "fill_in",
+    tags: ["summary_ch6", "restaurant", "verbs_present"],
+    questionNl: "Wat ___ (nemen) Jasper als hoofdgerecht vanavond?",
+    correctAnswer: "neemt",
+    explanationTr: "'Jasper' (hij) 3. tekil şahıs olduğu için 'nemen' fiili kök+t kuralına göre 'neemt' olur.",
+    explanationEn: "For subject 'Jasper' (hij), the present tense of 'nemen' takes the stem + t: 'neemt'."
+  },
+  {
+    id: "q_onclass_6_9",
+    type: "fill_in",
+    tags: ["summary_ch6", "restaurant", "dessert"],
+    questionNl: "Een ander gangbaar woord voor 'nagerecht' is het ___.",
+    correctAnswer: "toetje",
+    explanationTr: "'Nagerecht' (tatlı) kelimesinin günlük dildeki eşanlamlısı 'het toetje'dir.",
+    explanationEn: "The everyday informal Dutch synonym for 'nagerecht' (dessert) is 'het toetje'."
+  },
+  {
+    id: "q_onclass_7_1",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "demonstrative_pronouns", "clothing"],
+    questionNl: "Kies de juiste aanwijzende voornaamwoorden: '___ (deze/dit) spijkerbroek hier zit perfect, maar ___ (die/dat) overhemd daar is te groot.'",
+    options: ["Deze ... dat", "Dit ... die", "Deze ... die", "Dit ... dat"],
+    correctAnswer: "Deze ... dat",
+    explanationTr: "'De spijkerbroek' bir de-kelimesi olduğu için yakında 'deze' alır. 'Het overhemd' bir het-kelimesi olduğu için uzakta 'dat' alır.",
+    explanationEn: "'De spijkerbroek' is a de-word, so nearby it takes 'deze'. 'Het overhemd' is a het-word, so far away it takes 'dat'."
+  },
+  {
+    id: "q_onclass_7_2",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "pronouns_object", "clothing"],
+    questionNl: "Waar verwijs je naar met het lijdend voorwerp (object) als het om een 'de'-woord gaat (zoals de trui)?",
+    options: ["Ik pas hem.", "Ik pas het.", "Ik pas ze.", "Ik pas er."],
+    correctAnswer: "Ik pas hem.",
+    explanationTr: "Hollandacada 'de'-kelimeleri nesne konumunda eril/dişil kabul edilir ve 'hem' (veya özne konumunda 'hij') zamiri ile karşılanır ('Waar is de trui? - Ik pas hem').",
+    explanationEn: "In standard Dutch, when referring back to a singular 'de'-noun in the object position, you use 'hem' ('Ik pas hem'), not 'het'."
+  },
+  {
+    id: "q_onclass_7_3",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "pronouns_object", "clothing"],
+    questionNl: "Waar zijn mijn schoenen (de schoenen - meervoud)? Hoe verwijs je naar meervoudige objecten?",
+    options: ["Ik heb ze in mijn hand.", "Ik heb hem in mijn hand.", "Ik heb het in mijn hand.", "Ik heb dit in mijn hand."],
+    correctAnswer: "Ik heb ze in mijn hand.",
+    explanationTr: "Çoğul nesnelere (örneğin 'de schoenen', 'de glazen') atıfta bulunurken her zaman 'ze' zamiri kullanılır: 'Ik heb ze in mijn hand.'",
+    explanationEn: "When referring to plural objects ('de schoenen', 'de glazen'), Dutch always uses the pronoun 'ze': 'Ik heb ze in mijn hand.'"
+  },
+  {
+    id: "q_onclass_7_4",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "comparative_superlative", "adjectives"],
+    questionNl: "Wat gebeurt er bij de vergrotende trap (comparatief) van adjectieven die eindigen op een -r (zoals zwaar, duur)?",
+    options: ["Er wordt -der toegevoegd (zwaarder, duurder).", "Er wordt alleen -er toegevoegd (zwaarer, duurer).", "Er verandert niets.", "Ze worden altijd onregelmatig zoals goed/beter."],
+    correctAnswer: "Er wordt -der toegevoegd (zwaarder, duurder).",
+    explanationTr: "Kökü '-r' harfiyle biten sıfatlarda telaffuzu kolaylaştırmak için karşılaştırma ekine bir 'd' girer ve '-der' olur: zwaar -> zwaarder, duur -> duurder.",
+    explanationEn: "Adjectives ending in '-r' insert an epenthetic 'd' before '-er' in the comparative degree: zwaar -> zwaarder, duur -> duurder."
+  },
+  {
+    id: "q_onclass_7_5",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "comparative_superlative", "irregular"],
+    questionNl: "Wat is de juiste onregelmatige reeks van het bijwoord 'graag'?",
+    options: ["graag - liever - het liefst", "graag - graager - het graagst", "graag - beter - het best", "graag - meer - het meest"],
+    correctAnswer: "graag - liever - het liefst",
+    explanationTr: "'Graag' (severek, memnuniyetle) düzensiz bir karşılaştırmaya sahiptir: graag (severek) - liever (tercihen) - het liefst (en çok severek).",
+    explanationEn: "The irregular comparative and superlative sequence for 'graag' (gladly / like) is: graag - liever - het liefst."
+  },
+  {
+    id: "q_onclass_7_6",
+    type: "multiple_choice",
+    tags: ["summary_ch7", "comparative_superlative", "adjectives"],
+    questionNl: "Hoe druk je gelijkheid uit tussen twee dingen (as ... as)?",
+    options: ["even ... als (De broek is even duur als het T-shirt)", "meer ... dan (De broek is meer duur dan het T-shirt)", "even ... dan (De broek is even duur dan het T-shirt)", "zo ... dan (De broek is zo duur dan het T-shirt)"],
+    correctAnswer: "even ... als (De broek is even duur als het T-shirt)",
+    explanationTr: "İki şeyin eşit derecede olduğunu (kadar ... / as ... as) belirtmek için 'even + sıfat + als' kalıbı kullanılır: 'even duur als'.",
+    explanationEn: "To express equality in comparison (as ... as), Dutch uses 'even + adjective + als': 'De broek is even duur als het T-shirt.'"
+  },
+  {
+    id: "q_onclass_7_7",
+    type: "fill_in",
+    tags: ["summary_ch7", "clothing", "shopping"],
+    questionNl: "Deze broek is niet te strak en niet te wijd; hij ___ (fits) erg goed.",
+    correctAnswer: "zit",
+    explanationTr: "Bir kıyafetin bedene tam oturması, iyi durması 'zitten' fiiliyle ifade edilir: 'Hij zit goed' (Bedeni tam oldu).",
+    explanationEn: "In Dutch, how clothes physically fit on the body is described with 'zitten': 'Hij zit goed' (It fits well)."
+  },
+  {
+    id: "q_onclass_7_8",
+    type: "fill_in",
+    tags: ["summary_ch7", "clothing", "expressions"],
+    questionNl: "Die blauwe kleur ___ (staat / suits) jou ontzettend goed!",
+    correctAnswer: "staat",
+    explanationTr: "Bir kıyafetin veya rengin birine yakışması 'staan' fiiliyle ifade edilir: 'Het staat je goed' (Sana çok yakıştı).",
+    explanationEn: "To say that a garment, hairstyle, or color looks good on someone / suits them, Dutch uses 'staan': 'Het staat je goed.'"
+  },
+  {
+    id: "q_onclass_7_9",
+    type: "fill_in",
+    tags: ["summary_ch7", "shopping", "paying"],
+    questionNl: "Kan ik hier met de bankpas betalen? Oftewel: Kan ik ___ (pin)?",
+    correctAnswer: "pinnen",
+    explanationTr: "Hollandacada banka kartıyla şifre girerek ödeme yapma fiiline 'pinnen' denir: 'Kan ik pinnen?'.",
+    explanationEn: "In the Netherlands, paying by debit card via terminal is expressed with the verb 'pinnen': 'Kan ik pinnen?'."
+  },
+  {
+    id: "q_onclass_8_1",
+    type: "fill_in",
+    tags: ["summary_ch8", "niet_vs_geen", "negation"],
+    questionNl: "Ik heb geen auto, en ik heb ook ___ (geen/niet) fiets.",
+    correctAnswer: "geen",
+    explanationTr: "Belirsiz, önünde 'een' veya artikelsiz duran tekil/çoğul isimlerin olumsuzunda 'geen' kullanılır: 'geen fiets'.",
+    explanationEn: "Indefinite nouns (or nouns where 'een' or zero article would appear in affirmative) are negated with 'geen': 'geen fiets'."
+  },
+  {
+    id: "q_onclass_8_2",
+    type: "multiple_choice",
+    tags: ["summary_ch8", "niet_vs_geen", "negation"],
+    questionNl: "Waarom gebruik je 'niet' in de zin: 'Dat is niet mijn fiets'?",
+    options: ["Omdat 'mijn' een bezittelijk voornaamwoord is waardoor het zelfstandig naamwoord specifiek/bepaald is.", "Omdat 'fiets' een de-woord is.", "Omdat het achteraan in de zin staat.", "Omdat 'geen' alleen voor dieren wordt gebruikt."],
+    correctAnswer: "Omdat 'mijn' een bezittelijk voornaamwoord is waardoor het zelfstandig naamwoord specifiek/bepaald is.",
+    explanationTr: "İsim belirli (de, het, mijn, jouw, deze, die ile tanımlanmış) olduğunda olumsuzluk 'geen' ile değil, 'niet' ile yapılır: 'Dat is niet mijn fiets.'",
+    explanationEn: "When a noun is made definite/specific by a possessive pronoun (mijn), definite article (de/het), or demonstrative, you must negate it with 'niet', NOT 'geen'."
+  },
+  {
+    id: "q_onclass_8_3",
+    type: "multiple_choice",
+    tags: ["summary_ch8", "niet_vs_geen", "negation"],
+    questionNl: "Zij drinkt ___ koffie, want ze houdt er niet van. (onbepaald stofnaam)",
+    options: ["geen", "niet", "geen een", "niets van"],
+    correctAnswer: "geen",
+    explanationTr: "Sayılamayan belirsiz madde isimlerinin (koffie, su, melk vb.) olumsuzunda 'geen' kullanılır: 'Zij drinkt geen koffie.'",
+    explanationEn: "Uncountable, indefinite substance nouns like 'koffie' are negated using 'geen': 'Zij drinkt geen koffie.'"
+  },
+  {
+    id: "q_onclass_8_4",
+    type: "fill_in",
+    tags: ["summary_ch8", "niet_vs_geen", "word_order"],
+    questionNl: "Ik woon ___ (not) in Amsterdam, maar in Utrecht.",
+    correctAnswer: "niet",
+    explanationTr: "Yer ve edat öbekleri (in Amsterdam, op kantoor) 'niet' ile olumsuz yapılır ve 'niet' edat öbeğinin hemen önüne gelir: 'niet in Amsterdam'.",
+    explanationEn: "Prepositional phrases indicating location are negated with 'niet', which is placed right before the preposition: 'niet in Amsterdam'."
+  },
+  {
+    id: "q_onclass_8_5",
+    type: "fill_in",
+    tags: ["summary_ch8", "niet_vs_geen", "negation"],
+    questionNl: "Het weer is vandaag ___ (not) mooi; het regent.",
+    correctAnswer: "niet",
+    explanationTr: "Sıfatlar (mooi, moe, duur) daima 'niet' ile olumsuz yapılır: 'niet mooi'.",
+    explanationEn: "Adjectives (mooi, moe, duur) are negated using 'niet', which precedes the adjective: 'niet mooi'."
+  },
+  {
+    id: "q_onclass_8_6",
+    type: "multiple_choice",
+    tags: ["summary_ch8", "niet_vs_geen", "grammar"],
+    questionNl: "Wat is er fout aan de zin: 'Ik heb geen een auto'?",
+    options: ["In het Nederlands zeg je nooit 'geen een'; 'geen' vervangt al 'niet een'.", "Het werkwoord moet achteraan staan.", "Auto is een het-woord dus het moet 'niet een' zijn.", "Er ontbreekt een meervoudsvorm."],
+    correctAnswer: "In het Nederlands zeg je nooit 'geen een'; 'geen' vervangt al 'niet een'.",
+    explanationTr: "Hollandacada asla 'geen een' denmez! 'Geen' kelimesi zaten 'niet een' (bir ... değil) anlamını tek başına içerir: 'Ik heb geen auto.'",
+    explanationEn: "Dutch learners often mistakenly say 'geen een'. In standard Dutch, 'geen' replaces 'niet een' completely: 'Ik heb geen auto.'"
+  },
+  {
+    id: "q_onclass_8_7",
+    type: "multiple_choice",
+    tags: ["summary_ch8", "niet_vs_geen", "negation"],
+    questionNl: "Kies het juiste woord: 'Dit is ___ het antwoord dat ik zocht.'",
+    options: ["niet", "geen", "geen enkel", "niets"],
+    correctAnswer: "niet",
+    explanationTr: "'Het antwoord' belirli tanımlığa (het) sahip olduğu için cümlenin olumsuzu 'geen' ile değil 'niet' ile kurulur: 'niet het antwoord'.",
+    explanationEn: "Because 'het antwoord' carries the definite article 'het', it is negated by 'niet', never 'geen': 'niet het antwoord'."
+  },
+  {
+    id: "q_onclass_8_8",
+    type: "fill_in",
+    tags: ["summary_ch8", "niet_vs_geen", "word_order"],
+    questionNl: "Jan werkt vandaag ___ (not); hij heeft een vrije dag.",
+    correctAnswer: "niet",
+    explanationTr: "Yalın fiil eylemini olumsuzlamak için 'niet' kullanılır: 'Jan werkt vandaag niet.'",
+    explanationEn: "To negate the simple verb action, 'niet' is used: 'Jan werkt vandaag niet.'"
+  },
+  {
+    id: "q_onclass_8_9",
+    type: "multiple_choice",
+    tags: ["summary_ch8", "niet_vs_geen", "negation"],
+    questionNl: "Wij hebben ___ katten in huis omdat mijn man allergisch is.",
+    options: ["geen", "niet", "geen een", "niets van"],
+    correctAnswer: "geen",
+    explanationTr: "Çoğul ve belirsiz isimlerin ('katten') olumsuzunda 'geen' kullanılır: 'geen katten'.",
+    explanationEn: "Plural indefinite nouns ('katten') are negated by 'geen': 'geen katten'."
+  },
+  {
+    id: "q_onclass_9_1",
+    type: "fill_in",
+    tags: ["summary_ch9", "health_doctor", "prepositions"],
+    questionNl: "Ik kan niet praten, want ik heb heel veel last ___ (of/from) mijn keel.",
+    correctAnswer: "van",
+    explanationTr: "Bir organdan veya hastalıktan şikayetçi olmak/muzdarip olmak kalıbı 'last hebben van'dır: 'last van mijn keel'.",
+    explanationEn: "The fixed medical complaint expression for being bothered by / suffering from a symptom is 'last hebben van': 'last van mijn keel'."
+  },
+  {
+    id: "q_onclass_9_2",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "health_doctor", "vocabulary"],
+    questionNl: "De rode bultjes (rash) op mijn benen ___ verschrikkelijk!",
+    options: ["jeuken", "slapen", "pinnen", "herhalen"],
+    correctAnswer: "jeuken",
+    explanationTr: "Döküntülerin ve kabarcıkların (bultjes) dayanılmaz şekilde kaşınması 'jeuken' fiili ile ifade edilir.",
+    explanationEn: "The sensation of itching caused by bumps or a rash is expressed with the verb 'jeuken' ('jeuken verschrikkelijk')."
+  },
+  {
+    id: "q_onclass_9_3",
+    type: "fill_in",
+    tags: ["summary_ch9", "health_doctor", "expressions"],
+    questionNl: "De huisarts vraagt aan de patiënt: 'Wat is er aan de ___?' (What is the matter?)",
+    correctAnswer: "hand",
+    explanationTr: "'Ne var, ne oldu, neyin var?' anlamındaki sabit Hollandaca doktor sorusu 'Wat is er aan de hand?' kalıbıdır.",
+    explanationEn: "The standard Dutch phrase used by doctors or carers to ask 'What is the matter / what's wrong?' is 'Wat is er aan de hand?'."
+  },
+  {
+    id: "q_onclass_9_4",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "health_doctor", "vocabulary"],
+    questionNl: "Wat geeft de arts mee tegen een jeukende huiduitslag?",
+    options: ["Een zalf", "Een menu", "Een rekening", "Een vork"],
+    correctAnswer: "Een zalf",
+    explanationTr: "Ciltteki kaşıntı ve döküntülere karşı hekim merhem/krem ('een zalf') reçete eder.",
+    explanationEn: "For an itching skin reaction, the doctor prescribes or provides an ointment ('een zalf')."
+  },
+  {
+    id: "q_onclass_9_5",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "dagdelen", "time"],
+    questionNl: "Hoe noem je de ochtend van vandaag en de avond van gisteren in het Nederlands?",
+    options: ["vanochtend en gisteravond", "morgenochtend en vanavond", "deze ochtend en gisteren avond", "ochtend van vandaag en avond van gisteren"],
+    correctAnswer: "vanochtend en gisteravond",
+    explanationTr: "Günün bölümleri birleşik sözcüklerle ifade edilir: Bu sabah = 'vanochtend', Dün akşam = 'gisteravond'.",
+    explanationEn: "Dutch blends day parts into single adverbs: this morning is 'vanochtend' and yesterday evening is 'gisteravond'."
+  },
+  {
+    id: "q_onclass_9_6",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "perfectum", "zijn_hebben"],
+    questionNl: "Waarom vormt het werkwoord 'gaan' het perfectum met 'zijn' (Ik ben naar de dokter gegaan)?",
+    options: ["Omdat het een werkwoord van verplaatsing / beweging van A naar B is.", "Omdat het een regelmatig werkwoord is.", "Omdat het in de verleden tijd op -te eindigt.", "Dat is willekeurig zonder reden."],
+    correctAnswer: "Omdat het een werkwoord van verplaatsing / beweging van A naar B is.",
+    explanationTr: "A noktasından B noktasına yön ve yer değiştirme bildiren hareket fiilleri (gaan, komen, vertrekken) 'zijn' yardımcı fiiliyle geçmiş zaman (perfectum) yapar.",
+    explanationEn: "Verbs denoting directional movement from point A to point B (gaan, komen, vertrekken) take the auxiliary 'zijn' in the perfect tense."
+  },
+  {
+    id: "q_onclass_9_7",
+    type: "multiple_choice",
+    tags: ["summary_ch9", "perfectum", "soft_ketchup"],
+    questionNl: "Waarom eindigt het voltooid deelwoord van 'werken' op een -t (gewerkt) en van 'rennen' op een -d (gerend)?",
+    options: ["De stam van werken (werk) eindigt op 'k' (in 'soft ketchup' / 't kofschip); de stam van rennen (ren) eindigt op 'n' (niet in het kofschip).", "Omdat rennen een onregelmatig werkwoord is.", "Omdat werken een scheidbaar werkwoord is.", "Omdat rennen met 'zijn' wordt vervoegd."],
+    correctAnswer: "De stam van werken (werk) eindigt op 'k' (in 'soft ketchup' / 't kofschip); de stam van rennen (ren) eindigt op 'n' (niet in het kofschip).",
+    explanationTr: "Fiil kökünün son harfi 'soft ketchup' / 't kofschip (s, f, t, k, c, h, p) sessizlerinden biriyse participium '-t' alır (gewerkt); değilse '-d' alır (gerend).",
+    explanationEn: "If the verb stem ends in a consonant from 'soft ketchup' / 't kofschip (s, f, t, k, c, h, p), the past participle takes '-t' (gewerkt); otherwise it takes '-d' (gerend)."
+  },
+  {
+    id: "q_onclass_9_8",
+    type: "fill_in",
+    tags: ["summary_ch9", "perfectum", "soft_ketchup"],
+    questionNl: "De atleet heeft hard naar de finish ___ (rennen).",
+    correctAnswer: "gerend",
+    explanationTr: "'Rennen' kökü 'ren' n ile biter (kofschip dışı), dolayısıyla düzenli participium eki '-d'dir: 'gerend'.",
+    explanationEn: "The stem of 'rennen' is 'ren', ending in 'n' (not in soft ketchup), so its regular participle ending is '-d': 'gerend'."
+  },
+  {
+    id: "q_onclass_9_9",
+    type: "fill_in",
+    tags: ["summary_ch9", "body_parts", "health_doctor"],
+    questionNl: "Mijn ___ (throat) doet erg veel pijn als ik slik.",
+    correctAnswer: "keel",
+    explanationTr: "'Boğaz' kelimesinin Hollandacası 'de keel'dir: 'Mijn keel doet pijn.'",
+    explanationEn: "The Dutch word for throat is 'de keel': 'Mijn keel doet pijn.'"
+  },
+  {
+    id: "q_onclass_10_1",
+    type: "multiple_choice",
+    tags: ["summary_ch10", "verstaan_begrijpen", "communication"],
+    questionNl: "Er is veel lawaai op straat en je kunt iemands stem akoestisch niet horen. Wat zeg je?",
+    options: ["Sorry, ik versta u niet goed.", "Sorry, ik begrijp u niet goed.", "Sorry, ik bedoel u niet.", "Sorry, ik beteken u niet."],
+    correctAnswer: "Sorry, ik versta u niet goed.",
+    explanationTr: "'Verstaan', fiziksel ve işitsel olarak duymak/seçebilmektir. Gürültüden dolayı ses duyulmadığında 'Ik versta u niet' denir.",
+    explanationEn: "'Verstaan' refers strictly to physical acoustic hearing/auditory perception. If noise prevents you from hearing, you say 'Ik versta u niet'."
+  },
+  {
+    id: "q_onclass_10_2",
+    type: "multiple_choice",
+    tags: ["summary_ch10", "verstaan_begrijpen", "communication"],
+    questionNl: "Iemand spreekt luid en duidelijk, maar gebruikt een ingewikkeld concept dat je inhoudelijk niet vat. Wat zeg je?",
+    options: ["Sorry, ik begrijp het niet.", "Sorry, ik versta het niet.", "Sorry, ik luister het niet.", "Sorry, ik spreek het niet."],
+    correctAnswer: "Sorry, ik begrijp het niet.",
+    explanationTr: "'Begrijpen', zihinsel olarak kavramak, anlamını idrak etmektir. Konsept veya anlam anlaşılmadığında 'Ik begrijp het niet' denir.",
+    explanationEn: "'Begrijpen' means cognitive comprehension of meaning or concept. When you hear the words but don't grasp the meaning, you say 'Ik begrijp het niet'."
+  },
+  {
+    id: "q_onclass_10_3",
+    type: "multiple_choice",
+    tags: ["summary_ch10", "bedoelen_betekenen", "vocabulary"],
+    questionNl: "Wat is het fundamentele verschil tussen 'bedoelen' en 'betekenen'?",
+    options: ["'Bedoelen' wordt gebruikt voor wat een PERSOON wil zeggen; 'betekenen' voor wat een woord of situatie inhoudt.", "'Bedoelen' is alleen voor woordenboeken; 'betekenen' is voor mensen.", "'Bedoelen' en 'betekenen' betekenen exact hetzelfde.", "'Bedoelen' wordt alleen in het meervoud gebruikt."],
+    correctAnswer: "'Bedoelen' wordt gebruikt voor wat een PERSOON wil zeggen; 'betekenen' voor wat een woord of situatie inhoudt.",
+    explanationTr: "'Bedoelen', bir İNSANIN neyi kastettiğini ifade eder ('Wat bedoel je?'). 'Betekenen' ise bir KELİME, İŞARET veya DURUMUN ne anlama geldiğidir ('Wat betekent dit woord?').",
+    explanationEn: "'Bedoelen' is used for what a PERSON intends to convey ('Wat bedoel je?'), while 'betekenen' is what a WORD or SIGN signifies ('Wat betekent dit?')."
+  },
+  {
+    id: "q_onclass_10_4",
+    type: "multiple_choice",
+    tags: ["summary_ch10", "bike", "vocabulary"],
+    questionNl: "Op welk fietsonderdeel zet je je voeten om vooruit te komen?",
+    options: ["de trapper", "de bagagedrager", "het stuur", "de velg"],
+    correctAnswer: "de trapper",
+    explanationTr: "Bisiklet pedalı için Hollandacada 'de trapper' (veya het pedaal) kelimesi kullanılır.",
+    explanationEn: "The bicycle pedal on which you put your feet to cycle is called 'de trapper'."
+  },
+  {
+    id: "q_onclass_10_5",
+    type: "fill_in",
+    tags: ["summary_ch10", "bike", "vocabulary"],
+    questionNl: "Achterop de fiets kun je bagage of tassen vastzetten op de ___ (luggage rack).",
+    correctAnswer: "bagagedrager",
+    explanationTr: "Bisikletin arkasındaki bagaj demirine 'de bagagedrager' denir.",
+    explanationEn: "The luggage rack behind the saddle on a Dutch bicycle is 'de bagagedrager'."
+  },
+  {
+    id: "q_onclass_10_6",
+    type: "fill_in",
+    tags: ["summary_ch10", "imperfectum", "modal_verbs"],
+    questionNl: "Toen ik klein was, ___ (mogen) ik niet na acht uur op straat spelen.",
+    correctAnswer: "mocht",
+    explanationTr: "'Mogen' (izinli olmak) modal fiilinin tekil geçmiş zaman (imperfectum) çekimi 'mocht'tur.",
+    explanationEn: "The singular imperfectum (past simple) form of modal verb 'mogen' is 'mocht'."
+  },
+  {
+    id: "q_onclass_10_7",
+    type: "fill_in",
+    tags: ["summary_ch10", "imperfectum", "modal_verbs"],
+    questionNl: "Gisteren was de bibliotheek gesloten, dus ik ___ (kunnen) de boeken niet inleveren.",
+    correctAnswer: "kon",
+    explanationTr: "'Kunnen' (yapabilmek) modal fiilinin tekil geçmiş zaman (imperfectum) çekimi 'kon'dur (çoğulu: konden).",
+    explanationEn: "The singular imperfectum form of the modal verb 'kunnen' is 'kon' (plural: 'konden')."
+  },
+  {
+    id: "q_onclass_10_8",
+    type: "fill_in",
+    tags: ["summary_ch10", "imperfectum", "modal_verbs"],
+    questionNl: "Wij ___ (moeten) vroeger elke zaterdagochtend onze kamer opruimen.",
+    correctAnswer: "moesten",
+    explanationTr: "'Moeten' modal fiilinin çoğul (wij) geçmiş zaman (imperfectum) çekimi 'moesten'dir.",
+    explanationEn: "For plural subject 'wij', the past tense (imperfectum) of 'moeten' is 'moesten'."
+  },
+  {
+    id: "q_onclass_10_9",
+    type: "multiple_choice",
+    tags: ["summary_ch10", "imperfectum", "modal_verbs"],
+    questionNl: "Wat is het imperfectum van het hulpwerkwoord 'zullen', dat overeenkomt met het Engelse 'would'?",
+    options: ["zou / zouden", "zal / zallen", "zult / zulden", "gewild"],
+    correctAnswer: "zou / zouden",
+    explanationTr: "'Zullen' fiilinin geçmiş zaman biçimi 'zou' (tekil) ve 'zouden' (çoğul) olup İngilizcedeki 'would' ve koşul kiplerine karşılık gelir.",
+    explanationEn: "The past tense forms of 'zullen' are 'zou' (singular) and 'zouden' (plural), functioning like English 'would'."
+  },
+  {
+    id: "q_onclass_11_1",
+    type: "fill_in",
+    tags: ["summary_ch11", "reflexive_verbs", "reflexive_pronouns"],
+    questionNl: "Ik vergis ___ (myself) heel vaak in zijn huisnummer.",
+    correctAnswer: "me",
+    explanationTr: "'Zich vergissen' dönüşlü fiilinde 'ik' öznesinin dönüşlülük zamiri 'me'dir: 'Ik vergis me.'",
+    explanationEn: "For the reflexive verb 'zich vergissen', the reflexive pronoun for subject 'ik' is 'me': 'Ik vergis me.'"
+  },
+  {
+    id: "q_onclass_11_2",
+    type: "fill_in",
+    tags: ["summary_ch11", "reflexive_verbs", "reflexive_pronouns"],
+    questionNl: "Peter voelt ___ (himself) vandaag niet erg fit.",
+    correctAnswer: "zich",
+    explanationTr: "3. tekil şahıs (hij/zij) için dönüşlülük zamiri 'zich'tir: 'Hij voelt zich niet fit.'",
+    explanationEn: "For 3rd person singular (hij/zij), the reflexive pronoun is strictly 'zich': 'Hij voelt zich niet fit.'"
+  },
+  {
+    id: "q_onclass_11_3",
+    type: "fill_in",
+    tags: ["summary_ch11", "reflexive_verbs", "reflexive_pronouns"],
+    questionNl: "Wij bereiden ___ (ourselves) grondig voor op het grote examen.",
+    correctAnswer: "ons",
+    explanationTr: "'Wij' (biz) öznesi için dönüşlülük zamiri 'ons'tur: 'Wij bereiden ons voor.'",
+    explanationEn: "For first person plural 'wij' (we), the reflexive pronoun is 'ons': 'Wij bereiden ons voor.'"
+  },
+  {
+    id: "q_onclass_11_4",
+    type: "multiple_choice",
+    tags: ["summary_ch11", "reflexive_pronouns", "expressions"],
+    questionNl: "Welke zin drukt correct uit dat Tom zijn telefoon bij zijn eigen persoon draagt?",
+    options: ["Tom heeft zijn telefoon bij zich.", "Tom heeft zijn telefoon bij elkaar.", "Tom heeft zijn telefoon bij hemzelf meenemen.", "Tom heeft zijn telefoon bij zichzelven."],
+    correctAnswer: "Tom heeft zijn telefoon bij zich.",
+    explanationTr: "Bir eşyayı yanında/üzerinde bulundurmak 'bij zich hebben' şeklinde ifade edilir: 'Hij heeft zijn telefoon bij zich.'",
+    explanationEn: "To have something on one's person, Dutch uses the reflexive prepositional phrase 'bij zich': 'Tom heeft zijn telefoon bij zich.'"
+  },
+  {
+    id: "q_onclass_11_5",
+    type: "fill_in",
+    tags: ["summary_ch11", "reciprocal", "pronouns"],
+    questionNl: "Mijn broer en ik helpen ___ (each other) altijd met huiswerk.",
+    correctAnswer: "elkaar",
+    explanationTr: "'Birbirine / birbiriyle' (each other) karşılıklılık zamiri Hollandacada 'elkaar'dır.",
+    explanationEn: "The reciprocal pronoun for 'each other / one another' in Dutch is 'elkaar'."
+  },
+  {
+    id: "q_onclass_11_6",
+    type: "multiple_choice",
+    tags: ["summary_ch11", "exclamations", "reactions"],
+    questionNl: "Een vriend vertelt: 'Mijn vakantie naar Italië is geannuleerd.' Wat is de meest passende meelevende uitroep?",
+    options: ["Wat jammer! (of: Wat vervelend!)", "Wat lekker!", "Wat gezellig!", "Eet smakelijk!"],
+    correctAnswer: "Wat jammer! (of: Wat vervelend!)",
+    explanationTr: "Kötü veya hayal kırıklığı yaratan bir haber duyulduğunda 'Wat jammer!' (Ne yazık!) veya 'Wat vervelend!' (Ne can sıkıcı!) denir.",
+    explanationEn: "To react empathetically to disappointment or bad news, Dutch speakers say 'Wat jammer!' (What a pity!) or 'Wat vervelend!'."
+  },
+  {
+    id: "q_onclass_11_7",
+    type: "multiple_choice",
+    tags: ["summary_ch11", "exclamations", "social_interactions"],
+    questionNl: "Je buurvrouw vertelt dat ze hoge koorts heeft en met griep in bed ligt. Wat zeg je tegen haar?",
+    options: ["Beterschap!", "Sterkte!", "Veel plezier!", "Gefeliciteerd!"],
+    correctAnswer: "Beterschap!",
+    explanationTr: "Hasta olan birine 'Geçmiş olsun / acil şifalar' dilemek için 'Beterschap!' denir. 'Sterkte' daha çok zor sınavlar veya kayıplar içindir.",
+    explanationEn: "To wish someone a speedy recovery from an illness, Dutch uses 'Beterschap!'. 'Sterkte!' is typically reserved for difficult trials or grief."
+  },
+  {
+    id: "q_onclass_11_8",
+    type: "multiple_choice",
+    tags: ["summary_ch11", "exclamations", "social_interactions"],
+    questionNl: "Wat wens je mensen toe vlak voordat ze aan een feestelijk diner beginnen?",
+    options: ["Eet smakelijk!", "Veel succes!", "Tot straks!", "Wat toevallig!"],
+    correctAnswer: "Eet smakelijk!",
+    explanationTr: "Yemekten hemen önce 'Afiyet olsun' demek için 'Eet smakelijk!' denir.",
+    explanationEn: "The traditional Dutch phrase to wish someone a good meal (bon appétit) is 'Eet smakelijk!'."
+  },
+  {
+    id: "q_onclass_11_9",
+    type: "fill_in",
+    tags: ["summary_ch11", "reflexive_verbs", "verbs_present"],
+    questionNl: "De kinderen hebben geen speelgoed; ze ___ (vervelen) zich enorm.",
+    correctAnswer: "vervelen",
+    explanationTr: "'Zich vervelen' (canı sıkılmak) fiilinin çoğul (ze = onlar) çekimi 'vervelen'dir.",
+    explanationEn: "For subject 'ze' (they plural), the reflexive verb 'zich vervelen' (to be bored) conjugates as 'vervelen'."
+  },
+  {
+    id: "q_onclass_12_1",
+    type: "multiple_choice",
+    tags: ["summary_ch12", "places", "directions"],
+    questionNl: "Welke zin beschrijft een BEWEGING (movement) en géén vaste locatie (plaats)?",
+    options: ["U moet hier de trap af gaan.", "Het toilet is op de eerste verdieping.", "De kassa bevindt zich aan het eind van de gang.", "Zij wachten tegenover de ingang."],
+    correctAnswer: "U moet hier de trap af gaan.",
+    explanationTr: "'De trap af gaan' (merdivenden aşağı inmek) bir hareket (beweging) eylemidir; diğer seçenekler ise sabit bir konumu (plaats) belirtir.",
+    explanationEn: "'De trap af gaan' (going down the stairs) denotes motion/movement, whereas the other options describe static locations."
+  },
+  {
+    id: "q_onclass_12_2",
+    type: "fill_in",
+    tags: ["summary_ch12", "directions"],
+    questionNl: "Loop bij het kruispunt helemaal ___ (straight ahead) tot aan de kerk.",
+    correctAnswer: "rechtdoor",
+    explanationTr: "'Dümdüz gitmek / dosdoğru yürümek' yön tarifi 'rechtdoor lopen'dır.",
+    explanationEn: "The Dutch word for straight ahead in giving directions is 'rechtdoor' ('rechtdoor lopen')."
+  },
+  {
+    id: "q_onclass_12_3",
+    type: "multiple_choice",
+    tags: ["summary_ch12", "separable_verbs", "present_tense"],
+    questionNl: "Vervoeg het scheidbare werkwoord 'instappen' in de tegenwoordige tijd: 'Hij ___ bij het station ___.'",
+    options: ["stapt ... in", "instapt ... ", "stapt in ... ", "in ... stapt"],
+    correctAnswer: "stapt ... in",
+    explanationTr: "Ayrılabilen fiiller geniş zamanda bölünür: Fiil kökü 2. sıraya gider, ayrılan ön ek (in) cümlenin EN SONUNA fırlar: 'Hij stapt bij het station in.'",
+    explanationEn: "In the present tense, separable verbs split: conjugated stem takes position 2, and the prefix ('in') jumps to the very end."
+  },
+  {
+    id: "q_onclass_12_4",
+    type: "multiple_choice",
+    tags: ["summary_ch12", "separable_verbs", "imperfectum"],
+    questionNl: "Vervoeg het scheidbare werkwoord 'tegenkomen' in het imperfectum: 'Gisteren ___ ik Peter in de supermarkt ___.'",
+    options: ["kwam ... tegen", "kwam tegen ... ", "tegenkwam ... ", "komde ... tegen"],
+    correctAnswer: "kwam ... tegen",
+    explanationTr: "'Tegenkomen' geçmiş zamanda da ayrılır. 'Komen' fiilinin imperfectum hali 'kwam' olup 'tegen' cümlenin sonuna gider: 'Gisteren kwam ik Peter tegen.'",
+    explanationEn: "In the imperfectum, separable verbs also split: 'komen' becomes irregular past 'kwam' at 2nd position, and 'tegen' goes to the end."
+  },
+  {
+    id: "q_onclass_12_5",
+    type: "multiple_choice",
+    tags: ["summary_ch12", "separable_verbs", "perfectum"],
+    questionNl: "Hoe wordt het voltooid deelwoord (perfectum) van een scheidbaar werkwoord zoals 'instappen' gevormd?",
+    options: ["Het voorvoegsel + ge + stam + t/d (ingestapt).", "Ge + voorvoegsel + stam + t/d (geinstapt).", "Alleen de stam met -en (instappen).", "Voorvoegsel + stam zonder ge (instapt)."],
+    correctAnswer: "Het voorvoegsel + ge + stam + t/d (ingestapt).",
+    explanationTr: "Ayrılabilen fiillerin geçmiş zaman ortacında (participium) 'ge-' eki ön ek ile fiil kökünün ARASINA girer: in + ge + stapt = 'ingestapt'.",
+    explanationEn: "For separable verbs in the perfect tense, 'ge-' is inserted BETWEEN the prefix and the stem: in + ge + stapt = 'ingestapt'."
+  },
+  {
+    id: "q_onclass_12_6",
+    type: "fill_in",
+    tags: ["summary_ch12", "separable_verbs", "modal_verbs"],
+    questionNl: "De deuren zijn al open; u kunt direct ___ (instappen).",
+    correctAnswer: "instappen",
+    explanationTr: "Cümlede modal bir yardımcı fiil (kunt) varsa, ayrılabilen fiil cümlenin sonunda BİRLEŞİK ve MASTAR halinde kalır: 'instappen'.",
+    explanationEn: "When accompanied by a modal auxiliary ('kunt'), a separable verb remains whole and infinitive at the end: 'instappen'."
+  },
+  {
+    id: "q_onclass_12_7",
+    type: "fill_in",
+    tags: ["summary_ch12", "separable_verbs", "perfectum"],
+    questionNl: "We hebben de koffie en het gebak al bij de ober ___ (afrekenen).",
+    correctAnswer: "afgerekend",
+    explanationTr: "'Afrekenen' fiilinin participium biçiminde 'ge' araya girer: af + ge + rekend = 'afgerekend'.",
+    explanationEn: "The past participle of separable 'afrekenen' inserts '-ge-' between prefix and stem: 'afgerekend'."
+  },
+  {
+    id: "q_onclass_12_8",
+    type: "multiple_choice",
+    tags: ["summary_ch12", "directions", "dialogue"],
+    questionNl: "Hoe vat je een routebeschrijving samen om te controleren of je het goed hebt begrepen?",
+    options: ["Dus eerst rechtdoor en dan de tweede straat links, klopt dat?", "Waarom stuurt u mij die kant op?", "Ik geloof dat u liegt over de route.", "Gaat u zelf ook naar links?"],
+    correctAnswer: "Dus eerst rechtdoor en dan de tweede straat links, klopt dat?",
+    explanationTr: "Tarifi teyit etmek için 'Dus eerst... en dan..., klopt dat?' (Yani önce... sonra..., doğru mu?) kalıbı kullanılır.",
+    explanationEn: "To verify directions politely, Dutch speakers summarize and ask '...klopt dat?' (is that correct?)."
+  },
+  {
+    id: "q_onclass_12_9",
+    type: "multiple_choice",
+    tags: ["summary_ch12", "places", "prepositions"],
+    questionNl: "De bushalte bevindt zich direct ___ de ingang van het ziekenhuis. (opposite)",
+    options: ["tegenover", "tussen", "naastbij", "bovenop"],
+    correctAnswer: "tegenover",
+    explanationTr: "'Karşısında' anlamına gelen edat 'tegenover'dir: 'tegenover de ingang'.",
+    explanationEn: "The Dutch preposition meaning 'opposite / across from' is 'tegenover'."
+  },
+  {
+    id: "q_onclass_13_1",
+    type: "multiple_choice",
+    tags: ["summary_ch13", "opinions", "word_order"],
+    questionNl: "Wat is de juiste woordvolgorde als je een mening begint met 'Volgens mij'?",
+    options: ["Volgens mij is deze buurt heel gezellig.", "Volgens mij deze buurt is heel gezellig.", "Volgens mij heel gezellig is deze buurt.", "Volgens mij zijn deze buurt heel gezellig."],
+    correctAnswer: "Volgens mij is deze buurt heel gezellig.",
+    explanationTr: "'Volgens mij' ifadesi cümlede birinci öge sayıldığı için hemen ardından fiil (is) ve sonra özne gelir (devrik cümle/inversion): 'Volgens mij is deze buurt...'",
+    explanationEn: "'Volgens mij' takes 1st position in the sentence, immediately triggering inversion: verb (is) followed by subject ('deze buurt')."
+  },
+  {
+    id: "q_onclass_13_2",
+    type: "fill_in",
+    tags: ["summary_ch13", "zullen_promise", "promises"],
+    questionNl: "Maak je geen zorgen; ik ___ (zullen) de bloemen schuin afsnijden. (promise)",
+    correctAnswer: "zal",
+    explanationTr: "Bir söz veya niyet bildirmek için 'ik' öznesi ile 'zullen' fiili 'zal' şeklinde kullanılır: 'Ik zal... afsnijden.'",
+    explanationEn: "To express a firm personal promise or intention, the verb 'zullen' conjugates as 'zal' for subject 'ik'."
+  },
+  {
+    id: "q_onclass_13_3",
+    type: "fill_in",
+    tags: ["summary_ch13", "zullen_promise", "promises"],
+    questionNl: "Wij beloven het: wij ___ (zullen) uw fiets vandaag nog repareren.",
+    correctAnswer: "zullen",
+    explanationTr: "'Wij' (biz) öznesi ile verilen sözlerde 'zullen' fiili 'zullen' mastar biçimiyle eşleşir.",
+    explanationEn: "For plural subject 'wij', the modal promise verb 'zullen' conjugates as 'zullen'."
+  },
+  {
+    id: "q_onclass_13_4",
+    type: "multiple_choice",
+    tags: ["summary_ch13", "small_talk", "expressions"],
+    questionNl: "Wat betekent het Nederlandse idioom 'praten over koetjes en kalfjes'?",
+    options: ["Gezellig praten over alledaagse, luchtige onderwerpen (small talk).", "Praten over de prijs van rundvlees op de boerderij.", "Ruzie maken over dieren.", "Een officiële zakelijke presentatie geven."],
+    correctAnswer: "Gezellig praten over alledaagse, luchtige onderwerpen (small talk).",
+    explanationTr: "'Praten over koetjes en kalfjes' (ineklerden ve buzağılardan bahsetmek), havadan sudan konuşmak, havadan muhabbet etmek (small talk) anlamına gelen ünlü bir deyimdir.",
+    explanationEn: "'Praten over koetjes en kalfjes' literally means talking about cows and calves, but idiomatically means making casual small talk about everyday trivial things."
+  },
+  {
+    id: "q_onclass_13_5",
+    type: "multiple_choice",
+    tags: ["summary_ch13", "small_talk", "reactions"],
+    questionNl: "Iemand zegt: 'Wat een vreselijk weer vandaag, hè?' Hoe bevestig je dit volmondig?",
+    options: ["Zeg dat wel!", "Doe mij maar een cola.", "Wat jammer voor de koeien.", "Tot gisteren!"],
+    correctAnswer: "Zeg dat wel!",
+    explanationTr: "'Zeg dat wel!' (Aynen öyle! / Ağzına sağlık! / You can say that again!), birinin söylediği yoruma veya hava durumuna içtenlikle katılmayı bildiren bir deyimdir.",
+    explanationEn: "'Zeg dat wel!' is an emphatic Dutch agreement idiom corresponding to 'You can say that again!'."
+  },
+  {
+    id: "q_onclass_13_6",
+    type: "multiple_choice",
+    tags: ["summary_ch13", "small_talk", "expressions"],
+    questionNl: "Iemand zegt bij binnenkomst: 'Jullie moeten de groeten van Sophie hebben!' Wat is het gepaste antwoord?",
+    options: ["Doe haar de groeten terug!", "Waarom groet zij mij?", "Ik heb geen groeten nodig.", "Tot nooit meer ziens!"],
+    correctAnswer: "Doe haar de groeten terug!",
+    explanationTr: "'Jullie moeten de groeten hebben' (Falancanın selamı var) dendiğinde, nezaket kuralı olarak 'Doe haar de groeten terug!' (Sen de ona çok selam söyle) denir.",
+    explanationEn: "When someone delivers greetings from a third party, the polite social response is 'Doe haar/hem de groeten terug!' (Send my greetings back!)."
+  },
+  {
+    id: "q_onclass_13_7",
+    type: "fill_in",
+    tags: ["summary_ch13", "small_talk", "reflexive_verbs"],
+    questionNl: "Het geeft helemaal niets dat je te vroeg bent; je hoeft je niet te ___ (apologize).",
+    correctAnswer: "verontschuldigen",
+    explanationTr: "'Zich verontschuldigen' özür dilemek anlamına gelir. 'Je hoeft je niet te verontschuldigen' (Özür dilemene hiç gerek yok).",
+    explanationEn: "The Dutch reflexive verb for apologizing is 'zich verontschuldigen'."
+  },
+  {
+    id: "q_onclass_13_8",
+    type: "multiple_choice",
+    tags: ["summary_ch13", "reactions", "expressions"],
+    questionNl: "Welk woord gebruik je als uitroep van opluchting wanneer een spannend probleem goed afloopt?",
+    options: ["Gelukkig!", "Vervelend!", "Jammer!", "Tot straks!"],
+    correctAnswer: "Gelukkig!",
+    explanationTr: "Bir tehlike veya sorun atlatıldığında rahatlama ve şükran ifadesi olarak 'Gelukkig!' (Çok şükür! / Neyse ki!) denir.",
+    explanationEn: "'Gelukkig!' is the standard Dutch exclamation expressing relief ('Fortunately! / Thank goodness!')."
+  },
+  {
+    id: "q_onclass_13_9",
+    type: "multiple_choice",
+    tags: ["summary_ch13", "pronunciation"],
+    questionNl: "Hoe wordt de bekende tweeklank 'ui' (zoals in huis, tuin, huid) volgens de lesnotities gevormd?",
+    options: ["Het is een klankcombinatie die begint rond de 'a' en glijdt naar een 'ü'-achtige mondstand.", "Het klinkt precies als de Engelse 'oo'.", "Het klinkt exact hetzelfde als 'ee'.", "Het is een stomme e."],
+    correctAnswer: "Het is een klankcombinatie die begint rond de 'a' en glijdt naar een 'ü'-achtige mondstand.",
+    explanationTr: "Hollandacadaki 'ui' diftongu (huis, tuin, luid), ağzın 'a' pozisyonundan yuvarlak 'ü' sesine doğru kaymasıyla üretilen özel bir sestir.",
+    explanationEn: "The unique Dutch diphthong 'ui' (huis, buik) transitions acoustically from an open central vowel toward a rounded front vowel (a -> ü)."
+  },
+  {
+    id: "q_onclass_14_1",
+    type: "fill_in",
+    tags: ["summary_ch14", "indirect_questions", "word_order"],
+    questionNl: "Directe vraag: 'Waar is de balie?' -> Indirecte vraag: 'Kunt u mij vertellen waar de balie ___?'",
+    correctAnswer: "is",
+    explanationTr: "Dolaylı soru cümlelerinde (indirecte vraag) soru kelimesinden (waar) sonra gelen cümlenin yüklemi (is) cümlenin EN SONUNA gider.",
+    explanationEn: "In indirect questions introduced by a question word ('waar'), the finite verb ('is') is pushed to the very end of the subclause."
+  },
+  {
+    id: "q_onclass_14_2",
+    type: "fill_in",
+    tags: ["summary_ch14", "indirect_questions", "conjunctions"],
+    questionNl: "Directe vraag: 'Is hier een wc in de buurt?' -> Indirecte vraag: 'Weet u ___ hier een wc in de buurt is?'",
+    correctAnswer: "of",
+    explanationTr: "Evet/Hayır sorularını dolaylı soruya çevirirken '-ıp -madığı' / 'if/whether' anlamında 'of' bağlacı kullanılır.",
+    explanationEn: "Yes/no questions are converted into indirect questions using the conjunction 'of' (whether / if), with the verb moving to the end."
+  },
+  {
+    id: "q_onclass_14_3",
+    type: "multiple_choice",
+    tags: ["summary_ch14", "indirect_questions", "syntax"],
+    questionNl: "Wat is de juiste indirecte vraag voor: 'Werkt de automaat op muntgeld?'",
+    options: ["Weet u misschien of de automaat op muntgeld werkt?", "Weet u misschien werkt de automaat op muntgeld?", "Weet u misschien dat de automaat werkt op muntgeld?", "Kunt u zeggen werkt de automaat of muntgeld?"],
+    correctAnswer: "Weet u misschien of de automaat op muntgeld werkt?",
+    explanationTr: "Evet/hayır sorusu olduğu için 'of' ile başlar ve çekimli fiil 'werkt' cümlenin en sonuna gider: '...of de automaat op muntgeld werkt?'",
+    explanationEn: "For a yes/no question, use 'of' and place the conjugated verb 'werkt' at the very end of the sentence."
+  },
+  {
+    id: "q_onclass_14_4",
+    type: "multiple_choice",
+    tags: ["summary_ch14", "zullen_probability", "future_tense"],
+    questionNl: "Wat drukt de constructie 'zullen + wel' uit in de zin: 'Je zult morgen wel spierpijn hebben'?",
+    options: ["Een sterke waarschijnlijkheid / vermoeden (probability: you will probably have...).", "Een strikte verplichting (moeten).", "Een verbod (niet mogen).", "Een wens uit het verleden."],
+    correctAnswer: "Een sterke waarschijnlijkheid / vermoeden (probability: you will probably have...).",
+    explanationTr: "'Zullen + wel + infinitief' yapısı güçlü bir ihtimal, tahmin ve olasılık bildirir (Büyük olasılıkla kas ağrın olacak).",
+    explanationEn: "'Zullen + wel + infinitive' indicates strong probability or presumption (You will probably have sore muscles tomorrow)."
+  },
+  {
+    id: "q_onclass_14_5",
+    type: "multiple_choice",
+    tags: ["summary_ch14", "zullen_probability", "syntax"],
+    questionNl: "Kies de juiste woordvolgorde: 'Een jaarabonnement ___ wel goedkoper ___.'",
+    options: ["zal ... zijn", "is ... zullen", "zal ... wezen", "zou ... zijn geweest"],
+    correctAnswer: "zal ... zijn",
+    explanationTr: "'Zullen + wel' kalıbında: Öznenin ardından 'zal', araya 'wel + sıfat', sona ise mastar halinde 'zijn' gelir: 'zal wel goedkoper zijn'.",
+    explanationEn: "In the probability construction, 'zal' occupies position 2 and the infinitive 'zijn' closes the sentence: 'zal wel goedkoper zijn'."
+  },
+  {
+    id: "q_onclass_14_6",
+    type: "multiple_choice",
+    tags: ["summary_ch14", "future_tense", "future_gaan"],
+    questionNl: "Welke zin drukt volgens de lesnotities een PERSOONLIJK PLAN / VOORNEMEN (intention) uit?",
+    options: ["Ik ga volgende week Nederlands studeren.", "Ik werk morgen van tien tot twee.", "De les zal om acht uur beginnen.", "Het regent morgen waarschijnlijk."],
+    correctAnswer: "Ik ga volgende week Nederlands studeren.",
+    explanationTr: "Kişisel plan ve niyetler 'gaan + infinitief' ile anlatılır (Ik ga studeren). 'Presens + zaman' sabit programları, 'zullen' ise tahmin/resmi duyuruları bildirir.",
+    explanationEn: "Personal plans and intentions are expressed by 'gaan + infinitive' ('Ik ga studeren'). Presens + time indicates fixed schedules, while 'zullen' indicates forecasts/announcements."
+  },
+  {
+    id: "q_onclass_14_7",
+    type: "multiple_choice",
+    tags: ["summary_ch14", "gym_vocabulary", "vocabulary"],
+    questionNl: "Paul sport fanatiek: hij wil zijn spieren ___ (strengthen) en gewicht ___ (lose).",
+    options: ["versterken ... verliezen", "verliezen ... versterken", "openen ... sluiten", "breken ... winnen"],
+    correctAnswer: "versterken ... verliezen",
+    explanationTr: "Sporda kasları güçlendirmek 'spieren versterken', kilo vermek ise 'gewicht verliezen' (veya afvallen) olarak ifade edilir.",
+    explanationEn: "To strengthen muscles is 'spieren versterken', and to lose weight is 'gewicht verliezen' (or 'afvallen')."
+  },
+  {
+    id: "q_onclass_14_8",
+    type: "fill_in",
+    tags: ["summary_ch14", "perfectum", "irregular_verbs"],
+    questionNl: "De kat spinde tevreden toen ik hem zachtjes had ___ (aaien - to pet).",
+    correctAnswer: "geaaid",
+    explanationTr: "'Aaien' (okşamak/sevmek) fiilinin geçmiş zaman ortacı (voltooid deelwoord) 'geaaid' şeklinde yazılır.",
+    explanationEn: "The past participle of the verb 'aaien' (to stroke/pet) is regular in pronunciation but spelled 'geaaid'."
+  },
+  {
+    id: "q_onclass_14_9",
+    type: "multiple_choice",
+    tags: ["summary_ch14", "indirect_questions", "word_order"],
+    questionNl: "Maak van 'Wanneer is het pasje klaar?' een correcte indirecte vraag:",
+    options: ["Kunt u me zeggen wanneer het pasje klaar is?", "Kunt u me zeggen wanneer is het pasje klaar?", "Weet u of wanneer het pasje klaar is?", "Kunt u me zeggen dat het pasje is klaar?"],
+    correctAnswer: "Kunt u me zeggen wanneer het pasje klaar is?",
+    explanationTr: "Soru kelimesi (wanneer) korunur, cümlenin çekimli fiili (is) cümlenin en sonuna taşınır: '...wanneer het pasje klaar is?'",
+    explanationEn: "Keep the question word ('wanneer') and place the finite verb ('is') at the very end: 'Kunt u me zeggen wanneer het pasje klaar is?'."
+  },
+  {
+    id: "q_onclass_15_1",
+    type: "multiple_choice",
+    tags: ["summary_ch15", "future_tense", "future_gaan"],
+    questionNl: "Waarom zeg je 'Ik ga vanavond pizza eten' in plaats van 'Ik zal vanavond pizza eten'?",
+    options: ["Omdat 'gaan' wordt gebruikt voor persoonlijke plannen en voornemens, terwijl 'zullen' meer voor beloftes of voorspellingen is.", "Omdat 'zullen' niet mag bij eten.", "Omdat 'gaan' verplicht is in het weekend.", "Er is grammaticaal geen enkel verschil."],
+    correctAnswer: "Omdat 'gaan' wordt gebruikt voor persoonlijke plannen en voornemens, terwijl 'zullen' meer voor beloftes of voorspellingen is.",
+    explanationTr: "Kişisel plan, niyet ve kararlarda 'gaan' kullanılır (pizza yiyeceğim). 'Zullen' ise söz verme (promise) veya tahmin/hava durumu için geçerlidir.",
+    explanationEn: "'Gaan' expresses active personal plans and intentions ('Ik ga pizza eten'). 'Zullen' is used for promises, weather forecasts, or formal predictions."
+  },
+  {
+    id: "q_onclass_15_2",
+    type: "fill_in",
+    tags: ["summary_ch15", "demonstratives", "pronouns_demonstrative"],
+    questionNl: "Wat vind je van de kaas (de kaas)? - ___ vind ik heerlijk!",
+    correctAnswer: "Die",
+    explanationTr: "'De kaas' bir de-kelimesi olduğu için ona atıfta bulunurken bağımsız işaret zamiri olarak 'Die' kullanılır: 'Die vind ik heerlijk.'",
+    explanationEn: "Because 'kaas' is a 'de'-word, the independent demonstrative pronoun used to refer back to it is 'Die'."
+  },
+  {
+    id: "q_onclass_15_3",
+    type: "fill_in",
+    tags: ["summary_ch15", "demonstratives", "pronouns_demonstrative"],
+    questionNl: "Heb je toch wel koffie meegenomen? - Natuurlijk heb ik ___ (that action) gedaan!",
+    correctAnswer: "dat",
+    explanationTr: "Daha önce bahsedilen koca bir cümlenin veya eylemin bütününe (kahve getirme eylemine) atıfta bulunurken her zaman 'dat' kullanılır.",
+    explanationEn: "To refer back to an entire preceding action or whole clause, Dutch always uses the pronoun 'dat' ('heb ik dat gedaan')."
+  },
+  {
+    id: "q_onclass_15_4",
+    type: "multiple_choice",
+    tags: ["summary_ch15", "demonstratives", "people"],
+    questionNl: "Waar is Ashwini? Hoe verwijs je informeel naar een persoon met een aanwijzend voornaamwoord?",
+    options: ["Die is in de les.", "Dat is in de les.", "Het is in de les.", "Deze is in de les."],
+    correctAnswer: "Die is in de les.",
+    explanationTr: "İnsanlara gayriresmi ama çok yaygın şekilde atıfta bulunurken 'de'-kelimesi mantığıyla 'Die' kullanılır: 'Die is in de les.'",
+    explanationEn: "When referring back demonstratively to people in natural Dutch conversation, 'Die' is standard: 'Die is in de les.'"
+  },
+  {
+    id: "q_onclass_15_5",
+    type: "multiple_choice",
+    tags: ["summary_ch15", "demonstratives", "nature"],
+    questionNl: "We zien het Naardermeer (het meer). Welk woord gebruik je om hiernaar te verwijzen?",
+    options: ["Dat / Het is een prachtig natuurgebied.", "Die is een prachtig natuurgebied.", "Deze zijn een prachtig natuurgebied.", "Hij is een prachtig natuurgebied."],
+    correctAnswer: "Dat / Het is een prachtig natuurgebied.",
+    explanationTr: "'Het Naardermeer' bir het-kelimesidir. 'Het'-kelimelerine atıfta bulunurken 'Dat' veya 'Het' kullanılır.",
+    explanationEn: "Since 'Naardermeer' is a 'het'-word, you refer back to it using 'Dat' (or 'Het'): 'Dat is een prachtig natuurgebied.'"
+  },
+  {
+    id: "q_onclass_15_6",
+    type: "fill_in",
+    tags: ["summary_ch15", "indirect_questions", "train"],
+    questionNl: "Direct: Waar is spoor 2? -> Indirect: Kun je me zeggen waar spoor 2 ___?",
+    correctAnswer: "is",
+    explanationTr: "Dolaylı soruda çekimli fiil 'is' yan cümlenin en sonuna gider: '...waar spoor 2 is?'.",
+    explanationEn: "In the indirect question, the finite verb 'is' is placed at the end: '...waar spoor 2 is?'."
+  },
+  {
+    id: "q_onclass_15_7",
+    type: "fill_in",
+    tags: ["summary_ch15", "indirect_questions", "train"],
+    questionNl: "Direct: Vertrekt de trein op tijd? -> Indirect: Weet je of de trein op tijd ___?",
+    correctAnswer: "vertrekt",
+    explanationTr: "'Of' bağlacı yan cümle yapar ve çekimli fiil olan 'vertrekt' cümlenin sonuna gider.",
+    explanationEn: "The subclause introduced by 'of' places the finite verb 'vertrekt' at the end of the clause."
+  },
+  {
+    id: "q_onclass_15_8",
+    type: "fill_in",
+    tags: ["summary_ch15", "train", "travel"],
+    questionNl: "Vanaf welk ___ (platform/track) vertrekt de intercity naar Utrecht Centraal?",
+    correctAnswer: "spoor",
+    explanationTr: "Hollanda tren istasyonlarında tren rayı ve peron numarası için 'het spoor' (spoor 1, spoor 2) kullanılır.",
+    explanationEn: "In Dutch railway stations, the platform/track number is called 'het spoor' ('spoor 2')."
+  },
+  {
+    id: "q_onclass_15_9",
+    type: "multiple_choice",
+    tags: ["summary_ch15", "buildings", "vocabulary"],
+    questionNl: "Hoe heet de toren van een historisch gebouw waarin een groot uurwerk hangt?",
+    options: ["de kloktoren", "de kerkbank", "het station", "het perron"],
+    correctAnswer: "de kloktoren",
+    explanationTr: "Üzerinde saat bulunan tarihi kulelere 'de kloktoren' (saat kulesi) denir.",
+    explanationEn: "A tower housing a large public clock is called 'de kloktoren' (clock tower)."
+  },
+  {
+    id: "q_onclass_16_1",
+    type: "multiple_choice",
+    tags: ["summary_ch16", "demonstratives", "introducing"],
+    questionNl: "Welke constructie gebruik je om mensen aan elkaar voor te stellen (zelfs als het meervoud is)?",
+    options: ["Dit zijn mijn ouders. / Dat zijn mijn zussen.", "Deze zijn mijn ouders. / Die zijn mijn zussen.", "Zij zijn mijn ouders hier.", "Hier zijn mijn ouders."],
+    correctAnswer: "Dit zijn mijn ouders. / Dat zijn mijn zussen.",
+    explanationTr: "İnsanları tanıtırken çoğul dahi olsa daima 'Dit zijn...' veya 'Dat zijn...' kullanılır; asla 'Deze zijn' denmez!",
+    explanationEn: "When presenting people, Dutch strictly uses 'Dit zijn...' or 'Dat zijn...', even before plural nouns (never 'Deze zijn')."
+  },
+  {
+    id: "q_onclass_16_2",
+    type: "fill_in",
+    tags: ["summary_ch16", "demonstratives", "family"],
+    questionNl: "___ (Dat / Die) zijn mijn broers die in Amsterdam wonen.",
+    correctAnswer: "Dat",
+    explanationTr: "Tanıtma kalıbında uzaktaki çoğul şahıslar için 'Dat zijn...' kalıbı kullanılır.",
+    explanationEn: "In introductory presentation sentences, 'Dat zijn...' is used for pointing out people at a distance."
+  },
+  {
+    id: "q_onclass_16_3",
+    type: "multiple_choice",
+    tags: ["summary_ch16", "demonstratives", "articles"],
+    questionNl: "Het is een mooie bril. Welk woord gebruik je om hiernaar te verwijzen?",
+    options: ["Die is van mijn vader. (want 'bril' is een de-woord)", "Dat is van mijn vader.", "Het is van mijn vader.", "Deze zijn van mijn vader."],
+    correctAnswer: "Die is van mijn vader. (want 'bril' is een de-woord)",
+    explanationTr: "Hollandacada gözlük tekildir: 'de bril' (de-kelimesi). Bu yüzden ona işaret ederken 'Die' kullanılır: 'Die is van mijn vader.'",
+    explanationEn: "'Bril' (glasses) is singular and a 'de'-word ('de bril'). To refer back to it, use 'Die': 'Die is van mijn vader.'"
+  },
+  {
+    id: "q_onclass_16_4",
+    type: "multiple_choice",
+    tags: ["summary_ch16", "conjunctions", "word_order"],
+    questionNl: "Wat gebeurt er met de woordvolgorde in de hoofdzin na nevenschikkende voegwoorden zoals 'en, of, maar, want, dus'?",
+    options: ["De woordvolgorde verandert NIET: gewoon onderwerp + persoonsvorm.", "Het werkwoord springt naar het einde van de zin.", "Er vindt verplicht inversie plaats.", "Het onderwerp verdwijnt."],
+    correctAnswer: "De woordvolgorde verandert NIET: gewoon onderwerp + persoonsvorm.",
+    explanationTr: "'En, of, maar, want, dus' iki ana cümleyi birbirine bağlayan normal bağlaçlardır; kelime sırasını bozmazlar (Özne + Çekimli Fiil devam eder).",
+    explanationEn: "Coordinating conjunctions ('en, of, maar, want, dus') do NOT change word order; normal subject + verb order remains intact."
+  },
+  {
+    id: "q_onclass_16_5",
+    type: "multiple_choice",
+    tags: ["summary_ch16", "conjunctions", "want_omdat"],
+    questionNl: "Kies de juiste zin met 'want' (reden):",
+    options: ["Ik ga slapen, want ik ben heel moe.", "Ik ga slapen, want ik heel moe ben.", "Ik ga slapen, want ben ik heel moe.", "Ik ga slapen, want moe ik ben."],
+    correctAnswer: "Ik ga slapen, want ik ben heel moe.",
+    explanationTr: "'Want' sebep bildirir ve kelime sırasını DEĞİŞTİRMEZ: Önce özne 'ik', sonra fiil 'ben' gelir ('want ik ben heel moe').",
+    explanationEn: "'Want' expresses a reason and keeps standard subject-verb order: 'want ik ben heel moe'."
+  },
+  {
+    id: "q_onclass_16_6",
+    type: "fill_in",
+    tags: ["summary_ch16", "conjunctions"],
+    questionNl: "Het regent pijpenstelen, ___ (dus/so) we blijven lekker thuis.",
+    correctAnswer: "dus",
+    explanationTr: "Sonuç (gevolg) bildiren ve kelime sırasını bozmayan bağlaç 'dus'tur: 'Het regent, dus we blijven thuis.'",
+    explanationEn: "The coordinating conjunction of consequence/conclusion that retains regular word order is 'dus': '...dus we blijven lekker thuis.'"
+  },
+  {
+    id: "q_onclass_16_7",
+    type: "multiple_choice",
+    tags: ["summary_ch16", "perfectum", "word_order"],
+    questionNl: "Wat is de gouden regel voor de positie van het lijdend voorwerp (object) in het perfectum?",
+    options: ["Het object staat altijd VÓÓR het voltooid deelwoord (bijv. Ik heb de film gezien).", "Het object staat altijd achter het voltooid deelwoord (Ik heb gezien de film).", "Het object staat altijd vooraan voor het onderwerp.", "De positie maakt helemaal niet uit."],
+    correctAnswer: "Het object staat altijd VÓÓR het voltooid deelwoord (bijv. Ik heb de film gezien).",
+    explanationTr: "Geçmiş zamanda (perfectum) nesne her zaman geçmiş zaman ortacından (voltooid deelwoord) ÖNCE gelir: 'Ik heb de film gezien' (Asla: 'Ik heb gezien de film' denmez!).",
+    explanationEn: "In the perfect tense, the direct object MUST be placed BEFORE the past participle: 'Ik heb de film gezien' (never after!)."
+  },
+  {
+    id: "q_onclass_16_8",
+    type: "fill_in",
+    tags: ["summary_ch16", "imperfectum", "irregular_verbs"],
+    questionNl: "Gisteren had ik veel dorst, dus ik ___ (drinken) een groot glas cola.",
+    correctAnswer: "dronk",
+    explanationTr: "'Drinken' düzensiz bir fiildir; geçmiş zamanında -te almaz, kökü değişir: 'ik dronk' (asla drinkte denmez!).",
+    explanationEn: "'Drinken' is an irregular (strong) verb: its imperfectum singular is 'dronk', never 'drinkte'."
+  },
+  {
+    id: "q_onclass_16_9",
+    type: "multiple_choice",
+    tags: ["summary_ch16", "separable_verbs", "word_order"],
+    questionNl: "Waar staat het lijdend voorwerp bij een scheidbaar werkwoord (bijv. meenemen) in het presens?",
+    options: ["Tussen de twee gescheiden delen van het werkwoord in (Ik neem een vriend mee).", "Achter het afgescheiden deeltje (Ik neem mee een vriend).", "Helemaal vooraan in de zin.", "Direct voor de persoonsvorm."],
+    correctAnswer: "Tussen de twee gescheiden delen van het werkwoord in (Ik neem een vriend mee).",
+    explanationTr: "Ayrılabilen fiillerde nesne, çekimli fiil kökü ile cümlenin sonundaki ön ek arasına girer: 'Ik neem [een vriend] mee.'",
+    explanationEn: "With separable verbs in the present tense, the direct object is placed between the finite stem and the separable prefix: 'Ik neem een vriend mee.'"
+  },
+  {
+    id: "q_onclass_17_1",
+    type: "multiple_choice",
+    tags: ["summary_ch17", "er_daar", "dummy_subject"],
+    questionNl: "Hoe vertaal je: 'An accident has happened' volgens de klassikale 'Er'-regel voor onbepaalde onderwerpen?",
+    options: ["Er is een ongeluk gebeurd.", "Een ongeluk is gebeurd.", "Daar heeft een ongeluk gebeurd.", "Het is een ongeluk gebeurd."],
+    correctAnswer: "Er is een ongeluk gebeurd.",
+    explanationTr: "İngilizcede cümlenin öznesi belirsiz tanımlıkla ('a' veya 'an') başladığında, Hollandacada cümleye sahte özne olan 'Er' ile başlanır: 'Er is een ongeluk gebeurd.'",
+    explanationEn: "When an English sentence has an indefinite subject starting with 'a' or 'an', Dutch starts the sentence with dummy 'Er': 'Er is een ongeluk gebeurd.'"
+  },
+  {
+    id: "q_onclass_17_2",
+    type: "fill_in",
+    tags: ["summary_ch17", "er_daar", "dummy_subject"],
+    questionNl: "Pas op: ___ (There) komt een zware storm aan.",
+    correctAnswer: "Er",
+    explanationTr: "'A storm is coming' (belirsiz özne) cümlesinde Hollandaca yapı 'Er' ile başlar: 'Er komt een storm.'",
+    explanationEn: "Since 'a storm' is indefinite, Dutch introduces the clause with 'Er': 'Er komt een storm aan.'"
+  },
+  {
+    id: "q_onclass_17_3",
+    type: "fill_in",
+    tags: ["summary_ch17", "er_daar", "places"],
+    questionNl: "Ben jij weleens in Rome geweest? - Ja, ik was ___ (there) vorig jaar ook.",
+    correctAnswer: "er",
+    explanationTr: "Daha önce bahsedilen bir yere (in Rome) atıfta bulunurken vurgusuz 'orada' anlamında 'er' kullanılır: 'Ik was er ook.'",
+    explanationEn: "To refer back to an already mentioned location (in Rome) in an unstressed way ('there'), Dutch uses 'er': 'Ik was er ook.'"
+  },
+  {
+    id: "q_onclass_17_4",
+    type: "multiple_choice",
+    tags: ["summary_ch17", "continuous", "word_order"],
+    questionNl: "Waar plaats je het lijdend voorwerp (bijv. een pizza) in de constructie 'zijn ... aan het + infinitief'?",
+    options: ["TUSSEN de vervoeging van 'zijn' en 'aan het' (bijv. Ik ben een pizza aan het eten).", "Achter het infinitief (Ik ben aan het eten een pizza).", "Helemaal aan het begin van de zin.", "Vóór het onderwerp."],
+    correctAnswer: "TUSSEN de vervoeging van 'zijn' en 'aan het' (bijv. Ik ben een pizza aan het eten).",
+    explanationTr: "Şimdiki zaman yapısında (continuous aspect) nesne veya yer, 'zijn' ile 'aan het + mastar'ın TAM ARASINA girer: 'Ik ben [een pizza] aan het eten.'",
+    explanationEn: "In the continuous 'zijn ... aan het + inf' structure, the direct object or place MUST be placed between 'zijn' and 'aan het': 'Ik ben [een pizza] aan het eten.'"
+  },
+  {
+    id: "q_onclass_17_5",
+    type: "fill_in",
+    tags: ["summary_ch17", "continuous", "syntax"],
+    questionNl: "Rustig aan, ik ben de reservering in het hotel ___ (aan het maken / making).",
+    correctAnswer: "aan het maken",
+    explanationTr: "'Zijn' fiilinin ardından eylemin şu an yapıldığını belirtmek için 'aan het + mastar' gelir: 'aan het maken'.",
+    explanationEn: "To indicate ongoing present continuous action, use 'aan het + infinitive': 'aan het maken'."
+  },
+  {
+    id: "q_onclass_17_6",
+    type: "fill_in",
+    tags: ["summary_ch17", "continuous"],
+    questionNl: "Muziek staat aan; zij zijn vrolijk in de club ___ (aan het dansen).",
+    correctAnswer: "aan het dansen",
+    explanationTr: "'Dansen' eyleminin devam etmekte olduğunu anlatmak için 'aan het dansen' yapısı kullanılır.",
+    explanationEn: "The continuous construction for dancing right now is 'aan het dansen'."
+  },
+  {
+    id: "q_onclass_17_7",
+    type: "multiple_choice",
+    tags: ["summary_ch17", "conjunctions"],
+    questionNl: "Kies het juiste voegwoord: 'Ik heb enorme hoofdpijn, ___ ik kan vandaag niet naar kantoor komen.'",
+    options: ["dus (conclusie/gevolg)", "want (reden)", "of (keuze)", "maar (tegenstelling)"],
+    correctAnswer: "dus (conclusie/gevolg)",
+    explanationTr: "Baş ağrısı bir sebep, ofise gelememek ise bunun sonucudur (gevolg). Sonuç bağlacı 'dus'tur (bu yüzden/dolayısıyla).",
+    explanationEn: "Having a headache leads to the consequence/result of staying home; therefore the result conjunction 'dus' (so) is correct."
+  },
+  {
+    id: "q_onclass_17_8",
+    type: "fill_in",
+    tags: ["summary_ch17", "imperfectum", "verbs"],
+    questionNl: "Vroeger ___ (werken) wij veertig uur per week op kantoor.",
+    correctAnswer: "werkten",
+    explanationTr: "'Werken' düzenli bir fiildir ve stam (werk) 'k' ile biter. Çoğul (wij) imperfectum eki '-ten'dir: 'werkten'.",
+    explanationEn: "The stem of 'werken' ends in 'k' (soft ketchup), so the plural imperfectum ending for 'wij' is '-ten': 'werkten'."
+  },
+  {
+    id: "q_onclass_17_9",
+    type: "fill_in",
+    tags: ["summary_ch17", "conjunctions"],
+    questionNl: "Ik wilde graag naar de film, ___ (maar/but) ik had geen geld meer.",
+    correctAnswer: "maar",
+    explanationTr: "Zıtlık bildiren nevenschikkend bağlaç 'maar'dır (ama/fakat): 'Ik wilde graag, maar ik had geen geld.'",
+    explanationEn: "The coordinating conjunction expressing contrast/adversity is 'maar' (but)."
+  },
+  {
+    id: "q_onclass_18_1",
+    type: "multiple_choice",
+    tags: ["summary_ch18", "subclauses", "conjunctions", "want_omdat"],
+    questionNl: "Wat is de zogenoemde 'Kikker Regel' bij onderschikkende voegwoorden zoals 'omdat' en 'zodat'?",
+    options: ["Alle werkwoorden springen naar het ALLERLAATSTE einde van de bijzin (zoals een kikker).", "Het onderwerp springt naar het einde van de zin.", "Het werkwoord verdwijnt helemaal.", "De zin moet altijd met een vraagteken eindigen."],
+    correctAnswer: "Alle werkwoorden springen naar het ALLERLAATSTE einde van de bijzin (zoals een kikker).",
+    explanationTr: "'Kikker' (kurbağa) kuralı: 'Omdat, zodat, dat, hoewel, terwijl' gibi yan cümle bağlaçlarında cümledeki tüm fiiller cümlenin EN SONUNA zıplar.",
+    explanationEn: "The 'Kikker' (frog) rule describes how subordinating conjunctions ('omdat, zodat, dat, hoewel, terwijl') make all verbs jump to the VERY END of the subclause."
+  },
+  {
+    id: "q_onclass_18_2",
+    type: "fill_in",
+    tags: ["summary_ch18", "subclauses", "want_omdat"],
+    questionNl: "Vergelijk: 'Ik eet pizza want ik heb honger' met: 'Ik eet pizza omdat ik honger ___.'",
+    correctAnswer: "heb",
+    explanationTr: "'Want' kelime sırasını bozmaz (want ik heb honger), ancak 'omdat' fiili sona fırlatır: 'omdat ik honger heb'.",
+    explanationEn: "'Want' preserves main clause word order ('want ik heb honger'), but 'omdat' pushes the verb to the end: 'omdat ik honger heb'."
+  },
+  {
+    id: "q_onclass_18_3",
+    type: "multiple_choice",
+    tags: ["summary_ch18", "subclauses", "conjunctions"],
+    questionNl: "Welk voegwoord is een ONDERSCHIKKEND voegwoord dat het werkwoord naar het einde slingert (kikker)?",
+    options: ["terwijl", "want", "maar", "of"],
+    correctAnswer: "terwijl",
+    explanationTr: "'Terwijl' (-iken / while) bir yan cümle (onderschikkend) bağlacıdır ve fiili sona atar. 'Want, maar, of' ise kelime sırasını değiştirmeyen ana cümle bağlaçlarıdır.",
+    explanationEn: "'Terwijl' (while) is a subordinating conjunction that triggers end-verb placement. 'Want, maar, of' are coordinating conjunctions."
+  },
+  {
+    id: "q_onclass_18_4",
+    type: "multiple_choice",
+    tags: ["summary_ch18", "subclauses", "inversion"],
+    questionNl: "Wat is de exacte formule wanneer een samengestelde zin BEGINT met een bijzin (met bijv. Als, Toen, Zodra)?",
+    options: ["Triggerwoord + Kikker (werkwoord achteraan in bijzin) + INVERSIE (werkwoord + onderwerp in hoofdzin)", "Triggerwoord + Inversie in bijzin + normale volgorde in hoofdzin", "Triggerwoord + Normale volgorde in beide zinnen", "Kikker in hoofdzin + Normale bijzin"],
+    correctAnswer: "Triggerwoord + Kikker (werkwoord achteraan in bijzin) + INVERSIE (werkwoord + onderwerp in hoofdzin)",
+    explanationTr: "Cümle yan cümle ile başlarsa: Tetikleyici (Als/Toen) + Kikker (fiil sonda) + VİRGÜL + Devrik Ana Cümle (Fiil + Özne): 'Als ik geen eten eet, heb ik honger.'",
+    explanationEn: "When starting with a subclause: Trigger word + Kikker (verb at end of subclause), comma, then INVERSION in main clause (Verb + Subject): 'Als ik niet eet, heb ik honger.'"
+  },
+  {
+    id: "q_onclass_18_5",
+    type: "fill_in",
+    tags: ["summary_ch18", "subclauses", "inversion"],
+    questionNl: "Als ik geen ontbijt eet, ___ (hebben) ik de hele ochtend honger.",
+    correctAnswer: "heb",
+    explanationTr: "Yan cümleyle başlandığı için virgülden hemen sonra devrik yapı (inversie) gelir: Fiil 'heb' özneden 'ik' önce gelir: 'heb ik honger'.",
+    explanationEn: "Because the sentence opens with a subclause ('Als...'), inversion is required immediately after the comma: 'heb ik honger'."
+  },
+  {
+    id: "q_onclass_18_6",
+    type: "fill_in",
+    tags: ["summary_ch18", "subclauses", "inversion"],
+    questionNl: "Als je niet goed studeert, ___ (gaan) je niet slagen voor het examen.",
+    correctAnswer: "ga",
+    explanationTr: "Virgülden sonra ana cümlede devrik yapı uygulanır. 'Je' fiilden sonra geldiği için fiil '-t' almaz: 'ga je niet slagen'.",
+    explanationEn: "After the comma, inversion occurs in the main clause. Since 'je' follows the verb, the '-t' drops: 'ga je niet slagen'."
+  },
+  {
+    id: "q_onclass_18_7",
+    type: "fill_in",
+    tags: ["summary_ch18", "subclauses", "inversion"],
+    questionNl: "Zodra ik een nieuwe laptop koop, ___ (gaan) deze oude laptop kapot.",
+    correctAnswer: "gaat",
+    explanationTr: "'Zodra...' yan cümlesinden sonra ana cümle devrik başlar: fiil 'gaat' özneden ('deze oude laptop') önce gelir.",
+    explanationEn: "Following the subclause introduced by 'Zodra', the main clause undergoes inversion: 'gaat deze oude laptop kapot'."
+  },
+  {
+    id: "q_onclass_18_8",
+    type: "multiple_choice",
+    tags: ["summary_ch18", "subclauses", "inversion"],
+    questionNl: "Kies de juiste voortzetting: 'Toen ik even met iemand naast ons praatte, ___'",
+    options: ["was mijn portemonnee gestolen.", "mijn portemonnee was gestolen.", "werd gestolen mijn portemonnee.", "gestolen was mijn portemonnee."],
+    correctAnswer: "was mijn portemonnee gestolen.",
+    explanationTr: "'Toen...' yan cümlesi bittikten sonra ana cümlede inversie (devrik yapı) zorunludur: Önce yardımcı fiil 'was', ardından özne 'mijn portemonnee' gelir.",
+    explanationEn: "After the 'Toen...' subclause, the main clause requires inversion: auxiliary verb 'was' followed by subject 'mijn portemonnee'."
+  },
+  {
+    id: "q_onclass_18_9",
+    type: "multiple_choice",
+    tags: ["summary_ch18", "separable_verbs", "past_tenses"],
+    questionNl: "Wat zijn de correcte vormen van het scheidbare werkwoord 'opbellen' in de 3 tijden voor 'ik'?",
+    options: ["Present: Ik bel op | Imperfectum: Ik belde op | Perfectum: Ik heb opgebeld", "Present: Ik opbel | Imperfectum: Ik opbelde | Perfectum: Ik ben geopbeld", "Present: Ik bel op | Imperfectum: Ik bopbelde | Perfectum: Ik heb geoppebeld", "Present: Ik belde op | Imperfectum: Ik heb opgebeld | Perfectum: Ik bel op"],
+    correctAnswer: "Present: Ik bel op | Imperfectum: Ik belde op | Perfectum: Ik heb opgebeld",
+    explanationTr: "'Opbellen' fiili: Şimdiki zamanda 'Ik bel op', imperfectumda 'Ik belde op', perfectumda 'Ik heb opgebeld' (ge araya girer) şeklindedir.",
+    explanationEn: "'Opbellen' conjugates as: Present: 'Ik bel op' | Imperfectum: 'Ik belde op' | Perfectum: 'Ik heb opgebeld'."
+  },
+  {
+    id: "q_onclass_18_10",
+    type: "multiple_choice",
+    tags: ["summary_ch18", "separable_verbs", "past_tenses"],
+    questionNl: "Wat zijn de correcte vormen van 'aankomen' in de 3 tijden voor 'hij'?",
+    options: ["Hij komt aan | Hij kwam aan | Hij is aangekomen", "Hij aankomt | Hij aankwam | Hij heeft geaankomen", "Hij komt aan | Hij komde aan | Hij heeft aangekomen", "Hij kwam aan | Hij komt aan | Hij is geaankomt"],
+    correctAnswer: "Hij komt aan | Hij kwam aan | Hij is aangekomen",
+    explanationTr: "'Aankomen' fiili: Şimdiki zamanda 'Hij komt aan', imperfectumda 'Hij kwam aan' (düzensiz), perfectumda yön/varış bildirdiği için 'Hij is aangekomen' (zijn ile) olur.",
+    explanationEn: "'Aankomen' conjugates as: Present: 'Hij komt aan' | Imperfectum: 'Hij kwam aan' | Perfectum: 'Hij is aangekomen' (uses 'zijn')."
+  },
+  {
+    id: "q_onclass_18_11",
+    type: "fill_in",
+    tags: ["summary_ch18", "subclauses", "conjunctions"],
+    questionNl: "Je moet eerst een geldig kaartje kopen voordat je naar binnen ___ (mogen).",
+    correctAnswer: "mag",
+    explanationTr: "'Voordat' bağlacı yan cümle kurar; 'je' öznesi için 'mogen' fiili cümlenin en sonuna gider ve 'mag' olur.",
+    explanationEn: "The subclause conjunction 'voordat' pushes the conjugated verb 'mogen' for subject 'je' to the very end: 'mag'."
+  },
+  {
+    id: "q_onclass_18_12",
+    type: "fill_in",
+    tags: ["summary_ch18", "subclauses", "conjunctions"],
+    questionNl: "Bas kookt het eten terwijl Maria de auto naar de garage ___ (brengen).",
+    correctAnswer: "brengt",
+    explanationTr: "'Terwijl' yan cümle bağlacıdır; 'Maria' (zij) öznesi için 'brengen' fiili cümlenin en sonuna gider: 'brengt'.",
+    explanationEn: "'Terwijl' is a subordinating conjunction, sending the conjugated verb for 'Maria' to the end of the clause: 'brengt'."
+  }
 ];
