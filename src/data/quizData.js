@@ -93,6 +93,330 @@ export const quizQuestions = [
     explanationEn: "Preposition usages: travel by ('met de trein'), direction to ('naar het restaurant'), surface ('op de tafel'), in a city ('in Amsterdam'), afraid of ('bang voor')."
   },
   {
+    id: "q_match_ch1_3_basics",
+    type: "matching",
+    tags: ["ch1", "ch2", "ch3", "summary_ch1", "summary_ch2", "summary_ch3", "verbs_present", "kennismaking"],
+    questionNl: "Kies het juiste woord voor elke zin (Hoofdstuk 1-3):",
+    instructionTr: "Cümlelerdeki boşlukları tanışma, kafe ve zaman kalıplarına göre doğru kelimelerle doldurun.",
+    instructionEn: "Fill in the blanks with the correct words based on introductions, cafe, and time expressions.",
+    items: [
+      { id: "m_1_3_1", sentenceNl: "Mag ik twee koppen koffie van u ___?", answer: "hebben" },
+      { id: "m_1_3_2", sentenceNl: "De les begint om kwart over ___.", answer: "negen" },
+      { id: "m_1_3_3", sentenceNl: "Hoe ___ je jouw moeilijke achternaam?", answer: "spelt" },
+      { id: "m_1_3_4", sentenceNl: "Ik drink mijn thee het liefst zonder ___.", answer: "suiker" },
+      { id: "m_1_3_5", sentenceNl: "Hoe laat ___ we vanavond in het café af?", answer: "spreken" }
+    ],
+    distractors: ["weten", "twaalf"],
+    explanationTr: "Kalıplar: 'mag ik hebben' (alabilir miyim), 'kwart over negen' (dokuzu çeyrek geçe), 'spelt' (hecelemek), 'zonder suiker' (şekersiz), 'afspreken' (buluşmak/sözleşmek).",
+    explanationEn: "Phrases: 'mag ik hebben' (may I have), 'kwart over negen' (quarter past nine), 'spelt' (spell), 'zonder suiker' (without sugar), 'afspreken' (meet up)."
+  },
+  {
+    id: "q_match_ch1_3_grammar",
+    type: "matching",
+    tags: ["ch1", "ch2", "ch3", "word_order", "inversion", "negation", "verbs_present"],
+    questionNl: "Vul het juiste woord in voor zinsbouw en ontkenning:",
+    instructionTr: "Cümle dizilimi (inversie), soru ve olumsuzluk (niet/geen) kurallarına göre doğru kelimeleri eşleştirin.",
+    instructionEn: "Match the correct words according to word order (inversion), questions, and negation rules.",
+    items: [
+      { id: "m_1_3_g1", sentenceNl: "Morgen ___ wij met z'n allen naar Amsterdam.", answer: "gaan" },
+      { id: "m_1_3_g2", sentenceNl: "Ik heb vandaag helaas ___ tijd voor een pauze.", answer: "geen" },
+      { id: "m_1_3_g3", sentenceNl: "___ woon jij momenteel in Nederland?", answer: "Waar" },
+      { id: "m_1_3_g4", sentenceNl: "Kom ___ morgenavond ook naar het feestje?", answer: "jij" },
+      { id: "m_1_3_g5", sentenceNl: "Het restaurant is op maandag ___ geopend.", answer: "niet" }
+    ],
+    distractors: ["Wat", "nooit"],
+    explanationTr: "Gramer kuralları: Devrik cümlede zaman başa gelince fiil 2. sıraya geçer ('Morgen gaan wij'). Sayılamayan/belirsiz isimde 'geen tijd'. Soru kelimesi 'Waar'. Soru cümlesinde 'jij' fiilden sonra gelince fiildeki -t düşer ('Kom jij'). Sıfat veya zarf olumsuzluğunda 'niet'.",
+    explanationEn: "Grammar rules: Inversion moves verb to 2nd position ('Morgen gaan wij'). 'geen' before indefinite nouns ('geen tijd'). Question word 'Waar'. 'jij' after verb drops -t ('Kom jij'). 'niet' negates adjectives/verbs."
+  },
+  {
+    id: "q_match_ch3_5_street_market",
+    type: "matching",
+    tags: ["ch3", "ch4", "ch5", "summary_ch4", "summary_ch5", "directions", "adjectives"],
+    questionNl: "Kies het juiste woord voor de stad en de markt (Hoofdstuk 3-5):",
+    instructionTr: "Şehirde yön tarifi ve pazar alışverişiyle ilgili cümleleri doğru kelimelerle tamamlayın.",
+    instructionEn: "Complete the sentences about city directions and market shopping with the correct words.",
+    items: [
+      { id: "m_3_5_1", sentenceNl: "Bij de rotonde moet u de tweede afslag ___.", answer: "nemen" },
+      { id: "m_3_5_2", sentenceNl: "Mag ik een kilo van die ___ mandarijnen?", answer: "zoete" },
+      { id: "m_3_5_3", sentenceNl: "Het postkantoor ligt direct naast het ___.", answer: "station" },
+      { id: "m_3_5_4", sentenceNl: "Dit is een bijzonder ___ museum in het centrum.", answer: "mooi" },
+      { id: "m_3_5_5", sentenceNl: "Hoeveel ___ twee bloemkolen vandaag?", answer: "kosten" }
+    ],
+    distractors: ["rijden", "zoet"],
+    explanationTr: "Yön ve pazar terminolojisi: 'de afslag nemen' (çıkışa girmek), 'zoete mandarijnen' (çoğul isim önünde sıfat -e alır), 'het station' (istasyon), 'een mooi museum' (het-woord ve een olunca sıfat -e almaz), 'kosten' (fiyat sorma).",
+    explanationEn: "Directions & market terms: 'afslag nemen' (take exit), 'zoete mandarijnen' (plural takes -e), 'het station', 'een mooi museum' (het-word with een gets no -e), 'kosten' (cost)."
+  },
+  {
+    id: "q_match_ch4_6_city_food",
+    type: "matching",
+    tags: ["ch4", "ch5", "ch6", "summary_ch4", "summary_ch6", "modal_verbs", "restaurant"],
+    questionNl: "Kies het juiste woord voor vervoer en restaurant (Hoofdstuk 4-6):",
+    instructionTr: "Ulaşım, yol ve restoran siparişiyle ilgili cümleleri uygun kelimelerle eşleştirin.",
+    instructionEn: "Match the sentences about transportation, traffic, and dining with the correct words.",
+    items: [
+      { id: "m_4_6_1", sentenceNl: "U kunt lijn 12 nemen vanaf de ___.", answer: "bushalte" },
+      { id: "m_4_6_2", sentenceNl: "Wij willen graag voor zes personen ___.", answer: "reserveren" },
+      { id: "m_4_6_3", sentenceNl: "Als hoofdgerecht neem ik de gebakken ___.", answer: "vis" },
+      { id: "m_4_6_4", sentenceNl: "Voetgangers moeten op het trottoir ___.", answer: "lopen" },
+      { id: "m_4_6_5", sentenceNl: "Kunnen wij alstublieft apart ___?", answer: "afrekenen" }
+    ],
+    distractors: ["koken", "wachten"],
+    explanationTr: "Ulaşım ve restoran kalıpları: 'de bushalte' (otobüs durağı), 'reserveren' (rezervasyon yapmak), 'vis' (balık menüsü), 'lopen' (yürümek), 'apart afrekenen' (hesabı ayrı ayrı ödemek).",
+    explanationEn: "Transport & restaurant phrases: 'bushalte' (bus stop), 'reserveren' (to reserve), 'vis' (fish main dish), 'lopen' (walk), 'apart afrekenen' (split the bill)."
+  },
+  {
+    id: "q_match_ch6_8_clothing_housing",
+    type: "matching",
+    tags: ["ch6", "ch7", "ch8", "summary_ch7", "summary_ch8", "clothing", "housing"],
+    questionNl: "Kies het juiste woord voor kleding en wonen (Hoofdstuk 6-8):",
+    instructionTr: "Kıyafet alışverişi, karşılaştırmalar ve ev kiralama cümlelerini uygun kelimelerle tamamlayın.",
+    instructionEn: "Complete the sentences about clothing, comparisons, and housing with the appropriate words.",
+    items: [
+      { id: "m_6_8_1", sentenceNl: "Deze wollen trui is veel te groot, ik zoek een ___ maat.", answer: "kleinere" },
+      { id: "m_6_8_2", sentenceNl: "De huurder betaalt maandelijks een vaste ___.", answer: "borg" },
+      { id: "m_6_8_3", sentenceNl: "Ik wil deze zwarte jas graag even ___ in de paskamer.", answer: "passen" },
+      { id: "m_6_8_4", sentenceNl: "De flat bevindt zich op de derde ___ van het gebouw.", answer: "verdieping" },
+      { id: "m_6_8_5", sentenceNl: "Het eten in dit restaurant smaakt buitengewoon ___.", answer: "heerlijk" }
+    ],
+    distractors: ["duur", "kopen"],
+    explanationTr: "Kıyafet ve konut terimleri: 'kleinere maat' (daha küçük beden - comparatief), 'borg' (depozito), 'passen' (denemek/üstüne uymak), 'verdieping' (kat), 'heerlijk' (nefis/lezzetli).",
+    explanationEn: "Clothing & housing terms: 'kleinere maat' (smaller size), 'borg' (deposit), 'passen' (try on), 'verdieping' (floor/story), 'heerlijk' (delicious)."
+  },
+  {
+    id: "q_match_ch6_8_modals_grammar",
+    type: "matching",
+    tags: ["ch6", "ch7", "ch8", "modal_verbs", "prepositions"],
+    questionNl: "Vul het juiste modale werkwoord of voorzetsel in:",
+    instructionTr: "Modale fiiller (mogen, moeten, kunnen) ve yer edatları (onder, aan, op) ile cümleleri eşleştirin.",
+    instructionEn: "Match the sentences with the correct modal verbs and prepositions of place.",
+    items: [
+      { id: "m_6_8_g1", sentenceNl: "Men ___ hier niet parkeren voor de uitrit.", answer: "mag" },
+      { id: "m_6_8_g2", sentenceNl: "De sloffen staan netjes ___ het bed.", answer: "onder" },
+      { id: "m_6_8_g3", sentenceNl: "Wij ___ vanavond de verhuisdozen inpakken.", answer: "moeten" },
+      { id: "m_6_8_g4", sentenceNl: "De grote spiegel hangt ___ de muur in de gang.", answer: "aan" },
+      { id: "m_6_8_g5", sentenceNl: "___ jij morgen die documenten voor me ondertekenen?", answer: "Kun" }
+    ],
+    distractors: ["zal", "tussen"],
+    explanationTr: "Kural: 'mogen' izin/yasak ('niet mag' yasaktır), 'onder het bed' (yatağın altında), 'moeten' zorunluluk ('wij moeten inpakken'), 'aan de muur' (duvarda asılı), 'kun jij' (yapabilir misin - inversie).",
+    explanationEn: "Rules: 'mogen' permission/prohibition ('niet mag'), 'onder het bed' (under the bed), 'moeten' necessity ('wij moeten'), 'aan de muur' (on the wall), 'kun jij' (can you)."
+  },
+  {
+    id: "q_match_ch8_10_health_bike",
+    type: "matching",
+    tags: ["ch8", "ch9", "ch10", "summary_ch9", "summary_ch10", "health", "bike_repair"],
+    questionNl: "Kies het juiste woord voor gezondheid en fietsreparatie (Hoofdstuk 8-10):",
+    instructionTr: "Doktor randevusu, sağlık şikayetleri ve bisiklet tamiriyle ilgili kelimeleri eşleştirin.",
+    instructionEn: "Match the words related to doctor visits, symptoms, and bicycle repair.",
+    items: [
+      { id: "m_8_10_1", sentenceNl: "Ik heb last van hoge koorts en hevige ___.", answer: "hoofdpijn" },
+      { id: "m_8_10_2", sentenceNl: "De voorrem piept en de ketting is ___.", answer: "los" },
+      { id: "m_8_10_3", sentenceNl: "U moet dit medicijn driemaal daags ___.", answer: "innemen" },
+      { id: "m_8_10_4", sentenceNl: "De fietsenmaker kan het achterlicht direct ___.", answer: "vervangen" },
+      { id: "m_8_10_5", sentenceNl: "De huurwoning heeft centrale ___ in alle kamers.", answer: "verwarming" }
+    ],
+    distractors: ["ziek", "rijden"],
+    explanationTr: "Sağlık ve bisiklet terimleri: 'hoofdpijn' (baş ağrısı), 'los' (gevşek/bol), 'innemen' (ilaç almak/yutmak), 'vervangen' (yenisiyle değiştirmek), 'centrale verwarming' (merkezi ısıtma/kalorifer).",
+    explanationEn: "Health & bike repair terms: 'hoofdpijn' (headache), 'los' (loose), 'innemen' (take medicine), 'vervangen' (replace), 'centrale verwarming' (central heating)."
+  },
+  {
+    id: "q_match_ch8_10_reflexive_er",
+    type: "matching",
+    tags: ["ch8", "ch9", "ch10", "reflexive_verbs", "er_structures"],
+    questionNl: "Vul de juiste vorm van het reflexief pronomen of 'er' in:",
+    instructionTr: "Dönüşlü zamirler (zich, me, u) ve 'er' yapısı kurallarına uygun kelimeleri seçin.",
+    instructionEn: "Select the correct reflexive pronouns and 'er' structures for each sentence.",
+    items: [
+      { id: "m_8_10_g1", sentenceNl: "Zij voelt ___ de laatste tijd erg gestrest.", answer: "zich" },
+      { id: "m_8_10_g2", sentenceNl: "In de wachtkamer zitten ___ al vijf patiënten.", answer: "er" },
+      { id: "m_8_10_g3", sentenceNl: "Ik verheug ___ ontzettend op onze aanstaande reis.", answer: "me" },
+      { id: "m_8_10_g4", sentenceNl: "Hoeveel slaapkamers zijn er? Er zijn ___ drie.", answer: "er" },
+      { id: "m_8_10_g5", sentenceNl: "Kunt u ___ even ontspannen voor het onderzoek?", answer: "zich" }
+    ],
+    distractors: ["ons", "daar"],
+    explanationTr: "Dönüşlü fiiller: 'zich voelen' (3. tekil için 'zich'), 'zich verheugen op' (ik için 'me'), 'zich ontspannen' (u için 'u' veya 'zich'). 'Er' kullanımı: Belirsiz öznede ('zitten er vijf patiënten') ve sayı belirtirken ('zijn er drie').",
+    explanationEn: "Reflexive pronouns: 'zich voelen' (3rd person 'zich'), 'zich verheugen op' (1st person 'me'). 'Er' usage: indefinite subject ('zitten er patiënten') and quantified reference ('zijn er drie')."
+  },
+  {
+    id: "q_match_ch10_12_birthday_events",
+    type: "matching",
+    tags: ["ch10", "ch11", "ch12", "summary_ch11", "summary_ch12", "perfectum", "events"],
+    questionNl: "Kies het juiste woord voor feesten en vrije tijd (Hoofdstuk 10-12):",
+    instructionTr: "Doğum günü kutlaması, etkinlikler ve geçmiş zaman cümlelerini doğru kelimelerle tamamlayın.",
+    instructionEn: "Complete the sentences about birthday parties, events, and past tense with the correct words.",
+    items: [
+      { id: "m_10_12_1", sentenceNl: "Bedankt voor de uitnodiging en het mooie ___!", answer: "cadeau" },
+      { id: "m_10_12_2", sentenceNl: "Gisteren hebben we urenlang gezellig ___.", answer: "gepraat" },
+      { id: "m_10_12_3", sentenceNl: "In het weekend bezoeken we een interessante ___.", answer: "tentoonstelling" },
+      { id: "m_10_12_4", sentenceNl: "Mijn zus heeft de hele avond vrolijk ___.", answer: "gedanst" },
+      { id: "m_10_12_5", sentenceNl: "De fietsenmaker heeft mijn band snel ___.", answer: "geplakt" }
+    ],
+    distractors: ["feest", "gewerkt"],
+    explanationTr: "Etkinlik ve geçmiş zaman: 'cadeau' (hediye), 'gepraat' (praten fiilinin perfectum hali: kofschip 't' kuralı), 'tentoonstelling' (sergi), 'gedanst' (dansen -> gedanst), 'geplakt' (plakken -> geplakt: yama yapmak).",
+    explanationEn: "Event & past tense: 'cadeau' (gift), 'gepraat' (talked, past participle), 'tentoonstelling' (exhibition), 'gedanst' (danced), 'geplakt' (patched the tire)."
+  },
+  {
+    id: "q_match_ch11_13_perfectum_irreg",
+    type: "matching",
+    tags: ["ch11", "ch12", "ch13", "irregular_verbs", "perfectum"],
+    questionNl: "Kies het juiste onregelmatige voltooid deelwoord (Perfectum):",
+    instructionTr: "Düzensiz fiillerin 3. hallerini (voltooid deelwoord) uygun cümlelerle eşleştirin.",
+    instructionEn: "Match the irregular past participles (perfectum) with the appropriate sentences.",
+    items: [
+      { id: "m_11_13_1", sentenceNl: "Zij zijn vanmorgen vroeg naar Spanje ___.", answer: "gevlogen" },
+      { id: "m_11_13_2", sentenceNl: "Ik heb gisteravond het hele artikel aandachtig ___.", answer: "gelezen" },
+      { id: "m_11_13_3", sentenceNl: "Wij hebben heerlijke lasagne in het restaurant ___.", answer: "gegeten" },
+      { id: "m_11_13_4", sentenceNl: "Hij is per ongeluk van zijn fiets ___.", answer: "gevallen" },
+      { id: "m_11_13_5", sentenceNl: "Heb jij je verloren fietssleutel weer ___?", answer: "gevonden" }
+    ],
+    distractors: ["gelopen", "gekocht"],
+    explanationTr: "Düzensiz fiillerin perfectum halleri: 'vliegen' -> 'gevlogen' (zijn ile), 'lezen' -> 'gelezen', 'eten' -> 'gegeten', 'vallen' -> 'gevallen' (zijn ile), 'vinden' -> 'gevonden'.",
+    explanationEn: "Irregular participles: 'vliegen' -> 'gevlogen' (with zijn), 'lezen' -> 'gelezen', 'eten' -> 'gegeten', 'vallen' -> 'gevallen' (with zijn), 'vinden' -> 'gevonden'."
+  },
+  {
+    id: "q_match_ch12_14_friends_sports",
+    type: "matching",
+    tags: ["ch12", "ch13", "ch14", "summary_ch13", "summary_ch14", "separable_verbs", "conjunctions"],
+    questionNl: "Kies het juiste voegwoord of sportwoord (Hoofdstuk 12-14):",
+    instructionTr: "Bağlaçlar (want, omdat) ve spor/arkadaşlık kelimelerini doğru cümlelerle eşleştirin.",
+    instructionEn: "Match the conjunctions (want, omdat) and sports/friendship vocabulary with the sentences.",
+    items: [
+      { id: "m_12_14_1", sentenceNl: "Ik ga vanavond niet mee, ___ ik moet studeren.", answer: "want" },
+      { id: "m_12_14_2", sentenceNl: "Vóór de zware training moet je goed ___.", answer: "opwarmen" },
+      { id: "m_12_14_3", sentenceNl: "Zij blijft thuis ___ ze grieperig is.", answer: "omdat" },
+      { id: "m_12_14_4", sentenceNl: "De instructeur geeft duidelijke instructies in de ___.", answer: "sportschool" },
+      { id: "m_12_14_5", sentenceNl: "We hebben onze buren voor de borrel ___.", answer: "uitgenodigd" }
+    ],
+    distractors: ["maar", "afvallen"],
+    explanationTr: "Bağlaç ve spor kuralları: 'want' düz cümle yapar ('want ik moet studeren'), 'omdat' yan cümle (bijzin) yapar ve fiili sona atar ('omdat ze grieperig is'). 'opwarmen' (ısınmak), 'sportschool' (spor salonu), 'uitnodigen -> uitgenodigd' (davet etmek).",
+    explanationEn: "Conjunction & gym rules: 'want' keeps normal word order, 'omdat' sends verb to end of clause. 'opwarmen' (warm up), 'sportschool' (gym), 'uitgenodigd' (invited)."
+  },
+  {
+    id: "q_match_ch13_15_separable_transport",
+    type: "matching",
+    tags: ["ch13", "ch14", "ch15", "separable_verbs", "train_travel"],
+    questionNl: "Kies het juiste woord voor treinreizen en scheidbare werkwoorden:",
+    instructionTr: "Tren yolculuğu ve ayrılabilen fiiller (scheidbare werkwoorden) kalıplarını eşleştirin.",
+    instructionEn: "Match the train travel expressions and separable verb particles.",
+    items: [
+      { id: "m_13_15_1", sentenceNl: "De intercity naar Rotterdam vertrekt van ___ 7b.", answer: "spoor" },
+      { id: "m_13_15_2", sentenceNl: "Vergeet niet met je kaartje in te ___.", answer: "checken" },
+      { id: "m_13_15_3", sentenceNl: "Zij belt haar oma elke woensdagmiddag ___.", answer: "op" },
+      { id: "m_13_15_4", sentenceNl: "Door de sneeuw heeft de trein twintig minuten ___.", answer: "vertraging" },
+      { id: "m_13_15_5", sentenceNl: "Trek voor het wandelen stevige bergschoenen ___.", answer: "aan" }
+    ],
+    distractors: ["perron", "uit"],
+    explanationTr: "Ayrılabilen fiiller ve tren seyahati: 'inchecken' (bilet okutmak), 'opbellen' (telefon etmek -> 'belt op'), 'aantrekken' (giymek -> 'trek aan'). 'spoor' (tren rayı/peron numarası), 'vertraging' (rötar/gecikme).",
+    explanationEn: "Separable verbs & travel terms: 'inchecken' (check in), 'opbellen' (call up), 'aantrekken' (put on). 'spoor' (track/platform number), 'vertraging' (delay)."
+  },
+  {
+    id: "q_match_ch15_17_relative_cinema",
+    type: "matching",
+    tags: ["ch15", "ch16", "ch17", "summary_ch15", "summary_ch16", "relative_clauses", "cinema"],
+    questionNl: "Kies het juiste betrekkelijk voornaamwoord of bioscoopwoord (Hoofdstuk 15-17):",
+    instructionTr: "İlgi zamirleri (die/dat) ve sinema/film kültürü kelimelerini uygun boşluklara yerleştirin.",
+    instructionEn: "Match the relative pronouns (die/dat) and cinema vocabulary with the blanks.",
+    items: [
+      { id: "m_15_17_1", sentenceNl: "De documentaire ___ we gisteren bekeken, was erg boeiend.", answer: "die" },
+      { id: "m_15_17_2", sentenceNl: "Het filmfestival ___ in Rotterdam plaatsvindt, trekt veel bezoekers.", answer: "dat" },
+      { id: "m_15_17_3", sentenceNl: "De acteur werd na afloop geprezen om zijn sterke ___.", answer: "hoofdrol" },
+      { id: "m_15_17_4", sentenceNl: "De filmzaal zat bomvol voor de officiële ___.", answer: "première" },
+      { id: "m_15_17_5", sentenceNl: "We reserveerden van tevoren twee kaartjes bij de ___.", answer: "kassa" }
+    ],
+    distractors: ["wat", "regisseur"],
+    explanationTr: "İlgi zamirleri: 'de documentaire' (de-woord) olduğu için 'die'. 'het filmfestival' (het-woord) olduğu için 'dat'. Sinema terimleri: 'hoofdrol' (başrol), 'première' (ilk gösterim), 'kassa' (bilet gişesi).",
+    explanationEn: "Relative pronouns: 'de-words' take 'die' ('de documentaire die'), 'het-words' take 'dat' ('het festival dat'). Cinema terms: 'hoofdrol' (lead role), 'première' (premiere), 'kassa' (box office)."
+  },
+  {
+    id: "q_match_ch15_18_subordinate_clauses",
+    type: "matching",
+    tags: ["ch14", "ch15", "ch16", "ch17", "ch18", "subordinate_clauses", "word_order"],
+    questionNl: "Kies het juiste voegwoord voor de bijzin (Subordinate Clauses):",
+    instructionTr: "Yan cümle (bijzin) bağlaçlarını (dat, omdat, terwijl, als, toen) anlam ve kurallara göre eşleştirin.",
+    instructionEn: "Match the subordinate clause conjunctions (dat, omdat, terwijl, als, toen) according to grammar and context.",
+    items: [
+      { id: "m_15_18_g1", sentenceNl: "Zij vertelde me gisteren ___ ze geslaagd is voor het examen.", answer: "dat" },
+      { id: "m_15_18_g2", sentenceNl: "Mijn man kookte het eten, ___ ik de eettafel dekte.", answer: "terwijl" },
+      { id: "m_15_18_g3", sentenceNl: "___ het morgen mooi weer is, gaan we fietsen.", answer: "Als" },
+      { id: "m_15_18_g4", sentenceNl: "Zij kwam te laat op het werk ___ de trein uitviel.", answer: "doordat" },
+      { id: "m_15_18_g5", sentenceNl: "We woonden nog in Utrecht ___ de oorlog uitbrak.", answer: "toen" }
+    ],
+    distractors: ["want", "maar"],
+    explanationTr: "Yan cümle bağlaçları (fiil cümlenin en sonuna gider): 'dat' (dığını/diğini), 'terwijl' (iken/aynı anda), 'als' (eğer/ise - geniş/gelecek zaman), 'doordat' (nedeniyle/sebep), 'toen' (geçmişte bir an/dığında).",
+    explanationEn: "Subordinate clause conjunctions (verbs move to the very end): 'dat' (that), 'terwijl' (while), 'als' (if/when), 'doordat' (because of/cause), 'toen' (when, in the past)."
+  },
+  {
+    id: "q_match_ch16_18_home_police",
+    type: "matching",
+    tags: ["ch16", "ch17", "ch18", "summary_ch17", "summary_ch18", "police", "household"],
+    questionNl: "Kies het juiste woord voor huishouden en politiebureau (Hoofdstuk 16-18):",
+    instructionTr: "Ev işleri ve polis merkezinde şikayet/tutanak bildirme kelimelerini doğru cümlelerle eşleştirin.",
+    instructionEn: "Match the household chores and police report vocabulary with the sentences.",
+    items: [
+      { id: "m_16_18_1", sentenceNl: "Ik moet dringend op het bureau ___ doen van inbraak.", answer: "aangifte" },
+      { id: "m_16_18_2", sentenceNl: "Zet de vuile theeglazen maar in de ___.", answer: "afwasmachine" },
+      { id: "m_16_18_3", sentenceNl: "De getuige gaf een nauwkeurig ___ van de dief.", answer: "signalement" },
+      { id: "m_16_18_4", sentenceNl: "Je moet eerst de woonkamer vegen en daarna ___.", answer: "dweilen" },
+      { id: "m_16_18_5", sentenceNl: "Mijn sportfiets is gisteren voor de bibliotheek ___.", answer: "gestolen" }
+    ],
+    distractors: ["boete", "strijken"],
+    explanationTr: "Ev ve polis terimleri: 'aangifte doen' (suç duyurusunda/tutanakta bulunmak), 'afwasmachine' (bulaşık makinesi), 'signalement' (eşkal/fiziksel tanım), 'dweilen' (paspaslamak/vileda yapmak), 'gestolen' (çalınmış).",
+    explanationEn: "Home & police terms: 'aangifte doen' (report a crime), 'afwasmachine' (dishwasher), 'signalement' (suspect description), 'dweilen' (mop the floor), 'gestolen' (stolen)."
+  },
+  {
+    id: "q_match_ch16_18_passive_imperfectum",
+    type: "matching",
+    tags: ["ch16", "ch17", "ch18", "passive_voice", "imperfectum", "grammar"],
+    questionNl: "Vul de juiste passieve of verleden tijd vorm in (Passief & Imperfectum):",
+    instructionTr: "Edilgen çatı (passief: worden/zijn) ve geçmiş zaman (imperfectum) fiillerini cümlelerle eşleştirin.",
+    instructionEn: "Match the passive voice (worden/zijn) and past simple (imperfectum) verb forms.",
+    items: [
+      { id: "m_16_18_g1", sentenceNl: "Het verdachte pakket ___ door de politie onderzocht.", answer: "werd" },
+      { id: "m_16_18_g2", sentenceNl: "Vroeger ___ mijn grootvader elke dag kilometers lang.", answer: "wandelde" },
+      { id: "m_16_18_g3", sentenceNl: "De post ___ elke ochtend om half negen bezorgd.", answer: "wordt" },
+      { id: "m_16_18_g4", sentenceNl: "Zij ___ gisteravond lang te wachten op het politiebureau.", answer: "stonden" },
+      { id: "m_16_18_g5", sentenceNl: "De winkeldief ___ direct na de diefstal aangehouden.", answer: "is" }
+    ],
+    distractors: ["was", "liepen"],
+    explanationTr: "Gramer kuralları: 'werd onderzocht' (geçmiş zaman edilgen / imperfectum passief), 'wandelde' (düzenli fiil geçmiş zaman), 'wordt bezorgd' (şimdiki zaman edilgen / presens passief), 'stonden' (staan fiilinin çoğul imperfectum hali), 'is aangehouden' (bitmiş zaman edilgen / perfectum passief).",
+    explanationEn: "Grammar rules: 'werd onderzocht' (past passive), 'wandelde' (past regular), 'wordt bezorgd' (present passive), 'stonden' (past plural of staan), 'is aangehouden' (present perfect passive)."
+  },
+  {
+    id: "q_match_irreg_verbs_past_1",
+    type: "matching",
+    tags: ["irregular_verbs", "imperfectum", "ch2", "ch3", "ch4"],
+    questionNl: "Kies de juiste vorm van het imperfectum (Onregelmatige werkwoorden):",
+    instructionTr: "En sık kullanılan düzensiz fiillerin hikaye geçmiş zaman (imperfectum) hallerini eşleştirin.",
+    instructionEn: "Match the past simple (imperfectum) forms of the most common irregular verbs.",
+    items: [
+      { id: "m_irr_p1", sentenceNl: "Gisteren ___ ik de hele middag aan mijn bureau te werken.", answer: "zat" },
+      { id: "m_irr_p2", sentenceNl: "Zij trok haar laarzen aan en ___ de zware deur dicht.", answer: "deed" },
+      { id: "m_irr_p3", sentenceNl: "Vorige week ___ wij een geweldige film in de bioscoop.", answer: "zagen" },
+      { id: "m_irr_p4", sentenceNl: "De docent ___ gisteren heel rustig en duidelijk.", answer: "sprak" },
+      { id: "m_irr_p5", sentenceNl: "Hij ___ de zware boodschappentas helemaal naar boven.", answer: "droeg" }
+    ],
+    distractors: ["bleef", "kwamen"],
+    explanationTr: "Düzensiz fiillerin imperfectum halleri: 'zitten' -> 'zat', 'doen' -> 'deed', 'zien' -> 'zagen' (çoğul), 'spreken' -> 'sprak', 'dragen' -> 'droeg'.",
+    explanationEn: "Irregular imperfectum forms: 'zitten' -> 'zat', 'doen' -> 'deed', 'zien' -> 'zagen' (plural), 'spreken' -> 'sprak', 'dragen' -> 'droeg'."
+  },
+  {
+    id: "q_match_irreg_verbs_perf_2",
+    type: "matching",
+    tags: ["irregular_verbs", "perfectum", "ch10", "ch11", "ch12"],
+    questionNl: "Kies het juiste voltooid deelwoord (Onregelmatige werkwoorden):",
+    instructionTr: "Düzensiz fiillerin geçmiş zaman ortaçlarını (voltooid deelwoord) uygun cümlelere yerleştirin.",
+    instructionEn: "Match the irregular past participles with the appropriate sentences.",
+    items: [
+      { id: "m_irr_p2_1", sentenceNl: "De vergadering is vanochtend stipt om negen uur ___.", answer: "begonnen" },
+      { id: "m_irr_p2_2", sentenceNl: "Heb jij de officiële brief al naar de gemeente ___?", answer: "verzonden" },
+      { id: "m_irr_p2_3", sentenceNl: "Zij is na het zware werk nog uren wakker ___.", answer: "gebleven" },
+      { id: "m_irr_p2_4", sentenceNl: "Hij heeft zich altijd netjes aan zijn belofte ___.", answer: "gehouden" },
+      { id: "m_irr_p2_5", sentenceNl: "Mijn favoriete koffiekopje is helaas van tafel ___.", answer: "gebroken" }
+    ],
+    distractors: ["gebracht", "geworden"],
+    explanationTr: "Düzensiz fiil ortaçları: 'beginnen' -> 'begonnen' (zijn ile), 'verzenden' -> 'verzonden' (hebben ile), 'blijven' -> 'gebleven' (zijn ile), 'houden' -> 'gehouden' (hebben ile), 'breken' -> 'gebroken' (zijn ile).",
+    explanationEn: "Irregular participles: 'beginnen' -> 'begonnen' (with zijn), 'verzenden' -> 'verzonden', 'blijven' -> 'gebleven' (with zijn), 'houden' -> 'gehouden', 'breken' -> 'gebroken' (with zijn)."
+  },
+  {
     id: "q_verb_pres_1",
     type: "multiple_choice",
     tags: ["verbs_present"],
