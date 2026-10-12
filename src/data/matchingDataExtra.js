@@ -6,8 +6,6 @@ export const matchingDataExtra = [
     "id": "q_match_extra_001",
     "type": "matching",
     "tags": [
-      "ch1",
-      "ch2",
       "summary_ch1",
       "summary_ch2",
       "family",
@@ -54,8 +52,6 @@ export const matchingDataExtra = [
     "id": "q_match_extra_002",
     "type": "matching",
     "tags": [
-      "ch1",
-      "ch3",
       "summary_ch1",
       "summary_ch3",
       "bestellen",
@@ -102,8 +98,6 @@ export const matchingDataExtra = [
     "id": "q_match_extra_003",
     "type": "matching",
     "tags": [
-      "ch2",
-      "ch4",
       "summary_ch2",
       "summary_ch4",
       "de_klok",
@@ -150,9 +144,9 @@ export const matchingDataExtra = [
     "id": "q_match_extra_004",
     "type": "matching",
     "tags": [
-      "ch1",
-      "ch2",
-      "ch4",
+      "summary_ch1",
+      "summary_ch2",
+      "summary_ch4",
       "verbs_present",
       "word_order"
     ],
@@ -197,9 +191,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_005",
     "type": "matching",
     "tags": [
-      "ch2",
-      "ch3",
       "summary_ch2",
+      "summary_ch3",
       "possessive_pronouns",
       "articles"
     ],
@@ -244,8 +237,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_006",
     "type": "matching",
     "tags": [
-      "ch3",
-      "ch4",
+      "summary_ch3",
+      "summary_ch4",
       "zullen",
       "canteen",
       "cafe_phrases"
@@ -291,9 +284,9 @@ export const matchingDataExtra = [
     "id": "q_match_extra_007",
     "type": "matching",
     "tags": [
-      "ch1",
-      "ch3",
-      "ch4",
+      "summary_ch1",
+      "summary_ch3",
+      "summary_ch4",
       "countries",
       "opening_hours"
     ],
@@ -338,8 +331,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_008",
     "type": "matching",
     "tags": [
-      "ch2",
-      "ch4",
+      "summary_ch2",
+      "summary_ch4",
       "appearance",
       "emotions",
       "adjectives"
@@ -385,8 +378,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_009",
     "type": "matching",
     "tags": [
-      "ch2",
-      "ch4",
+      "summary_ch2",
+      "summary_ch4",
       "routine",
       "afspraak",
       "de_klok"
@@ -432,8 +425,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_010",
     "type": "matching",
     "tags": [
-      "ch3",
-      "ch5",
+      "summary_ch3",
+      "summary_ch5",
       "market",
       "bestellen",
       "afrekenen"
@@ -479,8 +472,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_011",
     "type": "matching",
     "tags": [
-      "ch4",
-      "ch6",
+      "summary_ch4",
+      "summary_ch6",
       "restaurant",
       "afspraak",
       "food"
@@ -526,8 +519,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_012",
     "type": "matching",
     "tags": [
-      "ch5",
-      "ch6",
+      "summary_ch5",
+      "summary_ch6",
       "restaurant",
       "market",
       "opinions"
@@ -573,8 +566,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_013",
     "type": "matching",
     "tags": [
-      "ch5",
-      "ch7",
+      "summary_ch5",
+      "summary_ch7",
       "pluralis",
       "groente_fruit",
       "clothing"
@@ -620,8 +613,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_014",
     "type": "matching",
     "tags": [
-      "ch6",
-      "ch7",
+      "summary_ch6",
+      "summary_ch7",
       "modal_verbs",
       "clothing",
       "shopping"
@@ -667,8 +660,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_015",
     "type": "matching",
     "tags": [
-      "ch5",
-      "ch7",
+      "summary_ch5",
+      "summary_ch7",
       "colors",
       "clothing",
       "adjectives"
@@ -714,8 +707,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_016",
     "type": "matching",
     "tags": [
-      "ch6",
-      "ch8",
+      "summary_ch6",
+      "summary_ch8",
       "prepositions",
       "housing",
       "restaurant"
@@ -761,8 +754,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_017",
     "type": "matching",
     "tags": [
-      "ch7",
-      "ch8",
+      "summary_ch7",
+      "summary_ch8",
       "comparative_superlative",
       "housing",
       "adjectives"
@@ -808,10 +801,9 @@ export const matchingDataExtra = [
     "id": "q_match_extra_018",
     "type": "matching",
     "tags": [
-      "ch8",
+      "summary_ch8",
       "negation",
-      "housing",
-      "summary_ch8"
+      "housing"
     ],
     "questionNl": "Kies het juiste ontkenningswoord of woningtype:",
     "instructionTr": "Olumsuzluk ('geen' / 'niet') ve konut terimlerini eşleştirin.",
@@ -854,8 +846,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_019",
     "type": "matching",
     "tags": [
-      "ch7",
-      "ch9",
+      "summary_ch7",
+      "summary_ch9",
       "health",
       "clothing",
       "body_parts"
@@ -901,8 +893,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_020",
     "type": "matching",
     "tags": [
-      "ch8",
-      "ch9",
+      "summary_ch8",
+      "summary_ch9",
       "health",
       "advice",
       "modal_verbs"
@@ -948,8 +940,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_021",
     "type": "matching",
     "tags": [
-      "ch8",
-      "ch10",
+      "summary_ch8",
+      "summary_ch10",
       "bike",
       "bike_repair",
       "traffic"
@@ -995,8 +987,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_022",
     "type": "matching",
     "tags": [
-      "ch9",
-      "ch10",
+      "summary_ch9",
+      "summary_ch10",
       "bedoelen_betekenen",
       "conversation"
     ],
@@ -1041,8 +1033,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_023",
     "type": "matching",
     "tags": [
-      "ch10",
-      "ch11",
+      "summary_ch10",
+      "summary_ch11",
       "past_tenses",
       "birthdays",
       "social"
@@ -1088,8 +1080,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_024",
     "type": "matching",
     "tags": [
-      "ch10",
-      "ch11",
+      "summary_ch10",
+      "summary_ch11",
       "modal_verbs",
       "past_tenses"
     ],
@@ -1134,9 +1126,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_025",
     "type": "matching",
     "tags": [
-      "ch11",
-      "reflexive_verbs",
       "summary_ch11",
+      "reflexive_verbs",
       "grammar"
     ],
     "questionNl": "Kies het juiste wederkerend voornaamwoord of betrekkelijk woord:",
@@ -1180,8 +1171,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_026",
     "type": "matching",
     "tags": [
-      "ch10",
-      "ch12",
+      "summary_ch10",
+      "summary_ch12",
       "directions",
       "separable_verbs",
       "traffic"
@@ -1227,8 +1218,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_027",
     "type": "matching",
     "tags": [
-      "ch11",
-      "ch13",
+      "summary_ch11",
+      "summary_ch13",
       "reactions",
       "opinions",
       "conversation"
@@ -1274,8 +1265,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_028",
     "type": "matching",
     "tags": [
-      "ch12",
-      "ch13",
+      "summary_ch12",
+      "summary_ch13",
       "zullen",
       "visiting_friends",
       "social"
@@ -1321,8 +1312,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_029",
     "type": "matching",
     "tags": [
-      "ch11",
-      "ch14",
+      "summary_ch11",
+      "summary_ch14",
       "sports",
       "indirect_questions",
       "routine"
@@ -1368,8 +1359,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_030",
     "type": "matching",
     "tags": [
-      "ch13",
-      "ch14",
+      "summary_ch13",
+      "summary_ch14",
       "future_zullen",
       "weather",
       "probability"
@@ -1415,8 +1406,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_031",
     "type": "matching",
     "tags": [
-      "ch12",
-      "ch15",
+      "summary_ch12",
+      "summary_ch15",
       "train",
       "traffic",
       "ov_chipkaart"
@@ -1462,8 +1453,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_032",
     "type": "matching",
     "tags": [
-      "ch14",
-      "ch15",
+      "summary_ch14",
+      "summary_ch15",
       "demonstrative_pronouns",
       "shopping",
       "grammar"
@@ -1509,8 +1500,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_033",
     "type": "matching",
     "tags": [
-      "ch13",
-      "ch16",
+      "summary_ch13",
+      "summary_ch16",
       "cinema",
       "tickets",
       "culture"
@@ -1556,8 +1547,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_034",
     "type": "matching",
     "tags": [
-      "ch15",
-      "ch16",
+      "summary_ch15",
+      "summary_ch16",
       "conjunctions_independent",
       "word_order",
       "grammar"
@@ -1603,8 +1594,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_035",
     "type": "matching",
     "tags": [
-      "ch15",
-      "ch17",
+      "summary_ch15",
+      "summary_ch17",
       "continuous",
       "aan_het",
       "grammar"
@@ -1650,8 +1641,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_036",
     "type": "matching",
     "tags": [
-      "ch15",
-      "ch17",
+      "summary_ch15",
+      "summary_ch17",
       "er_daar",
       "pronouns",
       "grammar"
@@ -1697,8 +1688,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_037",
     "type": "matching",
     "tags": [
-      "ch16",
-      "ch18",
+      "summary_ch16",
+      "summary_ch18",
       "conjunctions_subclauses",
       "word_order",
       "grammar"
@@ -1744,11 +1735,10 @@ export const matchingDataExtra = [
     "id": "q_match_extra_038",
     "type": "matching",
     "tags": [
-      "ch17",
-      "ch18",
+      "summary_ch17",
+      "summary_ch18",
       "police",
-      "theft",
-      "summary_ch18"
+      "theft"
     ],
     "questionNl": "Kies het juiste woord voor een aangifte bij de politie:",
     "instructionTr": "Polise suç duyurusunda bulunma (aangifte doen) kelimelerini eşleştirin.",
@@ -1791,8 +1781,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_039",
     "type": "matching",
     "tags": [
-      "ch14",
-      "ch18",
+      "summary_ch14",
+      "summary_ch18",
       "police",
       "appearance",
       "clothing"
@@ -1838,8 +1828,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_040",
     "type": "matching",
     "tags": [
-      "ch15",
-      "ch18",
+      "summary_ch15",
+      "summary_ch18",
       "train",
       "police",
       "lost_found"
@@ -1885,9 +1875,9 @@ export const matchingDataExtra = [
     "id": "q_match_extra_041",
     "type": "matching",
     "tags": [
-      "ch1",
-      "ch2",
-      "ch4",
+      "summary_ch1",
+      "summary_ch2",
+      "summary_ch4",
       "work",
       "routine"
     ],
@@ -1932,8 +1922,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_042",
     "type": "matching",
     "tags": [
-      "ch2",
-      "ch5",
+      "summary_ch2",
+      "summary_ch5",
       "food",
       "family",
       "cooking"
@@ -1979,8 +1969,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_043",
     "type": "matching",
     "tags": [
-      "ch3",
-      "ch6",
+      "summary_ch3",
+      "summary_ch6",
       "cafe_phrases",
       "restaurant",
       "social"
@@ -2026,8 +2016,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_044",
     "type": "matching",
     "tags": [
-      "ch4",
-      "ch7",
+      "summary_ch4",
+      "summary_ch7",
       "clothing",
       "shopping",
       "afspraak"
@@ -2073,8 +2063,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_045",
     "type": "matching",
     "tags": [
-      "ch5",
-      "ch8",
+      "summary_ch5",
+      "summary_ch8",
       "housing",
       "furniture",
       "adjectives"
@@ -2120,8 +2110,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_046",
     "type": "matching",
     "tags": [
-      "ch6",
-      "ch9",
+      "summary_ch6",
+      "summary_ch9",
       "health",
       "food",
       "advice"
@@ -2167,8 +2157,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_047",
     "type": "matching",
     "tags": [
-      "ch7",
-      "ch10",
+      "summary_ch7",
+      "summary_ch10",
       "bike",
       "clothing",
       "weather"
@@ -2214,8 +2204,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_048",
     "type": "matching",
     "tags": [
-      "ch8",
-      "ch11",
+      "summary_ch8",
+      "summary_ch11",
       "housing",
       "social",
       "birthdays"
@@ -2261,8 +2251,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_049",
     "type": "matching",
     "tags": [
-      "ch9",
-      "ch12",
+      "summary_ch9",
+      "summary_ch12",
       "directions",
       "health",
       "traffic"
@@ -2308,8 +2298,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_050",
     "type": "matching",
     "tags": [
-      "ch10",
-      "ch13",
+      "summary_ch10",
+      "summary_ch13",
       "bike",
       "weather",
       "small_talk"
@@ -2355,8 +2345,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_051",
     "type": "matching",
     "tags": [
-      "ch11",
-      "ch14",
+      "summary_ch11",
+      "summary_ch14",
       "sports",
       "reflexive_verbs",
       "routine"
@@ -2402,8 +2392,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_052",
     "type": "matching",
     "tags": [
-      "ch12",
-      "ch15",
+      "summary_ch12",
+      "summary_ch15",
       "train",
       "separable_verbs",
       "culture"
@@ -2449,8 +2439,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_053",
     "type": "matching",
     "tags": [
-      "ch13",
-      "ch16",
+      "summary_ch13",
+      "summary_ch16",
       "cinema",
       "opinions",
       "culture"
@@ -2496,8 +2486,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_054",
     "type": "matching",
     "tags": [
-      "ch14",
-      "ch17",
+      "summary_ch14",
+      "summary_ch17",
       "daily_routine",
       "routine",
       "sports"
@@ -2543,8 +2533,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_055",
     "type": "matching",
     "tags": [
-      "ch15",
-      "ch18",
+      "summary_ch15",
+      "summary_ch18",
       "police",
       "theft",
       "train"
@@ -2590,8 +2580,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_056",
     "type": "matching",
     "tags": [
-      "ch16",
-      "ch18",
+      "summary_ch16",
+      "summary_ch18",
       "conjunctions_subclauses",
       "word_order",
       "past_tenses"
@@ -2637,8 +2627,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_057",
     "type": "matching",
     "tags": [
-      "ch14",
-      "ch18",
+      "summary_ch14",
+      "summary_ch18",
       "advice",
       "indirect_questions",
       "modal_verbs"
@@ -2684,8 +2674,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_058",
     "type": "matching",
     "tags": [
-      "ch13",
-      "ch17",
+      "summary_ch13",
+      "summary_ch17",
       "er_daar",
       "prepositions",
       "grammar"
@@ -2731,8 +2721,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_059",
     "type": "matching",
     "tags": [
-      "ch11",
-      "ch15",
+      "summary_ch11",
+      "summary_ch15",
       "train",
       "social",
       "traffic"
@@ -2778,8 +2768,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_060",
     "type": "matching",
     "tags": [
-      "ch12",
-      "ch16",
+      "summary_ch12",
+      "summary_ch16",
       "culture",
       "directions",
       "cinema"
@@ -2825,8 +2815,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_061",
     "type": "matching",
     "tags": [
-      "ch1",
-      "ch5",
+      "summary_ch1",
+      "summary_ch5",
       "market",
       "groente_fruit",
       "telwoorden"
@@ -2872,8 +2862,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_062",
     "type": "matching",
     "tags": [
-      "ch2",
-      "ch6",
+      "summary_ch2",
+      "summary_ch6",
       "restaurant",
       "food",
       "family"
@@ -2919,8 +2909,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_063",
     "type": "matching",
     "tags": [
-      "ch3",
-      "ch7",
+      "summary_ch3",
+      "summary_ch7",
       "shopping",
       "clothing",
       "prices"
@@ -2966,8 +2956,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_064",
     "type": "matching",
     "tags": [
-      "ch4",
-      "ch8",
+      "summary_ch4",
+      "summary_ch8",
       "housing",
       "afspraak",
       "adjectives"
@@ -3013,8 +3003,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_065",
     "type": "matching",
     "tags": [
-      "ch5",
-      "ch9",
+      "summary_ch5",
+      "summary_ch9",
       "health",
       "body_parts",
       "hygiene"
@@ -3060,8 +3050,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_066",
     "type": "matching",
     "tags": [
-      "ch6",
-      "ch10",
+      "summary_ch6",
+      "summary_ch10",
       "bike",
       "traffic",
       "work"
@@ -3107,8 +3097,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_067",
     "type": "matching",
     "tags": [
-      "ch7",
-      "ch11",
+      "summary_ch7",
+      "summary_ch11",
       "birthdays",
       "social",
       "clothing"
@@ -3154,8 +3144,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_068",
     "type": "matching",
     "tags": [
-      "ch8",
-      "ch12",
+      "summary_ch8",
+      "summary_ch12",
       "directions",
       "housing",
       "traffic"
@@ -3201,8 +3191,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_069",
     "type": "matching",
     "tags": [
-      "ch9",
-      "ch13",
+      "summary_ch9",
+      "summary_ch13",
       "health",
       "visiting_friends",
       "social"
@@ -3248,8 +3238,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_070",
     "type": "matching",
     "tags": [
-      "ch10",
-      "ch14",
+      "summary_ch10",
+      "summary_ch14",
       "sports",
       "routine",
       "adjectives"
@@ -3295,8 +3285,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_071",
     "type": "matching",
     "tags": [
-      "ch16",
-      "ch18",
+      "summary_ch16",
+      "summary_ch18",
       "conjunctions_independent",
       "conjunctions_subclauses",
       "word_order"
@@ -3342,8 +3332,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_072",
     "type": "matching",
     "tags": [
-      "ch17",
-      "ch18",
+      "summary_ch17",
+      "summary_ch18",
       "police",
       "daily_routine",
       "continuous"
@@ -3389,8 +3379,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_073",
     "type": "matching",
     "tags": [
-      "ch15",
-      "ch18",
+      "summary_ch15",
+      "summary_ch18",
       "train",
       "police",
       "lost_found"
@@ -3436,8 +3426,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_074",
     "type": "matching",
     "tags": [
-      "ch16",
-      "ch18",
+      "summary_ch16",
+      "summary_ch18",
       "conjunctions_subclauses",
       "word_order",
       "grammar"
@@ -3483,8 +3473,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_075",
     "type": "matching",
     "tags": [
-      "ch17",
-      "ch18",
+      "summary_ch17",
+      "summary_ch18",
       "prepositions",
       "housing",
       "police"
@@ -3530,8 +3520,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_076",
     "type": "matching",
     "tags": [
-      "ch14",
-      "ch18",
+      "summary_ch14",
+      "summary_ch18",
       "sports",
       "police",
       "theft"
@@ -3577,8 +3567,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_077",
     "type": "matching",
     "tags": [
-      "ch16",
-      "ch18",
+      "summary_ch16",
+      "summary_ch18",
       "subordinate_clauses",
       "word_order",
       "grammar"
@@ -3624,8 +3614,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_078",
     "type": "matching",
     "tags": [
-      "ch15",
-      "ch18",
+      "summary_ch15",
+      "summary_ch18",
       "police",
       "advice",
       "safety"
@@ -3671,8 +3661,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_079",
     "type": "matching",
     "tags": [
-      "ch17",
-      "ch18",
+      "summary_ch17",
+      "summary_ch18",
       "conjunctions_subclauses",
       "daily_routine",
       "grammar"
@@ -3718,11 +3708,10 @@ export const matchingDataExtra = [
     "id": "q_match_extra_080",
     "type": "matching",
     "tags": [
-      "ch14",
-      "ch18",
+      "summary_ch14",
+      "summary_ch18",
       "police",
-      "indirect_questions",
-      "summary_ch18"
+      "indirect_questions"
     ],
     "questionNl": "Kies het juiste woord voor de afronding van een politiemelding:",
     "instructionTr": "Polis ifade tutanağı ve işlemin tamamlanması terimlerini eşleştirin.",
@@ -3765,8 +3754,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_081",
     "type": "matching",
     "tags": [
-      "ch1",
-      "ch2",
+      "summary_ch1",
+      "summary_ch2",
       "irregular_verbs",
       "verbs_present",
       "grammar"
@@ -3812,8 +3801,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_082",
     "type": "matching",
     "tags": [
-      "ch3",
-      "ch6",
+      "summary_ch3",
+      "summary_ch6",
       "irregular_verbs",
       "past_tenses",
       "food"
@@ -3859,8 +3848,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_083",
     "type": "matching",
     "tags": [
-      "ch5",
-      "ch7",
+      "summary_ch5",
+      "summary_ch7",
       "adjectives",
       "comparatives",
       "adjectives_inflection"
@@ -3906,8 +3895,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_084",
     "type": "matching",
     "tags": [
-      "ch8",
-      "ch10",
+      "summary_ch8",
+      "summary_ch10",
       "irregular_verbs",
       "past_tenses",
       "grammar"
@@ -3953,8 +3942,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_085",
     "type": "matching",
     "tags": [
-      "ch11",
-      "ch12",
+      "summary_ch11",
+      "summary_ch12",
       "separable_verbs",
       "reflexive_verbs",
       "routine"
@@ -4000,8 +3989,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_086",
     "type": "matching",
     "tags": [
-      "ch10",
-      "ch14",
+      "summary_ch10",
+      "summary_ch14",
       "irregular_verbs",
       "past_tenses",
       "grammar"
@@ -4047,8 +4036,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_087",
     "type": "matching",
     "tags": [
-      "ch13",
-      "ch16",
+      "summary_ch13",
+      "summary_ch16",
       "prepositions",
       "verbs",
       "grammar"
@@ -4094,8 +4083,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_088",
     "type": "matching",
     "tags": [
-      "ch16",
-      "ch18",
+      "summary_ch16",
+      "summary_ch18",
       "conjunctions_subclauses",
       "word_order",
       "grammar"
@@ -4141,8 +4130,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_089",
     "type": "matching",
     "tags": [
-      "ch13",
-      "ch17",
+      "summary_ch13",
+      "summary_ch17",
       "continuous",
       "grammar",
       "verbs"
@@ -4188,8 +4177,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_090",
     "type": "matching",
     "tags": [
-      "ch15",
-      "ch18",
+      "summary_ch15",
+      "summary_ch18",
       "irregular_verbs",
       "past_tenses",
       "grammar"
@@ -4235,8 +4224,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_091",
     "type": "matching",
     "tags": [
-      "ch1",
-      "ch4",
+      "summary_ch1",
+      "summary_ch4",
       "daily_routine",
       "afspraak",
       "canteen"
@@ -4282,8 +4271,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_092",
     "type": "matching",
     "tags": [
-      "ch3",
-      "ch6",
+      "summary_ch3",
+      "summary_ch6",
       "restaurant",
       "canteen",
       "bestellen"
@@ -4329,8 +4318,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_093",
     "type": "matching",
     "tags": [
-      "ch5",
-      "ch8",
+      "summary_ch5",
+      "summary_ch8",
       "housing",
       "colors",
       "shopping"
@@ -4376,8 +4365,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_094",
     "type": "matching",
     "tags": [
-      "ch8",
-      "ch10",
+      "summary_ch8",
+      "summary_ch10",
       "bike",
       "health",
       "weather"
@@ -4423,8 +4412,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_095",
     "type": "matching",
     "tags": [
-      "ch9",
-      "ch13",
+      "summary_ch9",
+      "summary_ch13",
       "health",
       "visiting_friends",
       "advice"
@@ -4470,8 +4459,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_096",
     "type": "matching",
     "tags": [
-      "ch10",
-      "ch14",
+      "summary_ch10",
+      "summary_ch14",
       "sports",
       "bike",
       "future_zullen"
@@ -4517,8 +4506,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_097",
     "type": "matching",
     "tags": [
-      "ch11",
-      "ch15",
+      "summary_ch11",
+      "summary_ch15",
       "birthdays",
       "train",
       "travel"
@@ -4564,8 +4553,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_098",
     "type": "matching",
     "tags": [
-      "ch13",
-      "ch17",
+      "summary_ch13",
+      "summary_ch17",
       "cinema",
       "culture",
       "living"
@@ -4611,8 +4600,8 @@ export const matchingDataExtra = [
     "id": "q_match_extra_099",
     "type": "matching",
     "tags": [
-      "ch15",
-      "ch18",
+      "summary_ch15",
+      "summary_ch18",
       "police",
       "emergency",
       "traffic"
@@ -4658,12 +4647,11 @@ export const matchingDataExtra = [
     "id": "q_match_extra_100",
     "type": "matching",
     "tags": [
-      "ch15",
-      "ch18",
+      "summary_ch15",
+      "summary_ch18",
       "train",
       "police",
-      "subordinate_clauses",
-      "summary_ch18"
+      "subordinate_clauses"
     ],
     "questionNl": "Kies het juiste woord voor de afronding van alle thema's (reis, veiligheid en maatschappij):",
     "instructionTr": "Tüm temaların (seyahat, emniyet, resmi işlemler ve dil kuralları) büyük sentezini eşleştirin.",

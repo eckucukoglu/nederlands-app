@@ -61,7 +61,7 @@ export const quizQuestions = [
   {
     id: "q_matching_ch8_housing",
     type: "matching",
-    tags: ["summary_ch8", "ch8", "housing", "makelaar"],
+    tags: ["summary_ch8", "housing", "makelaar"],
     questionNl: "Kies het juiste woord over de woning:",
     instructionTr: "Ev kiralama ve konut ile ilgili cümleleri doğru kelimelerle tamamlayın.",
     instructionEn: "Complete the housing and apartment sentences with the correct words.",
@@ -97,7 +97,7 @@ export const quizQuestions = [
   {
     id: "q_match_ch1_3_basics",
     type: "matching",
-    tags: ["ch1", "ch2", "ch3", "summary_ch1", "summary_ch2", "summary_ch3", "verbs_present", "kennismaking"],
+    tags: ["summary_ch1", "summary_ch2", "summary_ch3", "verbs_present", "kennismaking"],
     questionNl: "Kies het juiste woord voor elke zin (Hoofdstuk 1-3):",
     instructionTr: "Cümlelerdeki boşlukları tanışma, kafe ve zaman kalıplarına göre doğru kelimelerle doldurun.",
     instructionEn: "Fill in the blanks with the correct words based on introductions, cafe, and time expressions.",
@@ -115,7 +115,7 @@ export const quizQuestions = [
   {
     id: "q_match_ch1_3_grammar",
     type: "matching",
-    tags: ["ch1", "ch2", "ch3", "word_order", "inversion", "negation", "verbs_present"],
+    tags: ["summary_ch1", "summary_ch2", "summary_ch3", "word_order", "inversion", "negation", "verbs_present"],
     questionNl: "Vul het juiste woord in voor zinsbouw en ontkenning:",
     instructionTr: "Cümle dizilimi (inversie), soru ve olumsuzluk (niet/geen) kurallarına göre doğru kelimeleri eşleştirin.",
     instructionEn: "Match the correct words according to word order (inversion), questions, and negation rules.",
@@ -133,7 +133,7 @@ export const quizQuestions = [
   {
     id: "q_match_ch3_5_street_market",
     type: "matching",
-    tags: ["ch3", "ch4", "ch5", "summary_ch4", "summary_ch5", "directions", "adjectives"],
+    tags: ["summary_ch3", "summary_ch4", "summary_ch5", "directions", "adjectives"],
     questionNl: "Kies het juiste woord voor de stad en de markt (Hoofdstuk 3-5):",
     instructionTr: "Şehirde yön tarifi ve pazar alışverişiyle ilgili cümleleri doğru kelimelerle tamamlayın.",
     instructionEn: "Complete the sentences about city directions and market shopping with the correct words.",
@@ -151,7 +151,7 @@ export const quizQuestions = [
   {
     id: "q_match_ch4_6_city_food",
     type: "matching",
-    tags: ["ch4", "ch5", "ch6", "summary_ch4", "summary_ch6", "modal_verbs", "restaurant"],
+    tags: ["summary_ch4", "summary_ch5", "summary_ch6", "modal_verbs", "restaurant"],
     questionNl: "Kies het juiste woord voor vervoer en restaurant (Hoofdstuk 4-6):",
     instructionTr: "Ulaşım, yol ve restoran siparişiyle ilgili cümleleri uygun kelimelerle eşleştirin.",
     instructionEn: "Match the sentences about transportation, traffic, and dining with the correct words.",
@@ -169,7 +169,7 @@ export const quizQuestions = [
   {
     id: "q_match_ch6_8_clothing_housing",
     type: "matching",
-    tags: ["ch6", "ch7", "ch8", "summary_ch7", "summary_ch8", "clothing", "housing"],
+    tags: ["summary_ch6", "summary_ch7", "summary_ch8", "clothing", "housing"],
     questionNl: "Kies het juiste woord voor kleding en wonen (Hoofdstuk 6-8):",
     instructionTr: "Kıyafet alışverişi, karşılaştırmalar ve ev kiralama cümlelerini uygun kelimelerle tamamlayın.",
     instructionEn: "Complete the sentences about clothing, comparisons, and housing with the appropriate words.",
@@ -187,12 +187,12 @@ export const quizQuestions = [
   {
     id: "q_match_ch6_8_modals_grammar",
     type: "matching",
-    tags: ["ch6", "ch7", "ch8", "modal_verbs", "prepositions"],
+    tags: ["summary_ch6", "summary_ch7", "summary_ch8", "modal_verbs", "prepositions"],
     questionNl: "Vul het juiste modale werkwoord of voorzetsel in:",
     instructionTr: "Modale fiiller (mogen, moeten, kunnen) ve yer edatları (onder, aan, op) ile cümleleri eşleştirin.",
     instructionEn: "Match the sentences with the correct modal verbs and prepositions of place.",
     items: [
-      { id: "m_6_8_g1", sentenceNl: "Men ___ hier niet parkeren voor de uitrit.", answer: "mag" },
+      { id: "m_6_8_g1", sentenceNl: "Men ___ niet parkeren voor de uitrit.", answer: "mag" },
       { id: "m_6_8_g2", sentenceNl: "De sloffen staan netjes ___ het bed.", answer: "onder" },
       { id: "m_6_8_g3", sentenceNl: "Wij ___ vanavond de verhuisdozen inpakken.", answer: "moeten" },
       { id: "m_6_8_g4", sentenceNl: "De grote spiegel hangt ___ de muur in de gang.", answer: "aan" },
@@ -205,7 +205,7 @@ export const quizQuestions = [
   {
     id: "q_match_ch8_10_health_bike",
     type: "matching",
-    tags: ["ch8", "ch9", "ch10", "summary_ch9", "summary_ch10", "health", "bike_repair"],
+    tags: ["summary_ch8", "summary_ch9", "summary_ch10", "health", "bike_repair"],
     questionNl: "Kies het juiste woord voor gezondheid en fietsreparatie (Hoofdstuk 8-10):",
     instructionTr: "Doktor randevusu, sağlık şikayetleri ve bisiklet tamiriyle ilgili kelimeleri eşleştirin.",
     instructionEn: "Match the words related to doctor visits, symptoms, and bicycle repair.",
@@ -223,7 +223,7 @@ export const quizQuestions = [
   {
     id: "q_match_ch8_10_reflexive_er",
     type: "matching",
-    tags: ["ch8", "ch9", "ch10", "reflexive_verbs", "er_structures"],
+    tags: ["summary_ch8", "summary_ch9", "summary_ch10", "reflexive_verbs", "er_structures"],
     questionNl: "Vul de juiste vorm van het reflexief pronomen of 'er' in:",
     instructionTr: "Dönüşlü zamirler (zich, me, u) ve 'er' yapısı kurallarına uygun kelimeleri seçin.",
     instructionEn: "Select the correct reflexive pronouns and 'er' structures for each sentence.",
@@ -241,7 +241,7 @@ export const quizQuestions = [
   {
     id: "q_match_ch10_12_birthday_events",
     type: "matching",
-    tags: ["ch10", "ch11", "ch12", "summary_ch11", "summary_ch12", "perfectum", "events"],
+    tags: ["summary_ch10", "summary_ch11", "summary_ch12", "perfectum", "events"],
     questionNl: "Kies het juiste woord voor feesten en vrije tijd (Hoofdstuk 10-12):",
     instructionTr: "Doğum günü kutlaması, etkinlikler ve geçmiş zaman cümlelerini doğru kelimelerle tamamlayın.",
     instructionEn: "Complete the sentences about birthday parties, events, and past tense with the correct words.",
@@ -259,7 +259,7 @@ export const quizQuestions = [
   {
     id: "q_match_ch11_13_perfectum_irreg",
     type: "matching",
-    tags: ["ch11", "ch12", "ch13", "irregular_verbs", "perfectum"],
+    tags: ["summary_ch11", "summary_ch12", "summary_ch13", "irregular_verbs", "perfectum"],
     questionNl: "Kies het juiste onregelmatige voltooid deelwoord (Perfectum):",
     instructionTr: "Düzensiz fiillerin 3. hallerini (voltooid deelwoord) uygun cümlelerle eşleştirin.",
     instructionEn: "Match the irregular past participles (perfectum) with the appropriate sentences.",
@@ -277,7 +277,7 @@ export const quizQuestions = [
   {
     id: "q_match_ch12_14_friends_sports",
     type: "matching",
-    tags: ["ch12", "ch13", "ch14", "summary_ch13", "summary_ch14", "separable_verbs", "conjunctions"],
+    tags: ["summary_ch12", "summary_ch13", "summary_ch14", "separable_verbs", "conjunctions"],
     questionNl: "Kies het juiste voegwoord of sportwoord (Hoofdstuk 12-14):",
     instructionTr: "Bağlaçlar (want, omdat) ve spor/arkadaşlık kelimelerini doğru cümlelerle eşleştirin.",
     instructionEn: "Match the conjunctions (want, omdat) and sports/friendship vocabulary with the sentences.",
@@ -295,7 +295,7 @@ export const quizQuestions = [
   {
     id: "q_match_ch13_15_separable_transport",
     type: "matching",
-    tags: ["ch13", "ch14", "ch15", "separable_verbs", "train_travel"],
+    tags: ["summary_ch13", "summary_ch14", "summary_ch15", "separable_verbs", "train_travel"],
     questionNl: "Kies het juiste woord voor treinreizen en scheidbare werkwoorden:",
     instructionTr: "Tren yolculuğu ve ayrılabilen fiiller (scheidbare werkwoorden) kalıplarını eşleştirin.",
     instructionEn: "Match the train travel expressions and separable verb particles.",
@@ -313,7 +313,7 @@ export const quizQuestions = [
   {
     id: "q_match_ch15_17_relative_cinema",
     type: "matching",
-    tags: ["ch15", "ch16", "ch17", "summary_ch15", "summary_ch16", "relative_clauses", "cinema"],
+    tags: ["summary_ch15", "summary_ch16", "summary_ch17", "relative_clauses", "cinema"],
     questionNl: "Kies het juiste betrekkelijk voornaamwoord of bioscoopwoord (Hoofdstuk 15-17):",
     instructionTr: "İlgi zamirleri (die/dat) ve sinema/film kültürü kelimelerini uygun boşluklara yerleştirin.",
     instructionEn: "Match the relative pronouns (die/dat) and cinema vocabulary with the blanks.",
@@ -331,7 +331,7 @@ export const quizQuestions = [
   {
     id: "q_match_ch15_18_subordinate_clauses",
     type: "matching",
-    tags: ["ch14", "ch15", "ch16", "ch17", "ch18", "subordinate_clauses", "word_order"],
+    tags: ["summary_ch14", "summary_ch15", "summary_ch16", "summary_ch17", "summary_ch18", "subordinate_clauses", "word_order"],
     questionNl: "Kies het juiste voegwoord voor de bijzin (Subordinate Clauses):",
     instructionTr: "Yan cümle (bijzin) bağlaçlarını (dat, omdat, terwijl, als, toen) anlam ve kurallara göre eşleştirin.",
     instructionEn: "Match the subordinate clause conjunctions (dat, omdat, terwijl, als, toen) according to grammar and context.",
@@ -349,7 +349,7 @@ export const quizQuestions = [
   {
     id: "q_match_ch16_18_home_police",
     type: "matching",
-    tags: ["ch16", "ch17", "ch18", "summary_ch17", "summary_ch18", "police", "household"],
+    tags: ["summary_ch16", "summary_ch17", "summary_ch18", "police", "household"],
     questionNl: "Kies het juiste woord voor huishouden en politiebureau (Hoofdstuk 16-18):",
     instructionTr: "Ev işleri ve polis merkezinde şikayet/tutanak bildirme kelimelerini doğru cümlelerle eşleştirin.",
     instructionEn: "Match the household chores and police report vocabulary with the sentences.",
@@ -367,7 +367,7 @@ export const quizQuestions = [
   {
     id: "q_match_ch16_18_passive_imperfectum",
     type: "matching",
-    tags: ["ch16", "ch17", "ch18", "passive_voice", "imperfectum", "grammar"],
+    tags: ["summary_ch16", "summary_ch17", "summary_ch18", "passive_voice", "imperfectum", "grammar"],
     questionNl: "Vul de juiste passieve of verleden tijd vorm in (Passief & Imperfectum):",
     instructionTr: "Edilgen çatı (passief: worden/zijn) ve geçmiş zaman (imperfectum) fiillerini cümlelerle eşleştirin.",
     instructionEn: "Match the passive voice (worden/zijn) and past simple (imperfectum) verb forms.",
@@ -385,7 +385,7 @@ export const quizQuestions = [
   {
     id: "q_match_irreg_verbs_past_1",
     type: "matching",
-    tags: ["irregular_verbs", "imperfectum", "ch2", "ch3", "ch4"],
+    tags: ["irregular_verbs", "imperfectum", "summary_ch2", "summary_ch3", "summary_ch4"],
     questionNl: "Kies de juiste vorm van het imperfectum (Onregelmatige werkwoorden):",
     instructionTr: "En sık kullanılan düzensiz fiillerin hikaye geçmiş zaman (imperfectum) hallerini eşleştirin.",
     instructionEn: "Match the past simple (imperfectum) forms of the most common irregular verbs.",
@@ -403,7 +403,7 @@ export const quizQuestions = [
   {
     id: "q_match_irreg_verbs_perf_2",
     type: "matching",
-    tags: ["irregular_verbs", "perfectum", "ch10", "ch11", "ch12"],
+    tags: ["irregular_verbs", "perfectum", "summary_ch10", "summary_ch11", "summary_ch12"],
     questionNl: "Kies het juiste voltooid deelwoord (Onregelmatige werkwoorden):",
     instructionTr: "Düzensiz fiillerin geçmiş zaman ortaçlarını (voltooid deelwoord) uygun cümlelere yerleştirin.",
     instructionEn: "Match the irregular past participles with the appropriate sentences.",
