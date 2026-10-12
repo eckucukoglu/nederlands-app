@@ -59,7 +59,7 @@ export const quizQuestions = [
   {
     id: "q_matching_ch8_housing",
     type: "matching",
-    tags: ["ch8", "housing", "makelaar"],
+    tags: ["summary_ch8", "ch8", "housing", "makelaar"],
     questionNl: "Kies het juiste woord over de woning:",
     instructionTr: "Ev kiralama ve konut ile ilgili cümleleri doğru kelimelerle tamamlayın.",
     instructionEn: "Complete the housing and apartment sentences with the correct words.",

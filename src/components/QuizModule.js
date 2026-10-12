@@ -20,6 +20,18 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
   const [quizHistory, setQuizHistory] = useState(() => JSON.parse(localStorage.getItem('quizHistory')) || {});
 
   const [activeFilter, setActiveFilter] = useState('all'); 
+  const [tagInput, setTagInput] = useState(tags && tags.length > 0 ? tags[0] : '');
+
+  // Tüm mevcut etiketlerin listesi (Datalist otomatik tamamlama için)
+  const allAvailableTags = useMemo(() => {
+    const tagSet = new Set();
+    quizQuestions.forEach(q => {
+      if (q.tags && Array.isArray(q.tags)) {
+        q.tags.forEach(t => tagSet.add(t));
+      }
+    });
+    return Array.from(tagSet).sort();
+  }, []);
   
   const [isFinished, setIsFinished] = useState(false);
   const [sessionScore, setSessionScore] = useState({ correct: 0, incorrect: 0, skipped: 0 });
@@ -188,7 +200,22 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
   };
 
   const handleTagClick = (clickedTag) => {
+    setTagInput(clickedTag);
     setActiveTags([clickedTag]);
+  };
+
+  const handleTagSubmit = (e) => {
+    if (e) e.preventDefault();
+    const cleanTag = tagInput.replace(/^#/, '').trim().toLowerCase();
+    if (!cleanTag) return;
+    const matchedTag = allAvailableTags.find(t => t.toLowerCase() === cleanTag) || cleanTag;
+    setTagInput(matchedTag);
+    setActiveTags([matchedTag]);
+  };
+
+  const handleClearTagFilter = () => {
+    setTagInput('');
+    setActiveTags(tags);
   };
 
   const toggleFilter = (filterType) => {
@@ -405,13 +432,16 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
           <p className="text-slate-400 text-sm mb-6">{isTr ? 'Bu kriterlere uygun soru bulunamadı.' : 'No questions found matching these criteria.'}</p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-3">
-            {activeFilter !== 'all' && (
+            {(activeFilter !== 'all' || activeTags.length > 0) && (
               <button 
-                onClick={() => setActiveFilter('all')} 
-                className="bg-rose-900/40 text-rose-300 px-5 py-2.5 rounded-xl border border-rose-800/50 hover:bg-rose-900/60 transition-colors font-bold"
+                onClick={() => {
+                  setActiveFilter('all');
+                  handleClearTagFilter();
+                }} 
+                className="bg-rose-900/40 text-rose-300 px-5 py-2.5 rounded-xl border border-rose-800/50 hover:bg-rose-900/60 transition-colors font-bold text-xs sm:text-sm"
               >
                 <i className="fa-solid fa-filter-circle-xmark mr-2"></i>
-                {isTr ? 'Filtreyi Kaldır' : 'Clear Filter'}
+                {isTr ? 'Filtreleri Temizle' : 'Clear Filters'}
               </button>
             )}
             <button onClick={onClose} className="bg-slate-800 text-white px-6 py-2.5 rounded-xl border border-slate-600 hover:bg-slate-700 transition-colors font-bold">
@@ -607,7 +637,7 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
               </span>
             </div>
             
-            <div className="flex bg-slate-950/60 p-0.5 rounded-lg border border-slate-700/80 gap-0.5">
+            <div className="flex items-center bg-slate-950/60 p-0.5 rounded-lg border border-slate-700/80 gap-1 flex-wrap sm:flex-nowrap">
               <button 
                 onClick={() => toggleFilter('weak')}
                 className={`text-[9px] sm:text-[10px] font-bold px-2 py-0.5 rounded transition-all flex items-center gap-1 ${
@@ -629,6 +659,53 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
               >
                 {isTr ? 'Çözülmeyenler' : 'Unseen'}
               </button>
+
+              <div className="h-3 w-[1px] bg-slate-700 mx-0.5 hidden sm:block"></div>
+
+              {/* Manuel Tag Giriş Alanı */}
+              <form onSubmit={handleTagSubmit} className="flex items-center gap-0.5">
+                <div className={`flex items-center bg-slate-900 rounded px-1.5 py-0.5 border transition-all ${
+                  activeTags.length > 0 && activeTags[0] === (tagInput.replace(/^#/, '').trim())
+                    ? 'border-indigo-500/80 ring-1 ring-indigo-500/30'
+                    : 'border-slate-700/70 focus-within:border-indigo-500/80'
+                }`}>
+                  <span className="text-[10px] text-indigo-400 font-bold mr-0.5 select-none">#</span>
+                  <input 
+                    type="text"
+                    list="quiz-tag-suggestions"
+                    value={tagInput}
+                    onChange={(e) => setTagInput(e.target.value)}
+                    placeholder={isTr ? "etiket..." : "tag..."}
+                    className="bg-transparent text-[9px] sm:text-[10px] text-slate-100 placeholder-slate-500 focus:outline-none w-16 sm:w-24 font-medium"
+                  />
+                  {tagInput && (
+                    <button 
+                      type="button" 
+                      onClick={handleClearTagFilter}
+                      className="text-slate-400 hover:text-rose-400 ml-0.5 p-0.5 text-[9px] cursor-pointer"
+                      title={isTr ? "Etiket filtresini temizle" : "Clear tag filter"}
+                    >
+                      <i className="fa-solid fa-xmark"></i>
+                    </button>
+                  )}
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={!tagInput.trim()}
+                  className="text-[9px] sm:text-[10px] font-bold px-1.5 py-0.5 rounded bg-indigo-950/60 text-indigo-300 border border-indigo-800/60 hover:bg-indigo-900 disabled:opacity-30 transition-all flex items-center cursor-pointer disabled:cursor-not-allowed"
+                  title={isTr ? "Bu etikete göre soruları filtrele" : "Filter by this tag"}
+                >
+                  <i className="fa-solid fa-magnifying-glass text-[8px]"></i>
+                </button>
+              </form>
+
+              {/* Datalist: Mevcut tüm etiketler */}
+              <datalist id="quiz-tag-suggestions">
+                {allAvailableTags.map(tag => (
+                  <option key={tag} value={tag} />
+                ))}
+              </datalist>
             </div>
           </div>
         </div>
@@ -647,7 +724,11 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
                     <button
                       key={tag}
                       onClick={() => handleTagClick(tag)}
-                      className="text-[10px] font-semibold bg-indigo-950/50 text-indigo-300 px-2 py-0.5 rounded-md border border-indigo-800/40 shadow-sm hover:bg-indigo-900 hover:text-white transition-all cursor-pointer"
+                      className={`text-[10px] font-semibold px-2 py-0.5 rounded-md border shadow-sm transition-all cursor-pointer ${
+                        activeTags.includes(tag)
+                          ? 'bg-indigo-900 border-indigo-500 text-white shadow-md'
+                          : 'bg-indigo-950/50 text-indigo-300 border border-indigo-800/40 hover:bg-indigo-900 hover:text-white'
+                      }`}
                       title={isTr ? `Bu etiketle ilgili sorulara geç: #${tag}` : `Filter by tag: #${tag}`}
                     >
                       #{tag}
