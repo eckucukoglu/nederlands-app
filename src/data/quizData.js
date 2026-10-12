@@ -1,6 +1,8 @@
 // src/data/quizData.js
+import { matchingDataExtra } from './matchingDataExtra';
 
 export const quizQuestions = [
+  ...matchingDataExtra,
   // --- EŞLEŞTİRME (MATCHING) SORULARI FORMATI (5 Cümle, 7 Kelimelik Havuz) ---
   {
     id: "q_matching_ch1_1",
