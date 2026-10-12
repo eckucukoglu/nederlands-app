@@ -1,46 +1,15 @@
 // src/components/FloatingFeedback.js
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { auth, submitFeedback, onAuthStateChanged } from '../firebase'; 
 
-export default function FloatingFeedback() {
+export default function FloatingFeedback({ isOpen, onClose }) {
   const { lang } = useLanguage();
   const isTr = lang === 'tr';
 
-  const [isOpen, setIsOpen] = useState(false);
   const [feedbackText, setFeedbackText] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [user, setUser] = useState(auth.currentUser);
-  
-  const calculateDefaultPos = () => {
-    if (typeof window === 'undefined') return { x: 12, y: 72 };
-    try {
-      const saved = localStorage.getItem('floatingFeedbackPos');
-      if (saved) {
-        const parsed = JSON.parse(saved);
-        if (typeof parsed.x === 'number' && typeof parsed.y === 'number') {
-          const boundedX = Math.min(Math.max(parsed.x, 10), window.innerWidth - 50);
-          const boundedY = Math.min(Math.max(parsed.y, 10), window.innerHeight - 50);
-          return { x: boundedX, y: boundedY };
-        }
-      }
-    } catch (e) {
-      console.error(e);
-    }
-
-    // İlk karşılaşmada varsayılan konum: Header altındaki bölüm/alt gezinme barının sol hizası
-    const header = document.querySelector('header');
-    if (header) {
-      const headerRect = header.getBoundingClientRect();
-      const targetY = Math.round(headerRect.bottom + 6);
-      return { x: 12, y: Math.max(10, targetY) };
-    }
-    return { x: 12, y: 72 };
-  };
-
-  const [pos, setPos] = useState(calculateDefaultPos);
-  const isDragging = useRef(false);
-  const dragStart = useRef(null);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -49,82 +18,7 @@ export default function FloatingFeedback() {
     return () => unsubscribe();
   }, []);
 
-  // İlk açılışta eğer daha önce taşınmamışsa, DOM header yerleşimi tamamlanınca tam hizala
-  useEffect(() => {
-    try {
-      const hasCustomPos = localStorage.getItem('floatingFeedbackPos');
-      if (!hasCustomPos) {
-        const alignDefaultPos = () => {
-          const header = document.querySelector('header');
-          if (header) {
-            const headerRect = header.getBoundingClientRect();
-            const targetY = Math.round(headerRect.bottom + 6);
-            setPos({ x: 12, y: Math.max(10, targetY) });
-          }
-        };
-        alignDefaultPos();
-        const timer = setTimeout(alignDefaultPos, 150);
-        return () => clearTimeout(timer);
-      }
-    } catch (e) {
-      console.error(e);
-    }
-  }, []);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setPos(p => {
-        let newX = p.x;
-        let newY = p.y;
-        if (newX > window.innerWidth - 50) newX = window.innerWidth - 50;
-        if (newY > window.innerHeight - 50) newY = window.innerHeight - 50;
-        return { x: newX, y: newY };
-      });
-    };
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  const handlePointerDown = (e) => {
-    if (e.target.setPointerCapture) {
-      e.target.setPointerCapture(e.pointerId);
-    }
-    dragStart.current = { x: e.clientX, y: e.clientY, startX: pos.x, startY: pos.y };
-    isDragging.current = false;
-  };
-
-  const handlePointerMove = (e) => {
-    if (!dragStart.current) return;
-    const dx = e.clientX - dragStart.current.x;
-    const dy = e.clientY - dragStart.current.y;
-    
-    if (Math.abs(dx) > 5 || Math.abs(dy) > 5) {
-      isDragging.current = true;
-    }
-    setPos({ x: dragStart.current.startX + dx, y: dragStart.current.startY + dy });
-  };
-
-  const handlePointerUp = (e) => {
-    if (e.target.releasePointerCapture && e.target.hasPointerCapture && e.target.hasPointerCapture(e.pointerId)) {
-      e.target.releasePointerCapture(e.pointerId);
-    }
-    dragStart.current = null;
-    
-    if (isDragging.current) {
-      const midX = window.innerWidth / 2;
-      const finalX = pos.x < midX ? 12 : Math.max(12, window.innerWidth - 52);
-      const finalY = Math.min(Math.max(pos.y, 10), window.innerHeight - 50);
-      const finalPos = { x: finalX, y: finalY };
-      setPos(finalPos);
-      try {
-        localStorage.setItem('floatingFeedbackPos', JSON.stringify(finalPos));
-      } catch (err) {
-        console.error(err);
-      }
-    } else {
-      setIsOpen(true);
-    }
-  };
+  if (!isOpen) return null;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -135,7 +29,7 @@ export default function FloatingFeedback() {
       await submitFeedback(feedbackText, user);
       alert(isTr ? "Geri bildiriminiz başarıyla iletildi. Teşekkürler!" : "Feedback successfully submitted. Thank you!");
       setFeedbackText("");
-      setIsOpen(false);
+      if (onClose) onClose();
     } catch (error) {
       console.error(error);
       alert(isTr ? "Bir hata oluştu, lütfen tekrar deneyin." : "An error occurred, please try again.");
@@ -144,85 +38,72 @@ export default function FloatingFeedback() {
   };
 
   return (
-    <>
-      {!isOpen && (
-        <div 
-          onPointerDown={handlePointerDown}
-          onPointerMove={handlePointerMove}
-          onPointerUp={handlePointerUp}
-          style={{ 
-            left: `${pos.x}px`, 
-            top: `${pos.y}px`, 
-            position: 'fixed',
-            touchAction: 'none' 
-          }}
-          className="z-[100] w-10 h-10 bg-slate-800 border-2 border-brand-500 rounded-full flex items-center justify-center text-brand-400 shadow-[0_0_12px_rgba(56,189,248,0.4)] cursor-pointer hover:bg-brand-500 hover:text-white transition-all duration-200"
-          title={isTr ? "Geri Bildirim" : "Feedback"}
+    <div 
+      className="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-slate-950/60 backdrop-blur-sm" 
+      onClick={onClose}
+    >
+      <div 
+        className="bg-slate-900 border border-slate-700 w-full max-w-sm rounded-3xl p-6 shadow-2xl relative animate-fadeIn max-h-[90vh] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-700" 
+        onClick={e => e.stopPropagation()}
+      >
+        <button 
+          onClick={onClose} 
+          className="absolute top-4 right-4 text-slate-500 hover:text-rose-400 text-xl transition-colors bg-slate-900 rounded-full w-8 h-8 flex items-center justify-center"
+          title={isTr ? "Kapat" : "Close"}
         >
-          <i className="fa-solid fa-paper-plane text-sm pointer-events-none -ml-0.5"></i>
-        </div>
-      )}
+          <i className="fa-solid fa-xmark"></i>
+        </button>
 
-      {isOpen && (
-        <div className="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-slate-950/60 backdrop-blur-sm" onClick={() => setIsOpen(false)}>
-          {/* Modal içine max-h-[90vh] ve overflow-y-auto eklendi */}
-          <div className="bg-slate-900 border border-slate-700 w-full max-w-sm rounded-3xl p-6 shadow-2xl relative animate-fadeIn max-h-[90vh] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-700" onClick={e => e.stopPropagation()}>
-            <button onClick={() => setIsOpen(false)} className="absolute top-4 right-4 text-slate-500 hover:text-rose-400 text-xl transition-colors bg-slate-900 rounded-full w-8 h-8 flex items-center justify-center">
-              <i className="fa-solid fa-xmark"></i>
-            </button>
+        <h3 className="text-lg font-bold text-slate-100 mb-2 flex items-center gap-2 mt-1">
+          <i className="fa-solid fa-paper-plane text-brand-400"></i>
+          {isTr ? 'Geri Bildirim Gönder' : 'Send Feedback'}
+        </h3>
 
-            <h3 className="text-lg font-bold text-slate-100 mb-2 flex items-center gap-2 mt-1">
-              <i className="fa-solid fa-paper-plane text-brand-400"></i>
-              {isTr ? 'Geri Bildirim Gönder' : 'Send Feedback'}
-            </h3>
-
-            {!user ? (
-              <div className="flex flex-col items-center justify-center py-8 text-center space-y-3">
-                 <div className="w-14 h-14 bg-slate-800 rounded-full flex items-center justify-center border border-slate-700 shadow-inner">
-                     <i className="fa-solid fa-user-lock text-slate-400 text-2xl"></i>
-                 </div>
-                 <p className="text-sm font-medium text-slate-300 px-4">
-                   {isTr ? "Geri bildirim göndermek için lütfen giriş yapın." : "Please log in to send feedback."}
-                 </p>
-              </div>
-            ) : (
-              <>
-                <p className="text-xs text-slate-400 mb-4">
-                  {isTr 
-                    ? 'Hata, öneri veya düşüncelerinizi bizimle paylaşın.' 
-                    : 'Share any bugs, suggestions, or thoughts with us.'}
-                </p>
-
-                <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-                  <textarea 
-                    autoFocus
-                    maxLength={256}
-                    value={feedbackText}
-                    onChange={(e) => setFeedbackText(e.target.value)}
-                    placeholder={isTr ? "Mesajınızı buraya yazın..." : "Write your message here..."}
-                    className="w-full h-32 bg-slate-800 border border-slate-700 rounded-xl p-3 text-sm text-slate-200 focus:outline-none focus:border-brand-500 resize-none shadow-inner"
-                  ></textarea>
-                  <div className="text-right text-[10px] text-slate-500 font-medium -mt-2">
-                    {feedbackText.length} / 256
-                  </div>
-
-                  <button 
-                    type="submit" 
-                    disabled={!feedbackText.trim() || isSubmitting}
-                    className="w-full flex-shrink-0 bg-brand-600 hover:bg-brand-500 text-white font-bold py-2.5 rounded-xl transition-colors disabled:opacity-50 flex justify-center items-center gap-2 shadow-lg"
-                  >
-                    {isSubmitting ? (
-                      <i className="fa-solid fa-circle-notch fa-spin"></i>
-                    ) : (
-                      <><i className="fa-solid fa-paper-plane"></i> {isTr ? 'Gönder' : 'Submit'}</>
-                    )}
-                  </button>
-                </form>
-              </>
-            )}
+        {!user ? (
+          <div className="flex flex-col items-center justify-center py-8 text-center space-y-3">
+             <div className="w-14 h-14 bg-slate-800 rounded-full flex items-center justify-center border border-slate-700 shadow-inner">
+                 <i className="fa-solid fa-user-lock text-slate-400 text-2xl"></i>
+             </div>
+             <p className="text-sm font-medium text-slate-300 px-4">
+               {isTr ? "Geri bildirim göndermek için lütfen giriş yapın." : "Please log in to send feedback."}
+             </p>
           </div>
-        </div>
-      )}
-    </>
+        ) : (
+          <>
+            <p className="text-xs text-slate-400 mb-4">
+              {isTr 
+                ? 'Hata, öneri veya düşüncelerinizi bizimle paylaşın.' 
+                : 'Share any bugs, suggestions, or thoughts with us.'}
+            </p>
+
+            <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+              <textarea 
+                autoFocus
+                maxLength={256}
+                value={feedbackText}
+                onChange={(e) => setFeedbackText(e.target.value)}
+                placeholder={isTr ? "Mesajınızı buraya yazın..." : "Write your message here..."}
+                className="w-full h-32 bg-slate-800 border border-slate-700 rounded-xl p-3 text-sm text-slate-200 focus:outline-none focus:border-brand-500 resize-none shadow-inner"
+              ></textarea>
+              <div className="text-right text-[10px] text-slate-500 font-medium -mt-2">
+                {feedbackText.length} / 256
+              </div>
+
+              <button 
+                type="submit" 
+                disabled={!feedbackText.trim() || isSubmitting}
+                className="w-full flex-shrink-0 bg-brand-600 hover:bg-brand-500 text-white font-bold py-2.5 rounded-xl transition-colors disabled:opacity-50 flex justify-center items-center gap-2 shadow-lg"
+              >
+                {isSubmitting ? (
+                  <i className="fa-solid fa-circle-notch fa-spin"></i>
+                ) : (
+                  <><i className="fa-solid fa-paper-plane"></i> {isTr ? 'Gönder' : 'Submit'}</>
+                )}
+              </button>
+            </form>
+          </>
+        )}
+      </div>
+    </div>
   );
 }
