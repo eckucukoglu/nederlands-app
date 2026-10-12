@@ -163,12 +163,15 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
     }
   };
 
-  const handleCheck = () => {
-    if (!userAnswer.trim()) return;
+  const handleCheck = (answerParam) => {
+    const rawAnswer = typeof answerParam === 'string' ? answerParam : userAnswer;
+    if (!rawAnswer || !rawAnswer.trim()) return;
 
-    const correct = userAnswer.trim().toLowerCase() === currentQ.correctAnswer.toLowerCase();
+    const answer = rawAnswer.trim();
+    const correct = answer.toLowerCase() === currentQ.correctAnswer.toLowerCase();
     setIsCorrect(correct);
     setIsAnswered(true);
+    setUserAnswer(answer);
 
     const newHistory = { ...quizHistory };
     if (!newHistory[currentQ.id]) newHistory[currentQ.id] = { correct: 0, incorrect: 0 };
@@ -192,6 +195,26 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
     setQuizHistory(newHistory);
     localStorage.setItem('quizHistory', JSON.stringify(newHistory));
   };
+
+  const handleOptionSelect = (opt) => {
+    if (isAnswered) return;
+    handleCheck(opt);
+  };
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Enter') {
+        if (isAnswered) {
+          goToNextState();
+        } else if (currentQ?.type === 'fill_in' && userAnswer.trim()) {
+          handleCheck();
+        }
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isAnswered, currentQ, userAnswer, currentIndex, deck.length]);
 
   const handleDontKnow = () => {
     setIsCorrect(false);
@@ -352,20 +375,21 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
     
     const parts = currentQ.questionNl.split('___');
     return (
-      <span className="leading-loose">
+      <span className="leading-relaxed">
         {parts[0]}
         {currentQ.type === 'fill_in' && !isAnswered ? (
           <input 
             autoFocus
             type="text" 
             value={userAnswer}
+            placeholder="..."
             onChange={(e) => setUserAnswer(e.target.value)}
             onKeyDown={(e) => e.key === 'Enter' && handleCheck()}
-            className="mx-2 bg-slate-800 border-b-2 border-slate-500 text-brand-300 px-2 py-1 w-24 text-center focus:outline-none focus:border-brand-400 shadow-inner rounded-t-md"
+            className="mx-1.5 bg-slate-800/90 border border-teal-500/70 text-teal-300 px-2.5 py-0.5 w-28 text-center text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-teal-400/50 shadow-inner rounded-md"
           />
         ) : (
-          <span className={`mx-2 px-3 py-1 rounded-md font-bold ${isAnswered ? (isCorrect ? 'bg-emerald-900/50 text-emerald-400 border border-emerald-700' : 'bg-rose-900/50 text-rose-400 border border-rose-700 line-through') : 'text-slate-500 border-b-2 border-slate-500'}`}>
-            {isAnswered ? userAnswer || '___' : '___'}
+          <span className={`mx-1.5 px-2.5 py-0.5 rounded-md font-bold text-sm inline-block ${isAnswered ? (isCorrect ? 'bg-emerald-950/60 text-emerald-300 border border-emerald-600' : 'bg-rose-950/60 text-rose-300 border border-rose-600 line-through') : 'text-slate-400 border-b-2 border-slate-500'}`}>
+            {isAnswered ? (userAnswer || '___') : '___'}
           </span>
         )}
         {parts[1]}
@@ -374,27 +398,27 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
   };
 
   return (
-    <div className="fixed inset-0 z-[150] flex items-center justify-center p-2 sm:p-4 bg-slate-950/80 backdrop-blur-sm" onClick={onClose}>
+    <div className="fixed inset-0 z-[150] flex items-center justify-center p-2.5 sm:p-4 bg-slate-950/80 backdrop-blur-sm" onClick={onClose}>
       {/* ANA TEST EKRANI - Kompakt ve Zarif Mobil Uyumlu */}
-      <div className="bg-slate-900 w-full max-w-2xl rounded-2xl sm:rounded-3xl shadow-2xl border border-slate-700/80 flex flex-col overflow-hidden relative max-h-[92vh] sm:max-h-[95vh]" onClick={e => e.stopPropagation()}>
+      <div className="bg-slate-900/95 backdrop-blur-md w-full max-w-xl rounded-2xl shadow-2xl border border-slate-700/80 flex flex-col overflow-hidden relative max-h-[90vh] sm:max-h-[92vh]" onClick={e => e.stopPropagation()}>
         
-        {/* Header (Zarif & Kompakt Mobil + Masaüstü Tasarımı) */}
-        <div className="px-3.5 sm:px-5 py-2.5 sm:py-3 border-b border-slate-800 bg-slate-800/60 flex-none space-y-2">
+        {/* Header */}
+        <div className="px-3.5 sm:px-4 py-2 sm:py-2.5 border-b border-slate-800 bg-slate-800/70 flex-none space-y-1.5">
           {/* Üst Satır: Başlık & Aksiyon Butonları */}
           <div className="flex items-center justify-between gap-2">
-            <div className="flex items-center gap-2 min-w-0 flex-1">
-              <i className="fa-solid fa-graduation-cap text-teal-400 text-sm flex-shrink-0"></i>
+            <div className="flex items-center gap-1.5 min-w-0 flex-1">
+              <i className="fa-solid fa-graduation-cap text-teal-400 text-xs sm:text-sm flex-shrink-0"></i>
               <h3 className="text-xs sm:text-sm font-bold text-slate-100 truncate" title={title}>
                 {title}
               </h3>
             </div>
 
-            <div className="flex items-center gap-1 sm:gap-1.5 flex-shrink-0">
+            <div className="flex items-center gap-1 flex-shrink-0">
               {/* İyi Soru */}
               <button 
                 onClick={handleGoodToggle}
                 title={isTr ? (isGood ? "İyi Soru (İşareti Kaldır)" : "İyi Soru Olarak İşaretle") : (isGood ? "Remove Good Mark" : "Mark as Good Question")}
-                className={`p-1 text-sm sm:text-base transition-colors rounded hover:bg-slate-700/50 ${isGood ? 'text-emerald-400' : 'text-slate-400 hover:text-emerald-400'}`}
+                className={`p-1 text-xs sm:text-sm transition-colors rounded hover:bg-slate-700/60 ${isGood ? 'text-emerald-400' : 'text-slate-400 hover:text-emerald-400'}`}
               >
                 <i className={isGood ? "fa-solid fa-thumbs-up" : "fa-regular fa-thumbs-up"}></i>
               </button>
@@ -403,7 +427,7 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
               <button 
                 onClick={handleDuplicateToggle}
                 title={isTr ? (isDuplicate ? "Kopya Soru (İşareti Kaldır)" : "Kopya / Mükerrer Soru Bildir") : (isDuplicate ? "Remove Duplicate Mark" : "Mark as Duplicate Question")}
-                className={`p-1 text-sm sm:text-base transition-colors rounded hover:bg-slate-700/50 ${isDuplicate ? 'text-sky-400' : 'text-slate-400 hover:text-sky-400'}`}
+                className={`p-1 text-xs sm:text-sm transition-colors rounded hover:bg-slate-700/60 ${isDuplicate ? 'text-sky-400' : 'text-slate-400 hover:text-sky-400'}`}
               >
                 <i className={isDuplicate ? "fa-solid fa-clone" : "fa-regular fa-clone"}></i>
               </button>
@@ -412,15 +436,15 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
               <button 
                 onClick={handleReportToggle}
                 title={isTr ? (isReported ? "Hatalı Soru (İşareti Kaldır)" : "Hatalı Soru Bildir") : (isReported ? "Remove Report" : "Report Question Error")}
-                className={`p-1 text-sm sm:text-base transition-colors rounded hover:bg-slate-700/50 ${isReported ? 'text-amber-400' : 'text-slate-400 hover:text-amber-400'}`}
+                className={`p-1 text-xs sm:text-sm transition-colors rounded hover:bg-slate-700/60 ${isReported ? 'text-amber-400' : 'text-slate-400 hover:text-amber-400'}`}
               >
                 <i className={isReported ? "fa-solid fa-flag" : "fa-regular fa-flag"}></i>
               </button>
 
-              <div className="h-3.5 w-[1px] bg-slate-700 mx-0.5"></div>
+              <div className="h-3 w-[1px] bg-slate-700 mx-0.5"></div>
               
               {/* Kapat Butonu */}
-              <button onClick={onClose} className="text-slate-400 hover:text-rose-400 p-1 text-base transition-colors rounded hover:bg-slate-700/50" title={isTr ? 'Kapat' : 'Close'}>
+              <button onClick={onClose} className="text-slate-400 hover:text-rose-400 p-1 text-sm sm:text-base transition-colors rounded hover:bg-slate-700/60" title={isTr ? 'Kapat' : 'Close'}>
                 <i className="fa-solid fa-xmark"></i>
               </button>
             </div>
@@ -470,11 +494,11 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
           <div className="bg-teal-500 h-full transition-all duration-300" style={{ width: `${((currentIndex) / deck.length) * 100}%` }}></div>
         </div>
         
-        {/* Content (Flex-1 overflow-y-auto ile burası kaydırılır) */}
-        <div className="px-3.5 sm:px-8 py-3.5 sm:py-6 flex-1 flex flex-col justify-start sm:justify-center overflow-y-auto scrollbar-thin scrollbar-thumb-slate-700">
-           <div className="text-center mb-3 sm:mb-6 mt-1 sm:mt-0">
+        {/* Content */}
+        <div className="px-4 sm:px-6 py-3.5 sm:py-5 flex-1 flex flex-col justify-center overflow-y-auto scrollbar-thin scrollbar-thumb-slate-700">
+           <div className="text-center mb-3 sm:mb-4">
               {currentQ.tags && currentQ.tags.length > 0 && (
-                <div className="flex flex-wrap justify-center gap-1 mb-2 sm:mb-3">
+                <div className="flex flex-wrap justify-center gap-1 mb-2">
                   {currentQ.tags.map(tag => (
                     <button
                       key={tag}
@@ -488,93 +512,125 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
                 </div>
               )}
 
-              <span className="text-[10px] sm:text-xs font-bold text-slate-400 uppercase tracking-wider mb-1 block">
+              <span className="text-[10px] sm:text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1 block">
                 {isTr ? 'Soru' : 'Question'} {currentIndex + 1} / {deck.length}
               </span>
-              <h2 className="text-lg sm:text-2xl md:text-3xl font-bold text-white drop-shadow-sm leading-snug">
+              <h2 className="text-base sm:text-lg md:text-xl font-bold text-white leading-snug max-w-xl mx-auto">
                 {renderQuestionText()}
               </h2>
            </div>
 
+           {/* Çoktan Seçmeli Seçenekler */}
            {currentQ.type === 'multiple_choice' && (
-             <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3 mb-3 sm:mb-5">
-                {shuffledOptions.map(opt => {
-                  let btnClass = "bg-slate-800 border-slate-600 text-slate-300 hover:bg-slate-700";
+             <div className={`grid gap-2 sm:gap-2.5 mb-3 sm:mb-4 w-full max-w-xl mx-auto ${shuffledOptions.some(o => o.length > 28) ? 'grid-cols-1' : 'grid-cols-1 sm:grid-cols-2'}`}>
+                {shuffledOptions.map((opt, index) => {
+                  const letter = String.fromCharCode(65 + index); // A, B, C, D
+                  let containerClass = "bg-slate-800/80 border-slate-700/80 text-slate-200 hover:bg-slate-750 hover:border-teal-500/60 active:scale-[0.99]";
+                  let badgeClass = "bg-slate-700 text-slate-300";
+                  let icon = null;
+
                   if (isAnswered) {
-                    if (opt === currentQ.correctAnswer) btnClass = "bg-emerald-900/40 border-emerald-500 text-emerald-300 shadow-[0_0_15px_rgba(16,185,129,0.2)]";
-                    else if (opt === userAnswer) btnClass = "bg-rose-900/40 border-rose-500 text-rose-300 opacity-50";
-                    else btnClass = "bg-slate-800 border-slate-700 text-slate-500 opacity-50";
-                  } else if (userAnswer === opt) {
-                    btnClass = "bg-teal-900/40 border-teal-500 text-teal-300";
+                    if (opt === currentQ.correctAnswer) {
+                      containerClass = "bg-emerald-950/50 border-emerald-500 text-emerald-200 shadow-[0_0_12px_rgba(16,185,129,0.25)]";
+                      badgeClass = "bg-emerald-500 text-slate-950 font-black";
+                      icon = <i className="fa-solid fa-check text-emerald-400 ml-auto text-sm"></i>;
+                    } else if (opt === userAnswer) {
+                      containerClass = "bg-rose-950/50 border-rose-500 text-rose-200 opacity-90";
+                      badgeClass = "bg-rose-500 text-white font-black";
+                      icon = <i className="fa-solid fa-xmark text-rose-400 ml-auto text-sm"></i>;
+                    } else {
+                      containerClass = "bg-slate-800/40 border-slate-700/40 text-slate-500 opacity-40";
+                      badgeClass = "bg-slate-800 text-slate-500";
+                    }
                   }
 
                   return (
                     <button 
                       key={opt}
                       disabled={isAnswered}
-                      onClick={() => setUserAnswer(opt)}
-                      className={`px-3.5 py-2.5 sm:py-3.5 rounded-xl border-2 font-bold transition-all text-xs sm:text-sm md:text-base ${btnClass}`}
+                      onClick={() => handleOptionSelect(opt)}
+                      className={`group flex items-center gap-2.5 px-3 sm:px-3.5 py-2.5 sm:py-3 rounded-xl border text-left font-medium transition-all text-xs sm:text-sm cursor-pointer disabled:cursor-default ${containerClass}`}
                     >
-                      {opt}
+                      <span className={`w-6 h-6 rounded-md flex items-center justify-center text-xs font-bold flex-shrink-0 transition-colors ${badgeClass}`}>
+                        {letter}
+                      </span>
+                      <span className="flex-1 leading-snug break-words">
+                        {opt}
+                      </span>
+                      {icon}
                     </button>
                   );
                 })}
              </div>
            )}
 
+           {/* Cevap Geribildirim Kutusu */}
            {isAnswered && (
-             <div className={`mt-2 p-3 sm:p-4 rounded-xl border animate-fadeIn flex flex-col gap-1.5 ${isCorrect ? 'bg-emerald-900/10 border-emerald-800/50' : 'bg-rose-900/10 border-rose-800/50'}`}>
-               <h4 className={`text-sm sm:text-base font-bold flex items-center gap-1.5 ${isCorrect ? 'text-emerald-400' : 'text-rose-400'}`}>
-                 <i className={`fa-solid ${isCorrect ? 'fa-face-smile-beam' : 'fa-face-frown-open'}`}></i>
-                 {isCorrect ? (isTr ? 'Harika!' : 'Correct!') : (isTr ? 'Yanlış!' : 'Incorrect!')}
-               </h4>
+             <div className={`mt-1 p-3 sm:p-3.5 rounded-xl border animate-fadeIn flex flex-col gap-1.5 max-w-xl mx-auto w-full ${isCorrect ? 'bg-emerald-950/30 border-emerald-800/60' : 'bg-rose-950/30 border-rose-800/60'}`}>
+               <div className="flex items-center justify-between">
+                 <h4 className={`text-xs sm:text-sm font-bold flex items-center gap-1.5 ${isCorrect ? 'text-emerald-400' : 'text-rose-400'}`}>
+                   <i className={`fa-solid ${isCorrect ? 'fa-circle-check' : 'fa-circle-xmark'}`}></i>
+                   {isCorrect ? (isTr ? 'Doğru Cevap!' : 'Correct!') : (isTr ? 'Yanlış Cevap' : 'Incorrect')}
+                 </h4>
+                 <span className="text-[10px] text-slate-400 font-mono hidden sm:inline">
+                   {isTr ? 'Devam etmek için Enter ↵' : 'Press Enter ↵ to continue'}
+                 </span>
+               </div>
                {!isCorrect && (
-                 <p className="text-slate-300 text-xs sm:text-sm">
-                   {isTr ? 'Doğru cevap:' : 'Correct answer:'} <strong className="text-white px-1.5 py-0.5 bg-slate-800 rounded border border-slate-600 ml-1">{currentQ.correctAnswer}</strong>
+                 <div className="text-slate-300 text-xs flex items-center gap-1.5 flex-wrap">
+                   <span>{isTr ? 'Doğru cevap:' : 'Correct answer:'}</span>
+                   <span className="text-emerald-300 font-bold px-2 py-0.5 bg-slate-900/90 rounded border border-emerald-700/60">
+                     {currentQ.correctAnswer}
+                   </span>
+                 </div>
+               )}
+               {(currentQ.explanationTr || currentQ.explanationEn) && (
+                 <p className="text-slate-400 text-xs mt-0.5 italic border-t border-slate-800/80 pt-1.5 flex items-start gap-1.5 leading-relaxed">
+                   <i className="fa-solid fa-lightbulb text-amber-400 mt-0.5 flex-shrink-0 text-[11px]"></i> 
+                   <span>{isTr ? currentQ.explanationTr : currentQ.explanationEn}</span>
                  </p>
                )}
-               <p className="text-slate-400 text-xs sm:text-sm mt-1 italic border-t border-slate-700/50 pt-2">
-                 <i className="fa-solid fa-lightbulb text-amber-400 mr-1.5"></i> 
-                 {isTr ? currentQ.explanationTr : currentQ.explanationEn}
-               </p>
              </div>
            )}
 
-           <div className="mt-3 sm:mt-6 flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-3">
+           {/* Alt Aksiyon Butonları */}
+           <div className="mt-3 sm:mt-4 flex flex-wrap justify-center items-center gap-2 max-w-xl mx-auto w-full">
              {!isAnswered ? (
                <>
+                 {currentQ.type === 'fill_in' && (
+                   <button 
+                     onClick={() => handleCheck()}
+                     disabled={!userAnswer.trim()}
+                     className="flex-1 sm:flex-initial bg-teal-600 hover:bg-teal-500 disabled:opacity-40 disabled:hover:bg-teal-600 text-white px-5 sm:px-6 py-2 rounded-xl font-bold border border-teal-500/80 shadow-md transition-all text-xs sm:text-sm flex items-center justify-center gap-1.5 cursor-pointer disabled:cursor-not-allowed"
+                   >
+                     <i className="fa-solid fa-check text-xs"></i> {isTr ? 'Kontrol Et' : 'Check'}
+                   </button>
+                 )}
+
                  <button 
-                   onClick={handleCheck}
-                   disabled={!userAnswer}
-                   className="w-full sm:w-auto flex-shrink-0 bg-teal-600 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-xl font-bold border border-teal-500 shadow-md disabled:opacity-50 disabled:shadow-none hover:bg-teal-500 transition-all text-xs sm:text-sm"
+                   onClick={handleDontKnow}
+                   className="flex-1 sm:flex-initial bg-slate-800/80 hover:bg-rose-950/40 text-slate-300 hover:text-rose-300 px-3.5 sm:px-4 py-2 rounded-xl font-semibold border border-slate-700/80 hover:border-rose-800/60 transition-all text-xs sm:text-sm flex items-center justify-center gap-1.5 cursor-pointer"
+                   title={isTr ? 'Yanlış kabul edilir' : 'Counts as incorrect'}
                  >
-                   <i className="fa-solid fa-check mr-2"></i> {isTr ? 'Kontrol Et' : 'Check'}
+                   <i className="fa-solid fa-circle-question text-rose-400 text-xs"></i> {isTr ? 'Bilmiyorum' : "Don't know"}
                  </button>
 
-                 <div className="flex gap-2 w-full sm:w-auto">
-                   <button 
-                     onClick={handleDontKnow}
-                     className="flex-1 sm:flex-initial bg-slate-800 hover:bg-rose-950/50 text-slate-300 hover:text-rose-300 px-4 py-2.5 sm:py-3 rounded-xl font-bold border border-slate-700 hover:border-rose-800/50 transition-all text-xs sm:text-sm"
-                     title={isTr ? 'Yanlış kabul edilir' : 'Counts as incorrect'}
-                   >
-                     <i className="fa-solid fa-circle-question mr-1.5 text-rose-400"></i> {isTr ? 'Bilmiyorum' : "Don't know"}
-                   </button>
-
-                   <button 
-                     onClick={handleSkip}
-                     className="flex-1 sm:flex-initial bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white px-4 py-2.5 sm:py-3 rounded-xl font-bold border border-slate-700 hover:border-slate-600 transition-all text-xs sm:text-sm"
-                     title={isTr ? 'Skoru etkilemeden sonraki soruya geçer' : 'Skip without affecting score'}
-                   >
-                     <i className="fa-solid fa-forward mr-1.5 text-amber-400"></i> {isTr ? 'Soruyu Geç' : 'Skip'}
-                   </button>
-                 </div>
+                 <button 
+                   onClick={handleSkip}
+                   className="flex-1 sm:flex-initial bg-slate-800/80 hover:bg-slate-700/80 text-slate-300 hover:text-white px-3.5 sm:px-4 py-2 rounded-xl font-semibold border border-slate-700/80 hover:border-slate-600 transition-all text-xs sm:text-sm flex items-center justify-center gap-1.5 cursor-pointer"
+                   title={isTr ? 'Skoru etkilemeden sonraki soruya geçer' : 'Skip without affecting score'}
+                 >
+                   <i className="fa-solid fa-forward text-amber-400 text-xs"></i> {isTr ? 'Soruyu Geç' : 'Skip'}
+                 </button>
                </>
              ) : (
                <button 
                  onClick={handleNext}
-                 className="w-full sm:w-auto bg-indigo-600 text-white px-8 sm:px-10 py-2.5 sm:py-3 rounded-xl font-bold border border-indigo-500 shadow-md hover:bg-indigo-500 transition-all text-xs sm:text-sm"
+                 className="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-500 text-white px-6 sm:px-8 py-2.5 rounded-xl font-bold border border-indigo-500/80 shadow-md transition-all text-xs sm:text-sm flex items-center justify-center gap-2 cursor-pointer"
                >
-                 {currentIndex < deck.length - 1 ? (isTr ? 'Sıradaki Soru' : 'Next Question') : (isTr ? 'Testi Bitir' : 'Finish')} <i className="fa-solid fa-arrow-right ml-2"></i>
+                 <span>{currentIndex < deck.length - 1 ? (isTr ? 'Sıradaki Soru' : 'Next Question') : (isTr ? 'Testi Bitir' : 'Finish')}</span>
+                 <span className="text-[10px] opacity-75 font-mono hidden sm:inline">(Enter ↵)</span>
+                 <i className="fa-solid fa-arrow-right text-xs"></i>
                </button>
              )}
            </div>
