@@ -313,6 +313,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
   const [isInfoModalOpen, setIsInfoModalOpen] = useState(false);
 
   const [isFullQuizOpen, setIsFullQuizOpen] = useState(false);
+  const [isFeedbackOpen, setIsFeedbackOpen] = useState(false);
 
   const [isSectionBarOverflowing, setIsSectionBarOverflowing] = useState(false);
 
@@ -828,7 +829,8 @@ function MainContent({ user, setIsAuthModalOpen }) {
 
   return (
     <div 
-      className="min-h-screen flex flex-col bg-slate-900 transition-colors duration-300 w-full max-w-full relative overflow-x-hidden"
+      className="min-h-screen flex flex-col bg-slate-900 transition-colors duration-300 w-full max-w-full relative overflow-x-clip"
+      style={{ overflowX: 'clip' }}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
@@ -946,8 +948,8 @@ function MainContent({ user, setIsAuthModalOpen }) {
         />
       )}
 
-      {/* 1. HEADER */}
-      <header className="bg-slate-950 text-white shadow-md sticky top-0 z-50 border-b border-slate-800 flex-none w-full">
+      {/* 1. HEADER (SADECE BU KISIM SABİT) */}
+      <header className="bg-slate-950/95 backdrop-blur-md text-white shadow-md sticky top-0 z-50 border-b border-slate-800 flex-none w-full">
         <div className="max-w-7xl mx-auto px-3 sm:px-4 py-3 flex flex-nowrap justify-between items-center gap-2">
           
           <div 
@@ -1206,17 +1208,29 @@ function MainContent({ user, setIsAuthModalOpen }) {
 
       {/* 3. SECTION BAR (SUMMARY VS NORMAL SECTIONS RENDER) */}
       <div 
-        className={`bg-slate-900/40 border-slate-800 w-full max-w-full overflow-hidden shadow-inner z-40 flex-none transition-all duration-300 ${
-          isSectionBarOverflowing ? 'absolute top-0 left-0 h-0 invisible opacity-0 pointer-events-none' : 'border-b relative opacity-100'
+        className={`bg-slate-900/95 backdrop-blur-sm border-slate-800 w-full max-w-full overflow-hidden shadow-inner flex-none transition-all duration-300 relative ${
+          isSectionBarOverflowing ? 'h-0 invisible opacity-0 pointer-events-none' : 'border-b opacity-100'
         }`}
       >
         <style>{`.hide-scroll::-webkit-scrollbar { display: none; }`}</style>
-        <div 
-          ref={sectionMeasureRef} 
-          className="max-w-7xl mx-auto px-2 py-2.5 flex justify-center items-center w-full max-w-full overflow-x-auto hide-scroll whitespace-nowrap gap-2" 
-          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-        >
-          <div className="flex items-center justify-center flex-nowrap gap-1.5 sm:gap-2 px-1 flex-shrink-0">
+        <div className="max-w-7xl mx-auto px-2 py-2 flex items-center justify-center relative min-h-[44px]">
+          
+          {/* SABİT GERİ BİLDİRİM (+) BUTONU */}
+          <button 
+            type="button"
+            onClick={() => setIsFeedbackOpen(true)}
+            className="absolute left-3 sm:left-4 z-10 w-7 h-7 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-brand-300 border border-slate-700 hover:border-brand-500/60 flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105 active:scale-95 group flex-shrink-0"
+            title={lang === 'tr' ? 'Geri Bildirim / Öneri Ekle (+)' : 'Add Feedback / Suggestion (+)'}
+          >
+            <i className="fa-solid fa-plus text-xs group-hover:rotate-90 transition-transform duration-200"></i>
+          </button>
+
+          <div 
+            ref={sectionMeasureRef} 
+            className="w-full max-w-full overflow-x-auto hide-scroll whitespace-nowrap flex justify-center items-center gap-2 px-10 sm:px-12" 
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          >
+            <div className="flex items-center justify-center flex-nowrap gap-1.5 sm:gap-2 px-1 flex-shrink-0">
             {isSummaryMode ? (
               // SUMMARY MODUNDA İSE: SADECE RAKAM GÖSTER (GÖRSEL SADELEŞTİRME)
               summaryChaptersList.map(ch => {
@@ -1279,17 +1293,27 @@ function MainContent({ user, setIsAuthModalOpen }) {
                 );
               })
             )}
+            </div>
           </div>
         </div>
       </div>
 
       {/* 4. MOBİL ZARİF İLERLEME ÇUBUĞU */}
       {isSectionBarOverflowing && (
-        <div className="w-full relative px-4 py-3 bg-slate-900/60 border-b border-slate-800 shadow-inner z-40 flex-none" ref={mobileMenuRef}>
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`w-full max-w-3xl mx-auto border rounded-2xl p-3 shadow-sm flex flex-col gap-2.5 transition-all ${isMobileMenuOpen ? 'bg-slate-800 border-brand-500' : 'bg-slate-800 border-slate-700'}`}
-          >
+        <div className="w-full relative px-3 sm:px-4 py-2 bg-slate-900/95 backdrop-blur-sm border-b border-slate-800 shadow-inner flex-none" ref={mobileMenuRef}>
+          <div className="max-w-3xl mx-auto flex items-center gap-2">
+            <button
+              type="button"
+              onClick={() => setIsFeedbackOpen(true)}
+              className="w-7 h-7 flex-shrink-0 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-brand-300 border border-slate-700 hover:border-brand-500/60 flex items-center justify-center transition-all duration-200 shadow-sm active:scale-95 group"
+              title={lang === 'tr' ? 'Geri Bildirim / Öneri Ekle (+)' : 'Add Feedback / Suggestion (+)'}
+            >
+              <i className="fa-solid fa-plus text-xs group-hover:rotate-90 transition-transform duration-200"></i>
+            </button>
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className={`flex-1 border rounded-2xl p-2.5 sm:p-3 shadow-sm flex flex-col gap-2 transition-all ${isMobileMenuOpen ? 'bg-slate-800 border-brand-500' : 'bg-slate-800 border-slate-700'}`}
+            >
             <div className="flex items-center justify-between w-full">
               <span className="text-slate-200 text-sm font-bold truncate text-left">
                 {activeTab === 'home' ? 'Dashboard' : (activeTab === 'flashcards' ? t('flashcards') : activeTab === 'verbs' ? (lang === 'tr' ? 'Düzensiz Fiiller' : 'Irregular Verbs') : activeTab === 'grammar' ? (lang === 'tr' ? 'Gramer Referansı' : 'Grammar Reference') : (isSummaryMode ? (lang === 'tr' ? `Ünite ${activeTab.replace('On-Class-', '')} Özeti` : `Chapter ${activeTab.replace('On-Class-', '')} Summary`) : (lang === 'tr' ? `Bölüm ${activeTab}` : `Section ${activeTab}`)))}
@@ -1345,6 +1369,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
               )}
             </div>
           </button>
+        </div>
 
           {isMobileMenuOpen && (
             <>
@@ -1456,7 +1481,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
         {activeTab === 'verbs' && <IrregularVerbs />}
         {activeTab === 'grammar' && <Grammar />}
       </main>
-	  <FloatingFeedback/>
+      <FloatingFeedback isOpen={isFeedbackOpen} onClose={() => setIsFeedbackOpen(false)} />
     </div>
   );
 }
