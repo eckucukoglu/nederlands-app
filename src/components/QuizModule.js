@@ -374,102 +374,112 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
   };
 
   return (
-    <div className="fixed inset-0 z-[150] flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm" onClick={onClose}>
-      {/* ANA TEST EKRANI - Kutuya max-h-[90vh] eklendi */}
-      <div className="bg-slate-900 w-full max-w-2xl rounded-3xl shadow-2xl border border-slate-700 flex flex-col overflow-hidden relative max-h-[90vh] sm:max-h-[95vh]" onClick={e => e.stopPropagation()}>
+    <div className="fixed inset-0 z-[150] flex items-center justify-center p-2 sm:p-4 bg-slate-950/80 backdrop-blur-sm" onClick={onClose}>
+      {/* ANA TEST EKRANI - Kompakt ve Zarif Mobil Uyumlu */}
+      <div className="bg-slate-900 w-full max-w-2xl rounded-2xl sm:rounded-3xl shadow-2xl border border-slate-700/80 flex flex-col overflow-hidden relative max-h-[92vh] sm:max-h-[95vh]" onClick={e => e.stopPropagation()}>
         
-        {/* Header (Flex-none ile sabit kalır) */}
-        <div className="p-4 sm:p-5 flex justify-between items-start sm:items-center border-b border-slate-800 bg-slate-800/50 flex-none">
-          <h3 className="text-base sm:text-lg font-bold text-slate-200 flex items-center gap-2 mt-1 sm:mt-0">
-            <i className="fa-solid fa-graduation-cap text-brand-400"></i> {title}
-          </h3>
-          
-          <div className="flex items-start sm:items-center gap-3">
-            <div className="flex flex-col items-stretch gap-1.5">
-              <div className="flex justify-center items-center gap-2 text-[10px] sm:text-xs font-bold bg-slate-950/50 px-2 sm:px-3 py-1.5 rounded-lg border border-slate-700 w-full">
-                 <span className="text-slate-400 font-normal mr-1 hidden sm:inline">{isTr ? 'Bu Soru:' : 'This Q:'}</span>
-                 <span className="text-emerald-400 flex items-center gap-1" title={isTr ? 'Doğru' : 'Correct'}><i className="fa-solid fa-check"></i> {qHistory.correct}</span>
-                 <span className="text-slate-600">|</span>
-                 <span className="text-rose-400 flex items-center gap-1" title={isTr ? 'Yanlış' : 'Incorrect'}><i className="fa-solid fa-xmark"></i> {qHistory.incorrect}</span>
-              </div>
-              
-              <div className="flex bg-slate-950/40 p-0.5 rounded-md border border-slate-800 w-full">
-                <button 
-                  onClick={() => toggleFilter('weak')}
-                  className={`flex-1 justify-center text-[9px] font-bold px-2 py-1 rounded transition-all flex items-center gap-1.5 ${
-                    activeFilter === 'weak' 
-                      ? 'bg-rose-900/60 text-rose-300 border border-rose-700/50 shadow-sm' 
-                      : 'text-slate-500 hover:text-slate-300 border border-transparent hover:bg-slate-800/50'
-                  }`}
-                >
-                  {isTr ? 'Zorlanılanlar' : 'Weakest'}
-                </button>
-
-                <button 
-                  onClick={() => toggleFilter('unattempted')}
-                  className={`flex-1 justify-center text-[9px] font-bold px-2 py-1 rounded transition-all flex items-center gap-1.5 ${
-                    activeFilter === 'unattempted' 
-                      ? 'bg-sky-900/60 text-sky-300 border border-sky-700/50 shadow-sm' 
-                      : 'text-slate-500 hover:text-slate-300 border border-transparent hover:bg-slate-800/50'
-                  }`}
-                >
-                  {isTr ? 'Çözülmeyenler' : 'Unseen'}
-                </button>
-              </div>
+        {/* Header (Zarif & Kompakt Mobil + Masaüstü Tasarımı) */}
+        <div className="px-3.5 sm:px-5 py-2.5 sm:py-3 border-b border-slate-800 bg-slate-800/60 flex-none space-y-2">
+          {/* Üst Satır: Başlık & Aksiyon Butonları */}
+          <div className="flex items-center justify-between gap-2">
+            <div className="flex items-center gap-2 min-w-0 flex-1">
+              <i className="fa-solid fa-graduation-cap text-teal-400 text-sm flex-shrink-0"></i>
+              <h3 className="text-xs sm:text-sm font-bold text-slate-100 truncate" title={title}>
+                {title}
+              </h3>
             </div>
 
-            <div className="flex items-center gap-1 sm:gap-1.5 mt-1 sm:mt-1.5">
-              {/* İyi Soru / Good Question */}
+            <div className="flex items-center gap-1 sm:gap-1.5 flex-shrink-0">
+              {/* İyi Soru */}
               <button 
                 onClick={handleGoodToggle}
                 title={isTr ? (isGood ? "İyi Soru (İşareti Kaldır)" : "İyi Soru Olarak İşaretle") : (isGood ? "Remove Good Mark" : "Mark as Good Question")}
-                className={`text-base sm:text-lg transition-colors px-1 sm:px-1.5 ${isGood ? 'text-emerald-400 hover:text-emerald-300' : 'text-slate-500 hover:text-emerald-400'}`}
+                className={`p-1 text-sm sm:text-base transition-colors rounded hover:bg-slate-700/50 ${isGood ? 'text-emerald-400' : 'text-slate-400 hover:text-emerald-400'}`}
               >
                 <i className={isGood ? "fa-solid fa-thumbs-up" : "fa-regular fa-thumbs-up"}></i>
               </button>
 
-              {/* Mükerrer / Kopya Soru / Duplicate Question */}
+              {/* Mükerrer / Kopya Soru */}
               <button 
                 onClick={handleDuplicateToggle}
                 title={isTr ? (isDuplicate ? "Kopya Soru (İşareti Kaldır)" : "Kopya / Mükerrer Soru Bildir") : (isDuplicate ? "Remove Duplicate Mark" : "Mark as Duplicate Question")}
-                className={`text-base sm:text-lg transition-colors px-1 sm:px-1.5 ${isDuplicate ? 'text-sky-400 hover:text-sky-300' : 'text-slate-500 hover:text-sky-400'}`}
+                className={`p-1 text-sm sm:text-base transition-colors rounded hover:bg-slate-700/50 ${isDuplicate ? 'text-sky-400' : 'text-slate-400 hover:text-sky-400'}`}
               >
                 <i className={isDuplicate ? "fa-solid fa-clone" : "fa-regular fa-clone"}></i>
               </button>
 
-              {/* Hatalı Soru Bildir / Report Question */}
+              {/* Hatalı Soru Bildir */}
               <button 
                 onClick={handleReportToggle}
                 title={isTr ? (isReported ? "Hatalı Soru (İşareti Kaldır)" : "Hatalı Soru Bildir") : (isReported ? "Remove Report" : "Report Question Error")}
-                className={`text-base sm:text-lg transition-colors px-1 sm:px-1.5 ${isReported ? 'text-amber-400 hover:text-amber-300' : 'text-slate-500 hover:text-amber-400'}`}
+                className={`p-1 text-sm sm:text-base transition-colors rounded hover:bg-slate-700/50 ${isReported ? 'text-amber-400' : 'text-slate-400 hover:text-amber-400'}`}
               >
                 <i className={isReported ? "fa-solid fa-flag" : "fa-regular fa-flag"}></i>
               </button>
 
-              <div className="h-4 w-[1px] bg-slate-700/60 mx-1"></div>
+              <div className="h-3.5 w-[1px] bg-slate-700 mx-0.5"></div>
               
-              <button onClick={onClose} className="text-slate-400 hover:text-rose-400 text-xl transition-colors ml-0.5">
+              {/* Kapat Butonu */}
+              <button onClick={onClose} className="text-slate-400 hover:text-rose-400 p-1 text-base transition-colors rounded hover:bg-slate-700/50" title={isTr ? 'Kapat' : 'Close'}>
                 <i className="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+          </div>
+
+          {/* Alt Satır: Soru İstatistiği & Filtreler (Kompakt Tek Satır) */}
+          <div className="flex items-center justify-between gap-1.5 pt-0.5">
+            <div className="flex items-center gap-1.5 text-[10px] sm:text-xs font-bold bg-slate-950/60 px-2 py-0.5 rounded-md border border-slate-700/80">
+              <span className="text-slate-400 font-medium hidden sm:inline">{isTr ? 'Bu Soru:' : 'This Q:'}</span>
+              <span className="text-emerald-400 flex items-center gap-0.5" title={isTr ? 'Doğru' : 'Correct'}>
+                <i className="fa-solid fa-check text-[9px]"></i> {qHistory.correct}
+              </span>
+              <span className="text-slate-600">|</span>
+              <span className="text-rose-400 flex items-center gap-0.5" title={isTr ? 'Yanlış' : 'Incorrect'}>
+                <i className="fa-solid fa-xmark text-[9px]"></i> {qHistory.incorrect}
+              </span>
+            </div>
+            
+            <div className="flex bg-slate-950/60 p-0.5 rounded-lg border border-slate-700/80 gap-0.5">
+              <button 
+                onClick={() => toggleFilter('weak')}
+                className={`text-[9px] sm:text-[10px] font-bold px-2 py-0.5 rounded transition-all flex items-center gap-1 ${
+                  activeFilter === 'weak' 
+                    ? 'bg-rose-900/70 text-rose-200 border border-rose-700/60 shadow-sm' 
+                    : 'text-slate-400 hover:text-slate-200'
+                }`}
+              >
+                {isTr ? 'Zorlanılanlar' : 'Weakest'}
+              </button>
+
+              <button 
+                onClick={() => toggleFilter('unattempted')}
+                className={`text-[9px] sm:text-[10px] font-bold px-2 py-0.5 rounded transition-all flex items-center gap-1 ${
+                  activeFilter === 'unattempted' 
+                    ? 'bg-sky-900/70 text-sky-200 border border-sky-700/60 shadow-sm' 
+                    : 'text-slate-400 hover:text-slate-200'
+                }`}
+              >
+                {isTr ? 'Çözülmeyenler' : 'Unseen'}
               </button>
             </div>
           </div>
         </div>
 
         {/* Progress Bar (Flex-none) */}
-        <div className="w-full bg-slate-800 h-1.5 flex-none">
-          <div className="bg-brand-500 h-full transition-all duration-300" style={{ width: `${((currentIndex) / deck.length) * 100}%` }}></div>
+        <div className="w-full bg-slate-800 h-1 flex-none">
+          <div className="bg-teal-500 h-full transition-all duration-300" style={{ width: `${((currentIndex) / deck.length) * 100}%` }}></div>
         </div>
         
-        {/* Content (Flex-1 overflow-y-auto ile burası kaydırılır hale geldi) */}
-        <div className="px-6 sm:px-8 pb-6 pt-5 flex-1 flex flex-col justify-start sm:justify-center overflow-y-auto scrollbar-thin scrollbar-thumb-slate-700">
-           <div className="text-center mb-8 mt-2 sm:mt-0">
+        {/* Content (Flex-1 overflow-y-auto ile burası kaydırılır) */}
+        <div className="px-3.5 sm:px-8 py-3.5 sm:py-6 flex-1 flex flex-col justify-start sm:justify-center overflow-y-auto scrollbar-thin scrollbar-thumb-slate-700">
+           <div className="text-center mb-3 sm:mb-6 mt-1 sm:mt-0">
               {currentQ.tags && currentQ.tags.length > 0 && (
-                <div className="flex flex-wrap justify-center gap-1.5 mb-4">
+                <div className="flex flex-wrap justify-center gap-1 mb-2 sm:mb-3">
                   {currentQ.tags.map(tag => (
                     <button
                       key={tag}
                       onClick={() => handleTagClick(tag)}
-                      className="text-[10px] font-semibold bg-indigo-950/60 text-indigo-300 px-2.5 py-0.5 rounded-md border border-indigo-800/50 shadow-sm hover:bg-indigo-900 hover:text-white transition-all cursor-pointer"
+                      className="text-[10px] font-semibold bg-indigo-950/50 text-indigo-300 px-2 py-0.5 rounded-md border border-indigo-800/40 shadow-sm hover:bg-indigo-900 hover:text-white transition-all cursor-pointer"
                       title={isTr ? `Bu etiketle ilgili sorulara geç: #${tag}` : `Filter by tag: #${tag}`}
                     >
                       #{tag}
@@ -478,16 +488,16 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
                 </div>
               )}
 
-              <span className="text-xs font-extrabold text-slate-500 uppercase tracking-wider mb-2 block">
+              <span className="text-[10px] sm:text-xs font-bold text-slate-400 uppercase tracking-wider mb-1 block">
                 {isTr ? 'Soru' : 'Question'} {currentIndex + 1} / {deck.length}
               </span>
-              <h2 className="text-xl sm:text-3xl font-bold text-white drop-shadow-sm">
+              <h2 className="text-lg sm:text-2xl md:text-3xl font-bold text-white drop-shadow-sm leading-snug">
                 {renderQuestionText()}
               </h2>
            </div>
 
            {currentQ.type === 'multiple_choice' && (
-             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
+             <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3 mb-3 sm:mb-5">
                 {shuffledOptions.map(opt => {
                   let btnClass = "bg-slate-800 border-slate-600 text-slate-300 hover:bg-slate-700";
                   if (isAnswered) {
@@ -495,7 +505,7 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
                     else if (opt === userAnswer) btnClass = "bg-rose-900/40 border-rose-500 text-rose-300 opacity-50";
                     else btnClass = "bg-slate-800 border-slate-700 text-slate-500 opacity-50";
                   } else if (userAnswer === opt) {
-                    btnClass = "bg-brand-900/40 border-brand-500 text-brand-300";
+                    btnClass = "bg-teal-900/40 border-teal-500 text-teal-300";
                   }
 
                   return (
@@ -503,7 +513,7 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
                       key={opt}
                       disabled={isAnswered}
                       onClick={() => setUserAnswer(opt)}
-                      className={`px-4 py-4 rounded-xl border-2 font-bold transition-all text-sm sm:text-base ${btnClass}`}
+                      className={`px-3.5 py-2.5 sm:py-3.5 rounded-xl border-2 font-bold transition-all text-xs sm:text-sm md:text-base ${btnClass}`}
                     >
                       {opt}
                     </button>
@@ -513,30 +523,30 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
            )}
 
            {isAnswered && (
-             <div className={`mt-4 p-5 rounded-xl border animate-fadeIn flex flex-col gap-2 ${isCorrect ? 'bg-emerald-900/10 border-emerald-800/50' : 'bg-rose-900/10 border-rose-800/50'}`}>
-               <h4 className={`text-lg font-bold flex items-center gap-2 ${isCorrect ? 'text-emerald-400' : 'text-rose-400'}`}>
+             <div className={`mt-2 p-3 sm:p-4 rounded-xl border animate-fadeIn flex flex-col gap-1.5 ${isCorrect ? 'bg-emerald-900/10 border-emerald-800/50' : 'bg-rose-900/10 border-rose-800/50'}`}>
+               <h4 className={`text-sm sm:text-base font-bold flex items-center gap-1.5 ${isCorrect ? 'text-emerald-400' : 'text-rose-400'}`}>
                  <i className={`fa-solid ${isCorrect ? 'fa-face-smile-beam' : 'fa-face-frown-open'}`}></i>
                  {isCorrect ? (isTr ? 'Harika!' : 'Correct!') : (isTr ? 'Yanlış!' : 'Incorrect!')}
                </h4>
                {!isCorrect && (
-                 <p className="text-slate-300 text-sm">
-                   {isTr ? 'Doğru cevap:' : 'Correct answer:'} <strong className="text-white px-2 py-0.5 bg-slate-800 rounded border border-slate-600 ml-1">{currentQ.correctAnswer}</strong>
+                 <p className="text-slate-300 text-xs sm:text-sm">
+                   {isTr ? 'Doğru cevap:' : 'Correct answer:'} <strong className="text-white px-1.5 py-0.5 bg-slate-800 rounded border border-slate-600 ml-1">{currentQ.correctAnswer}</strong>
                  </p>
                )}
-               <p className="text-slate-400 text-sm mt-2 italic border-t border-slate-700/50 pt-3">
+               <p className="text-slate-400 text-xs sm:text-sm mt-1 italic border-t border-slate-700/50 pt-2">
                  <i className="fa-solid fa-lightbulb text-amber-400 mr-1.5"></i> 
                  {isTr ? currentQ.explanationTr : currentQ.explanationEn}
                </p>
              </div>
            )}
 
-           <div className="mt-8 flex flex-col sm:flex-row justify-center items-center gap-3">
+           <div className="mt-3 sm:mt-6 flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-3">
              {!isAnswered ? (
                <>
                  <button 
                    onClick={handleCheck}
                    disabled={!userAnswer}
-                   className="w-full sm:w-auto flex-shrink-0 bg-brand-600 text-white px-8 py-3.5 rounded-xl font-bold border border-brand-500 shadow-[0_0_15px_rgba(56,189,248,0.3)] disabled:opacity-50 disabled:shadow-none hover:bg-brand-500 transition-all"
+                   className="w-full sm:w-auto flex-shrink-0 bg-teal-600 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-xl font-bold border border-teal-500 shadow-md disabled:opacity-50 disabled:shadow-none hover:bg-teal-500 transition-all text-xs sm:text-sm"
                  >
                    <i className="fa-solid fa-check mr-2"></i> {isTr ? 'Kontrol Et' : 'Check'}
                  </button>
@@ -544,7 +554,7 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
                  <div className="flex gap-2 w-full sm:w-auto">
                    <button 
                      onClick={handleDontKnow}
-                     className="flex-1 sm:flex-initial bg-slate-800 hover:bg-rose-950/50 text-slate-300 hover:text-rose-300 px-5 py-3.5 rounded-xl font-bold border border-slate-700 hover:border-rose-800/50 transition-all text-xs sm:text-sm"
+                     className="flex-1 sm:flex-initial bg-slate-800 hover:bg-rose-950/50 text-slate-300 hover:text-rose-300 px-4 py-2.5 sm:py-3 rounded-xl font-bold border border-slate-700 hover:border-rose-800/50 transition-all text-xs sm:text-sm"
                      title={isTr ? 'Yanlış kabul edilir' : 'Counts as incorrect'}
                    >
                      <i className="fa-solid fa-circle-question mr-1.5 text-rose-400"></i> {isTr ? 'Bilmiyorum' : "Don't know"}
@@ -552,7 +562,7 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
 
                    <button 
                      onClick={handleSkip}
-                     className="flex-1 sm:flex-initial bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white px-5 py-3.5 rounded-xl font-bold border border-slate-700 hover:border-slate-600 transition-all text-xs sm:text-sm"
+                     className="flex-1 sm:flex-initial bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white px-4 py-2.5 sm:py-3 rounded-xl font-bold border border-slate-700 hover:border-slate-600 transition-all text-xs sm:text-sm"
                      title={isTr ? 'Skoru etkilemeden sonraki soruya geçer' : 'Skip without affecting score'}
                    >
                      <i className="fa-solid fa-forward mr-1.5 text-amber-400"></i> {isTr ? 'Soruyu Geç' : 'Skip'}
@@ -562,7 +572,7 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
              ) : (
                <button 
                  onClick={handleNext}
-                 className="w-full sm:w-auto bg-indigo-600 text-white px-10 py-3.5 rounded-xl font-bold border border-indigo-500 shadow-[0_0_15px_rgba(79,70,229,0.3)] hover:bg-indigo-500 transition-all"
+                 className="w-full sm:w-auto bg-indigo-600 text-white px-8 sm:px-10 py-2.5 sm:py-3 rounded-xl font-bold border border-indigo-500 shadow-md hover:bg-indigo-500 transition-all text-xs sm:text-sm"
                >
                  {currentIndex < deck.length - 1 ? (isTr ? 'Sıradaki Soru' : 'Next Question') : (isTr ? 'Testi Bitir' : 'Finish')} <i className="fa-solid fa-arrow-right ml-2"></i>
                </button>
