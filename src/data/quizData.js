@@ -5,7 +5,7 @@ export const quizQuestions = [
   {
     id: "q_matching_ch1_1",
     type: "matching",
-    tags: ["ch1", "kennismaking", "begroeting"],
+    tags: ["summary_ch1", "kennismaking", "begroeting"],
     questionNl: "Kies het juiste woord voor elke zin:",
     instructionTr: "Aşağıdaki cümlelerdeki boşlukları kelime havuzundaki doğru kelimelerle eşleştirin.",
     instructionEn: "Match the blanks in each sentence with the correct word from the pool.",
@@ -23,7 +23,7 @@ export const quizQuestions = [
   {
     id: "q_matching_ch2_verbs",
     type: "matching",
-    tags: ["ch2", "verbs_present", "canteen"],
+    tags: ["summary_ch2", "verbs_present", "canteen"],
     questionNl: "Vul het juiste werkwoord in:",
     instructionTr: "Her cümle için uygun şimdiki zaman fiilini havuzdan seçin.",
     instructionEn: "Select the correct present tense verb for each sentence from the pool.",
@@ -41,7 +41,7 @@ export const quizQuestions = [
   {
     id: "q_matching_ch4_directions",
     type: "matching",
-    tags: ["ch4", "directions", "traffic"],
+    tags: ["summary_ch4", "directions", "traffic"],
     questionNl: "Kies het juiste woord voor de routebeschrijving:",
     instructionTr: "Yol tarifi cümlelerindeki boşlukları uygun kelimelerle doldurun.",
     instructionEn: "Fill in the blanks in the directions sentences with the correct words.",
