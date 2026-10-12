@@ -118,13 +118,18 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
     stopPlayingAll();
   }, [sectionId, stopPlayingAll]);
 
-  const cycleSpeechRate = (e) => {
+  const handleSpeechRateChange = (e) => {
+    const newRate = parseFloat(e.target.value);
+    if (!isNaN(newRate)) {
+      setCurrentSpeechRate(newRate);
+      setSpeechRate(newRate);
+    }
+  };
+
+  const resetSpeechRate = (e) => {
     if (e && e.stopPropagation) e.stopPropagation();
-    const rates = [1.0, 1.15, 0.75, 0.85];
-    const currentIndex = rates.indexOf(currentSpeechRate);
-    const nextRate = rates[(currentIndex + 1) % rates.length] || 1.0;
-    setCurrentSpeechRate(nextRate);
-    setSpeechRate(nextRate);
+    setCurrentSpeechRate(1.0);
+    setSpeechRate(1.0);
   };
 
   const speakDutch = (text, e, speaker) => {
@@ -523,15 +528,32 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
               </button>
             )}
 
-            {/* HIZLI KONUŞMA HIZI BUTONU */}
-            <button 
-              onClick={cycleSpeechRate}
-              className="flex items-center gap-1.5 bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 border border-slate-600 px-2.5 py-1.5 rounded-xl text-xs font-bold transition-all shadow-sm"
-              title={lang === 'tr' ? `Konuşma Hızı: ${currentSpeechRate}x (Hızı değiştirmek için tıkla)` : `Speech Speed: ${currentSpeechRate}x (Click to change)`}
+            {/* ANALOG SES HIZI KONTROLÜ (SLIDER / PITCH FADER) */}
+            <div 
+              className="flex items-center gap-1.5 sm:gap-2 bg-slate-950/70 border border-slate-700/80 hover:border-slate-600 rounded-xl px-2 py-1 shadow-inner transition-colors group select-none"
+              title={lang === 'tr' ? `Konuşma Hızı: ${Number(currentSpeechRate).toFixed(2)}x (Kaydırarak ayarla, 1.0x için tıkla)` : `Speech Speed: ${Number(currentSpeechRate).toFixed(2)}x (Slide to adjust, click 1.0x to reset)`}
             >
-              <i className="fa-solid fa-gauge-high text-brand-400 text-xs"></i>
-              <span>{currentSpeechRate}x</span>
-            </button>
+              <i className="fa-solid fa-gauge-high text-brand-400 text-[11px] flex-shrink-0 group-hover:scale-110 transition-transform"></i>
+              
+              <input 
+                type="range"
+                min="0.6"
+                max="1.4"
+                step="0.05"
+                value={currentSpeechRate}
+                onChange={handleSpeechRateChange}
+                className="analog-speed-slider w-14 sm:w-20 md:w-24 h-1.5 cursor-ew-resize flex-shrink-0"
+              />
+
+              <button 
+                type="button"
+                onClick={resetSpeechRate}
+                title={lang === 'tr' ? "1.00x normal hıza sıfırla" : "Reset to 1.00x"}
+                className="font-mono text-[10px] sm:text-[11px] font-bold text-brand-300 hover:text-white bg-slate-900/90 hover:bg-slate-800 border border-slate-700/70 hover:border-brand-500/50 px-1 py-0.5 rounded transition-all shadow-sm active:scale-95 flex-shrink-0"
+              >
+                {Number(currentSpeechRate).toFixed(2)}x
+              </button>
+            </div>
 
             <button onClick={(e) => { e.stopPropagation(); toggleCompleted(sectionId); }} className="text-xl transition-transform hover:scale-110 focus:outline-none ml-1">
               {isComp ? (

@@ -1,5 +1,5 @@
 // src/components/AuthModal.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { auth, sendSignInLinkToEmail, deleteCloudData } from '../firebase'; 
 import { useLanguage } from '../contexts/LanguageContext';
 import { getSpeechRate, setSpeechRate, testDutchSpeech } from '../utils/speech';
@@ -11,6 +11,14 @@ export default function AuthModal({ isOpen, onClose, user }) {
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
   const [speechRate, setLocalSpeechRate] = useState(getSpeechRate());
   const { lang, setLang, t } = useLanguage();
+
+  useEffect(() => {
+    const handleRateUpdate = (e) => {
+      setLocalSpeechRate(e.detail || getSpeechRate());
+    };
+    window.addEventListener('speechRateChanged', handleRateUpdate);
+    return () => window.removeEventListener('speechRateChanged', handleRateUpdate);
+  }, []);
   
   if (!isOpen) return null;
 
@@ -104,167 +112,197 @@ export default function AuthModal({ isOpen, onClose, user }) {
   };
 
   return (
-    // Dış kapsayıcıya p-4 eklendi
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm" onClick={onClose}>
-      {/* Modal içine max-h-[90vh] ve overflow-y-auto eklendi */}
-      <div className="bg-slate-900 border border-slate-700 p-6 sm:p-8 rounded-3xl shadow-2xl max-w-md w-full relative max-h-[90vh] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-700" onClick={e => e.stopPropagation()}>
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-4 bg-slate-950/80 backdrop-blur-sm" onClick={onClose}>
+      <div className="bg-slate-900/95 backdrop-blur-md border border-slate-700/80 p-5 rounded-2xl shadow-2xl max-w-sm w-full relative max-h-[90vh] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-700" onClick={e => e.stopPropagation()}>
         
-        <button onClick={onClose} className="absolute top-4 right-4 text-slate-500 hover:text-rose-400 transition-colors z-10 bg-slate-900 rounded-full w-8 h-8 flex items-center justify-center">
-          <i className="fa-solid fa-xmark text-2xl"></i>
+        <button onClick={onClose} className="absolute top-3.5 right-3.5 text-slate-400 hover:text-white hover:bg-slate-800 rounded-full w-7 h-7 flex items-center justify-center transition-colors z-10">
+          <i className="fa-solid fa-xmark text-lg"></i>
         </button>
 
-        <div className="text-center mb-6 mt-2">
-          <div className="bg-brand-900/30 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 border border-brand-500/20">
-            <i className="fa-solid fa-cloud-arrow-up text-3xl text-brand-400"></i>
+        {/* BAŞLIK & İKON (ZARİF & KOMPAKT) */}
+        <div className="text-center mb-3.5">
+          <div className="w-9 h-9 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center mx-auto mb-2 text-brand-400 shadow-inner">
+            <i className="fa-solid fa-cloud-arrow-up text-base"></i>
           </div>
-          <h2 className="text-2xl font-extrabold text-slate-100 mb-2">{t('syncProgress')}</h2>
-          <p className="text-sm text-slate-400 leading-relaxed">
+          <h2 className="text-base sm:text-lg font-bold text-slate-100">{t('syncProgress')}</h2>
+          <p className="text-[11px] text-slate-400 mt-0.5 leading-snug max-w-[280px] mx-auto">
             {t('syncDesc')}
           </p>
         </div>
 
+        {/* KULLANICI GİRİŞ DURUMU VEYA FORM */}
         {user ? (
-          <div className="text-center space-y-4">
-            <div className="bg-emerald-900/30 border border-emerald-800/50 p-4 rounded-2xl">
-              <p className="text-sm font-bold text-emerald-400 mb-1">{t('loggedIn')}</p>
-              <p className="text-xs text-slate-300">{user.email}</p>
+          <div className="mb-3">
+            <div className="bg-emerald-950/30 border border-emerald-800/40 p-2.5 rounded-xl flex items-center justify-between gap-2">
+              <div className="min-w-0 flex-1">
+                <p className="text-[10px] font-bold text-emerald-400 uppercase tracking-wide flex items-center gap-1">
+                  <i className="fa-solid fa-circle-check text-[9px]"></i>
+                  {t('loggedIn')}
+                </p>
+                <p className="text-xs text-slate-200 font-medium truncate mt-0.5">{user.email}</p>
+              </div>
+              <button 
+                onClick={handleLogout} 
+                className="bg-slate-800 hover:bg-rose-950/40 border border-slate-700 hover:border-rose-700/50 text-slate-300 hover:text-rose-300 text-xs font-semibold px-2.5 py-1.5 rounded-lg transition-all flex items-center gap-1.5 flex-shrink-0"
+              >
+                <i className="fa-solid fa-arrow-right-from-bracket text-[10px]"></i>
+                <span>{t('logout')}</span>
+              </button>
             </div>
-            <button onClick={handleLogout} className="w-full bg-slate-800 hover:bg-rose-900/40 border border-slate-700 hover:border-rose-700/50 text-slate-300 hover:text-rose-300 font-bold py-3 rounded-xl transition-all">
-              {t('logout')}
-            </button>
           </div>
         ) : (
-          <form onSubmit={handleLogin} className="space-y-4">
-            <input 
-              type="email" 
-              required
-              value={email}
-              onChange={e => setEmail(e.target.value)}
-              placeholder={t('emailPlaceholder')}
-              className="w-full bg-slate-800 border border-slate-700 text-slate-200 placeholder-slate-500 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-500"
-            />
-            <button disabled={loading} type="submit" className="w-full bg-brand-600 hover:bg-brand-500 text-white font-bold py-3 rounded-xl shadow-lg transition-all disabled:opacity-50">
-              {loading ? t('connecting') : t('sendLoginLink')}
+          <form onSubmit={handleLogin} className="space-y-2 mb-3">
+            <div className="relative">
+              <i className="fa-solid fa-envelope absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 text-xs"></i>
+              <input 
+                type="email" 
+                required
+                value={email}
+                onChange={e => setEmail(e.target.value)}
+                placeholder={t('emailPlaceholder')}
+                className="w-full bg-slate-950/60 border border-slate-700 text-slate-200 placeholder-slate-500 rounded-xl pl-8 pr-3 py-2 text-xs focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all"
+              />
+            </div>
+            <button 
+              disabled={loading} 
+              type="submit" 
+              className="w-full bg-brand-600 hover:bg-brand-500 active:scale-[0.99] text-white text-xs font-bold py-2 rounded-xl shadow-md transition-all disabled:opacity-50 flex items-center justify-center gap-1.5"
+            >
+              {loading ? (
+                <>
+                  <i className="fa-solid fa-circle-notch fa-spin text-xs"></i>
+                  <span>{t('connecting')}</span>
+                </>
+              ) : (
+                <>
+                  <i className="fa-solid fa-paper-plane text-xs"></i>
+                  <span>{t('sendLoginLink')}</span>
+                </>
+              )}
             </button>
-            {message && <p className={`text-xs text-center font-medium ${message.includes('❌') ? 'text-rose-400' : 'text-emerald-400'}`}>{message}</p>}
+            {message && (
+              <p className={`text-[11px] text-center font-medium ${message.includes('❌') ? 'text-rose-400' : 'text-emerald-400'}`}>
+                {message}
+              </p>
+            )}
           </form>
         )}
         
-        {/* DİL SEÇİMİ (LANGUAGE TOGGLE) */}
-        <div className="bg-slate-800 border border-slate-700 p-4 rounded-xl flex items-center justify-between mt-4">
-          <div className="flex items-center gap-3">
-            <i className="fa-solid fa-globe text-brand-400 text-lg"></i>
-            <span className="font-bold text-slate-200">{t('language')}</span>
-          </div>
+        {/* AYARLAR GRUBU (DİL VE SES HIZI) */}
+        <div className="space-y-2 pt-2 border-t border-slate-800/80">
           
-          <div className="flex items-center bg-slate-900 rounded-full p-1 border border-slate-700">
-            <button 
-              onClick={() => setLang('tr')}
-              className={`px-3 py-1 text-xs font-bold rounded-full transition-all ${lang === 'tr' ? 'bg-brand-600 text-white shadow-md' : 'text-slate-500 hover:text-slate-300'}`}
-            >
-              TR
-            </button>
-            <button 
-              onClick={() => setLang('en')}
-              className={`px-3 py-1 text-xs font-bold rounded-full transition-all ${lang === 'en' ? 'bg-brand-600 text-white shadow-md' : 'text-slate-500 hover:text-slate-300'}`}
-            >
-              EN
-            </button>
-          </div>
-        </div>
-        
-        {/* SESLENDİRME HIZI AYARI (SPEECH RATE) */}
-        <div className="bg-slate-800 border border-slate-700 p-4 rounded-xl mt-3 space-y-3">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <i className="fa-solid fa-gauge-high text-brand-400 text-lg"></i>
-              <div>
-                <span className="font-bold text-slate-200 block text-sm">
-                  {lang === 'tr' ? 'Seslendirme Hızı' : 'Speech Speed'}
-                </span>
-                <span className="text-[11px] text-slate-400">
-                  {lang === 'tr' ? 'Diyalog ve kelime okuma hızı' : 'Playback speed for dialogues & words'}
-                </span>
-              </div>
+          {/* DİL SEÇİMİ */}
+          <div className="bg-slate-950/40 border border-slate-800/80 px-3 py-1.5 rounded-xl flex items-center justify-between">
+            <div className="flex items-center gap-2 text-xs font-semibold text-slate-300">
+              <i className="fa-solid fa-globe text-brand-400 text-xs"></i>
+              <span>{t('language')}</span>
             </div>
             
-            <button 
-              type="button"
-              onClick={() => testDutchSpeech(speechRate)}
-              className="bg-brand-600/30 hover:bg-brand-600 text-brand-300 hover:text-white border border-brand-500/40 px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 shadow-sm active:scale-95"
-              title={lang === 'tr' ? 'Örnek Sesi Dinle' : 'Play Sample Audio'}
-            >
-              <i className="fa-solid fa-volume-high"></i>
-              <span>{lang === 'tr' ? 'Test Et' : 'Test'}</span>
-            </button>
-          </div>
-
-          <div className="grid grid-cols-4 gap-2 pt-1">
-            {[
-              { value: 0.75, label: '0.75x', desc: lang === 'tr' ? 'Yavaş' : 'Slow' },
-              { value: 0.85, label: '0.85x', desc: lang === 'tr' ? 'Rahat' : 'Learner' },
-              { value: 1.0, label: '1.0x', desc: lang === 'tr' ? 'Normal' : 'Normal' },
-              { value: 1.15, label: '1.15x', desc: lang === 'tr' ? 'Hızlı' : 'Fast' },
-            ].map(item => (
-              <button
-                key={item.value}
+            <div className="flex items-center bg-slate-900 rounded-lg p-0.5 border border-slate-700">
+              <button 
                 type="button"
-                onClick={() => {
-                  setLocalSpeechRate(item.value);
-                  setSpeechRate(item.value);
-                }}
-                className={`py-2 px-1 rounded-xl font-bold text-xs flex flex-col items-center transition-all border ${
-                  speechRate === item.value
-                    ? 'bg-brand-600 text-white border-brand-500 shadow-md shadow-brand-900/30 scale-[1.02]'
-                    : 'bg-slate-900 text-slate-400 hover:text-slate-200 border-slate-700 hover:bg-slate-800'
-                }`}
+                onClick={() => setLang('tr')}
+                className={`px-2.5 py-0.5 text-[11px] font-bold rounded-md transition-all ${lang === 'tr' ? 'bg-brand-600 text-white shadow-sm' : 'text-slate-400 hover:text-slate-200'}`}
               >
-                <span className="text-xs font-extrabold">{item.label}</span>
-                <span className="text-[10px] font-normal opacity-80">{item.desc}</span>
+                TR
               </button>
-            ))}
+              <button 
+                type="button"
+                onClick={() => setLang('en')}
+                className={`px-2.5 py-0.5 text-[11px] font-bold rounded-md transition-all ${lang === 'en' ? 'bg-brand-600 text-white shadow-sm' : 'text-slate-400 hover:text-slate-200'}`}
+              >
+                EN
+              </button>
+            </div>
+          </div>
+          
+          {/* SESLENDİRME HIZI AYARI (ANALOG SLIDER) */}
+          <div className="bg-slate-950/40 border border-slate-800/80 px-3 py-2 rounded-xl space-y-1.5">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2 text-xs font-semibold text-slate-300">
+                <i className="fa-solid fa-sliders text-brand-400 text-xs"></i>
+                <span>{lang === 'tr' ? 'Seslendirme Hızı' : 'Speech Speed'}</span>
+              </div>
+              
+              <div className="flex items-center gap-2">
+                <span className="font-mono text-xs font-bold text-brand-300">{Number(speechRate).toFixed(2)}x</span>
+                <button 
+                  type="button"
+                  onClick={() => testDutchSpeech(speechRate)}
+                  className="bg-brand-600/20 hover:bg-brand-600 text-brand-300 hover:text-white border border-brand-500/30 px-2 py-0.5 rounded-md text-[10px] font-bold transition-all flex items-center gap-1 active:scale-95"
+                  title={lang === 'tr' ? 'Örnek Sesi Dinle' : 'Play Sample Audio'}
+                >
+                  <i className="fa-solid fa-volume-high text-[10px]"></i>
+                  <span>{lang === 'tr' ? 'Test' : 'Test'}</span>
+                </button>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-2 pt-0.5">
+              <span className="text-[10px] text-slate-500 font-mono">0.6x</span>
+              <input 
+                type="range"
+                min="0.6"
+                max="1.4"
+                step="0.05"
+                value={speechRate}
+                onChange={(e) => {
+                  const val = parseFloat(e.target.value);
+                  setLocalSpeechRate(val);
+                  setSpeechRate(val);
+                }}
+                className="analog-speed-slider flex-1 h-1.5 cursor-ew-resize"
+              />
+              <span className="text-[10px] text-slate-500 font-mono">1.4x</span>
+            </div>
           </div>
         </div>
         
-        {/* VERİ YÖNETİMİ BÖLÜMÜ */}
-        <div className="mt-8 pt-6 border-t border-slate-800 space-y-3">
-          <p className="text-xs text-center text-slate-500 font-medium">{t('manualManageInfo')}</p>
-          <div className="flex gap-2 mb-2">
-            <button onClick={exportData} className="flex-1 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-300 text-xs font-bold py-2.5 rounded-lg transition-colors flex items-center justify-center gap-2">
-              <i className="fa-solid fa-download"></i> {t('downloadBackup')}
+        {/* VERİ YÖNETİMİ BÖLÜMÜ (KOMPAKT) */}
+        <div className="mt-3 pt-2.5 border-t border-slate-800/80 space-y-2">
+          <div className="flex gap-2">
+            <button 
+              onClick={exportData} 
+              className="flex-1 bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700/70 text-slate-300 hover:text-white text-[11px] font-semibold py-1.5 rounded-lg transition-colors flex items-center justify-center gap-1.5"
+            >
+              <i className="fa-solid fa-download text-[10px] text-slate-400"></i>
+              <span>{t('downloadBackup')}</span>
             </button>
             
-            <label className="flex-1 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-300 text-xs font-bold py-2.5 rounded-lg transition-colors flex items-center justify-center gap-2 cursor-pointer">
-              <i className="fa-solid fa-upload"></i> {t('importDataBtn')}
+            <label className="flex-1 bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700/70 text-slate-300 hover:text-white text-[11px] font-semibold py-1.5 rounded-lg transition-colors flex items-center justify-center gap-1.5 cursor-pointer">
+              <i className="fa-solid fa-upload text-[10px] text-slate-400"></i>
+              <span>{t('importDataBtn')}</span>
               <input type="file" accept=".json" className="hidden" onChange={importData} />
             </label>
           </div>
 
           {!showDeleteConfirm ? (
-            <button 
-              onClick={() => setShowDeleteConfirm(true)} 
-              className="w-full bg-rose-950/30 hover:bg-rose-900/40 border border-rose-900/50 hover:border-rose-700/50 text-rose-400 text-xs font-bold py-2.5 rounded-lg transition-colors flex items-center justify-center gap-2 mt-2"
-            >
-              <i className="fa-solid fa-triangle-exclamation"></i> 
-              {lang === 'tr' ? 'Tüm Site Verisini Sıfırla' : 'Erase All Site Data'}
-            </button>
+            <div className="text-center pt-0.5">
+              <button 
+                onClick={() => setShowDeleteConfirm(true)} 
+                className="text-[11px] text-rose-400/70 hover:text-rose-300 font-medium transition-colors inline-flex items-center gap-1"
+              >
+                <i className="fa-solid fa-triangle-exclamation text-[10px]"></i> 
+                <span>{lang === 'tr' ? 'Tüm Site Verisini Sıfırla' : 'Erase All Site Data'}</span>
+              </button>
+            </div>
           ) : (
-            <div className="mt-4 p-4 bg-rose-950/60 border border-rose-800/80 rounded-xl space-y-3 animate-fadeIn">
-              <p className="text-xs text-rose-300 text-center font-bold leading-relaxed">
+            <div className="p-2.5 bg-rose-950/40 border border-rose-800/60 rounded-xl space-y-2 animate-fadeIn text-center">
+              <p className="text-[11px] text-rose-300 font-medium leading-tight">
                 {lang === 'tr' 
-                  ? 'Tüm ilerlemeniz, eklediğiniz kelimeler ve ayarlarınız kalıcı olarak silinecek. Emin misiniz?' 
-                  : 'All your progress, words, and settings will be permanently deleted. Are you sure?'}
+                  ? 'Tüm ilerleme ve notlarınız kalıcı olarak silinecek. Emin misiniz?' 
+                  : 'All your progress and notes will be permanently deleted. Are you sure?'}
               </p>
               <div className="flex gap-2">
                 <button 
                   onClick={() => setShowDeleteConfirm(false)} 
-                  className="flex-1 bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-bold py-2 rounded-lg transition-colors border border-slate-600"
+                  className="flex-1 bg-slate-800 hover:bg-slate-700 text-slate-300 text-[11px] font-bold py-1 rounded-lg transition-colors border border-slate-700"
                 >
                   {lang === 'tr' ? 'İptal' : 'Cancel'}
                 </button>
                 <button 
                   onClick={handleDeleteAllData} 
-                  className="flex-1 bg-rose-600 hover:bg-rose-500 text-white text-xs font-bold py-2 rounded-lg transition-colors shadow-sm"
+                  className="flex-1 bg-rose-600 hover:bg-rose-500 text-white text-[11px] font-bold py-1 rounded-lg transition-colors shadow-sm"
                 >
                   {lang === 'tr' ? 'Evet, Sıfırla' : 'Yes, Erase'}
                 </button>
