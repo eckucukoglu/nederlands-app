@@ -4,6 +4,14 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { quizQuestions } from '../data/quizData';
 import { auth, toggleReportQuestion, toggleGoodQuestion } from '../firebase'; 
 
+const DIFFICULTY_LEVELS = [
+  { level: 1, labelTr: 'A1 Temel', labelEn: 'A1 Basics', shortTr: 'A1', shortEn: 'A1', color: 'bg-emerald-950/90 text-emerald-300 border-emerald-800/80 hover:bg-emerald-900' },
+  { level: 2, labelTr: 'A1+ / Erken A2', labelEn: 'A1+ / Early A2', shortTr: 'A1+', shortEn: 'A1+', color: 'bg-teal-950/90 text-teal-300 border-teal-800/80 hover:bg-teal-900' },
+  { level: 3, labelTr: 'Çekirdek A2', labelEn: 'Core A2', shortTr: 'A2', shortEn: 'A2', color: 'bg-amber-950/90 text-amber-300 border-amber-800/80 hover:bg-amber-900' },
+  { level: 4, labelTr: 'İleri A2', labelEn: 'Upper A2', shortTr: 'A2+', shortEn: 'A2+', color: 'bg-orange-950/90 text-orange-300 border-orange-800/80 hover:bg-orange-900' },
+  { level: 5, labelTr: 'B1 Hazırlık', labelEn: 'B1 Prep', shortTr: 'B1', shortEn: 'B1', color: 'bg-rose-950/90 text-rose-300 border-rose-800/80 hover:bg-rose-900' },
+];
+
 export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
   const { lang } = useLanguage();
   const isTr = lang === 'tr';
@@ -21,6 +29,7 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
 
   const [activeFilter, setActiveFilter] = useState('all'); 
   const [selectedDifficulty, setSelectedDifficulty] = useState(null);
+  const [isDiffMenuOpen, setIsDiffMenuOpen] = useState(false);
   const [tagInput, setTagInput] = useState(tags && tags.length > 0 ? tags[0] : '');
 
   // Tüm mevcut etiketlerin listesi (Datalist otomatik tamamlama için)
@@ -88,6 +97,7 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
   useEffect(() => {
     setUserMatches({});
     setActiveSlotId(null);
+    setIsDiffMenuOpen(false);
   }, [currentQ?.id]);
 
   const shuffledOptions = useMemo(() => {
@@ -204,8 +214,9 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
     }
   };
 
-  const handleDifficultyClick = (diff) => {
-    setSelectedDifficulty(prev => (prev === diff ? null : diff));
+  const handleSelectDifficulty = (lvl) => {
+    setSelectedDifficulty(prev => (prev === lvl ? null : lvl));
+    setIsDiffMenuOpen(false);
   };
 
   const handleCheck = (answerParam) => {
@@ -557,7 +568,7 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
   return (
     <div className="fixed inset-0 z-[150] flex items-center justify-center p-2 sm:p-4 md:p-6 bg-slate-950/85 backdrop-blur-sm" onClick={onClose}>
       {/* ANA TEST EKRANI - Okunaklı, Zarif & Mobil Uyumlu */}
-      <div className="bg-slate-900/98 backdrop-blur-md w-full max-w-2xl rounded-2xl sm:rounded-3xl shadow-2xl border border-slate-700/80 flex flex-col overflow-hidden relative max-h-[94vh] sm:max-h-[92vh]" onClick={e => e.stopPropagation()}>
+      <div className="bg-slate-900/98 backdrop-blur-md w-full max-w-2xl min-h-[350px] sm:min-h-[370px] rounded-2xl sm:rounded-3xl shadow-2xl border border-slate-700/80 flex flex-col overflow-hidden relative max-h-[94vh] sm:max-h-[92vh]" onClick={e => e.stopPropagation()}>
         
         {/* Header */}
         <div className="px-4 sm:px-6 py-3 sm:py-3.5 border-b border-slate-800 bg-slate-800/80 flex-none space-y-2.5">
@@ -641,20 +652,6 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
               >
                 {isTr ? 'Çözülmeyenler' : 'Unseen'}
               </button>
-
-              {selectedDifficulty !== null && (
-                <button
-                  type="button"
-                  onClick={() => setSelectedDifficulty(null)}
-                  className="text-xs sm:text-sm font-bold px-2.5 py-1.5 rounded-lg bg-amber-950/80 text-amber-300 border border-amber-700/80 hover:bg-amber-900 transition-all flex items-center gap-1.5 cursor-pointer shadow-sm animate-fadeIn"
-                  title={isTr ? "Zorluk filtresini temizle" : "Clear difficulty filter"}
-                >
-                  <i className="fa-solid fa-gauge-high text-xs"></i>
-                  <span>{isTr ? 'Zorluk' : 'Diff'}: {selectedDifficulty}/5</span>
-                  <i className="fa-solid fa-xmark text-xs ml-0.5"></i>
-                </button>
-              )}
-
               <div className="h-4 w-[1px] bg-slate-700 mx-0.5 hidden sm:block"></div>
 
               {/* Manuel Tag Giriş Alanı */}
@@ -738,45 +735,113 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
                 </span>
 
                 {currentQ.difficulty && (
-                  <button
-                    type="button"
-                    onClick={() => handleDifficultyClick(currentQ.difficulty)}
-                    className={`text-[11px] sm:text-xs font-semibold px-2 py-0.5 rounded-md border flex items-center gap-1 transition-all cursor-pointer ${
-                      selectedDifficulty === currentQ.difficulty
-                        ? 'ring-2 ring-white/60 shadow-lg scale-105 font-bold'
-                        : 'hover:brightness-125 hover:scale-105'
-                    } ${
-                      currentQ.difficulty === 1
-                        ? 'bg-emerald-950/40 text-emerald-300 border-emerald-800/60'
-                        : currentQ.difficulty === 2
-                        ? 'bg-teal-950/40 text-teal-300 border-teal-800/60'
-                        : currentQ.difficulty === 3
-                        ? 'bg-amber-950/40 text-amber-300 border-amber-800/60'
-                        : currentQ.difficulty === 4
-                        ? 'bg-orange-950/40 text-orange-300 border-orange-800/60'
-                        : 'bg-rose-950/40 text-rose-300 border-rose-800/60'
-                    }`}
-                    title={
-                      isTr
-                        ? selectedDifficulty === currentQ.difficulty
-                          ? `Zorluk ${currentQ.difficulty}/5 filtresi aktif. Filtreyi kaldırmak için tıklayın.`
-                          : `Zorluk: ${currentQ.difficulty}/5 (${
-                              currentQ.difficulty === 1 ? 'A1 Temel' :
-                              currentQ.difficulty === 2 ? 'A1+ / Erken A2' :
-                              currentQ.difficulty === 3 ? 'Çekirdek A2' :
-                              currentQ.difficulty === 4 ? 'İleri A2' : 'B1 Hazırlık'
-                            }). Sadece bu zorluktaki soruları filtrelemek için tıklayın.`
-                        : selectedDifficulty === currentQ.difficulty
-                          ? `Difficulty ${currentQ.difficulty}/5 filter active. Click to clear.`
-                          : `Difficulty: ${currentQ.difficulty}/5. Click to filter by this difficulty.`
-                    }
-                  >
-                    <i className="fa-solid fa-gauge-high text-[10px]"></i>
-                    <span>{isTr ? 'Zorluk' : 'Diff'}: {currentQ.difficulty}/5</span>
-                    {selectedDifficulty === currentQ.difficulty && (
-                      <i className="fa-solid fa-xmark text-[10px] ml-0.5 opacity-80 hover:opacity-100"></i>
+                  <div className="relative inline-block text-left w-32 sm:w-36">
+                    {/* Arka plan tıklama katmanı (menü açıkken dışarıya tıklandığında kapatmak için) */}
+                    {isDiffMenuOpen && (
+                      <div
+                        className="fixed inset-0 z-40"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setIsDiffMenuOpen(false);
+                        }}
+                      />
                     )}
-                  </button>
+
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setIsDiffMenuOpen(prev => !prev);
+                      }}
+                      className={`w-full text-[11px] sm:text-xs font-semibold px-2.5 py-1 rounded-lg border flex items-center justify-between gap-1 transition-all cursor-pointer relative z-40 ${
+                        selectedDifficulty !== null
+                          ? 'ring-2 ring-white/70 shadow-lg font-bold'
+                          : 'hover:brightness-125'
+                      } ${
+                        (selectedDifficulty || currentQ.difficulty) === 1
+                          ? 'bg-emerald-950/60 text-emerald-300 border-emerald-800/70'
+                          : (selectedDifficulty || currentQ.difficulty) === 2
+                          ? 'bg-teal-950/60 text-teal-300 border-teal-800/70'
+                          : (selectedDifficulty || currentQ.difficulty) === 3
+                          ? 'bg-amber-950/60 text-amber-300 border-amber-800/70'
+                          : (selectedDifficulty || currentQ.difficulty) === 4
+                          ? 'bg-orange-950/60 text-orange-300 border-orange-800/70'
+                          : 'bg-rose-950/60 text-rose-300 border-rose-800/70'
+                      }`}
+                      title={
+                        isTr
+                          ? selectedDifficulty !== null
+                            ? `Zorluk: ${currentQ.difficulty}/5 (${selectedDifficulty}/5 filtresi aktif). Seviyeyi değiştirmek veya kaldırmak için tıklayın.`
+                            : `Zorluk: ${currentQ.difficulty}/5. Zorluk seviyesi seçmek için tıklayın.`
+                          : `Difficulty: ${currentQ.difficulty}/5. Click to select difficulty level.`
+                      }
+                    >
+                      <div className="flex items-center gap-1 min-w-0 truncate">
+                        <i className="fa-solid fa-gauge-high text-[10px] flex-shrink-0"></i>
+                        <span className="truncate">{isTr ? 'Zorluk' : 'Diff'}: {currentQ.difficulty}/5</span>
+                      </div>
+                      <i className={`fa-solid fa-chevron-down text-[8px] flex-shrink-0 opacity-80 transition-transform ${isDiffMenuOpen ? 'rotate-180' : ''}`}></i>
+                    </button>
+
+                    {/* Açılır Dropdown Menü: Buton ile birebir aynı hizada ve genişlikte (w-full left-0) */}
+                    {isDiffMenuOpen && (
+                      <div className="absolute left-0 top-full mt-1 z-50 w-full bg-slate-900/98 backdrop-blur-md rounded-lg border border-slate-700 shadow-2xl p-1 space-y-0.5 animate-fadeIn max-h-[170px] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-700">
+                        {selectedDifficulty !== null && (
+                          <button
+                            type="button"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              setSelectedDifficulty(null);
+                              setIsDiffMenuOpen(false);
+                            }}
+                            className="w-full text-center h-5 py-0.5 px-1.5 mb-0.5 rounded-md bg-slate-800 hover:bg-slate-750 text-slate-300 hover:text-rose-300 border border-slate-700/80 text-[9.5px] font-bold flex items-center justify-center gap-1 transition-all cursor-pointer"
+                            title={isTr ? "Zorluk filtresini kaldır" : "Clear difficulty filter"}
+                          >
+                            <i className="fa-solid fa-xmark text-[8.5px]"></i>
+                            <span>{isTr ? 'Filtreyi Kaldır' : 'Clear Filter'}</span>
+                          </button>
+                        )}
+
+                        <div className="space-y-0.5">
+                          {DIFFICULTY_LEVELS.map(({ level, labelTr, labelEn, shortTr, shortEn, color }) => {
+                            const isSelected = selectedDifficulty === level;
+                            return (
+                              <button
+                                key={level}
+                                type="button"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  handleSelectDifficulty(level);
+                                }}
+                                className={`w-full flex items-center justify-between px-2 py-0.5 h-6 rounded-md border text-[10px] font-semibold transition-all cursor-pointer ${color} ${
+                                  isSelected
+                                    ? 'ring-2 ring-white/90 shadow-md font-bold'
+                                    : 'opacity-90 hover:opacity-100'
+                                }`}
+                                title={
+                                  isTr
+                                    ? isSelected
+                                      ? `${level}/5 filtresi aktif. Kaldırmak için tekrar tıklayın.`
+                                      : `${level}/5 (${labelTr}) seviyesini filtrele.`
+                                    : isSelected
+                                      ? `${level}/5 filter active. Click again to clear.`
+                                      : `Filter by ${level}/5 (${labelEn}).`
+                                }
+                              >
+                                <div className="flex items-center gap-1 min-w-0">
+                                  <span className="font-bold">{level}/5</span>
+                                  <span className="text-[9.5px] opacity-80 truncate">· {isTr ? shortTr : shortEn}</span>
+                                </div>
+                                {isSelected && (
+                                  <i className="fa-solid fa-check text-[9px] text-white flex-shrink-0"></i>
+                                )}
+                              </button>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 )}
 
                 {currentQ.quality && (
@@ -1053,7 +1118,7 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
            )}
 
            {/* Alt Aksiyon Butonları */}
-           <div className="mt-3 sm:mt-4 flex flex-wrap justify-center items-center gap-2.5 max-w-xl mx-auto w-full pb-1">
+           <div className="mt-auto pt-3 sm:pt-4 flex flex-wrap justify-center items-center gap-2.5 max-w-xl mx-auto w-full pb-1">
              {!isAnswered ? (
                <>
                  {currentQ.type === 'fill_in' && (
