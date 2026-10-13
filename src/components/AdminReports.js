@@ -1,7 +1,7 @@
 // src/components/AdminReports.js
 import React, { useState, useEffect } from 'react';
 import { db, auth } from '../firebase'; // auth eklendi
-import { collection, getDocs, deleteDoc, doc } from 'firebase/firestore';
+import { collection, getDocs, deleteDoc, updateDoc, doc } from 'firebase/firestore';
 import { onAuthStateChanged } from 'firebase/auth'; // onAuthStateChanged eklendi
 
 export default function AdminReports() {
@@ -124,6 +124,19 @@ export default function AdminReports() {
     }
   };
 
+  const markFeedbackDone = async (id) => {
+    try {
+      await updateDoc(doc(db, "feedbacks", id), {
+        status: 'done',
+        completedAt: new Date().toISOString()
+      });
+      fetchData();
+    } catch (error) {
+      console.error("Geri bildirim güncellenirken hata:", error);
+      alert("Hata oluştu: " + error.message);
+    }
+  };
+
   // 1. Durum: Henüz kimlik kontrol ediliyor
   if (authChecking) {
     return (
@@ -177,6 +190,9 @@ export default function AdminReports() {
   }
 
   // 5. Durum: Başarılı, tabloları göster
+  const activeFeedbacks = feedbacks.filter(fb => fb.status !== 'done');
+  const doneFeedbacks = feedbacks.filter(fb => fb.status === 'done');
+
   return (
     <div className="max-w-6xl mx-auto p-6 space-y-10 pb-20">
       <div className="mt-4 mb-2">
@@ -187,7 +203,7 @@ export default function AdminReports() {
       {/* 1. KULLANICI GERİ BİLDİRİMLERİ TABLOSU */}
       <section>
         <h2 className="text-xl font-bold text-indigo-400 mb-4 flex items-center gap-2">
-          <i className="fa-solid fa-comment-dots"></i> Kullanıcı Geri Bildirimleri ({feedbacks.length})
+          <i className="fa-solid fa-comment-dots"></i> Kullanıcı Geri Bildirimleri ({activeFeedbacks.length})
         </h2>
         <div className="bg-slate-900 border border-slate-700 rounded-xl overflow-x-auto shadow-xl">
           <table className="w-full text-left text-sm text-slate-300 min-w-[800px]">
@@ -196,20 +212,35 @@ export default function AdminReports() {
                 <th className="p-4 w-40">Tarih</th>
                 <th className="p-4 w-48">Kullanıcı</th>
                 <th className="p-4">Mesaj</th>
-                <th className="p-4 text-right w-32">İşlem</th>
+                <th className="p-4 text-right w-44">İşlem</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-800">
-              {feedbacks.length === 0 && <tr><td colSpan="4" className="p-8 text-center text-slate-500 font-medium">Mesaj yok.</td></tr>}
-              {feedbacks.map(fb => (
+              {activeFeedbacks.length === 0 && <tr><td colSpan="4" className="p-8 text-center text-slate-500 font-medium">Bekleyen geri bildirim yok.</td></tr>}
+              {activeFeedbacks.map(fb => (
                 <tr key={fb.id} className="hover:bg-slate-800/50 transition-colors">
                   <td className="p-4 text-slate-400 whitespace-nowrap">{new Date(fb.timestamp).toLocaleString('tr-TR')}</td>
                   <td className="p-4 text-brand-300 font-medium truncate max-w-[12rem]" title={fb.userEmail}>{fb.userEmail}</td>
                   <td className="p-4 break-words leading-relaxed text-slate-200">{fb.text}</td>
                   <td className="p-4 text-right">
-                    <button onClick={() => deleteItem("feedbacks", fb.id)} className="bg-slate-800 text-slate-300 border border-slate-700 hover:bg-indigo-600 hover:text-white hover:border-indigo-500 px-3 py-1.5 rounded-lg transition-all text-xs font-bold shadow-sm whitespace-nowrap cursor-pointer">
-                      Okundu / Sil
-                    </button>
+                    <div className="flex items-center justify-end gap-2">
+                      <button 
+                        onClick={() => markFeedbackDone(fb.id)} 
+                        title="Yapıldı / Tamamlandı olarak işaretle"
+                        className="bg-emerald-950/40 text-emerald-400 border border-emerald-900/50 hover:bg-emerald-600 hover:text-white hover:border-emerald-500 px-3 py-1.5 rounded-lg transition-all text-xs font-bold shadow-sm whitespace-nowrap cursor-pointer flex items-center gap-1.5"
+                      >
+                        <i className="fa-solid fa-check"></i>
+                        <span>Yapıldı</span>
+                      </button>
+                      <button 
+                        onClick={() => deleteItem("feedbacks", fb.id)} 
+                        title="Geri bildirimi tamamen sil"
+                        className="bg-rose-950/40 text-rose-400 border border-rose-900/50 hover:bg-rose-600 hover:text-white hover:border-rose-500 px-3 py-1.5 rounded-lg transition-all text-xs font-bold shadow-sm whitespace-nowrap cursor-pointer flex items-center gap-1.5"
+                      >
+                        <i className="fa-solid fa-trash-can"></i>
+                        <span>Sil</span>
+                      </button>
+                    </div>
                   </td>
                 </tr>
               ))}
@@ -308,6 +339,62 @@ export default function AdminReports() {
                     <button onClick={() => deleteItem("reported_questions", g.id)} className="bg-emerald-900/30 text-emerald-400 border border-emerald-900/50 hover:bg-emerald-600 hover:text-white hover:border-emerald-500 px-3 py-1.5 rounded-lg transition-all text-xs font-bold shadow-sm whitespace-nowrap cursor-pointer">
                       Sil
                     </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      {/* 4. YAPILDI / TAMAMLANAN GERİ BİLDİRİMLER (YALNIZCA GÖRÜNTÜLEME) */}
+      <section>
+        <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
+          <h2 className="text-xl font-bold text-slate-400 flex items-center gap-2">
+            <i className="fa-solid fa-circle-check text-emerald-400"></i> Yapıldı Olarak İşaretlenen Geri Bildirimler ({doneFeedbacks.length})
+          </h2>
+          <span className="text-xs text-slate-500 font-medium italic">
+            Yalnızca görüntüleme
+          </span>
+        </div>
+        <div className="bg-slate-900/60 border border-slate-800 rounded-xl overflow-x-auto shadow-xl">
+          <table className="w-full text-left text-sm text-slate-400 min-w-[700px]">
+            <thead className="bg-slate-800/70 text-slate-300">
+              <tr>
+                <th className="p-4 w-44">Tarih</th>
+                <th className="p-4 w-48">Kullanıcı</th>
+                <th className="p-4">Mesaj</th>
+                <th className="p-4 w-32 text-center">Durum</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-800/60">
+              {doneFeedbacks.length === 0 && (
+                <tr>
+                  <td colSpan="4" className="p-8 text-center text-slate-600 font-medium">
+                    Henüz yapıldı olarak işaretlenmiş geri bildirim bulunmuyor.
+                  </td>
+                </tr>
+              )}
+              {doneFeedbacks.map(fb => (
+                <tr key={fb.id} className="hover:bg-slate-800/30 transition-colors">
+                  <td className="p-4 text-slate-500 whitespace-nowrap text-xs">
+                    <div>{new Date(fb.timestamp).toLocaleString('tr-TR')}</div>
+                    {fb.completedAt && (
+                      <div className="text-[11px] text-emerald-500/80 mt-0.5">
+                        Yapıldı: {new Date(fb.completedAt).toLocaleDateString('tr-TR')}
+                      </div>
+                    )}
+                  </td>
+                  <td className="p-4 text-slate-300 font-medium truncate max-w-[12rem]" title={fb.userEmail}>
+                    {fb.userEmail}
+                  </td>
+                  <td className="p-4 break-words leading-relaxed text-slate-300">
+                    {fb.text}
+                  </td>
+                  <td className="p-4 text-center">
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-950/40 text-emerald-400 border border-emerald-900/50 select-none">
+                      <i className="fa-solid fa-check text-[10px]"></i> Yapıldı
+                    </span>
                   </td>
                 </tr>
               ))}
