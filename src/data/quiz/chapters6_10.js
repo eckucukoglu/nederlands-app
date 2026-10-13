@@ -617,7 +617,7 @@ export const chapters6_10 = [
     "explanationTr": "Bir şeyden hoşlanıp hoşlanmadığını sormak için 'Houd je van...?' kalıbı kullanılır.",
     "explanationEn": "To ask if someone likes something, use 'Houd je van...?'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch6_050",
@@ -1894,7 +1894,7 @@ export const chapters6_10 = [
     "explanationTr": "Belirsiz bir isim olan 'boek', 'geen' ile olumsuzlanır.",
     "explanationEn": "The indefinite noun 'boek' is negated with 'geen'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch8_039",
@@ -1909,7 +1909,7 @@ export const chapters6_10 = [
     "explanationTr": "'het boek' belirli artikeliyle spesifiktir, bu yüzden 'niet' alır.",
     "explanationEn": "'het boek' is specific with its definite article, so it takes 'niet'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch8_040",
@@ -2021,7 +2021,7 @@ export const chapters6_10 = [
     "explanationTr": "Basit bir eylemi ('slapen') olumsuz yaparken fiilin ardına 'niet' konur.",
     "explanationEn": "To negate a simple action ('slapen'), 'niet' is placed after the verb.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch8_048",
@@ -2599,7 +2599,7 @@ export const chapters6_10 = [
     "explanationTr": "Bir nesnenin adının ne olduğunu sorarken 'Hoe heet dat?' (Bunun adı ne?) kalıbı kullanılır.",
     "explanationEn": "When asking for the name of an object, use 'Hoe heet dat?' (What is that called?).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_010",
@@ -3321,7 +3321,7 @@ export const chapters6_10 = [
     "explanationTr": "Çok iyi hissettiğinizi 'Het gaat fantastisch' (Harika gidiyor) diyerek belirtebilirsiniz.",
     "explanationEn": "To say you are doing great, you can answer with 'Het gaat fantastisch'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch12_011",
@@ -3581,7 +3581,7 @@ export const chapters6_10 = [
     "explanationTr": "Üstü kalsın (Keep the change) demek için 'Laat de rest maar zitten' veya 'Het is goed zo' kalıpları kullanılır.",
     "explanationEn": "To say 'Keep the change', use 'Laat de rest maar zitten' or 'Het is goed zo'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch6_1025",
@@ -5211,7 +5211,7 @@ export const chapters6_10 = [
     "explanationTr": "Yatak odası mutfağın üstündeyse 'boven' (yukarısında/üstünde) edatı kullanılır.",
     "explanationEn": "If the bedroom is higher than the kitchen, the preposition 'boven' (above) is used.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch8_1038",
@@ -5226,7 +5226,7 @@ export const chapters6_10 = [
     "explanationTr": "Oturma odası balkonun altındaysa 'onder' (altında) edatı kullanılır.",
     "explanationEn": "If the living room is below the balcony, the preposition 'onder' (under) is used.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch8_1039",
@@ -7365,7 +7365,7 @@ export const chapters6_10 = [
     "explanationTr": "Sayılamayan belirsiz madde isimlerinin (koffie, su, melk vb.) olumsuzunda 'geen' kullanılır: 'Zij drinkt geen koffie.'",
     "explanationEn": "Uncountable, indefinite substance nouns like 'koffie' are negated using 'geen': 'Zij drinkt geen koffie.'",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_8_4",
@@ -7623,7 +7623,7 @@ export const chapters6_10 = [
     "explanationTr": "'Rennen' kökü 'ren' n ile biter (kofschip dışı), dolayısıyla düzenli participium eki '-d'dir: 'gerend'.",
     "explanationEn": "The stem of 'rennen' is 'ren', ending in 'n' (not in soft ketchup), so its regular participle ending is '-d': 'gerend'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_9_9",
@@ -7737,7 +7737,7 @@ export const chapters6_10 = [
     "explanationTr": "Bisikletin arkasındaki bagaj demirine 'de bagagedrager' denir.",
     "explanationEn": "The luggage rack behind the saddle on a Dutch bicycle is 'de bagagedrager'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_10_6",

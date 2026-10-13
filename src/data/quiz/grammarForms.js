@@ -106,7 +106,7 @@ export const grammarForms = [
     "explanationTr": "'jij' zamiri edattan (aan) sonra veya nesne durumunda 'jou/je' olur. Vurgulu kullanıldığı için 'jou' doğru yanıttır.",
     "explanationEn": "After a preposition (aan), 'jij' becomes 'jou/je'. 'jou' is used for emphasis.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_pronouns_031",
@@ -907,7 +907,7 @@ export const grammarForms = [
     "explanationTr": "KURAL: Sıfat, nitelediği isimden SONRA (predicative) geliyorsa HİÇBİR ZAMAN '-e' eklenmez.",
     "explanationEn": "RULE: If the adjective comes AFTER the noun it describes (predicative), it NEVER gets an '-e'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_adj_028",
@@ -920,7 +920,7 @@ export const grammarForms = [
     "explanationTr": "Sıfat isimden sonra gelmektedir, bu yüzden ek almaz.",
     "explanationEn": "The adjective comes after the noun, so it takes no suffix.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_adj_030",
@@ -933,7 +933,7 @@ export const grammarForms = [
     "explanationTr": "Sıfat (koud) isimden sonra geldiği için mastar/yalın halinde kalır.",
     "explanationEn": "Because the adjective (koud) comes after the noun, it stays in its base form.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_adj_032",
@@ -946,7 +946,7 @@ export const grammarForms = [
     "explanationTr": "Sıfat isimden sonradır, ek almaz.",
     "explanationEn": "The adjective follows the noun, no suffix.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_adj_034",
@@ -960,7 +960,7 @@ export const grammarForms = [
     "explanationTr": "Sıfat isimden sonradır, '-e' almaz.",
     "explanationEn": "Adjective is after the noun, no '-e'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_adj_035",
@@ -1744,7 +1744,7 @@ export const grammarForms = [
     "explanationTr": "DÜZENSİZ: 'graag' (memnuniyetle/severek) kelimesinin karşılaştırma hali 'liever' (daha çok severek) olur.",
     "explanationEn": "IRREGULAR: The comparative of 'graag' (gladly/like to) is 'liever' (prefer to).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_comp_028",
@@ -2327,7 +2327,7 @@ export const grammarForms = [
     "explanationTr": "'Zal' (gelecek zaman/teklif) fiili asıl eylemi sona mastar halinde atar. Ayrılabilen fiiller bu durumda ayrılmaz.",
     "explanationEn": "The verb 'Zal' pushes the main action to the end as an infinitive. Separable verbs do not split in this case.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_sep_014",
@@ -2932,7 +2932,7 @@ export const grammarForms = [
     "explanationTr": "Resmi 'u' (siz) zamiri için iyelik zamiri (sizin) 'uw'dur.",
     "explanationEn": "The possessive pronoun for the formal 'u' (your) is 'uw'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_pron_sum_010",
@@ -3698,7 +3698,7 @@ export const grammarForms = [
     "explanationTr": "'courgette' bir de-woord olduğu için, sıfat her zaman '-e' eki alır: een kleine courgette.",
     "explanationEn": "Because 'courgette' is a de-word, the adjective always gets an '-e': een kleine courgette.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "gr_1029",

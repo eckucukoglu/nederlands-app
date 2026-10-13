@@ -530,7 +530,7 @@ export const grammarSyntax = [
     "explanationTr": "Cümlede bir kipli fiil (modaal werkwoord - wil) varsa, asıl eylemi bildiren fiil mastar (infinitief) halinde cümlenin en sonuna gider.",
     "explanationEn": "If there is a modal verb (wil) in the sentence, the main action verb goes to the very end of the sentence in its infinitive form.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_wo_032",
@@ -598,7 +598,7 @@ export const grammarSyntax = [
     "explanationTr": "'Zal' (zullen) kullanıldığında diğer fiil daima mastar halinde sona gider.",
     "explanationEn": "When 'zal' (zullen) is used, the other verb always goes to the end in the infinitive form.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_wo_036",
@@ -632,7 +632,7 @@ export const grammarSyntax = [
     "explanationTr": "'Moeten' modal fiiliyle kullanıldığı için 'leren' sona gider.",
     "explanationEn": "Used with the modal verb 'moeten', so 'leren' goes to the end.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_wo_038",
@@ -788,7 +788,7 @@ export const grammarSyntax = [
     "explanationTr": "Asıl fiil (opruimen) mastar halinde sonda yer alır.",
     "explanationEn": "The main verb (opruimen) is placed at the end in the infinitive.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_mod_018",
@@ -1106,7 +1106,7 @@ export const grammarSyntax = [
     "explanationTr": "'Zal' yardımcı fiil olduğu için asıl fiil olan 'geven' cümlenin EN SONUNA mastar olarak gider.",
     "explanationEn": "Because 'Zal' is an auxiliary verb, the main verb 'geven' goes to the VERY END of the sentence as an infinitive.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_fut_034",
@@ -1938,7 +1938,7 @@ export const grammarSyntax = [
     "explanationTr": "'terwijl' bir yan cümle bağlacıdır. Fiil sona gider ve 'ik' için 'maak' olur.",
     "explanationEn": "'terwijl' is a subclause conjunction. The verb goes to the end, becoming 'maak' for 'ik'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_bijz_003",
@@ -1973,7 +1973,7 @@ export const grammarSyntax = [
     "explanationTr": "'als' (eğer/ne zaman ki) bir yan cümle başlatır. Fiil 'ben' olarak en sonda yer alır.",
     "explanationEn": "'als' (if/when) starts a subclause. The verb 'ben' is placed at the very end.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_bijz_005",
@@ -2125,7 +2125,7 @@ export const grammarSyntax = [
     "explanationTr": "'omdat' bir bijzin (yan cümle) bağlacıdır. Tüm fiiller (wil, leren) cümlenin EN SONUNA gider.",
     "explanationEn": "'omdat' is a subclause conjunction. All verbs (wil, leren) go to the VERY END of the sentence.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_bijz_014",
@@ -2440,7 +2440,7 @@ export const grammarSyntax = [
     "explanationTr": "'voordat' yerine bazen kısaca 'voor het...' yapısı da benzer mantıkla fiili sona iter (regent).",
     "explanationEn": "Similar to 'voordat', this structure pushes the verb to the end (regent).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_bijz_035",
@@ -2454,7 +2454,7 @@ export const grammarSyntax = [
     "explanationTr": "Geçmiş zamanda 'zijn' fiili yan cümlede en sona 'was' olarak gider.",
     "explanationEn": "In the past tense, the verb 'zijn' goes to the end of the subclause as 'was'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "gr_1001",
@@ -2549,7 +2549,7 @@ export const grammarSyntax = [
     "explanationTr": "Zaman ifadesinden (Om 11.00 uur) sonra çekimli fiil (hebben) en ardından özne (we) gelmelidir.",
     "explanationEn": "After the time phrase (Om 11.00 uur), the conjugated verb (hebben) must precede the subject (we).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "gr_1069",

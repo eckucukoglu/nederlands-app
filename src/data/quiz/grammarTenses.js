@@ -663,7 +663,7 @@ export const grammarTenses = [
     "explanationTr": "Perfectum (Geçmiş Zaman). 'werken' fiilinin kökü 'werk'. Son harfi 'k' (soft ketchup içinde var), bu yüzden '+t' alır: gewerkt.",
     "explanationEn": "Perfectum (Present Perfect). The stem of 'werken' is 'werk'. The last letter 'k' is in 'soft ketchup', so it takes '+t': gewerkt.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_past_002",
@@ -698,7 +698,7 @@ export const grammarTenses = [
     "explanationTr": "Perfectum. 'spelen' kökü 'speel'. Son harfi 'l' (soft ketchup içinde YOK), bu yüzden '+d' alır: gespeeld.",
     "explanationEn": "Perfectum. Stem of 'spelen' is 'speel'. The last letter 'l' is NOT in 'soft ketchup', so it takes '+d': gespeeld.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_past_004",
@@ -833,7 +833,7 @@ export const grammarTenses = [
     "explanationTr": "Perfectum. 'beginnen' (başlamak) bir durum değişikliği (verandering van situatie) olduğu için 'zijn' (is) ile kullanılır. Düzensizdir: begonnen.",
     "explanationEn": "Perfectum. 'beginnen' (to start) indicates a change of situation, so it uses 'zijn' (is). It is irregular: begonnen.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_past_014",
@@ -848,7 +848,7 @@ export const grammarTenses = [
     "explanationTr": "Perfectum. 'stoppen' (durmak/bırakmak) durum değişikliği olduğu için 'zijn' ile kullanılır.",
     "explanationEn": "Perfectum. 'stoppen' (to stop) indicates a change of state, so it is used with 'zijn'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_past_017",
@@ -863,7 +863,7 @@ export const grammarTenses = [
     "explanationTr": "Perfectum. 'worden' (olmak) bir durum değişikliğidir ve 'zijn' ile kullanılır. 3. hali 'geworden'dir.",
     "explanationEn": "Perfectum. 'worden' (to become) is a change of state and uses 'zijn'. Its past participle is 'geworden'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_past_018",
@@ -878,7 +878,7 @@ export const grammarTenses = [
     "explanationTr": "'bellen' kökü 'bel' -> l harfi soft ketchup'ta yok -> +d (gebeld).",
     "explanationEn": "Stem of 'bellen' is 'bel' -> l is not in soft ketchup -> +d (gebeld).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_past_020",
@@ -913,7 +913,7 @@ export const grammarTenses = [
     "explanationTr": "ALTIN KURAL: Fiil be-, ge-, her-, ver-, ont- eklerinden biriyle başlıyorsa, perfectumda başına 'ge-' ALMAZ. (betalen -> betaald).",
     "explanationEn": "GOLDEN RULE: If a verb starts with be-, ge-, her-, ver-, ont-, it does NOT get a 'ge-' prefix in the perfectum. (betalen -> betaald).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_past_022",
@@ -983,7 +983,7 @@ export const grammarTenses = [
     "explanationTr": "'ge-' ile başlayan fiiller fazladan bir 'ge-' daha almaz. (gebeuren -> gebeurd).",
     "explanationEn": "Verbs already starting with 'ge-' do not get an extra 'ge-'. (gebeuren -> gebeurd).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_past_026",
@@ -1018,7 +1018,7 @@ export const grammarTenses = [
     "explanationTr": "'verkopen' düzensizdir (kocht -> verkocht). 'ver-' ile başladığı için 'ge-' almaz.",
     "explanationEn": "'verkopen' is irregular (kocht -> verkocht). Starts with 'ver-', so no 'ge-'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_past_028",
@@ -1053,7 +1053,7 @@ export const grammarTenses = [
     "explanationTr": "'ontmoeten' (buluşmak) fiili 'ont-' ile başlar, bu yüzden 'ge-' almaz. Kökü 'ontmoet' t ile bittiği için aynen kalır.",
     "explanationEn": "'ontmoeten' starts with 'ont-', so no 'ge-'. Stem ends in 't', so it stays 'ontmoet'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_past_030",
@@ -1305,7 +1305,7 @@ export const grammarTenses = [
     "explanationTr": "Perfectum. 'uitnodigen' -> uit + ge + nodigd = uitgenodigd.",
     "explanationEn": "Perfectum. 'uitnodigen' -> uit + ge + nodigd = uitgenodigd.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_sep_018",
@@ -1320,7 +1320,7 @@ export const grammarTenses = [
     "explanationTr": "Perfectum. 'afrekenen' -> af + ge + rekend = afgerekend.",
     "explanationEn": "Perfectum. 'afrekenen' -> af + ge + rekend = afgerekend.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_sep_019",
@@ -1335,7 +1335,7 @@ export const grammarTenses = [
     "explanationTr": "Perfectum. 'opstaan' durum/konum değişikliği bildirdiği için 'zijn' (is) ile kullanılır. 3. hali: op + ge + staan = opgestaan.",
     "explanationEn": "Perfectum. 'opstaan' indicates a change of state, so it uses 'zijn' (is). Past participle: op + ge + staan = opgestaan.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_sep_020",
@@ -1365,7 +1365,7 @@ export const grammarTenses = [
     "explanationTr": "Perfectum. 'schoonmaken' -> schoon + ge + maakt = schoongemaakt.",
     "explanationEn": "Perfectum. 'schoonmaken' -> schoon + ge + maakt = schoongemaakt.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_sep_022",
@@ -1380,7 +1380,7 @@ export const grammarTenses = [
     "explanationTr": "Perfectum. 'komen' hareket/yönelme bildirdiği için 'zijn' (is) ile kullanılır. binnen + ge + komen = binnengekomen.",
     "explanationEn": "Perfectum. 'komen' implies motion, so it uses 'zijn' (is). binnen + ge + komen = binnengekomen.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_sep_023",
@@ -1395,7 +1395,7 @@ export const grammarTenses = [
     "explanationTr": "Perfectum. 'doen' düzensizdir (gedaan). aan + ge + daan = aangedaan.",
     "explanationEn": "Perfectum. 'doen' is irregular (gedaan). aan + ge + daan = aangedaan.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_sep_024",
@@ -1410,7 +1410,7 @@ export const grammarTenses = [
     "explanationTr": "Perfectum. 'voorstellen' (önermek) -> voor + ge + steld = voorgesteld.",
     "explanationEn": "Perfectum. 'voorstellen' (to propose) -> voor + ge + steld = voorgesteld.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_sep_025",
@@ -1783,7 +1783,7 @@ export const grammarTenses = [
     "explanationTr": "Söz verildiği (belofte) için 'zullen' kullanılır. 'Zij' (tekil) için çekim 'zal'dır.",
     "explanationEn": "Because it's a promise (belofte), 'zullen' is used. The conjugation for 'Zij' (singular) is 'zal'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_fut_025",
@@ -1956,7 +1956,7 @@ export const grammarTenses = [
     "explanationTr": "'Aan het' kalıbından sonra asıl eylem her zaman MASTAR (infinitief) halinde yazılır.",
     "explanationEn": "After the 'aan het' structure, the main action is always written in the INFINITIVE form.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_cont_025",
@@ -2002,7 +2002,7 @@ export const grammarTenses = [
     "explanationTr": "'Aan het' kalıbından sonra fiil mastar (wassen) halindedir.",
     "explanationEn": "After the 'aan het' pattern, the verb is in the infinitive (wassen).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_cont_030",

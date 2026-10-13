@@ -232,7 +232,7 @@ export const chapters11_15 = [
     "explanationTr": "Hastaya 'Geçmiş olsun' demek için 'Beterschap!' kullanılır.",
     "explanationEn": "To say 'Get well soon' to someone who is sick, you say 'Beterschap!'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch11_036",
@@ -431,7 +431,7 @@ export const chapters11_15 = [
     "explanationTr": "Zor bir durumdaki birine 'Güç dilerim / Kolaylık gelsin' anlamında 'Sterkte!' denir.",
     "explanationEn": "To wish someone strength during a tough time, you say 'Sterkte!'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch12_002",
@@ -1593,7 +1593,7 @@ export const chapters11_15 = [
     "explanationTr": "Kedi hakkında ne düşündüğünü sormak için 'Wat vind je van de kat?' veya 'Hoe vind je de kat?' denir.",
     "explanationEn": "To ask what someone thinks about the cat, use 'Wat vind je van de kat?' or 'Hoe vind je de kat?'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch14_001",
@@ -5029,7 +5029,7 @@ export const chapters11_15 = [
     "explanationTr": "Cümlede modal bir yardımcı fiil (kunt) varsa, ayrılabilen fiil cümlenin sonunda BİRLEŞİK ve MASTAR halinde kalır: 'instappen'.",
     "explanationEn": "When accompanied by a modal auxiliary ('kunt'), a separable verb remains whole and infinitive at the end: 'instappen'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_12_7",
@@ -5044,7 +5044,7 @@ export const chapters11_15 = [
     "explanationTr": "'Afrekenen' fiilinin participium biçiminde 'ge' araya girer: af + ge + rekend = 'afgerekend'.",
     "explanationEn": "The past participle of separable 'afrekenen' inserts '-ge-' between prefix and stem: 'afgerekend'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_12_8",
@@ -5086,7 +5086,7 @@ export const chapters11_15 = [
     "explanationTr": "'Karşısında' anlamına gelen edat 'tegenover'dir: 'tegenover de ingang'.",
     "explanationEn": "The Dutch preposition meaning 'opposite / across from' is 'tegenover'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_13_1",
@@ -5122,7 +5122,7 @@ export const chapters11_15 = [
     "explanationTr": "Bir söz veya niyet bildirmek için 'ik' öznesi ile 'zullen' fiili 'zal' şeklinde kullanılır: 'Ik zal... afsnijden.'",
     "explanationEn": "To express a firm personal promise or intention, the verb 'zullen' conjugates as 'zal' for subject 'ik'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_13_3",
@@ -5194,7 +5194,7 @@ export const chapters11_15 = [
     "explanationTr": "'Zich verontschuldigen' özür dilemek anlamına gelir. 'Je hoeft je niet te verontschuldigen' (Özür dilemene hiç gerek yok).",
     "explanationEn": "The Dutch reflexive verb for apologizing is 'zich verontschuldigen'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_13_8",
@@ -5370,7 +5370,7 @@ export const chapters11_15 = [
     "explanationTr": "Sporda kasları güçlendirmek 'spieren versterken', kilo vermek ise 'gewicht verliezen' (veya afvallen) olarak ifade edilir.",
     "explanationEn": "To strengthen muscles is 'spieren versterken', and to lose weight is 'gewicht verliezen' (or 'afvallen').",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_14_9",

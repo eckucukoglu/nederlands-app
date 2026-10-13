@@ -3956,7 +3956,7 @@ export const matchingQuestions = [
     "explanationTr": "'zijn' (çoğul anne-baba), 'doe jij' (inversiyonda kök 'doe'), 'gaat' (3. tekil), 'Heeft u' (u zamiriyle heeft), 'zie' (ik zie).",
     "explanationEn": "'zijn' (plural are), 'doe' (inversion with jij), 'gaat' (3rd person singular goes), 'Heeft' (polite has), 'zie' (1st person see).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_extra_082",
@@ -4005,7 +4005,7 @@ export const matchingQuestions = [
     "explanationTr": "'kopen' -> kocht, 'eten' çoğul -> aten, 'drinken' -> dronk, 'nemen' -> nam, 'geven' -> gaf.",
     "explanationEn": "'kopen' -> kocht (bought), 'eten' plural -> aten (ate), 'drinken' -> dronk (drank), 'nemen' -> nam (took), 'geven' -> gaf (gave).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_extra_083",
@@ -4103,7 +4103,7 @@ export const matchingQuestions = [
     "explanationTr": "'blijven' -> zijn gebleven, 'breken' -> heeft gebroken, 'lopen' -> heeft gelopen, 'vinden' -> heeft gevonden, 'verliezen' -> heeft verloren.",
     "explanationEn": "'gebleven' (stayed), 'gebroken' (broken), 'gelopen' (walked), 'gevonden' (found), 'verloren' (lost).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_extra_085",
@@ -4201,7 +4201,7 @@ export const matchingQuestions = [
     "explanationTr": "'rijden' -> reed, 'schrijven' -> schreef, 'snijden' -> sneed, 'kijken' çoğul -> keken, 'blijven' -> bleef.",
     "explanationEn": "'reed' (rode), 'schreef' (wrote), 'sneed' (sliced), 'keken' (plural watched), 'bleef' (stayed).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_extra_087",
@@ -4397,7 +4397,7 @@ export const matchingQuestions = [
     "explanationTr": "'vertrekken' -> is vertrokken, 'aankomen' -> zijn aangekomen, 'vallen' -> is gevallen, 'stijgen' -> zijn gestegen, 'overlijden' -> is overleden ('zijn' ile çekimlenirler).",
     "explanationEn": "'vertrokken' (departed), 'aangekomen' (arrived), 'gevallen' (fallen), 'gestegen' (risen), 'overleden' (passed away) all conjugate with 'zijn'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_extra_091",
@@ -5613,7 +5613,7 @@ export const matchingQuestions = [
     "explanationTr": "Düzensiz fiillerin perfectum halleri: 'vliegen' -> 'gevlogen' (zijn ile), 'lezen' -> 'gelezen', 'eten' -> 'gegeten', 'vallen' -> 'gevallen' (zijn ile), 'vinden' -> 'gevonden'.",
     "explanationEn": "Irregular participles: 'vliegen' -> 'gevlogen' (with zijn), 'lezen' -> 'gelezen', 'eten' -> 'gegeten', 'vallen' -> 'gevallen' (with zijn), 'vinden' -> 'gevonden'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_ch12_14_friends_sports",
@@ -5959,7 +5959,7 @@ export const matchingQuestions = [
     "explanationTr": "Düzensiz fiillerin imperfectum halleri: 'zitten' -> 'zat', 'doen' -> 'deed', 'zien' -> 'zagen' (çoğul), 'spreken' -> 'sprak', 'dragen' -> 'droeg'.",
     "explanationEn": "Irregular imperfectum forms: 'zitten' -> 'zat', 'doen' -> 'deed', 'zien' -> 'zagen' (plural), 'spreken' -> 'sprak', 'dragen' -> 'droeg'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_irreg_verbs_perf_2",
@@ -6008,6 +6008,6 @@ export const matchingQuestions = [
     "explanationTr": "Düzensiz fiil ortaçları: 'beginnen' -> 'begonnen' (zijn ile), 'verzenden' -> 'verzonden' (hebben ile), 'blijven' -> 'gebleven' (zijn ile), 'houden' -> 'gehouden' (hebben ile), 'breken' -> 'gebroken' (zijn ile).",
     "explanationEn": "Irregular participles: 'beginnen' -> 'begonnen' (with zijn), 'verzenden' -> 'verzonden', 'blijven' -> 'gebleven' (with zijn), 'houden' -> 'gehouden', 'breken' -> 'gebroken' (with zijn).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   }
 ];

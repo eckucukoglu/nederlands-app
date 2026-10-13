@@ -318,7 +318,7 @@ export const dialoguesReading = [
     "explanationTr": "Cümlede 'moet' modal fiili olduğu için asıl fiil (werken) mastar halinde cümlenin sonunda yer alır.",
     "explanationEn": "Because the modal verb 'moet' is in the sentence, the main verb (werken) is in the infinitive at the end.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_reading_041",
@@ -883,7 +883,7 @@ export const dialoguesReading = [
     "explanationTr": "'graag' (seve seve/memnuniyetle) kelimesinin en üstünlük derecesi 'het liefst' olur.",
     "explanationEn": "The superlative degree of 'graag' (gladly/prefer) is 'het liefst'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_read_comp_040",
@@ -1747,7 +1747,7 @@ export const dialoguesReading = [
     "explanationTr": "Metinde 'Ik ben me nu aan het klaarmaken' diyor. 'Aan het' kalıbından sonra fiil mastar (klaarmaken) olur.",
     "explanationEn": "The text says 'Ik ben me nu aan het klaarmaken'. After the 'Aan het' pattern, the verb is in the infinitive (klaarmaken).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_read_ercont_044",

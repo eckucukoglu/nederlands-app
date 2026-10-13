@@ -3643,7 +3643,7 @@ export const chapters1_5 = [
     "explanationTr": "Birine kim olduğunu (Who are you?) sormak için 'Wie ben jij?' kalıbı kullanılır.",
     "explanationEn": "To ask 'Who are you?', the phrase 'Wie ben jij?' is used.",
     "difficulty": 1,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch1_108",
@@ -3703,7 +3703,7 @@ export const chapters1_5 = [
     "explanationTr": "Nereden geldiğini (Where do you come from?) sormak için 'Waar kom je vandaan?' kullanılır.",
     "explanationEn": "To ask where someone comes from, you use 'Waar kom je vandaan?'.",
     "difficulty": 1,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch1_111",
@@ -3723,7 +3723,7 @@ export const chapters1_5 = [
     "explanationTr": "Hangi ülkeden geldiğini sormak için 'Uit welk land kom je?' sorusu yöneltilir.",
     "explanationEn": "To ask specifically from which country someone comes, use 'Uit welk land kom je?'.",
     "difficulty": 1,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch1_112",
@@ -3743,7 +3743,7 @@ export const chapters1_5 = [
     "explanationTr": "Nerede yaşadığını (Where do you live?) sormak için 'Waar woon je?' kullanılır.",
     "explanationEn": "To ask where someone lives, you use 'Waar woon je?'.",
     "difficulty": 1,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch1_113",
@@ -4753,7 +4753,7 @@ export const chapters1_5 = [
     "explanationTr": "Özet tablosunda Wie, Wie is jonger, Hoe, Hoeveel, Wat, Waar, Welke, Wanneer, Waarom soru kelimeleri listelenmiştir.",
     "explanationEn": "The overview lists question words like Wie, Welke, Hoe, Hoeveel, Wat, Waar, Wanneer, and Waarom.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch2_1074",
@@ -5311,7 +5311,7 @@ export const chapters1_5 = [
     "explanationTr": "Kadeh tokuştururken (şerefe) 'Proost' denir.",
     "explanationEn": "When clinking glasses (cheers), you say 'Proost'.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch3_1012",
@@ -6187,7 +6187,7 @@ export const chapters1_5 = [
     "explanationTr": "Zaten bir planınız varsa 'Nee, ik heb al een afspraak.' (Hayır, zaten randevum var) denir.",
     "explanationEn": "If you already have plans, you say 'Nee, ik heb al een afspraak.'.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch4_1037",
@@ -6207,7 +6207,7 @@ export const chapters1_5 = [
     "explanationTr": "Canınız istemiyorsa 'Nee, ik heb geen zin.' (Hayır, canım istemiyor) denir.",
     "explanationEn": "If you don't feel like it, you say 'Nee, ik heb geen zin.'.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch4_1038",
@@ -7420,7 +7420,7 @@ export const chapters1_5 = [
     "explanationTr": "'Mijn hobby is...' kalıbından sonra eylem mastar (infinitief) halinde gelir: 'lezen'.",
     "explanationEn": "After 'Mijn hobby is...', the verb following remains in its infinitive form: 'lezen'.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_1_9",
@@ -7905,7 +7905,7 @@ export const chapters1_5 = [
     "explanationTr": "'Canı istememek / hevesi olmamak' anlamındaki kalıp 'geen zin hebben'dir: 'Ik heb geen zin.'",
     "explanationEn": "To express lack of motivation or not being in the mood, Dutch uses 'geen zin hebben': 'Ik heb geen zin.'",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_4_8",

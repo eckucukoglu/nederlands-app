@@ -12,7 +12,7 @@ export const irregularVerbs = [
     "explanationTr": "'Kijken' düzensiz bir fiildir. Hikaye geçmiş zaman (imperfectum) 'ik' formu 'keek' şeklindedir.",
     "explanationEn": "'Kijken' is an irregular verb. The imperfectum 'ik' form is 'keek'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_verb_2",
@@ -43,7 +43,7 @@ export const irregularVerbs = [
     "explanationTr": "'Gaan' fiili yönelme ve hareket bildirdiği için perfectum'da 'zijn' (is) ile kullanılır. 3. hali 'gegaan'dır.",
     "explanationEn": "'Gaan' indicates motion/direction, so it uses 'zijn' in perfectum. Its past participle is 'gegaan'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_verb_4",
@@ -75,7 +75,7 @@ export const irregularVerbs = [
     "explanationTr": "'ik' öznesi ile düzenli/düzensiz tüm fiiller sadece kök (stam) halindedir.",
     "explanationEn": "With the pronoun 'ik', verbs are in their stem form.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_bakken_i1",
@@ -90,7 +90,7 @@ export const irregularVerbs = [
     "explanationTr": "'bakken' fiilinin tekil imperfectum (hikaye geçmiş zaman) hali 'bakte'dir.",
     "explanationEn": "The singular imperfectum form of 'bakken' is 'bakte'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_bakken_f1",
@@ -105,7 +105,7 @@ export const irregularVerbs = [
     "explanationTr": "'bakken' fiilinin 3. hali (perfectum) 'gebakken'dir.",
     "explanationEn": "The past participle (perfectum) of 'bakken' is 'gebakken'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_beginnen_p1",
@@ -119,7 +119,7 @@ export const irregularVerbs = [
     "explanationTr": "'De les' (het) 3. tekil şahıstır, bu yüzden köke '-t' eklenir (begint).",
     "explanationEn": "'De les' is 3rd person singular, so '-t' is added to the stem (begint).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_beginnen_i1",
@@ -134,7 +134,7 @@ export const irregularVerbs = [
     "explanationTr": "'beginnen' düzensiz bir fiildir; tekil imperfectum hali 'begon'dur.",
     "explanationEn": "'beginnen' is irregular; its singular imperfectum form is 'begon'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_beginnen_f1",
@@ -149,7 +149,7 @@ export const irregularVerbs = [
     "explanationTr": "'beginnen' fiili durum değişikliği bildirdiği için 'zijn' ile kullanılır ve 3. hali 'begonnen'dir.",
     "explanationEn": "'beginnen' indicates a state change, uses 'zijn', and its past participle is 'begonnen'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_begrijpen_p2",
@@ -203,7 +203,7 @@ export const irregularVerbs = [
     "explanationTr": "'begrijpen' fiilinin 3. hali 'begrepen'dir.",
     "explanationEn": "The past participle of 'begrijpen' is 'begrepen'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_bewegen_p1",
@@ -217,7 +217,7 @@ export const irregularVerbs = [
     "explanationTr": "'De hond' (hij) 3. tekil şahıstır, bu yüzden köke '-t' gelir (beweegt).",
     "explanationEn": "'De hond' is 3rd person singular, so '-t' is added to the stem (beweegt).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_bewegen_i1",
@@ -232,7 +232,7 @@ export const irregularVerbs = [
     "explanationTr": "Çoğul (de takken) için imperfectum hali 'bewogen' olur.",
     "explanationEn": "The plural imperfectum for 'de takken' is 'bewogen'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_bewegen_f1",
@@ -247,7 +247,7 @@ export const irregularVerbs = [
     "explanationTr": "'bewegen' fiilinin 3. hali 'bewogen'dir.",
     "explanationEn": "The past participle of 'bewegen' is 'bewogen'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_bidden_p1",
@@ -261,7 +261,7 @@ export const irregularVerbs = [
     "explanationTr": "'Mijn oma' (zij) 3. tekil şahıstır, kök 'bid' + t = bidt.",
     "explanationEn": "'Mijn oma' is 3rd person singular, stem 'bid' + t = bidt.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_bidden_i1",
@@ -276,7 +276,7 @@ export const irregularVerbs = [
     "explanationTr": "Çoğul imperfectum hali 'baden'dir.",
     "explanationEn": "The plural imperfectum form is 'baden'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_bidden_f1",
@@ -291,7 +291,7 @@ export const irregularVerbs = [
     "explanationTr": "'bidden' fiilinin 3. hali 'gebeden'dir.",
     "explanationEn": "The past participle of 'bidden' is 'gebeden'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_bieden_p1",
@@ -305,7 +305,7 @@ export const irregularVerbs = [
     "explanationTr": "'ik' öznesi için fiil kökü 'bied' kullanılır.",
     "explanationEn": "For the subject 'ik', the stem 'bied' is used.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_bieden_i1",
@@ -320,7 +320,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'bood'dur.",
     "explanationEn": "The singular imperfectum form is 'bood'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_bieden_f1",
@@ -335,7 +335,7 @@ export const irregularVerbs = [
     "explanationTr": "'bieden' fiilinin 3. hali 'geboden'dir.",
     "explanationEn": "The past participle of 'bieden' is 'geboden'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_bijten_p1",
@@ -349,7 +349,7 @@ export const irregularVerbs = [
     "explanationTr": "'Onze hond' (hij) için kök 'bijt' (zaten t ile bittiği için ekstra t almaz).",
     "explanationEn": "For 'Onze hond', the stem is 'bijt' (no extra t needed since it ends in t).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_bijten_i2",
@@ -384,7 +384,7 @@ export const irregularVerbs = [
     "explanationTr": "'bijten' fiili 'zijn' ile kurulur, 3. hali 'gebeten'dir.",
     "explanationEn": "'bijten' uses 'zijn', and its past participle is 'gebeten'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_binden_p1",
@@ -398,7 +398,7 @@ export const irregularVerbs = [
     "explanationTr": "'ik' öznesi için fiil kökü 'bind' kullanılır.",
     "explanationEn": "For the subject 'ik', the stem 'bind' is used.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_binden_i1",
@@ -413,7 +413,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'bond'dur.",
     "explanationEn": "The singular imperfectum form is 'bond'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_binden_f1",
@@ -428,7 +428,7 @@ export const irregularVerbs = [
     "explanationTr": "'binden' fiilinin 3. hali 'gebonden'dir.",
     "explanationEn": "The past participle of 'binden' is 'gebonden'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_blazen_p1",
@@ -442,7 +442,7 @@ export const irregularVerbs = [
     "explanationTr": "'De wind' (hij) 3. tekil şahıstır, kök 'blaas' + t = blaast.",
     "explanationEn": "'De wind' is 3rd person singular, stem 'blaas' + t = blaast.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_blazen_i1",
@@ -457,7 +457,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'blies'dir.",
     "explanationEn": "The singular imperfectum form is 'blies'.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_blazen_f1",
@@ -472,7 +472,7 @@ export const irregularVerbs = [
     "explanationTr": "'blazen' fiilinin 3. hali 'geblazen'dir.",
     "explanationEn": "The past participle of 'blazen' is 'geblazen'.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_blijken_p1",
@@ -486,7 +486,7 @@ export const irregularVerbs = [
     "explanationTr": "'Het' (3. tekil şahıs) için kök 'blijck/blijk' + t = blijkt.",
     "explanationEn": "For 'Het' (3rd person singular), stem + t = blijkt.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_blijken_i1",
@@ -501,7 +501,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'bleek'dir.",
     "explanationEn": "The singular imperfectum form is 'bleek'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_blijken_f2",
@@ -555,7 +555,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'bleef'dir.",
     "explanationEn": "The singular imperfectum form is 'bleef'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_blijven_f1",
@@ -570,7 +570,7 @@ export const irregularVerbs = [
     "explanationTr": "'blijven' durum değişikliği/konum bildirdiği için 'zijn' ile kurulur, 3. hali 'gebleven'dir.",
     "explanationEn": "'blijven' uses 'zijn', and its past participle is 'gebleven'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_breken_p1",
@@ -584,7 +584,7 @@ export const irregularVerbs = [
     "explanationTr": "'Het glas' (het) 3. tekil şahıstır, kök 'breek' + t = breekt.",
     "explanationEn": "'Het glas' is 3rd person singular, stem 'breek' + t = breekt.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_breken_i2",
@@ -619,7 +619,7 @@ export const irregularVerbs = [
     "explanationTr": "'breken' fiilinin 3. hali 'gebroken'dir.",
     "explanationEn": "The past participle of 'breken' is 'gebroken'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_brengen_p2",
@@ -653,7 +653,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'bracht'tir.",
     "explanationEn": "The singular imperfectum form is 'bracht'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_brengen_f1",
@@ -668,7 +668,7 @@ export const irregularVerbs = [
     "explanationTr": "'brengen' fiilinin 3. hali 'gebracht'tir.",
     "explanationEn": "The past participle of 'brengen' is 'gebracht'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_denken_p1",
@@ -682,7 +682,7 @@ export const irregularVerbs = [
     "explanationTr": "'ik' öznesi için fiil kökü 'denk' kullanılır.",
     "explanationEn": "For the subject 'ik', the stem 'denk' is used.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_denken_i2",
@@ -717,7 +717,7 @@ export const irregularVerbs = [
     "explanationTr": "'denken' fiilinin 3. hali 'gedacht'tir.",
     "explanationEn": "The past participle of 'denken' is 'gedacht'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_doen_p1",
@@ -731,7 +731,7 @@ export const irregularVerbs = [
     "explanationTr": "Soru cümlesinde 'jij' fiilden sonra gelince 't' düşer: doe.",
     "explanationEn": "In a question where 'jij' follows the verb, the 't' drops: doe.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_doen_i1",
@@ -746,7 +746,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'deed'dir.",
     "explanationEn": "The singular imperfectum form is 'deed'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_doen_f1",
@@ -761,7 +761,7 @@ export const irregularVerbs = [
     "explanationTr": "'doen' fiilinin 3. hali 'gedaan'dır.",
     "explanationEn": "The past participle of 'doen' is 'gedaan'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_dragen_p1",
@@ -775,7 +775,7 @@ export const irregularVerbs = [
     "explanationTr": "3. tekil şahıs (zij) için kök 'draag' + t = draagt.",
     "explanationEn": "For 3rd person singular (zij), stem 'draag' + t = draagt.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_dragen_i1",
@@ -790,7 +790,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'droeg'dür.",
     "explanationEn": "The singular imperfectum form is 'droeg'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_dragen_f2",
@@ -844,7 +844,7 @@ export const irregularVerbs = [
     "explanationTr": "Çoğul imperfectum hali 'dronken'dir.",
     "explanationEn": "The plural imperfectum form is 'dronken'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_drinken_f1",
@@ -859,7 +859,7 @@ export const irregularVerbs = [
     "explanationTr": "'drinken' fiilinin 3. hali 'gedronken'dir.",
     "explanationEn": "The past participle of 'drinken' is 'gedronken'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_eten_p2",
@@ -893,7 +893,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'at'tir.",
     "explanationEn": "The singular imperfectum form is 'at'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_eten_f2",
@@ -947,7 +947,7 @@ export const irregularVerbs = [
     "explanationTr": "Çoğul imperfectum hali 'gingen'dir.",
     "explanationEn": "The plural imperfectum form is 'gingen'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_gaan_f1",
@@ -962,7 +962,7 @@ export const irregularVerbs = [
     "explanationTr": "'gaan' hareket bildirdiği için 'zijn' ile kurulur, 3. hali 'gegaan'dır.",
     "explanationEn": "'gaan' indicates motion, uses 'zijn', and its past participle is 'gegaan'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_geven_p1",
@@ -976,7 +976,7 @@ export const irregularVerbs = [
     "explanationTr": "'ik' öznesi için fiil kökü 'geef' kullanılır.",
     "explanationEn": "For the subject 'ik', the stem 'geef' is used.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_geven_i2",
@@ -1011,7 +1011,7 @@ export const irregularVerbs = [
     "explanationTr": "'geven' fiilinin 3. hali 'gegeven'dir.",
     "explanationEn": "The past participle of 'geven' is 'gegeven'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_hangen_p1",
@@ -1025,7 +1025,7 @@ export const irregularVerbs = [
     "explanationTr": "3. tekil şahıs (het/de jas) için kök 'hang' + t = hangt.",
     "explanationEn": "For 3rd person singular, stem 'hang' + t = hangt.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_hangen_i1",
@@ -1040,7 +1040,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'hing'dir.",
     "explanationEn": "The singular imperfectum form is 'hing'.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_hangen_f1",
@@ -1055,7 +1055,7 @@ export const irregularVerbs = [
     "explanationTr": "'hangen' fiilinin 3. hali 'gehangen'dir.",
     "explanationEn": "The past participle of 'hangen' is 'gehangen'.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_hebben_p2",
@@ -1089,7 +1089,7 @@ export const irregularVerbs = [
     "explanationTr": "Çoğul imperfectum hali 'hadden'dir.",
     "explanationEn": "The plural imperfectum form is 'hadden'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_hebben_f1",
@@ -1104,7 +1104,7 @@ export const irregularVerbs = [
     "explanationTr": "'hebben' fiilinin 3. hali 'gehad'dir.",
     "explanationEn": "The past participle of 'hebben' is 'gehad'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_helpen_p2",
@@ -1138,7 +1138,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'hielp'tir.",
     "explanationEn": "The singular imperfectum form is 'hielp'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_helpen_f1",
@@ -1153,7 +1153,7 @@ export const irregularVerbs = [
     "explanationTr": "'helpen' fiilinin 3. hali 'geholpen'dir.",
     "explanationEn": "The past participle of 'helpen' is 'geholpen'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_houden_p1",
@@ -1167,7 +1167,7 @@ export const irregularVerbs = [
     "explanationTr": "'ik' öznesi için fiil kökü 'houd' kullanılır.",
     "explanationEn": "For the subject 'ik', the stem 'houd' is used.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_houden_i2",
@@ -1202,7 +1202,7 @@ export const irregularVerbs = [
     "explanationTr": "'houden' fiilinin 3. hali 'gehouden'dir.",
     "explanationEn": "The past participle of 'houden' is 'gehouden'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_kiezen_p1",
@@ -1216,7 +1216,7 @@ export const irregularVerbs = [
     "explanationTr": "'ik' öznesi için kök 'kies' kullanılır.",
     "explanationEn": "For the subject 'ik', the stem 'kies' is used.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_kiezen_i1",
@@ -1231,7 +1231,7 @@ export const irregularVerbs = [
     "explanationTr": "Çoğul imperfectum hali 'kozen'dir.",
     "explanationEn": "The plural imperfectum form is 'kozen'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_kiezen_f1",
@@ -1246,7 +1246,7 @@ export const irregularVerbs = [
     "explanationTr": "'kiezen' fiilinin 3. hali 'gekozen'dir.",
     "explanationEn": "The past participle of 'kiezen' is 'gekozen'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_kijken_p1",
@@ -1260,7 +1260,7 @@ export const irregularVerbs = [
     "explanationTr": "'ik' öznesi için fiil kökü 'kijk' kullanılır.",
     "explanationEn": "For the subject 'ik', the stem 'kijk' is used.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_kijken_i1",
@@ -1275,7 +1275,7 @@ export const irregularVerbs = [
     "explanationTr": "Çoğul imperfectum hali 'keken'dir.",
     "explanationEn": "The plural imperfectum form is 'keken'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_kijken_f1",
@@ -1290,7 +1290,7 @@ export const irregularVerbs = [
     "explanationTr": "'kijken' fiilinin 3. hali 'gekeken'dir.",
     "explanationEn": "The past participle of 'kijken' is 'gekeken'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_komen_p1",
@@ -1304,7 +1304,7 @@ export const irregularVerbs = [
     "explanationTr": "3. tekil şahıs (hij) için kök 'kom' + t = komt.",
     "explanationEn": "For 3rd person singular (hij), stem 'kom' + t = komt.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_komen_i1",
@@ -1319,7 +1319,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'kwam'dir.",
     "explanationEn": "The singular imperfectum form is 'kwam'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_komen_f1",
@@ -1334,7 +1334,7 @@ export const irregularVerbs = [
     "explanationTr": "'komen' hareket bildirdiği için 'zijn' ile kurulur, 3. hali 'gekomen'dir.",
     "explanationEn": "'komen' implies motion, uses 'zijn', and its past participle is 'gekomen'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_kopen_p1",
@@ -1348,7 +1348,7 @@ export const irregularVerbs = [
     "explanationTr": "'ik' öznesi için fiil kökü 'koop' kullanılır.",
     "explanationEn": "For the subject 'ik', the stem 'koop' is used.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_kopen_i1",
@@ -1363,7 +1363,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'kocht'tur.",
     "explanationEn": "The singular imperfectum form is 'kocht'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_kopen_f1",
@@ -1378,7 +1378,7 @@ export const irregularVerbs = [
     "explanationTr": "'kopen' fiilinin 3. hali 'gekocht'tur.",
     "explanationEn": "The past participle of 'kopen' is 'gekocht'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_krijgen_p2",
@@ -1432,7 +1432,7 @@ export const irregularVerbs = [
     "explanationTr": "'krijgen' fiilinin 3. hali 'gekregen'dir.",
     "explanationEn": "The past participle of 'krijgen' is 'gekregen'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_kunnen_p2",
@@ -1486,7 +1486,7 @@ export const irregularVerbs = [
     "explanationTr": "'kunnen' fiilinin 3. hali 'gekund'dür.",
     "explanationEn": "The past participle of 'kunnen' is 'gekund'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_lachen_p1",
@@ -1500,7 +1500,7 @@ export const irregularVerbs = [
     "explanationTr": "3. tekil şahıs için kök 'lach' + t = lacht.",
     "explanationEn": "For 3rd person singular, stem 'lach' + t = lacht.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_lachen_i2",
@@ -1535,7 +1535,7 @@ export const irregularVerbs = [
     "explanationTr": "'lachen' fiilinin 3. hali 'gelachen'dir.",
     "explanationEn": "The past participle of 'lachen' is 'gelachen'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_laten_p2",
@@ -1569,7 +1569,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'liet'tir.",
     "explanationEn": "The singular imperfectum form is 'liet'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_laten_f1",
@@ -1584,7 +1584,7 @@ export const irregularVerbs = [
     "explanationTr": "'laten' fiilinin 3. hali 'gelaten'dir.",
     "explanationEn": "The past participle of 'laten' is 'gelaten'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_lezen_p2",
@@ -1618,7 +1618,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'las'tır.",
     "explanationEn": "The singular imperfectum form is 'las'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_lezen_f1",
@@ -1633,7 +1633,7 @@ export const irregularVerbs = [
     "explanationTr": "'lezen' fiilinin 3. hali 'gelezen'dir.",
     "explanationEn": "The past participle of 'lezen' is 'gelezen'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_liggen_p2",
@@ -1667,7 +1667,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'lag'dır.",
     "explanationEn": "The singular imperfectum form is 'lag'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_liggen_f1",
@@ -1682,7 +1682,7 @@ export const irregularVerbs = [
     "explanationTr": "'liggen' fiilinin 3. hali 'gelegen'dir.",
     "explanationEn": "The past participle of 'liggen' is 'gelegen'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_lijken_p1",
@@ -1696,7 +1696,7 @@ export const irregularVerbs = [
     "explanationTr": "'jij' öznesi fiilden ÖNCE gelince '-t' alır (lijkt).",
     "explanationEn": "When the subject 'jij' comes BEFORE the verb, it takes '-t' (lijkt).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_lijken_i1",
@@ -1711,7 +1711,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'leek'tir.",
     "explanationEn": "The singular imperfectum form is 'leek'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_lijken_f2",
@@ -1745,7 +1745,7 @@ export const irregularVerbs = [
     "explanationTr": "Çoğul 'wij' öznesi için fiil mastar (lopen) kalır.",
     "explanationEn": "For the plural subject 'wij', the verb remains in the infinitive (lopen).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_lopen_i1",
@@ -1760,7 +1760,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'liep'tir.",
     "explanationEn": "The singular imperfectum form is 'liep'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_lopen_f2",
@@ -1794,7 +1794,7 @@ export const irregularVerbs = [
     "explanationTr": "'ik' öznesi için 'moeten' fiili 'moet' olur.",
     "explanationEn": "For the subject 'ik', the verb 'moeten' becomes 'moet'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_moeten_i2",
@@ -1829,7 +1829,7 @@ export const irregularVerbs = [
     "explanationTr": "'moeten' fiilinin 3. hali 'gemoeten'dir.",
     "explanationEn": "The past participle of 'moeten' is 'gemoeten'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_mogen_p1",
@@ -1843,7 +1843,7 @@ export const irregularVerbs = [
     "explanationTr": "Soru cümlesinde 'ik' için 'mogen' fiili 'Mag' olur.",
     "explanationEn": "In a question for 'ik', 'mogen' becomes 'Mag'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_mogen_i1",
@@ -1858,7 +1858,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'mocht'tur.",
     "explanationEn": "The singular imperfectum form is 'mocht'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_mogen_f1",
@@ -1873,7 +1873,7 @@ export const irregularVerbs = [
     "explanationTr": "'mogen' fiilinin 3. hali 'gemogen'dir.",
     "explanationEn": "The past participle of 'mogen' is 'gemogen'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_nemen_p2",
@@ -1907,7 +1907,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'nam'dır.",
     "explanationEn": "The singular imperfectum form is 'nam'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_nemen_f2",
@@ -1961,7 +1961,7 @@ export const irregularVerbs = [
     "explanationTr": "Çoğul imperfectum hali 'reden'dir.",
     "explanationEn": "The plural imperfectum form is 'reden'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_rijden_f1",
@@ -1976,7 +1976,7 @@ export const irregularVerbs = [
     "explanationTr": "'rijden' fiilinin 3. hali 'gereden'dir.",
     "explanationEn": "The past participle of 'rijden' is 'gereden'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_roepen_p1",
@@ -1990,7 +1990,7 @@ export const irregularVerbs = [
     "explanationTr": "3. tekil şahıs için kök 'roep' + t = roept.",
     "explanationEn": "For 3rd person singular, stem 'roep' + t = roept.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_roepen_i1",
@@ -2005,7 +2005,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'riep'tir.",
     "explanationEn": "The singular imperfectum form is 'riep'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_roepen_f1",
@@ -2020,7 +2020,7 @@ export const irregularVerbs = [
     "explanationTr": "'roepen' fiilinin 3. hali 'geroepen'dir.",
     "explanationEn": "The past participle of 'roepen' is 'geroepen'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_schrijven_p1",
@@ -2034,7 +2034,7 @@ export const irregularVerbs = [
     "explanationTr": "'ik' öznesi için fiil kökü 'schrijf' kullanılır.",
     "explanationEn": "For the subject 'ik', the stem 'schrijf' is used.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_schrijven_i1",
@@ -2049,7 +2049,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'schreef'dir.",
     "explanationEn": "The singular imperfectum form is 'schreef'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_schrijven_f1",
@@ -2064,7 +2064,7 @@ export const irregularVerbs = [
     "explanationTr": "'schrijven' fiilinin 3. hali 'geschreven'dir.",
     "explanationEn": "The past participle of 'schrijven' is 'geschreven'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_slapen_p2",
@@ -2098,7 +2098,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'sliep'tir.",
     "explanationEn": "The singular imperfectum form is 'sliep'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_slapen_f1",
@@ -2113,7 +2113,7 @@ export const irregularVerbs = [
     "explanationTr": "'slapen' fiilinin 3. hali 'geslapen'dir.",
     "explanationEn": "The past participle of 'slapen' is 'geslapen'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_sluiten_p1",
@@ -2127,7 +2127,7 @@ export const irregularVerbs = [
     "explanationTr": "3. tekil şahıs için kök 'sluit' (zaten t ile bittiği için ekstra t almaz).",
     "explanationEn": "For 3rd person singular, stem 'sluit' (no extra t needed).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_sluiten_i1",
@@ -2142,7 +2142,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'sloot'tur.",
     "explanationEn": "The singular imperfectum form is 'sloot'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_sluiten_f1",
@@ -2157,7 +2157,7 @@ export const irregularVerbs = [
     "explanationTr": "'sluiten' fiilinin 3. hali 'gesloten'dir.",
     "explanationEn": "The past participle of 'sluiten' is 'gesloten'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_snijden_p1",
@@ -2171,7 +2171,7 @@ export const irregularVerbs = [
     "explanationTr": "'ik' öznesi için fiil kökü 'snijd' kullanılır.",
     "explanationEn": "For the subject 'ik', the stem 'snijd' is used.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_snijden_i2",
@@ -2206,7 +2206,7 @@ export const irregularVerbs = [
     "explanationTr": "'snijden' fiilinin 3. hali 'gesneden'dir.",
     "explanationEn": "The past participle of 'snijden' is 'gesneden'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_spreken_p1",
@@ -2220,7 +2220,7 @@ export const irregularVerbs = [
     "explanationTr": "'ik' öznesi için fiil kökü 'spreek' kullanılır.",
     "explanationEn": "For the subject 'ik', the stem 'spreek' is used.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_spreken_i1",
@@ -2235,7 +2235,7 @@ export const irregularVerbs = [
     "explanationTr": "Çoğul imperfectum hali 'spraken'dir.",
     "explanationEn": "The plural imperfectum form is 'spraken'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_spreken_f2",
@@ -2309,7 +2309,7 @@ export const irregularVerbs = [
     "explanationTr": "'staan' fiilinin 3. hali 'gestaan'dır.",
     "explanationEn": "The past participle of 'staan' is 'gestaan'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_vallen_p2",
@@ -2343,7 +2343,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'viel'dir.",
     "explanationEn": "The singular imperfectum form is 'viel'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_vallen_f1",
@@ -2358,7 +2358,7 @@ export const irregularVerbs = [
     "explanationTr": "'vallen' durum değişikliği bildirdiği için 'zijn' ile kurulur, 3. hali 'gevallen'dir.",
     "explanationEn": "'vallen' indicates a change of state, uses 'zijn', and its past participle is 'gevallen'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_vergeten_p2",
@@ -2412,7 +2412,7 @@ export const irregularVerbs = [
     "explanationTr": "'vergeten' fiilinin 3. hali yine 'vergeten'dır ve 'zijn' ile kurulur.",
     "explanationEn": "The past participle of 'vergeten' is also 'vergeten' and uses 'zijn'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_vergeten_f2",
@@ -2446,7 +2446,7 @@ export const irregularVerbs = [
     "explanationTr": "Çoğul 'we' için fiil mastar (verliezen) kalır.",
     "explanationEn": "For the plural 'we', the verb remains in the infinitive (verliezen).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_verliezen_i1",
@@ -2461,7 +2461,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'verloor'dur.",
     "explanationEn": "The singular imperfectum form is 'verloor'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_verliezen_f1",
@@ -2476,7 +2476,7 @@ export const irregularVerbs = [
     "explanationTr": "'verliezen' fiilinin 3. hali 'verloren'dir.",
     "explanationEn": "The past participle of 'verliezen' is 'verloren'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_vertrekken_p1",
@@ -2490,7 +2490,7 @@ export const irregularVerbs = [
     "explanationTr": "3. tekil şahıs için kök 'vertrek' + t = vertrekt.",
     "explanationEn": "For 3rd person singular, stem 'vertrek' + t = vertrekt.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_vertrekken_i1",
@@ -2505,7 +2505,7 @@ export const irregularVerbs = [
     "explanationTr": "Çoğul imperfectum hali 'vertrokken'dür.",
     "explanationEn": "The plural imperfectum form is 'vertrokken'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_vertrekken_f1",
@@ -2520,7 +2520,7 @@ export const irregularVerbs = [
     "explanationTr": "'vertrekken' hareket bildirdiği için 'zijn' ile kurulur, 3. hali 'vertrokken'dür.",
     "explanationEn": "'vertrekken' indicates motion, uses 'zijn', and its past participle is 'vertrokken'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_vinden_p1",
@@ -2534,7 +2534,7 @@ export const irregularVerbs = [
     "explanationTr": "'ik' öznesi için fiil kökü 'vind' kullanılır.",
     "explanationEn": "For the subject 'ik', the stem 'vind' is used.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_vinden_i1",
@@ -2549,7 +2549,7 @@ export const irregularVerbs = [
     "explanationTr": "Çoğul imperfectum hali 'vonden'dir.",
     "explanationEn": "The plural imperfectum form is 'vonden'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_vinden_f1",
@@ -2564,7 +2564,7 @@ export const irregularVerbs = [
     "explanationTr": "'vinden' fiilinin 3. hali 'gevonden'dür.",
     "explanationEn": "The past participle of 'vinden' is 'gevonden'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_vliegen_p1",
@@ -2578,7 +2578,7 @@ export const irregularVerbs = [
     "explanationTr": "3. tekil şahıs için kök 'vlieg' + t = vliegt.",
     "explanationEn": "For 3rd person singular, stem 'vlieg' + t = vliegt.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_vliegen_i1",
@@ -2593,7 +2593,7 @@ export const irregularVerbs = [
     "explanationTr": "Çoğul imperfectum hali 'vlogen'dür.",
     "explanationEn": "The plural imperfectum form is 'vlogen'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_vliegen_f1",
@@ -2608,7 +2608,7 @@ export const irregularVerbs = [
     "explanationTr": "'vliegen' fiilinin 3. hali 'gevlogen'dür.",
     "explanationEn": "The past participle of 'vliegen' is 'gevlogen'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_vragen_p1",
@@ -2622,7 +2622,7 @@ export const irregularVerbs = [
     "explanationTr": "'ik' öznesi için fiil kökü 'vraag' kullanılır.",
     "explanationEn": "For the subject 'ik', the stem 'vraag' is used.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_vragen_i1",
@@ -2637,7 +2637,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'vroeg'dür.",
     "explanationEn": "The singular imperfectum form is 'vroeg'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_vragen_f1",
@@ -2652,7 +2652,7 @@ export const irregularVerbs = [
     "explanationTr": "'vragen' fiilinin 3. hali 'gevraagd'tır.",
     "explanationEn": "The past participle of 'vragen' is 'gevraagd'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_wassen_p1",
@@ -2666,7 +2666,7 @@ export const irregularVerbs = [
     "explanationTr": "'ik' öznesi için fiil kökü 'was' kullanılır.",
     "explanationEn": "For the subject 'ik', the stem 'was' is used.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_wassen_i1",
@@ -2681,7 +2681,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'waste'dir.",
     "explanationEn": "The singular imperfectum form is 'waste'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_wassen_f1",
@@ -2696,7 +2696,7 @@ export const irregularVerbs = [
     "explanationTr": "'wassen' fiilinin 3. hali 'gewassen'dir.",
     "explanationEn": "The past participle of 'wassen' is 'gewassen'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_weten_p2",
@@ -2730,7 +2730,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'wist'tir.",
     "explanationEn": "The singular imperfectum form is 'wist'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_weten_f1",
@@ -2745,7 +2745,7 @@ export const irregularVerbs = [
     "explanationTr": "'weten' fiilinin 3. hali 'geweten'dir.",
     "explanationEn": "The past participle of 'weten' is 'geweten'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_willen_p2",
@@ -2779,7 +2779,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'wilde' (veya wou) olur.",
     "explanationEn": "The singular imperfectum form is 'wilde' (or wou).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_willen_f1",
@@ -2794,7 +2794,7 @@ export const irregularVerbs = [
     "explanationTr": "'willen' fiilinin 3. hali 'gewild'dir.",
     "explanationEn": "The past participle of 'willen' is 'gewild'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_worden_p1",
@@ -2808,7 +2808,7 @@ export const irregularVerbs = [
     "explanationTr": "'ik' öznesi için fiil kökü 'word' kullanılır.",
     "explanationEn": "For the subject 'ik', the stem 'word' is used.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_worden_i1",
@@ -2823,7 +2823,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'werd'dir.",
     "explanationEn": "The singular imperfectum form is 'werd'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_worden_f1",
@@ -2838,7 +2838,7 @@ export const irregularVerbs = [
     "explanationTr": "'worden' durum değişikliği bildirdiği için 'zijn' ile kurulur, 3. hali 'geworden'dür.",
     "explanationEn": "'worden' indicates a state change, uses 'zijn', and its past participle is 'geworden'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_zeggen_p1",
@@ -2852,7 +2852,7 @@ export const irregularVerbs = [
     "explanationTr": "'ik' öznesi için 'zeggen' fiilinin kökü 'zeg'dir.",
     "explanationEn": "For the subject 'ik', the stem of 'zeggen' is 'zeg'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_zeggen_i2",
@@ -2887,7 +2887,7 @@ export const irregularVerbs = [
     "explanationTr": "'zeggen' fiilinin 3. hali 'gezegd'dir.",
     "explanationEn": "The past participle of 'zeggen' is 'gezegd'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_zien_p2",
@@ -2921,7 +2921,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'zag'dır.",
     "explanationEn": "The singular imperfectum form is 'zag'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_zien_f1",
@@ -2936,7 +2936,7 @@ export const irregularVerbs = [
     "explanationTr": "'zien' fiilinin 3. hali 'gezien'dir.",
     "explanationEn": "The past participle of 'zien' is 'gezien'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_zijn_p2",
@@ -2970,7 +2970,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'was'tır.",
     "explanationEn": "The singular imperfectum form is 'was'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_zijn_f1",
@@ -2985,7 +2985,7 @@ export const irregularVerbs = [
     "explanationTr": "'zijn' fiilinin 3. hali 'geweest'tir ve yine 'zijn' ile kurulur.",
     "explanationEn": "The past participle of 'zijn' is 'geweest' and uses 'zijn'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_zitten_p2",
@@ -3039,7 +3039,7 @@ export const irregularVerbs = [
     "explanationTr": "'zitten' fiilinin 3. hali 'gezeten'dir.",
     "explanationEn": "The past participle of 'zitten' is 'gezeten'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_zoeken_p1",
@@ -3053,7 +3053,7 @@ export const irregularVerbs = [
     "explanationTr": "'ik' öznesi ile düzenli/düzensiz tüm fiiller sadece kök (stam) halindedir. 'zoeken' kökü 'zoek'tir.",
     "explanationEn": "With the subject 'ik', verbs are in their stem form. The stem of 'zoeken' is 'zoek'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_zoeken_i1",
@@ -3068,7 +3068,7 @@ export const irregularVerbs = [
     "explanationTr": "'zoeken' düzensiz bir fiildir. Tekil imperfectum (hikaye geçmiş zaman) hali 'zocht'tur.",
     "explanationEn": "'zoeken' is an irregular verb. The singular imperfectum form is 'zocht'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_zoeken_f2",
@@ -3102,7 +3102,7 @@ export const irregularVerbs = [
     "explanationTr": "'zullen' modal (kipli) bir fiildir. 'ik' öznesi için çekimi 'zal'dır.",
     "explanationEn": "'zullen' is a modal verb. The conjugation for the subject 'ik' is 'zal'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_zullen_i1",
@@ -3117,7 +3117,7 @@ export const irregularVerbs = [
     "explanationTr": "'zullen' fiilinin tekil imperfectum hali 'zou'dur.",
     "explanationEn": "The singular imperfectum form of 'zullen' is 'zou'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_zullen_f2",
@@ -3132,7 +3132,7 @@ export const irregularVerbs = [
     "explanationTr": "'zullen' fiilinin perfectum formu bulunmadığı için listede '-' olarak belirtilmiştir.",
     "explanationEn": "Since the verb 'zullen' has no perfectum form, it is indicated as '-' in the list.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_aandoen_p1",
@@ -3146,7 +3146,7 @@ export const irregularVerbs = [
     "explanationTr": "'aandoen' ayrılabilen bir fiildir. Şimdiki zamanda 'ik' ile 'doe' özneden sonra, 'aan' ise cümlenin sonuna gider.",
     "explanationEn": "'aandoen' is a separable verb. In the present tense with 'ik', 'doe' follows the subject and 'aan' goes to the end.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_aandoen_i2",
@@ -3200,7 +3200,7 @@ export const irregularVerbs = [
     "explanationTr": "'aankomen' ayrılabilen bir fiildir. 'De trein' tekil olduğu için 'komt' olur, 'aan' sonda yer alır.",
     "explanationEn": "'aankomen' is separable. Since 'De trein' is singular, it takes 'komt' with 'aan' at the end.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_aankomen_i1",
@@ -3215,7 +3215,7 @@ export const irregularVerbs = [
     "explanationTr": "'aankomen' fiilinin imperfectum tekil hali 'kwam'dir.",
     "explanationEn": "The singular imperfectum form of 'aankomen' is 'kwam'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_aankomen_f1",
@@ -3230,7 +3230,7 @@ export const irregularVerbs = [
     "explanationTr": "'aankomen' hareket/varış bildirdiği için 'zijn' ile kurulur, 3. hali 'aangekomen'dir.",
     "explanationEn": "'aankomen' indicates arrival, uses 'zijn', and its past participle is 'aangekomen'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_bederven_p1",
@@ -3244,7 +3244,7 @@ export const irregularVerbs = [
     "explanationTr": "'Het vlees' (het) 3. tekil şahıstır, kök 'bederv' + t = bederft.",
     "explanationEn": "'Het vlees' is 3rd person singular, stem 'bederv' + t = bederft.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_bederven_i2",
@@ -3279,7 +3279,7 @@ export const irregularVerbs = [
     "explanationTr": "'bederven' fiilinin 3. hali 'bedorven'dür ve 'zijn' ile kurulabilir.",
     "explanationEn": "The past participle of 'bederven' is 'bedorven' and can use 'zijn'.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_bezoeken_p1",
@@ -3293,7 +3293,7 @@ export const irregularVerbs = [
     "explanationTr": "'beheren/bezoeken' gibi 'be-' ile başlayan fiillerde 'ik' için kök kullanılır: bezoek.",
     "explanationEn": "For verbs starting with 'be-', the 'ik' form uses the stem: bezoek.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_bezoeken_i1",
@@ -3308,7 +3308,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'bezocht'tur.",
     "explanationEn": "The singular imperfectum form is 'bezocht'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_bezoeken_f1",
@@ -3323,7 +3323,7 @@ export const irregularVerbs = [
     "explanationTr": "'be-' ile başlayan fiiller 'ge-' ek almaz. 3. hali 'bezocht'tur.",
     "explanationEn": "Verbs starting with 'be-' do not take 'ge-'. Past participle is 'bezocht'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_braden_p1",
@@ -3337,7 +3337,7 @@ export const irregularVerbs = [
     "explanationTr": "3. tekil şahıs için kök 'braad' + t = braadt (dt uyumu).",
     "explanationEn": "For 3rd person singular, stem 'braad' + t = braadt.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_braden_i1",
@@ -3352,7 +3352,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'braadde'dir.",
     "explanationEn": "The singular imperfectum form is 'braadde'.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_braden_f1",
@@ -3367,7 +3367,7 @@ export const irregularVerbs = [
     "explanationTr": "'braden' fiilinin 3. hali 'gebraden'dir.",
     "explanationEn": "The past participle of 'braden' is 'gebraden'.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_buigen_p1",
@@ -3381,7 +3381,7 @@ export const irregularVerbs = [
     "explanationTr": "Çoğul 'we' için fiil mastar (buigen) kalır.",
     "explanationEn": "For the plural 'we', the verb remains in the infinitive (buigen).",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_buigen_i1",
@@ -3396,7 +3396,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'boog'dur.",
     "explanationEn": "The singular imperfectum form is 'boog'.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_buigen_f1",
@@ -3411,7 +3411,7 @@ export const irregularVerbs = [
     "explanationTr": "'buigen' fiilinin 3. hali 'gebogen'dir.",
     "explanationEn": "The past participle of 'buigen' is 'gebogen'.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_drijven_p2",
@@ -3445,7 +3445,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'dreef'dir.",
     "explanationEn": "The singular imperfectum form is 'dreef'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_drijven_f1",
@@ -3460,7 +3460,7 @@ export const irregularVerbs = [
     "explanationTr": "'drijven' fiilinin 3. hali 'gedreven'dir.",
     "explanationEn": "The past participle of 'drijven' is 'gedreven'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_druipen_p1",
@@ -3474,7 +3474,7 @@ export const irregularVerbs = [
     "explanationTr": "3. tekil şahıs için kök 'druip' + t = druipt.",
     "explanationEn": "For 3rd person singular, stem 'druip' + t = druipt.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_druipen_i1",
@@ -3489,7 +3489,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'droop'tur.",
     "explanationEn": "The singular imperfectum form is 'droop'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_druipen_f1",
@@ -3504,7 +3504,7 @@ export const irregularVerbs = [
     "explanationTr": "'druipen' fiilinin 3. hali 'gedropen'dir.",
     "explanationEn": "The past participle of 'druipen' is 'gedropen'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_fluiten_p1",
@@ -3518,7 +3518,7 @@ export const irregularVerbs = [
     "explanationTr": "3. tekil şahıs için kök 'fluit' (zaten t ile bittiği için ekstra t almaz).",
     "explanationEn": "For 3rd person singular, stem 'fluit' (already ends in t, no extra t).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_fluiten_i1",
@@ -3533,7 +3533,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'floot'tur.",
     "explanationEn": "The singular imperfectum form is 'floot'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_fluiten_f1",
@@ -3548,7 +3548,7 @@ export const irregularVerbs = [
     "explanationTr": "'fluiten' fiilinin 3. hali 'gefloten'dir.",
     "explanationEn": "The past participle of 'fluiten' is 'gefloten'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_gelden_p2",
@@ -3582,7 +3582,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'gold'dur.",
     "explanationEn": "The singular imperfectum form is 'gold'.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_gelden_f1",
@@ -3597,7 +3597,7 @@ export const irregularVerbs = [
     "explanationTr": "'gelden' fiilinin 3. hali 'gegolden'dir.",
     "explanationEn": "The past participle of 'gelden' is 'gegolden'.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_genezen_p2",
@@ -3631,7 +3631,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'genas'tır.",
     "explanationEn": "The singular imperfectum form is 'genas'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_genezen_f1",
@@ -3646,7 +3646,7 @@ export const irregularVerbs = [
     "explanationTr": "'genezen' fiilinin 3. hali yine 'genezen'dir ve 'zijn' ile kurulabilir.",
     "explanationEn": "The past participle of 'genezen' is also 'genezen' and can use 'zijn'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_gieten_p1",
@@ -3660,7 +3660,7 @@ export const irregularVerbs = [
     "explanationTr": "3. tekil şahıs için kök 'giet' (zaten t ile bittiği için ekstra t almaz).",
     "explanationEn": "For 3rd person singular, stem 'giet' (already ends in t).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_gieten_i1",
@@ -3675,7 +3675,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'goot'tur.",
     "explanationEn": "The singular imperfectum form is 'goot'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_gieten_f1",
@@ -3690,7 +3690,7 @@ export const irregularVerbs = [
     "explanationTr": "'gieten' fiilinin 3. hali 'gegoten'dir.",
     "explanationEn": "The past participle of 'gieten' is 'gegoten'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_glijden_p1",
@@ -3704,7 +3704,7 @@ export const irregularVerbs = [
     "explanationTr": "3. tekil şahıs için kök 'glijd' + t = glijdt.",
     "explanationEn": "For 3rd person singular, stem 'glijd' + t = glijdt.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_glijden_i1",
@@ -3719,7 +3719,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'gleed'dir.",
     "explanationEn": "The singular imperfectum form is 'gleed'.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_glijden_f1",
@@ -3734,7 +3734,7 @@ export const irregularVerbs = [
     "explanationTr": "'glijden' hareket/kayma bildirdiği için 'zijn' ile kurulur, 3. hali 'gegleden'dir.",
     "explanationEn": "'glijden' indicates sliding motion, uses 'zijn', and its past participle is 'gegleden'.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_graven_p1",
@@ -3748,7 +3748,7 @@ export const irregularVerbs = [
     "explanationTr": "3. tekil şahıs için kök 'graaf' + t = graaft.",
     "explanationEn": "For 3rd person singular, stem 'graaf' + t = graaft.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_graven_i1",
@@ -3763,7 +3763,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'groef'dür.",
     "explanationEn": "The singular imperfectum form is 'groef'.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_graven_f1",
@@ -3778,7 +3778,7 @@ export const irregularVerbs = [
     "explanationTr": "'graven' fiilinin 3. hali 'gegraven'dir.",
     "explanationEn": "The past participle of 'graven' is 'gegraven'.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_grijpen_p1",
@@ -3792,7 +3792,7 @@ export const irregularVerbs = [
     "explanationTr": "3. tekil şahıs için kök 'grijp' + t = grijpt.",
     "explanationEn": "For 3rd person singular, stem 'grijp' + t = grijpt.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_grijpen_i1",
@@ -3807,7 +3807,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'greep'dir.",
     "explanationEn": "The singular imperfectum form is 'greep'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_grijpen_f1",
@@ -3822,7 +3822,7 @@ export const irregularVerbs = [
     "explanationTr": "'grijpen' fiilinin 3. hali 'gegrepen'dir.",
     "explanationEn": "The past participle of 'grijpen' is 'gegrepen'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_heten_p2",
@@ -3856,7 +3856,7 @@ export const irregularVerbs = [
     "explanationTr": "'heten' fiilinin tekil imperfectum hali 'heette'dir.",
     "explanationEn": "The singular imperfectum form of 'heten' is 'heette'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_heten_f1",
@@ -3871,7 +3871,7 @@ export const irregularVerbs = [
     "explanationTr": "'heten' fiilinin 3. hali 'geheten'dir ve 'hebben' ile kurulur.",
     "explanationEn": "The past participle of 'heten' is 'geheten' and it uses 'hebben'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_jagen_p1",
@@ -3885,7 +3885,7 @@ export const irregularVerbs = [
     "explanationTr": "Kitaptaki örnek cümleye göre 'jagen' fiilinin 3. tekil şahıs formu 'jagt'tır.",
     "explanationEn": "According to the textbook example, the 3rd person singular form of 'jagen' is 'jagt'.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_jagen_i1",
@@ -3900,7 +3900,7 @@ export const irregularVerbs = [
     "explanationTr": "'jagen' fiilinin güçlü imperfectum tekil hali 'joeg'dür.",
     "explanationEn": "The strong singular imperfectum form of 'jagen' is 'joeg'.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_jagen_f1",
@@ -3915,7 +3915,7 @@ export const irregularVerbs = [
     "explanationTr": "'jagen' fiilinin 3. hali 'gejaagd'dir.",
     "explanationEn": "The past participle of 'jagen' is 'gejaagd'.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_klimmen_p2",
@@ -3949,7 +3949,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'klom'dur.",
     "explanationEn": "The singular imperfectum form is 'klom'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_klimmen_f1",
@@ -3964,7 +3964,7 @@ export const irregularVerbs = [
     "explanationTr": "'klimmen' hareket bildirdiği için 'zijn' ile kurulur, 3. hali 'geklommen'dir.",
     "explanationEn": "'klimmen' indicates climbing motion, uses 'zijn', and its past participle is 'geklommen'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_klinken_p1",
@@ -3978,7 +3978,7 @@ export const irregularVerbs = [
     "explanationTr": "3. tekil şahıs için kök 'klink' + t = klinkt.",
     "explanationEn": "For 3rd person singular, stem 'klink' + t = klinkt.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_klinken_i2",
@@ -4013,7 +4013,7 @@ export const irregularVerbs = [
     "explanationTr": "'klinken' fiilinin 3. hali 'geklonken'dir.",
     "explanationEn": "The past participle of 'klinken' is 'geklonken'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_krimpen_p1",
@@ -4027,7 +4027,7 @@ export const irregularVerbs = [
     "explanationTr": "3. tekil şahıs için kök 'krimp' + t = krimpt.",
     "explanationEn": "For 3rd person singular, stem 'krimp' + t = krimpt.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_krimpen_i1",
@@ -4042,7 +4042,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'kromp'tur.",
     "explanationEn": "The singular imperfectum form is 'kromp'.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_krimpen_f1",
@@ -4057,7 +4057,7 @@ export const irregularVerbs = [
     "explanationTr": "'krimpen' durum değişikliği bildirdiği için 'zijn' ile kurulur, 3. hali 'gekrompen'dir.",
     "explanationEn": "'krimpen' indicates state change, uses 'zijn', and its past participle is 'gekrompen'.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_kruipen_p1",
@@ -4071,7 +4071,7 @@ export const irregularVerbs = [
     "explanationTr": "3. tekil şahıs için kök 'kruip' + t = kruipt.",
     "explanationEn": "For 3rd person singular, stem 'kruip' + t = kruipt.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_kruipen_i2",
@@ -4106,7 +4106,7 @@ export const irregularVerbs = [
     "explanationTr": "'kruipen' hareket bildirdiği için 'zijn' ile kurulur, 3. hali 'gekropen'dir.",
     "explanationEn": "'kruipen' indicates crawling motion, uses 'zijn', and its past participle is 'gekropen'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_liegen_p1",
@@ -4120,7 +4120,7 @@ export const irregularVerbs = [
     "explanationTr": "'jij' öznesi fiilden ÖNCE gelince '-t' alır (liegt).",
     "explanationEn": "When the subject 'jij' comes BEFORE the verb, it takes '-t' (liegt).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_liegen_i1",
@@ -4135,7 +4135,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'loog'dur.",
     "explanationEn": "The singular imperfectum form is 'loog'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_liegen_f1",
@@ -4150,7 +4150,7 @@ export const irregularVerbs = [
     "explanationTr": "'liegen' fiilinin 3. hali 'gelogen'dur.",
     "explanationEn": "The past participle of 'liegen' is 'gelogen'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_lijden_p2",
@@ -4184,7 +4184,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'leed'dir.",
     "explanationEn": "The singular imperfectum form is 'leed'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_lijden_f1",
@@ -4199,7 +4199,7 @@ export const irregularVerbs = [
     "explanationTr": "'lijden' fiilinin 3. hali 'geleden'dir.",
     "explanationEn": "The past participle of 'lijden' is 'geleden'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_ontbijten_p2",
@@ -4253,7 +4253,7 @@ export const irregularVerbs = [
     "explanationTr": "'ont-' ile başlayan fiiller 'ge-' almaz. 3. hali 'ontbeten'dir.",
     "explanationEn": "Verbs starting with 'ont-' do not take 'ge-'. Past participle is 'ontbeten'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_overlijden_p2",
@@ -4307,7 +4307,7 @@ export const irregularVerbs = [
     "explanationTr": "'overlijden' durum değişikliği/ölüm bildirdiği için 'zijn' ile kurulur, 3. hali 'overleden'dir.",
     "explanationEn": "'overlijden' indicates passing away, uses 'zijn', and its past participle is 'overleden'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_plegen_p1",
@@ -4321,7 +4321,7 @@ export const irregularVerbs = [
     "explanationTr": "3. tekil şahıs için kök 'pleeg' + t = pleegt.",
     "explanationEn": "For 3rd person singular, stem 'pleeg' + t = pleegt.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_plegen_i1",
@@ -4336,7 +4336,7 @@ export const irregularVerbs = [
     "explanationTr": "'plegen' fiilinin imperfectum tekil hali 'placht'tır (eski/edebi kullanım).",
     "explanationEn": "The singular imperfectum form of 'plegen' is 'placht'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_plegen_f2",
@@ -4351,7 +4351,7 @@ export const irregularVerbs = [
     "explanationTr": "Listede perfectum sütununda '---' yazmaktadır, yani bu anlamda aktif perfectum formu yoktur.",
     "explanationEn": "The list shows '---' under perfectum, meaning there is no active perfectum form.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_rijzen_p2",
@@ -4385,7 +4385,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'rees'dir.",
     "explanationEn": "The singular imperfectum form is 'rees'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_rijzen_f1",
@@ -4400,7 +4400,7 @@ export const irregularVerbs = [
     "explanationTr": "'rijzen' yükselme/durum bildirdiği için 'zijn' ile kurulur, 3. hali 'gerezen'dir.",
     "explanationEn": "'rijzen' indicates rising, uses 'zijn', and its past participle is 'gerezen'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_ruiken_p1",
@@ -4414,7 +4414,7 @@ export const irregularVerbs = [
     "explanationTr": "3. tekil şahıs için kök 'ruik' + t = ruikt.",
     "explanationEn": "For 3rd person singular, stem 'ruik' + t = ruikt.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_ruiken_i2",
@@ -4449,7 +4449,7 @@ export const irregularVerbs = [
     "explanationTr": "'ruiken' fiilinin 3. hali 'geroken'dir.",
     "explanationEn": "The past participle of 'ruiken' is 'geroken'.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_scheiden_p1",
@@ -4463,7 +4463,7 @@ export const irregularVerbs = [
     "explanationTr": "3. tekil şahıs için kök 'scheid' + t = scheidt.",
     "explanationEn": "For 3rd person singular, stem 'scheid' + t = scheidt.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_scheiden_i1",
@@ -4478,7 +4478,7 @@ export const irregularVerbs = [
     "explanationTr": "Çoğul/özneye göre imperfectum hali 'scheidden'dir.",
     "explanationEn": "The imperfectum form is 'scheidden'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_scheiden_f1",
@@ -4493,7 +4493,7 @@ export const irregularVerbs = [
     "explanationTr": "'scheiden' fiilinin 3. hali 'gescheiden'dir ve 'zijn' ile kurulur.",
     "explanationEn": "The past participle of 'scheiden' is 'gescheiden' and it uses 'zijn'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_schenken_p1",
@@ -4507,7 +4507,7 @@ export const irregularVerbs = [
     "explanationTr": "'ik' öznesi için fiil kökü 'schenk' kullanılır.",
     "explanationEn": "For the subject 'ik', the stem 'schenk' is used.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_schenken_i1",
@@ -4522,7 +4522,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'schonk'tır.",
     "explanationEn": "The singular imperfectum form is 'schonk'.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_schenken_f1",
@@ -4537,7 +4537,7 @@ export const irregularVerbs = [
     "explanationTr": "'schenken' fiilinin 3. hali 'geschonken'dir.",
     "explanationEn": "The past participle of 'schenken' is 'geschonken'.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_scheppen_p1",
@@ -4551,7 +4551,7 @@ export const irregularVerbs = [
     "explanationTr": "3. tekil şahıs için kök 'schep' + t = schept.",
     "explanationEn": "For 3rd person singular, stem 'schep' + t = schept.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_scheppen_i1",
@@ -4566,7 +4566,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'schiep'tir.",
     "explanationEn": "The singular imperfectum form is 'schiep'.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_scheppen_f1",
@@ -4581,7 +4581,7 @@ export const irregularVerbs = [
     "explanationTr": "'scheppen' fiilinin 3. hali 'geschapen'dir.",
     "explanationEn": "The past participle of 'scheppen' is 'geschapen'.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_scheren_p1",
@@ -4595,7 +4595,7 @@ export const irregularVerbs = [
     "explanationTr": "3. tekil şahıs (hij) için kök 'scheer' + t = scheert.",
     "explanationEn": "For 3rd person singular (hij), stem 'scheer' + t = scheert.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_scheren_i1",
@@ -4610,7 +4610,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'schoor'dur.",
     "explanationEn": "The singular imperfectum form is 'schoor'.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_scheren_f1",
@@ -4625,7 +4625,7 @@ export const irregularVerbs = [
     "explanationTr": "'scheren' fiilinin 3. hali 'geschoren'dir.",
     "explanationEn": "The past participle of 'scheren' is 'geschoren'.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_schieten_p1",
@@ -4639,7 +4639,7 @@ export const irregularVerbs = [
     "explanationTr": "3. tekil şahıs için kök 'schiet' (zaten t ile bittiği için ekstra t almaz).",
     "explanationEn": "For 3rd person singular, stem 'schiet' (already ends in t).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_schieten_i1",
@@ -4654,7 +4654,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'schoot'tur.",
     "explanationEn": "The singular imperfectum form is 'schoot'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_schieten_f1",
@@ -4669,7 +4669,7 @@ export const irregularVerbs = [
     "explanationTr": "'schieten' fiilinin 3. hali 'geschoten'dir.",
     "explanationEn": "The past participle of 'schieten' is 'geschoten'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_schijnen_p1",
@@ -4683,7 +4683,7 @@ export const irregularVerbs = [
     "explanationTr": "3. tekil şahıs için kök 'schijn' + t = schijnt.",
     "explanationEn": "For 3rd person singular, stem 'schijn' + t = schijnt.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_schijnen_i1",
@@ -4698,7 +4698,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'scheen'dir.",
     "explanationEn": "The singular imperfectum form is 'scheen'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_schijnen_f1",
@@ -4713,7 +4713,7 @@ export const irregularVerbs = [
     "explanationTr": "'schijnen' fiilinin 3. hali 'geschenen'dir.",
     "explanationEn": "The past participle of 'schijnen' is 'geschenen'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_schrikken_p1",
@@ -4727,7 +4727,7 @@ export const irregularVerbs = [
     "explanationTr": "'ik' öznesi için fiil kökü 'schrik' kullanılır.",
     "explanationEn": "For the subject 'ik', the stem 'schrik' is used.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_schrikken_i1",
@@ -4742,7 +4742,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'schrok'tür.",
     "explanationEn": "The singular imperfectum form is 'schrok'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_schrikken_f1",
@@ -4757,7 +4757,7 @@ export const irregularVerbs = [
     "explanationTr": "'schrikken' durum değişikliği bildirdiği için 'zijn' ile kurulur, 3. hali 'geschrokken'dir.",
     "explanationEn": "'schrikken' indicates a change of state, uses 'zijn', and its past participle is 'geschrokken'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_schuiven_p1",
@@ -4771,7 +4771,7 @@ export const irregularVerbs = [
     "explanationTr": "3. tekil şahıs için kök 'schuif' + t = schuift.",
     "explanationEn": "For 3rd person singular, stem 'schuif' + t = schuift.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_schuiven_i1",
@@ -4786,7 +4786,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'schoof'dur.",
     "explanationEn": "The singular imperfectum form is 'schoof'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_schuiven_f1",
@@ -4801,7 +4801,7 @@ export const irregularVerbs = [
     "explanationTr": "'schuiven' fiilinin 3. hali 'geschoven'dir.",
     "explanationEn": "The past participle of 'schuiven' is 'geschoven'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_slaan_p2",
@@ -4855,7 +4855,7 @@ export const irregularVerbs = [
     "explanationTr": "'slaan' fiilinin 3. hali 'geslagen'dir.",
     "explanationEn": "The past participle of 'slaan' is 'geslagen'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_smelten_p1",
@@ -4869,7 +4869,7 @@ export const irregularVerbs = [
     "explanationTr": "3. tekil şahıs için kök 'smelt' (zaten t ile bittiği için ekstra t almaz).",
     "explanationEn": "For 3rd person singular, stem 'smelt' (already ends in t).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_smelten_i1",
@@ -4884,7 +4884,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'smolt'tur.",
     "explanationEn": "The singular imperfectum form is 'smolt'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_smelten_f1",
@@ -4899,7 +4899,7 @@ export const irregularVerbs = [
     "explanationTr": "'smelten' durum değişikliği bildirdiği için 'zijn' ile kurulur, 3. hali 'gesmolten'dir.",
     "explanationEn": "'smelten' indicates state change, uses 'zijn', and its past participle is 'gesmolten'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_springen_p1",
@@ -4913,7 +4913,7 @@ export const irregularVerbs = [
     "explanationTr": "3. tekil şahıs için kök 'spring' + t = springt.",
     "explanationEn": "For 3rd person singular, stem 'spring' + t = springt.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_springen_i1",
@@ -4928,7 +4928,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'sprong'dur.",
     "explanationEn": "The singular imperfectum form is 'sprong'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_springen_f1",
@@ -4943,7 +4943,7 @@ export const irregularVerbs = [
     "explanationTr": "'springen' fiilinin 3. hali 'gesprongen'dir.",
     "explanationEn": "The past participle of 'springen' is 'gesprongen'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_steken_p1",
@@ -4957,7 +4957,7 @@ export const irregularVerbs = [
     "explanationTr": "3. tekil şahıs için kök 'steek' + t = steekt.",
     "explanationEn": "For 3rd person singular, stem 'steek' + t = steekt.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_steken_i1",
@@ -4972,7 +4972,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'stak'tır.",
     "explanationEn": "The singular imperfectum form is 'stak'.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_steken_f1",
@@ -4987,7 +4987,7 @@ export const irregularVerbs = [
     "explanationTr": "'steken' fiilinin 3. hali 'gestoken'dir.",
     "explanationEn": "The past participle of 'steken' is 'gestoken'.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_stelen_p1",
@@ -5001,7 +5001,7 @@ export const irregularVerbs = [
     "explanationTr": "3. tekil şahıs için kök 'steel' + t = steelt.",
     "explanationEn": "For 3rd person singular, stem 'steel' + t = steelt.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_stelen_i2",
@@ -5036,7 +5036,7 @@ export const irregularVerbs = [
     "explanationTr": "'stelen' fiilinin 3. hali 'gestolen'dir.",
     "explanationEn": "The past participle of 'stelen' is 'gestolen'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_sterven_p1",
@@ -5050,7 +5050,7 @@ export const irregularVerbs = [
     "explanationTr": "Çoğul özne (bloemen) için fiil mastar (sterven) kalır.",
     "explanationEn": "For the plural subject (bloemen), the verb remains in the infinitive (sterven).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_sterven_i1",
@@ -5065,7 +5065,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'stierf'tir.",
     "explanationEn": "The singular imperfectum form is 'stierf'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_sterven_f1",
@@ -5080,7 +5080,7 @@ export const irregularVerbs = [
     "explanationTr": "'sterven' ölüm bildirdiği için 'zijn' ile kurulur, 3. hali 'gestorven'dir.",
     "explanationEn": "'sterven' indicates death, uses 'zijn', and its past participle is 'gestorven'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_stijgen_p1",
@@ -5094,7 +5094,7 @@ export const irregularVerbs = [
     "explanationTr": "Çoğul özne (prijzen) için fiil mastar (stijgen) kalır.",
     "explanationEn": "For the plural subject (prijzen), the verb remains in the infinitive (stijgen).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_stijgen_i1",
@@ -5109,7 +5109,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'steeg'dir.",
     "explanationEn": "The singular imperfectum form is 'steeg'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_stijgen_f1",
@@ -5124,7 +5124,7 @@ export const irregularVerbs = [
     "explanationTr": "'stijgen' artış bildirdiği için 'zijn' ile kurulur, 3. hali 'gestegen'dir.",
     "explanationEn": "'stijgen' indicates increase, uses 'zijn', and its past participle is 'gestegen'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_treden_p1",
@@ -5138,7 +5138,7 @@ export const irregularVerbs = [
     "explanationTr": "3. tekil şahıs için kök 'treed' + t = treedt.",
     "explanationEn": "For 3rd person singular, stem 'treed' + t = treedt.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_treden_i1",
@@ -5153,7 +5153,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'trad'dir.",
     "explanationEn": "The singular imperfectum form is 'trad'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_treden_f1",
@@ -5168,7 +5168,7 @@ export const irregularVerbs = [
     "explanationTr": "'treden' hareket bildirdiği için 'zijn' ile kurulur, 3. hali 'getreden'dir.",
     "explanationEn": "'treden' indicates stepping motion, uses 'zijn', and its past participle is 'getreden'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_treffen_p1",
@@ -5182,7 +5182,7 @@ export const irregularVerbs = [
     "explanationTr": "'ik' öznesi için fiil kökü 'treff' kullanılır.",
     "explanationEn": "For the subject 'ik', the stem 'treff' is used.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_treffen_i1",
@@ -5197,7 +5197,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'trof'tur.",
     "explanationEn": "The singular imperfectum form is 'trof'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_treffen_f1",
@@ -5212,7 +5212,7 @@ export const irregularVerbs = [
     "explanationTr": "'treffen' fiilinin 3. hali 'getroffen'dir.",
     "explanationEn": "The past participle of 'treffen' is 'getroffen'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_trekken_p1",
@@ -5226,7 +5226,7 @@ export const irregularVerbs = [
     "explanationTr": "3. tekil şahıs için kök 'trek' + t = trekt.",
     "explanationEn": "For 3rd person singular, stem 'trek' + t = trekt.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_trekken_i1",
@@ -5241,7 +5241,7 @@ export const irregularVerbs = [
     "explanationTr": "Çoğul imperfectum hali 'trokken'dür.",
     "explanationEn": "The plural imperfectum form is 'trokken'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_trekken_f1",
@@ -5256,7 +5256,7 @@ export const irregularVerbs = [
     "explanationTr": "'trekken' fiilinin 3. hali 'getrokken'dür.",
     "explanationEn": "The past participle of 'trekken' is 'getrokken'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_vangen_p1",
@@ -5270,7 +5270,7 @@ export const irregularVerbs = [
     "explanationTr": "3. tekil şahıs için kök 'vang' + t = vangt.",
     "explanationEn": "For 3rd person singular, stem 'vang' + t = vangt.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_vangen_i2",
@@ -5305,7 +5305,7 @@ export const irregularVerbs = [
     "explanationTr": "'vangen' fiilinin 3. hali 'gevangen'dir.",
     "explanationEn": "The past participle of 'vangen' is 'gevangen'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_varen_p2",
@@ -5339,7 +5339,7 @@ export const irregularVerbs = [
     "explanationTr": "Çoğul imperfectum hali 'voeren'dir.",
     "explanationEn": "The plural imperfectum form is 'voeren'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_varen_f1",
@@ -5354,7 +5354,7 @@ export const irregularVerbs = [
     "explanationTr": "'varen' fiilinin 3. hali 'gevaren'dir.",
     "explanationEn": "The past participle of 'varen' is 'gevaren'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_vechten_p1",
@@ -5368,7 +5368,7 @@ export const irregularVerbs = [
     "explanationTr": "Çoğul özne (twee honden) için fiil mastar (vechten) kalır.",
     "explanationEn": "For the plural subject (twee honden), the verb remains in the infinitive (vechten).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_vechten_i1",
@@ -5383,7 +5383,7 @@ export const irregularVerbs = [
     "explanationTr": "Çoğul imperfectum hali 'vochten'dir.",
     "explanationEn": "The plural imperfectum form is 'vochten'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_vechten_f1",
@@ -5398,7 +5398,7 @@ export const irregularVerbs = [
     "explanationTr": "'vechten' fiilinin 3. hali 'gevochten'dur.",
     "explanationEn": "The past participle of 'vechten' is 'gevochten'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_verbieden_p1",
@@ -5412,7 +5412,7 @@ export const irregularVerbs = [
     "explanationTr": "3. tekil şahıs için kök 'verbied' + t = verbiedt.",
     "explanationEn": "For 3rd person singular, stem 'verbied' + t = verbiedt.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_verbieden_i2",
@@ -5447,7 +5447,7 @@ export const irregularVerbs = [
     "explanationTr": "'verbieden' fiilinin 3. hali 'verboden'dir ve 'be-' ile başladığı için 'ge-' almaz.",
     "explanationEn": "The past participle of 'verbiden' is 'verboden' and starts with 'be-', taking no 'ge-'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_verdwijnen_p1",
@@ -5461,7 +5461,7 @@ export const irregularVerbs = [
     "explanationTr": "Çoğul özne (wolken) için fiil mastar (verdwijnen) kalır.",
     "explanationEn": "For the plural subject (wolken), the verb remains in the infinitive (verdwijnen).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_verdwijnen_i1",
@@ -5476,7 +5476,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'verdween'dir.",
     "explanationEn": "The singular imperfectum form is 'verdween'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_verdwijnen_f1",
@@ -5491,7 +5491,7 @@ export const irregularVerbs = [
     "explanationTr": "'verdwijnen' durum değişikliği bildirdiği için 'zijn' ile kurulur, 3. hali 'verdwenen'dir ve 'ver-' ile başlar.",
     "explanationEn": "'verdwijnen' indicates change of state, uses 'zijn', and its past participle is 'verdwenen'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_vermijden_p1",
@@ -5505,7 +5505,7 @@ export const irregularVerbs = [
     "explanationTr": "'ik' öznesi için fiil kökü 'vermijd' kullanılır.",
     "explanationEn": "For the subject 'ik', the stem 'vermijd' is used.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_vermijden_i1",
@@ -5520,7 +5520,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'vermeed'dir.",
     "explanationEn": "The singular imperfectum form is 'vermeed'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_vermijden_f1",
@@ -5535,7 +5535,7 @@ export const irregularVerbs = [
     "explanationTr": "'vermijden' fiilinin 3. hali 'vermeden'dir ve 'ver-' ile başlar.",
     "explanationEn": "The past participle of 'vermijden' is 'vermeden'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_vouwen_p1",
@@ -5549,7 +5549,7 @@ export const irregularVerbs = [
     "explanationTr": "'ik' öznesi için fiil kökü 'vouw' kullanılır.",
     "explanationEn": "For the subject 'ik', the stem 'vouw' is used.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_vouwen_i1",
@@ -5564,7 +5564,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'vouwde'dir.",
     "explanationEn": "The singular imperfectum form is 'vouwde'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_vouwen_f1",
@@ -5579,7 +5579,7 @@ export const irregularVerbs = [
     "explanationTr": "'vouwen' fiilinin 3. hali 'gevouwen'dur.",
     "explanationEn": "The past participle of 'vouwen' is 'gevouwen'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_vriezen_p1",
@@ -5593,7 +5593,7 @@ export const irregularVerbs = [
     "explanationTr": "Hava olayı het-woord olduğu için kök 'vries' + t = vriest.",
     "explanationEn": "Impersonal weather verb, stem 'vries' + t = vriest.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_vriezen_i2",
@@ -5628,7 +5628,7 @@ export const irregularVerbs = [
     "explanationTr": "'vriezen' fiilinin 3. hali 'gevroren'dür.",
     "explanationEn": "The past participle of 'vriezen' is 'gevroren'.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_waaien_p1",
@@ -5642,7 +5642,7 @@ export const irregularVerbs = [
     "explanationTr": "3. tekil şahıs için kök 'waai' + t = waait.",
     "explanationEn": "For 3rd person singular, stem 'waai' + t = waait.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_waaien_i1",
@@ -5657,7 +5657,7 @@ export const irregularVerbs = [
     "explanationTr": "'waaien' fiilinin imperfectum hali 'woei' (veya waaide) olabilir.",
     "explanationEn": "The imperfectum form of 'waaien' is 'woei' (or waaide).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_waaien_f1",
@@ -5672,7 +5672,7 @@ export const irregularVerbs = [
     "explanationTr": "'waaien' fiilinin 3. hali 'gewaaid'dir.",
     "explanationEn": "The past participle of 'waaien' is 'gewaaid'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_wegen_p1",
@@ -5686,7 +5686,7 @@ export const irregularVerbs = [
     "explanationTr": "'jij' öznesi fiilden ÖNCE gelince 'weeg' köküne '-t' alır (weegt), ama soru cümlesinde 'jij' sonraya gelirse 't' düşer: weeg.",
     "explanationEn": "When 'jij' follows the verb in a question, the 't' drops: weeg.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_wegen_i1",
@@ -5701,7 +5701,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'woog'dur.",
     "explanationEn": "The singular imperfectum form is 'woog'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_wegen_f1",
@@ -5716,7 +5716,7 @@ export const irregularVerbs = [
     "explanationTr": "'wegen' fiilinin 3. hali 'gewogen'dir.",
     "explanationEn": "The past participle of 'wegen' is 'gewogen'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_werpen_p2",
@@ -5750,7 +5750,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'wierp'tir.",
     "explanationEn": "The singular imperfectum form is 'wierp'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_werpen_f1",
@@ -5765,7 +5765,7 @@ export const irregularVerbs = [
     "explanationTr": "'werpen' fiilinin 3. hali 'geworpen'dir.",
     "explanationEn": "The past participle of 'werpen' is 'geworpen'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_wijzen_p1",
@@ -5779,7 +5779,7 @@ export const irregularVerbs = [
     "explanationTr": "3. tekil şahıs için kök 'wijs' + t = wijst.",
     "explanationEn": "For 3rd person singular, stem 'wijs' + t = wijst.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_wijzen_i1",
@@ -5794,7 +5794,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'wees'tir.",
     "explanationEn": "The singular imperfectum form is 'wees'.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_wijzen_f1",
@@ -5809,7 +5809,7 @@ export const irregularVerbs = [
     "explanationTr": "'wijzen' fiilinin 3. hali 'gewezen'dir.",
     "explanationEn": "The past participle of 'wijzen' is 'gewezen'.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_winnen_p2",
@@ -5843,7 +5843,7 @@ export const irregularVerbs = [
     "explanationTr": "Çoğul imperfectum hali 'wonnen'dir.",
     "explanationEn": "The plural imperfectum form is 'wonnen'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_winnen_f1",
@@ -5858,7 +5858,7 @@ export const irregularVerbs = [
     "explanationTr": "'winnen' fiilinin 3. hali 'gewonnen'dir.",
     "explanationEn": "The past participle of 'winnen' is 'gewonnen'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_wrijven_p2",
@@ -5892,7 +5892,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'wreef'dir.",
     "explanationEn": "The singular imperfectum form is 'wreef'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_wrijven_f1",
@@ -5907,7 +5907,7 @@ export const irregularVerbs = [
     "explanationTr": "'wrijven' fiilinin 3. hali 'gewreven'dir.",
     "explanationEn": "The past participle of 'wrijven' is 'gewreven'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_zenden_p1",
@@ -5921,7 +5921,7 @@ export const irregularVerbs = [
     "explanationTr": "'ik' öznesi için fiil kökü 'zend' kullanılır.",
     "explanationEn": "For the subject 'ik', the stem 'zend' is used.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_zenden_i1",
@@ -5936,7 +5936,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'zond'dur.",
     "explanationEn": "The singular imperfectum form is 'zond'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_zenden_f1",
@@ -5951,7 +5951,7 @@ export const irregularVerbs = [
     "explanationTr": "'zenden' fiilinin 3. hali 'gezonden'dir.",
     "explanationEn": "The past participle of 'zenden' is 'gezonden'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_zingen_p1",
@@ -5965,7 +5965,7 @@ export const irregularVerbs = [
     "explanationTr": "Çoğul özne (vogels) için fiil mastar (zingen) kalır.",
     "explanationEn": "For the plural subject (vogels), the verb remains in the infinitive (zingen).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_zingen_i1",
@@ -5980,7 +5980,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'zong'dur.",
     "explanationEn": "The singular imperfectum form is 'zong'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_zingen_f1",
@@ -5995,7 +5995,7 @@ export const irregularVerbs = [
     "explanationTr": "'zingen' fiilinin 3. hali 'gezongen'dir.",
     "explanationEn": "The past participle of 'zingen' is 'gezongen'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_zinken_p1",
@@ -6009,7 +6009,7 @@ export const irregularVerbs = [
     "explanationTr": "Çoğul özne (stenen) için fiil mastar (zinken) kalır.",
     "explanationEn": "For the plural subject (stenen), the verb remains in the infinitive (zinken).",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_zinken_i1",
@@ -6024,7 +6024,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'zonk'tur.",
     "explanationEn": "The singular imperfectum form is 'zonk'.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_zinken_f1",
@@ -6039,7 +6039,7 @@ export const irregularVerbs = [
     "explanationTr": "'zinken' batma/hareket bildirdiği için 'zijn' ile kurulur, 3. hali 'gezonken'dür.",
     "explanationEn": "'zinken' indicates sinking, uses 'zijn', and its past participle is 'gezonken'.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_zwemmen_p1",
@@ -6053,7 +6053,7 @@ export const irregularVerbs = [
     "explanationTr": "'ik' öznesi için fiil kökü 'zwem' kullanılır.",
     "explanationEn": "For the subject 'ik', the stem 'zwem' is used.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_zwemmen_i1",
@@ -6068,7 +6068,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'zwom'dur.",
     "explanationEn": "The singular imperfectum form is 'zwom'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_zwemmen_f1",
@@ -6083,7 +6083,7 @@ export const irregularVerbs = [
     "explanationTr": "'zwemmen' fiilinin 3. hali 'gezwommen'dür.",
     "explanationEn": "The past participle of 'zwemmen' is 'gezwommen'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_zweren_p1",
@@ -6097,7 +6097,7 @@ export const irregularVerbs = [
     "explanationTr": "'ik' öznesi için fiil kökü 'zweer' kullanılır.",
     "explanationEn": "For the subject 'ik', the stem 'zweer' is used.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_zweren_i1",
@@ -6112,7 +6112,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'zwoer'dür.",
     "explanationEn": "The singular imperfectum form is 'zwoer'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_zweren_f1",
@@ -6127,7 +6127,7 @@ export const irregularVerbs = [
     "explanationTr": "'zweren' fiilinin 3. hali 'gezworen'dür.",
     "explanationEn": "The past participle of 'zweren' is 'gezworen'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_zwijgen_p1",
@@ -6141,7 +6141,7 @@ export const irregularVerbs = [
     "explanationTr": "3. tekil şahıs için kök 'zwijg' + t = zwijgt.",
     "explanationEn": "For 3rd person singular, stem 'zwijg' + t = zwijgt.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_zwijgen_i1",
@@ -6156,7 +6156,7 @@ export const irregularVerbs = [
     "explanationTr": "Tekil imperfectum hali 'zweeg'dir.",
     "explanationEn": "The singular imperfectum form is 'zweeg'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_irreg_zwijgen_f1",
@@ -6171,7 +6171,7 @@ export const irregularVerbs = [
     "explanationTr": "'zwijgen' fiilinin 3. hali 'gezwegen'dir.",
     "explanationEn": "The past participle of 'zwijgen' is 'gezwegen'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch16_016",
@@ -8749,7 +8749,7 @@ export const irregularVerbs = [
     "explanationTr": "'Aaien' (okşamak/sevmek) fiilinin geçmiş zaman ortacı (voltooid deelwoord) 'geaaid' şeklinde yazılır.",
     "explanationEn": "The past participle of the verb 'aaien' (to stroke/pet) is regular in pronunciation but spelled 'geaaid'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_16_8",
@@ -8764,6 +8764,6 @@ export const irregularVerbs = [
     "explanationTr": "'Drinken' düzensiz bir fiildir; geçmiş zamanında -te almaz, kökü değişir: 'ik dronk' (asla drinkte denmez!).",
     "explanationEn": "'Drinken' is an irregular (strong) verb: its imperfectum singular is 'dronk', never 'drinkte'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   }
 ];

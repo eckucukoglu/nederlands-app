@@ -1662,7 +1662,7 @@ export const chapters16_18 = [
     "explanationTr": "Normal kelime sıralamasına sahip ana cümleleri bağlayan kelime 'want'dır.",
     "explanationEn": "To connect main clauses with normal order, we use 'want'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch18_008",
@@ -1677,7 +1677,7 @@ export const chapters16_18 = [
     "explanationTr": "Fiilin sonda olduğu yan cümle yapısında 'omdat' kullanılır.",
     "explanationEn": "For a secondary clause where the verb is at the end, we use 'omdat'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch18_009",
@@ -3834,7 +3834,7 @@ export const chapters16_18 = [
     "explanationTr": "'aan het' yapısı cümlenin sonunda mastar fiille (telefoneren) birleşir.",
     "explanationEn": "The 'aan het' structure is completed with the infinitive 'telefoneren' at the end of the sentence.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch17_1050",
@@ -4334,7 +4334,7 @@ export const chapters16_18 = [
     "explanationTr": "'Zijn' fiilinin ardından eylemin şu an yapıldığını belirtmek için 'aan het + mastar' gelir: 'aan het maken'.",
     "explanationEn": "To indicate ongoing present continuous action, use 'aan het + infinitive': 'aan het maken'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_17_6",
@@ -4348,7 +4348,7 @@ export const chapters16_18 = [
     "explanationTr": "'Dansen' eyleminin devam etmekte olduğunu anlatmak için 'aan het dansen' yapısı kullanılır.",
     "explanationEn": "The continuous construction for dancing right now is 'aan het dansen'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_17_7",
@@ -4599,7 +4599,7 @@ export const chapters16_18 = [
     "explanationTr": "'Voordat' bağlacı yan cümle kurar; 'je' öznesi için 'mogen' fiili cümlenin en sonuna gider ve 'mag' olur.",
     "explanationEn": "The subclause conjunction 'voordat' pushes the conjugated verb 'mogen' for subject 'je' to the very end: 'mag'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_18_12",
@@ -4614,6 +4614,6 @@ export const chapters16_18 = [
     "explanationTr": "'Terwijl' yan cümle bağlacıdır; 'Maria' (zij) öznesi için 'brengen' fiili cümlenin en sonuna gider: 'brengt'.",
     "explanationEn": "'Terwijl' is a subordinating conjunction, sending the conjugated verb for 'Maria' to the end of the clause: 'brengt'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   }
 ];
