@@ -49,6 +49,15 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
   const [reportedQuestions, setReportedQuestions] = useState(() => JSON.parse(localStorage.getItem('reportedQuestions')) || {}); 
   const [goodQuestions, setGoodQuestions] = useState(() => JSON.parse(localStorage.getItem('goodQuestions')) || {}); 
 
+  // Modal açıkken arka plan sayfasının kaydırılmasını (Scrollbar 1) engelle
+  useEffect(() => {
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = originalOverflow;
+    };
+  }, []);
+
   useEffect(() => {
     const history = JSON.parse(localStorage.getItem('quizHistory')) || {};
     
@@ -915,33 +924,33 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
              </div>
            )}
 
-           {/* 2. Eşleştirme Sorusu Bölümü (Kelimeler Havuzu + Cümleler Slotları - MOBİL DOSTU) */}
+           {/* 2. Eşleştirme Sorusu Bölümü (Kelimeler Havuzu + Cümleler Slotları - MOBİL & DESKTOP DOSTU) */}
            {currentQ.type === 'matching' && (
-             <div className="w-full max-w-xl mx-auto flex flex-col gap-3 mb-3">
-               {/* Kelime Havuzu */}
-               <div className="bg-slate-800/80 border border-slate-700/80 rounded-2xl p-3.5 sm:p-4 shadow-lg">
-                 <div className="flex items-center justify-between mb-2.5">
-                   <span className="text-xs sm:text-sm font-bold text-slate-200 flex items-center gap-2">
-                     <i className="fa-solid fa-layer-group text-teal-400 text-sm"></i>
+             <div className="w-full max-w-2xl mx-auto flex flex-col gap-2.5 sm:gap-3 mb-3">
+               {/* Kelime Havuzu: Kaydırıldığında üstte sabitlenir, kelimeler her an erişilebilir kalır */}
+               <div className="sticky top-0 z-20 bg-slate-900/95 backdrop-blur-md border border-slate-700/80 rounded-xl sm:rounded-2xl p-2.5 sm:p-3 shadow-xl">
+                 <div className="flex items-center justify-between mb-2">
+                   <span className="text-xs sm:text-sm font-bold text-slate-200 flex items-center gap-1.5 sm:gap-2">
+                     <i className="fa-solid fa-layer-group text-teal-400 text-xs sm:text-sm"></i>
                      {isTr ? 'Kelime Havuzu' : 'Word Pool'}
-                     <span className="text-xs text-slate-400 font-normal">
+                     <span className="text-[11px] sm:text-xs text-slate-400 font-normal">
                        ({shuffledWordPool.length} {isTr ? 'kelime' : 'words'})
                      </span>
                    </span>
                    {!isAnswered && Object.keys(userMatches).length > 0 && (
                      <button 
                        onClick={handleClearAllMatches}
-                       className="text-xs font-semibold text-slate-400 hover:text-rose-400 bg-slate-900/60 hover:bg-slate-900 border border-slate-700/60 px-2.5 py-1 rounded-lg transition-colors flex items-center gap-1.5 cursor-pointer"
+                       className="text-[11px] sm:text-xs font-semibold text-slate-400 hover:text-rose-400 bg-slate-900/60 hover:bg-slate-900 border border-slate-700/60 px-2 py-0.5 sm:py-1 rounded-lg transition-colors flex items-center gap-1 cursor-pointer"
                        title={isTr ? 'Tüm eşleştirmeleri temizle' : 'Clear all matches'}
                      >
-                       <i className="fa-solid fa-rotate-left text-xs"></i>
+                       <i className="fa-solid fa-rotate-left text-[10px]"></i>
                        <span>{isTr ? 'Sıfırla' : 'Reset'}</span>
                      </button>
                    )}
                  </div>
 
                  {/* Kelime Hapları / Çipleri */}
-                 <div className="flex flex-wrap gap-2 justify-center">
+                 <div className="flex flex-wrap gap-1.5 sm:gap-2 justify-center">
                    {shuffledWordPool.map((word, wIdx) => {
                      const isUsed = Object.values(userMatches).includes(word);
                      return (
@@ -953,7 +962,7 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
                            e.dataTransfer.setData('text/plain', word);
                          }}
                          onClick={() => handlePlaceWord(word)}
-                         className={`px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center gap-2 select-none shadow-sm cursor-pointer ${
+                         className={`px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-lg sm:rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center gap-1.5 select-none shadow-sm cursor-pointer ${
                            isUsed
                              ? 'bg-slate-900/80 text-slate-500 border border-slate-800 line-through opacity-50'
                              : 'bg-teal-950/60 border-2 border-teal-500/70 text-teal-100 hover:bg-teal-900/80 hover:border-teal-400 hover:scale-105 active:scale-95 shadow cursor-grab active:cursor-grabbing'
@@ -967,8 +976,8 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
                  </div>
 
                  {!isAnswered && (
-                   <div className="mt-2.5 text-xs text-slate-300 text-center bg-slate-900/50 py-1.5 px-3 rounded-xl border border-slate-800/70 flex items-center justify-center gap-1.5">
-                     <i className="fa-solid fa-hand-pointer text-teal-400 text-xs"></i>
+                   <div className="mt-2 text-[11px] sm:text-xs text-slate-300 text-center bg-slate-900/50 py-1 px-2.5 rounded-lg border border-slate-800/70 flex items-center justify-center gap-1.5">
+                     <i className="fa-solid fa-hand-pointer text-teal-400 text-[10px] sm:text-xs"></i>
                      <span>
                        {activeSlotId 
                          ? (isTr ? 'Seçili boşluğa yerleştirmek için yukarıdaki kelimelerden birine dokunun.' : 'Tap a word above to place into the selected blank.')
@@ -978,8 +987,8 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
                  )}
                </div>
 
-               {/* Cümleler Listesi */}
-               <div className="space-y-2.5 max-h-[46vh] sm:max-h-[50vh] overflow-y-auto pr-1 scrollbar-thin scrollbar-thumb-slate-700">
+               {/* Cümleler Listesi: İç içe dikey kaydırma kaldırıldı, tüm modal tek akıcı kaydırmayla çalışır */}
+               <div className="space-y-2 sm:space-y-2.5">
                  {shuffledMatchingItems.map((item, idx) => {
                    const parts = item.sentenceNl.split('___');
                    const assignedWord = userMatches[item.id];
@@ -989,7 +998,7 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
                    return (
                      <div 
                        key={item.id}
-                       className={`p-3 sm:p-3.5 rounded-xl sm:rounded-2xl border transition-all text-sm sm:text-base leading-relaxed flex items-center gap-2.5 sm:gap-3 ${
+                       className={`p-2.5 sm:p-3 rounded-xl sm:rounded-2xl border transition-all text-xs sm:text-sm leading-relaxed flex items-center gap-2 sm:gap-2.5 ${
                          isAnswered
                            ? isItemCorrect
                              ? 'bg-emerald-950/30 border-emerald-700/60 shadow-sm'
@@ -999,11 +1008,11 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
                              : 'bg-slate-800/60 border-slate-700/70 hover:border-slate-600'
                        }`}
                      >
-                       <span className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-slate-900 border border-slate-700 text-slate-300 text-xs font-bold flex items-center justify-center flex-shrink-0 shadow-inner">
+                       <span className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-slate-900 border border-slate-700 text-slate-300 text-[11px] sm:text-xs font-bold flex items-center justify-center flex-shrink-0 shadow-inner">
                          {idx + 1}
                        </span>
 
-                       <div className="flex-1 leading-relaxed text-slate-100 font-medium text-sm sm:text-base">
+                       <div className="flex-1 leading-relaxed text-slate-100 font-medium text-xs sm:text-sm">
                          {parts[0]}
                          
                          {/* Boşluk / Slot Butonu */}
@@ -1029,7 +1038,7 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
                                setActiveSlotId(null);
                              }
                            }}
-                           className={`mx-1.5 inline-flex items-center justify-center px-3.5 py-1.5 sm:py-2 min-w-[90px] sm:min-w-[110px] rounded-xl text-xs sm:text-sm font-bold transition-all align-middle select-none shadow-sm cursor-pointer ${
+                           className={`mx-1 inline-flex items-center justify-center px-2.5 sm:px-3 py-1 sm:py-1.5 min-w-[75px] sm:min-w-[95px] rounded-lg sm:rounded-xl text-xs sm:text-sm font-bold transition-all align-middle select-none shadow-sm cursor-pointer ${
                              isAnswered
                                ? isItemCorrect
                                  ? 'bg-emerald-950/80 border-2 border-emerald-500 text-emerald-200'
@@ -1037,7 +1046,7 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
                                : assignedWord
                                  ? 'bg-teal-900/70 border-2 border-teal-400 text-teal-100 hover:bg-rose-950/60 hover:border-rose-500 hover:text-rose-200'
                                  : isActiveSlot
-                                   ? 'border-2 border-teal-400 bg-teal-950/70 text-teal-300 ring-4 ring-teal-400/25 animate-pulse'
+                                   ? 'border-2 border-teal-400 bg-teal-950/70 text-teal-300 ring-2 ring-teal-400/40 animate-pulse'
                                    : 'border-2 border-dashed border-slate-600 hover:border-teal-400 bg-slate-900/80 text-slate-400 hover:text-teal-300'
                            }`}
                            title={assignedWord && !isAnswered ? (isTr ? 'Kaldırmak için dokunun' : 'Tap to remove') : (isTr ? 'Bu boşluğu seç' : 'Select blank')}
@@ -1045,7 +1054,7 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
                            {assignedWord ? (
                              <>
                                <span>{assignedWord}</span>
-                               {!isAnswered && <i className="fa-solid fa-xmark text-xs ml-2 opacity-70 hover:opacity-100"></i>}
+                               {!isAnswered && <i className="fa-solid fa-xmark text-[10px] ml-1.5 opacity-70 hover:opacity-100"></i>}
                              </>
                            ) : (
                              <span className="font-mono text-xs opacity-75">___</span>
@@ -1054,8 +1063,8 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
 
                          {/* Yanlış ise doğru cevabı hemen yanında yeşil rozetle göster */}
                          {isAnswered && !isItemCorrect && (
-                           <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-950 border border-emerald-500 text-emerald-300 text-xs sm:text-sm font-bold ml-2 align-middle shadow-sm">
-                             <i className="fa-solid fa-arrow-right text-[10px]"></i>
+                           <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-emerald-950 border border-emerald-500 text-emerald-300 text-[11px] sm:text-xs font-bold ml-1.5 align-middle shadow-sm">
+                             <i className="fa-solid fa-arrow-right text-[9px]"></i>
                              {item.answer}
                            </span>
                          )}
@@ -1067,9 +1076,9 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
                        {isAnswered && (
                          <div className="flex-shrink-0 ml-1">
                            {isItemCorrect ? (
-                             <i className="fa-solid fa-circle-check text-emerald-400 text-base sm:text-lg"></i>
+                             <i className="fa-solid fa-circle-check text-emerald-400 text-sm sm:text-base"></i>
                            ) : (
-                             <i className="fa-solid fa-circle-xmark text-rose-400 text-base sm:text-lg"></i>
+                             <i className="fa-solid fa-circle-xmark text-rose-400 text-sm sm:text-base"></i>
                            )}
                          </div>
                        )}
