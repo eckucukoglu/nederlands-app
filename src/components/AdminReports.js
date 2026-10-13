@@ -13,6 +13,7 @@ export default function AdminReports() {
   const [authChecking, setAuthChecking] = useState(true); // Kimlik kontrolü için yeni state
   const [user, setUser] = useState(null);
   const [errorMsg, setErrorMsg] = useState('');
+  const [copiedId, setCopiedId] = useState(null);
 
   useEffect(() => {
     // Sayfa açıldığında önce Firebase'den kullanıcının giriş yapıp yapmadığını bekle
@@ -56,6 +57,48 @@ export default function AdminReports() {
       }
     }
     setLoading(false);
+  };
+
+  const copyToClipboard = async (text) => {
+    if (!text) return;
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(text);
+      } else {
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+      }
+      setCopiedId(text);
+      setTimeout(() => {
+        setCopiedId(prev => (prev === text ? null : prev));
+      }, 2000);
+    } catch (error) {
+      console.error("Kopyalama hatası:", error);
+    }
+  };
+
+  const renderQuestionId = (questionId) => {
+    if (!questionId) return null;
+    const isCopied = copiedId === questionId;
+    return (
+      <button
+        type="button"
+        onClick={() => copyToClipboard(questionId)}
+        title={isCopied ? "Kopyalandı!" : "ID'yi panoya kopyalamak için tıklayın"}
+        className={`inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-xs font-mono border transition-all cursor-pointer mr-2 select-all ${
+          isCopied
+            ? 'bg-emerald-950/80 border-emerald-500 text-emerald-300 ring-1 ring-emerald-500/50'
+            : 'bg-slate-950 text-slate-300 border-slate-700/80 hover:bg-slate-800 hover:text-white hover:border-slate-500'
+        }`}
+      >
+        <span>{questionId}</span>
+        <i className={isCopied ? "fa-solid fa-check text-emerald-400 text-[10px]" : "fa-regular fa-copy text-slate-400 hover:text-slate-200 text-[10px]"}></i>
+      </button>
+    );
   };
 
   const deleteItem = async (collectionName, id) => {
@@ -125,118 +168,7 @@ export default function AdminReports() {
     <div className="max-w-6xl mx-auto p-6 space-y-12 pb-20">
       <h1 className="text-3xl font-bold text-white mb-8 mt-4">🛠️ Gelen Raporlar ve Geri Bildirimler</h1>
 
-      {/* HATALI SORULAR TABLOSU */}
-      <section>
-        <h2 className="text-xl font-bold text-rose-400 mb-4 flex items-center gap-2">
-          <i className="fa-solid fa-flag"></i> Hatalı Bildirilen Sorular ({reports.length})
-        </h2>
-        <div className="bg-slate-900 border border-slate-700 rounded-xl overflow-x-auto shadow-xl">
-          <table className="w-full text-left text-sm text-slate-300 min-w-[800px]">
-            <thead className="bg-slate-800 text-slate-100">
-              <tr>
-                <th className="p-4 w-40">Tarih</th>
-                <th className="p-4 w-48">Kullanıcı</th>
-                <th className="p-4">Soru ID & Metni</th>
-                <th className="p-4 text-right w-32">İşlem</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-slate-800">
-              {reports.length === 0 && <tr><td colSpan="4" className="p-8 text-center text-slate-500 font-medium">Rapor yok.</td></tr>}
-              {reports.map(rep => (
-                <tr key={rep.id} className="hover:bg-slate-800/50 transition-colors">
-                  <td className="p-4 text-slate-400 whitespace-nowrap">{new Date(rep.timestamp).toLocaleString('tr-TR')}</td>
-                  <td className="p-4 text-brand-300 font-medium truncate max-w-[12rem]" title={rep.userEmail}>{rep.userEmail}</td>
-                  <td className="p-4">
-                    <span className="bg-slate-950 px-2 py-1 rounded text-xs font-mono text-slate-400 mr-2 border border-slate-800">{rep.questionId}</span>
-                    <span className="font-medium text-slate-200">{rep.questionNl}</span>
-                  </td>
-                  <td className="p-4 text-right">
-                    <button onClick={() => deleteItem("reported_questions", rep.id)} className="bg-rose-950/40 text-rose-400 border border-rose-900/50 hover:bg-rose-600 hover:text-white hover:border-rose-500 px-3 py-1.5 rounded-lg transition-all text-xs font-bold shadow-sm whitespace-nowrap">
-                      Çözüldü / Sil
-                    </button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      {/* KOPYA / MÜKERRER SORULAR TABLOSU */}
-      <section>
-        <h2 className="text-xl font-bold text-sky-400 mb-4 flex items-center gap-2">
-          <i className="fa-solid fa-clone"></i> Mükerrer / Kopya Bildirilen Sorular ({duplicates.length})
-        </h2>
-        <div className="bg-slate-900 border border-slate-700 rounded-xl overflow-x-auto shadow-xl">
-          <table className="w-full text-left text-sm text-slate-300 min-w-[800px]">
-            <thead className="bg-slate-800 text-slate-100">
-              <tr>
-                <th className="p-4 w-40">Tarih</th>
-                <th className="p-4 w-48">Kullanıcı</th>
-                <th className="p-4">Soru ID & Metni</th>
-                <th className="p-4 text-right w-32">İşlem</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-slate-800">
-              {duplicates.length === 0 && <tr><td colSpan="4" className="p-8 text-center text-slate-500 font-medium">Mükerrer soru bildirimi yok.</td></tr>}
-              {duplicates.map(dup => (
-                <tr key={dup.id} className="hover:bg-slate-800/50 transition-colors">
-                  <td className="p-4 text-slate-400 whitespace-nowrap">{new Date(dup.timestamp).toLocaleString('tr-TR')}</td>
-                  <td className="p-4 text-sky-300 font-medium truncate max-w-[12rem]" title={dup.userEmail}>{dup.userEmail}</td>
-                  <td className="p-4">
-                    <span className="bg-slate-950 px-2 py-1 rounded text-xs font-mono text-slate-400 mr-2 border border-slate-800">{dup.questionId}</span>
-                    <span className="font-medium text-slate-200">{dup.questionNl}</span>
-                  </td>
-                  <td className="p-4 text-right">
-                    <button onClick={() => deleteItem("reported_questions", dup.id)} className="bg-sky-950/40 text-sky-400 border border-sky-900/50 hover:bg-sky-600 hover:text-white hover:border-sky-500 px-3 py-1.5 rounded-lg transition-all text-xs font-bold shadow-sm whitespace-nowrap">
-                      İncelendi / Sil
-                    </button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      {/* İYİ / BEĞENİLEN SORULAR TABLOSU */}
-      <section>
-        <h2 className="text-xl font-bold text-emerald-400 mb-4 flex items-center gap-2">
-          <i className="fa-solid fa-thumbs-up"></i> İyi / Kaliteli Olarak İşaretlenen Sorular ({goods.length})
-        </h2>
-        <div className="bg-slate-900 border border-slate-700 rounded-xl overflow-x-auto shadow-xl">
-          <table className="w-full text-left text-sm text-slate-300 min-w-[800px]">
-            <thead className="bg-slate-800 text-slate-100">
-              <tr>
-                <th className="p-4 w-40">Tarih</th>
-                <th className="p-4 w-48">Kullanıcı</th>
-                <th className="p-4">Soru ID & Metni</th>
-                <th className="p-4 text-right w-32">İşlem</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-slate-800">
-              {goods.length === 0 && <tr><td colSpan="4" className="p-8 text-center text-slate-500 font-medium">Beğenilen soru yok.</td></tr>}
-              {goods.map(g => (
-                <tr key={g.id} className="hover:bg-slate-800/50 transition-colors">
-                  <td className="p-4 text-slate-400 whitespace-nowrap">{new Date(g.timestamp).toLocaleString('tr-TR')}</td>
-                  <td className="p-4 text-emerald-300 font-medium truncate max-w-[12rem]" title={g.userEmail}>{g.userEmail}</td>
-                  <td className="p-4">
-                    <span className="bg-slate-950 px-2 py-1 rounded text-xs font-mono text-slate-400 mr-2 border border-slate-800">{g.questionId}</span>
-                    <span className="font-medium text-slate-200">{g.questionNl}</span>
-                  </td>
-                  <td className="p-4 text-right">
-                    <button onClick={() => deleteItem("reported_questions", g.id)} className="bg-emerald-900/30 text-emerald-400 border border-emerald-900/50 hover:bg-emerald-600 hover:text-white hover:border-emerald-500 px-3 py-1.5 rounded-lg transition-all text-xs font-bold shadow-sm whitespace-nowrap">
-                      Sil
-                    </button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      {/* FEEDBACK TABLOSU */}
+      {/* 1. KULLANICI GERİ BİLDİRİMLERİ TABLOSU */}
       <section>
         <h2 className="text-xl font-bold text-indigo-400 mb-4 flex items-center gap-2">
           <i className="fa-solid fa-comment-dots"></i> Kullanıcı Geri Bildirimleri ({feedbacks.length})
@@ -261,6 +193,117 @@ export default function AdminReports() {
                   <td className="p-4 text-right">
                     <button onClick={() => deleteItem("feedbacks", fb.id)} className="bg-slate-800 text-slate-300 border border-slate-700 hover:bg-indigo-600 hover:text-white hover:border-indigo-500 px-3 py-1.5 rounded-lg transition-all text-xs font-bold shadow-sm whitespace-nowrap">
                       Okundu / Sil
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      {/* 2. HATALI SORULAR TABLOSU */}
+      <section>
+        <h2 className="text-xl font-bold text-rose-400 mb-4 flex items-center gap-2">
+          <i className="fa-solid fa-flag"></i> Hatalı Bildirilen Sorular ({reports.length})
+        </h2>
+        <div className="bg-slate-900 border border-slate-700 rounded-xl overflow-x-auto shadow-xl">
+          <table className="w-full text-left text-sm text-slate-300 min-w-[800px]">
+            <thead className="bg-slate-800 text-slate-100">
+              <tr>
+                <th className="p-4 w-40">Tarih</th>
+                <th className="p-4 w-48">Kullanıcı</th>
+                <th className="p-4">Soru ID & Metni</th>
+                <th className="p-4 text-right w-32">İşlem</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-800">
+              {reports.length === 0 && <tr><td colSpan="4" className="p-8 text-center text-slate-500 font-medium">Rapor yok.</td></tr>}
+              {reports.map(rep => (
+                <tr key={rep.id} className="hover:bg-slate-800/50 transition-colors">
+                  <td className="p-4 text-slate-400 whitespace-nowrap">{new Date(rep.timestamp).toLocaleString('tr-TR')}</td>
+                  <td className="p-4 text-brand-300 font-medium truncate max-w-[12rem]" title={rep.userEmail}>{rep.userEmail}</td>
+                  <td className="p-4">
+                    {renderQuestionId(rep.questionId)}
+                    <span className="font-medium text-slate-200">{rep.questionNl}</span>
+                  </td>
+                  <td className="p-4 text-right">
+                    <button onClick={() => deleteItem("reported_questions", rep.id)} className="bg-rose-950/40 text-rose-400 border border-rose-900/50 hover:bg-rose-600 hover:text-white hover:border-rose-500 px-3 py-1.5 rounded-lg transition-all text-xs font-bold shadow-sm whitespace-nowrap">
+                      Çözüldü / Sil
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      {/* 3. KOPYA / MÜKERRER SORULAR TABLOSU */}
+      <section>
+        <h2 className="text-xl font-bold text-sky-400 mb-4 flex items-center gap-2">
+          <i className="fa-solid fa-clone"></i> Mükerrer / Kopya Bildirilen Sorular ({duplicates.length})
+        </h2>
+        <div className="bg-slate-900 border border-slate-700 rounded-xl overflow-x-auto shadow-xl">
+          <table className="w-full text-left text-sm text-slate-300 min-w-[800px]">
+            <thead className="bg-slate-800 text-slate-100">
+              <tr>
+                <th className="p-4 w-40">Tarih</th>
+                <th className="p-4 w-48">Kullanıcı</th>
+                <th className="p-4">Soru ID & Metni</th>
+                <th className="p-4 text-right w-32">İşlem</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-800">
+              {duplicates.length === 0 && <tr><td colSpan="4" className="p-8 text-center text-slate-500 font-medium">Mükerrer soru bildirimi yok.</td></tr>}
+              {duplicates.map(dup => (
+                <tr key={dup.id} className="hover:bg-slate-800/50 transition-colors">
+                  <td className="p-4 text-slate-400 whitespace-nowrap">{new Date(dup.timestamp).toLocaleString('tr-TR')}</td>
+                  <td className="p-4 text-sky-300 font-medium truncate max-w-[12rem]" title={dup.userEmail}>{dup.userEmail}</td>
+                  <td className="p-4">
+                    {renderQuestionId(dup.questionId)}
+                    <span className="font-medium text-slate-200">{dup.questionNl}</span>
+                  </td>
+                  <td className="p-4 text-right">
+                    <button onClick={() => deleteItem("reported_questions", dup.id)} className="bg-sky-950/40 text-sky-400 border border-sky-900/50 hover:bg-sky-600 hover:text-white hover:border-sky-500 px-3 py-1.5 rounded-lg transition-all text-xs font-bold shadow-sm whitespace-nowrap">
+                      İncelendi / Sil
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      {/* 4. İYİ / KALİTELİ OLARAK İŞARETLENEN SORULAR TABLOSU */}
+      <section>
+        <h2 className="text-xl font-bold text-emerald-400 mb-4 flex items-center gap-2">
+          <i className="fa-solid fa-thumbs-up"></i> İyi / Kaliteli Olarak İşaretlenen Sorular ({goods.length})
+        </h2>
+        <div className="bg-slate-900 border border-slate-700 rounded-xl overflow-x-auto shadow-xl">
+          <table className="w-full text-left text-sm text-slate-300 min-w-[800px]">
+            <thead className="bg-slate-800 text-slate-100">
+              <tr>
+                <th className="p-4 w-40">Tarih</th>
+                <th className="p-4 w-48">Kullanıcı</th>
+                <th className="p-4">Soru ID & Metni</th>
+                <th className="p-4 text-right w-32">İşlem</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-800">
+              {goods.length === 0 && <tr><td colSpan="4" className="p-8 text-center text-slate-500 font-medium">Beğenilen soru yok.</td></tr>}
+              {goods.map(g => (
+                <tr key={g.id} className="hover:bg-slate-800/50 transition-colors">
+                  <td className="p-4 text-slate-400 whitespace-nowrap">{new Date(g.timestamp).toLocaleString('tr-TR')}</td>
+                  <td className="p-4 text-emerald-300 font-medium truncate max-w-[12rem]" title={g.userEmail}>{g.userEmail}</td>
+                  <td className="p-4">
+                    {renderQuestionId(g.questionId)}
+                    <span className="font-medium text-slate-200">{g.questionNl}</span>
+                  </td>
+                  <td className="p-4 text-right">
+                    <button onClick={() => deleteItem("reported_questions", g.id)} className="bg-emerald-900/30 text-emerald-400 border border-emerald-900/50 hover:bg-emerald-600 hover:text-white hover:border-emerald-500 px-3 py-1.5 rounded-lg transition-all text-xs font-bold shadow-sm whitespace-nowrap">
+                      Sil
                     </button>
                   </td>
                 </tr>
