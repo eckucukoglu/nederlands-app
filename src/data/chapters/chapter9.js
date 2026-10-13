@@ -100,39 +100,6 @@ export const chapter9Sections = [
     exerciseGroups: [{ instruction: "Extra Oefeningen: Begrip van de dialoog (Dialogue Comprehension)", isExtra: true, questions: generateSmartQuestions(9, "Dialoog Woordenschat", 5, chapter9Vocab) }]
   },
   {
-    id: "9.2", chapter: 9, title: "9.2 Woordenlijst & Opdracht 1",
-    theory: (lang) => (
-      <>
-        {lang === 'tr' ? (
-          <>
-            <h3>📖 Woordenlijst (Kelime Listesi)</h3>
-            <p>Opdracht 1'e başlamadan önce bu kelimeleri dikkatlice çalışın.</p>
-          </>
-        ) : (
-          <>
-            <h3>📖 Woordenlijst (Vocabulary)</h3>
-            <p>Study these words carefully before starting Exercise 1.</p>
-          </>
-        )}
-      </>
-    ),
-    exerciseGroups: [
-      {
-        instruction: "Opdracht 1: Bedenk zelf vragen bij de dialoog. Gebruik de gegeven woorden. (Create your own questions for the dialogue. Use the given words.)",
-        isExtra: false,
-        questions: [
-          { id: "9.2_opd1_1", type: "fill_in", question: "1 Waarom – huisarts?", correctAnswer: "Waarom is meneer Smit bij de huisarts?" },
-          { id: "9.2_opd1_2", type: "fill_in", question: "2 Waar – bultjes?", correctAnswer: "Waar heeft meneer Smit bultjes?" },
-          { id: "9.2_opd1_3", type: "fill_in", question: "3 Hoelang – klachten?", correctAnswer: "Hoelang heeft meneer Smit de klachten?" },
-          { id: "9.2_opd1_4", type: "fill_in", question: "4 Wat – gedaan?", correctAnswer: "Wat heeft meneer Smit gisteren gedaan?" },
-          { id: "9.2_opd1_5", type: "fill_in", question: "5 Wat – gegeten?", correctAnswer: "Wat heeft meneer Smit gegeten?" },
-          { id: "9.2_opd1_6", type: "fill_in", question: "6 Wat – geeft?", correctAnswer: "Wat geeft de huisarts aan meneer Smit?" },
-          { id: "9.2_opd1_7", type: "fill_in", question: "7 Waarom – zalf?", correctAnswer: "Waarom geeft de huisarts zalf?" }
-        ]
-      }
-    ]
-  },
-  {
     id: "9.3", chapter: 9, title: "9.3 Bij de huisarts",
     theory: (lang) => (
       <>
@@ -194,34 +161,6 @@ export const chapter9Sections = [
           { id: "9.4_smart_1", type: "fill_in", question: "Je draagt een horloge (saat/watch) om je ________.", correctAnswer: "pols" },
           { id: "9.4_smart_2", type: "fill_in", question: "Je gebruikt je ________ om te kijken/zien. (to see/look)", correctAnswer: "ogen" },
           { id: "9.4_smart_3", type: "multiple_choice", question: "Wat is het meervoud (plural) van 'het been'?", options: ["de beens", "de benen", "de beenen"], correctAnswer: "de benen" }
-        ]
-      }
-    ]
-  },
-  {
-    id: "9.5", chapter: 9, title: "9.5 Reacties",
-    theory: (lang) => (
-      <>
-        {lang === 'tr' ? (
-          <>
-            <h3>💬 Reacties (Geçmiş olsun dilekleri)</h3>
-            <p>Beterschap. (Geçmiş olsun). Sterkte. (Güçlü kal/Geçmiş olsun). Ik wens u het (aller)beste. (Size en iyisini diliyorum).</p>
-          </>
-        ) : (
-          <>
-            <h3>💬 Reacties (Get well wishes)</h3>
-            <p>Beterschap. (Get well soon). Sterkte. (Stay strong/Good luck). Ik wens u het (aller)beste. (I wish you all the best).</p>
-          </>
-        )}
-      </>
-    ),
-    exerciseGroups: [
-      {
-        instruction: "Slimme Oefeningen: Reageren op zieke mensen (Responding to sick people)",
-        isExtra: true,
-        questions: [
-          { id: "9.5_smart_1", type: "multiple_choice", question: "Je collega zegt: 'Ik heb hoofdpijn en koorts.' Wat zeg jij?", options: ["Gefeliciteerd!", "Beterschap!", "Tot ziens!"], correctAnswer: "Beterschap!" },
-          { id: "9.5_smart_2", type: "fill_in", question: "Vertaal: 'Stay strong' -> ________", correctAnswer: "Sterkte" }
         ]
       }
     ]

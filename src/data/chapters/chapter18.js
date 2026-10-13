@@ -1,6 +1,5 @@
 // src/data/chapters/chapter18.js
 import React from 'react';
-import { generateSmartQuestions } from '../questionGenerator';
 
 export const chapter18Vocab = [
   { id: "18_1", chapter: 18, nl: "de politie", en: "police / police station", example: "Sam gaat naar de politie." },
@@ -119,33 +118,6 @@ export const chapter18Sections = [
           { id: "18.1_opd1_1", type: "multiple_choice", question: "Wat gebeurde er als EERSTE in het verhaal?", options: ["Sam gaat naar de politie.", "Sam zit op een terras met een collega.", "Sam koopt een nieuwe portemonnee."], correctAnswer: "Sam zit op een terras met een collega." },
           { id: "18.1_opd1_2", type: "multiple_choice", question: "Wat deed Sam nadat hij merkte dat zijn portemonnee weg was?", options: ["Hij blokkeerde meteen zijn pinpas.", "Hij ging direct naar de politie om aangifte te doen."], correctAnswer: "Hij ging direct naar de politie om aangifte te doen." }
         ]
-      }
-    ]
-  },
-  {
-    id: "18.2",
-    chapter: 18,
-    title: "18.2 Woordenlijst",
-    theory: (lang) => (
-      <>
-        {lang === 'tr' ? (
-          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
-            <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>📖 Woordenlijst Analizi</h3>
-            <p>Polis, suç, cüzdan, kimlik kartı ve banka kartı gibi acil durum kelimelerini bu bölümde çalışıyoruz. Menüdeki Flashcards sekmesinden pratik yapabilirsiniz.</p>
-          </div>
-        ) : (
-          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
-            <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>📖 Vocabulary Analysis</h3>
-            <p>In this section, we study emergency words such as police, crime, wallet, ID card, and bank card. You can practice in the Flashcards section from the menu.</p>
-          </div>
-        )}
-      </>
-    ),
-    exerciseGroups: [
-      {
-        instruction: "Woordenlijst Test: Wat is de juiste vertaling? (What is the correct translation?)",
-        isExtra: true,
-        questions: generateSmartQuestions(18, "Woordenlijst", 10, chapter18Vocab)
       }
     ]
   },

@@ -104,55 +104,6 @@ export const chapter10Sections = [
     ]
   },
   {
-    id: "10.2",
-    chapter: 10,
-    title: "10.2 Woordenlijst & Opdracht 1",
-    theory: (lang) => (
-      <>
-        {lang === 'tr' ? (
-          <>
-            <h3>📖 Woordenlijst (Kelime Listesi)</h3>
-            <p>Opdracht 1'e başlamadan önce bu kelimeleri dikkatlice çalışın.</p>
-          </>
-        ) : (
-          <>
-            <h3>📖 Woordenlijst (Vocabulary)</h3>
-            <p>Study these words carefully before starting Exercise 1.</p>
-          </>
-        )}
-      </>
-    ),
-    exerciseGroups: [
-      {
-        instruction: "Opdracht 1: Zijn de volgende zinnen waar of niet waar? (Are the following sentences true or false?)",
-        isExtra: false,
-        questions: [
-          { id: "10.2_opd1_1", type: "multiple_choice", question: "1. Mevrouw Kirbas gaat met haar fiets naar de fietsenmaker.", options: ["waar", "niet waar"], correctAnswer: "waar" },
-          { id: "10.2_opd1_2", type: "multiple_choice", question: "2. Mevrouw Kirbas gaat een nieuwe fiets kopen.", options: ["waar", "niet waar"], correctAnswer: "niet waar" },
-          { id: "10.2_opd1_3", type: "multiple_choice", question: "3. Mevrouw Kirbas is met haar fiets tegen een huis gereden.", options: ["waar", "niet waar"], correctAnswer: "niet waar" },
-          { id: "10.2_opd1_4", type: "multiple_choice", question: "4. De fiets van mevrouw Kirbas is al oud.", options: ["waar", "niet waar"], correctAnswer: "waar" },
-          { id: "10.2_opd1_5", type: "multiple_choice", question: "5. De fietsenmaker kan de fiets niet meer in orde maken.", options: ["waar", "niet waar"], correctAnswer: "niet waar" },
-          { id: "10.2_opd1_6", type: "multiple_choice", question: "6. Mevrouw Kirbas kan de fiets morgen ophalen.", options: ["waar", "niet waar"], correctAnswer: "niet waar" }
-        ]
-      },
-      {
-        instruction: "Slimme Oefeningen (Smart Exercises): Begrip van de dialoog",
-        isExtra: true,
-        questions: [
-          { id: "10.1_smart_1", type: "multiple_choice", question: "Wat betekent 'total loss' in deze context?", options: ["De fiets is gestolen.", "De fiets is helemaal kapot en kan niet worden gerepareerd.", "De fiets is erg duur."], correctAnswer: "De fiets is helemaal kapot en kan niet worden gerepareerd." },
-          { id: "10.1_smart_2", type: "multiple_choice", question: "Waarom viel mevrouw Kirbas?", options: ["Omdat ze te snel fietste.", "Omdat het regende en de weg een beetje glad was.", "Omdat haar remmen kapot waren."], correctAnswer: "Omdat het regende en de weg een beetje glad was." },
-          { id: "10.1_smart_3", type: "fill_in", question: "Wat betekent de uitdrukking 'tiptop in orde'? (Tip: één woord)", correctAnswer: "perfect" },
-          { id: "10.1_smart_4", type: "multiple_choice", question: "Vertaal de zin uit de tekst (Translate): 'Ik mankeerde zelf niets'.", options: ["Ik had zelf geen pijn/probleem.", "Mijn fiets was kapot.", "Ik ben niet gevallen."], correctAnswer: "Ik had zelf geen pijn/probleem." }
-        ]
-      },
-      {
-        instruction: "Extra Oefeningen (Woordenlijst Test / Vocabulary Test)",
-        isExtra: true,
-        questions: generateSmartQuestions(10, "Woordenlijst", 10, chapter10Vocab)
-      }
-    ]
-  },
-  {
     id: "10.3",
     chapter: 10,
     title: "10.3 / 10.4 Begrijpen & Bedoelen",

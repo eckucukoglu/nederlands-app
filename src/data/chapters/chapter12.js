@@ -1,6 +1,5 @@
 // src/data/chapters/chapter12.js
 import React from 'react';
-import { generateSmartQuestions } from '../questionGenerator';
 
 export const chapter12Vocab = [
   { id: "12_1", chapter: 12, nl: "het station", en: "train station", example: "Kirsten is op het station in Amsterdam." },
@@ -111,33 +110,6 @@ export const chapter12Sections = [
           { id: "12.1_opd1_6", type: "multiple_choice", question: "Wat geeft de portier aan Kirsten?", options: ["Een ticket.", "Een plattegrond (harita / map).", "Geld."], correctAnswer: "Een plattegrond (harita / map)." },
           { id: "12.1_opd1_7", type: "multiple_choice", question: "Waar zijn de toiletten?", options: ["Beneden.", "Naast het restaurant.", "Boven, bij hal 3."], correctAnswer: "Beneden." }
         ]
-      }
-    ]
-  },
-  {
-    id: "12.2",
-    chapter: 12,
-    title: "12.2 Woordenlijst",
-    theory: (lang) => (
-      <>
-        {lang === 'tr' ? (
-          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
-            <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>📖 Woordenlijst Analizi</h3>
-            <p>Yol sorma ve tarif etme kelimeleri çok spesifiktir. Lütfen bu bölümdeki kelimeleri dikkatle çalışın. Menüdeki Flashcards kısmından pratik yapabilirsiniz.</p>
-          </div>
-        ) : (
-          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
-            <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>📖 Vocabulary Analysis</h3>
-            <p>Words for asking and giving directions are very specific. Please study the words in this section carefully. You can practice them using the Flashcards section in the menu.</p>
-          </div>
-        )}
-      </>
-    ),
-    exerciseGroups: [
-      {
-        instruction: "Woordenlijst Test: Wat is de juiste vertaling? (What is the correct translation?)",
-        isExtra: true,
-        questions: generateSmartQuestions(12, "Woordenlijst", 10, chapter12Vocab)
       }
     ]
   },

@@ -1,6 +1,5 @@
 // src/data/chapters/chapter17.js
 import React from 'react';
-import { generateSmartQuestions } from '../questionGenerator';
 
 export const chapter17Vocab = [
   { id: "17_1", chapter: 17, nl: "het studentenhuis", en: "student house", example: "Tina woont in een studentenhuis." },
@@ -140,33 +139,6 @@ export const chapter17Sections = [
           { id: "17.1_opd1_2", type: "multiple_choice", question: "Wat is het beroep van Sam?", options: ["Computerprogrammateur / IT", "Caissère in de bioscoop", "Makelaar"], correctAnswer: "Computerprogrammateur / IT" },
           { id: "17.1_opd1_3", type: "multiple_choice", question: "Waarom heeft Sam slecht geslapen?", options: ["Omdat hij ziek is", "Omdat hij nadenkt over een probleem op zijn werk", "Omdat het te warm is"], correctAnswer: "Omdat hij nadenkt over een probleem op zijn werk" }
         ]
-      }
-    ]
-  },
-  {
-    id: "17.2",
-    chapter: 17,
-    title: "17.2 Woordenlijst",
-    theory: (lang) => (
-      <>
-        {lang === 'tr' ? (
-          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
-            <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>📖 Woordenlijst Analizi</h3>
-            <p>Günlük rutinler, üniversite terimleri (college, tentamen, bibliotheek) ve teknoloji/iş dünyası kelimeleri bu ünitenin odak noktasıdır. Flashcards bölümünden pratik yapabilirsiniz.</p>
-          </div>
-        ) : (
-          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
-            <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>📖 Vocabulary Analysis</h3>
-            <p>Daily routines, university terms (college, tentamen, bibliotheek), and technology/business words are the focus of this unit. You can practice in the Flashcards section.</p>
-          </div>
-        )}
-      </>
-    ),
-    exerciseGroups: [
-      {
-        instruction: "Woordenlijst Test: Wat is de juiste vertaling? (What is the correct translation?)",
-        isExtra: true,
-        questions: generateSmartQuestions(17, "Woordenlijst", 10, chapter17Vocab)
       }
     ]
   },

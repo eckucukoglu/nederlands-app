@@ -1,6 +1,5 @@
 // src/data/chapters/chapter1.js
 import React from 'react';
-import { generateSmartQuestions } from '../questionGenerator';
 
 export const chapter1Vocab = [
   { id: "1_1", chapter: 1, nl: "welkom (in)", en: "welcome (to)", example: "Welkom in de cursus." },
@@ -156,33 +155,6 @@ export const chapter1Sections = [
           { id: "1.1_smart_2", type: "multiple_choice", question: "Uit welk land komt Susy?", options: ["Uit Nederland", "Uit China", "Uit Engeland"], correctAnswer: "Uit Engeland" },
           { id: "1.1_smart_3", type: "multiple_choice", question: "Waarom zegt de docent 'Zeg maar jij, hoor' tegen Ning? (Why does the teacher say 'Zeg maar jij'?)", options: ["Omdat ze 'u' te formeel vindt (She finds 'u' too formal). Ze wil tutoyeren.", "Omdat ze boos is.", "Omdat Ning geen Nederlands spreekt."], correctAnswer: "Omdat ze 'u' te formeel vindt (She finds 'u' too formal). Ze wil tutoyeren." }
         ]
-      }
-    ]
-  },
-  {
-    id: "1.2",
-    chapter: 1,
-    title: "1.2 Woordenlijst",
-    theory: (lang) => (
-      <>
-        {lang === 'tr' ? (
-          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
-            <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>📖 Woordenlijst Analizi</h3>
-            <p>Bu bölümde, 1. ünitenin kelime haznesini (Woordenlijst) çalışacağız. Menüdeki <strong>Flashcards</strong> bölümünden bu kelimeleri pratik etmeyi unutmayın!</p>
-          </div>
-        ) : (
-          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
-            <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>📖 Vocabulary Analysis</h3>
-            <p>In this section, we will study the vocabulary (Woordenlijst) of unit 1. Don't forget to practice these words using the <strong>Flashcards</strong> section in the menu!</p>
-          </div>
-        )}
-      </>
-    ),
-    exerciseGroups: [
-      {
-        instruction: "Woordenlijst Test: Wat is de juiste vertaling? (What is the correct translation?)",
-        isExtra: true,
-        questions: generateSmartQuestions(1, "Woordenlijst", 15, chapter1Vocab)
       }
     ]
   },

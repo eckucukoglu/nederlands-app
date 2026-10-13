@@ -1,6 +1,5 @@
 // src/data/chapters/chapter11.js
 import React from 'react';
-import { generateSmartQuestions } from '../questionGenerator';
 
 export const chapter11Vocab = [
   { id: "11_1", chapter: 11, nl: "de buurvrouw", en: "neighbour (f)", example: "Marit is de buurvrouw van Tom." },
@@ -135,43 +134,6 @@ export const chapter11Sections = [
           { id: "11.1_smart_2", type: "fill_in", question: "Kirsten vindt dat Tom te snel praat. Ze vraagt: 'Kun je misschien iets ________ praten?'", correctAnswer: "langzamer" },
           { id: "11.1_smart_3", type: "multiple_choice", question: "Wat betekent de zin 'Ik ben gek op films'?", options: ["Ben filmlerden nefret ederim.", "Ben filmlere bayılırım / hastasıyım.", "Ben filmlerde oynamak istiyorum."], correctAnswer: "Ben filmlere bayılırım / hastasıyım." }
         ]
-      }
-    ]
-  },
-  {
-    id: "11.2",
-    chapter: 11,
-    title: "11.2 Woordenlijst & Opdracht 1",
-    theory: (lang) => (
-      <>
-        {lang === 'tr' ? (
-          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
-            <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>📖 Woordenlijst Analizi</h3>
-            <p>Diyalogdaki karakterlerin hayatları hakkında bazı temel bilgiler öğrendik. Şimdi bu bilgileri eşleştirme zamanı.</p>
-          </div>
-        ) : (
-          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
-            <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>📖 Vocabulary Analysis</h3>
-            <p>We learned some basic information about the lives of the characters in the dialogue. Now it's time to match this information.</p>
-          </div>
-        )}
-      </>
-    ),
-    exerciseGroups: [
-      {
-        instruction: "Opdracht 1: Wat weet je over de mensen in de dialoog? (What do you know about the people?)",
-        isExtra: false,
-        questions: [
-          { id: "11.2_opd1_1", type: "multiple_choice", question: "1. Wat doet Peter nu?", options: ["Hij werkt nog op kantoor.", "Hij is eigen baas geworden.", "Hij is een student."], correctAnswer: "Hij is eigen baas geworden." },
-          { id: "11.2_opd1_2", type: "multiple_choice", question: "2. Waar is Tom gisteren geweest?", options: ["Naar Festival Cubana", "Naar Chili", "Naar de Wandelbeurs in Amsterdam"], correctAnswer: "Naar de Wandelbeurs in Amsterdam" },
-          { id: "11.2_opd1_3", type: "multiple_choice", question: "3. Wat doet Kirsten naast haar studie?", options: ["Ze werkt iedere donderdag in de bioscoop.", "Ze zingt Cubaanse muziek.", "Ze werkt als accountant."], correctAnswer: "Ze werkt iedere donderdag in de bioscoop." },
-          { id: "11.2_opd1_4", type: "multiple_choice", question: "4. Houdt Kirsten veel van films?", options: ["Ja, het is haar hobby.", "Nee, niet echt. Ze houdt van sport.", "Ja, ze is gek op films."], correctAnswer: "Nee, niet echt. Ze houdt van sport." }
-        ]
-      },
-      {
-        instruction: "Slimme Oefeningen (Smart Exercises): Kelime Bilgisi Testi",
-        isExtra: true,
-        questions: generateSmartQuestions(11, "Woorden", 10, chapter11Vocab)
       }
     ]
   },

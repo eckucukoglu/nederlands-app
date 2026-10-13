@@ -1,6 +1,5 @@
 // src/data/chapters/chapter13.js
 import React from 'react';
-import { generateSmartQuestions } from '../questionGenerator';
 
 export const chapter13Vocab = [
   { id: "13_1", chapter: 13, nl: "bezoekt (bezoeken)", en: "is visiting", example: "Bas bezoekt zijn nieuwe vrienden." },
@@ -139,33 +138,6 @@ export const chapter13Sections = [
           { id: "13.1_opd1_5", type: "multiple_choice", question: "5. Paul en Janine hebben...", options: ["a) veel dieren.", "b) alleen nog een kat."], correctAnswer: "a) veel dieren." },
           { id: "13.1_opd1_6", type: "multiple_choice", question: "6. Bas heeft geen kat, want...", options: ["a) Maria houdt niet van dieren.", "b) zijn kat is doodgegaan."], correctAnswer: "b) zijn kat is doodgegaan." }
         ]
-      }
-    ]
-  },
-  {
-    id: "13.2",
-    chapter: 13,
-    title: "13.2 Woordenlijst",
-    theory: (lang) => (
-      <>
-        {lang === 'tr' ? (
-          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
-            <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>📖 Woordenlijst Analizi</h3>
-            <p>Günlük sohbetler (small talk) ve duyguları ifade etmeyle ilgili kelimeleri içerir. <strong>Gelukkig</strong> (çok şükür/neyse ki), <strong>verdriet</strong> (üzüntü) ve <strong>verkoudheid</strong> (soğuk algınlığı) kelimelerine dikkat edin.</p>
-          </div>
-        ) : (
-          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
-            <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>📖 Vocabulary Analysis</h3>
-            <p>This section contains words related to everyday small talk and expressing emotions. Pay attention to the words <strong>Gelukkig</strong> (fortunately/gladly), <strong>verdriet</strong> (sorrow/grief) and <strong>verkoudheid</strong> (a cold).</p>
-          </div>
-        )}
-      </>
-    ),
-    exerciseGroups: [
-      {
-        instruction: "Woordenlijst Test: Wat is de juiste vertaling? (What is the correct translation?)",
-        isExtra: true,
-        questions: generateSmartQuestions(13, "Woordenlijst", 10, chapter13Vocab)
       }
     ]
   },

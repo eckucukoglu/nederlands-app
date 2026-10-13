@@ -1,6 +1,5 @@
 // src/data/chapters/chapter16.js
 import React from 'react';
-import { generateSmartQuestions } from '../questionGenerator';
 
 export const chapter16Vocab = [
   { id: "16_1", chapter: 16, nl: "de caissère", en: "box office assistant / cashier", example: "Amira praat met de caissère." },
@@ -93,33 +92,6 @@ export const chapter16Sections = [
           { id: "16.1_opd1_4", type: "multiple_choice", question: "4. 'Zomerhitte' is...", options: ["a) een Nederlandse film.", "b) een natuurdocumentaire."], correctAnswer: "a) een Nederlandse film." },
           { id: "16.1_opd1_5", type: "multiple_choice", question: "5. Amira koopt een kaartje voor...", options: ["a) De Nieuwe Wildernis.", "b) Zomerhitte."], correctAnswer: "b) Zomerhitte." }
         ]
-      }
-    ]
-  },
-  {
-    id: "16.2",
-    chapter: 16,
-    title: "16.2 Woordenlijst",
-    theory: (lang) => (
-      <>
-        {lang === 'tr' ? (
-          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
-            <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>📖 Woordenlijst Analizi</h3>
-            <p>Sinema, film izleme ve bilet işlemleriyle ilgili kritik kelimeler bu bölümde yer alıyor. <strong>"Draaien"</strong> fiili normalde "dönmek/çevirmek" anlamına gelse de filmler için "vizyonda olmak / oynamak" anlamında kullanılır.</p>
-          </div>
-        ) : (
-          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
-            <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>📖 Vocabulary Analysis</h3>
-            <p>Critical words related to cinema, watching movies, and ticketing are in this section. Although the verb <strong>"draaien"</strong> normally means "to turn", for movies it means "to be showing / to be screened".</p>
-          </div>
-        )}
-      </>
-    ),
-    exerciseGroups: [
-      {
-        instruction: "Woordenlijst Test: Wat is de juiste vertaling? (What is the correct translation?)",
-        isExtra: true,
-        questions: generateSmartQuestions(16, "Woordenlijst", 10, chapter16Vocab)
       }
     ]
   },
