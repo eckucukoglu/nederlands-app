@@ -709,9 +709,71 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
                 </div>
               )}
 
-              <span className="text-xs sm:text-sm font-bold text-slate-400 uppercase tracking-wider mb-1 block">
-                {isTr ? 'Soru' : 'Question'} {currentIndex + 1} / {deck.length}
-              </span>
+              <div className="flex items-center justify-center gap-1.5 sm:gap-2 mb-2 flex-wrap">
+                <span className="text-[11px] sm:text-xs font-semibold px-2 py-0.5 rounded-md bg-slate-800 text-slate-300 border border-slate-700/80 uppercase tracking-wider">
+                  {isTr ? 'Soru' : 'Question'} {currentIndex + 1} / {deck.length}
+                </span>
+
+                {currentQ.difficulty && (
+                  <span
+                    className={`text-[11px] sm:text-xs font-semibold px-2 py-0.5 rounded-md border flex items-center gap-1 transition-all ${
+                      currentQ.difficulty === 1
+                        ? 'bg-emerald-950/40 text-emerald-300 border-emerald-800/60'
+                        : currentQ.difficulty === 2
+                        ? 'bg-teal-950/40 text-teal-300 border-teal-800/60'
+                        : currentQ.difficulty === 3
+                        ? 'bg-amber-950/40 text-amber-300 border-amber-800/60'
+                        : currentQ.difficulty === 4
+                        ? 'bg-orange-950/40 text-orange-300 border-orange-800/60'
+                        : 'bg-rose-950/40 text-rose-300 border-rose-800/60'
+                    }`}
+                    title={
+                      isTr
+                        ? `A2 Hazırlık Zorluk Seviyesi: ${currentQ.difficulty}/5 (${
+                            currentQ.difficulty === 1 ? 'A1 Temel' :
+                            currentQ.difficulty === 2 ? 'A1+ / Erken A2' :
+                            currentQ.difficulty === 3 ? 'Çekirdek A2' :
+                            currentQ.difficulty === 4 ? 'İleri A2' : 'B1 Hazırlık'
+                          })`
+                        : `A2 Difficulty Level: ${currentQ.difficulty}/5 (${
+                            currentQ.difficulty === 1 ? 'A1 Basics' :
+                            currentQ.difficulty === 2 ? 'A1+ / Early A2' :
+                            currentQ.difficulty === 3 ? 'Core A2' :
+                            currentQ.difficulty === 4 ? 'Upper A2' : 'B1 Prep'
+                          })`
+                    }
+                  >
+                    <i className="fa-solid fa-gauge-high text-[10px]"></i>
+                    <span>{isTr ? 'Zorluk' : 'Diff'}: {currentQ.difficulty}/5</span>
+                  </span>
+                )}
+
+                {currentQ.quality && (
+                  <span
+                    className={`text-[11px] sm:text-xs font-semibold px-2 py-0.5 rounded-md border flex items-center gap-1 transition-all ${
+                      currentQ.quality === 3
+                        ? 'bg-sky-950/40 text-sky-300 border-sky-800/60'
+                        : currentQ.quality === 2
+                        ? 'bg-indigo-950/40 text-indigo-300 border-indigo-800/60'
+                        : 'bg-slate-800/60 text-slate-400 border-slate-700/60'
+                    }`}
+                    title={
+                      isTr
+                        ? `Soru Kalitesi: ${currentQ.quality}/3 (${
+                            currentQ.quality === 3 ? 'Yüksek / Zengin Açıklama' :
+                            currentQ.quality === 2 ? 'İyi / Dengeli' : 'Temel'
+                          })`
+                        : `Question Quality: ${currentQ.quality}/3 (${
+                            currentQ.quality === 3 ? 'Excellent / Rich Explanation' :
+                            currentQ.quality === 2 ? 'Good / Balanced' : 'Basic'
+                          })`
+                    }
+                  >
+                    <i className="fa-solid fa-gem text-[10px]"></i>
+                    <span>{isTr ? 'Kalite' : 'Quality'}: {currentQ.quality}/3</span>
+                  </span>
+                )}
+              </div>
               <h2 className="text-base sm:text-lg md:text-xl font-bold text-white leading-relaxed max-w-xl mx-auto">
                 {renderQuestionText()}
               </h2>
