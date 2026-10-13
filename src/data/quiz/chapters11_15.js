@@ -868,7 +868,7 @@ export const chapters11_15 = [
   },
   {
     "id": "sum_ch12_042",
-    "type": "fill_in",
+    "type": "multiple_choice",
     "tags": [
       "summary_ch12",
       "reflexive_verbs"
@@ -878,7 +878,13 @@ export const chapters11_15 = [
     "explanationTr": "'ik' öznesi için 'bereid' kullanılır ve ayrılabilen prefix 'voor' sonda yer alır.",
     "explanationEn": "For 'ik', the verb is 'bereid' and the separable prefix 'voor' goes to the end.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 2,
+    "options": [
+      "bereid",
+      "bereidt",
+      "voorbereid",
+      "voorbereidt"
+    ]
   },
   {
     "id": "sum_ch12_045",
@@ -1025,7 +1031,7 @@ export const chapters11_15 = [
   },
   {
     "id": "sum_ch13_008",
-    "type": "fill_in",
+    "type": "multiple_choice",
     "tags": [
       "summary_ch13",
       "small_talk",
@@ -1036,11 +1042,17 @@ export const chapters11_15 = [
     "explanationTr": "Selamı iade etmek için 'Doe haar/hem de groeten terug' (Ona da selamlarımı söyle) denir.",
     "explanationEn": "To return regards, you say 'Doe haar de groeten terug' (Say hi back to her).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 2,
+    "options": [
+      "terug",
+      "weer",
+      "ook",
+      "samen"
+    ]
   },
   {
     "id": "sum_ch13_011",
-    "type": "fill_in",
+    "type": "multiple_choice",
     "tags": [
       "summary_ch13",
       "small_talk",
@@ -1051,7 +1063,13 @@ export const chapters11_15 = [
     "explanationTr": "'Zeg dat wel!' kalıbı 'Aynen öyle / Kesinlikle haklısın (for sure!)' anlamı verir.",
     "explanationEn": "'Zeg dat wel!' is an expression meaning 'For sure! / You can say that again!'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 2,
+    "options": [
+      "wel",
+      "eens",
+      "maar",
+      "toch"
+    ]
   },
   {
     "id": "sum_ch13_012",

@@ -1326,7 +1326,7 @@ export const chapters1_5 = [
   },
   {
     "id": "sum_ch2_029",
-    "type": "fill_in",
+    "type": "multiple_choice",
     "tags": [
       "summary_ch2",
       "time_expressions"
@@ -1336,7 +1336,13 @@ export const chapters1_5 = [
     "explanationTr": "Hollandacada 'half' ifadesi sonraki saati hedefler. 11.30 demek 'on ikiye yarım var' anlamında 'half twaalf' demektir.",
     "explanationEn": "In Dutch, 'half' points to the upcoming hour. 11:30 is 'half twaalf' (half to twelve).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 2,
+    "options": [
+      "twaalf",
+      "elf",
+      "tien",
+      "één"
+    ]
   },
   {
     "id": "sum_ch2_031",
@@ -8099,7 +8105,7 @@ export const chapters1_5 = [
   },
   {
     "id": "q_onclass_4_3",
-    "type": "fill_in",
+    "type": "multiple_choice",
     "tags": [
       "summary_ch4",
       "proposals",
@@ -8110,7 +8116,13 @@ export const chapters1_5 = [
     "explanationTr": "'Biz' (we) ile öneri veya teklif yaparken 'Zullen we...?' (Yapalım mı?) kalıbı kullanılır.",
     "explanationEn": "To make a joint suggestion or proposal with 'we' (shall we...?), Dutch uses 'Zullen we...?'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 2,
+    "options": [
+      "Zullen",
+      "Gaan",
+      "Moeten",
+      "Willen"
+    ]
   },
   {
     "id": "q_onclass_4_4",

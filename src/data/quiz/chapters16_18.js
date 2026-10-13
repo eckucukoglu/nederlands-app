@@ -3835,7 +3835,7 @@ export const chapters16_18 = [
   },
   {
     "id": "q_onclass_18_2",
-    "type": "fill_in",
+    "type": "multiple_choice",
     "tags": [
       "summary_ch18",
       "subclauses",
@@ -3846,7 +3846,13 @@ export const chapters16_18 = [
     "explanationTr": "'Want' kelime sırasını bozmaz (want ik heb honger), ancak 'omdat' fiili sona fırlatır: 'omdat ik honger heb'.",
     "explanationEn": "'Want' preserves main clause word order ('want ik heb honger'), but 'omdat' pushes the verb to the end: 'omdat ik honger heb'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 2,
+    "options": [
+      "heb",
+      "hebt",
+      "heeft",
+      "hadden"
+    ]
   },
   {
     "id": "q_onclass_18_3",

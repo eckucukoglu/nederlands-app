@@ -2421,7 +2421,7 @@ export const grammarSyntax = [
   },
   {
     "id": "q_bijz_006",
-    "type": "fill_in",
+    "type": "multiple_choice",
     "tags": [
       "subclauses",
       "conjunctions",
@@ -2432,7 +2432,13 @@ export const grammarSyntax = [
     "explanationTr": "Yan cümle başa gelirse ana cümlede inversie (devrik yapı) olur. Yan cümlede ise fiil sona gider: 'was'.",
     "explanationEn": "If the subclause is at the start, the main clause has inversion. In the subclause, the verb goes to the end: 'was'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 2,
+    "options": [
+      "was",
+      "is",
+      "werd",
+      "waren"
+    ]
   },
   {
     "id": "q_bijz_007",
@@ -2600,7 +2606,7 @@ export const grammarSyntax = [
   },
   {
     "id": "q_bijz_015",
-    "type": "fill_in",
+    "type": "multiple_choice",
     "tags": [
       "subclauses",
       "want_omdat"
@@ -2610,7 +2616,13 @@ export const grammarSyntax = [
     "explanationTr": "Aradaki virgül ve normal kelime dizilimi ('hij heeft') 'want' bağlacının kullanıldığını gösterir.",
     "explanationEn": "The comma and normal word order ('hij heeft') indicate that the conjunction 'want' is used.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 2,
+    "options": [
+      "want",
+      "omdat",
+      "doordat",
+      "terwijl"
+    ]
   },
   {
     "id": "q_bijz_016",
