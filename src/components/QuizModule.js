@@ -20,6 +20,7 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
   const [quizHistory, setQuizHistory] = useState(() => JSON.parse(localStorage.getItem('quizHistory')) || {});
 
   const [activeFilter, setActiveFilter] = useState('all'); 
+  const [selectedDifficulty, setSelectedDifficulty] = useState(null);
   const [tagInput, setTagInput] = useState(tags && tags.length > 0 ? tags[0] : '');
 
   // Tüm mevcut etiketlerin listesi (Datalist otomatik tamamlama için)
@@ -46,6 +47,10 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
         ? [...quizQuestions] 
         : quizQuestions.filter(q => q.tags && q.tags.some(tag => activeTags.includes(tag)));
     
+    if (selectedDifficulty !== null) {
+      filtered = filtered.filter(q => q.difficulty === selectedDifficulty);
+    }
+
     if (activeFilter === 'weak') {
       filtered = filtered.filter(q => {
         const hist = history[q.id];
@@ -73,7 +78,7 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
     setIsFinished(false);
     setSessionScore({ correct: 0, incorrect: 0, skipped: 0 });
     setWrongTagsCloud({});
-  }, [activeTags, activeFilter]);
+  }, [activeTags, activeFilter, selectedDifficulty]);
 
   const currentQ = deck[currentIndex];
   const qHistory = currentQ ? quizHistory[currentQ.id] || { correct: 0, incorrect: 0 } : null;
@@ -197,6 +202,10 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
     } else {
       setActiveFilter(filterType);
     }
+  };
+
+  const handleDifficultyClick = (diff) => {
+    setSelectedDifficulty(prev => (prev === diff ? null : diff));
   };
 
   const handleCheck = (answerParam) => {
@@ -405,10 +414,11 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
           <p className="text-slate-400 text-sm mb-6">{isTr ? 'Bu kriterlere uygun soru bulunamadı.' : 'No questions found matching these criteria.'}</p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-3">
-            {(activeFilter !== 'all' || activeTags.length > 0) && (
+            {(activeFilter !== 'all' || activeTags.length > 0 || selectedDifficulty !== null) && (
               <button 
                 onClick={() => {
                   setActiveFilter('all');
+                  setSelectedDifficulty(null);
                   handleClearTagFilter();
                 }} 
                 className="bg-rose-900/40 text-rose-300 px-5 py-2.5 rounded-xl border border-rose-800/50 hover:bg-rose-900/60 transition-colors font-bold text-xs sm:text-sm"
@@ -632,6 +642,19 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
                 {isTr ? 'Çözülmeyenler' : 'Unseen'}
               </button>
 
+              {selectedDifficulty !== null && (
+                <button
+                  type="button"
+                  onClick={() => setSelectedDifficulty(null)}
+                  className="text-xs sm:text-sm font-bold px-2.5 py-1.5 rounded-lg bg-amber-950/80 text-amber-300 border border-amber-700/80 hover:bg-amber-900 transition-all flex items-center gap-1.5 cursor-pointer shadow-sm animate-fadeIn"
+                  title={isTr ? "Zorluk filtresini temizle" : "Clear difficulty filter"}
+                >
+                  <i className="fa-solid fa-gauge-high text-xs"></i>
+                  <span>{isTr ? 'Zorluk' : 'Diff'}: {selectedDifficulty}/5</span>
+                  <i className="fa-solid fa-xmark text-xs ml-0.5"></i>
+                </button>
+              )}
+
               <div className="h-4 w-[1px] bg-slate-700 mx-0.5 hidden sm:block"></div>
 
               {/* Manuel Tag Giriş Alanı */}
@@ -715,8 +738,14 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
                 </span>
 
                 {currentQ.difficulty && (
-                  <span
-                    className={`text-[11px] sm:text-xs font-semibold px-2 py-0.5 rounded-md border flex items-center gap-1 transition-all ${
+                  <button
+                    type="button"
+                    onClick={() => handleDifficultyClick(currentQ.difficulty)}
+                    className={`text-[11px] sm:text-xs font-semibold px-2 py-0.5 rounded-md border flex items-center gap-1 transition-all cursor-pointer ${
+                      selectedDifficulty === currentQ.difficulty
+                        ? 'ring-2 ring-white/60 shadow-lg scale-105 font-bold'
+                        : 'hover:brightness-125 hover:scale-105'
+                    } ${
                       currentQ.difficulty === 1
                         ? 'bg-emerald-950/40 text-emerald-300 border-emerald-800/60'
                         : currentQ.difficulty === 2
@@ -729,48 +758,46 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
                     }`}
                     title={
                       isTr
-                        ? `A2 Hazırlık Zorluk Seviyesi: ${currentQ.difficulty}/5 (${
-                            currentQ.difficulty === 1 ? 'A1 Temel' :
-                            currentQ.difficulty === 2 ? 'A1+ / Erken A2' :
-                            currentQ.difficulty === 3 ? 'Çekirdek A2' :
-                            currentQ.difficulty === 4 ? 'İleri A2' : 'B1 Hazırlık'
-                          })`
-                        : `A2 Difficulty Level: ${currentQ.difficulty}/5 (${
-                            currentQ.difficulty === 1 ? 'A1 Basics' :
-                            currentQ.difficulty === 2 ? 'A1+ / Early A2' :
-                            currentQ.difficulty === 3 ? 'Core A2' :
-                            currentQ.difficulty === 4 ? 'Upper A2' : 'B1 Prep'
-                          })`
+                        ? selectedDifficulty === currentQ.difficulty
+                          ? `Zorluk ${currentQ.difficulty}/5 filtresi aktif. Filtreyi kaldırmak için tıklayın.`
+                          : `Zorluk: ${currentQ.difficulty}/5 (${
+                              currentQ.difficulty === 1 ? 'A1 Temel' :
+                              currentQ.difficulty === 2 ? 'A1+ / Erken A2' :
+                              currentQ.difficulty === 3 ? 'Çekirdek A2' :
+                              currentQ.difficulty === 4 ? 'İleri A2' : 'B1 Hazırlık'
+                            }). Sadece bu zorluktaki soruları filtrelemek için tıklayın.`
+                        : selectedDifficulty === currentQ.difficulty
+                          ? `Difficulty ${currentQ.difficulty}/5 filter active. Click to clear.`
+                          : `Difficulty: ${currentQ.difficulty}/5. Click to filter by this difficulty.`
                     }
                   >
                     <i className="fa-solid fa-gauge-high text-[10px]"></i>
                     <span>{isTr ? 'Zorluk' : 'Diff'}: {currentQ.difficulty}/5</span>
-                  </span>
+                    {selectedDifficulty === currentQ.difficulty && (
+                      <i className="fa-solid fa-xmark text-[10px] ml-0.5 opacity-80 hover:opacity-100"></i>
+                    )}
+                  </button>
                 )}
 
                 {currentQ.quality && (
                   <span
                     className={`text-[11px] sm:text-xs font-semibold px-2 py-0.5 rounded-md border flex items-center gap-1 transition-all ${
-                      currentQ.quality === 3
+                      currentQ.quality === 2
                         ? 'bg-sky-950/40 text-sky-300 border-sky-800/60'
-                        : currentQ.quality === 2
-                        ? 'bg-indigo-950/40 text-indigo-300 border-indigo-800/60'
-                        : 'bg-slate-800/60 text-slate-400 border-slate-700/60'
+                        : 'bg-indigo-950/40 text-indigo-300 border-indigo-800/60'
                     }`}
                     title={
                       isTr
-                        ? `Soru Kalitesi: ${currentQ.quality}/3 (${
-                            currentQ.quality === 3 ? 'Yüksek / Zengin Açıklama' :
-                            currentQ.quality === 2 ? 'İyi / Dengeli' : 'Temel'
+                        ? `Soru Kalitesi: ${currentQ.quality}/2 (${
+                            currentQ.quality === 2 ? 'Yüksek / Zengin Açıklama' : 'Standart / İyi'
                           })`
-                        : `Question Quality: ${currentQ.quality}/3 (${
-                            currentQ.quality === 3 ? 'Excellent / Rich Explanation' :
-                            currentQ.quality === 2 ? 'Good / Balanced' : 'Basic'
+                        : `Question Quality: ${currentQ.quality}/2 (${
+                            currentQ.quality === 2 ? 'Excellent / Rich Explanation' : 'Standard / Good'
                           })`
                     }
                   >
                     <i className="fa-solid fa-gem text-[10px]"></i>
-                    <span>{isTr ? 'Kalite' : 'Quality'}: {currentQ.quality}/3</span>
+                    <span>{isTr ? 'Kalite' : 'Quality'}: {currentQ.quality}/2</span>
                   </span>
                 )}
               </div>
