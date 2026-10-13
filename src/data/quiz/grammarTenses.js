@@ -12,7 +12,7 @@ export const grammarTenses = [
       "werk",
       "werkt",
       "werken",
-      "werkte"
+      "studeren"
     ],
     "correctAnswer": "werk",
     "explanationTr": "'ik' (ben) zamirinde fiil sadece kök (stam) halindedir. '-t' almaz.",
@@ -129,7 +129,7 @@ export const grammarTenses = [
     "quality": 1,
     "options": [
       "praat",
-      "praatte",
+      "Misschien later.",
       "praten",
       "gepraat"
     ]
@@ -143,7 +143,7 @@ export const grammarTenses = [
     "questionNl": "— Kun je haar goed verstaan?\n— Soms is het lastig, want zij ___ heel erg snel als ze zenuwachtig is.",
     "options": [
       "praat",
-      "praatte",
+      "Misschien later.",
       "praten",
       "gepraat"
     ],
@@ -471,7 +471,7 @@ export const grammarTenses = [
       "Werkt",
       "Werk",
       "Werken",
-      "Werkte"
+      "Misschien later."
     ],
     "correctAnswer": "Werkt",
     "explanationTr": "3. tekil şahıs (hij) soru cümlesinde de olsa fiilin '-t' harfi kalır.",
@@ -620,26 +620,6 @@ export const grammarTenses = [
     ]
   },
   {
-    "id": "q_mod_001",
-    "type": "multiple_choice",
-    "tags": [
-      "modal_verbs",
-      "verbs_present"
-    ],
-    "questionNl": "— Er staat een parkeerbord met een vergunningsteken.\n'Ik ___ hier gratis parkeren met mijn bewonersvergunning.'",
-    "correctAnswer": "mag",
-    "explanationTr": "'mogen' (izinli olmak) düzensiz bir modal fiildir. 'Ik' için çekimi 'mag'dır.",
-    "explanationEn": "'mogen' (to be allowed to) is an irregular modal verb. The conjugation for 'Ik' is 'mag'.",
-    "difficulty": 2,
-    "quality": 1,
-    "options": [
-      "mag",
-      "moet",
-      "wil",
-      "kan"
-    ]
-  },
-  {
     "id": "q_mod_002",
     "type": "multiple_choice",
     "tags": [
@@ -741,46 +721,6 @@ export const grammarTenses = [
     "quality": 1
   },
   {
-    "id": "q_mod_007",
-    "type": "multiple_choice",
-    "tags": [
-      "modal_verbs",
-      "verbs_present"
-    ],
-    "questionNl": "— Situatie:\n'Het ___ vandaag erg warm worden.'",
-    "correctAnswer": "kan",
-    "explanationTr": "'Het' (3. tekil şahıs) için 'kunnen' fiili 'kan' şeklindedir.",
-    "explanationEn": "For 'Het' (3rd person singular), the verb 'kunnen' is 'kan'.",
-    "difficulty": 2,
-    "quality": 1,
-    "options": [
-      "kan",
-      "niet kan",
-      "geen kan",
-      "wel kan"
-    ]
-  },
-  {
-    "id": "q_mod_008",
-    "type": "multiple_choice",
-    "tags": [
-      "modal_verbs",
-      "verbs_present"
-    ],
-    "questionNl": "— Situatie:\n'Zij ___ een nieuwe auto kopen.'",
-    "options": [
-      "wil",
-      "wilt",
-      "willen",
-      "willde"
-    ],
-    "correctAnswer": "wil",
-    "explanationTr": "'Zij' (tekil - o) için 'willen' fiilinin çekimi 'wil'dir.",
-    "explanationEn": "For 'Zij' (singular - she), the conjugation of 'willen' is 'wil'.",
-    "difficulty": 2,
-    "quality": 1
-  },
-  {
     "id": "q_mod_009",
     "type": "multiple_choice",
     "tags": [
@@ -835,7 +775,7 @@ export const grammarTenses = [
       "werkde",
       "werkte",
       "gewerkt",
-      "gewerkter"
+      "Misschien later."
     ],
     "correctAnswer": "werkte",
     "explanationTr": "Imperfectum (Hikaye Geçmiş Zaman). 'werk' kökünün sonu 'k' ile bittiği için '+te' eklenir: werkte.",
@@ -877,7 +817,7 @@ export const grammarTenses = [
       "speelde",
       "speelte",
       "gespeeld",
-      "gespeelder"
+      "Misschien later."
     ],
     "correctAnswer": "speelde",
     "explanationTr": "Imperfectum. 'speel' kökü 'soft ketchup' kuralına uymaz, bu yüzden '+de' eklenir: speelde.",
@@ -940,7 +880,7 @@ export const grammarTenses = [
       "gefietst",
       "gefietste",
       "gefietstd",
-      "gefietster"
+      "Misschien later."
     ],
     "correctAnswer": "gefietst",
     "explanationTr": "Perfectum. 'fietsen' kökü 'fiets'. Son harf 's' (soft ketchup içinde VAR), bu yüzden '+t' alır.",
@@ -966,7 +906,7 @@ export const grammarTenses = [
       "gekookt",
       "gekook",
       "gekooken",
-      "gekookte"
+      "Misschien later."
     ]
   },
   {
@@ -982,7 +922,7 @@ export const grammarTenses = [
       "praat",
       "praatte",
       "praatde",
-      "praater"
+      "Misschien later."
     ],
     "correctAnswer": "praatte",
     "explanationTr": "Imperfectum. 'praten' kökü 'praat'. Kök zaten 't' ile bitiyor ve 't' harfi soft ketchup kuralında '+te' almasını gerektiriyor. İki 't' yan yana gelir: praatte.",
@@ -1150,7 +1090,7 @@ export const grammarTenses = [
       "gevertaald",
       "vertaald",
       "vertaalde",
-      "gevertaalder"
+      "Misschien later."
     ],
     "correctAnswer": "vertaald",
     "explanationTr": "'ver-' ile başlayan fiiller 'ge-' takısı almaz. (vertalen -> vertaald).",
@@ -1423,7 +1363,7 @@ export const grammarTenses = [
       "moeste",
       "moest",
       "moesten",
-      "moester"
+      "Misschien later."
     ],
     "correctAnswer": "moest",
     "explanationTr": "Modal fiil (Imperfectum): 'moeten' tekil için 'moest' olur.",
@@ -1438,7 +1378,7 @@ export const grammarTenses = [
       "past_tenses",
       "usage"
     ],
-    "questionNl": "Welke tijd gebruik je voor BESCRIJVINGEN in het verleden?",
+    "questionNl": "In het dagelijks leven: Welke tijd gebruik je voor BESCRIJVINGEN in het verleden?",
     "options": [
       "Perfectum",
       "Imperfectum",
@@ -1458,7 +1398,7 @@ export const grammarTenses = [
       "past_tenses",
       "usage"
     ],
-    "questionNl": "Welke tijd gebruik je voor AFGESLOTEN ZAKEN (tamamlanmış tekil olaylar) in het verleden?",
+    "questionNl": "In het dagelijks leven: Welke tijd gebruik je voor AFGESLOTEN ZAKEN (tamamlanmış tekil olaylar) in het verleden?",
     "options": [
       "Perfectum",
       "Imperfectum",
@@ -1489,7 +1429,7 @@ export const grammarTenses = [
       "zocht",
       "zoch",
       "zochen",
-      "zochte"
+      "Misschien later."
     ]
   },
   {
@@ -1510,7 +1450,7 @@ export const grammarTenses = [
       "kocht",
       "koch",
       "kochen",
-      "kochte"
+      "Misschien later."
     ]
   },
   {
@@ -1526,7 +1466,7 @@ export const grammarTenses = [
       "vraagde",
       "vroeg",
       "gevraagd",
-      "vroeger"
+      "belangrijk"
     ],
     "correctAnswer": "vroeg",
     "explanationTr": "DÜZENSİZ: 'vragen' (sormak) fiilinin imperfectum hali 'vroeg' olur.",
@@ -1593,7 +1533,7 @@ export const grammarTenses = [
       "komt",
       "kom",
       "komen",
-      "komte"
+      "Misschien later."
     ]
   },
   {
@@ -1904,7 +1844,7 @@ export const grammarTenses = [
       "gaat",
       "gaa",
       "gaaen",
-      "gaate"
+      "Misschien later."
     ]
   },
   {
@@ -1985,7 +1925,7 @@ export const grammarTenses = [
       "Gaat",
       "Gaa",
       "Gaaen",
-      "Gaate"
+      "Misschien later."
     ]
   },
   {
@@ -2061,7 +2001,7 @@ export const grammarTenses = [
       "zult",
       "zal",
       "zult / zal",
-      "geen van deze"
+      "Misschien later."
     ],
     "correctAnswer": "zult / zal",
     "explanationTr": "'Jij' için 'zullen' fiilinin çekimi 'zult' veya 'zal' olabilir. İkisi de doğrudur.",
@@ -2127,7 +2067,7 @@ export const grammarTenses = [
       "Zult",
       "Zul",
       "Zulen",
-      "Zulte"
+      "Misschien later."
     ]
   },
   {
@@ -2159,12 +2099,12 @@ export const grammarTenses = [
       "zullen",
       "zullen_promise"
     ],
-    "questionNl": "Wat is de functie van 'zullen' in deze zin? 'Ik zal je geheim aan niemand vertellen.'",
+    "questionNl": "In het dagelijks leven: Wat is de functie van 'zullen' in deze zin? 'Ik zal je geheim aan niemand vertellen.'",
     "options": [
       "Een voorstel (Teklif)",
       "Een waarschijnlijkheid (Olasılık)",
       "Een belofte (Söz/Vaat)",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Een belofte (Söz/Vaat)",
     "explanationTr": "'Sırrını kimseye söylemeyeceğim' demek, açıkça bir söz vermektir (belofte).",
@@ -2180,12 +2120,12 @@ export const grammarTenses = [
       "zullen",
       "zullen_probability"
     ],
-    "questionNl": "Wat is de functie van 'zullen' in: 'Dat zal wel veel geld kosten!'?",
+    "questionNl": "In het dagelijks leven: Wat is de functie van 'zullen' in: 'Dat zal wel veel geld kosten!'?",
     "options": [
       "Een belofte (Söz/Vaat)",
       "Een waarschijnlijkheid (Olasılık/Tahmin)",
       "Een voorstel (Teklif)",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Een waarschijnlijkheid (Olasılık/Tahmin)",
     "explanationTr": "'Bu muhtemelen çok paraya mal olur!' güçlü bir tahmin/olasılık ifade eder.",
@@ -2343,7 +2283,7 @@ export const grammarTenses = [
       "wacht",
       "wachten",
       "gewacht",
-      "wachtte"
+      "Misschien later."
     ],
     "correctAnswer": "wachten",
     "explanationTr": "'Aan het' yapısı her zaman fiilin mastarını (infinitief) ister: 'wachten'.",
@@ -2418,7 +2358,7 @@ export const grammarTenses = [
       "zullen",
       "proposals"
     ],
-    "questionNl": "Hoe bied je beleefd je hulp aan als je voor iemand wilt koken (voorstel met 'ik')?",
+    "questionNl": "In het dagelijks leven: Hoe bied je beleefd je hulp aan als je voor iemand wilt koken (voorstel met 'ik')?",
     "options": [
       "Zal ik vanavond een lekkere maaltijd koken?",
       "Moet ik vanavond een maaltijd koken?",
@@ -2439,7 +2379,7 @@ export const grammarTenses = [
       "zullen",
       "proposals"
     ],
-    "questionNl": "Hoe doe je een gezellig voorstel aan je vrienden om samen iets te gaan drinken?",
+    "questionNl": "In het dagelijks leven: Hoe doe je een gezellig voorstel aan je vrienden om samen iets te gaan drinken?",
     "options": [
       "Zullen we naar het café gaan om koffie te drinken?",
       "Moeten we naar het café gaan om koffie te drinken?",
@@ -2481,7 +2421,7 @@ export const grammarTenses = [
       "perfectum",
       "spelling"
     ],
-    "questionNl": "Welk voltooid deelwoord (participium) eindigt op een '-t' volgens de regel van 'soft ketchup'?",
+    "questionNl": "In het dagelijks leven: Welk voltooid deelwoord (participium) eindigt op een '-t' volgens de regel van 'soft ketchup'?",
     "options": [
       "gewerkt (stam werk eindigt op k)",
       "gespeeld (stam speel eindigt op l)",
@@ -2502,7 +2442,7 @@ export const grammarTenses = [
       "perfectum",
       "prefixes"
     ],
-    "questionNl": "In de zin 'Ik heb de rekening al betaald', waarom heeft het werkwoord 'betalen' GEEN extra prefix 'ge-'?",
+    "questionNl": "In het dagelijks leven: In de zin 'Ik heb de rekening al betaald', waarom heeft het werkwoord 'betalen' GEEN extra prefix 'ge-'?",
     "options": [
       "Omdat werkwoorden met be-, ge-, her-, ver- en ont- geen 'ge-' krijgen.",
       "Omdat het werkwoord onregelmatig is.",
@@ -2523,7 +2463,7 @@ export const grammarTenses = [
       "imperfectum",
       "spelling"
     ],
-    "questionNl": "Kies de zin waarin het imperfectum van het regelmatige werkwoord 'werken' correct is gevormd (-te):",
+    "questionNl": "In het dagelijks leven: Kies de zin waarin het imperfectum van het regelmatige werkwoord 'werken' correct is gevormd (-te):",
     "options": [
       "Hij werkte gisteren tot laat op kantoor.",
       "Hij werkde gisteren tot laat op kantoor.",
@@ -2544,7 +2484,7 @@ export const grammarTenses = [
       "imperfectum",
       "plural"
     ],
-    "questionNl": "Kies de correcte meervoudsvorm in de verleden tijd (imperfectum) met de uitgang '-ten' of '-den':",
+    "questionNl": "In het dagelijks leven: Kies de correcte meervoudsvorm in de verleden tijd (imperfectum) met de uitgang '-ten' of '-den':",
     "options": [
       "Wij wandelden gisteren twee uur in het bos.",
       "Wij wandelde gisteren twee uur in het bos.",
@@ -2565,7 +2505,7 @@ export const grammarTenses = [
       "imperfectum",
       "modal_verbs"
     ],
-    "questionNl": "Kies de zin waarin de verleden tijd (imperfectum) van 'kunnen' en 'zullen' correct wordt gebruikt:",
+    "questionNl": "In het dagelijks leven: Kies de zin waarin de verleden tijd (imperfectum) van 'kunnen' en 'zullen' correct wordt gebruikt:",
     "options": [
       "Hij kon gisteren niet komen, maar hij zou het proberen.",
       "Hij kande gisteren niet komen, maar hij zalde het proberen.",
@@ -2587,7 +2527,7 @@ export const grammarTenses = [
       "syntax",
       "perfectum"
     ],
-    "questionNl": "Kies de zin waarin het participium van het scheidbare werkwoord 'afrekenen' correct gevormd is met '-ge-':",
+    "questionNl": "In het dagelijks leven: Kies de zin waarin het participium van het scheidbare werkwoord 'afrekenen' correct gevormd is met '-ge-':",
     "options": [
       "We hebben de drankjes aan de bar afgerekend.",
       "We hebben de drankjes aan de bar geafrekend.",
@@ -2608,7 +2548,7 @@ export const grammarTenses = [
       "zullen",
       "promises"
     ],
-    "questionNl": "Wat drukt de zin 'Ik zal je morgenochtend zeker helpen met de verhuizing' uit?",
+    "questionNl": "In het dagelijks leven: Wat drukt de zin 'Ik zal je morgenochtend zeker helpen met de verhuizing' uit?",
     "options": [
       "Een belofte (promise)",
       "Een bevel (command)",
@@ -2629,7 +2569,7 @@ export const grammarTenses = [
       "zullen",
       "probability"
     ],
-    "questionNl": "Wat drukt de zin 'Paul zal morgen wel spierpijn hebben na die zware training' uit?",
+    "questionNl": "In het dagelijks leven: Wat drukt de zin 'Paul zal morgen wel spierpijn hebben na die zware training' uit?",
     "options": [
       "Waarschijnlijkheid (probability / vermoeden)",
       "Een officiële verplichting",
@@ -2649,7 +2589,7 @@ export const grammarTenses = [
       "grammar",
       "continuous"
     ],
-    "questionNl": "Welke zin geeft aan dat iemand NU op dit exacte moment bezig is met koken (aan het + infinitief)?",
+    "questionNl": "In het dagelijks leven: Welke zin geeft aan dat iemand NU op dit exacte moment bezig is met koken (aan het + infinitief)?",
     "options": [
       "Ik ben nu een maaltijd aan het koken in de keuken.",
       "Ik ga straks een maaltijd koken in de keuken.",

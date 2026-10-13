@@ -13,7 +13,7 @@ export const grammarForms = [
       "mooi",
       "mooie",
       "mooiste",
-      "mooier"
+      "belangrijk"
     ],
     "correctAnswer": "mooi",
     "explanationTr": "Altın kural! 'Huis' bir het-woord'dur ve önünde 'een' olduğu için sıfat '-e' ALMAZ.",
@@ -36,7 +36,7 @@ export const grammarForms = [
     "options": [
       "lekkere",
       "lekker",
-      "lekkerste",
+      "Misschien later.",
       "lekkers"
     ]
   },
@@ -79,44 +79,6 @@ export const grammarForms = [
     "quality": 2
   },
   {
-    "id": "q_pronouns_028",
-    "type": "multiple_choice",
-    "tags": [
-      "pronouns_object"
-    ],
-    "questionNl": "— Na de les in de gang:\n'De docent praat even rustig met ___ over mijn spreekvaardigheidstoets.'",
-    "correctAnswer": "mij",
-    "explanationTr": "'ik' (ben) zamiri nesne durumunda veya bir edattan (met) sonra 'mij/me' olur. Vurgulu form 'mij'dir.",
-    "explanationEn": "'ik' (I) becomes 'mij/me' as an object or after a preposition. 'mij' is the emphasized form.",
-    "difficulty": 3,
-    "quality": 1,
-    "options": [
-      "mij",
-      "ik",
-      "mijn",
-      "meze"
-    ]
-  },
-  {
-    "id": "q_pronouns_029",
-    "type": "multiple_choice",
-    "tags": [
-      "pronouns_object"
-    ],
-    "questionNl": "— In de speeltuin kijken de ouders trots:\n'We kijken naar de kinderen en we zien ___ vrolijk schommelen.'",
-    "options": [
-      "hen",
-      "zij",
-      "hun",
-      "haar"
-    ],
-    "correctAnswer": "hen",
-    "explanationTr": "Çoğul 'zij' (onlar) zamiri nesne konumunda vurgulu olarak 'hen' (onları) şeklini alır. ('ze' de kullanılabilir).",
-    "explanationEn": "The plural 'zij' (they) becomes 'hen' or 'ze' (them) when used as an object.",
-    "difficulty": 3,
-    "quality": 1
-  },
-  {
     "id": "q_pronouns_030",
     "type": "multiple_choice",
     "tags": [
@@ -153,83 +115,6 @@ export const grammarForms = [
     "explanationEn": "The possessive pronoun for 'my' is 'mijn'.",
     "difficulty": 2,
     "quality": 2
-  },
-  {
-    "id": "q_pronouns_032",
-    "type": "multiple_choice",
-    "tags": [
-      "pronouns_possessive"
-    ],
-    "questionNl": "— Je hebt je rugzak laten liggen op de stoel!\n'Is dat niet ___ tas die daar bij het raam ligt?'",
-    "correctAnswer": "jouw",
-    "explanationTr": "'Senin' anlamını veren vurgulu iyelik zamiri 'jouw' kelimesidir. ('je' de yazılabilir ama vurgu için 'jouw' öğretilir).",
-    "explanationEn": "The emphasized possessive pronoun for 'your' is 'jouw'.",
-    "difficulty": 2,
-    "quality": 1,
-    "options": [
-      "jouw",
-      "jou",
-      "jij",
-      "jeze"
-    ]
-  },
-  {
-    "id": "q_pronouns_033",
-    "type": "multiple_choice",
-    "tags": [
-      "pronouns_possessive"
-    ],
-    "questionNl": "— Thomas parkeert voor de deur:\n'Hij heeft een grote elektrische auto gekocht, dat is ___ auto.'",
-    "options": [
-      "zijn",
-      "hem",
-      "haar",
-      "hun"
-    ],
-    "correctAnswer": "zijn",
-    "explanationTr": "'Onun' (eril) anlamını veren iyelik zamiri 'zijn' kelimesidir.",
-    "explanationEn": "The possessive pronoun for 'his' is 'zijn'.",
-    "difficulty": 2,
-    "quality": 1
-  },
-  {
-    "id": "q_pronouns_034",
-    "type": "multiple_choice",
-    "tags": [
-      "pronouns_possessive"
-    ],
-    "questionNl": "— Lisa loopt trots over straat:\n'Zij heeft een warme winterjas aan, dat is ___ nieuwe jas.'",
-    "correctAnswer": "haar",
-    "explanationTr": "'Onun' (dişil) anlamını veren iyelik zamiri 'haar' kelimesidir.",
-    "explanationEn": "The possessive pronoun for 'her' is 'haar'.",
-    "difficulty": 2,
-    "quality": 1,
-    "options": [
-      "haar",
-      "hem",
-      "zijn",
-      "ze"
-    ]
-  },
-  {
-    "id": "q_pronouns_035",
-    "type": "multiple_choice",
-    "tags": [
-      "pronouns_possessive",
-      "articles_plurals"
-    ],
-    "questionNl": "— Wij hebben een prachtig appartement gekocht in Utrecht.\n'Dat lichte appartement is ___ nieuwe huis.'",
-    "options": [
-      "ons",
-      "onze",
-      "wij",
-      "onser"
-    ],
-    "correctAnswer": "ons",
-    "explanationTr": "'Huis' bir het-woord olduğu için 'bizim' derken 'ons' kullanılır. De-woorden için 'onze' kullanılır.",
-    "explanationEn": "Because 'huis' is a het-word, we use 'ons' for 'our'. For de-words, we use 'onze'.",
-    "difficulty": 2,
-    "quality": 1
   },
   {
     "id": "q_pronouns_036",
@@ -449,7 +334,7 @@ export const grammarForms = [
     "tags": [
       "diminutives"
     ],
-    "questionNl": "Wat is het correcte diminutief van 'huis'?",
+    "questionNl": "In het dagelijks leven: Wat is het correcte diminutief van 'huis'?",
     "options": [
       "huisje",
       "huispje",
@@ -602,12 +487,12 @@ export const grammarForms = [
     "tags": [
       "articles_plurals"
     ],
-    "questionNl": "Waarom krijgt het woord 'modem' een -s in het meervoud ?",
+    "questionNl": "In het dagelijks leven: Waarom krijgt het woord 'modem' een -s in het meervoud ?",
     "options": [
       "Omdat het op -em eindigt",
       "Omdat het op een klinker eindigt",
       "Omdat het onregelmatig is",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Omdat het op -em eindigt",
     "explanationTr": "Sonu '-em' ile biten çok heceli kelimeler '-s' eki alarak çoğul olur.",
@@ -659,7 +544,7 @@ export const grammarForms = [
     "tags": [
       "articles_plurals"
     ],
-    "questionNl": "Waarom krijgen 'films' en 'champignons' een -s in het meervoud?",
+    "questionNl": "In het dagelijks leven: Waarom krijgen 'films' en 'champignons' een -s in het meervoud?",
     "options": [
       "Het zijn buitenlandse woorden",
       "Ze eindigen op een klinker",
@@ -773,7 +658,7 @@ export const grammarForms = [
     "tags": [
       "articles_plurals"
     ],
-    "questionNl": "Waarom krijgt 'auto' een apostrof-s in het meervoud?",
+    "questionNl": "In het dagelijks leven: Waarom krijgt 'auto' een apostrof-s in het meervoud?",
     "options": [
       "Omdat het eindigt op de klinker -o",
       "Omdat het een buitenlands woord is",
@@ -874,7 +759,7 @@ export const grammarForms = [
       "mooi",
       "mooie",
       "mooiste",
-      "mooier"
+      "belangrijk"
     ],
     "correctAnswer": "mooie",
     "explanationTr": "'Auto' bir de-woord'dur. İsmin önündeki sıfatlar genellikle '-e' takısı alır.",
@@ -931,7 +816,7 @@ export const grammarForms = [
       "lekker",
       "lekkere",
       "lekkerste",
-      "lekkerer"
+      "Misschien later."
     ],
     "correctAnswer": "lekkere",
     "explanationTr": "'Pizza' de-woord'dur. Bu yüzden sıfat her zaman '-e' takısı alır.",
@@ -1088,7 +973,7 @@ export const grammarForms = [
       "groot",
       "grote",
       "groten",
-      "grooter"
+      "Misschien later."
     ],
     "correctAnswer": "grote",
     "explanationTr": "Çoğul ('huizen') olduğu için artikel olmasa da sıfat '-e' alır (grote).",
@@ -1145,7 +1030,7 @@ export const grammarForms = [
       "goed",
       "goede",
       "goeden",
-      "goeder"
+      "Misschien later."
     ],
     "correctAnswer": "goede",
     "explanationTr": "'Ideeën' çoğuldur. Sıfat '-e' alır.",
@@ -1226,7 +1111,7 @@ export const grammarForms = [
       "koud",
       "koude",
       "kouds",
-      "kouder"
+      "Misschien later."
     ]
   },
   {
@@ -1245,7 +1130,7 @@ export const grammarForms = [
       "aardig",
       "aardige",
       "aardigs",
-      "aardiger"
+      "Misschien later."
     ]
   },
   {
@@ -1265,7 +1150,7 @@ export const grammarForms = [
       "klein",
       "kleine",
       "kleins",
-      "kleiner"
+      "Misschien later."
     ]
   },
   {
@@ -1279,7 +1164,7 @@ export const grammarForms = [
       "goed",
       "goede",
       "goeden",
-      "goeder"
+      "Misschien later."
     ],
     "correctAnswer": "goed",
     "explanationTr": "Sıfat (goed) isimden (Dat idee) sonra gelmektedir.",
@@ -1317,7 +1202,7 @@ export const grammarForms = [
       "katoen",
       "katoene",
       "katoenen",
-      "katoener"
+      "Misschien later."
     ],
     "correctAnswer": "katoenen",
     "explanationTr": "Materyal bildiren sıfatlar (pamuklu) '-en' eki ile kullanılır.",
@@ -1417,7 +1302,7 @@ export const grammarForms = [
       "Gaat",
       "Gaa",
       "Gaaen",
-      "Gaate"
+      "Misschien later."
     ]
   },
   {
@@ -1445,7 +1330,7 @@ export const grammarForms = [
     "tags": [
       "imperative"
     ],
-    "questionNl": "Hoe maak je een imperatief vriendelijker (daha dostça/kibar)?",
+    "questionNl": "In het dagelijks leven: Hoe maak je een imperatief vriendelijker (daha dostça/kibar)?",
     "options": [
       "Door 'maar', 'even' of 'eens' toe te voegen",
       "Door het woord 'moeten' te gebruiken",
@@ -1531,7 +1416,7 @@ export const grammarForms = [
       "Wacht",
       "Wach",
       "Wachen",
-      "Wachte"
+      "Misschien later."
     ]
   },
   {
@@ -1586,7 +1471,7 @@ export const grammarForms = [
       "moet",
       "hoeft",
       "hoeft niet",
-      "geen van deze"
+      "Misschien later."
     ],
     "correctAnswer": "hoeft",
     "explanationTr": "'Moeten' (zorunda olmak) sorusunun OLUMSUZU 'hoeven niet te' (gerek yok) yapısıdır.",
@@ -1741,32 +1626,13 @@ export const grammarForms = [
       "klein",
       "kleiner",
       "het kleinst",
-      "geen van deze"
+      "het huis"
     ],
     "correctAnswer": "kleiner",
     "explanationTr": "Karşılaştırma (comparatief) yaparken sıfatın sonuna '-er' eklenir. 'klein' -> 'kleiner'.",
     "explanationEn": "When comparing (comparative), we add '-er' to the adjective. 'klein' -> 'kleiner'.",
     "difficulty": 3,
     "quality": 1
-  },
-  {
-    "id": "q_comp_002",
-    "type": "multiple_choice",
-    "tags": [
-      "comparative_superlative"
-    ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Mijn huis is ___ dan jouw huis.'",
-    "correctAnswer": "groter",
-    "explanationTr": "Karşılaştırma formunda '-er' eklenir. Yazım kuralı: 'groot' kelimesi açık heceye dönüştüğü için bir 'o' harfi düşer -> 'groter'.",
-    "explanationEn": "Add '-er' for the comparative. Spelling rule: one 'o' drops because it becomes an open syllable -> 'groter'.",
-    "difficulty": 3,
-    "quality": 1,
-    "options": [
-      "groter",
-      "grot",
-      "grotst",
-      "grotste"
-    ]
   },
   {
     "id": "q_comp_003",
@@ -1779,32 +1645,13 @@ export const grammarForms = [
       "mooier",
       "mooiste",
       "het mooist",
-      "het mooister"
+      "het huis"
     ],
     "correctAnswer": "het mooist",
     "explanationTr": "En üstünlük (superlatief) derecesinde sıfatın sonuna '-st' eklenir ve fiilden sonra zarf gibi kullanılıyorsa başına 'het' gelir.",
     "explanationEn": "In the superlative, '-st' is added. When used as an adverb after the verb, it is preceded by 'het'.",
     "difficulty": 3,
     "quality": 1
-  },
-  {
-    "id": "q_comp_004",
-    "type": "multiple_choice",
-    "tags": [
-      "comparative_superlative"
-    ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'In de winter is het ___ dan in de lente.'",
-    "correctAnswer": "kouder",
-    "explanationTr": "Karşılaştırma (daha soğuk) için 'koud' sıfatına '-er' eklenir.",
-    "explanationEn": "To compare (colder), '-er' is added to the adjective 'koud'.",
-    "difficulty": 4,
-    "quality": 1,
-    "options": [
-      "kouder",
-      "koud",
-      "koudst",
-      "koudste"
-    ]
   },
   {
     "id": "q_comp_005",
@@ -1840,7 +1687,7 @@ export const grammarForms = [
     "options": [
       "de oudste",
       "de oud",
-      "de ouder",
+      "de tafel",
       "de oudere"
     ]
   },
@@ -1912,7 +1759,7 @@ export const grammarForms = [
       "belangrijker",
       "belangrijkst",
       "meer belangrijk",
-      "geen van deze"
+      "belangrijk"
     ],
     "correctAnswer": "belangrijker",
     "explanationTr": "Hollandacada uzun kelimeler bile (İngilizcedeki 'more' yerine) genellikle sonuna '-er' alarak karşılaştırılır.",
@@ -2111,25 +1958,6 @@ export const grammarForms = [
     "quality": 1
   },
   {
-    "id": "q_comp_021",
-    "type": "multiple_choice",
-    "tags": [
-      "comparative_superlative"
-    ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Ik vind deze film ___ dan die andere.'",
-    "correctAnswer": "beter",
-    "explanationTr": "DÜZENSİZ: 'goed' (iyi) kelimesinin karşılaştırmalı hali 'beter' (daha iyi) olur.",
-    "explanationEn": "IRREGULAR: The comparative of 'goed' (good) is 'beter' (better).",
-    "difficulty": 3,
-    "quality": 1,
-    "options": [
-      "beter",
-      "bet",
-      "betst",
-      "betste"
-    ]
-  },
-  {
     "id": "q_comp_022",
     "type": "multiple_choice",
     "tags": [
@@ -2140,7 +1968,7 @@ export const grammarForms = [
       "het best",
       "het beste",
       "het goedst",
-      "het bester"
+      "het huis"
     ],
     "correctAnswer": "het beste",
     "explanationTr": "DÜZENSİZ: 'goed' -> 'best'. İsimden önce (boek) geldiği için ve 'het' ile başladığı için '-e' alır: 'het beste boek'.",
@@ -2178,7 +2006,7 @@ export const grammarForms = [
       "het meer",
       "het meest",
       "het veelst",
-      "geen van deze"
+      "het huis"
     ],
     "correctAnswer": "het meest",
     "explanationTr": "DÜZENSİZ: 'veel' -> 'meer' -> 'het meest' (en çok).",
@@ -2216,7 +2044,7 @@ export const grammarForms = [
       "het minst",
       "het mindere",
       "het weinigst",
-      "het minster"
+      "het huis"
     ],
     "correctAnswer": "het minst",
     "explanationTr": "DÜZENSİZ: 'weinig' -> 'minder' -> 'het minst' (en az).",
@@ -2254,53 +2082,13 @@ export const grammarForms = [
       "het lieverst",
       "het liefst",
       "het graagst",
-      "geen van deze"
+      "het huis"
     ],
     "correctAnswer": "het liefst",
     "explanationTr": "DÜZENSİZ: 'graag' -> 'liever' -> 'het liefst' (en çok severek / tercihen).",
     "explanationEn": "IRREGULAR: 'graag' -> 'liever' -> 'het liefst' (most preferably).",
     "difficulty": 3,
     "quality": 1
-  },
-  {
-    "id": "q_comp_030",
-    "type": "multiple_choice",
-    "tags": [
-      "comparative_superlative",
-      "adjectives"
-    ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Ik vind deze film ___ van allemaal.'",
-    "correctAnswer": "mooist",
-    "explanationTr": "'vinden' fiili kullanıldığı için 'het mooist' yerine sadece 'mooist' yazılır.",
-    "explanationEn": "Because the verb 'vinden' is used, we write just 'mooist' instead of 'het mooist'.",
-    "difficulty": 3,
-    "quality": 1,
-    "options": [
-      "mooist",
-      "mooi",
-      "mooier",
-      "mooiere"
-    ]
-  },
-  {
-    "id": "q_comp_032",
-    "type": "multiple_choice",
-    "tags": [
-      "comparative_superlative",
-      "adjectives"
-    ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Hij wil in een ___ huis wonen dan dit huis.'",
-    "correctAnswer": "groter",
-    "explanationTr": "'Huis' het-woord'dur ve önünde 'een' vardır. Bu yüzden sıfat '-e' takısı almaz. 'een groter huis'.",
-    "explanationEn": "'Huis' is a het-word preceded by 'een'. Therefore, the adjective does not get an '-e'. 'een groter huis'.",
-    "difficulty": 3,
-    "quality": 1,
-    "options": [
-      "groter",
-      "grot",
-      "grotst",
-      "grotste"
-    ]
   },
   {
     "id": "q_comp_034",
@@ -2318,7 +2106,7 @@ export const grammarForms = [
     "options": [
       "lekkerste",
       "lekker",
-      "lekkerer",
+      "Misschien later.",
       "lekkerere"
     ]
   },
@@ -2333,32 +2121,13 @@ export const grammarForms = [
       "de snelste",
       "snelst",
       "het snelst",
-      "snelster"
+      "de tafel"
     ],
     "correctAnswer": "het snelst",
     "explanationTr": "Fiili niteleyen (zarf olarak) superlatief formlarda 'het ...st' kullanılır. 'het snelst rennen'.",
     "explanationEn": "When modifying a verb (as an adverb), the superlative takes the 'het ...st' form. 'het snelst rennen'.",
     "difficulty": 3,
     "quality": 1
-  },
-  {
-    "id": "q_obj_001",
-    "type": "multiple_choice",
-    "tags": [
-      "pronouns_object"
-    ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'De leraar ziet ___ in de gang.'",
-    "correctAnswer": "mij",
-    "explanationTr": "'Ik' (ben) zamirinin nesne (object) hali 'mij' veya 'me'dir. İkisi de doğrudur, 'mij' vurguludur.",
-    "explanationEn": "The object form of 'ik' (I) is 'mij' or 'me'. Both are correct; 'mij' is the emphasized form.",
-    "difficulty": 3,
-    "quality": 1,
-    "options": [
-      "mij",
-      "jou",
-      "hem",
-      "haar"
-    ]
   },
   {
     "id": "q_obj_002",
@@ -2399,63 +2168,6 @@ export const grammarForms = [
     ]
   },
   {
-    "id": "q_obj_004",
-    "type": "multiple_choice",
-    "tags": [
-      "pronouns_object"
-    ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Kijk naar John! Zie je ___ ook?'",
-    "options": [
-      "hij",
-      "zijn",
-      "hem",
-      "gehij"
-    ],
-    "correctAnswer": "hem",
-    "explanationTr": "Eril 'hij' (o) zamirinin nesne (onu/ona) hali 'hem'dir.",
-    "explanationEn": "The object form (him) of the masculine pronoun 'hij' (he) is 'hem'.",
-    "difficulty": 3,
-    "quality": 1
-  },
-  {
-    "id": "q_obj_005",
-    "type": "multiple_choice",
-    "tags": [
-      "pronouns_object"
-    ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Dit is Anna. Ik ken ___ al heel lang.'",
-    "correctAnswer": "haar",
-    "explanationTr": "Dişil 'zij/ze' (o) zamirinin nesne (onu/ona) hali 'haar'dır.",
-    "explanationEn": "The object form (her) of the feminine pronoun 'zij/ze' (she) is 'haar'.",
-    "difficulty": 3,
-    "quality": 1,
-    "options": [
-      "haar",
-      "mij",
-      "jou",
-      "hem"
-    ]
-  },
-  {
-    "id": "q_obj_006",
-    "type": "multiple_choice",
-    "tags": [
-      "pronouns_object"
-    ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Het regent. De docent wacht op ___ in de klas.'",
-    "options": [
-      "we",
-      "ons",
-      "onze",
-      "hun"
-    ],
-    "correctAnswer": "ons",
-    "explanationTr": "'Wij/we' (biz) zamirinin nesne (bizi/bize) hali 'ons'tur.",
-    "explanationEn": "The object form (us) of the pronoun 'wij/we' (we) is 'ons'.",
-    "difficulty": 3,
-    "quality": 1
-  },
-  {
     "id": "q_obj_007",
     "type": "multiple_choice",
     "tags": [
@@ -2475,25 +2187,6 @@ export const grammarForms = [
     ]
   },
   {
-    "id": "q_obj_008",
-    "type": "multiple_choice",
-    "tags": [
-      "pronouns_object"
-    ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'De studenten zijn te laat. De docent is boos op ___ .'",
-    "options": [
-      "hun",
-      "hen",
-      "zij",
-      "haar"
-    ],
-    "correctAnswer": "hen",
-    "explanationTr": "Çoğul 'zij/ze' (onlar) zamirinin vurgulu nesne hali 'hen' (onlara/onları) şeklindedir. ('ze' de kullanılabilir, ancak 'hun' iyelik belirtir).",
-    "explanationEn": "The emphasized object form for plural 'zij/ze' (they) is 'hen' (them). ('ze' is also possible, but 'hun' means 'their').",
-    "difficulty": 3,
-    "quality": 1
-  },
-  {
     "id": "q_obj_009",
     "type": "multiple_choice",
     "tags": [
@@ -2509,45 +2202,6 @@ export const grammarForms = [
       "jou",
       "mij",
       "hem",
-      "haar"
-    ]
-  },
-  {
-    "id": "q_obj_010",
-    "type": "multiple_choice",
-    "tags": [
-      "pronouns_object"
-    ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Het is mijn jas. Geef het aan ___!'",
-    "options": [
-      "me",
-      "mij",
-      "ik",
-      "hen"
-    ],
-    "correctAnswer": "mij",
-    "explanationTr": "Cümlenin sonunda ve bir edattan (aan) sonra özel bir vurgu yapıldığında her zaman vurgulu form 'mij' tercih edilir.",
-    "explanationEn": "At the end of a sentence and after a preposition (aan) where there is emphasis, the emphasized form 'mij' is always preferred.",
-    "difficulty": 3,
-    "quality": 1
-  },
-  {
-    "id": "q_obj_011",
-    "type": "multiple_choice",
-    "tags": [
-      "pronouns_object",
-      "articles_plurals"
-    ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Dit is mijn nieuwe computer . Ik heb ___ gisteren gekocht.'",
-    "correctAnswer": "hem",
-    "explanationTr": "De-woorden (eril/dişil kabul edilir) nesne durumunda 'hem' ile ifade edilir.",
-    "explanationEn": "De-words (considered masculine/feminine) are referred to with 'hem' in the object position.",
-    "difficulty": 2,
-    "quality": 1,
-    "options": [
-      "hem",
-      "mij",
-      "jou",
       "haar"
     ]
   },
@@ -2592,26 +2246,6 @@ export const grammarForms = [
     ]
   },
   {
-    "id": "q_obj_014",
-    "type": "multiple_choice",
-    "tags": [
-      "pronouns_object",
-      "articles_plurals"
-    ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Waar is de sleutel? Ik kan ___ nergens vinden.'",
-    "options": [
-      "hem",
-      "het",
-      "ze",
-      "hen"
-    ],
-    "correctAnswer": "hem",
-    "explanationTr": "'Sleutel' bir de-woord'dur (de sleutel). Bu yüzden 'hem' kullanılır.",
-    "explanationEn": "'Sleutel' is a de-word (de sleutel). Therefore, 'hem' is used.",
-    "difficulty": 4,
-    "quality": 1
-  },
-  {
     "id": "q_obj_015",
     "type": "multiple_choice",
     "tags": [
@@ -2632,161 +2266,6 @@ export const grammarForms = [
     ]
   },
   {
-    "id": "q_dem_017",
-    "type": "multiple_choice",
-    "tags": [
-      "pronouns_demonstrative",
-      "articles_plurals"
-    ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'___ shirt daar is erg mooi.'",
-    "correctAnswer": "Dat",
-    "explanationTr": "'Shirt' bir het-woord'dur (het shirt). Uzaktaki (daar) het-woord'lar için 'Dat' (şu/o) kullanılır.",
-    "explanationEn": "'Shirt' is a het-word (het shirt). For far away (daar) het-words, 'Dat' (that) is used.",
-    "difficulty": 2,
-    "quality": 1,
-    "options": [
-      "Dat",
-      "Deze",
-      "Die",
-      "Dit"
-    ]
-  },
-  {
-    "id": "q_dem_019",
-    "type": "multiple_choice",
-    "tags": [
-      "pronouns_demonstrative",
-      "articles_plurals"
-    ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'___ boek hier is van mijn docent.'",
-    "correctAnswer": "Dit",
-    "explanationTr": "'Boek' bir het-woord'dur. Yakındaki (hier) het-woord'lar için 'Dit' (bu) kullanılır.",
-    "explanationEn": "'Boek' is a het-word. For nearby (hier) het-words, 'Dit' (this) is used.",
-    "difficulty": 4,
-    "quality": 1,
-    "options": [
-      "Dit",
-      "Deze",
-      "Die",
-      "Dat"
-    ]
-  },
-  {
-    "id": "q_dem_021",
-    "type": "multiple_choice",
-    "tags": [
-      "pronouns_demonstrative"
-    ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Wat vind je van de kaas? ___ vind ik lekker.'",
-    "correctAnswer": "Die",
-    "explanationTr": "Bağımsız kullanım: 'Kaas' bir de-woord'dur. Kendisine atıfta bulunurken bağımsız işaret zamiri 'Die' kullanılır.",
-    "explanationEn": "Independent use: 'Kaas' is a de-word. When referring back to it, the independent demonstrative 'Die' is used.",
-    "difficulty": 3,
-    "quality": 1,
-    "options": [
-      "Die",
-      "Deze",
-      "Dit",
-      "Dat"
-    ]
-  },
-  {
-    "id": "q_dem_023",
-    "type": "multiple_choice",
-    "tags": [
-      "pronouns_demonstrative"
-    ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'We zien het Naardermeer. ___ is een prachtig natuurgebied.'",
-    "correctAnswer": "Dat",
-    "explanationTr": "Bağımsız kullanım: 'Het Naardermeer' bir het-woord'dur. Atıfta bulunurken 'Dat' kullanılır.",
-    "explanationEn": "Independent use: 'Het Naardermeer' is a het-word. When referring back to it, 'Dat' is used.",
-    "difficulty": 3,
-    "quality": 1,
-    "options": [
-      "Dat",
-      "Deze",
-      "Die",
-      "Dit"
-    ]
-  },
-  {
-    "id": "q_dem_024",
-    "type": "multiple_choice",
-    "tags": [
-      "pronouns_demonstrative"
-    ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Je hebt toch wel koffie meegenomen? Ja natuurlijk heb ik ___ gedaan.'",
-    "options": [
-      "dat",
-      "die",
-      "dit",
-      "dater"
-    ],
-    "correctAnswer": "dat",
-    "explanationTr": "Bağımsız kullanım: Bütün bir cümleye veya eyleme ('kahve getirme' eylemi) atıfta bulunurken 'dat' kullanılır.",
-    "explanationEn": "Independent use: When referring back to a whole sentence or action (the act of bringing coffee), 'dat' is used.",
-    "difficulty": 3,
-    "quality": 1
-  },
-  {
-    "id": "q_dem_025",
-    "type": "multiple_choice",
-    "tags": [
-      "pronouns_demonstrative"
-    ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Waar zijn Tom en Marit? ___ zijn naar de beurs.'",
-    "correctAnswer": "Die",
-    "explanationTr": "Kişilere veya çoğul varlıklara bağımsız atıfta bulunurken 'Die' kullanılır.",
-    "explanationEn": "When independently referring back to people or plural entities, 'Die' is used.",
-    "difficulty": 3,
-    "quality": 1,
-    "options": [
-      "Die",
-      "Deze",
-      "Dit",
-      "Dat"
-    ]
-  },
-  {
-    "id": "q_dem_027",
-    "type": "multiple_choice",
-    "tags": [
-      "pronouns_demonstrative",
-      "articles_plurals"
-    ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'___ zijn leuke dvd's.'",
-    "correctAnswer": "Dit",
-    "explanationTr": "ALTIN KURAL: Sunum yaparken nesneler ÇOĞUL olsa bile 'Dit zijn / Dat zijn' kalıbı kullanılır ('Deze zijn' denmez).",
-    "explanationEn": "GOLDEN RULE: When presenting, even if the objects are PLURAL, the structure 'Dit zijn / Dat zijn' is used (not 'Deze zijn').",
-    "difficulty": 2,
-    "quality": 1,
-    "options": [
-      "Dit",
-      "Deze",
-      "Die",
-      "Dat"
-    ]
-  },
-  {
-    "id": "q_dem_029",
-    "type": "multiple_choice",
-    "tags": [
-      "pronouns_demonstrative"
-    ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Kijk, ___ zijn mijn docenten Karin en Paul.'",
-    "correctAnswer": "dat",
-    "explanationTr": "İnsanları tanıtıyor/sunuyorsunuz (Çoğul olsalar bile). Bu yüzden 'Dat zijn' kullanılır.",
-    "explanationEn": "You are presenting/introducing people (even though they are plural). Thus, 'Dat zijn' is used.",
-    "difficulty": 3,
-    "quality": 1,
-    "options": [
-      "dat",
-      "deze",
-      "die",
-      "dit"
-    ]
-  },
-  {
     "id": "q_dem_030",
     "type": "multiple_choice",
     "tags": [
@@ -2797,7 +2276,7 @@ export const grammarForms = [
       "Dit of Dat",
       "Deze of Die",
       "Hij of Zij",
-      "Dit of Dater"
+      "Misschien later."
     ],
     "correctAnswer": "Dit of Dat",
     "explanationTr": "Sunum/tanıtım (presenteren) cümleleri her zaman 'Dit is/zijn' veya 'Dat is/zijn' ile başlar.",
@@ -2957,7 +2436,7 @@ export const grammarForms = [
       "moet",
       "moe",
       "moeen",
-      "moete"
+      "Misschien later."
     ]
   },
   {
@@ -2977,7 +2456,7 @@ export const grammarForms = [
       "Moet",
       "Moe",
       "Moeen",
-      "Moete"
+      "Misschien later."
     ]
   },
   {
@@ -3021,46 +2500,6 @@ export const grammarForms = [
     ]
   },
   {
-    "id": "q_ref_026",
-    "type": "multiple_choice",
-    "tags": [
-      "reflexive_verbs",
-      "pronouns"
-    ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Ik was ___ elke ochtend met koud water.'",
-    "options": [
-      "me",
-      "je",
-      "zich",
-      "hen"
-    ],
-    "correctAnswer": "me",
-    "explanationTr": "Dönüşlü fiiller (Reflexieve werkwoorden). 'Ik' (ben) öznesi için dönüşlü zamir 'me' veya 'mij'dir.",
-    "explanationEn": "Reflexive verbs. For the subject 'Ik' (I), the reflexive pronoun is 'me' or 'mij'.",
-    "difficulty": 4,
-    "quality": 1
-  },
-  {
-    "id": "q_ref_027",
-    "type": "multiple_choice",
-    "tags": [
-      "reflexive_verbs",
-      "pronouns"
-    ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Jij vergist ___ in de datum van de vergadering.'",
-    "correctAnswer": "je",
-    "explanationTr": "Dönüşlü fiiller. 'Jij/Je' (sen) öznesi için dönüşlü zamir 'je'dir.",
-    "explanationEn": "Reflexive verbs. For the subject 'Jij/Je' (you), the reflexive pronoun is 'je'.",
-    "difficulty": 4,
-    "quality": 1,
-    "options": [
-      "je",
-      "ik",
-      "jij",
-      "hij"
-    ]
-  },
-  {
     "id": "q_ref_028",
     "type": "multiple_choice",
     "tags": [
@@ -3099,106 +2538,6 @@ export const grammarForms = [
       "je",
       "ons"
     ]
-  },
-  {
-    "id": "q_ref_030",
-    "type": "multiple_choice",
-    "tags": [
-      "reflexive_verbs",
-      "pronouns"
-    ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Zij verveelt ___ op het feestje.'",
-    "correctAnswer": "zich",
-    "explanationTr": "'Zij' (tekil/o kadın) için dönüşlü zamir 'zich'tir.",
-    "explanationEn": "For 'Zij' (singular/she), the reflexive pronoun is 'zich'.",
-    "difficulty": 4,
-    "quality": 1,
-    "options": [
-      "zich",
-      "me",
-      "je",
-      "ons"
-    ]
-  },
-  {
-    "id": "q_ref_031",
-    "type": "multiple_choice",
-    "tags": [
-      "reflexive_verbs",
-      "pronouns"
-    ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Wij herinneren ___ die mooie dag in Spanje heel goed.'",
-    "correctAnswer": "ons",
-    "explanationTr": "Çoğul 'Wij' (biz) öznesi için dönüşlü zamir 'ons'tur.",
-    "explanationEn": "For the plural subject 'Wij' (we), the reflexive pronoun is 'ons'.",
-    "difficulty": 4,
-    "quality": 1,
-    "options": [
-      "ons",
-      "mij",
-      "jou",
-      "hem"
-    ]
-  },
-  {
-    "id": "q_ref_032",
-    "type": "multiple_choice",
-    "tags": [
-      "reflexive_verbs",
-      "pronouns"
-    ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Jullie moeten ___ goed voorbereiden op de test.'",
-    "correctAnswer": "je",
-    "explanationTr": "Çoğul 'Jullie' (siz) öznesi için dönüşlü zamir 'je'dir.",
-    "explanationEn": "For the plural subject 'Jullie' (you all), the reflexive pronoun is 'je'.",
-    "difficulty": 4,
-    "quality": 1,
-    "options": [
-      "je",
-      "ik",
-      "jij",
-      "hij"
-    ]
-  },
-  {
-    "id": "q_ref_033",
-    "type": "multiple_choice",
-    "tags": [
-      "reflexive_verbs",
-      "pronouns"
-    ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Zij schamen ___ voor hun grote fout.'",
-    "correctAnswer": "zich",
-    "explanationTr": "Çoğul 'Zij' (onlar) öznesi için dönüşlü zamir 'zich'tir.",
-    "explanationEn": "For the plural subject 'Zij' (they), the reflexive pronoun is 'zich'.",
-    "difficulty": 4,
-    "quality": 1,
-    "options": [
-      "zich",
-      "me",
-      "je",
-      "ons"
-    ]
-  },
-  {
-    "id": "q_ref_034",
-    "type": "multiple_choice",
-    "tags": [
-      "reflexive_verbs",
-      "pronouns"
-    ],
-    "questionNl": "Welk reflexief pronomen hoort bij het subject 'wij'?",
-    "options": [
-      "zich",
-      "ons",
-      "je",
-      "hen"
-    ],
-    "correctAnswer": "ons",
-    "explanationTr": "'Wij' (biz) zamiri dönüşlü yapıda 'ons' (kendimizi) şeklini alır.",
-    "explanationEn": "The pronoun 'Wij' (we) takes the reflexive form 'ons' (ourselves).",
-    "difficulty": 4,
-    "quality": 1
   },
   {
     "id": "q_ref_035",
@@ -3254,7 +2593,7 @@ export const grammarForms = [
       "Die",
       "Dat",
       "Dit",
-      "Dater"
+      "Misschien later."
     ],
     "correctAnswer": "Die",
     "explanationTr": "Bağımsız işaret zamiri: 'Kaas' bir de-woord'dur (de kaas). Tekil bir de-woord ismin yerine geçerken 'Die' kullanılır.",
@@ -3293,7 +2632,7 @@ export const grammarForms = [
       "Die",
       "Dat",
       "Deze",
-      "Dater"
+      "Misschien later."
     ],
     "correctAnswer": "Dat",
     "explanationTr": "Bağımsız işaret zamiri: 'Naardermeer' bir het-woord'dur (het meer). Tekil het-woord yerine 'Dat' kullanılır.",
@@ -3331,7 +2670,7 @@ export const grammarForms = [
       "dat",
       "die",
       "dit",
-      "dater"
+      "Misschien later."
     ],
     "correctAnswer": "dat",
     "explanationTr": "Bütün bir eyleme veya cümleye ('ev ödevi yapma' eylemi) bağımsız olarak atıfta bulunurken 'dat' kullanılır.",
@@ -3369,7 +2708,7 @@ export const grammarForms = [
       "Dit",
       "Deze",
       "Die",
-      "Diter"
+      "Misschien later."
     ],
     "correctAnswer": "Dit",
     "explanationTr": "SUNUM YAPMAK (Presenteren): Birini veya bir şeyi tanıtırken / sunarken daima 'Dit is' veya 'Dat is' kullanılır.",
@@ -3408,7 +2747,7 @@ export const grammarForms = [
       "Dat",
       "Die",
       "Deze",
-      "Dater"
+      "Misschien later."
     ],
     "correctAnswer": "Dat",
     "explanationTr": "Bir kitabı sunarken/işaret ederken uzakta/genel bağlamdaysa 'Dat is' kullanılır.",
@@ -3441,12 +2780,12 @@ export const grammarForms = [
     "tags": [
       "independent_pronouns"
     ],
-    "questionNl": "Wat is de juiste vorm bij het presenteren van personen of zaken?",
+    "questionNl": "In het dagelijks leven: Wat is de juiste vorm bij het presenteren van personen of zaken?",
     "options": [
       "Dit is / Dat is (of meervoud zijn)",
       "Deze is / Die is",
       "Hij is / Zij is",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Dit is / Dat is (of meervoud zijn)",
     "explanationTr": "Tanıtım ve sunumlarda (presenteren) 'Dit is/zijn' veya 'Dat is/zijn' standart kalıptır.",
@@ -3485,7 +2824,7 @@ export const grammarForms = [
       "Die",
       "Dat",
       "Dit",
-      "Dater"
+      "Misschien later."
     ],
     "correctAnswer": "Die",
     "explanationTr": "'Pen' bir de-woord'dur (de pen). Tekil de-woord yerine bağımsız zamir olarak 'Die' kullanılır.",
@@ -3542,7 +2881,7 @@ export const grammarForms = [
       "Die",
       "Dat",
       "Dit",
-      "Dater"
+      "Misschien later."
     ],
     "correctAnswer": "Die",
     "explanationTr": "'auto's' çoğul olduğu için bağımsız zamir 'Die' olur.",
@@ -3595,12 +2934,12 @@ export const grammarForms = [
       "schema_pronomina",
       "pronouns_object"
     ],
-    "questionNl": "Wat is de objectvorm van het persoonlijke voornaamwoord 'ik'?",
+    "questionNl": "In het dagelijks leven: Wat is de objectvorm van het persoonlijke voornaamwoord 'ik'?",
     "options": [
       "mij / me",
       "mijn",
       "me",
-      "mijner"
+      "Misschien later."
     ],
     "correctAnswer": "mij / me",
     "explanationTr": "'ik' (ben) zamirinin nesne durumu (beni/bana) 'mij' veya 'me'dir.",
@@ -3609,78 +2948,18 @@ export const grammarForms = [
     "quality": 1
   },
   {
-    "id": "q_pron_sum_002",
-    "type": "multiple_choice",
-    "tags": [
-      "schema_pronomina",
-      "pronouns_possessive"
-    ],
-    "questionNl": "Dit is mijn auto. Wat is de possessief pronomen bij 'ik'?",
-    "correctAnswer": "mijn",
-    "explanationTr": "'ik' zamiri için iyelik (benim) zamiri 'mijn' kelimesidir.",
-    "explanationEn": "The possessive pronoun for 'ik' (my) is 'mijn'.",
-    "difficulty": 2,
-    "quality": 1,
-    "options": [
-      "mijn",
-      "jouw",
-      "zijn",
-      "haar"
-    ]
-  },
-  {
-    "id": "q_pron_sum_003",
-    "type": "multiple_choice",
-    "tags": [
-      "schema_pronomina",
-      "reflexive_verbs"
-    ],
-    "questionNl": "Welk reflexief pronomen (dönüşlü zamir) hoort bij het subject 'ik'?",
-    "options": [
-      "me",
-      "zich",
-      "ons",
-      "hen"
-    ],
-    "correctAnswer": "me",
-    "explanationTr": "'ik' öznesi ile kullanılan dönüşlü zamir 'me'dir.",
-    "explanationEn": "The reflexive pronoun used with the subject 'ik' is 'me'.",
-    "difficulty": 4,
-    "quality": 1
-  },
-  {
-    "id": "q_pron_sum_004",
-    "type": "multiple_choice",
-    "tags": [
-      "schema_pronomina",
-      "pronouns_object"
-    ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Ik zie jou niet, maar zie jij ___ ?'",
-    "correctAnswer": "mij",
-    "explanationTr": "Cümle içinde vurgulu nesne zamiri olarak 'mij' kullanılır.",
-    "explanationEn": "'mij' is used as an emphasized object pronoun within a sentence.",
-    "difficulty": 3,
-    "quality": 1,
-    "options": [
-      "mij",
-      "jou",
-      "hem",
-      "haar"
-    ]
-  },
-  {
     "id": "q_pron_sum_005",
     "type": "multiple_choice",
     "tags": [
       "schema_pronomina",
       "pronouns_possessive"
     ],
-    "questionNl": "Jij hebt een nieuwe tas. Wat is de possessief pronomen bij 'jij / je'?",
+    "questionNl": "In het dagelijks leven: Jij hebt een nieuwe tas. Wat is de possessief pronomen bij 'jij / je'?",
     "options": [
       "jouw / je",
       "jou",
       "jij",
-      "jouer"
+      "Misschien later."
     ],
     "correctAnswer": "jouw / je",
     "explanationTr": "'jij / je' (sen) için iyelik zamiri (senin) 'jouw' veya 'je'dir.",
@@ -3709,26 +2988,6 @@ export const grammarForms = [
     ]
   },
   {
-    "id": "q_pron_sum_007",
-    "type": "multiple_choice",
-    "tags": [
-      "schema_pronomina",
-      "reflexive_verbs"
-    ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Vergis ___ je niet in de tijd?'",
-    "options": [
-      "je",
-      "me",
-      "zich",
-      "hen"
-    ],
-    "correctAnswer": "je",
-    "explanationTr": "'jij / je' (sen) öznesi için dönüşlü zamir 'je'dir.",
-    "explanationEn": "The reflexive pronoun for the subject 'jij / je' is 'je'.",
-    "difficulty": 4,
-    "quality": 1
-  },
-  {
     "id": "q_pron_sum_008",
     "type": "multiple_choice",
     "tags": [
@@ -3747,126 +3006,6 @@ export const grammarForms = [
       "uwe",
       "jouw"
     ]
-  },
-  {
-    "id": "q_pron_sum_010",
-    "type": "multiple_choice",
-    "tags": [
-      "schema_pronomina",
-      "pronouns_object"
-    ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Waar is Jan? Ik heb ___ gisteren nog gezien.'",
-    "correctAnswer": "hem",
-    "explanationTr": "Eril 'hij' (o) zamirinin nesne hali 'hem'dir.",
-    "explanationEn": "The object form of the masculine pronoun 'hij' (he) is 'hem' (him).",
-    "difficulty": 3,
-    "quality": 1,
-    "options": [
-      "hem",
-      "mij",
-      "jou",
-      "haar"
-    ]
-  },
-  {
-    "id": "q_pron_sum_011",
-    "type": "multiple_choice",
-    "tags": [
-      "schema_pronomina",
-      "pronouns_possessive"
-    ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Dit is de auto van Jan. Dat is ___ auto.'",
-    "options": [
-      "zijn",
-      "haar",
-      "hun",
-      "hen"
-    ],
-    "correctAnswer": "zijn",
-    "explanationTr": "Eril tekil (hij/Jan) için iyelik zamiri 'zijn' (onun) olur.",
-    "explanationEn": "For masculine singular (hij/Jan), the possessive pronoun is 'zijn' (his).",
-    "difficulty": 2,
-    "quality": 1
-  },
-  {
-    "id": "q_pron_sum_012",
-    "type": "multiple_choice",
-    "tags": [
-      "schema_pronomina",
-      "reflexive_verbs"
-    ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Hij scheert ___ elke ochtend.'",
-    "correctAnswer": "zich",
-    "explanationTr": "3. tekil şahıs 'hij' için dönüşlü zamir 'zich'tir.",
-    "explanationEn": "For the 3rd person singular 'hij', the reflexive pronoun is 'zich'.",
-    "difficulty": 4,
-    "quality": 1,
-    "options": [
-      "zich",
-      "me",
-      "je",
-      "ons"
-    ]
-  },
-  {
-    "id": "q_pron_sum_013",
-    "type": "multiple_choice",
-    "tags": [
-      "schema_pronomina",
-      "pronouns_object"
-    ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Waar is Anna? Ik kan ___ niet vinden.'",
-    "options": [
-      "hem",
-      "haar",
-      "het",
-      "hen"
-    ],
-    "correctAnswer": "haar",
-    "explanationTr": "Dişil 'zij / ze' (o - kadın) zamirinin nesne hali 'haar'dır.",
-    "explanationEn": "The object form of the feminine pronoun 'zij / ze' (she) is 'haar' (her).",
-    "difficulty": 4,
-    "quality": 1
-  },
-  {
-    "id": "q_pron_sum_014",
-    "type": "multiple_choice",
-    "tags": [
-      "schema_pronomina",
-      "pronouns_possessive"
-    ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Dit is de tas van Anna. Het is ___ tas.'",
-    "correctAnswer": "haar",
-    "explanationTr": "Dişil tekil (zij/Anna) için iyelik zamiri 'haar' (onun) olur.",
-    "explanationEn": "For feminine singular (zij/Anna), the possessive pronoun is 'haar' (her).",
-    "difficulty": 2,
-    "quality": 1,
-    "options": [
-      "haar",
-      "mij",
-      "jou",
-      "hem"
-    ]
-  },
-  {
-    "id": "q_pron_sum_015",
-    "type": "multiple_choice",
-    "tags": [
-      "schema_pronomina",
-      "reflexive_verbs"
-    ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Zij verveelt ___ tijdens de saaie les.'",
-    "options": [
-      "zich",
-      "haar",
-      "me",
-      "hen"
-    ],
-    "correctAnswer": "zich",
-    "explanationTr": "Tekil 'zij' için dönüşlü zamir 'zich'tir.",
-    "explanationEn": "For singular 'zij', the reflexive pronoun is 'zich'.",
-    "difficulty": 4,
-    "quality": 1
   },
   {
     "id": "q_pron_sum_016",
@@ -3890,87 +3029,6 @@ export const grammarForms = [
     ]
   },
   {
-    "id": "q_pron_sum_017",
-    "type": "multiple_choice",
-    "tags": [
-      "schema_pronomina",
-      "pronouns_possessive"
-    ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Het paard heeft een lange staart. Dat is ___ staart.'",
-    "options": [
-      "zijn",
-      "haar",
-      "het",
-      "hen"
-    ],
-    "correctAnswer": "zijn",
-    "explanationTr": "Het-woorden ('het paard') için iyelik zamiri 'zijn' olarak kullanılır.",
-    "explanationEn": "For het-words ('het paard'), the possessive pronoun is 'zijn'.",
-    "difficulty": 2,
-    "quality": 1
-  },
-  {
-    "id": "q_pron_sum_018",
-    "type": "multiple_choice",
-    "tags": [
-      "schema_pronomina",
-      "reflexive_verbs"
-    ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Het kind wast ___ in bad.'",
-    "correctAnswer": "zich",
-    "explanationTr": "Het-woord veya 3. tekil özne için dönüşlü zamir 'zich'tir.",
-    "explanationEn": "For a het-word or 3rd person singular subject, the reflexive pronoun is 'zich'.",
-    "difficulty": 4,
-    "quality": 1,
-    "options": [
-      "zich",
-      "me",
-      "je",
-      "ons"
-    ]
-  },
-  {
-    "id": "q_pron_sum_019",
-    "type": "multiple_choice",
-    "tags": [
-      "schema_pronomina",
-      "pronouns_object"
-    ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'De leraar helpt ___ met de oefening.'",
-    "options": [
-      "ons",
-      "we",
-      "onze",
-      "hun"
-    ],
-    "correctAnswer": "ons",
-    "explanationTr": "'wij / we' (biz) zamirinin nesne hali 'ons'tur.",
-    "explanationEn": "The object form of 'wij / we' (we) is 'ons' (us).",
-    "difficulty": 3,
-    "quality": 1
-  },
-  {
-    "id": "q_pron_sum_020",
-    "type": "multiple_choice",
-    "tags": [
-      "schema_pronomina",
-      "pronouns_possessive",
-      "articles_plurals"
-    ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Dit is ___ huis .'",
-    "correctAnswer": "ons",
-    "explanationTr": "'huis' bir het-woord olduğu için iyelik zamiri 'ons'tur.",
-    "explanationEn": "Because 'huis' is a het-word, the possessive pronoun is 'ons'.",
-    "difficulty": 2,
-    "quality": 1,
-    "options": [
-      "ons",
-      "mij",
-      "jou",
-      "hem"
-    ]
-  },
-  {
     "id": "q_pron_sum_021",
     "type": "multiple_choice",
     "tags": [
@@ -3990,26 +3048,6 @@ export const grammarForms = [
     "explanationEn": "Because 'auto' is a de-word, the possessive pronoun is 'onze'.",
     "difficulty": 2,
     "quality": 1
-  },
-  {
-    "id": "q_pron_sum_022",
-    "type": "multiple_choice",
-    "tags": [
-      "schema_pronomina",
-      "reflexive_verbs"
-    ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Wij verheugen ___ op de vakantie.'",
-    "correctAnswer": "ons",
-    "explanationTr": "'wij' öznesi için dönüşlü zamir 'ons'tur.",
-    "explanationEn": "The reflexive pronoun for the subject 'wij' is 'ons'.",
-    "difficulty": 4,
-    "quality": 1,
-    "options": [
-      "ons",
-      "mij",
-      "jou",
-      "hem"
-    ]
   },
   {
     "id": "q_pron_sum_023",
@@ -4052,46 +3090,6 @@ export const grammarForms = [
     ]
   },
   {
-    "id": "q_pron_sum_025",
-    "type": "multiple_choice",
-    "tags": [
-      "schema_pronomina",
-      "reflexive_verbs"
-    ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Jullie moeten ___ goed concentreren.'",
-    "options": [
-      "je",
-      "ons",
-      "zich",
-      "hen"
-    ],
-    "correctAnswer": "je",
-    "explanationTr": "'jullie' öznesi için dönüşlü zamir 'je'dir.",
-    "explanationEn": "The reflexive pronoun for the subject 'jullie' is 'je'.",
-    "difficulty": 4,
-    "quality": 1
-  },
-  {
-    "id": "q_pron_sum_026",
-    "type": "multiple_choice",
-    "tags": [
-      "schema_pronomina",
-      "pronouns_object"
-    ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Waar zijn de studenten? Ik ken ___ niet.'",
-    "correctAnswer": "hen",
-    "explanationTr": "Çoğul (onlar) için nesne zamiri vurgulu olarak 'hen' (veya ze) şeklindedir.",
-    "explanationEn": "The emphasized object pronoun for plural (they) is 'hen' (or 'ze').",
-    "difficulty": 3,
-    "quality": 1,
-    "options": [
-      "hen",
-      "mij",
-      "jou",
-      "hem"
-    ]
-  },
-  {
     "id": "q_pron_sum_027",
     "type": "multiple_choice",
     "tags": [
@@ -4112,33 +3110,13 @@ export const grammarForms = [
     "quality": 1
   },
   {
-    "id": "q_pron_sum_028",
-    "type": "multiple_choice",
-    "tags": [
-      "schema_pronomina",
-      "reflexive_verbs"
-    ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'De kinderen amuseren ___ in de speeltuin.'",
-    "correctAnswer": "zich",
-    "explanationTr": "Çoğul 3. şahıs (zij) için dönüşlü zamir 'zich'tir.",
-    "explanationEn": "For 3rd person plural (they), the reflexive pronoun is 'zich'.",
-    "difficulty": 4,
-    "quality": 1,
-    "options": [
-      "zich",
-      "me",
-      "je",
-      "ons"
-    ]
-  },
-  {
     "id": "q_pron_sum_029",
     "type": "multiple_choice",
     "tags": [
       "schema_pronomina",
       "pronouns_object"
     ],
-    "questionNl": "Wat is de objectvorm van het persoonlijk voornaamwoord 'u'?",
+    "questionNl": "In het dagelijks leven: Wat is de objectvorm van het persoonlijk voornaamwoord 'u'?",
     "options": [
       "u",
       "uw",
@@ -4148,46 +3126,6 @@ export const grammarForms = [
     "correctAnswer": "u",
     "explanationTr": "Resmi 'u' zamirinin nesne hali de 'u'dur.",
     "explanationEn": "The object form of the formal pronoun 'u' is 'u'.",
-    "difficulty": 3,
-    "quality": 1
-  },
-  {
-    "id": "q_pron_sum_030",
-    "type": "multiple_choice",
-    "tags": [
-      "schema_pronomina",
-      "pronouns_possessive"
-    ],
-    "questionNl": "Wat is de possessief pronomen bij de subjectvorm 'hij'?",
-    "correctAnswer": "zijn",
-    "explanationTr": "'hij' için iyelik zamiri 'zijn'dir.",
-    "explanationEn": "The possessive pronoun for 'hij' is 'zijn'.",
-    "difficulty": 2,
-    "quality": 1,
-    "options": [
-      "zijn",
-      "mijn",
-      "jouw",
-      "haar"
-    ]
-  },
-  {
-    "id": "q_pron_sum_031",
-    "type": "multiple_choice",
-    "tags": [
-      "schema_pronomina",
-      "pronouns_object"
-    ],
-    "questionNl": "Welk woord vult de tabel correct aan? Subject: wij -> Object: ...",
-    "options": [
-      "ons",
-      "we",
-      "onze",
-      "hun"
-    ],
-    "correctAnswer": "ons",
-    "explanationTr": "'wij' zamirinin objectvorm karşılığı 'ons'tur.",
-    "explanationEn": "The object form equivalent of 'wij' is 'ons'.",
     "difficulty": 3,
     "quality": 1
   },
@@ -4219,12 +3157,12 @@ export const grammarForms = [
       "schema_pronomina",
       "reflexive_verbs"
     ],
-    "questionNl": "Welk reflexief pronomen hoort bij 'u'?",
+    "questionNl": "In het dagelijks leven: Welk reflexief pronomen hoort bij 'u'?",
     "options": [
       "zich, u",
       "me, je",
       "ons",
-      "zich, uer"
+      "Misschien later."
     ],
     "correctAnswer": "zich, u",
     "explanationTr": "'u' zamiri için hem 'zich' hem de 'u' dönüşlü zamir olarak kullanılabilir.",
@@ -4233,33 +3171,13 @@ export const grammarForms = [
     "quality": 1
   },
   {
-    "id": "q_pron_sum_034",
-    "type": "multiple_choice",
-    "tags": [
-      "schema_pronomina",
-      "pronouns_possessive"
-    ],
-    "questionNl": "Wat is de possessief pronomen bij de subjectvorm 'zij' (dişil - tekil)?",
-    "correctAnswer": "haar",
-    "explanationTr": "Tekil dişil 'zij' için iyelik zamiri 'haar'dır.",
-    "explanationEn": "The possessive pronoun for singular feminine 'zij' is 'haar'.",
-    "difficulty": 2,
-    "quality": 1,
-    "options": [
-      "haar",
-      "mij",
-      "jou",
-      "hem"
-    ]
-  },
-  {
     "id": "q_pron_sum_035",
     "type": "multiple_choice",
     "tags": [
       "schema_pronomina",
       "pronouns_object"
     ],
-    "questionNl": "Wat is de objectvorm bij 'jij / je'?",
+    "questionNl": "In het dagelijks leven: Wat is de objectvorm bij 'jij / je'?",
     "options": [
       "jou / je",
       "jouw",
@@ -4280,7 +3198,7 @@ export const grammarForms = [
       "verbs",
       "present_tense"
     ],
-    "questionNl": "Wat is de juiste vorm van het werkwoord 'luisteren' voor het pronomen 'ik'?",
+    "questionNl": "In het dagelijks leven: Wat is de juiste vorm van het werkwoord 'luisteren' voor het pronomen 'ik'?",
     "options": [
       "luister",
       "luistert",
@@ -4311,7 +3229,7 @@ export const grammarForms = [
       "regent",
       "regen",
       "regenen",
-      "regente"
+      "Misschien later."
     ]
   },
   {
@@ -4322,7 +3240,7 @@ export const grammarForms = [
       "syntax",
       "questions"
     ],
-    "questionNl": "Hoe wordt een 'ja/nee-vraag' in het Nederlands gevormd?",
+    "questionNl": "In het dagelijks leven: Hoe wordt een 'ja/nee-vraag' in het Nederlands gevormd?",
     "options": [
       "Persoonsvorm (verb) + Subject + Rest",
       "Vraagwoord + Persoonsvorm (verb) + Subject + Rest",
@@ -4343,7 +3261,7 @@ export const grammarForms = [
       "syntax",
       "questions"
     ],
-    "questionNl": "Wat is de correcte woordvolgorde voor een vraagwoordvraag?",
+    "questionNl": "In het dagelijks leven: Wat is de correcte woordvolgorde voor een vraagwoordvraag?",
     "options": [
       "Vraagwoord + Persoonsvorm + Subject + Rest",
       "Vraagwoord + Subject + Persoonsvorm + Rest",
@@ -4368,7 +3286,7 @@ export const grammarForms = [
       "mijn",
       "ik",
       "me",
-      "mijner"
+      "Misschien later."
     ],
     "correctAnswer": "mijn",
     "explanationTr": "'ik' (ben) öznesinin iyelik zamiri (possessief pronomen) 'mijn' (benim) kelimesidir.",
@@ -4383,7 +3301,7 @@ export const grammarForms = [
       "grammar",
       "possessive_pronouns"
     ],
-    "questionNl": "Welk possessief pronomen gebruik je bij 'wij/we' voor een de-woord (bijv. de les)?",
+    "questionNl": "In het dagelijks leven: Welk possessief pronomen gebruik je bij 'wij/we' voor een de-woord (bijv. de les)?",
     "options": [
       "onze",
       "ons",
@@ -4403,7 +3321,7 @@ export const grammarForms = [
       "grammar",
       "possessive_pronouns"
     ],
-    "questionNl": "Wat is het possessief pronomen voor 'zij / ze' ?",
+    "questionNl": "In het dagelijks leven: Wat is het possessief pronomen voor 'zij / ze' ?",
     "options": [
       "hun",
       "haar",
@@ -4423,7 +3341,7 @@ export const grammarForms = [
       "grammar",
       "articles"
     ],
-    "questionNl": "Welk definiet artikel krijgen ALLE woorden in het meervoud ?",
+    "questionNl": "In het dagelijks leven: Welk definiet artikel krijgen ALLE woorden in het meervoud ?",
     "options": [
       "de",
       "het",
@@ -4444,7 +3362,7 @@ export const grammarForms = [
       "articles",
       "diminutives"
     ],
-    "questionNl": "Welk definiet artikel krijgen ALLE diminutieven in het enkelvoud?",
+    "questionNl": "In het dagelijks leven: Welk definiet artikel krijgen ALLE diminutieven in het enkelvoud?",
     "options": [
       "het",
       "de",
@@ -4464,7 +3382,7 @@ export const grammarForms = [
       "grammar",
       "articles"
     ],
-    "questionNl": "Wat is het indefiniet artikel voor zowel de-woorden als het-woorden in het enkelvoud?",
+    "questionNl": "In het dagelijks leven: Wat is het indefiniet artikel voor zowel de-woorden als het-woorden in het enkelvoud?",
     "options": [
       "een",
       "de",
@@ -4484,12 +3402,12 @@ export const grammarForms = [
       "grammar",
       "diminutives"
     ],
-    "questionNl": "Welke suffixen worden in het Nederlands gebruikt om een diminutief te maken?",
+    "questionNl": "In het dagelijks leven: Welke suffixen worden in het Nederlands gebruikt om een diminutief te maken?",
     "options": [
       "-je, -pje, -tje",
       "-en, -s, -'s",
       "-er, -st, -der",
-      "-en, -s, -'ser"
+      "Misschien later."
     ],
     "correctAnswer": "-je, -pje, -tje",
     "explanationTr": "Küçültme sözcükleri ismin sonuna genellikle -je, -pje of -tje eklenerek yapılır.",
@@ -4525,12 +3443,12 @@ export const grammarForms = [
       "diminutives",
       "plural"
     ],
-    "questionNl": "Hoe maak je een meervoud van een diminutiefwoord (bijv. 'rondje')?",
+    "questionNl": "In het dagelijks leven: Hoe maak je een meervoud van een diminutiefwoord (bijv. 'rondje')?",
     "options": [
       "Je voegt altijd een -s toe (bijv. rondjes).",
       "Je voegt altijd -en toe (bijv. rondjeen).",
       "Je gebruikt een apostrof-'s (bijv. rondje's).",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Je voegt altijd een -s toe (bijv. rondjes).",
     "explanationTr": "Tüm küçültme kelimeleri (diminutief) çoğul yapıldığında sonuna '-s' alır.",
@@ -4545,12 +3463,12 @@ export const grammarForms = [
       "grammar",
       "plural"
     ],
-    "questionNl": "Welke meervoudsuitgang krijgen de meeste Nederlandse woorden?",
+    "questionNl": "In het dagelijks leven: Welke meervoudsuitgang krijgen de meeste Nederlandse woorden?",
     "options": [
       "-en (bijv. boeken)",
       "-s (bijv. boeks)",
       "-'s (bijv. boek's)",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "-en (bijv. boeken)",
     "explanationTr": "Hollandaca kelimelerin büyük bir çoğunluğu çoğul yapılırken '-en' takısı alır.",
@@ -4565,12 +3483,12 @@ export const grammarForms = [
       "grammar",
       "plural"
     ],
-    "questionNl": "Wanneer krijgt een substantief in het meervoud de uitgang '-s'?",
+    "questionNl": "In het dagelijks leven: Wanneer krijgt een substantief in het meervoud de uitgang '-s'?",
     "options": [
       "Meestal bij buitenlandse woorden, en woorden eindigend op onbeklemtoonde -el, -em, -en, -er, -je, -e.",
       "Altijd als het woord één lettergreep heeft.",
       "Nooit, alle woorden krijgen -en.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Meestal bij buitenlandse woorden, en woorden eindigend op onbeklemtoonde -el, -em, -en, -er, -je, -e.",
     "explanationTr": "Yabancı kökenli kelimeler en -el, -em, -en, -er, -je, -e ile biten kelimeler çoğulda genellikle '-s' takısı alır.",
@@ -4585,12 +3503,12 @@ export const grammarForms = [
       "grammar",
       "plural"
     ],
-    "questionNl": "Wanneer krijgt een substantief een apostrof-'s in het meervoud?",
+    "questionNl": "In het dagelijks leven: Wanneer krijgt een substantief een apostrof-'s in het meervoud?",
     "options": [
       "Wanneer het eindigt op de lange klinkers -a, -i, -o, -u of -y (bijv. paprika's, auto's).",
       "Wanneer het een diminutief is.",
       "Wanneer het een Nederlands woord is met één syllabe.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Wanneer het eindigt op de lange klinkers -a, -i, -o, -u of -y (bijv. paprika's, auto's).",
     "explanationTr": "Uzun ünlü harflerden -a, -i, -o, -u veya -y ile biten kelimeler çoğul yapılırken telaffuzun bozulmaması için kesme işareti en s (-'s) alır.",
@@ -4605,12 +3523,12 @@ export const grammarForms = [
       "grammar",
       "adjectives"
     ],
-    "questionNl": "Wanneer krijgt een adjectief GEEN '-e' aan het einde?",
+    "questionNl": "In het dagelijks leven: Wanneer krijgt een adjectief GEEN '-e' aan het einde?",
     "options": [
       "Bij een het-woord met het onbepaalde lidwoord 'een' (of zonder lidwoord).",
       "Bij een de-woord in het meervoud.",
       "Bij een de-woord met het bepaalde lidwoord 'de'.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Bij een het-woord met het onbepaalde lidwoord 'een' (of zonder lidwoord).",
     "explanationTr": "Sıfatlar yalnızca 'een + het-woord' veya artikelsiz 'het-woord' durumunda sonlarına '-e' almazlar (örn. een klein bosje).",
@@ -4635,7 +3553,7 @@ export const grammarForms = [
       "kleine",
       "klein",
       "kleins",
-      "kleiner"
+      "Misschien later."
     ]
   },
   {
@@ -4645,12 +3563,12 @@ export const grammarForms = [
       "grammar",
       "adjectives"
     ],
-    "questionNl": "Wat is een andere situatie waarin het adjectief GEEN -e krijgt?",
+    "questionNl": "In het dagelijks leven: Wat is een andere situatie waarin het adjectief GEEN -e krijgt?",
     "options": [
       "Als het adjectief predicatief gebruikt wordt (achter het substantief met 'zijn', bijv. De koffie is lekker).",
       "Als het adjectief voor een de-woord staat.",
       "Als het in het meervoud staat.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Als het adjectief predicatief gebruikt wordt (achter het substantief met 'zijn', bijv. De koffie is lekker).",
     "explanationTr": "Sıfat, ismin önünde değil de cümlenin sonunda yüklem olarak (predicatief) kullanıldığında hiçbir zaman '-e' almaz.",
@@ -4665,7 +3583,7 @@ export const grammarForms = [
       "grammar",
       "imperative"
     ],
-    "questionNl": "Hoe vorm je de gewone imperatief in het Nederlands?",
+    "questionNl": "In het dagelijks leven: Hoe vorm je de gewone imperatief in het Nederlands?",
     "options": [
       "Door de stam van het werkwoord te gebruiken (bijv. Geef, Vertel).",
       "Door de infinitief te gebruiken (bijv. Geven, Vertellen).",
@@ -4685,7 +3603,7 @@ export const grammarForms = [
       "grammar",
       "imperative"
     ],
-    "questionNl": "Hoe vorm je een uiterst beleefde imperatief ?",
+    "questionNl": "In het dagelijks leven: Hoe vorm je een uiterst beleefde imperatief ?",
     "options": [
       "Stam + t + u (bijv. Gaat u zitten).",
       "Stam + u (bijv. Ga u zitten).",
@@ -4705,12 +3623,12 @@ export const grammarForms = [
       "grammar",
       "imperative"
     ],
-    "questionNl": "Welke woordjes kun je toevoegen om een imperatief vriendelijker te maken?",
+    "questionNl": "In het dagelijks leven: Welke woordjes kun je toevoegen om een imperatief vriendelijker te maken?",
     "options": [
       "maar, even, eens",
       "niet, geen, nooit",
       "altijd, vaak, soms",
-      "Geen van de bovenstaande antwoorden."
+      "Misschien later."
     ],
     "correctAnswer": "maar, even, eens",
     "explanationTr": "Emir cümlelerini daha samimi of yumuşak hale getirmek için 'maar', 'even', 'eens' gibi kelimeler eklenir.",
@@ -4725,12 +3643,12 @@ export const grammarForms = [
       "grammar",
       "modal_verbs"
     ],
-    "questionNl": "Waar in de zin plaats je de infinitief als je een modaal werkwoord gebruikt?",
+    "questionNl": "In het dagelijks leven: Waar in de zin plaats je de infinitief als je een modaal werkwoord gebruikt?",
     "options": [
       "Meestal aan het einde van de zin (bijv. Ik moet naar de les gaan).",
       "Direct na het modale werkwoord (bijv. Ik moet gaan naar de les).",
       "Helemaal aan het begin van de zin.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Meestal aan het einde van de zin (bijv. Ik moet naar de les gaan).",
     "explanationTr": "Modal fiiller çekimli olarak 2. sıraya yerleşirken, cümlenin ana eylemi olan mastar (infinitief) cümlenin en sonuna gider.",
@@ -4755,7 +3673,7 @@ export const grammarForms = [
       "Wilt",
       "Wil",
       "Wilen",
-      "Wilte"
+      "Misschien later."
     ]
   },
   {
@@ -4765,12 +3683,12 @@ export const grammarForms = [
       "grammar",
       "comparatives"
     ],
-    "questionNl": "Hoe vorm je de comparatief van regelmatige adjectieven, zoals 'klein' of 'groot'?",
+    "questionNl": "In het dagelijks leven: Hoe vorm je de comparatief van regelmatige adjectieven, zoals 'klein' of 'groot'?",
     "options": [
       "Je voegt -er toe achter het adjectief (bijv. kleiner, groter).",
       "Je voegt -st toe (bijv. kleinst, grootst).",
       "Je voegt -der toe (bijv. kleinder, grootder).",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Je voegt -er toe achter het adjectief (bijv. kleiner, groter).",
     "explanationTr": "Düzenli sıfatların karşılaştırma hali (comparatief) sonlarına '-er' eklenerek yapılır (kleiner, groter).",
@@ -4785,12 +3703,12 @@ export const grammarForms = [
       "grammar",
       "comparatives"
     ],
-    "questionNl": "Wat gebeurt er bij de comparatief als het adjectief eindigt op een '-r', zoals 'duur'?",
+    "questionNl": "In het dagelijks leven: Wat gebeurt er bij de comparatief als het adjectief eindigt op een '-r', zoals 'duur'?",
     "options": [
       "Je voegt -der toe (bijv. duurder).",
       "Je voegt alleen -er toe (bijv. duurer).",
       "Het adjectief verandert niet.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Je voegt -der toe (bijv. duurder).",
     "explanationTr": "Sıfat '-r' harfi ile bitiyorsa, telaffuz kolaylığı için karşılaştırma halinde sonuna '-der' eklenir (duur -> duurder).",
@@ -4806,12 +3724,12 @@ export const grammarForms = [
       "comparatives",
       "irregular_adjectives"
     ],
-    "questionNl": "Wat zijn de comparatief en superlatief van het onregelmatige adjectief 'goed'?",
+    "questionNl": "In het dagelijks leven: Wat zijn de comparatief en superlatief van het onregelmatige adjectief 'goed'?",
     "options": [
       "beter / best",
       "goeder / goedst",
       "meer goed / meest goed",
-      "Geen van de bovenstaande antwoorden."
+      "Misschien later."
     ],
     "correctAnswer": "beter / best",
     "explanationTr": "'goed' (iyi) sıfatı düzensizdir. Karşılaştırma hali 'beter', en üstünlük hali ise 'best' şeklindedir.",
@@ -4826,7 +3744,7 @@ export const grammarForms = [
       "grammar",
       "object_pronouns"
     ],
-    "questionNl": "Wat is de objectvorm van het personaal pronomen 'wij/we'?",
+    "questionNl": "In het dagelijks leven: Wat is de objectvorm van het personaal pronomen 'wij/we'?",
     "options": [
       "ons",
       "onze",
@@ -4846,7 +3764,7 @@ export const grammarForms = [
       "grammar",
       "object_pronouns"
     ],
-    "questionNl": "Welk objectpronomen gebruik je voor dingen of dieren in het meervoud , zoals 'de schoenen'?",
+    "questionNl": "In het dagelijks leven: Welk objectpronomen gebruik je voor dingen of dieren in het meervoud , zoals 'de schoenen'?",
     "options": [
       "ze",
       "hen",
@@ -4866,7 +3784,7 @@ export const grammarForms = [
       "grammar",
       "object_pronouns"
     ],
-    "questionNl": "Welk objectpronomen gebruik je om te verwijzen naar een man ?",
+    "questionNl": "In het dagelijks leven: Welk objectpronomen gebruik je om te verwijzen naar een man ?",
     "options": [
       "hem",
       "haar",
@@ -4926,7 +3844,7 @@ export const grammarForms = [
       "grammar",
       "demonstrative_pronouns"
     ],
-    "questionNl": "Welke aanwijzende voornaamwoorden gebruik je ALTIJD voor woorden in het meervoud (zowel de- als het-woorden)?",
+    "questionNl": "In het dagelijks leven: Welke aanwijzende voornaamwoorden gebruik je ALTIJD voor woorden in het meervoud (zowel de- als het-woorden)?",
     "options": [
       "Altijd deze en die, ongeacht of het een de- of het-woord is in het enkelvoud.",
       "Altijd dit en dat.",
@@ -4946,7 +3864,7 @@ export const grammarForms = [
       "grammar",
       "negation"
     ],
-    "questionNl": "Kies de correcte ontkenning met 'geen' voor een onbepaald zelfstandig naamwoord (zonder lidwoord):",
+    "questionNl": "In het dagelijks leven: Kies de correcte ontkenning met 'geen' voor een onbepaald zelfstandig naamwoord (zonder lidwoord):",
     "options": [
       "Ik heb vandaag geen tijd voor een lange lunchpauze.",
       "Ik heb vandaag niet tijd voor een lange lunchpauze.",
@@ -4966,7 +3884,7 @@ export const grammarForms = [
       "grammar",
       "negation"
     ],
-    "questionNl": "Kies de correcte ontkenning met 'niet' voor een bijvoeglijk naamwoord (adjectief):",
+    "questionNl": "In het dagelijks leven: Kies de correcte ontkenning met 'niet' voor een bijvoeglijk naamwoord (adjectief):",
     "options": [
       "Deze lichte hotelkamer is helemaal niet duur.",
       "Deze lichte hotelkamer is helemaal geen duur.",
@@ -5027,7 +3945,7 @@ export const grammarForms = [
       "grammar",
       "moeten_hoeven"
     ],
-    "questionNl": "Wat betekent de waarschuwing: 'Je moet die gevaarlijke medicijnen niet zonder water innemen'?",
+    "questionNl": "In het dagelijks leven: Wat betekent de waarschuwing: 'Je moet die gevaarlijke medicijnen niet zonder water innemen'?",
     "options": [
       "Een dringend negatief advies of verbod (je mag het absoluut niet doen).",
       "Het is niet verplicht (je hoeft het niet te doen).",
@@ -5048,7 +3966,7 @@ export const grammarForms = [
       "tenses",
       "usage"
     ],
-    "questionNl": "Welke zin gebruikt het perfectum (voltooid tegenwoordige tijd) voor een voltooide gebeurtenis in het verleden?",
+    "questionNl": "In het dagelijks leven: Welke zin gebruikt het perfectum (voltooid tegenwoordige tijd) voor een voltooide gebeurtenis in het verleden?",
     "options": [
       "Ik heb vanmorgen twee brieven naar de gemeente gestuurd.",
       "Ik stuurde vanmorgen twee brieven naar de gemeente.",
@@ -5069,7 +3987,7 @@ export const grammarForms = [
       "tenses",
       "usage"
     ],
-    "questionNl": "Welke zin gebruikt het imperfectum (onvoltooid verleden tijd) voor een beschrijving van vroeger?",
+    "questionNl": "In het dagelijks leven: Welke zin gebruikt het imperfectum (onvoltooid verleden tijd) voor een beschrijving van vroeger?",
     "options": [
       "Toen ik kind was, woonde ik in een klein rustig dorpje.",
       "Ik heb in een klein rustig dorpje gewoond.",
@@ -5151,7 +4069,7 @@ export const grammarForms = [
       "separable_verbs",
       "syntax"
     ],
-    "questionNl": "Kies de zin waarin het scheidbare werkwoord 'afrekenen' correct in de tegenwoordige tijd staat:",
+    "questionNl": "In het dagelijks leven: Kies de zin waarin het scheidbare werkwoord 'afrekenen' correct in de tegenwoordige tijd staat:",
     "options": [
       "We rekenen het eten direct aan de kassa af.",
       "We afrekenen het eten direct aan de kassa.",
@@ -5172,7 +4090,7 @@ export const grammarForms = [
       "separable_verbs",
       "modal_verbs"
     ],
-    "questionNl": "Kies de zin waarin het modale werkwoord 'moeten' wordt gecombineerd met het scheidbare werkwoord 'afrekenen':",
+    "questionNl": "In het dagelijks leven: Kies de zin waarin het modale werkwoord 'moeten' wordt gecombineerd met het scheidbare werkwoord 'afrekenen':",
     "options": [
       "We moeten de rekening nu aan de kassa afrekenen.",
       "We moeten afrekenen de rekening aan de kassa.",
@@ -5192,7 +4110,7 @@ export const grammarForms = [
       "grammar",
       "futurum"
     ],
-    "questionNl": "Welke zin drukt een concreet toekomstplan uit met 'gaan + infinitief'?",
+    "questionNl": "In het dagelijks leven: Welke zin drukt een concreet toekomstplan uit met 'gaan + infinitief'?",
     "options": [
       "Eva gaat volgend jaar een studie in Utrecht volgen.",
       "Eva studeerde vorig jaar in Utrecht.",

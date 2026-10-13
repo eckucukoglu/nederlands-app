@@ -300,7 +300,7 @@ export const grammarSyntax = [
       "werk",
       "werkt",
       "werken",
-      "werkte"
+      "studeren"
     ]
   },
   {
@@ -316,7 +316,7 @@ export const grammarSyntax = [
       "werkt",
       "werk",
       "werken",
-      "werkte"
+      "studeren"
     ],
     "correctAnswer": "werkt",
     "explanationTr": "İstisna: Devrik cümlede '-t' harfinin düşmesi SADECE 'jij/je' için geçerlidir. Resmi 'u' zamirinde '-t' her zaman kalır.",
@@ -342,7 +342,7 @@ export const grammarSyntax = [
       "werkt",
       "werk",
       "werken",
-      "werkte"
+      "studeren"
     ]
   },
   {
@@ -500,7 +500,7 @@ export const grammarSyntax = [
       "word_order",
       "verbs_present"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nWaarom ___ hij?",
+    "questionNl": "— In het dagelijks contact:\n'Waarom ___ hij?'",
     "correctAnswer": "lacht",
     "explanationTr": "Soru kelimesi + Fiil + Özne. Özne 'hij' olduğu için '-t' kalır.",
     "explanationEn": "Question word + Verb + Subject. The subject is 'hij', so the '-t' stays.",
@@ -510,7 +510,7 @@ export const grammarSyntax = [
       "lacht",
       "lach",
       "lachen",
-      "lachte"
+      "Misschien later."
     ]
   },
   {
@@ -521,7 +521,7 @@ export const grammarSyntax = [
       "word_order",
       "verbs_present"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nHoe ___ je zus?",
+    "questionNl": "— In het dagelijks contact:\n'Hoe ___ je zus?'",
     "options": [
       "heet",
       "heett",
@@ -542,7 +542,7 @@ export const grammarSyntax = [
       "word_order",
       "verbs_present"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nWelke talen ___ jij?",
+    "questionNl": "— In het dagelijks contact:\n'Welke talen ___ jij?'",
     "correctAnswer": "spreek",
     "explanationTr": "'Welke' soru grubu başa gelir. 'jij' fiilden sonra geldiği için 't' düşer.",
     "explanationEn": "'Welke' question group comes first. Because 'jij' is after the verb, the 't' drops.",
@@ -563,7 +563,7 @@ export const grammarSyntax = [
       "word_order",
       "verbs_present"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nWelk boek ___ jij op dit moment?",
+    "questionNl": "— In het dagelijks contact:\n'Welk boek ___ jij op dit moment?'",
     "options": [
       "lees",
       "leest",
@@ -584,7 +584,7 @@ export const grammarSyntax = [
       "word_order",
       "verbs_present"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nHoeveel broers ___ jij?",
+    "questionNl": "— In het dagelijks contact:\n'Hoeveel broers ___ jij?'",
     "correctAnswer": "heb",
     "explanationTr": "'Hoeveel broers' başa gelir, sonra fiil, sonra özne. 'jij' fiilin sağına düştüğü için 'hebt' yerine 'heb' olur.",
     "explanationEn": "'Hoeveel broers' is first, then the verb, then subject. Since 'jij' is to the right of the verb, 'hebt' becomes 'heb'.",
@@ -605,12 +605,12 @@ export const grammarSyntax = [
       "word_order",
       "verbs_present"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nWat ___ jij morgenavond?",
+    "questionNl": "— In het dagelijks contact:\n'Wat ___ jij morgenavond?'",
     "options": [
       "doe",
       "doet",
       "doen",
-      "doeter"
+      "Misschien later."
     ],
     "correctAnswer": "doe",
     "explanationTr": "'Wat' başa gelir, sonra fiil. 'jij' fiilden sonra olduğu için 't' düşer.",
@@ -650,7 +650,7 @@ export const grammarSyntax = [
       "werk",
       "werkt",
       "werken",
-      "werkte"
+      "studeren"
     ],
     "correctAnswer": "werken",
     "explanationTr": "'moet' (zorunda olmak) kipli fiili nedeniyle asıl fiil cümlenin en sonunda ve mastar halindedir.",
@@ -666,7 +666,7 @@ export const grammarSyntax = [
       "word_order",
       "modal_verbs"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nKan jij mij even ___ ?",
+    "questionNl": "— In het dagelijks contact:\n'Kan jij mij even ___ ?'",
     "correctAnswer": "helpen",
     "explanationTr": "Soru cümlesinde de kural değişmez. Kipli fiil (Kan) başa gelir, asıl fiil (helpen) cümlenin en sonuna gider.",
     "explanationEn": "The rule remains in a question. The modal verb (Kan) is at the front, and the main verb (helpen) goes to the very end.",
@@ -687,7 +687,7 @@ export const grammarSyntax = [
       "word_order",
       "modal_verbs"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nWat wil je vanavond ___?",
+    "questionNl": "— In het dagelijks contact:\n'Wat wil je vanavond ___?'",
     "options": [
       "eet",
       "eten",
@@ -728,7 +728,7 @@ export const grammarSyntax = [
       "word_order",
       "modal_verbs"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nMag ik mijn fiets hier ___?",
+    "questionNl": "— In het dagelijks contact:\n'Mag ik mijn fiets hier ___?'",
     "options": [
       "parkeer",
       "parkeert",
@@ -769,12 +769,12 @@ export const grammarSyntax = [
       "word_order",
       "modal_verbs"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nWilt u nog iets ___?",
+    "questionNl": "— In het dagelijks contact:\n'Wilt u nog iets ___?'",
     "options": [
       "drink",
       "drinkt",
       "drinken",
-      "drinkte"
+      "Misschien later."
     ],
     "correctAnswer": "drinken",
     "explanationTr": "Modal fiil (Wilt) cümlenin ikinci sırasında veya soru olduğu için en başındadır, asıl fiil sonda mastar halindedir.",
@@ -790,7 +790,7 @@ export const grammarSyntax = [
       "word_order",
       "modal_verbs"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nZullen we samen naar huis ___ ?",
+    "questionNl": "— In het dagelijks contact:\n'Zullen we samen naar huis ___ ?'",
     "correctAnswer": "gaan",
     "explanationTr": "'Zullen' ile öneri sunarken de ana eylem (gaan) cümlenin sonunda yer alır.",
     "explanationEn": "When making a suggestion with 'Zullen', the main action (gaan) is also placed at the end of the sentence.",
@@ -811,7 +811,7 @@ export const grammarSyntax = [
       "word_order",
       "modal_verbs"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nWaar kan ik de auto ___?",
+    "questionNl": "— In het dagelijks contact:\n'Waar kan ik de auto ___?'",
     "options": [
       "parkeer",
       "parkeert",
@@ -852,7 +852,7 @@ export const grammarSyntax = [
       "word_order",
       "questions"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nKan jij me even met mijn huiswerk ___ ?",
+    "questionNl": "— In het dagelijks contact:\n'Kan jij me even met mijn huiswerk ___ ?'",
     "correctAnswer": "helpen",
     "explanationTr": "Soru cümlesinde de kural aynıdır: Modal fiil başta, ana fiil (helpen) mastar olarak sonda.",
     "explanationEn": "The rule is the same in questions: Modal verb at the front, main verb (helpen) as infinitive at the end.",
@@ -873,7 +873,7 @@ export const grammarSyntax = [
       "word_order",
       "questions"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nMag ik hier een sigaret ___?",
+    "questionNl": "— In het dagelijks contact:\n'Mag ik hier een sigaret ___?'",
     "options": [
       "rook",
       "rookt",
@@ -893,7 +893,7 @@ export const grammarSyntax = [
       "modal_verbs",
       "word_order"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nWaarom wil hij morgen niet ___ ?",
+    "questionNl": "— In het dagelijks contact:\n'Waarom wil hij morgen niet ___ ?'",
     "correctAnswer": "komen",
     "explanationTr": "Modal fiilli (wil) bir cümlede asıl eylem daima sona gider: 'komen'.",
     "explanationEn": "In a sentence with a modal (wil), the main action always goes to the end: 'komen'.",
@@ -953,7 +953,7 @@ export const grammarSyntax = [
       "modal_verbs",
       "word_order"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nIk moet naar het toilet. (Welk woord is hier weggelaten?)",
+    "questionNl": "In het dagelijks leven: Ik moet naar het toilet. (Welk woord is hier weggelaten?)",
     "options": [
       "gaan",
       "maken",
@@ -974,7 +974,7 @@ export const grammarSyntax = [
       "word_order",
       "questions"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nZullen we samen een pizza ___ ?",
+    "questionNl": "— In het dagelijks contact:\n'Zullen we samen een pizza ___ ?'",
     "correctAnswer": "eten",
     "explanationTr": "Teklif cümlesi: 'Zullen' başta, asıl eylem 'eten' sonda.",
     "explanationEn": "Proposal sentence: 'Zullen' at the beginning, main action 'eten' at the end.",
@@ -1000,7 +1000,7 @@ export const grammarSyntax = [
       "sport",
       "sporten",
       "gesport",
-      "sportte"
+      "Misschien later."
     ],
     "correctAnswer": "sporten",
     "explanationTr": "Devrik cümle (inversie) olsa da kural değişmez: ana fiil (sporten) sona gider.",
@@ -1068,7 +1068,7 @@ export const grammarSyntax = [
       "neemt",
       "neem",
       "neemen",
-      "neemte"
+      "Misschien later."
     ]
   },
   {
@@ -1079,7 +1079,7 @@ export const grammarSyntax = [
       "questions",
       "word_order"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\n___ jij het huis in het weekend schoon?",
+    "questionNl": "— In het dagelijks contact:\n'___ jij het huis in het weekend schoon?'",
     "correctAnswer": "Maak",
     "explanationTr": "Soru cümlesi: 'Schoonmaken'. Ana fiil 'maken' başa gelir, 'jij' fiilden sonra olduğu için 't' düşer (Maak jij). Prefix 'schoon' sonda kalır.",
     "explanationEn": "Question: 'Schoonmaken'. Main verb 'maken' comes first, 't' drops because 'jij' follows (Maak jij). Prefix 'schoon' stays at the end.",
@@ -1100,7 +1100,7 @@ export const grammarSyntax = [
       "verbs_present",
       "word_order"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nWaarom ___ zij hem niet uit voor het feest?",
+    "questionNl": "— In het dagelijks contact:\n'Waarom ___ zij hem niet uit voor het feest?'",
     "correctAnswer": "nodigt",
     "explanationTr": "'Uitnodigen' (davet etmek). Soru kelimesinden sonra fiil gelir (nodigt), 'uit' eki ise cümlenin en sonuna gider.",
     "explanationEn": "'Uitnodigen' (to invite). The verb follows the question word (nodigt), and the prefix 'uit' goes to the very end.",
@@ -1110,7 +1110,7 @@ export const grammarSyntax = [
       "nodigt",
       "nodig",
       "nodigen",
-      "nodigte"
+      "Misschien later."
     ]
   },
   {
@@ -1120,7 +1120,7 @@ export const grammarSyntax = [
       "separable_verbs",
       "word_order"
     ],
-    "questionNl": "Kies de zin waarin het scheidbare werkwoord 'opstaan' correct is gesplitst in de tegenwoordige tijd:",
+    "questionNl": "In het dagelijks leven: Kies de zin waarin het scheidbare werkwoord 'opstaan' correct is gesplitst in de tegenwoordige tijd:",
     "options": [
       "Ik sta elke ochtend om zeven uur op.",
       "Ik opsta elke ochtend om zeven uur.",
@@ -1167,7 +1167,7 @@ export const grammarSyntax = [
       "opstaan",
       "staan op",
       "opgestaan",
-      "geen van deze"
+      "Misschien later."
     ],
     "correctAnswer": "opstaan",
     "explanationTr": "Cümlede modal/yardımcı fiil (wil/ga) varsa, ayrılabilen fiil AYRILMAZ ve mastar halinde cümlenin sonuna bütün olarak gider.",
@@ -1183,7 +1183,7 @@ export const grammarSyntax = [
       "modal_verbs",
       "word_order"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nMoeten we de rekening aan de bar ___?",
+    "questionNl": "— In het dagelijks contact:\n'Moeten we de rekening aan de bar ___?'",
     "options": [
       "rekenen af",
       "afrekenen",
@@ -1204,7 +1204,7 @@ export const grammarSyntax = [
       "modal_verbs",
       "word_order"
     ],
-    "questionNl": "Kies de correcte zin met het modale werkwoord 'willen' en het scheidbare werkwoord 'meenemen':",
+    "questionNl": "In het dagelijks leven: Kies de correcte zin met het modale werkwoord 'willen' en het scheidbare werkwoord 'meenemen':",
     "options": [
       "Ik wil mijn laptop meenemen naar kantoor.",
       "Ik wil meenemen mijn laptop naar kantoor.",
@@ -1256,7 +1256,7 @@ export const grammarSyntax = [
       "werk",
       "werkt",
       "werken",
-      "werkte"
+      "studeren"
     ]
   },
   {
@@ -1288,7 +1288,7 @@ export const grammarSyntax = [
       "future_gaan",
       "word_order"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\n___ jij vanavond koken?",
+    "questionNl": "— In het dagelijks contact:\n'___ jij vanavond koken?'",
     "correctAnswer": "Ga",
     "explanationTr": "Soru cümlesinde 'jij' fiilden sonra gelince 'gaan' fiilindeki 't' düşer: Ga.",
     "explanationEn": "In a question, when 'jij' comes after the verb, the 't' in 'gaan' drops: Ga.",
@@ -1309,7 +1309,7 @@ export const grammarSyntax = [
       "future_gaan",
       "word_order"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nWat ___ jullie in het weekend doen?",
+    "questionNl": "— In het dagelijks contact:\n'Wat ___ jullie in het weekend doen?'",
     "options": [
       "ga",
       "gaat",
@@ -1415,7 +1415,7 @@ export const grammarSyntax = [
       "zullen",
       "questions"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nZal ik je straks even ___ ?",
+    "questionNl": "— In het dagelijks contact:\n'Zal ik je straks even ___ ?'",
     "correctAnswer": "bellen",
     "explanationTr": "Soru cümlesinde (Zal ik...) ana eylem cümlenin sonunda olur (bellen).",
     "explanationEn": "In a question sentence (Zal ik...), the main action is at the end of the sentence (bellen).",
@@ -1457,7 +1457,7 @@ export const grammarSyntax = [
       "word_order",
       "future_gaan"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nGaat hij volgende week donderdag op vakantie ___ ?",
+    "questionNl": "— In het dagelijks contact:\n'Gaat hij volgende week donderdag op vakantie ___ ?'",
     "correctAnswer": "vertrekken",
     "explanationTr": "'Gaat' fiili kullanıldığı için 'vertrekken' sonda ve mastar (infinitief) olmalıdır.",
     "explanationEn": "Because the verb 'Gaat' is used, 'vertrekken' must be at the end and as an infinitive.",
@@ -1479,7 +1479,7 @@ export const grammarSyntax = [
       "zullen",
       "zullen_proposal"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nZullen we hier op deze bank ___?",
+    "questionNl": "— In het dagelijks contact:\n'Zullen we hier op deze bank ___?'",
     "options": [
       "zitten",
       "gezeten",
@@ -1559,7 +1559,7 @@ export const grammarSyntax = [
       "er_daar",
       "word_order"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nWaarom gebruiken we 'Er' in de zin: 'Er loopt een kat in de tuin.'?",
+    "questionNl": "In het dagelijks leven: Waarom gebruiken we 'Er' in de zin: 'Er loopt een kat in de tuin.'?",
     "options": [
       "Omdat 'een kat' een indefiniet subject is.",
       "Omdat we nadruk (vurgu) leggen op de tuin.",
@@ -1579,7 +1579,7 @@ export const grammarSyntax = [
       "er_daar",
       "verbs_present"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nEr ___ een man voor de deur. Ken jij hem?",
+    "questionNl": "— In het dagelijks contact:\n'Er ___ een man voor de deur. Ken jij hem?'",
     "correctAnswer": "staat",
     "explanationTr": "Özne 'een man' (tekil ve belirsiz). Bu yüzden 'staan' fiili 3. tekil şahıs formunda 'staat' olur.",
     "explanationEn": "The subject is 'een man' (singular and indefinite). Therefore, the verb 'staan' becomes 'staat' in the 3rd person singular form.",
@@ -1589,7 +1589,7 @@ export const grammarSyntax = [
       "staat",
       "staa",
       "staaen",
-      "staate"
+      "Misschien later."
     ]
   },
   {
@@ -1623,7 +1623,7 @@ export const grammarSyntax = [
       "Er zijn een probleem.",
       "Er is veel problemen.",
       "Er is een probleem.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Er is een probleem.",
     "explanationTr": "'een probleem' tekil olduğu için 'is' kullanılır. 'veel problemen' çoğul olduğu için 'zijn' gerektirirdi.",
@@ -1648,7 +1648,7 @@ export const grammarSyntax = [
       "werk",
       "werkt",
       "werken",
-      "werkte"
+      "studeren"
     ]
   },
   {
@@ -1658,12 +1658,12 @@ export const grammarSyntax = [
       "er_daar",
       "word_order"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nIn welke zin is 'Er' correct gebruikt?",
+    "questionNl": "In het dagelijks leven: In welke zin is 'Er' correct gebruikt?",
     "options": [
       "Er is de man ziek.",
       "Er zijn de studenten hier.",
       "Er zit een vogel in de boom.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Er zit een vogel in de boom.",
     "explanationTr": "'Er' yapısı BELİRLİ öznelerle (de man, de studenten) KULLANILMAZ. 'een vogel' (bir kuş) belirsizdir, bu yüzden doğrudur.",
@@ -1716,7 +1716,7 @@ export const grammarSyntax = [
     "tags": [
       "er_daar"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nWaar zijn mijn sleutels? Oh, ze liggen ___ op tafel!",
+    "questionNl": "— In het dagelijks contact:\n'Waar zijn mijn sleutels? Oh, ze liggen ___ op tafel!'",
     "correctAnswer": "daar",
     "explanationTr": "Masadaki spesifik bir yeri işaret edip gösterdiğimiz için (İşte orada!) 'daar' kelimesi daha uygundur.",
     "explanationEn": "Because we are pointing to a specific place on the table (Right there!), 'daar' is more appropriate.",
@@ -1736,7 +1736,7 @@ export const grammarSyntax = [
       "er_daar",
       "past_tenses"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nBen je wel eens in Londen geweest? Ja, ik ben ___ vorig jaar geweest.",
+    "questionNl": "— In het dagelijks contact:\n'Ben je wel eens in Londen geweest? Ja, ik ben ___ vorig jaar geweest.'",
     "options": [
       "er",
       "daar",
@@ -1795,7 +1795,7 @@ export const grammarSyntax = [
     "tags": [
       "er_daar"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nHeb je suiker? Nee, ik heb ___ geen.",
+    "questionNl": "— In het dagelijks contact:\n'Heb je suiker? Nee, ik heb ___ geen.'",
     "correctAnswer": "er",
     "explanationTr": "'Er', miktar veya sayı belirtirken de kullanılır ('Bende ondan hiç yok'). 'Ik heb er geen' çok yaygın bir kalıptır.",
     "explanationEn": "'Er' is also used when indicating quantity/number ('I have none of it'). 'Ik heb er geen' is a very common phrase.",
@@ -1815,7 +1815,7 @@ export const grammarSyntax = [
       "continuous",
       "word_order"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nWat ___ je aan het doen?",
+    "questionNl": "— In het dagelijks contact:\n'Wat ___ je aan het doen?'",
     "correctAnswer": "ben",
     "explanationTr": "Soru cümlesinde 'je' (sen) için 'zijn' fiilinin çekimi 'ben' olur. (Ben je aan het...).",
     "explanationEn": "In a question, the conjugation of 'zijn' for 'je' (you) is 'ben'. (Ben je aan het...).",
@@ -1840,7 +1840,7 @@ export const grammarSyntax = [
       "Ik ben aan het schoonmaken mijn kamer.",
       "Ik ben mijn kamer aan het schoonmaken.",
       "Ik aan het schoonmaken ben mijn kamer.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Ik ben mijn kamer aan het schoonmaken.",
     "explanationTr": "Nesne (mijn kamer), yardımcı fiil (ben) ile 'aan het' yapısının ARASINA girer.",
@@ -1856,7 +1856,7 @@ export const grammarSyntax = [
       "word_order",
       "verbs_present"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nWat ___ je? Ik ben aan het eten.",
+    "questionNl": "— In het dagelijks contact:\n'Wat ___ je? Ik ben aan het eten.'",
     "correctAnswer": "doe",
     "explanationTr": "Soru kısmı: 'Wat doe je?' (Ne yapıyorsun?). 'je' fiilden sonra olduğu için 't' düştü.",
     "explanationEn": "Question part: 'Wat doe je?' (What are you doing?). 't' is dropped because 'je' follows the verb.",
@@ -1896,7 +1896,7 @@ export const grammarSyntax = [
       "continuous",
       "er_daar"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nWaar is de kat? Hij is daar aan het ___.",
+    "questionNl": "— In het dagelijks contact:\n'Waar is de kat? Hij is daar aan het ___.'",
     "options": [
       "slapen",
       "slaapt",
@@ -1946,7 +1946,7 @@ export const grammarSyntax = [
       "staat",
       "staa",
       "staaen",
-      "staate"
+      "Misschien later."
     ]
   },
   {
@@ -1956,12 +1956,12 @@ export const grammarSyntax = [
       "er_daar",
       "continuous"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nWat is het verschil tussen 'Er is een man aan het koken' en 'Daar is een man aan het koken'?",
+    "questionNl": "In het dagelijks leven: Wat is het verschil tussen 'Er is een man aan het koken' en 'Daar is een man aan het koken'?",
     "options": [
       "'Daar' legt de nadruk (vurgu) op de plaats.",
       "'Er' is meervoud.",
       "Er is geen verschil.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "'Daar' legt de nadruk (vurgu) op de plaats.",
     "explanationTr": "'Daar' kullanıldığında 'ORADA' diyerek yere özel bir vurgu yapılmış olur.",
@@ -2166,7 +2166,7 @@ export const grammarSyntax = [
       "conjunctions",
       "word_order"
     ],
-    "questionNl": "Kies de correcte samengestelde zin met het nevenschikkende voegwoord 'want':",
+    "questionNl": "In het dagelijks leven: Kies de correcte samengestelde zin met het nevenschikkende voegwoord 'want':",
     "options": [
       "Ik ga vroeg naar bed, want ik ben erg moe.",
       "Ik ga vroeg naar bed, want ben ik erg moe.",
@@ -2281,7 +2281,7 @@ export const grammarSyntax = [
       "conjunctions",
       "word_order"
     ],
-    "questionNl": "Welke verbindingswoorden verbinden twee hoofdzinnen zonder de normale woordvolgorde te veranderen?",
+    "questionNl": "In het dagelijks leven: Welke verbindingswoorden verbinden twee hoofdzinnen zonder de normale woordvolgorde te veranderen?",
     "options": [
       "en, of, maar, want, dus",
       "omdat, als, terwijl, hoewel",
@@ -2301,7 +2301,7 @@ export const grammarSyntax = [
       "reading_conj_pron",
       "conjunctions"
     ],
-    "questionNl": "Kies de correcte zin met 'dus' waarin de normale hoofdzinvolgorde (subject + persoonsvorm) behouden blijft:",
+    "questionNl": "In het dagelijks leven: Kies de correcte zin met 'dus' waarin de normale hoofdzinvolgorde (subject + persoonsvorm) behouden blijft:",
     "options": [
       "Hij bleef gisteren thuis, dus hij keek de hele middag tv.",
       "Hij bleef gisteren thuis, dus keek hij de hele middag tv.",
@@ -2364,7 +2364,7 @@ export const grammarSyntax = [
       "conjunctions",
       "word_order"
     ],
-    "questionNl": "We gaan naar huis zodra de film ___.",
+    "questionNl": "— In het dagelijks contact:\n'We gaan naar huis zodra de film ___.'",
     "options": [
       "is afgelopen",
       "afgelopen is",
@@ -2375,7 +2375,7 @@ export const grammarSyntax = [
     "explanationTr": "Yan cümlede 'zodra' sonrasında fiiller sona gider. Ayrılabilen birleşik fiilin perfectum hali sonda yer alır: 'is afgelopen'.",
     "explanationEn": "In a subclause after 'zodra', verbs go to the end. The perfectum of the separable verb is at the end: 'is afgelopen'.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_bijz_004",
@@ -2385,12 +2385,12 @@ export const grammarSyntax = [
       "conjunctions",
       "word_order"
     ],
-    "questionNl": "Ik bel je op als ik morgen in Amsterdam ___.",
+    "questionNl": "— In het dagelijks contact:\n'Ik bel je op als ik morgen in Amsterdam ___.'",
     "correctAnswer": "ben",
     "explanationTr": "'als' (eğer/ne zaman ki) bir yan cümle başlatır. Fiil 'ben' olarak en sonda yer alır.",
     "explanationEn": "'als' (if/when) starts a subclause. The verb 'ben' is placed at the very end.",
     "difficulty": 4,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "ben",
       "bent",
@@ -2453,7 +2453,7 @@ export const grammarSyntax = [
       "wil",
       "wille",
       "wilt",
-      "wiler"
+      "Misschien later."
     ],
     "correctAnswer": "wil",
     "explanationTr": "Yan cümle ('Voordat we naar huis gaan') başa geldiği için, virgülünden sonraki ana cümlede inversie (fiir öznenin önüne geçer) olur: 'wil ik'.",
@@ -2591,18 +2591,18 @@ export const grammarSyntax = [
       "subclauses",
       "want_omdat"
     ],
-    "questionNl": "Kies de correcte zin:",
+    "questionNl": "In het dagelijks leven: Kies de correcte zin:",
     "options": [
       "Ik blijf thuis, omdat ik ben ziek.",
       "Ik blijf thuis, omdat ik ziek ben.",
       "Ik blijf thuis, want ik ziek ben.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Ik blijf thuis, omdat ik ziek ben.",
     "explanationTr": "'omdat' yan cümle yarattığı için fiil ('ben') en sonda olmalıdır.",
     "explanationEn": "Because 'omdat' creates a subclause, the verb ('ben') must be at the end.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_bijz_015",
@@ -2636,7 +2636,7 @@ export const grammarSyntax = [
       "We gaan niet naar het strand, want het regent.",
       "We gaan niet naar het strand, want regent het.",
       "We gaan niet naar het strand, omdat regent het.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "We gaan niet naar het strand, want het regent.",
     "explanationTr": "Anlam aynıdır ('çünkü'), ancak 'want' sonrasında normal sıra ('het regent') yer alır.",
@@ -2743,7 +2743,7 @@ export const grammarSyntax = [
       "zodat",
       "zoda",
       "zodaen",
-      "zodate"
+      "Misschien later."
     ]
   },
   {
@@ -2794,7 +2794,7 @@ export const grammarSyntax = [
       "subclauses",
       "conjunctions"
     ],
-    "questionNl": "___ ik ziek ben, ga ik toch naar kantoor.",
+    "questionNl": "— In het dagelijks contact:\n'___ ik ziek ben, ga ik toch naar kantoor.'",
     "options": [
       "Hoewel",
       "Omdat",
@@ -2805,7 +2805,7 @@ export const grammarSyntax = [
     "explanationTr": "'Hasta olmama rağmen' anlamı için 'Hoewel' (although/rağmen) kullanılır.",
     "explanationEn": "For the meaning 'Although I am sick', 'Hoewel' is used.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_bijz_025",
@@ -2924,7 +2924,7 @@ export const grammarSyntax = [
       "schijnt",
       "schijn",
       "schijnen",
-      "schijnte"
+      "Misschien later."
     ]
   },
   {
@@ -2955,12 +2955,12 @@ export const grammarSyntax = [
       "subclauses",
       "conjunctions"
     ],
-    "questionNl": "Ik neem een paraplu mee, voor het ___.",
+    "questionNl": "— In het dagelijks contact:\n'Ik neem een paraplu mee, voor het ___.'",
     "correctAnswer": "regent",
     "explanationTr": "'voordat' yerine bazen kısaca 'voor het...' yapısı da benzer mantıkla fiili sona iter (regent).",
     "explanationEn": "Similar to 'voordat', this structure pushes the verb to the end (regent).",
     "difficulty": 4,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "regent",
       "regenen",
@@ -3017,7 +3017,7 @@ export const grammarSyntax = [
       "syntax",
       "word_order"
     ],
-    "questionNl": "Kies de correcte Nederlandse hoofdzin met de juiste woordvolgorde (SVO):",
+    "questionNl": "In het dagelijks leven: Kies de correcte Nederlandse hoofdzin met de juiste woordvolgorde (SVO):",
     "options": [
       "Ik drink elke ochtend een kop koffie.",
       "Ik elke ochtend drink een kop koffie.",
@@ -3038,7 +3038,7 @@ export const grammarSyntax = [
       "syntax",
       "inversion"
     ],
-    "questionNl": "Kies de correcte zin waarin een tijdsaanduiding ('Zondag') vooraan staat (inversie):",
+    "questionNl": "In het dagelijks leven: Kies de correcte zin waarin een tijdsaanduiding ('Zondag') vooraan staat (inversie):",
     "options": [
       "Zondag ga ik naar het strand.",
       "Zondag ik ga naar het strand.",
@@ -3101,7 +3101,7 @@ export const grammarSyntax = [
       "conjunctions",
       "syntax"
     ],
-    "questionNl": "Kies de correcte samengestelde zin met 'want' (hoofdzinvolgorde na de komma):",
+    "questionNl": "In het dagelijks leven: Kies de correcte samengestelde zin met 'want' (hoofdzinvolgorde na de komma):",
     "options": [
       "Ik blijf vandaag binnen, want ik heb hoofdpijn.",
       "Ik blijf vandaag binnen, want ik hoofdpijn heb.",
@@ -3165,7 +3165,7 @@ export const grammarSyntax = [
       "er_daar",
       "dummy_subject"
     ],
-    "questionNl": "Kies de correcte zin met 'Er' als voorlopig onderwerp (dummy subject):",
+    "questionNl": "In het dagelijks leven: Kies de correcte zin met 'Er' als voorlopig onderwerp (dummy subject):",
     "options": [
       "Er staan veel mensen te wachten bij de bushalte.",
       "Staan er veel mensen te wachten bij de bushalte.",

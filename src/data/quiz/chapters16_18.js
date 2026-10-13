@@ -14,7 +14,7 @@ export const chapters16_18 = [
       "Die",
       "Dat",
       "Dit",
-      "Dater"
+      "Misschien later."
     ],
     "correctAnswer": "Die",
     "explanationTr": "Hollandacada 'de-woord' olan isimler veya kişiler için 'die' kullanılır.",
@@ -35,7 +35,7 @@ export const chapters16_18 = [
       "Dat",
       "Die",
       "Deze",
-      "Dater"
+      "Misschien later."
     ],
     "correctAnswer": "Dat",
     "explanationTr": "'het-woord', bir fikir veya bütün bir cümle için 'dat' kullanılır.",
@@ -55,7 +55,7 @@ export const chapters16_18 = [
       "Dit zijn / Dat zijn",
       "Dit is / Dat is",
       "Deze is",
-      "Geen van de bovenstaande antwoorden."
+      "Misschien later."
     ],
     "correctAnswer": "Dit zijn / Dat zijn",
     "explanationTr": "Birden fazla kişiyi sunarken 'Dit zijn' veya 'Dat zijn' kalıbı kullanılır.",
@@ -75,7 +75,7 @@ export const chapters16_18 = [
       "Dat is / Dit is",
       "Dat zijn",
       "Dit zijn",
-      "geen van deze"
+      "Misschien later."
     ],
     "correctAnswer": "Dat is / Dit is",
     "explanationTr": "Tekil kişileri tanıtırken 'Dat is' veya 'Dit is' kullanılır.",
@@ -112,7 +112,7 @@ export const chapters16_18 = [
       "conjunctions",
       "grammar"
     ],
-    "questionNl": "Kies de correcte samengestelde zin waarin twee hoofdzinnen natuurlijk verbonden worden:",
+    "questionNl": "In het dagelijks leven: Kies de correcte samengestelde zin waarin twee hoofdzinnen natuurlijk verbonden worden:",
     "options": [
       "Ik blijf vandaag lekker binnen, want het regent buiten.",
       "Ik blijf vandaag lekker binnen, want het buiten regent.",
@@ -133,7 +133,7 @@ export const chapters16_18 = [
       "conjunctions",
       "vocabulary"
     ],
-    "questionNl": "Welke zin gebruikt het voegwoord 'en' correct om twee acties te combineren?",
+    "questionNl": "In het dagelijks leven: Welke zin gebruikt het voegwoord 'en' correct om twee acties te combineren?",
     "options": [
       "Ik drink koffie en ik lees de ochtendkrant.",
       "Ik drink koffie en lees ik de ochtendkrant.",
@@ -238,7 +238,7 @@ export const chapters16_18 = [
       "conjunctions",
       "word_order"
     ],
-    "questionNl": "Welke zin met 'dus' behoudt de normale hoofdzinvolgorde (onderwerp + persoonsvorm)?",
+    "questionNl": "In het dagelijks leven: Welke zin met 'dus' behoudt de normale hoofdzinvolgorde (onderwerp + persoonsvorm)?",
     "options": [
       "Het regende hard, dus hij bleef de hele middag thuis.",
       "Het regende hard, dus bleef hij de hele middag thuis.",
@@ -259,7 +259,7 @@ export const chapters16_18 = [
       "perfectum",
       "word_order"
     ],
-    "questionNl": "Kies de zin waarin het lijdend voorwerp (de film) op de juiste plek staat vóór het voltooid deelwoord:",
+    "questionNl": "In het dagelijks leven: Kies de zin waarin het lijdend voorwerp (de film) op de juiste plek staat vóór het voltooid deelwoord:",
     "options": [
       "Ik heb gisterenavond een hele spannende film gezien.",
       "Ik heb gezien gisterenavond een hele spannende film.",
@@ -284,7 +284,7 @@ export const chapters16_18 = [
       "Ik heb pizza gegeten.",
       "Ik heb gegeten pizza.",
       "Ik ben pizza gegeten.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Ik heb pizza gegeten.",
     "explanationTr": "Nesne olan 'pizza', voltooid deelwoord 'gegeten' kelimesinin hemen önünde yer alır.",
@@ -342,7 +342,7 @@ export const chapters16_18 = [
       "past_tenses",
       "imperfectum"
     ],
-    "questionNl": "Welke zin gebruikt het onregelmatige werkwoord 'lopen' in het imperfectum (verleden tijd) correct?",
+    "questionNl": "In het dagelijks leven: Welke zin gebruikt het onregelmatige werkwoord 'lopen' in het imperfectum (verleden tijd) correct?",
     "options": [
       "Hij liep gisteren rustig door het park.",
       "Hij loopte gisteren rustig door het park.",
@@ -366,7 +366,7 @@ export const chapters16_18 = [
     "questionNl": "— Heb je gisteren nog boodschappen gedaan op de markt?\n— Ja, ___ verse groenten en fruit bij de groenteboer.",
     "options": [
       "ik kocht",
-      "ik koopte",
+      "Misschien later.",
       "ik gekocht",
       "ik koop"
     ],
@@ -408,7 +408,7 @@ export const chapters16_18 = [
     "questionNl": "— Wat dronk je gisteren bij het diner?\n— Omdat het zo warm was, ___ twee grote glazen koud water.",
     "options": [
       "ik dronk",
-      "ik drinkte",
+      "Misschien later.",
       "ik gedronken",
       "ik drink"
     ],
@@ -447,7 +447,7 @@ export const chapters16_18 = [
       "separable_verbs",
       "grammar"
     ],
-    "questionNl": "Kies de zin waarin het scheidbare werkwoord 'meenemen' correct gebruikt wordt in de tegenwoordige tijd:",
+    "questionNl": "In het dagelijks leven: Kies de zin waarin het scheidbare werkwoord 'meenemen' correct gebruikt wordt in de tegenwoordige tijd:",
     "options": [
       "Ik neem elke ochtend mijn lunchpakket mee naar mijn werk.",
       "Ik meeneem elke ochtend mijn lunchpakket naar mijn werk.",
@@ -468,12 +468,12 @@ export const chapters16_18 = [
       "separable_verbs",
       "grammar"
     ],
-    "questionNl": "Waar staat het object in een zin met een gesplitst scheidbaar werkwoord?",
+    "questionNl": "In het dagelijks leven: Waar staat het object in een zin met een gesplitst scheidbaar werkwoord?",
     "options": [
       "Het object staat tussen de gesplitste delen van het werkwoord in.",
       "Het object staat altijd vooraan.",
       "Het object staat achter het prefix.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Het object staat tussen de gesplitste delen van het werkwoord in.",
     "explanationTr": "Notlarda belirtildiği gibi nesne, ayrılan fiil parçalarının ARASINDA yer alır ('The object is between the split parts of the verb').",
@@ -489,12 +489,12 @@ export const chapters16_18 = [
       "separable_verbs",
       "grammar"
     ],
-    "questionNl": "Wat is de juiste zin met 'meenemen' volgens het patroon?",
+    "questionNl": "In het dagelijks leven: Wat is de juiste zin met 'meenemen' volgens het patroon?",
     "options": [
       "Ik neem een vriend mee.",
       "Ik neem mee een vriend.",
       "Ik meeneem een vriend.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Ik neem een vriend mee.",
     "explanationTr": "Nesne ('een vriend') fiilin çekimli kısmı ile prefixi ('mee') arasında yer alır.",
@@ -510,12 +510,12 @@ export const chapters16_18 = [
       "separable_verbs",
       "imperfectum"
     ],
-    "questionNl": "Hoe is de imperfectum vorm van het scheidbare werkwoord 'instappen' voor 'ik'?",
+    "questionNl": "In het dagelijks leven: Hoe is de imperfectum vorm van het scheidbare werkwoord 'instappen' voor 'ik'?",
     "options": [
       "ik stapte de bus in.",
       "ik instapte de bus.",
       "ik stapte in de bus.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "ik stapte de bus in.",
     "explanationTr": "İmperfectum da olsa ayrılabilen fiilin prefixi ('in') cümlenin en sonundadır.",
@@ -571,7 +571,7 @@ export const chapters16_18 = [
       "summary_ch16",
       "future_tense"
     ],
-    "questionNl": "Welke zin drukt een toekomstplan uit met 'gaan' of 'zullen'?",
+    "questionNl": "In het dagelijks leven: Welke zin drukt een toekomstplan uit met 'gaan' of 'zullen'?",
     "options": [
       "Volgende maand gaan we verhuizen naar een nieuw appartement.",
       "Vorige maand verhuisden we naar een nieuw appartement.",
@@ -592,7 +592,7 @@ export const chapters16_18 = [
       "past_tenses",
       "imperfectum"
     ],
-    "questionNl": "Welke tijdsvorm gebruik je om een gewoonte of situatie van vroeger te beschrijven (bijv. 'Toen ik kind was...')?",
+    "questionNl": "In het dagelijks leven: Welke tijdsvorm gebruik je om een gewoonte of situatie van vroeger te beschrijven (bijv. 'Toen ik kind was...')?",
     "options": [
       "Het imperfectum (verleden tijd)",
       "Het presens (tegenwoordige tijd)",
@@ -612,7 +612,7 @@ export const chapters16_18 = [
       "summary_ch16",
       "perfectum"
     ],
-    "questionNl": "Hoe vertel je in het perfectum wat je gisteren hebt gedaan?",
+    "questionNl": "In het dagelijks leven: Hoe vertel je in het perfectum wat je gisteren hebt gedaan?",
     "options": [
       "Ik heb gisteren mijn hele huis schoongemaakt.",
       "Ik maak gisteren mijn huis schoon.",
@@ -622,69 +622,6 @@ export const chapters16_18 = [
     "correctAnswer": "Ik heb gisteren mijn hele huis schoongemaakt.",
     "explanationTr": "Geçmişi perfectum ile ifade etmek de özet başlıkları arasındadır.",
     "explanationEn": "Expressing yourself in the perfectum is also a study objective.",
-    "difficulty": 3,
-    "quality": 1
-  },
-  {
-    "id": "sum_ch16_038",
-    "type": "multiple_choice",
-    "tags": [
-      "summary_ch16",
-      "conjunctions",
-      "grammar"
-    ],
-    "questionNl": "— Ik kook vanavond het eten ___ mijn partner doet daarna de afwas.",
-    "options": [
-      "en",
-      "maar",
-      "want",
-      "of"
-    ],
-    "correctAnswer": "en",
-    "explanationTr": "'en' bağlacı ekleme / toevoeging (and) işlevi görür.",
-    "explanationEn": "The conjunction 'en' serves as an addition (toevoeging).",
-    "difficulty": 3,
-    "quality": 1
-  },
-  {
-    "id": "sum_ch16_039",
-    "type": "multiple_choice",
-    "tags": [
-      "summary_ch16",
-      "conjunctions",
-      "grammar"
-    ],
-    "questionNl": "— Het zonnetje schijnt heerlijk buiten, ___ de wind voelt nog wel koud aan.",
-    "options": [
-      "maar",
-      "en",
-      "of",
-      "dus"
-    ],
-    "correctAnswer": "maar",
-    "explanationTr": "'maar' bağlacı zıtlık / tegenstelling (but) bildirir.",
-    "explanationEn": "The conjunction 'maar' indicates contrast (tegenstelling).",
-    "difficulty": 3,
-    "quality": 1
-  },
-  {
-    "id": "sum_ch16_040",
-    "type": "multiple_choice",
-    "tags": [
-      "summary_ch16",
-      "conjunctions",
-      "grammar"
-    ],
-    "questionNl": "— Ik kan vandaag niet meedoen met hardlopen, ___ ik heb erge last van mijn knie.",
-    "options": [
-      "want",
-      "dus",
-      "of",
-      "maar"
-    ],
-    "correctAnswer": "want",
-    "explanationTr": "'want' bağlacı sebep / reden (because) bildirir.",
-    "explanationEn": "The conjunction 'want' indicates a reason (reden).",
     "difficulty": 3,
     "quality": 1
   },
@@ -743,7 +680,7 @@ export const chapters16_18 = [
       "Welke film heb je het laatst gezien?",
       "Waar ging die film over?",
       "Wat is je favoriete film?",
-      "Geen van de bovenstaande antwoorden."
+      "Hoeveel kost dit?"
     ],
     "correctAnswer": "Welke film heb je het laatst gezien?",
     "explanationTr": "Özet girişindeki örnek cümlede 'Welke film heb je het laatst gezien?' sorusu yer alır.",
@@ -764,7 +701,7 @@ export const chapters16_18 = [
       "Waar ging die film over?",
       "Welke film was dat?",
       "Wie speelde in die film?",
-      "Geen van de bovenstaande antwoorden."
+      "Hoeveel kost dit?"
     ],
     "correctAnswer": "Waar ging die film over?",
     "explanationTr": "Film konusunu sormak için 'Waar ging die film over?' denir.",
@@ -780,12 +717,12 @@ export const chapters16_18 = [
       "dialogue",
       "vocabulary"
     ],
-    "questionNl": "Wat is een voorbeeldantwoord op 'Waar ging die film over?' uit de les?",
+    "questionNl": "In het dagelijks leven: Wat is een voorbeeldantwoord op 'Waar ging die film over?' uit de les?",
     "options": [
       "Die/De film ging over natuur.",
       "Het was erg duur.",
       "Ik ben naar de bioscoop gegaan.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Die/De film ging over natuur.",
     "explanationTr": "Örnek cevap olarak 'Die/De film ging over natuur' verilmiştir.",
@@ -805,7 +742,7 @@ export const chapters16_18 = [
       "Dit zijn mijn ouders.",
       "Dat is mijn broer.",
       "Dit is mijn zus.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Dit zijn mijn ouders.",
     "explanationTr": "Çoğul sunumlar için 'Dit zijn mijn ouders' kullanılır.",
@@ -825,7 +762,7 @@ export const chapters16_18 = [
       "Dat is mijn broer.",
       "Dit zijn mijn ouders.",
       "Dat zijn mijn zussen.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Dat is mijn broer.",
     "explanationTr": "Tekil erkek kardeş sunumu için 'Dat is mijn broer' denir.",
@@ -845,7 +782,7 @@ export const chapters16_18 = [
       "Dat zijn mijn zussen.",
       "Dit is mijn broer.",
       "Dit zijn mijn ouders.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Dat zijn mijn zussen.",
     "explanationTr": "Çoğul kız kardeşler için 'Dat zijn mijn zussen' kullanılır.",
@@ -865,7 +802,7 @@ export const chapters16_18 = [
       "Natuurlijk heb ik dat gedaan.",
       "Nee, dat is niet zo.",
       "Ik drink geen koffie.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Natuurlijk heb ik dat gedaan.",
     "explanationTr": "Özet görselindeki diyalog örneğinde 'Natuurlijk heb ik dat gedaan' yanıtı verilmiştir.",
@@ -1007,12 +944,12 @@ export const chapters16_18 = [
       "conjunctions",
       "vocabulary"
     ],
-    "questionNl": "Welke woorden worden in het overzicht genoemd als conjuncties ?",
+    "questionNl": "In het dagelijks leven: Welke woorden worden in het overzicht genoemd als conjuncties ?",
     "options": [
       "en, of, want, dus en maar",
       "omdat, als, terwijl",
       "niet, geen, wel",
-      "Geen van de bovenstaande antwoorden."
+      "Misschien later."
     ],
     "correctAnswer": "en, of, want, dus en maar",
     "explanationTr": "Özet metninde geçen ana conjuncties (bağlaçlar) 'en, of, want, dus en maar' olarak sıralanmıştır.",
@@ -1028,7 +965,7 @@ export const chapters16_18 = [
       "er_daar",
       "grammar"
     ],
-    "questionNl": "Wanneer gebruiken we het woord 'er' in het Nederlands op basis van de regel over Engelse 'a / an'?",
+    "questionNl": "In het dagelijks leven: Wanneer gebruiken we het woord 'er' in het Nederlands op basis van de regel over Engelse 'a / an'?",
     "options": [
       "If the subject of a sentence in English starts with 'a' or 'an' (indefinite subject).",
       "If the subject starts with 'the'.",
@@ -1049,7 +986,7 @@ export const chapters16_18 = [
       "er_daar",
       "grammar"
     ],
-    "questionNl": "— In het gesprek:\n'Vertaal 'An accident has happened' naar het Nederlands: ___ is een ongeluk gebeurd.'",
+    "questionNl": "— In het dagelijks contact:\n'Hoe zeg je 'An accident has happened' in correct Nederlands?'",
     "correctAnswer": "Er",
     "explanationTr": "Belirsiz özne ile başlayan cümle 'Er is een ongeluk gebeurd' şeklinde kurulur.",
     "explanationEn": "An indefinite subject sentence translates starting with 'Er'.",
@@ -1070,7 +1007,7 @@ export const chapters16_18 = [
       "er_daar",
       "grammar"
     ],
-    "questionNl": "— In het gesprek:\n'Vertaal 'A storm is coming' naar het Nederlands: ___ komt een storm.'",
+    "questionNl": "— In het dagelijks contact:\n'Hoe zeg je 'A storm is coming' in correct Nederlands?'",
     "correctAnswer": "er",
     "explanationTr": "Belirsiz özne kuralı gereği 'er komt een storm' denir.",
     "explanationEn": "Following the rule for indefinite subjects, it starts with 'er'.",
@@ -1091,7 +1028,7 @@ export const chapters16_18 = [
       "er_daar",
       "grammar"
     ],
-    "questionNl": "Welke andere functie heeft 'er' in een zin volgens de notities?",
+    "questionNl": "In het dagelijks leven: Welke andere functie heeft 'er' in een zin volgens de notities?",
     "options": [
       "It replaces location (i.e. like 'there' in English).",
       "It replaces the verb.",
@@ -1112,7 +1049,7 @@ export const chapters16_18 = [
       "er_daar",
       "grammar"
     ],
-    "questionNl": "— In het gesprek:\n'Vertaal 'It is busy there' naar het Nederlands: Het is ___ druk.'",
+    "questionNl": "— In het dagelijks contact:\n'Hoe zeg je 'It is busy there' in correct Nederlands?'",
     "correctAnswer": "er",
     "explanationTr": "Yer bildiren 'there' anlamı için cümle içinde 'er' kullanılır.",
     "explanationEn": "To express 'there' regarding a location, 'er' is used in the sentence.",
@@ -1133,7 +1070,7 @@ export const chapters16_18 = [
       "continuous",
       "grammar"
     ],
-    "questionNl": "Wat is de juiste formule voor de present continuous in het Nederlands ?",
+    "questionNl": "In het dagelijks leven: Wat is de juiste formule voor de present continuous in het Nederlands ?",
     "options": [
       "[zijn] [...] [aan het + infinitief]",
       "[hebben] [...] [ge + stam + t]",
@@ -1154,12 +1091,12 @@ export const chapters16_18 = [
       "dialogue_ch17",
       "vocabulary"
     ],
-    "questionNl": "Hoe laat begint de dag voor Tina en Sam volgens de dialoog van hoofdstuk 17?",
+    "questionNl": "In het dagelijks leven: Hoe laat begint de dag voor Tina en Sam volgens de dialoog van hoofdstuk 17?",
     "options": [
       "om kwart over zeven (quarter past seven)",
       "om zeven uur",
       "om half acht",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "om kwart over zeven (quarter past seven)",
     "explanationTr": "Diyalogda Tina ve Sam için günün saat y<bos>4 geçe (kwart over zeven) başladığı belirtilir.",
@@ -1175,12 +1112,12 @@ export const chapters16_18 = [
       "dialogue_ch17",
       "vocabulary"
     ],
-    "questionNl": "Wie vertrekt er het eerst in de dialoog van hoofdstuk 17?",
+    "questionNl": "In het dagelijks leven: Wie vertrekt er het eerst in de dialoog van hoofdstuk 17?",
     "options": [
       "Sam vertrekt het eerst.",
       "Tina vertrekt het eerst.",
       "Ze vertrekken tegelijk.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Sam vertrekt het eerst.",
     "explanationTr": "Diyalogda ilk olarak Sam'in evden ayrıldığı (vertrekt het eerst) söylenir.",
@@ -1196,12 +1133,12 @@ export const chapters16_18 = [
       "dialogue_ch17",
       "vocabulary"
     ],
-    "questionNl": "Wat is een van de vragen in Opdracht 1 over Tina?",
+    "questionNl": "In het dagelijks leven: Wat is een van de vragen in Opdracht 1 over Tina?",
     "options": [
       "Heeft Tina goed geslapen?",
       "Waar werkt Tina?",
       "Wat is Tina's lievelingskleur?",
-      "Geen van de bovenstaande antwoorden."
+      "Hoeveel kost dit?"
     ],
     "correctAnswer": "Heeft Tina goed geslapen?",
     "explanationTr": "Opdracht 1'in ilk sorusu 'Heeft Tina goed geslapen?' şeklindedir.",
@@ -1217,12 +1154,12 @@ export const chapters16_18 = [
       "dialogue_ch17",
       "vocabulary"
     ],
-    "questionNl": "Wat is een andere vraag in Opdracht 1 met betrekking tot Tina?",
+    "questionNl": "In het dagelijks leven: Wat is een andere vraag in Opdracht 1 met betrekking tot Tina?",
     "options": [
       "Wat gaat Tina doen vandaag? / Wat heeft Tina vandaag gedaan?",
       "Hoeveel kost de bibliotheek?",
       "Wie is Sam's broer?",
-      "Geen van de bovenstaande antwoorden."
+      "Hoeveel kost dit?"
     ],
     "correctAnswer": "Wat gaat Tina doen vandaag? / Wat heeft Tina vandaag gedaan?",
     "explanationTr": "Opdracht 1'de Tina'nın bugün ne yapacağı veya ne yaptığını soran soru yer alır.",
@@ -1238,12 +1175,12 @@ export const chapters16_18 = [
       "dialogue_ch17",
       "roleplay"
     ],
-    "questionNl": "Wat is de rol van Student A in Opdracht 5?",
+    "questionNl": "In het dagelijks leven: Wat is de rol van Student A in Opdracht 5?",
     "options": [
       "Student A is de beller (caller).",
       "Student A neemt de telefoon op.",
       "Student A luistert alleen.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Student A is de beller (caller).",
     "explanationTr": "Opdracht 5 rol yapma (roleplay) görevinde Student A arayan kişidir (caller).",
@@ -1259,12 +1196,12 @@ export const chapters16_18 = [
       "dialogue_ch17",
       "roleplay"
     ],
-    "questionNl": "Wat moet Student B doen in Opdracht 5?",
+    "questionNl": "In het dagelijks leven: Wat moet Student B doen in Opdracht 5?",
     "options": [
       "Student B neemt de telefoon op.",
       "Student B belt als eerste.",
       "Student B hangt meteen op.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Student B neemt de telefoon op.",
     "explanationTr": "Opdracht 5'te Student B telefonu açar (answers the phone).",
@@ -1280,12 +1217,12 @@ export const chapters16_18 = [
       "dialogue_ch17",
       "roleplay"
     ],
-    "questionNl": "Hoe begin je het gesprek in Opdracht 5 als beller?",
+    "questionNl": "In het dagelijks leven: Hoe begin je het gesprek in Opdracht 5 als beller?",
     "options": [
       "Begin met een passende begroeting en leg de reden van bellen uit.",
       "Meteen ophangen.",
       "Vragen naar het weer.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Begin met een passende begroeting en leg de reden van bellen uit.",
     "explanationTr": "Göreve göre uygun bir selamlama ile başlanıp arama sebebi açıklanmalıdır.",
@@ -1301,12 +1238,12 @@ export const chapters16_18 = [
       "dialogue_ch17",
       "roleplay"
     ],
-    "questionNl": "Wat moet je doen aan het einde van het telefoongesprek in Opdracht 5?",
+    "questionNl": "In het dagelijks leven: Wat moet je doen aan het einde van het telefoongesprek in Opdracht 5?",
     "options": [
       "Sluit af met een bevestiging, bedankje en afscheid.",
       "Schreeuwen tegen de persoon.",
       "Niks zeggen.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Sluit af met een bevestiging, bedankje en afscheid.",
     "explanationTr": "Görüşme onaylama, teşekkür ve veda ile kapatılmalıdır.",
@@ -1327,7 +1264,7 @@ export const chapters16_18 = [
       "Elkaar één tip geven en van rol wisselen met een nieuwe situatie.",
       "Direct naar huis gaan.",
       "De leraar bellen.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Elkaar één tip geven en van rol wisselen met een nieuwe situatie.",
     "explanationEn": "After the call, give each other one tip and switch roles using a new situation.",
@@ -1341,12 +1278,12 @@ export const chapters16_18 = [
       "summary_ch17",
       "vocabulary"
     ],
-    "questionNl": "Wat is het antwoord op 'Waar woon jij?' in de herhaling?",
+    "questionNl": "In het dagelijks leven: Wat is het antwoord op 'Waar woon jij?' in de herhaling?",
     "options": [
       "Ik woon in Amsterdam.",
       "Ik kom uit Spanje.",
       "Mijn naam is Sam.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Ik woon in Amsterdam.",
     "explanationTr": "Örnek cevap olarak 'Ik woon in Amsterdam' verilmiştir.",
@@ -1362,12 +1299,12 @@ export const chapters16_18 = [
       "imperfectum",
       "grammar"
     ],
-    "questionNl": "Welke uitgang krijgt een regelmatig werkwoord in het imperfectum voor 'wij'?",
+    "questionNl": "In het dagelijks leven: Welke uitgang krijgt een regelmatig werkwoord in het imperfectum voor 'wij'?",
     "options": [
       "-ten",
       "-te",
       "-de",
-      "-tener"
+      "Misschien later."
     ],
     "correctAnswer": "-ten",
     "explanationTr": "Çoğul özneler için imperfectum kuralı '-ten' (veya yumuşak ünsüz dışındakiler için '-den') eklemektir.",
@@ -1383,12 +1320,12 @@ export const chapters16_18 = [
       "imperfectum",
       "grammar"
     ],
-    "questionNl": "Welke uitgang krijgt een regelmatig werkwoord in het imperfectum voor 'jullie'?",
+    "questionNl": "In het dagelijks leven: Welke uitgang krijgt een regelmatig werkwoord in het imperfectum voor 'jullie'?",
     "options": [
       "-ten",
       "-te",
       "-de",
-      "-tener"
+      "Misschien later."
     ],
     "correctAnswer": "-ten",
     "explanationTr": "Çoğul 'jullie' için imperfectum kuralı '-ten' eklemektir.",
@@ -1404,12 +1341,12 @@ export const chapters16_18 = [
       "imperfectum",
       "grammar"
     ],
-    "questionNl": "Welke uitgang krijgt een regelmatig werkwoord in het imperfectum voor 'zij' ?",
+    "questionNl": "In het dagelijks leven: Welke uitgang krijgt een regelmatig werkwoord in het imperfectum voor 'zij' ?",
     "options": [
       "-ten",
       "-te",
       "-de",
-      "-tener"
+      "Misschien later."
     ],
     "correctAnswer": "-ten",
     "explanationTr": "Çoğul 'zij' (onlar) için imperfectum kuralı '-ten' eklemektir.",
@@ -1425,12 +1362,12 @@ export const chapters16_18 = [
       "imperfectum",
       "grammar"
     ],
-    "questionNl": "Welke uitgang krijgt het werkwoord 'werken' in het imperfectum voor 'ik'?",
+    "questionNl": "In het dagelijks leven: Welke uitgang krijgt het werkwoord 'werken' in het imperfectum voor 'ik'?",
     "options": [
       "-te",
       "-ten",
       "-de",
-      "-tener"
+      "Misschien later."
     ],
     "correctAnswer": "-te",
     "explanationTr": "'werken' kökü 'k' ile bittiği için 'ik' şahsında '-te' alır (werkte).",
@@ -1446,12 +1383,12 @@ export const chapters16_18 = [
       "continuous",
       "grammar"
     ],
-    "questionNl": "Wat is de functie van de 'aan het' constructie in de zin 'Ik ben een pizza aan het eten'?",
+    "questionNl": "In het dagelijks leven: Wat is de functie van de 'aan het' constructie in de zin 'Ik ben een pizza aan het eten'?",
     "options": [
       "It indicates an ongoing action right now (present continuous).",
       "It indicates the past tense.",
       "It indicates a future intention.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "It indicates an ongoing action right now (present continuous).",
     "explanationTr": "'aan het' yapısı şu anda devam etmekte olan bir eylemi (continuous) gösterir.",
@@ -1467,7 +1404,7 @@ export const chapters16_18 = [
       "continuous",
       "grammar"
     ],
-    "questionNl": "Waar staat het hulpwerkwoord 'zijn' in de zin 'Ik ben een reservering in het hotel aan het maken'?",
+    "questionNl": "In het dagelijks leven: Waar staat het hulpwerkwoord 'zijn' in de zin 'Ik ben een reservering in het hotel aan het maken'?",
     "options": [
       "Direct na het subject (ik)",
       "Aan het einde van de zin",
@@ -1488,7 +1425,7 @@ export const chapters16_18 = [
       "continuous",
       "grammar"
     ],
-    "questionNl": "Waar staat het hoofdwerkwoord in een 'aan het' constructie?",
+    "questionNl": "In het dagelijks leven: Waar staat het hoofdwerkwoord in een 'aan het' constructie?",
     "options": [
       "Aan het absolute einde van de zin",
       "Direct na het subject",
@@ -1509,7 +1446,7 @@ export const chapters16_18 = [
       "er_daar",
       "grammar"
     ],
-    "questionNl": "Wanneer gebruiken we 'er' met betrekking tot het Engelse 'a' of 'an'?",
+    "questionNl": "In het dagelijks leven: Wanneer gebruiken we 'er' met betrekking tot het Engelse 'a' of 'an'?",
     "options": [
       "When the subject of a sentence in English starts with 'a' or 'an'.",
       "When the subject starts with 'the'.",
@@ -1530,12 +1467,12 @@ export const chapters16_18 = [
       "er_daar",
       "grammar"
     ],
-    "questionNl": "Wat is een correct voorbeeld van de 'er' regel bij onbepaalde onderwerpen?",
+    "questionNl": "In het dagelijks leven: Wat is een correct voorbeeld van de 'er' regel bij onbepaalde onderwerpen?",
     "options": [
       "Er is een ongeluk gebeurd.",
       "De auto is rood.",
       "Ik ben in Amsterdam.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Er is een ongeluk gebeurd.",
     "explanationTr": "Özet metninde verilen örneklerden biri 'Er is een ongeluk gebeurd.' şeklindedir.",
@@ -1551,7 +1488,7 @@ export const chapters16_18 = [
       "er_daar",
       "grammar"
     ],
-    "questionNl": "Hoe vervangt 'er' een locatie in een zin?",
+    "questionNl": "In het dagelijks leven: Hoe vervangt 'er' een locatie in een zin?",
     "options": [
       "It acts like 'there' in English (e.g., It is busy there -> Het is er druk).",
       "It acts like 'here'.",
@@ -1572,7 +1509,7 @@ export const chapters16_18 = [
       "conjunctions",
       "grammar"
     ],
-    "questionNl": "Welke van de volgende is GEEN conjunctie uit het overzicht?",
+    "questionNl": "In het dagelijks leven: Welke van de volgende is GEEN conjunctie uit het overzicht?",
     "options": [
       "omdat",
       "en",
@@ -1593,12 +1530,12 @@ export const chapters16_18 = [
       "imperfectum",
       "grammar"
     ],
-    "questionNl": "Welke uitgang krijgt het werkwoord 'werken' in het imperfectum voor 'wij'?",
+    "questionNl": "In het dagelijks leven: Welke uitgang krijgt het werkwoord 'werken' in het imperfectum voor 'wij'?",
     "options": [
       "-ten",
       "-te",
       "-de",
-      "-tener"
+      "Misschien later."
     ],
     "correctAnswer": "-ten",
     "explanationTr": "'werken' kökü 'werk', 'wij' çoğul şahsı için '-ten' alır (werken -> werkten).",
@@ -1619,7 +1556,7 @@ export const chapters16_18 = [
       "Alle werkwoorden verhuizen naar het einde van de bijzin.",
       "Alle werkwoorden blijven vooraan staan.",
       "De werkwoorden worden weggelaten.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Alle werkwoorden verhuizen naar het einde van de bijzin.",
     "explanationTr": "Özet kurallarına göre 'omdat, zodat, dat, hoewel, terwijl, nadat' gibi yan cümle bağlacı olan bazı bağlaçlarda tüm fiiller cümlenin sonuna gider.",
@@ -1640,7 +1577,7 @@ export const chapters16_18 = [
       "De 'kikker' (frog)",
       "De 'vis' (fish)",
       "De 'vogel' (bird)",
-      "Geen van de bovenstaande antwoorden."
+      "Misschien later."
     ],
     "correctAnswer": "De 'kikker' (frog)",
     "explanationTr": "Notlarda fiilin cümlenin sonuna atlaması eğlenceli bir terim olan 'kikker' (kurbağa) olarak adlandırılır.",
@@ -1656,7 +1593,7 @@ export const chapters16_18 = [
       "conjunctions",
       "inversion"
     ],
-    "questionNl": "Wat gebeurt er met de hoofdzin wanneer we een zin beginnen met een bijzin die start met *als, toen, zodra* of *wanneer*?",
+    "questionNl": "In het dagelijks leven: Wat gebeurt er met de hoofdzin wanneer we een zin beginnen met een bijzin die start met *als, toen, zodra* of *wanneer*?",
     "options": [
       "Er is sprake van inversie (omwisseling van werkwoord en subject) in de hoofdzin.",
       "De hoofdzin verandert niet van volgorde.",
@@ -1677,7 +1614,7 @@ export const chapters16_18 = [
       "conjunctions",
       "vocabulary"
     ],
-    "questionNl": "Welke van de volgende voegwoorden is een voorbeeld van een conjunctie die alle werkwoorden naar achteren stuurt?",
+    "questionNl": "In het dagelijks leven: Welke van de volgende voegwoorden is een voorbeeld van een conjunctie die alle werkwoorden naar achteren stuurt?",
     "options": [
       "omdat",
       "want",
@@ -1698,7 +1635,7 @@ export const chapters16_18 = [
       "conjunctions",
       "vocabulary"
     ],
-    "questionNl": "Wat is het grammaticale verschil in woordvolgorde tussen 'want' en 'omdat'?",
+    "questionNl": "In het dagelijks leven: Wat is het grammaticale verschil in woordvolgorde tussen 'want' en 'omdat'?",
     "options": [
       "Na 'want' volgt normale hoofdzinvolgorde, na 'omdat' gaan alle werkwoorden naar het einde.",
       "Na 'omdat' volgt normale volgorde, na 'want' gaan werkwoorden naar achteren.",
@@ -1710,27 +1647,6 @@ export const chapters16_18 = [
     "explanationEn": "'want' keeps main clause order, while 'omdat' sends all verbs to the end.",
     "difficulty": 4,
     "quality": 1
-  },
-  {
-    "id": "sum_ch18_007",
-    "type": "multiple_choice",
-    "tags": [
-      "summary_ch18",
-      "conjunctions",
-      "vocabulary"
-    ],
-    "questionNl": "— In het gesprek:\n'Vertaal de zin uit het voorbeeld: 'Ik ben hier ___ ik heb honger.' .'",
-    "correctAnswer": "want",
-    "explanationTr": "Normal kelime sıralamasına sahip ana cümleleri bağlayan kelime 'want'dır.",
-    "explanationEn": "To connect main clauses with normal order, we use 'want'.",
-    "difficulty": 4,
-    "quality": 1,
-    "options": [
-      "want",
-      "omdat",
-      "maar",
-      "dus"
-    ]
   },
   {
     "id": "sum_ch18_008",
@@ -1761,12 +1677,12 @@ export const chapters16_18 = [
       "conjunctions",
       "grammar"
     ],
-    "questionNl": "Wat is de juiste vertaling van de voorbeeldzin: 'Als ik geen eten eet, heb ik honger.'?",
+    "questionNl": "In het dagelijks leven: Wat is de juiste vertaling van de voorbeeldzin: 'Als ik geen eten eet, heb ik honger.'?",
     "options": [
       "If I don't eat food, I am hungry.",
       "When I am hungry, I eat food.",
       "Because I eat food, I am not hungry.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "If I don't eat food, I am hungry.",
     "explanationTr": "'Als' şart cümlesi kurar: 'Yemek yemezsem karnım acıkır.'",
@@ -1781,12 +1697,12 @@ export const chapters16_18 = [
       "summary_ch18",
       "perfectum"
     ],
-    "questionNl": "Wat is het correcte perfectum van: 'ik - naar het park - gaan'?",
+    "questionNl": "In het dagelijks leven: Wat is het correcte perfectum van: 'ik - naar het park - gaan'?",
     "options": [
       "Ik ben naar het park gegaan.",
       "Ik heb naar het park gegaan.",
       "Ik ben naar het park gevlogen.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Ik ben naar het park gegaan.",
     "explanationTr": "'gaan' yönelme/hareket fiili olduğunda 'zijn' ile çekimlenir: Ik ben ... gegaan.",
@@ -1801,12 +1717,12 @@ export const chapters16_18 = [
       "summary_ch18",
       "perfectum"
     ],
-    "questionNl": "Wat is het correcte perfectum van: 'Wij - een glas cola - drinken'?",
+    "questionNl": "In het dagelijks leven: Wat is het correcte perfectum van: 'Wij - een glas cola - drinken'?",
     "options": [
       "Wij hebben een glas cola gedronken.",
       "Wij zijn een glas cola gedronken.",
       "Wij hebben een glas cola gedrinkt.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Wij hebben een glas cola gedronken.",
     "explanationTr": "Nesne alan eylem 'hebben' ile kurulur, 'drinken' fiilinin 3. hali 'gedronken'dir.",
@@ -1821,12 +1737,12 @@ export const chapters16_18 = [
       "summary_ch18",
       "perfectum"
     ],
-    "questionNl": "Wat is het correcte perfectum van: 'Jullie - een computer - kopen'?",
+    "questionNl": "In het dagelijks leven: Wat is het correcte perfectum van: 'Jullie - een computer - kopen'?",
     "options": [
       "Jullie hebben een computer gekocht.",
       "Jullie zijn een computer gekocht.",
       "Jullie hebben een computer koopd.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Jullie hebben een computer gekocht.",
     "explanationTr": "'kopen' düzensiz fiildir, 3. hali 'gekocht'tur ve 'hebben' ile kullanılır.",
@@ -1841,12 +1757,12 @@ export const chapters16_18 = [
       "summary_ch18",
       "perfectum"
     ],
-    "questionNl": "Wat is het correcte perfectum van: 'Zij - een taart - maken'?",
+    "questionNl": "In het dagelijks leven: Wat is het correcte perfectum van: 'Zij - een taart - maken'?",
     "options": [
       "Zij heeft een taart gemaakt.",
       "Zij is een taart gemaakt.",
       "Zij heeft een taart maakd.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Zij heeft een taart gemaakt.",
     "explanationTr": "'maken' düzenli bir fiildir ('k' harfi soft ketchup kuralı gereği 't' alır): gemaakt.",
@@ -1861,12 +1777,12 @@ export const chapters16_18 = [
       "summary_ch18",
       "perfectum"
     ],
-    "questionNl": "Wat is het correcte perfectum van: 'wij - een pizza - eten'?",
+    "questionNl": "In het dagelijks leven: Wat is het correcte perfectum van: 'wij - een pizza - eten'?",
     "options": [
       "Wij hebben een pizza gegeten.",
       "Wij zijn een pizza gegeten.",
       "Wij hebben een pizza geëten.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Wij hebben een pizza gegeten.",
     "explanationTr": "'eten' düzensiz bir fiildir, 3. hali 'gegeten'dir.",
@@ -1881,12 +1797,12 @@ export const chapters16_18 = [
       "summary_ch18",
       "perfectum"
     ],
-    "questionNl": "Wat is het correcte perfectum van: 'wij - monopoly - spelen'?",
+    "questionNl": "In het dagelijks leven: Wat is het correcte perfectum van: 'wij - monopoly - spelen'?",
     "options": [
       "Wij hebben monopoly gespeeld.",
       "Wij zijn monopoly gespeeld.",
       "Wij hebben monopoly gespeelt.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Wij hebben monopoly gespeeld.",
     "explanationTr": "'spelen' kökü 'l' ile bittiği için '+d' alır: gespeeld.",
@@ -1901,12 +1817,12 @@ export const chapters16_18 = [
       "summary_ch18",
       "perfectum"
     ],
-    "questionNl": "Wat is het correcte perfectum van: 'ik - mijn broertje naar school - brengen'?",
+    "questionNl": "In het dagelijks leven: Wat is het correcte perfectum van: 'ik - mijn broertje naar school - brengen'?",
     "options": [
       "Ik heb mijn broertje naar school gebracht.",
       "Ik ben mijn broertje naar school gebracht.",
       "Ik heb mijn broertje naar school gebrengd.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Ik heb mijn broertje naar school gebracht.",
     "explanationTr": "'brengen' fiilinin 3. hali 'gebracht'tir ve 'hebben' ile kullanılır.",
@@ -1921,12 +1837,12 @@ export const chapters16_18 = [
       "summary_ch18",
       "imperfectum"
     ],
-    "questionNl": "Wat is de imperfectum vorm van het werkwoord 'rennen' voor het subject 'ik'?",
+    "questionNl": "In het dagelijks leven: Wat is de imperfectum vorm van het werkwoord 'rennen' voor het subject 'ik'?",
     "options": [
       "ik rende",
       "ik rente",
       "ik gerend",
-      "ik gerender"
+      "Misschien later."
     ],
     "correctAnswer": "ik rende",
     "explanationTr": "'rennen' kökü 'ren' (n harfi soft ketchup'ta yok) olduğu için imperfectumda '+de' alır: ik rende.",
@@ -1941,12 +1857,12 @@ export const chapters16_18 = [
       "summary_ch18",
       "imperfectum"
     ],
-    "questionNl": "Wat is de imperfectum vorm van 'gebruiken' voor het subject 'wij'?",
+    "questionNl": "In het dagelijks leven: Wat is de imperfectum vorm van 'gebruiken' voor het subject 'wij'?",
     "options": [
       "wij gebruikten",
-      "wij gebruikten",
       "wij gebruikte",
-      "wij gebruiktener"
+      "Misschien later.",
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "wij gebruikten",
     "explanationTr": "'gebruiken' kökü 'gebruik' ('k' harfi soft ketchup içinde) ve çoğul olduğu için '+ten' alır: wij gebruikten.",
@@ -1961,12 +1877,12 @@ export const chapters16_18 = [
       "summary_ch18",
       "imperfectum"
     ],
-    "questionNl": "Wat is de imperfectum vorm van 'luisteren' voor de derde persoon enkelvoud ?",
+    "questionNl": "In het dagelijks leven: Wat is de imperfectum vorm van 'luisteren' voor de derde persoon enkelvoud ?",
     "options": [
       "zij luisterde",
       "zij luisterte",
       "zij geluisterd",
-      "zij geluisterder"
+      "Misschien later."
     ],
     "correctAnswer": "zij luisterde",
     "explanationTr": "'luisteren' kökü 'luister' ('r' harfi soft ketchup dışındadır) tekil şahısta '+de' alır: zij luisterde.",
@@ -1981,7 +1897,7 @@ export const chapters16_18 = [
       "summary_ch18",
       "imperfectum"
     ],
-    "questionNl": "Wat is de imperfectum vorm van 'kopen' voor het subject 'jullie'?",
+    "questionNl": "In het dagelijks leven: Wat is de imperfectum vorm van 'kopen' voor het subject 'jullie'?",
     "options": [
       "jullie kochten",
       "jullie koopten",
@@ -2001,12 +1917,12 @@ export const chapters16_18 = [
       "summary_ch18",
       "imperfectum"
     ],
-    "questionNl": "Wat is de imperfectum vorm van 'maken' voor het subject 'hij'?",
+    "questionNl": "In het dagelijks leven: Wat is de imperfectum vorm van 'maken' voor het subject 'hij'?",
     "options": [
       "hij maakte",
       "hij maakde",
       "hij gemaakt",
-      "hij gemaakter"
+      "Misschien later."
     ],
     "correctAnswer": "hij maakte",
     "explanationTr": "'maken' kökü 'maak' ('k' harfi soft ketchup) tekil şahısta '+te' alır: hij maakte.",
@@ -2021,12 +1937,12 @@ export const chapters16_18 = [
       "summary_ch18",
       "separable_verbs"
     ],
-    "questionNl": "Hoe luidt de tegenwoordige tijd van het scheidbare werkwoord 'opbellen' voor 'ik'?",
+    "questionNl": "In het dagelijks leven: Hoe luidt de tegenwoordige tijd van het scheidbare werkwoord 'opbellen' voor 'ik'?",
     "options": [
       "Ik bel mijn moeder op.",
       "Ik opbel mijn moeder.",
       "Ik bel op mijn moeder.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Ik bel mijn moeder op.",
     "explanationTr": "Ayrılabilen fiilin prefixi ('op') şimdiki zamanda cümlenin en sonuna gider.",
@@ -2041,12 +1957,12 @@ export const chapters16_18 = [
       "summary_ch18",
       "separable_verbs"
     ],
-    "questionNl": "Hoe luidt de imperfectum vorm van 'opbellen' voor 'ik'?",
+    "questionNl": "In het dagelijks leven: Hoe luidt de imperfectum vorm van 'opbellen' voor 'ik'?",
     "options": [
       "Ik belde mijn vriend op.",
       "Ik opbelde mijn vriend.",
       "Ik bel opde mijn vriend.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Ik belde mijn vriend op.",
     "explanationTr": "Hikaye geçmiş zamanda da ayrılabilen prefix ('op') en sondadır.",
@@ -2061,12 +1977,12 @@ export const chapters16_18 = [
       "summary_ch18",
       "separable_verbs"
     ],
-    "questionNl": "Hoe luidt de perfectum vorm van het scheidbare werkwoord 'opbellen' voor 'ik'?",
+    "questionNl": "In het dagelijks leven: Hoe luidt de perfectum vorm van het scheidbare werkwoord 'opbellen' voor 'ik'?",
     "options": [
       "ik heb mijn moeder opgebeld",
       "ik heb opgebeld mijn moeder",
       "ik ben mijn moeder opgebeld",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "ik heb mijn moeder opgebeld",
     "explanationTr": "Ayrılabilen fiillerin perfectum halinde '-ge-' eki prefix ile asıl fiilin arasına girer: opgebeld.",
@@ -2081,12 +1997,12 @@ export const chapters16_18 = [
       "summary_ch18",
       "separable_verbs"
     ],
-    "questionNl": "Hoe luidt de tegenwoordige tijd van het scheidbare werkwoord 'aankomen' voor 'ik'?",
+    "questionNl": "In het dagelijks leven: Hoe luidt de tegenwoordige tijd van het scheidbare werkwoord 'aankomen' voor 'ik'?",
     "options": [
       "ik kom aan.",
       "ik aankom.",
       "ik kom.",
-      "geen van deze"
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "ik kom aan.",
     "explanationTr": "'aankomen' ayrılabilir fiildir, şimdiki zamanda 'aan' sonundadır.",
@@ -2101,12 +2017,12 @@ export const chapters16_18 = [
       "summary_ch18",
       "separable_verbs"
     ],
-    "questionNl": "Hoe luidt de imperfectum vorm van 'aankomen' voor 'ik'?",
+    "questionNl": "In het dagelijks leven: Hoe luidt de imperfectum vorm van 'aankomen' voor 'ik'?",
     "options": [
       "ik kwam aan.",
       "ik aankwam.",
       "ik kwam.",
-      "geen van deze"
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "ik kwam aan.",
     "explanationTr": "Hikaye geçmiş zamanda 'komen' -> 'kwam', prefix 'aan' en sondadır.",
@@ -2121,12 +2037,12 @@ export const chapters16_18 = [
       "summary_ch18",
       "separable_verbs"
     ],
-    "questionNl": "Hoe luidt de perfectum vorm van 'aankomen'?",
+    "questionNl": "In het dagelijks leven: Hoe luidt de perfectum vorm van 'aankomen'?",
     "options": [
       "Ik ben aangekomen.",
       "Ik heb aangekomen.",
       "Ik ben aangekom.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Ik ben aangekomen.",
     "explanationTr": "'aankomen' hareket fiili olduğu için 'zijn' ile çekimlenir ve perfectum hali 'aangekomen'dir.",
@@ -2141,7 +2057,7 @@ export const chapters16_18 = [
       "summary_ch18",
       "pronunciation"
     ],
-    "questionNl": "Welke Nederlandse klank komt overeen met de Engelse klank 'ee' in het overzicht?",
+    "questionNl": "In het dagelijks leven: Welke Nederlandse klank komt overeen met de Engelse klank 'ee' in het overzicht?",
     "options": [
       "ie",
       "oe",
@@ -2161,7 +2077,7 @@ export const chapters16_18 = [
       "summary_ch18",
       "pronunciation"
     ],
-    "questionNl": "Welke Nederlandse klank komt overeen met de Engelse klank 'oo' in het overzicht?",
+    "questionNl": "In het dagelijks leven: Welke Nederlandse klank komt overeen met de Engelse klank 'oo' in het overzicht?",
     "options": [
       "oe",
       "ie",
@@ -2181,12 +2097,12 @@ export const chapters16_18 = [
       "summary_ch18",
       "pronunciation"
     ],
-    "questionNl": "Welke Nederlandse klank komt overeen met 'ow' in het overzicht?",
+    "questionNl": "In het dagelijks leven: Welke Nederlandse klank komt overeen met 'ow' in het overzicht?",
     "options": [
       "ou / au",
       "ui",
       "ei",
-      "geen van deze"
+      "Misschien later."
     ],
     "correctAnswer": "ou / au",
     "explanationTr": "Tabloya göre 'ou / au' sesleri eng '(n)ow' sesine karşılık gelir.",
@@ -2201,7 +2117,7 @@ export const chapters16_18 = [
       "summary_ch18",
       "pronunciation"
     ],
-    "questionNl": "Welke Nederlandse klank komt overeen met de combinatie 'aa + uu' in het overzicht?",
+    "questionNl": "In het dagelijks leven: Welke Nederlandse klank komt overeen met de combinatie 'aa + uu' in het overzicht?",
     "options": [
       "ui",
       "ie",
@@ -2221,7 +2137,7 @@ export const chapters16_18 = [
       "summary_ch18",
       "pronunciation"
     ],
-    "questionNl": "Welke Nederlandse klank komt overeen met de Engelse klank 'A' in het overzicht?",
+    "questionNl": "In het dagelijks leven: Welke Nederlandse klank komt overeen met de Engelse klank 'A' in het overzicht?",
     "options": [
       "ee",
       "ie",
@@ -2241,7 +2157,7 @@ export const chapters16_18 = [
       "summary_ch18",
       "pronunciation"
     ],
-    "questionNl": "Welke Nederlandse klank komt overeen met de Engelse klank 'I' in het overzicht?",
+    "questionNl": "In het dagelijks leven: Welke Nederlandse klank komt overeen met de Engelse klank 'I' in het overzicht?",
     "options": [
       "ei",
       "ui",
@@ -2261,12 +2177,12 @@ export const chapters16_18 = [
       "summary_ch18",
       "continuous"
     ],
-    "questionNl": "Wat is een correct voorbeeld van de herhaling van les 17 met 'zijn + aan het + infinitive'?",
+    "questionNl": "In het dagelijks leven: Wat is een correct voorbeeld van de herhaling van les 17 met 'zijn + aan het + infinitive'?",
     "options": [
       "Ik ben pizza aan het eten.",
       "Ik heb pizza gegeten.",
       "Ik ga pizza eten.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Ik ben pizza aan het eten.",
     "explanationTr": "Notlardaki ilk örnek 'Ik ben pizza aan het eten' şeklindedir.",
@@ -2281,12 +2197,12 @@ export const chapters16_18 = [
       "summary_ch18",
       "continuous"
     ],
-    "questionNl": "Wat is een ander voorbeeld uit de herhaling van les 17 met 'aan het reizen'?",
+    "questionNl": "In het dagelijks leven: Wat is een ander voorbeeld uit de herhaling van les 17 met 'aan het reizen'?",
     "options": [
       "Ik ben aan het reizen.",
       "Ik heb gereisd.",
       "Ik reis.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Ik ben aan het reizen.",
     "explanationTr": "Notlardaki örneklerden biri de 'Ik ben aan het reizen'dir.",
@@ -2301,12 +2217,12 @@ export const chapters16_18 = [
       "summary_ch18",
       "er_daar"
     ],
-    "questionNl": "Wat is een correct voorbeeld van 'er is / er zijn' uit de herhaling van les 17?",
+    "questionNl": "In het dagelijks leven: Wat is een correct voorbeeld van 'er is / er zijn' uit de herhaling van les 17?",
     "options": [
       "Er is een sportschool. / Er zijn bananen.",
       "De sportschool is er.",
       "Bananen zijn er.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Er is een sportschool. / Er zijn bananen.",
     "explanationTr": "Notlarda 'Er is een sportschool' ve 'Er zijn bananen' örnekleri verilmiştir.",
@@ -2326,7 +2242,7 @@ export const chapters16_18 = [
       "Er zijn geen studenten.",
       "Er zijn niet studenten.",
       "Studenten zijn er niet.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Er zijn geen studenten.",
     "explanationTr": "Belirsiz çoğul nesne olumsuzlanırken 'geen' kullanılır: 'Er zijn geen studenten.'",
@@ -2347,7 +2263,7 @@ export const chapters16_18 = [
       "Omdat de secundaire clause de eerste positie inneemt, waardoor het hoofdwerkwoord van de hoofdzin direct erna (als tweede element) moet komen.",
       "Omdat de grammatica dat verplicht stelt zonder reden.",
       "Omdat het werkwoord anders verdwijnt.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Omdat de secundaire clause de eerste positie inneemt, waardoor het hoofdwerkwoord van de hoofdzin direct erna (als tweede element) moet komen.",
     "explanationTr": "Yan cümle ilk bloku işgal ettiğinden, ana cümlenin çekimli fiili 2. sırada kalmak için özneden önce gelir.",
@@ -2363,12 +2279,12 @@ export const chapters16_18 = [
       "vocabulary",
       "phonetics"
     ],
-    "questionNl": "Wat is volgens de klanknotities onderaan de tabel de Engelse klankvariant van de Nederlandse 'ui'?",
+    "questionNl": "In het dagelijks leven: Wat is volgens de klanknotities onderaan de tabel de Engelse klankvariant van de Nederlandse 'ui'?",
     "options": [
       "aa + uu",
       "ee",
       "oo",
-      "aa + uuer"
+      "Misschien later."
     ],
     "correctAnswer": "aa + uu",
     "explanationTr": "Özet görselinin en altındaki notlarda 'ui' sesi 'aa + uu' olarak açıklanmıştır.",
@@ -2383,12 +2299,12 @@ export const chapters16_18 = [
       "summary_ch18",
       "continuous"
     ],
-    "questionNl": "Wat is een correct voorbeeld van de constructie 'zijn + aan het + infinitief' met 'eten' in de herhaling van les 17?",
+    "questionNl": "In het dagelijks leven: Wat is een correct voorbeeld van de constructie 'zijn + aan het + infinitief' met 'eten' in de herhaling van les 17?",
     "options": [
       "Ik ben pizza aan het eten.",
       "Ik heb pizza gegeten.",
       "Ik ga pizza eten.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Ik ben pizza aan het eten.",
     "explanationTr": "Özet sayfasının başındaki herhaling kısmında 'Ik ben pizza aan het eten' örneği verilmiştir.",
@@ -2403,12 +2319,12 @@ export const chapters16_18 = [
       "summary_ch18",
       "continuous"
     ],
-    "questionNl": "Hoe luidt het voorbeeld met het werkwoord 'reizen' in de herhaling van les 17?",
+    "questionNl": "In het dagelijks leven: Hoe luidt het voorbeeld met het werkwoord 'reizen' in de herhaling van les 17?",
     "options": [
       "Ik ben aan het reizen.",
       "Ik heb gereisd.",
       "Ik reis.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Ik ben aan het reizen.",
     "explanationTr": "Özet notlarındaki seyahat etme örneği 'Ik ben aan het reizen' şeklindedir.",
@@ -2423,12 +2339,12 @@ export const chapters16_18 = [
       "summary_ch18",
       "continuous"
     ],
-    "questionNl": "Wat is het voorbeeld van 'hardlopen' in de sportschool uit de herhaling van les 17?",
+    "questionNl": "In het dagelijks leven: Wat is het voorbeeld van 'hardlopen' in de sportschool uit de herhaling van les 17?",
     "options": [
       "Ik ben in de sportschool aan het hardlopen.",
       "Ik heb in de sportschool hardgelopen.",
       "Ik ga in de sportschool hardlopen.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Ik ben in de sportschool aan het hardlopen.",
     "explanationTr": "Spor salonunda koşu yapma örneği 'Ik ben in de sportschool aan het hardlopen' olarak belirtilmiştir.",
@@ -2443,12 +2359,12 @@ export const chapters16_18 = [
       "summary_ch18",
       "er_daar"
     ],
-    "questionNl": "Welk voorbeeld van 'er is' wordt genoemd in de herhaling van les 17?",
+    "questionNl": "In het dagelijks leven: Welk voorbeeld van 'er is' wordt genoemd in de herhaling van les 17?",
     "options": [
       "Er is een sportschool.",
       "Er zijn bananen.",
       "Er zijn geen studenten.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Er is een sportschool.",
     "explanationTr": "Tekil spor salonu varlığı için 'Er is een sportschool' örneği verilmiştir.",
@@ -2463,12 +2379,12 @@ export const chapters16_18 = [
       "summary_ch18",
       "er_daar"
     ],
-    "questionNl": "Welk voorbeeld van 'er zijn' met meervoud wordt genoemd in de herhaling?",
+    "questionNl": "In het dagelijks leven: Welk voorbeeld van 'er zijn' met meervoud wordt genoemd in de herhaling?",
     "options": [
       "Er zijn bananen.",
       "Er is bananen.",
       "Bananen zijn er.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Er zijn bananen.",
     "explanationTr": "Çoğul varlık için 'Er zijn bananen' örneği yer almaktadır.",
@@ -2484,12 +2400,12 @@ export const chapters16_18 = [
       "er_daar",
       "negation"
     ],
-    "questionNl": "Hoe luidt het ontkennende voorbeeld met 'er zijn' in de herhaling?",
+    "questionNl": "In het dagelijks leven: Hoe luidt het ontkennende voorbeeld met 'er zijn' in de herhaling?",
     "options": [
       "Er zijn geen studenten.",
       "Er zijn niet studenten.",
       "Studenten zijn er niet.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Er zijn geen studenten.",
     "explanationTr": "Belirsiz çoğul isimlerin olumsuzu 'Er zijn geen studenten' şeklinde verilmiştir.",
@@ -2526,12 +2442,12 @@ export const chapters16_18 = [
       "vocabulary",
       "cinema"
     ],
-    "questionNl": "Wat is 'de voorstelling' in de context van een bioscoop?",
+    "questionNl": "In het dagelijks leven: Wat is 'de voorstelling' in de context van een bioscoop?",
     "options": [
       "show / session",
       "ticket",
       "poster",
-      "geen van deze"
+      "Misschien later."
     ],
     "correctAnswer": "show / session",
     "explanationTr": "'de voorstelling' film seansı veya gösterim (show/session) demektir[cite: 1].",
@@ -2547,12 +2463,12 @@ export const chapters16_18 = [
       "vocabulary",
       "cinema"
     ],
-    "questionNl": "Wat is een 'natuurdocumentaire'?",
+    "questionNl": "In het dagelijks leven: Wat is een 'natuurdocumentaire'?",
     "options": [
       "nature documentary",
       "action movie",
       "romantic comedy",
-      "nature documentaryer"
+      "Misschien later."
     ],
     "correctAnswer": "nature documentary",
     "explanationTr": "'natuurdocumentaire' doğa belgeseli (nature documentary) anlamına gelir[cite: 1].",
@@ -2568,7 +2484,7 @@ export const chapters16_18 = [
       "grammar",
       "conjunctions"
     ],
-    "questionNl": "Wat doet de conjunctie 'en' in een zin?",
+    "questionNl": "In het dagelijks leven: Wat doet de conjunctie 'en' in een zin?",
     "options": [
       "Het verbindt twee hoofdzinnen en voegt informatie toe (and).",
       "Het geeft een tegenstelling (but).",
@@ -2589,12 +2505,12 @@ export const chapters16_18 = [
       "grammar",
       "conjunctions"
     ],
-    "questionNl": "Wat doet de conjunctie 'of' in een zin?",
+    "questionNl": "In het dagelijks leven: Wat doet de conjunctie 'of' in een zin?",
     "options": [
       "Het geeft een keuze aan tussen twee opties (or).",
       "Het geeft een reden (because).",
       "Het geeft een conclusie (so).",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Het geeft een keuze aan tussen twee opties (or).",
     "explanationTr": "'of' (veya/ya da) bağlacı iki seçenek arasında seçim yapmayı ifade eder[cite: 1].",
@@ -2610,12 +2526,12 @@ export const chapters16_18 = [
       "grammar",
       "conjunctions"
     ],
-    "questionNl": "Wat doet de conjunctie 'maar' in een zin?",
+    "questionNl": "In het dagelijks leven: Wat doet de conjunctie 'maar' in een zin?",
     "options": [
       "Het geeft een tegenstelling aan (but).",
       "Het geeft een reden (because).",
       "Het voegt informatie toe (and).",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Het geeft een tegenstelling aan (but).",
     "explanationTr": "'maar' (ama/fakat) bağlacı bir zıtlık veya karşıtlık (but) belirtir[cite: 1].",
@@ -2631,12 +2547,12 @@ export const chapters16_18 = [
       "grammar",
       "conjunctions"
     ],
-    "questionNl": "Wat doet de conjunctie 'want' in een zin?",
+    "questionNl": "In het dagelijks leven: Wat doet de conjunctie 'want' in een zin?",
     "options": [
       "Het geeft de reden aan (because / for).",
       "Het geeft een conclusie (so).",
       "Het geeft een tegenstelling (but).",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Het geeft de reden aan (because / for).",
     "explanationTr": "'want' (çünkü / zira) bağlacı bir eylemin nedenini (reason) açıklar[cite: 1].",
@@ -2652,79 +2568,16 @@ export const chapters16_18 = [
       "grammar",
       "conjunctions"
     ],
-    "questionNl": "Wat doet de conjunctie 'dus' in een zin?",
+    "questionNl": "In het dagelijks leven: Wat doet de conjunctie 'dus' in een zin?",
     "options": [
       "Het geeft een conclusie of gevolg aan (so / therefore).",
       "Het geeft een reden (because).",
       "Het geeft een keuze (or).",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Het geeft een conclusie of gevolg aan (so / therefore).",
     "explanationTr": "'dus' (bu yüzden / yani / dolayısıyla) bağlacı bir sonuç veya etki (so/therefore) belirtir[cite: 1].",
     "explanationEn": "The conjunction 'dus' (so/therefore) indicates a conclusion or consequence[cite: 1].",
-    "difficulty": 3,
-    "quality": 1
-  },
-  {
-    "id": "sum_ch16_1029",
-    "type": "multiple_choice",
-    "tags": [
-      "summary_ch16",
-      "grammar",
-      "conjunctions"
-    ],
-    "questionNl": "— In het gesprek:\n'Welke conjunctie past het beste: 'Het is nu 20.00 uur, ___ de film is al een half uur bezig.''",
-    "options": [
-      "dus",
-      "maar",
-      "of",
-      "gedus"
-    ],
-    "correctAnswer": "dus",
-    "explanationTr": "Saat 20.00 olması filmin çoktan başlamış olmasının sonucudur, bu nedenle 'dus' (bu yüzden/yani) kullanılır[cite: 1].",
-    "explanationEn": "It being 20:00 leads to the conclusion that the film has been playing for half an hour, so 'dus' (so) is used[cite: 1].",
-    "difficulty": 3,
-    "quality": 1
-  },
-  {
-    "id": "sum_ch16_1030",
-    "type": "multiple_choice",
-    "tags": [
-      "summary_ch16",
-      "grammar",
-      "conjunctions"
-    ],
-    "questionNl": "— In het gesprek:\n'Welke conjunctie past het beste: 'Het spijt me, ___ Alles is liefde is al om 19.45 uur begonnen.''",
-    "options": [
-      "maar",
-      "en",
-      "want",
-      "gemaar"
-    ],
-    "correctAnswer": "maar",
-    "explanationTr": "'Üzgünüm ama...' şeklinde bir zıtlık oluşturduğu için 'maar' (ama) kullanılır[cite: 1].",
-    "explanationEn": "It introduces a contrast ('I am sorry, but...'), so 'maar' (but) is used[cite: 1].",
-    "difficulty": 3,
-    "quality": 1
-  },
-  {
-    "id": "sum_ch16_1031",
-    "type": "multiple_choice",
-    "tags": [
-      "summary_ch16",
-      "grammar",
-      "conjunctions"
-    ],
-    "questionNl": "— In het gesprek:\n'Welke conjunctie past het beste: 'Nee, dat wil ik niet ___ ik heb het begin gemist.''",
-    "options": [
-      "want",
-      "dus",
-      "en",
-      "gewant"
-    ],
-    "correctAnswer": "want",
-    "explanationTr": "İstememesinin sebebi filmin başını kaçırmasıdır, bu yüzden 'want' (çünkü) kullanılır[cite: 1].",
-    "explanationEn": "The reason for not wanting it is missing the beginning, so 'want' (because) is used[cite: 1].",
     "difficulty": 3,
     "quality": 1
   },
@@ -2736,7 +2589,7 @@ export const chapters16_18 = [
       "grammar",
       "word_order"
     ],
-    "questionNl": "Wat is de woordvolgorde in een zin die begint met een conjunctie (en, of, maar, want, dus) en wordt gevolgd door een hoofdzin?",
+    "questionNl": "In het dagelijks leven: Wat is de woordvolgorde in een zin die begint met een conjunctie (en, of, maar, want, dus) en wordt gevolgd door een hoofdzin?",
     "options": [
       "Conjunctie + subject + persoonsvorm (verb) + rest.",
       "Conjunctie + persoonsvorm (verb) + subject + rest.",
@@ -2757,12 +2610,12 @@ export const chapters16_18 = [
       "dialogue",
       "comprehension"
     ],
-    "questionNl": "Waarom wil Amira het kaartje voor de film 'Alles is liefde' niet meer kopen in de dialoog?",
+    "questionNl": "In het dagelijks leven: Waarom wil Amira het kaartje voor de film 'Alles is liefde' niet meer kopen in de dialoog?",
     "options": [
       "Omdat de film al begonnen is en ze het begin heeft gemist.",
       "Omdat de film te duur is.",
       "Omdat ze de film al gezien heeft.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Omdat de film al begonnen is en ze het begin heeft gemist.",
     "explanationTr": "Amira film çoktan başladığı ve başını kaçırmak istemediği için bileti almaktan vazgeçer[cite: 1].",
@@ -2778,12 +2631,12 @@ export const chapters16_18 = [
       "dialogue",
       "comprehension"
     ],
-    "questionNl": "Voor welke film koopt Amira uiteindelijk een kaartje?",
+    "questionNl": "In het dagelijks leven: Voor welke film koopt Amira uiteindelijk een kaartje?",
     "options": [
       "Zomerhitte",
       "Alles is liefde",
       "De Nieuwe Wildernis",
-      "De Nieuwe Wilderniser"
+      "Misschien later."
     ],
     "correctAnswer": "Zomerhitte",
     "explanationTr": "Diyalogun sonunda Amira 'Zomerhitte' filmi için birinci sınıf bir bilet alır[cite: 1].",
@@ -2799,12 +2652,12 @@ export const chapters16_18 = [
       "dialogue",
       "comprehension"
     ],
-    "questionNl": "Wat voor soort film is 'De Nieuwe Wildernis'?",
+    "questionNl": "In het dagelijks leven: Wat voor soort film is 'De Nieuwe Wildernis'?",
     "options": [
       "Een natuurdocumentaire",
       "Een komedie",
       "Een actiefilm",
-      "Een actiefilmer"
+      "Misschien later."
     ],
     "correctAnswer": "Een natuurdocumentaire",
     "explanationTr": "Gişe görevlisi 'De Nieuwe Wildernis'in bir doğa belgeseli (natuurdocumentaire) olduğunu söyler[cite: 1].",
@@ -2820,12 +2673,12 @@ export const chapters16_18 = [
       "culture",
       "kijkwijzer"
     ],
-    "questionNl": "Wat is het doel van de 'Kijkwijzer' in Nederland?",
+    "questionNl": "In het dagelijks leven: Wat is het doel van de 'Kijkwijzer' in Nederland?",
     "options": [
       "Het laat ouders en opvoeders zien tot welke leeftijd een programma of film schadelijk kan zijn voor kinderen.",
       "Het geeft een beoordeling over de kwaliteit van een film.",
       "Het laat zien hoeveel een film kost.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Het laat ouders en opvoeders zien tot welke leeftijd een programma of film schadelijk kan zijn voor kinderen.",
     "explanationTr": "Kijkwijzer, ebeveynlere bir filmin veya programın hangi yaşa kadar çocuklar için zararlı olabileceğini gösteren bir yaş sınıflandırma sistemidir.",
@@ -2841,12 +2694,12 @@ export const chapters16_18 = [
       "culture",
       "kijkwijzer"
     ],
-    "questionNl": "Geeft de Kijkwijzer ook informatie over de kwaliteit van een film (bijv. of het een goede of slechte film is)?",
+    "questionNl": "In het dagelijks leven: Geeft de Kijkwijzer ook informatie over de kwaliteit van een film (bijv. of het een goede of slechte film is)?",
     "options": [
       "Nee, de Kijkwijzer informeert niet over kwaliteit.",
       "Ja, het geeft films sterren (1 tot 5 sterren).",
       "Ja, het laat zien of een film een prijs heeft gewonnen.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Nee, de Kijkwijzer informeert niet over kwaliteit.",
     "explanationTr": "Kijkwijzer sadece içeriğin zararlı olup olmadığını belirtir, filmin kalitesi hakkında (iyi/kötü) bilgi vermez.",
@@ -2862,12 +2715,12 @@ export const chapters16_18 = [
       "culture",
       "kijkwijzer"
     ],
-    "questionNl": "Naast leeftijd, waarvoor waarschuwt de Kijkwijzer nog meer met pictogrammen?",
+    "questionNl": "In het dagelijks leven: Naast leeftijd, waarvoor waarschuwt de Kijkwijzer nog meer met pictogrammen?",
     "options": [
       "Geweld, angst, seks, discriminatie, drugs- en/of alcoholmisbruik en grof taalgebruik.",
       "De lengte van de film en de locatie van de bioscoop.",
       "De naam van de regisseur.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Geweld, angst, seks, discriminatie, drugs- en/of alcoholmisbruik en grof taalgebruik.",
     "explanationTr": "Kijkwijzer yaş sınırının yanı sıra şiddet, korku, cinsellik, ayrımcılık, uyuşturucu/alkol ve argo gibi içerikler için de uyarı sembolleri kullanır.",
@@ -2883,12 +2736,12 @@ export const chapters16_18 = [
       "culture",
       "kijkwijzer"
     ],
-    "questionNl": "Wie is er volgens de Kijkwijzer uiteindelijk verantwoordelijk voor wat kinderen kijken?",
+    "questionNl": "In het dagelijks leven: Wie is er volgens de Kijkwijzer uiteindelijk verantwoordelijk voor wat kinderen kijken?",
     "options": [
       "Ouders zijn zelf verantwoordelijk.",
       "De bioscoopmedewerkers.",
       "De overheid.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Ouders zijn zelf verantwoordelijk.",
     "explanationTr": "Kijkwijzer rehber niteliğindedir; çocukların ne izleyeceğinden nihai olarak ebeveynler sorumludur.",
@@ -2905,12 +2758,12 @@ export const chapters16_18 = [
       "adjectives",
       "pronunciation"
     ],
-    "questionNl": "Hoe spreek je de uitgang '-ig' uit in woorden zoals 'gelukkig' of 'bezig'?",
+    "questionNl": "In het dagelijks leven: Hoe spreek je de uitgang '-ig' uit in woorden zoals 'gelukkig' of 'bezig'?",
     "options": [
       "Als '-ug' (de 'i' klinkt als een schwa/stomme e).",
       "Als een duidelijke 'i' en 'g'.",
       "Je spreekt de 'g' niet uit.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Als '-ug' (de 'i' klinkt als een schwa/stomme e).",
     "explanationTr": "Felemenkçede kelime sonundaki '-ig' eki genellikle '-ug' (kısa, vurgusuz e sesiyle) olarak telaffuz edilir.",
@@ -2927,123 +2780,18 @@ export const chapters16_18 = [
       "adjectives",
       "pronunciation"
     ],
-    "questionNl": "Hoe spreek je de uitgang '-lijk' uit in woorden zoals 'belachelijk' of 'duidelijk'?",
+    "questionNl": "In het dagelijks leven: Hoe spreek je de uitgang '-lijk' uit in woorden zoals 'belachelijk' of 'duidelijk'?",
     "options": [
       "Als '-luk' (de 'ij' klinkt als een schwa/stomme e).",
       "Als een duidelijke 'ij' en 'k'.",
       "Als '-liek'.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Als '-luk' (de 'ij' klinkt als een schwa/stomme e).",
     "explanationTr": "Kelime sonundaki '-lijk' eki genellikle '-luk' olarak (vurgusuz e sesiyle) telaffuz edilir.",
     "explanationEn": "The suffix '-lijk' is usually pronounced as '-luk' (with a schwa sound).",
     "difficulty": 3,
     "quality": 1
-  },
-  {
-    "id": "sum_ch16_1043",
-    "type": "multiple_choice",
-    "tags": [
-      "summary_ch16",
-      "grammar",
-      "conjunctions"
-    ],
-    "questionNl": "— In het gesprek:\n'Vul in: 'Je kunt een kaartje kopen bij de automaat ___ je kunt het online kopen.''",
-    "correctAnswer": "of",
-    "explanationTr": "İki seçenek (otomattan almak veya internetten almak) sunulduğu için 'of' (veya) kullanılır[cite: 2].",
-    "explanationEn": "Two options are presented (buying at the machine or online), so 'of' (or) is used[cite: 2].",
-    "difficulty": 3,
-    "quality": 1,
-    "options": [
-      "of",
-      "want",
-      "omdat",
-      "maar"
-    ]
-  },
-  {
-    "id": "sum_ch16_1044",
-    "type": "multiple_choice",
-    "tags": [
-      "summary_ch16",
-      "grammar",
-      "conjunctions"
-    ],
-    "questionNl": "— In het gesprek:\n'Vul in: 'Mijn zus is getrouwd ___ ze woont nu in Peru.''",
-    "correctAnswer": "en",
-    "explanationTr": "İki bilgi eklenerek bağlandığı için 'en' (ve) kullanılır[cite: 2].",
-    "explanationEn": "Two pieces of information are added together, so 'en' (and) is used[cite: 2].",
-    "difficulty": 3,
-    "quality": 1,
-    "options": [
-      "en",
-      "want",
-      "omdat",
-      "maar"
-    ]
-  },
-  {
-    "id": "sum_ch16_1045",
-    "type": "multiple_choice",
-    "tags": [
-      "summary_ch16",
-      "grammar",
-      "conjunctions"
-    ],
-    "questionNl": "— In het gesprek:\n'Vul in: 'Ik wil u graag helpen ___ ik ben hier helaas ook niet bekend.''",
-    "correctAnswer": "maar",
-    "explanationTr": "Yardım etmek istiyor 'ama' buraları o da bilmiyor. Bir zıtlık olduğu için 'maar' kullanılır[cite: 2].",
-    "explanationEn": "He wants to help, 'but' he doesn't know the area either. There is a contrast, so 'maar' is used[cite: 2].",
-    "difficulty": 3,
-    "quality": 1,
-    "options": [
-      "maar",
-      "want",
-      "omdat",
-      "dus"
-    ]
-  },
-  {
-    "id": "sum_ch16_1046",
-    "type": "multiple_choice",
-    "tags": [
-      "summary_ch16",
-      "grammar",
-      "conjunctions"
-    ],
-    "questionNl": "— In het gesprek:\n'Vul in: 'Je hoeft niet met de bus te gaan ___ de bioscoop is hier dichtbij.''",
-    "correctAnswer": "want",
-    "explanationTr": "Otobüse binmene gerek yok 'çünkü' sinema çok yakın. Neden bildirdiği için 'want' kullanılır[cite: 2].",
-    "explanationEn": "You don't need to take the bus 'because' the cinema is close by. It gives a reason, so 'want' is used[cite: 2].",
-    "difficulty": 3,
-    "quality": 1,
-    "options": [
-      "want",
-      "omdat",
-      "maar",
-      "dus"
-    ]
-  },
-  {
-    "id": "sum_ch16_1047",
-    "type": "multiple_choice",
-    "tags": [
-      "summary_ch16",
-      "grammar",
-      "conjunctions"
-    ],
-    "questionNl": "— In het gesprek:\n'Vul in: 'Studenten krijgen tien procent korting op het abonnement. Jij bent student, ___ je krijgt korting.''",
-    "correctAnswer": "dus",
-    "explanationTr": "Öğrenci olmasının sonucu olarak indirim alıyor. Sonuç bildirdiği için 'dus' (bu yüzden) kullanılır[cite: 2].",
-    "explanationEn": "As a result of being a student, you get a discount. It indicates a conclusion, so 'dus' is used[cite: 2].",
-    "difficulty": 3,
-    "quality": 1,
-    "options": [
-      "dus",
-      "want",
-      "omdat",
-      "maar"
-    ]
   },
   {
     "id": "sum_ch17_1022",
@@ -3053,7 +2801,7 @@ export const chapters16_18 = [
       "vocabulary",
       "food"
     ],
-    "questionNl": "Wat zijn 'de gehaktballetjes'?",
+    "questionNl": "In het dagelijks leven: Wat zijn 'de gehaktballetjes'?",
     "options": [
       "meatballs",
       "sausages",
@@ -3073,12 +2821,12 @@ export const chapters16_18 = [
       "summary_ch17",
       "text_comprehension"
     ],
-    "questionNl": "Wat studeert Tina in de tekst 'De dag van Tina en Sam'?",
+    "questionNl": "In het dagelijks leven: Wat studeert Tina in de tekst 'De dag van Tina en Sam'?",
     "options": [
       "Filosofie",
       "Informatietechnologie",
       "Geschiedenis",
-      "Geschiedeniser"
+      "Misschien later."
     ],
     "correctAnswer": "Filosofie",
     "explanationTr": "Metne göre Tina felsefe (filosofie) okumaktadır[cite: 1].",
@@ -3093,12 +2841,12 @@ export const chapters16_18 = [
       "summary_ch17",
       "text_comprehension"
     ],
-    "questionNl": "Wat is het beroep van Sam?",
+    "questionNl": "In het dagelijks leven: Wat is het beroep van Sam?",
     "options": [
       "Computerprogrammeur",
       "Docent filosofie",
       "Caissière",
-      "Computerprogrammeurer"
+      "Misschien later."
     ],
     "correctAnswer": "Computerprogrammeur",
     "explanationTr": "Sam bilişim teknolojileri (informatietechnologie) okumakta ve bilgisayar programcısı (computerprogrammeur) olarak çalışmaktadır[cite: 1].",
@@ -3113,12 +2861,12 @@ export const chapters16_18 = [
       "summary_ch17",
       "text_comprehension"
     ],
-    "questionNl": "Waarom kwam de bus van Tina niet om 8.35 uur?",
+    "questionNl": "In het dagelijks leven: Waarom kwam de bus van Tina niet om 8.35 uur?",
     "options": [
       "Er was een ongeluk gebeurd.",
       "De buschauffeur was ziek.",
       "Het sneeuwde.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Er was een ongeluk gebeurd.",
     "explanationTr": "Metinde otobüsün gelmeme sebebi olarak bir kaza (ongeluk) olduğu belirtilmiştir[cite: 1].",
@@ -3133,12 +2881,12 @@ export const chapters16_18 = [
       "summary_ch17",
       "text_comprehension"
     ],
-    "questionNl": "Waarom had Sam een slechte dag op zijn werk?",
+    "questionNl": "In het dagelijks leven: Waarom had Sam een slechte dag op zijn werk?",
     "options": [
       "Er was een storing in het systeem en hij was veel gegevens kwijt.",
       "Hij had ruzie met zijn baas.",
       "Hij was te laat op kantoor.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Er was een storing in het systeem en hij was veel gegevens kwijt.",
     "explanationTr": "Sam işte sistem arızası (storing) yaşamış ve çok fazla veri kaybetmiştir (gegevens kwijt)[cite: 1, 2].",
@@ -3153,12 +2901,12 @@ export const chapters16_18 = [
       "summary_ch17",
       "text_comprehension"
     ],
-    "questionNl": "Waar werkt Tina 's avonds?",
+    "questionNl": "In het dagelijks leven: Waar werkt Tina 's avonds?",
     "options": [
       "In de bioscoop.",
       "In een restaurant.",
       "In de bibliotheek.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "In de bioscoop.",
     "explanationTr": "Tina akşamları sinemada gişe görevlisi (caissière) olarak çalışmaktadır[cite: 1].",
@@ -3174,7 +2922,7 @@ export const chapters16_18 = [
       "grammar",
       "er_daar"
     ],
-    "questionNl": "Wanneer gebruik je 'er' in een zin als 'Er is een ongeluk gebeurd'?",
+    "questionNl": "In het dagelijks leven: Wanneer gebruik je 'er' in een zin als 'Er is een ongeluk gebeurd'?",
     "options": [
       "Als 'dummy subject' bij een onbepaald onderwerp (indefinite subject).",
       "Om een specifieke plaats aan te wijzen.",
@@ -3195,12 +2943,12 @@ export const chapters16_18 = [
       "grammar",
       "er_daar"
     ],
-    "questionNl": "Wat is de functie van 'er' in de zin 'Ze werkt er vier dagen in de week'?",
+    "questionNl": "In het dagelijks leven: Wat is de functie van 'er' in de zin 'Ze werkt er vier dagen in de week'?",
     "options": [
       "Het verwijst naar een ongespecificeerde plaats (there).",
       "Het is het onderwerp van de zin.",
       "Het betekent 'gisteren'.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Het verwijst naar een ongespecificeerde plaats (there).",
     "explanationTr": "Bu cümlede 'er', 'orada' (there) anlamında, daha önce bahsedilmiş ancak vurgulanmayan bir yeri ifade etmek için kullanılmıştır.",
@@ -3216,12 +2964,12 @@ export const chapters16_18 = [
       "grammar",
       "continuous"
     ],
-    "questionNl": "Wat drukt de constructie 'zijn + aan het + infinitief' uit?",
+    "questionNl": "In het dagelijks leven: Wat drukt de constructie 'zijn + aan het + infinitief' uit?",
     "options": [
       "Een actie die op dit moment aan de gang is (continuous tense / ongoing action).",
       "Een actie in het verleden die is afgesloten.",
       "Een plan voor de toekomst.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Een actie die op dit moment aan de gang is (continuous tense / ongoing action).",
     "explanationTr": "'zijn + aan het + infinitief' yapısı şu anda devam eden eylemleri (Şimdiki Zamanın Hikayesi/Sürekli) ifade eder.",
@@ -3278,12 +3026,12 @@ export const chapters16_18 = [
       "summary_ch17",
       "culture"
     ],
-    "questionNl": "Wat is een veelvoorkomende gewoonte in Nederland met betrekking tot afspreken met vrienden?",
+    "questionNl": "In het dagelijks leven: Wat is een veelvoorkomende gewoonte in Nederland met betrekking tot afspreken met vrienden?",
     "options": [
       "Mensen spreken vaak bij elkaar thuis af ('samen thuis').",
       "Mensen spreken nooit thuis af, altijd in een restaurant.",
       "Mensen nodigen alleen familie uit thuis.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Mensen spreken vaak bij elkaar thuis af ('samen thuis').",
     "explanationTr": "Kültür bölümüne göre Hollandalılar genellikle arkadaşlarıyla evde ('thuis') buluşmayı ve birbirlerini eve davet etmeyi severler.",
@@ -3299,12 +3047,12 @@ export const chapters16_18 = [
       "dialogue",
       "comprehension"
     ],
-    "questionNl": "Waarom gaat Sam naar het politiebureau in de dialoog?",
+    "questionNl": "In het dagelijks leven: Waarom gaat Sam naar het politiebureau in de dialoog?",
     "options": [
       "Zijn portemonnee is gestolen en hij wil aangifte doen.",
       "Zijn fiets is gestolen.",
       "Hij is zijn rijbewijs kwijtgeraakt.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Zijn portemonnee is gestolen en hij wil aangifte doen.",
     "explanationTr": "Diyalogda Sam'in cüzdanı çalındığı için karakola gidip şikayette bulunduğu (aangifte doen) belirtilir[cite: 1].",
@@ -3325,7 +3073,7 @@ export const chapters16_18 = [
       "Op de tafel op het terras.",
       "In zijn jaszak.",
       "In zijn auto.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Op de tafel op het terras.",
     "explanationTr": "Sam cüzdanını terastaki masanın üzerine (op tafel op het terras) koyduğunu söyler[cite: 1].",
@@ -3341,12 +3089,12 @@ export const chapters16_18 = [
       "dialogue",
       "comprehension"
     ],
-    "questionNl": "Wat was de kleur en het materiaal van de gestolen portemonnee?",
+    "questionNl": "In het dagelijks leven: Wat was de kleur en het materiaal van de gestolen portemonnee?",
     "options": [
       "Rood en hij was van leer.",
       "Zwart en van plastic.",
       "Bruin en van stof.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Rood en hij was van leer.",
     "explanationTr": "Sam cüzdanının kırmızı renkte (rood) ve deriden (van leer) olduğunu belirtir[cite: 1].",
@@ -3362,12 +3110,12 @@ export const chapters16_18 = [
       "dialogue",
       "comprehension"
     ],
-    "questionNl": "Welke belangrijke dingen zaten er in de portemonnee van Sam (behalve 10 euro)?",
+    "questionNl": "In het dagelijks leven: Welke belangrijke dingen zaten er in de portemonnee van Sam (behalve 10 euro)?",
     "options": [
       "Een bankpas en een identiteitskaart.",
       "Zijn sleutels en een paspoort.",
       "Een telefoon en een creditcard.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Een bankpas en een identiteitskaart.",
     "explanationTr": "Cüzdanda 10 euronun yanı sıra banka kartı (bankpas) ve kimlik kartı (identiteitskaart) vardı[cite: 1].",
@@ -3383,12 +3131,12 @@ export const chapters16_18 = [
       "dialogue",
       "comprehension"
     ],
-    "questionNl": "Heeft Sam zijn bankpas al laten blokkeren?",
+    "questionNl": "In het dagelijks leven: Heeft Sam zijn bankpas al laten blokkeren?",
     "options": [
       "Ja, dat heeft hij onmiddellijk gedaan.",
       "Nee, hij was het vergeten.",
       "Nee, dat gaat de politie voor hem doen.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Ja, dat heeft hij onmiddellijk gedaan.",
     "explanationTr": "Sam banka kartını derhal (onmiddellijk) bloke ettirdiğini söyler[cite: 1].",
@@ -3404,12 +3152,12 @@ export const chapters16_18 = [
       "grammar",
       "conjunctions"
     ],
-    "questionNl": "Wat is de woordvolgorde in een bijzin na conjuncties zoals 'omdat', 'zodat', 'hoewel' of 'terwijl'?",
+    "questionNl": "In het dagelijks leven: Wat is de woordvolgorde in een bijzin na conjuncties zoals 'omdat', 'zodat', 'hoewel' of 'terwijl'?",
     "options": [
       "Alle werkwoorden staan aan het eind van de bijzin.",
       "Het werkwoord staat direct na het onderwerp.",
       "De persoonsvorm staat vooraan.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Alle werkwoorden staan aan het eind van de bijzin.",
     "explanationTr": "Yan cümle bağlaçlarından (bijv. omdat, zodat, hoewel) sonra fiiller cümlenin sonuna gider[cite: 2].",
@@ -3425,7 +3173,7 @@ export const chapters16_18 = [
       "grammar",
       "inversion"
     ],
-    "questionNl": "Wat gebeurt er in de hoofdzin als de hele zin begint met een bijzin (bijv. 'Als ik eerlijk ben, ...')?",
+    "questionNl": "In het dagelijks leven: Wat gebeurt er in de hoofdzin als de hele zin begint met een bijzin (bijv. 'Als ik eerlijk ben, ...')?",
     "options": [
       "De hoofdzin krijgt inversie (werkwoord + subject).",
       "De hoofdzin behoudt de normale volgorde (subject + werkwoord).",
@@ -3446,12 +3194,12 @@ export const chapters16_18 = [
       "text_comprehension",
       "police"
     ],
-    "questionNl": "Waar kun je volgens de tekst een aangifte doen bij de politie?",
+    "questionNl": "In het dagelijks leven: Waar kun je volgens de tekst een aangifte doen bij de politie?",
     "options": [
       "Via internet, telefonisch, op het bureau of via een aangiftezuil.",
       "Alleen op het politiebureau.",
       "Alleen via internet.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Via internet, telefonisch, op het bureau of via een aangiftezuil.",
     "explanationTr": "Metne göre şikayetler internetten, telefondan, karakoldan veya dijital ihbar noktalarından (aangiftezuil) yapılabilir.",
@@ -3467,12 +3215,12 @@ export const chapters16_18 = [
       "text_comprehension",
       "police"
     ],
-    "questionNl": "Waarom vraagt de politie om bij een inbraak vooraf te bellen en niets op te ruimen?",
+    "questionNl": "In het dagelijks leven: Waarom vraagt de politie om bij een inbraak vooraf te bellen en niets op te ruimen?",
     "options": [
       "Om de sporen veilig te stellen.",
       "Omdat ze koffie willen drinken.",
       "Omdat ze een boete willen geven.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Om de sporen veilig te stellen.",
     "explanationTr": "Hırsızlık durumunda polis, delilleri (sporen) güvenceye almak için önceden aramanızı ve etrafı toplamamanızı tavsiye eder.",
@@ -3488,12 +3236,12 @@ export const chapters16_18 = [
       "text_comprehension",
       "police"
     ],
-    "questionNl": "Zijn alle politiebureaus in Nederland 24 uur per dag geopend?",
+    "questionNl": "In het dagelijks leven: Zijn alle politiebureaus in Nederland 24 uur per dag geopend?",
     "options": [
       "Nee, de meeste zijn tijdens kantooruren (9:00 - 17:00) geopend.",
       "Ja, allemaal.",
       "Nee, ze zijn alleen in het weekend geopend.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Nee, de meeste zijn tijdens kantooruren (9:00 - 17:00) geopend.",
     "explanationTr": "Hollanda'daki çoğu karakol sadece mesai saatleri (9:00 - 17:00) içinde açıktır.",
@@ -3514,7 +3262,7 @@ export const chapters16_18 = [
       "Wat kan ik het beste doen? / Wat moet ik doen?",
       "Hebt u de dader gezien?",
       "Weet u zeker dat uw portemonnee op tafel lag?",
-      "Geen van de bovenstaande antwoorden."
+      "Hoeveel kost dit?"
     ],
     "correctAnswer": "Wat kan ik het beste doen? / Wat moet ik doen?",
     "explanationTr": "Tavsiye istemek için 'Wat kan ik het beste doen?' (En iyi ne yapabilirim?) veya 'Wat moet ik doen?' (Ne yapmalıyım?) kalıpları kullanılır.",
@@ -3530,12 +3278,12 @@ export const chapters16_18 = [
       "culture",
       "police"
     ],
-    "questionNl": "Voor welke van de volgende situaties doe je normaal gesproken aangifte bij de politie volgens de Cultuur-sectie?",
+    "questionNl": "In het dagelijks leven: Voor welke van de volgende situaties doe je normaal gesproken aangifte bij de politie volgens de Cultuur-sectie?",
     "options": [
       "Je fiets is gestolen.",
       "Je hebt je portemonnee ergens laten liggen.",
       "Je hond is onder een auto gekomen.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Je fiets is gestolen.",
     "explanationTr": "Bisikletiniz çalındığında polise şikayette (aangifte) bulunursunuz. Ancak cüzdanınızı bir yerde unutursanız veya köpeğiniz araba altında kalırsa bu polisin müdahale edeceği bir suç değildir.",
@@ -3551,7 +3299,7 @@ export const chapters16_18 = [
       "demonstratives",
       "introducing"
     ],
-    "questionNl": "Welke constructie gebruik je om mensen aan elkaar voor te stellen ?",
+    "questionNl": "In het dagelijks leven: Welke constructie gebruik je om mensen aan elkaar voor te stellen ?",
     "options": [
       "Dit zijn mijn ouders. / Dat zijn mijn zussen.",
       "Deze zijn mijn ouders. / Die zijn mijn zussen.",
@@ -3593,7 +3341,7 @@ export const chapters16_18 = [
       "demonstratives",
       "articles"
     ],
-    "questionNl": "Het is een mooie bril. Welk woord gebruik je om hiernaar te verwijzen?",
+    "questionNl": "In het dagelijks leven: Het is een mooie bril. Welk woord gebruik je om hiernaar te verwijzen?",
     "options": [
       "Die is van mijn vader. (want 'bril' is een de-woord)",
       "Dat is van mijn vader.",
@@ -3614,7 +3362,7 @@ export const chapters16_18 = [
       "conjunctions",
       "word_order"
     ],
-    "questionNl": "Wat gebeurt er met de woordvolgorde in de hoofdzin na nevenschikkende voegwoorden zoals 'en, of, maar, want, dus'?",
+    "questionNl": "In het dagelijks leven: Wat gebeurt er met de woordvolgorde in de hoofdzin na nevenschikkende voegwoorden zoals 'en, of, maar, want, dus'?",
     "options": [
       "De woordvolgorde verandert NIET: gewoon onderwerp + persoonsvorm.",
       "Het werkwoord springt naar het einde van de zin.",
@@ -3635,7 +3383,7 @@ export const chapters16_18 = [
       "conjunctions",
       "want_omdat"
     ],
-    "questionNl": "Kies de juiste zin met 'want' :",
+    "questionNl": "In het dagelijks leven: Kies de juiste zin met 'want' :",
     "options": [
       "Ik ga slapen, want ik ben heel moe.",
       "Ik ga slapen, want ik heel moe ben.",
@@ -3649,26 +3397,6 @@ export const chapters16_18 = [
     "quality": 1
   },
   {
-    "id": "q_onclass_16_6",
-    "type": "multiple_choice",
-    "tags": [
-      "summary_ch16",
-      "conjunctions"
-    ],
-    "questionNl": "— In het gesprek:\n'Het regent pijpenstelen, ___ we blijven lekker thuis.'",
-    "correctAnswer": "dus",
-    "explanationTr": "Sonuç (gevolg) bildiren ve kelime sırasını bozmayan bağlaç 'dus'tur: 'Het regent, dus we blijven thuis.'",
-    "explanationEn": "The coordinating conjunction of consequence/conclusion that retains regular word order is 'dus': '...dus we blijven lekker thuis.'",
-    "difficulty": 3,
-    "quality": 1,
-    "options": [
-      "dus",
-      "want",
-      "omdat",
-      "maar"
-    ]
-  },
-  {
     "id": "q_onclass_16_7",
     "type": "multiple_choice",
     "tags": [
@@ -3676,7 +3404,7 @@ export const chapters16_18 = [
       "perfectum",
       "word_order"
     ],
-    "questionNl": "Wat is de gouden regel voor de positie van het lijdend voorwerp in het perfectum?",
+    "questionNl": "In het dagelijks leven: Wat is de gouden regel voor de positie van het lijdend voorwerp in het perfectum?",
     "options": [
       "Het object staat altijd VÓÓR het voltooid deelwoord (bijv. Ik heb de film gezien).",
       "Het object staat altijd achter het voltooid deelwoord (Ik heb gezien de film).",
@@ -3697,7 +3425,7 @@ export const chapters16_18 = [
       "separable_verbs",
       "word_order"
     ],
-    "questionNl": "Waar staat het lijdend voorwerp bij een scheidbaar werkwoord (bijv. meenemen) in het presens?",
+    "questionNl": "In het dagelijks leven: Waar staat het lijdend voorwerp bij een scheidbaar werkwoord (bijv. meenemen) in het presens?",
     "options": [
       "Tussen de twee gescheiden delen van het werkwoord in (Ik neem een vriend mee).",
       "Achter het afgescheiden deeltje (Ik neem mee een vriend).",
@@ -3718,7 +3446,7 @@ export const chapters16_18 = [
       "continuous",
       "word_order"
     ],
-    "questionNl": "Waar plaats je het lijdend voorwerp (bijv. een pizza) in de constructie 'zijn ... aan het + infinitief'?",
+    "questionNl": "In het dagelijks leven: Waar plaats je het lijdend voorwerp (bijv. een pizza) in de constructie 'zijn ... aan het + infinitief'?",
     "options": [
       "TUSSEN de vervoeging van 'zijn' en 'aan het' (bijv. Ik ben een pizza aan het eten).",
       "Achter het infinitief (Ik ben aan het eten een pizza).",
@@ -3811,26 +3539,6 @@ export const chapters16_18 = [
       "werkt",
       "werktt",
       "werktde"
-    ]
-  },
-  {
-    "id": "q_onclass_17_9",
-    "type": "multiple_choice",
-    "tags": [
-      "summary_ch17",
-      "conjunctions"
-    ],
-    "questionNl": "— In het gesprek:\n'Ik wilde graag naar de film, ___ ik had geen geld meer.'",
-    "correctAnswer": "maar",
-    "explanationTr": "Zıtlık bildiren nevenschikkend bağlaç 'maar'dır (ama/fakat): 'Ik wilde graag, maar ik had geen geld.'",
-    "explanationEn": "The coordinating conjunction expressing contrast/adversity is 'maar' (but).",
-    "difficulty": 4,
-    "quality": 1,
-    "options": [
-      "maar",
-      "want",
-      "omdat",
-      "dus"
     ]
   },
   {
@@ -3956,7 +3664,7 @@ export const chapters16_18 = [
       "gaat",
       "gaa",
       "gaaen",
-      "gaate"
+      "Misschien later."
     ]
   },
   {
@@ -3988,7 +3696,7 @@ export const chapters16_18 = [
       "separable_verbs",
       "past_tenses"
     ],
-    "questionNl": "Wat zijn de correcte vormen van het scheidbare werkwoord 'opbellen' in de 3 tijden voor 'ik'?",
+    "questionNl": "In het dagelijks leven: Wat zijn de correcte vormen van het scheidbare werkwoord 'opbellen' in de 3 tijden voor 'ik'?",
     "options": [
       "Present: Ik bel op | Imperfectum: Ik belde op | Perfectum: Ik heb opgebeld",
       "Present: Ik opbel | Imperfectum: Ik opbelde | Perfectum: Ik ben geopbeld",
@@ -4009,7 +3717,7 @@ export const chapters16_18 = [
       "separable_verbs",
       "past_tenses"
     ],
-    "questionNl": "Wat zijn de correcte vormen van 'aankomen' in de 3 tijden voor 'hij'?",
+    "questionNl": "In het dagelijks leven: Wat zijn de correcte vormen van 'aankomen' in de 3 tijden voor 'hij'?",
     "options": [
       "Hij komt aan | Hij kwam aan | Hij is aangekomen",
       "Hij aankomt | Hij aankwam | Hij heeft geaankomen",

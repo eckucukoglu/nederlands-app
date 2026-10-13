@@ -133,7 +133,7 @@ export const chapters11_15 = [
       "Heb je een papier bij je?",
       "Heb je een papier bij me?",
       "Heb je een papier bij zich?",
-      "Geen van de bovenstaande antwoorden."
+      "Hoeveel kost dit?"
     ],
     "correctAnswer": "Heb je een papier bij je?",
     "explanationTr": "'jij/je' öznesi için 'bij je' kalıbı kullanılır.",
@@ -343,7 +343,7 @@ export const chapters11_15 = [
     "difficulty": 4,
     "quality": 2,
     "options": [
-      "vergiste",
+      "Misschien later.",
       "vergis",
       "vergist",
       "was"
@@ -356,7 +356,7 @@ export const chapters11_15 = [
       "summary_ch12",
       "reflexive_verbs"
     ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Vertaal 'to get prepared / ready' naar het Nederlands met een reflexief werkwoord: zich ___'",
+    "questionNl": "— In het dagelijks contact:\n'Hoe zeg je 'to get prepared / ready' in correct Nederlands?'",
     "correctAnswer": "voorbereiden",
     "explanationTr": "'zich voorbereiden' hazırlanmak demektir.",
     "explanationEn": "'to get prepared/ready' translates to 'zich voorbereiden'.",
@@ -377,12 +377,12 @@ export const chapters11_15 = [
       "separable_verbs",
       "word_order"
     ],
-    "questionNl": "Wat gebeurt er met het eerste deel van een scheidbaar werkwoord in een zin met een vervoegd werkwoord ?",
+    "questionNl": "In het dagelijks leven: Wat gebeurt er met het eerste deel van een scheidbaar werkwoord in een zin met een vervoegd werkwoord ?",
     "options": [
       "Het eerste deel gaat naar het einde van de zin.",
       "Het blijft vooraan vastplakken.",
       "Het verdwijnt helemaal.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Het eerste deel gaat naar het einde van de zin.",
     "explanationTr": "Çekimli fiil yapılarında ayrılabilen fiilin ilk parçası (in-) cümlenin en sonuna gider.",
@@ -440,12 +440,12 @@ export const chapters11_15 = [
       "separable_verbs",
       "perfectum"
     ],
-    "questionNl": "Hoe is de perfectum vorm van 'in-stappen'?",
+    "questionNl": "In het dagelijks leven: Hoe is de perfectum vorm van 'in-stappen'?",
     "options": [
       "hij is bij het station ingestapt",
       "hij heeft ingestapt zijn",
       "hij stapte in",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "hij is bij het station ingestapt",
     "explanationTr": "'in-stappen' hareket/konum içerdiği ve 'zijn' aldığı için 'ingestapt' olarak kurulur.",
@@ -466,7 +466,7 @@ export const chapters11_15 = [
       "instappen (blijft heel en aan het einde)",
       "stapt in",
       "in stapt",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "instappen (blijft heel en aan het einde)",
     "explanationTr": "Modal fiil (kunt) olduğunda ayrılabilen fiil ayrılmaz ve mastar halinde sonda yer alır: instappen.",
@@ -487,7 +487,7 @@ export const chapters11_15 = [
       "Pardon, mag ik u iets vragen?",
       "Waar is de wc?",
       "Kunt u mij helpen?",
-      "Geen van de bovenstaande antwoorden."
+      "Hoeveel kost dit?"
     ],
     "correctAnswer": "Pardon, mag ik u iets vragen?",
     "explanationTr": "Biriyle konuşmaya başlarken 'Pardon, mag ik u iets vragen?' denir.",
@@ -503,7 +503,7 @@ export const chapters11_15 = [
       "directions",
       "phrases"
     ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Vertaal 'Can you help me?' naar het Nederlands: Kunt u mij ___?'",
+    "questionNl": "— In het dagelijks contact:\n'Hoe zeg je 'Can you help me?' in correct Nederlands?'",
     "correctAnswer": "helpen",
     "explanationTr": "'Yardım edebilir misiniz?' sorusu 'Kunt u mij helpen?' şeklindedir.",
     "explanationEn": "'Can you help me?' translates to 'Kunt u mij helpen?'.",
@@ -524,7 +524,7 @@ export const chapters11_15 = [
       "directions",
       "phrases"
     ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Vertaal 'I am looking for...' naar het Nederlands: Ik ___'",
+    "questionNl": "— In het dagelijks contact:\n'Hoe zeg je 'I am looking for...' in correct Nederlands?'",
     "correctAnswer": "zoek",
     "explanationTr": "'Arıyorum' anlamındaki fiil 'zoeken'dir ('Ik zoek...').",
     "explanationEn": "'I am looking for...' translates to 'Ik zoek...'.",
@@ -550,7 +550,7 @@ export const chapters11_15 = [
       "Zijn er hier ook ergens tolletten?",
       "Waar is de bus?",
       "Is dat ver?",
-      "Geen van de bovenstaande antwoorden."
+      "Hoeveel kost dit?"
     ],
     "correctAnswer": "Zijn er hier ook ergens tolletten?",
     "explanationTr": "Tuvalet sormak için 'Zijn er hier ook ergens toiletten?' kalıbı kullanılır.",
@@ -570,7 +570,7 @@ export const chapters11_15 = [
       "Welke bus of tram moet ik nemen?",
       "Waar is de bushalte?",
       "Is dat ver?",
-      "Geen van de bovenstaande antwoorden."
+      "Hoeveel kost dit?"
     ],
     "correctAnswer": "Welke bus of tram moet ik nemen?",
     "explanationTr": "Hangi araca binmeniz gerektiğini öğrenmek için 'Welke bus of tram moet ik nemen?' denir.",
@@ -586,7 +586,7 @@ export const chapters11_15 = [
       "directions",
       "phrases"
     ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Vertaal 'again / one more time' naar het Nederlands: nog een ___'",
+    "questionNl": "— In het dagelijks contact:\n'Hoe zeg je 'again / one more time' in correct Nederlands?'",
     "correctAnswer": "keer",
     "explanationTr": "'Bir kez daha / yeniden' anlamı 'nog een keer' ile sağlanır.",
     "explanationEn": "'again / one more time' translates to 'nog een keer'.",
@@ -607,12 +607,12 @@ export const chapters11_15 = [
       "directions",
       "vocabulary"
     ],
-    "questionNl": "Hoe sluit je een gesprek na hulp of een routebeschrijving netjes af?",
+    "questionNl": "In het dagelijks leven: Hoe sluit je een gesprek na hulp of een routebeschrijving netjes af?",
     "options": [
       "Dank u wel. / Bedankt voor uw hulp.",
       "Tot ziens op straat.",
       "Waar is het station?",
-      "Geen van de bovenstaande antwoorden."
+      "Hoeveel kost dit?"
     ],
     "correctAnswer": "Dank u wel. / Bedankt voor uw hulp.",
     "explanationTr": "Yardım alındıktan sonra 'Dank u wel' veya 'Bedankt voor uw hulp' ile teşekkür edilir.",
@@ -627,12 +627,12 @@ export const chapters11_15 = [
       "summary_ch12",
       "dialogue_ch12"
     ],
-    "questionNl": "Waar is Kirsten aan het begin van de dialoog van hoofdstuk 12?",
+    "questionNl": "In het dagelijks leven: Waar is Kirsten aan het begin van de dialoog van hoofdstuk 12?",
     "options": [
       "Kirsten is op het station.",
       "Kirsten is in de supermarkt.",
       "Kirsten is in het kantoor.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Kirsten is op het station.",
     "explanationTr": "Diyalog notlarına göre Kirsten istasyondadır ('Kirsten is op het station').",
@@ -647,12 +647,12 @@ export const chapters11_15 = [
       "summary_ch12",
       "dialogue_ch12"
     ],
-    "questionNl": "Wat vraagt Kirsten aan de buschauffeur in de dialoog?",
+    "questionNl": "In het dagelijks leven: Wat vraagt Kirsten aan de buschauffeur in de dialoog?",
     "options": [
       "Zij vraagt of zij met de tram kan lopen / of welke lijn naar de eventhal gaat.",
       "Hoeveel een ticket kost.",
       "Waar de wc is.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Zij vraagt of zij met de tram kan lopen / of welke lijn naar de eventhal gaat.",
     "explanationTr": "Kirsten otobüs şoförüne etkinlik salonuna (eventhal) nasıl gideceğini sorar.",
@@ -667,12 +667,12 @@ export const chapters11_15 = [
       "summary_ch12",
       "dialogue_ch12"
     ],
-    "questionNl": "Waar is de wandelbeurs in de stad volgens de dialoog?",
+    "questionNl": "In het dagelijks leven: Waar is de wandelbeurs in de stad volgens de dialoog?",
     "options": [
       "In hal drie (in hal drle).",
       "Op het station.",
       "Boven en beneden.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "In hal drie (in hal drle).",
     "explanationTr": "Yürüyüş fuarı (wandelbeurs) 3. haldedir.",
@@ -692,7 +692,7 @@ export const chapters11_15 = [
       "de portier",
       "de buschauffeur",
       "de politie",
-      "de buschauffeurer"
+      "de tafel"
     ],
     "correctAnswer": "de portier",
     "explanationTr": "Notlarda portierin (kapıcı/görevli) bilgi verdiği geçer.",
@@ -708,7 +708,7 @@ export const chapters11_15 = [
       "grammar",
       "object_pronouns"
     ],
-    "questionNl": "Welk objectpronomen gebruik je voor een de-woord in de accusatief (bijv. de deur)?",
+    "questionNl": "In het dagelijks leven: Welk objectpronomen gebruik je voor een de-woord in de accusatief (bijv. de deur)?",
     "options": [
       "hem",
       "het",
@@ -729,7 +729,7 @@ export const chapters11_15 = [
       "grammar",
       "object_pronouns"
     ],
-    "questionNl": "Welk objectpronomen gebruik je voor een het-woord (bijv. het huis)?",
+    "questionNl": "In het dagelijks leven: Welk objectpronomen gebruik je voor een het-woord (bijv. het huis)?",
     "options": [
       "het",
       "hem",
@@ -750,7 +750,7 @@ export const chapters11_15 = [
       "grammar",
       "object_pronouns"
     ],
-    "questionNl": "Welk objectpronomen gebruik je voor meerdere objecten / meervoud (bijv. de glazen)?",
+    "questionNl": "In het dagelijks leven: Welk objectpronomen gebruik je voor meerdere objecten / meervoud (bijv. de glazen)?",
     "options": [
       "ze",
       "hem",
@@ -833,12 +833,12 @@ export const chapters11_15 = [
       "summary_ch12",
       "reflexive_verbs"
     ],
-    "questionNl": "Wat is de juiste vervoeging van 'zich vergissen' voor 'hij'?",
+    "questionNl": "In het dagelijks leven: Wat is de juiste vervoeging van 'zich vergissen' voor 'hij'?",
     "options": [
       "hij vergist zich",
       "hij vergist me",
       "hij vergissen zich",
-      "hij vergist zicher"
+      "Misschien later."
     ],
     "correctAnswer": "hij vergist zich",
     "explanationTr": "3. tekil şahıs 'hij' için 'vergist zich' kullanılır.",
@@ -853,12 +853,12 @@ export const chapters11_15 = [
       "summary_ch12",
       "reflexive_verbs"
     ],
-    "questionNl": "Wat is de juiste vervoeging van 'zich vergissen' voor 'wij'?",
+    "questionNl": "In het dagelijks leven: Wat is de juiste vervoeging van 'zich vergissen' voor 'wij'?",
     "options": [
       "wij vergissen ons",
       "wij vergissen zich",
       "wij vergist me",
-      "wij vergissen onser"
+      "Misschien later."
     ],
     "correctAnswer": "wij vergissen ons",
     "explanationTr": "'wij' öznesi için dönüşlü zamir 'ons'tur: wij vergissen ons.",
@@ -893,7 +893,7 @@ export const chapters11_15 = [
       "summary_ch12",
       "separable_verbs"
     ],
-    "questionNl": "Waar staat het eerste deel van een scheidbaar werkwoord als het werkwoord vervoegd is in de zin?",
+    "questionNl": "In het dagelijks leven: Waar staat het eerste deel van een scheidbaar werkwoord als het werkwoord vervoegd is in de zin?",
     "options": [
       "Aan het einde van de zin",
       "Direct voor het subject",
@@ -918,7 +918,7 @@ export const chapters11_15 = [
       "Nee, dat is niet ver. / Het is dichtbij.",
       "Ja, het is heel ver.",
       "Ik weet het niet.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Nee, dat is niet ver. / Het is dichtbij.",
     "explanationTr": "Uzak değilse 'Nee, dat is niet ver' veya 'Het is dichtbij' denir.",
@@ -947,26 +947,6 @@ export const chapters11_15 = [
     ]
   },
   {
-    "id": "sum_ch12_049",
-    "type": "multiple_choice",
-    "tags": [
-      "summary_ch12",
-      "directions"
-    ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Vertaal de route-instructie 'straight ahead' naar het Nederlands: ___'",
-    "correctAnswer": "rechtdoor",
-    "explanationTr": "'Dosdoğru / dümdüz' anlamındaki tarif kelimesi 'rechtdoor'dur.",
-    "explanationEn": "'straight ahead' translates to 'rechtdoor'.",
-    "difficulty": 3,
-    "quality": 1,
-    "options": [
-      "rechtdoor",
-      "niet rechtdoor",
-      "geen rechtdoor",
-      "wel rechtdoor"
-    ]
-  },
-  {
     "id": "sum_ch13_001",
     "type": "multiple_choice",
     "tags": [
@@ -979,7 +959,7 @@ export const chapters11_15 = [
       "Weet je waar het station is?",
       "Waar is het station?",
       "Ken je het station?",
-      "Geen van de bovenstaande antwoorden."
+      "Hoeveel kost dit?"
     ],
     "correctAnswer": "Weet je waar het station is?",
     "explanationTr": "'Weet je waar...' kalıbı 'Biliyor musun nerede...?' anlamı verir.",
@@ -1000,7 +980,7 @@ export const chapters11_15 = [
       "Kan je herhalen?",
       "Wat zeg je?",
       "Spreek je Engels?",
-      "Geen van de bovenstaande antwoorden."
+      "Hoeveel kost dit?"
     ],
     "correctAnswer": "Kan je herhalen?",
     "explanationTr": "'Tekrar edebilir misin?' sorusu 'Kan je herhalen?' şeklindedir.",
@@ -1016,12 +996,12 @@ export const chapters11_15 = [
       "perfectum",
       "separable_verbs"
     ],
-    "questionNl": "Wat is de juiste voltooid deelwoord vorm van het werkwoord 'aan-komen' ?",
+    "questionNl": "In het dagelijks leven: Wat is de juiste voltooid deelwoord vorm van het werkwoord 'aan-komen' ?",
     "options": [
       "Ik ben aangekomen.",
       "Ik heb aangekomen.",
       "Ik ben aangekom.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Ik ben aangekomen.",
     "explanationTr": "'aan-komen' hareket bildirdiği için 'zijn' ile çekimlenir ve 'aangekomen' olur.",
@@ -1079,12 +1059,12 @@ export const chapters11_15 = [
       "small_talk",
       "vocabulary"
     ],
-    "questionNl": "Wat drukt het woord 'gelukkig' uit als reactie in een gesprek?",
+    "questionNl": "In het dagelijks leven: Wat drukt het woord 'gelukkig' uit als reactie in een gesprek?",
     "options": [
       "An expression of relief (Thank God!)",
       "Extreme anger",
       "Total confusion",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "An expression of relief (Thank God!)",
     "explanationTr": "'gelukkig' (şükürler olsun / neyse ki) rahatlama (relief) ifade eder.",
@@ -1105,7 +1085,7 @@ export const chapters11_15 = [
       "Alsjeblieft, ik heb iets voor jullie meegenomen.",
       "Waar is mijn cadeau?",
       "Ik heb niets meegenomen.",
-      "Geen van de bovenstaande antwoorden."
+      "Hoeveel kost dit?"
     ],
     "correctAnswer": "Alsjeblieft, ik heb iets voor jullie meegenomen.",
     "explanationTr": "Hediye veya ikram verirken bu kalıp kullanılır.",
@@ -1126,7 +1106,7 @@ export const chapters11_15 = [
       "Ja, lekker hè.",
       "Nee, niet lekker.",
       "Dag dag.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Ja, lekker hè.",
     "explanationTr": "İkram beğenildiğinde onaylamak için 'Ja, lekker hè' denir.",
@@ -1143,7 +1123,7 @@ export const chapters11_15 = [
       "grammar",
       "word_order"
     ],
-    "questionNl": "Wat is de juiste zinsstructuur bij het gebruik van 'zal / zullen' met een hoofdwerkwoord?",
+    "questionNl": "In het dagelijks leven: Wat is de juiste zinsstructuur bij het gebruik van 'zal / zullen' met een hoofdwerkwoord?",
     "options": [
       "Onderwerp + zullen/zal + rest + infinitief",
       "Onderwerp + infinitief + zullen",
@@ -1164,7 +1144,7 @@ export const chapters11_15 = [
       "zullen",
       "grammar"
     ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Vertaal 'I will cut the flowers diagonally' naar het Nederlands: Ik zal de bloemen schuin ___'",
+    "questionNl": "— In het dagelijks contact:\n'Hoe zeg je 'I will cut the flowers diagonally' in correct Nederlands?'",
     "correctAnswer": "afsnijden",
     "explanationTr": "Asıl fiil 'afsnijden' cümlenin sonunda mastar halindedir.",
     "explanationEn": "The main verb 'afsnijden' stays in the infinitive at the end.",
@@ -1185,7 +1165,7 @@ export const chapters11_15 = [
       "zullen",
       "grammar"
     ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Vertaal 'We will buy a gift' naar het Nederlands: We zullen een cadeau ___'",
+    "questionNl": "— In het dagelijks contact:\n'Hoe zeg je 'We will buy a gift' in correct Nederlands?'",
     "correctAnswer": "kopen",
     "explanationTr": "Özne 'We', yardımcı fiil 'zullen', asıl eylem sonda 'kopen'.",
     "explanationEn": "Subject 'We', auxiliary 'zullen', main verb at the end 'kopen'.",
@@ -1206,7 +1186,7 @@ export const chapters11_15 = [
       "zullen",
       "grammar"
     ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Vertaal 'I will write down the address' naar het Nederlands: Ik zal het adres even ___'",
+    "questionNl": "— In het dagelijks contact:\n'Hoe zeg je 'I will write down the address' in correct Nederlands?'",
     "correctAnswer": "opschrijven",
     "explanationTr": "Asıl fiil 'opschrijven' en sonda yer alır.",
     "explanationEn": "The main verb 'opschrijven' is placed at the end.",
@@ -1227,7 +1207,7 @@ export const chapters11_15 = [
       "zullen",
       "grammar"
     ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Vertaal 'We will bring the vacation photos' naar het Nederlands: We zullen de vakantiefoto's ___'",
+    "questionNl": "— In het dagelijks contact:\n'Hoe zeg je 'We will bring the vacation photos' in correct Nederlands?'",
     "correctAnswer": "meebrengen",
     "explanationTr": "Asıl fiil 'meebrengen' sonda mastar kalır.",
     "explanationEn": "The main verb 'meebrengen' stays as an infinitive at the end.",
@@ -1248,7 +1228,7 @@ export const chapters11_15 = [
       "zullen",
       "grammar"
     ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Vertaal 'I will check the computer for a moment' naar het Nederlands: Ik zal even op de computer ___'",
+    "questionNl": "— In het dagelijks contact:\n'Hoe zeg je 'I will check the computer for a moment' in correct Nederlands?'",
     "correctAnswer": "kijken",
     "explanationTr": "Asıl fiil 'kijken' cümlenin sonundadır.",
     "explanationEn": "The main verb 'kijken' is at the end of the sentence.",
@@ -1269,7 +1249,7 @@ export const chapters11_15 = [
       "zullen",
       "grammar"
     ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Vertaal 'We will make a new appointment' naar het Nederlands: We zullen een nieuwe afspraak ___'",
+    "questionNl": "— In het dagelijks contact:\n'Hoe zeg je 'We will make a new appointment' in correct Nederlands?'",
     "correctAnswer": "maken",
     "explanationTr": "Asıl fiil 'maken' en sondadır.",
     "explanationEn": "The main verb 'maken' is at the very end.",
@@ -1290,7 +1270,7 @@ export const chapters11_15 = [
       "zullen",
       "grammar"
     ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Vertaal 'We will fix your bike again' naar het Nederlands: We zullen uw fiets weer in orde ___'",
+    "questionNl": "— In het dagelijks contact:\n'Hoe zeg je 'We will fix your bike again' in correct Nederlands?'",
     "correctAnswer": "maken",
     "explanationTr": "'in orde maken' ifadesindeki asıl fiil 'maken' sondadır.",
     "explanationEn": "The main verb 'maken' is at the end.",
@@ -1311,7 +1291,7 @@ export const chapters11_15 = [
       "zullen",
       "grammar"
     ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Vertaal 'I will bring the menu' naar het Nederlands: Ik zal de menukaart ___'",
+    "questionNl": "— In het dagelijks contact:\n'Hoe zeg je 'I will bring the menu' in correct Nederlands?'",
     "correctAnswer": "brengen",
     "explanationTr": "Asıl fiil 'brengen' en sondadır.",
     "explanationEn": "The main verb 'brengen' is at the end.",
@@ -1332,7 +1312,7 @@ export const chapters11_15 = [
       "zullen",
       "grammar"
     ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Vertaal 'We will also ask the neighbors' naar het Nederlands: We zullen de buren ook ___'",
+    "questionNl": "— In het dagelijks contact:\n'Hoe zeg je 'We will also ask the neighbors' in correct Nederlands?'",
     "correctAnswer": "vragen",
     "explanationTr": "Asıl fiil 'vragen' sondadır.",
     "explanationEn": "The main verb 'vragen' is at the end.",
@@ -1353,12 +1333,12 @@ export const chapters11_15 = [
       "opinions",
       "vocabulary"
     ],
-    "questionNl": "Welke twee patronen kun je gebruiken om naar iemands mening te vragen?",
+    "questionNl": "In het dagelijks leven: Welke twee patronen kun je gebruiken om naar iemands mening te vragen?",
     "options": [
       "Wat vind je van...? / Hoe vind je ...?",
       "Waar woon je? / Wat is je naam?",
       "Wie ben jij? / Hoe laat is het?",
-      "Geen van de bovenstaande antwoorden."
+      "Hoeveel kost dit?"
     ],
     "correctAnswer": "Wat vind je van...? / Hoe vind je ...?",
     "explanationTr": "Meydan/fikir sormak için 'Wat vind je van...?' veya 'Hoe vind je...?' kalıpları kullanılır.",
@@ -1374,12 +1354,12 @@ export const chapters11_15 = [
       "opinions",
       "vocabulary"
     ],
-    "questionNl": "Welke patronen kun je gebruiken om je eigen mening te geven?",
+    "questionNl": "In het dagelijks leven: Welke patronen kun je gebruiken om je eigen mening te geven?",
     "options": [
       "Ik vind [...] / Volgens mij ...",
       "Ik ben jarig / Ik woon in...",
       "Zullen we...?",
-      "Geen van de bovenstaande antwoorden."
+      "Hoeveel kost dit?"
     ],
     "correctAnswer": "Ik vind [...] / Volgens mij ...",
     "explanationTr": "Fikir belirtirken 'Ik vind [sıfat/nesne]' veya 'Volgens mij ...' kalıpları seçilir.",
@@ -1400,7 +1380,7 @@ export const chapters11_15 = [
       "Ik vind de kat leuk.",
       "Ik ben de kat.",
       "Ik hou van de kat niet.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Ik vind de kat leuk.",
     "explanationTr": "Fikir ifade ederken 'Ik vind de kat leuk' denir.",
@@ -1416,7 +1396,7 @@ export const chapters11_15 = [
       "opinions",
       "vocabulary"
     ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Vertaal 'I find the movie interesting' naar het Nederlands: Ik vind de film ___'",
+    "questionNl": "— In het dagelijks contact:\n'Hoe zeg je 'I find the movie interesting' in correct Nederlands?'",
     "correctAnswer": "interessant",
     "explanationTr": "'interessant' ilginç/enteresan demektir.",
     "explanationEn": "'interessant' means interesting.",
@@ -1426,7 +1406,7 @@ export const chapters11_15 = [
       "interessant",
       "interessan",
       "interessanen",
-      "interessante"
+      "Misschien later."
     ]
   },
   {
@@ -1442,7 +1422,7 @@ export const chapters11_15 = [
       "Ja, dat vind ik ook.",
       "Nee, dat vind ik niet.",
       "Ik weet het niet.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Ja, dat vind ik ook.",
     "explanationTr": "Aynı fikirde olduğunuzu belirtmek için 'Ja, dat vind ik ook' denir.",
@@ -1463,7 +1443,7 @@ export const chapters11_15 = [
       "Nee, dat vind ik niet.",
       "Ja, dat vind ik ook.",
       "Dat is goed.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Nee, dat vind ik niet.",
     "explanationTr": "Aynı fikirde olmadığını belirtmek için 'Nee, dat vind ik niet' denir.",
@@ -1479,12 +1459,12 @@ export const chapters11_15 = [
       "phonetics",
       "minimal_pairs"
     ],
-    "questionNl": "Hoe luidt de fonetische regel voor de klank 'ui' volgens het overzicht?",
+    "questionNl": "In het dagelijks leven: Hoe luidt de fonetische regel voor de klank 'ui' volgens het overzicht?",
     "options": [
       "ui = a + ü",
       "ui = o + i",
       "ui = e + i",
-      "geen van deze"
+      "Misschien later."
     ],
     "correctAnswer": "ui = a + ü",
     "explanationTr": "'ui' sesi 'a' ve 'ü' seslerinin birleşiminden oluşur.",
@@ -1500,12 +1480,12 @@ export const chapters11_15 = [
       "phonetics",
       "minimal_pairs"
     ],
-    "questionNl": "Wat is het verschil in betekenis tussen de minimale paarwoorden 'man' en 'maan'?",
+    "questionNl": "In het dagelijks leven: Wat is het verschil in betekenis tussen de minimale paarwoorden 'man' en 'maan'?",
     "options": [
       "man = man, maan = moon",
       "man = moon, maan = man",
       "man = bad, maan = good",
-      "Geen van de bovenstaande antwoorden."
+      "Misschien later."
     ],
     "correctAnswer": "man = man, maan = moon",
     "explanationTr": "'man' adam/insan, 'maan' ise ay (moon) demektir.",
@@ -1521,12 +1501,12 @@ export const chapters11_15 = [
       "phonetics",
       "minimal_pairs"
     ],
-    "questionNl": "Wat is het verschil in betekenis tussen 'bed' en 'beet'?",
+    "questionNl": "In het dagelijks leven: Wat is het verschil in betekenis tussen 'bed' en 'beet'?",
     "options": [
       "bed = bed, beet = bite",
       "bed = bite, beet = bed",
       "bed = bad, beet = good",
-      "bed = bite, beet = beder"
+      "Misschien later."
     ],
     "correctAnswer": "bed = bed, beet = bite",
     "explanationTr": "'bed' yatak, 'beet' ise ısırık (bite) demektir.",
@@ -1542,12 +1522,12 @@ export const chapters11_15 = [
       "phonetics",
       "minimal_pairs"
     ],
-    "questionNl": "Wat is het verschil in betekenis tussen 'bos' en 'boos'?",
+    "questionNl": "In het dagelijks leven: Wat is het verschil in betekenis tussen 'bos' en 'boos'?",
     "options": [
       "bos = forest/woods, boos = angry",
       "bos = angry, boos = forest",
       "bos = box, boos = boat",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "bos = forest/woods, boos = angry",
     "explanationTr": "'bos' orman/koruluk, 'boos' ise kızgın/öfkeli (angry) demektir.",
@@ -1563,12 +1543,12 @@ export const chapters11_15 = [
       "phonetics",
       "minimal_pairs"
     ],
-    "questionNl": "Wat is het verschil in betekenis tussen 'put' en 'puur'?",
+    "questionNl": "In het dagelijks leven: Wat is het verschil in betekenis tussen 'put' en 'puur'?",
     "options": [
       "put = well/pit, puur = pure",
       "put = pure, puur = well",
       "put = poor, puur = rich",
-      "put = pure, puur = weller"
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "put = well/pit, puur = pure",
     "explanationTr": "'put' kuyu/çukur, 'puur' ise saf/katıksız (pure) demektir.",
@@ -1584,12 +1564,12 @@ export const chapters11_15 = [
       "phonetics",
       "minimal_pairs"
     ],
-    "questionNl": "Wat is het verschil in betekenis tussen 'vis' en 'vies'?",
+    "questionNl": "In het dagelijks leven: Wat is het verschil in betekenis tussen 'vis' en 'vies'?",
     "options": [
       "vis = fish, vies = dirty/bad/nasty",
       "vis = dirty, vies = fish",
       "vis = fast, vies = slow",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "vis = fish, vies = dirty/bad/nasty",
     "explanationTr": "'vis' balık, 'vies' ise kirli veya iğrenç/kötü (dirty/nasty) demektir (not: ie sounds like 'freeze').",
@@ -1605,12 +1585,12 @@ export const chapters11_15 = [
       "phonetics",
       "minimal_pairs"
     ],
-    "questionNl": "Hoe klinkt de 'ie' in het woord 'vies' volgens de notitie?",
+    "questionNl": "In het dagelijks leven: Hoe klinkt de 'ie' in het woord 'vies' volgens de notitie?",
     "options": [
       "like 'freeze'",
       "like 'bed'",
       "like 'man'",
-      "geen van deze"
+      "Misschien later."
     ],
     "correctAnswer": "like 'freeze'",
     "explanationTr": "Notlarda 'ie is like freeze' şeklinde telaffuz ipucu verilmiştir.",
@@ -1626,12 +1606,12 @@ export const chapters11_15 = [
       "phonetics",
       "minimal_pairs"
     ],
-    "questionNl": "Wat is het verschil in betekenis tussen 'reis' en 'reus'?",
+    "questionNl": "In het dagelijks leven: Wat is het verschil in betekenis tussen 'reis' en 'reus'?",
     "options": [
       "reis = trip/travel, reus = giant",
       "reis = giant, reus = trip",
       "reis = rice, reus = rose",
-      "reis = trip/travel, reus = gianter"
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "reis = trip/travel, reus = giant",
     "explanationTr": "'reis' seyahat/gezi, 'reus' ise dev (giant) demektir.",
@@ -1647,12 +1627,12 @@ export const chapters11_15 = [
       "phonetics",
       "minimal_pairs"
     ],
-    "questionNl": "Wat is het verschil in betekenis tussen 'hout' en 'huid'?",
+    "questionNl": "In het dagelijks leven: Wat is het verschil in betekenis tussen 'hout' en 'huid'?",
     "options": [
       "hout = wood, huid = skin",
       "hout = skin, huid = wood",
       "hout = house, huid = hand",
-      "Geen van de bovenstaande antwoorden."
+      "Misschien later."
     ],
     "correctAnswer": "hout = wood, huid = skin",
     "explanationTr": "'hout' odun/tahta (wood), 'huid' ise cilt/deri (skin) demektir.",
@@ -1668,7 +1648,7 @@ export const chapters11_15 = [
       "opinions",
       "vocabulary"
     ],
-    "questionNl": "Welke vraag kun je stellen om te vragen hoe iemand over een kat denkt?",
+    "questionNl": "In het dagelijks leven: Welke vraag kun je stellen om te vragen hoe iemand over een kat denkt?",
     "options": [
       "Wat vind je van de kat? / Hoe vind je de kat?",
       "Waar is de kat?",
@@ -1688,12 +1668,12 @@ export const chapters11_15 = [
       "summary_ch14",
       "future_tense"
     ],
-    "questionNl": "Welke constructie gebruik je om een plan of voornemen in de toekomst uit te drukken?",
+    "questionNl": "In het dagelijks leven: Welke constructie gebruik je om een plan of voornemen in de toekomst uit te drukken?",
     "options": [
       "gaan + infinitief",
       "zullen + infinitief",
       "presens + tijd",
-      "Geen van de bovenstaande antwoorden."
+      "Misschien later."
     ],
     "correctAnswer": "gaan + infinitief",
     "explanationTr": "Plan veya niyet belirtmek için 'gaan + infinitief' yapısı kullanılır.",
@@ -1708,12 +1688,12 @@ export const chapters11_15 = [
       "summary_ch14",
       "future_tense"
     ],
-    "questionNl": "Wanneer gebruik je 'zullen + infinitief' in de toekomsttijd?",
+    "questionNl": "In het dagelijks leven: Wanneer gebruik je 'zullen + infinitief' in de toekomsttijd?",
     "options": [
       "Voor een minder persoonlijke voorspelling of aangekondigde gebeurtenis.",
       "Alleen voor plannen van vandaag.",
       "Voor gewone routines.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Voor een minder persoonlijke voorspelling of aangekondigde gebeurtenis.",
     "explanationTr": "'zullen + infinitief' kişisel olmayan tahminler veya duyurulan olaylar için kullanılır.",
@@ -1728,12 +1708,12 @@ export const chapters11_15 = [
       "summary_ch14",
       "future_tense"
     ],
-    "questionNl": "Hoe druk je een gewone of vaste toekomstige activiteit uit met het presens? (Bijv: 'Tomorrow I work from ten until two.')",
+    "questionNl": "In het dagelijks leven: Hoe druk je een gewone of vaste toekomstige activiteit uit met het presens? (Bijv: 'Tomorrow I work from ten until two.')",
     "options": [
       "Ik werk morgen van tien tot twee.",
       "Ik ga morgen werken van tien tot twee.",
       "Ik zal morgen werken van tien tot twee.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Ik werk morgen van tien tot twee.",
     "explanationTr": "Sabit veya alışılmış gelecek aktiviteleri için şimdiki zaman (presens) + zaman zarfı kullanılabilir.",
@@ -1749,12 +1729,12 @@ export const chapters11_15 = [
       "zullen",
       "probability"
     ],
-    "questionNl": "Wat drukt de zin uit: 'Je zult morgen wel spierpijn hebben.'?",
+    "questionNl": "In het dagelijks leven: Wat drukt de zin uit: 'Je zult morgen wel spierpijn hebben.'?",
     "options": [
       "Probability / Olasılık / Tahmin",
       "A direct order / Emir",
       "A past action / Geçmiş eylem",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Probability / Olasılık / Tahmin",
     "explanationTr": "'zullen + wel' yapısı geleceğe dair olasılık veya güçlü tahmin (probability) belirtir.",
@@ -1771,12 +1751,12 @@ export const chapters11_15 = [
       "probability",
       "word_order"
     ],
-    "questionNl": "Wat is het patroon voor een waarschijnlijkheid met 'zullen' en 'wel'?",
+    "questionNl": "In het dagelijks leven: Wat is het patroon voor een waarschijnlijkheid met 'zullen' en 'wel'?",
     "options": [
       "Onderwerp + zullen + wel + Infinitief",
       "Zullen + onderwerp + wel + Infinitief",
       "Onderwerp + wel + zullen + Infinitief",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Onderwerp + zullen + wel + Infinitief",
     "explanationTr": "Olasılık yapısında 'Onderwerp + zullen + wel + Infinitief' sıralaması izlenir.",
@@ -1791,12 +1771,12 @@ export const chapters11_15 = [
       "summary_ch14",
       "indirect_questions"
     ],
-    "questionNl": "Hoe vorm je een indirecte vraag wanneer de directe vraag een vraagwoord bevat? (Bijv: 'Waar is de balie?')",
+    "questionNl": "In het dagelijks leven: Hoe vorm je een indirecte vraag wanneer de directe vraag een vraagwoord bevat? (Bijv: 'Waar is de balie?')",
     "options": [
       "Kunt u me zeggen waar de balie is?",
       "Kunt u me zeggen waar is de balie?",
       "Weet u of waar de balie is?",
-      "Geen van de bovenstaande antwoorden."
+      "Hoeveel kost dit?"
     ],
     "correctAnswer": "Kunt u me zeggen waar de balie is?",
     "explanationTr": "Soru kelimesiyle kurulan indirect (dolaylı) sorularda fiil yan cümlenin en sonuna gider: '...waar de balie is'.",
@@ -1811,12 +1791,12 @@ export const chapters11_15 = [
       "summary_ch14",
       "indirect_questions"
     ],
-    "questionNl": "Hoe vorm je een indirecte vraag bij een ja/nee-vraag? (Bijv: 'Werkt de automaat op muntgeld?')",
+    "questionNl": "In het dagelijks leven: Hoe vorm je een indirecte vraag bij een ja/nee-vraag? (Bijv: 'Werkt de automaat op muntgeld?')",
     "options": [
       "Weet u of de automaat op muntgeld werkt?",
       "Kunt u me zeggen of werkt de automaat?",
       "Weet u waar de automaat werkt?",
-      "Geen van de bovenstaande antwoorden."
+      "Hoeveel kost dit?"
     ],
     "correctAnswer": "Weet u of de automaat op muntgeld werkt?",
     "explanationTr": "Evet/hayır sorularında dolaylı soru yaparken 'of' (whether/if) kullanılır ve fiil yine sona gider.",
@@ -1832,12 +1812,12 @@ export const chapters11_15 = [
       "indirect_questions",
       "word_order"
     ],
-    "questionNl": "Wat gebeurt er met de persoonsvorm in een indirecte vraag ?",
+    "questionNl": "In het dagelijks leven: Wat gebeurt er met de persoonsvorm in een indirecte vraag ?",
     "options": [
       "Het werkwoord gaat naar het einde van het zinsdeel.",
       "Het werkwoord blijft op de tweede plaats.",
       "Het werkwoord verdwijnt.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Het werkwoord gaat naar het einde van het zinsdeel.",
     "explanationTr": "Dolaylı sorular birer yan cümle (bijzin) niteliği taşır, bu yüzden çekimli fiil sona gider.",
@@ -1853,12 +1833,12 @@ export const chapters11_15 = [
       "gym_vocabulary",
       "dialogue_ch14"
     ],
-    "questionNl": "Waar is Paul volgens de dialoog van hoofdstuk 14?",
+    "questionNl": "In het dagelijks leven: Waar is Paul volgens de dialoog van hoofdstuk 14?",
     "options": [
       "Hij is in de gym / sportschool.",
       "Hij is op het station.",
       "Hij is thuis.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Hij is in de gym / sportschool.",
     "explanationTr": "Diyalogda Paul'ün spor salonunda (gym / sportschool) olduğu belirtilir.",
@@ -1874,12 +1854,12 @@ export const chapters11_15 = [
       "gym_vocabulary",
       "dialogue_ch14"
     ],
-    "questionNl": "Wat wil Paul doen bij de sportschool? (Lidmaatschap)",
+    "questionNl": "In het dagelijks leven: Wat wil Paul doen bij de sportschool? (Lidmaatschap)",
     "options": [
       "Hij wil lid van de sportschool worden.",
       "Hij wil zijn lidmaatschap opzeggen.",
       "Hij wil alleen de balie bekijken.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Hij wil lid van de sportschool worden.",
     "explanationTr": "Paul spor salonuna üye olmak (lid worden) istemektedir.",
@@ -1895,12 +1875,12 @@ export const chapters11_15 = [
       "gym_vocabulary",
       "dialogue_ch14"
     ],
-    "questionNl": "Waar kan Paul zich inschrijven voor de sportschool?",
+    "questionNl": "In het dagelijks leven: Waar kan Paul zich inschrijven voor de sportschool?",
     "options": [
       "Hij kan zich bij de balie inschrijven.",
       "Hij kan zich online registreren.",
       "Hij kan zich bij de ingang melden.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Hij kan zich bij de balie inschrijven.",
     "explanationTr": "Kayıt işlemlerini danışmada / resepsiyonda (bij de balie) yapabilir.",
@@ -1916,12 +1896,12 @@ export const chapters11_15 = [
       "gym_vocabulary",
       "dialogue_ch14"
     ],
-    "questionNl": "Wat is het verschil tussen een maandabonnement en een jaarabonnement?",
+    "questionNl": "In het dagelijks leven: Wat is het verschil tussen een maandabonnement en een jaarabonnement?",
     "options": [
       "Het verschil tussen een maandabonnement en een jaarabonnement is 10 procent.",
       "Er is geen prijsverschil.",
       "Een jaarabonnement is twee keer zo duur.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Het verschil tussen een maandabonnement en een jaarabonnement is 10 procent.",
     "explanationTr": "Aylık ve yıllık abonelik arasındaki fark yüzde 10'dur.",
@@ -1937,12 +1917,12 @@ export const chapters11_15 = [
       "gym_vocabulary",
       "dialogue_ch14"
     ],
-    "questionNl": "Welke speciale aanbieding heeft de sportschool?",
+    "questionNl": "In het dagelijks leven: Welke speciale aanbieding heeft de sportschool?",
     "options": [
       "De sportschool geeft 10 procent korting en een gratis t-shirt voor elk abonnement.",
       "Alleen een gratis fles water.",
       "Geen enkele korting.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "De sportschool geeft 10 procent korting en een gratis t-shirt voor elk abonnement.",
     "explanationTr": "Spor salonu her abonelik için yüzde 10 indirim ve ücretsiz tişört vermektedir.",
@@ -1958,7 +1938,7 @@ export const chapters11_15 = [
       "gym_vocabulary",
       "dialogue_ch14"
     ],
-    "questionNl": "Wat wil Paul in de sportschool gaan doen?",
+    "questionNl": "In het dagelijks leven: Wat wil Paul in de sportschool gaan doen?",
     "options": [
       "Zijn conditie verbeteren, spieren versterken en gewicht verliezen.",
       "Alleen zwemmen en ontspannen.",
@@ -1978,12 +1958,12 @@ export const chapters11_15 = [
       "summary_ch14",
       "greetings"
     ],
-    "questionNl": "Welke begroetingen en vragen worden gebruikt in de sectie 'Over koetjes en kalfjes praten'?",
+    "questionNl": "In het dagelijks leven: Welke begroetingen en vragen worden gebruikt in de sectie 'Over koetjes en kalfjes praten'?",
     "options": [
       "Hoe gaat het met je? / Wat heb je gisteren gedaan? / Heb je deze week gesport?",
       "Waar is de balie?",
       "Wat kost een maandabonnement?",
-      "Geen van de bovenstaande antwoorden."
+      "Hoeveel kost dit?"
     ],
     "correctAnswer": "Hoe gaat het met je? / Wat heb je gisteren gedaan? / Heb je deze week gesport?",
     "explanationTr": "Hâl hatır sormak ve sohbet başlatmak için bu günlük sorular kullanılır.",
@@ -2003,7 +1983,7 @@ export const chapters11_15 = [
       "O ja? Welke sport heb je gedaan? / of antwoorden over je dag",
       "Mijn adres is Utrecht.",
       "Kunt u me zeggen waar de balie is?",
-      "Geen van de bovenstaande antwoorden."
+      "Hoeveel kost dit?"
     ],
     "correctAnswer": "O ja? Welke sport heb je gedaan? / of antwoorden over je dag",
     "explanationTr": "Dünkü aktiviteler sorulduğunda gün hakkında bilgi verilir veya karşı soru sorulabilir.",
@@ -2023,7 +2003,7 @@ export const chapters11_15 = [
       "Waar is de sportschool?",
       "Kunt u me zeggen waar de sportschool is?",
       "Beide opties zijn correct.",
-      "Geen van de bovenstaande antwoorden."
+      "Hoeveel kost dit?"
     ],
     "correctAnswer": "Beide opties zijn correct.",
     "explanationTr": "Hem doğrudan 'Waar is de sportschool?' hem de dolaylı 'Kunt u me zeggen waar de sportschool is?' sorulabilir.",
@@ -2043,7 +2023,7 @@ export const chapters11_15 = [
       "Is hier een wc in de buurt? / Weet u of hier een wc in de buurt is?",
       "Waar is het station?",
       "Kan ik pinnen?",
-      "Geen van de bovenstaande antwoorden."
+      "Hoeveel kost dit?"
     ],
     "correctAnswer": "Is hier een wc in de buurt? / Weet u of hier een wc in de buurt is?",
     "explanationTr": "Tuvalet sormak için hem direkt hem indirect biçimler özet tablosunda verilmiştir.",
@@ -2059,7 +2039,7 @@ export const chapters11_15 = [
       "past_tenses",
       "perfectum"
     ],
-    "questionNl": "Wat is het voltooid deelwoord van het werkwoord 'aaien' ?",
+    "questionNl": "In het dagelijks leven: Wat is het voltooid deelwoord van het werkwoord 'aaien' ?",
     "correctAnswer": "geaaid",
     "explanationTr": "'aaien' kökü 'aai' (klinker ile biter), 'soft ketchup' kuralına göre sonuna 'd' alır: geaaid.",
     "explanationEn": "The stem of 'aaien' is 'aai' (ends in a vowel), so it takes 'd': geaaid.",
@@ -2185,7 +2165,7 @@ export const chapters11_15 = [
       "future_tense",
       "zullen"
     ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Vertaal 'Shall we make an example?' naar het Nederlands: Zullen we een voorbeeld ___?'",
+    "questionNl": "— In het dagelijks contact:\n'Hoe zeg je 'Shall we make an example?' in correct Nederlands?'",
     "correctAnswer": "maken",
     "explanationTr": "Asıl fiil 'maken' en sonda mastar kalır.",
     "explanationEn": "The main verb 'maken' stays as an infinitive at the end.",
@@ -2206,7 +2186,7 @@ export const chapters11_15 = [
       "future_tense",
       "zullen"
     ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Vertaal 'I will eat pizza' naar het Nederlands: Ik wil pizza ___'",
+    "questionNl": "— In het dagelijks contact:\n'Hoe zeg je 'I will eat pizza' in correct Nederlands?'",
     "correctAnswer": "eten",
     "explanationTr": "Modal fiilden sonra asıl fiil sonda mastar olur: eten.",
     "explanationEn": "After the modal verb, the main verb is an infinitive at the end: eten.",
@@ -2227,7 +2207,7 @@ export const chapters11_15 = [
       "future_tense",
       "zullen"
     ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Vertaal 'We will go to the cinema' naar het Nederlands: Wij zullen naar de bioscoop ___'",
+    "questionNl": "— In het dagelijks contact:\n'Hoe zeg je 'We will go to the cinema' in correct Nederlands?'",
     "correctAnswer": "gaan",
     "explanationTr": "Zullen ile kurulan cümlede asıl fiil 'gaan' sondadır.",
     "explanationEn": "In a sentence with 'zullen', the main verb 'gaan' is at the end.",
@@ -2287,12 +2267,12 @@ export const chapters11_15 = [
       "summary_ch14",
       "future_tense"
     ],
-    "questionNl": "Welke zin drukt een plan of voornemen uit met 'gaan + infinitief'?",
+    "questionNl": "In het dagelijks leven: Welke zin drukt een plan of voornemen uit met 'gaan + infinitief'?",
     "options": [
       "Ik ga volgende week Nederlands studeren.",
       "Ik werk morgen van tien tot twee.",
       "De les zal om acht uur beginnen.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Ik ga volgende week Nederlands studeren.",
     "explanationTr": "'gaan + studeren' bir plan veya niyet (plan of voornemen) ifade eder.",
@@ -2307,12 +2287,12 @@ export const chapters11_15 = [
       "summary_ch14",
       "future_tense"
     ],
-    "questionNl": "Welke zin drukt een voorspelling/aangekondigde gebeurtenis uit met 'zullen + infinitief'?",
+    "questionNl": "In het dagelijks leven: Welke zin drukt een voorspelling/aangekondigde gebeurtenis uit met 'zullen + infinitief'?",
     "options": [
       "De les zal om acht uur beginnen.",
       "Ik werk morgen van tien tot twee.",
       "Ik ga volgende week Nederlands studeren.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "De les zal om acht uur beginnen.",
     "explanationTr": "'zullen + beginnen' resmi veya duyurulan bir geleceği (voorspelling) ifade eder.",
@@ -2327,12 +2307,12 @@ export const chapters11_15 = [
       "summary_ch14",
       "future_tense"
     ],
-    "questionNl": "Welke zin gebruikt het presens + tijd om een gewone/vaste toekomstige activiteit uit te drukken?",
+    "questionNl": "In het dagelijks leven: Welke zin gebruikt het presens + tijd om een gewone/vaste toekomstige activiteit uit te drukken?",
     "options": [
       "Ik werk morgen van tien tot twee.",
       "Ik ga volgende week Nederlands studeren.",
       "De les zal om acht uur beginnen.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Ik werk morgen van tien tot twee.",
     "explanationTr": "Şimdiki zaman ('werk') ve zaman zarfı ('morgen') kombinasyonu sabit bir geleceği gösterir.",
@@ -2348,7 +2328,7 @@ export const chapters11_15 = [
       "word_order",
       "inversion"
     ],
-    "questionNl": "Waarom staat het werkwoord in de zin 'Morgen werk ik' voor het subject?",
+    "questionNl": "In het dagelijks leven: Waarom staat het werkwoord in de zin 'Morgen werk ik' voor het subject?",
     "options": [
       "Omdat de zin begint met een tijdsaanduiding ('Morgen'), wat leidt tot inversie.",
       "Omdat het een vraag is.",
@@ -2368,12 +2348,12 @@ export const chapters11_15 = [
       "summary_ch14",
       "greetings"
     ],
-    "questionNl": "Wat is de juiste volgorde van antwoorden als iemand vraagt 'Hoe gaat het met je?'",
+    "questionNl": "In het dagelijks leven: Wat is de juiste volgorde van antwoorden als iemand vraagt 'Hoe gaat het met je?'",
     "options": [
       "Good, dank je. En met jou?",
       "Mijn naam is Paul.",
       "Waar is de sportschool?",
-      "Geen van de bovenstaande antwoorden."
+      "Hoeveel kost dit?"
     ],
     "correctAnswer": "Good, dank je. En met jou?",
     "explanationTr": "Hal hatır sorulduğunda 'İyi, teşekkürler. Ya sen?' demek için bu kalıp kullanılır.",
@@ -2388,12 +2368,12 @@ export const chapters11_15 = [
       "summary_ch15",
       "future_tense"
     ],
-    "questionNl": "Wat drukt de zin 'Ik zal een afspraak maken' meestal uit in dit patroon?",
+    "questionNl": "In het dagelijks leven: Wat drukt de zin 'Ik zal een afspraak maken' meestal uit in dit patroon?",
     "options": [
       "Een belofte (promise)",
       "Een verleden actie",
       "Een vaste gewoonte",
-      "Een belofte (promise)er"
+      "Misschien later."
     ],
     "correctAnswer": "Een belofte (promise)",
     "explanationTr": "Özet notlarında 'zullen' fiili ile kurulan 'Ik zal een afspraak maken' cümlesi bir sözü (promise) ifade eder.",
@@ -2408,12 +2388,12 @@ export const chapters11_15 = [
       "summary_ch15",
       "future_tense"
     ],
-    "questionNl": "Welke betekenis heeft de zin 'Het zal morgen regenen'?",
+    "questionNl": "In het dagelijks leven: Welke betekenis heeft de zin 'Het zal morgen regenen'?",
     "options": [
       "Een voorspelling / weersverwachting",
       "Een directe vraag",
       "Een verzoek",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Een voorspelling / weersverwachting",
     "explanationTr": "'Het zal morgen regenen' geleceğe dair bir hava durumu tahmini/voorspelling belirtir.",
@@ -2428,12 +2408,12 @@ export const chapters11_15 = [
       "summary_ch15",
       "future_tense"
     ],
-    "questionNl": "Welk patroon hoort bij het plannen van een actie met 'gaan'?",
+    "questionNl": "In het dagelijks leven: Welk patroon hoort bij het plannen van een actie met 'gaan'?",
     "options": [
       "subject + ga/gaat/gaan + rest + infinitive",
       "subject + zullen + rest + noun",
       "subject + verb + past participle",
-      "subject + zullen + rest + nouner"
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "subject + ga/gaat/gaan + rest + infinitive",
     "explanationTr": "Gelecek planı için 'subject + ga/gaat/gaan + rest + infinitive' formülü verilir.",
@@ -2448,12 +2428,12 @@ export const chapters11_15 = [
       "summary_ch15",
       "future_tense"
     ],
-    "questionNl": "Wat is een correct voorbeeld van het 'gaan + infinitive' patroon?",
+    "questionNl": "In het dagelijks leven: Wat is een correct voorbeeld van het 'gaan + infinitive' patroon?",
     "options": [
       "Ik ga pizza eten.",
       "Ik heb pizza gegeten.",
       "Ik eet pizza gisteren.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Ik ga pizza eten.",
     "explanationTr": "Örnek olarak 'Ik ga pizza eten' verilmiştir.",
@@ -2468,12 +2448,12 @@ export const chapters11_15 = [
       "summary_ch15",
       "future_tense"
     ],
-    "questionNl": "Waar staat het hoofdwerkwoord in de zin bij de toekomstige tijd patronen ?",
+    "questionNl": "In het dagelijks leven: Waar staat het hoofdwerkwoord in de zin bij de toekomstige tijd patronen ?",
     "options": [
       "Aan het einde in de infinitief (mastar) vorm",
       "Vooraan de zin",
       "Direct achter het onderwerp",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Aan het einde in de infinitief (mastar) vorm",
     "explanationTr": "Zullen veya gaan ile kurulduktan sonra asıl fiil en sonda mastar (infinitive) olarak yer alır.",
@@ -2488,12 +2468,12 @@ export const chapters11_15 = [
       "summary_ch15",
       "indirect_questions"
     ],
-    "questionNl": "Wat is de indirecte / beleefde vraagvorm van 'Waar is spoor 2?'?",
+    "questionNl": "In het dagelijks leven: Wat is de indirecte / beleefde vraagvorm van 'Waar is spoor 2?'?",
     "options": [
       "Kun je zeggen waar spoor 2 is?",
       "Waar is spoor 2?",
       "Weet je waar is spoor 2?",
-      "Geen van de bovenstaande antwoorden."
+      "Hoeveel kost dit?"
     ],
     "correctAnswer": "Kun je zeggen waar spoor 2 is?",
     "explanationTr": "Dolaylı sorularda fiil cümlenin en sonuna gider: 'Kun je zeggen waar spoor 2 is?'",
@@ -2513,7 +2493,7 @@ export const chapters11_15 = [
       "Weet je of de trein op tijd vertrekt?",
       "Vertrekt de trein op tijd?",
       "Weet je dat de trein vertrekt?",
-      "Geen van de bovenstaande antwoorden."
+      "Hoeveel kost dit?"
     ],
     "correctAnswer": "Weet je of de trein op tijd vertrekt?",
     "explanationTr": "Evet/hayır soruları dolaylı yapılırken 'of' kullanılır ve fiil en sona gider.",
@@ -2528,12 +2508,12 @@ export const chapters11_15 = [
       "summary_ch15",
       "indirect_questions"
     ],
-    "questionNl": "Wat is het enige grote verschil in de woordvolgorde tussen een directe en een indirecte vraag?",
+    "questionNl": "In het dagelijks leven: Wat is het enige grote verschil in de woordvolgorde tussen een directe en een indirecte vraag?",
     "options": [
       "In de indirecte vorm staat het werkwoord aan het einde van de zin.",
       "Er is geen verschil.",
       "In de indirecte vorm staat het werkwoord vooraan.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "In de indirecte vorm staat het werkwoord aan het einde van de zin.",
     "explanationTr": "Notlarda belirtildiği gibi soru yapısı aynı kalır, tek fark fiilin en sona konmasıdır.",
@@ -2548,12 +2528,12 @@ export const chapters11_15 = [
       "summary_ch15",
       "indirect_questions"
     ],
-    "questionNl": "Hoe luidt de indirecte vraag voor 'Hoe laat is het?'?",
+    "questionNl": "In het dagelijks leven: Hoe luidt de indirecte vraag voor 'Hoe laat is het?'?",
     "options": [
       "Kun je zeggen hoe laat het is?",
       "Hoe laat is het?",
       "Weet je hoe laat is het?",
-      "Geen van de bovenstaande antwoorden."
+      "Hoeveel kost dit?"
     ],
     "correctAnswer": "Kun je zeggen hoe laat het is?",
     "explanationTr": "Soru kelimesi ile başlayan sorularda fiil ('is') en sonraya gider.",
@@ -2568,12 +2548,12 @@ export const chapters11_15 = [
       "summary_ch15",
       "indirect_questions"
     ],
-    "questionNl": "Hoe luidt de indirecte vorm voor de ja/nee-vraag 'Heb je een pen?'?",
+    "questionNl": "In het dagelijks leven: Hoe luidt de indirecte vorm voor de ja/nee-vraag 'Heb je een pen?'?",
     "options": [
       "Weet je of je een pen hebt?",
       "Heb je een pen?",
       "Weet je heb je een pen?",
-      "Geen van de bovenstaande antwoorden."
+      "Hoeveel kost dit?"
     ],
     "correctAnswer": "Weet je of je een pen hebt?",
     "explanationTr": "Ja/nee sorularında 'of' bağlacı kullanılır ve çekimli fiil sona gider.",
@@ -2589,7 +2569,7 @@ export const chapters11_15 = [
       "pronouns_demonstrative",
       "vocabulary"
     ],
-    "questionNl": "Wanneer gebruiken we het aanwijzend voornaamwoord **die** voor een zelfstandig naamwoord?",
+    "questionNl": "In het dagelijks leven: Wanneer gebruiken we het aanwijzend voornaamwoord **die** voor een zelfstandig naamwoord?",
     "options": [
       "Bij de-words (en meervoud / personen)",
       "Alleen bij het-words",
@@ -2636,7 +2616,7 @@ export const chapters11_15 = [
       "Die / zij",
       "Dat / het",
       "Dit / dit",
-      "geen van deze"
+      "Misschien later."
     ],
     "correctAnswer": "Die / zij",
     "explanationTr": "Özet notlarında kişilere atıfta bulunmak için 'Die/zij' kullanılabileceği gösterilmiştir.",
@@ -2652,7 +2632,7 @@ export const chapters11_15 = [
       "pronouns_demonstrative",
       "vocabulary"
     ],
-    "questionNl": "Wanneer gebruiken we het aanwijzend voornaamwoord **dat**?",
+    "questionNl": "In het dagelijks leven: Wanneer gebruiken we het aanwijzend voornaamwoord **dat**?",
     "options": [
       "Bij het-words, een idee of een hele zin",
       "Alleen bij de-woorden",
@@ -2714,7 +2694,7 @@ export const chapters11_15 = [
       "summary_ch15",
       "course_goals"
     ],
-    "questionNl": "Wat is een van de leerdoelen (Wat gaan we leren?) in hoofdstuk 15?",
+    "questionNl": "In het dagelijks leven: Wat is een van de leerdoelen (Wat gaan we leren?) in hoofdstuk 15?",
     "options": [
       "Vertellen over een reis",
       "Auto leren rijden",
@@ -2734,12 +2714,12 @@ export const chapters11_15 = [
       "summary_ch15",
       "course_goals"
     ],
-    "questionNl": "Leren studenten in deze les beschrijven wat zij onderweg of in hun omgeving zien?",
+    "questionNl": "In het dagelijks leven: Leren studenten in deze les beschrijven wat zij onderweg of in hun omgeving zien?",
     "options": [
       "Ja, dat staat in de lesdoelen.",
       "Nee, alleen grammatica.",
       "Alleen getallen tellen.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Ja, dat staat in de lesdoelen.",
     "explanationTr": "Hedefler arasında çevrelerinde veya yolda gördüklerini betimlemek vardır.",
@@ -2754,12 +2734,12 @@ export const chapters11_15 = [
       "summary_ch15",
       "course_goals"
     ],
-    "questionNl": "Wat leer je onder andere uit te drukken volgens de lesdoelen?",
+    "questionNl": "In het dagelijks leven: Wat leer je onder andere uit te drukken volgens de lesdoelen?",
     "options": [
       "Belangstelling en waardering uitdrukken",
       "Boosheid en frustratie",
       "Geen emoties tonen",
-      "Belangstelling en waardering uitdrukkener"
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Belangstelling en waardering uitdrukken",
     "explanationTr": "Hedefler arasında ilgi ve takdir (belangstelling en waardering) ifade etmek bulunur.",
@@ -2774,12 +2754,12 @@ export const chapters11_15 = [
       "summary_ch15",
       "course_goals"
     ],
-    "questionNl": "Kun je personen en dingen presenteren met 'dit/dat is' en 'dit/dat zijn'?",
+    "questionNl": "In het dagelijks leven: Kun je personen en dingen presenteren met 'dit/dat is' en 'dit/dat zijn'?",
     "options": [
       "Ja, dat is een specifiek doel van deze les.",
       "Nee, dat leer je pas in hoofdstuk 20.",
       "Alleen met meervoud.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Ja, dat is een specifiek doel van deze les.",
     "explanationTr": "Kişileri ve nesneleri sunma kalıpları bu ünitenin hedeflerindendir.",
@@ -2794,12 +2774,12 @@ export const chapters11_15 = [
       "summary_ch15",
       "course_goals"
     ],
-    "questionNl": "Moeten studenten bespreken wat zij belangrijk vinden voor een vakantie?",
+    "questionNl": "In het dagelijks leven: Moeten studenten bespreken wat zij belangrijk vinden voor een vakantie?",
     "options": [
       "Ja",
       "Nee",
       "Alleen in het Engels",
-      "Jaer"
+      "Misschien later."
     ],
     "correctAnswer": "Ja",
     "explanationTr": "Tatil için neyi önemli bulduklarını tartışmak hedefler arasındadır.",
@@ -2814,7 +2794,7 @@ export const chapters11_15 = [
       "summary_ch15",
       "course_goals"
     ],
-    "questionNl": "Wat leer je te schrijven in het kort volgens de doelen?",
+    "questionNl": "In het dagelijks leven: Wat leer je te schrijven in het kort volgens de doelen?",
     "options": [
       "Een kort vakantiekaartje schrijven",
       "Een officiële klachtenbrief",
@@ -2855,12 +2835,12 @@ export const chapters11_15 = [
       "course_goals",
       "phonetics"
     ],
-    "questionNl": "Welke specifieke klanken leer je herkennen en uitspreken?",
+    "questionNl": "In het dagelijks leven: Welke specifieke klanken leer je herkennen en uitspreken?",
     "options": [
       "ng, ing en nk",
       "ui, eu en oe",
       "aa, ee en oo",
-      "ng, ing en nker"
+      "Misschien later."
     ],
     "correctAnswer": "ng, ing en nk",
     "explanationTr": "Hedeflerde ng, ing ve nk seslerini tanımak ve telaffuz etmek vardır.",
@@ -2875,12 +2855,12 @@ export const chapters11_15 = [
       "summary_ch15",
       "future_tense"
     ],
-    "questionNl": "Wat is het openingsvoorbeeld onder herhaling les 14?",
+    "questionNl": "In het dagelijks leven: Wat is het openingsvoorbeeld onder herhaling les 14?",
     "options": [
       "Ik heb een leuke dag gehad.",
       "Ik ga naar huis.",
       "Waar is het station?",
-      "Geen van de bovenstaande antwoorden."
+      "Hoeveel kost dit?"
     ],
     "correctAnswer": "Ik heb een leuke dag gehad.",
     "explanationTr": "Giriş kısmındaki örnek cümle 'Ik heb een leuke dag gehad.' şeklindedir.",
@@ -2895,12 +2875,12 @@ export const chapters11_15 = [
       "summary_ch15",
       "future_tense"
     ],
-    "questionNl": "Welke zin gebruikt het patroon 'subject + zullen/zal + rest + infinitive' om een belofte uit te drukken?",
+    "questionNl": "In het dagelijks leven: Welke zin gebruikt het patroon 'subject + zullen/zal + rest + infinitive' om een belofte uit te drukken?",
     "options": [
       "Ik zal een afspraak maken.",
       "Ik ga pizza eten.",
       "Ik ben naar Amsterdam gegaan.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Ik zal een afspraak maken.",
     "explanationTr": "'Ik zal een afspraak maken' söz verme (promise) anlamı taşır.",
@@ -2915,12 +2895,12 @@ export const chapters11_15 = [
       "summary_ch15",
       "future_tense"
     ],
-    "questionNl": "Welke zin toont een weersvoorspelling met 'zullen'?",
+    "questionNl": "In het dagelijks leven: Welke zin toont een weersvoorspelling met 'zullen'?",
     "options": [
       "Het zal morgen regenen.",
       "Ik zal morgen werken.",
       "Wij zullen morgen koken.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Het zal morgen regenen.",
     "explanationTr": "Hava durumu tahmini için 'Het zal morgen regenen' örneği verilmiştir.",
@@ -2935,12 +2915,12 @@ export const chapters11_15 = [
       "summary_ch15",
       "future_tense"
     ],
-    "questionNl": "Wat is het verschil in nuance tussen 'zullen' en 'gaan' voor de toekomst?",
+    "questionNl": "In het dagelijks leven: Wat is het verschil in nuance tussen 'zullen' en 'gaan' voor de toekomst?",
     "options": [
       "'gaan' wordt vaker gebruikt voor plannen/voornemens, 'zullen' voor beloftes of voorspellingen.",
       "Er is geen enkele betekenisverschil.",
       "'zullen' is alleen verleden tijd.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "'gaan' wordt vaker gebruikt voor plannen/voornemens, 'zullen' voor beloftes of voorspellingen.",
     "explanationTr": "Gaan plan/niyet için, zullen ise söz verme veya tahmin/öngörü için kullanılır.",
@@ -2960,7 +2940,7 @@ export const chapters11_15 = [
       "Aan het einde van de zin",
       "Vooraan de zin",
       "Er is geen werkwoord nodig",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Aan het einde van de zin",
     "explanationTr": "Dolaylı sorularda çekimli fiil her zaman cümlenin en sonuna gider.",
@@ -2980,7 +2960,7 @@ export const chapters11_15 = [
       "Weet je of de trein op tijd vertrekt?",
       "Vertrekt de trein op tijd?",
       "Weet je waar de trein vertrekt?",
-      "Geen van de bovenstaande antwoorden."
+      "Hoeveel kost dit?"
     ],
     "correctAnswer": "Weet je of de trein op tijd vertrekt?",
     "explanationTr": "Evet/hayır sorusu dolaylı yapılırken 'of' kullanılır ve 'vertrekt' sona gider.",
@@ -2995,7 +2975,7 @@ export const chapters11_15 = [
       "summary_ch15",
       "indirect_questions"
     ],
-    "questionNl": "Blijft de vraag zelf inhoudelijk hetzelfde bij de beleefde/indirecte vorm?",
+    "questionNl": "In het dagelijks leven: Blijft de vraag zelf inhoudelijk hetzelfde bij de beleefde/indirecte vorm?",
     "options": [
       "Ja, de inhoud blijft gelijk, alleen de woordvolgorde verandert.",
       "Nee, de hele vraag verandert van betekenis.",
@@ -3015,12 +2995,12 @@ export const chapters11_15 = [
       "summary_ch15",
       "pronouns_demonstrative"
     ],
-    "questionNl": "Welk aanwijzend voornaamwoord gebruik je om naar een de-woord te verwijzen?",
+    "questionNl": "In het dagelijks leven: Welk aanwijzend voornaamwoord gebruik je om naar een de-woord te verwijzen?",
     "options": [
       "die",
       "dat",
       "dit",
-      "dater"
+      "Misschien later."
     ],
     "correctAnswer": "die",
     "explanationTr": "De-woord isimler için 'die' kullanılır.",
@@ -3035,12 +3015,12 @@ export const chapters11_15 = [
       "summary_ch15",
       "pronouns_demonstrative"
     ],
-    "questionNl": "Welk aanwijzend voornaamwoord gebruik je om naar een het-woord te verwijzen?",
+    "questionNl": "In het dagelijks leven: Welk aanwijzend voornaamwoord gebruik je om naar een het-woord te verwijzen?",
     "options": [
       "dat",
       "die",
       "dit",
-      "dater"
+      "Misschien later."
     ],
     "correctAnswer": "dat",
     "explanationTr": "Het-woord isimler için 'dat' kullanılır.",
@@ -3055,12 +3035,12 @@ export const chapters11_15 = [
       "summary_ch15",
       "pronouns_demonstrative"
     ],
-    "questionNl": "Kan **die** ook gebruikt worden om naar meerdere objecten of personen te verwijzen?",
+    "questionNl": "In het dagelijks leven: Kan **die** ook gebruikt worden om naar meerdere objecten of personen te verwijzen?",
     "options": [
       "Ja, ook bij personen en meervoud.",
       "Nee, alleen bij enkelvoud.",
       "Alleen bij levenloze objecten.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Ja, ook bij personen en meervoud.",
     "explanationTr": "'die' kişilere ve çoğul isimlere de atıfta bulunabilir.",
@@ -3075,12 +3055,12 @@ export const chapters11_15 = [
       "summary_ch15",
       "pronouns_demonstrative"
     ],
-    "questionNl": "Wat kun je doen met **dat** behalve verwijzen naar een het-woord?",
+    "questionNl": "In het dagelijks leven: Wat kun je doen met **dat** behalve verwijzen naar een het-woord?",
     "options": [
       "Verwijzen naar een idee of een hele zin.",
       "Verwijzen naar een meervoud.",
       "Verwijzen naar een persoonsvorm.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Verwijzen naar een idee of een hele zin.",
     "explanationTr": "'dat' aynı zamanda bir fikre veya bütün bir cümleye atıfta bulunabilir.",
@@ -3095,12 +3075,12 @@ export const chapters11_15 = [
       "summary_ch15",
       "indirect_questions"
     ],
-    "questionNl": "Hoe luidt de indirecte vraag voor: 'Waar is het toilet?'",
+    "questionNl": "In het dagelijks leven: Hoe luidt de indirecte vraag voor: 'Waar is het toilet?'",
     "options": [
       "Kun je zeggen waar het toilet is?",
       "Waar is het toilet?",
       "Weet je waar is het toilet?",
-      "Geen van de bovenstaande antwoorden."
+      "Hoeveel kost dit?"
     ],
     "correctAnswer": "Kun je zeggen waar het toilet is?",
     "explanationTr": "Soru kelimesi ile kurulan dolaylı sorularda fiil 'is' en sonradır.",
@@ -3120,7 +3100,7 @@ export const chapters11_15 = [
       "Weet je of de trein komt?",
       "Komt de trein?",
       "Weet je komt de trein?",
-      "Geen van de bovenstaande antwoorden."
+      "Hoeveel kost dit?"
     ],
     "correctAnswer": "Weet je of de trein komt?",
     "explanationTr": "Ja/nee sorusu dolaylı yapılırken 'of' kullanılır ve 'komt' en sona gider.",
@@ -3180,7 +3160,7 @@ export const chapters11_15 = [
       "Die",
       "Dat",
       "Het",
-      "Dater"
+      "Misschien later."
     ],
     "correctAnswer": "Die",
     "explanationTr": "Notlardaki ok işaretine göre 'de kaas' de-woord olduğu için 'Die' ile bağlanmıştır.",
@@ -3200,7 +3180,7 @@ export const chapters11_15 = [
       "Dat",
       "Die",
       "Deze",
-      "Dater"
+      "Misschien later."
     ],
     "correctAnswer": "Dat",
     "explanationTr": "Notlara göre 'het Naardermeer' het-woord olduğundan 'Dat' ile bağlanmıştır.",
@@ -3216,12 +3196,12 @@ export const chapters11_15 = [
       "vocabulary",
       "people"
     ],
-    "questionNl": "Wat is de Nederlandse vertaling voor 'neighbour' ?",
+    "questionNl": "— Situatie in het dagelijks leven:\n'Wat is het juiste Nederlandse woord voor 'neighbour'?'",
     "options": [
       "de buurvrouw",
       "de buurman",
       "de vriendin",
-      "geen van deze"
+      "de tafel"
     ],
     "correctAnswer": "de buurvrouw",
     "explanationTr": "Kadın komşu Hollandacada 'de buurvrouw' olarak adlandırılır.",
@@ -3279,7 +3259,7 @@ export const chapters11_15 = [
       "grammar",
       "reflexive_pronouns"
     ],
-    "questionNl": "Wat is het reflexief pronomen voor het formele subject 'u'?",
+    "questionNl": "In het dagelijks leven: Wat is het reflexief pronomen voor het formele subject 'u'?",
     "options": [
       "u of zich",
       "je",
@@ -3384,12 +3364,12 @@ export const chapters11_15 = [
       "culture",
       "birthdays"
     ],
-    "questionNl": "Wat doet de jarige in Nederland normaal gesproken direct met een gekregen cadeautje?",
+    "questionNl": "In het dagelijks leven: Wat doet de jarige in Nederland normaal gesproken direct met een gekregen cadeautje?",
     "options": [
       "Je pakt het direct uit.",
       "Je bewaart het voor de volgende dag.",
       "Je geeft het terug.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Je pakt het direct uit.",
     "explanationTr": "Hollanda'da hediye alındığında hemen açmak (direct uitpakken) kültürel bir adettir.",
@@ -3405,12 +3385,12 @@ export const chapters11_15 = [
       "culture",
       "birthdays"
     ],
-    "questionNl": "Wie feliciteer je normaal gesproken op een verjaardagsfeestje in Nederland?",
+    "questionNl": "In het dagelijks leven: Wie feliciteer je normaal gesproken op een verjaardagsfeestje in Nederland?",
     "options": [
       "Iedereen op het verjaardagsfeestje.",
       "Alleen de jarige.",
       "Niemand.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Iedereen op het verjaardagsfeestje.",
     "explanationTr": "Hollanda kültüründe doğum günü partisinde sadece doğum günü olan kişiyi değil, partideki herkesi (aile, arkadaşlar, komşular) tebrik edersiniz.",
@@ -3426,12 +3406,12 @@ export const chapters11_15 = [
       "culture",
       "birthdays"
     ],
-    "questionNl": "Wie trakteert er meestal op een verjaardag in Nederland?",
+    "questionNl": "In het dagelijks leven: Wie trakteert er meestal op een verjaardag in Nederland?",
     "options": [
       "De jarige trakteert anderen.",
       "De gasten trakteren de jarige.",
       "De baas trakteert.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "De jarige trakteert anderen.",
     "explanationTr": "Hollanda'da doğum günü olan kişi (de jarige) başkalarına ikramda bulunur (trakteert).",
@@ -3447,12 +3427,12 @@ export const chapters11_15 = [
       "culture",
       "birthdays"
     ],
-    "questionNl": "Welk liedje zingen mensen vaak voor de jarige in Nederland?",
+    "questionNl": "In het dagelijks leven: Welk liedje zingen mensen vaak voor de jarige in Nederland?",
     "options": [
       "Lang zal hij / ze leven",
       "Wilhelmus",
       "Sinterklaas kapoentje",
-      "Lang zal hij / ze levener"
+      "Misschien later."
     ],
     "correctAnswer": "Lang zal hij / ze leven",
     "explanationTr": "Doğum günlerinde söylenen geleneksel şarkı 'Lang zal hij/ze leven'dir.",
@@ -3473,7 +3453,7 @@ export const chapters11_15 = [
       "Een baan als promotor waar je zelf bepaalt wanneer je werkt.",
       "Een kantoorbaan van 9 tot 5.",
       "Werken als accountant.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Een baan als promotor waar je zelf bepaalt wanneer je werkt.",
     "explanationTr": "Okuma parçasına göre ideal ek iş, ne zaman çalışacağınızı kendiniz belirlediğiniz 'promotor'luk işidir.",
@@ -3489,12 +3469,12 @@ export const chapters11_15 = [
       "dialogue",
       "comprehension"
     ],
-    "questionNl": "Waar komt Kirsten vandaan en wat studeert ze (in de dialoog)?",
+    "questionNl": "In het dagelijks leven: Waar komt Kirsten vandaan en wat studeert ze (in de dialoog)?",
     "options": [
       "Uit Hamburg, ze studeert logopedie.",
       "Uit Amsterdam, ze studeert psychologie.",
       "Uit Chili, ze studeert voor accountant.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Uit Hamburg, ze studeert logopedie.",
     "explanationTr": "Diyalogda Kirsten'in Hamburg'dan geldiği ve logopedi (konuşma terapisi) okuduğu belirtilmektedir.",
@@ -3510,12 +3490,12 @@ export const chapters11_15 = [
       "dialogue",
       "comprehension"
     ],
-    "questionNl": "Wat heeft Tom voor Marit meegebracht naar het feestje?",
+    "questionNl": "In het dagelijks leven: Wat heeft Tom voor Marit meegebracht naar het feestje?",
     "options": [
       "Een cadeautje en een kaartje voor Festival Cubana.",
       "Een taart en koffie.",
       "Een nieuwe fiets.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Een cadeautje en een kaartje voor Festival Cubana.",
     "explanationTr": "Tom, Marit'e bir hediye (cadeautje) ve Küba Müzik Festivali için bir bilet (kaartje) getirmiştir.",
@@ -3531,12 +3511,12 @@ export const chapters11_15 = [
       "dialogue",
       "comprehension"
     ],
-    "questionNl": "Werkt Peter nog op een kantoor?",
+    "questionNl": "In het dagelijks leven: Werkt Peter nog op een kantoor?",
     "options": [
       "Nee, hij is eigen baas geworden en heeft een eigen bedrijf.",
       "Ja, hij werkt als docent.",
       "Ja, hij verveelt zich vaak op kantoor.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Nee, hij is eigen baas geworden en heeft een eigen bedrijf.",
     "explanationTr": "Diyalogda Peter'in artık ofiste çalışmadığı, kendi işini kurup kendi patronu (eigen baas) olduğu geçer.",
@@ -3552,12 +3532,12 @@ export const chapters11_15 = [
       "vocabulary",
       "transport"
     ],
-    "questionNl": "Wat is 'de lijn' in de context van openbaar vervoer?",
+    "questionNl": "In het dagelijks leven: Wat is 'de lijn' in de context van openbaar vervoer?",
     "options": [
       "line (number)",
       "train",
       "ticket",
-      "geen van deze"
+      "Misschien later."
     ],
     "correctAnswer": "line (number)",
     "explanationTr": "Toplu taşımada 'de lijn' hat / hat numarası (line number) demektir[cite: 1].",
@@ -3573,12 +3553,12 @@ export const chapters11_15 = [
       "vocabulary",
       "directions"
     ],
-    "questionNl": "Wat is 'het stuk' in de context van 'Moet ik nog een stuk lopen?'?",
+    "questionNl": "In het dagelijks leven: Wat is 'het stuk' in de context van 'Moet ik nog een stuk lopen?'?",
     "options": [
       "short distance / piece",
       "long way",
       "street",
-      "long wayer"
+      "Misschien later."
     ],
     "correctAnswer": "short distance / piece",
     "explanationTr": "'het stuk' parça veya kısa mesafe (short distance) demektir[cite: 1].",
@@ -3594,7 +3574,7 @@ export const chapters11_15 = [
       "vocabulary",
       "places"
     ],
-    "questionNl": "Wat is 'de toiletten' ?",
+    "questionNl": "In het dagelijks leven: Wat is 'de toiletten' ?",
     "options": [
       "toilets",
       "kitchens",
@@ -3615,12 +3595,12 @@ export const chapters11_15 = [
       "vocabulary",
       "directions"
     ],
-    "questionNl": "Wat is 'ga ... af' ?",
+    "questionNl": "In het dagelijks leven: Wat is 'ga ... af' ?",
     "options": [
       "go down (e.g. stairs)",
       "go up",
       "wait",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "go down (e.g. stairs)",
     "explanationTr": "'afgaan' (örneğin merdivenlerden inmek) aşağı inmek (go down) demektir[cite: 1].",
@@ -3641,7 +3621,7 @@ export const chapters11_15 = [
       "Mag ik u iets vragen? / Kunt u mij vertellen...",
       "Ik wil hier weg.",
       "Wat is dit?",
-      "Geen van de bovenstaande antwoorden."
+      "Hoeveel kost dit?"
     ],
     "correctAnswer": "Mag ik u iets vragen? / Kunt u mij vertellen...",
     "explanationTr": "Yol sormak için 'Mag ik u iets vragen?' (Size bir şey sorabilir miyim?) veya 'Kunt u mij vertellen...' (Bana söyleyebilir misiniz...) kullanılır[cite: 2].",
@@ -3657,12 +3637,12 @@ export const chapters11_15 = [
       "phrases",
       "directions"
     ],
-    "questionNl": "Hoe wijs je de weg met de zin 'You go straight ahead'?",
+    "questionNl": "In het dagelijks leven: Hoe wijs je de weg met de zin 'You go straight ahead'?",
     "options": [
       "U gaat hier rechtdoor.",
       "U steekt de straat over.",
       "U gaat linksaf.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "U gaat hier rechtdoor.",
     "explanationTr": "Yol tarif ederken 'dümdüz gidin' demek için 'U gaat hier rechtdoor' denir[cite: 2].",
@@ -3678,12 +3658,12 @@ export const chapters11_15 = [
       "grammar",
       "separable_verbs"
     ],
-    "questionNl": "Wat is een scheidbaar werkwoord ?",
+    "questionNl": "In het dagelijks leven: Wat is een scheidbaar werkwoord ?",
     "options": [
       "Een werkwoord dat uit twee delen bestaat die in een zin soms van elkaar gescheiden worden (bijv. aankomen -> Ik kom aan).",
       "Een werkwoord dat nooit verandert.",
       "Een werkwoord dat altijd met 'ge-' begint.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Een werkwoord dat uit twee delen bestaat die in een zin soms van elkaar gescheiden worden (bijv. aankomen -> Ik kom aan).",
     "explanationTr": "Ayrılabilir fiiller (scheidbare werkwoorden), cümlede bazen ikiye bölünen fiillerdir (örn: aankomen -> Ik kom aan).",
@@ -3699,7 +3679,7 @@ export const chapters11_15 = [
       "grammar",
       "separable_verbs"
     ],
-    "questionNl": "Waar staat het prefix van een scheidbaar werkwoord in een normale hoofdzin in het presens (bijv. 'instappen')?",
+    "questionNl": "In het dagelijks leven: Waar staat het prefix van een scheidbaar werkwoord in een normale hoofdzin in het presens (bijv. 'instappen')?",
     "options": [
       "Aan het einde van de zin (bijv. Hij stapt in).",
       "Direct na het subject.",
@@ -3725,7 +3705,7 @@ export const chapters11_15 = [
       "stapte ... in",
       "instapte ...",
       "stap ... in",
-      "geen van deze"
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "stapte ... in",
     "explanationTr": "'instappen' fiilinin hikaye geçmiş zamanı (imperfectum) 'stapte' şeklindedir, 'in' yine sona gider: Hij stapte ... in.",
@@ -3742,12 +3722,12 @@ export const chapters11_15 = [
       "separable_verbs",
       "perfectum"
     ],
-    "questionNl": "Hoe vorm je het perfectum van een scheidbaar werkwoord zoals 'instappen'?",
+    "questionNl": "In het dagelijks leven: Hoe vorm je het perfectum van een scheidbaar werkwoord zoals 'instappen'?",
     "options": [
       "Het voorvoegsel en het participium worden één woord met 'ge' ertussen (bijv. ingestapt).",
       "Je gebruikt 'ge-' aan het begin (bijv. geinstapt).",
       "Het voorvoegsel blijft aan het einde staan.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Het voorvoegsel en het participium worden één woord met 'ge' ertussen (bijv. ingestapt).",
     "explanationTr": "Ayrılabilir fiillerin perfectum halinde, 'ge' eki ön ek (in) ile fiil kökü arasına girerek tek bir kelime oluşturur: ingestapt.",
@@ -3764,12 +3744,12 @@ export const chapters11_15 = [
       "separable_verbs",
       "modal_verbs"
     ],
-    "questionNl": "Wat gebeurt er met een scheidbaar werkwoord (bijv. instappen) als er een modaal werkwoord in de zin staat?",
+    "questionNl": "In het dagelijks leven: Wat gebeurt er met een scheidbaar werkwoord (bijv. instappen) als er een modaal werkwoord in de zin staat?",
     "options": [
       "Het hele, ongescheiden werkwoord staat aan het einde van de zin (bijv. U kunt direct instappen).",
       "Het werkwoord wordt toch gescheiden.",
       "Het modale werkwoord staat aan het einde.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Het hele, ongescheiden werkwoord staat aan het einde van de zin (bijv. U kunt direct instappen).",
     "explanationTr": "Cümlede modal bir fiil (kunt, mag vb.) varsa, ayrılabilir fiil ayrılmaz ve mastar halinde cümlenin en sonuna gider.",
@@ -3785,12 +3765,12 @@ export const chapters11_15 = [
       "dialogue",
       "comprehension"
     ],
-    "questionNl": "Waarom adviseert de buschauffeur in de dialoog om de tram te nemen in plaats van te lopen?",
+    "questionNl": "In het dagelijks leven: Waarom adviseert de buschauffeur in de dialoog om de tram te nemen in plaats van te lopen?",
     "options": [
       "Omdat het zeker een uur lopen is vanaf daar.",
       "Omdat het regent.",
       "Omdat hij Kirsten een lift wil geven.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Omdat het zeker een uur lopen is vanaf daar.",
     "explanationTr": "Otobüs şoförü yürüyüşün en az bir saat ('zeker een uur lopen') süreceğini söyleyerek tramvaya binmesini tavsiye eder[cite: 1].",
@@ -3806,12 +3786,12 @@ export const chapters11_15 = [
       "dialogue",
       "comprehension"
     ],
-    "questionNl": "Waar in het gebouw is de Wandelbeurs volgens de portier?",
+    "questionNl": "In het dagelijks leven: Waar in het gebouw is de Wandelbeurs volgens de portier?",
     "options": [
       "Boven, op de eerste verdieping, in hal 3.",
       "Beneden in de kelder.",
       "Buiten het gebouw.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Boven, op de eerste verdieping, in hal 3.",
     "explanationTr": "Portier, Wandelbeurs'un yukarıda (boven), birinci katta (eerste verdieping), 3. salonda (hal 3) olduğunu söyler[cite: 1].",
@@ -3826,12 +3806,12 @@ export const chapters11_15 = [
       "summary_ch12",
       "text_comprehension"
     ],
-    "questionNl": "Waar vindt de 'Fiets en Wandelbeurs' plaats volgens de tekst?",
+    "questionNl": "In het dagelijks leven: Waar vindt de 'Fiets en Wandelbeurs' plaats volgens de tekst?",
     "options": [
       "Jaarbeurs Utrecht",
       "Evenementenhal Amsterdam",
       "Centraal Station",
-      "Geen van de bovenstaande antwoorden."
+      "Misschien later."
     ],
     "correctAnswer": "Jaarbeurs Utrecht",
     "explanationTr": "Metne göre 'Fiets en Wandelbeurs' etkinliğinin lokasyonu Jaarbeurs Utrecht'tir.",
@@ -3846,7 +3826,7 @@ export const chapters11_15 = [
       "summary_ch12",
       "text_comprehension"
     ],
-    "questionNl": "Zijn honden toegestaan op de Fiets en Wandelbeurs?",
+    "questionNl": "In het dagelijks leven: Zijn honden toegestaan op de Fiets en Wandelbeurs?",
     "options": [
       "Ja, honden met een rustig gedrag zijn toegelaten, mits aangelijnd.",
       "Nee, honden zijn verboden.",
@@ -3867,12 +3847,12 @@ export const chapters11_15 = [
       "dialogue",
       "comprehension"
     ],
-    "questionNl": "Waarom was Maria niet meegekomen met Bas in de dialoog?",
+    "questionNl": "In het dagelijks leven: Waarom was Maria niet meegekomen met Bas in de dialoog?",
     "options": [
       "Ze moest de auto naar de garage brengen en ze voelde zich niet zo lekker.",
       "Ze moest werken op kantoor.",
       "Ze was vergeten dat ze een afspraak hadden.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Ze moest de auto naar de garage brengen en ze voelde zich niet zo lekker.",
     "explanationTr": "Diyalogda Maria'nın arabayı tamirciye götürmesi gerektiği ve kendini iyi hissetmediği belirtilir.",
@@ -3888,12 +3868,12 @@ export const chapters11_15 = [
       "dialogue",
       "comprehension"
     ],
-    "questionNl": "Wat heeft Bas meegenomen voor Paul en Janine?",
+    "questionNl": "In het dagelijks leven: Wat heeft Bas meegenomen voor Paul en Janine?",
     "options": [
       "Een doos bonbons en een mooie bos bloemen.",
       "Een fles wijn.",
       "Een nieuwe kat.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Een doos bonbons en een mooie bos bloemen.",
     "explanationTr": "Bas, Paul ve Janine için bir kutu çikolata (bonbons) ve bir buket çiçek (bloemen) getirmiştir.",
@@ -3909,12 +3889,12 @@ export const chapters11_15 = [
       "dialogue",
       "comprehension"
     ],
-    "questionNl": "Waarom heeft Paul de verwarming aan in juni?",
+    "questionNl": "In het dagelijks leven: Waarom heeft Paul de verwarming aan in juni?",
     "options": [
       "Omdat het koud en nat is.",
       "Omdat de airconditioning kapot is.",
       "Omdat Bas dat vroeg.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Omdat het koud en nat is.",
     "explanationTr": "Haziran ayı olmasına rağmen hava soğuk (koud) ve ıslak (nat) olduğu için kaloriferi açmışlardır.",
@@ -3930,12 +3910,12 @@ export const chapters11_15 = [
       "dialogue",
       "comprehension"
     ],
-    "questionNl": "Wat is er met de kat van Bas (Tony) gebeurd?",
+    "questionNl": "In het dagelijks leven: Wat is er met de kat van Bas (Tony) gebeurd?",
     "options": [
       "Hij heeft een ongeluk gehad en is onder een auto gekomen.",
       "Hij is weggelopen.",
       "Hij is ziek geworden van oud eten.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Hij heeft een ongeluk gehad en is onder een auto gekomen.",
     "explanationTr": "Bas'ın kedisi Tony bir kaza geçirmiş ve arabanın altında kalıp ölmüştür.",
@@ -3951,12 +3931,12 @@ export const chapters11_15 = [
       "dialogue",
       "comprehension"
     ],
-    "questionNl": "Wat laat Paul aan Bas zien in de schuur?",
+    "questionNl": "In het dagelijks leven: Wat laat Paul aan Bas zien in de schuur?",
     "options": [
       "Hun kat Minoes die jongen heeft gekregen.",
       "Zijn nieuwe fiets.",
       "Zijn gereedschap.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Hun kat Minoes die jongen heeft gekregen.",
     "explanationTr": "Paul, Bas'a depoda (schuur) yeni yavrulamış (jongen gekregen) kedileri Minoes'u gösterir.",
@@ -3978,7 +3958,7 @@ export const chapters11_15 = [
       "Wat vind je van ...? / Hoe vind je ...?",
       "Wat weet je van ...?",
       "Hoe zie je ...?",
-      "Geen van de bovenstaande antwoorden."
+      "Hoeveel kost dit?"
     ],
     "correctAnswer": "Wat vind je van ...? / Hoe vind je ...?",
     "explanationTr": "Fikir sormak için 'Wat vind je van...?' veya 'Hoe vind je...?' (Hakkında ne düşünüyorsun?) kalıpları kullanılır.",
@@ -4000,7 +3980,7 @@ export const chapters11_15 = [
       "Jawel, ik vind dieren heel leuk.",
       "Nee, ik vind het leuk.",
       "Ja, ik vind niet leuk.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Jawel, ik vind dieren heel leuk.",
     "explanationTr": "Olumsuz soruya ('Bunu sevmiyor musun?') karşı çıkarak 'Hayır, seviyorum/Evet, seviyorum' demek için 'Jawel' kullanılır.",
@@ -4016,12 +3996,12 @@ export const chapters11_15 = [
       "phrases",
       "smalltalk"
     ],
-    "questionNl": "Welke zin is een goed voorbeeld van praten over 'het weer' in het Nederlands?",
+    "questionNl": "In het dagelijks leven: Welke zin is een goed voorbeeld van praten over 'het weer' in het Nederlands?",
     "options": [
       "Wat een weer, hè?",
       "Was het druk op de weg?",
       "Lang niet gezien!",
-      "Geen van de bovenstaande antwoorden."
+      "Hoeveel kost dit?"
     ],
     "correctAnswer": "Wat een weer, hè?",
     "explanationTr": "Hava durumu hakkında havadan sudan konuşurken 'Wat een weer, hè?' (Ne hava ama, değil mi?) denir.",
@@ -4042,7 +4022,7 @@ export const chapters11_15 = [
       "Was het druk op de weg?",
       "Wat een weer, hè?",
       "Hoe is het met je?",
-      "Geen van de bovenstaande antwoorden."
+      "Hoeveel kost dit?"
     ],
     "correctAnswer": "Was het druk op de weg?",
     "explanationTr": "Trafik hakkında konuşurken 'Was het druk op de weg?' (Yolda trafik yoğun muydu?) sorusu sorulur.",
@@ -4058,7 +4038,7 @@ export const chapters11_15 = [
       "grammar",
       "zullen"
     ],
-    "questionNl": "Welk woord gebruik je om een belofte te maken in het Nederlands?",
+    "questionNl": "In het dagelijks leven: Welk woord gebruik je om een belofte te maken in het Nederlands?",
     "options": [
       "zullen (bijv. Dat zal ik doen.)",
       "moeten",
@@ -4100,12 +4080,12 @@ export const chapters11_15 = [
       "text_comprehension",
       "passion"
     ],
-    "questionNl": "Wat is de passie van Evelyn Koster in de tekst 'Mijn passie!'?",
+    "questionNl": "In het dagelijks leven: Wat is de passie van Evelyn Koster in de tekst 'Mijn passie!'?",
     "options": [
       "Zingen (klassieke stukken / opera).",
       "Schilderen.",
       "Fietsen.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Zingen (klassieke stukken / opera).",
     "explanationTr": "Metne göre Evelyn'in tutkusu şarkı söylemektir (klasik eserler ve opera).",
@@ -4121,12 +4101,12 @@ export const chapters11_15 = [
       "text_comprehension",
       "passion"
     ],
-    "questionNl": "Wat voor muziek zong Evelyn liever toen ze een puber was?",
+    "questionNl": "In het dagelijks leven: Wat voor muziek zong Evelyn liever toen ze een puber was?",
     "options": [
       "Popliedjes.",
       "Klassieke muziek.",
       "Jazz.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Popliedjes.",
     "explanationTr": "Ergenliğinde ailesinin sevdiği klasik müziğe karşı çıkıp pop şarkıları (popliedjes) söylemeyi tercih etmiştir.",
@@ -4142,12 +4122,12 @@ export const chapters11_15 = [
       "culture",
       "gifts"
     ],
-    "questionNl": "Wat is een typisch cadeau om mee te nemen als je in Nederland bij een vriend op bezoek gaat?",
+    "questionNl": "In het dagelijks leven: Wat is een typisch cadeau om mee te nemen als je in Nederland bij een vriend op bezoek gaat?",
     "options": [
       "Een bos bloemen, een doosje bonbons of een fles wijn.",
       "Een nieuwe fiets.",
       "Veel geld.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Een bos bloemen, een doosje bonbons of een fles wijn.",
     "explanationTr": "Hollanda'da ziyarete giderken çiçek, çikolata veya şarap götürmek yaygın bir adettir.",
@@ -4163,12 +4143,12 @@ export const chapters11_15 = [
       "vocabulary",
       "sports"
     ],
-    "questionNl": "Wat is 'het rooster' in de sportschool?",
+    "questionNl": "In het dagelijks leven: Wat is 'het rooster' in de sportschool?",
     "options": [
       "schedule",
       "equipment",
       "changing room",
-      "equipmenter"
+      "Misschien later."
     ],
     "correctAnswer": "schedule",
     "explanationTr": "'het rooster' ders programı veya çizelge (schedule) demektir[cite: 1].",
@@ -4184,7 +4164,7 @@ export const chapters11_15 = [
       "vocabulary",
       "sports_types"
     ],
-    "questionNl": "Welke sport betekent 'running' in het Nederlands?",
+    "questionNl": "In het dagelijks leven: Welke sport betekent 'running' in het Nederlands?",
     "options": [
       "hardlopen",
       "wielrennen",
@@ -4205,7 +4185,7 @@ export const chapters11_15 = [
       "vocabulary",
       "sports_types"
     ],
-    "questionNl": "Welke sport betekent 'cycling ' in het Nederlands?",
+    "questionNl": "In het dagelijks leven: Welke sport betekent 'cycling ' in het Nederlands?",
     "options": [
       "wielrennen",
       "turnen",
@@ -4226,12 +4206,12 @@ export const chapters11_15 = [
       "grammar",
       "indirect_questions"
     ],
-    "questionNl": "Wat is de correcte woordvolgorde in een indirecte vraag ? 'Weet je misschien of...'",
+    "questionNl": "In het dagelijks leven: Wat is de correcte woordvolgorde in een indirecte vraag ? 'Weet je misschien of...'",
     "options": [
       "...ik me hier kan inschrijven?",
       "...kan ik me hier inschrijven?",
       "...ik me kan inschrijven hier?",
-      "Geen van de bovenstaande antwoorden."
+      "Hoeveel kost dit?"
     ],
     "correctAnswer": "...ik me hier kan inschrijven?",
     "explanationTr": "Dolaylı sorularda (indirecte vraag) çekimli fiil ve diğer fiiller cümlenin en sonuna gider.",
@@ -4247,12 +4227,12 @@ export const chapters11_15 = [
       "grammar",
       "indirect_questions"
     ],
-    "questionNl": "Kies de juiste zin om informatie te vragen:",
+    "questionNl": "In het dagelijks leven: Kies de juiste zin om informatie te vragen:",
     "options": [
       "Kun je me zeggen wat het verschil tussen die abonnementen is?",
       "Kun je me zeggen wat is het verschil tussen die abonnementen?",
       "Kun je me zeggen wat het verschil is tussen die abonnementen?",
-      "Geen van de bovenstaande antwoorden."
+      "Hoeveel kost dit?"
     ],
     "correctAnswer": "Kun je me zeggen wat het verschil tussen die abonnementen is?",
     "explanationTr": "'Kun je me zeggen...' ile başlayan dolaylı sorularda asıl fiil (is) cümlenin sonuna gider.",
@@ -4268,12 +4248,12 @@ export const chapters11_15 = [
       "grammar",
       "indirect_questions"
     ],
-    "questionNl": "Maak een indirecte vraag van: 'Waar is de sportschool?'. Kunt u me zeggen...",
+    "questionNl": "In het dagelijks leven: Maak een indirecte vraag van: 'Waar is de sportschool?'. Kunt u me zeggen...",
     "options": [
       "...waar de sportschool is?",
       "...waar is de sportschool?",
       "...is waar de sportschool?",
-      "Geen van de bovenstaande antwoorden."
+      "Hoeveel kost dit?"
     ],
     "correctAnswer": "...waar de sportschool is?",
     "explanationTr": "Soru kelimesi (waar) kullanılır, ardından özne gelir ve fiil (is) en sona atılır.",
@@ -4289,12 +4269,12 @@ export const chapters11_15 = [
       "grammar",
       "indirect_questions"
     ],
-    "questionNl": "Maak een indirecte vraag van: 'Werkt de automaat op muntgeld?'. Weet u misschien...",
+    "questionNl": "In het dagelijks leven: Maak een indirecte vraag van: 'Werkt de automaat op muntgeld?'. Weet u misschien...",
     "options": [
       "...of de automaat op muntgeld werkt?",
       "...of werkt de automaat op muntgeld?",
       "...de automaat op muntgeld werkt?",
-      "Geen van de bovenstaande antwoorden."
+      "Hoeveel kost dit?"
     ],
     "correctAnswer": "...of de automaat op muntgeld werkt?",
     "explanationTr": "Evet/hayır soruları dolaylı soru yapılırken 'of' (olup olmadığı) bağlacı kullanılır ve fiil sona gider.",
@@ -4310,12 +4290,12 @@ export const chapters11_15 = [
       "grammar",
       "indirect_questions"
     ],
-    "questionNl": "Maak een indirecte vraag van: 'Hoelang duurt het buikspierkwartier?'. Kunt u me zeggen...",
+    "questionNl": "In het dagelijks leven: Maak een indirecte vraag van: 'Hoelang duurt het buikspierkwartier?'. Kunt u me zeggen...",
     "options": [
       "...hoelang het buikspierkwartier duurt?",
       "...hoelang duurt het buikspierkwartier?",
       "...duurt hoelang het buikspierkwartier?",
-      "Geen van de bovenstaande antwoorden."
+      "Hoeveel kost dit?"
     ],
     "correctAnswer": "...hoelang het buikspierkwartier duurt?",
     "explanationTr": "Soru kelimesinden (hoelang) sonra özne gelir ve fiil (duurt) en sona yerleşir.",
@@ -4331,12 +4311,12 @@ export const chapters11_15 = [
       "grammar",
       "zullen_probability"
     ],
-    "questionNl": "Wat drukt de constructie 'zullen + wel' (bijv. Je zult het morgen wel voelen) uit?",
+    "questionNl": "In het dagelijks leven: Wat drukt de constructie 'zullen + wel' (bijv. Je zult het morgen wel voelen) uit?",
     "options": [
       "waarschijnlijkheid (probability / likelihood)",
       "een verplichting (obligation)",
       "een wens (wish)",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "waarschijnlijkheid (probability / likelihood)",
     "explanationTr": "'zullen + wel' yapısı bir şeyin yüksek ihtimalle olacağını (waarschijnlijkheid) ifade eder.",
@@ -4373,12 +4353,12 @@ export const chapters11_15 = [
       "grammar",
       "futurum"
     ],
-    "questionNl": "Hoe kun je in het Nederlands de toekomstige tijd NIET uitdrukken in de gegeven voorbeelden?",
+    "questionNl": "In het dagelijks leven: Hoe kun je in het Nederlands de toekomstige tijd NIET uitdrukken in de gegeven voorbeelden?",
     "options": [
       "Met de verleden tijd (imperfectum).",
       "Met de tegenwoordige tijd (presens + tijdsaanduiding).",
       "Met het werkwoord 'zullen' of 'gaan' + infinitief.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Met de verleden tijd (imperfectum).",
     "explanationTr": "Gelecek zamanı ifade etmek için şimdiki zaman, 'gaan' veya 'zullen' kullanılır; geçmiş zaman kullanılmaz.",
@@ -4394,12 +4374,12 @@ export const chapters11_15 = [
       "grammar",
       "futurum"
     ],
-    "questionNl": "Welke grammaticale constructie wordt gebruikt voor het futurum in de zin: 'Over 20 minuten begint het buikspierkwartier.'?",
+    "questionNl": "In het dagelijks leven: Welke grammaticale constructie wordt gebruikt voor het futurum in de zin: 'Over 20 minuten begint het buikspierkwartier.'?",
     "options": [
       "Presens (tegenwoordige tijd) met een tijdsaanduiding",
       "Gaan + infinitief",
       "Zullen + infinitief",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Presens (tegenwoordige tijd) met een tijdsaanduiding",
     "explanationTr": "Bu cümlede şimdiki zaman fiili (begint) ve gelecek bildiren bir zaman ifadesi (Over 20 minuten) kullanılmıştır.",
@@ -4415,12 +4395,12 @@ export const chapters11_15 = [
       "grammar",
       "futurum"
     ],
-    "questionNl": "Welke grammaticale constructie wordt gebruikt in de zin: 'Over twee maanden ga ik met Janine trouwen.'?",
+    "questionNl": "In het dagelijks leven: Welke grammaticale constructie wordt gebruikt in de zin: 'Over twee maanden ga ik met Janine trouwen.'?",
     "options": [
       "Gaan + infinitief",
       "Zullen + infinitief",
       "Presens",
-      "Geen van de bovenstaande antwoorden."
+      "Misschien later."
     ],
     "correctAnswer": "Gaan + infinitief",
     "explanationTr": "Gelecek planı ifade etmek için 'ga' (gaan) ve mastar halindeki fiil 'trouwen' kullanılmıştır.",
@@ -4436,12 +4416,12 @@ export const chapters11_15 = [
       "grammar",
       "futurum"
     ],
-    "questionNl": "Welke grammaticale constructie wordt gebruikt in de zin: 'Volgende week zal het nieuwe rooster op de website staan.'?",
+    "questionNl": "In het dagelijks leven: Welke grammaticale constructie wordt gebruikt in de zin: 'Volgende week zal het nieuwe rooster op de website staan.'?",
     "options": [
       "Zullen + infinitief",
       "Gaan + infinitief",
       "Presens",
-      "Geen van de bovenstaande antwoorden."
+      "Misschien later."
     ],
     "correctAnswer": "Zullen + infinitief",
     "explanationTr": "Gelecekte olacak bir durumu belirtmek için 'zal' (zullen) ve mastar 'staan' kullanılmıştır.",
@@ -4462,7 +4442,7 @@ export const chapters11_15 = [
       "Hij wilde een paar kilo afvallen voor zijn huwelijk.",
       "Hij wilde professioneel bodybuilder worden.",
       "Hij had een blessure.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Hij wilde een paar kilo afvallen voor zijn huwelijk.",
     "explanationTr": "Okuma parçasına göre Arthur düğünü öncesinde birkaç kilo vermek için spor yapmaya başlamıştır.",
@@ -4483,7 +4463,7 @@ export const chapters11_15 = [
       "Ze studeert veel en merkt dat haar studieresultaten daardoor beter worden.",
       "Ze haat studeren.",
       "Ze wil profvoetballer worden.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Ze studeert veel en merkt dat haar studieresultaten daardoor beter worden.",
     "explanationTr": "Linda çok çalıştığını ve spor yapmanın çalışma sonuçlarını (studieresultaten) iyileştirdiğini belirtiyor.",
@@ -4504,7 +4484,7 @@ export const chapters11_15 = [
       "Hij vindt de sfeer verschrikkelijk en de mensen nep.",
       "Hij vindt sporten saai.",
       "Hij heeft geen geld voor een abonnement.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Hij vindt de sfeer verschrikkelijk en de mensen nep.",
     "explanationTr": "Mike spor salonundaki atmosferi berbat bulduğunu ve insanların sahte (nep) olduğunu söylüyor.",
@@ -4525,7 +4505,7 @@ export const chapters11_15 = [
       "Buiten: wandelen, fietsen en hardlopen, liefst alleen.",
       "Binnen in een virtuele les met veel mensen.",
       "Ze sport helemaal niet.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Buiten: wandelen, fietsen en hardlopen, liefst alleen.",
     "explanationTr": "Nina kapalı alanları sevmez; dışarıda yürümeyi, bisiklete binmeyi ve koşmayı (tercihen yalnız) sever.",
@@ -4546,7 +4526,7 @@ export const chapters11_15 = [
       "Door een personal trainer in de arm te nemen na veel mislukte diëten.",
       "Door pillen te slikken.",
       "Door elke dag buiten te wandelen.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Door een personal trainer in de arm te nemen na veel mislukte diëten.",
     "explanationTr": "Babette birçok diyet denedikten sonra bir personal trainer (kişisel antrenör) ile hedefine ulaşmıştır.",
@@ -4567,7 +4547,7 @@ export const chapters11_15 = [
       "Hij doet fitness en voetbalt ook, hij is heel fanatiek.",
       "Hij zwemt alleen.",
       "Hij fietst naar zijn studie.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Hij doet fitness en voetbalt ook, hij is heel fanatiek.",
     "explanationTr": "Ruud fitness ve futbol yapar, oldukça fanatiktir ve arkadaşları da spor salonuna gitmektedir.",
@@ -4583,7 +4563,7 @@ export const chapters11_15 = [
       "culture",
       "statistics"
     ],
-    "questionNl": "Welke sport is volgens het diagram het meest populair (25%) onder 18- tot 50-jarigen in Nederland?",
+    "questionNl": "In het dagelijks leven: Welke sport is volgens het diagram het meest populair (25%) onder 18- tot 50-jarigen in Nederland?",
     "options": [
       "Fitness",
       "Joggen",
@@ -4604,7 +4584,7 @@ export const chapters11_15 = [
       "culture",
       "statistics"
     ],
-    "questionNl": "Hoeveel procent van de 18- tot 50-jarigen doet aan joggen in Nederland volgens het diagram?",
+    "questionNl": "In het dagelijks leven: Hoeveel procent van de 18- tot 50-jarigen doet aan joggen in Nederland volgens het diagram?",
     "options": [
       "17%",
       "8%",
@@ -4625,7 +4605,7 @@ export const chapters11_15 = [
       "culture",
       "statistics"
     ],
-    "questionNl": "Hoeveel procent van de 18- tot 50-jarigen doet aan voetbal in Nederland volgens het diagram?",
+    "questionNl": "In het dagelijks leven: Hoeveel procent van de 18- tot 50-jarigen doet aan voetbal in Nederland volgens het diagram?",
     "options": [
       "8%",
       "17%",
@@ -4646,7 +4626,7 @@ export const chapters11_15 = [
       "culture",
       "statistics"
     ],
-    "questionNl": "Hoeveel procent wordt in het diagram aangeduid als 'overig' ?",
+    "questionNl": "In het dagelijks leven: Hoeveel procent wordt in het diagram aangeduid als 'overig' ?",
     "options": [
       "50%",
       "25%",
@@ -4667,7 +4647,7 @@ export const chapters11_15 = [
       "vocabulary",
       "places"
     ],
-    "questionNl": "Wat is 'het raampje' ?",
+    "questionNl": "In het dagelijks leven: Wat is 'het raampje' ?",
     "options": [
       "window",
       "door",
@@ -4688,12 +4668,12 @@ export const chapters11_15 = [
       "dialogue",
       "comprehension"
     ],
-    "questionNl": "Waar komt Amira vandaan in de dialoog van hoofdstuk 15?",
+    "questionNl": "In het dagelijks leven: Waar komt Amira vandaan in de dialoog van hoofdstuk 15?",
     "options": [
       "Uit Colombia",
       "Uit Spanje",
       "Uit Suriname",
-      "Uit Colombiaer"
+      "Misschien later."
     ],
     "correctAnswer": "Uit Colombia",
     "explanationTr": "Diyalogda Amira'nın Kolombiya'dan (Colombia) geldiği belirtilmektedir[cite: 1].",
@@ -4709,12 +4689,12 @@ export const chapters11_15 = [
       "dialogue",
       "comprehension"
     ],
-    "questionNl": "Wat heeft Amira meegenomen voor oom Tjeerd uit Colombia?",
+    "questionNl": "In het dagelijks leven: Wat heeft Amira meegenomen voor oom Tjeerd uit Colombia?",
     "options": [
       "Twee pakken lekkere koffie.",
       "Schilderijen.",
       "Een grote koffer.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Twee pakken lekkere koffie.",
     "explanationTr": "Amira, amcası Tjeerd için Kolombiya'dan iki paket lezzetli kahve getirmiştir[cite: 1].",
@@ -4735,7 +4715,7 @@ export const chapters11_15 = [
       "Dan kan ze lekker naar buiten kijken.",
       "Dan kan ze goed slapen.",
       "Omdat Tjeerd daar wil zitten.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Dan kan ze lekker naar buiten kijken.",
     "explanationTr": "Amira dışarıyı izleyebilmek (naar buiten kijken) için cam kenarında oturmak ister[cite: 1].",
@@ -4751,12 +4731,12 @@ export const chapters11_15 = [
       "dialogue",
       "comprehension"
     ],
-    "questionNl": "Wat valt Amira op aan het Nederlandse landschap in vergelijking met Colombia?",
+    "questionNl": "In het dagelijks leven: Wat valt Amira op aan het Nederlandse landschap in vergelijking met Colombia?",
     "options": [
       "Het is er heel plat, er is geen berg te zien.",
       "Het is erg bergachtig.",
       "Er is geen natuur in Nederland.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Het is er heel plat, er is geen berg te zien.",
     "explanationTr": "Amira, Hollanda manzarasının çok düz (plat) olduğunu ve hiç dağ görünmediğini fark eder[cite: 1].",
@@ -4772,12 +4752,12 @@ export const chapters11_15 = [
       "dialogue",
       "comprehension"
     ],
-    "questionNl": "Wat ziet Amira buiten lopen in de wei?",
+    "questionNl": "In het dagelijks leven: Wat ziet Amira buiten lopen in de wei?",
     "options": [
       "Kleine pony's (shetlandpony's).",
       "Koeien en schapen.",
       "Wilde honden.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Kleine pony's (shetlandpony's).",
     "explanationTr": "Amira dışarıda çayırda küçük midilliler (shetlandpony's) görür ve onları başta köpek sanır[cite: 1].",
@@ -4793,18 +4773,18 @@ export const chapters11_15 = [
       "dialogue",
       "comprehension"
     ],
-    "questionNl": "Wat eten Amira en Tjeerd in de trein?",
+    "questionNl": "In het dagelijks leven: Wat eten Amira en Tjeerd in de trein?",
     "options": [
       "Broodjes, onder andere met kaas.",
       "Fruit uit Colombia.",
       "Alleen koffie.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Broodjes, onder andere met kaas.",
     "explanationTr": "Amira ve Tjeerd trende peynirli sandviç (broodje met kaas) yerler[cite: 1].",
     "explanationEn": "Amira and Tjeerd eat bread rolls, including one with cheese, on the train[cite: 1].",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch15_1038",
@@ -4819,7 +4799,7 @@ export const chapters11_15 = [
       "Ze gaat even slapen in de trein.",
       "Ze gaat een boek lezen.",
       "Ze gaat koffie drinken.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Ze gaat even slapen in de trein.",
     "explanationTr": "Amira yorgun olduğu için sandviçini yedikten sonra uyuyacağını (even slapen) söyler[cite: 1].",
@@ -4835,12 +4815,12 @@ export const chapters11_15 = [
       "phrases",
       "describing"
     ],
-    "questionNl": "Hoe trek je iemands aandacht om iets te laten zien ?",
+    "questionNl": "In het dagelijks leven: Hoe trek je iemands aandacht om iets te laten zien ?",
     "options": [
       "Kijk eens... / Moet je eens zien...",
       "Wat is er aan de hand?",
       "Zeg dat wel!",
-      "Geen van de bovenstaande antwoorden."
+      "Hoeveel kost dit?"
     ],
     "correctAnswer": "Kijk eens... / Moet je eens zien...",
     "explanationTr": "Birinin dikkatini çekip bir şey göstermek için 'Kijk eens...' (Şuna bak) veya 'Moet je eens zien...' (Şunu görmelisin) kalıpları kullanılır[cite: 2].",
@@ -4856,12 +4836,12 @@ export const chapters11_15 = [
       "grammar",
       "demonstrative_pronouns"
     ],
-    "questionNl": "Wanneer gebruik je het demonstratief pronomen 'die' zelfstandig?",
+    "questionNl": "In het dagelijks leven: Wanneer gebruik je het demonstratief pronomen 'die' zelfstandig?",
     "options": [
       "Voor de-woorden, personen en meervoudsvormen.",
       "Voor het-woorden.",
       "Voor hele zinnen.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Voor de-woorden, personen en meervoudsvormen.",
     "explanationTr": "'die' zamiri tek başına kullanılırken 'de-woorden' (de artikelli kelimeler), kişiler ve çoğullar için kullanılır.",
@@ -4877,12 +4857,12 @@ export const chapters11_15 = [
       "grammar",
       "demonstrative_pronouns"
     ],
-    "questionNl": "Wanneer gebruik je het demonstratief pronomen 'dat' zelfstandig?",
+    "questionNl": "In het dagelijks leven: Wanneer gebruik je het demonstratief pronomen 'dat' zelfstandig?",
     "options": [
       "Voor het-woorden en om naar een hele zin of situatie te verwijzen.",
       "Voor personen.",
       "Voor de-woorden.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Voor het-woorden en om naar een hele zin of situatie te verwijzen.",
     "explanationTr": "'dat' zamiri tek başına kullanılırken 'het-woorden' (het artikelli kelimeler) ve bütün bir cümleye/duruma atıfta bulunmak için kullanılır.",
@@ -5003,12 +4983,12 @@ export const chapters11_15 = [
       "grammar",
       "introductions"
     ],
-    "questionNl": "Wanneer gebruik je 'Dit is' of 'Dat is'?",
+    "questionNl": "In het dagelijks leven: Wanneer gebruik je 'Dit is' of 'Dat is'?",
     "options": [
       "Om iets of iemand in het enkelvoud te presenteren, ongeacht of het een de- of het-woord is.",
       "Alleen voor het-woorden.",
       "Om meervoudsvormen te presenteren.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Om iets of iemand in het enkelvoud te presenteren, ongeacht of het een de- of het-woord is.",
     "explanationTr": "'Dit is' ve 'Dat is', cinsiyetten bağımsız olarak (de/het) tekil bir kişiyi veya nesneyi tanıtırken kullanılır.",
@@ -5024,12 +5004,12 @@ export const chapters11_15 = [
       "grammar",
       "introductions"
     ],
-    "questionNl": "Wanneer gebruik je 'Dit zijn' of 'Dat zijn'?",
+    "questionNl": "In het dagelijks leven: Wanneer gebruik je 'Dit zijn' of 'Dat zijn'?",
     "options": [
       "Om personen of dingen in het meervoud te presenteren.",
       "Om naar één persoon te wijzen.",
       "Alleen voor de-woorden.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Om personen of dingen in het meervoud te presenteren.",
     "explanationTr": "Çoğul kişileri veya nesneleri (bunlar / şunlar) tanıtırken 'Dit zijn' veya 'Dat zijn' kullanılır.",
@@ -5108,12 +5088,12 @@ export const chapters11_15 = [
       "text_comprehension",
       "train"
     ],
-    "questionNl": "Waarom konden de reizigers in de tekst 'Een mooie reisherinnering' niet verder reizen dan Eindhoven?",
+    "questionNl": "In het dagelijks leven: Waarom konden de reizigers in de tekst 'Een mooie reisherinnering' niet verder reizen dan Eindhoven?",
     "options": [
       "Er was heel veel sneeuw gevallen.",
       "De trein was kapot.",
       "Er was een staking.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Er was heel veel sneeuw gevallen.",
     "explanationTr": "Metne göre Eindhoven'da çok fazla kar (heel veel sneeuw) yağdığı için tren daha uzağa gidememiştir.",
@@ -5134,7 +5114,7 @@ export const chapters11_15 = [
       "Gratis koffie en thee.",
       "Een gratis treinkaartje.",
       "Een maaltijd.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "Gratis koffie en thee.",
     "explanationTr": "Metinde NS'nin bekleyen yolculara bedava kahve ve çay (gratis koffie en thee) ikram ettiği ve bunun onları ısıttığı yazar.",
@@ -5155,7 +5135,7 @@ export const chapters11_15 = [
       "De solidariteit was groot, iedereen zat in hetzelfde treintje.",
       "De mensen waren boos en ongeduldig.",
       "Iedereen was in paniek.",
-      "Geen van de bovenstaande antwoorden."
+      "Ik heb helaas geen tijd vandaag."
     ],
     "correctAnswer": "De solidariteit was groot, iedereen zat in hetzelfde treintje.",
     "explanationTr": "Yazar, yolcular arasındaki dayanışmanın (solidariteit) çok büyük olduğunu, herkesin aynı durumda (in hetzelfde treintje) olduğunu ve güzel yeni insanlarla tanıştıklarını belirtir.",
@@ -5234,7 +5214,7 @@ export const chapters11_15 = [
       "reflexive_pronouns",
       "expressions"
     ],
-    "questionNl": "Welke zin drukt correct uit dat Tom zijn telefoon bij zijn eigen persoon draagt?",
+    "questionNl": "In het dagelijks leven: Welke zin drukt correct uit dat Tom zijn telefoon bij zijn eigen persoon draagt?",
     "options": [
       "Tom heeft zijn telefoon bij zich.",
       "Tom heeft zijn telefoon bij elkaar.",
@@ -5276,7 +5256,7 @@ export const chapters11_15 = [
       "exclamations",
       "reactions"
     ],
-    "questionNl": "Een vriend vertelt: 'Mijn vakantie naar Italië is geannuleerd.' Wat is de meest passende meelevende uitroep?",
+    "questionNl": "In het dagelijks leven: Een vriend vertelt: 'Mijn vakantie naar Italië is geannuleerd.' Wat is de meest passende meelevende uitroep?",
     "options": [
       "Wat jammer! (of: Wat vervelend!)",
       "Wat lekker!",
@@ -5360,7 +5340,7 @@ export const chapters11_15 = [
       "places",
       "directions"
     ],
-    "questionNl": "Welke zin beschrijft een BEWEGING en géén vaste locatie ?",
+    "questionNl": "In het dagelijks leven: Welke zin beschrijft een BEWEGING en géén vaste locatie ?",
     "options": [
       "U moet hier de trap af gaan.",
       "Het toilet is op de eerste verdieping.",
@@ -5372,26 +5352,6 @@ export const chapters11_15 = [
     "explanationEn": "'De trap af gaan' (going down the stairs) denotes motion/movement, whereas the other options describe static locations.",
     "difficulty": 3,
     "quality": 1
-  },
-  {
-    "id": "q_onclass_12_2",
-    "type": "multiple_choice",
-    "tags": [
-      "summary_ch12",
-      "directions"
-    ],
-    "questionNl": "— Situatie in het dagelijks leven:\n'Loop bij het kruispunt helemaal ___ tot aan de kerk.'",
-    "correctAnswer": "rechtdoor",
-    "explanationTr": "'Dümdüz gitmek / dosdoğru yürümek' yön tarifi 'rechtdoor lopen'dır.",
-    "explanationEn": "The Dutch word for straight ahead in giving directions is 'rechtdoor' ('rechtdoor lopen').",
-    "difficulty": 3,
-    "quality": 1,
-    "options": [
-      "rechtdoor",
-      "niet rechtdoor",
-      "geen rechtdoor",
-      "wel rechtdoor"
-    ]
   },
   {
     "id": "q_onclass_12_3",
@@ -5443,7 +5403,7 @@ export const chapters11_15 = [
       "separable_verbs",
       "perfectum"
     ],
-    "questionNl": "Hoe wordt het voltooid deelwoord van een scheidbaar werkwoord zoals 'instappen' gevormd?",
+    "questionNl": "In het dagelijks leven: Hoe wordt het voltooid deelwoord van een scheidbaar werkwoord zoals 'instappen' gevormd?",
     "options": [
       "Het voorvoegsel + ge + stam + t/d (ingestapt).",
       "Ge + voorvoegsel + stam + t/d (geinstapt).",
@@ -5506,7 +5466,7 @@ export const chapters11_15 = [
       "directions",
       "dialogue"
     ],
-    "questionNl": "Hoe vat je een routebeschrijving samen om te controleren of je het goed hebt begrepen?",
+    "questionNl": "In het dagelijks leven: Hoe vat je een routebeschrijving samen om te controleren of je het goed hebt begrepen?",
     "options": [
       "Dus eerst rechtdoor en dan de tweede straat links, klopt dat?",
       "Waarom stuurt u mij die kant op?",
@@ -5548,7 +5508,7 @@ export const chapters11_15 = [
       "opinions",
       "word_order"
     ],
-    "questionNl": "Kies de zin met de correcte woordvolgorde die begint met 'Volgens mij':",
+    "questionNl": "In het dagelijks leven: Kies de zin met de correcte woordvolgorde die begint met 'Volgens mij':",
     "options": [
       "Volgens mij is deze buurt heel gezellig.",
       "Volgens mij deze buurt is heel gezellig.",
@@ -5674,7 +5634,7 @@ export const chapters11_15 = [
       "reactions",
       "expressions"
     ],
-    "questionNl": "Welke uitroep gebruik je om grote opluchting uit te drukken wanneer een spannend probleem goed afloopt?",
+    "questionNl": "In het dagelijks leven: Welke uitroep gebruik je om grote opluchting uit te drukken wanneer een spannend probleem goed afloopt?",
     "options": [
       "Gelukkig!",
       "Helaas!",
@@ -5694,7 +5654,7 @@ export const chapters11_15 = [
       "summary_ch13",
       "pronunciation"
     ],
-    "questionNl": "Hoe wordt de bekende tweeklank 'ui' (zoals in huis, tuin, huid) volgens de lesnotities gevormd?",
+    "questionNl": "In het dagelijks leven: Hoe wordt de bekende tweeklank 'ui' (zoals in huis, tuin, huid) volgens de lesnotities gevormd?",
     "options": [
       "Het is een klankcombinatie die begint rond de 'a' en glijdt naar een 'ü'-achtige mondstand.",
       "Het klinkt precies als de Engelse 'oo'.",
@@ -5757,7 +5717,7 @@ export const chapters11_15 = [
       "indirect_questions",
       "syntax"
     ],
-    "questionNl": "Wat is de juiste beleefde indirecte vraag voor: 'Werkt de kaartautomaat op muntgeld?'",
+    "questionNl": "In het dagelijks leven: Wat is de juiste beleefde indirecte vraag voor: 'Werkt de kaartautomaat op muntgeld?'",
     "options": [
       "Weet u misschien of de automaat op muntgeld werkt?",
       "Weet u misschien werkt de automaat op muntgeld?",
@@ -5778,7 +5738,7 @@ export const chapters11_15 = [
       "zullen_probability",
       "future_tense"
     ],
-    "questionNl": "Wat drukt de constructie 'zullen + wel' uit in de zin: 'Je zult morgen wel spierpijn hebben'?",
+    "questionNl": "In het dagelijks leven: Wat drukt de constructie 'zullen + wel' uit in de zin: 'Je zult morgen wel spierpijn hebben'?",
     "options": [
       "Een sterke waarschijnlijkheid / vermoeden (probability: you will probably have...).",
       "Een strikte verplichting (moeten).",
@@ -5820,7 +5780,7 @@ export const chapters11_15 = [
       "future_tense",
       "future_gaan"
     ],
-    "questionNl": "Welke zin drukt volgens de lesnotities een PERSOONLIJK PLAN / VOORNEMEN (intention) uit?",
+    "questionNl": "In het dagelijks leven: Welke zin drukt volgens de lesnotities een PERSOONLIJK PLAN / VOORNEMEN (intention) uit?",
     "options": [
       "Ik ga volgende week Nederlands studeren.",
       "Ik werk morgen van tien tot twee.",
@@ -5862,7 +5822,7 @@ export const chapters11_15 = [
       "indirect_questions",
       "word_order"
     ],
-    "questionNl": "Maak van 'Wanneer is het pasje klaar?' een correcte en beleefde indirecte vraag:",
+    "questionNl": "In het dagelijks leven: Maak van 'Wanneer is het pasje klaar?' een correcte en beleefde indirecte vraag:",
     "options": [
       "Kunt u me zeggen wanneer het pasje klaar is?",
       "Kunt u me zeggen wanneer is het pasje klaar?",
@@ -5883,7 +5843,7 @@ export const chapters11_15 = [
       "future_tense",
       "future_gaan"
     ],
-    "questionNl": "Waarom zeg je 'Ik ga vanavond pizza eten' in plaats van 'Ik zal vanavond pizza eten'?",
+    "questionNl": "In het dagelijks leven: Waarom zeg je 'Ik ga vanavond pizza eten' in plaats van 'Ik zal vanavond pizza eten'?",
     "options": [
       "Omdat 'gaan' wordt gebruikt voor persoonlijke plannen en voornemens, terwijl 'zullen' meer voor beloftes of voorspellingen is.",
       "Omdat 'zullen' niet mag bij eten.",
@@ -5946,7 +5906,7 @@ export const chapters11_15 = [
       "demonstratives",
       "people"
     ],
-    "questionNl": "Waar is Ashwini? Hoe verwijs je informeel naar een persoon met een aanwijzend voornaamwoord?",
+    "questionNl": "In het dagelijks leven: Waar is Ashwini? Hoe verwijs je informeel naar een persoon met een aanwijzend voornaamwoord?",
     "options": [
       "Die is in de les.",
       "Dat is in de les.",
@@ -5967,7 +5927,7 @@ export const chapters11_15 = [
       "demonstratives",
       "nature"
     ],
-    "questionNl": "We zien het Naardermeer . Welk woord gebruik je om hiernaar te verwijzen?",
+    "questionNl": "In het dagelijks leven: We zien het Naardermeer . Welk woord gebruik je om hiernaar te verwijzen?",
     "options": [
       "Dat / Het is een prachtig natuurgebied.",
       "Die is een prachtig natuurgebied.",
@@ -6051,7 +6011,7 @@ export const chapters11_15 = [
       "buildings",
       "vocabulary"
     ],
-    "questionNl": "Hoe heet de toren van een historisch gebouw waarin een groot uurwerk hangt?",
+    "questionNl": "In het dagelijks leven: Hoe heet de toren van een historisch gebouw waarin een groot uurwerk hangt?",
     "options": [
       "de kloktoren",
       "de kerkbank",
