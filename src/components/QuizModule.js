@@ -855,10 +855,10 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
 
                 {currentQ.quality && (
                   <span
-                    className={`text-[11px] sm:text-xs font-semibold px-2 py-0.5 rounded-md border flex items-center gap-1 transition-all ${
+                    className={`w-6 h-6 sm:w-7 sm:h-7 rounded-md border flex items-center justify-center transition-all select-none ${
                       currentQ.quality === 2
-                        ? 'bg-sky-950/40 text-sky-300 border-sky-800/60'
-                        : 'bg-indigo-950/40 text-indigo-300 border-indigo-800/60'
+                        ? 'bg-sky-950/50 text-sky-300 border-sky-800/60 shadow-sm'
+                        : 'bg-slate-800/80 text-slate-400 border-slate-700/80'
                     }`}
                     title={
                       isTr
@@ -870,8 +870,7 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
                           })`
                     }
                   >
-                    <i className="fa-solid fa-gem text-[10px]"></i>
-                    <span>{isTr ? 'Kalite' : 'Quality'}: {currentQ.quality}/2</span>
+                    <i className="fa-solid fa-gem text-[11px] sm:text-xs"></i>
                   </span>
                 )}
               </div>
