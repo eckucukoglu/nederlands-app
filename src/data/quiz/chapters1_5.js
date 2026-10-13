@@ -79,7 +79,7 @@ export const chapters1_5 = [
     "explanationTr": "Tekil 'sen' anlamında 'jij' veya 'je' kullanılır.",
     "explanationEn": "'jij' or 'je' is used for the singular 'you'.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_11",
@@ -99,7 +99,7 @@ export const chapters1_5 = [
     "explanationTr": "'Biz' anlamında 'wij' veya 'we' kullanılır.",
     "explanationEn": "'wij' or 'we' translates to 'We'.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_12",
@@ -119,7 +119,7 @@ export const chapters1_5 = [
     "explanationTr": "Çoğul 'siz' anlamında 'jullie' kullanılır.",
     "explanationEn": "'jullie' is used for the plural 'you'.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_13",
@@ -139,7 +139,7 @@ export const chapters1_5 = [
     "explanationTr": "'Zij/ze' hem tekil dişil (o) hem de çoğul (onlar) anlamlarına gelebilir.",
     "explanationEn": "'Zij/ze' can mean singular 'she' or plural 'they'.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_14",
@@ -159,7 +159,7 @@ export const chapters1_5 = [
     "explanationTr": "'ik' öznesi ile 'zijn' fiili 'ben' olarak çekimlenir.",
     "explanationEn": "For 'ik', the verb 'zijn' is conjugated as 'ben'.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_15",
@@ -179,7 +179,7 @@ export const chapters1_5 = [
     "explanationTr": "'jij' öznesi ile 'zijn' fiili 'bent' olur.",
     "explanationEn": "The correct form of 'zijn' for 'jij' is 'bent'.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_16",
@@ -199,7 +199,7 @@ export const chapters1_5 = [
     "explanationTr": "Tekil 3. şahıslar için 'zijn' fiili 'is' olur.",
     "explanationEn": "For 3rd person singular, 'zijn' becomes 'is'.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_17",
@@ -219,7 +219,7 @@ export const chapters1_5 = [
     "explanationTr": "Çoğul şahıslarda 'zijn' fiili mastar halinde kalır.",
     "explanationEn": "Plural pronouns take the infinitive form 'zijn'.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_18",
@@ -239,7 +239,7 @@ export const chapters1_5 = [
     "explanationTr": "Mastar ekinden (-en) arındırıldığında kalan kısım köktür: 'luister'.",
     "explanationEn": "Removing '-en' gives the stem: 'luister'.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_19",
@@ -259,7 +259,7 @@ export const chapters1_5 = [
     "explanationTr": "'Ik' şahsı için düzenli fiiller sadece kök halindedir.",
     "explanationEn": "For 'Ik', regular verbs use only the stem.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_20",
@@ -279,7 +279,7 @@ export const chapters1_5 = [
     "explanationTr": "'jij' öznesi için 'kök + t' kuralı uygulanır: luister + t = luistert.",
     "explanationEn": "For 'jij', the rule is 'stem + t': luistert.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_21",
@@ -299,7 +299,7 @@ export const chapters1_5 = [
     "explanationTr": "Çoğul şahıslarda fiil mastar (luisteren) halindedir.",
     "explanationEn": "For plurals, the infinitive form is used.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_22",
@@ -319,7 +319,7 @@ export const chapters1_5 = [
     "explanationTr": "'werken' fiilinin kökü 'werk'tir.",
     "explanationEn": "The stem of 'werken' is 'werk'.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_23",
@@ -339,7 +339,7 @@ export const chapters1_5 = [
     "explanationTr": "'Hij' 3. tekil şahıs olduğu için 'kök + t' uygulanır: werkt.",
     "explanationEn": "For 'Hij', the rule is 'stem + t': werkt.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_34",
@@ -359,7 +359,7 @@ export const chapters1_5 = [
     "explanationTr": "Harfler sırasıyla P-ay, ay, em şeklinde okunur.",
     "explanationEn": "The letters are read as P-ay, ay, em.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_35",
@@ -399,7 +399,7 @@ export const chapters1_5 = [
     "explanationTr": "'Goedemiddag' öğleden sonra kullanılır.",
     "explanationEn": "'Goedemiddag' is used in the afternoon.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_37",
@@ -419,7 +419,7 @@ export const chapters1_5 = [
     "explanationTr": "Akşamları 'goedenavond' kullanılır.",
     "explanationEn": "In the evening, use 'goedenavond'.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_39",
@@ -439,7 +439,7 @@ export const chapters1_5 = [
     "explanationTr": "Günlük dilde 'hallo' veya 'hoi' informel bir selamlamadır.",
     "explanationEn": "'hallo' or 'hoi' is an informal greeting.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_40",
@@ -499,7 +499,7 @@ export const chapters1_5 = [
     "explanationTr": "21'den büyük sayılarda önce birler basamağı söylenir: achtenvijftig.",
     "explanationEn": "For numbers over 20, ones come first: achtenvijftig.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_49",
@@ -519,7 +519,7 @@ export const chapters1_5 = [
     "explanationTr": "23 sayısı 'drieëntwintig' olarak yazılır.",
     "explanationEn": "The number 23 is written as 'drieëntwintig'.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_001",
@@ -619,7 +619,7 @@ export const chapters1_5 = [
     "explanationTr": "Erkek için 'hij', kadın için 'zij/ze', cansız/nötr nesne için 'het' kullanılır.",
     "explanationEn": "'hij' for he, 'zij/ze' for she, and 'het' for it.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_024",
@@ -639,7 +639,7 @@ export const chapters1_5 = [
     "explanationTr": "Hollandacada A harfi uzun bir 'AA' (Aaa) sesiyle okunur.",
     "explanationEn": "In Dutch, the letter A is pronounced with a long 'AA' sound.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_025",
@@ -659,7 +659,7 @@ export const chapters1_5 = [
     "explanationTr": "'E' harfi Hollandacada 'ay' (Türkçedeki 'ey' gibi) okunur.",
     "explanationEn": "The letter 'E' is pronounced as 'ay' (similar to 'ey' in English).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_026",
@@ -679,7 +679,7 @@ export const chapters1_5 = [
     "explanationTr": "'G' harfi boğazdan gelen özel bir sesle 'G-ay' şeklinde okunur.",
     "explanationEn": "'G' is pronounced with a guttural sound 'G-ay'.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_027",
@@ -699,7 +699,7 @@ export const chapters1_5 = [
     "explanationTr": "'I' harfi Hollandacada İngilizcedeki 'ee' (uzun i) gibi okunur.",
     "explanationEn": "The letter 'I' is pronounced like 'ee' in English.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_028",
@@ -719,7 +719,7 @@ export const chapters1_5 = [
     "explanationTr": "'J' harfi İngilizcedeki Y sesine benzer şekilde 'y-ay' olarak okunur.",
     "explanationEn": "The letter 'J' is pronounced like an English Y as 'y-ay'.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_029",
@@ -739,7 +739,7 @@ export const chapters1_5 = [
     "explanationTr": "'U' harfi dudaklar büzülerek uzun bir 'Uu' (ü'ye yakın) olarak okunur.",
     "explanationEn": "The letter 'U' is pronounced with pursed lips as 'Uu'.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_030",
@@ -759,7 +759,7 @@ export const chapters1_5 = [
     "explanationTr": "'V' harfi Hollandacada 'V-ay' olarak telaffuz edilir.",
     "explanationEn": "The letter 'V' is phonetically pronounced as 'V-ay' in Dutch.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_031",
@@ -779,7 +779,7 @@ export const chapters1_5 = [
     "explanationTr": "'W' harfinin Hollandaca fonetik karşılığı 'W-ay' şeklindedir.",
     "explanationEn": "The phonetic representation of the Dutch 'W' is 'W-ay'.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_032",
@@ -799,7 +799,7 @@ export const chapters1_5 = [
     "explanationTr": "Y harfi Hollandacada 'Yunan i'si' anlamına gelen 'Griekse ij' veya Fransızca kökenli 'i-grec' olarak adlandırılır.",
     "explanationEn": "The letter Y is called 'Griekse ij' or 'i-grec'.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_033",
@@ -819,7 +819,7 @@ export const chapters1_5 = [
     "explanationTr": "'C' harfi İngilizcedeki 'say' (sey) kelimesi gibi telaffuz edilir.",
     "explanationEn": "The letter 'C' is phonetically pronounced as 'say'.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_038",
@@ -839,7 +839,7 @@ export const chapters1_5 = [
     "explanationTr": "Günlük dilde gayriresmi selamlaşma 'hallo' veya 'hoi' şeklindedir.",
     "explanationEn": "Informal greetings are 'hallo' or 'hoi'.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_042",
@@ -873,7 +873,7 @@ export const chapters1_5 = [
     "explanationTr": "Yarın görüşmek üzere 'tot morgen' denir.",
     "explanationEn": "'See you tomorrow' is 'tot morgen'.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_044",
@@ -913,7 +913,7 @@ export const chapters1_5 = [
     "explanationTr": "'hardlopen' spor amaçlı koşu demektir.",
     "explanationEn": "'hardlopen' means running as a sport.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_047",
@@ -927,7 +927,7 @@ export const chapters1_5 = [
     "explanationTr": "'Ik' öznesi için 'spelen' fiili kök halinde 'speel' olur.",
     "explanationEn": "For 'Ik', the verb 'spelen' is 'speel'.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_050",
@@ -947,7 +947,7 @@ export const chapters1_5 = [
     "explanationTr": "Tüm çoğul şahıs zamirleri ile fiilin mastar hali (infinitief) kullanılır.",
     "explanationEn": "All plural pronouns take the infinitive form of the verb.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_002",
@@ -961,7 +961,7 @@ export const chapters1_5 = [
     "explanationTr": "'jij' öznesi için fiil köküne '-t' eklenir (stam + t).",
     "explanationEn": "For the subject 'jij', a '-t' is added to the verb stem (stam + t).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_003",
@@ -975,7 +975,7 @@ export const chapters1_5 = [
     "explanationTr": "Tekil 3. şahıs (hij) için 'stam + t' kuralı uygulanır: werkt.",
     "explanationEn": "For 3rd person singular (hij), the 'stam + t' rule applies: werkt.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_004",
@@ -989,7 +989,7 @@ export const chapters1_5 = [
     "explanationTr": "Çoğul 'wij' öznesi ile fiil mastar (infinitief) halinde kalır.",
     "explanationEn": "With the plural subject 'wij', the verb remains in the infinitive.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_005",
@@ -1003,7 +1003,7 @@ export const chapters1_5 = [
     "explanationTr": "Çoğul 'jullie' öznesi için fiil mastar halindedir.",
     "explanationEn": "For the plural subject 'jullie', the verb is in the infinitive.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_006",
@@ -1017,7 +1017,7 @@ export const chapters1_5 = [
     "explanationTr": "Çoğul 'zij' (onlar) öznesi ile fiil mastar halinde (werken) kalır.",
     "explanationEn": "With the plural subject 'zij' (they), the verb stays in the infinitive.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_007",
@@ -1037,7 +1037,7 @@ export const chapters1_5 = [
     "explanationTr": "'werken' fiilinden '-en' eki atıldığında kök olan 'werk' kalır.",
     "explanationEn": "Removing '-en' from 'werken' leaves the stem 'werk'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_008",
@@ -1057,7 +1057,7 @@ export const chapters1_5 = [
     "explanationTr": "'jij' ve 'hij/zij/het' zamirleri için kural 'stam + t' şeklindedir.",
     "explanationEn": "For 'jij' and 'hij/zij/het', the rule is 'stem + t'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_009",
@@ -1071,7 +1071,7 @@ export const chapters1_5 = [
     "explanationTr": "'Mijn moeder' (zij) 3. tekil şahıstır, bu yüzden 'stam + t' uygulanır.",
     "explanationEn": "'Mijn moeder' is 3rd person singular, so the 'stam + t' rule applies.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_010",
@@ -1091,7 +1091,7 @@ export const chapters1_5 = [
     "explanationTr": "Çoğul şahıslar (wij, jullie, zij) her zaman mastar formunu alır.",
     "explanationEn": "Plural pronouns (wij, jullie, zij) always take the infinitive form.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_011",
@@ -1105,7 +1105,7 @@ export const chapters1_5 = [
     "explanationTr": "'Benim' anlamını veren iyelik zamiri (possessief pronomen) 'mijn' kelimesidir.",
     "explanationEn": "The possessive pronoun for 'my' is 'mijn'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_012",
@@ -1119,7 +1119,7 @@ export const chapters1_5 = [
     "explanationTr": "'Senin' anlamını veren vurgulu iyelik zamiri 'jouw'dur (veya je).",
     "explanationEn": "The emphasized possessive pronoun for 'your' is 'jouw' (or 'je').",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_013",
@@ -1133,7 +1133,7 @@ export const chapters1_5 = [
     "explanationTr": "'Onun' (eril) anlamını veren iyelik zamiri 'zijn' kelimesidir.",
     "explanationEn": "The possessive pronoun for 'his' is 'zijn'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_014",
@@ -1147,7 +1147,7 @@ export const chapters1_5 = [
     "explanationTr": "'Onun' (dişil) anlamını veren iyelik zamiri 'haar' kelimesidir.",
     "explanationEn": "The possessive pronoun for 'her' is 'haar'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_015",
@@ -1168,7 +1168,7 @@ export const chapters1_5 = [
     "explanationTr": "'Tuin' bir de-woord olduğu için 'bizim' karşılığı 'onze' olur.",
     "explanationEn": "Because 'tuin' is a de-word, the word for 'our' is 'onze'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_016",
@@ -1189,7 +1189,7 @@ export const chapters1_5 = [
     "explanationTr": "'Huis' bir het-woord olduğu için 'bizim' karşılığı 'ons' olur.",
     "explanationEn": "Because 'huis' is a het-word, the word for 'our' is 'ons'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_017",
@@ -1203,7 +1203,7 @@ export const chapters1_5 = [
     "explanationTr": "Çoğul 'sizin' anlamını veren iyelik zamiri 'jullie'dir.",
     "explanationEn": "The possessive pronoun for plural 'your' is 'jullie'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_018",
@@ -1217,7 +1217,7 @@ export const chapters1_5 = [
     "explanationTr": "'Onların' anlamını veren iyelik zamiri 'hun' kelimesidir.",
     "explanationEn": "The possessive pronoun for 'their' is 'hun'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_019",
@@ -1237,7 +1237,7 @@ export const chapters1_5 = [
     "explanationTr": "'Hij' zamiri için iyelik zamiri 'zijn' (onun) olur.",
     "explanationEn": "The possessive pronoun corresponding to 'hij' is 'zijn'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_020",
@@ -1257,7 +1257,7 @@ export const chapters1_5 = [
     "explanationTr": "Resmi 'u' zamiri için iyelik zamiri (sizin) 'uw'dur.",
     "explanationEn": "The possessive pronoun for the formal 'u' is 'uw'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_021",
@@ -1271,7 +1271,7 @@ export const chapters1_5 = [
     "explanationTr": "'Nerede' sorusu Hollandacada 'Waar' kelimesiyle sorulur.",
     "explanationEn": "The question word for 'Where' in Dutch is 'Waar'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_022",
@@ -1285,7 +1285,7 @@ export const chapters1_5 = [
     "explanationTr": "'Nereden' sorusu 'Waar ... vandaan' veya 'Uit wie/waar' ile yapılır.",
     "explanationEn": "'Where from' is asked using 'Waar ... vandaan'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_023",
@@ -1299,7 +1299,7 @@ export const chapters1_5 = [
     "explanationTr": "'Nasıl' sorusunun karşılığı 'Hoe' kelimesidir.",
     "explanationEn": "The question word for 'How' is 'Hoe'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_024",
@@ -1313,7 +1313,7 @@ export const chapters1_5 = [
     "explanationTr": "'Kaç yaşında' demek için 'Hoe oud' kalıbı kullanılır.",
     "explanationEn": "'How old' translates to 'Hoe oud'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_025",
@@ -1327,7 +1327,7 @@ export const chapters1_5 = [
     "explanationTr": "'Kim' sorusu 'Wie' ile sorulur.",
     "explanationEn": "The question word for 'Who' is 'Wie'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_026",
@@ -1342,7 +1342,7 @@ export const chapters1_5 = [
     "explanationTr": "Saati sormak için 'Hoe laat is het?' kalıbı kullanılır.",
     "explanationEn": "To ask for the time, use 'Hoe laat is het?'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_027",
@@ -1356,7 +1356,7 @@ export const chapters1_5 = [
     "explanationTr": "'Ne kadar / Kaç tane' anlamında 'Hoeveel' kelimesi kullanılır.",
     "explanationEn": "'How many' translates to 'Hoeveel'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_028",
@@ -1376,7 +1376,7 @@ export const chapters1_5 = [
     "explanationTr": "'Hangi' (which) anlamında 'welk' veya 'welke' kullanılır.",
     "explanationEn": "'Which' translates to 'welk' or 'welke'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_029",
@@ -1405,7 +1405,7 @@ export const chapters1_5 = [
     "explanationTr": "Kloktijden ile her zaman 'om' voorzetsel (preposition) kullanılır.",
     "explanationEn": "Clock times always use the preposition 'om'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_032",
@@ -1420,7 +1420,7 @@ export const chapters1_5 = [
     "explanationTr": "Belirli bir saatten bahsederken 'om' kullanılır.",
     "explanationEn": "When stating a specific time, 'om' is used.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_033",
@@ -1435,7 +1435,7 @@ export const chapters1_5 = [
     "explanationTr": "Aylar (months) ve yıllar (years) ile 'in' voorzetsel kullanılır.",
     "explanationEn": "Months and years take the preposition 'in'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_034",
@@ -1450,7 +1450,7 @@ export const chapters1_5 = [
     "explanationTr": "Spesifik tarihler (dates) ve gün isimleri (days) ile 'op' voorzetsel kullanılır.",
     "explanationEn": "Specific dates and days of the week take the preposition 'op'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_035",
@@ -1465,7 +1465,7 @@ export const chapters1_5 = [
     "explanationTr": "Gün isimleri (days) ile 'op' kullanılır (op maandag).",
     "explanationEn": "Days of the week use 'op' (op maandag).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_036",
@@ -1480,7 +1480,7 @@ export const chapters1_5 = [
     "explanationTr": "Mevsimler (seasons) ile 'in' voorzetsel kullanılır (in de winter).",
     "explanationEn": "Seasons take the preposition 'in' (in de winter).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_037",
@@ -1500,7 +1500,7 @@ export const chapters1_5 = [
     "explanationTr": "Hollanda takviminde haftanın ilk günü 'maandag'dır.",
     "explanationEn": "In the Dutch calendar, the first day of the week is 'maandag'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_038",
@@ -1514,7 +1514,7 @@ export const chapters1_5 = [
     "explanationTr": "Mart ayından sonra nisan (april) ayı gelir.",
     "explanationEn": "The month following March is April.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_042",
@@ -1548,7 +1548,7 @@ export const chapters1_5 = [
     "explanationTr": "'broer' erkek kardeş demektir.",
     "explanationEn": "'broer' means brother.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_048",
@@ -1563,7 +1563,7 @@ export const chapters1_5 = [
     "explanationTr": "Yıllardan önce 'in' voorzetsel kullanılır.",
     "explanationEn": "Years take the preposition 'in'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_049",
@@ -1578,7 +1578,7 @@ export const chapters1_5 = [
     "explanationTr": "Yıl belirten ifadelerde 'in' kullanılır.",
     "explanationEn": "Years are preceded by the preposition 'in'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_001",
@@ -1635,7 +1635,7 @@ export const chapters1_5 = [
     "explanationTr": "'Sipariş verebilir miyim?' demek için 'Mag ik bestellen?' kalıbı kullanılır.",
     "explanationEn": "To ask 'May I order?', use 'Mag ik bestellen?'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_006",
@@ -1650,7 +1650,7 @@ export const chapters1_5 = [
     "explanationTr": "'Tekrar sipariş verelim mi?' anlamında 'Zullen we nog een keer bestellen?' kullanılır.",
     "explanationEn": "'Shall we order again?' translates to 'Zullen we nog een keer bestellen?'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_007",
@@ -1686,7 +1686,7 @@ export const chapters1_5 = [
     "explanationTr": "'Benim için' anlamındaki ifade 'voor mij'dir.",
     "explanationEn": "'For me' translates to 'voor mij'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_011",
@@ -1700,7 +1700,7 @@ export const chapters1_5 = [
     "explanationTr": "Tanışırken 'Aangenaam' (Memnun oldum) denir.",
     "explanationEn": "'Nice to meet you' is translated as 'Aangenaam'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_013",
@@ -1721,7 +1721,7 @@ export const chapters1_5 = [
     "explanationTr": "Küçültme eki almış tüm kelimeler tekilken her zaman 'het' artikeli alır (het biertje, het wijntje).",
     "explanationEn": "All diminutive words always take the article 'het' in the singular.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_014",
@@ -1742,7 +1742,7 @@ export const chapters1_5 = [
     "explanationTr": "Çoğul isimlerin hepsi istisnasız 'de' artikeli alır.",
     "explanationEn": "All plural nouns take the article 'de' without exception.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_015",
@@ -1763,7 +1763,7 @@ export const chapters1_5 = [
     "explanationTr": "İnversie (devrik yapı), özne ile çekimli fiilin yer değiştirmesidir (Fiil + Özne).",
     "explanationEn": "Inversion means switching the positions of the verb and the subject (Verb + Subject).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_016",
@@ -1784,7 +1784,7 @@ export const chapters1_5 = [
     "explanationTr": "Soru cümlelerinde fiil başa gelerek inversie oluşturur (Mag ik een cola?).",
     "explanationEn": "We use inversion for questions (e.g., Mag ik een cola?).",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_017",
@@ -1804,7 +1804,7 @@ export const chapters1_5 = [
     "explanationTr": "Normal ana cümle diziliminde özne fiilden önce gelir: 'Ik ga naar het park.'",
     "explanationEn": "In a normal main clause, the subject precedes the verb: 'Ik ga naar het park.' ",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_018",
@@ -1824,7 +1824,7 @@ export const chapters1_5 = [
     "explanationTr": "Özneyi bulmak için 'Eylemi yapan kim veya ne?' diye sorulur.",
     "explanationEn": "To find the subject, ask: 'Who or what performs the action/verb?'",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_019",
@@ -1845,7 +1845,7 @@ export const chapters1_5 = [
     "explanationTr": "Cümle özne dışındaki bir öğeyle (zaman, yer vb.) başladığında inversie (devrik yapı) yapılır.",
     "explanationEn": "We use inversion when we start the sentence with something that is NOT the subject.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_020",
@@ -1860,7 +1860,7 @@ export const chapters1_5 = [
     "explanationTr": "'Vandaag' ile başlandığı için fiil öznenin önüne geçer: 'Vandaag ga ik...'.",
     "explanationEn": "Starting with 'Vandaag' triggers inversion: 'Vandaag ga ik...'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_021",
@@ -1877,7 +1877,7 @@ export const chapters1_5 = [
     "explanationTr": "Zaman zarfı ile başlandığında fiil ikinci sırada yer alır.",
     "explanationEn": "When starting with a time adverb, the verb takes the second position.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_022",
@@ -1894,7 +1894,7 @@ export const chapters1_5 = [
     "explanationTr": "'Volgende week' ile başlayan devrik cümlede fiil 'drink' hemen sonra gelir.",
     "explanationEn": "In this inverted sentence starting with 'Volgende week', the verb 'drink' follows immediately.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_023",
@@ -1909,7 +1909,7 @@ export const chapters1_5 = [
     "explanationTr": "'Nu' ile başlayan devrik cümlede fiilden (ben) sonra özne (ik) gelir.",
     "explanationEn": "In the inversion starting with 'Nu', the subject 'ik' follows the verb 'ben'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_024",
@@ -1926,7 +1926,7 @@ export const chapters1_5 = [
     "explanationTr": "Gün ismi ile başlandığı için inversie olur ve fiil ikinci sıraya geçer.",
     "explanationEn": "Starting with a day name triggers inversion, placing the verb in the second position.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_028",
@@ -1940,7 +1940,7 @@ export const chapters1_5 = [
     "explanationTr": "'kat' kelimesi bir de-woord'dur, bu yüzden 'de kat' olur.",
     "explanationEn": "'kat' is a de-word, so it takes 'de kat'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_029",
@@ -1954,7 +1954,7 @@ export const chapters1_5 = [
     "explanationTr": "'huis' kelimesi bir het-woord'dur, bu yüzden 'het huis' olur.",
     "explanationEn": "'huis' is a het-word, so it takes 'het huis'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_030",
@@ -1974,7 +1974,7 @@ export const chapters1_5 = [
     "explanationTr": "'adres' kelimesi 'het' artikeli alan bir het-woord'dur.",
     "explanationEn": "'adres' is a het-word taking the article 'het'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_031",
@@ -1994,7 +1994,7 @@ export const chapters1_5 = [
     "explanationTr": "'cursus' kelimesi 'de' artikeli alan bir de-woord'dur.",
     "explanationEn": "'cursus' is a de-word taking the article 'de'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_034",
@@ -2008,7 +2008,7 @@ export const chapters1_5 = [
     "explanationTr": "'foto' kelimesi de-woord'dur ('de foto').",
     "explanationEn": "'foto' is a de-word ('de foto').",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_035",
@@ -2022,7 +2022,7 @@ export const chapters1_5 = [
     "explanationTr": "'land' kelimesi het-woord'dur ('het land').",
     "explanationEn": "'land' is a het-word ('het land').",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_036",
@@ -2036,7 +2036,7 @@ export const chapters1_5 = [
     "explanationTr": "'maand' kelimesi de-woord'dur ('de maand').",
     "explanationEn": "'maand' is a de-word ('de maand').",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_037",
@@ -2050,7 +2050,7 @@ export const chapters1_5 = [
     "explanationTr": "'seizoen' kelimesi het-woord'dur ('het seizoen').",
     "explanationEn": "'seizoen' is a het-word ('het seizoen').",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_040",
@@ -2070,7 +2070,7 @@ export const chapters1_5 = [
     "explanationTr": "'de ronde' kafede alınan içki turu (round of drinks) anlamına gelir.",
     "explanationEn": "'de ronde' means a round of drinks in a café context.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_041",
@@ -2090,7 +2090,7 @@ export const chapters1_5 = [
     "explanationTr": "'de verjaardag van Edit' Edit'in doğum günüdür.",
     "explanationEn": "'de verjaardag van Edit' indicates it's Edit's birthday.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_042",
@@ -2110,7 +2110,7 @@ export const chapters1_5 = [
     "explanationTr": "Kafede olma sebepleri Edit'in doğum günü olmasıdır.",
     "explanationEn": "They are in the café because it's Edit's birthday.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_043",
@@ -2124,7 +2124,7 @@ export const chapters1_5 = [
     "explanationTr": "Doğum gününü kutlamak için 'Gefeliciteerd met je verjaardag' denir.",
     "explanationEn": "To say Happy birthday, use 'Gefeliciteerd met je verjaardag'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_044",
@@ -2164,7 +2164,7 @@ export const chapters1_5 = [
     "explanationTr": "Özet notlarına göre Andres kırmızı şarap (rode wijn) ister.",
     "explanationEn": "According to the summary notes, Andres wants red wine (rode wijn).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_047",
@@ -2179,7 +2179,7 @@ export const chapters1_5 = [
     "explanationTr": "Soru cümlesi yaparken fiil başa gelir: 'Mag ik een cola?'.",
     "explanationEn": "To form a question, the verb moves to the front: 'Mag ik een cola?'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_049",
@@ -2193,7 +2193,7 @@ export const chapters1_5 = [
     "explanationTr": "'tekst' kelimesi de-woord'dur ('de tekst').",
     "explanationEn": "'tekst' is a de-word ('de tekst').",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_001",
@@ -2208,7 +2208,7 @@ export const chapters1_5 = [
     "explanationTr": "Cümbelesi bir zaman zarfıyla (Op maandag) başladığı için inversie (devrik yapı) olur; fiil ikinci sıraya geçer.",
     "explanationEn": "Starting with a time adverb (Op maandag) triggers inversion, placing the verb in the second position.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_002",
@@ -2229,7 +2229,7 @@ export const chapters1_5 = [
     "explanationTr": "İnversie hem soru cümlelerinde hem de cümlenin özne dışındaki bir unsurla başlaması durumunda uygulanır.",
     "explanationEn": "Inversion is used for questions AND when starting a sentence with anything that is NOT a subject.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_003",
@@ -2245,7 +2245,7 @@ export const chapters1_5 = [
     "explanationTr": "Soru cümlesinde 'jij/je' fiilden sonra geldiği için 't' düşer: kom.",
     "explanationEn": "In a question where 'jij/je' follows the verb, the 't' drops: kom.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_004",
@@ -2260,7 +2260,7 @@ export const chapters1_5 = [
     "explanationTr": "'Morgen' ile başlayan devrik cümlede 'ik' için fiil 'drink' olur.",
     "explanationEn": "In this inverted sentence starting with 'Morgen', the verb for 'ik' is 'drink'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_005",
@@ -2281,7 +2281,7 @@ export const chapters1_5 = [
     "explanationTr": "Özne dışı öğe + fiil + özne + kalanlar formülü geçerlidir.",
     "explanationEn": "The correct pattern is: moment/place/anything that is not a subject + verb + subject + rest.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_006",
@@ -2296,7 +2296,7 @@ export const chapters1_5 = [
     "explanationTr": "'Vandaag' ile başlandığı için 'zijn' fiili 'ben' olarak ikinci sıraya geçer.",
     "explanationEn": "Starting with 'Vandaag' places the verb 'ben' in the second position.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_007",
@@ -2311,7 +2311,7 @@ export const chapters1_5 = [
     "explanationTr": "'Deze week' (Bu hafta) zarfıyla başlayan cümlede inversie yapılır: ga ik.",
     "explanationEn": "Starting with 'Deze week' triggers inversion: ga ik.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_008",
@@ -2331,7 +2331,7 @@ export const chapters1_5 = [
     "explanationTr": "Hal hatır sormak için 'Hoe gaat het?', 'Hoe is het met jou?' veya 'Alles goed?' kullanılabilir.",
     "explanationEn": "To ask how someone is doing, you can use 'Hoe gaat het?', 'Hoe is het met jou?', or 'Alles goed?'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_009",
@@ -2351,7 +2351,7 @@ export const chapters1_5 = [
     "explanationTr": "İyi hissettiğini belirten olumlu ifadeler goed, heel goed, prima ve uitstekend'dir.",
     "explanationEn": "Positive responses indicating things are going well include goed, heel goed, prima, and uitstekend.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_011",
@@ -2365,7 +2365,7 @@ export const chapters1_5 = [
     "explanationTr": "'Best goed' ifadesi 'oldukça iyi / bayağı iyi' anlamına gelir.",
     "explanationEn": "'Best goed' translates to pretty good / well.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_012",
@@ -2385,7 +2385,7 @@ export const chapters1_5 = [
     "explanationTr": "Öneri ve tekliflerde İngilizcedeki 'shall' anlamını vermek için 'zal' ve 'zullen' kullanılır.",
     "explanationEn": "To make suggestions meaning 'shall', we use 'zal' and 'zullen'.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_013",
@@ -2399,7 +2399,7 @@ export const chapters1_5 = [
     "explanationTr": "'I' (ben) öznesiyle öneri yaparken 'zal ik' kalıbı kullanılır.",
     "explanationEn": "When making a suggestion with 'I', we use 'zal ik'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_014",
@@ -2413,7 +2413,7 @@ export const chapters1_5 = [
     "explanationTr": "'We' (biz) öznesiyle öneri yaparken 'zullen we' kalıbı kullanılır.",
     "explanationEn": "When making a suggestion with 'we', we use 'zullen we'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_015",
@@ -2428,7 +2428,7 @@ export const chapters1_5 = [
     "explanationTr": "'Buluşmak / randevulaşmak' anlamındaki fiil 'afspreken'dir.",
     "explanationEn": "The verb meaning 'to meet / to make an appointment' is 'afspreken'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_017",
@@ -2468,7 +2468,7 @@ export const chapters1_5 = [
     "explanationTr": "Teklifleri olumlu karşılayan ifadeler 'Ja, leuk!', 'Ja, goed idee' ve 'Hartstikke leuk'dir.",
     "explanationEn": "Expressions showing a positive reaction to a suggestion include 'Ja, leuk!', 'Ja, goed idee', and 'Hartstikke leuk'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_019",
@@ -2488,7 +2488,7 @@ export const chapters1_5 = [
     "explanationTr": "Olumsuz reaksiyonlar teklifin kabul edilmediğini (lukt niet, heb al een afspraak, geen zin) belirtir.",
     "explanationEn": "Negative reactions decline suggestions citing reasons like not working out, having an appointment, or lacking mood.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_020",
@@ -2502,7 +2502,7 @@ export const chapters1_5 = [
     "explanationTr": "'Canım istemiyor / Hevesim yok' anlamındaki kalıp 'Ik heb geen zin'dir.",
     "explanationEn": "'I don't feel like it' translates to 'Ik heb geen zin'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_022",
@@ -2516,7 +2516,7 @@ export const chapters1_5 = [
     "explanationTr": "'Canım ... istiyor / ... hevesindeyim' demek için 'Ik heb zin in' kalıbı kullanılır.",
     "explanationEn": "'I feel like...' translates to 'Ik heb zin in'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_024",
@@ -2556,7 +2556,7 @@ export const chapters1_5 = [
     "explanationTr": "Diyalogda Hans'ın durumunun iyi olduğu belirtilir ('Hans is goed').",
     "explanationEn": "The dialogue states that things are going well with Hans ('Hans is goed').",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_026",
@@ -2616,7 +2616,7 @@ export const chapters1_5 = [
     "explanationTr": "Diyalogda Hans'ın çok fazla fotoğraf çekmek yerine romantik bir film çekeceği söylenir.",
     "explanationEn": "The dialogue notes that instead of taking many photos, Hans is going to make a romantic film.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_029",
@@ -2631,7 +2631,7 @@ export const chapters1_5 = [
     "explanationTr": "Zaman zarfıyla başlandığı için 'ik' zamirine göre 'wil' fiili ikinci sıradadır.",
     "explanationEn": "Starting with a time phrase requires the verb 'wil' for 'ik' in the second position.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_030",
@@ -2647,7 +2647,7 @@ export const chapters1_5 = [
     "explanationTr": "Devrik cümle kuralı gereği 'Vandaag' sözcüğünden hemen sonra 'studeer' gelir.",
     "explanationEn": "Following 'Vandaag' in inversion, the verb 'studeer' comes right after.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_032",
@@ -2667,7 +2667,7 @@ export const chapters1_5 = [
     "explanationTr": "Bu ifade kafede bira siparişi vermek için kullanılır.",
     "explanationEn": "This phrase is used to place an order for a beer in a café.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_033",
@@ -2687,7 +2687,7 @@ export const chapters1_5 = [
     "explanationTr": "'kantine' okul veya iş yerindeki yemekhane/kafeterya alanıdır.",
     "explanationEn": "'kantine' refers to the canteen or cafeteria.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_034",
@@ -2707,7 +2707,7 @@ export const chapters1_5 = [
     "explanationTr": "'We' öznesiyle teklif yaparken 'zullen we' kalıbı kullanılır.",
     "explanationEn": "When making suggestions with 'we', we use 'zullen we'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_035",
@@ -2727,7 +2727,7 @@ export const chapters1_5 = [
     "explanationTr": "'I' öznesiyle teklif yaparken 'zal ik' kalıbı kullanılır.",
     "explanationEn": "When making suggestions with 'I', we use 'zal ik'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_036",
@@ -2741,7 +2741,7 @@ export const chapters1_5 = [
     "explanationTr": "Öneri cümlesi 'Zullen we iets afspreken?' şeklinde başlar.",
     "explanationEn": "A suggestion starts with 'Zullen we iets afspreken?'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_037",
@@ -2755,7 +2755,7 @@ export const chapters1_5 = [
     "explanationTr": "'Ja, goed idee!' teklifleri kabul ederken sıklıkla söylenir.",
     "explanationEn": "'Ja, goed idee!' is commonly said when accepting suggestions.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_038",
@@ -2769,7 +2769,7 @@ export const chapters1_5 = [
     "explanationTr": "Olumsuz tepki kalıbı 'Nee, dat lukt niet' şeklindedir.",
     "explanationEn": "The negative response pattern is 'Nee, dat lukt niet'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_039",
@@ -2783,7 +2783,7 @@ export const chapters1_5 = [
     "explanationTr": "'Zaten bir randevum var' demek için 'Nee, ik heb al een afspraak' denir.",
     "explanationEn": "To say you already have plans, use 'Nee, ik heb al een afspraak'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_042",
@@ -2859,7 +2859,7 @@ export const chapters1_5 = [
     "explanationTr": "'Hartstikke leuk' çok keyifli, harika anlamında pozitif bir tepkidir.",
     "explanationEn": "'Hartstikke leuk' is a positive, enthusiastic response meaning great fun / awesome.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_046",
@@ -2879,7 +2879,7 @@ export const chapters1_5 = [
     "explanationTr": "Bu dersin ana hedefleri randevulaşmak, teklif sunmak ve bu tekliflere olumlu/olumsuz tepki vermektir.",
     "explanationEn": "The main goals of this lesson are making appointments, making suggestions, and reacting to suggestions.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_047",
@@ -2899,7 +2899,7 @@ export const chapters1_5 = [
     "explanationTr": "'Ik heb geen zin' ilgimin veya hevesimin olmadığını gösterir.",
     "explanationEn": "'Ik heb geen zin' expresses a lack of interest or desire.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_049",
@@ -2914,7 +2914,7 @@ export const chapters1_5 = [
     "explanationTr": "'Deze week' ile başlayan devrik cümlede 'ik' için fiil 'ga' olur.",
     "explanationEn": "In inversion starting with 'Deze week', the verb for 'ik' is 'ga'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_050",
@@ -2950,7 +2950,7 @@ export const chapters1_5 = [
     "explanationTr": "'tomaat' bir de-woord'dur ('de tomaat').",
     "explanationEn": "'tomaat' is a de-word ('de tomaat').",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_006",
@@ -2965,7 +2965,7 @@ export const chapters1_5 = [
     "explanationTr": "'bloemkool' karnabahar demektir.",
     "explanationEn": "'bloemkool' means cauliflower.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_010",
@@ -2986,7 +2986,7 @@ export const chapters1_5 = [
     "explanationTr": "'de aardbei' çilek demektir.",
     "explanationEn": "'de aardbei' means strawberry.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_011",
@@ -3006,7 +3006,7 @@ export const chapters1_5 = [
     "explanationTr": "Diyalogda Hans'ın altı domates (zes tomaten) aldığı belirtilir.",
     "explanationEn": "The dialogue states that Hans buys six tomatoes.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_012",
@@ -3026,7 +3026,7 @@ export const chapters1_5 = [
     "explanationTr": "Komşuların yarın (morgen) Hans'ta yemek yiyeceği söylenir.",
     "explanationEn": "The neighbors are coming to eat at Hans' place tomorrow.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_013",
@@ -3066,7 +3066,7 @@ export const chapters1_5 = [
     "explanationTr": "Diyalogda Hans'ın salatalık almadığı (geen komkommers) geçer.",
     "explanationEn": "The dialogue mentions that Hans does not buy cucumbers.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_015",
@@ -3080,7 +3080,7 @@ export const chapters1_5 = [
     "explanationTr": "Toplam tutar sekiz euro otuz centtir (acht euro dertig).",
     "explanationEn": "The total amount is eight euro thirty (acht euro dertig).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_016",
@@ -3100,7 +3100,7 @@ export const chapters1_5 = [
     "explanationTr": "Andiviyin ucuz olduğu belirtilir.",
     "explanationEn": "It is stated that the endive is cheap.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_017",
@@ -3114,7 +3114,7 @@ export const chapters1_5 = [
     "explanationTr": "'dertig cent' otuz cent demektir.",
     "explanationEn": "'dertig cent' means thirty cents.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_018",
@@ -3128,7 +3128,7 @@ export const chapters1_5 = [
     "explanationTr": "'iki kilo patates' ifadesi 'twee kilo aardappels' olarak yazılır.",
     "explanationEn": "'two kilos of potatoes' is written as 'twee kilo aardappels'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_019",
@@ -3148,7 +3148,7 @@ export const chapters1_5 = [
     "explanationTr": "'-el' ile biten vurgusuz heceli kelimeler düz olarak '-s' alır (tafels).",
     "explanationEn": "Words ending in unstressed '-el' take a plain '-s' (tafels).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_020",
@@ -3162,7 +3162,7 @@ export const chapters1_5 = [
     "explanationTr": "'-em' ile biten kelimeler plain '-s' alır: bezems.",
     "explanationEn": "Words ending in '-em' take a plain '-s': bezems.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_021",
@@ -3176,7 +3176,7 @@ export const chapters1_5 = [
     "explanationTr": "'-en' ile biten çok heceli kelimeler plain '-s' alır: jongens.",
     "explanationEn": "Words ending in '-en' take a plain '-s': jongens.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_022",
@@ -3190,7 +3190,7 @@ export const chapters1_5 = [
     "explanationTr": "'-er' ile biten kelimeler plain '-s' alır: kamers.",
     "explanationEn": "Words ending in '-er' take a plain '-s': kamers.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_023",
@@ -3205,7 +3205,7 @@ export const chapters1_5 = [
     "explanationTr": "Tüm küçültme ekli kelimeler (-je) çoğulda sadece '-s' alır: mesjes.",
     "explanationEn": "All diminutive words (-je) take a plain '-s' in plural: mesjes.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_024",
@@ -3220,7 +3220,7 @@ export const chapters1_5 = [
     "explanationTr": "Küçültme kelimeleri '-s' ile çoğul yapılır: meisjes.",
     "explanationEn": "Diminutives become plural with '-s': meisjes.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_025",
@@ -3234,7 +3234,7 @@ export const chapters1_5 = [
     "explanationTr": "Modern yabancı kelimeler (İngilizce/Fransızca kökenli) düz '-s' alır: computers.",
     "explanationEn": "Modern foreign loanwords take a plain '-s': computers.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_026",
@@ -3248,7 +3248,7 @@ export const chapters1_5 = [
     "explanationTr": "Fransızca kökenli 'café' kelimesi çoğulda 'cafés' olur.",
     "explanationEn": "The loanword 'café' becomes 'cafés' in plural.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_027",
@@ -3268,7 +3268,7 @@ export const chapters1_5 = [
     "explanationTr": "Özet tablosuna göre bu gruplar apostrofsuz düz '-s' alırlar.",
     "explanationEn": "According to the summary table, these groups take a plain '-s' without an apostrophe.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_028",
@@ -3288,7 +3288,7 @@ export const chapters1_5 = [
     "explanationTr": "'de' kelimelerinden sonra veya belirli/çoğul durumlarda sıfat her zaman '-e' alır: grote.",
     "explanationEn": "With 'de' words or plural/definite nouns, adjectives always take an '-e': grote.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_029",
@@ -3308,7 +3308,7 @@ export const chapters1_5 = [
     "explanationTr": "Altın kural: 'het'-woord ve önünde 'een' ya da hiç artikel yoksa sıfat '-e' ALMAZ (een groot café).",
     "explanationEn": "Golden rule: 'het'-word with 'een' or no article means the adjective gets NO '-e' (een groot café).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_030",
@@ -3328,7 +3328,7 @@ export const chapters1_5 = [
     "explanationTr": "'het' belirli artikeli kullanıldığında het-woord ile birlikte sıfat '-e' alır: het grote café.",
     "explanationEn": "When using the definite article 'het', the adjective for a het-word takes an '-e': het grote café.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_031",
@@ -3348,7 +3348,7 @@ export const chapters1_5 = [
     "explanationTr": "Eğer sıfat isimden sonra geliyorsa (örn. Het eten is lekker) asla '-e' almaz.",
     "explanationEn": "If the adjective comes after the noun (e.g., Het eten is lekker), it never takes an '-e'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_032",
@@ -3362,7 +3362,7 @@ export const chapters1_5 = [
     "explanationTr": "Sıfat isimden sonra (is ile bağlanarak) geldiği için ek almaz: lekker.",
     "explanationEn": "Since the adjective follows the noun, it takes no suffix: lekker.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_033",
@@ -3376,7 +3376,7 @@ export const chapters1_5 = [
     "explanationTr": "'maaltijd' de-woord'dur, bu yüzden sıfat '-e' alır: lekkere.",
     "explanationEn": "'maaltijd' is a de-word, so the adjective takes an '-e': lekkere.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_034",
@@ -3390,7 +3390,7 @@ export const chapters1_5 = [
     "explanationTr": "'man' de-woord'dur, sıfat '-e' alır: grote.",
     "explanationEn": "'man' is a de-word, the adjective takes an '-e': grote.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_035",
@@ -3404,7 +3404,7 @@ export const chapters1_5 = [
     "explanationTr": "Çoğul isimlerin önündeki sıfatlar '-e' alır, isim de çoğul olur: grote komkommers.",
     "explanationEn": "Adjectives before plural nouns take '-e', and the noun becomes plural: grote komkommers.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_036",
@@ -3418,7 +3418,7 @@ export const chapters1_5 = [
     "explanationTr": "'ik' öznesi için fiil sadece kök halindedir: werk.",
     "explanationEn": "For 'ik', the verb is just the stem: werk.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_037",
@@ -3432,7 +3432,7 @@ export const chapters1_5 = [
     "explanationTr": "'jij' öznesi için kök + t kuralı uygulanır: werkt.",
     "explanationEn": "For 'jij', the stem + t rule applies: werkt.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_038",
@@ -3446,7 +3446,7 @@ export const chapters1_5 = [
     "explanationTr": "3. tekil şahıs için 'stam + t' uygulanır: werkt.",
     "explanationEn": "For 3rd person singular, 'stam + t' is used: werkt.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_039",
@@ -3460,7 +3460,7 @@ export const chapters1_5 = [
     "explanationTr": "Çoğul 'wij' öznesi ile fiil mastar halindedir: werken.",
     "explanationEn": "For the plural 'wij', the verb is in the infinitive: werken.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_040",
@@ -3474,7 +3474,7 @@ export const chapters1_5 = [
     "explanationTr": "Çoğul 'jullie' öznesi için fiil mastar halindedir: werken.",
     "explanationEn": "For the plural 'jullie', the verb is in the infinitive: werken.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_041",
@@ -3488,7 +3488,7 @@ export const chapters1_5 = [
     "explanationTr": "Çoğul 'zij' (onlar) için fiil mastar halindedir: werken.",
     "explanationEn": "For plural 'zij' (they), the verb is in the infinitive: werken.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_042",
@@ -3502,7 +3502,7 @@ export const chapters1_5 = [
     "explanationTr": "'ik' öznesi için 'gebruiken' fiilinin kökü kullanılır: gebruik.",
     "explanationEn": "For 'ik', the stem of 'gebruiken' is used: gebruik.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_043",
@@ -3516,7 +3516,7 @@ export const chapters1_5 = [
     "explanationTr": "'jij' öznesi için kök + t kuralı uygulanır: gebruikt.",
     "explanationEn": "For 'jij', the stem + t rule applies: gebruikt.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_044",
@@ -3530,7 +3530,7 @@ export const chapters1_5 = [
     "explanationTr": "Çoğul 'wij' öznesi ile fiil mastar halindedir: gebruiken.",
     "explanationEn": "For the plural 'wij', the verb is in the infinitive: gebruiken.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_046",
@@ -3544,7 +3544,7 @@ export const chapters1_5 = [
     "explanationTr": "'sla' marul (lettuce) demektir.",
     "explanationEn": "'sla' means lettuce.",
     "difficulty": 3,
-    "quality": 2,
+    "quality": 1,
     "options": [
       "lettuce",
       "cabbage",
@@ -3564,7 +3564,7 @@ export const chapters1_5 = [
     "explanationTr": "Zullen yardımcı fiilinden sonra asıl eylem mastar halinde sona gider: drinken.",
     "explanationEn": "After the auxiliary 'zullen', the main verb goes to the end as an infinitive: drinken.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_101",
@@ -3585,7 +3585,7 @@ export const chapters1_5 = [
     "explanationTr": "Öğleden sonra (good afternoon) selamlaşmak için 'goedemiddag' kullanılır.",
     "explanationEn": "To greet someone in the afternoon (good afternoon), you use 'goedemiddag'.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_102",
@@ -3627,7 +3627,7 @@ export const chapters1_5 = [
     "explanationTr": "'dag' kelimesi hem merhaba hem de hoşça kal (bye) anlamında kullanılabilir.",
     "explanationEn": "The word 'dag' can be used for both greeting (hello) and saying goodbye (bye).",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_104",
@@ -3690,7 +3690,7 @@ export const chapters1_5 = [
     "explanationTr": "Resmi vedalaşmalarda hoşça kal (goodbye) demek için 'tot ziens' tercih edilir.",
     "explanationEn": "For formal goodbyes (goodbye / so long), 'tot ziens' is used.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_107",
@@ -3711,7 +3711,7 @@ export const chapters1_5 = [
     "explanationTr": "Birine kim olduğunu (Who are you?) sormak için 'Wie ben jij?' kalıbı kullanılır.",
     "explanationEn": "To ask 'Who are you?', the phrase 'Wie ben jij?' is used.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_108",
@@ -3774,7 +3774,7 @@ export const chapters1_5 = [
     "explanationTr": "Nereden geldiğini (Where do you come from?) sormak için 'Waar kom je vandaan?' kullanılır.",
     "explanationEn": "To ask where someone comes from, you use 'Waar kom je vandaan?'.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_111",
@@ -3795,7 +3795,7 @@ export const chapters1_5 = [
     "explanationTr": "Hangi ülkeden geldiğini sormak için 'Uit welk land kom je?' sorusu yöneltilir.",
     "explanationEn": "To ask specifically from which country someone comes, use 'Uit welk land kom je?'.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_112",
@@ -3816,7 +3816,7 @@ export const chapters1_5 = [
     "explanationTr": "Nerede yaşadığını (Where do you live?) sormak için 'Waar woon je?' kullanılır.",
     "explanationEn": "To ask where someone lives, you use 'Waar woon je?'.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_113",
@@ -3837,7 +3837,7 @@ export const chapters1_5 = [
     "explanationTr": "Birinin adresini doğrudan sormak için 'Wat is jouw / je adres?' denir.",
     "explanationEn": "To directly ask for someone's address, you say 'Wat is jouw / je adres?'.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_114",
@@ -3879,7 +3879,7 @@ export const chapters1_5 = [
     "explanationTr": "Hollanda'dan (Nederland) gelen biri Hollandaca (Nederlands) konuşur.",
     "explanationEn": "Someone from the Netherlands (Nederland) speaks Dutch (Nederlands).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_116",
@@ -3900,7 +3900,7 @@ export const chapters1_5 = [
     "explanationTr": "İngiltere'den (Engeland) gelen bir erkek Engelsman, bir kadın ise Engelse olarak adlandırılır.",
     "explanationEn": "Someone from England (Engeland) is referred to as Engelsman (male) or Engelse (female).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_117",
@@ -3921,7 +3921,7 @@ export const chapters1_5 = [
     "explanationTr": "Çin'den (China) gelen biri Çince (Chinees) konuşur.",
     "explanationEn": "Someone from China speaks Chinese (Chinees).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_118",
@@ -3942,7 +3942,7 @@ export const chapters1_5 = [
     "explanationTr": "'ik' (ben) öznesi için 'zijn' (olmak) fiilinin çekimi 'ben' şeklindedir.",
     "explanationEn": "For the subject 'ik' (I), the conjugation of 'zijn' (to be) is 'ben'.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_119",
@@ -3963,7 +3963,7 @@ export const chapters1_5 = [
     "explanationTr": "'jij / je' (sen) öznesi için 'zijn' fiili 'bent' olarak çekimlenir.",
     "explanationEn": "For the subject 'jij / je' (you), the verb 'zijn' is conjugated as 'bent'.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_120",
@@ -3984,7 +3984,7 @@ export const chapters1_5 = [
     "explanationTr": "Üçüncü tekil şahıs 'hij' (o) için 'zijn' fiili 'is' olarak çekimlenir.",
     "explanationEn": "For the third person singular 'hij' (he), the verb 'zijn' is conjugated as 'is'.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_121",
@@ -4005,7 +4005,7 @@ export const chapters1_5 = [
     "explanationTr": "Çoğul 'wij / we' (biz) öznesi için 'zijn' fiili mastar halinde ('zijn') kalır.",
     "explanationEn": "For the plural subject 'wij / we' (we), the verb 'zijn' remains in its infinitive form ('zijn').",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_122",
@@ -4026,7 +4026,7 @@ export const chapters1_5 = [
     "explanationTr": "Çoğul 'jullie' (siz) öznesi için 'zijn' fiili 'zijn' olarak çekimlenir.",
     "explanationEn": "For the plural subject 'jullie' (you all), the verb 'zijn' is conjugated as 'zijn'.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_123",
@@ -4047,7 +4047,7 @@ export const chapters1_5 = [
     "explanationTr": "'ik' öznesi için 'hebben' (sahip olmak) fiili 'heb' olarak çekimlenir.",
     "explanationEn": "For the subject 'ik', the verb 'hebben' (to have) is conjugated as 'heb'.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_124",
@@ -4068,7 +4068,7 @@ export const chapters1_5 = [
     "explanationTr": "'jij' öznesi için 'hebben' fiili 'hebt' şeklini alır.",
     "explanationEn": "For the subject 'jij', the verb 'hebben' takes the form 'hebt'.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_125",
@@ -4089,7 +4089,7 @@ export const chapters1_5 = [
     "explanationTr": "Resmi 'u' zamiri için 'hebben' fiilinin hem 'heeft' hem de 'hebt' kullanımları doğrudur.",
     "explanationEn": "For the formal 'u', both 'heeft' and 'hebt' are correct conjugations for 'hebben'.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_126",
@@ -4110,7 +4110,7 @@ export const chapters1_5 = [
     "explanationTr": "Üçüncü tekil şahıs 'hij' (o) için 'hebben' fiili 'heeft' olarak çekimlenir.",
     "explanationEn": "For the third person singular 'hij' (he), the verb 'hebben' is conjugated as 'heeft'.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_127",
@@ -4131,7 +4131,7 @@ export const chapters1_5 = [
     "explanationTr": "Çoğul şahıs 'wij' için 'hebben' fiili mastar halinde kalır ('hebben').",
     "explanationEn": "For the plural 'wij', the verb 'hebben' remains in the infinitive ('hebben').",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_128",
@@ -4152,7 +4152,7 @@ export const chapters1_5 = [
     "explanationTr": "'ik' öznesi için fiil sadece kök (stam) halindedir, '-t' almaz.",
     "explanationEn": "For the subject 'ik', the verb is just the stem, without a '-t'.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_129",
@@ -4173,7 +4173,7 @@ export const chapters1_5 = [
     "explanationTr": "Üçüncü tekil şahıs 'hij' için fiil köküne '-t' eklenir.",
     "explanationEn": "For the third person singular 'hij', a '-t' is added to the verb stem.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_130",
@@ -4194,7 +4194,7 @@ export const chapters1_5 = [
     "explanationTr": "Çoğul 'jullie' öznesi için fiil mastar halinde (luisteren) kalır.",
     "explanationEn": "For the plural subject 'jullie', the verb remains in the infinitive (luisteren).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_131",
@@ -4215,7 +4215,7 @@ export const chapters1_5 = [
     "explanationTr": "Soru cümlelerinde (inversie) fiil 'jij' veya 'je'den önce geldiğinde fiilin sonundaki '-t' düşer.",
     "explanationEn": "In question sentences (inversion) where the verb precedes 'jij' or 'je', the '-t' suffix is dropped.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_132",
@@ -4236,7 +4236,7 @@ export const chapters1_5 = [
     "explanationTr": "Resmi 'u' zamiri kullanıldığında, soru cümlesinde devrik yapı olsa bile fiildeki '-t' harfi düşmez.",
     "explanationEn": "When using the formal 'u', the '-t' suffix on the verb is NOT dropped, even in inversion.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_133",
@@ -4256,7 +4256,7 @@ export const chapters1_5 = [
     "explanationTr": "12 sayısı Hollandacada 'twaalf' olarak yazılır.",
     "explanationEn": "The number 12 is written as 'twaalf' in Dutch.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_134",
@@ -4276,7 +4276,7 @@ export const chapters1_5 = [
     "explanationTr": "13 sayısı 'dertien'dir.",
     "explanationEn": "The number 13 is 'dertien'.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_135",
@@ -4296,7 +4296,7 @@ export const chapters1_5 = [
     "explanationTr": "14 sayısı 'veertien'dir.",
     "explanationEn": "The number 14 is 'veertien'.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_136",
@@ -4316,7 +4316,7 @@ export const chapters1_5 = [
     "explanationTr": "20 sayısı 'twintig' olarak yazılır.",
     "explanationEn": "The number 20 is written as 'twintig'.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_137",
@@ -4336,7 +4336,7 @@ export const chapters1_5 = [
     "explanationTr": "30 sayısı 'dertig' olarak yazılır.",
     "explanationEn": "The number 30 is written as 'dertig'.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_138",
@@ -4356,7 +4356,7 @@ export const chapters1_5 = [
     "explanationTr": "80 sayısı 'tachtig' olarak yazılır.",
     "explanationEn": "The number 80 is written as 'tachtig'.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_139",
@@ -4376,7 +4376,7 @@ export const chapters1_5 = [
     "explanationTr": "100 sayısı 'honderd' olarak yazılır.",
     "explanationEn": "The number 100 is written as 'honderd'.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_140",
@@ -4396,7 +4396,7 @@ export const chapters1_5 = [
     "explanationTr": "1000 sayısı 'duizend' olarak yazılır.",
     "explanationEn": "The number 1000 is written as 'duizend'.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_141",
@@ -4417,7 +4417,7 @@ export const chapters1_5 = [
     "explanationTr": "'ij' harfleri Hollandacada 'lange ij' (uzun ij) olarak adlandırılır.",
     "explanationEn": "The letter combination 'ij' is called 'lange ij' (long ij) in Dutch.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_142",
@@ -4438,7 +4438,7 @@ export const chapters1_5 = [
     "explanationTr": "'ei' harfleri Hollandacada 'korte ei' (kısa ei) olarak adlandırılır.",
     "explanationEn": "The letter combination 'ei' is called 'korte ei' (short ei) in Dutch.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_143",
@@ -4459,7 +4459,7 @@ export const chapters1_5 = [
     "explanationTr": "'y' harfi Hollandacada 'Griekse ij' veya 'Griekse y' (Yunan ij) olarak bilinir.",
     "explanationEn": "The letter 'y' is known as 'Griekse ij' or 'Griekse y' (Greek ij) in Dutch.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_146",
@@ -4480,7 +4480,7 @@ export const chapters1_5 = [
     "explanationTr": "'Woonplaats' yaşanılan şehir veya yerleşim yerini (city/residence) ifade eder.",
     "explanationEn": "'Woonplaats' refers to the city or place of residence.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_147",
@@ -4501,7 +4501,7 @@ export const chapters1_5 = [
     "explanationTr": "'Geslacht' cinsiyet (man/vrouw) anlamına gelir.",
     "explanationEn": "'Geslacht' means gender (male/female).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_149",
@@ -4522,7 +4522,7 @@ export const chapters1_5 = [
     "explanationTr": "Resmi veya yaşlı kişilere (örneğin öğretmen, 82 yaşındaki komşu veya Bay/Bayan Smit) saygı ifadesi olarak 'u' (siz) denir.",
     "explanationEn": "The formal 'u' is used for older people or figures of authority, such as an 82-year-old neighbor, a teacher, or Mr./Mrs. Smit.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_150",
@@ -4543,7 +4543,7 @@ export const chapters1_5 = [
     "explanationTr": "Gençlere veya samimi ortamlardaki kişilere (örneğin 20 yaşındaki komşu veya sınıf arkadaşları Susy ve Ning) sen (jij) diye hitap edilir.",
     "explanationEn": "The informal 'jij' is used for younger people or peers, such as a 20-year-old neighbor or classmates like Susy and Ning.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch1_151",
@@ -4564,7 +4564,7 @@ export const chapters1_5 = [
     "explanationTr": "Kitaptaki top 10 soyadı listesinde 'de Jong' 1. sırada yer alır.",
     "explanationEn": "In the top 10 family names list provided in the book, 'de Jong' is ranked number 1.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_1000",
@@ -4627,7 +4627,7 @@ export const chapters1_5 = [
     "explanationTr": "Diyalogda Edit bugünün perşembe (donderdag) olduğunu söyler.",
     "explanationEn": "Edit states in the dialogue that today is Thursday (donderdag).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_1003",
@@ -4690,7 +4690,7 @@ export const chapters1_5 = [
     "explanationTr": "Edit, kardeşinin kendisinden daha genç (jonger) olduğunu söyler.",
     "explanationEn": "Edit states that her brother is younger.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_1006",
@@ -4711,7 +4711,7 @@ export const chapters1_5 = [
     "explanationTr": "Edit diyalogda 'Ja, ik heb nog een zus' diyerek bir kız kardeşi olduğunu belirtir.",
     "explanationEn": "Edit states in the dialogue that she has one sister.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_1007",
@@ -4732,7 +4732,7 @@ export const chapters1_5 = [
     "explanationTr": "Edit'in zuzu kısa ve sarı saçlıdır ('kort, blond haar').",
     "explanationEn": "Edit's sister is described as having short, blonde hair.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_1008",
@@ -4753,7 +4753,7 @@ export const chapters1_5 = [
     "explanationTr": "Susy Edit'in saçının koyu (donker haar) olduğunu söyler.",
     "explanationEn": "Susy points out that Edit has dark hair.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_1009",
@@ -4774,7 +4774,7 @@ export const chapters1_5 = [
     "explanationTr": "Diyalogun sonunda saat 11.00 olduğu ve derse dönmeleri gerektiği söylenir.",
     "explanationEn": "At the end of the dialogue, it is stated that it is 11.00 o'clock.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_1023",
@@ -4794,7 +4794,7 @@ export const chapters1_5 = [
     "explanationTr": "'goh' şaşırma veya fark etme belirten 'vah / hani / oh' tarzı bir nidadır.",
     "explanationEn": "'goh' expresses surprise or realization (oh).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_1047",
@@ -4814,7 +4814,7 @@ export const chapters1_5 = [
     "explanationTr": "'eens' kelimesi cümlelere samimiyet katar ve genellikle çevrilmez (usually untranslated).",
     "explanationEn": "'eens' is a conversational particle, usually untranslated.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_1071",
@@ -4835,7 +4835,7 @@ export const chapters1_5 = [
     "explanationTr": "Ana cümlelerde (hoofdzin) çekimli fiir her zaman ikinci sırada (position 2) yer alır.",
     "explanationEn": "In main clauses, the conjugated verb always occupies the second position.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_1072",
@@ -4856,7 +4856,7 @@ export const chapters1_5 = [
     "explanationTr": "Evet/hayır soruları fiilin başa gelmesiyle (inversie) yani 'werkwoord + onderwerp' şeklinde kurulur.",
     "explanationEn": "Yes/no questions are formed by putting the verb first (inversion: verb + subject).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_1073",
@@ -4877,7 +4877,7 @@ export const chapters1_5 = [
     "explanationTr": "Özet tablosunda Wie, Wie is jonger, Hoe, Hoeveel, Wat, Waar, Welke, Wanneer, Waarom soru kelimeleri listelenmiştir.",
     "explanationEn": "The overview lists question words like Wie, Welke, Hoe, Hoeveel, Wat, Waar, Wanneer, and Waarom.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_1074",
@@ -4898,7 +4898,7 @@ export const chapters1_5 = [
     "explanationTr": "'ik' öznesi için iyelik zamiri 'mijn' (benim) kelimesidir.",
     "explanationEn": "The possessive pronoun for the subject 'ik' is 'mijn'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_1075",
@@ -4919,7 +4919,7 @@ export const chapters1_5 = [
     "explanationTr": "'jij / je' öznesi için iyelik zamiri 'jouw / je' (senin) kelimesidir.",
     "explanationEn": "The possessive pronoun for 'jij / je' is 'jouw / je'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_1076",
@@ -4940,7 +4940,7 @@ export const chapters1_5 = [
     "explanationTr": "Resmi 'u' zamiri için iyelik zamiri 'uw' (sizin) olur.",
     "explanationEn": "The possessive pronoun for the formal 'u' is 'uw'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_1077",
@@ -4961,7 +4961,7 @@ export const chapters1_5 = [
     "explanationTr": "'hij' (o - erkek) için iyelik zamiri 'zijn' (onun) olur.",
     "explanationEn": "The possessive pronoun for 'hij' (he) is 'zijn'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_1078",
@@ -4982,7 +4982,7 @@ export const chapters1_5 = [
     "explanationTr": "'zij / ze' (o - kadın) için iyelik zamiri 'haar' (onun) olur.",
     "explanationEn": "The possessive pronoun for 'zij / ze' (she) is 'haar'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_1079",
@@ -5003,7 +5003,7 @@ export const chapters1_5 = [
     "explanationTr": "'wij / we' (biz) için iyelik zamiri 'onze' veya 'ons' (bizim) olur.",
     "explanationEn": "The possessive pronoun for 'wij / we' is 'onze / ons'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_1080",
@@ -5024,7 +5024,7 @@ export const chapters1_5 = [
     "explanationTr": "'jullie' (siz) için iyelik zamiri yine 'jullie' (sizin) kalır.",
     "explanationEn": "The possessive pronoun for 'jullie' is 'jullie'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_1081",
@@ -5045,7 +5045,7 @@ export const chapters1_5 = [
     "explanationTr": "Çoğul 'zij / ze' (onlar) için iyelik zamiri 'hun' (onların) olur.",
     "explanationEn": "The possessive pronoun for plural 'zij / ze' (they) is 'hun'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_1082",
@@ -5171,7 +5171,7 @@ export const chapters1_5 = [
     "explanationTr": "Salı gününden (dinsdag) sonra çarşamba (woensdag) gelir.",
     "explanationEn": "After Tuesday (dinsdag), Wednesday (woensdag) follows.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_1091",
@@ -5192,7 +5192,7 @@ export const chapters1_5 = [
     "explanationTr": "Kitaptaki örnekte 'Vandaag is het donderdag' denmektedir.",
     "explanationEn": "In the book's example, it states 'Today is Thursday'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_1092",
@@ -5213,7 +5213,7 @@ export const chapters1_5 = [
     "explanationTr": "Perşembeden sonraki gün cuma (vrijdag) olur.",
     "explanationEn": "The day after Thursday is Friday (vrijdag).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_1093",
@@ -5234,7 +5234,7 @@ export const chapters1_5 = [
     "explanationTr": "Perşembeden iki gün sonra cumartesi (zaterdag) olur.",
     "explanationEn": "Two days after Thursday is Saturday (zaterdag).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_1094",
@@ -5255,7 +5255,7 @@ export const chapters1_5 = [
     "explanationTr": "İlkbahar / voorjaar ayları mart, nisan ve mayıstır.",
     "explanationEn": "The spring months are March, April, and May.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_1095",
@@ -5276,7 +5276,7 @@ export const chapters1_5 = [
     "explanationTr": "Yaz ayları haziran, temmuz ve ağustostur.",
     "explanationEn": "The summer months are June, July, and August.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_1096",
@@ -5297,7 +5297,7 @@ export const chapters1_5 = [
     "explanationTr": "Sonbahar ayları eylül, ekim ve kasımdır.",
     "explanationEn": "The autumn months are September, October, and November.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_1097",
@@ -5318,7 +5318,7 @@ export const chapters1_5 = [
     "explanationTr": "Kış ayları aralık, ocak ve şubattır.",
     "explanationEn": "The winter months are December, January, and February.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_1098",
@@ -5339,7 +5339,7 @@ export const chapters1_5 = [
     "explanationTr": "Günlerden ve tam tarihlerden önce 'op' edatı kullanılır (op maandag).",
     "explanationEn": "Before days and specific dates, the preposition 'op' is used.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_1099",
@@ -5360,7 +5360,7 @@ export const chapters1_5 = [
     "explanationTr": "Aylardan ve mevsimlerden önce 'in' edatı kullanılır (in januari).",
     "explanationEn": "Before months and seasons, the preposition 'in' is used.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch2_1100",
@@ -5381,7 +5381,7 @@ export const chapters1_5 = [
     "explanationTr": "Kesin saatlerden önce 'om' edatı kullanılır (om 9.00 uur).",
     "explanationEn": "Before exact times (clock hours), the preposition 'om' is used.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_1002",
@@ -5421,7 +5421,7 @@ export const chapters1_5 = [
     "explanationTr": "Kafede veya restoranda çalışan garsona 'de ober' denir.",
     "explanationEn": "The waiter is called 'de ober'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_1009",
@@ -5483,7 +5483,7 @@ export const chapters1_5 = [
     "explanationTr": "'het rondje' kafede ısmarlanan bir tur içki (the round of drinks) demektir.",
     "explanationEn": "'het rondje' refers to a round of drinks.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_1014",
@@ -5546,7 +5546,7 @@ export const chapters1_5 = [
     "explanationTr": "Teşekkür etmek için 'dank je', 'dank je wel' veya 'bedankt' kullanılır.",
     "explanationEn": "To thank someone, you can use 'dank je', 'dank je wel', or 'bedankt'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_1017",
@@ -5567,7 +5567,7 @@ export const chapters1_5 = [
     "explanationTr": "Bütün küçültme sözcükleri (diminutief) istisnasız 'het' artikeli alır.",
     "explanationEn": "All diminutives (verkleinwoorden) always take the article 'het'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_1018",
@@ -5588,7 +5588,7 @@ export const chapters1_5 = [
     "explanationTr": "Bütün çoğul isimler (pluralis) istisnasız 'de' artikeli alır.",
     "explanationEn": "All plural words always take the article 'de'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_1019",
@@ -5609,7 +5609,7 @@ export const chapters1_5 = [
     "explanationTr": "'cursus' kelimesi tekil halinde 'de' artikeli alır (de cursus).",
     "explanationEn": "The singular word 'cursus' takes the article 'de' (de cursus).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_1020",
@@ -5630,7 +5630,7 @@ export const chapters1_5 = [
     "explanationTr": "'café' kelimesi tekil halinde 'het' artikeli alır (het café).",
     "explanationEn": "The singular word 'café' takes the article 'het' (het café).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_1021",
@@ -5651,7 +5651,7 @@ export const chapters1_5 = [
     "explanationTr": "'kop' kelimesinin küçültme hali 'kopje'dir ve her zaman 'het' artikeli alır.",
     "explanationEn": "The diminutive of 'kop' is 'het kopje'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_1022",
@@ -5672,7 +5672,7 @@ export const chapters1_5 = [
     "explanationTr": "'zus' kelimesinin küçültme hali 'zusje'dir ve 'het' artikeli alır.",
     "explanationEn": "The diminutive of 'zus' is 'het zusje'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_1023",
@@ -5693,7 +5693,7 @@ export const chapters1_5 = [
     "explanationTr": "Belgisiz (indefinite) tekil isimler için 'een' artikeli (bir) kullanılır.",
     "explanationEn": "The indefinite article for singular words is 'een' (a/an).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_1024",
@@ -5714,7 +5714,7 @@ export const chapters1_5 = [
     "explanationTr": "Cümle zaman veya yer gibi başka bir öğe ile başladığında devrik yapı (inversie) olur; fiil ikinci sıraya geçer ve özne ondan sonra gelir.",
     "explanationEn": "When a sentence starts with something other than the subject (like time or place), inversion occurs: the verb stays in position 2, and the subject follows it.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_1025",
@@ -5735,7 +5735,7 @@ export const chapters1_5 = [
     "explanationTr": "'Nu' (Şimdi) kelimesi başa geldiği için fiil 'wil' ikinci sırada, özne 'ik' ise üçüncü sırada yer alır.",
     "explanationEn": "Starting with 'Nu' causes inversion: verb 'wil' in position 2, subject 'ik' in position 3.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_1026",
@@ -5756,7 +5756,7 @@ export const chapters1_5 = [
     "explanationTr": "Nesne ('Dit rondje') başa geldiğinde, fiil ('betaal') ikinci sırayı alır, özne ('ik') ise fiilden sonra gelir.",
     "explanationEn": "When the object ('Dit rondje') is first, the verb ('betaal') takes position 2, followed by the subject ('ik').",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_1027",
@@ -5777,7 +5777,7 @@ export const chapters1_5 = [
     "explanationTr": "'Morgen' (Yarın) kelimesi başa geldiği için devrik yapı uygulanır ve fiil özneden önce gelir (Morgen beginnen we).",
     "explanationEn": "Starting with 'Morgen' triggers inversion: verb ('beginnen') comes before the subject ('we').",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_1028",
@@ -5798,7 +5798,7 @@ export const chapters1_5 = [
     "explanationTr": "Zaman bildiren 'Vandaag' başa geldiği için fiil ('geeft') özneden ('Eddy') önce gelmelidir.",
     "explanationEn": "Starting with 'Vandaag' causes inversion: the verb ('geeft') precedes the subject ('Eddy').",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_1029",
@@ -5819,7 +5819,7 @@ export const chapters1_5 = [
     "explanationTr": "1 sayısının sıra sayısı 'eerste' (birinci) şeklindedir.",
     "explanationEn": "The ordinal number for 1 is 'eerste' (first).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_1030",
@@ -5840,7 +5840,7 @@ export const chapters1_5 = [
     "explanationTr": "3 sayısının sıra sayısı düzensizdir ve 'derde' (üçüncü) olur.",
     "explanationEn": "The ordinal number for 3 is 'derde' (third).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_1031",
@@ -5861,7 +5861,7 @@ export const chapters1_5 = [
     "explanationTr": "8 sayısının sıra sayısı 'achtste' (sekizinci) şeklindedir.",
     "explanationEn": "The ordinal number for 8 is 'achtste' (eighth).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_1032",
@@ -5882,7 +5882,7 @@ export const chapters1_5 = [
     "explanationTr": "12 sayısının sıra sayısı 'twaalfde' (on ikinci) olur.",
     "explanationEn": "The ordinal number for 12 is 'twaalfde' (twelfth).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_1033",
@@ -5903,7 +5903,7 @@ export const chapters1_5 = [
     "explanationTr": "20 sayısının sıra sayısı 'twintigste' (yirminci) şeklindedir.",
     "explanationEn": "The ordinal number for 20 is 'twintigste' (twentieth).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_1034",
@@ -5924,7 +5924,7 @@ export const chapters1_5 = [
     "explanationTr": "100 sayısının sıra sayısı 'honderdste' (yüzüncü) olur.",
     "explanationEn": "The ordinal number for 100 is 'honderdste' (hundredth).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_1037",
@@ -5945,7 +5945,7 @@ export const chapters1_5 = [
     "explanationTr": "Metne göre yaz aylarında sudaki teknelere (de boten) bakılır.",
     "explanationEn": "According to the text, in summer you look at the boats (de boten) in the water.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_1043",
@@ -5965,7 +5965,7 @@ export const chapters1_5 = [
     "explanationTr": "Fransız (şarabı gibi) derken 'Franse' kelimesi kullanılır.",
     "explanationEn": "'French' translates to 'Franse' (or Frans).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_1044",
@@ -5985,7 +5985,7 @@ export const chapters1_5 = [
     "explanationTr": "İspanyol (şarabı gibi) derken 'Spaanse' kullanılır.",
     "explanationEn": "'Spanish' translates to 'Spaanse' (or Spaans).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_1045",
@@ -6005,7 +6005,7 @@ export const chapters1_5 = [
     "explanationTr": "Güney Afrikalı demek için 'Zuid-Afrikaanse' kullanılır.",
     "explanationEn": "'South African' translates to 'Zuid-Afrikaanse'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_1049",
@@ -6026,7 +6026,7 @@ export const chapters1_5 = [
     "explanationTr": "Çoğul kelimeler daima 'de' artikeli alır; 'rondje' kelimesinin çoğulu 'de rondjes' olur.",
     "explanationEn": "Plurals always take 'de'; the plural of 'rondje' is 'de rondjes'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch3_1050",
@@ -6047,7 +6047,7 @@ export const chapters1_5 = [
     "explanationTr": "'cursus' kelimesinin çoğul hali 'de cursussen' şeklindedir.",
     "explanationEn": "The plural of 'cursus' is 'de cursussen'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_1020",
@@ -6131,7 +6131,7 @@ export const chapters1_5 = [
     "explanationTr": "Bert ve Hans 30 Ağustos Pazar saat 16.00'da buluşmak üzere anlaşırlar.",
     "explanationEn": "They agree to meet on Sunday, August 30th at 16:00.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_1024",
@@ -6173,7 +6173,7 @@ export const chapters1_5 = [
     "explanationTr": "'Hoe gaat het?' (Nasılsın?) yerine 'Alles goed?' (Her şey yolunda mı?) da kullanılır.",
     "explanationEn": "'Alles goed?' (Is everything alright?) is another way to ask 'Hoe gaat het?' (How are you?).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_1026",
@@ -6194,7 +6194,7 @@ export const chapters1_5 = [
     "explanationTr": "En olumlu tepkiler (++) 'uitstekend' (mükemmel) ve 'fantastisch' (harika) kelimeleridir.",
     "explanationEn": "The most positive responses (++) are 'uitstekend' (excellent) and 'fantastisch' (fantastic).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_1028",
@@ -6215,7 +6215,7 @@ export const chapters1_5 = [
     "explanationTr": "Birlikte bir şey yapmayı teklif ederken 'Zullen we...' (Yapalım mı?) kalıbı kullanılır.",
     "explanationEn": "To make a suggestion together, use 'Zullen we...' (Shall we...).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_1029",
@@ -6236,7 +6236,7 @@ export const chapters1_5 = [
     "explanationTr": "Kendi adınıza bir teklifte bulunurken 'Zal ik...' (Yapayım mı?) kalıbı kullanılır.",
     "explanationEn": "To offer to do something yourself, use 'Zal ik...' (Shall I...).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_1030",
@@ -6257,7 +6257,7 @@ export const chapters1_5 = [
     "explanationTr": "'Bir buluşma ayarlayalım mı?' sorusu 'Zullen we iets afspreken?' şeklinde çevrilir.",
     "explanationEn": "'Shall we set a date?' translates to 'Zullen we iets afspreken?'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_1031",
@@ -6278,7 +6278,7 @@ export const chapters1_5 = [
     "explanationTr": "'Spagetti carbonara yapayım mı?' sorusu 'Zal ik spaghetti carbonara maken?' şeklinde çevrilir.",
     "explanationEn": "'Shall I make spaghetti carbonara?' translates to 'Zal ik spaghetti carbonara maken?'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_1032",
@@ -6299,7 +6299,7 @@ export const chapters1_5 = [
     "explanationTr": "'Benimle (şuraya) gelir misin?' anlamında 'Ga je mee (naar)...?' kullanılır.",
     "explanationEn": "'Are you coming along to...?' translates to 'Ga je mee (naar)...?'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_1033",
@@ -6341,7 +6341,7 @@ export const chapters1_5 = [
     "explanationTr": "Teklife olumlu yanıt verirken 'Ja, dat kan.' veya 'Ja, dat is goed.' denir.",
     "explanationEn": "To respond positively, you can say 'Ja, dat kan.' or 'Ja, dat is goed.'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_1035",
@@ -6362,7 +6362,7 @@ export const chapters1_5 = [
     "explanationTr": "Teklif edilen zaman uymuyorsa 'Nee, dat lukt niet.' (Hayır, uymuyor/olmaz) denir.",
     "explanationEn": "If the time doesn't work for you, you say 'Nee, dat lukt niet.'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_1036",
@@ -6425,7 +6425,7 @@ export const chapters1_5 = [
     "explanationTr": "Harika bir fikir olduğunu belirtmek için 'Ja, leuk!' veya 'Ja, goed idee!' denir.",
     "explanationEn": "To respond enthusiastically, use 'Ja, leuk!' or 'Ja, goed idee!'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_1039",
@@ -6445,7 +6445,7 @@ export const chapters1_5 = [
     "explanationTr": "Metin Groningen Üniversitesi Dil Merkezi (Talencentrum) hakkındadır.",
     "explanationEn": "The text provides information about the Language Centre (Talencentrum) of the University of Groningen.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_1040",
@@ -6465,7 +6465,7 @@ export const chapters1_5 = [
     "explanationTr": "Hizmetler hakkındaki bilgilerin web sitesinde (www.rug.nl/talencentrum) bulunabileceği belirtilir.",
     "explanationEn": "Information about services can be found on their website.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_1041",
@@ -6485,7 +6485,7 @@ export const chapters1_5 = [
     "explanationTr": "Pazartesiden Cumaya normal açılış saatleri 12.00-16.00 arasıdır.",
     "explanationEn": "Regular opening hours from Monday to Friday are 12.00-16.00.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_1042",
@@ -6505,7 +6505,7 @@ export const chapters1_5 = [
     "explanationTr": "Perşembe günleri 12.00 ile 20.00 arasında açıktırlar.",
     "explanationEn": "On Thursdays, they are open from 12.00 to 20.00.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_1043",
@@ -6525,7 +6525,7 @@ export const chapters1_5 = [
     "explanationTr": "Telefonla ulaşılabilirlik saatleri iş günleri 9.00 ile 17.00 arasıdır.",
     "explanationEn": "They are reachable by phone on workdays from 9.00 to 17.00.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_1044",
@@ -6545,7 +6545,7 @@ export const chapters1_5 = [
     "explanationTr": "Eğer sorularınıza web sitesinde yanıt bulamazsanız, e-posta göndermeniz istenir.",
     "explanationEn": "If your questions are not answered on the website, you should send an e-mail.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_1047",
@@ -6565,7 +6565,7 @@ export const chapters1_5 = [
     "explanationTr": "'romantische' romantik (romantic) anlamına gelir.",
     "explanationEn": "'romantische' translates to 'romantic'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_1049",
@@ -6580,7 +6580,7 @@ export const chapters1_5 = [
     "explanationTr": "Özne 'we' (biz) olduğu için öneri cümlesi 'Zullen' ile başlar.",
     "explanationEn": "With the subject 'we', the suggestion starts with 'Zullen'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_1050",
@@ -6595,7 +6595,7 @@ export const chapters1_5 = [
     "explanationTr": "Özne 'ik' (ben) olduğu için teklif cümlesi 'Zal' ile başlar.",
     "explanationEn": "With the subject 'ik', the offer starts with 'Zal'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch4_1053",
@@ -6615,7 +6615,7 @@ export const chapters1_5 = [
     "explanationTr": "Hollanda kültüründe arkadaşlara yemeğe giderken önceden buluşma/randevu ayarlamak yaygındır.",
     "explanationEn": "In Dutch culture, it is common to make an appointment before visiting friends for dinner.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_1002",
@@ -6636,7 +6636,7 @@ export const chapters1_5 = [
     "explanationTr": "Kabak kelimesi Hollandacada 'de courgette' olarak geçer.",
     "explanationEn": "Courgette/zucchini translates to 'de courgette'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_1003",
@@ -6657,7 +6657,7 @@ export const chapters1_5 = [
     "explanationTr": "Karnabahar Hollandacada 'de bloemkool' olarak adlandırılır.",
     "explanationEn": "Cauliflower translates to 'de bloemkool'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_1004",
@@ -6678,7 +6678,7 @@ export const chapters1_5 = [
     "explanationTr": "Sarımsak Hollandacada 'de knoflook' kelimesiyle ifade edilir.",
     "explanationEn": "Garlic translates to 'de knoflook'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_1005",
@@ -6699,7 +6699,7 @@ export const chapters1_5 = [
     "explanationTr": "Soğan Hollandacada 'de ui' olarak geçer.",
     "explanationEn": "Onion translates to 'de ui'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_1006",
@@ -6720,7 +6720,7 @@ export const chapters1_5 = [
     "explanationTr": "Havuç Hollandacada 'de wortel' demektir.",
     "explanationEn": "Carrot translates to 'de wortel'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_1007",
@@ -6741,7 +6741,7 @@ export const chapters1_5 = [
     "explanationTr": "Çilek Hollandacada 'de aardbei' olarak geçer.",
     "explanationEn": "Strawberry translates to 'de aardbei'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_1008",
@@ -6762,7 +6762,7 @@ export const chapters1_5 = [
     "explanationTr": "Armut Hollandacada 'de peer' demektir.",
     "explanationEn": "Pear translates to 'de peer'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_1009",
@@ -6783,7 +6783,7 @@ export const chapters1_5 = [
     "explanationTr": "Portakal Hollandacada 'de sinaasappel' olarak geçer.",
     "explanationEn": "Orange translates to 'de sinaasappel'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_1011",
@@ -6804,7 +6804,7 @@ export const chapters1_5 = [
     "explanationTr": "'het bosje' demet/bağ (bunch) anlamına gelir (örneğin bir demet maydanoz).",
     "explanationEn": "'het bosje' translates to a bunch (e.g., a bunch of parsley).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_1014",
@@ -6846,7 +6846,7 @@ export const chapters1_5 = [
     "explanationTr": "Satıcılar size söz vermek ve siparişinizi sormak için 'Zeg het maar' (Buyrun/Söyleyin) derler.",
     "explanationEn": "Shopkeepers use 'Zeg het maar' to mean 'Go ahead / tell me your order'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_1016",
@@ -6867,7 +6867,7 @@ export const chapters1_5 = [
     "explanationTr": "Başka bir şey isteyip istemediğinizi sormak için 'Anders nog iets?' veya 'Verder nog iets?' kullanılır.",
     "explanationEn": "To ask 'Anything else?', shopkeepers use 'Anders nog iets?' or 'Verder nog iets?'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_1017",
@@ -6888,7 +6888,7 @@ export const chapters1_5 = [
     "explanationTr": "Siparişinizin bitip bitmediğini teyit etmek için 'Dat was het?' (Hepsi bu kadar mı?) derler.",
     "explanationEn": "To ask 'Was that all?', they say 'Dat was het?'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_1018",
@@ -6993,7 +6993,7 @@ export const chapters1_5 = [
     "explanationTr": "Hollandacada 'tomaat' kelimesinin çoğulu '-en' eki alarak 'tomaten' olur.",
     "explanationEn": "The plural of 'tomaat' takes '-en' to become 'tomaten'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_1023",
@@ -7014,7 +7014,7 @@ export const chapters1_5 = [
     "explanationTr": "'persoon' kelimesinin çoğulu '-en' eki alarak 'personen' olur.",
     "explanationEn": "The plural of 'persoon' takes '-en' to become 'personen'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_1024",
@@ -7035,7 +7035,7 @@ export const chapters1_5 = [
     "explanationTr": "'buitenlander' gibi '-er' ile biten kelimeler çoğulda genellikle '-s' alır: buitenlanders.",
     "explanationEn": "Words ending in '-er' like 'buitenlander' usually take '-s' for plural: buitenlanders.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_1025",
@@ -7056,7 +7056,7 @@ export const chapters1_5 = [
     "explanationTr": "'komkommer' kelimesinin çoğulu '-s' alarak 'komkommers' olur.",
     "explanationEn": "The plural of 'komkommer' takes '-s' to become 'komkommers'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_1026",
@@ -7077,7 +7077,7 @@ export const chapters1_5 = [
     "explanationTr": "Bütün küçültme sözcükleri (diminutief) çoğul yapıldığında '-s' alır (spekjes, boontjes).",
     "explanationEn": "All diminutives take '-s' in the plural (spekjes, boontjes).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_1027",
@@ -7098,7 +7098,7 @@ export const chapters1_5 = [
     "explanationTr": "Uzun ünlü harfle biten kelimeler çoğul yapıldığında kesme işareti ve s (-'s) alır: paprika's, foto's.",
     "explanationEn": "Words ending in a long vowel take an apostrophe and s (-'s) in the plural: paprika's, foto's.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_1028",
@@ -7120,7 +7120,7 @@ export const chapters1_5 = [
     "explanationTr": "Ölçü ve zaman bildiren cent, jaar, uur, euro ve kilo kelimeleri bir sayıdan sonra geldiklerinde çoğul eki almazlar.",
     "explanationEn": "Measurement and time words like cent, jaar, uur, euro, and kilo do not take a plural form when following a number.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_1029",
@@ -7142,7 +7142,7 @@ export const chapters1_5 = [
     "explanationTr": "'kilo' ölçü birimi çoğul eki almaz, 'twee kilo' olarak yazılır.",
     "explanationEn": "'kilo' as a unit of measurement does not take a plural suffix, it is written as 'twee kilo'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_1030",
@@ -7164,7 +7164,7 @@ export const chapters1_5 = [
     "explanationTr": "'euro' para birimi miktar belirtirken çoğul eki almaz, 'acht euro' olur.",
     "explanationEn": "The currency 'euro' does not take a plural suffix when stating amounts, it remains 'acht euro'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_1031",
@@ -7186,7 +7186,7 @@ export const chapters1_5 = [
     "explanationTr": "'jaar' zaman bildiren kelimesi miktar belirtirken çoğul eki almaz, 'twintig jaar' olur.",
     "explanationEn": "The time word 'jaar' does not take a plural suffix when stating amounts, it is 'twintig jaar'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_1032",
@@ -7207,7 +7207,7 @@ export const chapters1_5 = [
     "explanationTr": "Sıfatlar yalnızca 'een + het-woord' (veya artikelsiz het-woord) durumunda sonuna -e almaz. Diğer tüm tanımlayıcı durumlarda -e alır.",
     "explanationEn": "Adjectives do NOT get an -e ONLY when used with 'een' (or no article) before a singular het-word.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_1033",
@@ -7228,7 +7228,7 @@ export const chapters1_5 = [
     "explanationTr": "'de-woord' olan kelimelerde sıfat her zaman -e eki alır: de kleine courgette.",
     "explanationEn": "With de-words, the adjective always gets an -e: de kleine courgette.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_1034",
@@ -7249,7 +7249,7 @@ export const chapters1_5 = [
     "explanationTr": "Belirli (definite) 'het' artikeli kullanıldığında sıfat -e eki alır: het kleine bosje.",
     "explanationEn": "When using the definite article 'het', the adjective gets an -e: het kleine bosje.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_1035",
@@ -7270,7 +7270,7 @@ export const chapters1_5 = [
     "explanationTr": "Belgisiz (indefinite) 'een' artikeli ile 'het-woord' kullanıldığında sıfat -e EKİ ALMAZ: een klein bosje.",
     "explanationEn": "When using the indefinite 'een' with a het-word, the adjective DOES NOT get an -e: een klein bosje.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_1036",
@@ -7291,7 +7291,7 @@ export const chapters1_5 = [
     "explanationTr": "Çoğul isimlerin önündeki sıfatlar her zaman -e eki alır: mooie tomaten.",
     "explanationEn": "Adjectives before plural nouns always get an -e: mooie tomaten.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_1037",
@@ -7312,7 +7312,7 @@ export const chapters1_5 = [
     "explanationTr": "Sıfat ismin önünde değil de cümlenin sonunda yüklem (predicative) olarak kullanıldığında -e eki almaz: De courgette is klein.",
     "explanationEn": "When the adjective is used predicatively (after the noun and verb 'zijn'), it does not get an -e: De courgette is klein.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_1038",
@@ -7327,7 +7327,7 @@ export const chapters1_5 = [
     "explanationTr": "'het idee' bir het-woord'dur. 'een' ile kullanıldığında sıfat ek almaz: een goed idee.",
     "explanationEn": "'het idee' is a het-word. With 'een', the adjective takes no -e: een goed idee.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_1039",
@@ -7342,7 +7342,7 @@ export const chapters1_5 = [
     "explanationTr": "'het kopje' bir diminutief yani het-woord'dur. 'een' ile sıfat ek almaz: een lekker kopje.",
     "explanationEn": "'het kopje' is a diminutive (het-word). With 'een', the adjective takes no -e: een lekker kopje.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_1040",
@@ -7357,7 +7357,7 @@ export const chapters1_5 = [
     "explanationTr": "'de achternaam' de-woord'dur. de-woord'lerde sıfat her zaman -e alır: een Arabische achternaam.",
     "explanationEn": "'de achternaam' is a de-word. With de-words, the adjective always gets an -e: een Arabische achternaam.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_1041",
@@ -7372,7 +7372,7 @@ export const chapters1_5 = [
     "explanationTr": "'het gezin' bir het-woord'dur. 'een' ile kullanıldığında sıfat ek almaz: een groot gezin.",
     "explanationEn": "'het gezin' is a het-word. With 'een', the adjective takes no -e: een groot gezin.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_1042",
@@ -7393,7 +7393,7 @@ export const chapters1_5 = [
     "explanationTr": "Hollandacada standart emir kipi fiilin kök (stam) halinin kullanılmasıyla oluşturulur: Zeg het maar, Doe maar.",
     "explanationEn": "The standard imperative in Dutch is formed using just the stem of the verb: Zeg het maar, Doe maar.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_1043",
@@ -7414,7 +7414,7 @@ export const chapters1_5 = [
     "explanationTr": "Emir cümlelerini daha nazik ve samimi hale getirmek için 'maar, even, eens' gibi küçük kelimeler (particles) eklenir.",
     "explanationEn": "To make an imperative more friendly and polite, particles like 'maar, even, eens' are added.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_1044",
@@ -7435,7 +7435,7 @@ export const chapters1_5 = [
     "explanationTr": "Çok resmi ve kibar rica cümlelerinde 'stam + t + u' yapısı kullanılır: Doet u maar....",
     "explanationEn": "For very polite imperatives with 'u', the structure 'stem + t + u' is used: Doet u maar....",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_1045",
@@ -7455,7 +7455,7 @@ export const chapters1_5 = [
     "explanationTr": "'stamppot' patates ve sebzelerin ezilerek karıştırıldığı tipik bir Hollanda yemeğidir.",
     "explanationEn": "'stamppot' is a typical Dutch dish made of mashed potatoes and vegetables.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_1046",
@@ -7475,7 +7475,7 @@ export const chapters1_5 = [
     "explanationTr": "Metne göre Tim ve Jorik 'Andijviestamppot met spekjes' (pastırmalı hindiba ezmesi) yapmaktadır.",
     "explanationEn": "According to the text, Tim and Jorik are making 'Andijviestamppot met spekjes'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_1047",
@@ -7495,7 +7495,7 @@ export const chapters1_5 = [
     "explanationTr": "Tarifte patateslerin pişmesinin yaklaşık 20 dakika (20 minuten gaar) sürdüğü belirtilmiştir.",
     "explanationEn": "The recipe states that the potatoes need to boil for about 20 minutes.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch5_1052",
@@ -7515,7 +7515,7 @@ export const chapters1_5 = [
     "explanationTr": "Hollandalılar genellikle akşam yemeğini nispeten erken saatlerde (yaklaşık 18:00 civarı) yerler.",
     "explanationEn": "Dutch people generally eat their dinner relatively early in the evening, around 18:00.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_1_1",
@@ -7531,7 +7531,7 @@ export const chapters1_5 = [
     "explanationTr": "Soru cümlesinde 'jij' öznesi fiilden hemen sonra geldiğinde (inversie/devrik cümle), fiil köküne '-t' eklenmez; sadece yalın fiil kökü (stam) kullanılır.",
     "explanationEn": "In question inversion when 'jij' immediately follows the verb, the '-t' suffix is dropped and only the bare verb stem (stam) is used.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_1_2",
@@ -7552,7 +7552,7 @@ export const chapters1_5 = [
     "explanationTr": "Hollandacada '23' sayısı yazılırken 'drie' ve 'en' birleştiğinde ses çatışmasını önlemek için 'e' üzerine iki nokta (trema / deelteken) konur: 'drieëntwintig'.",
     "explanationEn": "In Dutch, when writing '23' in full, a diaeresis (trema) is placed on the second 'e' to indicate a new syllable and prevent vowel clash: 'drieëntwintig'.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_1_3",
@@ -7573,7 +7573,7 @@ export const chapters1_5 = [
     "explanationTr": "Hollandacada basamaklar tersten okunur: önce birler basamağı (acht), ardından 'en', sonra onlar basamağı (vijftig): 'achtenvijftig'.",
     "explanationEn": "In Dutch two-digit numbers, the unit comes first, followed by 'en', then the ten: 'achtenvijftig' (eight-and-fifty).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_1_4",
@@ -7594,7 +7594,7 @@ export const chapters1_5 = [
     "explanationTr": "'Wat is je nationaliteit?' sorusuna milliyet sıfatı ile cevap verilir: 'Ik ben Nederlandse' (veya Nederlander / Turkse vb.). 'Nederland' ülke ismidir, milliyet değildir.",
     "explanationEn": "To answer 'Wat is je nationaliteit?', you state your nationality adjective ('Ik ben Nederlandse'), not the country name ('Nederland').",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_1_5",
@@ -7630,7 +7630,7 @@ export const chapters1_5 = [
     "explanationTr": "'Zijn' (olmak) düzensiz fiilinde 'jullie' (siz çoğul) öznesi için doğru çekim 'zijn'dir.",
     "explanationEn": "For the irregular verb 'zijn' (to be), the plural subject pronoun 'jullie' conjugates as 'zijn'.",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_1_7",
@@ -7651,7 +7651,7 @@ export const chapters1_5 = [
     "explanationTr": "Hollandaca alfabede 'Y' harfi 'Griekse ij' veya Fransızca kökenli 'y-grec' olarak adlandırılır. Normal 'ij' harfine ise 'lange ij' denir.",
     "explanationEn": "In the Dutch alphabet, the letter 'Y' is officially called 'Griekse ij' (Greek i) or 'y-grec', distinguishing it from 'lange ij' (ij).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_1_8",
@@ -7666,7 +7666,7 @@ export const chapters1_5 = [
     "explanationTr": "'Mijn hobby is...' kalıbından sonra eylem mastar (infinitief) halinde gelir: 'lezen'.",
     "explanationEn": "After 'Mijn hobby is...', the verb following remains in its infinitive form: 'lezen'.",
     "difficulty": 1,
-    "quality": 2,
+    "quality": 1,
     "options": [
       "lezen",
       "lezt",
@@ -7756,7 +7756,7 @@ export const chapters1_5 = [
     "explanationTr": "Haftanın günleri için 'op' (op maandag), aylar ve mevsimler için 'in' (in juli, in de zomer) kullanılır.",
     "explanationEn": "Days of the week require 'op' (op maandag), while months and seasons take 'in' (in juli, in de zomer).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_2_4",
@@ -7771,7 +7771,7 @@ export const chapters1_5 = [
     "explanationTr": "Kesin saat bildirimlerinde (at 3 o'clock) her zaman 'om' edatı kullanılır: 'om drie uur'.",
     "explanationEn": "For exact clock times (at ... o'clock), Dutch always uses the preposition 'om': 'om drie uur'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_2_5",
@@ -7792,7 +7792,7 @@ export const chapters1_5 = [
     "explanationTr": "'Wij' zamirinin iyelik hali: 'het'-kelimeleri için 'ons' (ons huis), 'de'-kelimeleri ve çoğullar için 'onze' (onze kat) olur.",
     "explanationEn": "The possessive pronoun for 'wij' is 'ons' before 'het'-words (ons huis) and 'onze' before 'de'-words and plurals (onze kat).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_2_6",
@@ -7849,7 +7849,7 @@ export const chapters1_5 = [
     "explanationTr": "'Emre' 3. tekil şahıs (hij) olduğu için fiil köküne (woon) '-t' eklenir: 'woont'.",
     "explanationEn": "Because 'Emre' is a third-person singular subject (hij), the verb stem (woon) takes '-t': 'woont'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_2_9",
@@ -7890,7 +7890,7 @@ export const chapters1_5 = [
     "explanationTr": "Hollanda kafelerinde ve barlarında gayet doğal ve yaygın bir sipariş verme kalıbı 'Doe mij maar een...' şeklindedir (Bana bir bira lütfen).",
     "explanationEn": "In Dutch café culture, 'Doe mij maar een...' is a classic, natural idiomatic way to order drinks at the counter or table.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_3_2",
@@ -7911,7 +7911,7 @@ export const chapters1_5 = [
     "explanationTr": "Hollandacada sonuna '-tje', '-je', '-pje' vb. küçültme eki almış tüm tekil kelimeler istisnasız 'HET' lidwoord'ü alır.",
     "explanationEn": "In Dutch grammar, all singular diminutive nouns (ending in -je, -tje, -pje, etc.) ALWAYS take the neuter definite article 'het'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_3_3",
@@ -7932,7 +7932,7 @@ export const chapters1_5 = [
     "explanationTr": "Tekilde 'het' olan kelimeler de dahil olmak üzere, Hollandacada TÜM çoğul isimlerin belirli tanımlığı (lidwoord) istisnasız 'DE'dir.",
     "explanationEn": "Regardless of whether a noun is 'de' or 'het' in the singular, ALL plural nouns in Dutch take 'de'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_3_4",
@@ -7953,7 +7953,7 @@ export const chapters1_5 = [
     "explanationTr": "Cümle özne dışında bir ögeyle (zaman: Vandaag) başladığında inversie (devrik cümle) gerçekleşir: Fiil (ga) 2. sıraya, özne (ik) fiilden hemen sonraya geçer.",
     "explanationEn": "When a Dutch sentence begins with an element other than the subject (e.g. time: Vandaag), inversion occurs: Verb (ga) in 2nd position, followed immediately by Subject (ik).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_3_5",
@@ -7968,7 +7968,7 @@ export const chapters1_5 = [
     "explanationTr": "'Nu' ile başlayan devrik cümlede fiil başa gelir. 'Ik' öznesi için 'hebben' fiilinin kökü 'heb'dir.",
     "explanationEn": "With 'Nu' triggering inversion, the verb precedes the subject 'ik'. The present stem of 'hebben' for 'ik' is 'heb'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_3_6",
@@ -8004,7 +8004,7 @@ export const chapters1_5 = [
     "explanationTr": "Barda herkese içki ısmarlanan tur için 'het rondje' (een rondje geven / betalen) tabiri kullanılır.",
     "explanationEn": "'Het rondje' is the standard Dutch idiom for buying a round of drinks for the table ('een rondje betalen').",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_3_8",
@@ -8019,7 +8019,7 @@ export const chapters1_5 = [
     "explanationTr": "Sipariş verirken 'Voor mij een sapje/koffie...' (Benim için bir meyve suyu/kahve...) kalıbı kullanılır.",
     "explanationEn": "When ordering drinks, the polite phrase is 'Voor mij een sapje/koffie, alstublieft.'",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_3_9",
@@ -8034,7 +8034,7 @@ export const chapters1_5 = [
     "explanationTr": "'Op maandag' zaman ifadesi devrik cümle yapar. 'Ik' öznesi için 'willen' fiili 'wil' şeklindedir.",
     "explanationEn": "'Op maandag' triggers inversion. For subject 'ik', the modal verb 'willen' conjugates as 'wil'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_4_1",
@@ -8055,7 +8055,7 @@ export const chapters1_5 = [
     "explanationTr": "Devrik cümle kuralı: Zaman/Yer + Çekimli Fiil (V) + Özne (S) + Cümlenin kalanı. Fiil daima 2. pozisyondadır.",
     "explanationEn": "Inversion rule: Time/Place + conjugated verb (V) + subject (S) + rest. The finite verb strictly retains 2nd position.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_4_2",
@@ -8070,7 +8070,7 @@ export const chapters1_5 = [
     "explanationTr": "'Morgen' devrik cümle başlatır: fiil başa gelir. 'Ik' için 'drinken' fiilinin çekimi 'drink'tir.",
     "explanationEn": "'Morgen' triggers inversion. With 'ik' as subject, the verb conjugates as 'drink'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_4_3",
@@ -8100,7 +8100,7 @@ export const chapters1_5 = [
     "explanationTr": "'Ben' (ik) öznesiyle bir teklifte bulunurken (Shall I...?) 'Zal ik...?' kalıbı kullanılır.",
     "explanationEn": "To make an offer or proposal with first-person singular 'I' (Shall I...?), Dutch uses 'Zal ik...?'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_4_5",
@@ -8157,7 +8157,7 @@ export const chapters1_5 = [
     "explanationTr": "'Canı istememek / hevesi olmamak' anlamındaki kalıp 'geen zin hebben'dir: 'Ik heb geen zin.'",
     "explanationEn": "To express lack of motivation or not being in the mood, Dutch uses 'geen zin hebben': 'Ik heb geen zin.'",
     "difficulty": 2,
-    "quality": 2,
+    "quality": 1,
     "options": [
       "zin",
       "tijd",
@@ -8178,7 +8178,7 @@ export const chapters1_5 = [
     "explanationTr": "'Bizimle geliyor musun / katılıyor musun?' diye sormak için 'Ga je mee?' veya 'Kom je mee?' kalıbı kullanılır.",
     "explanationEn": "To ask someone if they are coming along with you, Dutch uses 'Ga je mee?' or 'Kom je mee?'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_4_9",
@@ -8193,7 +8193,7 @@ export const chapters1_5 = [
     "explanationTr": "'Vandaag' devrik cümle oluşturur: fiil özneden önce gelir. 'Jan' (hij) için 'leren' fiilinin köküne -t eklenir: 'leert'.",
     "explanationEn": "'Vandaag' causes inversion. For subject 'Jan' (hij), the verb stem takes '-t': 'leert'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_5_1",
@@ -8214,7 +8214,7 @@ export const chapters1_5 = [
     "explanationTr": "Vurgusuz -el, -em, -en, -er heceleriyle biten Hollandaca kelimeler çoğulda kesme işaretsiz düz '-s' eki alır (tafels, bezems, jongens, kamers).",
     "explanationEn": "Dutch words with unstressed final syllables ending in -el, -em, -en, or -er take a plain '-s' in the plural without an apostrophe.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_5_2",
@@ -8235,7 +8235,7 @@ export const chapters1_5 = [
     "explanationTr": "'Café' bir 'het'-kelimesidir. Belirsiz tanımlık 'een' ile kullanıldığında 'het'-kelimelerinin önündeki sıfat '-e' ALMAZ: 'een groot café'.",
     "explanationEn": "'Café' is a 'het'-word. Preceded by indefinite article 'een', adjectives before singular 'het'-words do NOT take '-e': 'een groot café'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_5_3",
@@ -8256,7 +8256,7 @@ export const chapters1_5 = [
     "explanationTr": "'Het' belirli tanımlığı kullanıldığında, 'het'-kelimesinin önündeki sıfat '-e' eki alır: 'het grote café'. (Tek ünlü 'o' açık hecede uzar: groot -> grote).",
     "explanationEn": "When the definite article 'het' is used, the adjective before a 'het'-word DOES take an '-e': 'het grote café'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_5_4",
@@ -8271,7 +8271,7 @@ export const chapters1_5 = [
     "explanationTr": "'De komkommer' bir 'de'-kelimesidir. 'De'-kelimelerinin önündeki sıfatlar her zaman (hem 'de' hem 'een' ile) '-e' alır: 'een grote komkommer'.",
     "explanationEn": "'Komkommer' is a 'de'-word. Adjectives preceding 'de'-words ALWAYS take an '-e', even with 'een': 'een grote komkommer'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_5_5",
@@ -8286,7 +8286,7 @@ export const chapters1_5 = [
     "explanationTr": "'Vies' sıfatına '-e' eklenirken sonundaki 's' harfi sesli harf öncesinde yumuşayarak 'z'ye dönüşür: 'vieze'.",
     "explanationEn": "When '-e' is added to 'vies', the final 's' softens between vowels into 'z': 'vieze'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_5_6",
@@ -8307,7 +8307,7 @@ export const chapters1_5 = [
     "explanationTr": "Ağırlık, para, zaman birimleri (kilo, euro, uur, cent, jaar vb.) sayıların ardından çoğul eki almaz, yalın tekil kalır: 'twee kilo aardappels, drie uur, acht euro'.",
     "explanationEn": "Units of weight, currency, and time (kilo, euro, uur, cent, jaar) remain singular after numbers: 'twee kilo', 'drie uur', 'acht euro'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_5_7",
@@ -8328,7 +8328,7 @@ export const chapters1_5 = [
     "explanationTr": "'Karnabahar' sebzesinin Hollandacası 'de bloemkool'dur.",
     "explanationEn": "The Dutch word for cauliflower is 'de bloemkool'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_5_8",
@@ -8343,7 +8343,7 @@ export const chapters1_5 = [
     "explanationTr": "Marul adedi/göbeği için Hollandacada 'een krop sla' (bir baş marul) birim ifadesi kullanılır.",
     "explanationEn": "The measure word for a whole head of lettuce in Dutch is 'een krop sla'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_5_9",
@@ -8364,6 +8364,6 @@ export const chapters1_5 = [
     "explanationTr": "Sıfat isimden önce gelmeyip fiilden sonra (yüklem/predicatief olarak) yer aldığında asla '-e' eki almaz: 'De soep is lekker', 'Het café is groot'.",
     "explanationEn": "When an adjective is placed after the verb (predicative position), it never receives an '-e' inflection: 'De soep is lekker'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   }
 ];

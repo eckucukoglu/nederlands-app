@@ -19,7 +19,7 @@ export const chapters11_15 = [
     "explanationTr": "'ik' öznesi ile kullanılan dönüşlü zamir (reflexief pronomen) 'me'dir.",
     "explanationEn": "The reflexive pronoun associated with the subject 'ik' is 'me'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch11_002",
@@ -39,7 +39,7 @@ export const chapters11_15 = [
     "explanationTr": "'jij / je' öznesi için dönüşlü zamir 'je'dir.",
     "explanationEn": "The reflexive pronoun associated with 'jij / je' is 'je'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch11_003",
@@ -59,7 +59,7 @@ export const chapters11_15 = [
     "explanationTr": "Üçüncü tekil şahıslar (hij, zij, het) için dönüşlü zamir 'zich'tir.",
     "explanationEn": "For the 3rd person singular (hij, zij, het), the reflexive pronoun is 'zich'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch11_004",
@@ -79,7 +79,7 @@ export const chapters11_15 = [
     "explanationTr": "'wij / we' (biz) öznesi için dönüşlü zamir 'ons'tur.",
     "explanationEn": "The reflexive pronoun associated with 'wij / we' is 'ons'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch11_005",
@@ -99,7 +99,7 @@ export const chapters11_15 = [
     "explanationTr": "'jullie' (siz) öznesi için dönüşlü zamir 'je'dir.",
     "explanationEn": "The reflexive pronoun associated with 'jullie' is 'je'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch11_006",
@@ -119,7 +119,7 @@ export const chapters11_15 = [
     "explanationTr": "Çoğul 'zij / ze' (onlar) öznesi için dönüşlü zamir 'zich'tir.",
     "explanationEn": "For the plural 'zij / ze' (they), the reflexive pronoun is 'zich'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch11_012",
@@ -160,7 +160,7 @@ export const chapters11_15 = [
     "explanationTr": "'werken' kökü 'k' (soft ketchup) ile bittiği için '+te' alır: ik werkte.",
     "explanationEn": "Stem of 'werken' ends in 'k' (soft ketchup), so it takes '+te': ik werkte.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch11_017",
@@ -181,7 +181,7 @@ export const chapters11_15 = [
     "explanationTr": "'spelen' kökü 'l' harfiyle biter (soft ketchup içinde yoktur), bu yüzden '+de' alır: hij speelde.",
     "explanationEn": "Stem of 'spelen' ends in 'l' (not in soft ketchup), so it takes '+de': hij speelde.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch11_018",
@@ -202,7 +202,7 @@ export const chapters11_15 = [
     "explanationTr": "'herhalen' kökü 'l' ile bittiği için '+de' alır: ik herhaalde.",
     "explanationEn": "Stem of 'herhalen' takes '+de': ik herhaalde.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch11_019",
@@ -223,7 +223,7 @@ export const chapters11_15 = [
     "explanationTr": "'wonen' kökü 'n' ile biter, imperfectum'da '+de' alır: ik woonde.",
     "explanationEn": "Stem of 'wonen' takes '+de' in the imperfectum: ik woonde.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch11_028",
@@ -328,7 +328,7 @@ export const chapters11_15 = [
     "explanationTr": "Notlarda 'Tom en Kirsten kennen elkaar nog niet' yazmaktadır.",
     "explanationEn": "The notes state that 'Tom en Kirsten kennen elkaar nog niet' (Tom and Kirsten do not know each other yet).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch11_040",
@@ -391,7 +391,7 @@ export const chapters11_15 = [
     "explanationTr": "Çoğul 'wij' için imperfectum kuralı 'stam + ten' şeklindedir: wij werkten.",
     "explanationEn": "For plural 'wij', the imperfectum rule gives 'stam + ten': wij werkten.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch11_045",
@@ -412,7 +412,7 @@ export const chapters11_15 = [
     "explanationTr": "Çoğul 'jullie' için imperfectum kuralı 'stam + den' şeklindedir: jullie speelden.",
     "explanationEn": "For plural 'jullie', the imperfectum rule gives 'stam + den': jullie speelden.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch11_046",
@@ -432,7 +432,7 @@ export const chapters11_15 = [
     "explanationTr": "Resmi 'u' zamiri ile hem 'u' hem de 'zich' kullanılabilir.",
     "explanationEn": "For the formal 'u', either 'u' or 'zich' can be used as a reflexive pronoun.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch11_050",
@@ -467,7 +467,7 @@ export const chapters11_15 = [
     "explanationTr": "Özet görselinin en başında 'ik was me.' olarak geçmiş zaman örneği verilmiştir.",
     "explanationEn": "The summary shows the past tense example as 'ik was me.'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch12_003",
@@ -481,7 +481,7 @@ export const chapters11_15 = [
     "explanationTr": "'zich voorbereiden' hazırlanmak demektir.",
     "explanationEn": "'to get prepared/ready' translates to 'zich voorbereiden'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch12_015",
@@ -502,7 +502,7 @@ export const chapters11_15 = [
     "explanationTr": "Çekimli fiil yapılarında ayrılabilen fiilin ilk parçası (in-) cümlenin en sonuna gider.",
     "explanationEn": "In conjugated sentences, the first part of a separable verb goes to the end of the sentence.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch12_016",
@@ -517,7 +517,7 @@ export const chapters11_15 = [
     "explanationTr": "'in-stappen' ayrılabilir fiildir, şimdiki zamanda 'in' eki sona gider: Hij stapt ... in.",
     "explanationEn": "'in-stappen' is separable; in present tense, 'in' goes to the end: Hij stapt ... in.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch12_017",
@@ -532,7 +532,7 @@ export const chapters11_15 = [
     "explanationTr": "Hikaye geçmiş zamanda da ayrılabilen fiilin prefixi ('in') sona gider.",
     "explanationEn": "In the imperfectum, the prefix ('in') of the separable verb also goes to the end.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch12_018",
@@ -553,7 +553,7 @@ export const chapters11_15 = [
     "explanationTr": "'in-stappen' hareket/konum içerdiği ve 'zijn' aldığı için 'ingestapt' olarak kurulur.",
     "explanationEn": "'in-stappen' uses 'zijn' and its past participle is 'ingestapt'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch12_019",
@@ -610,7 +610,7 @@ export const chapters11_15 = [
     "explanationTr": "'Yardım edebilir misiniz?' sorusu 'Kunt u mij helpen?' şeklindedir.",
     "explanationEn": "'Can you help me?' translates to 'Kunt u mij helpen?'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch12_022",
@@ -625,7 +625,7 @@ export const chapters11_15 = [
     "explanationTr": "'Arıyorum' anlamındaki fiil 'zoeken'dir ('Ik zoek...').",
     "explanationEn": "'I am looking for...' translates to 'Ik zoek...'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch12_023",
@@ -681,7 +681,7 @@ export const chapters11_15 = [
     "explanationTr": "'Bir kez daha / yeniden' anlamı 'nog een keer' ile sağlanır.",
     "explanationEn": "'again / one more time' translates to 'nog een keer'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch12_029",
@@ -803,7 +803,7 @@ export const chapters11_15 = [
     "explanationTr": "De-woord nesne zamiri 'hem'dir ('Waar is hij? -> Waar is het? / De deur -> Ik heb hem in mijn hand').",
     "explanationEn": "The object pronoun for a de-word is 'hem'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch12_035",
@@ -824,7 +824,7 @@ export const chapters11_15 = [
     "explanationTr": "Het-woord nesne zamiri yine 'het'tir ('Waar is het?').",
     "explanationEn": "The object pronoun for a het-word remains 'het'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch12_036",
@@ -845,7 +845,7 @@ export const chapters11_15 = [
     "explanationTr": "Çoğul nesnelere atıfta bulunurken 'ze' kullanılır ('Waar zijn ze?').",
     "explanationEn": "When referring to multiple objects (plural), we use 'ze'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch12_037",
@@ -860,7 +860,7 @@ export const chapters11_15 = [
     "explanationTr": "'de telefoon' de-woord olduğu için nesne karşılığı 'hem'dir.",
     "explanationEn": "Since 'de telefoon' is a de-word, its object pronoun is 'hem'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch12_038",
@@ -875,7 +875,7 @@ export const chapters11_15 = [
     "explanationTr": "'het glas' het-woord olduğu için nesne karşılığı 'het'dir.",
     "explanationEn": "Since 'het glas' is a het-word, its object pronoun is 'het'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch12_039",
@@ -890,7 +890,7 @@ export const chapters11_15 = [
     "explanationTr": "Çoğul nesneler için nesne zamiri 'ze'dir.",
     "explanationEn": "For plural objects, the object pronoun is 'ze'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch12_040",
@@ -964,7 +964,7 @@ export const chapters11_15 = [
     "explanationTr": "Çekimli ayrılabilen fiillerin prefixi cümlenin en sonuna gider.",
     "explanationEn": "The prefix of a conjugated separable verb goes to the end of the sentence.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch12_046",
@@ -998,7 +998,7 @@ export const chapters11_15 = [
     "explanationTr": "'istasyon' kelimesi Hollandacada 'het station'dur.",
     "explanationEn": "'station' translates to 'het station' in Dutch.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch12_049",
@@ -1012,7 +1012,7 @@ export const chapters11_15 = [
     "explanationTr": "'Dosdoğru / dümdüz' anlamındaki tarif kelimesi 'rechtdoor'dur.",
     "explanationEn": "'straight ahead' translates to 'rechtdoor'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch13_001",
@@ -1075,7 +1075,7 @@ export const chapters11_15 = [
     "explanationTr": "'aan-komen' hareket bildirdiği için 'zijn' ile çekimlenir ve 'aangekomen' olur.",
     "explanationEn": "'aan-komen' indicates movement, so it uses 'zijn' and forms 'aangekomen'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch13_008",
@@ -1126,7 +1126,7 @@ export const chapters11_15 = [
     "explanationTr": "'gelukkig' (şükürler olsun / neyse ki) rahatlama (relief) ifade eder.",
     "explanationEn": "'gelukkig' is used as an expression of relief.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch13_013",
@@ -1190,7 +1190,7 @@ export const chapters11_15 = [
     "explanationTr": "'zullen/zal' ikinci sırada yer alırken asıl fiil en sonda mastar (infinitief) kalır.",
     "explanationEn": "'zullen/zal' takes the second position while the main verb goes to the end as an infinitive.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch13_019",
@@ -1205,7 +1205,7 @@ export const chapters11_15 = [
     "explanationTr": "Asıl fiil 'afsnijden' cümlenin sonunda mastar halindedir.",
     "explanationEn": "The main verb 'afsnijden' stays in the infinitive at the end.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch13_020",
@@ -1220,7 +1220,7 @@ export const chapters11_15 = [
     "explanationTr": "Özne 'We', yardımcı fiil 'zullen', asıl eylem sonda 'kopen'.",
     "explanationEn": "Subject 'We', auxiliary 'zullen', main verb at the end 'kopen'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch13_021",
@@ -1235,7 +1235,7 @@ export const chapters11_15 = [
     "explanationTr": "Asıl fiil 'opschrijven' en sonda yer alır.",
     "explanationEn": "The main verb 'opschrijven' is placed at the end.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch13_022",
@@ -1250,7 +1250,7 @@ export const chapters11_15 = [
     "explanationTr": "Asıl fiil 'meebrengen' sonda mastar kalır.",
     "explanationEn": "The main verb 'meebrengen' stays as an infinitive at the end.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch13_023",
@@ -1265,7 +1265,7 @@ export const chapters11_15 = [
     "explanationTr": "Asıl fiil 'kijken' cümlenin sonundadır.",
     "explanationEn": "The main verb 'kijken' is at the end of the sentence.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch13_024",
@@ -1280,7 +1280,7 @@ export const chapters11_15 = [
     "explanationTr": "Asıl fiil 'maken' en sondadır.",
     "explanationEn": "The main verb 'maken' is at the very end.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch13_025",
@@ -1295,7 +1295,7 @@ export const chapters11_15 = [
     "explanationTr": "'in orde maken' ifadesindeki asıl fiil 'maken' sondadır.",
     "explanationEn": "The main verb 'maken' is at the end.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch13_026",
@@ -1310,7 +1310,7 @@ export const chapters11_15 = [
     "explanationTr": "Asıl fiil 'brengen' en sondadır.",
     "explanationEn": "The main verb 'brengen' is at the end.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch13_027",
@@ -1325,7 +1325,7 @@ export const chapters11_15 = [
     "explanationTr": "Asıl fiil 'vragen' sondadır.",
     "explanationEn": "The main verb 'vragen' is at the end.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch13_028",
@@ -1403,7 +1403,7 @@ export const chapters11_15 = [
     "explanationTr": "'interessant' ilginç/enteresan demektir.",
     "explanationEn": "'interessant' means interesting.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch13_036",
@@ -1466,7 +1466,7 @@ export const chapters11_15 = [
     "explanationTr": "'ui' sesi 'a' ve 'ü' seslerinin birleşiminden oluşur.",
     "explanationEn": "The sound 'ui' is a combination of 'a' and 'ü'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch13_039",
@@ -1487,7 +1487,7 @@ export const chapters11_15 = [
     "explanationTr": "'man' adam/insan, 'maan' ise ay (moon) demektir.",
     "explanationEn": "'man' is man, and 'maan' is moon.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch13_040",
@@ -1508,7 +1508,7 @@ export const chapters11_15 = [
     "explanationTr": "'bed' yatak, 'beet' ise ısırık (bite) demektir.",
     "explanationEn": "'bed' is bed, and 'beet' is bite.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch13_041",
@@ -1529,7 +1529,7 @@ export const chapters11_15 = [
     "explanationTr": "'bos' orman/koruluk, 'boos' ise kızgın/öfkeli (angry) demektir.",
     "explanationEn": "'bos' is forest/woods, and 'boos' is angry.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch13_042",
@@ -1550,7 +1550,7 @@ export const chapters11_15 = [
     "explanationTr": "'put' kuyu/çukur, 'puur' ise saf/katıksız (pure) demektir.",
     "explanationEn": "'put' is a well/pit, and 'puur' is pure.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch13_043",
@@ -1571,7 +1571,7 @@ export const chapters11_15 = [
     "explanationTr": "'vis' balık, 'vies' ise kirli veya iğrenç/kötü (dirty/nasty) demektir (not: ie sounds like 'freeze').",
     "explanationEn": "'vis' is fish, and 'vies' is dirty/bad/nasty.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch13_044",
@@ -1592,7 +1592,7 @@ export const chapters11_15 = [
     "explanationTr": "Notlarda 'ie is like freeze' şeklinde telaffuz ipucu verilmiştir.",
     "explanationEn": "The notes state that 'ie' is like 'freeze'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch13_045",
@@ -1613,7 +1613,7 @@ export const chapters11_15 = [
     "explanationTr": "'reis' seyahat/gezi, 'reus' ise dev (giant) demektir.",
     "explanationEn": "'reis' is a trip/travel, and 'reus' is a giant.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch13_046",
@@ -1634,7 +1634,7 @@ export const chapters11_15 = [
     "explanationTr": "'hout' odun/tahta (wood), 'huid' ise cilt/deri (skin) demektir.",
     "explanationEn": "'hout' is wood, and 'huid' is skin.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch13_047",
@@ -1655,7 +1655,7 @@ export const chapters11_15 = [
     "explanationTr": "Kedi hakkında ne düşündüğünü sormak için 'Wat vind je van de kat?' veya 'Hoe vind je de kat?' denir.",
     "explanationEn": "To ask what someone thinks about the cat, use 'Wat vind je van de kat?' or 'Hoe vind je de kat?'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_001",
@@ -1675,7 +1675,7 @@ export const chapters11_15 = [
     "explanationTr": "Plan veya niyet belirtmek için 'gaan + infinitief' yapısı kullanılır.",
     "explanationEn": "To express a plan or intention, the 'gaan + infinitive' construction is used.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_002",
@@ -1695,7 +1695,7 @@ export const chapters11_15 = [
     "explanationTr": "'zullen + infinitief' kişisel olmayan tahminler veya duyurulan olaylar için kullanılır.",
     "explanationEn": "'zullen + infinitive' is used for less personal predictions or announced events.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_003",
@@ -1715,7 +1715,7 @@ export const chapters11_15 = [
     "explanationTr": "Sabit veya alışılmış gelecek aktiviteleri için şimdiki zaman (presens) + zaman zarfı kullanılabilir.",
     "explanationEn": "Regular or fixed future activities can be expressed using the present tense + time word.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_005",
@@ -1736,7 +1736,7 @@ export const chapters11_15 = [
     "explanationTr": "'zullen + wel' yapısı geleceğe dair olasılık veya güçlü tahmin (probability) belirtir.",
     "explanationEn": "'zullen + wel' expresses a probability or strong prediction about the future.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_006",
@@ -1758,7 +1758,7 @@ export const chapters11_15 = [
     "explanationTr": "Olasılık yapısında 'Onderwerp + zullen + wel + Infinitief' sıralaması izlenir.",
     "explanationEn": "The pattern for probability is Subject + zullen + wel + Infinitive.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_007",
@@ -1778,7 +1778,7 @@ export const chapters11_15 = [
     "explanationTr": "Soru kelimesiyle kurulan indirect (dolaylı) sorularda fiil yan cümlenin en sonuna gider: '...waar de balie is'.",
     "explanationEn": "In indirect questions with a wh-word, the verb moves to the end of the clause: '...waar de balie is'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_008",
@@ -1798,7 +1798,7 @@ export const chapters11_15 = [
     "explanationTr": "Evet/hayır sorularında dolaylı soru yaparken 'of' (whether/if) kullanılır ve fiil yine sona gider.",
     "explanationEn": "For yes/no indirect questions, use 'of' (whether/if) and place the verb at the end.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_009",
@@ -1819,7 +1819,7 @@ export const chapters11_15 = [
     "explanationTr": "Dolaylı sorular birer yan cümle (bijzin) niteliği taşır, bu yüzden çekimli fiil sona gider.",
     "explanationEn": "Indirect questions act as subclauses, meaning the conjugated verb goes to the end of the clause.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_010",
@@ -1965,7 +1965,7 @@ export const chapters11_15 = [
     "explanationTr": "Hâl hatır sormak ve sohbet başlatmak için bu günlük sorular kullanılır.",
     "explanationEn": "These casual questions are used for small talk and greeting.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_017",
@@ -2040,7 +2040,7 @@ export const chapters11_15 = [
     "explanationTr": "'aaien' kökü 'aai' (klinker ile biter), 'soft ketchup' kuralına göre sonuna 'd' alır: geaaid.",
     "explanationEn": "The stem of 'aaien' is 'aai' (ends in a vowel), so it takes 'd': geaaid.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_022",
@@ -2055,7 +2055,7 @@ export const chapters11_15 = [
     "explanationTr": "Özet notlarındaki örnekte 'Ik heb mijn kat geaaid' cümlesi yer alır.",
     "explanationEn": "The summary notes give the example 'Ik heb mijn kat geaaid'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_023",
@@ -2070,7 +2070,7 @@ export const chapters11_15 = [
     "explanationTr": "Çoğul 'we' öznesiyle 'zullen' kullanılır.",
     "explanationEn": "With the plural subject 'we', 'zullen' is used.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_024",
@@ -2085,7 +2085,7 @@ export const chapters11_15 = [
     "explanationTr": "'ik' öznesiyle söz verme/teklif anlamında 'zal' kullanılır.",
     "explanationEn": "With the subject 'ik', 'zal' is used for offers/promises.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_025",
@@ -2100,7 +2100,7 @@ export const chapters11_15 = [
     "explanationTr": "Eylem bildiren söz/teklif için 'zal' kullanılır.",
     "explanationEn": "'zal' is used for expressing a prompt action or offer.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_026",
@@ -2115,7 +2115,7 @@ export const chapters11_15 = [
     "explanationTr": "Gelecek eylem niyeti için 'zal' kullanılır.",
     "explanationEn": "'zal' is used to state an upcoming action.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_027",
@@ -2130,7 +2130,7 @@ export const chapters11_15 = [
     "explanationTr": "Asıl fiil 'maken' en sonda mastar kalır.",
     "explanationEn": "The main verb 'maken' stays as an infinitive at the end.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_028",
@@ -2145,7 +2145,7 @@ export const chapters11_15 = [
     "explanationTr": "Modal fiilden sonra asıl fiil sonda mastar olur: eten.",
     "explanationEn": "After the modal verb, the main verb is an infinitive at the end: eten.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_029",
@@ -2160,7 +2160,7 @@ export const chapters11_15 = [
     "explanationTr": "Zullen ile kurulan cümlede asıl fiil 'gaan' sondadır.",
     "explanationEn": "In a sentence with 'zullen', the main verb 'gaan' is at the end.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_033",
@@ -2174,7 +2174,7 @@ export const chapters11_15 = [
     "explanationTr": "Soru kelimesi 'waar' (nerede) dolaylı soruda kullanılır.",
     "explanationEn": "The wh-word 'waar' (where) is used in the indirect question.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_034",
@@ -2188,7 +2188,7 @@ export const chapters11_15 = [
     "explanationTr": "Ja/nee sorularının dolaylı biçiminde 'of' (whether/if) kullanılır.",
     "explanationEn": "For indirect yes/no questions, use 'of'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_035",
@@ -2248,7 +2248,7 @@ export const chapters11_15 = [
     "explanationTr": "Şimdiki zaman ('werk') ve zaman zarfı ('morgen') kombinasyonu sabit bir geleceği gösterir.",
     "explanationEn": "The present tense ('werk') combined with a time word ('morgen') shows a routine future activity.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_047",
@@ -2269,7 +2269,7 @@ export const chapters11_15 = [
     "explanationTr": "Cümlenin zaman öğesiyle başlaması devrik yapıya (inversie) neden olur.",
     "explanationEn": "Starting the sentence with a time phrase ('Morgen') causes inversion.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_048",
@@ -2289,7 +2289,7 @@ export const chapters11_15 = [
     "explanationTr": "Hal hatır sorulduğunda 'İyi, teşekkürler. Ya sen?' demek için bu kalıp kullanılır.",
     "explanationEn": "When asked how you are, a standard polite reply is 'Good, dank je. En met jou?'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_001",
@@ -2329,7 +2329,7 @@ export const chapters11_15 = [
     "explanationTr": "'Het zal morgen regenen' geleceğe dair bir hava durumu tahmini/voorspelling belirtir.",
     "explanationEn": "'Het zal morgen regenen' expresses a future prediction or weather forecast.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_003",
@@ -2349,7 +2349,7 @@ export const chapters11_15 = [
     "explanationTr": "Gelecek planı için 'subject + ga/gaat/gaan + rest + infinitive' formülü verilir.",
     "explanationEn": "The formula for future plans is 'subject + ga/gaat/gaan + rest + infinitive'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_004",
@@ -2369,7 +2369,7 @@ export const chapters11_15 = [
     "explanationTr": "Örnek olarak 'Ik ga pizza eten' verilmiştir.",
     "explanationEn": "An example given is 'Ik ga pizza eten'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_005",
@@ -2389,7 +2389,7 @@ export const chapters11_15 = [
     "explanationTr": "Zullen veya gaan ile kurulduktan sonra asıl fiil en sonda mastar (infinitive) olarak yer alır.",
     "explanationEn": "When using zullen or gaan, the main verb goes to the end in its infinitive form.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_006",
@@ -2409,7 +2409,7 @@ export const chapters11_15 = [
     "explanationTr": "Dolaylı sorularda fiil cümlenin en sonuna gider: 'Kun je zeggen waar spoor 2 is?'",
     "explanationEn": "In indirect questions, the verb moves to the end: 'Kun je zeggen waar spoor 2 is?'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_007",
@@ -2429,7 +2429,7 @@ export const chapters11_15 = [
     "explanationTr": "Evet/hayır soruları dolaylı yapılırken 'of' kullanılır ve fiil en sona gider.",
     "explanationEn": "For yes/no indirect questions, use 'of' and place the verb at the end.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_008",
@@ -2449,7 +2449,7 @@ export const chapters11_15 = [
     "explanationTr": "Notlarda belirtildiği gibi soru yapısı aynı kalır, tek fark fiilin en sona konmasıdır.",
     "explanationEn": "As stated in the notes, the question stays the same except the verb is placed at the end.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_009",
@@ -2469,7 +2469,7 @@ export const chapters11_15 = [
     "explanationTr": "Soru kelimesi ile başlayan sorularda fiil ('is') en sonraya gider.",
     "explanationEn": "For wh-questions, the verb ('is') moves to the end.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_010",
@@ -2489,7 +2489,7 @@ export const chapters11_15 = [
     "explanationTr": "Ja/nee sorularında 'of' bağlacı kullanılır ve çekimli fiil sona gider.",
     "explanationEn": "Yes/no questions use 'of' and send the conjugated verb to the end.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_011",
@@ -2510,7 +2510,7 @@ export const chapters11_15 = [
     "explanationTr": "'die' de-woord isimler, çoğullar ve kişiler için kullanılır.",
     "explanationEn": "'die' is used for de-words, plurals, and people.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_012",
@@ -2525,7 +2525,7 @@ export const chapters11_15 = [
     "explanationTr": "'de kaas' de-woord olduğu için 'Die vind ik lekker' denir.",
     "explanationEn": "Since 'de kaas' is a de-word, we use 'Die vind ik lekker'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_013",
@@ -2546,7 +2546,7 @@ export const chapters11_15 = [
     "explanationTr": "Özet notlarında kişilere atıfta bulunmak için 'Die/zij' kullanılabileceği gösterilmiştir.",
     "explanationEn": "The summary notes show that 'Die/zij' can be used to refer to a person.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_014",
@@ -2567,7 +2567,7 @@ export const chapters11_15 = [
     "explanationTr": "'dat' het-woord isimler, fikirler veya bütün bir cümle için kullanılır.",
     "explanationEn": "'dat' is used for het-words, an idea, or an entire sentence.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_015",
@@ -2582,7 +2582,7 @@ export const chapters11_15 = [
     "explanationTr": "'het Naardermeer' bir het-woord olduğundan 'Dat / Het' ile işaret edilir.",
     "explanationEn": "'het Naardermeer' is a het-word, so it is referred to with 'Dat / Het'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_016",
@@ -2597,7 +2597,7 @@ export const chapters11_15 = [
     "explanationTr": "Bütün bir cümleye/eyleme atıfta bulunurken 'dat' kullanılır.",
     "explanationEn": "When referring back to an entire sentence/action, 'dat' is used.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_023",
@@ -2617,7 +2617,7 @@ export const chapters11_15 = [
     "explanationTr": "Özet listesinde 'vertellen over een reis' (bir seyahat hakkında anlatmak) yer alır.",
     "explanationEn": "The summary list includes 'vertellen over een reis' (talk about a trip).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_024",
@@ -2637,7 +2637,7 @@ export const chapters11_15 = [
     "explanationTr": "Hedefler arasında çevrelerinde veya yolda gördüklerini betimlemek vardır.",
     "explanationEn": "Describing what they see along the way or in their environment is part of the goals.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_025",
@@ -2657,7 +2657,7 @@ export const chapters11_15 = [
     "explanationTr": "Hedefler arasında ilgi ve takdir (belangstelling en waardering) ifade etmek bulunur.",
     "explanationEn": "Expressing interest and appreciation is among the learning goals.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_026",
@@ -2677,7 +2677,7 @@ export const chapters11_15 = [
     "explanationTr": "Kişileri ve nesneleri sunma kalıpları bu ünitenin hedeflerindendir.",
     "explanationEn": "Presenting people and things with dit/dat is and dit/dat zijn is a specific goal.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_027",
@@ -2697,7 +2697,7 @@ export const chapters11_15 = [
     "explanationTr": "Tatil için neyi önemli bulduklarını tartışmak hedefler arasındadır.",
     "explanationEn": "Discussing what they find important for a vacation is part of the curriculum.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_028",
@@ -2717,7 +2717,7 @@ export const chapters11_15 = [
     "explanationTr": "Kısa bir tatil kartpostalı yazmak hedefler arasında geçer.",
     "explanationEn": "Writing a short vacation postcard is listed in the goals.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_029",
@@ -2737,7 +2737,7 @@ export const chapters11_15 = [
     "explanationTr": "Tren seyahati hakkındaki bir metnin ana hatlarını anlamak hedeflenir.",
     "explanationEn": "Understanding the main line of a text about a train journey is a goal.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_030",
@@ -2758,7 +2758,7 @@ export const chapters11_15 = [
     "explanationTr": "Hedeflerde ng, ing ve nk seslerini tanımak ve telaffuz etmek vardır.",
     "explanationEn": "Recognizing and pronouncing the sounds ng, ing, and nk is part of the goals.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_031",
@@ -2778,7 +2778,7 @@ export const chapters11_15 = [
     "explanationTr": "Giriş kısmındaki örnek cümle 'Ik heb een leuke dag gehad.' şeklindedir.",
     "explanationEn": "The opening example sentence is 'Ik heb een leuke dag gehad.'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_032",
@@ -2798,7 +2798,7 @@ export const chapters11_15 = [
     "explanationTr": "'Ik zal een afspraak maken' söz verme (promise) anlamı taşır.",
     "explanationEn": "'Ik zal een afspraak maken' expresses a promise.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_033",
@@ -2818,7 +2818,7 @@ export const chapters11_15 = [
     "explanationTr": "Hava durumu tahmini için 'Het zal morgen regenen' örneği verilmiştir.",
     "explanationEn": "For a weather prediction, the example given is 'Het zal morgen regenen'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_034",
@@ -2838,7 +2838,7 @@ export const chapters11_15 = [
     "explanationTr": "Gaan plan/niyet için, zullen ise söz verme veya tahmin/öngörü için kullanılır.",
     "explanationEn": "Gaan is generally for plans/intentions, while zullen is for promises or predictions.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_035",
@@ -2878,7 +2878,7 @@ export const chapters11_15 = [
     "explanationTr": "Evet/hayır sorusu dolaylı yapılırken 'of' kullanılır ve 'vertrekt' sona gider.",
     "explanationEn": "A yes/no question becomes indirect using 'of' and sending 'vertrekt' to the end.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_037",
@@ -2898,7 +2898,7 @@ export const chapters11_15 = [
     "explanationTr": "Notlarda belirtildiği gibi anlam aynı kalır, sadece fiil sona taşınır.",
     "explanationEn": "As stated, the question stays the same in meaning, only the word order changes.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_038",
@@ -2918,7 +2918,7 @@ export const chapters11_15 = [
     "explanationTr": "De-woord isimler için 'die' kullanılır.",
     "explanationEn": "For de-words, we use 'die'.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_039",
@@ -2938,7 +2938,7 @@ export const chapters11_15 = [
     "explanationTr": "Het-woord isimler için 'dat' kullanılır.",
     "explanationEn": "For het-words, we use 'dat'.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_040",
@@ -2958,7 +2958,7 @@ export const chapters11_15 = [
     "explanationTr": "'die' kişilere ve çoğul isimlere de atıfta bulunabilir.",
     "explanationEn": "'die' can also refer to people and plurals.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_041",
@@ -2978,7 +2978,7 @@ export const chapters11_15 = [
     "explanationTr": "'dat' aynı zamanda bir fikre veya bütün bir cümleye atıfta bulunabilir.",
     "explanationEn": "'dat' can also refer back to an idea or an entire sentence.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_045",
@@ -2998,7 +2998,7 @@ export const chapters11_15 = [
     "explanationTr": "Soru kelimesi ile kurulan dolaylı sorularda fiil 'is' en sonradır.",
     "explanationEn": "In indirect questions with a wh-word, the verb 'is' goes to the end.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_046",
@@ -3018,7 +3018,7 @@ export const chapters11_15 = [
     "explanationTr": "Ja/nee sorusu dolaylı yapılırken 'of' kullanılır ve 'komt' en sona gider.",
     "explanationEn": "A yes/no question becomes indirect using 'of' and sending 'komt' to the end.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_047",
@@ -3038,7 +3038,7 @@ export const chapters11_15 = [
     "explanationTr": "Plan/niyet belirtirken 'gaan' fiili çekimlenir: Ik ga volgende week naar Parijs gaan.",
     "explanationEn": "To express a plan, 'gaan' is conjugated: Ik ga volgende week naar Parijs gaan.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_048",
@@ -3058,7 +3058,7 @@ export const chapters11_15 = [
     "explanationTr": "Söz verme/belofte durumunda 'zal' kullanılır.",
     "explanationEn": "For a promise, 'zal' is used.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_049",
@@ -3078,7 +3078,7 @@ export const chapters11_15 = [
     "explanationTr": "Notlardaki ok işaretine göre 'de kaas' de-woord olduğu için 'Die' ile bağlanmıştır.",
     "explanationEn": "Based on the arrow in the notes, 'de kaas' (de-word) is referred to with 'Die'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_050",
@@ -3098,7 +3098,7 @@ export const chapters11_15 = [
     "explanationTr": "Notlara göre 'het Naardermeer' het-woord olduğundan 'Dat' ile bağlanmıştır.",
     "explanationEn": "According to the notes, 'het Naardermeer' (het-word) is referred to with 'Dat'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch11_1000",
@@ -3119,7 +3119,7 @@ export const chapters11_15 = [
     "explanationTr": "Kadın komşu Hollandacada 'de buurvrouw' olarak adlandırılır.",
     "explanationEn": "A female neighbour is called 'de buurvrouw' in Dutch.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch11_1035",
@@ -3134,7 +3134,7 @@ export const chapters11_15 = [
     "explanationTr": "'ik' öznesi için dönüşlü zamir (reflexief pronomen) 'me'dir.",
     "explanationEn": "The reflexive pronoun for the subject 'ik' is 'me'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch11_1036",
@@ -3149,7 +3149,7 @@ export const chapters11_15 = [
     "explanationTr": "'jij / je' öznesi için dönüşlü zamir 'je'dir.",
     "explanationEn": "The reflexive pronoun for 'jij / je' is 'je'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch11_1037",
@@ -3170,7 +3170,7 @@ export const chapters11_15 = [
     "explanationTr": "Resmi 'u' zamiri için dönüşlü zamir 'u' veya 'zich' olabilir.",
     "explanationEn": "For the formal 'u', the reflexive pronoun can be 'u' or 'zich'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch11_1038",
@@ -3185,7 +3185,7 @@ export const chapters11_15 = [
     "explanationTr": "3. tekil şahıslar ('hij', 'zij') için dönüşlü zamir her zaman 'zich'tir.",
     "explanationEn": "For third person singular ('hij', 'zij'), the reflexive pronoun is always 'zich'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch11_1039",
@@ -3200,7 +3200,7 @@ export const chapters11_15 = [
     "explanationTr": "'wij / we' öznesi için dönüşlü zamir 'ons'tur.",
     "explanationEn": "The reflexive pronoun for 'wij / we' is 'ons'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch11_1040",
@@ -3215,7 +3215,7 @@ export const chapters11_15 = [
     "explanationTr": "'jullie' öznesi için dönüşlü zamir olarak 'je' kullanılır.",
     "explanationEn": "For the subject 'jullie', the reflexive pronoun is 'je'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch11_1041",
@@ -3230,7 +3230,7 @@ export const chapters11_15 = [
     "explanationTr": "3. çoğul şahıslar ('zij/ze') için dönüşlü zamir yine 'zich'tir.",
     "explanationEn": "For third person plural ('zij/ze'), the reflexive pronoun is 'zich'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch11_1051",
@@ -3251,7 +3251,7 @@ export const chapters11_15 = [
     "explanationTr": "Hollanda'da hediye alındığında hemen açmak (direct uitpakken) kültürel bir adettir.",
     "explanationEn": "In the Netherlands, it is customary to open a present immediately (direct uitpakken) upon receiving it.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch11_1052",
@@ -3272,7 +3272,7 @@ export const chapters11_15 = [
     "explanationTr": "Hollanda kültüründe doğum günü partisinde sadece doğum günü olan kişiyi değil, partideki herkesi (aile, arkadaşlar, komşular) tebrik edersiniz.",
     "explanationEn": "In Dutch culture, you congratulate everyone at the birthday party, not just the person whose birthday it is.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch11_1053",
@@ -3293,7 +3293,7 @@ export const chapters11_15 = [
     "explanationTr": "Hollanda'da doğum günü olan kişi (de jarige) başkalarına ikramda bulunur (trakteert).",
     "explanationEn": "In the Netherlands, the person whose birthday it is treats others (de jarige trakteert anderen).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch11_1054",
@@ -3314,7 +3314,7 @@ export const chapters11_15 = [
     "explanationTr": "Doğum günlerinde söylenen geleneksel şarkı 'Lang zal hij/ze leven'dir.",
     "explanationEn": "The traditional birthday song is 'Lang zal hij/ze leven'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch11_1055",
@@ -3335,7 +3335,7 @@ export const chapters11_15 = [
     "explanationTr": "Okuma parçasına göre ideal ek iş, ne zaman çalışacağınızı kendiniz belirlediğiniz 'promotor'luk işidir.",
     "explanationEn": "According to the text, the ideal side job is working as a promotor where you decide when you work.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch11_1057",
@@ -3398,7 +3398,7 @@ export const chapters11_15 = [
     "explanationTr": "Diyalogda Peter'in artık ofiste çalışmadığı, kendi işini kurup kendi patronu (eigen baas) olduğu geçer.",
     "explanationEn": "The dialogue mentions Peter no longer works in an office; he became his own boss and has his own company.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch12_1009",
@@ -3419,7 +3419,7 @@ export const chapters11_15 = [
     "explanationTr": "Toplu taşımada 'de lijn' hat / hat numarası (line number) demektir[cite: 1].",
     "explanationEn": "In public transport, 'de lijn' means 'line' or 'line number'[cite: 1].",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch12_1015",
@@ -3440,7 +3440,7 @@ export const chapters11_15 = [
     "explanationTr": "'het stuk' parça veya kısa mesafe (short distance) demektir[cite: 1].",
     "explanationEn": "'het stuk' translates to a 'piece' or 'short distance'[cite: 1].",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch12_1032",
@@ -3461,7 +3461,7 @@ export const chapters11_15 = [
     "explanationTr": "'de toiletten' tuvaletler (toilets) demektir[cite: 1].",
     "explanationEn": "'de toiletten' translates to 'toilets'[cite: 1].",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch12_1036",
@@ -3482,7 +3482,7 @@ export const chapters11_15 = [
     "explanationTr": "'afgaan' (örneğin merdivenlerden inmek) aşağı inmek (go down) demektir[cite: 1].",
     "explanationEn": "'afgaan' means 'to go down' (e.g., stairs)[cite: 1].",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch12_1042",
@@ -3524,7 +3524,7 @@ export const chapters11_15 = [
     "explanationTr": "Yol tarif ederken 'dümdüz gidin' demek için 'U gaat hier rechtdoor' denir[cite: 2].",
     "explanationEn": "To say 'go straight ahead', use 'U gaat hier rechtdoor'[cite: 2].",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch12_1045",
@@ -3545,7 +3545,7 @@ export const chapters11_15 = [
     "explanationTr": "Ayrılabilir fiiller (scheidbare werkwoorden), cümlede bazen ikiye bölünen fiillerdir (örn: aankomen -> Ik kom aan).",
     "explanationEn": "Separable verbs consist of two parts that are sometimes separated in a sentence (e.g., aankomen -> Ik kom aan).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch12_1046",
@@ -3566,7 +3566,7 @@ export const chapters11_15 = [
     "explanationTr": "Normal bir ana cümlede (şimdiki zaman), ayrılabilir fiilin ön eki (prefix) cümlenin en sonuna gider.",
     "explanationEn": "In a regular main clause (present tense), the prefix of a separable verb goes to the end of the sentence.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch12_1047",
@@ -3587,7 +3587,7 @@ export const chapters11_15 = [
     "explanationTr": "'instappen' fiilinin hikaye geçmiş zamanı (imperfectum) 'stapte' şeklindedir, 'in' yine sona gider: Hij stapte ... in.",
     "explanationEn": "In the imperfectum, the stem is 'stapte', and 'in' goes to the end: Hij stapte ... in.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch12_1048",
@@ -3609,7 +3609,7 @@ export const chapters11_15 = [
     "explanationTr": "Ayrılabilir fiillerin perfectum halinde, 'ge' eki ön ek (in) ile fiil kökü arasına girerek tek bir kelime oluşturur: ingestapt.",
     "explanationEn": "In the perfectum, 'ge' is placed between the prefix and the stem to form one word: ingestapt.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch12_1049",
@@ -3631,7 +3631,7 @@ export const chapters11_15 = [
     "explanationTr": "Cümlede modal bir fiil (kunt, mag vb.) varsa, ayrılabilir fiil ayrılmaz ve mastar halinde cümlenin en sonuna gider.",
     "explanationEn": "When a modal verb is used, the separable verb is not separated and goes to the end in its infinitive form.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch12_1050",
@@ -3693,7 +3693,7 @@ export const chapters11_15 = [
     "explanationTr": "Metne göre 'Fiets en Wandelbeurs' etkinliğinin lokasyonu Jaarbeurs Utrecht'tir.",
     "explanationEn": "According to the text, the location of the 'Fiets en Wandelbeurs' is Jaarbeurs Utrecht.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch12_1053",
@@ -3713,7 +3713,7 @@ export const chapters11_15 = [
     "explanationTr": "Metinde uysal köpeklerin tasmalı olmak (mits aangelijnd) şartıyla kabul edildiği yazmaktadır.",
     "explanationEn": "The text states that well-behaved dogs are allowed, provided they are on a leash (mits aangelijnd).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch13_1037",
@@ -3883,7 +3883,7 @@ export const chapters11_15 = [
     "explanationTr": "Hava durumu hakkında havadan sudan konuşurken 'Wat een weer, hè?' (Ne hava ama, değil mi?) denir.",
     "explanationEn": "For small talk about the weather, one might say 'Wat een weer, hè?'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch13_1046",
@@ -3925,7 +3925,7 @@ export const chapters11_15 = [
     "explanationTr": "Bir söz verirken 'zullen' (örneğin 'Dat zal ik doen' - Bunu yapacağım) fiili kullanılır.",
     "explanationEn": "To make a promise, the verb 'zullen' is used (e.g., 'Dat zal ik doen').",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch13_1048",
@@ -3940,7 +3940,7 @@ export const chapters11_15 = [
     "explanationTr": "'ik' öznesiyle söz verirken 'zal' yardımcı fiili kullanılır.",
     "explanationEn": "When making a promise with 'ik', the auxiliary 'zal' is used.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch13_1049",
@@ -3961,7 +3961,7 @@ export const chapters11_15 = [
     "explanationTr": "Metne göre Evelyn'in tutkusu şarkı söylemektir (klasik eserler ve opera).",
     "explanationEn": "According to the text, Evelyn's passion is singing (classical pieces and opera).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch13_1050",
@@ -3982,7 +3982,7 @@ export const chapters11_15 = [
     "explanationTr": "Ergenliğinde ailesinin sevdiği klasik müziğe karşı çıkıp pop şarkıları (popliedjes) söylemeyi tercih etmiştir.",
     "explanationEn": "As a teenager, she preferred singing pop songs (popliedjes) to rebel against her parents' classical music.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch13_1051",
@@ -4003,7 +4003,7 @@ export const chapters11_15 = [
     "explanationTr": "Hollanda'da ziyarete giderken çiçek, çikolata veya şarap götürmek yaygın bir adettir.",
     "explanationEn": "It is typical to bring flowers, chocolates, or a bottle of wine when visiting someone in the Netherlands.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_1014",
@@ -4024,7 +4024,7 @@ export const chapters11_15 = [
     "explanationTr": "'het rooster' ders programı veya çizelge (schedule) demektir[cite: 1].",
     "explanationEn": "'het rooster' means schedule[cite: 1].",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_1020",
@@ -4045,7 +4045,7 @@ export const chapters11_15 = [
     "explanationTr": "'hardlopen' koşu yapmak (running) demektir[cite: 2].",
     "explanationEn": "'hardlopen' translates to running[cite: 2].",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_1023",
@@ -4066,7 +4066,7 @@ export const chapters11_15 = [
     "explanationTr": "'wielrennen' bisiklet yarışı (cycling) demektir[cite: 2].",
     "explanationEn": "'wielrennen' means cycling (specifically racing)[cite: 2].",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_1027",
@@ -4087,7 +4087,7 @@ export const chapters11_15 = [
     "explanationTr": "Dolaylı sorularda (indirecte vraag) çekimli fiil ve diğer fiiller cümlenin en sonuna gider.",
     "explanationEn": "In an indirect question, the conjugated verb moves to the end of the clause.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_1028",
@@ -4108,7 +4108,7 @@ export const chapters11_15 = [
     "explanationTr": "'Kun je me zeggen...' ile başlayan dolaylı sorularda asıl fiil (is) cümlenin sonuna gider.",
     "explanationEn": "In indirect questions starting with 'Kun je me zeggen...', the main verb (is) goes to the end.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_1029",
@@ -4129,7 +4129,7 @@ export const chapters11_15 = [
     "explanationTr": "Soru kelimesi (waar) kullanılır, ardından özne gelir ve fiil (is) en sona atılır.",
     "explanationEn": "The question word (waar) is used, followed by the subject, and the verb (is) is placed at the end.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_1030",
@@ -4150,7 +4150,7 @@ export const chapters11_15 = [
     "explanationTr": "Evet/hayır soruları dolaylı soru yapılırken 'of' (olup olmadığı) bağlacı kullanılır ve fiil sona gider.",
     "explanationEn": "Yes/no questions become indirect questions by using 'of' (if/whether) and moving the verb to the end.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_1031",
@@ -4171,7 +4171,7 @@ export const chapters11_15 = [
     "explanationTr": "Soru kelimesinden (hoelang) sonra özne gelir ve fiil (duurt) en sona yerleşir.",
     "explanationEn": "After the question word (hoelang), the subject follows, and the verb (duurt) goes to the end.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_1032",
@@ -4192,7 +4192,7 @@ export const chapters11_15 = [
     "explanationTr": "'zullen + wel' yapısı bir şeyin yüksek ihtimalle olacağını (waarschijnlijkheid) ifade eder.",
     "explanationEn": "The construction 'zullen + wel' expresses probability or likelihood.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_1034",
@@ -4207,7 +4207,7 @@ export const chapters11_15 = [
     "explanationTr": "Tekil bir özne (een jaarabonnement) için 'zal' ve ihtimal bildiren 'wel' kullanılır.",
     "explanationEn": "For a singular subject, use 'zal' along with the probability particle 'wel'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_1035",
@@ -4228,7 +4228,7 @@ export const chapters11_15 = [
     "explanationTr": "Gelecek zamanı ifade etmek için şimdiki zaman, 'gaan' veya 'zullen' kullanılır; geçmiş zaman kullanılmaz.",
     "explanationEn": "Future tense is expressed using present tense, 'gaan', or 'zullen'; not the past tense.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_1036",
@@ -4249,7 +4249,7 @@ export const chapters11_15 = [
     "explanationTr": "Bu cümlede şimdiki zaman fiili (begint) ve gelecek bildiren bir zaman ifadesi (Over 20 minuten) kullanılmıştır.",
     "explanationEn": "This sentence uses the present tense verb (begint) with a future time indicator (Over 20 minuten).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_1037",
@@ -4270,7 +4270,7 @@ export const chapters11_15 = [
     "explanationTr": "Gelecek planı ifade etmek için 'ga' (gaan) ve mastar halindeki fiil 'trouwen' kullanılmıştır.",
     "explanationEn": "To express a future plan, 'ga' (gaan) and the infinitive 'trouwen' are used.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_1038",
@@ -4291,7 +4291,7 @@ export const chapters11_15 = [
     "explanationTr": "Gelecekte olacak bir durumu belirtmek için 'zal' (zullen) ve mastar 'staan' kullanılmıştır.",
     "explanationEn": "To indicate a future state, 'zal' (zullen) and the infinitive 'staan' are used.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_1039",
@@ -4312,7 +4312,7 @@ export const chapters11_15 = [
     "explanationTr": "Okuma parçasına göre Arthur düğünü öncesinde birkaç kilo vermek için spor yapmaya başlamıştır.",
     "explanationEn": "According to the text, Arthur started working out to lose a few kilos for his wedding.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_1040",
@@ -4333,7 +4333,7 @@ export const chapters11_15 = [
     "explanationTr": "Linda çok çalıştığını ve spor yapmanın çalışma sonuçlarını (studieresultaten) iyileştirdiğini belirtiyor.",
     "explanationEn": "Linda states that she studies a lot and that being active improves her study results.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_1041",
@@ -4354,7 +4354,7 @@ export const chapters11_15 = [
     "explanationTr": "Mike spor salonundaki atmosferi berbat bulduğunu ve insanların sahte (nep) olduğunu söylüyor.",
     "explanationEn": "Mike finds the atmosphere in the gym terrible and the people fake.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_1042",
@@ -4375,7 +4375,7 @@ export const chapters11_15 = [
     "explanationTr": "Nina kapalı alanları sevmez; dışarıda yürümeyi, bisiklete binmeyi ve koşmayı (tercihen yalnız) sever.",
     "explanationEn": "Nina dislikes indoors; she prefers walking, cycling, and running outside, preferably alone.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_1043",
@@ -4396,7 +4396,7 @@ export const chapters11_15 = [
     "explanationTr": "Babette birçok diyet denedikten sonra bir personal trainer (kişisel antrenör) ile hedefine ulaşmıştır.",
     "explanationEn": "After many failed diets, Babette achieved her goal by hiring a personal trainer.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_1044",
@@ -4417,7 +4417,7 @@ export const chapters11_15 = [
     "explanationTr": "Ruud fitness ve futbol yapar, oldukça fanatiktir ve arkadaşları da spor salonuna gitmektedir.",
     "explanationEn": "Ruud does fitness and football, is very fanatic, and his friends go to the gym too.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_1045",
@@ -4438,7 +4438,7 @@ export const chapters11_15 = [
     "explanationTr": "Kültür bölümündeki grafiğe göre 18-50 yaş arası Hollandalılarda %25 ile en popüler spor fitness'tır.",
     "explanationEn": "According to the diagram in the culture section, fitness is the most popular sport (25%) among 18 to 50-year-olds in the Netherlands.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_1046",
@@ -4459,7 +4459,7 @@ export const chapters11_15 = [
     "explanationTr": "Grafiğe göre bu yaş grubunun %17'si koşu (joggen) yapmaktadır.",
     "explanationEn": "According to the diagram, 17% of this age group jogs.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_1047",
@@ -4480,7 +4480,7 @@ export const chapters11_15 = [
     "explanationTr": "Grafikte futbolun (voetbal) payı %8 olarak belirtilmiştir.",
     "explanationEn": "The diagram shows that 8% play football.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch14_1048",
@@ -4501,7 +4501,7 @@ export const chapters11_15 = [
     "explanationTr": "Grafikte diğer sporların (overig) toplam payı %50 olarak gösterilmektedir.",
     "explanationEn": "The diagram indicates that 'overig' (other sports) makes up 50%.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_1011",
@@ -4522,7 +4522,7 @@ export const chapters11_15 = [
     "explanationTr": "'het raampje' küçük pencere / cam kenarı (window) anlamına gelir[cite: 1].",
     "explanationEn": "'het raampje' means '(small) window'[cite: 1].",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_1032",
@@ -4690,7 +4690,7 @@ export const chapters11_15 = [
     "explanationTr": "Birinin dikkatini çekip bir şey göstermek için 'Kijk eens...' (Şuna bak) veya 'Moet je eens zien...' (Şunu görmelisin) kalıpları kullanılır[cite: 2].",
     "explanationEn": "To draw someone's attention to look at something, use 'Kijk eens...' or 'Moet je eens zien...'[cite: 2].",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_1040",
@@ -4711,7 +4711,7 @@ export const chapters11_15 = [
     "explanationTr": "'die' zamiri tek başına kullanılırken 'de-woorden' (de artikelli kelimeler), kişiler ve çoğullar için kullanılır.",
     "explanationEn": "The pronoun 'die' used independently refers to de-words, people, and plural nouns.",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_1041",
@@ -4732,7 +4732,7 @@ export const chapters11_15 = [
     "explanationTr": "'dat' zamiri tek başına kullanılırken 'het-woorden' (het artikelli kelimeler) ve bütün bir cümleye/duruma atıfta bulunmak için kullanılır.",
     "explanationEn": "The pronoun 'dat' used independently refers to het-words and to whole sentences or situations.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_1042",
@@ -4747,7 +4747,7 @@ export const chapters11_15 = [
     "explanationTr": "'kaas' bir de-woord'dur (de kaas), bu yüzden 'die' zamiri ile atıfta bulunulur.",
     "explanationEn": "'kaas' is a de-word (de kaas), so it is referred to with 'die'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_1043",
@@ -4762,7 +4762,7 @@ export const chapters11_15 = [
     "explanationTr": "'Naardermeer' bir het-woord'dur (het Naardermeer), dolayısıyla 'dat' ile atıfta bulunulur.",
     "explanationEn": "'Naardermeer' is a het-word (het Naardermeer), so it is referred to with 'dat'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_1044",
@@ -4777,7 +4777,7 @@ export const chapters11_15 = [
     "explanationTr": "İnsanlardan (tante Lena) bahsederken 'die' zamiri kullanılır.",
     "explanationEn": "When referring to a person (tante Lena), the pronoun 'die' is used.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_1045",
@@ -4792,7 +4792,7 @@ export const chapters11_15 = [
     "explanationTr": "Kişiler ve çoğul özneler (Tom en Marit) için 'die' kullanılır.",
     "explanationEn": "For people and plural subjects (Tom and Marit), 'die' is used.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_1046",
@@ -4807,7 +4807,7 @@ export const chapters11_15 = [
     "explanationTr": "Burada 'dat', kahve getirme eyleminin tamamına (bütün cümleye) atıfta bulunduğu için kullanılır.",
     "explanationEn": "Here 'dat' is used because it refers to the entire previous sentence or action of bringing coffee.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_1047",
@@ -4828,7 +4828,7 @@ export const chapters11_15 = [
     "explanationTr": "'Dit is' ve 'Dat is', cinsiyetten bağımsız olarak (de/het) tekil bir kişiyi veya nesneyi tanıtırken kullanılır.",
     "explanationEn": "'Dit is' and 'Dat is' are used to introduce a singular person or object, regardless of whether it's a de- or het-word.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_1048",
@@ -4849,7 +4849,7 @@ export const chapters11_15 = [
     "explanationTr": "Çoğul kişileri veya nesneleri (bunlar / şunlar) tanıtırken 'Dit zijn' veya 'Dat zijn' kullanılır.",
     "explanationEn": "'Dit zijn' and 'Dat zijn' are used to introduce plural people or objects.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_1049",
@@ -4864,7 +4864,7 @@ export const chapters11_15 = [
     "explanationTr": "Amira tekil bir kişi olduğu için 'Dit is' (Bu Amira) kullanılır.",
     "explanationEn": "Because Amira is a singular person, 'Dit is' is used.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_1050",
@@ -4879,7 +4879,7 @@ export const chapters11_15 = [
     "explanationTr": "Tjeerd amca ve Lena teyze çoğul (iki kişi) olduğu için 'Dit zijn' (Bunlar ...) kullanılır.",
     "explanationEn": "Because uncle Tjeerd and aunt Lena are plural (two people), 'Dit zijn' is used.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_1051",
@@ -4894,7 +4894,7 @@ export const chapters11_15 = [
     "explanationTr": "Shetlandpony's çoğul olduğu için 'Dat zijn' (Onlar/Şunlar) kullanılır.",
     "explanationEn": "Because shetlandpony's is plural, 'Dat zijn' is used.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_1052",
@@ -4915,7 +4915,7 @@ export const chapters11_15 = [
     "explanationTr": "Metne göre Eindhoven'da çok fazla kar (heel veel sneeuw) yağdığı için tren daha uzağa gidememiştir.",
     "explanationEn": "According to the text, the train couldn't go further than Eindhoven because of heavy snow.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_1053",
@@ -4936,7 +4936,7 @@ export const chapters11_15 = [
     "explanationTr": "Metinde NS'nin bekleyen yolculara bedava kahve ve çay (gratis koffie en thee) ikram ettiği ve bunun onları ısıttığı yazar.",
     "explanationEn": "The text states that NS provided free coffee and tea, which kept them warm.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch15_1054",
@@ -4972,7 +4972,7 @@ export const chapters11_15 = [
     "explanationTr": "'Zich vergissen' dönüşlü fiilinde 'ik' öznesinin dönüşlülük zamiri 'me'dir: 'Ik vergis me.'",
     "explanationEn": "For the reflexive verb 'zich vergissen', the reflexive pronoun for subject 'ik' is 'me': 'Ik vergis me.'",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_11_2",
@@ -4987,7 +4987,7 @@ export const chapters11_15 = [
     "explanationTr": "3. tekil şahıs (hij/zij) için dönüşlülük zamiri 'zich'tir: 'Hij voelt zich niet fit.'",
     "explanationEn": "For 3rd person singular (hij/zij), the reflexive pronoun is strictly 'zich': 'Hij voelt zich niet fit.'",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_11_3",
@@ -5002,7 +5002,7 @@ export const chapters11_15 = [
     "explanationTr": "'Wij' (biz) öznesi için dönüşlülük zamiri 'ons'tur: 'Wij bereiden ons voor.'",
     "explanationEn": "For first person plural 'wij' (we), the reflexive pronoun is 'ons': 'Wij bereiden ons voor.'",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_11_4",
@@ -5038,7 +5038,7 @@ export const chapters11_15 = [
     "explanationTr": "'Birbirine / birbiriyle' (each other) karşılıklılık zamiri Hollandacada 'elkaar'dır.",
     "explanationEn": "The reciprocal pronoun for 'each other / one another' in Dutch is 'elkaar'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_11_6",
@@ -5059,7 +5059,7 @@ export const chapters11_15 = [
     "explanationTr": "Kötü veya hayal kırıklığı yaratan bir haber duyulduğunda 'Wat jammer!' (Ne yazık!) veya 'Wat vervelend!' (Ne can sıkıcı!) denir.",
     "explanationEn": "To react empathetically to disappointment or bad news, Dutch speakers say 'Wat jammer!' (What a pity!) or 'Wat vervelend!'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_11_7",
@@ -5116,7 +5116,7 @@ export const chapters11_15 = [
     "explanationTr": "'Zich vervelen' (canı sıkılmak) fiilinin çoğul (ze = onlar) çekimi 'vervelen'dir.",
     "explanationEn": "For subject 'ze' (they plural), the reflexive verb 'zich vervelen' (to be bored) conjugates as 'vervelen'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_12_1",
@@ -5137,7 +5137,7 @@ export const chapters11_15 = [
     "explanationTr": "'De trap af gaan' (merdivenden aşağı inmek) bir hareket (beweging) eylemidir; diğer seçenekler ise sabit bir konumu (plaats) belirtir.",
     "explanationEn": "'De trap af gaan' (going down the stairs) denotes motion/movement, whereas the other options describe static locations.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_12_2",
@@ -5151,7 +5151,7 @@ export const chapters11_15 = [
     "explanationTr": "'Dümdüz gitmek / dosdoğru yürümek' yön tarifi 'rechtdoor lopen'dır.",
     "explanationEn": "The Dutch word for straight ahead in giving directions is 'rechtdoor' ('rechtdoor lopen').",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_12_3",
@@ -5214,7 +5214,7 @@ export const chapters11_15 = [
     "explanationTr": "Ayrılabilen fiillerin geçmiş zaman ortacında (participium) 'ge-' eki ön ek ile fiil kökünün ARASINA girer: in + ge + stapt = 'ingestapt'.",
     "explanationEn": "For separable verbs in the perfect tense, 'ge-' is inserted BETWEEN the prefix and the stem: in + ge + stapt = 'ingestapt'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_12_6",
@@ -5229,7 +5229,7 @@ export const chapters11_15 = [
     "explanationTr": "Cümlede modal bir yardımcı fiil (kunt) varsa, ayrılabilen fiil cümlenin sonunda BİRLEŞİK ve MASTAR halinde kalır: 'instappen'.",
     "explanationEn": "When accompanied by a modal auxiliary ('kunt'), a separable verb remains whole and infinitive at the end: 'instappen'.",
     "difficulty": 3,
-    "quality": 2,
+    "quality": 1,
     "options": [
       "instappen",
       "instappt",
@@ -5277,7 +5277,7 @@ export const chapters11_15 = [
     "explanationTr": "Tarifi teyit etmek için 'Dus eerst... en dan..., klopt dat?' (Yani önce... sonra..., doğru mu?) kalıbı kullanılır.",
     "explanationEn": "To verify directions politely, Dutch speakers summarize and ask '...klopt dat?' (is that correct?).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_12_9",
@@ -5298,7 +5298,7 @@ export const chapters11_15 = [
     "explanationTr": "'Karşısında' anlamına gelen edat 'tegenover'dir: 'tegenover de ingang'.",
     "explanationEn": "The Dutch preposition meaning 'opposite / across from' is 'tegenover'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_13_1",
@@ -5319,7 +5319,7 @@ export const chapters11_15 = [
     "explanationTr": "'Volgens mij' ifadesi cümlede birinci öge sayıldığı için hemen ardından fiil (is) ve sonra özne gelir (devrik cümle/inversion): 'Volgens mij is deze buurt...'",
     "explanationEn": "'Volgens mij' takes 1st position in the sentence, immediately triggering inversion: verb (is) followed by subject ('deze buurt').",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_13_2",
@@ -5334,7 +5334,7 @@ export const chapters11_15 = [
     "explanationTr": "Bir söz veya niyet bildirmek için 'ik' öznesi ile 'zullen' fiili 'zal' şeklinde kullanılır: 'Ik zal... afsnijden.'",
     "explanationEn": "To express a firm personal promise or intention, the verb 'zullen' conjugates as 'zal' for subject 'ik'.",
     "difficulty": 4,
-    "quality": 2,
+    "quality": 1,
     "options": [
       "zal",
       "zalt",
@@ -5355,7 +5355,7 @@ export const chapters11_15 = [
     "explanationTr": "'Wij' (biz) öznesi ile verilen sözlerde 'zullen' fiili 'zullen' mastar biçimiyle eşleşir.",
     "explanationEn": "For plural subject 'wij', the modal promise verb 'zullen' conjugates as 'zullen'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_13_5",
@@ -5376,7 +5376,7 @@ export const chapters11_15 = [
     "explanationTr": "'Zeg dat wel!' (Aynen öyle! / Ağzına sağlık! / You can say that again!), birinin söylediği yoruma veya hava durumuna içtenlikle katılmayı bildiren bir deyimdir.",
     "explanationEn": "'Zeg dat wel!' is an emphatic Dutch agreement idiom corresponding to 'You can say that again!'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_13_6",
@@ -5397,7 +5397,7 @@ export const chapters11_15 = [
     "explanationTr": "'Jullie moeten de groeten hebben' (Falancanın selamı var) dendiğinde, nezaket kuralı olarak 'Doe haar de groeten terug!' (Sen de ona çok selam söyle) denir.",
     "explanationEn": "When someone delivers greetings from a third party, the polite social response is 'Doe haar/hem de groeten terug!' (Send my greetings back!).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_13_7",
@@ -5439,7 +5439,7 @@ export const chapters11_15 = [
     "explanationTr": "Bir tehlike veya sorun atlatıldığında rahatlama ve şükran ifadesi olarak 'Gelukkig!' (Çok şükür! / Neyse ki!) denir.",
     "explanationEn": "'Gelukkig!' is the standard Dutch exclamation expressing relief ('Fortunately! / Thank goodness!').",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_13_9",
@@ -5459,7 +5459,7 @@ export const chapters11_15 = [
     "explanationTr": "Hollandacadaki 'ui' diftongu (huis, tuin, luid), ağzın 'a' pozisyonundan yuvarlak 'ü' sesine doğru kaymasıyla üretilen özel bir sestir.",
     "explanationEn": "The unique Dutch diphthong 'ui' (huis, buik) transitions acoustically from an open central vowel toward a rounded front vowel (a -> ü).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_14_1",
@@ -5474,7 +5474,7 @@ export const chapters11_15 = [
     "explanationTr": "Dolaylı soru cümlelerinde (indirecte vraag) soru kelimesinden (waar) sonra gelen cümlenin yüklemi (is) cümlenin EN SONUNA gider.",
     "explanationEn": "In indirect questions introduced by a question word ('waar'), the finite verb ('is') is pushed to the very end of the subclause.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_14_2",
@@ -5489,7 +5489,7 @@ export const chapters11_15 = [
     "explanationTr": "Evet/Hayır sorularını dolaylı soruya çevirirken '-ıp -madığı' / 'if/whether' anlamında 'of' bağlacı kullanılır.",
     "explanationEn": "Yes/no questions are converted into indirect questions using the conjunction 'of' (whether / if), with the verb moving to the end.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_14_3",
@@ -5510,7 +5510,7 @@ export const chapters11_15 = [
     "explanationTr": "Evet/hayır sorusu olduğu için 'of' ile başlar ve çekimli fiil 'werkt' cümlenin en sonuna gider: '...of de automaat op muntgeld werkt?'",
     "explanationEn": "For a yes/no question, use 'of' and place the conjugated verb 'werkt' at the very end of the sentence.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_14_4",
@@ -5531,7 +5531,7 @@ export const chapters11_15 = [
     "explanationTr": "'Zullen + wel + infinitief' yapısı güçlü bir ihtimal, tahmin ve olasılık bildirir (Büyük olasılıkla kas ağrın olacak).",
     "explanationEn": "'Zullen + wel + infinitive' indicates strong probability or presumption (You will probably have sore muscles tomorrow).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_14_5",
@@ -5552,7 +5552,7 @@ export const chapters11_15 = [
     "explanationTr": "'Zullen + wel' kalıbında: Öznenin ardından 'zal', araya 'wel + sıfat', sona ise mastar halinde 'zijn' gelir: 'zal wel goedkoper zijn'.",
     "explanationEn": "In the probability construction, 'zal' occupies position 2 and the infinitive 'zijn' closes the sentence: 'zal wel goedkoper zijn'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_14_6",
@@ -5594,7 +5594,7 @@ export const chapters11_15 = [
     "explanationTr": "Sporda kasları güçlendirmek 'spieren versterken', kilo vermek ise 'gewicht verliezen' (veya afvallen) olarak ifade edilir.",
     "explanationEn": "To strengthen muscles is 'spieren versterken', and to lose weight is 'gewicht verliezen' (or 'afvallen').",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_14_9",
@@ -5615,7 +5615,7 @@ export const chapters11_15 = [
     "explanationTr": "Soru kelimesi (wanneer) korunur, cümlenin çekimli fiili (is) cümlenin en sonuna taşınır: '...wanneer het pasje klaar is?'",
     "explanationEn": "Keep the question word ('wanneer') and place the finite verb ('is') at the very end: 'Kunt u me zeggen wanneer het pasje klaar is?'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_15_1",
@@ -5636,7 +5636,7 @@ export const chapters11_15 = [
     "explanationTr": "Kişisel plan, niyet ve kararlarda 'gaan' kullanılır (pizza yiyeceğim). 'Zullen' ise söz verme (promise) veya tahmin/hava durumu için geçerlidir.",
     "explanationEn": "'Gaan' expresses active personal plans and intentions ('Ik ga pizza eten'). 'Zullen' is used for promises, weather forecasts, or formal predictions.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_15_2",
@@ -5651,7 +5651,7 @@ export const chapters11_15 = [
     "explanationTr": "'De kaas' bir de-kelimesi olduğu için ona atıfta bulunurken bağımsız işaret zamiri olarak 'Die' kullanılır: 'Die vind ik heerlijk.'",
     "explanationEn": "Because 'kaas' is a 'de'-word, the independent demonstrative pronoun used to refer back to it is 'Die'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_15_3",
@@ -5666,7 +5666,7 @@ export const chapters11_15 = [
     "explanationTr": "Daha önce bahsedilen koca bir cümlenin veya eylemin bütününe (kahve getirme eylemine) atıfta bulunurken her zaman 'dat' kullanılır.",
     "explanationEn": "To refer back to an entire preceding action or whole clause, Dutch always uses the pronoun 'dat' ('heb ik dat gedaan').",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_15_4",
@@ -5687,7 +5687,7 @@ export const chapters11_15 = [
     "explanationTr": "İnsanlara gayriresmi ama çok yaygın şekilde atıfta bulunurken 'de'-kelimesi mantığıyla 'Die' kullanılır: 'Die is in de les.'",
     "explanationEn": "When referring back demonstratively to people in natural Dutch conversation, 'Die' is standard: 'Die is in de les.'",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_15_5",
@@ -5708,7 +5708,7 @@ export const chapters11_15 = [
     "explanationTr": "'Het Naardermeer' bir het-kelimesidir. 'Het'-kelimelerine atıfta bulunurken 'Dat' veya 'Het' kullanılır.",
     "explanationEn": "Since 'Naardermeer' is a 'het'-word, you refer back to it using 'Dat' (or 'Het'): 'Dat is een prachtig natuurgebied.'",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_15_6",
@@ -5723,7 +5723,7 @@ export const chapters11_15 = [
     "explanationTr": "Dolaylı soruda çekimli fiil 'is' yan cümlenin en sonuna gider: '...waar spoor 2 is?'.",
     "explanationEn": "In the indirect question, the finite verb 'is' is placed at the end: '...waar spoor 2 is?'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_15_7",
@@ -5738,7 +5738,7 @@ export const chapters11_15 = [
     "explanationTr": "'Of' bağlacı yan cümle yapar ve çekimli fiil olan 'vertrekt' cümlenin sonuna gider.",
     "explanationEn": "The subclause introduced by 'of' places the finite verb 'vertrekt' at the end of the clause.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_15_8",
@@ -5753,7 +5753,7 @@ export const chapters11_15 = [
     "explanationTr": "Hollanda tren istasyonlarında tren rayı ve peron numarası için 'het spoor' (spoor 1, spoor 2) kullanılır.",
     "explanationEn": "In Dutch railway stations, the platform/track number is called 'het spoor' ('spoor 2').",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_onclass_15_9",
@@ -5774,6 +5774,6 @@ export const chapters11_15 = [
     "explanationTr": "Üzerinde saat bulunan tarihi kulelere 'de kloktoren' (saat kulesi) denir.",
     "explanationEn": "A tower housing a large public clock is called 'de kloktoren' (clock tower).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   }
 ];
