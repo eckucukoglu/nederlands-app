@@ -137,6 +137,25 @@ export default function AdminReports() {
     }
   };
 
+  const deleteAllReportedQuestions = async () => {
+    if (reports.length === 0) return;
+    if (!window.confirm(`Hatalı bildirilen TÜM soruları (${reports.length} adet) silmek istediğinize emin misiniz? Bu işlem geri alınamaz.`)) {
+      return;
+    }
+
+    try {
+      setLoading(true);
+      await Promise.all(
+        reports.map(rep => deleteDoc(doc(db, "reported_questions", rep.id)))
+      );
+      await fetchData();
+    } catch (error) {
+      console.error("Toplu silme hatası:", error);
+      alert("Hatalı sorular silinirken bir hata oluştu: " + error.message);
+      setLoading(false);
+    }
+  };
+
   // 1. Durum: Henüz kimlik kontrol ediliyor
   if (authChecking) {
     return (
@@ -256,14 +275,24 @@ export default function AdminReports() {
             <i className="fa-solid fa-flag"></i> Hatalı Bildirilen Sorular ({reports.length})
           </h2>
           {reports.length > 0 && (
-            <button
-              onClick={() => copyAllIds(reports, 'errors')}
-              className="bg-rose-950/60 hover:bg-rose-900 border border-rose-800/80 text-rose-300 hover:text-white px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 shadow-sm cursor-pointer"
-              title="Tüm hatalı soru ID'lerini panoya kopyala"
-            >
-              <i className={bulkCopiedLabel === 'errors' ? "fa-solid fa-check text-emerald-400" : "fa-regular fa-copy"}></i>
-              <span>{bulkCopiedLabel === 'errors' ? "Kopyalandı!" : `Tüm Hatalı ID'leri Kopyala (${[...new Set(reports.map(r => r.questionId).filter(Boolean))].length})`}</span>
-            </button>
+            <div className="flex items-center gap-2 flex-wrap">
+              <button
+                onClick={() => copyAllIds(reports, 'errors')}
+                className="bg-rose-950/60 hover:bg-rose-900 border border-rose-800/80 text-rose-300 hover:text-white px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 shadow-sm cursor-pointer"
+                title="Tüm hatalı soru ID'lerini panoya kopyala"
+              >
+                <i className={bulkCopiedLabel === 'errors' ? "fa-solid fa-check text-emerald-400" : "fa-regular fa-copy"}></i>
+                <span>{bulkCopiedLabel === 'errors' ? "Kopyalandı!" : `Tüm Hatalı ID'leri Kopyala (${[...new Set(reports.map(r => r.questionId).filter(Boolean))].length})`}</span>
+              </button>
+              <button
+                onClick={deleteAllReportedQuestions}
+                className="bg-rose-950/80 hover:bg-rose-600 border border-rose-800/90 text-rose-200 hover:text-white px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 shadow-sm cursor-pointer"
+                title="Hatalı olarak bildirilen tüm soruları sil"
+              >
+                <i className="fa-solid fa-trash-can"></i>
+                <span>Tüm Hatalı Soruları Sil</span>
+              </button>
+            </div>
           )}
         </div>
         <div className="bg-slate-900 border border-slate-700 rounded-xl overflow-x-auto shadow-xl">
