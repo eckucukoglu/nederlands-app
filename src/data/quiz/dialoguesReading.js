@@ -390,7 +390,7 @@ export const dialoguesReading = [
     ]
   },
   {
-    "id": "q_reading_041",
+    "id": "q_reading_041_b",
     "type": "multiple_choice",
     "tags": [
       "reading_comprehension",
@@ -411,7 +411,7 @@ export const dialoguesReading = [
     "quality": 2
   },
   {
-    "id": "q_reading_042",
+    "id": "q_reading_042_b",
     "type": "multiple_choice",
     "tags": [
       "reading_comprehension",
@@ -431,7 +431,7 @@ export const dialoguesReading = [
     ]
   },
   {
-    "id": "q_reading_043",
+    "id": "q_reading_043_b",
     "type": "multiple_choice",
     "tags": [
       "reading_comprehension",
@@ -451,7 +451,7 @@ export const dialoguesReading = [
     "quality": 2
   },
   {
-    "id": "q_reading_044",
+    "id": "q_reading_044_b",
     "type": "multiple_choice",
     "tags": [
       "reading_comprehension",
@@ -471,7 +471,7 @@ export const dialoguesReading = [
     ]
   },
   {
-    "id": "q_reading_045",
+    "id": "q_reading_045_b",
     "type": "multiple_choice",
     "tags": [
       "reading_comprehension",
@@ -491,7 +491,7 @@ export const dialoguesReading = [
     ]
   },
   {
-    "id": "q_reading_046",
+    "id": "q_reading_046_b",
     "type": "multiple_choice",
     "tags": [
       "reading_comprehension",
@@ -511,7 +511,7 @@ export const dialoguesReading = [
     ]
   },
   {
-    "id": "q_reading_047",
+    "id": "q_reading_047_b",
     "type": "multiple_choice",
     "tags": [
       "reading_comprehension",

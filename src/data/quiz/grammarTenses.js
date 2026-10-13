@@ -126,7 +126,7 @@ export const grammarTenses = [
     "explanationTr": "'Praten' fiilinin kökü 'praat'tır. 'Ik' öznesi için ek almaz.",
     "explanationEn": "The stem of 'praten' is 'praat'. For the subject 'ik', it takes no suffix.",
     "difficulty": 2,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "praat",
       "praatte",
@@ -202,7 +202,7 @@ export const grammarTenses = [
     "explanationTr": "'Ik' öznesi için sadece kök (vind) kullanılır.",
     "explanationEn": "For the subject 'ik', only the stem (vind) is used.",
     "difficulty": 4,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "vind",
       "vindt",
@@ -311,7 +311,7 @@ export const grammarTenses = [
     "tags": [
       "verbs_present"
     ],
-    "questionNl": "In het restaurant vraagt de ober beleefd:\n'Mevrouw, ___ u klaar om te bestellen of heeft u nog even tijd nodig?'",
+    "questionNl": "— Situatie:\n'In het restaurant vraagt de ober beleefd:\n'Mevrouw, ___ u klaar om te bestellen of heeft u nog even tijd nodig?''",
     "correctAnswer": "bent",
     "explanationTr": "'u' zamirinde devrik cümlede bile 't' düşmez, bu yüzden 'bent u' doğrudur.",
     "explanationEn": "For 'u', the 't' never drops in inversion, so it is 'bent u'.",
@@ -379,7 +379,7 @@ export const grammarTenses = [
     "explanationTr": "'Hebben' fiilinde 'jij' çekimi 'hebt' şeklindedir.",
     "explanationEn": "The 'jij' form of 'hebben' is 'hebt'.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_pres_025",
@@ -411,7 +411,7 @@ export const grammarTenses = [
     "explanationTr": "Çoğul şahıs 'jullie' için fiil daima mastar halindedir.",
     "explanationEn": "For the plural person 'jullie', the verb is always in its infinitive form.",
     "difficulty": 2,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "weten",
       "weet",
@@ -431,7 +431,7 @@ export const grammarTenses = [
     "explanationTr": "Evet/Hayır sorularında fiil başa gelir. 'Ik' için 'zijn' fiilinin çekimi 'Ben'dir.",
     "explanationEn": "In yes/no questions, the verb comes first. For 'Ik', the conjugation of 'zijn' is 'Ben'.",
     "difficulty": 2,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "Ben",
       "Bent",
@@ -517,7 +517,7 @@ export const grammarTenses = [
     "explanationTr": "'Jullie' çoğul bir özne olduğu için fiil mastar halinde (hebben) başa gelir.",
     "explanationEn": "'Jullie' is a plural subject, so the verb comes first in its infinitive form (hebben).",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_wo_017",
@@ -557,7 +557,7 @@ export const grammarTenses = [
     "explanationTr": "'De kinderen' (çocuklar) çoğul olduğu için yardımcı fiil 'zijn' başa gelir.",
     "explanationEn": "'De kinderen' (the children) is plural, so the auxiliary verb 'zijn' comes first.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_wo_019",
@@ -591,7 +591,7 @@ export const grammarTenses = [
     "explanationTr": "'Wie' (kim) soru kelimesi özne görevindeyse, her zaman 3. tekil şahıs (hij/zij) gibi işlem görür. Bu yüzden 'heeft' kullanılır.",
     "explanationEn": "When 'Wie' (who) acts as the subject, it is always treated as 3rd person singular. So 'heeft' is used.",
     "difficulty": 2,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "heeft",
       "hebben",
@@ -631,7 +631,7 @@ export const grammarTenses = [
     "explanationTr": "'mogen' (izinli olmak) düzensiz bir modal fiildir. 'Ik' için çekimi 'mag'dır.",
     "explanationEn": "'mogen' (to be allowed to) is an irregular modal verb. The conjugation for 'Ik' is 'mag'.",
     "difficulty": 2,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "mag",
       "moet",
@@ -686,7 +686,7 @@ export const grammarTenses = [
       "modal_verbs",
       "verbs_present"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nWij ___ heel goed Nederlands spreken.",
+    "questionNl": "— Situatie:\n'Wij ___ heel goed Nederlands spreken.'",
     "options": [
       "kan",
       "kunt",
@@ -697,7 +697,7 @@ export const grammarTenses = [
     "explanationTr": "Çoğul şahıslarda (wij, jullie, zij) modal fiiller her zaman mastar (infinitief) halindedir.",
     "explanationEn": "For plural subjects (wij, jullie, zij), modal verbs are always in their infinitive form.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_mod_005",
@@ -706,12 +706,12 @@ export const grammarTenses = [
       "modal_verbs",
       "verbs_present"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nJullie ___ volgende week het examen maken.",
+    "questionNl": "— Situatie:\n'Jullie ___ volgende week het examen maken.'",
     "correctAnswer": "zullen",
     "explanationTr": "'Jullie' çoğul bir özne olduğu için 'zullen' fiili mastar halinde kullanılır.",
     "explanationEn": "'Jullie' is a plural subject, so the verb 'zullen' remains in the infinitive.",
     "difficulty": 2,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "zullen",
       "zull",
@@ -727,7 +727,7 @@ export const grammarTenses = [
       "verbs_present",
       "questions"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\n___ u mij alstublieft helpen?",
+    "questionNl": "— Situatie:\n'___ u mij alstublieft helpen?'",
     "options": [
       "Kan",
       "Kunt",
@@ -738,7 +738,7 @@ export const grammarTenses = [
     "explanationTr": "Soru cümlesinde 'u' (siz) zamiri için 'kunnen' fiilinin çekimi 'kunt' veya 'kan' olabilir, ancak kibar formda 'kunt u' daha yaygındır.",
     "explanationEn": "In a question with 'u', the conjugation of 'kunnen' is usually 'Kunt' (Kunt u...?). 'Kan u' is also possible but 'Kunt u' is standard.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_mod_007",
@@ -747,12 +747,12 @@ export const grammarTenses = [
       "modal_verbs",
       "verbs_present"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nHet ___ vandaag erg warm worden.",
+    "questionNl": "— Situatie:\n'Het ___ vandaag erg warm worden.'",
     "correctAnswer": "kan",
     "explanationTr": "'Het' (3. tekil şahıs) için 'kunnen' fiili 'kan' şeklindedir.",
     "explanationEn": "For 'Het' (3rd person singular), the verb 'kunnen' is 'kan'.",
     "difficulty": 2,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "kan",
       "niet kan",
@@ -767,7 +767,7 @@ export const grammarTenses = [
       "modal_verbs",
       "verbs_present"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nZij ___ een nieuwe auto kopen.",
+    "questionNl": "— Situatie:\n'Zij ___ een nieuwe auto kopen.'",
     "options": [
       "wil",
       "wilt",
@@ -778,7 +778,7 @@ export const grammarTenses = [
     "explanationTr": "'Zij' (tekil - o) için 'willen' fiilinin çekimi 'wil'dir.",
     "explanationEn": "For 'Zij' (singular - she), the conjugation of 'willen' is 'wil'.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_mod_009",
@@ -788,12 +788,12 @@ export const grammarTenses = [
       "verbs_present",
       "questions"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\n___ ik hier zitten?",
+    "questionNl": "— Situatie:\n'___ ik hier zitten?'",
     "correctAnswer": "Mag",
     "explanationTr": "Soru cümlesinde 'ik' için 'mogen' fiili 'Mag' olur.",
     "explanationEn": "In a question, 'mogen' for 'ik' becomes 'Mag'.",
     "difficulty": 2,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "Mag",
       "niet Mag",
@@ -809,12 +809,12 @@ export const grammarTenses = [
       "perfectum",
       "soft_ketchup"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nIk heb gisteren hard ___.",
+    "questionNl": "— Situatie:\n'Ik heb gisteren hard ___.'",
     "correctAnswer": "gewerkt",
     "explanationTr": "Perfectum (Geçmiş Zaman). 'werken' fiilinin kökü 'werk'. Son harfi 'k' (soft ketchup içinde var), bu yüzden '+t' alır: gewerkt.",
     "explanationEn": "Perfectum (Present Perfect). The stem of 'werken' is 'werk'. The last letter 'k' is in 'soft ketchup', so it takes '+t': gewerkt.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "gewerkt",
       "werktte",
@@ -830,7 +830,7 @@ export const grammarTenses = [
       "imperfectum",
       "soft_ketchup"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nVroeger ___ hij in een restaurant.",
+    "questionNl": "— Situatie:\n'Vroeger ___ hij in een restaurant.'",
     "options": [
       "werkde",
       "werkte",
@@ -841,7 +841,7 @@ export const grammarTenses = [
     "explanationTr": "Imperfectum (Hikaye Geçmiş Zaman). 'werk' kökünün sonu 'k' ile bittiği için '+te' eklenir: werkte.",
     "explanationEn": "Imperfectum (Simple Past). The stem 'werk' ends in 'k', so '+te' is added: werkte.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_past_003",
@@ -851,12 +851,12 @@ export const grammarTenses = [
       "perfectum",
       "soft_ketchup"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nDe kinderen hebben in de tuin ___.",
+    "questionNl": "— Situatie:\n'De kinderen hebben in de tuin ___.'",
     "correctAnswer": "gespeeld",
     "explanationTr": "Perfectum. 'spelen' kökü 'speel'. Son harfi 'l' (soft ketchup içinde YOK), bu yüzden '+d' alır: gespeeld.",
     "explanationEn": "Perfectum. Stem of 'spelen' is 'speel'. The last letter 'l' is NOT in 'soft ketchup', so it takes '+d': gespeeld.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "gespeeld",
       "speeldte",
@@ -872,7 +872,7 @@ export const grammarTenses = [
       "imperfectum",
       "soft_ketchup"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nZij ___ vroeger vaak tennis.",
+    "questionNl": "— Situatie:\n'Zij ___ vroeger vaak tennis.'",
     "options": [
       "speelde",
       "speelte",
@@ -883,7 +883,7 @@ export const grammarTenses = [
     "explanationTr": "Imperfectum. 'speel' kökü 'soft ketchup' kuralına uymaz, bu yüzden '+de' eklenir: speelde.",
     "explanationEn": "Imperfectum. The stem 'speel' does not fall under the 'soft ketchup' rule, so '+de' is added: speelde.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_past_005",
@@ -893,12 +893,12 @@ export const grammarTenses = [
       "imperfectum",
       "soft_ketchup"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nToen ik kind was, ___ ik in Utrecht.",
+    "questionNl": "— Situatie:\n'Toen ik kind was, ___ ik in Utrecht.'",
     "correctAnswer": "woonde",
     "explanationTr": "Imperfectum. 'wonen' kökü 'woon'. 'n' harfi 'soft ketchup' içinde yoktur, bu yüzden '+de' eklenir.",
     "explanationEn": "Imperfectum. Stem of 'wonen' is 'woon'. 'n' is not in 'soft ketchup', so '+de' is added.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "woonde",
       "niet woonde",
@@ -914,12 +914,12 @@ export const grammarTenses = [
       "perfectum",
       "soft_ketchup"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nHeb je naar de leraar ___ ?",
+    "questionNl": "— Situatie:\n'Heb je naar de leraar ___ ?'",
     "correctAnswer": "geluisterd",
     "explanationTr": "Perfectum. 'luisteren' kökü 'luister'. 'r' harfi 'soft ketchup' içinde olmadığı için '+d' alır.",
     "explanationEn": "Perfectum. Stem of 'luisteren' is 'luister'. 'r' is not in 'soft ketchup', so it takes '+d'.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "geluisterd",
       "niet geluisterd",
@@ -935,7 +935,7 @@ export const grammarTenses = [
       "perfectum",
       "soft_ketchup"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nWij hebben gisteren een uur ___.",
+    "questionNl": "— Situatie:\n'Wij hebben gisteren een uur ___.'",
     "options": [
       "gefietst",
       "gefietste",
@@ -946,7 +946,7 @@ export const grammarTenses = [
     "explanationTr": "Perfectum. 'fietsen' kökü 'fiets'. Son harf 's' (soft ketchup içinde VAR), bu yüzden '+t' alır.",
     "explanationEn": "Perfectum. Stem of 'fietsen' is 'fiets'. 's' is in 'soft ketchup', so it takes '+t'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_past_008",
@@ -956,12 +956,12 @@ export const grammarTenses = [
       "perfectum",
       "soft_ketchup"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nWie heeft deze lekkere soep ___ ?",
+    "questionNl": "— Situatie:\n'Wie heeft deze lekkere soep ___ ?'",
     "correctAnswer": "gekookt",
     "explanationTr": "Perfectum. 'koken' kökü 'kook'. Son harf 'k' (soft ketchup içinde var), bu yüzden '+t' alır.",
     "explanationEn": "Perfectum. Stem of 'koken' is 'kook'. 'k' is in 'soft ketchup', so it takes '+t'.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "gekookt",
       "gekook",
@@ -977,7 +977,7 @@ export const grammarTenses = [
       "imperfectum",
       "soft_ketchup"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nGisteren ___ ik met mijn buurman.",
+    "questionNl": "— Situatie:\n'Gisteren ___ ik met mijn buurman.'",
     "options": [
       "praat",
       "praatte",
@@ -988,7 +988,7 @@ export const grammarTenses = [
     "explanationTr": "Imperfectum. 'praten' kökü 'praat'. Kök zaten 't' ile bitiyor ve 't' harfi soft ketchup kuralında '+te' almasını gerektiriyor. İki 't' yan yana gelir: praatte.",
     "explanationEn": "Imperfectum. Stem is 'praat'. Ends in 't' (takes '+te'). Two t's are written together: praatte.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_past_010",
@@ -998,12 +998,12 @@ export const grammarTenses = [
       "imperfectum",
       "soft_ketchup"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nWij ___ veel nieuwe woorden in de les.",
+    "questionNl": "— Situatie:\n'Wij ___ veel nieuwe woorden in de les.'",
     "correctAnswer": "leerden",
     "explanationTr": "Imperfectum ÇOĞUL. 'leren' kökü 'leer'. 'r' harfi soft ketchup içinde yoktur (+de). Çoğul olduğu için '+den' alır: leerden.",
     "explanationEn": "Imperfectum PLURAL. Stem is 'leer'. 'r' is not in soft ketchup (+de). Since it's plural (wij), it gets '+den': leerden.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "leerden",
       "leerd",
@@ -1019,12 +1019,12 @@ export const grammarTenses = [
       "perfectum",
       "zijn_hebben"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nDe les is om 9.00 uur ___.",
+    "questionNl": "— Situatie:\n'De les is om 9.00 uur ___.'",
     "correctAnswer": "begonnen",
     "explanationTr": "Perfectum. 'beginnen' (başlamak) bir durum değişikliği (verandering van situatie) olduğu için 'zijn' (is) ile kullanılır. Düzensizdir: begonnen.",
     "explanationEn": "Perfectum. 'beginnen' (to start) indicates a change of situation, so it uses 'zijn' (is). It is irregular: begonnen.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "begonnen",
       "begon",
@@ -1040,12 +1040,12 @@ export const grammarTenses = [
       "perfectum",
       "zijn_hebben"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nZij is met haar cursus ___.",
+    "questionNl": "— Situatie:\n'Zij is met haar cursus ___.'",
     "correctAnswer": "gestopt",
     "explanationTr": "Perfectum. 'stoppen' (durmak/bırakmak) durum değişikliği olduğu için 'zijn' ile kullanılır.",
     "explanationEn": "Perfectum. 'stoppen' (to stop) indicates a change of state, so it is used with 'zijn'.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "gestopt",
       "stoptte",
@@ -1061,12 +1061,12 @@ export const grammarTenses = [
       "perfectum",
       "zijn_hebben"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nMijn zoon is gisteren 10 jaar ___.",
+    "questionNl": "— Situatie:\n'Mijn zoon is gisteren 10 jaar ___.'",
     "correctAnswer": "geworden",
     "explanationTr": "Perfectum. 'worden' (olmak) bir durum değişikliğidir ve 'zijn' ile kullanılır. 3. hali 'geworden'dir.",
     "explanationEn": "Perfectum. 'worden' (to become) is a change of state and uses 'zijn'. Its past participle is 'geworden'.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "geworden",
       "wordente",
@@ -1082,12 +1082,12 @@ export const grammarTenses = [
       "perfectum",
       "zijn_hebben"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nIk heb mijn moeder gisteren ___.",
+    "questionNl": "— Situatie:\n'Ik heb mijn moeder gisteren ___.'",
     "correctAnswer": "gebeld",
     "explanationTr": "'bellen' kökü 'bel' -> l harfi soft ketchup'ta yok -> +d (gebeld).",
     "explanationEn": "Stem of 'bellen' is 'bel' -> l is not in soft ketchup -> +d (gebeld).",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "gebeld",
       "beldte",
@@ -1103,7 +1103,7 @@ export const grammarTenses = [
       "perfectum",
       "zijn_hebben"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nIk ben nog nooit in Parijs ___.",
+    "questionNl": "— Situatie:\n'Ik ben nog nooit in Parijs ___.'",
     "options": [
       "geweest",
       "gezijn",
@@ -1114,7 +1114,7 @@ export const grammarTenses = [
     "explanationTr": "'zijn' (olmak) fiilinin 3. hali (perfectum) 'geweest'tir ve kendisi yine 'zijn' ile kullanılır.",
     "explanationEn": "The past participle of 'zijn' (to be) is 'geweest', and it is used with the auxiliary 'zijn'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_past_021",
@@ -1124,12 +1124,12 @@ export const grammarTenses = [
       "perfectum",
       "prefixes"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nIk heb de rekening gisteren ___.",
+    "questionNl": "— Situatie:\n'Ik heb de rekening gisteren ___.'",
     "correctAnswer": "betaald",
     "explanationTr": "ALTIN KURAL: Fiil be-, ge-, her-, ver-, ont- eklerinden biriyle başlıyorsa, perfectumda başına 'ge-' ALMAZ. (betalen -> betaald).",
     "explanationEn": "GOLDEN RULE: If a verb starts with be-, ge-, her-, ver-, ont-, it does NOT get a 'ge-' prefix in the perfectum. (betalen -> betaald).",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "betaald",
       "betaaldt",
@@ -1145,7 +1145,7 @@ export const grammarTenses = [
       "perfectum",
       "prefixes"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nHij heeft het boek in het Engels ___.",
+    "questionNl": "— Situatie:\n'Hij heeft het boek in het Engels ___.'",
     "options": [
       "gevertaald",
       "vertaald",
@@ -1156,7 +1156,7 @@ export const grammarTenses = [
     "explanationTr": "'ver-' ile başlayan fiiller 'ge-' takısı almaz. (vertalen -> vertaald).",
     "explanationEn": "Verbs starting with 'ver-' do not take the 'ge-' prefix. (vertalen -> vertaald).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_past_023",
@@ -1166,12 +1166,12 @@ export const grammarTenses = [
       "perfectum",
       "prefixes"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nHeb je de grammatica goed ___ ?",
+    "questionNl": "— Situatie:\n'Heb je de grammatica goed ___ ?'",
     "correctAnswer": "herhaald",
     "explanationTr": "'her-' ile başlayan fiiller 'ge-' almaz. Kök 'herhaal' + d = herhaald.",
     "explanationEn": "Verbs starting with 'her-' don't get 'ge-'. Stem 'herhaal' + d = herhaald.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "herhaald",
       "niet herhaald",
@@ -1187,7 +1187,7 @@ export const grammarTenses = [
       "perfectum",
       "prefixes"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nZij hebben een oude hut ___.",
+    "questionNl": "— Situatie:\n'Zij hebben een oude hut ___.'",
     "options": [
       "geontdekt",
       "ontdekkt",
@@ -1198,7 +1198,7 @@ export const grammarTenses = [
     "explanationTr": "'ont-' ile başlayan fiiller 'ge-' almaz. Kök 'ontdek' + t = ontdekt.",
     "explanationEn": "Verbs starting with 'ont-' don't get 'ge-'. Stem 'ontdek' + t = ontdekt.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_past_025",
@@ -1208,12 +1208,12 @@ export const grammarTenses = [
       "perfectum",
       "prefixes"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nHet ongeluk is gisteren ___.",
+    "questionNl": "— Situatie:\n'Het ongeluk is gisteren ___.'",
     "correctAnswer": "gebeurd",
     "explanationTr": "'ge-' ile başlayan fiiller fazladan bir 'ge-' daha almaz. (gebeuren -> gebeurd).",
     "explanationEn": "Verbs already starting with 'ge-' do not get an extra 'ge-'. (gebeuren -> gebeurd).",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "gebeurd",
       "beurdte",
@@ -1229,7 +1229,7 @@ export const grammarTenses = [
       "perfectum",
       "prefixes"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nHeb je de leraar goed ___?",
+    "questionNl": "— Situatie:\n'Heb je de leraar goed ___?'",
     "options": [
       "gebegrepen",
       "begrepen",
@@ -1240,7 +1240,7 @@ export const grammarTenses = [
     "explanationTr": "'begrijpen' düzensizdir (begreep, begrepen). 'be-' ile başladığı için 'ge-' almaz.",
     "explanationEn": "'begrijpen' is irregular (begreep, begrepen). Since it starts with 'be-', it gets no 'ge-'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_past_027",
@@ -1250,12 +1250,12 @@ export const grammarTenses = [
       "perfectum",
       "prefixes"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nHij heeft zijn auto gisteren ___.",
+    "questionNl": "— Situatie:\n'Hij heeft zijn auto gisteren ___.'",
     "correctAnswer": "verkocht",
     "explanationTr": "'verkopen' düzensizdir (kocht -> verkocht). 'ver-' ile başladığı için 'ge-' almaz.",
     "explanationEn": "'verkopen' is irregular (kocht -> verkocht). Starts with 'ver-', so no 'ge-'.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "verkocht",
       "verkochtt",
@@ -1271,7 +1271,7 @@ export const grammarTenses = [
       "perfectum",
       "prefixes"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nDe trein is om 10 uur ___.",
+    "questionNl": "— Situatie:\n'De trein is om 10 uur ___.'",
     "options": [
       "gevertrokken",
       "vertrokken",
@@ -1282,7 +1282,7 @@ export const grammarTenses = [
     "explanationTr": "'vertrekken' düzensizdir. 'ver-' ile başlar, 'ge-' almaz.",
     "explanationEn": "'vertrekken' is irregular. Starts with 'ver-', gets no 'ge-'.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_past_029",
@@ -1292,12 +1292,12 @@ export const grammarTenses = [
       "perfectum",
       "prefixes"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nIk heb mijn vriend in de stad ___.",
+    "questionNl": "— Situatie:\n'Ik heb mijn vriend in de stad ___.'",
     "correctAnswer": "ontmoet",
     "explanationTr": "'ontmoeten' (buluşmak) fiili 'ont-' ile başlar, bu yüzden 'ge-' almaz. Kökü 'ontmoet' t ile bittiği için aynen kalır.",
     "explanationEn": "'ontmoeten' starts with 'ont-', so no 'ge-'. Stem ends in 't', so it stays 'ontmoet'.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "ontmoet",
       "ontmoett",
@@ -1313,7 +1313,7 @@ export const grammarTenses = [
       "perfectum",
       "prefixes"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nOeps! Ik ben mijn sleutels ___.",
+    "questionNl": "— Situatie:\n'Oeps! Ik ben mijn sleutels ___.'",
     "options": [
       "gevergeten",
       "vergeten",
@@ -1324,7 +1324,7 @@ export const grammarTenses = [
     "explanationTr": "'vergeten' düzensizdir ve 3. hali yine 'vergeten'dır. 'ver-' ile başladığı için 'ge-' almaz.",
     "explanationEn": "'vergeten' is irregular and its past participle is also 'vergeten'. Starts with 'ver-', gets no 'ge-'.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_past_031",
@@ -1334,12 +1334,12 @@ export const grammarTenses = [
       "imperfectum",
       "irregular"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nGisteren ___ ik heel erg ziek.",
+    "questionNl": "— Situatie:\n'Gisteren ___ ik heel erg ziek.'",
     "correctAnswer": "was",
     "explanationTr": "DÜZENSİZ (Imperfectum): 'zijn' fiilinin 'ik/jij/hij' için hikaye geçmiş zaman hali 'was'tır.",
     "explanationEn": "IRREGULAR (Imperfectum): The simple past of 'zijn' for 'ik/jij/hij' is 'was'.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "was",
       "niet was",
@@ -1355,12 +1355,12 @@ export const grammarTenses = [
       "imperfectum",
       "irregular"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nWij ___ vroeger een kleine hond.",
+    "questionNl": "— Situatie:\n'Wij ___ vroeger een kleine hond.'",
     "correctAnswer": "hadden",
     "explanationTr": "DÜZENSİZ (Imperfectum): 'hebben' fiilinin çoğul (wij/jullie/zij) geçmiş zaman hali 'hadden'dır.",
     "explanationEn": "IRREGULAR (Imperfectum): The plural simple past of 'hebben' is 'hadden'.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "hadden",
       "hadd",
@@ -1376,7 +1376,7 @@ export const grammarTenses = [
       "imperfectum",
       "modal_verbs"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nHij ___ gisteren naar de film gaan.",
+    "questionNl": "— Situatie:\n'Hij ___ gisteren naar de film gaan.'",
     "options": [
       "wilde",
       "wilte",
@@ -1387,7 +1387,7 @@ export const grammarTenses = [
     "explanationTr": "Modal fiil (Imperfectum): 'willen' fiilinin geçmiş zamanı 'wilde' veya konuşma dilinde 'wou'dur.",
     "explanationEn": "Modal verb (Imperfectum): The past of 'willen' is 'wilde' (or 'wou' informally).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_past_034",
@@ -1397,12 +1397,12 @@ export const grammarTenses = [
       "imperfectum",
       "modal_verbs"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nJullie ___ de oefening niet begrijpen.",
+    "questionNl": "— Situatie:\n'Jullie ___ de oefening niet begrijpen.'",
     "correctAnswer": "konden",
     "explanationTr": "Modal fiil (Imperfectum): 'kunnen' çoğul için 'konden' olur.",
     "explanationEn": "Modal verb (Imperfectum): 'kunnen' becomes 'konden' for plural.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "konden",
       "kond",
@@ -1418,7 +1418,7 @@ export const grammarTenses = [
       "imperfectum",
       "modal_verbs"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nIk ___ vandaag om 6 uur opstaan.",
+    "questionNl": "— Situatie:\n'Ik ___ vandaag om 6 uur opstaan.'",
     "options": [
       "moeste",
       "moest",
@@ -1429,7 +1429,7 @@ export const grammarTenses = [
     "explanationTr": "Modal fiil (Imperfectum): 'moeten' tekil için 'moest' olur.",
     "explanationEn": "Modal verb (Imperfectum): 'moeten' becomes 'moest' for singular.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_past_036",
@@ -1438,7 +1438,7 @@ export const grammarTenses = [
       "past_tenses",
       "usage"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nWelke tijd gebruik je voor BESCRIJVINGEN in het verleden?",
+    "questionNl": "Welke tijd gebruik je voor BESCRIJVINGEN in het verleden?",
     "options": [
       "Perfectum",
       "Imperfectum",
@@ -1449,7 +1449,7 @@ export const grammarTenses = [
     "explanationTr": "Geçmişte olan bir olayın arka planını tasvir ederken veya hikaye anlatırken (Beschrijvingen) genellikle Imperfectum kullanılır.",
     "explanationEn": "When describing the background of a past event or storytelling (Beschrijvingen), the Imperfectum is generally used.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_past_037",
@@ -1458,7 +1458,7 @@ export const grammarTenses = [
       "past_tenses",
       "usage"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nWelke tijd gebruik je voor AFGESLOTEN ZAKEN (tamamlanmış tekil olaylar) in het verleden?",
+    "questionNl": "Welke tijd gebruik je voor AFGESLOTEN ZAKEN (tamamlanmış tekil olaylar) in het verleden?",
     "options": [
       "Perfectum",
       "Imperfectum",
@@ -1469,7 +1469,7 @@ export const grammarTenses = [
     "explanationTr": "Geçmişte anlık olarak olup bitmiş, tamamlanmış olaylar (Afgesloten zaken) için Perfectum (hebben/zijn + 3. hal) kullanılır.",
     "explanationEn": "For single, completed actions in the past (Afgesloten zaken), the Perfectum is used.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_past_038",
@@ -1479,12 +1479,12 @@ export const grammarTenses = [
       "imperfectum",
       "irregular"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nIk ___ gisteren mijn sleutels overal.",
+    "questionNl": "— Situatie:\n'Ik ___ gisteren mijn sleutels overal.'",
     "correctAnswer": "zocht",
     "explanationTr": "DÜZENSİZ: 'zoeken' (aramak) fiilinin tekil imperfectum hali 'zocht' olur.",
     "explanationEn": "IRREGULAR: The singular imperfectum of 'zoeken' (to search) is 'zocht'.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "zocht",
       "zoch",
@@ -1500,12 +1500,12 @@ export const grammarTenses = [
       "imperfectum",
       "irregular"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nZij ___ een nieuw huis.",
+    "questionNl": "— Situatie:\n'Zij ___ een nieuw huis.'",
     "correctAnswer": "kocht",
     "explanationTr": "DÜZENSİZ: 'kopen' (satın almak) fiilinin tekil imperfectum hali 'kocht' olur.",
     "explanationEn": "IRREGULAR: The singular imperfectum of 'kopen' (to buy) is 'kocht'.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "kocht",
       "koch",
@@ -1521,7 +1521,7 @@ export const grammarTenses = [
       "imperfectum",
       "irregular"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nHij ___ mij naar de weg.",
+    "questionNl": "— Situatie:\n'Hij ___ mij naar de weg.'",
     "options": [
       "vraagde",
       "vroeg",
@@ -1532,7 +1532,7 @@ export const grammarTenses = [
     "explanationTr": "DÜZENSİZ: 'vragen' (sormak) fiilinin imperfectum hali 'vroeg' olur.",
     "explanationEn": "IRREGULAR: The imperfectum of 'vragen' (to ask) is 'vroeg'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_sep_007",
@@ -1542,12 +1542,12 @@ export const grammarTenses = [
       "past_tenses",
       "imperfectum"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nToen ik jong was, ___ ik heel vroeg op.",
+    "questionNl": "— Situatie:\n'Toen ik jong was, ___ ik heel vroeg op.'",
     "correctAnswer": "stond",
     "explanationTr": "Imperfectum. 'opstaan' -> 'staan' fiilinin geçmiş zamanı 'stond'dur. 'op' cümlenin sonundadır.",
     "explanationEn": "Imperfectum. 'opstaan' -> the past of 'staan' is 'stond'. 'op' is at the end.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "stond",
       "niet stond",
@@ -1563,12 +1563,12 @@ export const grammarTenses = [
       "past_tenses",
       "imperfectum"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nGisteren ___ we de hele keuken schoon.",
+    "questionNl": "— Situatie:\n'Gisteren ___ we de hele keuken schoon.'",
     "correctAnswer": "maakten",
     "explanationTr": "Imperfectum. Çoğul özne (we) için 'maken' fiilinin geçmiş zamanı 'maakten' olur. 'schoon' sondadır.",
     "explanationEn": "Imperfectum. The past plural of 'maken' is 'maakten'. 'schoon' is at the end.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "maakten",
       "maakt",
@@ -1583,7 +1583,7 @@ export const grammarTenses = [
       "separable_verbs",
       "verbs_present"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nDe trein ___ om 10.00 uur aan op het station.",
+    "questionNl": "— Situatie:\n'De trein ___ om 10.00 uur aan op het station.'",
     "correctAnswer": "komt",
     "explanationTr": "'aankomen' (varmak/ulaşmak). 'De trein' tekil olduğu için 'komt' olur, 'aan' sonda yer alır.",
     "explanationEn": "'aankomen' (to arrive). 'De trein' is singular so it becomes 'komt', 'aan' is placed at the end.",
@@ -1604,12 +1604,12 @@ export const grammarTenses = [
       "past_tenses",
       "perfectum"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nIk heb mijn vrienden voor zaterdag ___.",
+    "questionNl": "— Situatie:\n'Ik heb mijn vrienden voor zaterdag ___.'",
     "correctAnswer": "uitgenodigd",
     "explanationTr": "Perfectum. 'uitnodigen' -> uit + ge + nodigd = uitgenodigd.",
     "explanationEn": "Perfectum. 'uitnodigen' -> uit + ge + nodigd = uitgenodigd.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "uitgenodigd",
       "uitnodigd",
@@ -1625,12 +1625,12 @@ export const grammarTenses = [
       "past_tenses",
       "perfectum"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nWe hebben de rekening al ___.",
+    "questionNl": "— Situatie:\n'We hebben de rekening al ___.'",
     "correctAnswer": "afgerekend",
     "explanationTr": "Perfectum. 'afrekenen' -> af + ge + rekend = afgerekend.",
     "explanationEn": "Perfectum. 'afrekenen' -> af + ge + rekend = afgerekend.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "afgerekend",
       "afrekend",
@@ -1646,12 +1646,12 @@ export const grammarTenses = [
       "past_tenses",
       "perfectum"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nHij is vanmorgen heel vroeg ___.",
+    "questionNl": "— Situatie:\n'Hij is vanmorgen heel vroeg ___.'",
     "correctAnswer": "opgestaan",
     "explanationTr": "Perfectum. 'opstaan' durum/konum değişikliği bildirdiği için 'zijn' (is) ile kullanılır. 3. hali: op + ge + staan = opgestaan.",
     "explanationEn": "Perfectum. 'opstaan' indicates a change of state, so it uses 'zijn' (is). Past participle: op + ge + staan = opgestaan.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "opgestaan",
       "opstaan",
@@ -1667,12 +1667,12 @@ export const grammarTenses = [
       "past_tenses",
       "perfectum"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nHeb jij je paraplu ___ ?",
+    "questionNl": "— Situatie:\n'Heb jij je paraplu ___ ?'",
     "correctAnswer": "meegenomen",
     "explanationTr": "Perfectum. 'nemen' düzensizdir (genomen). mee + ge + nomen = meegenomen.",
     "explanationEn": "Perfectum. 'nemen' is irregular (genomen). mee + ge + nomen = meegenomen.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "meegenomen",
       "meegenom",
@@ -1688,12 +1688,12 @@ export const grammarTenses = [
       "past_tenses",
       "perfectum"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nZij hebben de kamer netjes ___.",
+    "questionNl": "— Situatie:\n'Zij hebben de kamer netjes ___.'",
     "correctAnswer": "schoongemaakt",
     "explanationTr": "Perfectum. 'schoonmaken' -> schoon + ge + maakt = schoongemaakt.",
     "explanationEn": "Perfectum. 'schoonmaken' -> schoon + ge + maakt = schoongemaakt.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "schoongemaakt",
       "schoongemaaktt",
@@ -1709,12 +1709,12 @@ export const grammarTenses = [
       "past_tenses",
       "perfectum"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nDe leraar is net ___.",
+    "questionNl": "— Situatie:\n'De leraar is net ___.'",
     "correctAnswer": "binnengekomen",
     "explanationTr": "Perfectum. 'komen' hareket/yönelme bildirdiği için 'zijn' (is) ile kullanılır. binnen + ge + komen = binnengekomen.",
     "explanationEn": "Perfectum. 'komen' implies motion, so it uses 'zijn' (is). binnen + ge + komen = binnengekomen.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "binnengekomen",
       "binnenkomen",
@@ -1730,12 +1730,12 @@ export const grammarTenses = [
       "past_tenses",
       "perfectum"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nHet was koud, dus hij heeft zijn jas ___.",
+    "questionNl": "— Situatie:\n'Het was koud, dus hij heeft zijn jas ___.'",
     "correctAnswer": "aangedaan",
     "explanationTr": "Perfectum. 'doen' düzensizdir (gedaan). aan + ge + daan = aangedaan.",
     "explanationEn": "Perfectum. 'doen' is irregular (gedaan). aan + ge + daan = aangedaan.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "aangedaan",
       "aandaan",
@@ -1751,12 +1751,12 @@ export const grammarTenses = [
       "past_tenses",
       "perfectum"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nWe hebben een heel leuk plan ___.",
+    "questionNl": "— Situatie:\n'We hebben een heel leuk plan ___.'",
     "correctAnswer": "voorgesteld",
     "explanationTr": "Perfectum. 'voorstellen' (önermek) -> voor + ge + steld = voorgesteld.",
     "explanationEn": "Perfectum. 'voorstellen' (to propose) -> voor + ge + steld = voorgesteld.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "voorgesteld",
       "voorsteld",
@@ -1772,7 +1772,7 @@ export const grammarTenses = [
       "past_tenses",
       "perfectum"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nIs hij al van zijn vakantie ___?",
+    "questionNl": "— Situatie:\n'Is hij al van zijn vakantie ___?'",
     "options": [
       "teruggekomen",
       "geterugkomen",
@@ -1783,7 +1783,7 @@ export const grammarTenses = [
     "explanationTr": "Perfectum. 'terugkomen' -> terug + ge + komen = teruggekomen.",
     "explanationEn": "Perfectum. 'terugkomen' -> terug + ge + komen = teruggekomen.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_ref_038",
@@ -1793,12 +1793,12 @@ export const grammarTenses = [
       "past_tenses",
       "perfectum"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nHij heeft ___ gisteren geschoren.",
+    "questionNl": "— Situatie:\n'Hij heeft ___ gisteren geschoren.'",
     "correctAnswer": "zich",
     "explanationTr": "Perfectum cümlesi. 'Hij' için dönüşlü zamir 'zich'tir. Yardımcı fiil 'heeft' kullanılmıştır.",
     "explanationEn": "Perfectum sentence. For 'Hij', the reflexive pronoun is 'zich'. The auxiliary verb is 'heeft'.",
     "difficulty": 4,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "zich",
       "me",
@@ -1814,12 +1814,12 @@ export const grammarTenses = [
       "past_tenses",
       "perfectum"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nWij hebben ___ vanmorgen erg gehaast.",
+    "questionNl": "— Situatie:\n'Wij hebben ___ vanmorgen erg gehaast.'",
     "correctAnswer": "ons",
     "explanationTr": "Geçmiş zaman cümlesinde 'wij' öznesi için dönüşlü zamir 'ons' kullanılır.",
     "explanationEn": "In a past tense sentence, for the subject 'wij', the reflexive pronoun 'ons' is used.",
     "difficulty": 4,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "ons",
       "mij",
@@ -1834,12 +1834,12 @@ export const grammarTenses = [
       "future_tenses",
       "future_presens"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nIk ___ volgend weekend in Londen.",
+    "questionNl": "— Situatie:\n'Ik ___ volgend weekend in Londen.'",
     "correctAnswer": "ben",
     "explanationTr": "Gelecek zamandan (volgend weekend) bahsederken şimdiki zaman (presens) fiili kullanılabilir. 'ik' için 'zijn' çekimi 'ben'dir.",
     "explanationEn": "You can use the present tense (presens) with a future time word (volgend weekend). The 'ik' form of 'zijn' is 'ben'.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "ben",
       "niet ben",
@@ -1854,7 +1854,7 @@ export const grammarTenses = [
       "future_tenses",
       "future_presens"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nHans ___ volgende week niet naar de les.",
+    "questionNl": "— Situatie:\n'Hans ___ volgende week niet naar de les.'",
     "options": [
       "kom",
       "komt",
@@ -1865,7 +1865,7 @@ export const grammarTenses = [
     "explanationTr": "Gelecek zamanı belirtmek için şimdiki zaman kullanılmış. Hans (hij) 3. tekil şahıs olduğu için 'komt' olur.",
     "explanationEn": "Present tense is used to indicate the future. Hans (hij) is 3rd person singular, so it becomes 'komt'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_fut_004",
@@ -1874,7 +1874,7 @@ export const grammarTenses = [
       "future_tenses",
       "future_presens"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nWij ___ in juli naar Spanje.",
+    "questionNl": "— Situatie:\n'Wij ___ in juli naar Spanje.'",
     "options": [
       "reizen",
       "reist",
@@ -1885,7 +1885,7 @@ export const grammarTenses = [
     "explanationTr": "'Wij' (biz) çoğul olduğu için fiil mastar (reizen) olarak kalır. Gelecekteki bir planı (in juli) şimdiki zamanla anlatıyoruz.",
     "explanationEn": "'Wij' (we) is plural so the verb stays in the infinitive (reizen). A future plan (in juli) is expressed using present tense.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_fut_006",
@@ -1894,12 +1894,12 @@ export const grammarTenses = [
       "future_tenses",
       "future_gaan"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nEva ___ een jaar in Engeland studeren.",
+    "questionNl": "— Situatie:\n'Eva ___ een jaar in Engeland studeren.'",
     "correctAnswer": "gaat",
     "explanationTr": "Planlanmış niyet (intentie) için 'gaan' kullanılır. Eva (zij) için 'gaat' olur.",
     "explanationEn": "For planned intentions, 'gaan' is used. For Eva (zij), it becomes 'gaat'.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "gaat",
       "gaa",
@@ -1914,7 +1914,7 @@ export const grammarTenses = [
       "future_tenses",
       "future_gaan"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nWe ___ nu even koffiedrinken.",
+    "questionNl": "— Situatie:\n'We ___ nu even koffiedrinken.'",
     "options": [
       "gaan",
       "gaat",
@@ -1925,7 +1925,7 @@ export const grammarTenses = [
     "explanationTr": "Yakın gelecek/niyet için 'gaan'. 'We' çoğul olduğu için 'gaan' mastar olarak kalır.",
     "explanationEn": "For near future/intentions, 'gaan' is used. Because 'We' is plural, it remains 'gaan'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_fut_010",
@@ -1934,12 +1934,12 @@ export const grammarTenses = [
       "future_tenses",
       "future_gaan"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nIk ___ morgen mijn kamer opruimen.",
+    "questionNl": "— Situatie:\n'Ik ___ morgen mijn kamer opruimen.'",
     "correctAnswer": "ga",
     "explanationTr": "'ik' için 'gaan' fiili 'ga' olarak çekimlenir.",
     "explanationEn": "For 'ik', the verb 'gaan' is conjugated as 'ga'.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "ga",
       "niet ga",
@@ -1954,7 +1954,7 @@ export const grammarTenses = [
       "future_tenses",
       "future_gaan"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nZij ___ een nieuw huis kopen.",
+    "questionNl": "— Situatie:\n'Zij ___ een nieuw huis kopen.'",
     "options": [
       "gaat",
       "gaan",
@@ -1965,7 +1965,7 @@ export const grammarTenses = [
     "explanationTr": "'Zij' çoğul (onlar) olduğu için 'gaan' kullanılır.",
     "explanationEn": "'Zij' is plural (they), so 'gaan' is used.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_fut_012",
@@ -1975,12 +1975,12 @@ export const grammarTenses = [
       "future_gaan",
       "questions"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\n___ u vanmiddag rusten?",
+    "questionNl": "— Situatie:\n'___ u vanmiddag rusten?'",
     "correctAnswer": "Gaat",
     "explanationTr": "Resmi 'u' zamirinde soru cümlesi de olsa '-t' kalır. 'Gaat u'.",
     "explanationEn": "With the formal pronoun 'u', the '-t' remains even in a question. 'Gaat u'.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "Gaat",
       "Gaa",
@@ -1995,7 +1995,7 @@ export const grammarTenses = [
       "future_tenses",
       "zullen"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nDe koning ___ de beurs openen.",
+    "questionNl": "— Situatie:\n'De koning ___ de beurs openen.'",
     "options": [
       "zult",
       "zal",
@@ -2006,7 +2006,7 @@ export const grammarTenses = [
     "explanationTr": "Resmi/kesin gelecek eylemlerde 'zullen' kullanılır. 3. tekil şahıs (hij) için 'zal' olur.",
     "explanationEn": "For formal/certain future actions, 'zullen' is used. For 3rd person singular (hij), it is 'zal'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_fut_014",
@@ -2015,7 +2015,7 @@ export const grammarTenses = [
       "future_tenses",
       "zullen"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nOver enkele ogenblikken ___ we aankomen op station Utrecht Centraal.",
+    "questionNl": "— Situatie:\n'Over enkele ogenblikken ___ we aankomen op station Utrecht Centraal.'",
     "correctAnswer": "zullen",
     "explanationTr": "Çoğul (we) olduğu için 'zullen' mastar halinde kalır. Resmi bir anons ifadesidir.",
     "explanationEn": "Because it is plural (we), 'zullen' remains in the infinitive. It's a formal announcement expression.",
@@ -2036,7 +2036,7 @@ export const grammarTenses = [
       "zullen",
       "zullen_proposal"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\n___ ik het raam opendoen?",
+    "questionNl": "— Situatie:\n'___ ik het raam opendoen?'",
     "options": [
       "Zal",
       "Zul",
@@ -2047,7 +2047,7 @@ export const grammarTenses = [
     "explanationTr": "Bir teklif (voorstel) sunuluyor. Öznesi 'ik' olduğu için 'Zal' kullanılır.",
     "explanationEn": "A proposal (voorstel) is being made. Since the subject is 'ik', 'Zal' is used.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_fut_017",
@@ -2056,7 +2056,7 @@ export const grammarTenses = [
       "future_tenses",
       "zullen"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nJij ___ morgen de resultaten van de test horen.",
+    "questionNl": "— Situatie:\n'Jij ___ morgen de resultaten van de test horen.'",
     "options": [
       "zult",
       "zal",
@@ -2067,7 +2067,7 @@ export const grammarTenses = [
     "explanationTr": "'Jij' için 'zullen' fiilinin çekimi 'zult' veya 'zal' olabilir. İkisi de doğrudur.",
     "explanationEn": "For 'Jij', the conjugation of 'zullen' can be 'zult' or 'zal'. Both are correct.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_fut_018",
@@ -2076,12 +2076,12 @@ export const grammarTenses = [
       "future_tenses",
       "zullen"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nHij ___ het document morgen naar u sturen.",
+    "questionNl": "— Situatie:\n'Hij ___ het document morgen naar u sturen.'",
     "correctAnswer": "zal",
     "explanationTr": "3. tekil şahıs (hij/zij/het) için 'zullen' çekimi her zaman 'zal'dır.",
     "explanationEn": "For the 3rd person singular (hij/zij/het), the conjugation of 'zullen' is always 'zal'.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "zal",
       "niet zal",
@@ -2096,7 +2096,7 @@ export const grammarTenses = [
       "future_tenses",
       "zullen"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nWij ___ u zo snel mogelijk bellen.",
+    "questionNl": "— Situatie:\n'Wij ___ u zo snel mogelijk bellen.'",
     "options": [
       "zal",
       "zult",
@@ -2107,7 +2107,7 @@ export const grammarTenses = [
     "explanationTr": "Çoğul (wij) özne ile 'zullen' mastar olarak kullanılır. Bu resmi bir gelecek eylemidir.",
     "explanationEn": "With the plural (wij) subject, 'zullen' is used as an infinitive. This is a formal future action.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_fut_020",
@@ -2117,39 +2117,18 @@ export const grammarTenses = [
       "zullen",
       "questions"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\n___ u even wachten, alstublieft?",
+    "questionNl": "— Situatie:\n'___ u even wachten, alstublieft?'",
     "correctAnswer": "Zult",
     "explanationTr": "'u' (resmi siz) için 'zullen' çekimi 'zult' şeklindedir (zal u da duyulabilir ama zult u daha doğrudur).",
     "explanationEn": "For 'u' (formal you), the conjugation of 'zullen' is 'zult' (zal u can also be heard, but zult u is more precise).",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "Zult",
       "Zul",
       "Zulen",
       "Zulte"
     ]
-  },
-  {
-    "id": "q_fut_021",
-    "type": "multiple_choice",
-    "tags": [
-      "future_tenses",
-      "zullen",
-      "zullen_promise"
-    ],
-    "questionNl": "— Wat zeg je in deze situatie?\nIk ___ vanavond het eten maken. Maak je geen zorgen!",
-    "options": [
-      "zal",
-      "ga",
-      "wil",
-      "gezal"
-    ],
-    "correctAnswer": "zal",
-    "explanationTr": "Burada bir söz verme / vaat (belofte) durumu vardır. 'Ben yapacağım' (Söz veriyorum). 'Zullen' kullanılır.",
-    "explanationEn": "There is a promise (belofte) here. 'I will do it' (I promise). 'Zullen' is used.",
-    "difficulty": 3,
-    "quality": 1
   },
   {
     "id": "q_fut_022",
@@ -2159,12 +2138,12 @@ export const grammarTenses = [
       "zullen",
       "zullen_promise"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nWe ___ je altijd helpen met je huiswerk.",
+    "questionNl": "— Situatie:\n'We ___ je altijd helpen met je huiswerk.'",
     "correctAnswer": "zullen",
     "explanationTr": "Bir vaat/söz (belofte). 'We' için 'zullen' kullanılır.",
     "explanationEn": "A promise (belofte). For 'We', 'zullen' is used.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "zullen",
       "zull",
@@ -2180,7 +2159,7 @@ export const grammarTenses = [
       "zullen",
       "zullen_promise"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nWat is de functie van 'zullen' in deze zin? 'Ik zal je geheim aan niemand vertellen.'",
+    "questionNl": "Wat is de functie van 'zullen' in deze zin? 'Ik zal je geheim aan niemand vertellen.'",
     "options": [
       "Een voorstel (Teklif)",
       "Een waarschijnlijkheid (Olasılık)",
@@ -2191,154 +2170,7 @@ export const grammarTenses = [
     "explanationTr": "'Sırrını kimseye söylemeyeceğim' demek, açıkça bir söz vermektir (belofte).",
     "explanationEn": "Saying 'I will not tell your secret to anyone' is clearly making a promise (belofte).",
     "difficulty": 3,
-    "quality": 1
-  },
-  {
-    "id": "q_fut_024",
-    "type": "multiple_choice",
-    "tags": [
-      "future_tenses",
-      "zullen",
-      "zullen_promise"
-    ],
-    "questionNl": "— Wat zeg je in deze situatie?\nZij ___ het boek morgen teruggeven. .",
-    "correctAnswer": "zal",
-    "explanationTr": "Söz verildiği (belofte) için 'zullen' kullanılır. 'Zij' (tekil) için çekim 'zal'dır.",
-    "explanationEn": "Because it's a promise (belofte), 'zullen' is used. The conjugation for 'Zij' (singular) is 'zal'.",
-    "difficulty": 3,
-    "quality": 1,
-    "options": [
-      "zal",
-      "zalt",
-      "zalen",
-      "gezald"
-    ]
-  },
-  {
-    "id": "q_fut_025",
-    "type": "multiple_choice",
-    "tags": [
-      "future_tenses",
-      "zullen",
-      "zullen_promise"
-    ],
-    "questionNl": "— Wat zeg je in deze situatie?\nKies het juiste woord: Ik ___ mijn kamer vandaag schoonmaken, beloofd!",
-    "options": [
-      "ga",
-      "zal",
-      "ben",
-      "gega"
-    ],
-    "correctAnswer": "zal",
-    "explanationTr": "Cümlenin sonundaki 'beloofd!' (söz veriyorum) kelimesi, burada 'zal' kullanılmasını gerektirir.",
-    "explanationEn": "The word 'beloofd!' (promised!) at the end of the sentence requires the use of 'zal' here.",
-    "difficulty": 3,
-    "quality": 1
-  },
-  {
-    "id": "q_fut_026",
-    "type": "multiple_choice",
-    "tags": [
-      "future_tenses",
-      "zullen",
-      "zullen_promise"
-    ],
-    "questionNl": "— Wat zeg je in deze situatie?\nIk ___ op tijd zijn, wacht maar op mij!",
-    "correctAnswer": "zal",
-    "explanationTr": "'Zamanında orada olacağım' bir sözdür. 'ik' için 'zal' kullanılır.",
-    "explanationEn": "'I will be on time' is a promise. 'zal' is used for 'ik'.",
-    "difficulty": 3,
-    "quality": 1,
-    "options": [
-      "zal",
-      "niet zal",
-      "geen zal",
-      "wel zal"
-    ]
-  },
-  {
-    "id": "q_fut_027",
-    "type": "multiple_choice",
-    "tags": [
-      "future_tenses",
-      "zullen",
-      "zullen_probability"
-    ],
-    "questionNl": "— Wat zeg je in deze situatie?\nPaul heeft gisteren veel gesport. Hij ___ morgen wel spierpijn hebben.",
-    "options": [
-      "zal",
-      "gaat",
-      "komt",
-      "gezal"
-    ],
-    "correctAnswer": "zal",
-    "explanationTr": "'wel' kelimesiyle birlikte 'zullen' kullanımı yüksek ihtimal/olasılık (waarschijnlijkheid) belirtir: 'Muhtemelen kas ağrısı çekecek.'",
-    "explanationEn": "The use of 'zullen' with the word 'wel' indicates high probability (waarschijnlijkheid): 'He will probably have muscle pain.'",
-    "difficulty": 3,
-    "quality": 1
-  },
-  {
-    "id": "q_fut_028",
-    "type": "multiple_choice",
-    "tags": [
-      "future_tenses",
-      "zullen",
-      "zullen_probability"
-    ],
-    "questionNl": "— Wat zeg je in deze situatie?\nHet ___ morgen wel mooi weer zijn volgens het nieuws.",
-    "correctAnswer": "zal",
-    "explanationTr": "Tahmin/ihtimal. 'Het' için 'zal' kullanılır.",
-    "explanationEn": "Guess/probability. 'zal' is used for 'Het'.",
-    "difficulty": 4,
-    "quality": 1,
-    "options": [
-      "zal",
-      "niet zal",
-      "geen zal",
-      "wel zal"
-    ]
-  },
-  {
-    "id": "q_fut_029",
-    "type": "multiple_choice",
-    "tags": [
-      "future_tenses",
-      "zullen",
-      "zullen_probability"
-    ],
-    "questionNl": "— Wat zeg je in deze situatie?\nZe is heel laat. Ze ___ de trein wel gemist hebben.",
-    "options": [
-      "zal",
-      "heeft",
-      "is",
-      "gezal"
-    ],
-    "correctAnswer": "zal",
-    "explanationTr": "Olasılık belirtiyor: 'Trenini kaçırmış olmalı.' Bu yüzden 'zal' kullanılır.",
-    "explanationEn": "Indicates probability: 'She must have missed her train.' Therefore 'zal' is used.",
-    "difficulty": 3,
     "quality": 2
-  },
-  {
-    "id": "q_fut_030",
-    "type": "multiple_choice",
-    "tags": [
-      "future_tenses",
-      "zullen",
-      "zullen_probability"
-    ],
-    "questionNl": "— Wat zeg je in deze situatie?\nWaar is Ali? Hij ___ wel thuis zijn.",
-    "correctAnswer": "zal",
-    "explanationTr": "'Ali nerede? Muhtemelen evdedir.' anlamı veren 'zal wel' kalıbı kullanılmıştır.",
-    "explanationEn": "'Where is Ali? He is probably at home.' The 'zal wel' pattern gives this meaning.",
-    "difficulty": 3,
-    "quality": 1,
-    "options": [
-      "zal",
-      "niet zal",
-      "geen zal",
-      "wel zal"
-    ]
   },
   {
     "id": "q_fut_031",
@@ -2348,7 +2180,7 @@ export const grammarTenses = [
       "zullen",
       "zullen_probability"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nWat is de functie van 'zullen' in: 'Dat zal wel veel geld kosten!'?",
+    "questionNl": "Wat is de functie van 'zullen' in: 'Dat zal wel veel geld kosten!'?",
     "options": [
       "Een belofte (Söz/Vaat)",
       "Een waarschijnlijkheid (Olasılık/Tahmin)",
@@ -2359,28 +2191,7 @@ export const grammarTenses = [
     "explanationTr": "'Bu muhtemelen çok paraya mal olur!' güçlü bir tahmin/olasılık ifade eder.",
     "explanationEn": "'That will probably cost a lot of money!' expresses a strong guess/probability.",
     "difficulty": 3,
-    "quality": 1
-  },
-  {
-    "id": "q_fut_032",
-    "type": "multiple_choice",
-    "tags": [
-      "future_tenses",
-      "zullen",
-      "zullen_probability"
-    ],
-    "questionNl": "— Wat zeg je in deze situatie?\nHet ___ wel kloppen, hij is immers de expert.",
-    "correctAnswer": "zal",
-    "explanationTr": "'Muhtemelen doğrudur' anlamında bir olasılık. 'Het' için 'zal' kullanılır.",
-    "explanationEn": "A probability meaning 'It's probably correct'. For 'Het', 'zal' is used.",
-    "difficulty": 3,
-    "quality": 1,
-    "options": [
-      "zal",
-      "niet zal",
-      "geen zal",
-      "wel zal"
-    ]
+    "quality": 2
   },
   {
     "id": "q_cont_021",
@@ -2389,7 +2200,7 @@ export const grammarTenses = [
       "continuous",
       "verbs_present"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nWat doe je? Ik ___ aan het koken.",
+    "questionNl": "— Situatie:\n'Wat doe je? Ik ___ aan het koken.'",
     "options": [
       "ben",
       "is",
@@ -2400,7 +2211,7 @@ export const grammarTenses = [
     "explanationTr": "Şimdiki zaman hikayesi (Şu an yapıyorum) 'zijn + aan het + infinitief' ile yapılır. 'Ik' için 'ben' kullanılır.",
     "explanationEn": "Present continuous (I am doing right now) is formed with 'zijn + aan het + infinitive'. For 'Ik', 'ben' is used.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_cont_022",
@@ -2409,12 +2220,12 @@ export const grammarTenses = [
       "continuous",
       "verbs_present"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nWe zijn aan het ___.",
+    "questionNl": "— Situatie:\n'We zijn aan het ___.'",
     "correctAnswer": "fietsen",
     "explanationTr": "'Aan het' kalıbından sonra asıl eylem her zaman MASTAR (infinitief) halinde yazılır.",
     "explanationEn": "After the 'aan het' structure, the main action is always written in the INFINITIVE form.",
     "difficulty": 2,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "fietsen",
       "gefietst",
@@ -2429,12 +2240,12 @@ export const grammarTenses = [
       "continuous",
       "verbs_present"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nJullie ___ aan het studeren voor het examen.",
+    "questionNl": "— Situatie:\n'Jullie ___ aan het studeren voor het examen.'",
     "correctAnswer": "zijn",
     "explanationTr": "Çoğul (Jullie) özne için 'zijn' yardımcı fiili 'zijn' olarak kalır.",
     "explanationEn": "For the plural (Jullie) subject, the auxiliary verb 'zijn' remains 'zijn'.",
     "difficulty": 2,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "zijn",
       "mijn",
@@ -2449,7 +2260,7 @@ export const grammarTenses = [
       "continuous",
       "verbs_present"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nZij ___ aan het lezen in de tuin.",
+    "questionNl": "— Situatie:\n'Zij ___ aan het lezen in de tuin.'",
     "options": [
       "ben",
       "is",
@@ -2460,7 +2271,7 @@ export const grammarTenses = [
     "explanationTr": "Tekil 'Zij' (o kadın) için 'zijn' fiili 'is' olur.",
     "explanationEn": "For the singular 'Zij' (she), the verb 'zijn' becomes 'is'.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_cont_028",
@@ -2468,12 +2279,12 @@ export const grammarTenses = [
     "tags": [
       "continuous"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nMijn broer is de auto aan het ___.",
+    "questionNl": "— Situatie:\n'Mijn broer is de auto aan het ___.'",
     "correctAnswer": "wassen",
     "explanationTr": "'Aan het' kalıbından sonra fiil mastar (wassen) halindedir.",
     "explanationEn": "After the 'aan het' pattern, the verb is in the infinitive (wassen).",
     "difficulty": 4,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "wassen",
       "gewassen",
@@ -2488,7 +2299,7 @@ export const grammarTenses = [
       "continuous",
       "questions"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\n___ de kinderen buiten aan het spelen?",
+    "questionNl": "— Situatie:\n'___ de kinderen buiten aan het spelen?'",
     "options": [
       "Ben",
       "Is",
@@ -2499,7 +2310,7 @@ export const grammarTenses = [
     "explanationTr": "'De kinderen' (çocuklar) çoğul olduğu için soru cümlesine 'Zijn' ile başlanır.",
     "explanationEn": "Because 'De kinderen' (the children) is plural, the question starts with 'Zijn'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_cont_032",
@@ -2507,12 +2318,12 @@ export const grammarTenses = [
     "tags": [
       "continuous"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nWe zijn naar muziek ___ het luisteren.",
+    "questionNl": "— Situatie:\n'We zijn naar muziek ___ het luisteren.'",
     "correctAnswer": "aan",
     "explanationTr": "'Aan het' kalıbının ayrılmaz bir parçası olan 'aan' kelimesi boşluğa gelmelidir.",
     "explanationEn": "The word 'aan', which is an inseparable part of the 'aan het' pattern, should fill the blank.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "aan",
       "in",
@@ -2527,7 +2338,7 @@ export const grammarTenses = [
       "continuous",
       "negation"
     ],
-    "questionNl": "— Wat zeg je in deze situatie?\nEr is niemand. We zijn alleen aan het ___.",
+    "questionNl": "— Situatie:\n'Er is niemand. We zijn alleen aan het ___.'",
     "options": [
       "wacht",
       "wachten",
@@ -2538,7 +2349,7 @@ export const grammarTenses = [
     "explanationTr": "'Aan het' yapısı her zaman fiilin mastarını (infinitief) ister: 'wachten'.",
     "explanationEn": "The 'aan het' structure always requires the infinitive of the verb: 'wachten'.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_cont_036",
@@ -2551,7 +2362,7 @@ export const grammarTenses = [
     "explanationTr": "Şimdiki zamanın devamlılığı 'zijn + aan + het + infinitief' formülüyle sağlanır.",
     "explanationEn": "Present continuous is formed with the formula 'zijn + aan + het + infinitive'.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "het",
       "de",
@@ -2591,7 +2402,7 @@ export const grammarTenses = [
     "explanationTr": "Resmi 'u' zamiri için 'zijn' fiili soru cümlesinde 'Bent' şeklindedir.",
     "explanationEn": "For the formal pronoun 'u', the verb 'zijn' takes the form 'Bent' in a question.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "Bent",
       "Is",
@@ -2618,7 +2429,7 @@ export const grammarTenses = [
     "explanationTr": "Kendi adınıza bir teklifte bulunurken of yardım teklif ederken 'Zal ik...' (Yapayım mı?) kullanılır.",
     "explanationEn": "To make an offer or proposal for yourself (Shall I...), you use 'Zal ik...'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1022",
@@ -2639,7 +2450,7 @@ export const grammarTenses = [
     "explanationTr": "Birlikte bir şey yapmayı teklif ederken 'Zullen we...' (Yapalım mı?) kalıbı kullanılır.",
     "explanationEn": "To make a joint suggestion (Shall we...), you use 'Zullen we...'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1023",
@@ -2654,7 +2465,7 @@ export const grammarTenses = [
     "explanationTr": "Özne 'we' (biz) olduğu için öneri cümlesi 'Zullen' ile başlar.",
     "explanationEn": "With the subject 'we', the suggestion starts with the plural form 'Zullen'.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "Zullen",
       "Moeten",
@@ -2681,7 +2492,7 @@ export const grammarTenses = [
     "explanationTr": "Düzenli fiillerin 3. halinde (participium), kökün son harfi 'soft ketchup' ünsüzlerinden biriyse sona '-t' eklenir.",
     "explanationEn": "In the perfectum, the regular past participle ends in '-t' if the verb's stem ends in one of the consonants of 'soft ketchup'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1052",
@@ -2702,7 +2513,7 @@ export const grammarTenses = [
     "explanationTr": "ge-, be-, her-, ver- of ont- ile başlayan fiiller 3. hallerinde ekstra 'ge-' ön eki almazlar.",
     "explanationEn": "Verbs already starting with ge-, be-, her-, ver-, or ont- do not get an additional 'ge-' prefix in the perfect tense.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1054",
@@ -2723,7 +2534,7 @@ export const grammarTenses = [
     "explanationTr": "Düzenli fiillerin hikaye geçmiş zamanı (imperfectum), kökün 'soft ketchup' ile bitmesi durumunda sonuna '+te(n)' almasıyla oluşturulur.",
     "explanationEn": "For regular verbs in the imperfectum, if the stem ends in a 'soft ketchup' consonant, you add '+te(n)'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1055",
@@ -2744,7 +2555,7 @@ export const grammarTenses = [
     "explanationTr": "Imperfectumda -ten of -den eklerindeki 'n' harfi sadece çoğul öznelerle (wij, jullie, zij) kullanılır.",
     "explanationEn": "In the imperfectum, the ending with an 'n' (-ten or -den) is used for plural subjects (wij, jullie, zij).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1056",
@@ -2765,7 +2576,7 @@ export const grammarTenses = [
     "explanationTr": "'zullen' en 'kunnen' fiillerinin geçmiş zaman halleri düzensizdir: sırasıyla 'zou' en 'kon'.",
     "explanationEn": "The modal verbs 'zullen' and 'kunnen' are irregular in the imperfectum: 'zou' and 'kon' respectively.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1064",
@@ -2787,7 +2598,7 @@ export const grammarTenses = [
     "explanationTr": "Ayrılabilir fiillerin perfectum halinde, 'ge' eki ön ek ile fiil kökü arasına girer (af + ge + rekend = afgerekend).",
     "explanationEn": "In the perfectum of a separable verb, the '-ge-' is placed between the prefix and the stem (e.g., afgerekend).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1066",
@@ -2808,7 +2619,7 @@ export const grammarTenses = [
     "explanationTr": "'ik' of 'wij/we' ile kullanılan 'zullen', gelecekte yapılacak bir eylem için söz vermek (belofte) anlamı taşır.",
     "explanationEn": "Used with 'ik' or 'wij/we', 'zullen' often functions to make a promise for future action.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1067",
@@ -2829,7 +2640,7 @@ export const grammarTenses = [
     "explanationTr": "'zullen + wel' yapısı, bir şeyin büyük ihtimalle gerçekleşeceğini (waarschijnlijkheid) ifade eder.",
     "explanationEn": "The construction 'zullen + wel' expresses probability or strong likelihood.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1074",
@@ -2849,6 +2660,6 @@ export const grammarTenses = [
     "explanationTr": "Şu anda devam etmekte olan een eylemi (Şimdiki Zamanın Hikayesi) belirtmek için 'zijn + aan het + mastar fiil' yapısı kullanılır.",
     "explanationEn": "To describe an action happening right now (continuous aspect), the construction 'zijn + aan het + infinitive' is used.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   }
 ];
