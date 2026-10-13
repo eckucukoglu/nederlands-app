@@ -7,7 +7,6 @@ import { onAuthStateChanged } from 'firebase/auth'; // onAuthStateChanged eklend
 export default function AdminReports() {
   const [feedbacks, setFeedbacks] = useState([]);
   const [reports, setReports] = useState([]);
-  const [duplicates, setDuplicates] = useState([]);
   const [goods, setGoods] = useState([]);
   const [loading, setLoading] = useState(true);
   const [authChecking, setAuthChecking] = useState(true); // Kimlik kontrolü için yeni state
@@ -15,7 +14,6 @@ export default function AdminReports() {
   const [errorMsg, setErrorMsg] = useState('');
   const [copiedId, setCopiedId] = useState(null);
   const [bulkCopiedLabel, setBulkCopiedLabel] = useState(null);
-  const [copyFormat, setCopyFormat] = useState('newline'); // 'newline' | 'comma' | 'json'
 
   const copyAllIds = async (list, label) => {
     const ids = [...new Set(list.map(item => item.questionId).filter(Boolean))];
@@ -24,16 +22,7 @@ export default function AdminReports() {
       return;
     }
     
-    let textToCopy = "";
-    if (copyFormat === 'json') {
-      textToCopy = JSON.stringify(ids, null, 2);
-    } else if (copyFormat === 'comma') {
-      textToCopy = ids.join(', ');
-    } else {
-      textToCopy = ids.join('\n');
-    }
-
-    await copyToClipboard(textToCopy);
+    await copyToClipboard(ids.join('\n'));
     setBulkCopiedLabel(label);
     setTimeout(() => {
       setBulkCopiedLabel(prev => (prev === label ? null : prev));
@@ -70,7 +59,6 @@ export default function AdminReports() {
       const sortedReps = repData.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
 
       setReports(sortedReps.filter(r => !r.reportType || r.reportType === 'error'));
-      setDuplicates(sortedReps.filter(r => r.reportType === 'duplicate'));
       setGoods(sortedReps.filter(r => r.reportType === 'good'));
       
     } catch (error) {
@@ -189,70 +177,11 @@ export default function AdminReports() {
   }
 
   // 5. Durum: Başarılı, tabloları göster
-  const badAndDupIds = [...new Set([...reports, ...duplicates].map(r => r.questionId).filter(Boolean))];
-  const badAndDupCount = badAndDupIds.length;
-
   return (
     <div className="max-w-6xl mx-auto p-6 space-y-10 pb-20">
       <div className="mt-4 mb-2">
         <h1 className="text-3xl font-extrabold text-white">🛠️ Gelen Raporlar ve Geri Bildirimler</h1>
         <p className="text-sm text-slate-400 mt-1">Kullanıcı bildirimleri ve işaretlenmiş soruların yönetim paneli.</p>
-      </div>
-
-      {/* TOPLU İŞLEM KARTI - TÜM İŞARETLİ (KÖTÜ / KOPYA) SORULARI KOPYALA */}
-      <div className="bg-slate-900 border border-slate-700/80 p-5 rounded-2xl shadow-xl flex flex-col md:flex-row md:items-center justify-between gap-4">
-        <div>
-          <h3 className="text-base font-bold text-slate-100 flex items-center gap-2">
-            <i className="fa-solid fa-copy text-brand-400"></i>
-            Toplu Soru ID Kopyalama
-          </h3>
-          <p className="text-xs sm:text-sm text-slate-400 mt-1">
-            İşaretli (hatalı veya kopya bildirilen) tüm soruların ID'lerini tek tıkla panoya aktarın.
-          </p>
-        </div>
-
-        <div className="flex flex-wrap items-center gap-3">
-          {/* Format Seçimi */}
-          <div className="flex items-center bg-slate-950 rounded-xl p-1 border border-slate-800 text-xs font-semibold">
-            <span className="text-slate-500 px-2 select-none">Format:</span>
-            <button
-              onClick={() => setCopyFormat('newline')}
-              className={`px-2.5 py-1 rounded-lg transition-all cursor-pointer ${copyFormat === 'newline' ? 'bg-slate-800 text-white font-bold shadow-sm' : 'text-slate-400 hover:text-slate-200'}`}
-              title="Her ID ayrı satırda"
-            >
-              Alt Alta
-            </button>
-            <button
-              onClick={() => setCopyFormat('comma')}
-              className={`px-2.5 py-1 rounded-lg transition-all cursor-pointer ${copyFormat === 'comma' ? 'bg-slate-800 text-white font-bold shadow-sm' : 'text-slate-400 hover:text-slate-200'}`}
-              title="Virgülle yan yana (id1, id2)"
-            >
-              Virgüllü
-            </button>
-            <button
-              onClick={() => setCopyFormat('json')}
-              className={`px-2.5 py-1 rounded-lg transition-all cursor-pointer ${copyFormat === 'json' ? 'bg-slate-800 text-white font-bold shadow-sm' : 'text-slate-400 hover:text-slate-200'}`}
-              title='JSON dizisi formatında ["id1", "id2"]'
-            >
-              JSON
-            </button>
-          </div>
-
-          {/* Ana Buton: Bütün Hatalı + Mükerrer ID'leri Kopyala */}
-          <button
-            onClick={() => copyAllIds([...reports, ...duplicates], 'all_problematic')}
-            disabled={badAndDupCount === 0}
-            className="bg-gradient-to-r from-rose-600 via-amber-600 to-sky-600 hover:from-rose-500 hover:via-amber-500 hover:to-sky-500 disabled:opacity-40 text-white px-4.5 py-2.5 rounded-xl text-xs sm:text-sm font-bold shadow-lg transition-all flex items-center gap-2 cursor-pointer disabled:cursor-not-allowed"
-            title="Tüm hatalı ve kopya bildirilen soruların ID'lerini panoya kopyala"
-          >
-            <i className={bulkCopiedLabel === 'all_problematic' ? "fa-solid fa-check text-white" : "fa-solid fa-copy"}></i>
-            <span>
-              {bulkCopiedLabel === 'all_problematic' 
-                ? "Tüm ID'ler Panoya Kopyalandı!" 
-                : `Tüm Hatalı + Kopya ID'leri Kopyala (${badAndDupCount})`}
-            </span>
-          </button>
-        </div>
       </div>
 
       {/* 1. KULLANICI GERİ BİLDİRİMLERİ TABLOSU */}
@@ -338,56 +267,7 @@ export default function AdminReports() {
         </div>
       </section>
 
-      {/* 3. KOPYA / MÜKERRER SORULAR TABLOSU */}
-      <section>
-        <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
-          <h2 className="text-xl font-bold text-sky-400 flex items-center gap-2">
-            <i className="fa-solid fa-clone"></i> Mükerrer / Kopya Bildirilen Sorular ({duplicates.length})
-          </h2>
-          {duplicates.length > 0 && (
-            <button
-              onClick={() => copyAllIds(duplicates, 'duplicates')}
-              className="bg-sky-950/60 hover:bg-sky-900 border border-sky-800/80 text-sky-300 hover:text-white px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 shadow-sm cursor-pointer"
-              title="Tüm mükerrer soru ID'lerini panoya kopyala"
-            >
-              <i className={bulkCopiedLabel === 'duplicates' ? "fa-solid fa-check text-emerald-400" : "fa-regular fa-copy"}></i>
-              <span>{bulkCopiedLabel === 'duplicates' ? "Kopyalandı!" : `Tüm Kopya ID'leri Kopyala (${[...new Set(duplicates.map(r => r.questionId).filter(Boolean))].length})`}</span>
-            </button>
-          )}
-        </div>
-        <div className="bg-slate-900 border border-slate-700 rounded-xl overflow-x-auto shadow-xl">
-          <table className="w-full text-left text-sm text-slate-300 min-w-[800px]">
-            <thead className="bg-slate-800 text-slate-100">
-              <tr>
-                <th className="p-4 w-40">Tarih</th>
-                <th className="p-4 w-48">Kullanıcı</th>
-                <th className="p-4">Soru ID & Metni</th>
-                <th className="p-4 text-right w-32">İşlem</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-slate-800">
-              {duplicates.length === 0 && <tr><td colSpan="4" className="p-8 text-center text-slate-500 font-medium">Mükerrer soru bildirimi yok.</td></tr>}
-              {duplicates.map(dup => (
-                <tr key={dup.id} className="hover:bg-slate-800/50 transition-colors">
-                  <td className="p-4 text-slate-400 whitespace-nowrap">{new Date(dup.timestamp).toLocaleString('tr-TR')}</td>
-                  <td className="p-4 text-sky-300 font-medium truncate max-w-[12rem]" title={dup.userEmail}>{dup.userEmail}</td>
-                  <td className="p-4">
-                    {renderQuestionId(dup.questionId)}
-                    <span className="font-medium text-slate-200">{dup.questionNl}</span>
-                  </td>
-                  <td className="p-4 text-right">
-                    <button onClick={() => deleteItem("reported_questions", dup.id)} className="bg-sky-950/40 text-sky-400 border border-sky-900/50 hover:bg-sky-600 hover:text-white hover:border-sky-500 px-3 py-1.5 rounded-lg transition-all text-xs font-bold shadow-sm whitespace-nowrap cursor-pointer">
-                      İncelendi / Sil
-                    </button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      {/* 4. İYİ / KALİTELİ OLARAK İŞARETLENEN SORULAR TABLOSU */}
+      {/* 3. İYİ / KALİTELİ OLARAK İŞARETLENEN SORULAR TABLOSU */}
       <section>
         <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
           <h2 className="text-xl font-bold text-emerald-400 flex items-center gap-2">

@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { quizQuestions } from '../data/quizData';
-import { auth, toggleReportQuestion, toggleDuplicateQuestion, toggleGoodQuestion } from '../firebase'; 
+import { auth, toggleReportQuestion, toggleGoodQuestion } from '../firebase'; 
 
 export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
   const { lang } = useLanguage();
@@ -37,7 +37,6 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
   const [sessionScore, setSessionScore] = useState({ correct: 0, incorrect: 0, skipped: 0 });
   const [wrongTagsCloud, setWrongTagsCloud] = useState({}); 
   const [reportedQuestions, setReportedQuestions] = useState(() => JSON.parse(localStorage.getItem('reportedQuestions')) || {}); 
-  const [duplicateQuestions, setDuplicateQuestions] = useState(() => JSON.parse(localStorage.getItem('duplicateQuestions')) || {}); 
   const [goodQuestions, setGoodQuestions] = useState(() => JSON.parse(localStorage.getItem('goodQuestions')) || {}); 
 
   useEffect(() => {
@@ -79,7 +78,6 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
   const currentQ = deck[currentIndex];
   const qHistory = currentQ ? quizHistory[currentQ.id] || { correct: 0, incorrect: 0 } : null;
   const isReported = currentQ ? !!reportedQuestions[currentQ.id] : false;
-  const isDuplicate = currentQ ? !!duplicateQuestions[currentQ.id] : false;
   const isGood = currentQ ? !!goodQuestions[currentQ.id] : false;
 
   useEffect(() => {
@@ -145,31 +143,6 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
       alert(isTr 
         ? "Soru bildirilirken bir hata oluştu. Lütfen bağlantınızı veya izinleri kontrol edin." 
         : "An error occurred while reporting. Please check your connection."
-      );
-    }
-  };
-
-  const handleDuplicateToggle = async () => {
-    if (!currentQ) return;
-    if (!auth.currentUser) {
-      alert(isTr ? "Kopya soru bildirmek için giriş yapmalısınız." : "You must be logged in to report a duplicate question.");
-      return;
-    }
-
-    const newStatus = !isDuplicate;
-    
-    try {
-      await toggleDuplicateQuestion(currentQ, auth.currentUser, newStatus);
-      
-      const updatedDuplicates = { ...duplicateQuestions, [currentQ.id]: newStatus };
-      setDuplicateQuestions(updatedDuplicates);
-      localStorage.setItem('duplicateQuestions', JSON.stringify(updatedDuplicates));
-
-    } catch (error) {
-      console.error(error);
-      alert(isTr 
-        ? "Kopya soru bildirilirken bir hata oluştu. Lütfen bağlantınızı veya izinleri kontrol edin." 
-        : "An error occurred while reporting duplicate. Please check your connection."
       );
     }
   };
@@ -597,15 +570,6 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
                 className={`w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center text-sm sm:text-base transition-colors rounded-lg hover:bg-slate-700/70 cursor-pointer ${isGood ? 'text-emerald-400 bg-emerald-950/40 border border-emerald-800/50' : 'text-slate-400 hover:text-emerald-400'}`}
               >
                 <i className={isGood ? "fa-solid fa-thumbs-up" : "fa-regular fa-thumbs-up"}></i>
-              </button>
-
-              {/* Mükerrer / Kopya Soru */}
-              <button 
-                onClick={handleDuplicateToggle}
-                title={isTr ? (isDuplicate ? "Kopya Soru (İşareti Kaldır)" : "Kopya / Mükerrer Soru Bildir") : (isDuplicate ? "Remove Duplicate Mark" : "Mark as Duplicate Question")}
-                className={`w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center text-sm sm:text-base transition-colors rounded-lg hover:bg-slate-700/70 cursor-pointer ${isDuplicate ? 'text-sky-400 bg-sky-950/40 border border-sky-800/50' : 'text-slate-400 hover:text-sky-400'}`}
-              >
-                <i className={isDuplicate ? "fa-solid fa-clone" : "fa-regular fa-clone"}></i>
               </button>
 
               {/* Hatalı Soru Bildir */}

@@ -133,32 +133,6 @@ export const toggleReportQuestion = async (question, user, isReporting) => {
   }
 };
 
-// YENİ: Mükerrer / Kopya Soruyu Bildirme veya Geri Alma
-export const toggleDuplicateQuestion = async (question, user, isDuplicate) => {
-  if (!user) throw new Error("Kullanıcı bulunamadı"); 
-  
-  const docId = `${question.id}_${user.uid}_duplicate`;
-  const docRef = doc(db, "reported_questions", docId);
-  
-  try {
-    if (isDuplicate) {
-      await setDoc(docRef, {
-        questionId: question.id || "ID Yok",
-        questionNl: question.questionNl || "Soru metni yok",
-        tags: question.tags || [],
-        userId: user.uid,
-        userEmail: user.email || "Email belirtilmemiş",
-        reportType: "duplicate",
-        timestamp: new Date().toISOString()
-      });
-    } else {
-      await deleteDoc(docRef);
-    }
-  } catch (err) {
-    console.error("Kopya soru bildirim hatası (Firebase):", err);
-    throw err;
-  }
-};
 
 // YENİ: İyi / Kaliteli Soruyu İşaretleme veya Geri Alma
 export const toggleGoodQuestion = async (question, user, isGood) => {
