@@ -109,13 +109,14 @@ export const chapters6_10 = [
     "options": [
       "met een lepel",
       "met een vork",
-      "met een mes"
+      "met een mes",
+      "geen van deze"
     ],
     "correctAnswer": "met een lepel",
     "explanationTr": "Çorba kaşıkla (met een lepel) içilir/yenir.",
     "explanationEn": "Soup is eaten with a spoon (met een lepel).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch6_009",
@@ -150,13 +151,14 @@ export const chapters6_10 = [
     "options": [
       "mosterdsoep en spaanse salade",
       "biefstuk met frietjes",
-      "kip met rijst"
+      "kip met rijst",
+      "biefstuk met frietjeser"
     ],
     "correctAnswer": "mosterdsoep en spaanse salade",
     "explanationTr": "Başlangıç olarak hardal çorbası ve İspanyol salatası alırlar.",
     "explanationEn": "They take mustard soup and Spanish salad as starters.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch6_011",
@@ -170,13 +172,14 @@ export const chapters6_10 = [
     "options": [
       "biefstuk met frietjes",
       "spaanse salade",
-      "mosterdsoep"
+      "mosterdsoep",
+      "biefstuk met frietjeser"
     ],
     "correctAnswer": "biefstuk met frietjes",
     "explanationTr": "Ana yemek olarak patates kızartmalı biftek (biefstuk met frietjes) seçer.",
     "explanationEn": "Jasper takes steak with fries (biefstuk met frietjes) as main course.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch6_013",
@@ -220,13 +223,14 @@ export const chapters6_10 = [
     "options": [
       "Hoe vind je de soep? / Wat vind je van de soep?",
       "Waar is de soep?",
-      "Wie drinkt de soep?"
+      "Wie drinkt de soep?",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Hoe vind je de soep? / Wat vind je van de soep?",
     "explanationTr": "Bir şey hakkındaki fikri sormak için 'Hoe vind je...?' veya 'Wat vind je van...?' kalıpları kullanılır.",
     "explanationEn": "To ask someone's opinion, you use 'Hoe vind je...?' or 'Wat vind je van...?'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch6_018",
@@ -269,13 +273,14 @@ export const chapters6_10 = [
     "options": [
       "Ja, ik houd van kip.",
       "Nee, ik houd van kip.",
-      "Ik vind het stom."
+      "Ik vind het stom.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Ja, ik houd van kip.",
     "explanationTr": "Tavuk sevdiğinizi onaylamak için 'Ja, ik houd van kip' denir.",
     "explanationEn": "To confirm that you like chicken, you say 'Ja, ik houd van kip'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch6_021",
@@ -289,13 +294,14 @@ export const chapters6_10 = [
     "options": [
       "Het gaat wel.",
       "Ik vind het heerlijk.",
-      "Ik vind het vies."
+      "Ik vind het vies.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Het gaat wel.",
     "explanationTr": "'Het gaat wel' orta karar, idare eder anlamına gelen tarafsız/negatifimsi bir yanıttır.",
     "explanationEn": "'Het gaat wel' means so so.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch6_023",
@@ -325,13 +331,14 @@ export const chapters6_10 = [
     "options": [
       "Nee, ik houd niet van mosselen.",
       "Ja, ik houd van mosselen.",
-      "Ik vind mosselen lekker."
+      "Ik vind mosselen lekker.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Nee, ik houd niet van mosselen.",
     "explanationTr": "Sevmediğini belirtmek için 'Nee, ik houd niet van...' kalıbı kullanılır.",
     "explanationEn": "To state you dislike something, use 'Nee, ik houd niet van...'.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch6_030",
@@ -510,13 +517,14 @@ export const chapters6_10 = [
     "options": [
       "tomaten en sinaasappels",
       "boeken en pennen",
-      "auto's en motoren"
+      "auto's en motoren",
+      "boeken en pennde"
     ],
     "correctAnswer": "tomaten en sinaasappels",
     "explanationTr": "Özet sayfasının tepesindeki market tekrarında domates ve portakal örnekleri verilir.",
     "explanationEn": "The market repetition at the top of the summary mentions tomatoes and oranges.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch6_042",
@@ -529,13 +537,14 @@ export const chapters6_10 = [
     "options": [
       "Hoeveel is het? / Hoeveel kost het?",
       "Waar woon je?",
-      "Wie ben jij?"
+      "Wie ben jij?",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Hoeveel is het? / Hoeveel kost het?",
     "explanationTr": "Fiyat sormak için 'Hoeveel is het?' veya 'Hoeveel kost het?' denir.",
     "explanationEn": "To ask for a price, you say 'Hoeveel is het?' or 'Hoeveel kost het?'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch6_044",
@@ -562,13 +571,14 @@ export const chapters6_10 = [
     "options": [
       "Jasper en Christine",
       "Alleen Jasper",
-      "De serveerster"
+      "De serveerster",
+      "Jasper en Christineer"
     ],
     "correctAnswer": "Jasper en Christine",
     "explanationTr": "Diyalogda hem Jasper'in hem de Christine'in mineraalwater içtiği yazar.",
     "explanationEn": "The dialogue states that both Jasper and Christine drink mineral water.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch6_046",
@@ -611,7 +621,8 @@ export const chapters6_10 = [
     "options": [
       "Houd je van kip?",
       "Wat is kip?",
-      "Waar is de kip?"
+      "Waar is de kip?",
+      "Hoeveel kost de kip?"
     ],
     "correctAnswer": "Houd je van kip?",
     "explanationTr": "Bir şeyden hoşlanıp hoşlanmadığını sormak için 'Houd je van...?' kalıbı kullanılır.",
@@ -645,13 +656,14 @@ export const chapters6_10 = [
     "options": [
       "Hoe was jouw dag vandaag?",
       "Hoe gaat het met jou?",
-      "Wat heb je vandaag gedaan?"
+      "Wat heb je vandaag gedaan?",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Hoe was jouw dag vandaag?",
     "explanationTr": "'Bugünkü günün nasıl geçti?' sorusu 'Hoe was jouw dag vandaag?' olarak sorulur.",
     "explanationEn": "'How was your day today?' translates to 'Hoe was jouw dag vandaag?'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_002",
@@ -834,13 +846,14 @@ export const chapters6_10 = [
     "options": [
       "blouse and button-up shirt",
       "dress and skirt",
-      "shoes and suit"
+      "shoes and suit",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "blouse and button-up shirt",
     "explanationTr": "'de bloes' bluz, 'het overhemd' ise düğmeli gömlek (button-up shirt) demektir.",
     "explanationEn": "'de bloes' is a blouse and 'het overhemd' is a button-up shirt.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_019",
@@ -854,13 +867,14 @@ export const chapters6_10 = [
     "options": [
       "skirt and dress",
       "coat and jacket",
-      "pants and jeans"
+      "pants and jeans",
+      "geen van deze"
     ],
     "correctAnswer": "skirt and dress",
     "explanationTr": "'de rok' etek, 'de jurk' ise elbise demektir.",
     "explanationEn": "'de rok' is a skirt and 'de jurk' is a dress.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_020",
@@ -874,13 +888,14 @@ export const chapters6_10 = [
     "options": [
       "coat/jacket, shoes, and suit",
       "shirt, skirt, blouse",
-      "trousers, sweater, t-shirt"
+      "trousers, sweater, t-shirt",
+      "coat/jacket, shoes, and suiter"
     ],
     "correctAnswer": "coat/jacket, shoes, and suit",
     "explanationTr": "'de jas' mont/ceket, 'de schoenen' ayakkabılar, 'het pak' ise takım elbisedir.",
     "explanationEn": "'de jas' is coat/jacket, 'de schoenen' are shoes, and 'het pak' is the suit.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_021",
@@ -894,13 +909,14 @@ export const chapters6_10 = [
     "options": [
       "She is in the clothing shop to buy jeans.",
       "She is in a restaurant to eat soup.",
-      "She is at home to study Dutch."
+      "She is at home to study Dutch.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "She is in the clothing shop to buy jeans.",
     "explanationTr": "Sandra kot pantolon almak için giyim mağazasındadır.",
     "explanationEn": "Sandra is in the clothing shop to buy jeans.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_022",
@@ -929,13 +945,14 @@ export const chapters6_10 = [
     "options": [
       "een lichte spijkerbroek, een laag model",
       "een donkere spijkerbroek, een hoog model",
-      "een zwarte spijkerbroek, een strak model"
+      "een zwarte spijkerbroek, een strak model",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "een lichte spijkerbroek, een laag model",
     "explanationTr": "Açık renk ve düşük bel (laag model) bir kot aratmaktadır.",
     "explanationEn": "She is looking for light jeans in a low model.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_024",
@@ -962,13 +979,14 @@ export const chapters6_10 = [
     "options": [
       "Kan ik pinnen?",
       "Contant betalen?",
-      "Mag ik de rekening?"
+      "Mag ik de rekening?",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Kan ik pinnen?",
     "explanationTr": "Kartla ödeme yapmak için 'Kan ik pinnen?' denir.",
     "explanationEn": "To ask to pay by card, you say 'Kan ik pinnen?'.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_031",
@@ -981,13 +999,14 @@ export const chapters6_10 = [
     "options": [
       "klein - kleiner - het kleinst",
       "klein - kleinder - het kleinstst",
-      "klein - more klein - most klein"
+      "klein - more klein - most klein",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "klein - kleiner - het kleinst",
     "explanationTr": "Düzenli sıfatlarda comparatief '-er', superlatief ise '-st' alır: klein - kleiner - het kleinst.",
     "explanationEn": "Regular adjectives take '-er' for comparative and '-st' for superlative: klein - kleiner - het kleinst.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_032",
@@ -1000,13 +1019,14 @@ export const chapters6_10 = [
     "options": [
       "duur - duurder - het duurst",
       "duur - duurer - het duurstst",
-      "duur - more duur - most duur"
+      "duur - more duur - most duur",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "duur - duurder - het duurst",
     "explanationTr": "'duur' sıfatı 'duurder - het duurst' şeklinde düzenli kurala uyar.",
     "explanationEn": "'duur' follows the regular pattern as 'duurder - het duurst'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_033",
@@ -1019,13 +1039,14 @@ export const chapters6_10 = [
     "options": [
       "goed - beter - het best",
       "goed - gooder - het goodst",
-      "goed - meler - het mest"
+      "goed - meler - het mest",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "goed - beter - het best",
     "explanationTr": "'goed' sıfatı düzensizdir: goed - beter - het best.",
     "explanationEn": "'goed' is irregular: goed - beter - het best.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_034",
@@ -1038,13 +1059,14 @@ export const chapters6_10 = [
     "options": [
       "veel - meer - het meest",
       "veel - veelder - het veelst",
-      "veel - minder - het minst"
+      "veel - minder - het minst",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "veel - meer - het meest",
     "explanationTr": "'veel' kelimesinin karşılaştırma halleri 'meer' ve 'het meest'tir.",
     "explanationEn": "The comparative forms for 'veel' are 'meer' and 'het meest'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_035",
@@ -1057,13 +1079,14 @@ export const chapters6_10 = [
     "options": [
       "weinig - minder - het minst",
       "weinig - meer - het meest",
-      "weinig - kleiner - het kleinst"
+      "weinig - kleiner - het kleinst",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "weinig - minder - het minst",
     "explanationTr": "'weinig' kelimesi 'minder' ve 'het minst' olarak çekimlenir.",
     "explanationEn": "'weinig' scales down to 'minder' and 'het minst'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_036",
@@ -1076,13 +1099,14 @@ export const chapters6_10 = [
     "options": [
       "graag - liever - het liefst",
       "graag - graager - het graagst",
-      "graag - beter - het best"
+      "graag - beter - het best",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "graag - liever - het liefst",
     "explanationTr": "'graag' zarfı 'liever' ve 'het liefst' şeklini alır.",
     "explanationEn": "The adverb 'graag' scales to 'liever' and 'het liefst'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_038",
@@ -1223,13 +1247,14 @@ export const chapters6_10 = [
     "options": [
       "hij / hem",
       "het / het",
-      "ze / ze"
+      "ze / ze",
+      "hij / hemer"
     ],
     "correctAnswer": "hij / hem",
     "explanationTr": "De-woord isimlere atıfta bulunurken 'hij / hem' kullanılır.",
     "explanationEn": "When referring to a de-word, we use 'hij / hem'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_048",
@@ -1242,13 +1267,14 @@ export const chapters6_10 = [
     "options": [
       "het / het",
       "hij / hem",
-      "ze / ze"
+      "ze / ze",
+      "het / heter"
     ],
     "correctAnswer": "het / het",
     "explanationTr": "Het-woord isimlere atıfta bulunurken 'het / het' kullanılır.",
     "explanationEn": "When referring to a het-word, we use 'het / het'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_049",
@@ -1261,13 +1287,14 @@ export const chapters6_10 = [
     "options": [
       "ze / ze",
       "hij / hem",
-      "het / het"
+      "het / het",
+      "hij / hemer"
     ],
     "correctAnswer": "ze / ze",
     "explanationTr": "Birden fazla nesneden (çoğul) bahsettiğimizde 'ze / ze' kullanılır.",
     "explanationEn": "When talking about several objects (plural), we use 'ze / ze'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_050",
@@ -1358,13 +1385,14 @@ export const chapters6_10 = [
     "options": [
       "Nee, we zeggen gewoon 'geen'.",
       "Ja, dat is correct.",
-      "Alleen bij de-woorden."
+      "Alleen bij de-woorden.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Nee, we zeggen gewoon 'geen'.",
     "explanationTr": "Hollandacada 'geen een' kullanılmaz. Doğrudan 'geen' denir (Ik heb geen auto).",
     "explanationEn": "We do not say 'geen een' in Dutch, we just say 'geen' (Ik heb geen auto).",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch8_005",
@@ -1453,13 +1481,14 @@ export const chapters6_10 = [
     "options": [
       "Direct voor het substantief (directly before the noun).",
       "Direct na het substantief (directly after the noun).",
-      "Aan het einde van de zin (at the end of the sentence)."
+      "Aan het einde van de zin (at the end of the sentence).",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Direct voor het substantief (directly before the noun).",
     "explanationTr": "'geen' kelimesi her zaman nitelediği ismin hemen BİR ÖNCESİNDE yer alır (Subject + verb + geen + noun).",
     "explanationEn": "'geen' comes directly BEFORE the noun (Subject + verb + geen + noun).",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch8_011",
@@ -1473,13 +1502,14 @@ export const chapters6_10 = [
     "options": [
       "Alleen als het substantief specifiek/bepaald is (met de, het, mijn, jouw, dat, etc.).",
       "Als het substantief meervoud is.",
-      "Als het substantief geen artikel heeft."
+      "Als het substantief geen artikel heeft.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Alleen als het substantief specifiek/bepaald is (met de, het, mijn, jouw, dat, etc.).",
     "explanationTr": "İsimlerin önünde 'niet' SADECE isim belirli (spesifik) olduğunda kullanılır (de, het, benim, senin, bu, şu vb. varsa).",
     "explanationEn": "'niet' is used with nouns ONLY when the noun is specific (preceded by de, het, mijn, jouw, dat, deze, dit, die).",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch8_012",
@@ -1508,13 +1538,14 @@ export const chapters6_10 = [
     "options": [
       "Met 'niet'",
       "Met 'geen'",
-      "Met 'geen een'"
+      "Met 'geen een'",
+      "geen van deze"
     ],
     "correctAnswer": "Met 'niet'",
     "explanationTr": "Fiilleri/eylemleri olumsuz yapmak için daima 'niet' kullanılır.",
     "explanationEn": "To make verbs negative, we always use 'niet'.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch8_014",
@@ -1543,13 +1574,14 @@ export const chapters6_10 = [
     "options": [
       "Met 'niet'",
       "Met 'geen'",
-      "Zonder extra woord"
+      "Zonder extra woord",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Met 'niet'",
     "explanationTr": "Sıfatları (güzel, büyük, iyi vb.) olumsuz yapmak için 'niet' kullanılır.",
     "explanationEn": "To make adjectives negative, 'niet' is used.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch8_016",
@@ -1578,13 +1610,14 @@ export const chapters6_10 = [
     "options": [
       "Met 'niet'",
       "Met 'geen'",
-      "Met 'nergens'"
+      "Met 'nergens'",
+      "geen van deze"
     ],
     "correctAnswer": "Met 'niet'",
     "explanationTr": "Mekan ve yer bildiren ifadeler 'niet' kelimesiyle olumsuz yapılır.",
     "explanationEn": "To make a location or place negative, 'niet' is used.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch8_018",
@@ -1643,13 +1676,14 @@ export const chapters6_10 = [
     "options": [
       "'niet' komt voor (before) het adjectief.",
       "'niet' komt na (after) het adjectief.",
-      "'niet' staat helemaal achteraan de zin."
+      "'niet' staat helemaal achteraan de zin.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "'niet' komt voor (before) het adjectief.",
     "explanationTr": "Sıfatları olumsuz yaparken 'niet' her zaman sıfattan ÖNCE (voor) gelir.",
     "explanationEn": "When negating an adjective, 'niet' comes BEFORE the adjective.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch8_022",
@@ -1708,13 +1742,14 @@ export const chapters6_10 = [
     "options": [
       "'niet' komt meestal voor de plaats (before the place).",
       "'niet' komt meestal na de plaats (after the place).",
-      "'niet' staat aan het begin van de zin."
+      "'niet' staat aan het begin van de zin.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "'niet' komt meestal voor de plaats (before the place).",
     "explanationTr": "Yer bildirirken 'niet' genellikle mekandan/yerden ÖNCE (voor) gelir.",
     "explanationEn": "With a place, 'niet' usually comes BEFORE the place.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch8_026",
@@ -1758,13 +1793,14 @@ export const chapters6_10 = [
     "options": [
       "'niet' komt meestal NA het werkwoord / later in de zin.",
       "'niet' komt VOOR het werkwoord.",
-      "'niet' vervangt het werkwoord."
+      "'niet' vervangt het werkwoord.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "'niet' komt meestal NA het werkwoord / later in de zin.",
     "explanationTr": "Basit fiilleri olumsuz yaparken 'niet' genellikle fiilden SONRA (veya cümlenin sonlarına doğru) gelir.",
     "explanationEn": "With a simple verb, 'niet' usually comes AFTER the verb or later in the sentence.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch8_029",
@@ -1823,13 +1859,14 @@ export const chapters6_10 = [
     "options": [
       "'niet' komt VOOR de informatie die je negatief wilt maken.",
       "'niet' komt NA de informatie die je negatief wilt maken.",
-      "'niet' moet aan het einde staan."
+      "'niet' moet aan het einde staan.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "'niet' komt VOOR de informatie die je negatief wilt maken.",
     "explanationTr": "Ekstra bilgi (örneğin zaman) eklendiğinde, 'niet' olumsuz yapmak istediğiniz bilginin ÖNÜNE konur.",
     "explanationEn": "With extra info, 'niet' comes BEFORE the information you want to make negative.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch8_033",
@@ -1873,43 +1910,56 @@ export const chapters6_10 = [
     "options": [
       "Omdat 'mijn boek' een specifiek substantief is.",
       "Omdat 'boek' een het-woord is.",
-      "Omdat het boek niet bestaat."
+      "Omdat het boek niet bestaat.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Omdat 'mijn boek' een specifiek substantief is.",
     "explanationTr": "'mijn' kelimesi kitabı belirli/spesifik hale getirdiği için 'geen' yerine 'niet' kullanılmalıdır.",
     "explanationEn": "Because 'mijn' makes the book specific, 'niet' must be used instead of 'geen'.",
     "difficulty": 5,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch8_038",
-    "type": "fill_in",
+    "type": "multiple_choice",
     "tags": [
       "summary_ch8",
       "negation",
       "niet_vs_geen"
     ],
-    "questionNl": "Ik lees ___ (niet/geen) boek. (I am not reading a book).",
+    "questionNl": "Ik lees ___ boek. (I am not reading a book).",
     "correctAnswer": "geen",
     "explanationTr": "Belirsiz bir isim olan 'boek', 'geen' ile olumsuzlanır.",
     "explanationEn": "The indefinite noun 'boek' is negated with 'geen'.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2,
+    "options": [
+      "geen",
+      "niet",
+      "geen een",
+      "niets"
+    ]
   },
   {
     "id": "sum_ch8_039",
-    "type": "fill_in",
+    "type": "multiple_choice",
     "tags": [
       "summary_ch8",
       "negation",
       "niet_vs_geen"
     ],
-    "questionNl": "Ik lees ___ (niet/geen) het boek. (I am not reading the book).",
+    "questionNl": "Ik lees ___ het boek. (I am not reading the book).",
     "correctAnswer": "niet",
     "explanationTr": "'het boek' belirli artikeliyle spesifiktir, bu yüzden 'niet' alır.",
     "explanationEn": "'het boek' is specific with its definite article, so it takes 'niet'.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2,
+    "options": [
+      "niet",
+      "geen",
+      "nooit",
+      "niets"
+    ]
   },
   {
     "id": "sum_ch8_040",
@@ -1953,13 +2003,14 @@ export const chapters6_10 = [
     "options": [
       "Zij drinkt geen thee.",
       "Zij drinkt niet thee.",
-      "Zij drinkt thee niet."
+      "Zij drinkt thee niet.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Zij drinkt geen thee.",
     "explanationTr": "'thee' sayılamayan belirsiz bir isimdir, bu yüzden 'geen' (hiç çay) kullanılır.",
     "explanationEn": "'thee' is an uncountable indefinite noun, so 'geen' (no tea) is used.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch8_044",
@@ -2009,19 +2060,25 @@ export const chapters6_10 = [
   },
   {
     "id": "sum_ch8_047",
-    "type": "fill_in",
+    "type": "multiple_choice",
     "tags": [
       "summary_ch8",
       "negation",
       "niet_vs_geen",
       "word_order"
     ],
-    "questionNl": "Wij slapen ___ (niet/geen).",
+    "questionNl": "Wij slapen ___.",
     "correctAnswer": "niet",
     "explanationTr": "Basit bir eylemi ('slapen') olumsuz yaparken fiilin ardına 'niet' konur.",
     "explanationEn": "To negate a simple action ('slapen'), 'niet' is placed after the verb.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2,
+    "options": [
+      "niet",
+      "geen",
+      "nooit",
+      "niets"
+    ]
   },
   {
     "id": "sum_ch8_048",
@@ -2035,13 +2092,14 @@ export const chapters6_10 = [
     "options": [
       "Ik heb geen tijd.",
       "Ik heb niet tijd.",
-      "Ik heb tijd niet."
+      "Ik heb tijd niet.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Ik heb geen tijd.",
     "explanationTr": "'tijd' (zaman) kelimesi belirsiz bir isimdir, bu yüzden 'geen tijd' denir.",
     "explanationEn": "'tijd' (time) is an indefinite noun, so 'geen tijd' is used.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_001",
@@ -2055,13 +2113,14 @@ export const chapters6_10 = [
     "options": [
       "Als de focus op het werkwoord ligt (bijv. Ik kan dan niet).",
       "Als de focus op een zelfstandig naamwoord ligt.",
-      "Als er 'een' voor het woord staat."
+      "Als er 'een' voor het woord staat.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Als de focus op het werkwoord ligt (bijv. Ik kan dan niet).",
     "explanationTr": "Özet kurallarına göre odak fiil üzerinde olduğunda 'niet' kullanılır.",
     "explanationEn": "According to the summary rules, when the focus is on a verb, we use 'niet'.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_002",
@@ -2075,13 +2134,14 @@ export const chapters6_10 = [
     "options": [
       "Omdat de focus op het adjectief (sıfat) ligt.",
       "Omdat 'huis' een onbepaald naamwoord is.",
-      "Omdat het een plaatsaanduiding is."
+      "Omdat het een plaatsaanduiding is.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Omdat de focus op het adjectief (sıfat) ligt.",
     "explanationTr": "Cümledeki odak 'mooi' sıfatı üzerinde olduğu için 'niet' kullanılmıştır.",
     "explanationEn": "Because the focus in the sentence is on the adjective 'mooi', 'niet' is used.",
     "difficulty": 5,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_003",
@@ -2095,13 +2155,14 @@ export const chapters6_10 = [
     "options": [
       "Omdat de focus op het substantief ligt met 'een' of niets ervoor, dus gebruiken we 'geen'.",
       "Omdat 'hond' een adjectief is.",
-      "Omdat het om een locatie gaat."
+      "Omdat het om een locatie gaat.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Omdat de focus op het substantief ligt met 'een' of niets ervoor, dus gebruiken we 'geen'.",
     "explanationTr": "İsimden önce 'een' veya hiçbir şey olmadığında isim odaklı olumsuzlama için 'geen' tercih edilir.",
     "explanationEn": "When the focus is on a noun with 'een' or nothing before it, we use 'geen'.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_004",
@@ -2115,13 +2176,14 @@ export const chapters6_10 = [
     "options": [
       "Omdat de focus op een locatie / plaats ligt.",
       "Omdat 'Amsterdam' een onbepaald naamwoord is.",
-      "Omdat het een werkwoord is."
+      "Omdat het een werkwoord is.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Omdat de focus op een locatie / plaats ligt.",
     "explanationTr": "Konum/yer (location) bildiren durumlarda 'niet' kullanılır.",
     "explanationEn": "When the focus is on a location or place, we use 'niet'.",
     "difficulty": 5,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_005",
@@ -2135,13 +2197,14 @@ export const chapters6_10 = [
     "options": [
       "Als er specifieke woorden voor staan zoals de, het, deze, die, mijn, jouw, haar, etc.",
       "Als het woord in het meervoud staat.",
-      "Als er geen artikel aanwezig is."
+      "Als er geen artikel aanwezig is.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Als er specifieke woorden voor staan zoals de, het, deze, die, mijn, jouw, haar, etc.",
     "explanationTr": "İsimden önce de, het, mijn, jouw, haar gibi belirli/spesifik kelimeler varsa 'niet' kullanılır.",
     "explanationEn": "When specific words like de, het, deze, die, mijn, jouw, haar, etc., precede the noun, we use 'niet'.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_025",
@@ -2155,13 +2218,14 @@ export const chapters6_10 = [
     "options": [
       "Wat is er aan de hand?",
       "Wat bent u aan het doen?",
-      "Waar is de apotheek?"
+      "Waar is de apotheek?",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Wat is er aan de hand?",
     "explanationTr": "Hekimin sorun nedir anlamında sorduğu soru 'Wat is er aan de hand?'dir.",
     "explanationEn": "The doctor's question for 'What's wrong?' is 'Wat is er aan de hand?'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_027",
@@ -2175,13 +2239,14 @@ export const chapters6_10 = [
     "options": [
       "Hoelang hebt u die / dat al?",
       "Wanneer is dat begonnen?",
-      "Waar hebt u pijn?"
+      "Waar hebt u pijn?",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Hoelang hebt u die / dat al?",
     "explanationTr": "Şikayetin ne süredir var olduğunu sormak için 'Hoelang hebt u die/dat al?' kullanılır.",
     "explanationEn": "To ask 'How long have you had them/it?', you use 'Hoelang hebt u die / dat al?'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_029",
@@ -2195,13 +2260,14 @@ export const chapters6_10 = [
     "options": [
       "Waar hebt u pijn?",
       "Wat is er aan de hand?",
-      "Hebt u koorts?"
+      "Hebt u koorts?",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Waar hebt u pijn?",
     "explanationTr": "Ağrının yerini sormak için 'Waar hebt u pijn?' denir.",
     "explanationEn": "To ask 'Where does it hurt?', use 'Waar hebt u pijn?'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_031",
@@ -2215,13 +2281,14 @@ export const chapters6_10 = [
     "options": [
       "06.00 - 12.00",
       "12.00 - 18.00",
-      "18.00 - 24.00"
+      "18.00 - 24.00",
+      "geen van deze"
     ],
     "correctAnswer": "06.00 - 12.00",
     "explanationTr": "Özet tablosuna göre 'de ochtend' 06:00 ile 12:00 arasını kapsar.",
     "explanationEn": "According to the summary table, 'de ochtend' covers 06:00 to 12:00.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_032",
@@ -2235,13 +2302,14 @@ export const chapters6_10 = [
     "options": [
       "12.00 - 18.00",
       "06.00 - 12.00",
-      "00.00 - 06.00"
+      "00.00 - 06.00",
+      "geen van deze"
     ],
     "correctAnswer": "12.00 - 18.00",
     "explanationTr": "'de middag' 12:00 ile 18:00 saatleri arasındadır.",
     "explanationEn": "'de middag' covers 12:00 to 18:00.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_033",
@@ -2255,13 +2323,14 @@ export const chapters6_10 = [
     "options": [
       "18.00 - 24.00",
       "12.00 - 18.00",
-      "06.00 - 12.00"
+      "06.00 - 12.00",
+      "geen van deze"
     ],
     "correctAnswer": "18.00 - 24.00",
     "explanationTr": "'de avond' 18:00 ile 24:00 saatleri arasındadır.",
     "explanationEn": "'de avond' covers 18:00 to 24:00.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_036",
@@ -2275,13 +2344,14 @@ export const chapters6_10 = [
     "options": [
       "gewerkt",
       "gewerkd",
-      "gewerken"
+      "gewerken",
+      "gewerkte"
     ],
     "correctAnswer": "gewerkt",
     "explanationTr": "'werken' kökü 'werk' ile biter; 'k' harfi 'soft ketchup' kuralında olduğu için sonuna 't' alır: gewerkt.",
     "explanationEn": "The stem of 'werken' is 'werk'. 'k' is in 'soft ketchup', so it takes a 't': gewerkt.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_037",
@@ -2295,13 +2365,14 @@ export const chapters6_10 = [
     "options": [
       "gerend",
       "gerent",
-      "gerennen"
+      "gerennen",
+      "gerennde"
     ],
     "correctAnswer": "gerend",
     "explanationTr": "'rennen' kökü 'ren' ile biter; 'n' harfi 'soft ketchup' içinde olmadığı için sonuna 'd' alır: gerend.",
     "explanationEn": "The stem of 'rennen' is 'ren'. 'n' is not in 'soft ketchup', so it takes a 'd': gerend.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_038",
@@ -2315,13 +2386,14 @@ export const chapters6_10 = [
     "options": [
       "Wanneer de laatste letter van de stam in de ezelsbrug 'soft ketchup' (s, f, t, k, c, h, p) zit.",
       "Wanneer het werkwoord onregelmatig is.",
-      "Wanneer het werkwoord een prefix heeft."
+      "Wanneer het werkwoord een prefix heeft.",
+      "Je gebruikt stam + d."
     ],
     "correctAnswer": "Wanneer de laatste letter van de stam in de ezelsbrug 'soft ketchup' (s, f, t, k, c, h, p) zit.",
     "explanationTr": "Kökün son harfi soft ketchup ünsüzlerinden biriyse 't', aksi takdirde 'd' alır.",
     "explanationEn": "When the last letter of the stem is in the mnemonic 'soft ketchup', we add a 't'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_040",
@@ -2335,13 +2407,14 @@ export const chapters6_10 = [
     "options": [
       "Ik ben gegaan.",
       "Ik heb gegaan.",
-      "Ik zijn gegaan."
+      "Ik zijn gegaan.",
+      "geen van deze"
     ],
     "correctAnswer": "Ik ben gegaan.",
     "explanationTr": "'gaan' yönelme/hareket bildirdiği için 'zijn' ile çekimlenir: Ik ben gegaan.",
     "explanationEn": "'gaan' implies movement, so it uses 'zijn': Ik ben gegaan.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_041",
@@ -2355,13 +2428,14 @@ export const chapters6_10 = [
     "options": [
       "Time (when) - Manner (how) - Place (where)",
       "Tense - Mood - Person",
-      "Topic - Meaning - Pronunciation"
+      "Topic - Meaning - Pronunciation",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Time (when) - Manner (how) - Place (where)",
     "explanationTr": "TeMPo kuralı sırasıyla Zaman (Time), Tarz (Manner) ve Yer/Mekan (Place) sıralamasını ifade eder.",
     "explanationEn": "TeMPo stands for Time (when) - Manner (how) - Place (where).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_043",
@@ -2375,13 +2449,14 @@ export const chapters6_10 = [
     "options": [
       "Op zijn armen, benen, buik en rug",
       "Alleen op zijn gezicht",
-      "Op zijn handen en voeten"
+      "Op zijn handen en voeten",
+      "Op zijn handen en voette"
     ],
     "correctAnswer": "Op zijn armen, benen, buik en rug",
     "explanationTr": "Notlara göre hastanın kollarında, bacaklarında, karnında ve sırtında kabarcıklar vardır.",
     "explanationEn": "According to the notes, he has bumps on his arms, legs, belly, and back.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_044",
@@ -2395,13 +2470,14 @@ export const chapters6_10 = [
     "options": [
       "Sinds gisteravond",
       "Sinds twee weken",
-      "Sinds vanochtend"
+      "Sinds vanochtend",
+      "Sinds twee wekte"
     ],
     "correctAnswer": "Sinds gisteravond",
     "explanationTr": "Meneer Smit'in şikayetleri dün akşamdan (sinds gisteravond) beri başlamıştır.",
     "explanationEn": "Mr. Smit's complaints started yesterday evening ('sinds gisteravond').",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_049",
@@ -2415,13 +2491,14 @@ export const chapters6_10 = [
     "options": [
       "Nee, nooit.",
       "Ja, altijd.",
-      "Alleen in het meervoud."
+      "Alleen in het meervoud.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Nee, nooit.",
     "explanationTr": "Altın kural: be-, ge-, her-, ver-, ont- ile başlayan fiiller perfectumda başına ekstra 'ge-' almaz.",
     "explanationEn": "Golden rule: verbs starting with be-, ge-, her-, ver-, ont- do not take an extra 'ge-' in the perfectum.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_050",
@@ -2435,13 +2512,14 @@ export const chapters6_10 = [
     "options": [
       "heb besteld",
       "heb gebesteld",
-      "ben besteld"
+      "ben besteld",
+      "geen van deze"
     ],
     "correctAnswer": "heb besteld",
     "explanationTr": "'bestellen' fiili 'be-' ile başladığı için 'ge-' almaz ve düzenli kuralla 'besteld' olur.",
     "explanationEn": "Since 'bestellen' starts with 'be-', it does not take 'ge-' and forms 'besteld'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_001",
@@ -2455,13 +2533,14 @@ export const chapters6_10 = [
     "options": [
       "'Bedoelen' is voor wat een persoon wil zeggen (intend), 'betekenen' is voor de betekenis van een woord of situatie (mean).",
       "'Bedoelen' is voor woorden, 'betekenen' is voor personen.",
-      "Er is geen verschil, ze betekenen hetzelfde."
+      "Er is geen verschil, ze betekenen hetzelfde.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "'Bedoelen' is voor wat een persoon wil zeggen (intend), 'betekenen' is voor de betekenis van een woord of situatie (mean).",
     "explanationTr": "'Bedoelen' bir kişinin ne demek/kastetmek istediğini (intend) ifade ederken, 'betekenen' bir kelimenin, işaretin veya durumun anlamını (mean) ifade eder.",
     "explanationEn": "'Bedoelen' expresses what a person intends to say, while 'betekenen' refers to the meaning of a word, sign, or situation.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_002",
@@ -2475,13 +2554,14 @@ export const chapters6_10 = [
     "options": [
       "betekent",
       "bedoelt",
-      "begrijpt"
+      "begrijpt",
+      "gebetekent"
     ],
     "correctAnswer": "betekent",
     "explanationTr": "Bir kelimenin anlamını sorarken 'betekenen' (anlamına gelmek) fiili kullanılır.",
     "explanationEn": "When asking for the meaning of a word, the verb 'betekenen' (to mean) is used.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_003",
@@ -2495,13 +2575,14 @@ export const chapters6_10 = [
     "options": [
       "bedoelt",
       "betekent",
-      "verstaat"
+      "verstaat",
+      "gebedoelt"
     ],
     "correctAnswer": "bedoelt",
     "explanationTr": "Bir kişinin ne kastettiğini sorarken 'bedoelen' (kastetmek/demek istemek) fiili kullanılır.",
     "explanationEn": "When asking what a person intends to say, the verb 'bedoelen' (to intend/mean) is used.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_004",
@@ -2515,13 +2596,14 @@ export const chapters6_10 = [
     "options": [
       "'Verstaan' betekent dat je iemand fysiek hoort, 'begrijpen' betekent dat je de betekenis snapt.",
       "'Verstaan' is voor de betekenis, 'begrijpen' is voor het horen.",
-      "Het zijn synoniemen."
+      "Het zijn synoniemen.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "'Verstaan' betekent dat je iemand fysiek hoort, 'begrijpen' betekent dat je de betekenis snapt.",
     "explanationTr": "'Verstaan' fiziksel olarak sesi duymak ve ayırt etmek, 'begrijpen' ise duyulan şeyin anlamını kavramak (anlamak) demektir.",
     "explanationEn": "'Verstaan' means to physically hear and discern words, while 'begrijpen' means to understand their meaning.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_005",
@@ -2535,13 +2617,14 @@ export const chapters6_10 = [
     "options": [
       "versta",
       "begrijp",
-      "bedoel"
+      "bedoel",
+      "geversta"
     ],
     "correctAnswer": "versta",
     "explanationTr": "Fiziksel olarak iyi duyamadığınızda 'verstaan' fiilini kullanırsınız.",
     "explanationEn": "When you cannot physically hear well, you use the verb 'verstaan'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_006",
@@ -2555,13 +2638,14 @@ export const chapters6_10 = [
     "options": [
       "begrijp",
       "versta",
-      "beteken"
+      "beteken",
+      "betekte"
     ],
     "correctAnswer": "begrijp",
     "explanationTr": "Duyduğunuz kelimelerin anlamını kavrayamadığınızda 'begrijpen' (anlamak) fiilini kullanırsınız.",
     "explanationEn": "When you hear the words but don't know their meaning, you use the verb 'begrijpen' (to understand).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_007",
@@ -2574,13 +2658,14 @@ export const chapters6_10 = [
     "options": [
       "Kunt u het even herhalen?",
       "Wat zegt u?",
-      "Kan u het nog een keer zeggen?"
+      "Kan u het nog een keer zeggen?",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Kunt u het even herhalen?",
     "explanationTr": "'Tekrar edebilir misiniz?' sorusunun tam karşılığı 'Kunt u het even herhalen?' cümlesidir.",
     "explanationEn": "'Can you repeat?' translates precisely to 'Kunt u het even herhalen?'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_009",
@@ -2593,7 +2678,8 @@ export const chapters6_10 = [
     "options": [
       "Hoe heet dat?",
       "Wat zegt u?",
-      "Kunt u het even herhalen?"
+      "Kunt u het even herhalen?",
+      "Hoe laat is het?"
     ],
     "correctAnswer": "Hoe heet dat?",
     "explanationTr": "Bir nesnenin adının ne olduğunu sorarken 'Hoe heet dat?' (Bunun adı ne?) kalıbı kullanılır.",
@@ -2612,13 +2698,14 @@ export const chapters6_10 = [
     "options": [
       "Kan u het nog een keer zeggen?",
       "Wat bedoelt u?",
-      "Kunt u het even herhalen?"
+      "Kunt u het even herhalen?",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Kan u het nog een keer zeggen?",
     "explanationTr": "'Bunu bir kez daha söyleyebilir misiniz?' sorusunun karşılığı 'Kan u het nog een keer zeggen?' cümlesidir.",
     "explanationEn": "'Can you say it again?' translates to 'Kan u het nog een keer zeggen?'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_013",
@@ -2632,13 +2719,14 @@ export const chapters6_10 = [
     "options": [
       "het stuur",
       "het zadel",
-      "de trapper"
+      "de trapper",
+      "geen van deze"
     ],
     "correctAnswer": "het stuur",
     "explanationTr": "Bisiklet gidonu 'het stuur' olarak adlandırılır.",
     "explanationEn": "The handlebar/steering wheel is called 'het stuur'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_014",
@@ -2652,13 +2740,14 @@ export const chapters6_10 = [
     "options": [
       "het zadel",
       "de rem",
-      "de ketting"
+      "de ketting",
+      "geen van deze"
     ],
     "correctAnswer": "het zadel",
     "explanationTr": "Bisiklet selesi 'het zadel'dir.",
     "explanationEn": "'The saddle' translates to 'het zadel'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_015",
@@ -2672,13 +2761,14 @@ export const chapters6_10 = [
     "options": [
       "de bagagedrager",
       "de trapper",
-      "het wiel"
+      "het wiel",
+      "geen van deze"
     ],
     "correctAnswer": "de bagagedrager",
     "explanationTr": "Bisikletin arka tarafındaki eşya taşıyıcı kısma 'de bagagedrager' denir.",
     "explanationEn": "The rear rack or parcel shelf is called 'de bagagedrager'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_017",
@@ -2692,13 +2782,14 @@ export const chapters6_10 = [
     "options": [
       "de rem",
       "de bel",
-      "de band"
+      "de band",
+      "geen van deze"
     ],
     "correctAnswer": "de rem",
     "explanationTr": "Fren Hollandacada 'de rem'dir.",
     "explanationEn": "'The brake' translates to 'de rem'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_018",
@@ -2712,13 +2803,14 @@ export const chapters6_10 = [
     "options": [
       "de bel",
       "het stuur",
-      "het voorlicht"
+      "het voorlicht",
+      "geen van deze"
     ],
     "correctAnswer": "de bel",
     "explanationTr": "Bisiklet zili 'de bel'dir.",
     "explanationEn": "'The bell' translates to 'de bel'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_019",
@@ -2732,13 +2824,14 @@ export const chapters6_10 = [
     "options": [
       "het voorlicht en het achterlicht",
       "de rem en de ketting",
-      "het zadel en het wiel"
+      "het zadel en het wiel",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "het voorlicht en het achterlicht",
     "explanationTr": "Ön lamba 'het voorlicht', arka lamba 'het achterlicht'tir.",
     "explanationEn": "The front light is 'het voorlicht' and the back light is 'het achterlicht'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_020",
@@ -2752,13 +2845,14 @@ export const chapters6_10 = [
     "options": [
       "de ketting",
       "de trapper",
-      "de bagagedrager"
+      "de bagagedrager",
+      "geen van deze"
     ],
     "correctAnswer": "de ketting",
     "explanationTr": "Bisiklet zinciri 'de ketting' kelimesiyle ifade edilir.",
     "explanationEn": "'The chain' translates to 'de ketting'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_021",
@@ -2772,13 +2866,14 @@ export const chapters6_10 = [
     "options": [
       "platypus",
       "ladybug",
-      "bird"
+      "bird",
+      "geplatypus"
     ],
     "correctAnswer": "platypus",
     "explanationTr": "'vogelbekdier' ornitorenk (platypus) demektir.",
     "explanationEn": "'vogelbekdier' translates to 'platypus' in English.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_022",
@@ -2792,13 +2887,14 @@ export const chapters6_10 = [
     "options": [
       "ladybug / dear lord animal",
       "butterfly",
-      "platypus"
+      "platypus",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "ladybug / dear lord animal",
     "explanationTr": "'lieveheersbeestje' uğur böceği (ladybug) demektir. Kelime anlamı 'dear lord animal'dır.",
     "explanationEn": "'lieveheersbeestje' translates to 'ladybug' (literally: dear lord animal).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_023",
@@ -2811,13 +2907,14 @@ export const chapters6_10 = [
     "options": [
       "Wat vervelend!",
       "Wat is er gebeurd?",
-      "Dat is heel slim."
+      "Dat is heel slim.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Wat vervelend!",
     "explanationTr": "Birinin kötü durumuna karşı empati göstermek için 'Wat vervelend!' (Ne kadar can sıkıcı!) denir.",
     "explanationEn": "To express empathy like 'How annoying!' or 'What a pity!', use 'Wat vervelend!'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_024",
@@ -2830,13 +2927,14 @@ export const chapters6_10 = [
     "options": [
       "Wat is er gebeurd?",
       "Wat is kapot?",
-      "Hoe heet dat?"
+      "Hoe heet dat?",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Wat is er gebeurd?",
     "explanationTr": "'Wat is er gebeurd?' cümlesi 'Ne oldu?' anlamına gelir.",
     "explanationEn": "'Wat is er gebeurd?' translates to 'What happened?'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_025",
@@ -2849,13 +2947,14 @@ export const chapters6_10 = [
     "options": [
       "Dat is niet heel slim.",
       "Dat is niet goed.",
-      "Dat is vervelend."
+      "Dat is vervelend.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Dat is niet heel slim.",
     "explanationTr": "'slim' akıllı demektir. 'Dat is niet heel slim' cümlesi 'Bu çok akıllıca değil' anlamına gelir.",
     "explanationEn": "'slim' means smart. 'Dat is niet heel slim' translates to 'That is not very smart'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_026",
@@ -2869,13 +2968,14 @@ export const chapters6_10 = [
     "options": [
       "stam + te/de",
       "stam + ten/den",
-      "stam + en"
+      "stam + en",
+      "stam + ten/dener"
     ],
     "correctAnswer": "stam + te/de",
     "explanationTr": "Düzenli fiillerin tekil şahıs hikaye geçmiş zaman (imperfectum) formunda köke '-te' veya '-de' eklenir.",
     "explanationEn": "For regular verbs in the singular imperfectum, the suffix '-te' or '-de' is added to the stem.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_027",
@@ -2890,13 +2990,14 @@ export const chapters6_10 = [
     "options": [
       "Wanneer de laatste letter van de stam in 'soft ketchup' zit.",
       "Wanneer de laatste letter een klinker is.",
-      "Wanneer het werkwoord onregelmatig is."
+      "Wanneer het werkwoord onregelmatig is.",
+      "Je gebruikt stam + d."
     ],
     "correctAnswer": "Wanneer de laatste letter van de stam in 'soft ketchup' zit.",
     "explanationTr": "Fiil kökünün son harfi 'soft ketchup' kelimelerindeki ünsüzlerden biriyse '-te/-ten' eklenir.",
     "explanationEn": "When the last letter of the stem is a consonant from 'soft ketchup', the suffix is '-te/-ten'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_028",
@@ -2910,13 +3011,14 @@ export const chapters6_10 = [
     "options": [
       "werkte",
       "werkde",
-      "werkten"
+      "werkten",
+      "werktener"
     ],
     "correctAnswer": "werkte",
     "explanationTr": "'werken' kökü 'werk', 'k' harfi 'soft ketchup' kuralına uyduğu için '+te' alır (werkte).",
     "explanationEn": "The stem of 'werken' is 'werk'. 'k' is in 'soft ketchup', so it takes '+te' (werkte).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_029",
@@ -2930,13 +3032,14 @@ export const chapters6_10 = [
     "options": [
       "fietsten",
       "fietste",
-      "fietsden"
+      "fietsden",
+      "fietstener"
     ],
     "correctAnswer": "fietsten",
     "explanationTr": "'fiets' kökü 's' ile bittiğinden '+te' kuralına uyar. Çoğul 'wij' olduğu için '+ten' eklenir (fietsten).",
     "explanationEn": "Stem 'fiets' ends in 's', taking '+te'. For plural 'wij', it becomes '+ten' (fietsten).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_030",
@@ -2950,13 +3053,14 @@ export const chapters6_10 = [
     "options": [
       "was",
       "waren",
-      "werd"
+      "werd",
+      "warde"
     ],
     "correctAnswer": "was",
     "explanationTr": "'zijn' (olmak) fiilinin tekil geçmiş zaman hali 'was'tır.",
     "explanationEn": "The singular past tense of 'zijn' (to be) is 'was'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_031",
@@ -2970,13 +3074,14 @@ export const chapters6_10 = [
     "options": [
       "waren",
       "was",
-      "werden"
+      "werden",
+      "warde"
     ],
     "correctAnswer": "waren",
     "explanationTr": "'zijn' (olmak) fiilinin çoğul geçmiş zaman hali 'waren'dir.",
     "explanationEn": "The plural past tense of 'zijn' (to be) is 'waren'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_032",
@@ -2986,17 +3091,18 @@ export const chapters6_10 = [
       "grammar",
       "imperfectum"
     ],
-    "questionNl": "Kies het juiste onregelmatige werkwoord in het imperfectum: Hij ___ (hebben) gisteren geen tijd.",
+    "questionNl": "Kies het juiste onregelmatige werkwoord in het imperfectum: Hij ___ gisteren geen tijd.",
     "options": [
       "had",
       "hadden",
-      "heeft"
+      "heeft",
+      "haddde"
     ],
     "correctAnswer": "had",
     "explanationTr": "'hebben' (sahip olmak) fiilinin tekil geçmiş zaman hali 'had'dir.",
     "explanationEn": "The singular past tense of 'hebben' (to have) is 'had'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_033",
@@ -3006,17 +3112,18 @@ export const chapters6_10 = [
       "grammar",
       "imperfectum"
     ],
-    "questionNl": "Kies het juiste onregelmatige werkwoord in het imperfectum: Wij ___ (gaan) samen naar de stad.",
+    "questionNl": "Kies het juiste onregelmatige werkwoord in het imperfectum: Wij ___ samen naar de stad.",
     "options": [
       "gingen",
       "ging",
-      "gingte"
+      "gingte",
+      "gingener"
     ],
     "correctAnswer": "gingen",
     "explanationTr": "'gaan' (gitmek) fiilinin çoğul geçmiş zaman hali 'gingen'dir.",
     "explanationEn": "The plural past tense of 'gaan' (to go) is 'gingen'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_034",
@@ -3026,17 +3133,18 @@ export const chapters6_10 = [
       "grammar",
       "imperfectum"
     ],
-    "questionNl": "Kies het juiste onregelmatige werkwoord in het imperfectum: Zij (enkelvoud/she) ___ (komen) te laat.",
+    "questionNl": "Kies het juiste onregelmatige werkwoord in het imperfectum: Zij (enkelvoud/she) ___ te laat.",
     "options": [
       "kwam",
       "kwamen",
-      "komde"
+      "komde",
+      "kwamer"
     ],
     "correctAnswer": "kwam",
     "explanationTr": "'komen' (gelmek) fiilinin tekil geçmiş zaman hali 'kwam'dır.",
     "explanationEn": "The singular past tense of 'komen' (to come) is 'kwam'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_035",
@@ -3046,17 +3154,18 @@ export const chapters6_10 = [
       "grammar",
       "imperfectum"
     ],
-    "questionNl": "Kies het juiste onregelmatige werkwoord in het imperfectum: Jullie ___ (zien) een mooie vogel.",
+    "questionNl": "Kies het juiste onregelmatige werkwoord in het imperfectum: Jullie ___ een mooie vogel.",
     "options": [
       "zagen",
       "zag",
-      "zieden"
+      "zieden",
+      "zagde"
     ],
     "correctAnswer": "zagen",
     "explanationTr": "'zien' (görmek) fiilinin çoğul geçmiş zaman hali 'zagen'dir.",
     "explanationEn": "The plural past tense of 'zien' (to see) is 'zagen'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_036",
@@ -3066,17 +3175,18 @@ export const chapters6_10 = [
       "grammar",
       "imperfectum"
     ],
-    "questionNl": "Kies het juiste onregelmatige werkwoord in het imperfectum: Ik ___ (vinden) het heel grappig.",
+    "questionNl": "Kies het juiste onregelmatige werkwoord in het imperfectum: Ik ___ het heel grappig.",
     "options": [
       "vond",
       "vonden",
-      "vondte"
+      "vondte",
+      "vonder"
     ],
     "correctAnswer": "vond",
     "explanationTr": "'vinden' (bulmak/düşünmek) fiilinin tekil geçmiş zaman hali 'vond'dur.",
     "explanationEn": "The singular past tense of 'vinden' (to find) is 'vond'.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_037",
@@ -3086,17 +3196,18 @@ export const chapters6_10 = [
       "grammar",
       "imperfectum"
     ],
-    "questionNl": "Kies het juiste onregelmatige werkwoord in het imperfectum: Hij ___ (doen) gisteren de deur open.",
+    "questionNl": "Kies het juiste onregelmatige werkwoord in het imperfectum: Hij ___ gisteren de deur open.",
     "options": [
       "deed",
       "deden",
-      "doede"
+      "doede",
+      "deeder"
     ],
     "correctAnswer": "deed",
     "explanationTr": "'doen' (yapmak) fiilinin tekil geçmiş zaman hali 'deed'dir.",
     "explanationEn": "The singular past tense of 'doen' (to do) is 'deed'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_038",
@@ -3106,17 +3217,18 @@ export const chapters6_10 = [
       "grammar",
       "imperfectum"
     ],
-    "questionNl": "Kies het juiste onregelmatige werkwoord in het imperfectum: Wij ___ (staan) voor het museum te wachten.",
+    "questionNl": "Kies het juiste onregelmatige werkwoord in het imperfectum: Wij ___ voor het museum te wachten.",
     "options": [
       "stonden",
       "stond",
-      "staanden"
+      "staanden",
+      "stondde"
     ],
     "correctAnswer": "stonden",
     "explanationTr": "'staan' (ayakta durmak) fiilinin çoğul geçmiş zaman hali 'stonden'dir.",
     "explanationEn": "The plural past tense of 'staan' (to stand) is 'stonden'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_039",
@@ -3126,17 +3238,18 @@ export const chapters6_10 = [
       "grammar",
       "imperfectum"
     ],
-    "questionNl": "Kies het juiste onregelmatige werkwoord in het imperfectum: Ik ___ (vallen) van mijn fiets.",
+    "questionNl": "Kies het juiste onregelmatige werkwoord in het imperfectum: Ik ___ van mijn fiets.",
     "options": [
       "viel",
       "vielen",
-      "valde"
+      "valde",
+      "vieler"
     ],
     "correctAnswer": "viel",
     "explanationTr": "'vallen' (düşmek) fiilinin tekil geçmiş zaman hali 'viel'dir.",
     "explanationEn": "The singular past tense of 'vallen' (to fall) is 'viel'.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_040",
@@ -3146,17 +3259,18 @@ export const chapters6_10 = [
       "grammar",
       "imperfectum"
     ],
-    "questionNl": "Kies het juiste onregelmatige werkwoord in het imperfectum: Zij (meervoud) ___ (zeggen) niets.",
+    "questionNl": "Kies het juiste onregelmatige werkwoord in het imperfectum: Zij (meervoud) ___ niets.",
     "options": [
       "zeiden",
       "zei",
-      "zegden"
+      "zegden",
+      "zeidde"
     ],
     "correctAnswer": "zeiden",
     "explanationTr": "'zeggen' (söylemek) fiilinin çoğul geçmiş zaman hali 'zeiden'dir.",
     "explanationEn": "The plural past tense of 'zeggen' (to say) is 'zeiden'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_041",
@@ -3171,13 +3285,14 @@ export const chapters6_10 = [
     "options": [
       "mocht",
       "mochten",
-      "mogde"
+      "mogde",
+      "mochter"
     ],
     "correctAnswer": "mocht",
     "explanationTr": "'mogen' (izinli olmak) fiilinin tekil geçmiş zamanı 'mocht' olur.",
     "explanationEn": "The singular past tense of the modal verb 'mogen' (may/allowed) is 'mocht'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_042",
@@ -3192,13 +3307,14 @@ export const chapters6_10 = [
     "options": [
       "wilde / wou",
       "wilden",
-      "wilte"
+      "wilte",
+      "wilde / wouer"
     ],
     "correctAnswer": "wilde / wou",
     "explanationTr": "'willen' (istemek) fiilinin tekil geçmiş zamanı 'wilde' (veya konuşma dilinde 'wou') şeklindedir.",
     "explanationEn": "The singular past tense of 'willen' (to want) is 'wilde' (or 'wou' informally).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_043",
@@ -3213,13 +3329,14 @@ export const chapters6_10 = [
     "options": [
       "moesten",
       "moest",
-      "moetden"
+      "moetden",
+      "moestte"
     ],
     "correctAnswer": "moesten",
     "explanationTr": "'moeten' (zorunda olmak) fiilinin çoğul geçmiş zamanı 'moesten'dir.",
     "explanationEn": "The plural past tense of the modal verb 'moeten' (must) is 'moesten'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_044",
@@ -3234,13 +3351,14 @@ export const chapters6_10 = [
     "options": [
       "kon",
       "konden",
-      "kunde"
+      "kunde",
+      "koner"
     ],
     "correctAnswer": "kon",
     "explanationTr": "'kunnen' (yapabilmek) fiilinin tekil geçmiş zamanı 'kon' şeklindedir.",
     "explanationEn": "The singular past tense of the modal verb 'kunnen' (can) is 'kon'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_045",
@@ -3255,13 +3373,14 @@ export const chapters6_10 = [
     "options": [
       "zouden",
       "zou",
-      "zullen"
+      "zullen",
+      "zoudde"
     ],
     "correctAnswer": "zouden",
     "explanationTr": "'zullen' (-ecek/-acak) fiilinin çoğul geçmiş zamanı 'zouden'dir.",
     "explanationEn": "The plural past tense of the modal verb 'zullen' (shall/will) is 'zouden'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_047",
@@ -3276,13 +3395,14 @@ export const chapters6_10 = [
     "options": [
       "gereden",
       "gereden hebben",
-      "gerijdt"
+      "gerijdt",
+      "geredde"
     ],
     "correctAnswer": "gereden",
     "explanationTr": "'rijden' (sürmek) hareket/yönelme fiili olduğu için 'zijn' (ben) ile kullanılmıştır, 3. hali 'gereden'dir.",
     "explanationEn": "'rijden' (to ride) implies movement/direction, so it uses 'zijn' (ben). The past participle is 'gereden'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_048",
@@ -3296,13 +3416,14 @@ export const chapters6_10 = [
     "options": [
       "Voor beweging (movement) of verandering van situatie (state change).",
       "Voor alle regelmatige werkwoorden.",
-      "Als de laatste letter in soft ketchup zit."
+      "Als de laatste letter in soft ketchup zit.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Voor beweging (movement) of verandering van situatie (state change).",
     "explanationTr": "'zijn' yardımcı fiili yön bildiren hareketlerde veya durum değişikliklerinde kullanılır. Aksi halde 'hebben' kullanılır.",
     "explanationEn": "The verb 'zijn' is used for movement (direction) or a change in state; otherwise 'hebben' is used.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_050",
@@ -3315,7 +3436,8 @@ export const chapters6_10 = [
     "options": [
       "Het gaat fantastisch.",
       "Mijn fiets is kapot.",
-      "Wat vervelend."
+      "Wat vervelend.",
+      "Het gaat niet zo goed."
     ],
     "correctAnswer": "Het gaat fantastisch.",
     "explanationTr": "Çok iyi hissettiğinizi 'Het gaat fantastisch' (Harika gidiyor) diyerek belirtebilirsiniz.",
@@ -3335,13 +3457,14 @@ export const chapters6_10 = [
     "options": [
       "turn left and right",
       "go upstairs and downstairs",
-      "walk straight"
+      "walk straight",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "turn left and right",
     "explanationTr": "'linksaf gaan' sola dönmek, 'rechtsaf gaan' sağa dönmek demektir.",
     "explanationEn": "'linksaf gaan' means to turn left and 'rechtsaf gaan' means to turn right.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch6_1005",
@@ -3355,13 +3478,14 @@ export const chapters6_10 = [
     "options": [
       "het voorgerecht",
       "het hoofdgerecht",
-      "het nagerecht"
+      "het nagerecht",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "het voorgerecht",
     "explanationTr": "Yemeklerin ilk servisine başlangıç (het voorgerecht / starter) denir.",
     "explanationEn": "The first course is the starter (het voorgerecht).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch6_1007",
@@ -3375,13 +3499,14 @@ export const chapters6_10 = [
     "options": [
       "het toetje",
       "de dagschotel",
-      "het voorgerecht"
+      "het voorgerecht",
+      "de dagschoteler"
     ],
     "correctAnswer": "het toetje",
     "explanationTr": "'het nagerecht' tatlı/kapanış anlamına gelir ve eşanlamlısı 'het toetje'dir.",
     "explanationEn": "'het nagerecht' means dessert, and its synonym is 'het toetje'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch6_1011",
@@ -3395,13 +3520,14 @@ export const chapters6_10 = [
     "options": [
       "today's special",
       "the menu",
-      "the bill"
+      "the bill",
+      "geen van deze"
     ],
     "correctAnswer": "today's special",
     "explanationTr": "'de dagschotel' günün yemeği (today's special) demektir.",
     "explanationEn": "'de dagschotel' means 'today's special'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch6_1012",
@@ -3415,13 +3541,14 @@ export const chapters6_10 = [
     "options": [
       "het bestek (cutlery)",
       "de borden",
-      "de glazen"
+      "de glazen",
+      "de bordde"
     ],
     "correctAnswer": "het bestek (cutlery)",
     "explanationTr": "Kaşık, bıçak ve çatalın genel adı 'het bestek' (çatal bıçak takımı) olarak geçer.",
     "explanationEn": "The collective name for spoon, knife, and fork is 'het bestek' (cutlery).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch6_1013",
@@ -3435,13 +3562,14 @@ export const chapters6_10 = [
     "options": [
       "de lepel",
       "het mes",
-      "de vork"
+      "de vork",
+      "geen van deze"
     ],
     "correctAnswer": "de lepel",
     "explanationTr": "Kaşık kelimesinin Hollandacası 'de lepel'dir.",
     "explanationEn": "'spoon' translates to 'de lepel' in Dutch.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch6_1014",
@@ -3455,13 +3583,14 @@ export const chapters6_10 = [
     "options": [
       "het mes",
       "de vork",
-      "de lepel"
+      "de lepel",
+      "geen van deze"
     ],
     "correctAnswer": "het mes",
     "explanationTr": "Bıçak kelimesinin Hollandacası 'het mes'tir.",
     "explanationEn": "'knife' translates to 'het mes' in Dutch.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch6_1015",
@@ -3475,13 +3604,14 @@ export const chapters6_10 = [
     "options": [
       "de vork",
       "het mes",
-      "de lepel"
+      "de lepel",
+      "geen van deze"
     ],
     "correctAnswer": "de vork",
     "explanationTr": "Çatal kelimesinin Hollandacası 'de vork'tur.",
     "explanationEn": "'fork' translates to 'de vork' in Dutch.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch6_1016",
@@ -3495,13 +3625,14 @@ export const chapters6_10 = [
     "options": [
       "Hoe vind je de soep? / Wat vind je van de soep?",
       "Wat is de soep?",
-      "Hoeveel kost de soep?"
+      "Hoeveel kost de soep?",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Hoe vind je de soep? / Wat vind je van de soep?",
     "explanationTr": "Birinin yemek hakkındaki fikrini sorarken 'Hoe vind je...?' veya 'Wat vind je van...?' kalıpları kullanılır.",
     "explanationEn": "To ask for an opinion about food, use 'Hoe vind je...?' or 'Wat vind je van...?'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch6_1017",
@@ -3515,13 +3646,14 @@ export const chapters6_10 = [
     "options": [
       "(ik vind het) heerlijk",
       "(ik vind het) lekker",
-      "het gaat wel"
+      "het gaat wel",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "(ik vind het) heerlijk",
     "explanationTr": "En olumlu derece (++) 'heerlijk' (harika/nefis) kelimesiyle ifade edilir.",
     "explanationEn": "The most positive rating (++) is expressed with 'heerlijk' (delicious/wonderful).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch6_1019",
@@ -3535,13 +3667,14 @@ export const chapters6_10 = [
     "options": [
       "(ik vind het) vies",
       "ik houd niet van ...",
-      "het gaat wel"
+      "het gaat wel",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "(ik vind het) vies",
     "explanationTr": "Yemek için en olumsuz derece (--) 'vies' (iğrenç/kötü) kelimesidir.",
     "explanationEn": "The most negative rating (--) for food is 'vies' (disgusting/nasty).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch6_1023",
@@ -3555,13 +3688,14 @@ export const chapters6_10 = [
     "options": [
       "Mogen we de rekening?",
       "Waar is de menukaart?",
-      "Zullen we bestellen?"
+      "Zullen we bestellen?",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Mogen we de rekening?",
     "explanationTr": "Hesabı isterken 'Mogen we de rekening?' (Hesabı alabilir miyiz?) denir.",
     "explanationEn": "To ask for the bill, say 'Mogen we de rekening?'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch6_1024",
@@ -3575,7 +3709,8 @@ export const chapters6_10 = [
     "options": [
       "Laat de rest maar zitten. / Het is goed zo.",
       "Ik wil wisselgeld.",
-      "De rekening klopt niet."
+      "De rekening klopt niet.",
+      "Mag ik pinnen?"
     ],
     "correctAnswer": "Laat de rest maar zitten. / Het is goed zo.",
     "explanationTr": "Üstü kalsın (Keep the change) demek için 'Laat de rest maar zitten' veya 'Het is goed zo' kalıpları kullanılır.",
@@ -3595,13 +3730,14 @@ export const chapters6_10 = [
     "options": [
       "Tussen de 5 en 10 procent",
       "Ongeveer 20 procent",
-      "Nederlanders geven geen fooi"
+      "Nederlanders geven geen fooi",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Tussen de 5 en 10 procent",
     "explanationTr": "Hollanda'da restoranlarda genellikle yüzde 5 ile 10 arası bahşiş (fooi) verilir.",
     "explanationEn": "In Dutch restaurants, it is customary to give between 5 and 10 percent tip.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch6_1026",
@@ -3615,13 +3751,14 @@ export const chapters6_10 = [
     "options": [
       "Serveerster / ober en taxichauffeur",
       "Groenteboer en docent",
-      "Dokter en kapper"
+      "Dokter en kapper",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Serveerster / ober en taxichauffeur",
     "explanationTr": "Kültür notuna göre garsonlara ve taksicilere bahşiş verilirken manav, öğretmen veya doktora verilmez.",
     "explanationEn": "According to the culture notes, waiters and taxi drivers get tips, but not greengrocers, teachers, or doctors.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch6_1027",
@@ -3635,13 +3772,14 @@ export const chapters6_10 = [
     "options": [
       "Mogen (bijv. Mogen we bij het raam zitten?)",
       "Moeten",
-      "Willen"
+      "Willen",
+      "Moette"
     ],
     "correctAnswer": "Mogen (bijv. Mogen we bij het raam zitten?)",
     "explanationTr": "İzin istemek veya vermek için (may/allowed to) 'mogen' fiili kullanılır.",
     "explanationEn": "The modal verb 'mogen' is used for permission (may).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch6_1028",
@@ -3655,13 +3793,14 @@ export const chapters6_10 = [
     "options": [
       "Willen (bijv. Ik wil graag ijs...)",
       "Kunnen",
-      "Zullen"
+      "Zullen",
+      "Kunnde"
     ],
     "correctAnswer": "Willen (bijv. Ik wil graag ijs...)",
     "explanationTr": "İstek veya arzu belirtirken (want) 'willen' fiili kullanılır.",
     "explanationEn": "To express a desire or want, the modal verb 'willen' is used.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch6_1029",
@@ -3675,13 +3814,14 @@ export const chapters6_10 = [
     "options": [
       "Moeten (bijv. Ik moet even een lepel halen.)",
       "Mogen",
-      "Willen"
+      "Willen",
+      "Mogde"
     ],
     "correctAnswer": "Moeten (bijv. Ik moet even een lepel halen.)",
     "explanationTr": "Zorunluluk (must/have to) belirtmek için 'moeten' fiili kullanılır.",
     "explanationEn": "To express an obligation or necessity (must), the modal verb 'moeten' is used.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch6_1030",
@@ -3695,13 +3835,14 @@ export const chapters6_10 = [
     "options": [
       "Kunnen (bijv. Jullie kunnen daar gaan zitten.)",
       "Zullen",
-      "Moeten"
+      "Moeten",
+      "Zullde"
     ],
     "correctAnswer": "Kunnen (bijv. Jullie kunnen daar gaan zitten.)",
     "explanationTr": "Yetenek veya olasılık (can/able to) ifade ederken 'kunnen' fiili kullanılır.",
     "explanationEn": "To express ability or possibility (can), the modal verb 'kunnen' is used.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch6_1031",
@@ -3715,13 +3856,14 @@ export const chapters6_10 = [
     "options": [
       "Zullen (bijv. Zullen we dat later doen?)",
       "Mogen",
-      "Moeten"
+      "Moeten",
+      "Mogde"
     ],
     "correctAnswer": "Zullen (bijv. Zullen we dat later doen?)",
     "explanationTr": "Birlikte bir şey yapmayı teklif ederken veya gelecek zamandan bahsederken (shall/will) 'zullen' kullanılır.",
     "explanationEn": "For proposals (shall we...) or future tense, the modal verb 'zullen' is used.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch6_1032",
@@ -3752,13 +3894,14 @@ export const chapters6_10 = [
     "options": [
       "wil / wilt",
       "wilt",
-      "willen"
+      "willen",
+      "willde"
     ],
     "correctAnswer": "wil / wilt",
     "explanationTr": "Hollandacada 'jij' ve 'u' için 'willen' fiili hem 'wil' hem de 'wilt' olarak doğru kabul edilir.",
     "explanationEn": "For 'jij' and 'u', both 'wil' and 'wilt' are acceptable conjugations of 'willen'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch6_1034",
@@ -3789,13 +3932,14 @@ export const chapters6_10 = [
     "options": [
       "kan / kunt",
       "kunnen",
-      "kant"
+      "kant",
+      "kunnde"
     ],
     "correctAnswer": "kan / kunt",
     "explanationTr": "'jij' ve 'u' özneleri için 'kunnen' fiili 'kan' veya 'kunt' şeklinde çekimlenir.",
     "explanationEn": "For 'jij' and 'u', 'kunnen' is conjugated as 'kan' or 'kunt'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch6_1036",
@@ -3842,13 +3986,14 @@ export const chapters6_10 = [
     "options": [
       "Ze krijgen allemaal de infinitief (stam + en).",
       "Ze krijgen een -t.",
-      "Ze veranderen compleet."
+      "Ze veranderen compleet.",
+      "Je gebruikt stam + d."
     ],
     "correctAnswer": "Ze krijgen allemaal de infinitief (stam + en).",
     "explanationTr": "Modaal fiillerin çoğul çekimleri her zaman mastar (infinitief) halindedir.",
     "explanationEn": "Plural conjugations of modal verbs always take the infinitive form.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch6_1039",
@@ -3861,13 +4006,14 @@ export const chapters6_10 = [
     "options": [
       "Van het fietsen",
       "Omdat hij boos is",
-      "Van de zon"
+      "Van de zon",
+      "Van het fietste"
     ],
     "correctAnswer": "Van het fietsen",
     "explanationTr": "Metne göre anlatıcının yüzü bisiklete bindiği için ('van het fietsen') kızarmıştır.",
     "explanationEn": "According to the text, the narrator's head is red from cycling ('van het fietsen').",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch6_1040",
@@ -3880,13 +4026,14 @@ export const chapters6_10 = [
     "options": [
       "Nee, niet één tafeltje is vrij.",
       "Ja, er zijn veel tafels vrij.",
-      "Ja, er is één tafel vrij."
+      "Ja, er is één tafel vrij.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Nee, niet één tafeltje is vrij.",
     "explanationTr": "Metinde restoranda tek bir boş masa bile olmadığı ('Niet één tafeltje is vrij') belirtilir.",
     "explanationEn": "The text states that not a single table is free in the restaurant.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch6_1041",
@@ -3899,13 +4046,14 @@ export const chapters6_10 = [
     "options": [
       "Dat moet u eerst aan die mensen vragen, meneer!",
       "Gaat u uw gang.",
-      "U moet hier wachten."
+      "U moet hier wachten.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Dat moet u eerst aan die mensen vragen, meneer!",
     "explanationTr": "Garson, anlatıcıya 'Bunu önce o insanlara sormalısınız beyefendi!' der.",
     "explanationEn": "The waitress says: 'You must first ask those people, sir!'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch6_1042",
@@ -3918,13 +4066,14 @@ export const chapters6_10 = [
     "options": [
       "i - ie",
       "a - aa",
-      "o - oo"
+      "o - oo",
+      "a - aaer"
     ],
     "correctAnswer": "i - ie",
     "explanationTr": "Sayfa 93 ve 94'te yer alan telaffuz alıştırmaları 'i' ve 'ie' sesleri arasındaki farka odaklanır.",
     "explanationEn": "The pronunciation exercises focus on the difference between 'i' and 'ie' sounds.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch6_1046",
@@ -3938,13 +4087,14 @@ export const chapters6_10 = [
     "options": [
       "Hebt u een tafel voor ons?",
       "Waar is de rekening?",
-      "Zullen we bestellen?"
+      "Zullen we bestellen?",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Hebt u een tafel voor ons?",
     "explanationTr": "Restoranda masa sormak için 'Hebt u een tafel voor ons?' (Bizim için bir masanız var mı?) kullanılır.",
     "explanationEn": "To ask for a table, use 'Hebt u een tafel voor ons?'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch6_1048",
@@ -3958,13 +4108,14 @@ export const chapters6_10 = [
     "options": [
       "Mag",
       "Moet",
-      "Zal"
+      "Zal",
+      "geMag"
     ],
     "correctAnswer": "Mag",
     "explanationTr": "Bir şey rica ederken 'Mag ik...?' (Alabilir miyim?) kalıbı yaygındır.",
     "explanationEn": "When requesting something politely, 'Mag ik...?' is commonly used.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch6_1049",
@@ -3978,13 +4129,14 @@ export const chapters6_10 = [
     "options": [
       "kunnen",
       "moeten",
-      "willen"
+      "willen",
+      "kunnde"
     ],
     "correctAnswer": "kunnen",
     "explanationTr": "Yer gösterme ve imkan belirtmek için 'kunnen' (oturabilirsiniz) kullanılır.",
     "explanationEn": "To indicate possibility or direct someone, 'kunnen' is used: 'Jullie kunnen daar gaan zitten'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_1003",
@@ -3998,13 +4150,14 @@ export const chapters6_10 = [
     "options": [
       "de broek",
       "de rok",
-      "het pak"
+      "het pak",
+      "geen van deze"
     ],
     "correctAnswer": "de broek",
     "explanationTr": "Pantolon Hollandacada 'de broek' olarak adlandırılır.",
     "explanationEn": "'trousers' translates to 'de broek' in Dutch.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_1005",
@@ -4018,13 +4171,14 @@ export const chapters6_10 = [
     "options": [
       "de verkoopster",
       "de serveerster",
-      "de docent"
+      "de docent",
+      "geen van deze"
     ],
     "correctAnswer": "de verkoopster",
     "explanationTr": "Kadın satış görevlisi / tezgahtar 'de verkoopster' olarak adlandırılır.",
     "explanationEn": "'saleswoman' translates to 'de verkoopster'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_1009",
@@ -4038,13 +4192,14 @@ export const chapters6_10 = [
     "options": [
       "de spijkerbroek",
       "de trui",
-      "het overhemd"
+      "het overhemd",
+      "geen van deze"
     ],
     "correctAnswer": "de spijkerbroek",
     "explanationTr": "Kot pantolon Hollandacada 'de spijkerbroek' olarak adlandırılır.",
     "explanationEn": "'jeans' translates to 'de spijkerbroek' in Dutch.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_1022",
@@ -4058,13 +4213,14 @@ export const chapters6_10 = [
     "options": [
       "En, hoe zitten ze?",
       "Wat is je maat?",
-      "Waar is de paskamer?"
+      "Waar is de paskamer?",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "En, hoe zitten ze?",
     "explanationTr": "Kıyafetin nasıl oturduğunu / uyduğunu sormak için 'Hoe zitten ze?' kalıbı kullanılır.",
     "explanationEn": "To ask how clothes fit, you use the phrase 'Hoe zitten ze?'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_1045",
@@ -4078,13 +4234,14 @@ export const chapters6_10 = [
     "options": [
       "de trui",
       "de jas",
-      "het overhemd"
+      "het overhemd",
+      "geen van deze"
     ],
     "correctAnswer": "de trui",
     "explanationTr": "Kazak veya süveter Hollandacada 'de trui' olarak geçer.",
     "explanationEn": "'jumper / pullover' translates to 'de trui'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_1046",
@@ -4098,13 +4255,14 @@ export const chapters6_10 = [
     "options": [
       "de bloes",
       "het t-shirt",
-      "de jurk"
+      "de jurk",
+      "geen van deze"
     ],
     "correctAnswer": "de bloes",
     "explanationTr": "Bluz Hollandacada 'de bloes' olarak adlandırılır.",
     "explanationEn": "'blouse' translates to 'de bloes'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_1047",
@@ -4118,13 +4276,14 @@ export const chapters6_10 = [
     "options": [
       "het overhemd",
       "de trui",
-      "het t-shirt"
+      "het t-shirt",
+      "geen van deze"
     ],
     "correctAnswer": "het overhemd",
     "explanationTr": "Gömlek Hollandacada 'het overhemd' demektir.",
     "explanationEn": "'shirt' translates to 'het overhemd'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_1048",
@@ -4138,13 +4297,14 @@ export const chapters6_10 = [
     "options": [
       "de rok",
       "de broek",
-      "de jurk"
+      "de jurk",
+      "geen van deze"
     ],
     "correctAnswer": "de rok",
     "explanationTr": "Etek Hollandacada 'de rok' olarak adlandırılır.",
     "explanationEn": "'skirt' translates to 'de rok'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_1049",
@@ -4158,13 +4318,14 @@ export const chapters6_10 = [
     "options": [
       "de jurk",
       "de jas",
-      "de rok"
+      "de rok",
+      "geen van deze"
     ],
     "correctAnswer": "de jurk",
     "explanationTr": "Elbise Hollandacada 'de jurk' demektir.",
     "explanationEn": "'dress' translates to 'de jurk'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_1050",
@@ -4178,13 +4339,14 @@ export const chapters6_10 = [
     "options": [
       "de jas",
       "het pak",
-      "de trui"
+      "de trui",
+      "geen van deze"
     ],
     "correctAnswer": "de jas",
     "explanationTr": "Ceket veya mont Hollandacada 'de jas' olarak geçer.",
     "explanationEn": "'coat' translates to 'de jas'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_1051",
@@ -4198,13 +4360,14 @@ export const chapters6_10 = [
     "options": [
       "de schoenen",
       "de sokken",
-      "de broeken"
+      "de broeken",
+      "de schoende"
     ],
     "correctAnswer": "de schoenen",
     "explanationTr": "Ayakkabılar Hollandacada 'de schoenen' olarak adlandırılır.",
     "explanationEn": "'shoes' translates to 'de schoenen'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_1052",
@@ -4218,13 +4381,14 @@ export const chapters6_10 = [
     "options": [
       "het pak",
       "de jas",
-      "het overhemd"
+      "het overhemd",
+      "geen van deze"
     ],
     "correctAnswer": "het pak",
     "explanationTr": "Takım elbise Hollandacada 'het pak' demektir.",
     "explanationEn": "'suit' translates to 'het pak'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_1053",
@@ -4238,13 +4402,14 @@ export const chapters6_10 = [
     "options": [
       "mij / me",
       "jou / je",
-      "hem"
+      "hem",
+      "hemer"
     ],
     "correctAnswer": "mij / me",
     "explanationTr": "'ik' (ben) öznesinin nesne hali 'mij' veya 'me' (beni/bana) şeklindedir.",
     "explanationEn": "The object form of 'ik' is 'mij / me'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_1054",
@@ -4258,13 +4423,14 @@ export const chapters6_10 = [
     "options": [
       "jou / je",
       "mij / me",
-      "hem"
+      "hem",
+      "hemer"
     ],
     "correctAnswer": "jou / je",
     "explanationTr": "'jij / je' (sen) öznesinin nesne hali 'jou' veya 'je' (seni/sana) şeklindedir.",
     "explanationEn": "The object form of 'jij / je' is 'jou / je'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_1055",
@@ -4278,13 +4444,14 @@ export const chapters6_10 = [
     "options": [
       "u",
       "jou",
-      "hem"
+      "hem",
+      "hen"
     ],
     "correctAnswer": "u",
     "explanationTr": "Resmi 'u' zamirinin nesne hali de 'u' (sizi/size) olarak kalır.",
     "explanationEn": "The object form of formal 'u' remains 'u'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_1056",
@@ -4298,13 +4465,14 @@ export const chapters6_10 = [
     "options": [
       "hem",
       "haar",
-      "het"
+      "het",
+      "hen"
     ],
     "correctAnswer": "hem",
     "explanationTr": "'hij' (o-erkek) öznesinin nesne hali 'hem' (onu/ona) şeklindedir.",
     "explanationEn": "The object form of 'hij' is 'hem'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_1057",
@@ -4318,13 +4486,14 @@ export const chapters6_10 = [
     "options": [
       "haar",
       "hem",
-      "hen"
+      "hen",
+      "hun"
     ],
     "correctAnswer": "haar",
     "explanationTr": "'zij / ze' (o-kadın) öznesinin nesne hali 'haar' (onu/ona) şeklindedir.",
     "explanationEn": "The object form of female 'zij / ze' is 'haar'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_1058",
@@ -4338,13 +4507,14 @@ export const chapters6_10 = [
     "options": [
       "ons",
       "jullie",
-      "hen"
+      "hen",
+      "hun"
     ],
     "correctAnswer": "ons",
     "explanationTr": "'wij / we' (biz) öznesinin nesne hali 'ons' (bizi/bize) şeklindedir.",
     "explanationEn": "The object form of 'wij / we' is 'ons'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_1059",
@@ -4358,13 +4528,14 @@ export const chapters6_10 = [
     "options": [
       "jullie",
       "ons",
-      "ze"
+      "ze",
+      "hen"
     ],
     "correctAnswer": "jullie",
     "explanationTr": "'jullie' (siz) öznesinin nesne hali de 'jullie' (sizi/size) olarak kalır.",
     "explanationEn": "The object form of 'jullie' remains 'jullie'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_1060",
@@ -4378,13 +4549,14 @@ export const chapters6_10 = [
     "options": [
       "hen / ze / hun",
       "haar",
-      "jullie"
+      "jullie",
+      "hen"
     ],
     "correctAnswer": "hen / ze / hun",
     "explanationTr": "Çoğul kişiler için nesne hali 'hen', 'ze' veya duruma göre 'hun' (onları/onlara) olur.",
     "explanationEn": "The object form of plural 'zij / ze' for people is 'hen / ze / hun'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_1061",
@@ -4398,13 +4570,14 @@ export const chapters6_10 = [
     "options": [
       "hem",
       "het",
-      "ze"
+      "ze",
+      "hen"
     ],
     "correctAnswer": "hem",
     "explanationTr": "Cansız de-woord isimleri nesne olarak kullanırken 'hem' ile atıfta bulunulur.",
     "explanationEn": "For non-person de-words acting as objects, 'hem' is used.",
     "difficulty": 5,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_1062",
@@ -4418,13 +4591,14 @@ export const chapters6_10 = [
     "options": [
       "het",
       "hem",
-      "ze"
+      "ze",
+      "hen"
     ],
     "correctAnswer": "het",
     "explanationTr": "Cansız het-woord isimleri nesne olarak kullanırken 'het' ile atıfta bulunulur.",
     "explanationEn": "For non-person het-words acting as objects, 'het' is used.",
     "difficulty": 5,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_1063",
@@ -4438,13 +4612,14 @@ export const chapters6_10 = [
     "options": [
       "ze",
       "hem",
-      "het"
+      "het",
+      "hen"
     ],
     "correctAnswer": "ze",
     "explanationTr": "Çoğul cansız varlıklara (niet-personen pluralis) nesne olarak atıfta bulunurken 'ze' kullanılır.",
     "explanationEn": "For non-person plural objects, 'ze' is used.",
     "difficulty": 5,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_1064",
@@ -4458,13 +4633,14 @@ export const chapters6_10 = [
     "options": [
       "deze",
       "die",
-      "dit"
+      "dit",
+      "diter"
     ],
     "correctAnswer": "deze",
     "explanationTr": "Yakındaki bir de-woord için 'deze' (bu) kullanılır.",
     "explanationEn": "For a de-word that is close (hier), 'deze' is used.",
     "difficulty": 5,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_1065",
@@ -4478,13 +4654,14 @@ export const chapters6_10 = [
     "options": [
       "die",
       "deze",
-      "dat"
+      "dat",
+      "dater"
     ],
     "correctAnswer": "die",
     "explanationTr": "Uzaktaki bir de-woord için 'die' (şu/o) kullanılır.",
     "explanationEn": "For a de-word that is further away (daar), 'die' is used.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_1066",
@@ -4498,13 +4675,14 @@ export const chapters6_10 = [
     "options": [
       "dit",
       "dat",
-      "deze"
+      "deze",
+      "diter"
     ],
     "correctAnswer": "dit",
     "explanationTr": "Yakındaki bir het-woord için 'dit' (bu) kullanılır.",
     "explanationEn": "For a het-word that is close (hier), 'dit' is used.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_1067",
@@ -4518,13 +4696,14 @@ export const chapters6_10 = [
     "options": [
       "dat",
       "dit",
-      "die"
+      "die",
+      "dater"
     ],
     "correctAnswer": "dat",
     "explanationTr": "Uzaktaki bir het-woord için 'dat' (şu/o) kullanılır.",
     "explanationEn": "For a het-word that is further away (daar), 'dat' is used.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_1068",
@@ -4538,13 +4717,14 @@ export const chapters6_10 = [
     "options": [
       "deze",
       "die",
-      "dit"
+      "dit",
+      "diter"
     ],
     "correctAnswer": "deze",
     "explanationTr": "Yakındaki çoğul isimler için her zaman 'deze' (bunlar) kullanılır.",
     "explanationEn": "For plural words that are close (hier), 'deze' is always used.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_1069",
@@ -4558,13 +4738,14 @@ export const chapters6_10 = [
     "options": [
       "die",
       "deze",
-      "dat"
+      "dat",
+      "dater"
     ],
     "correctAnswer": "die",
     "explanationTr": "Uzaktaki çoğul isimler için her zaman 'die' (şunlar/onlar) kullanılır.",
     "explanationEn": "For plural words that are further away (daar), 'die' is always used.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_1070",
@@ -4578,13 +4759,14 @@ export const chapters6_10 = [
     "options": [
       "kleiner (dan)",
       "kleinst",
-      "meest klein"
+      "meest klein",
+      "geen van deze"
     ],
     "correctAnswer": "kleiner (dan)",
     "explanationTr": "Düzenli sıfatların karşılaştırma hali sonuna '-er' alarak yapılır: kleiner (dan) [daha küçük].",
     "explanationEn": "Regular adjectives form the comparative by adding '-er': kleiner (dan) [smaller than].",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_1071",
@@ -4598,13 +4780,14 @@ export const chapters6_10 = [
     "options": [
       "(het) kleinst",
       "kleiner",
-      "meest klein"
+      "meest klein",
+      "geen van deze"
     ],
     "correctAnswer": "(het) kleinst",
     "explanationTr": "Düzenli sıfatların en üstünlük hali sonuna '-st' alarak yapılır: (het) kleinst [en küçük].",
     "explanationEn": "Regular adjectives form the superlative by adding '-st': (het) kleinst [smallest].",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_1072",
@@ -4619,13 +4802,14 @@ export const chapters6_10 = [
     "options": [
       "beter (dan)",
       "goeder",
-      "meer goed"
+      "meer goed",
+      "geen van deze"
     ],
     "correctAnswer": "beter (dan)",
     "explanationTr": "'goed' (iyi) sıfatı düzensizdir, karşılaştırma hali 'beter (dan)' (daha iyi) olur.",
     "explanationEn": "The irregular adjective 'goed' (good) becomes 'beter (dan)' (better) in the comparative.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_1073",
@@ -4640,13 +4824,14 @@ export const chapters6_10 = [
     "options": [
       "(het) best",
       "(het) beterst",
-      "(het) goedst"
+      "(het) goedst",
+      "geen van deze"
     ],
     "correctAnswer": "(het) best",
     "explanationTr": "'goed' sıfatının en üstünlük hali '(het) best' (en iyi) şeklindedir.",
     "explanationEn": "The superlative of 'goed' is '(het) best' (best).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_1074",
@@ -4661,13 +4846,14 @@ export const chapters6_10 = [
     "options": [
       "meer (dan)",
       "veeler",
-      "beter"
+      "beter",
+      "geen van deze"
     ],
     "correctAnswer": "meer (dan)",
     "explanationTr": "'veel' (çok) sıfatının karşılaştırma hali 'meer (dan)' (daha fazla) şeklindedir.",
     "explanationEn": "The comparative of 'veel' is 'meer (dan)' (more).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_1075",
@@ -4682,13 +4868,14 @@ export const chapters6_10 = [
     "options": [
       "(het) meest",
       "(het) meerst",
-      "(het) veelst"
+      "(het) veelst",
+      "geen van deze"
     ],
     "correctAnswer": "(het) meest",
     "explanationTr": "'veel' sıfatının en üstünlük hali '(het) meest' (en çok) olur.",
     "explanationEn": "The superlative of 'veel' is '(het) meest' (most).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_1076",
@@ -4703,13 +4890,14 @@ export const chapters6_10 = [
     "options": [
       "minder (dan)",
       "weiniger",
-      "meer"
+      "meer",
+      "geen van deze"
     ],
     "correctAnswer": "minder (dan)",
     "explanationTr": "'weinig' (az) sıfatının karşılaştırma hali 'minder (dan)' (daha az) olur.",
     "explanationEn": "The comparative of 'weinig' is 'minder (dan)' (less/fewer).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_1077",
@@ -4724,13 +4912,14 @@ export const chapters6_10 = [
     "options": [
       "(het) minst",
       "(het) minder",
-      "(het) weinigst"
+      "(het) weinigst",
+      "geen van deze"
     ],
     "correctAnswer": "(het) minst",
     "explanationTr": "'weinig' sıfatının en üstünlük hali '(het) minst' (en az) şeklindedir.",
     "explanationEn": "The superlative of 'weinig' is '(het) minst' (least).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_1078",
@@ -4745,13 +4934,14 @@ export const chapters6_10 = [
     "options": [
       "liever (dan)",
       "graager",
-      "meer graag"
+      "meer graag",
+      "geen van deze"
     ],
     "correctAnswer": "liever (dan)",
     "explanationTr": "'graag' (memnuniyetle/severek) kelimesinin karşılaştırma hali 'liever (dan)' (tercihen/daha çok severek) olur.",
     "explanationEn": "The comparative of 'graag' is 'liever (dan)' (rather/prefer).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_1079",
@@ -4766,13 +4956,14 @@ export const chapters6_10 = [
     "options": [
       "(het) liefst",
       "(het) graags",
-      "(het) meest graag"
+      "(het) meest graag",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "(het) liefst",
     "explanationTr": "'graag' kelimesinin en üstünlük hali '(het) liefst' (en tercihen/en çok severek) şeklindedir.",
     "explanationEn": "The superlative of 'graag' is '(het) liefst' (most preferably).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_1080",
@@ -4786,13 +4977,14 @@ export const chapters6_10 = [
     "options": [
       "even + basisvorm + als (bijv. even klein als)",
       "meer + basisvorm + als",
-      "zo + comparatief + als"
+      "zo + comparatief + als",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "even + basisvorm + als (bijv. even klein als)",
     "explanationTr": "Eşitlik durumunda 'even [sıfatın yalın hali] als' (kadar ...) yapısı kullanılır.",
     "explanationEn": "To express equality (as... as), use 'even [base form] als' (e.g. even klein als).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_1081",
@@ -4806,13 +4998,14 @@ export const chapters6_10 = [
     "options": [
       "directeur Schomaker Mannenmode",
       "directeur van een supermarkt",
-      "directeur van een school"
+      "directeur van een school",
+      "directeur van een supermarkter"
     ],
     "correctAnswer": "directeur Schomaker Mannenmode",
     "explanationTr": "Metinde Jos Schomaker'in 'Schomaker Mannenmode' (erkek giyimi) direktörü olduğu belirtilir.",
     "explanationEn": "The text states that Jos Schomaker is the director of 'Schomaker Mannenmode' (men's fashion).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_1082",
@@ -4826,13 +5019,14 @@ export const chapters6_10 = [
     "options": [
       "Nee, hij draagt zijn kleding niet te lang.",
       "Ja, hij draagt zijn kleding heel lang.",
-      "Hij draagt nooit eigen kleding."
+      "Hij draagt nooit eigen kleding.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Nee, hij draagt zijn kleding niet te lang.",
     "explanationTr": "Metinde 'Ik draag mijn kleren niet te lang' diyerek kıyafetlerini çok uzun süre giymediğini söyler.",
     "explanationEn": "He states 'Ik draag mijn kleren niet te lang', meaning he does not wear his clothes for too long.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch7_1083",
@@ -4846,13 +5040,14 @@ export const chapters6_10 = [
     "options": [
       "Ze moeten absoluut comfortabel zijn.",
       "Ze moeten de duurste zijn.",
-      "Ze moeten zwart zijn."
+      "Ze moeten zwart zijn.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Ze moeten absoluut comfortabel zijn.",
     "explanationTr": "Çalışırken odaklanabilmek için kıyafetlerinin 'absoluut comfortabel' (kesinlikle rahat) olması gerektiğini belirtir.",
     "explanationEn": "He mentions his clothes must be 'absoluut comfortabel' (absolutely comfortable) so he can concentrate.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch8_1000",
@@ -4866,13 +5061,14 @@ export const chapters6_10 = [
     "options": [
       "de makelaar",
       "de woonruimte",
-      "de koper"
+      "de koper",
+      "de makelaarer"
     ],
     "correctAnswer": "de makelaar",
     "explanationTr": "'de makelaar' emlakçı (real estate agent) demektir.",
     "explanationEn": "'de makelaar' translates to 'real estate agent'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch8_1005",
@@ -4886,13 +5082,14 @@ export const chapters6_10 = [
     "options": [
       "de bovenwoning",
       "de benedenwoning",
-      "het appartement"
+      "het appartement",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "de bovenwoning",
     "explanationTr": "Üst kat dairesi Hollandacada 'de bovenwoning' olarak adlandırılır.",
     "explanationEn": "'upstairs flat' translates to 'de bovenwoning'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch8_1006",
@@ -4906,13 +5103,14 @@ export const chapters6_10 = [
     "options": [
       "de benedenwoning",
       "de bovenwoning",
-      "de begane grond"
+      "de begane grond",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "de benedenwoning",
     "explanationTr": "Zemin kat dairesi Hollandacada 'de benedenwoning' olarak geçer.",
     "explanationEn": "'ground-floor flat' translates to 'de benedenwoning'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch8_1009",
@@ -4925,13 +5123,14 @@ export const chapters6_10 = [
     "options": [
       "de buurt",
       "het centrum",
-      "de stad"
+      "de stad",
+      "geen van deze"
     ],
     "correctAnswer": "de buurt",
     "explanationTr": "Mahalle veya semt Hollandacada 'de buurt' olarak adlandırılır.",
     "explanationEn": "'neighbourhood' translates to 'de buurt'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch8_1020",
@@ -4945,13 +5144,14 @@ export const chapters6_10 = [
     "options": [
       "de bank",
       "het bed",
-      "de kast"
+      "de kast",
+      "geen van deze"
     ],
     "correctAnswer": "de bank",
     "explanationTr": "Kanepe / koltuk Hollandacada 'de bank' olarak adlandırılır.",
     "explanationEn": "'couch / sofa' translates to 'de bank'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch8_1022",
@@ -4965,13 +5165,14 @@ export const chapters6_10 = [
     "options": [
       "de kast",
       "het bed",
-      "de stoel"
+      "de stoel",
+      "geen van deze"
     ],
     "correctAnswer": "de kast",
     "explanationTr": "Dolap kelimesinin Hollandacası 'de kast'tır.",
     "explanationEn": "'cupboard' translates to 'de kast'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch8_1023",
@@ -4985,13 +5186,14 @@ export const chapters6_10 = [
     "options": [
       "Om zelfstandige naamwoorden (met 'een' of zonder lidwoord) te ontkennen (bijv. Ik heb geen idee).",
       "Om werkwoorden te ontkennen.",
-      "Om bijvoeglijke naamwoorden te ontkennen."
+      "Om bijvoeglijke naamwoorden te ontkennen.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Om zelfstandige naamwoorden (met 'een' of zonder lidwoord) te ontkennen (bijv. Ik heb geen idee).",
     "explanationTr": "'geen' kelimesi belirsiz isimleri (önünde 'een' olan veya artikeli olmayan) olumsuz yapmak için kullanılır.",
     "explanationEn": "'geen' is used to negate indefinite nouns (nouns with 'een' or no article).",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch8_1024",
@@ -5005,13 +5207,14 @@ export const chapters6_10 = [
     "options": [
       "Om de rest van de zin te ontkennen, zoals bijvoeglijke naamwoorden, werkwoorden of specifieke plaatsen (bijv. niet ver, dat gebruiken we niet).",
       "Alleen voor meervoudsvormen.",
-      "Om een nieuw zelfstandig naamwoord te introduceren."
+      "Om een nieuw zelfstandig naamwoord te introduceren.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Om de rest van de zin te ontkennen, zoals bijvoeglijke naamwoorden, werkwoorden of specifieke plaatsen (bijv. niet ver, dat gebruiken we niet).",
     "explanationTr": "'niet' fiilleri, sıfatları veya belirli durumları olumsuzlaştırmak için kullanılır.",
     "explanationEn": "'niet' is used to negate adjectives, verbs, or specific statements.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch8_1025",
@@ -5200,7 +5403,7 @@ export const chapters6_10 = [
   },
   {
     "id": "sum_ch8_1037",
-    "type": "fill_in",
+    "type": "multiple_choice",
     "tags": [
       "summary_ch8",
       "grammar",
@@ -5211,11 +5414,17 @@ export const chapters6_10 = [
     "explanationTr": "Yatak odası mutfağın üstündeyse 'boven' (yukarısında/üstünde) edatı kullanılır.",
     "explanationEn": "If the bedroom is higher than the kitchen, the preposition 'boven' (above) is used.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2,
+    "options": [
+      "boven",
+      "onder",
+      "naast",
+      "achter"
+    ]
   },
   {
     "id": "sum_ch8_1038",
-    "type": "fill_in",
+    "type": "multiple_choice",
     "tags": [
       "summary_ch8",
       "grammar",
@@ -5226,7 +5435,13 @@ export const chapters6_10 = [
     "explanationTr": "Oturma odası balkonun altındaysa 'onder' (altında) edatı kullanılır.",
     "explanationEn": "If the living room is below the balcony, the preposition 'onder' (under) is used.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2,
+    "options": [
+      "onder",
+      "boven",
+      "tussen",
+      "voor"
+    ]
   },
   {
     "id": "sum_ch8_1039",
@@ -5300,13 +5515,14 @@ export const chapters6_10 = [
     "options": [
       "Ze vinden de trappen erg steil.",
       "Ze vinden de trappen erg breed.",
-      "Ze vinden dat er geen trappen zijn."
+      "Ze vinden dat er geen trappen zijn.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Ze vinden de trappen erg steil.",
     "explanationTr": "Yabancılar genellikle Hollanda evlerindeki merdivenleri çok dik (steil) bulurlar.",
     "explanationEn": "Foreigners often find the stairs in Dutch houses to be very steep (steil).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch8_1044",
@@ -5320,13 +5536,14 @@ export const chapters6_10 = [
     "options": [
       "Grote ramen en veel licht.",
       "Heel grote kamers.",
-      "Veel privacy."
+      "Veel privacy.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Grote ramen en veel licht.",
     "explanationTr": "Büyük pencereler (grote ramen) ve çok ışık (veel licht) alması olumlu özelliklerdendir.",
     "explanationEn": "Big windows (grote ramen) and lots of light (veel licht) are considered positive features.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch8_1045",
@@ -5340,13 +5557,14 @@ export const chapters6_10 = [
     "options": [
       "Je hebt geen privacy, mensen kunnen 's avonds naar binnen kijken.",
       "Ze zijn te zwaar om te openen.",
-      "Ze maken het huis te koud."
+      "Ze maken het huis te koud.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Je hebt geen privacy, mensen kunnen 's avonds naar binnen kijken.",
     "explanationTr": "Büyük pencereler yüzünden gece dışarıdan içerisinin görünmesi gizlilik (privacy) eksikliğine neden olur.",
     "explanationEn": "The big windows mean no privacy, as people can look inside at night.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch8_1046",
@@ -5360,13 +5578,14 @@ export const chapters6_10 = [
     "options": [
       "De wc / het toilet",
       "De slaapkamer",
-      "De meterkast"
+      "De meterkast",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "De wc / het toilet",
     "explanationTr": "Metinde tuvalet genellikle evdeki 'en küçük oda' (kleinste kamertje) olarak adlandırılır.",
     "explanationEn": "In the text, the toilet is often referred to as the 'smallest room' (kleinste kamertje).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch8_1047",
@@ -5380,13 +5599,14 @@ export const chapters6_10 = [
     "options": [
       "35 vierkante meter",
       "50 vierkante meter",
-      "20 vierkante meter"
+      "20 vierkante meter",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "35 vierkante meter",
     "explanationTr": "Diyalogda oturma odasının 35 metrekare (35 vierkante meter) olduğu belirtilmektedir.",
     "explanationEn": "The dialogue mentions that the living room is 35 square metres.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch8_1048",
@@ -5400,13 +5620,14 @@ export const chapters6_10 = [
     "options": [
       "Op de derde verdieping",
       "Op de begane grond",
-      "Op de eerste verdieping"
+      "Op de eerste verdieping",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Op de derde verdieping",
     "explanationTr": "Emlakçı dairenin üçüncü katta (derde verdieping) olduğunu söyler.",
     "explanationEn": "The real estate agent says the flat is on the third floor (derde verdieping).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch8_1049",
@@ -5419,13 +5640,14 @@ export const chapters6_10 = [
     "options": [
       "living room",
       "bedroom",
-      "kitchen"
+      "kitchen",
+      "kitchte"
     ],
     "correctAnswer": "living room",
     "explanationTr": "'de woonkamer' oturma odası (living room) demektir.",
     "explanationEn": "'de woonkamer' translates to 'living room'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch8_1051",
@@ -5439,13 +5661,14 @@ export const chapters6_10 = [
     "options": [
       "Omdat ze het een leuke, zonnige kamer vindt en met haar vriend wil overleggen.",
       "Omdat ze de huurprijs te hoog vindt.",
-      "Omdat ze een bad wil."
+      "Omdat ze een bad wil.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Omdat ze het een leuke, zonnige kamer vindt en met haar vriend wil overleggen.",
     "explanationTr": "Patricia evi güzel ve güneşli bulduğu için erkek arkadaşıyla görüşüp (overleggen) randevu almak ister.",
     "explanationEn": "Patricia thinks it's a nice, sunny room and wants to discuss (overleggen) it with her boyfriend before making an appointment.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1000",
@@ -5459,13 +5682,14 @@ export const chapters6_10 = [
     "options": [
       "het hoofd",
       "de nek",
-      "de buik"
+      "de buik",
+      "geen van deze"
     ],
     "correctAnswer": "het hoofd",
     "explanationTr": "Kitaptaki vücut bölümleri listesine göre 'head' (baş) kelimesinin Felemenkçesi 'het hoofd'dur.",
     "explanationEn": "According to the body parts list in the book, 'head' translates to 'het hoofd'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1001",
@@ -5479,13 +5703,14 @@ export const chapters6_10 = [
     "options": [
       "de buik",
       "de rug",
-      "het been"
+      "het been",
+      "het bede"
     ],
     "correctAnswer": "de buik",
     "explanationTr": "Vücut bölümleri listesine göre 'stomach' (mide/karın) kelimesinin Felemenkçesi 'de buik'tir.",
     "explanationEn": "According to the body parts list, 'stomach' translates to 'de buik'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1002",
@@ -5499,13 +5724,14 @@ export const chapters6_10 = [
     "options": [
       "de rug",
       "de nek",
-      "de schouder"
+      "de schouder",
+      "geen van deze"
     ],
     "correctAnswer": "de rug",
     "explanationTr": "Vücut bölümleri listesine göre 'back' (sırt) kelimesinin Felemenkçesi 'de rug'dur.",
     "explanationEn": "According to the body parts list, 'back' translates to 'de rug'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1003",
@@ -5519,13 +5745,14 @@ export const chapters6_10 = [
     "options": [
       "de schouder",
       "de pols",
-      "de arm"
+      "de arm",
+      "geen van deze"
     ],
     "correctAnswer": "de schouder",
     "explanationTr": "Vücut bölümleri listesinde 'shoulder' (omuz) kelimesi 'de schouder' olarak verilmiştir.",
     "explanationEn": "In the body parts list, 'shoulder' is given as 'de schouder'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1004",
@@ -5539,13 +5766,14 @@ export const chapters6_10 = [
     "options": [
       "de pols",
       "de hand",
-      "de vinger"
+      "de vinger",
+      "geen van deze"
     ],
     "correctAnswer": "de pols",
     "explanationTr": "Vücut bölümleri listesine göre 'wrist' (el bileği) kelimesinin Felemenkçesi 'de pols'dur.",
     "explanationEn": "According to the body parts list, 'wrist' translates to 'de pols'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1005",
@@ -5559,13 +5787,14 @@ export const chapters6_10 = [
     "options": [
       "het been",
       "de voet",
-      "de knie"
+      "de knie",
+      "het beener"
     ],
     "correctAnswer": "het been",
     "explanationTr": "Vücut bölümleri listesinde 'leg' (bacak) kelimesi 'het been' olarak verilmiştir.",
     "explanationEn": "In the body parts list, 'leg' is given as 'het been'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1006",
@@ -5579,13 +5808,14 @@ export const chapters6_10 = [
     "options": [
       "de knie",
       "de enkel",
-      "de voet"
+      "de voet",
+      "de enkeler"
     ],
     "correctAnswer": "de knie",
     "explanationTr": "Vücut bölümleri listesinde 'knee' (diz) kelimesi 'de knie' olarak geçer.",
     "explanationEn": "In the body parts list, 'knee' translates to 'de knie'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1007",
@@ -5599,13 +5829,14 @@ export const chapters6_10 = [
     "options": [
       "de enkel",
       "de voet",
-      "het been"
+      "het been",
+      "het bede"
     ],
     "correctAnswer": "de enkel",
     "explanationTr": "Vücut bölümleri listesinde 'ankle' (ayak bileği) kelimesi 'de enkel' olarak verilmiştir.",
     "explanationEn": "In the body parts list, 'ankle' is given as 'de enkel'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1008",
@@ -5619,13 +5850,14 @@ export const chapters6_10 = [
     "options": [
       "het gezicht",
       "de mond",
-      "het oog"
+      "het oog",
+      "geen van deze"
     ],
     "correctAnswer": "het gezicht",
     "explanationTr": "Vücut bölümleri listesine göre 'face' (yüz) kelimesi 'het gezicht'tir.",
     "explanationEn": "According to the body parts list, 'face' translates to 'het gezicht'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1009",
@@ -5639,13 +5871,14 @@ export const chapters6_10 = [
     "options": [
       "het oog",
       "het oor",
-      "de neus"
+      "de neus",
+      "geen van deze"
     ],
     "correctAnswer": "het oog",
     "explanationTr": "Vücut bölümleri listesinde 'eye' (göz) kelimesi 'het oog' olarak geçer.",
     "explanationEn": "In the body parts list, 'eye' translates to 'het oog'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1010",
@@ -5659,13 +5892,14 @@ export const chapters6_10 = [
     "options": [
       "de mond",
       "het gezicht",
-      "de neus"
+      "de neus",
+      "geen van deze"
     ],
     "correctAnswer": "de mond",
     "explanationTr": "Vücut bölümleri listesinde 'mouth' (ağız) kelimesi 'de mond' olarak verilmiştir.",
     "explanationEn": "In the body parts list, 'mouth' is given as 'de mond'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1011",
@@ -5679,13 +5913,14 @@ export const chapters6_10 = [
     "options": [
       "het oor",
       "het oog",
-      "de neus"
+      "de neus",
+      "geen van deze"
     ],
     "correctAnswer": "het oor",
     "explanationTr": "Vücut bölümleri listesinde 'ear' (kulak) kelimesi 'het oor' olarak geçer.",
     "explanationEn": "In the body parts list, 'ear' translates to 'het oor'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1012",
@@ -5699,13 +5934,14 @@ export const chapters6_10 = [
     "options": [
       "Wat is er aan de hand?",
       "Waar hebt u pijn?",
-      "Hebt u koorts?"
+      "Hebt u koorts?",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Wat is er aan de hand?",
     "explanationTr": "Hekimin 'Sorun nedir / Ne oldu?' anlamında sorduğu soru 'Wat is er aan de hand?' şeklindedir.",
     "explanationEn": "The doctor's question 'What's wrong?' translates to 'Wat is er aan de hand?'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1013",
@@ -5719,13 +5955,14 @@ export const chapters6_10 = [
     "options": [
       "Wat zijn de klachten?",
       "Wat is er aan de hand?",
-      "Hoelang hebt u die al?"
+      "Hoelang hebt u die al?",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Wat zijn de klachten?",
     "explanationTr": "Hekim şikayetlerinizi veya belirtilerinizi sormak için 'Wat zijn de klachten?' ifadesini kullanır.",
     "explanationEn": "To ask about your symptoms or complaints, the doctor says 'Wat zijn de klachten?'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1014",
@@ -5739,13 +5976,14 @@ export const chapters6_10 = [
     "options": [
       "Hoelang hebt u die / dat al?",
       "Wanneer is dat begonnen?",
-      "Hebt u koorts?"
+      "Hebt u koorts?",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Hoelang hebt u die / dat al?",
     "explanationTr": "Hastalık belirtilerinin ne kadar süredir var olduğunu sormak için 'Hoelang hebt u die / dat al?' sorusu sorulur.",
     "explanationEn": "To ask how long you've had the symptoms, the doctor asks 'Hoelang hebt u die / dat al?'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1015",
@@ -5759,13 +5997,14 @@ export const chapters6_10 = [
     "options": [
       "Hebt u koorts?",
       "Waar hebt u pijn?",
-      "Wat zijn de klachten?"
+      "Wat zijn de klachten?",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Hebt u koorts?",
     "explanationTr": "Ateşiniz olup olmadığını sormak için 'Hebt u koorts?' kullanılır.",
     "explanationEn": "To ask if you have a fever, the doctor asks 'Hebt u koorts?'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1016",
@@ -5779,13 +6018,14 @@ export const chapters6_10 = [
     "options": [
       "Mijn keel doet pijn / zeer.",
       "Ik heb hoofdpijn.",
-      "Ik ben ziek."
+      "Ik ben ziek.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Mijn keel doet pijn / zeer.",
     "explanationTr": "Hasta boğazının ağrıdığını ifade etmek için 'Mijn keel doet pijn / zeer' der.",
     "explanationEn": "The patient says 'Mijn keel doet pijn / zeer' to express that their throat hurts.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1017",
@@ -5799,13 +6039,14 @@ export const chapters6_10 = [
     "options": [
       "De bultjes jeuken verschrikkelijk.",
       "Ik voel me niet goed.",
-      "Mijn keel doet pijn."
+      "Mijn keel doet pijn.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "De bultjes jeuken verschrikkelijk.",
     "explanationTr": "Kızarıklık veya kabarcıkların korkunç derecede kaşındığını söylemek için 'De bultjes jeuken verschrikkelijk' kalıbı kullanılır.",
     "explanationEn": "To say the lumps itch terribly, the phrase 'De bultjes jeuken verschrikkelijk' is used.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1018",
@@ -5819,13 +6060,14 @@ export const chapters6_10 = [
     "options": [
       "Ik ben ziek.",
       "Ik voel me goed.",
-      "Ik slaap slecht."
+      "Ik slaap slecht.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Ik ben ziek.",
     "explanationTr": "Hasta olduğunu belirtmek için 'Ik ben ziek' ifadesi kullanılır.",
     "explanationEn": "The phrase 'Ik ben ziek' is used to say 'I am sick / ill'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1019",
@@ -5839,13 +6081,14 @@ export const chapters6_10 = [
     "options": [
       "de zalf",
       "de bultjes",
-      "de dokter"
+      "de dokter",
+      "geen van deze"
     ],
     "correctAnswer": "de zalf",
     "explanationTr": "Merhem kelimesinin Felemenkçesi 'de zalf'tır.",
     "explanationEn": "The Dutch word for 'ointment' is 'de zalf'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1020",
@@ -5859,13 +6102,14 @@ export const chapters6_10 = [
     "options": [
       "de huisarts / de dokter",
       "de verpleegkundige",
-      "de patiënt"
+      "de patiënt",
+      "de patiënter"
     ],
     "correctAnswer": "de huisarts / de dokter",
     "explanationTr": "Doktor veya pratisyen hekim Felemenkçede 'de huisarts' veya 'de dokter' olarak adlandırılır.",
     "explanationEn": "A doctor or GP translates to 'de huisarts' or 'de dokter' in Dutch.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1021",
@@ -5879,13 +6123,14 @@ export const chapters6_10 = [
     "options": [
       "Beterschap.",
       "Gefeliciteerd.",
-      "Smakelijk eten."
+      "Smakelijk eten.",
+      "geen van deze"
     ],
     "correctAnswer": "Beterschap.",
     "explanationTr": "Hasta olan birine 'Geçmiş olsun' (Get well soon) demek için 'Beterschap' denir.",
     "explanationEn": "To wish someone a speedy recovery ('Get well soon'), you say 'Beterschap'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1022",
@@ -5899,13 +6144,14 @@ export const chapters6_10 = [
     "options": [
       "Sterkte.",
       "Proost.",
-      "Beterschap."
+      "Beterschap.",
+      "geSterkte."
     ],
     "correctAnswer": "Sterkte.",
     "explanationTr": "Zor durumlarda 'Güçlü ol / Kolay gelsin' (Be strong / Good luck) anlamında 'Sterkte' ifadesi kullanılır.",
     "explanationEn": "To say 'Be strong' or 'Good luck' in difficult times, you use the expression 'Sterkte'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1023",
@@ -5919,13 +6165,14 @@ export const chapters6_10 = [
     "options": [
       "gisterochtend / gistermorgen",
       "gistermiddag",
-      "gisteravond"
+      "gisteravond",
+      "gisterochtend / gistermorgde"
     ],
     "correctAnswer": "gisterochtend / gistermorgen",
     "explanationTr": "'Dün sabah' (yesterday morning) ifadesi Felemenkçede 'gisterochtend' veya 'gistermorgen' olarak söylenir.",
     "explanationEn": "'Yesterday morning' translates to 'gisterochtend' or 'gistermorgen' in Dutch.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1024",
@@ -5939,13 +6186,14 @@ export const chapters6_10 = [
     "options": [
       "vanavond",
       "vannacht",
-      "gisteravond"
+      "gisteravond",
+      "gevanavond"
     ],
     "correctAnswer": "vanavond",
     "explanationTr": "'Bu akşam' (tonight / this evening) ifadesi 'vanavond' olarak kullanılır.",
     "explanationEn": "'Tonight' or 'this evening' translates to 'vanavond'.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1025",
@@ -5959,13 +6207,14 @@ export const chapters6_10 = [
     "options": [
       "morgennacht",
       "vanavond",
-      "morgenochtend"
+      "morgenochtend",
+      "gemorgennacht"
     ],
     "correctAnswer": "morgennacht",
     "explanationTr": "'Yarın gece' (tomorrow night) ifadesinin karşılığı 'morgennacht'tır.",
     "explanationEn": "'Tomorrow night' translates to 'morgennacht'.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1026",
@@ -5979,13 +6228,14 @@ export const chapters6_10 = [
     "options": [
       "'s middags",
       "elke ochtend",
-      "'s avonds"
+      "'s avonds",
+      "geen van deze"
     ],
     "correctAnswer": "'s middags",
     "explanationTr": "'Her öğleden sonra' (every afternoon) ifadesi günlük dilde kısaca ''s middags' olarak geçer.",
     "explanationEn": "'Every afternoon' translates to ''s middags'.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1027",
@@ -5999,13 +6249,14 @@ export const chapters6_10 = [
     "options": [
       "Als de laatste letter van de stam in 'soft ketchup' zit (s, f, t, k, c, h, p).",
       "Als het werkwoord met een klinker eindigt.",
-      "Als het subject 'ik' is."
+      "Als het subject 'ik' is.",
+      "Je gebruikt stam + d."
     ],
     "correctAnswer": "Als de laatste letter van de stam in 'soft ketchup' zit (s, f, t, k, c, h, p).",
     "explanationTr": "Düzenli fiillerin perfectum (geçmiş zaman) halinde, fiil kökünün son harfi 'soft ketchup' (s, f, t, k, c, h, p) ünsüzlerinden biriyse sona '-t' eklenir.",
     "explanationEn": "In the regular perfectum, a '-t' is added if the last letter of the verb stem is in 'soft ketchup' (s, f, t, k, c, h, p).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1028",
@@ -6019,13 +6270,14 @@ export const chapters6_10 = [
     "options": [
       "gewerkt",
       "gewerkd",
-      "gewerken"
+      "gewerken",
+      "gewerkte"
     ],
     "correctAnswer": "gewerkt",
     "explanationTr": "'werken' fiilinin kökü 'werk' ile biter. 'k' harfi 'soft ketchup' içinde yer aldığı için sonuna '-t' alır: 'gewerkt'.",
     "explanationEn": "The stem of 'werken' is 'werk'. Since 'k' is in 'soft ketchup', it takes a '-t': 'gewerkt'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1029",
@@ -6039,13 +6291,14 @@ export const chapters6_10 = [
     "options": [
       "gespeeld",
       "gespeelt",
-      "gespelen"
+      "gespelen",
+      "gespelde"
     ],
     "correctAnswer": "gespeeld",
     "explanationTr": "'spelen' fiilinin kökü 'speel' ile biter. 'l' harfi 'soft ketchup' içinde olmadığından sonuna '-d' alır: 'gespeeld'.",
     "explanationEn": "The stem of 'spelen' is 'speel'. Since 'l' is not in 'soft ketchup', it takes a '-d': 'gespeeld'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1030",
@@ -6060,13 +6313,14 @@ export const chapters6_10 = [
     "options": [
       "Ze krijgen geen extra 'ge-' als prefix.",
       "Ze krijgen een dubbele 'ge-'.",
-      "Ze veranderen in onregelmatige werkwoorden."
+      "Ze veranderen in onregelmatige werkwoorden.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Ze krijgen geen extra 'ge-' als prefix.",
     "explanationTr": "be-, ge-, her-, ver- veya ont- ile başlayan fiiller perfectum (geçmiş zaman) formunda fazladan 'ge-' ön eki almazlar.",
     "explanationEn": "Verbs starting with be-, ge-, her-, ver-, or ont- do not get an extra 'ge-' prefix in the perfectum.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1031",
@@ -6080,13 +6334,14 @@ export const chapters6_10 = [
     "options": [
       "gebruikt",
       "gegebruikt",
-      "gebruiken"
+      "gebruiken",
+      "gebruikte"
     ],
     "correctAnswer": "gebruikt",
     "explanationTr": "'gebruiken' fiili zaten 'ge-' ile başladığı için ekstra 'ge-' almaz ve köküne göre '-t' eklenir: 'gebruikt'.",
     "explanationEn": "Since 'gebruiken' already starts with 'ge-', it does not take an extra 'ge-' and ends with '-t': 'gebruikt'.",
     "difficulty": 5,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1032",
@@ -6100,13 +6355,14 @@ export const chapters6_10 = [
     "options": [
       "betaald",
       "gebetaald",
-      "betaalt"
+      "betaalt",
+      "betaaldte"
     ],
     "correctAnswer": "betaald",
     "explanationTr": "'betalen' fiili 'be-' ile başladığı için fazladan 'ge-' almaz, kurala göre sonuna '-d' gelir: 'betaald'.",
     "explanationEn": "Since 'betalen' starts with 'be-', it does not take an extra 'ge-' and ends with '-d': 'betaald'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1033",
@@ -6120,13 +6376,14 @@ export const chapters6_10 = [
     "options": [
       "verhuurd",
       "geverhuurd",
-      "verhuurt"
+      "verhuurt",
+      "verhuurdte"
     ],
     "correctAnswer": "verhuurd",
     "explanationTr": "'verhuren' fiili 'ver-' ile başladığı için 'ge-' almaz ve sonuna '-d' eklenir: 'verhuurd'.",
     "explanationEn": "Since 'verhuren' starts with 'ver-', it does not take an extra 'ge-' and ends with '-d': 'verhuurd'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1034",
@@ -6140,13 +6397,14 @@ export const chapters6_10 = [
     "options": [
       "ontmoet",
       "geontmoet",
-      "ontmoeten"
+      "ontmoeten",
+      "ontmoette"
     ],
     "correctAnswer": "ontmoet",
     "explanationTr": "'ontmoeten' fiili 'ont-' ile başladığı için 'ge-' almaz. Kökü 't' ile bittiği için kendi formunda kalır: 'ontmoet'.",
     "explanationEn": "Since 'ontmoeten' starts with 'ont-', it does not take an extra 'ge-'. The stem ends in 't', so it remains 'ontmoet'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1035",
@@ -6160,13 +6418,14 @@ export const chapters6_10 = [
     "options": [
       "Bij werkwoorden van richting of verandering van situatie (bijv. gaan, komen, beginnen).",
       "Bij alle onregelmatige werkwoorden.",
-      "Als de zin ontkennend is."
+      "Als de zin ontkennend is.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Bij werkwoorden van richting of verandering van situatie (bijv. gaan, komen, beginnen).",
     "explanationTr": "Perfectum formunda, yön veya durum değişikliği bildiren fiiller (gaan, komen, beginnen gibi) ile 'hebben' yerine 'zijn' kullanılır.",
     "explanationEn": "In the perfectum, the auxiliary 'zijn' is used instead of 'hebben' for verbs expressing direction or change of situation (e.g., gaan, komen, beginnen).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1036",
@@ -6180,13 +6439,14 @@ export const chapters6_10 = [
     "options": [
       "ben",
       "heb",
-      "had"
+      "had",
+      "geben"
     ],
     "correctAnswer": "ben",
     "explanationTr": "'gaan' fiili yönelme ve hareket bildirdiği için 'zijn' yardımcı fiiliyle kullanılır: Ik ben gegaan.",
     "explanationEn": "Because 'gaan' implies direction/movement, it is used with the auxiliary 'zijn': Ik ben gegaan.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1037",
@@ -6200,13 +6460,14 @@ export const chapters6_10 = [
     "options": [
       "ben",
       "heb",
-      "is"
+      "is",
+      "geben"
     ],
     "correctAnswer": "ben",
     "explanationTr": "'komen' (gelmek) fiili de yön ve hareket bildirdiği için 'zijn' ile çekimlenir.",
     "explanationEn": "The verb 'komen' (to come) also implies movement and direction, so it uses 'zijn'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1038",
@@ -6220,13 +6481,14 @@ export const chapters6_10 = [
     "options": [
       "zijn",
       "hebben",
-      "worden"
+      "worden",
+      "hebbde"
     ],
     "correctAnswer": "zijn",
     "explanationTr": "'beginnen' durumu değişikliği (change of situation) ifade ettiği için 'zijn' yardımcı fiilini alır.",
     "explanationEn": "'beginnen' implies a change of situation, so it takes the auxiliary 'zijn'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1039",
@@ -6240,13 +6502,14 @@ export const chapters6_10 = [
     "options": [
       "zijn en blijven",
       "hebben en doen",
-      "kijken en luisteren"
+      "kijken en luisteren",
+      "zijn en blijvde"
     ],
     "correctAnswer": "zijn en blijven",
     "explanationTr": "Kitaptaki notlara göre, hareket fiillerinin dışında 'zijn' (olmak) ve 'blijven' (kalmak) fiilleri de perfectumda 'zijn' ile kullanılır.",
     "explanationEn": "According to the notes, besides movement verbs, 'zijn' and 'blijven' also use 'zijn' in the perfectum.",
     "difficulty": 5,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1046",
@@ -6260,13 +6523,14 @@ export const chapters6_10 = [
     "options": [
       "iets bijzonders",
       "iets bijzonder",
-      "iets bijzonderes"
+      "iets bijzonderes",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "iets bijzonders",
     "explanationTr": "Kurala göre 'iets' kelimesinden sonra gelen sıfatlara '-s' takısı eklenir: iets bijzonders.",
     "explanationEn": "According to the rule, adjectives following 'iets' get an '-s' suffix: iets bijzonders.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1048",
@@ -6280,13 +6544,14 @@ export const chapters6_10 = [
     "options": [
       "Zij had griep (met hoge koorts, pijn en moest in bed blijven).",
       "Zij had een lichte verkoudheid.",
-      "Zij had een gebroken been."
+      "Zij had een gebroken been.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Zij had griep (met hoge koorts, pijn en moest in bed blijven).",
     "explanationTr": "Okuma parçasına ve cevap anahtarına göre Jenny gribe (griep) yakalanmıştır; ateşi vardı, her yeri ağrıyordu ve yataktan çıkamadı.",
     "explanationEn": "According to the text and answer key, Jenny had the flu (griep); she had a fever, everything hurt, and she stayed in bed.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1049",
@@ -6300,13 +6565,14 @@ export const chapters6_10 = [
     "options": [
       "Hij was verkouden (hij werkte, maar moest hoesten, niezen en zijn neus snuiten).",
       "Hij had griep en kon niet lopen.",
-      "Hij had hoofdpijn en moest naar het ziekenhuis."
+      "Hij had hoofdpijn en moest naar het ziekenhuis.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Hij was verkouden (hij werkte, maar moest hoesten, niezen en zijn neus snuiten).",
     "explanationTr": "Okuma parçasına ve cevap anahtarına göre Peter soğuk algınlığı (verkoudheid) geçirmiştir; öksürüyor, hapşırıyor ve burnunu siliyordu ama çalışabiliyordu.",
     "explanationEn": "According to the text and answer key, Peter had a cold (verkoudheid); he was coughing, sneezing, and blowing his nose but still worked.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1050",
@@ -6320,13 +6586,14 @@ export const chapters6_10 = [
     "options": [
       "Op werkdagen van 8.00 tot 12.00 uur en van 13.30 tot 17.00 uur.",
       "24 uur per dag, 7 dagen per week.",
-      "Alleen in de ochtend tot 13.00 uur."
+      "Alleen in de ochtend tot 13.00 uur.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Op werkdagen van 8.00 tot 12.00 uur en van 13.30 tot 17.00 uur.",
     "explanationTr": "Kitaptaki kültürel bilgilere göre aile hekimlerinin (huisarts) standart çalışma saatleri iş günleri 8.00-12.00 ile 13.30-17.00 arasıdır.",
     "explanationEn": "According to the cultural notes, regular office hours for a GP are working days 8.00-12.00 and 13.30-17.00.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1051",
@@ -6340,13 +6607,14 @@ export const chapters6_10 = [
     "options": [
       "De spoedlijn of huisartsenpost.",
       "De politie.",
-      "Je buren."
+      "Je buren.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "De spoedlijn of huisartsenpost.",
     "explanationTr": "Çalışma saatleri dışında veya acil durumlarda nöbetçi doktora 'de spoedlijn' (acil durum hattı) üzerinden ulaşılır.",
     "explanationEn": "For medical emergencies outside regular hours, you contact the 'spoedlijn' (emergency line).",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch9_1052",
@@ -6360,13 +6628,14 @@ export const chapters6_10 = [
     "options": [
       "onder",
       "in",
-      "op"
+      "op",
+      "bij"
     ],
     "correctAnswer": "onder",
     "explanationTr": "Felemenkçede vücudun bir şeyle (örneğin kızarıklıkla) kaplı olduğunu belirtirken 'onder zitten' (altında kalmak / kaplanmak) deyimi kullanılır.",
     "explanationEn": "In Dutch, the expression 'onder zitten' is used to indicate being covered in something, like a rash.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_1000",
@@ -6380,13 +6649,14 @@ export const chapters6_10 = [
     "options": [
       "de fietsenmaker",
       "de fietser",
-      "de garage"
+      "de garage",
+      "de fietsenmakerer"
     ],
     "correctAnswer": "de fietsenmaker",
     "explanationTr": "'de fietsenmaker' bisiklet tamircisi (cycle repairman) demektir.",
     "explanationEn": "'de fietsenmaker' translates to cycle repairman.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_1006",
@@ -6400,13 +6670,14 @@ export const chapters6_10 = [
     "options": [
       "rechts afslaan",
       "links afslaan",
-      "rechtdoor gaan"
+      "rechtdoor gaan",
+      "geen van deze"
     ],
     "correctAnswer": "rechts afslaan",
     "explanationTr": "'rechts afslaan' sağa dönmek (turn right) demektir.",
     "explanationEn": "'rechts afslaan' translates to 'turn right'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_1011",
@@ -6420,13 +6691,14 @@ export const chapters6_10 = [
     "options": [
       "seat / saddle",
       "wheel",
-      "lock"
+      "lock",
+      "wheeler"
     ],
     "correctAnswer": "seat / saddle",
     "explanationTr": "'het zadel' bisiklet selesi / koltuğu (seat / saddle) demektir.",
     "explanationEn": "'het zadel' translates to 'seat' or 'saddle'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_1013",
@@ -6440,13 +6712,14 @@ export const chapters6_10 = [
     "options": [
       "pedal",
       "brake",
-      "light"
+      "light",
+      "pedaler"
     ],
     "correctAnswer": "pedal",
     "explanationTr": "'de trapper' bisiklet pedalıdır.",
     "explanationEn": "'de trapper' translates to 'pedal'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_1014",
@@ -6460,13 +6733,14 @@ export const chapters6_10 = [
     "options": [
       "front light",
       "rear light",
-      "bell"
+      "bell",
+      "geen van deze"
     ],
     "correctAnswer": "front light",
     "explanationTr": "'het voorlicht' bisikletin ön farı/ışığıdır (front light).",
     "explanationEn": "'het voorlicht' means 'front light'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_1015",
@@ -6480,13 +6754,14 @@ export const chapters6_10 = [
     "options": [
       "rear light",
       "front light",
-      "lock"
+      "lock",
+      "geen van deze"
     ],
     "correctAnswer": "rear light",
     "explanationTr": "'het achterlicht' bisikletin arka lambasıdır (rear light).",
     "explanationEn": "'het achterlicht' means 'rear light'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_1016",
@@ -6500,13 +6775,14 @@ export const chapters6_10 = [
     "options": [
       "kickstand",
       "bell",
-      "handlebars"
+      "handlebars",
+      "gekickstand"
     ],
     "correctAnswer": "kickstand",
     "explanationTr": "'de standaard' bisiklet ayağı (kickstand) demektir.",
     "explanationEn": "'de standaard' translates to 'kickstand'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_1017",
@@ -6520,13 +6796,14 @@ export const chapters6_10 = [
     "options": [
       "lock",
       "seat",
-      "pedal"
+      "pedal",
+      "gelock"
     ],
     "correctAnswer": "lock",
     "explanationTr": "'het slot' kilit (lock) demektir.",
     "explanationEn": "'het slot' means 'lock'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_1031",
@@ -6540,13 +6817,14 @@ export const chapters6_10 = [
     "options": [
       "Sorry, ik versta u niet goed. Kunt u het nog een keer zeggen?",
       "Wat betekent dat?",
-      "Hoe heet dat?"
+      "Hoe heet dat?",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Sorry, ik versta u niet goed. Kunt u het nog een keer zeggen?",
     "explanationTr": "Anlamadığınızda tekrar ettirmek için 'Üzgünüm, sizi iyi anlayamadım. Bir kez daha söyleyebilir misiniz?' kalıbı kullanılır.",
     "explanationEn": "To politely ask someone to repeat themselves, say 'Sorry, ik versta u niet goed. Kunt u het nog een keer zeggen?'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_1032",
@@ -6560,13 +6838,14 @@ export const chapters6_10 = [
     "options": [
       "Sorry, ik begrijp het niet. Wat bedoelt u met...?",
       "Wat zegt u?",
-      "Kunt u het herhalen?"
+      "Kunt u het herhalen?",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Sorry, ik begrijp het niet. Wat bedoelt u met...?",
     "explanationTr": "Birinin ne kastettiğini (ne demek istediğini) sormak için 'Wat bedoelt u met...?' kullanılır.",
     "explanationEn": "To ask what someone means by something, use 'Wat bedoelt u met...?'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_1033",
@@ -6580,13 +6859,14 @@ export const chapters6_10 = [
     "options": [
       "Hoe heet dat / zo'n ding?",
       "Wat bedoelt u?",
-      "Kunt u het spellen?"
+      "Kunt u het spellen?",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Hoe heet dat / zo'n ding?",
     "explanationTr": "Bir nesnenin Felemenkçe adını sormak için 'Hoe heet dat?' veya 'Hoe heet zo'n ding?' (Bunun adı ne?) kullanılır.",
     "explanationEn": "To ask what an object is called, use 'Hoe heet dat?' or 'Hoe heet zo'n ding?'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_1034",
@@ -6600,13 +6880,14 @@ export const chapters6_10 = [
     "options": [
       "'Bedoelen' is voor wat een persoon bedoelt (person means), 'betekenen' is voor wat een woord of ding betekent (thing means).",
       "'Betekenen' is voor personen, 'bedoelen' is voor dingen.",
-      "Er is geen verschil."
+      "Er is geen verschil.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "'Bedoelen' is voor wat een persoon bedoelt (person means), 'betekenen' is voor wat een woord of ding betekent (thing means).",
     "explanationTr": "'bedoelen' kişilerin ne kastettiği (demek istediği) için, 'betekenen' ise kelime veya nesnelerin ne anlama geldiği için kullanılır.",
     "explanationEn": "'bedoelen' is used for what a person means, while 'betekenen' is used for what a word or thing means.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_1035",
@@ -6650,13 +6931,14 @@ export const chapters6_10 = [
     "options": [
       "stam + te(n) of de(n) afhankelijk van de 'soft ketchup' regel.",
       "stam + t",
-      "infinitief + ge"
+      "infinitief + ge",
+      "stam + te(n) of de(n) afhankelijk van de 'soft ketchup' regel.er"
     ],
     "correctAnswer": "stam + te(n) of de(n) afhankelijk van de 'soft ketchup' regel.",
     "explanationTr": "Düzenli fiillerin hikaye geçmiş zamanı (imperfectum), kökün 'soft ketchup' harflerinden biriyle bitip bitmediğine bağlı olarak '+te(n)' veya '+de(n)' almasıyla oluşturulur.",
     "explanationEn": "The imperfectum for regular verbs is formed by adding 'te(n)' or 'de(n)' to the stem, depending on the 'soft ketchup' rule.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_1038",
@@ -6731,13 +7013,14 @@ export const chapters6_10 = [
     "options": [
       "mocht",
       "moogde",
-      "moogte"
+      "moogte",
+      "mochter"
     ],
     "correctAnswer": "mocht",
     "explanationTr": "'mogen' (izinli olmak) fiilinin tekil geçmiş zaman hali 'mocht' şeklindedir.",
     "explanationEn": "The singular imperfectum of 'mogen' is 'mocht'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_1043",
@@ -6752,13 +7035,14 @@ export const chapters6_10 = [
     "options": [
       "wilde / wou",
       "wilte",
-      "wilde / wilden"
+      "wilde / wilden",
+      "wilde / wouer"
     ],
     "correctAnswer": "wilde / wou",
     "explanationTr": "'willen' (istemek) fiilinin tekil geçmiş zaman hali 'wilde' veya 'wou' olabilir.",
     "explanationEn": "The singular imperfectum of 'willen' is 'wilde' or 'wou'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_1044",
@@ -6773,13 +7057,14 @@ export const chapters6_10 = [
     "options": [
       "moest",
       "moette",
-      "moetde"
+      "moetde",
+      "moester"
     ],
     "correctAnswer": "moest",
     "explanationTr": "'moeten' (zorunda olmak) fiilinin tekil geçmiş zaman hali 'moest' şeklindedir.",
     "explanationEn": "The singular imperfectum of 'moeten' is 'moest'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_1045",
@@ -6794,13 +7079,14 @@ export const chapters6_10 = [
     "options": [
       "kon",
       "koste",
-      "kunde"
+      "kunde",
+      "koner"
     ],
     "correctAnswer": "kon",
     "explanationTr": "'kunnen' (yapabilmek) fiilinin tekil geçmiş zaman hali 'kon' şeklindedir.",
     "explanationEn": "The singular imperfectum of 'kunnen' is 'kon'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_1046",
@@ -6815,13 +7101,14 @@ export const chapters6_10 = [
     "options": [
       "zou",
       "zulte",
-      "zulde"
+      "zulde",
+      "zouer"
     ],
     "correctAnswer": "zou",
     "explanationTr": "'zullen' fiilinin tekil geçmiş zaman hali 'zou' şeklindedir.",
     "explanationEn": "The singular imperfectum of 'zullen' is 'zou'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_1047",
@@ -6836,13 +7123,14 @@ export const chapters6_10 = [
     "options": [
       "konden",
       "konden",
-      "konden"
+      "konden",
+      "kondde"
     ],
     "correctAnswer": "konden",
     "explanationTr": "Çoğul özneler için 'kunnen' fiilinin geçmiş zamanı 'konden' olur.",
     "explanationEn": "The plural imperfectum of 'kunnen' is 'konden'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_1048",
@@ -6857,13 +7145,14 @@ export const chapters6_10 = [
     "options": [
       "moesten",
       "moesten",
-      "moesten"
+      "moesten",
+      "moestte"
     ],
     "correctAnswer": "moesten",
     "explanationTr": "Çoğul özneler için 'moeten' fiilinin geçmiş zamanı 'moesten' olur.",
     "explanationEn": "The plural imperfectum of 'moeten' is 'moesten'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_1049",
@@ -6877,13 +7166,14 @@ export const chapters6_10 = [
     "options": [
       "Voor zaken die afgesloten zijn (completed actions).",
       "Voor het beschrijven van achtergrondinformatie.",
-      "Voor de toekomstige tijd."
+      "Voor de toekomstige tijd.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Voor zaken die afgesloten zijn (completed actions).",
     "explanationTr": "Hollandacada tamamlanmış, bitmiş olaylar (afgesloten zaken) için perfectum kullanılır.",
     "explanationEn": "The perfectum is used for completed actions (zaken die afgesloten zijn).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_1050",
@@ -6897,13 +7187,14 @@ export const chapters6_10 = [
     "options": [
       "Voor beschrijvingen (descriptions / background details).",
       "Voor afgesloten acties in het verleden.",
-      "Om een bevel te geven."
+      "Om een bevel te geven.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Voor beschrijvingen (descriptions / background details).",
     "explanationTr": "Geçmişteki durumları betimlemek ve arka plan detayları vermek için (beschrijvingen) imperfectum kullanılır.",
     "explanationEn": "The imperfectum is used for descriptions and background details of the past.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_1051",
@@ -6916,13 +7207,14 @@ export const chapters6_10 = [
     "options": [
       "Zijn eigen fietsen zijn allemaal gestolen.",
       "Hij vindt de fiets van zijn vriendin mooier.",
-      "Zijn fiets is bij de fietsenmaker."
+      "Zijn fiets is bij de fietsenmaker.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Zijn eigen fietsen zijn allemaal gestolen.",
     "explanationTr": "Metne göre Andreas'ın üç bisikleti de çalınmıştır (gestolen).",
     "explanationEn": "According to the text, Andreas rides his girlfriend's bike because his own bikes were stolen.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_1052",
@@ -6935,13 +7227,14 @@ export const chapters6_10 = [
     "options": [
       "De bel, het heeft een vrolijk geluid als een mini-kerkklok.",
       "De kleur van de fiets.",
-      "Het stuur."
+      "Het stuur.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "De bel, het heeft een vrolijk geluid als een mini-kerkklok.",
     "explanationTr": "Ronald bisikletindeki en güzel şeyin, neşeli sesiyle mini bir kilise çanına benzeyen zili (de bel) olduğunu söyler.",
     "explanationEn": "Ronald finds the bell the most beautiful part of his bike because it sounds like a cheerful mini church bell.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_1053",
@@ -6954,13 +7247,14 @@ export const chapters6_10 = [
     "options": [
       "Een omafiets.",
       "Een mountainbike.",
-      "Een racefiets."
+      "Een racefiets.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Een omafiets.",
     "explanationTr": "Jarno, uzun zamandır istediği bir 'omafiets' (klasik kadın bisikleti) aldığını anlatır.",
     "explanationEn": "Jarno bought an 'omafiets' (traditional Dutch bike) which was his dream.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "sum_ch10_1054",
@@ -6973,13 +7267,14 @@ export const chapters6_10 = [
     "options": [
       "In Nederland fietst iedereen, van kind tot professor.",
       "Alleen studenten fietsen in Nederland.",
-      "Mensen fietsen alleen in het weekend."
+      "Mensen fietsen alleen in het weekend.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "In Nederland fietst iedereen, van kind tot professor.",
     "explanationTr": "Kültür notuna göre Hollanda'da çocuktan profesöre kadar herkes bisiklete biner.",
     "explanationEn": "According to the culture note, everyone in the Netherlands cycles, from children to professors.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_onclass_6_1",
@@ -7365,7 +7660,7 @@ export const chapters6_10 = [
     "explanationTr": "Sayılamayan belirsiz madde isimlerinin (koffie, su, melk vb.) olumsuzunda 'geen' kullanılır: 'Zij drinkt geen koffie.'",
     "explanationEn": "Uncountable, indefinite substance nouns like 'koffie' are negated using 'geen': 'Zij drinkt geen koffie.'",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_onclass_8_4",
@@ -7612,18 +7907,24 @@ export const chapters6_10 = [
   },
   {
     "id": "q_onclass_9_8",
-    "type": "fill_in",
+    "type": "multiple_choice",
     "tags": [
       "summary_ch9",
       "perfectum",
       "soft_ketchup"
     ],
-    "questionNl": "De atleet heeft hard naar de finish ___ (rennen).",
+    "questionNl": "De atleet heeft hard naar de finish ___.",
     "correctAnswer": "gerend",
     "explanationTr": "'Rennen' kökü 'ren' n ile biter (kofschip dışı), dolayısıyla düzenli participium eki '-d'dir: 'gerend'.",
     "explanationEn": "The stem of 'rennen' is 'ren', ending in 'n' (not in soft ketchup), so its regular participle ending is '-d': 'gerend'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2,
+    "options": [
+      "gerend",
+      "rendte",
+      "rendde",
+      "gerenden"
+    ]
   },
   {
     "id": "q_onclass_9_9",
@@ -7726,18 +8027,24 @@ export const chapters6_10 = [
   },
   {
     "id": "q_onclass_10_5",
-    "type": "fill_in",
+    "type": "multiple_choice",
     "tags": [
       "summary_ch10",
       "bike",
       "vocabulary"
     ],
-    "questionNl": "Achterop de fiets kun je bagage of tassen vastzetten op de ___ (luggage rack).",
+    "questionNl": "Achterop de fiets kun je bagage of tassen vastzetten op de ___.",
     "correctAnswer": "bagagedrager",
     "explanationTr": "Bisikletin arkasındaki bagaj demirine 'de bagagedrager' denir.",
     "explanationEn": "The luggage rack behind the saddle on a Dutch bicycle is 'de bagagedrager'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2,
+    "options": [
+      "bagagedrager",
+      "stuur",
+      "zadel",
+      "ketting"
+    ]
   },
   {
     "id": "q_onclass_10_6",

@@ -8,17 +8,18 @@ export const dialoguesReading = [
       "reading_comprehension",
       "verbs_present"
     ],
-    "questionNl": "Lees de tekst: 'Hallo, ik ben Sanne. Ik ben 25 jaar en ik woon in Rotterdam. Ik werk als verpleegkundige in een groot ziekenhuis. Mijn vriend heet Luuk. Hij studeert informatica.'\n\nWaar ___ (wonen) Sanne?",
+    "questionNl": "Lees de tekst: 'Hallo, ik ben Sanne. Ik ben 25 jaar en ik woon in Rotterdam. Ik werk als verpleegkundige in een groot ziekenhuis. Mijn vriend heet Luuk. Hij studeert informatica.'\n\nWaar ___ Sanne?",
     "options": [
       "woon",
       "woont",
-      "wonen"
+      "wonen",
+      "wonde"
     ],
     "correctAnswer": "woont",
     "explanationTr": "Metne göre özne Sanne (zij). Bu yüzden 'stam + t' (woon+t) kullanılır.",
     "explanationEn": "Based on the text, the subject is Sanne (zij). Therefore, we use 'stam + t' (woon+t).",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_reading_040",
@@ -45,13 +46,14 @@ export const dialoguesReading = [
     "options": [
       "Hij",
       "Zij",
-      "Hem"
+      "Hem",
+      "ik"
     ],
     "correctAnswer": "Hij",
     "explanationTr": "Luuk bir erkek ismi olduğu için özne olarak 'Hij' (O) kullanılır.",
     "explanationEn": "Luuk is a male name, so the subject pronoun 'Hij' (He) is used.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_reading_042",
@@ -74,17 +76,18 @@ export const dialoguesReading = [
       "reading_comprehension",
       "verbs_present"
     ],
-    "questionNl": "Lees de tekst: 'Wij zijn de familie De Jong. We hebben een mooi huis in Utrecht. Op zondag gaan we vaak naar het bos. Onze kinderen, Sem en Emma, spelen dan met de hond. De hond heet Max.'\n\nDe familie De Jong ___ (hebben) een mooi huis.",
+    "questionNl": "Lees de tekst: 'Wij zijn de familie De Jong. We hebben een mooi huis in Utrecht. Op zondag gaan we vaak naar het bos. Onze kinderen, Sem en Emma, spelen dan met de hond. De hond heet Max.'\n\nDe familie De Jong ___ een mooi huis.",
     "options": [
       "heb",
       "heeft",
-      "hebben"
+      "hebben",
+      "hebbde"
     ],
     "correctAnswer": "heeft",
     "explanationTr": "Hollandacada 'familie' (aile) kelimesi tekil bir kelimedir (de familie). Bu yüzden 'heeft' kullanılır.",
     "explanationEn": "In Dutch, 'familie' (family) is a singular noun (de familie). Therefore, 'heeft' is used.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_reading_044",
@@ -107,17 +110,18 @@ export const dialoguesReading = [
       "reading_comprehension",
       "verbs_present"
     ],
-    "questionNl": "De kinderen ___ (spelen) met de hond.",
+    "questionNl": "De kinderen ___ met de hond.",
     "options": [
       "speel",
       "speelt",
-      "spelen"
+      "spelen",
+      "spelde"
     ],
     "correctAnswer": "spelen",
     "explanationTr": "'De kinderen' (çocuklar) çoğul bir öznedir (zij). Çoğul öznelerde fiil mastar (spelen) halinde kalır.",
     "explanationEn": "'De kinderen' (the children) is a plural subject (zij). With plural subjects, the verb remains in the infinitive (spelen).",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_reading_046",
@@ -144,13 +148,14 @@ export const dialoguesReading = [
     "options": [
       "zijn",
       "hun",
-      "onze"
+      "onze",
+      "uw"
     ],
     "correctAnswer": "hun",
     "explanationTr": "'Onların evi' demek için çoğul iyelik zamiri olan 'hun' kullanılır.",
     "explanationEn": "To say 'their house', the plural possessive pronoun 'hun' is used.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_wo_041",
@@ -175,17 +180,18 @@ export const dialoguesReading = [
       "questions",
       "word_order"
     ],
-    "questionNl": "Lees de tekst uit de vorige vraag opnieuw.\n\nWaarom ___ (slapen) ze vandaag lang uit?",
+    "questionNl": "Lees de tekst uit de vorige vraag opnieuw.\n\nWaarom ___ ze vandaag lang uit?",
     "options": [
       "slaap",
       "slaapt",
-      "slapen"
+      "slapen",
+      "slapte"
     ],
     "correctAnswer": "slaapt",
     "explanationTr": "Soru cümlesinde 'ze' (o-kadın) zamirinden önce fiil gelir. 'Ze' için '-t' harfi düşmez, bu yüzden 'slaapt'.",
     "explanationEn": "In the question, the verb precedes 'ze' (she). The '-t' does not drop for 'ze', so it's 'slaapt'.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_wo_043",
@@ -210,17 +216,18 @@ export const dialoguesReading = [
       "questions",
       "verbs_present"
     ],
-    "questionNl": "___ (Vinden) Anna koffie lekker?",
+    "questionNl": "___ Anna koffie lekker?",
     "options": [
       "Vind",
       "Vindt",
-      "Vinden"
+      "Vinden",
+      "Vindde"
     ],
     "correctAnswer": "Vindt",
     "explanationTr": "Anna (zij) öznesi olduğu için soru cümlesinde bile '-t' düşmez. ('Vind' köküne 't' eklenir: Vindt).",
     "explanationEn": "Because the subject is Anna (zij), the '-t' doesn't drop even in a question. ('t' is added to 'Vind': Vindt).",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_wo_045",
@@ -258,17 +265,18 @@ export const dialoguesReading = [
       "reading_comprehension",
       "modal_verbs"
     ],
-    "questionNl": "Bart ___ (moeten) vandaag werken.",
+    "questionNl": "Bart ___ vandaag werken.",
     "options": [
       "moet",
       "moeten",
-      "moetst"
+      "moetst",
+      "moette"
     ],
     "correctAnswer": "moet",
     "explanationTr": "Bart (hij) için 'moeten' modal fiilinin çekimi 'moet' şeklindedir.",
     "explanationEn": "For Bart (hij), the conjugation of the modal verb 'moeten' is 'moet'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_wo_048",
@@ -293,32 +301,39 @@ export const dialoguesReading = [
       "word_order",
       "inversion"
     ],
-    "questionNl": "Daar ___ (werken) ik elke zaterdag.",
+    "questionNl": "Daar ___ ik elke zaterdag.",
     "options": [
       "werk",
       "werkt",
-      "werken"
+      "werken",
+      "werkte"
     ],
     "correctAnswer": "werk",
     "explanationTr": "Cümle 'Daar' (orada) yer zarfıyla başladığı için inversie olur. 'ik' için fiil her halükarda sadece 'werk' şeklindedir.",
     "explanationEn": "Starting with 'Daar' (there) causes inversion. For 'ik', the verb is just 'werk' in any case.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_wo_050",
-    "type": "fill_in",
+    "type": "multiple_choice",
     "tags": [
       "reading_comprehension",
       "modal_verbs",
       "word_order"
     ],
-    "questionNl": "Bart moet vandaag heel hard ___ (werken).",
+    "questionNl": "Bart moet vandaag heel hard ___.",
     "correctAnswer": "werken",
     "explanationTr": "Cümlede 'moet' modal fiili olduğu için asıl fiil (werken) mastar halinde cümlenin sonunda yer alır.",
     "explanationEn": "Because the modal verb 'moet' is in the sentence, the main verb (werken) is in the infinitive at the end.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2,
+    "options": [
+      "werken",
+      "werkt",
+      "werk",
+      "gewerken"
+    ]
   },
   {
     "id": "q_reading_041",
@@ -332,13 +347,14 @@ export const dialoguesReading = [
     "options": [
       "hobby's",
       "boeken",
-      "broertje"
+      "broertje",
+      "hobby'ser"
     ],
     "correctAnswer": "broertje",
     "explanationTr": "'-tje' küçültme ekidir. 'broertje' küçük erkek kardeş demektir.",
     "explanationEn": "'-tje' is a diminutive suffix. 'broertje' means little brother.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_reading_042",
@@ -365,13 +381,14 @@ export const dialoguesReading = [
     "options": [
       "Ze eindigen op a, i, o, u of y",
       "Het zijn de-woorden",
-      "Het zijn buitenlandse woorden"
+      "Het zijn buitenlandse woorden",
+      "Het zijn de-woordde"
     ],
     "correctAnswer": "Ze eindigen op a, i, o, u of y",
     "explanationTr": "Kurala göre, a, i, o, u veya y ile biten isimler çoğul yapılırken apostrof alır.",
     "explanationEn": "According to the rule, nouns ending in a, i, o, u, or y take an apostrophe when made plural.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_reading_044",
@@ -426,13 +443,14 @@ export const dialoguesReading = [
     "options": [
       "Onregelmatige vormen",
       "Buitenlandse vormen",
-      "Reguliere vormen"
+      "Reguliere vormen",
+      "Onregelmatige vormde"
     ],
     "correctAnswer": "Onregelmatige vormen",
     "explanationTr": "Bu üç kelime Hollandacada standart -en, -s kurallarına uymayan 'düzensiz formlar'dır (Onregelmatige vormen).",
     "explanationEn": "These three words are 'irregular forms' (Onregelmatige vormen) because they don't follow the standard -en, -s rules.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_reading_048",
@@ -445,13 +463,14 @@ export const dialoguesReading = [
     "options": [
       "Omdat het eindigt op een onbeklemtoonde -e",
       "Omdat het eindigt op -s",
-      "Omdat het onregelmatig is"
+      "Omdat het onregelmatig is",
+      "Omdat het eindigt op -ser"
     ],
     "correctAnswer": "Omdat het eindigt op een onbeklemtoonde -e",
     "explanationTr": "Kantine gibi sonu vurgusuz '-e' ile biten kelimeler, çoğul olurken '-s' eki alırlar.",
     "explanationEn": "Words ending with an unaccented '-e' like kantine, take an '-s' suffix in the plural.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_reading_049",
@@ -479,13 +498,14 @@ export const dialoguesReading = [
     "options": [
       "de",
       "het",
-      "een"
+      "een",
+      "geen lidwoord"
     ],
     "correctAnswer": "de",
     "explanationTr": "'Broodje' (küçük ekmek) tekil halde 'het' alsa bile, çoğul olduğu an ('broodjes') daima 'de' artikeli alır.",
     "explanationEn": "Although 'broodje' takes 'het' in the singular, the moment it becomes plural ('broodjes') it always takes 'de'.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_adj_041",
@@ -498,13 +518,14 @@ export const dialoguesReading = [
     "options": [
       "'huis' is een het-woord en het is indefiniet (een)",
       "'huis' is een de-woord",
-      "Omdat 'oud' een uitzondering is"
+      "Omdat 'oud' een uitzondering is",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "'huis' is een het-woord en het is indefiniet (een)",
     "explanationTr": "Metinde geçen 'een oud huis' kuralı: het-woord + een = sıfata ek yok.",
     "explanationEn": "The rule for 'een oud huis' in the text: het-word + een = no suffix for adjective.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_adj_042",
@@ -545,13 +566,14 @@ export const dialoguesReading = [
     "options": [
       "Omdat 'het' definiet (bepaald) is",
       "Omdat 'water' meervoud is",
-      "Omdat 'koud' onregelmatig is"
+      "Omdat 'koud' onregelmatig is",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Omdat 'het' definiet (bepaald) is",
     "explanationTr": "Aynı kelime (water). Önünde artikel yoksa belirsiz (koud water). Önünde 'het' varsa belirlidir ve sıfat '-e' alır (het koude water).",
     "explanationEn": "Same word (water). No article means indefinite (koud water). 'het' makes it definite, so the adjective gets an '-e' (het koude water).",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_adj_045",
@@ -564,13 +586,14 @@ export const dialoguesReading = [
     "options": [
       "Het is een perfectumvorm op -en",
       "Het is een het-woord",
-      "Het staat na het substantief"
+      "Het staat na het substantief",
+      "Het is een perfectumvorm op -de"
     ],
     "correctAnswer": "Het is een perfectumvorm op -en",
     "explanationTr": "'-en' ile biten fiil çekimleri (gebakken) sıfat olarak kullanıldığında ek almaz.",
     "explanationEn": "Past participles ending in '-en' (gebakken) do not take a suffix when used as adjectives.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_adj_046",
@@ -612,13 +635,14 @@ export const dialoguesReading = [
     "options": [
       "'budget' is een het-woord en 'geen' is indefiniet",
       "'budget' is een de-woord",
-      "Het staat na het substantief"
+      "Het staat na het substantief",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "'budget' is een het-woord en 'geen' is indefiniet",
     "explanationTr": "Altın Kural: 'budget' het-woord'dur. 'geen' belirsiz yapar, bu yüzden sıfat ek almaz.",
     "explanationEn": "Golden Rule: 'budget' is a het-word. 'geen' makes it indefinite, so the adjective gets no suffix.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_adj_049",
@@ -645,13 +669,14 @@ export const dialoguesReading = [
     "options": [
       "Omdat het al op -en eindigt",
       "Omdat 'auto' een het-woord is",
-      "Omdat het meervoud is"
+      "Omdat het meervoud is",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Omdat het al op -en eindigt",
     "explanationTr": "Kendi yapısında '-en' ile biten sıfatlar (eigen, open) ekstra '-e' takısı almaz.",
     "explanationEn": "Adjectives that inherently end in '-en' (eigen, open) do not take an extra '-e' suffix.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_mod_041",
@@ -678,13 +703,14 @@ export const dialoguesReading = [
     "options": [
       "Omdat er een modaal werkwoord ('wil') in de zin staat.",
       "Omdat het een vraag is.",
-      "Omdat 'zingen' onregelmatig is."
+      "Omdat 'zingen' onregelmatig is.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Omdat er een modaal werkwoord ('wil') in de zin staat.",
     "explanationTr": "Cümlede kipli (modal) fiil varsa, asıl fiil (zingen) cümlenin en sonuna gider.",
     "explanationEn": "If there is a modal verb in the sentence, the main verb (zingen) goes to the very end.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_mod_043",
@@ -711,13 +737,14 @@ export const dialoguesReading = [
     "options": [
       "Een imperatief (emir cümlesi)",
       "Een vraag (soru)",
-      "Een inversie (devrik cümle)"
+      "Een inversie (devrik cümle)",
+      "Het werkwoord staat altijd vooraan."
     ],
     "correctAnswer": "Een imperatief (emir cümlesi)",
     "explanationTr": "Fiil köküyle (Kom) başlayan cümleler emir kipi (imperatief) cümleleridir. 'maar' kelimesiyle yumuşatılmıştır.",
     "explanationEn": "Sentences starting with the verb stem (Kom) are imperatives. It is softened with the word 'maar'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_mod_045",
@@ -744,13 +771,14 @@ export const dialoguesReading = [
     "options": [
       "Omdat het de beleefde vorm (kibar form) is met 'u'",
       "Omdat het meervoud is",
-      "Omdat het een vraag is"
+      "Omdat het een vraag is",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Omdat het de beleefde vorm (kibar form) is met 'u'",
     "explanationTr": "'u' (siz) hitabıyla resmi/kibar emir verilirken 'stam + t' (Gaat u) kullanılır.",
     "explanationEn": "When giving a polite/formal command to 'u', the structure 'stam + t' (Gaat u) is used.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_mod_047",
@@ -777,13 +805,14 @@ export const dialoguesReading = [
     "options": [
       "Een voorstel (Öneri / Teklif)",
       "Een waarschijnlijkheid (Olasılık)",
-      "Een belofte (Söz)"
+      "Een belofte (Söz)",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Een voorstel (Öneri / Teklif)",
     "explanationTr": "'Zal ik...' (Yapayım mı?) yapısı, birine bir şey teklif ederken (voorstel) kullanılır.",
     "explanationEn": "The structure 'Zal ik...' (Shall I...?) is used when making a proposal or offering something.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_mod_049",
@@ -797,13 +826,14 @@ export const dialoguesReading = [
     "options": [
       "Het is niet nodig (Gerek yok)",
       "Het is verboden (Yasak)",
-      "Hij moet het wel doen (Yapmalı)"
+      "Hij moet het wel doen (Yapmalı)",
+      "Het werkwoord staat altijd vooraan."
     ],
     "correctAnswer": "Het is niet nodig (Gerek yok)",
     "explanationTr": "'Hoeft niet', bir zorunluluğun olmadığını (gerek yok) belirtir. 'Moet niet' ise yasak belirtirdi.",
     "explanationEn": "'Hoeft niet' means there is no obligation (don't have to). 'Moet niet' would mean forbidden.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_mod_050",
@@ -844,13 +874,14 @@ export const dialoguesReading = [
     "options": [
       "Ik",
       "Jan",
-      "Marie"
+      "Marie",
+      "Iker"
     ],
     "correctAnswer": "Marie",
     "explanationTr": "Metinde açıkça 'De fiets van Marie is het oudst' (En eski bisiklet Marie'nin) yazmaktadır.",
     "explanationEn": "The text explicitly states 'De fiets van Marie is het oudst' (Marie's bike is the oldest).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_comp_038",
@@ -863,27 +894,34 @@ export const dialoguesReading = [
     "options": [
       "grager",
       "liever",
-      "het liefst"
+      "het liefst",
+      "geen van deze"
     ],
     "correctAnswer": "liever",
     "explanationTr": "Düzensiz 'graag' zarfının comparatief hali metinde de görüldüğü gibi 'liever'dır.",
     "explanationEn": "The comparative of the irregular adverb 'graag' is 'liever', as seen in the text.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_comp_039",
-    "type": "fill_in",
+    "type": "multiple_choice",
     "tags": [
       "reading_comprehension",
       "comparative_superlative"
     ],
-    "questionNl": "Lees de tekst uit de vorige vraag opnieuw.\n\nVul in: 'Marie fietst ___ (graag).' (Superlatief form)",
+    "questionNl": "Lees de tekst uit de vorige vraag opnieuw.\n\nVul in: 'Marie fietst ___.' (Superlatief form)",
     "correctAnswer": "het liefst",
     "explanationTr": "'graag' (seve seve/memnuniyetle) kelimesinin en üstünlük derecesi 'het liefst' olur.",
     "explanationEn": "The superlative degree of 'graag' (gladly/prefer) is 'het liefst'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2,
+    "options": [
+      "het liefst",
+      "liever",
+      "graag",
+      "het best"
+    ]
   },
   {
     "id": "q_read_comp_040",
@@ -910,13 +948,14 @@ export const dialoguesReading = [
     "options": [
       "Ja, ze is jonger",
       "Nee, ze is ouder",
-      "Nee, ze is even oud als Thomas"
+      "Nee, ze is even oud als Thomas",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Nee, ze is even oud als Thomas",
     "explanationTr": "Metinde 'Zij is even oud als Thomas' (O Thomas ile aynı yaşta) yazmaktadır. Eşitlik durumu vardır.",
     "explanationEn": "The text says 'Zij is even oud als Thomas' (She is as old as Thomas). It shows equality.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_comp_042",
@@ -943,13 +982,14 @@ export const dialoguesReading = [
     "options": [
       "Omdat 'student' een de-woord is.",
       "Omdat het superlatief voor een substantief staat.",
-      "Omdat het meervoud is."
+      "Omdat het meervoud is.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Omdat het superlatief voor een substantief staat.",
     "explanationTr": "Superlatief bir ismin önüne geldiğinde her zaman '-e' takısı alır. (de oudst + e = de oudste).",
     "explanationEn": "When a superlative precedes a noun, it always takes the '-e' suffix. (de oudst + e = de oudste).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_comp_044",
@@ -976,13 +1016,14 @@ export const dialoguesReading = [
     "options": [
       "Thomas",
       "Ali",
-      "Sarah"
+      "Sarah",
+      "geThomas"
     ],
     "correctAnswer": "Sarah",
     "explanationTr": "Metnin sonunda 'maar Sarah heeft het minst' (ama Sarah'ın en az var) denmektedir.",
     "explanationEn": "At the end of the text, it says 'maar Sarah heeft het minst' (but Sarah has the least).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_comp_046",
@@ -1010,13 +1051,14 @@ export const dialoguesReading = [
     "options": [
       "Omdat chocolademelk vrouwelijk is.",
       "Omdat het woord 'vinden' een uitzondering is en geen 'het' krijgt voor een superlatief.",
-      "Omdat het in de verleden tijd staat."
+      "Omdat het in de verleden tijd staat.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Omdat het woord 'vinden' een uitzondering is en geen 'het' krijgt voor een superlatief.",
     "explanationTr": "'Vinden' fiili kullanıldığında, kendisinden sonra gelen superlatief kelimesi (lekkerst) 'het' artikeli almaz. Bu bir istisnadır.",
     "explanationEn": "When using the verb 'vinden', the superlative word that follows (lekkerst) does not take the article 'het'. This is an exception.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_comp_048",
@@ -1029,13 +1071,14 @@ export const dialoguesReading = [
     "options": [
       "Vandaag",
       "Gisteren",
-      "Morgen"
+      "Morgen",
+      "Gisterde"
     ],
     "correctAnswer": "Gisteren",
     "explanationTr": "Metinde 'Bugün çok yiyoruz... Dün daha çok (meer) yedik' diyor. Yani en çok yenen zaman 'dün'.",
     "explanationEn": "The text says 'Today we eat a lot... Yesterday we ate more (meer)'. So the most was eaten 'yesterday'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_comp_049",
@@ -1063,13 +1106,14 @@ export const dialoguesReading = [
     "options": [
       "Omdat 'restaurant' een het-woord is, en er staat 'een' voor.",
       "Omdat 'groter' onregelmatig is.",
-      "Omdat het een comparatief is."
+      "Omdat het een comparatief is.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Omdat 'restaurant' een het-woord is, en er staat 'een' voor.",
     "explanationTr": "Altın Sıfat Kuralı: 'Restaurant' bir het-woord'dur ve önünde belirsiz artikel 'een' vardır. Bu durumda sıfat (comparatief de olsa) '-e' takısı almaz.",
     "explanationEn": "Golden Adjective Rule: 'Restaurant' is a het-word and is preceded by the indefinite article 'een'. In this case, the adjective (even comparative) does not take an '-e' suffix.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_neg_046",
@@ -1082,13 +1126,14 @@ export const dialoguesReading = [
     "options": [
       "Omdat 'auto' een de-woord is.",
       "Omdat 'auto' een het-woord is.",
-      "Omdat het meervoud is."
+      "Omdat het meervoud is.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Omdat 'auto' een de-woord is.",
     "explanationTr": "'Auto' bir de-woord'dur. De-woorden nesne durumundayken 'hem' ile işaret edilir.",
     "explanationEn": "'Auto' is a de-word. De-words are referred to with 'hem' in the object position.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_neg_047",
@@ -1115,13 +1160,14 @@ export const dialoguesReading = [
     "options": [
       "Om iets of iemand te presenteren gebruiken we altijd 'dit' of 'dat'.",
       "Omdat 'auto' een uitzondering is.",
-      "Omdat het woord 'nieuwe' er staat."
+      "Omdat het woord 'nieuwe' er staat.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Om iets of iemand te presenteren gebruiken we altijd 'dit' of 'dat'.",
     "explanationTr": "Sunum (presenteren) yaparken nesnenin de/het veya çoğul olmasına bakılmaksızın daima 'Dit is/zijn' veya 'Dat is/zijn' kalıbı kullanılır.",
     "explanationEn": "When presenting/introducing, the structure 'Dit is/zijn' or 'Dat is/zijn' is always used, regardless of whether the noun is de/het or plural.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_neg_049",
@@ -1134,13 +1180,14 @@ export const dialoguesReading = [
     "options": [
       "Tom en Emma",
       "De bioscoop",
-      "De film"
+      "De film",
+      "geen van deze"
     ],
     "correctAnswer": "Tom en Emma",
     "explanationTr": "Bağımsız işaret zamiri 'Die' burada kendinden önceki cümlede sorulan kişileri (Tom ve Emma) işaret etmektedir.",
     "explanationEn": "The independent demonstrative pronoun 'Die' here refers back to the people asked about in the previous sentence (Tom and Emma).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_neg_050",
@@ -1184,13 +1231,14 @@ export const dialoguesReading = [
     "options": [
       "Omdat het een beschrijving (tasvir) is van het verleden.",
       "Omdat het een afgesloten actie is.",
-      "Omdat 'zijn' onregelmatig is."
+      "Omdat 'zijn' onregelmatig is.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Omdat het een beschrijving (tasvir) is van het verleden.",
     "explanationTr": "'Hava güzeldi' cümlesi geçmişteki bir durumu/ortamı tasvir ettiği (beschrijving) için Imperfectum (was) kullanılır.",
     "explanationEn": "'The weather was nice' describes a past state/background (beschrijving), so Imperfectum (was) is used.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_past_043",
@@ -1219,13 +1267,14 @@ export const dialoguesReading = [
     "options": [
       "drinken",
       "dronken",
-      "drink"
+      "drink",
+      "drinkte"
     ],
     "correctAnswer": "drinken",
     "explanationTr": "Diyalogdaki 'We dronken' (İçtik), düzensiz 'drinken' fiilinin çoğul hikaye geçmiş zaman halidir.",
     "explanationEn": "'We dronken' (We drank) is the plural simple past of the irregular verb 'drinken'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_past_045",
@@ -1272,13 +1321,14 @@ export const dialoguesReading = [
     "options": [
       "Omdat de letter 'l' niet in soft ketchup zit.",
       "Omdat het een onregelmatig werkwoord is.",
-      "Omdat het meervoud is."
+      "Omdat het meervoud is.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Omdat de letter 'l' niet in soft ketchup zit.",
     "explanationTr": "'speel' kökünün son harfi olan 'l', soft ketchup ünsüzlerinden biri olmadığı için '+de' alır.",
     "explanationEn": "The last letter of the stem 'speel' is 'l', which is not in soft ketchup, so it takes '+de'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_past_048",
@@ -1293,13 +1343,14 @@ export const dialoguesReading = [
     "options": [
       "Omdat er richting is (naar het bos).",
       "Omdat 'fietsen' altijd met 'zijn' is.",
-      "Omdat het meervoud is."
+      "Omdat het meervoud is.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Omdat er richting is (naar het bos).",
     "explanationTr": "Cümlede 'naar het bos' (ormana doğru) diyerek YÖN belirtildiği için 'zijn' kullanılmıştır.",
     "explanationEn": "Because the sentence specifies a DIRECTION 'naar het bos' (to the forest), 'zijn' is used.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_past_049",
@@ -1330,13 +1381,14 @@ export const dialoguesReading = [
     "options": [
       "moeten",
       "mogen",
-      "maken"
+      "maken",
+      "moette"
     ],
     "correctAnswer": "moeten",
     "explanationTr": "'moesten', 'moeten' (zorunda olmak) modal fiilinin çoğul geçmiş zaman halidir.",
     "explanationEn": "'moesten' is the plural simple past of the modal verb 'moeten' (must).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_sep_041",
@@ -1349,13 +1401,14 @@ export const dialoguesReading = [
     "options": [
       "opstaan",
       "staan op",
-      "opgestaan"
+      "opgestaan",
+      "geen van deze"
     ],
     "correctAnswer": "opstaan",
     "explanationTr": "Metinde geçen 'sta ... op' ayrılabilen fiilinin mastar hali 'opstaan'dır (kalkmak).",
     "explanationEn": "The infinitive form of the separable verb 'sta ... op' in the text is 'opstaan' (to get up).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_sep_042",
@@ -1370,13 +1423,14 @@ export const dialoguesReading = [
     "options": [
       "Omdat er een modaal werkwoord ('moet') in de zin staat.",
       "Omdat het in de toekomst is.",
-      "Omdat het de laatste zin is."
+      "Omdat het de laatste zin is.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Omdat er een modaal werkwoord ('moet') in de zin staat.",
     "explanationTr": "Cümlede 'moet' modal fiili olduğu için ayrılabilen fiil ayrılmaz ve mastar halinde cümlenin sonuna gider.",
     "explanationEn": "Because the modal verb 'moet' is in the sentence, the separable verb doesn't split and goes to the end as an infinitive.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_sep_043",
@@ -1433,13 +1487,14 @@ export const dialoguesReading = [
     "options": [
       "zich",
       "ons",
-      "me"
+      "me",
+      "hen"
     ],
     "correctAnswer": "ons",
     "explanationTr": "'Mijn man en ik' = 'Wij' (biz) anlamına gelir. Metinde de görüldüğü gibi 'wij' için 'ons' kullanılır.",
     "explanationEn": "'Mijn man en ik' means 'Wij' (we). As seen in the text, 'ons' is used for 'wij'.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_ref_047",
@@ -1453,13 +1508,14 @@ export const dialoguesReading = [
     "options": [
       "Omdat de actie wederkerig (reciprocal/karşılıklı) is.",
       "Omdat 'helpen' geen reflexief werkwoord is.",
-      "Beide antwoorden zijn correct."
+      "Beide antwoorden zijn correct.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Beide antwoorden zijn correct.",
     "explanationTr": "Hem 'helpen' fiili dönüşlü (reflexive) değildir, hem de eylem karşılıklı yapıldığı için (birbirimize yardım ediyoruz) 'elkaar' kullanılmalıdır.",
     "explanationEn": "Both are correct: 'helpen' is not a reflexive verb, and since the action is reciprocal (we help each other), 'elkaar' must be used.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_ref_048",
@@ -1503,13 +1559,14 @@ export const dialoguesReading = [
     "options": [
       "Perfectum",
       "Presens",
-      "Imperfectum"
+      "Imperfectum",
+      "gePerfectum"
     ],
     "correctAnswer": "Imperfectum",
     "explanationTr": "'vergisten we ons', 'zich vergissen' fiilinin hikaye geçmiş zamanıdır (Imperfectum).",
     "explanationEn": "'vergisten we ons' is the simple past (Imperfectum) of the verb 'zich vergissen'.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_fut_041",
@@ -1523,13 +1580,14 @@ export const dialoguesReading = [
     "options": [
       "Hij gaat een feest organiseren",
       "Hij gaat op vakantie",
-      "Hij gaat verhuizen"
+      "Hij gaat verhuizen",
+      "Hij gaat een feest organiserener"
     ],
     "correctAnswer": "Hij gaat een feest organiseren",
     "explanationTr": "Metinde 'Ik ga een groot feest voor haar organiseren' (Onun için büyük bir parti organize edeceğim) yazıyor.",
     "explanationEn": "The text says 'Ik ga een groot feest voor haar organiseren' (I am going to organize a big party for her).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_fut_042",
@@ -1543,13 +1601,14 @@ export const dialoguesReading = [
     "options": [
       "Een belofte (Söz vermek)",
       "Een waarschijnlijkheid (Olasılık)",
-      "Een gewoonte (Alışkanlık)"
+      "Een gewoonte (Alışkanlık)",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Een belofte (Söz vermek)",
     "explanationTr": "'Alışverişi ben yapacağım' diyerek kız arkadaşına veya okuyucuya bir nevi söz vermektedir (belofte).",
     "explanationEn": "By saying 'I will do the groceries', he is essentially making a promise (belofte) to his girlfriend or the reader.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_fut_043",
@@ -1563,13 +1622,14 @@ export const dialoguesReading = [
     "options": [
       "Het is heel waarschijnlijk (olası) dat ze blij is.",
       "Ik beloof dat ze blij is.",
-      "Ze was gisteren blij."
+      "Ze was gisteren blij.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Het is heel waarschijnlijk (olası) dat ze blij is.",
     "explanationTr": "'zal wel' yapısı, güçlü bir ihtimal/tahmin (waarschijnlijkheid) belirtir: 'Kesin çok mutlu olacak!'.",
     "explanationEn": "The 'zal wel' structure indicates a strong probability/guess (waarschijnlijkheid): 'She will surely be very happy!'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_fut_044",
@@ -1598,13 +1658,14 @@ export const dialoguesReading = [
     "options": [
       "Omdat 'gaan' als hulpwerkwoord wordt gebruikt.",
       "Omdat het in de verleden tijd staat.",
-      "Omdat het een bijzin is."
+      "Omdat het een bijzin is.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Omdat 'gaan' als hulpwerkwoord wordt gebruikt.",
     "explanationTr": "'Gaan' yardımcı fiil olarak kullanıldığında asıl eylem her zaman cümlenin sonuna gider.",
     "explanationEn": "When 'Gaan' is used as an auxiliary verb, the main action always goes to the end of the sentence.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_fut_046",
@@ -1618,13 +1679,14 @@ export const dialoguesReading = [
     "options": [
       "Morgen komt hij wel naar kantoor.",
       "De directeur is ziek vandaag.",
-      "Ik denk dat het een lange vergadering zal worden."
+      "Ik denk dat het een lange vergadering zal worden.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Morgen komt hij wel naar kantoor.",
     "explanationTr": "'Morgen' (Yarın) kelimesi ile gelecek belirtilirken 'komt' (şimdiki zaman) fiili kullanılmıştır.",
     "explanationEn": "While 'Morgen' (Tomorrow) indicates the future, the present tense verb 'komt' is used.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_fut_047",
@@ -1653,13 +1715,14 @@ export const dialoguesReading = [
     "options": [
       "Een voorstel (Öneri / Teklif)",
       "Een waarschijnlijkheid (Olasılık)",
-      "Een belofte (Söz)"
+      "Een belofte (Söz)",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Een voorstel (Öneri / Teklif)",
     "explanationTr": "'Zullen we...?' (Yapalım mı?) kalıbı her zaman birisine teklif veya öneri sunarken kullanılır.",
     "explanationEn": "The pattern 'Zullen we...?' (Shall we...?) is always used when making a proposal or suggestion to someone.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_fut_049",
@@ -1673,13 +1736,14 @@ export const dialoguesReading = [
     "options": [
       "Omdat 'zal' (zullen) het andere werkwoord naar het einde van de zin stuurt.",
       "Omdat het woord 'denk' in de zin staat.",
-      "Omdat het een vraag is."
+      "Omdat het een vraag is.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Omdat 'zal' (zullen) het andere werkwoord naar het einde van de zin stuurt.",
     "explanationTr": "'Zal' yardımcı fiil olduğu için asıl fiil olan 'worden'i cümlenin sonuna itmiştir.",
     "explanationEn": "Because 'Zal' is an auxiliary verb, it pushed the main verb 'worden' to the end of the sentence.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_fut_050",
@@ -1707,13 +1771,14 @@ export const dialoguesReading = [
     "options": [
       "Omdat 'een groot feest' een indefiniet (belirsiz) subject is.",
       "Omdat het in de stad is.",
-      "Omdat Lotte spreekt."
+      "Omdat Lotte spreekt.",
+      "Het werkwoord staat altijd vooraan."
     ],
     "correctAnswer": "Omdat 'een groot feest' een indefiniet (belirsiz) subject is.",
     "explanationTr": "'Bir parti var' derken 'een groot feest' belirsizdir, bu yüzden cümleye 'Er' ile başlanmıştır.",
     "explanationEn": "When saying 'There is a big party', 'een groot feest' is indefinite, so the sentence starts with 'Er'.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_ercont_042",
@@ -1726,28 +1791,35 @@ export const dialoguesReading = [
     "options": [
       "Lotte's huis",
       "De stad",
-      "Het feest"
+      "Het feest",
+      "geen van deze"
     ],
     "correctAnswer": "De stad",
     "explanationTr": "'Daar' (Orada), bir önceki cümlede bahsedilen 'de stad' (şehir) lokasyonuna vurgu yapmaktadır.",
     "explanationEn": "'Daar' (There) emphasizes the location 'de stad' (the city) mentioned in the previous sentence.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_ercont_043",
-    "type": "fill_in",
+    "type": "multiple_choice",
     "tags": [
       "reading_comprehension",
       "continuous",
       "reflexive_verbs"
     ],
-    "questionNl": "Lees de tekst uit de vorige vraag.\n\nVul in: Lotte is zich aan het ___ (klaarmaken).",
+    "questionNl": "Lees de tekst uit de vorige vraag.\n\nVul in: Lotte is zich aan het ___.",
     "correctAnswer": "klaarmaken",
     "explanationTr": "Metinde 'Ik ben me nu aan het klaarmaken' diyor. 'Aan het' kalıbından sonra fiil mastar (klaarmaken) olur.",
     "explanationEn": "The text says 'Ik ben me nu aan het klaarmaken'. After the 'Aan het' pattern, the verb is in the infinitive (klaarmaken).",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2,
+    "options": [
+      "klaarmaken",
+      "klaarmaakt",
+      "klaargemaakt",
+      "klaarmaakte"
+    ]
   },
   {
     "id": "q_read_ercont_044",
@@ -1760,13 +1832,14 @@ export const dialoguesReading = [
     "options": [
       "Hij is aan het wachten.",
       "Hij is zich aan het klaarmaken.",
-      "Hij is op het feest."
+      "Hij is op het feest.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Hij is aan het wachten.",
     "explanationTr": "Metnin son cümlesi 'Mijn vriend is al aan het wachten' (Erkek arkadaşım zaten bekliyor) diyor.",
     "explanationEn": "The last sentence of the text says 'Mijn vriend is al aan het wachten' (My boyfriend is already waiting).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_ercont_045",
@@ -1779,13 +1852,14 @@ export const dialoguesReading = [
     "options": [
       "Omdat 'veel mensen' indefiniet is en er geen extra nadruk op de plaats is in deze nieuwe zin.",
       "Omdat het meervoud is.",
-      "Omdat 'Er' altijd na 'restaurant' komt."
+      "Omdat 'Er' altijd na 'restaurant' komt.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Omdat 'veel mensen' indefiniet is en er geen extra nadruk op de plaats is in deze nieuwe zin.",
     "explanationTr": "Buradaki odak 'çok insanın çalışmasıdır' (belirsiz özne), mekanın kendisine özel bir vurgu yapmaya gerek duyulmamıştır.",
     "explanationEn": "The focus here is on 'many people working' (indefinite subject), there is no need for extra emphasis on the place itself.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_ercont_046",
@@ -1798,13 +1872,14 @@ export const dialoguesReading = [
     "options": [
       "In de straat",
       "In het nieuwe restaurant",
-      "Pizza"
+      "Pizza",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "In het nieuwe restaurant",
     "explanationTr": "'Daar' (Orada) kelimesi bahsedilen yeni restoranı işaret etmektedir.",
     "explanationEn": "The word 'Daar' (There) points back to the new restaurant mentioned.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_ercont_047",
@@ -1817,13 +1892,14 @@ export const dialoguesReading = [
     "options": [
       "Het geeft een gewoonte (alışkanlık) aan.",
       "Het geeft aan dat de actie NU (op dit moment) bezig is.",
-      "Het is verleden tijd."
+      "Het is verleden tijd.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Het geeft aan dat de actie NU (op dit moment) bezig is.",
     "explanationTr": "'aan het' kalıbı eylemin TAM OLARAK ŞU ANDA gerçekleştiğini gösterir. (Şu an pizza yiyoruz).",
     "explanationEn": "The 'aan het' structure indicates that the action is happening EXACTLY RIGHT NOW. (We are eating pizza right now).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_ercont_048",
@@ -1865,13 +1941,14 @@ export const dialoguesReading = [
     "options": [
       "Aan het bellen",
       "Overal aan het zoeken",
-      "De telefoon aan het verkopen"
+      "De telefoon aan het verkopen",
+      "Aan het bellde"
     ],
     "correctAnswer": "Overal aan het zoeken",
     "explanationTr": "Metnin sonunda 'Ik ben nu overal aan het zoeken' (Şu an her yerde arıyorum) diyor.",
     "explanationEn": "At the end of the text, it says 'Ik ben nu overal aan het zoeken' (I am searching everywhere right now).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_conj_036",
@@ -1884,13 +1961,14 @@ export const dialoguesReading = [
     "options": [
       "Om een contrast / zıtlık te tonen tussen de wens en de realiteit.",
       "Om een reden te geven.",
-      "Om een keuze te presenteren."
+      "Om een keuze te presenteren.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Om een contrast / zıtlık te tonen tussen de wens en de realiteit.",
     "explanationTr": "İtalya'ya gitmek istemesi ile yeterli paraya sahip olmaması arasında bir zıtlık vardır; bu yüzden 'maar' kullanılır.",
     "explanationEn": "There is a contrast between wanting to go to Italy and not having enough money; hence 'maar' is used.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_conj_037",
@@ -1917,13 +1995,14 @@ export const dialoguesReading = [
     "options": [
       "De motor",
       "De broer",
-      "De auto"
+      "De auto",
+      "geen van deze"
     ],
     "correctAnswer": "De motor",
     "explanationTr": "Bağımsız işaret zamiri 'Die', bir önceki cümlede geçen tekil de-woord olan 'de motor' kelimesine atıfta bulunur.",
     "explanationEn": "The independent demonstrative pronoun 'Die' refers back to the singular de-word 'de motor' from the previous sentence.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_conj_039",
@@ -1950,13 +2029,14 @@ export const dialoguesReading = [
     "options": [
       "Om de autosleutels te presenteren / introduceren.",
       "Omdat sleutels een de-woord zijn.",
-      "Omdat het in de verleden tijd staat."
+      "Omdat het in de verleden tijd staat.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Om de autosleutels te presenteren / introduceren.",
     "explanationTr": "Anahtarları sunmak/tanıtmak (presenteren) amacıyla 'Dit zijn' kalıbı kullanılmıştır (Çoğul olmalarına rağmen).",
     "explanationEn": "The structure 'Dit zijn' is used to present/introduce the keys (even though they are plural).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_conj_041",
@@ -1969,13 +2049,14 @@ export const dialoguesReading = [
     "options": [
       "Tom bleef thuis.",
       "Tom ging naar de wedstrijd.",
-      "Tom ging in de regen voetballen."
+      "Tom ging in de regen voetballen.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Tom bleef thuis.",
     "explanationTr": "Yağmurun başlaması ve evde kalması 'dus' (bu yüzden) bağlacıyla birbirine bağlanan bir sonuçtur.",
     "explanationEn": "The rain starting and staying home are connected as a consequence using 'dus' (so).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_conj_042",
@@ -2016,12 +2097,13 @@ export const dialoguesReading = [
     "options": [
       "Omdat vogels meervoud zijn en we hier een presentatie/introductie doen.",
       "Omdat vogels het-woorden zijn.",
-      "Omdat het in de verleden tijd staat."
+      "Omdat het in de verleden tijd staat.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Omdat vogels meervoud zijn en we hier een presentatie/introductie doen.",
     "explanationEn": "Because birds are plural and we are doing a presentation/introduction here.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_conj_046",
@@ -2048,13 +2130,14 @@ export const dialoguesReading = [
     "options": [
       "'Want' geeft een reden, 'maar' geeft een tegenstelling (zıtlık) aan.",
       "'Want' geeft een gevolg, 'maar' geeft een keuze.",
-      "Er is geen verschil."
+      "Er is geen verschil.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "'Want' geeft een reden, 'maar' geeft een tegenstelling (zıtlık) aan.",
     "explanationTr": "'Want' sebep bildirirken, 'maar' iki durum arasındaki zıtlığı vurgular.",
     "explanationEn": "'Want' gives a reason, while 'maar' emphasizes the contrast between two situations.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_conj_048",
@@ -2081,12 +2164,13 @@ export const dialoguesReading = [
     "options": [
       "Omdat 'schoenen' meervoud is (en meervoud is altijd de-woord).",
       "Omdat 'schoenen' een het-woord is.",
-      "Omdat het om personen gaat."
+      "Omdat het om personen gaat.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Omdat 'schoenen' meervoud is (en meervoud is altijd de-woord).",
     "explanationEn": "Because 'schoenen' is plural (and plurals are always de-words).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_conj_050",
@@ -2113,13 +2197,14 @@ export const dialoguesReading = [
     "options": [
       "Omdat het regent.",
       "Omdat de kat slaapt.",
-      "Omdat de zon schijnt."
+      "Omdat de zon schijnt.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Omdat het regent.",
     "explanationTr": "Metnin ilk cümlesinde 'Omdat het vandaag regent, blijf ik lekker binnen' yazmaktadır.",
     "explanationEn": "The first sentence of the text states 'Omdat het vandaag regent, blijf ik lekker binnen'.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_bijz_037",
@@ -2133,13 +2218,14 @@ export const dialoguesReading = [
     "options": [
       "Omdat de zin begint met een bijzin (Omdat het vandaag regent).",
       "Omdat het een vraag is.",
-      "Omdat er 'want' wordt gebruikt."
+      "Omdat er 'want' wordt gebruikt.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Omdat de zin begint met een bijzin (Omdat het vandaag regent).",
     "explanationTr": "Yan cümle ('Omdat...') ile başlayan cümlelerde ana cümlede her zaman inversie (devrik yapı) olur.",
     "explanationEn": "Sentences starting with a subclause ('Omdat...') always have inversion in the main clause.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_bijz_038",
@@ -2166,13 +2252,14 @@ export const dialoguesReading = [
     "options": [
       "Een wandeling maken",
       "Binnen blijven",
-      "Een boek lezen"
+      "Een boek lezen",
+      "Een wandeling makte"
     ],
     "correctAnswer": "Een wandeling maken",
     "explanationTr": "Metnin son cümlesinde 'ga ik een wandeling maken' denmektedir.",
     "explanationEn": "The last sentence says 'ga ik een wandeling maken'.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_bijz_040",
@@ -2200,13 +2287,14 @@ export const dialoguesReading = [
     "options": [
       "Omdat hij zijn examen heeft gehaald.",
       "Omdat hij naar het feestje gaat.",
-      "Omdat hij vroeg moet opstaan."
+      "Omdat hij vroeg moet opstaan.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Omdat hij zijn examen heeft gehaald.",
     "explanationTr": "Metinde 'want hij heeft zijn examen gehaald' diyerek mutluluğunun sebebi açıklanmıştır.",
     "explanationEn": "The text explains the reason for his happiness with 'want hij heeft zijn examen gehaald'.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_bijz_042",
@@ -2233,13 +2321,14 @@ export const dialoguesReading = [
     "options": [
       "Yarın erken kalkması gerekmesine rağmen",
       "Yarın erken kalkacağı için",
-      "Yarın erken kalkana kadar"
+      "Yarın erken kalkana kadar",
+      "Yarın erken kalkması gerekmesine rağmde"
     ],
     "correctAnswer": "Yarın erken kalkması gerekmesine rağmen",
     "explanationTr": "'Hoewel' kelimesi 'rağmen' (although) anlamı katmaktadır.",
     "explanationEn": "'Hoewel' adds the meaning of 'although'.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_bijz_044",
@@ -2268,13 +2357,14 @@ export const dialoguesReading = [
     "options": [
       "Het werkwoord verschuift naar het einde van het zinsdeel.",
       "Het werkwoord blijft op de tweede plaats.",
-      "Het werkwoord verdwijnt helemaal."
+      "Het werkwoord verdwijnt helemaal.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Het werkwoord verschuift naar het einde van het zinsdeel.",
     "explanationTr": "'want' ana cümle bağlar (fiil ortada kalır), 'omdat' yan cümle bağlar (fiil sona gider).",
     "explanationEn": "'want' connects a main clause (verb stays middle), 'omdat' connects a subclause (verb goes to the end).",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_bijz_046",
@@ -2302,13 +2392,14 @@ export const dialoguesReading = [
     "options": [
       "Omdat de zin begint met een bijzin.",
       "Omdat het een vraag is.",
-      "Omdat er 'want' staat."
+      "Omdat er 'want' staat.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Omdat de zin begint met een bijzin.",
     "explanationTr": "Cümlenin ilk kısmı yan cümle olduğu için ana cümle devriktir (drink ik).",
     "explanationEn": "Because the first part of the sentence is a subclause, the main clause is inverted (drink ik).",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_bijz_048",
@@ -2335,13 +2426,14 @@ export const dialoguesReading = [
     "options": [
       "Nadat hij zijn koffie op heeft",
       "Voordat hij op staat",
-      "Tijdens het koken"
+      "Tijdens het koken",
+      "Tijdens het kokte"
     ],
     "correctAnswer": "Nadat hij zijn koffie op heeft",
     "explanationTr": "Metinde 'Nadat ik mijn koffie op heb, vertrek ik' şeklinde açıkça belirtilmiştir.",
     "explanationEn": "The text explicitly states 'Nadat ik mijn koffie op heb, vertrek ik'.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_bijz_050",
@@ -2368,13 +2460,14 @@ export const dialoguesReading = [
     "options": [
       "Mark",
       "De broer van Sarah",
-      "Ik"
+      "Ik",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Mark",
     "explanationTr": "Metinde 'hem' kelimesi Mark'ı (eril nesne - hem) temsil etmektedir.",
     "explanationEn": "In the text, 'hem' represents Mark (masculine object form).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_pron_037",
@@ -2401,13 +2494,14 @@ export const dialoguesReading = [
     "options": [
       "Mark en zijn vrouw Sarah",
       "De broer",
-      "Ik"
+      "Ik",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Mark en zijn vrouw Sarah",
     "explanationTr": "'hen' burada çoğul/çift olan Mark ve Sarah'yı (onları/onlarda) belirtmektedir.",
     "explanationEn": "'hen' here refers to the couple Mark and Sarah (them/at their place).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_pron_039",
@@ -2434,13 +2528,14 @@ export const dialoguesReading = [
     "options": [
       "Omdat 'tuin' een de-woord is.",
       "Omdat 'tuin' meervoud is.",
-      "Omdat het in de verleden tijd staat."
+      "Omdat het in de verleden tijd staat.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Omdat 'tuin' een de-woord is.",
     "explanationTr": "'tuin' bir de-woord olduğu için 'onze' kullanılır.",
     "explanationEn": "Because 'tuin' is a de-word, 'onze' is used.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_pron_041",
@@ -2467,13 +2562,14 @@ export const dialoguesReading = [
     "options": [
       "hem",
       "zijn",
-      "zich"
+      "zich",
+      "gehem"
     ],
     "correctAnswer": "hem",
     "explanationTr": "Metindeki 'voor hem' ifadesi 'hij' zamirinin nesne halidir.",
     "explanationEn": "The expression 'voor hem' in the text is the object form of 'hij'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_pron_043",
@@ -2500,13 +2596,14 @@ export const dialoguesReading = [
     "options": [
       "Omdat 'zich' het reflexieve pronomen is bij 'hij'.",
       "Omdat 'hij' een object is.",
-      "Omdat het meervoud is."
+      "Omdat het meervoud is.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Omdat 'zich' het reflexieve pronomen is bij 'hij'.",
     "explanationTr": "'hij' öznesi dönüştü eylemde 'zich' zamirini gerektirir.",
     "explanationEn": "The subject 'hij' requires the reflexive pronoun 'zich' in a reflexive action.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_pron_045",
@@ -2533,13 +2630,14 @@ export const dialoguesReading = [
     "options": [
       "Ze",
       "hun",
-      "haar"
+      "haar",
+      "hen"
     ],
     "correctAnswer": "Ze",
     "explanationTr": "'Ze' (zij) burada özne konumundadır (subjectvorm).",
     "explanationEn": "'Ze' (they) is in the subject position here (subjectvorm).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_pron_047",
@@ -2566,13 +2664,14 @@ export const dialoguesReading = [
     "options": [
       "me",
       "je",
-      "zich"
+      "zich",
+      "hen"
     ],
     "correctAnswer": "me",
     "explanationTr": "'Ik bereid me voor' cümlesinde 'me' dönüşlü zamir olarak kullanılmıştır.",
     "explanationEn": "In the sentence 'Ik bereid me voor', 'me' is used as a reflexive pronoun.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_pron_049",
@@ -2599,12 +2698,13 @@ export const dialoguesReading = [
     "options": [
       "Possessief pronomen (İyelik)",
       "Objectvorm (Nesne)",
-      "Reflexief pronomen (Dönüşlü)"
+      "Reflexief pronomen (Dönüşlü)",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Possessief pronomen (İyelik)",
     "explanationTr": "Bu kelimeler kime ait olduğunu gösteren 'possessief pronomen' (iyelik zamirleri) sütununda yer alır.",
     "explanationEn": "These words belong to the 'possessief pronomen' (possessive pronouns) column indicating ownership.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   }
 ];

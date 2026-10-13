@@ -25,13 +25,14 @@ export const grammarSyntax = [
     "options": [
       "gaan",
       "wij gaan",
-      "gaan wij"
+      "gaan wij",
+      "geen van deze"
     ],
     "correctAnswer": "gaan",
     "explanationTr": "Cümleye zaman (Morgen) ile başladığımız için devrik cümle (inversie) olur. Fiil 2. sıraya geçer.",
     "explanationEn": "Starting with time (Morgen) causes inversion. The verb goes to the 2nd position.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_pres_005",
@@ -68,17 +69,18 @@ export const grammarSyntax = [
       "verbs_present",
       "word_order"
     ],
-    "questionNl": "Wat ___ (vinden) u van ons nieuwe huis?",
+    "questionNl": "Wat ___ u van ons nieuwe huis?",
     "options": [
       "vind",
       "vindt",
-      "vinden"
+      "vinden",
+      "vindde"
     ],
     "correctAnswer": "vindt",
     "explanationTr": "Dikkat! Devrik yapıda 't' düşme kuralı SADECE 'jij/je' için geçerlidir. 'u' zamirinde 't' harfi daima kalır.",
     "explanationEn": "Attention! The rule of dropping the 't' ONLY applies to 'jij/je'. With the formal 'u', the 't' always stays.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_pres_016",
@@ -101,17 +103,18 @@ export const grammarSyntax = [
       "verbs_present",
       "word_order"
     ],
-    "questionNl": "Waarom ___ (zijn) jij vandaag te laat?",
+    "questionNl": "Waarom ___ jij vandaag te laat?",
     "options": [
       "ben",
       "bent",
-      "is"
+      "is",
+      "geben"
     ],
     "correctAnswer": "ben",
     "explanationTr": "Soru cümlesinde 'jij' fiilden sonra gelince 't' düşer (bent -> ben).",
     "explanationEn": "When 'jij' follows the verb in inversion, the 't' drops (bent -> ben).",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_pres_048",
@@ -134,17 +137,18 @@ export const grammarSyntax = [
       "verbs_present",
       "word_order"
     ],
-    "questionNl": "___ (Zien) je die grote vogel daar?",
+    "questionNl": "___ je die grote vogel daar?",
     "options": [
       "Ziet",
       "Zien",
-      "Zie"
+      "Zie",
+      "Zieter"
     ],
     "correctAnswer": "Zie",
     "explanationTr": "Soru cümlesinde 'je/jij' fiilden sonra gelince 't' düşer. (Ziet -> Zie).",
     "explanationEn": "In a question, when 'je/jij' follows the verb, the 't' drops. (Ziet -> Zie).",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_wo_001",
@@ -153,17 +157,18 @@ export const grammarSyntax = [
       "word_order",
       "verbs_present"
     ],
-    "questionNl": "Ik ___ (gaan) morgen naar de markt.",
+    "questionNl": "Ik ___ morgen naar de markt.",
     "options": [
       "ga",
       "gaat",
-      "gaan"
+      "gaan",
+      "gega"
     ],
     "correctAnswer": "ga",
     "explanationTr": "Normal cümle dizilimi (Hoofdzin): Özne + Fiil + Zaman + Yer. 'Ik' için fiil sadece kök (ga) halindedir.",
     "explanationEn": "Normal main clause order: Subject + Verb + Time + Place. For 'Ik', the verb is just the stem (ga).",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_wo_002",
@@ -187,17 +192,18 @@ export const grammarSyntax = [
       "word_order",
       "verbs_present"
     ],
-    "questionNl": "Mijn vader ___ (komen) uit Spanje.",
+    "questionNl": "Mijn vader ___ uit Spanje.",
     "options": [
       "kom",
       "komt",
-      "komen"
+      "komen",
+      "komde"
     ],
     "correctAnswer": "komt",
     "explanationTr": "Normal dizilim. Özne 3. tekil şahıs (hij) olduğu için fiile '-t' eklenir (kom + t).",
     "explanationEn": "Normal order. The subject is 3rd person singular (hij), so '-t' is added to the verb (kom + t).",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_wo_004",
@@ -221,17 +227,18 @@ export const grammarSyntax = [
       "word_order",
       "verbs_present"
     ],
-    "questionNl": "Wij ___ (eten) vanavond pizza.",
+    "questionNl": "Wij ___ vanavond pizza.",
     "options": [
       "eet",
       "eetst",
-      "eten"
+      "eten",
+      "ette"
     ],
     "correctAnswer": "eten",
     "explanationTr": "Çoğul özne (wij) ile normal cümle. Fiil mastar halinde (eten) kullanılır.",
     "explanationEn": "Normal sentence with a plural subject (wij). The verb is in its infinitive form (eten).",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_wo_006",
@@ -256,17 +263,18 @@ export const grammarSyntax = [
       "inversion",
       "verbs_present"
     ],
-    "questionNl": "Zondag ___ (werken) u in het café.",
+    "questionNl": "Zondag ___ u in het café.",
     "options": [
       "werk",
       "werkt",
-      "werken"
+      "werken",
+      "werkte"
     ],
     "correctAnswer": "werkt",
     "explanationTr": "İstisna: Devrik cümlede '-t' harfinin düşmesi SADECE 'jij/je' için geçerlidir. Resmi 'u' zamirinde '-t' her zaman kalır.",
     "explanationEn": "Exception: Dropping the '-t' in inversion ONLY applies to 'jij/je'. With the formal 'u', the '-t' always remains.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_wo_008",
@@ -291,17 +299,18 @@ export const grammarSyntax = [
       "inversion",
       "verbs_present"
     ],
-    "questionNl": "Vaak ___ (zijn) ik op zondag vrij.",
+    "questionNl": "Vaak ___ ik op zondag vrij.",
     "options": [
       "ben",
       "bent",
-      "is"
+      "is",
+      "geben"
     ],
     "correctAnswer": "ben",
     "explanationTr": "Cümleye 'vaak' (sıklıkla) zarfı ile başladık, bu yüzden fiil 2. sıradadır. 'Ik' için 'zijn' fiili 'ben' olur.",
     "explanationEn": "Started with the adverb 'vaak' (often), so the verb is 2nd. For 'Ik', the verb 'zijn' is 'ben'.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_wo_010",
@@ -326,17 +335,18 @@ export const grammarSyntax = [
       "verbs_present",
       "word_order"
     ],
-    "questionNl": "___ (Wonen) jij in Amsterdam?",
+    "questionNl": "___ jij in Amsterdam?",
     "options": [
       "Woon",
       "Woont",
-      "Wonen"
+      "Wonen",
+      "Wonde"
     ],
     "correctAnswer": "Woon",
     "explanationTr": "ALTIN KURAL! Soru cümlesinde 'jij' fiilden SONRA geldiği için fiildeki '-t' harfi düşer.",
     "explanationEn": "GOLDEN RULE! In a question, because 'jij' comes AFTER the verb, the '-t' is dropped.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_wo_020",
@@ -346,17 +356,18 @@ export const grammarSyntax = [
       "verbs_present",
       "word_order"
     ],
-    "questionNl": "___ (Hebben) jij een leuke vakantie gehad?",
+    "questionNl": "___ jij een leuke vakantie gehad?",
     "options": [
       "Heb",
       "Hebt",
-      "Heeft"
+      "Heeft",
+      "geHeb"
     ],
     "correctAnswer": "Heb",
     "explanationTr": "'jij' fiilden sonra geldiği için 'hebben' fiilindeki '-t' düşer (hebt -> heb).",
     "explanationEn": "Because 'jij' follows the verb, the '-t' on 'hebben' drops (hebt -> heb).",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_wo_021",
@@ -381,17 +392,18 @@ export const grammarSyntax = [
       "word_order",
       "verbs_present"
     ],
-    "questionNl": "Waar ___ (wonen) je ouders?",
+    "questionNl": "Waar ___ je ouders?",
     "options": [
       "woon",
       "woont",
-      "wonen"
+      "wonen",
+      "wonde"
     ],
     "correctAnswer": "wonen",
     "explanationTr": "'Je ouders' (senin ailen) çoğul bir öznedir. Bu yüzden fiil mastar (wonen) halindedir.",
     "explanationEn": "'Je ouders' (your parents) is a plural subject. Thus, the verb is in the infinitive (wonen).",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_wo_024",
@@ -401,17 +413,18 @@ export const grammarSyntax = [
       "word_order",
       "verbs_present"
     ],
-    "questionNl": "Wanneer ___ (komen) de trein aan?",
+    "questionNl": "Wanneer ___ de trein aan?",
     "options": [
       "kom",
       "komt",
-      "komen"
+      "komen",
+      "komde"
     ],
     "correctAnswer": "komt",
     "explanationTr": "'De trein' tekil bir öznedir (hij/het). Bu yüzden fiil '-t' alır (komt).",
     "explanationEn": "'De trein' is a singular subject (it). Therefore, the verb takes a '-t' (komt).",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_wo_025",
@@ -436,17 +449,18 @@ export const grammarSyntax = [
       "word_order",
       "verbs_present"
     ],
-    "questionNl": "Hoe ___ (heten) je zus?",
+    "questionNl": "Hoe ___ je zus?",
     "options": [
       "heet",
       "heett",
-      "heten"
+      "heten",
+      "hette"
     ],
     "correctAnswer": "heet",
     "explanationTr": "'Je zus' (kız kardeşin) 3. tekil şahıstır. Fiil kökü zaten 't' ile bittiği için ekstra 't' almaz (heet).",
     "explanationEn": "'Je zus' is 3rd person singular. The stem already ends in 't', so it takes no extra 't' (heet).",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_wo_027",
@@ -471,17 +485,18 @@ export const grammarSyntax = [
       "word_order",
       "verbs_present"
     ],
-    "questionNl": "Welk boek ___ (lezen) jij op dit moment?",
+    "questionNl": "Welk boek ___ jij op dit moment?",
     "options": [
       "lees",
       "leest",
-      "lezen"
+      "lezen",
+      "lezde"
     ],
     "correctAnswer": "lees",
     "explanationTr": "Soru grubu (Welk boek) + Fiil + Özne (jij). Fiilden sonraki 'jij' kuralı işler ve 't' düşer.",
     "explanationEn": "Question group + Verb + Subject (jij). The post-verb 'jij' rule applies, dropping the 't'.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_wo_029",
@@ -506,31 +521,38 @@ export const grammarSyntax = [
       "word_order",
       "verbs_present"
     ],
-    "questionNl": "Wat ___ (doen) jij morgenavond?",
+    "questionNl": "Wat ___ jij morgenavond?",
     "options": [
       "doe",
       "doet",
-      "doen"
+      "doen",
+      "doeter"
     ],
     "correctAnswer": "doe",
     "explanationTr": "'Wat' başa gelir, sonra fiil. 'jij' fiilden sonra olduğu için 't' düşer.",
     "explanationEn": "'Wat' comes first, then the verb. Because 'jij' is after the verb, the 't' drops.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_wo_031",
-    "type": "fill_in",
+    "type": "multiple_choice",
     "tags": [
       "word_order",
       "modal_verbs"
     ],
-    "questionNl": "Ik wil vanavond een boek ___ (lezen).",
+    "questionNl": "Ik wil vanavond een boek ___.",
     "correctAnswer": "lezen",
     "explanationTr": "Cümlede bir kipli fiil (modaal werkwoord - wil) varsa, asıl eylemi bildiren fiil mastar (infinitief) halinde cümlenin en sonuna gider.",
     "explanationEn": "If there is a modal verb (wil) in the sentence, the main action verb goes to the very end of the sentence in its infinitive form.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2,
+    "options": [
+      "lezen",
+      "lezt",
+      "lez",
+      "gelezen"
+    ]
   },
   {
     "id": "q_wo_032",
@@ -539,17 +561,18 @@ export const grammarSyntax = [
       "word_order",
       "modal_verbs"
     ],
-    "questionNl": "Morgen moet ik om 8 uur ___ (werken).",
+    "questionNl": "Morgen moet ik om 8 uur ___.",
     "options": [
       "werk",
       "werkt",
-      "werken"
+      "werken",
+      "werkte"
     ],
     "correctAnswer": "werken",
     "explanationTr": "'moet' (zorunda olmak) kipli fiili nedeniyle asıl fiil cümlenin en sonunda ve mastar halindedir.",
     "explanationEn": "Due to the modal verb 'moet' (must), the main verb goes to the end of the sentence in the infinitive.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_wo_033",
@@ -574,31 +597,38 @@ export const grammarSyntax = [
       "word_order",
       "modal_verbs"
     ],
-    "questionNl": "Wat wil je vanavond ___ (eten)?",
+    "questionNl": "Wat wil je vanavond ___?",
     "options": [
       "eet",
       "eten",
-      "gegeten"
+      "gegeten",
+      "ette"
     ],
     "correctAnswer": "eten",
     "explanationTr": "Soru kelimesi (Wat) + Modal Fiil (wil) + Özne + Zaman + Ana Fiil (Sonda ve mastar).",
     "explanationEn": "Question word (Wat) + Modal (wil) + Subject + Time + Main Verb (At the end, infinitive).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_wo_035",
-    "type": "fill_in",
+    "type": "multiple_choice",
     "tags": [
       "word_order",
       "modal_verbs"
     ],
-    "questionNl": "Hij zal het raam voor me ___ (sluiten).",
+    "questionNl": "Hij zal het raam voor me ___.",
     "correctAnswer": "sluiten",
     "explanationTr": "'Zal' (zullen) kullanıldığında diğer fiil daima mastar halinde sona gider.",
     "explanationEn": "When 'zal' (zullen) is used, the other verb always goes to the end in the infinitive form.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2,
+    "options": [
+      "sluiten",
+      "sluitt",
+      "sluit",
+      "gesluiten"
+    ]
   },
   {
     "id": "q_wo_036",
@@ -608,31 +638,38 @@ export const grammarSyntax = [
       "word_order",
       "modal_verbs"
     ],
-    "questionNl": "Mag ik mijn fiets hier ___ (parkeren)?",
+    "questionNl": "Mag ik mijn fiets hier ___?",
     "options": [
       "parkeer",
       "parkeert",
-      "parkeren"
+      "parkeren",
+      "parkerde"
     ],
     "correctAnswer": "parkeren",
     "explanationTr": "'Mag' (mogen) izin fiilidir, ana eylemi bildiren 'parkeren' cümlenin sonunda mastar halinde yer alır.",
     "explanationEn": "'Mag' (mogen) is a modal verb of permission, the main action 'parkeren' stays at the end in the infinitive.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_wo_037",
-    "type": "fill_in",
+    "type": "multiple_choice",
     "tags": [
       "word_order",
       "modal_verbs"
     ],
-    "questionNl": "Wij moeten eerst de grammatica ___ (leren).",
+    "questionNl": "Wij moeten eerst de grammatica ___.",
     "correctAnswer": "leren",
     "explanationTr": "'Moeten' modal fiiliyle kullanıldığı için 'leren' sona gider.",
     "explanationEn": "Used with the modal verb 'moeten', so 'leren' goes to the end.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2,
+    "options": [
+      "leren",
+      "lert",
+      "ler",
+      "geleren"
+    ]
   },
   {
     "id": "q_wo_038",
@@ -642,17 +679,18 @@ export const grammarSyntax = [
       "word_order",
       "modal_verbs"
     ],
-    "questionNl": "Wilt u nog iets ___ (drinken)?",
+    "questionNl": "Wilt u nog iets ___?",
     "options": [
       "drink",
       "drinkt",
-      "drinken"
+      "drinken",
+      "drinkte"
     ],
     "correctAnswer": "drinken",
     "explanationTr": "Modal fiil (Wilt) cümlenin ikinci sırasında veya soru olduğu için en başındadır, asıl fiil sonda mastar halindedir.",
     "explanationEn": "The modal verb is in the 2nd position or 1st in a question, the main verb is infinitive at the end.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_wo_039",
@@ -677,17 +715,18 @@ export const grammarSyntax = [
       "word_order",
       "modal_verbs"
     ],
-    "questionNl": "Waar kan ik de auto ___ (parkeren)?",
+    "questionNl": "Waar kan ik de auto ___?",
     "options": [
       "parkeer",
       "parkeert",
-      "parkeren"
+      "parkeren",
+      "parkerde"
     ],
     "correctAnswer": "parkeren",
     "explanationTr": "Soru kelimesi (Waar) + modal fiil (kan) + özne (ik) + nesne (de auto) + ana fiil (parkeren).",
     "explanationEn": "Question word (Waar) + modal verb (kan) + subject (ik) + object (de auto) + main verb (parkeren).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_mod_012",
@@ -696,17 +735,18 @@ export const grammarSyntax = [
       "modal_verbs",
       "word_order"
     ],
-    "questionNl": "Morgen moet ik om 8 uur ___ (opstaan).",
+    "questionNl": "Morgen moet ik om 8 uur ___.",
     "options": [
       "opsta",
       "opstaat",
-      "opstaan"
+      "opstaan",
+      "geopsta"
     ],
     "correctAnswer": "opstaan",
     "explanationTr": "'Moet' kullanıldığı için asıl eylem 'opstaan' sona gider ve mastar halinde kalır.",
     "explanationEn": "Because 'moet' is used, the main action 'opstaan' goes to the end and remains in the infinitive.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_mod_013",
@@ -731,17 +771,18 @@ export const grammarSyntax = [
       "word_order",
       "questions"
     ],
-    "questionNl": "Mag ik hier een sigaret ___ (roken)?",
+    "questionNl": "Mag ik hier een sigaret ___?",
     "options": [
       "rook",
       "rookt",
-      "roken"
+      "roken",
+      "rokte"
     ],
     "correctAnswer": "roken",
     "explanationTr": "'Mag' izin fiilidir, asıl eylem 'roken' (içmek) mastar olarak sona gider.",
     "explanationEn": "'Mag' is the modal for permission, the main action 'roken' goes to the end in the infinitive.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_mod_015",
@@ -764,31 +805,38 @@ export const grammarSyntax = [
       "modal_verbs",
       "word_order"
     ],
-    "questionNl": "Wij zullen dat document later naar jou ___ (sturen).",
+    "questionNl": "Wij zullen dat document later naar jou ___.",
     "options": [
       "sturen",
       "stuurt",
-      "stuur"
+      "stuur",
+      "sturde"
     ],
     "correctAnswer": "sturen",
     "explanationTr": "'Zullen' kullanıldığında diğer fiil daima sona mastar olarak (sturen) gider.",
     "explanationEn": "When 'zullen' is used, the other verb always goes to the end as an infinitive (sturen).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_mod_017",
-    "type": "fill_in",
+    "type": "multiple_choice",
     "tags": [
       "modal_verbs",
       "word_order"
     ],
-    "questionNl": "Je moet je kamer vandaag nog ___ (opruimen).",
+    "questionNl": "Je moet je kamer vandaag nog ___.",
     "correctAnswer": "opruimen",
     "explanationTr": "Asıl fiil (opruimen) mastar halinde sonda yer alır.",
     "explanationEn": "The main verb (opruimen) is placed at the end in the infinitive.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2,
+    "options": [
+      "opruimen",
+      "opruimt",
+      "opruim",
+      "geopruimen"
+    ]
   },
   {
     "id": "q_mod_018",
@@ -801,13 +849,14 @@ export const grammarSyntax = [
     "options": [
       "gaan",
       "maken",
-      "doen"
+      "doen",
+      "makte"
     ],
     "correctAnswer": "gaan",
     "explanationTr": "Hollandacada bağlamdan çok net anlaşılan 'gaan' (gitmek) gibi fiiller modal fiillerden sonra düşürülebilir.",
     "explanationEn": "In Dutch, obvious verbs like 'gaan' (to go) can be omitted after modal verbs if the context is clear.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_mod_019",
@@ -832,17 +881,18 @@ export const grammarSyntax = [
       "word_order",
       "inversion"
     ],
-    "questionNl": "Vandaag kan ik helaas niet ___ (sporten).",
+    "questionNl": "Vandaag kan ik helaas niet ___.",
     "options": [
       "sport",
       "sporten",
-      "gesport"
+      "gesport",
+      "sportte"
     ],
     "correctAnswer": "sporten",
     "explanationTr": "Devrik cümle (inversie) olsa da kural değişmez: ana fiil (sporten) sona gider.",
     "explanationEn": "Even with inversion, the rule stands: the main verb (sporten) goes to the end.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_sep_001",
@@ -930,13 +980,14 @@ export const grammarSyntax = [
     "options": [
       "Voor de persoonsvorm",
       "Aan het einde van de zin",
-      "Direct na het subject"
+      "Direct na het subject",
+      "Het werkwoord staat altijd vooraan."
     ],
     "correctAnswer": "Aan het einde van de zin",
     "explanationTr": "Ayrılabilen fiillerin ilk parçası (prefix) şimdiki zaman ve hikaye geçmiş zamanda her zaman cümlenin EN SONUNA gider.",
     "explanationEn": "The first part (prefix) of a separable verb always goes to the VERY END of the sentence in the present and simple past tense.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_sep_009",
@@ -965,13 +1016,14 @@ export const grammarSyntax = [
     "options": [
       "opstaan",
       "staan op",
-      "opgestaan"
+      "opgestaan",
+      "geen van deze"
     ],
     "correctAnswer": "opstaan",
     "explanationTr": "Cümlede modal/yardımcı fiil (wil/ga) varsa, ayrılabilen fiil AYRILMAZ ve mastar halinde cümlenin sonuna bütün olarak gider.",
     "explanationEn": "If there is a modal/auxiliary verb (wil/ga), the separable verb does NOT split and goes to the end of the sentence as a whole infinitive.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_sep_012",
@@ -985,13 +1037,14 @@ export const grammarSyntax = [
     "options": [
       "rekenen af",
       "afrekenen",
-      "afgerekend"
+      "afgerekend",
+      "afrekende"
     ],
     "correctAnswer": "afrekenen",
     "explanationTr": "'Moeten' modal fiili kullanıldığı için 'afrekenen' ayrılmadan mastar halinde sonda kullanılır.",
     "explanationEn": "Because the modal verb 'Moeten' is used, 'afrekenen' stays together as an infinitive at the end.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_sep_015",
@@ -1005,13 +1058,14 @@ export const grammarSyntax = [
     "options": [
       "Omdat er een modaal werkwoord ('wil') in de zin staat.",
       "Omdat het in de verleden tijd is.",
-      "Omdat het een vraag is."
+      "Omdat het een vraag is.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Omdat er een modaal werkwoord ('wil') in de zin staat.",
     "explanationTr": "Modal fiiller (willen, moeten, kunnen vb.) ayrılabilen fiillerin ayrılmasını engeller ve onları mastar olarak sona atar.",
     "explanationEn": "Modal verbs (willen, moeten, kunnen etc.) prevent separable verbs from splitting and push them as infinitives to the end.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_ref_037",
@@ -1081,32 +1135,39 @@ export const grammarSyntax = [
       "future_gaan",
       "word_order"
     ],
-    "questionNl": "Wat ___ (gaan) jullie in het weekend doen?",
+    "questionNl": "Wat ___ jullie in het weekend doen?",
     "options": [
       "ga",
       "gaat",
-      "gaan"
+      "gaan",
+      "gega"
     ],
     "correctAnswer": "gaan",
     "explanationTr": "'jullie' çoğul bir şahıs olduğu için fiil çekimi her zaman mastar (gaan) olur.",
     "explanationEn": "'jullie' is a plural person, so the verb conjugation is always the infinitive (gaan).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_fut_033",
-    "type": "fill_in",
+    "type": "multiple_choice",
     "tags": [
       "future_tenses",
       "word_order",
       "zullen"
     ],
-    "questionNl": "Ik zal je morgen in de klas het boek ___ (geven).",
+    "questionNl": "Ik zal je morgen in de klas het boek ___.",
     "correctAnswer": "geven",
     "explanationTr": "'Zal' yardımcı fiil olduğu için asıl fiil olan 'geven' cümlenin EN SONUNA mastar olarak gider.",
     "explanationEn": "Because 'Zal' is an auxiliary verb, the main verb 'geven' goes to the VERY END of the sentence as an infinitive.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2,
+    "options": [
+      "geven",
+      "vente",
+      "vende",
+      "gevt"
+    ]
   },
   {
     "id": "q_fut_034",
@@ -1120,13 +1181,14 @@ export const grammarSyntax = [
     "options": [
       "eten",
       "gegeten",
-      "eet"
+      "eet",
+      "ette"
     ],
     "correctAnswer": "eten",
     "explanationTr": "Gelecek zamanı yapan 'ga' (gaan) yardımcı fiildir, asıl fiil olan 'eten' cümlenin sonunda mastar halinde bulunur.",
     "explanationEn": "The auxiliary 'ga' (gaan) creates the future tense, so the main verb 'eten' is at the end of the sentence as an infinitive.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_fut_035",
@@ -1151,17 +1213,18 @@ export const grammarSyntax = [
       "word_order",
       "future_gaan"
     ],
-    "questionNl": "Zij gaan het oude huis aan de rivier ___ (verkopen).",
+    "questionNl": "Zij gaan het oude huis aan de rivier ___.",
     "options": [
       "verkoopt",
       "verkocht",
-      "verkopen"
+      "verkopen",
+      "verkopte"
     ],
     "correctAnswer": "verkopen",
     "explanationTr": "'Gaan' yardımcı fiili asıl eylemi sona (verkopen) atar.",
     "explanationEn": "The auxiliary verb 'Gaan' pushes the main action to the end (verkopen).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_fut_037",
@@ -1191,13 +1254,14 @@ export const grammarSyntax = [
     "options": [
       "luister",
       "luisteren",
-      "geluisterd"
+      "geluisterd",
+      "luisterde"
     ],
     "correctAnswer": "luisteren",
     "explanationTr": "Yardımcı fiil 'zullen', ana fiili 'luisteren' mastar olarak cümlenin sonuna atar.",
     "explanationEn": "The auxiliary verb 'zullen' pushes the main verb 'luisteren' as an infinitive to the end of the sentence.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_fut_039",
@@ -1227,13 +1291,14 @@ export const grammarSyntax = [
     "options": [
       "zitten",
       "gezeten",
-      "zit"
+      "zit",
+      "zittte"
     ],
     "correctAnswer": "zitten",
     "explanationTr": "Bir teklif olan 'Zullen we...' yapısında ana eylem cümlenin sonunda yer alır (zitten).",
     "explanationEn": "In the proposal structure 'Zullen we...', the main action is placed at the end of the sentence (zitten).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_er_cont_001",
@@ -1260,13 +1325,14 @@ export const grammarSyntax = [
     "options": [
       "Er",
       "Daar",
-      "Het"
+      "Het",
+      "geEr"
     ],
     "correctAnswer": "Er",
     "explanationTr": "Özne 'veel problemen' (belirsiz ve çoğul) olduğu için cümlenin başında 'Er' kullanılır.",
     "explanationEn": "Because the subject is 'veel problemen' (indefinite and plural), 'Er' is used at the beginning of the sentence.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_er_cont_003",
@@ -1293,13 +1359,14 @@ export const grammarSyntax = [
     "options": [
       "Omdat 'een kat' een indefiniet subject is.",
       "Omdat we nadruk (vurgu) leggen op de tuin.",
-      "Omdat de kat specifiek is."
+      "Omdat de kat specifiek is.",
+      "Het werkwoord staat altijd vooraan."
     ],
     "correctAnswer": "Omdat 'een kat' een indefiniet subject is.",
     "explanationTr": "'een kat' (bir kedi) belirsiz bir öznedir. Belirsiz öznelerle Hollandacada genellikle 'Er' yapısı kullanılır.",
     "explanationEn": "'een kat' (a cat) is an indefinite subject. With indefinite subjects, the 'Er' structure is typically used in Dutch.",
     "difficulty": 5,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_er_cont_005",
@@ -1339,13 +1406,14 @@ export const grammarSyntax = [
     "options": [
       "Er zijn een probleem.",
       "Er is veel problemen.",
-      "Er is een probleem."
+      "Er is een probleem.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Er is een probleem.",
     "explanationTr": "'een probleem' tekil olduğu için 'is' kullanılır. 'veel problemen' çoğul olduğu için 'zijn' gerektirirdi.",
     "explanationEn": "'een probleem' is singular, so 'is' is used. 'veel problemen' is plural and would require 'zijn'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_er_cont_009",
@@ -1372,13 +1440,14 @@ export const grammarSyntax = [
     "options": [
       "Er is de man ziek.",
       "Er zijn de studenten hier.",
-      "Er zit een vogel in de boom."
+      "Er zit een vogel in de boom.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Er zit een vogel in de boom.",
     "explanationTr": "'Er' yapısı BELİRLİ öznelerle (de man, de studenten) KULLANILMAZ. 'een vogel' (bir kuş) belirsizdir, bu yüzden doğrudur.",
     "explanationEn": "The 'Er' structure is NOT USED with DEFINITE subjects (de man, de studenten). 'een vogel' (a bird) is indefinite, so it's correct.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_er_cont_012",
@@ -1431,13 +1500,14 @@ export const grammarSyntax = [
     "options": [
       "er",
       "daar",
-      "het"
+      "het",
+      "geer"
     ],
     "correctAnswer": "er",
     "explanationTr": "Londen hakkında konuşulurken vurgusuz yer bildirmek için cümlenin ortasında 'er' kullanılır.",
     "explanationEn": "When talking about London, 'er' is used in the middle of the sentence to indicate the place without emphasis.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_er_cont_018",
@@ -1464,13 +1534,14 @@ export const grammarSyntax = [
     "options": [
       "daar",
       "er",
-      "hier"
+      "hier",
+      "gedaar"
     ],
     "correctAnswer": "er",
     "explanationTr": "'er', cümlenin ortasında Utrecht'e atıfta bulunarak 'orada' (vurgusuz) anlamına gelir.",
     "explanationEn": "'er' refers back to Utrecht in the middle of the sentence meaning 'there' (unstressed).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_er_cont_020",
@@ -1510,13 +1581,14 @@ export const grammarSyntax = [
     "options": [
       "Ik ben aan het schoonmaken mijn kamer.",
       "Ik ben mijn kamer aan het schoonmaken.",
-      "Ik aan het schoonmaken ben mijn kamer."
+      "Ik aan het schoonmaken ben mijn kamer.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Ik ben mijn kamer aan het schoonmaken.",
     "explanationTr": "Nesne (mijn kamer), yardımcı fiil (ben) ile 'aan het' yapısının ARASINA girer.",
     "explanationEn": "The object (mijn kamer) goes BETWEEN the auxiliary verb (ben) and the 'aan het' structure.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_cont_029",
@@ -1558,13 +1630,14 @@ export const grammarSyntax = [
     "options": [
       "slapen",
       "slaapt",
-      "slaap"
+      "slaap",
+      "slapte"
     ],
     "correctAnswer": "slapen",
     "explanationTr": "Hem yer bildiren 'daar' hem de continuous kalıbı 'aan het' var. 'Aan het' mastar ister (slapen).",
     "explanationEn": "Contains both the place indicator 'daar' and the continuous pattern 'aan het'. 'Aan het' takes the infinitive (slapen).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_cont_035",
@@ -1605,13 +1678,14 @@ export const grammarSyntax = [
     "options": [
       "'Daar' legt de nadruk (vurgu) op de plaats.",
       "'Er' is meervoud.",
-      "Er is geen verschil."
+      "Er is geen verschil.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "'Daar' legt de nadruk (vurgu) op de plaats.",
     "explanationTr": "'Daar' kullanıldığında 'ORADA' diyerek yere özel bir vurgu yapılmış olur.",
     "explanationEn": "When 'Daar' is used, it means 'THERE', placing special emphasis on the location.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_conj_pron_001",
@@ -1623,13 +1697,14 @@ export const grammarSyntax = [
     "options": [
       "en",
       "want",
-      "dus"
+      "dus",
+      "geen"
     ],
     "correctAnswer": "en",
     "explanationTr": "'En' (ve) bağlacı iki ana cümleyi birbirine bağlar ve kelime dizilimini (word order) değiştirmez.",
     "explanationEn": "'En' (and) connects two main clauses and does not change the word order.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_conj_pron_002",
@@ -1654,13 +1729,14 @@ export const grammarSyntax = [
     "options": [
       "of",
       "en",
-      "maar"
+      "maar",
+      "geof"
     ],
     "correctAnswer": "of",
     "explanationTr": "'Of' (veya) iki seçenek sunan ana cümleleri birbirine bağlar. Dizilim değişmez.",
     "explanationEn": "'Of' (or) connects main clauses presenting alternatives. Word order remains unchanged.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_conj_pron_004",
@@ -1685,13 +1761,14 @@ export const grammarSyntax = [
     "options": [
       "maar",
       "want",
-      "dus"
+      "dus",
+      "gemaar"
     ],
     "correctAnswer": "maar",
     "explanationTr": "'Maar' (ama/fakat) zıtlık bildiren iki ana cümleyi bağlar. Dizilim (Subject + Verb) aynen kalır.",
     "explanationEn": "'Maar' (but) connects contrasting main clauses. Word order (Subject + Verb) remains identical.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_conj_pron_006",
@@ -1716,13 +1793,14 @@ export const grammarSyntax = [
     "options": [
       "want",
       "dus",
-      "en"
+      "en",
+      "gewant"
     ],
     "correctAnswer": "want",
     "explanationTr": "'Want' (çünkü) bir gerekçe/sebep bildirir. Arkasından gelen cümlede kelime dizilimi DEĞİŞMEZ (Hoofdzin yapısıdır).",
     "explanationEn": "'Want' (because) expresses a reason. The clause following it retains standard main clause word order (unlike 'omdat').",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_conj_pron_008",
@@ -1747,13 +1825,14 @@ export const grammarSyntax = [
     "options": [
       "dus",
       "want",
-      "maar"
+      "maar",
+      "gedus"
     ],
     "correctAnswer": "dus",
     "explanationTr": "'Dus' (bu yüzden/öyleyse) bir sonuç bildirir. İki ana cümleyi bağlar ve dizilimi değiştirmez.",
     "explanationEn": "'Dus' (so/therefore) indicates a consequence. It connects main clauses without changing word order.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_conj_pron_010",
@@ -1779,13 +1858,14 @@ export const grammarSyntax = [
     "options": [
       "Ze veranderen de woordvolgorde niet (ze verbinden hoofdzin + hoofdzin).",
       "Ze sturen de persoonsvorm naar het einde van de zin.",
-      "Ze dwingen inversie af."
+      "Ze dwingen inversie af.",
+      "Het werkwoord staat altijd vooraan."
     ],
     "correctAnswer": "Ze veranderen de woordvolgorde niet (ze verbinden hoofdzin + hoofdzin).",
     "explanationTr": "Bu 5 bağlaç iki ana cümleyi (hoofdzin) birbirine bağlar; dolayısıyla sonraki cümlede Özne + Fiil dizilimi bozulmaz.",
     "explanationEn": "These 5 conjunctions connect two main clauses; thus, the Subject + Verb order in the following clause is preserved.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_conj_pron_026",
@@ -1797,13 +1877,14 @@ export const grammarSyntax = [
     "options": [
       "dus",
       "want",
-      "maar"
+      "maar",
+      "gedus"
     ],
     "correctAnswer": "dus",
     "explanationTr": "Balık sevmediği için sonuç olarak vejetaryen yiyor ('dus' - bu yüzden/öyleyse).",
     "explanationEn": "Since he doesn't like fish, as a consequence he eats vegetarian ('dus' - so/therefore).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_conj_pron_027",
@@ -1828,13 +1909,14 @@ export const grammarSyntax = [
     "options": [
       "of",
       "en",
-      "dus"
+      "dus",
+      "geof"
     ],
     "correctAnswer": "of",
     "explanationTr": "İki içecek arasında seçim sunuluyor ('of' - veya).",
     "explanationEn": "Offering a choice between two drinks ('of' - or).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_conj_pron_029",
@@ -1859,13 +1941,14 @@ export const grammarSyntax = [
     "options": [
       "want",
       "dus",
-      "maar"
+      "maar",
+      "gewant"
     ],
     "correctAnswer": "want",
     "explanationTr": "Mutlu olmasının GEREKÇESİ sınavı geçmiş olmasıdır ('want' - çünkü).",
     "explanationEn": "The REASON for being happy is passing the exam ('want' - because).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_conj_pron_034",
@@ -1878,13 +1961,14 @@ export const grammarSyntax = [
     "options": [
       "en, of, maar, want, dus",
       "omdat, als, terwijl, voordat",
-      "geen van alle"
+      "geen van alle",
+      "en, of, maar, want, duser"
     ],
     "correctAnswer": "en, of, maar, want, dus",
     "explanationTr": "Bu beşli ana cümleleri birbirine bağlar ve kelime sırasını değiştirmez.",
     "explanationEn": "These five connect main clauses and do not alter the word order.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_conj_043",
@@ -1897,13 +1981,14 @@ export const grammarSyntax = [
     "options": [
       "Nee, de volgorde blijft gelijk (Hoofdzin).",
       "Ja, de persoonsvorm gaat naar het einde.",
-      "Ja, er is sprake van inversie."
+      "Ja, er is sprake van inversie.",
+      "Het werkwoord staat altijd vooraan."
     ],
     "correctAnswer": "Nee, de volgorde blijft gelijk (Hoofdzin).",
     "explanationTr": "'Dus' bir ana cümle bağlacıdır; arkasından gelen cümlede Özne + Fiil sıralaması bozulmaz.",
     "explanationEn": "'Dus' is a main clause conjunction; the Subject + Verb order in the following clause is not disrupted.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_bijz_001",
@@ -1917,28 +2002,35 @@ export const grammarSyntax = [
     "options": [
       "ben",
       "is",
-      "zijn"
+      "zijn",
+      "geben"
     ],
     "correctAnswer": "ben",
     "explanationTr": "Yan cümlede (bijzin) 'omdat' bağlacından sonra fiiller EN SONA gider. 'ik' için 'zijn' çekimi 'ben'dir.",
     "explanationEn": "In a subclause (bijzin) after 'omdat', verbs go to the END. The 'ik' conjugation of 'zijn' is 'ben'.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_bijz_002",
-    "type": "fill_in",
+    "type": "multiple_choice",
     "tags": [
       "subclauses",
       "conjunctions",
       "word_order"
     ],
-    "questionNl": "Ik luister naar muziek terwijl ik mijn huiswerk ___ (maken).",
+    "questionNl": "Ik luister naar muziek terwijl ik mijn huiswerk ___.",
     "correctAnswer": "maak",
     "explanationTr": "'terwijl' bir yan cümle bağlacıdır. Fiil sona gider ve 'ik' için 'maak' olur.",
     "explanationEn": "'terwijl' is a subclause conjunction. The verb goes to the end, becoming 'maak' for 'ik'.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2,
+    "options": [
+      "maak",
+      "maakt",
+      "maaken",
+      "gemaakd"
+    ]
   },
   {
     "id": "q_bijz_003",
@@ -1952,28 +2044,35 @@ export const grammarSyntax = [
     "options": [
       "is afgelopen",
       "afgelopen is",
-      "afgelopen zijn"
+      "afgelopen zijn",
+      "is afgelopte"
     ],
     "correctAnswer": "is afgelopen",
     "explanationTr": "Yan cümlede 'zodra' sonrasında fiiller sona gider. Ayrılabilen birleşik fiilin perfectum hali sonda yer alır: 'is afgelopen'.",
     "explanationEn": "In a subclause after 'zodra', verbs go to the end. The perfectum of the separable verb is at the end: 'is afgelopen'.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_bijz_004",
-    "type": "fill_in",
+    "type": "multiple_choice",
     "tags": [
       "subclauses",
       "conjunctions",
       "word_order"
     ],
-    "questionNl": "Ik bel je op als ik morgen in Amsterdam ___ (zijn).",
+    "questionNl": "Ik bel je op als ik morgen in Amsterdam ___.",
     "correctAnswer": "ben",
     "explanationTr": "'als' (eğer/ne zaman ki) bir yan cümle başlatır. Fiil 'ben' olarak en sonda yer alır.",
     "explanationEn": "'als' (if/when) starts a subclause. The verb 'ben' is placed at the very end.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2,
+    "options": [
+      "ben",
+      "bent",
+      "benen",
+      "gebend"
+    ]
   },
   {
     "id": "q_bijz_005",
@@ -1987,13 +2086,14 @@ export const grammarSyntax = [
     "options": [
       "Alle werkwoorden gaan naar het einde van de zin.",
       "De persoonsvorm staat altijd op de tweede plaats.",
-      "Er is sprake van inversie in de bijzin."
+      "Er is sprake van inversie in de bijzin.",
+      "Het werkwoord staat altijd vooraan."
     ],
     "correctAnswer": "Alle werkwoorden gaan naar het einde van de zin.",
     "explanationTr": "Yan cümlenin (bijzin) altın kuralı: Çekimli fiil ve diğer tüm fiiller cümlenin en sonuna gider.",
     "explanationEn": "The golden rule of a subclause: The conjugated verb and all other verbs go to the end of the sentence.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_bijz_006",
@@ -2022,13 +2122,14 @@ export const grammarSyntax = [
     "options": [
       "wil",
       "wille",
-      "wilt"
+      "wilt",
+      "wiler"
     ],
     "correctAnswer": "wil",
     "explanationTr": "Yan cümle ('Voordat we naar huis gaan') başa geldiği için, virgülünden sonraki ana cümlede inversie (fiir öznenin önüne geçer) olur: 'wil ik'.",
     "explanationEn": "Since the subclause ('Voordat...') is at the start, the main clause after the comma has inversion: 'wil ik'.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_bijz_008",
@@ -2057,13 +2158,14 @@ export const grammarSyntax = [
     "options": [
       "gaan",
       "zullen",
-      "bezoeken"
+      "bezoeken",
+      "zullde"
     ],
     "correctAnswer": "zullen",
     "explanationTr": "Yan cümleyle başlayan yapılarda ana cümle devrik (inversie) olur: 'zullen we'.",
     "explanationEn": "In structures starting with a subclause, the main clause is inverted: 'zullen we'.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_bijz_010",
@@ -2091,13 +2193,14 @@ export const grammarSyntax = [
     "options": [
       "Na 'want' volgt een hoofdzin (normale volgorde), na 'omdat' volgt een bijzin (werkwoorden naar achter).",
       "Na 'omdat' volgt een hoofdzin, na 'want' volgt een bijzin.",
-      "Er is geen gramaticaal verschil."
+      "Er is geen gramaticaal verschil.",
+      "Het werkwoord staat altijd vooraan."
     ],
     "correctAnswer": "Na 'want' volgt een hoofdzin (normale volgorde), na 'omdat' volgt een bijzin (werkwoorden naar achter).",
     "explanationTr": "İkisi de 'çünkü' demektir ancak 'want' ana cümle (hoofdzin) bağlar, 'omdat' ise yan cümle (bijzin) bağlayıp fiilleri sona atar.",
     "explanationEn": "Both mean 'because', but 'want' connects a main clause, while 'omdat' connects a subclause sending verbs to the end.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_bijz_012",
@@ -2115,17 +2218,23 @@ export const grammarSyntax = [
   },
   {
     "id": "q_bijz_013",
-    "type": "fill_in",
+    "type": "multiple_choice",
     "tags": [
       "subclauses",
       "want_omdat"
     ],
-    "questionNl": "Ik doe deze cursus omdat ik graag Nederlands ___ (leren / willen).",
+    "questionNl": "Ik doe deze cursus omdat ik graag Nederlands ___.",
     "correctAnswer": "wil leren",
     "explanationTr": "'omdat' bir bijzin (yan cümle) bağlacıdır. Tüm fiiller (wil, leren) cümlenin EN SONUNA gider.",
     "explanationEn": "'omdat' is a subclause conjunction. All verbs (wil, leren) go to the VERY END of the sentence.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2,
+    "options": [
+      "wil leren",
+      "leren wil",
+      "zal leren",
+      "heeft geleerd"
+    ]
   },
   {
     "id": "q_bijz_014",
@@ -2138,13 +2247,14 @@ export const grammarSyntax = [
     "options": [
       "Ik blijf thuis, omdat ik ben ziek.",
       "Ik blijf thuis, omdat ik ziek ben.",
-      "Ik blijf thuis, want ik ziek ben."
+      "Ik blijf thuis, want ik ziek ben.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Ik blijf thuis, omdat ik ziek ben.",
     "explanationTr": "'omdat' yan cümle yarattığı için fiil ('ben') en sonda olmalıdır.",
     "explanationEn": "Because 'omdat' creates a subclause, the verb ('ben') must be at the end.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_bijz_015",
@@ -2171,13 +2281,14 @@ export const grammarSyntax = [
     "options": [
       "We gaan niet naar het strand, want het regent.",
       "We gaan niet naar het strand, want regent het.",
-      "We gaan niet naar het strand, omdat regent het."
+      "We gaan niet naar het strand, omdat regent het.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "We gaan niet naar het strand, want het regent.",
     "explanationTr": "Anlam aynıdır ('çünkü'), ancak 'want' sonrasında normal sıra ('het regent') yer alır.",
     "explanationEn": "The meaning is the same ('because'), but after 'want' we use normal word order ('het regent').",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_bijz_017",
@@ -2204,13 +2315,14 @@ export const grammarSyntax = [
     "options": [
       "gaan",
       "gaat",
-      "staan"
+      "staan",
+      "gegaan"
     ],
     "correctAnswer": "gaan",
     "explanationTr": "Yan cümleyle (Omdat...) başlandığı için ana cümlede inversie (devrik yapı) olur: 'gaan we'.",
     "explanationEn": "Starting with a subclause (Omdat...) requires inversion in the main clause: 'gaan we'.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_bijz_019",
@@ -2239,13 +2351,14 @@ export const grammarSyntax = [
     "options": [
       "Zowel 'gevonden is' als 'is gevonden' zijn toegestaan.",
       "Alleen 'is gevonden' is correct.",
-      "Alleen 'gevonden is' is correct."
+      "Alleen 'gevonden is' is correct.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Zowel 'gevonden is' als 'is gevonden' zijn toegestaan.",
     "explanationTr": "Hollandacada yan cümlenin sonunda hem 'participle + yardımcı fiil' hem de 'yardımcı fiil + participle' kabul edilir.",
     "explanationEn": "In Dutch subclauses at the end, both 'participle + auxiliary' and 'auxiliary + participle' orders are accepted.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_bijz_021",
@@ -2273,13 +2386,14 @@ export const grammarSyntax = [
     "options": [
       "omdat",
       "want",
-      "zodat"
+      "zodat",
+      "geomdat"
     ],
     "correctAnswer": "omdat",
     "explanationTr": "Cümlenin devamında fiiller sonda yer almaktadır ('willen missen'), bu yüzden 'omdat' (yan cümle bağlacı) gereklidir.",
     "explanationEn": "The verbs are at the end ('willen missen'), which requires the subclause conjunction 'omdat'.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_bijz_023",
@@ -2306,13 +2420,14 @@ export const grammarSyntax = [
     "options": [
       "Hoewel",
       "Omdat",
-      "Zodat"
+      "Zodat",
+      "geHoewel"
     ],
     "correctAnswer": "Hoewel",
     "explanationTr": "'Hasta olmama rağmen' anlamı için 'Hoewel' (although/rağmen) kullanılır.",
     "explanationEn": "For the meaning 'Although I am sick', 'Hoewel' is used.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_bijz_025",
@@ -2353,13 +2468,14 @@ export const grammarSyntax = [
     "options": [
       "zodat",
       "omdat",
-      "terwijl"
+      "terwijl",
+      "gezodat"
     ],
     "correctAnswer": "zodat",
     "explanationTr": "'zodat' amacı veya sonucu (so that) ifade eder.",
     "explanationEn": "'zodat' expresses a goal or result (so that).",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_bijz_029",
@@ -2386,13 +2502,14 @@ export const grammarSyntax = [
     "options": [
       "Aan het einde van de bijzin",
       "Direct na het voegwoord",
-      "Op de tweede plaats"
+      "Op de tweede plaats",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Aan het einde van de bijzin",
     "explanationTr": "Yan cümlede çekimli fiil (persoonsvorm) en arkasındaki diğer fiiller her zaman en sondadır.",
     "explanationEn": "In a subclause, the conjugated verb and other verbs are always at the end.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_bijz_031",
@@ -2420,41 +2537,54 @@ export const grammarSyntax = [
     "options": [
       "gaan",
       "gaat",
-      "zijn"
+      "zijn",
+      "gegaan"
     ],
     "correctAnswer": "gaan",
     "explanationTr": "Yan cümle öne geçtiği için ana cümlede inversie (devrik yapı) olur: 'gaan we'.",
     "explanationEn": "The subclause is upfront, so the main clause is inverted: 'gaan we'.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_bijz_033",
-    "type": "fill_in",
+    "type": "multiple_choice",
     "tags": [
       "subclauses",
       "conjunctions"
     ],
-    "questionNl": "Ik neem een paraplu mee, voor het ___ (regenen).",
+    "questionNl": "Ik neem een paraplu mee, voor het ___.",
     "correctAnswer": "regent",
     "explanationTr": "'voordat' yerine bazen kısaca 'voor het...' yapısı da benzer mantıkla fiili sona iter (regent).",
     "explanationEn": "Similar to 'voordat', this structure pushes the verb to the end (regent).",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2,
+    "options": [
+      "regent",
+      "regenen",
+      "regende",
+      "geregend"
+    ]
   },
   {
     "id": "q_bijz_035",
-    "type": "fill_in",
+    "type": "multiple_choice",
     "tags": [
       "subclauses",
       "conjunctions"
     ],
-    "questionNl": "We konden niet buiten slapen, omdat het te koud ___ (zijn).",
+    "questionNl": "We konden niet buiten slapen, omdat het te koud ___.",
     "correctAnswer": "was",
     "explanationTr": "Geçmiş zamanda 'zijn' fiili yan cümlede en sona 'was' olarak gider.",
     "explanationEn": "In the past tense, the verb 'zijn' goes to the end of the subclause as 'was'.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2,
+    "options": [
+      "was",
+      "is",
+      "waren",
+      "geweest"
+    ]
   },
   {
     "id": "gr_1001",
@@ -2468,13 +2598,14 @@ export const grammarSyntax = [
     "options": [
       "Kom",
       "Komt",
-      "Komen"
+      "Komen",
+      "Komde"
     ],
     "correctAnswer": "Kom",
     "explanationTr": "Soru cümlelerinde of devrik yapılarda (inversie) fiil 'jij/je' öznesinden önce gelirse, fiilin sonundaki '-t' düşer.",
     "explanationEn": "In questions or inversions where the verb precedes 'jij/je', the '-t' ending is dropped from the verb.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1006",
@@ -2488,13 +2619,14 @@ export const grammarSyntax = [
     "options": [
       "Subject + Persoonsvorm (verb) + Rest",
       "Persoonsvorm (verb) + Subject + Rest",
-      "Rest + Subject + Persoonsvorm (verb)"
+      "Rest + Subject + Persoonsvorm (verb)",
+      "Het werkwoord staat altijd vooraan."
     ],
     "correctAnswer": "Subject + Persoonsvorm (verb) + Rest",
     "explanationTr": "Standart bir Hollandaca ana cümlede (hoofdzin) sıralama Özne + Çekimli Fiil + Kalan Öğeler şeklindedir.",
     "explanationEn": "In a standard Dutch main clause, the word order is Subject + Conjugated Verb + Rest.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1018",
@@ -2508,13 +2640,14 @@ export const grammarSyntax = [
     "options": [
       "De persoonsvorm komt direct na dat element, vóór het subject (inversie).",
       "Het subject blijft op de eerste plaats staan.",
-      "Het werkwoord verhuist naar het einde van de zin."
+      "Het werkwoord verhuist naar het einde van de zin.",
+      "Het werkwoord staat altijd vooraan."
     ],
     "correctAnswer": "De persoonsvorm komt direct na dat element, vóór het subject (inversie).",
     "explanationTr": "Cümle zaman (Zondag) gibi bir öğeyle başlarsa devrik yapı (inversie) uygulanır: Zaman + Çekimli Fiil + Özne.",
     "explanationEn": "If a sentence starts with an element other than the subject (like time), inversion occurs: the verb comes before the subject.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1019",
@@ -2528,17 +2661,18 @@ export const grammarSyntax = [
     "options": [
       "Dat weet ik niet.",
       "Dat ik weet niet.",
-      "Weet dat ik niet."
+      "Weet dat ik niet.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Dat weet ik niet.",
     "explanationTr": "Nesne olan 'Dat' başa geldiği için devrik yapı uygulanır. Fiil ikinci sırada (weet), özne (ik) üçüncü sırada yer alır.",
     "explanationEn": "Because the object 'Dat' is placed first, inversion applies. The verb 'weet' is in the 2nd position, and the subject 'ik' follows.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1020",
-    "type": "fill_in",
+    "type": "multiple_choice",
     "tags": [
       "grammar",
       "syntax",
@@ -2549,7 +2683,13 @@ export const grammarSyntax = [
     "explanationTr": "Zaman ifadesinden (Om 11.00 uur) sonra çekimli fiil (hebben) en ardından özne (we) gelmelidir.",
     "explanationEn": "After the time phrase (Om 11.00 uur), the conjugated verb (hebben) must precede the subject (we).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2,
+    "options": [
+      "hebben",
+      "hebbt",
+      "hebb",
+      "gehebben"
+    ]
   },
   {
     "id": "gr_1069",
@@ -2563,13 +2703,14 @@ export const grammarSyntax = [
     "options": [
       "De normale hoofdzinvolgorde: subject + persoonsvorm (bijv. ...want ik ga op vakantie).",
       "Inversie: persoonsvorm + subject.",
-      "Het werkwoord staat helemaal aan het einde."
+      "Het werkwoord staat helemaal aan het einde.",
+      "Het werkwoord staat altijd vooraan."
     ],
     "correctAnswer": "De normale hoofdzinvolgorde: subject + persoonsvorm (bijv. ...want ik ga op vakantie).",
     "explanationTr": "Bu beş bağlaçtan (en, of, maar, want, dus) sonra normal cümle dizilimi (Özne + Fiil) devam eder, devrik yapı uygulanmaz.",
     "explanationEn": "After these five coordinating conjunctions, the standard main clause word order (Subject + Verb) is maintained.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1070",
@@ -2583,13 +2724,14 @@ export const grammarSyntax = [
     "options": [
       "Conjunctie + subject + rest + persoonsvorm + (andere werkwoorden).",
       "Conjunctie + persoonsvorm + subject + rest.",
-      "Conjunctie + rest + subject + persoonsvorm."
+      "Conjunctie + rest + subject + persoonsvorm.",
+      "Het werkwoord staat altijd vooraan."
     ],
     "correctAnswer": "Conjunctie + subject + rest + persoonsvorm + (andere werkwoorden).",
     "explanationTr": "Yan cümle bağlaçlarından (bijzin) sonra, çekimli fiil en varsa diğer tüm fiiller cümlenin en sonuna gider.",
     "explanationEn": "In a subclause introduced by these subordinating conjunctions, the conjugated verb (and any other verbs) go to the very end.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1071",
@@ -2604,13 +2746,14 @@ export const grammarSyntax = [
     "options": [
       "De hoofdzin krijgt inversie: persoonsvorm + subject (bijv. Nadat mijn fiets gestolen was, ben ik...).",
       "De hoofdzin behoudt de normale volgorde (subject + persoonsvorm).",
-      "De hoofdzin krijgt geen persoonsvorm."
+      "De hoofdzin krijgt geen persoonsvorm.",
+      "Het werkwoord staat altijd vooraan."
     ],
     "correctAnswer": "De hoofdzin krijgt inversie: persoonsvorm + subject (bijv. Nadat mijn fiets gestolen was, ben ik...).",
     "explanationTr": "Eğer cümleye yan cümle ile başlanırsa (Bijzin voorop), takip eden ana cümlede devrik yapı (inversie) oluşur: Fiil + Özne.",
     "explanationEn": "When a complex sentence starts with a subclause, the following main clause uses inversion (verb + subject).",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1072",
@@ -2624,13 +2767,14 @@ export const grammarSyntax = [
     "options": [
       "Als dummy-subject bij een indefiniet subject of getal (bijv. Er is geen plaats meer).",
       "Alleen in het meervoud.",
-      "Om een persoon aan te wijzen."
+      "Om een persoon aan te wijzen.",
+      "Het werkwoord staat altijd vooraan."
     ],
     "correctAnswer": "Als dummy-subject bij een indefiniet subject of getal (bijv. Er is geen plaats meer).",
     "explanationTr": "Belirsiz bir özne (of sayı) kullanıldığında 'er', cümlenin başında sahte özne (dummy subject) olarak yer alır.",
     "explanationEn": "'Er' is used at the beginning of a sentence as a dummy subject when the real subject is indefinite or a number.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1073",
@@ -2644,12 +2788,13 @@ export const grammarSyntax = [
     "options": [
       "'Daar' legt accent op de plaats en kan vooraan staan, 'er' is onbeklemtoond (unstressed).",
       "Ze zijn precies hetzelfde.",
-      "'Er' wordt alleen voor grote steden gebruikt."
+      "'Er' wordt alleen voor grote steden gebruikt.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "'Daar' legt accent op de plaats en kan vooraan staan, 'er' is onbeklemtoond (unstressed).",
     "explanationTr": "'Daar' mekanı vurgular (stressed) en cümlenin başında durabilir. 'Er' ise vurgusuzdur.",
     "explanationEn": "'Daar' puts emphasis on the place (stressed) and can start a sentence. 'Er' is unstressed and acts as an unemphasized 'there'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   }
 ];

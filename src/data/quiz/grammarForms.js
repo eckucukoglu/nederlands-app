@@ -8,17 +8,18 @@ export const grammarForms = [
       "adjectives",
       "articles_plurals"
     ],
-    "questionNl": "Dit is een ___ (mooi) huis.",
+    "questionNl": "Dit is een ___ huis.",
     "options": [
       "mooie",
       "mooi",
-      "mooiste"
+      "mooiste",
+      "mooier"
     ],
     "correctAnswer": "mooi",
     "explanationTr": "Altın kural! 'Huis' bir het-woord'dur ve önünde 'een' olduğu için sıfat '-e' ALMAZ.",
     "explanationEn": "Golden rule! 'Huis' is a het-word and preceded by 'een', so the adjective gets NO '-e'.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_adjectives_2",
@@ -56,13 +57,14 @@ export const grammarForms = [
     "options": [
       "haar",
       "zij",
-      "ze"
+      "ze",
+      "hen"
     ],
     "correctAnswer": "haar",
     "explanationTr": "Nesne durumundaki 'zij/ze' (dişil - o), 'haar' (onu/ona) olur.",
     "explanationEn": "The object form of 'zij/ze' (she) is 'haar' (her).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_pronouns_028",
@@ -87,26 +89,33 @@ export const grammarForms = [
     "options": [
       "hen",
       "zij",
-      "hun"
+      "hun",
+      "haar"
     ],
     "correctAnswer": "hen",
     "explanationTr": "Çoğul 'zij' (onlar) zamiri nesne konumunda vurgulu olarak 'hen' (onları) şeklini alır. ('ze' de kullanılabilir).",
     "explanationEn": "The plural 'zij' (they) becomes 'hen' or 'ze' (them) when used as an object.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_pronouns_030",
-    "type": "fill_in",
+    "type": "multiple_choice",
     "tags": [
       "pronouns_object"
     ],
-    "questionNl": "Ik geef het boek aan ___ (jij).",
+    "questionNl": "Ik geef het boek aan ___.",
     "correctAnswer": "jou",
     "explanationTr": "'jij' zamiri edattan (aan) sonra veya nesne durumunda 'jou/je' olur. Vurgulu kullanıldığı için 'jou' doğru yanıttır.",
     "explanationEn": "After a preposition (aan), 'jij' becomes 'jou/je'. 'jou' is used for emphasis.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2,
+    "options": [
+      "jou",
+      "jouw",
+      "jij",
+      "jezelf"
+    ]
   },
   {
     "id": "q_pronouns_031",
@@ -118,13 +127,14 @@ export const grammarForms = [
     "options": [
       "mij",
       "ik",
-      "mijn"
+      "mijn",
+      "gemij"
     ],
     "correctAnswer": "mijn",
     "explanationTr": "'Benim' anlamını veren iyelik zamiri 'mijn' kelimesidir.",
     "explanationEn": "The possessive pronoun for 'my' is 'mijn'.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_pronouns_032",
@@ -149,13 +159,14 @@ export const grammarForms = [
     "options": [
       "hem",
       "zijn",
-      "haar"
+      "haar",
+      "hen"
     ],
     "correctAnswer": "zijn",
     "explanationTr": "'Onun' (eril) anlamını veren iyelik zamiri 'zijn' kelimesidir.",
     "explanationEn": "The possessive pronoun for 'his' is 'zijn'.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_pronouns_034",
@@ -181,13 +192,14 @@ export const grammarForms = [
     "options": [
       "onze",
       "ons",
-      "wij"
+      "wij",
+      "hun"
     ],
     "correctAnswer": "ons",
     "explanationTr": "'Huis' bir het-woord olduğu için 'bizim' derken 'ons' kullanılır. De-woorden için 'onze' kullanılır.",
     "explanationEn": "Because 'huis' is a het-word, we use 'ons' for 'our'. For de-words, we use 'onze'.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_pronouns_036",
@@ -213,13 +225,14 @@ export const grammarForms = [
     "options": [
       "jullie",
       "hun",
-      "jouw"
+      "jouw",
+      "hen"
     ],
     "correctAnswer": "jullie",
     "explanationTr": "'Jullie' zamirinin iyelik (sizin) hali de aynen 'jullie' şeklindedir.",
     "explanationEn": "The possessive form of 'jullie' (yours - plural) is also 'jullie'.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_pronouns_038",
@@ -240,17 +253,18 @@ export const grammarForms = [
     "tags": [
       "articles_plurals"
     ],
-    "questionNl": "___ (artikel) cursus is erg interessant.",
+    "questionNl": "___ cursus is erg interessant.",
     "options": [
       "De",
       "Het",
-      "Een"
+      "Een",
+      "geen lidwoord"
     ],
     "correctAnswer": "De",
     "explanationTr": "'Cursus' kelimesi bir de-woord'dur. Belirli (definiet) durumlarda 'de' artikeli alır.",
     "explanationEn": "The word 'cursus' is a de-word. In definite situations, it takes the article 'de'.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_art_plur_003",
@@ -258,17 +272,18 @@ export const grammarForms = [
     "tags": [
       "articles_plurals"
     ],
-    "questionNl": "___ (artikel) cursussen beginnen morgen.",
+    "questionNl": "___ cursussen beginnen morgen.",
     "options": [
       "De",
       "Het",
-      "Een"
+      "Een",
+      "geen lidwoord"
     ],
     "correctAnswer": "De",
     "explanationTr": "ALTIN KURAL: Tüm çoğul kelimeler (pluralis) İSTİSNASIZ 'de' artikeli alır.",
     "explanationEn": "GOLDEN RULE: All plural words (pluralis) ALWAYS take the article 'de' without exception.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_art_plur_005",
@@ -277,17 +292,18 @@ export const grammarForms = [
       "articles_plurals",
       "diminutives"
     ],
-    "questionNl": "Waar zijn ___ (artikel) rondjes?",
+    "questionNl": "Waar zijn ___ rondjes?",
     "options": [
       "de",
       "het",
-      "een"
+      "een",
+      "geen lidwoord"
     ],
     "correctAnswer": "de",
     "explanationTr": "Kelime küçültme eki (-je) alsa bile, ÇOĞUL (-s) olduğu an 'de' artikeli alır. (Çoğul kuralı daima baskındır).",
     "explanationEn": "Even if a word has a diminutive suffix (-je), the moment it becomes PLURAL (-s), it takes the article 'de'.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_art_plur_006",
@@ -365,13 +381,14 @@ export const grammarForms = [
     "options": [
       "huisje",
       "huispje",
-      "huistje"
+      "huistje",
+      "gehuisje"
     ],
     "correctAnswer": "huisje",
     "explanationTr": "Normal bir kelime çoğunlukla sadece '-je' eki alır. 'huis' -> 'huisje'.",
     "explanationEn": "A normal word mostly just takes the '-je' suffix. 'huis' -> 'huisje'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_art_plur_012",
@@ -475,13 +492,14 @@ export const grammarForms = [
     "options": [
       "Omdat het op -em eindigt",
       "Omdat het op een klinker eindigt",
-      "Omdat het onregelmatig is"
+      "Omdat het onregelmatig is",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Omdat het op -em eindigt",
     "explanationTr": "Sonu '-em' ile biten çok heceli kelimeler '-s' eki alarak çoğul olur.",
     "explanationEn": "Polysyllabic words ending in '-em' become plural by taking the '-s' suffix.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_art_plur_020",
@@ -519,13 +537,14 @@ export const grammarForms = [
     "options": [
       "Het zijn buitenlandse woorden",
       "Ze eindigen op een klinker",
-      "Het zijn diminutieven"
+      "Het zijn diminutieven",
+      "Het zijn buitenlandse woordde"
     ],
     "correctAnswer": "Het zijn buitenlandse woorden",
     "explanationTr": "Buitenlandse woorden (Yabancı kelimeler) genellikle '-s' ile çoğul yapılır.",
     "explanationEn": "Foreign words usually form their plurals with an '-s'.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_art_plur_023",
@@ -602,13 +621,14 @@ export const grammarForms = [
     "options": [
       "Omdat het eindigt op de klinker -o",
       "Omdat het een buitenlands woord is",
-      "Omdat het op -s moet eindigen"
+      "Omdat het op -s moet eindigen",
+      "Omdat het op -s moet eindigde"
     ],
     "correctAnswer": "Omdat het eindigt op de klinker -o",
     "explanationTr": "Uzun ünlü sesini (o) korumak için, a, i, o, u, y ile biten kelimeler apostrof alır.",
     "explanationEn": "To preserve the long vowel sound, words ending in a, i, o, u, y take an apostrophe.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_art_plur_029",
@@ -669,17 +689,18 @@ export const grammarForms = [
       "adjectives",
       "articles_plurals"
     ],
-    "questionNl": "Ik koop de ___ (mooi) auto.",
+    "questionNl": "Ik koop de ___ auto.",
     "options": [
       "mooi",
       "mooie",
-      "mooiste"
+      "mooiste",
+      "mooier"
     ],
     "correctAnswer": "mooie",
     "explanationTr": "'Auto' bir de-woord'dur. İsmin önündeki sıfatlar genellikle '-e' takısı alır.",
     "explanationEn": "'Auto' is a de-word. Adjectives before a noun generally take the '-e' suffix.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_adj_002",
@@ -713,17 +734,18 @@ export const grammarForms = [
     "tags": [
       "adjectives"
     ],
-    "questionNl": "We eten een ___ (lekker) pizza.",
+    "questionNl": "We eten een ___ pizza.",
     "options": [
       "lekker",
       "lekkere",
-      "lekkerste"
+      "lekkerste",
+      "lekkerer"
     ],
     "correctAnswer": "lekkere",
     "explanationTr": "'Pizza' de-woord'dur. Bu yüzden sıfat her zaman '-e' takısı alır.",
     "explanationEn": "'Pizza' is a de-word. Therefore, the adjective always gets the '-e' suffix.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_adj_008",
@@ -827,17 +849,18 @@ export const grammarForms = [
       "adjectives",
       "articles_plurals"
     ],
-    "questionNl": "We zien ___ (groot) huizen in deze straat.",
+    "questionNl": "We zien ___ huizen in deze straat.",
     "options": [
       "groot",
       "grote",
-      "groten"
+      "groten",
+      "grooter"
     ],
     "correctAnswer": "grote",
     "explanationTr": "Çoğul ('huizen') olduğu için artikel olmasa da sıfat '-e' alır (grote).",
     "explanationEn": "Because it is plural ('huizen'), the adjective takes an '-e' (grote) even without an article.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_adj_021",
@@ -871,17 +894,18 @@ export const grammarForms = [
     "tags": [
       "adjectives"
     ],
-    "questionNl": "Hebben jullie nog ___ (goed) ideeën?",
+    "questionNl": "Hebben jullie nog ___ ideeën?",
     "options": [
       "goed",
       "goede",
-      "goeden"
+      "goeden",
+      "goeder"
     ],
     "correctAnswer": "goede",
     "explanationTr": "'Ideeën' çoğuldur. Sıfat '-e' alır.",
     "explanationEn": "'Ideeën' is plural. The adjective takes an '-e'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_adj_024",
@@ -898,69 +922,99 @@ export const grammarForms = [
   },
   {
     "id": "q_adj_026",
-    "type": "fill_in",
+    "type": "multiple_choice",
     "tags": [
       "adjectives"
     ],
-    "questionNl": "De auto is ___ (snel).",
+    "questionNl": "De auto is ___.",
     "correctAnswer": "snel",
     "explanationTr": "KURAL: Sıfat, nitelediği isimden SONRA (predicative) geliyorsa HİÇBİR ZAMAN '-e' eklenmez.",
     "explanationEn": "RULE: If the adjective comes AFTER the noun it describes (predicative), it NEVER gets an '-e'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2,
+    "options": [
+      "snel",
+      "snelle",
+      "snels",
+      "sneller"
+    ]
   },
   {
     "id": "q_adj_028",
-    "type": "fill_in",
+    "type": "multiple_choice",
     "tags": [
       "adjectives"
     ],
-    "questionNl": "Die boeken zijn erg ___ (duur).",
+    "questionNl": "Die boeken zijn erg ___.",
     "correctAnswer": "duur",
     "explanationTr": "Sıfat isimden sonra gelmektedir, bu yüzden ek almaz.",
     "explanationEn": "The adjective comes after the noun, so it takes no suffix.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2,
+    "options": [
+      "duur",
+      "dure",
+      "duurs",
+      "duurder"
+    ]
   },
   {
     "id": "q_adj_030",
-    "type": "fill_in",
+    "type": "multiple_choice",
     "tags": [
       "adjectives"
     ],
-    "questionNl": "Het eten is helemaal ___ (koud).",
+    "questionNl": "Het eten is helemaal ___.",
     "correctAnswer": "koud",
     "explanationTr": "Sıfat (koud) isimden sonra geldiği için mastar/yalın halinde kalır.",
     "explanationEn": "Because the adjective (koud) comes after the noun, it stays in its base form.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2,
+    "options": [
+      "koud",
+      "koude",
+      "kouds",
+      "kouder"
+    ]
   },
   {
     "id": "q_adj_032",
-    "type": "fill_in",
+    "type": "multiple_choice",
     "tags": [
       "adjectives"
     ],
-    "questionNl": "De docent is erg ___ (aardig).",
+    "questionNl": "De docent is erg ___.",
     "correctAnswer": "aardig",
     "explanationTr": "Sıfat isimden sonradır, ek almaz.",
     "explanationEn": "The adjective follows the noun, no suffix.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2,
+    "options": [
+      "aardig",
+      "aardige",
+      "aardigs",
+      "aardiger"
+    ]
   },
   {
     "id": "q_adj_034",
-    "type": "fill_in",
+    "type": "multiple_choice",
     "tags": [
       "adjectives",
       "diminutives"
     ],
-    "questionNl": "Het meisje is heel ___ (klein).",
+    "questionNl": "Het meisje is heel ___.",
     "correctAnswer": "klein",
     "explanationTr": "Sıfat isimden sonradır, '-e' almaz.",
     "explanationEn": "Adjective is after the noun, no '-e'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2,
+    "options": [
+      "klein",
+      "kleine",
+      "kleins",
+      "kleiner"
+    ]
   },
   {
     "id": "q_adj_035",
@@ -968,17 +1022,18 @@ export const grammarForms = [
     "tags": [
       "adjectives"
     ],
-    "questionNl": "Dat idee is heel ___ (goed).",
+    "questionNl": "Dat idee is heel ___.",
     "options": [
       "goed",
       "goede",
-      "goeden"
+      "goeden",
+      "goeder"
     ],
     "correctAnswer": "goed",
     "explanationTr": "Sıfat (goed) isimden (Dat idee) sonra gelmektedir.",
     "explanationEn": "The adjective (goed) comes after the noun (Dat idee).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_adj_036",
@@ -999,17 +1054,18 @@ export const grammarForms = [
     "tags": [
       "adjectives"
     ],
-    "questionNl": "Hij draagt een ___ (katoen) T-shirt.",
+    "questionNl": "Hij draagt een ___ T-shirt.",
     "options": [
       "katoen",
       "katoene",
-      "katoenen"
+      "katoenen",
+      "katoener"
     ],
     "correctAnswer": "katoenen",
     "explanationTr": "Materyal bildiren sıfatlar (pamuklu) '-en' eki ile kullanılır.",
     "explanationEn": "Adjectives describing material (cotton) are used with the '-en' suffix.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_adj_038",
@@ -1056,17 +1112,18 @@ export const grammarForms = [
     "tags": [
       "imperative"
     ],
-    "questionNl": "___ (Komen) u alstublieft binnen.",
+    "questionNl": "___ u alstublieft binnen.",
     "options": [
       "Kom",
       "Komt",
-      "Komen"
+      "Komen",
+      "Komde"
     ],
     "correctAnswer": "Komt",
     "explanationTr": "Kibar (beleefde) emir formunda 'stam + t + u' kuralı geçerlidir. Bu yüzden 'Komt u'.",
     "explanationEn": "In the polite imperative form, the rule is 'stam + t + u'. Therefore, 'Komt u'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_imp_024",
@@ -1104,13 +1161,14 @@ export const grammarForms = [
     "options": [
       "Door 'maar', 'even' of 'eens' toe te voegen",
       "Door het woord 'moeten' te gebruiken",
-      "Door in het meervoud te praten"
+      "Door in het meervoud te praten",
+      "Door 'maar', 'even' of 'eens' toe te voegde"
     ],
     "correctAnswer": "Door 'maar', 'even' of 'eens' toe te voegen",
     "explanationTr": "Emir kiplerini yumuşatmak için cümleye 'maar', 'maar even' veya 'eens' kelimeleri eklenir.",
     "explanationEn": "To soften an imperative and make it friendly, words like 'maar', 'maar even', or 'eens' are added.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_imp_027",
@@ -1144,17 +1202,18 @@ export const grammarForms = [
     "tags": [
       "imperative"
     ],
-    "questionNl": "___ (Schrijven) u uw naam hier.",
+    "questionNl": "___ u uw naam hier.",
     "options": [
       "Schrijf",
       "Schrijft",
-      "Schrijven"
+      "Schrijven",
+      "Schrijvde"
     ],
     "correctAnswer": "Schrijft",
     "explanationTr": "Cümlede 'u' (kibar) olduğu için 'stam + t' kuralı uygulanır: Schrijft u.",
     "explanationEn": "Because 'u' (polite) is in the sentence, the 'stam + t' rule applies: Schrijft u.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_imp_030",
@@ -1208,13 +1267,14 @@ export const grammarForms = [
     "options": [
       "moet",
       "hoeft",
-      "hoeft niet"
+      "hoeft niet",
+      "geen van deze"
     ],
     "correctAnswer": "hoeft",
     "explanationTr": "'Moeten' (zorunda olmak) sorusunun OLUMSUZU 'hoeven niet te' (gerek yok) yapısıdır.",
     "explanationEn": "The NEGATIVE of 'moeten' (must) is 'hoeven niet te' (don't have to).",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_mod_034",
@@ -1236,17 +1296,18 @@ export const grammarForms = [
     "tags": [
       "modal_verbs"
     ],
-    "questionNl": "Ik ___ (zullen) je morgen zeker helpen.",
+    "questionNl": "Ik ___ je morgen zeker helpen.",
     "options": [
       "zal",
       "wil",
-      "moet"
+      "moet",
+      "gezal"
     ],
     "correctAnswer": "zal",
     "explanationTr": "'Zullen' gayriresmi durumlarda bir SÖZ/VAAT (belofte) ifade eder. 'Sana kesinlikle yardım edeceğim'.",
     "explanationEn": "'Zullen' expresses a PROMISE (belofte) in informal situations. 'I will definitely help you'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_mod_036",
@@ -1259,13 +1320,14 @@ export const grammarForms = [
     "options": [
       "mag",
       "wil",
-      "hoeft"
+      "hoeft",
+      "gemag"
     ],
     "correctAnswer": "mag",
     "explanationTr": "Bir şeyin yasak olduğunu belirtmek için 'mag niet' (izin yok / yapamazsın) kullanılır.",
     "explanationEn": "To indicate that something is forbidden, 'mag niet' (not allowed) is used.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_mod_037",
@@ -1303,13 +1365,14 @@ export const grammarForms = [
     "options": [
       "zal",
       "kan",
-      "moet"
+      "moet",
+      "gezal"
     ],
     "correctAnswer": "zal",
     "explanationTr": "'zal wel ... zijn' yapısı güçlü bir ihtimal/tahmin (waarschijnlijkheid) belirtir: 'Dışarısı soğuk olmalı.'",
     "explanationEn": "The 'zal wel ... zijn' structure expresses a strong probability: 'It must be cold outside.'",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_mod_040",
@@ -1322,13 +1385,14 @@ export const grammarForms = [
     "options": [
       "hoeft",
       "moet",
-      "mag"
+      "mag",
+      "gehoeft"
     ],
     "correctAnswer": "moet",
     "explanationTr": "Eğer bir şeyin yapılması istenmiyorsa/kötüyse 'moet niet' kullanılır. 'Bizi aramanıza gerek yok/aramayın, BİZ sizi ararız!'",
     "explanationEn": "If something is strongly discouraged or forbidden, use 'moet niet'. 'You shouldn't call us, WE will call you!'",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_comp_001",
@@ -1336,17 +1400,18 @@ export const grammarForms = [
     "tags": [
       "comparative_superlative"
     ],
-    "questionNl": "Mijn auto is ___ (klein) dan jouw auto.",
+    "questionNl": "Mijn auto is ___ dan jouw auto.",
     "options": [
       "klein",
       "kleiner",
-      "het kleinst"
+      "het kleinst",
+      "geen van deze"
     ],
     "correctAnswer": "kleiner",
     "explanationTr": "Karşılaştırma (comparatief) yaparken sıfatın sonuna '-er' eklenir. 'klein' -> 'kleiner'.",
     "explanationEn": "When comparing (comparative), we add '-er' to the adjective. 'klein' -> 'kleiner'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_comp_002",
@@ -1367,17 +1432,18 @@ export const grammarForms = [
     "tags": [
       "comparative_superlative"
     ],
-    "questionNl": "Dit is ___ (mooi) schilderij van het museum.",
+    "questionNl": "Dit is ___ schilderij van het museum.",
     "options": [
       "mooier",
       "mooiste",
-      "het mooist"
+      "het mooist",
+      "het mooister"
     ],
     "correctAnswer": "het mooist",
     "explanationTr": "En üstünlük (superlatief) derecesinde sıfatın sonuna '-st' eklenir ve fiilden sonra zarf gibi kullanılıyorsa başına 'het' gelir.",
     "explanationEn": "In the superlative, '-st' is added. When used as an adverb after the verb, it is preceded by 'het'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_comp_004",
@@ -1398,17 +1464,18 @@ export const grammarForms = [
     "tags": [
       "comparative_superlative"
     ],
-    "questionNl": "Vandaag is het ___ (warm) dan gisteren.",
+    "questionNl": "Vandaag is het ___ dan gisteren.",
     "options": [
       "warmer",
       "warmst",
-      "warm"
+      "warm",
+      "gewarmer"
     ],
     "correctAnswer": "warmer",
     "explanationTr": "İki günü karşılaştırıyoruz ('dan' kelimesinden de anlıyoruz), bu yüzden comparatief (warmer) kullanılır.",
     "explanationEn": "We are comparing two days (indicated by 'dan'), so we use the comparative (warmer).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_comp_006",
@@ -1442,17 +1509,18 @@ export const grammarForms = [
     "tags": [
       "comparative_superlative"
     ],
-    "questionNl": "De trein is ___ (snel) dan de bus.",
+    "questionNl": "De trein is ___ dan de bus.",
     "options": [
       "sneler",
       "sneller",
-      "snelst"
+      "snelst",
+      "gesneler"
     ],
     "correctAnswer": "sneller",
     "explanationTr": "Yazım kuralı: 'snel' kısa sesli harfe sahip tek heceli bir kelimedir. Ek aldığında son ünsüz harf ikileşir: 'sneller'.",
     "explanationEn": "Spelling rule: 'snel' has a short vowel in a closed syllable. The final consonant doubles when adding a suffix: 'sneller'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_comp_009",
@@ -1473,17 +1541,18 @@ export const grammarForms = [
     "tags": [
       "comparative_superlative"
     ],
-    "questionNl": "Gezondheid is ___ (belangrijk) dan geld.",
+    "questionNl": "Gezondheid is ___ dan geld.",
     "options": [
       "belangrijker",
       "belangrijkst",
-      "meer belangrijk"
+      "meer belangrijk",
+      "geen van deze"
     ],
     "correctAnswer": "belangrijker",
     "explanationTr": "Hollandacada uzun kelimeler bile (İngilizcedeki 'more' yerine) genellikle sonuna '-er' alarak karşılaştırılır.",
     "explanationEn": "In Dutch, even long adjectives usually take '-er' for the comparative (instead of using 'more' like in English).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_comp_011",
@@ -1504,17 +1573,18 @@ export const grammarForms = [
     "tags": [
       "comparative_superlative"
     ],
-    "questionNl": "Mijn koffer is ___ (zwaar) dan jouw koffer.",
+    "questionNl": "Mijn koffer is ___ dan jouw koffer.",
     "options": [
       "zwaarer",
       "zwaarder",
-      "het zwaarst"
+      "het zwaarst",
+      "geen van deze"
     ],
     "correctAnswer": "zwaarder",
     "explanationTr": "Sıfat '-r' ile bittiği için '-der' alır. Ayrıca yazım kuralı gereği uzun sesli (aa) açık hecede teke düşer: zwaar -> zwaarder.",
     "explanationEn": "Ends in '-r', so it gets '-der'. Also, the long vowel 'aa' simplifies to one 'a' in the open syllable: zwaar -> zwaarder.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_comp_013",
@@ -1535,17 +1605,18 @@ export const grammarForms = [
     "tags": [
       "comparative_superlative"
     ],
-    "questionNl": "Ik vind deze soep ___ (lekker) dan de pasta.",
+    "questionNl": "Ik vind deze soep ___ dan de pasta.",
     "options": [
       "lekkerer",
       "lekkerder",
-      "het lekkerst"
+      "het lekkerst",
+      "geen van deze"
     ],
     "correctAnswer": "lekkerder",
     "explanationTr": "Sıfat '-r' ile bittiği için karşılaştırma yapılırken '-der' alır. 'lekker' -> 'lekkerder'.",
     "explanationEn": "The adjective ends in '-r', so it takes '-der' for the comparative. 'lekker' -> 'lekkerder'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_comp_015",
@@ -1570,13 +1641,14 @@ export const grammarForms = [
     "options": [
       "even",
       "net",
-      "dan"
+      "dan",
+      "evde"
     ],
     "correctAnswer": "even",
     "explanationTr": "Eşitlik durumunda 'even ... als' yapısı kullanılır.",
     "explanationEn": "To show equality, the structure 'even ... als' is used.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_comp_017",
@@ -1601,13 +1673,14 @@ export const grammarForms = [
     "options": [
       "dan",
       "als",
-      "zo"
+      "zo",
+      "gedan"
     ],
     "correctAnswer": "als",
     "explanationTr": "Eşitlik durumlarında daima 'als' kullanılır. (Karşılaştırma durumlarında ise 'dan' kullanılır: ouder dan).",
     "explanationEn": "In cases of equality, 'als' is always used. (For comparatives, 'dan' is used: ouder dan).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_comp_019",
@@ -1632,13 +1705,14 @@ export const grammarForms = [
     "options": [
       "even",
       "net",
-      "dan"
+      "dan",
+      "evde"
     ],
     "correctAnswer": "net",
     "explanationTr": "'zo' kelimesinden önce eşitlik belirtirken 'net' kullanılır (net zo groot als).",
     "explanationEn": "Before the word 'zo', 'net' is used to indicate equality (net zo groot als).",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_comp_021",
@@ -1659,17 +1733,18 @@ export const grammarForms = [
     "tags": [
       "comparative_superlative"
     ],
-    "questionNl": "Dit is ___ (goed) boek van de wereld.",
+    "questionNl": "Dit is ___ boek van de wereld.",
     "options": [
       "het best",
       "het beste",
-      "het goedst"
+      "het goedst",
+      "het bester"
     ],
     "correctAnswer": "het beste",
     "explanationTr": "DÜZENSİZ: 'goed' -> 'best'. İsimden önce (boek) geldiği için ve 'het' ile başladığı için '-e' alır: 'het beste boek'.",
     "explanationEn": "IRREGULAR: 'goed' -> 'best'. Because it precedes the noun (boek) with 'het', it takes an '-e': 'het beste boek'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_comp_023",
@@ -1690,17 +1765,18 @@ export const grammarForms = [
     "tags": [
       "comparative_superlative"
     ],
-    "questionNl": "Opa eet van ons allemaal ___ (veel).",
+    "questionNl": "Opa eet van ons allemaal ___.",
     "options": [
       "het meer",
       "het meest",
-      "het veelst"
+      "het veelst",
+      "geen van deze"
     ],
     "correctAnswer": "het meest",
     "explanationTr": "DÜZENSİZ: 'veel' -> 'meer' -> 'het meest' (en çok).",
     "explanationEn": "IRREGULAR: 'veel' -> 'meer' -> 'het meest' (the most).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_comp_025",
@@ -1721,30 +1797,37 @@ export const grammarForms = [
     "tags": [
       "comparative_superlative"
     ],
-    "questionNl": "Van al mijn vrienden heeft Ali ___ (weinig) geld.",
+    "questionNl": "Van al mijn vrienden heeft Ali ___ geld.",
     "options": [
       "het minst",
       "het mindere",
-      "het weinigst"
+      "het weinigst",
+      "het minster"
     ],
     "correctAnswer": "het minst",
     "explanationTr": "DÜZENSİZ: 'weinig' -> 'minder' -> 'het minst' (en az).",
     "explanationEn": "IRREGULAR: 'weinig' -> 'minder' -> 'het minst' (the least).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_comp_027",
-    "type": "fill_in",
+    "type": "multiple_choice",
     "tags": [
       "comparative_superlative"
     ],
-    "questionNl": "Ik wandel graag, maar ik fiets ___ (graag).",
+    "questionNl": "Ik wandel graag, maar ik fiets ___.",
     "correctAnswer": "liever",
     "explanationTr": "DÜZENSİZ: 'graag' (memnuniyetle/severek) kelimesinin karşılaştırma hali 'liever' (daha çok severek) olur.",
     "explanationEn": "IRREGULAR: The comparative of 'graag' (gladly/like to) is 'liever' (prefer to).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2,
+    "options": [
+      "liever",
+      "graag",
+      "het liefst",
+      "beter"
+    ]
   },
   {
     "id": "q_comp_028",
@@ -1752,17 +1835,18 @@ export const grammarForms = [
     "tags": [
       "comparative_superlative"
     ],
-    "questionNl": "Ik drink graag thee, liever koffie, maar ik drink ___ (graag) fruitsap.",
+    "questionNl": "Ik drink graag thee, liever koffie, maar ik drink ___ fruitsap.",
     "options": [
       "het lieverst",
       "het liefst",
-      "het graagst"
+      "het graagst",
+      "geen van deze"
     ],
     "correctAnswer": "het liefst",
     "explanationTr": "DÜZENSİZ: 'graag' -> 'liever' -> 'het liefst' (en çok severek / tercihen).",
     "explanationEn": "IRREGULAR: 'graag' -> 'liever' -> 'het liefst' (most preferably).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_comp_030",
@@ -1812,17 +1896,18 @@ export const grammarForms = [
     "tags": [
       "comparative_superlative"
     ],
-    "questionNl": "Wie kan van ons allemaal ___ (snel) rennen?",
+    "questionNl": "Wie kan van ons allemaal ___ rennen?",
     "options": [
       "de snelste",
       "snelst",
-      "het snelst"
+      "het snelst",
+      "snelster"
     ],
     "correctAnswer": "het snelst",
     "explanationTr": "Fiili niteleyen (zarf olarak) superlatief formlarda 'het ...st' kullanılır. 'het snelst rennen'.",
     "explanationEn": "When modifying a verb (as an adverb), the superlative takes the 'het ...st' form. 'het snelst rennen'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_obj_001",
@@ -1843,17 +1928,18 @@ export const grammarForms = [
     "tags": [
       "pronouns_object"
     ],
-    "questionNl": "Ik heb een cadeautje voor ___ (jij).",
+    "questionNl": "Ik heb een cadeautje voor ___.",
     "options": [
       "jou",
       "jij",
-      "jezelf"
+      "jezelf",
+      "gejou"
     ],
     "correctAnswer": "jou",
     "explanationTr": "Bir edattan (voor) sonra nesne zamiri kullanılır. 'Jij'in nesne ve vurgulu hali 'jou'dur. ('je' de kullanılabilir).",
     "explanationEn": "After a preposition (voor), the object pronoun is used. The object and emphasized form of 'jij' is 'jou' (or 'je').",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_obj_003",
@@ -1874,17 +1960,18 @@ export const grammarForms = [
     "tags": [
       "pronouns_object"
     ],
-    "questionNl": "Kijk naar John! Zie je ___ (hij) ook?",
+    "questionNl": "Kijk naar John! Zie je ___ ook?",
     "options": [
       "hij",
       "zijn",
-      "hem"
+      "hem",
+      "gehij"
     ],
     "correctAnswer": "hem",
     "explanationTr": "Eril 'hij' (o) zamirinin nesne (onu/ona) hali 'hem'dir.",
     "explanationEn": "The object form (him) of the masculine pronoun 'hij' (he) is 'hem'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_obj_005",
@@ -1905,17 +1992,18 @@ export const grammarForms = [
     "tags": [
       "pronouns_object"
     ],
-    "questionNl": "Het regent. De docent wacht op ___ (wij) in de klas.",
+    "questionNl": "Het regent. De docent wacht op ___ in de klas.",
     "options": [
       "we",
       "ons",
-      "onze"
+      "onze",
+      "hun"
     ],
     "correctAnswer": "ons",
     "explanationTr": "'Wij/we' (biz) zamirinin nesne (bizi/bize) hali 'ons'tur.",
     "explanationEn": "The object form (us) of the pronoun 'wij/we' (we) is 'ons'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_obj_007",
@@ -1940,13 +2028,14 @@ export const grammarForms = [
     "options": [
       "hun",
       "hen",
-      "zij"
+      "zij",
+      "haar"
     ],
     "correctAnswer": "hen",
     "explanationTr": "Çoğul 'zij/ze' (onlar) zamirinin vurgulu nesne hali 'hen' (onlara/onları) şeklindedir. ('ze' de kullanılabilir, ancak 'hun' iyelik belirtir).",
     "explanationEn": "The emphasized object form for plural 'zij/ze' (they) is 'hen' (them). ('ze' is also possible, but 'hun' means 'their').",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_obj_009",
@@ -1971,13 +2060,14 @@ export const grammarForms = [
     "options": [
       "me",
       "mij",
-      "ik"
+      "ik",
+      "hen"
     ],
     "correctAnswer": "mij",
     "explanationTr": "Cümlenin sonunda ve bir edattan (aan) sonra özel bir vurgu yapıldığında her zaman vurgulu form 'mij' tercih edilir.",
     "explanationEn": "At the end of a sentence and after a preposition (aan) where there is emphasis, the emphasized form 'mij' is always preferred.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_obj_011",
@@ -2004,13 +2094,14 @@ export const grammarForms = [
     "options": [
       "hem",
       "het",
-      "haar"
+      "haar",
+      "hen"
     ],
     "correctAnswer": "het",
     "explanationTr": "Het-woorden nesne durumunda daima 'het' ile ifade edilir.",
     "explanationEn": "Het-words are always referred to with 'het' in the object position.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_obj_013",
@@ -2037,13 +2128,14 @@ export const grammarForms = [
     "options": [
       "hem",
       "het",
-      "ze"
+      "ze",
+      "hen"
     ],
     "correctAnswer": "hem",
     "explanationTr": "'Sleutel' bir de-woord'dur (de sleutel). Bu yüzden 'hem' kullanılır.",
     "explanationEn": "'Sleutel' is a de-word (de sleutel). Therefore, 'hem' is used.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_obj_015",
@@ -2123,13 +2215,14 @@ export const grammarForms = [
     "options": [
       "dat",
       "die",
-      "dit"
+      "dit",
+      "dater"
     ],
     "correctAnswer": "dat",
     "explanationTr": "Bağımsız kullanım: Bütün bir cümleye veya eyleme ('kahve getirme' eylemi) atıfta bulunurken 'dat' kullanılır.",
     "explanationEn": "Independent use: When referring back to a whole sentence or action (the act of bringing coffee), 'dat' is used.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_dem_025",
@@ -2181,13 +2274,14 @@ export const grammarForms = [
     "options": [
       "Dit of Dat",
       "Deze of Die",
-      "Hij of Zij"
+      "Hij of Zij",
+      "Dit of Dater"
     ],
     "correctAnswer": "Dit of Dat",
     "explanationTr": "Sunum/tanıtım (presenteren) cümleleri her zaman 'Dit is/zijn' veya 'Dat is/zijn' ile başlar.",
     "explanationEn": "Sentences for presenting/introducing always start with 'Dit is/zijn' or 'Dat is/zijn'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_neg_031",
@@ -2279,13 +2373,14 @@ export const grammarForms = [
     "options": [
       "moet",
       "hoeft",
-      "mag"
+      "mag",
+      "gemoet"
     ],
     "correctAnswer": "hoeft",
     "explanationTr": "'Beni aramana gerek yok' anlamındadır. 'Hoeven' fiili daima 'te + infinitief' ile çalışır.",
     "explanationEn": "It means 'you don't have to call me'. The verb 'Hoeven' always works with 'te + infinitive'.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_neg_043",
@@ -2317,17 +2412,23 @@ export const grammarForms = [
   },
   {
     "id": "q_sep_013",
-    "type": "fill_in",
+    "type": "multiple_choice",
     "tags": [
       "separable_verbs",
       "modal_verbs"
     ],
-    "questionNl": "Zij zal hem zeker voor haar verjaardagsfeest ___ (uitnodigen).",
+    "questionNl": "Zij zal hem zeker voor haar verjaardagsfeest ___.",
     "correctAnswer": "uitnodigen",
     "explanationTr": "'Zal' (gelecek zaman/teklif) fiili asıl eylemi sona mastar halinde atar. Ayrılabilen fiiller bu durumda ayrılmaz.",
     "explanationEn": "The verb 'Zal' pushes the main action to the end as an infinitive. Separable verbs do not split in this case.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2,
+    "options": [
+      "uitnodigen",
+      "uitnodigt",
+      "uitnodig",
+      "geuitnodigen"
+    ]
   },
   {
     "id": "q_sep_014",
@@ -2354,13 +2455,14 @@ export const grammarForms = [
     "options": [
       "me",
       "je",
-      "zich"
+      "zich",
+      "hen"
     ],
     "correctAnswer": "me",
     "explanationTr": "Dönüşlü fiiller (Reflexieve werkwoorden). 'Ik' (ben) öznesi için dönüşlü zamir 'me' veya 'mij'dir.",
     "explanationEn": "Reflexive verbs. For the subject 'Ik' (I), the reflexive pronoun is 'me' or 'mij'.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_ref_027",
@@ -2387,13 +2489,14 @@ export const grammarForms = [
     "options": [
       "je",
       "u",
-      "ons"
+      "ons",
+      "hen"
     ],
     "correctAnswer": "u",
     "explanationTr": "Resmi 'u' (siz) öznesi için dönüşlü zamir olarak yine 'u' kullanılır (bazen 'zich' de kullanılır).",
     "explanationEn": "For the formal subject 'u' (you), the reflexive pronoun is also 'u' (sometimes 'zich' is used).",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_ref_029",
@@ -2476,13 +2579,14 @@ export const grammarForms = [
     "options": [
       "zich",
       "ons",
-      "je"
+      "je",
+      "hen"
     ],
     "correctAnswer": "ons",
     "explanationTr": "'Wij' (biz) zamiri dönüşlü yapıda 'ons' (kendimizi) şeklini alır.",
     "explanationEn": "The pronoun 'Wij' (we) takes the reflexive form 'ons' (ourselves).",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_ref_035",
@@ -2496,13 +2600,14 @@ export const grammarForms = [
     "options": [
       "elkaar",
       "ons",
-      "zich"
+      "zich",
+      "geelkaar"
     ],
     "correctAnswer": "elkaar",
     "explanationTr": "Karşılıklı yapılan (reciprocal) eylemlerde (birbirimizi/birbirlerini vb.) 'elkaar' kelimesi kullanılır.",
     "explanationEn": "For reciprocal actions (each other/one another), the word 'elkaar' is used.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_ref_036",
@@ -2516,13 +2621,14 @@ export const grammarForms = [
     "options": [
       "ons",
       "zich",
-      "elkaar"
+      "elkaar",
+      "geons"
     ],
     "correctAnswer": "elkaar",
     "explanationTr": "Birlikte/Karşılıklı bir şeyler yapmak (birbirimizle buluşmak) için 'elkaar' kullanılır.",
     "explanationEn": "To do something together/reciprocally (meet with each other), 'elkaar' is used.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_conj_pron_012",
@@ -2535,13 +2641,14 @@ export const grammarForms = [
     "options": [
       "Die",
       "Dat",
-      "Dit"
+      "Dit",
+      "Dater"
     ],
     "correctAnswer": "Die",
     "explanationTr": "Bağımsız işaret zamiri: 'Kaas' bir de-woord'dur (de kaas). Tekil bir de-woord ismin yerine geçerken 'Die' kullanılır.",
     "explanationEn": "Independent demonstrative pronoun: 'Kaas' is a de-word. When replacing a singular de-word noun, 'Die' is used.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_conj_pron_013",
@@ -2567,13 +2674,14 @@ export const grammarForms = [
     "options": [
       "Die",
       "Dat",
-      "Deze"
+      "Deze",
+      "Dater"
     ],
     "correctAnswer": "Dat",
     "explanationTr": "Bağımsız işaret zamiri: 'Naardermeer' bir het-woord'dur (het meer). Tekil het-woord yerine 'Dat' kullanılır.",
     "explanationEn": "Independent demonstrative pronoun: 'Naardermeer' is a het-word. 'Dat' is used to replace a singular het-word.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_conj_pron_015",
@@ -2598,13 +2706,14 @@ export const grammarForms = [
     "options": [
       "dat",
       "die",
-      "dit"
+      "dit",
+      "dater"
     ],
     "correctAnswer": "dat",
     "explanationTr": "Bütün bir eyleme veya cümleye ('ev ödevi yapma' eylemi) bağımsız olarak atıfta bulunurken 'dat' kullanılır.",
     "explanationEn": "When independently referring back to an entire action or sentence (doing homework), 'dat' is used.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_conj_pron_017",
@@ -2629,13 +2738,14 @@ export const grammarForms = [
     "options": [
       "Dit",
       "Deze",
-      "Die"
+      "Die",
+      "Diter"
     ],
     "correctAnswer": "Dit",
     "explanationTr": "SUNUM YAPMAK (Presenteren): Birini veya bir şeyi tanıtırken / sunarken daima 'Dit is' veya 'Dat is' kullanılır.",
     "explanationEn": "PRESENTING: When introducing or presenting someone/something, always use 'Dit is' or 'Dat is'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_conj_pron_019",
@@ -2661,13 +2771,14 @@ export const grammarForms = [
     "options": [
       "Dat",
       "Die",
-      "Deze"
+      "Deze",
+      "Dater"
     ],
     "correctAnswer": "Dat",
     "explanationTr": "Bir kitabı sunarken/işaret ederken uzakta/genel bağlamdaysa 'Dat is' kullanılır.",
     "explanationEn": "When presenting/pointing out a book in a general context, 'Dat is' is used.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_conj_pron_021",
@@ -2692,13 +2803,14 @@ export const grammarForms = [
     "options": [
       "Dit is / Dat is (of meervoud zijn)",
       "Deze is / Die is",
-      "Hij is / Zij is"
+      "Hij is / Zij is",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Dit is / Dat is (of meervoud zijn)",
     "explanationTr": "Tanıtım ve sunumlarda (presenteren) 'Dit is/zijn' veya 'Dat is/zijn' standart kalıptır.",
     "explanationEn": "For introductions and presentations (presenteren), 'Dit is/zijn' or 'Dat is/zijn' is the standard pattern.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_conj_pron_023",
@@ -2724,13 +2836,14 @@ export const grammarForms = [
     "options": [
       "Die",
       "Dat",
-      "Dit"
+      "Dit",
+      "Dater"
     ],
     "correctAnswer": "Die",
     "explanationTr": "'Pen' bir de-woord'dur (de pen). Tekil de-woord yerine bağımsız zamir olarak 'Die' kullanılır.",
     "explanationEn": "'Pen' is a de-word (de pen). As an independent pronoun replacing a singular de-word, 'Die' is used.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_conj_pron_025",
@@ -2768,13 +2881,14 @@ export const grammarForms = [
     "options": [
       "Die",
       "Dat",
-      "Dit"
+      "Dit",
+      "Dater"
     ],
     "correctAnswer": "Die",
     "explanationTr": "'auto's' çoğul olduğu için bağımsız zamir 'Die' olur.",
     "explanationEn": "Since 'auto's' is plural, the independent pronoun is 'Die'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_conj_pron_033",
@@ -2813,13 +2927,14 @@ export const grammarForms = [
     "options": [
       "mij / me",
       "mijn",
-      "me"
+      "me",
+      "mijner"
     ],
     "correctAnswer": "mij / me",
     "explanationTr": "'ik' (ben) zamirinin nesne durumu (beni/bana) 'mij' veya 'me'dir.",
     "explanationEn": "The object form of the personal pronoun 'ik' (I) is 'mij' or 'me'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_pron_sum_002",
@@ -2846,13 +2961,14 @@ export const grammarForms = [
     "options": [
       "me",
       "zich",
-      "ons"
+      "ons",
+      "hen"
     ],
     "correctAnswer": "me",
     "explanationTr": "'ik' öznesi ile kullanılan dönüşlü zamir 'me'dir.",
     "explanationEn": "The reflexive pronoun used with the subject 'ik' is 'me'.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_pron_sum_004",
@@ -2879,13 +2995,14 @@ export const grammarForms = [
     "options": [
       "jouw / je",
       "jou",
-      "jij"
+      "jij",
+      "jouer"
     ],
     "correctAnswer": "jouw / je",
     "explanationTr": "'jij / je' (sen) için iyelik zamiri (senin) 'jouw' veya 'je'dir.",
     "explanationEn": "The possessive pronoun for 'jij / je' (your) is 'jouw' or 'je'.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_pron_sum_006",
@@ -2908,31 +3025,38 @@ export const grammarForms = [
       "schema_pronomina",
       "reflexive_verbs"
     ],
-    "questionNl": "Vergis ___ (jij) je niet in de tijd?",
+    "questionNl": "Vergis ___ je niet in de tijd?",
     "options": [
       "je",
       "me",
-      "zich"
+      "zich",
+      "hen"
     ],
     "correctAnswer": "je",
     "explanationTr": "'jij / je' (sen) öznesi için dönüşlü zamir 'je'dir.",
     "explanationEn": "The reflexive pronoun for the subject 'jij / je' is 'je'.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_pron_sum_008",
-    "type": "fill_in",
+    "type": "multiple_choice",
     "tags": [
       "schema_pronomina",
       "pronouns_possessive"
     ],
-    "questionNl": "Meneer, is dit ___ (u) jas? (Possessief pronomen)",
+    "questionNl": "Meneer, is dit ___ jas? (Possessief pronomen)",
     "correctAnswer": "uw",
     "explanationTr": "Resmi 'u' (siz) zamiri için iyelik zamiri (sizin) 'uw'dur.",
     "explanationEn": "The possessive pronoun for the formal 'u' (your) is 'uw'.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2,
+    "options": [
+      "uw",
+      "u",
+      "uwe",
+      "jouw"
+    ]
   },
   {
     "id": "q_pron_sum_010",
@@ -2959,13 +3083,14 @@ export const grammarForms = [
     "options": [
       "zijn",
       "haar",
-      "hun"
+      "hun",
+      "hen"
     ],
     "correctAnswer": "zijn",
     "explanationTr": "Eril tekil (hij/Jan) için iyelik zamiri 'zijn' (onun) olur.",
     "explanationEn": "For masculine singular (hij/Jan), the possessive pronoun is 'zijn' (his).",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_pron_sum_012",
@@ -2992,13 +3117,14 @@ export const grammarForms = [
     "options": [
       "hem",
       "haar",
-      "het"
+      "het",
+      "hen"
     ],
     "correctAnswer": "haar",
     "explanationTr": "Dişil 'zij / ze' (o - kadın) zamirinin nesne hali 'haar'dır.",
     "explanationEn": "The object form of the feminine pronoun 'zij / ze' (she) is 'haar' (her).",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_pron_sum_014",
@@ -3025,13 +3151,14 @@ export const grammarForms = [
     "options": [
       "zich",
       "haar",
-      "me"
+      "me",
+      "hen"
     ],
     "correctAnswer": "zich",
     "explanationTr": "Tekil 'zij' için dönüşlü zamir 'zich'tir.",
     "explanationEn": "For singular 'zij', the reflexive pronoun is 'zich'.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_pron_sum_016",
@@ -3059,13 +3186,14 @@ export const grammarForms = [
     "options": [
       "zijn",
       "haar",
-      "het"
+      "het",
+      "hen"
     ],
     "correctAnswer": "zijn",
     "explanationTr": "Het-woorden ('het paard') için iyelik zamiri 'zijn' olarak kullanılır.",
     "explanationEn": "For het-words ('het paard'), the possessive pronoun is 'zijn'.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_pron_sum_018",
@@ -3088,17 +3216,18 @@ export const grammarForms = [
       "schema_pronomina",
       "pronouns_object"
     ],
-    "questionNl": "De leraar helpt ___ (wij) met de oefening.",
+    "questionNl": "De leraar helpt ___ met de oefening.",
     "options": [
       "ons",
       "we",
-      "onze"
+      "onze",
+      "hun"
     ],
     "correctAnswer": "ons",
     "explanationTr": "'wij / we' (biz) zamirinin nesne hali 'ons'tur.",
     "explanationEn": "The object form of 'wij / we' (we) is 'ons' (us).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_pron_sum_020",
@@ -3123,17 +3252,18 @@ export const grammarForms = [
       "pronouns_possessive",
       "articles_plurals"
     ],
-    "questionNl": "Dit is ___ (wij) auto (de-woord).",
+    "questionNl": "Dit is ___ auto (de-woord).",
     "options": [
       "ons",
       "onze",
-      "mijn"
+      "mijn",
+      "hun"
     ],
     "correctAnswer": "onze",
     "explanationTr": "'auto' bir de-woord olduğu için iyelik zamiri 'onze'dir.",
     "explanationEn": "Because 'auto' is a de-word, the possessive pronoun is 'onze'.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_pron_sum_022",
@@ -3160,13 +3290,14 @@ export const grammarForms = [
     "options": [
       "jullie",
       "ons",
-      "hen"
+      "hen",
+      "hun"
     ],
     "correctAnswer": "jullie",
     "explanationTr": "'jullie' (siz) zamirinin nesne hali yine 'jullie'dir.",
     "explanationEn": "The object form of 'jullie' (you all) is also 'jullie'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_pron_sum_024",
@@ -3193,13 +3324,14 @@ export const grammarForms = [
     "options": [
       "je",
       "ons",
-      "zich"
+      "zich",
+      "hen"
     ],
     "correctAnswer": "je",
     "explanationTr": "'jullie' öznesi için dönüşlü zamir 'je'dir.",
     "explanationEn": "The reflexive pronoun for the subject 'jullie' is 'je'.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_pron_sum_026",
@@ -3226,13 +3358,14 @@ export const grammarForms = [
     "options": [
       "hun",
       "zijn",
-      "haar"
+      "haar",
+      "hen"
     ],
     "correctAnswer": "hun",
     "explanationTr": "Çoğul (onlar) için iyelik zamiri (onların) 'hun'dur.",
     "explanationEn": "The possessive pronoun for plural (their) is 'hun'.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_pron_sum_028",
@@ -3259,13 +3392,14 @@ export const grammarForms = [
     "options": [
       "u",
       "uw",
-      "zich"
+      "zich",
+      "geu"
     ],
     "correctAnswer": "u",
     "explanationTr": "Resmi 'u' zamirinin nesne hali de 'u'dur.",
     "explanationEn": "The object form of the formal pronoun 'u' is 'u'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_pron_sum_030",
@@ -3292,13 +3426,14 @@ export const grammarForms = [
     "options": [
       "ons",
       "we",
-      "onze"
+      "onze",
+      "hun"
     ],
     "correctAnswer": "ons",
     "explanationTr": "'wij' zamirinin objectvorm karşılığı 'ons'tur.",
     "explanationEn": "The object form equivalent of 'wij' is 'ons'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_pron_sum_032",
@@ -3326,13 +3461,14 @@ export const grammarForms = [
     "options": [
       "zich, u",
       "me, je",
-      "ons"
+      "ons",
+      "zich, uer"
     ],
     "correctAnswer": "zich, u",
     "explanationTr": "'u' zamiri için hem 'zich' hem de 'u' dönüşlü zamir olarak kullanılabilir.",
     "explanationEn": "For the pronoun 'u', both 'zich' and 'u' can be used as reflexive pronouns.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_pron_sum_034",
@@ -3359,13 +3495,14 @@ export const grammarForms = [
     "options": [
       "jou / je",
       "jouw",
-      "jullie"
+      "jullie",
+      "hun"
     ],
     "correctAnswer": "jou / je",
     "explanationTr": "'jij / je' zamirinin nesne hali 'jou' veya 'je'dir.",
     "explanationEn": "The object form of 'jij / je' is 'jou' or 'je'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1000",
@@ -3379,13 +3516,14 @@ export const grammarForms = [
     "options": [
       "luister",
       "luistert",
-      "luisteren"
+      "luisteren",
+      "luisterde"
     ],
     "correctAnswer": "luister",
     "explanationTr": "Düzenli fiillerin 'ik' (ben) çekimi, fiilin mastar halinden (infinitief) '-en' atılarak elde edilen kök (stam) formudur. 'luisteren' -> 'luister'.",
     "explanationEn": "The 'ik' (I) conjugation for regular verbs is just the stem (stam) of the verb, found by dropping '-en' from the infinitive. 'luisteren' -> 'luister'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1002",
@@ -3414,13 +3552,14 @@ export const grammarForms = [
     "options": [
       "Persoonsvorm (verb) + Subject + Rest",
       "Vraagwoord + Persoonsvorm (verb) + Subject + Rest",
-      "Subject + Persoonsvorm (verb) + Rest"
+      "Subject + Persoonsvorm (verb) + Rest",
+      "Het werkwoord staat altijd vooraan."
     ],
     "correctAnswer": "Persoonsvorm (verb) + Subject + Rest",
     "explanationTr": "Evet/hayır soruları, çekimli fiilin (persoonsvorm) öznenin önüne (başa) getirilmesiyle oluşturulur.",
     "explanationEn": "Yes/no questions are formed by placing the conjugated verb (persoonsvorm) before the subject.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1008",
@@ -3434,13 +3573,14 @@ export const grammarForms = [
     "options": [
       "Vraagwoord + Persoonsvorm + Subject + Rest",
       "Vraagwoord + Subject + Persoonsvorm + Rest",
-      "Persoonsvorm + Vraagwoord + Subject + Rest"
+      "Persoonsvorm + Vraagwoord + Subject + Rest",
+      "Het werkwoord staat altijd vooraan."
     ],
     "correctAnswer": "Vraagwoord + Persoonsvorm + Subject + Rest",
     "explanationTr": "Soru kelimeli sorularda diziliş: Soru kelimesi + Çekimli Fiil + Özne + Kalan Öğeler şeklindedir.",
     "explanationEn": "In questions with a question word, the order is: Question word + Conjugated verb + Subject + Rest.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1009",
@@ -3453,13 +3593,14 @@ export const grammarForms = [
     "options": [
       "mijn",
       "ik",
-      "me"
+      "me",
+      "mijner"
     ],
     "correctAnswer": "mijn",
     "explanationTr": "'ik' (ben) öznesinin iyelik zamiri (possessief pronomen) 'mijn' (benim) kelimesidir.",
     "explanationEn": "The possessive pronoun for the subject 'ik' (I) is 'mijn' (my).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1010",
@@ -3472,13 +3613,14 @@ export const grammarForms = [
     "options": [
       "onze",
       "ons",
-      "wij"
+      "wij",
+      "hun"
     ],
     "correctAnswer": "onze",
     "explanationTr": "'wij/we' için iyelik zamiri, 'de-woorden' (de artikelli isimler) ile 'onze' olarak kullanılır.",
     "explanationEn": "The possessive pronoun for 'wij/we' used with a de-word is 'onze'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1011",
@@ -3491,13 +3633,14 @@ export const grammarForms = [
     "options": [
       "hun",
       "haar",
-      "hen"
+      "hen",
+      "hem"
     ],
     "correctAnswer": "hun",
     "explanationTr": "Çoğul 3. şahıs olan 'zij / ze' (onlar) için iyelik zamiri 'hun' (onların) şeklindedir.",
     "explanationEn": "For the plural 3rd person 'zij / ze' (they), the possessive pronoun is 'hun' (their).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1012",
@@ -3510,13 +3653,14 @@ export const grammarForms = [
     "options": [
       "de",
       "het",
-      "een"
+      "een",
+      "geen lidwoord"
     ],
     "correctAnswer": "de",
     "explanationTr": "Tekil halinde 'het' alsalar bile, çoğul isimlerin tamamı istisnasız 'de' artikeli alır.",
     "explanationEn": "All plural nouns take the definite article 'de', even if they take 'het' in their singular form.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1013",
@@ -3530,13 +3674,14 @@ export const grammarForms = [
     "options": [
       "het",
       "de",
-      "een"
+      "een",
+      "geen lidwoord"
     ],
     "correctAnswer": "het",
     "explanationTr": "Bütün küçültme sözcükleri (diminutief) tekil hallerinde her zaman 'het' artikeli alır.",
     "explanationEn": "All diminutive nouns in the singular form always take the definite article 'het'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1014",
@@ -3549,13 +3694,14 @@ export const grammarForms = [
     "options": [
       "een",
       "de",
-      "het"
+      "het",
+      "geen lidwoord"
     ],
     "correctAnswer": "een",
     "explanationTr": "Belgisiz (indefinite) tekil isimler için hem de-woorden hem de het-woorden 'een' (bir) artikeli alır.",
     "explanationEn": "The indefinite article for both singular de-words and het-words is 'een' (a/an).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1015",
@@ -3568,13 +3714,14 @@ export const grammarForms = [
     "options": [
       "-je, -pje, -tje",
       "-en, -s, -'s",
-      "-er, -st, -der"
+      "-er, -st, -der",
+      "-en, -s, -'ser"
     ],
     "correctAnswer": "-je, -pje, -tje",
     "explanationTr": "Küçültme sözcükleri ismin sonuna genellikle -je, -pje of -tje eklenerek yapılır.",
     "explanationEn": "Diminutives are formed by adding suffixes like -je, -pje, or -tje to the noun.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1016",
@@ -3602,13 +3749,14 @@ export const grammarForms = [
     "options": [
       "Je voegt altijd een -s toe (bijv. rondjes).",
       "Je voegt altijd -en toe (bijv. rondjeen).",
-      "Je gebruikt een apostrof-'s (bijv. rondje's)."
+      "Je gebruikt een apostrof-'s (bijv. rondje's).",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Je voegt altijd een -s toe (bijv. rondjes).",
     "explanationTr": "Tüm küçültme kelimeleri (diminutief) çoğul yapıldığında sonuna '-s' alır.",
     "explanationEn": "All diminutive words take an '-s' suffix when made plural.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1024",
@@ -3621,13 +3769,14 @@ export const grammarForms = [
     "options": [
       "-en (bijv. boeken)",
       "-s (bijv. boeks)",
-      "-'s (bijv. boek's)"
+      "-'s (bijv. boek's)",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "-en (bijv. boeken)",
     "explanationTr": "Hollandaca kelimelerin büyük bir çoğunluğu çoğul yapılırken '-en' takısı alır.",
     "explanationEn": "The vast majority of native Dutch words take the '-en' suffix to form the plural.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1025",
@@ -3640,13 +3789,14 @@ export const grammarForms = [
     "options": [
       "Meestal bij buitenlandse woorden, en woorden eindigend op onbeklemtoonde -el, -em, -en, -er, -je, -e.",
       "Altijd als het woord één lettergreep heeft.",
-      "Nooit, alle woorden krijgen -en."
+      "Nooit, alle woorden krijgen -en.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Meestal bij buitenlandse woorden, en woorden eindigend op onbeklemtoonde -el, -em, -en, -er, -je, -e.",
     "explanationTr": "Yabancı kökenli kelimeler en -el, -em, -en, -er, -je, -e ile biten kelimeler çoğulda genellikle '-s' takısı alır.",
     "explanationEn": "Foreign words and words ending in unstressed syllables like -el, -em, -en, -er, -je, or -e usually take the '-s' suffix.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1026",
@@ -3659,13 +3809,14 @@ export const grammarForms = [
     "options": [
       "Wanneer het eindigt op de lange klinkers -a, -i, -o, -u of -y (bijv. paprika's, auto's).",
       "Wanneer het een diminutief is.",
-      "Wanneer het een Nederlands woord is met één syllabe."
+      "Wanneer het een Nederlands woord is met één syllabe.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Wanneer het eindigt op de lange klinkers -a, -i, -o, -u of -y (bijv. paprika's, auto's).",
     "explanationTr": "Uzun ünlü harflerden -a, -i, -o, -u veya -y ile biten kelimeler çoğul yapılırken telaffuzun bozulmaması için kesme işareti en s (-'s) alır.",
     "explanationEn": "Nouns ending in a single long vowel (-a, -i, -o, -u, or -y) take an apostrophe and s (-'s) in the plural to preserve the vowel's length.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1027",
@@ -3678,17 +3829,18 @@ export const grammarForms = [
     "options": [
       "Bij een het-woord met het onbepaalde lidwoord 'een' (of zonder lidwoord).",
       "Bij een de-woord in het meervoud.",
-      "Bij een de-woord met het bepaalde lidwoord 'de'."
+      "Bij een de-woord met het bepaalde lidwoord 'de'.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Bij een het-woord met het onbepaalde lidwoord 'een' (of zonder lidwoord).",
     "explanationTr": "Sıfatlar yalnızca 'een + het-woord' veya artikelsiz 'het-woord' durumunda sonlarına '-e' almazlar (örn. een klein bosje).",
     "explanationEn": "Adjectives do NOT get an '-e' only when used with 'een' (or no article) before a singular het-word.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1028",
-    "type": "fill_in",
+    "type": "multiple_choice",
     "tags": [
       "grammar",
       "adjectives"
@@ -3698,7 +3850,13 @@ export const grammarForms = [
     "explanationTr": "'courgette' bir de-woord olduğu için, sıfat her zaman '-e' eki alır: een kleine courgette.",
     "explanationEn": "Because 'courgette' is a de-word, the adjective always gets an '-e': een kleine courgette.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2,
+    "options": [
+      "kleine",
+      "klein",
+      "kleins",
+      "kleiner"
+    ]
   },
   {
     "id": "gr_1029",
@@ -3711,13 +3869,14 @@ export const grammarForms = [
     "options": [
       "Als het adjectief predicatief gebruikt wordt (achter het substantief met 'zijn', bijv. De koffie is lekker).",
       "Als het adjectief voor een de-woord staat.",
-      "Als het in het meervoud staat."
+      "Als het in het meervoud staat.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Als het adjectief predicatief gebruikt wordt (achter het substantief met 'zijn', bijv. De koffie is lekker).",
     "explanationTr": "Sıfat, ismin önünde değil de cümlenin sonunda yüklem olarak (predicatief) kullanıldığında hiçbir zaman '-e' almaz.",
     "explanationEn": "When an adjective is used predicatively (after the noun and verb 'zijn'), it never takes an '-e'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1030",
@@ -3730,13 +3889,14 @@ export const grammarForms = [
     "options": [
       "Door de stam van het werkwoord te gebruiken (bijv. Geef, Vertel).",
       "Door de infinitief te gebruiken (bijv. Geven, Vertellen).",
-      "Door stam + t te gebruiken (bijv. Geeft, Vertelt)."
+      "Door stam + t te gebruiken (bijv. Geeft, Vertelt).",
+      "Je gebruikt stam + d."
     ],
     "correctAnswer": "Door de stam van het werkwoord te gebruiken (bijv. Geef, Vertel).",
     "explanationTr": "Standart emir kipi, fiilin kök (stam) halinin doğrudan kullanılmasıyla oluşturulur.",
     "explanationEn": "The standard imperative is formed by using just the stem of the verb without any additions.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1031",
@@ -3749,13 +3909,14 @@ export const grammarForms = [
     "options": [
       "Stam + t + u (bijv. Gaat u zitten).",
       "Stam + u (bijv. Ga u zitten).",
-      "Infinitief + u (bijv. Gaan u zitten)."
+      "Infinitief + u (bijv. Gaan u zitten).",
+      "Je gebruikt stam + d."
     ],
     "correctAnswer": "Stam + t + u (bijv. Gaat u zitten).",
     "explanationTr": "Resmi en çok kibar emir veya ricalarda yapı 'stam + t + u' şeklindedir (Örn: Gaat u zitten).",
     "explanationEn": "For formal and polite instructions, the structure is 'stem + t + u' (e.g., Gaat u zitten).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1032",
@@ -3768,13 +3929,14 @@ export const grammarForms = [
     "options": [
       "maar, even, eens",
       "niet, geen, nooit",
-      "altijd, vaak, soms"
+      "altijd, vaak, soms",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "maar, even, eens",
     "explanationTr": "Emir cümlelerini daha samimi of yumuşak hale getirmek için 'maar', 'even', 'eens' gibi kelimeler eklenir.",
     "explanationEn": "To soften an imperative and make it friendlier, you can add particles like 'maar', 'even', or 'eens'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1034",
@@ -3787,13 +3949,14 @@ export const grammarForms = [
     "options": [
       "Meestal aan het einde van de zin (bijv. Ik moet naar de les gaan).",
       "Direct na het modale werkwoord (bijv. Ik moet gaan naar de les).",
-      "Helemaal aan het begin van de zin."
+      "Helemaal aan het begin van de zin.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Meestal aan het einde van de zin (bijv. Ik moet naar de les gaan).",
     "explanationTr": "Modal fiiller çekimli olarak 2. sıraya yerleşirken, cümlenin ana eylemi olan mastar (infinitief) cümlenin en sonuna gider.",
     "explanationEn": "When using a modal verb, the infinitive of the main verb is placed at the very end of the clause.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1035",
@@ -3820,13 +3983,14 @@ export const grammarForms = [
     "options": [
       "Je voegt -er toe achter het adjectief (bijv. kleiner, groter).",
       "Je voegt -st toe (bijv. kleinst, grootst).",
-      "Je voegt -der toe (bijv. kleinder, grootder)."
+      "Je voegt -der toe (bijv. kleinder, grootder).",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Je voegt -er toe achter het adjectief (bijv. kleiner, groter).",
     "explanationTr": "Düzenli sıfatların karşılaştırma hali (comparatief) sonlarına '-er' eklenerek yapılır (kleiner, groter).",
     "explanationEn": "The comparative of regular adjectives is formed by adding '-er' to the base form (kleiner, groter).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1037",
@@ -3839,13 +4003,14 @@ export const grammarForms = [
     "options": [
       "Je voegt -der toe (bijv. duurder).",
       "Je voegt alleen -er toe (bijv. duurer).",
-      "Het adjectief verandert niet."
+      "Het adjectief verandert niet.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Je voegt -der toe (bijv. duurder).",
     "explanationTr": "Sıfat '-r' harfi ile bitiyorsa, telaffuz kolaylığı için karşılaştırma halinde sonuna '-der' eklenir (duur -> duurder).",
     "explanationEn": "If the adjective ends in an '-r' (like 'duur'), you add '-der' to form the comparative (duurder).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1038",
@@ -3859,13 +4024,14 @@ export const grammarForms = [
     "options": [
       "beter / best",
       "goeder / goedst",
-      "meer goed / meest goed"
+      "meer goed / meest goed",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "beter / best",
     "explanationTr": "'goed' (iyi) sıfatı düzensizdir. Karşılaştırma hali 'beter', en üstünlük hali ise 'best' şeklindedir.",
     "explanationEn": "The adjective 'goed' (good) is irregular. Its comparative is 'beter' and its superlative is 'best'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1039",
@@ -3878,13 +4044,14 @@ export const grammarForms = [
     "options": [
       "ons",
       "onze",
-      "hen"
+      "hen",
+      "hun"
     ],
     "correctAnswer": "ons",
     "explanationTr": "'wij/we' (biz) öznesinin nesne hali (bizi/bize) 'ons' kelimesidir.",
     "explanationEn": "The object pronoun form for 'wij/we' (we) is 'ons' (us).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1040",
@@ -3897,13 +4064,14 @@ export const grammarForms = [
     "options": [
       "ze",
       "hen",
-      "hun"
+      "hun",
+      "haar"
     ],
     "correctAnswer": "ze",
     "explanationTr": "Cansız varlıkların (veya hayvanların) çoğul nesne hali olarak Hollandacada her zaman 'ze' kullanılır.",
     "explanationEn": "For inanimate objects or animals in the plural, the object pronoun 'ze' is always used.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1041",
@@ -3916,13 +4084,14 @@ export const grammarForms = [
     "options": [
       "hem",
       "haar",
-      "zijn"
+      "zijn",
+      "hen"
     ],
     "correctAnswer": "hem",
     "explanationTr": "'hij' (o - erkek) öznesinin nesne hali 'hem' (onu/ona) şeklindedir.",
     "explanationEn": "The object pronoun for a male ('hij') is 'hem' (him).",
     "difficulty": 5,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1042",
@@ -3935,13 +4104,14 @@ export const grammarForms = [
     "options": [
       "deze (hier) en die (daar)",
       "dit (hier) en dat (daar)",
-      "deze (hier) en dat (daar)"
+      "deze (hier) en dat (daar)",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "deze (hier) en die (daar)",
     "explanationTr": "De-woorden için yakındakini gösterirken 'deze' (bu), uzaktakini gösterirken 'die' (şu/o) kullanılır.",
     "explanationEn": "For de-words, use 'deze' for something close (this) and 'die' for something far (that).",
     "difficulty": 5,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1043",
@@ -3954,13 +4124,14 @@ export const grammarForms = [
     "options": [
       "dit (hier) en dat (daar)",
       "deze (hier) en die (daar)",
-      "dat (hier) en die (daar)"
+      "dat (hier) en die (daar)",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "dit (hier) en dat (daar)",
     "explanationTr": "Het-woorden için yakındakini gösterirken 'dit' (bu), uzaktakini gösterirken 'dat' (şu/o) kullanılır.",
     "explanationEn": "For het-words, use 'dit' for something close (this) and 'dat' for something far (that).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1044",
@@ -3973,13 +4144,14 @@ export const grammarForms = [
     "options": [
       "Altijd deze en die, ongeacht of het een de- of het-woord is in het enkelvoud.",
       "Altijd dit en dat.",
-      "Je voegt een -s toe aan het lidwoord."
+      "Je voegt een -s toe aan het lidwoord.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Altijd deze en die, ongeacht of het een de- of het-woord is in het enkelvoud.",
     "explanationTr": "Tüm kelimeler (de/het fark etmeksizin) çoğul olduklarında her zaman 'deze' en 'die' işaret zamirlerini alırlar.",
     "explanationEn": "All plural words, regardless of their singular article, use 'deze' (these) and 'die' (those).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1045",
@@ -3992,13 +4164,14 @@ export const grammarForms = [
     "options": [
       "Voor indefiniete (onbepaalde) woorden, dus woorden met 'een' of zonder lidwoord (bijv. Ik heb geen idee).",
       "Om bijvoeglijke naamwoorden te ontkennen (bijv. De kamer is geen zonnig).",
-      "Om een heel zinsdeel of werkwoord te ontkennen."
+      "Om een heel zinsdeel of werkwoord te ontkennen.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Voor indefiniete (onbepaalde) woorden, dus woorden met 'een' of zonder lidwoord (bijv. Ik heb geen idee).",
     "explanationTr": "'geen' kelimesi sadece belirsiz (önünde 'een' olan of artikelsiz) isimleri olumsuz yapmak için kullanılır.",
     "explanationEn": "'geen' is used strictly to negate indefinite nouns (nouns preceded by 'een' or no article).",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1046",
@@ -4011,13 +4184,14 @@ export const grammarForms = [
     "options": [
       "In alle andere situaties dan bij 'geen', zoals bij adjectieven, werkwoorden of specifieke plaatsen (bijv. De kamer is niet zonnig).",
       "Voor meervoudsvormen.",
-      "Voor indefiniete woorden."
+      "Voor indefiniete woorden.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "In alle andere situaties dan bij 'geen', zoals bij adjectieven, werkwoorden of specifieke plaatsen (bijv. De kamer is niet zonnig).",
     "explanationTr": "'niet', sıfatları, fiilleri, belirli isimleri of durumları olumsuz yaparken ('geen'in kullanılmadığı tüm durumlarda) kullanılır.",
     "explanationEn": "'niet' is used in all other situations where 'geen' is not applicable, such as negating adjectives, verbs, or specific nouns.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1047",
@@ -4045,13 +4219,14 @@ export const grammarForms = [
     "options": [
       "Je gebruikt 'hoeven + te + infinitief' (bijv. Nee, je hoeft mij niet te bellen).",
       "Je gebruikt 'moeten niet' (bijv. Nee, je moet mij niet bellen).",
-      "Je gebruikt 'mogen niet'."
+      "Je gebruikt 'mogen niet'.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Je gebruikt 'hoeven + te + infinitief' (bijv. Nee, je hoeft mij niet te bellen).",
     "explanationTr": "'moeten' (zorunda olmak) fiilinin olumsuzu 'niet/geen hoeven te' (zorunda olmamak) şeklindedir.",
     "explanationEn": "The negative counterpart to 'moeten' (must / have to) is 'niet/geen hoeven te' (don't have to).",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1050",
@@ -4064,13 +4239,14 @@ export const grammarForms = [
     "options": [
       "Als iets niet goed is om te doen (een sterk negatief advies / verbod).",
       "Als iets niet verplicht is.",
-      "Als je een voorstel doet."
+      "Als je een voorstel doet.",
+      "Het werkwoord staat altijd vooraan."
     ],
     "correctAnswer": "Als iets niet goed is om te doen (een sterk negatief advies / verbod).",
     "explanationTr": "'moeten + niet/geen', bir şeyin yapılmaması gerektiğinde (güçlü bir tavsiye of yasak) kullanılır (Örn: Bunu yapmamalısın).",
     "explanationEn": "'moeten + niet/geen' is used when something is a bad idea or strongly advised against (You must not...).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1057",
@@ -4084,13 +4260,14 @@ export const grammarForms = [
     "options": [
       "Voor zaken in het verleden die afgesloten zijn (completed actions).",
       "Voor beschrijvingen of achtergrondinformatie in het verleden.",
-      "Voor toekomstige plannen."
+      "Voor toekomstige plannen.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Voor zaken in het verleden die afgesloten zijn (completed actions).",
     "explanationTr": "Hollandacada tamamlanmış, bitmiş olayları anlatmak için genellikle perfectum kullanılır.",
     "explanationEn": "The perfectum is primarily used for actions in the past that are finished or completed.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1058",
@@ -4104,13 +4281,14 @@ export const grammarForms = [
     "options": [
       "Voor beschrijvingen, gewoontes en achtergrondinformatie in het verleden.",
       "Voor korte, eenmalige en afgesloten acties.",
-      "Voor voorstellen in het heden."
+      "Voor voorstellen in het heden.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Voor beschrijvingen, gewoontes en achtergrondinformatie in het verleden.",
     "explanationTr": "Imperfectum, geçmişteki durumları betimlemek (beschrijvingen), alışkanlıklar en arka plan detayları vermek için kullanılır.",
     "explanationEn": "The imperfectum is mainly used for descriptions, habits, and background information in the past.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1059",
@@ -4138,13 +4316,14 @@ export const grammarForms = [
     "options": [
       "ons",
       "zich",
-      "me"
+      "me",
+      "hen"
     ],
     "correctAnswer": "ons",
     "explanationTr": "'wij/we' öznesi için dönüşlü zamir 'ons'tur (Örn: Wij bereiden ons voor).",
     "explanationEn": "The reflexive pronoun for 'wij/we' is 'ons'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1061",
@@ -4157,13 +4336,14 @@ export const grammarForms = [
     "options": [
       "u of zich",
       "je",
-      "ons"
+      "ons",
+      "hen"
     ],
     "correctAnswer": "u of zich",
     "explanationTr": "Resmi 'u' zamiri için dönüşlü zamir 'u' of 'zich' olabilir.",
     "explanationEn": "For the formal 'u', the reflexive pronoun can be 'u' or 'zich'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1063",
@@ -4177,13 +4357,14 @@ export const grammarForms = [
     "options": [
       "Op de laatste plaats in de zin (bijv. We rekenen het eten af).",
       "Direct na het werkwoord (bijv. We rekenen af het eten).",
-      "Voor het onderwerp."
+      "Voor het onderwerp.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Op de laatste plaats in de zin (bijv. We rekenen het eten af).",
     "explanationTr": "Şimdiki zaman en geçmiş zamanda (imperfectum) ayrılabilir fiilin ön eki cümlenin en sonuna gider.",
     "explanationEn": "In the present and imperfect tenses in a main clause, the separable prefix goes to the very end of the sentence.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1065",
@@ -4197,13 +4378,14 @@ export const grammarForms = [
     "options": [
       "Het werkwoord blijft ongescheiden en staat in de infinitief aan het einde van de zin (bijv. We moeten het eten afrekenen).",
       "Het werkwoord wordt toch gescheiden.",
-      "Het modale werkwoord staat aan het einde."
+      "Het modale werkwoord staat aan het einde.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Het werkwoord blijft ongescheiden en staat in de infinitief aan het einde van de zin (bijv. We moeten het eten afrekenen).",
     "explanationTr": "Modal fiil kullanıldığında, ayrılabilir fiil ayrılmaz en mastar halinde (infinitief) cümlenin sonuna gider.",
     "explanationEn": "When a modal verb is used, the separable verb is not separated and is placed at the end of the sentence as an infinitive.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1068",
@@ -4216,12 +4398,13 @@ export const grammarForms = [
     "options": [
       "Gaan + infinitief (bijv. Eva gaat een jaar in Engeland studeren).",
       "Presens + een verleden tijdaanduiding.",
-      "Imperfectum."
+      "Imperfectum.",
+      "Geen van de bovenstaande antwoorden."
     ],
     "correctAnswer": "Gaan + infinitief (bijv. Eva gaat een jaar in Engeland studeren).",
     "explanationTr": "Gelecek planları en niyetler için genellikle 'gaan' (gitmek/yapmak üzere olmak) + mastar fiil kullanılır.",
     "explanationEn": "To tell about an intention or plan for the future, the construction 'gaan + infinitive' is commonly used.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   }
 ];
