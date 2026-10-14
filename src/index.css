@@ -63,3 +63,17 @@ code {
   box-shadow: 0 0 8px rgba(56, 189, 248, 0.6);
 }
 
+@keyframes navPopIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.86);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-nav-pop {
+  animation: navPopIn 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

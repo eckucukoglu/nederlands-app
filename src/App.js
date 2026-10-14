@@ -287,6 +287,8 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
   const mobileMenuRef = useRef(null);
   const sectionMeasureRef = useRef(null); 
   const mobileSearchRef = useRef(null); 
+  const navGroupRef = useRef(null);
+  const [expandedNavGroup, setExpandedNavGroup] = useState(null); // 'study' | 'reference' | null
 
   const touchStartX = useRef(0);
   const touchStartY = useRef(0);
@@ -296,6 +298,26 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
 
   const isSummaryMode = activeTab.startsWith('On-Class-');
   const summaryChaptersList = availableChapters.filter(ch => bookSections.some(s => s.id === `On-Class-${ch}`));
+
+  const getActiveNavFeature = () => {
+    if (isFullQuizOpen) return 'quiz';
+    if (activeTab === 'flashcards') return 'flashcards';
+    if (isSummaryMode) return 'summary';
+    if (activeTab === 'grammar') return 'grammar';
+    if (activeTab === 'verbs') return 'verbs';
+    return null;
+  };
+  const activeNavFeature = getActiveNavFeature();
+
+  const isStudyFeature = activeNavFeature === 'quiz' || activeNavFeature === 'flashcards';
+  const isReferenceFeature = activeNavFeature === 'summary' || activeNavFeature === 'grammar' || activeNavFeature === 'verbs';
+
+  const showActiveAtFarLeft = Boolean(
+    activeNavFeature && !(
+      (expandedNavGroup === 'study' && isStudyFeature) ||
+      (expandedNavGroup === 'reference' && isReferenceFeature)
+    )
+  );
 
   const isChapterFullyCompleted = (chNum) => {
     const chapterSections = bookSections.filter(s => s.chapter === chNum && !s.id.includes('On-Class'));
@@ -434,6 +456,9 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
       }
       if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target)) {
         setIsMobileMenuOpen(false);
+      }
+      if (navGroupRef.current && !navGroupRef.current.contains(event.target)) {
+        setExpandedNavGroup(null);
       }
     };
 
@@ -696,6 +721,7 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
   const handleTitleClick = () => {
     setIsChapterExpanded(false); 
     setIsSearchExpanded(false);
+    setExpandedNavGroup(null);
 
     if (activeTab === 'home') {
       const target = lastTabBeforeHome || localStorage.getItem('lastTabBeforeHome') || `${currentChapter}.1`;
@@ -937,7 +963,7 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
               : (lang === 'tr' ? '1 Tık: Dashboard | 2 Tık: Kılavuz' : '1 Click: Dashboard | 2 Clicks: Guide')
             }
           >
-            <div className={`w-8.5 h-8.5 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center transition-all duration-200 ${
+            <div className={`w-9 h-9 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center transition-all duration-200 ${
               activeTab === 'home' 
                 ? 'bg-brand-600 text-white border-2 border-brand-300 shadow-[0_0_14px_rgba(14,165,233,0.8)] ring-2 ring-brand-300/60' 
                 : 'bg-brand-950/40 text-brand-400 hover:bg-brand-900/50 hover:text-brand-300 border border-brand-500/30'
@@ -953,121 +979,239 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
             
           </div>
 
-          <div className="flex items-center gap-1 sm:gap-1.5 flex-shrink-0 overflow-visible">
+          <div className="flex items-center gap-1.5 sm:gap-2 flex-shrink-0 overflow-visible" ref={navGroupRef}>
             
-            {/* FULL QUIZ BUTONU */}
-            <button 
-              onClick={() => setIsFullQuizOpen(true)}
-              className={`w-8.5 h-8.5 sm:w-10 sm:h-10 rounded-full transition-all duration-200 flex items-center justify-center cursor-pointer ${
-                isFullQuizOpen 
-                  ? 'bg-teal-600 text-white border-2 border-teal-300 shadow-[0_0_14px_rgba(20,184,166,0.8)] ring-2 ring-teal-300/60' 
-                  : 'bg-teal-950/50 text-teal-400 hover:bg-teal-900/60 hover:text-teal-200 border border-teal-800/50 shadow-sm'
-              }`}
-              title={lang === 'tr' ? 'Genel Sınav & Full Quiz' : 'Full Quiz Mode'}
-            >
-              <i className="fa-solid fa-graduation-cap text-sm sm:text-lg"></i>
-            </button>
+            {/* 1. AKTİF BÖLÜM BUTONU (Açılmışsa en solda gösterilir) */}
+            {showActiveAtFarLeft && (
+              <div className="animate-nav-pop">
+                {activeNavFeature === 'quiz' && (
+                  <button 
+                    onClick={() => {
+                      setIsFullQuizOpen(false);
+                      setExpandedNavGroup(null);
+                    }}
+                    className="w-9 h-9 sm:w-10 sm:h-10 rounded-full transition-all duration-200 flex items-center justify-center cursor-pointer bg-teal-600 text-white border-2 border-teal-300 shadow-[0_0_14px_rgba(20,184,166,0.8)] ring-2 ring-teal-300/60"
+                    title={lang === 'tr' ? 'Genel Sınavı Kapat' : 'Close Full Quiz'}
+                  >
+                    <i className="fa-solid fa-graduation-cap text-base sm:text-lg"></i>
+                  </button>
+                )}
+                {activeNavFeature === 'flashcards' && (
+                  <button 
+                    onClick={() => {
+                      setActiveTab(previousTab || 'home');
+                      setExpandedNavGroup(null);
+                    }}
+                    className="w-9 h-9 sm:w-10 sm:h-10 rounded-full transition-all duration-200 flex items-center justify-center cursor-pointer bg-rose-600 text-white border-2 border-rose-300 shadow-[0_0_14px_rgba(244,63,94,0.8)] ring-2 ring-rose-300/60"
+                    title={lang === 'tr' ? 'Kelime Kartlarını Kapat' : 'Close Flashcards'}
+                  >
+                    <i className="fa-solid fa-clone text-base sm:text-lg"></i>
+                  </button>
+                )}
+                {activeNavFeature === 'summary' && (
+                  <button 
+                    onClick={() => {
+                      setActiveTab(previousTab || 'home');
+                      setExpandedNavGroup(null);
+                    }}
+                    className="w-9 h-9 sm:w-10 sm:h-10 rounded-full transition-all duration-200 flex items-center justify-center cursor-pointer bg-amber-600 text-white border-2 border-amber-300 shadow-[0_0_14px_rgba(245,158,11,0.8)] ring-2 ring-amber-300/60"
+                    title={lang === 'tr' ? 'Özeti Kapat' : 'Close Summary'}
+                  >
+                    <i className="fa-solid fa-chalkboard-user text-base sm:text-lg"></i>
+                  </button>
+                )}
+                {activeNavFeature === 'grammar' && (
+                  <button 
+                    onClick={() => {
+                      setActiveTab(previousTab || 'home');
+                      setExpandedNavGroup(null);
+                    }}
+                    className="w-9 h-9 sm:w-10 sm:h-10 rounded-full transition-all duration-200 flex items-center justify-center cursor-pointer bg-indigo-600 text-white border-2 border-indigo-300 shadow-[0_0_14px_rgba(99,102,241,0.8)] ring-2 ring-indigo-300/60"
+                    title={lang === 'tr' ? 'Gramer Referansını Kapat' : 'Close Grammar'}
+                  >
+                    <i className="fa-solid fa-spell-check text-base sm:text-lg"></i>
+                  </button>
+                )}
+                {activeNavFeature === 'verbs' && (
+                  <button 
+                    onClick={() => {
+                      setActiveTab(previousTab || 'home');
+                      setExpandedNavGroup(null);
+                    }}
+                    className="w-9 h-9 sm:w-10 sm:h-10 rounded-full transition-all duration-200 flex items-center justify-center cursor-pointer bg-sky-600 text-white border-2 border-sky-300 shadow-[0_0_14px_rgba(14,165,233,0.8)] ring-2 ring-sky-300/60"
+                    title={lang === 'tr' ? 'Düzensiz Fiilleri Kapat' : 'Close Irregular Verbs'}
+                  >
+                    <i className="fa-solid fa-bolt text-base sm:text-lg"></i>
+                  </button>
+                )}
+              </div>
+            )}
 
-            {/* SUMMARY BUTONU */}
+            {/* 2. ÇALIŞ GRUBU (Quiz & Flashcards) */}
+            {expandedNavGroup === 'study' ? (
+              <div className="flex items-center gap-1.5 sm:gap-2 animate-nav-pop">
+                {/* Full Quiz Butonu */}
+                <button 
+                  onClick={() => {
+                    setIsFullQuizOpen(true);
+                    setExpandedNavGroup(null);
+                    setIsChapterExpanded(false); 
+                    setIsSearchExpanded(false);
+                  }}
+                  className={`w-9 h-9 sm:w-10 sm:h-10 rounded-full transition-all duration-200 flex items-center justify-center cursor-pointer ${
+                    isFullQuizOpen 
+                      ? 'bg-teal-600 text-white border-2 border-teal-300 shadow-[0_0_14px_rgba(20,184,166,0.8)] ring-2 ring-teal-300/60' 
+                      : 'bg-teal-950/50 text-teal-400 hover:bg-teal-900/60 hover:text-teal-200 border border-teal-800/50 shadow-sm'
+                  }`}
+                  title={lang === 'tr' ? 'Genel Sınav & Full Quiz' : 'Full Quiz Mode'}
+                >
+                  <i className="fa-solid fa-graduation-cap text-base sm:text-lg"></i>
+                </button>
+
+                {/* Flashcards Butonu */}
+                <button 
+                  onClick={() => {
+                    if (activeTab === 'flashcards') {
+                      setActiveTab(previousTab || 'home');
+                    } else {
+                      if (activeTab !== 'home' && activeTab !== 'verbs' && activeTab !== 'grammar' && !activeTab.startsWith('On-Class-')) setPreviousTab(activeTab);
+                      setActiveTab("flashcards");
+                    }
+                    setExpandedNavGroup(null);
+                    setIsChapterExpanded(false); 
+                    setIsSearchExpanded(false);
+                  }}
+                  className={`w-9 h-9 sm:w-10 sm:h-10 rounded-full transition-all duration-200 flex items-center justify-center cursor-pointer ${
+                    activeTab === 'flashcards' 
+                      ? 'bg-rose-600 text-white border-2 border-rose-300 shadow-[0_0_14px_rgba(244,63,94,0.8)] ring-2 ring-rose-300/60' 
+                      : 'bg-rose-950/50 text-rose-400 hover:bg-rose-900/60 hover:text-rose-200 border border-rose-800/50 shadow-sm'
+                  }`}
+                  title={t('flashcards')}
+                >
+                  <i className="fa-solid fa-clone text-base sm:text-lg"></i>
+                </button>
+              </div>
+            ) : (
+              <button 
+                onClick={() => {
+                  setExpandedNavGroup('study');
+                  setIsChapterExpanded(false); 
+                  setIsSearchExpanded(false);
+                }}
+                className={`w-9 h-9 sm:w-10 sm:h-10 rounded-full transition-all duration-200 flex items-center justify-center cursor-pointer ${
+                  (activeNavFeature === 'quiz' || activeNavFeature === 'flashcards')
+                    ? 'bg-purple-900/40 text-purple-300 border border-purple-500/40'
+                    : 'bg-purple-950/50 text-purple-400 hover:bg-purple-900/60 hover:text-purple-200 border border-purple-800/50 shadow-sm'
+                }`}
+                title={lang === 'tr' ? 'Çalış (Quiz & Kelime Kartları)' : 'Study (Quiz & Flashcards)'}
+              >
+                <i className="fa-solid fa-brain text-base sm:text-lg"></i>
+              </button>
+            )}
+
+            {/* 3. REFERENCE GRUBU (Summaries, Grammar, Verbs) */}
+            {expandedNavGroup === 'reference' ? (
+              <div className="flex items-center gap-1.5 sm:gap-2 animate-nav-pop">
+                {/* Summary Butonu */}
+                <button 
+                  onClick={() => {
+                    if (isSummaryMode) {
+                      setActiveTab(previousTab || 'home');
+                    } else {
+                      if (activeTab !== 'home' && activeTab !== 'verbs' && activeTab !== 'flashcards' && activeTab !== 'grammar' && !activeTab.startsWith('On-Class-')) setPreviousTab(activeTab);
+                      const currentSum = `On-Class-${currentChapter}`;
+                      if (bookSections.some(s => s.id === currentSum)) {
+                        setActiveTab(currentSum);
+                      } else {
+                        const firstSum = bookSections.find(s => s.id.startsWith('On-Class-'))?.id || 'On-Class-17';
+                        setActiveTab(firstSum);
+                      }
+                    }
+                    setExpandedNavGroup(null);
+                    setIsChapterExpanded(false); 
+                    setIsSearchExpanded(false);
+                  }}
+                  className={`w-9 h-9 sm:w-10 sm:h-10 rounded-full transition-all duration-200 flex items-center justify-center cursor-pointer ${
+                    isSummaryMode 
+                      ? 'bg-amber-600 text-white border-2 border-amber-300 shadow-[0_0_14px_rgba(245,158,11,0.8)] ring-2 ring-amber-300/60' 
+                      : 'bg-amber-950/50 text-amber-400 hover:bg-amber-900/60 hover:text-amber-200 border border-amber-800/50 shadow-sm'
+                  }`}
+                  title={lang === 'tr' ? 'Özet (Summary)' : 'Summary'}
+                >
+                  <i className="fa-solid fa-chalkboard-user text-base sm:text-lg"></i>
+                </button>
+
+                {/* Grammar Butonu */}
+                <button 
+                  onClick={() => {
+                    if (activeTab === 'grammar') {
+                      setActiveTab(previousTab || 'home');
+                    } else {
+                      if (activeTab !== 'home' && activeTab !== 'verbs' && activeTab !== 'flashcards' && !activeTab.startsWith('On-Class-')) setPreviousTab(activeTab);
+                      setActiveTab("grammar");
+                    }
+                    setExpandedNavGroup(null);
+                    setIsChapterExpanded(false); 
+                    setIsSearchExpanded(false);
+                  }}
+                  className={`w-9 h-9 sm:w-10 sm:h-10 rounded-full transition-all duration-200 flex items-center justify-center cursor-pointer ${
+                    activeTab === 'grammar' 
+                      ? 'bg-indigo-600 text-white border-2 border-indigo-300 shadow-[0_0_14px_rgba(99,102,241,0.8)] ring-2 ring-indigo-300/60' 
+                      : 'bg-indigo-950/50 text-indigo-400 hover:bg-indigo-900/60 hover:text-indigo-200 border border-indigo-800/50 shadow-sm'
+                  }`}
+                  title={lang === 'tr' ? 'Gramer Referansı' : 'Grammar Reference'}
+                >
+                  <i className="fa-solid fa-spell-check text-base sm:text-lg"></i>
+                </button>
+
+                {/* Verbs Butonu */}
+                <button 
+                  onClick={() => {
+                    if (activeTab === 'verbs') {
+                      setActiveTab(previousTab || 'home');
+                    } else {
+                      if (activeTab !== 'home' && activeTab !== 'flashcards' && activeTab !== 'grammar' && !activeTab.startsWith('On-Class-')) setPreviousTab(activeTab);
+                      setActiveTab("verbs");
+                    }
+                    setExpandedNavGroup(null);
+                    setIsChapterExpanded(false); 
+                    setIsSearchExpanded(false);
+                  }}
+                  className={`w-9 h-9 sm:w-10 sm:h-10 rounded-full transition-all duration-200 flex items-center justify-center cursor-pointer ${
+                    activeTab === 'verbs' 
+                      ? 'bg-sky-600 text-white border-2 border-sky-300 shadow-[0_0_14px_rgba(14,165,233,0.8)] ring-2 ring-sky-300/60' 
+                      : 'bg-sky-950/50 text-sky-400 hover:bg-sky-900/60 hover:text-sky-200 border border-sky-800/50 shadow-sm'
+                  }`}
+                  title={lang === 'tr' ? 'Düzensiz Fiiller' : 'Irregular Verbs'}
+                >
+                  <i className="fa-solid fa-bolt text-base sm:text-lg"></i>
+                </button>
+              </div>
+            ) : (
+              <button 
+                onClick={() => {
+                  setExpandedNavGroup('reference');
+                  setIsChapterExpanded(false); 
+                  setIsSearchExpanded(false);
+                }}
+                className={`w-9 h-9 sm:w-10 sm:h-10 rounded-full transition-all duration-200 flex items-center justify-center cursor-pointer ${
+                  (activeNavFeature === 'summary' || activeNavFeature === 'grammar' || activeNavFeature === 'verbs')
+                    ? 'bg-blue-900/40 text-blue-300 border border-blue-500/40'
+                    : 'bg-blue-950/50 text-blue-400 hover:bg-blue-900/60 hover:text-blue-200 border border-blue-800/50 shadow-sm'
+                }`}
+                title={lang === 'tr' ? 'Referans (Özet, Gramer, Fiiller)' : 'Reference (Summary, Grammar, Verbs)'}
+              >
+                <i className="fa-solid fa-book-bookmark text-base sm:text-lg"></i>
+              </button>
+            )}
+
+            {/* 4. AUTH / PROFİL BUTONU (Login Olmuşsa Yeşil) */}
             <button 
               onClick={() => {
-                if (isSummaryMode) {
-                  setActiveTab(previousTab);
-                } else {
-                  if (activeTab !== 'home' && activeTab !== 'verbs' && activeTab !== 'flashcards' && activeTab !== 'grammar' && !activeTab.startsWith('On-Class-')) setPreviousTab(activeTab);
-                  
-                  // O anki chapter'ın summary'si var mı bak, yoksa ilk bulduğuna git
-                  const currentSum = `On-Class-${currentChapter}`;
-                  if (bookSections.some(s => s.id === currentSum)) {
-                    setActiveTab(currentSum);
-                  } else {
-                    const firstSum = bookSections.find(s => s.id.startsWith('On-Class-'))?.id || 'On-Class-17';
-                    setActiveTab(firstSum);
-                  }
-                }
-                setIsChapterExpanded(false); 
-                setIsSearchExpanded(false);
+                setIsAuthModalOpen(true);
+                setExpandedNavGroup(null);
               }}
-              className={`w-8.5 h-8.5 sm:w-10 sm:h-10 rounded-full transition-all duration-200 flex items-center justify-center cursor-pointer ${
-                isSummaryMode 
-                  ? 'bg-amber-600 text-white border-2 border-amber-300 shadow-[0_0_14px_rgba(245,158,11,0.8)] ring-2 ring-amber-300/60' 
-                  : 'bg-amber-950/50 text-amber-400 hover:bg-amber-900/60 hover:text-amber-200 border border-amber-800/50 shadow-sm'
-              }`}
-              title={lang === 'tr' ? 'Özet (Summary)' : 'Summary'}
-            >
-              <i className="fa-solid fa-chalkboard-user text-sm sm:text-lg"></i>
-            </button>
-
-            {/* FLASHCARDS BUTONU */}
-            <button 
-              onClick={() => {
-                if (activeTab === 'flashcards') {
-                  setActiveTab(previousTab);
-                } else {
-                  if (activeTab !== 'home' && activeTab !== 'verbs' && activeTab !== 'grammar' && !activeTab.startsWith('On-Class-')) setPreviousTab(activeTab);
-                  setActiveTab("flashcards");
-                }
-                setIsChapterExpanded(false); 
-                setIsSearchExpanded(false);
-              }}
-              className={`w-8.5 h-8.5 sm:w-10 sm:h-10 rounded-full transition-all duration-200 flex items-center justify-center cursor-pointer ${
-                activeTab === 'flashcards' 
-                  ? 'bg-rose-600 text-white border-2 border-rose-300 shadow-[0_0_14px_rgba(244,63,94,0.8)] ring-2 ring-rose-300/60' 
-                  : 'bg-rose-950/50 text-rose-400 hover:bg-rose-900/60 hover:text-rose-200 border border-rose-800/50 shadow-sm'
-              }`}
-              title={t('flashcards')}
-            >
-              <i className="fa-solid fa-clone text-sm sm:text-lg"></i>
-            </button>
-
-            {/* GRAMMAR BUTONU */}
-            <button 
-              onClick={() => {
-                if (activeTab === 'grammar') {
-                  setActiveTab(previousTab);
-                } else {
-                  if (activeTab !== 'home' && activeTab !== 'verbs' && activeTab !== 'flashcards' && !activeTab.startsWith('On-Class-')) setPreviousTab(activeTab);
-                  setActiveTab("grammar");
-                }
-                setIsChapterExpanded(false); 
-                setIsSearchExpanded(false);
-              }}
-              className={`w-8.5 h-8.5 sm:w-10 sm:h-10 rounded-full transition-all duration-200 flex items-center justify-center cursor-pointer ${
-                activeTab === 'grammar' 
-                  ? 'bg-indigo-600 text-white border-2 border-indigo-300 shadow-[0_0_14px_rgba(99,102,241,0.8)] ring-2 ring-indigo-300/60' 
-                  : 'bg-indigo-950/50 text-indigo-400 hover:bg-indigo-900/60 hover:text-indigo-200 border border-indigo-800/50 shadow-sm'
-              }`}
-              title={lang === 'tr' ? 'Gramer Referansı' : 'Grammar Reference'}
-            >
-              <i className="fa-solid fa-spell-check text-sm sm:text-lg"></i>
-            </button>
-
-            {/* VERBS BUTONU */}
-            <button 
-              onClick={() => {
-                if (activeTab === 'verbs') {
-                  setActiveTab(previousTab);
-                } else {
-                  if (activeTab !== 'home' && activeTab !== 'flashcards' && activeTab !== 'grammar' && !activeTab.startsWith('On-Class-')) setPreviousTab(activeTab);
-                  setActiveTab("verbs");
-                }
-                setIsChapterExpanded(false); 
-                setIsSearchExpanded(false);
-              }}
-              className={`w-8.5 h-8.5 sm:w-10 sm:h-10 rounded-full transition-all duration-200 flex items-center justify-center cursor-pointer ${
-                activeTab === 'verbs' 
-                  ? 'bg-sky-600 text-white border-2 border-sky-300 shadow-[0_0_14px_rgba(14,165,233,0.8)] ring-2 ring-sky-300/60' 
-                  : 'bg-sky-950/50 text-sky-400 hover:bg-sky-900/60 hover:text-sky-200 border border-sky-800/50 shadow-sm'
-              }`}
-              title={lang === 'tr' ? 'Düzensiz Fiiller' : 'Irregular Verbs'}
-            >
-              <i className="fa-solid fa-bolt text-sm sm:text-lg"></i>
-            </button>
-
-            {/* AUTH / PROFİL BUTONU (Login Olmuşsa Yeşil) */}
-            <button 
-              onClick={() => setIsAuthModalOpen(true)}
-              className={`w-8.5 h-8.5 sm:w-10 sm:h-10 rounded-full transition-all duration-200 flex items-center justify-center relative cursor-pointer ${
+              className={`w-9 h-9 sm:w-10 sm:h-10 rounded-full transition-all duration-200 flex items-center justify-center relative cursor-pointer ${
                 user 
                   ? (isAuthModalOpen 
                       ? 'bg-emerald-600 text-white border-2 border-emerald-300 shadow-[0_0_15px_rgba(16,185,129,0.9)] ring-2 ring-emerald-300/60' 
@@ -1078,7 +1222,7 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
               }`}
               title={t('accountSync')}
             >
-              <i className={`fa-solid fa-circle-user text-sm sm:text-lg ${user ? (isAuthModalOpen ? 'text-white' : 'text-emerald-400') : ''}`}></i>
+              <i className={`fa-solid fa-circle-user text-base sm:text-lg ${user ? (isAuthModalOpen ? 'text-white' : 'text-emerald-400') : ''}`}></i>
               {user && (
                 <div className="absolute top-0 right-0 w-2.5 h-2.5 bg-emerald-400 border border-slate-950 rounded-full shadow-[0_0_6px_rgba(52,211,153,1)]"></div>
               )}
@@ -1113,6 +1257,7 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
               
               <button 
                 onClick={() => {
+                  setExpandedNavGroup(null);
                   if (window.innerWidth < 640) {
                     setIsMobileSearchOpen(true);
                   } else {
@@ -1124,14 +1269,14 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
                     }
                   }
                 }}
-                className={`w-8.5 h-8.5 sm:w-10 sm:h-10 rounded-full transition-all duration-200 flex items-center justify-center cursor-pointer ${
+                className={`w-9 h-9 sm:w-10 sm:h-10 rounded-full transition-all duration-200 flex items-center justify-center cursor-pointer ${
                   (isMobileSearchOpen || isSearchExpanded)
                     ? 'bg-brand-600 text-white border-2 border-brand-300 shadow-[0_0_14px_rgba(14,165,233,0.8)] ring-2 ring-brand-300/60' 
                     : 'bg-slate-800/80 text-slate-400 hover:text-brand-300 hover:bg-slate-800 border border-slate-700/60 shadow-sm'
                 }`}
                 title={t('searchTitle')}
               >
-                <i className="fa-solid fa-magnifying-glass text-sm sm:text-lg"></i>
+                <i className="fa-solid fa-magnifying-glass text-base sm:text-lg"></i>
               </button>
 
               {isSearchExpanded && searchResults && searchResults.length > 0 && (
@@ -1146,8 +1291,12 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
             {/* CHAPTER MENÜSÜ */}
             <div className="relative flex items-center" ref={chapterMenuRef}>
               <button
-                onClick={() => { setIsChapterExpanded(!isChapterExpanded); setIsSearchExpanded(false); }}
-                className={`flex items-center justify-center h-8.5 sm:h-10 px-2.5 sm:px-3.5 rounded-full font-extrabold text-xs sm:text-xs transition-all border shadow-sm flex-shrink-0 cursor-pointer ${
+                onClick={() => { 
+                  setExpandedNavGroup(null);
+                  setIsChapterExpanded(!isChapterExpanded); 
+                  setIsSearchExpanded(false); 
+                }}
+                className={`flex items-center justify-center h-9 sm:h-10 px-2.5 sm:px-3.5 rounded-full font-extrabold text-xs sm:text-xs transition-all border shadow-sm flex-shrink-0 cursor-pointer ${
                   isChapterExpanded 
                     ? 'bg-brand-600 text-white border-2 border-brand-300 shadow-[0_0_14px_rgba(14,165,233,0.8)] ring-2 ring-brand-300/60' 
                     : 'bg-slate-800/80 text-slate-200 border-slate-700/70 hover:bg-slate-700 hover:text-white'
