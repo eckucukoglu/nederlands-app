@@ -1488,6 +1488,7 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
             onReturn={handleTitleClick}
             getSectionTitle={getSectionTitle}
             setActiveTab={setActiveTab}
+            setCurrentChapter={setCurrentChapter}
             setIsFullQuizOpen={setIsFullQuizOpen}
             GuideContent={GuideContent}
           />

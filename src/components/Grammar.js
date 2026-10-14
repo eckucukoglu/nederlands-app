@@ -21,7 +21,7 @@ const grammarData = [
            infinitief = luisteren &nbsp; ➡️ &nbsp; stam = luister
         </div>
 
-        <div className="bg-slate-900/50 rounded-xl border border-slate-700 overflow-hidden shadow-sm">
+        <div className="bg-slate-900/50 rounded-xl border border-slate-700 overflow-x-auto shadow-sm">
            <table className="w-full text-sm text-left text-slate-300">
               <thead className="text-xs uppercase bg-slate-800 text-slate-400">
                  <tr>
@@ -87,7 +87,7 @@ const grammarData = [
         <h4 className="font-bold text-lg text-slate-200 mt-8 mb-4 border-b border-slate-700 pb-2">
           {isTr ? "En Sık Kullanılan Düzensiz Fiiller (zijn & hebben)" : "Most Common Irregular Verbs (zijn & hebben)"}
         </h4>
-        <div className="bg-slate-900/50 rounded-xl border border-slate-700 overflow-hidden shadow-sm">
+        <div className="bg-slate-900/50 rounded-xl border border-slate-700 overflow-x-auto shadow-sm">
            <table className="w-full text-sm text-left text-slate-300">
               <thead className="text-xs uppercase bg-slate-800 text-slate-400">
                  <tr>
@@ -139,7 +139,7 @@ const grammarData = [
           <p className="text-slate-300 text-sm mb-3">
              {isTr ? "Standart bir Hollandaca cümlesinde dizilim: Özne (Subject) + Çekimli Fiil (Persoonsvorm) + Kalanlar (Rest: Zaman/Yer) şeklindedir." : "The standard Dutch word order is: Subject + Persoonsvorm (verb) + Rest (time + place)."}
           </p>
-          <div className="bg-slate-900/50 rounded-xl border border-slate-700 overflow-hidden shadow-sm">
+          <div className="bg-slate-900/50 rounded-xl border border-slate-700 overflow-x-auto shadow-sm">
              <table className="w-full text-sm text-left text-slate-300">
                 <thead className="text-xs uppercase bg-slate-800 text-slate-400">
                    <tr>
@@ -174,7 +174,7 @@ const grammarData = [
                ? "Cümleye özne DIŞINDA başka bir öğeyle (zaman, yer vb.) başlarsanız, fiil ile özne yer değiştirir. (Fiil daima 2. sıradadır!)" 
                : "If you start a sentence with an element other than the subject, the verb and subject swap places. (Verb is always in the 2nd position!)"}
           </p>
-          <div className="bg-slate-900/50 rounded-xl border border-slate-700 overflow-hidden shadow-sm mb-4">
+          <div className="bg-slate-900/50 rounded-xl border border-slate-700 overflow-x-auto shadow-sm mb-4">
              <table className="w-full text-sm text-left text-slate-300">
                 <thead className="text-xs uppercase bg-slate-800 text-slate-400">
                    <tr>
@@ -329,7 +329,7 @@ const grammarData = [
            <h4 className="font-bold text-lg text-indigo-400 mb-3 border-b border-slate-700 pb-2 flex items-center gap-2">
              <i className="fa-solid fa-tag"></i> {isTr ? "1. Artikeller (Artikel)" : "1. Articles (Artikel)"}
            </h4>
-           <div className="bg-slate-900/50 rounded-xl border border-slate-700 overflow-hidden shadow-sm mb-4">
+           <div className="bg-slate-900/50 rounded-xl border border-slate-700 overflow-x-auto shadow-sm mb-4">
               <table className="w-full text-sm text-left text-slate-300">
                  <thead className="text-xs uppercase bg-slate-800 text-slate-400">
                     <tr>
@@ -443,7 +443,7 @@ const grammarData = [
             : "When an adjective is placed before a noun, it usually gets an '-e'. However, there is a very important EXCEPTION."}
         </p>
 
-        <div className="bg-slate-900/50 rounded-xl border border-slate-700 overflow-hidden shadow-sm mb-6">
+        <div className="bg-slate-900/50 rounded-xl border border-slate-700 overflow-x-auto shadow-sm mb-6">
            <table className="w-full text-sm text-left text-slate-300">
               <thead className="text-xs uppercase bg-slate-800 text-slate-400">
                  <tr>
@@ -546,7 +546,7 @@ const grammarData = [
            <h4 className="font-bold text-lg text-brand-400 mb-3 border-b border-slate-700 pb-2 flex items-center gap-2">
              <i className="fa-solid fa-gears"></i> {isTr ? "1. Kipler (Modale werkwoorden)" : "1. Modal Verbs (Modale werkwoorden)"}
            </h4>
-           <div className="bg-slate-900/50 rounded-xl border border-slate-700 overflow-hidden shadow-sm mb-4">
+           <div className="bg-slate-900/50 rounded-xl border border-slate-700 overflow-x-auto shadow-sm mb-4">
               <table className="w-full text-sm text-left text-slate-300">
                  <thead className="text-xs uppercase bg-slate-800 text-slate-400">
                     <tr>
@@ -690,7 +690,7 @@ const grammarData = [
              <i className="fa-solid fa-arrow-up-right-dots"></i> {isTr ? "1. Kurallı Formlar (Regelmatige vormen)" : "1. Regular Forms (Regelmatige vormen)"}
            </h4>
            
-           <div className="bg-slate-900/50 rounded-xl border border-slate-700 overflow-hidden shadow-sm mb-4">
+           <div className="bg-slate-900/50 rounded-xl border border-slate-700 overflow-x-auto shadow-sm mb-4">
               <table className="w-full text-sm text-left text-slate-300">
                  <thead className="text-xs uppercase bg-slate-800 text-slate-400">
                     <tr>
@@ -759,7 +759,7 @@ const grammarData = [
            <h4 className="font-bold text-lg text-rose-400 mb-3 border-b border-slate-700 pb-2 flex items-center gap-2">
              <i className="fa-solid fa-triangle-exclamation"></i> {isTr ? "2. Düzensiz Formlar (Onregelmatige vormen)" : "2. Irregular Forms (Onregelmatige vormen)"}
            </h4>
-           <div className="bg-slate-900/50 rounded-xl border border-slate-700 overflow-hidden shadow-sm">
+           <div className="bg-slate-900/50 rounded-xl border border-slate-700 overflow-x-auto shadow-sm">
               <table className="w-full text-sm text-left text-slate-300">
                  <thead className="text-xs uppercase bg-rose-900/30 text-rose-400">
                     <tr>
@@ -916,7 +916,7 @@ const grammarData = [
            <h4 className="font-bold text-lg text-brand-400 mb-3 border-b border-slate-700 pb-2 flex items-center gap-2">
              <i className="fa-solid fa-hand-pointer"></i> {isTr ? "2. İşaret Zamirleri (Demonstratief pronomen)" : "2. Demonstrative Pronouns"}
            </h4>
-           <div className="bg-slate-900/50 rounded-xl border border-slate-700 overflow-hidden shadow-sm mb-4">
+           <div className="bg-slate-900/50 rounded-xl border border-slate-700 overflow-x-auto shadow-sm mb-4">
               <table className="w-full text-sm text-left text-slate-300">
                  <thead className="text-xs uppercase bg-slate-800 text-slate-400">
                     <tr>
@@ -1057,7 +1057,7 @@ const grammarData = [
              {isTr ? "Geçmişte olup bitmiş olaylar (afgesloten zaken) için kullanılır." : "Used for completed actions in the past."}
            </p>
 
-           <div className="bg-slate-900/50 rounded-xl border border-slate-700 overflow-hidden shadow-sm mb-6">
+           <div className="bg-slate-900/50 rounded-xl border border-slate-700 overflow-x-auto shadow-sm mb-6">
               <table className="w-full text-sm text-left text-slate-300">
                  <thead className="text-xs uppercase bg-slate-800 text-slate-400">
                     <tr>
@@ -1127,7 +1127,7 @@ const grammarData = [
 
            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
              {/* Reguliere Werkwoorden */}
-             <div className="bg-slate-900/50 rounded-xl border border-slate-700 overflow-hidden shadow-sm h-fit">
+             <div className="bg-slate-900/50 rounded-xl border border-slate-700 overflow-x-auto shadow-sm h-fit">
                 <table className="w-full text-sm text-left text-slate-300">
                    <thead className="text-xs uppercase bg-slate-800 text-slate-400">
                       <tr>
@@ -1152,7 +1152,7 @@ const grammarData = [
              </div>
 
              {/* Modale Werkwoorden - Onregelmatig */}
-             <div className="bg-slate-900/50 rounded-xl border border-slate-700 overflow-hidden shadow-sm h-fit">
+             <div className="bg-slate-900/50 rounded-xl border border-slate-700 overflow-x-auto shadow-sm h-fit">
                 <table className="w-full text-[11px] sm:text-xs text-left text-slate-300">
                    <thead className="text-[10px] uppercase bg-slate-800 text-brand-400">
                       <tr>
@@ -1264,7 +1264,7 @@ const grammarData = [
                : "Verbs where the subject and object are the same (e.g., zich wassen). They use a reflexive pronoun."}
            </p>
 
-           <div className="bg-slate-900/50 rounded-xl border border-slate-700 overflow-hidden shadow-sm mb-4 w-full max-w-md">
+           <div className="bg-slate-900/50 rounded-xl border border-slate-700 overflow-x-auto shadow-sm mb-4 w-full max-w-md">
               <table className="w-full text-sm text-left text-slate-300">
                  <thead className="text-xs uppercase bg-slate-800 text-slate-400">
                     <tr>
@@ -1890,25 +1890,27 @@ export default function Grammar() {
   const nextTopic = currentIndex < grammarData.length - 1 ? grammarData[currentIndex + 1] : null;
 
   return (
-    <div className="w-full max-w-5xl mx-auto flex flex-col gap-6 animate-fadeIn pb-16">
+    <div className="w-full max-w-5xl mx-auto flex flex-col gap-6 animate-fadeIn pb-16 min-w-0 overflow-x-hidden">
       
       {/* EN ÜST: DROPDOWN MENÜ & GEZİNME PANELİ */}
-      <div className="bg-slate-800 border border-slate-700 rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-xl relative">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 mb-4">
+      <div className="bg-slate-800 border border-slate-700 rounded-2xl sm:rounded-3xl p-3.5 sm:p-6 shadow-xl relative z-30 w-full min-w-0">
+        <div className="flex items-center justify-between gap-2 mb-3 sm:mb-4 min-w-0">
           {/* Başlık & İkon */}
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 flex-shrink-0 shadow-inner">
-              <i className="fa-solid fa-spell-check text-lg"></i>
+          <div className="flex items-center gap-2 sm:gap-3 min-w-0 flex-1">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 flex-shrink-0 shadow-inner">
+              <i className="fa-solid fa-spell-check text-sm sm:text-lg"></i>
             </div>
-            <div>
-              <h2 className="text-base sm:text-lg font-extrabold text-white flex items-center gap-2">
-                {isTr ? 'Gramer Konuları' : 'Grammar Topics'}
-                <span className="text-[11px] font-semibold font-mono px-2 py-0.5 rounded-full bg-slate-900 border border-slate-700 text-indigo-300">
+            <div className="min-w-0 flex-1">
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <h2 className="text-sm sm:text-lg font-extrabold text-white truncate">
+                  {isTr ? 'Gramer Konuları' : 'Grammar Topics'}
+                </h2>
+                <span className="text-[10px] sm:text-[11px] font-semibold font-mono px-2 py-0.5 rounded-full bg-slate-900 border border-slate-700 text-indigo-300 flex-shrink-0">
                   {currentIndex + 1} / {grammarData.length}
                 </span>
-              </h2>
-              <p className="text-xs text-slate-400">
-                {isTr ? 'Aşağıdaki menüden dilediğiniz konuyu seçin' : 'Select any grammar topic from the dropdown below'}
+              </div>
+              <p className="text-[11px] sm:text-xs text-slate-400 truncate hidden xs:block">
+                {isTr ? 'Menüden dilediğiniz konuyu seçin' : 'Select any topic from the menu'}
               </p>
             </div>
           </div>
@@ -1917,145 +1919,149 @@ export default function Grammar() {
           {activeContent && (
             <button 
               onClick={() => setIsQuizOpen(true)}
-              className="flex-shrink-0 flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-500 text-white border border-indigo-500/80 px-4 sm:px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all shadow-md group cursor-pointer"
+              className="flex-shrink-0 flex items-center justify-center gap-1.5 bg-indigo-600 hover:bg-indigo-500 text-white border border-indigo-500/80 px-2.5 sm:px-4 py-1.5 sm:py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all shadow-md group cursor-pointer"
+              title={isTr ? 'Bu konuyu quiz ile test et' : 'Practice topic with quiz'}
             >
-              <i className="fa-solid fa-dumbbell group-hover:rotate-12 transition-transform"></i> 
-              <span>{isTr ? 'Konuyu Test Et' : 'Practice Topic'}</span>
+              <i className="fa-solid fa-dumbbell text-xs group-hover:rotate-12 transition-transform"></i> 
+              <span className="hidden xs:inline">{isTr ? 'Konuyu Test Et' : 'Practice Topic'}</span>
+              <span className="xs:hidden">{isTr ? 'Test' : 'Quiz'}</span>
             </button>
           )}
         </div>
 
-        {/* DROPDOWN VE YÖN BUTONLARI */}
-        <div className="flex items-center gap-2 sm:gap-3">
-          {/* Önceki Konu Butonu */}
-          <button
-            type="button"
-            onClick={handlePrevTopic}
-            disabled={currentIndex <= 0}
-            title={isTr ? (prevTopic ? `Önceki: ${prevTopic.titleTr}` : 'İlk konu') : 'Previous topic'}
-            className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-slate-900 border border-slate-700 text-slate-300 hover:text-white hover:border-slate-500 disabled:opacity-30 disabled:hover:border-slate-700 disabled:hover:text-slate-300 flex items-center justify-center transition-all flex-shrink-0 cursor-pointer disabled:cursor-not-allowed shadow-inner"
-          >
-            <i className="fa-solid fa-chevron-left text-sm"></i>
-          </button>
+        {/* DROPDOWN VE YÖN BUTONLARI WRAPPER */}
+        <div ref={dropdownRef} className="relative w-full min-w-0">
+          <div className="flex items-center gap-1.5 sm:gap-3 w-full min-w-0">
+            {/* Önceki Konu Butonu */}
+            <button
+              type="button"
+              onClick={handlePrevTopic}
+              disabled={currentIndex <= 0}
+              title={isTr ? (prevTopic ? `Önceki: ${prevTopic.titleTr}` : 'İlk konu') : 'Previous topic'}
+              className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-slate-900 border border-slate-700 text-slate-300 hover:text-white hover:border-slate-500 disabled:opacity-30 disabled:hover:border-slate-700 disabled:hover:text-slate-300 flex items-center justify-center transition-all flex-shrink-0 cursor-pointer disabled:cursor-not-allowed shadow-inner"
+            >
+              <i className="fa-solid fa-chevron-left text-xs sm:text-sm"></i>
+            </button>
 
-          {/* Ana Dropdown Menü Butonu & Paneli */}
-          <div ref={dropdownRef} className="relative flex-1">
+            {/* Ana Dropdown Menü Tetikleyici Buton */}
             <button
               type="button"
               onClick={() => setIsDropdownOpen(prev => !prev)}
-              className="w-full flex items-center justify-between gap-3 bg-slate-900/95 hover:bg-slate-900 border border-slate-600 hover:border-indigo-500 rounded-xl sm:rounded-2xl px-3.5 sm:px-4 py-2.5 sm:py-3 text-left transition-all shadow-inner group cursor-pointer ring-0 focus:ring-2 focus:ring-indigo-500/50"
+              className={`flex-1 min-w-0 flex items-center justify-between gap-2 bg-slate-900/95 hover:bg-slate-900 border ${
+                isDropdownOpen ? 'border-indigo-500 ring-2 ring-indigo-500/30' : 'border-slate-600 hover:border-indigo-500/70'
+              } rounded-xl sm:rounded-2xl px-2.5 sm:px-4 py-2 sm:py-2.5 text-left transition-all shadow-inner group cursor-pointer`}
             >
-              <div className="flex items-center gap-2.5 sm:gap-3 min-w-0">
-                <span className="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-indigo-500/20 text-indigo-400 border border-indigo-500/30 text-xs sm:text-sm font-bold flex items-center justify-center flex-shrink-0 font-mono">
+              <div className="flex items-center gap-2 sm:gap-3 min-w-0 flex-1 overflow-hidden">
+                <span className="w-5.5 h-5.5 sm:w-7 sm:h-7 rounded-md sm:rounded-lg bg-indigo-500/20 text-indigo-400 border border-indigo-500/30 text-xs sm:text-sm font-bold flex items-center justify-center flex-shrink-0 font-mono">
                   {currentIndex + 1}
                 </span>
-                <div className="truncate">
+                <div className="min-w-0 flex-1 overflow-hidden">
                   <div className="text-xs sm:text-sm font-bold text-slate-100 group-hover:text-indigo-300 transition-colors truncate">
                     {isTr ? activeContent?.titleTr : activeContent?.titleEn}
                   </div>
-                  <div className="text-[10px] sm:text-xs text-slate-400 truncate">
+                  <div className="text-[10.5px] sm:text-xs text-slate-400 truncate hidden xs:block">
                     {isTr ? activeContent?.titleEn : activeContent?.titleTr}
                   </div>
                 </div>
               </div>
-              <div className="flex items-center gap-2 flex-shrink-0 text-slate-400 group-hover:text-indigo-400 transition-colors">
+              <div className="flex items-center gap-1.5 flex-shrink-0 text-slate-400 group-hover:text-indigo-300 transition-colors pl-1">
                 <span className="text-[10px] sm:text-xs font-mono font-semibold px-2 py-0.5 rounded bg-slate-800 border border-slate-700 hidden md:inline">
                   {isTr ? 'Değiştir' : 'Change'}
                 </span>
-                <i className={`fa-solid fa-chevron-down text-xs transition-transform duration-200 ${isDropdownOpen ? 'rotate-180 text-indigo-400' : ''}`}></i>
+                <i className={`fa-solid fa-chevron-down text-[11px] sm:text-xs transition-transform duration-200 ${isDropdownOpen ? 'rotate-180 text-indigo-400' : ''}`}></i>
               </div>
             </button>
 
-            {/* Dropdown Açılır Menü Listesi */}
-            {isDropdownOpen && (
-              <div className="absolute top-full left-0 right-0 mt-2 z-50 bg-slate-900/98 border border-slate-600 rounded-2xl shadow-2xl overflow-hidden animate-fadeIn backdrop-blur-md">
-                {/* Arama Kutusu */}
-                <div className="p-3 border-b border-slate-800 bg-slate-950/80 sticky top-0 z-10">
-                  <div className="relative">
-                    <i className="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 text-xs"></i>
-                    <input
-                      type="text"
-                      autoFocus
-                      value={searchQuery}
-                      onChange={(e) => setSearchQuery(e.target.value)}
-                      placeholder={isTr ? "Gramer konularında ara..." : "Search grammar topics..."}
-                      className="w-full bg-slate-800/90 border border-slate-700 rounded-xl pl-9 pr-8 py-2 text-xs sm:text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
-                    />
-                    {searchQuery && (
-                      <button
-                        type="button"
-                        onClick={() => setSearchQuery("")}
-                        className="absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-rose-400 p-1 text-xs"
-                      >
-                        <i className="fa-solid fa-xmark"></i>
-                      </button>
-                    )}
-                  </div>
-                </div>
+            {/* Sonraki Konu Butonu */}
+            <button
+              type="button"
+              onClick={handleNextTopic}
+              disabled={currentIndex >= grammarData.length - 1}
+              title={isTr ? (nextTopic ? `Sonraki: ${nextTopic.titleTr}` : 'Son konu') : 'Next topic'}
+              className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-slate-900 border border-slate-700 text-slate-300 hover:text-white hover:border-slate-500 disabled:opacity-30 disabled:hover:border-slate-700 disabled:hover:text-slate-300 flex items-center justify-center transition-all flex-shrink-0 cursor-pointer disabled:cursor-not-allowed shadow-inner"
+            >
+              <i className="fa-solid fa-chevron-right text-xs sm:text-sm"></i>
+            </button>
+          </div>
 
-                {/* Konu Maddeleri */}
-                <div className="max-h-72 sm:max-h-96 overflow-y-auto scrollbar-thin scrollbar-thumb-slate-700 divide-y divide-slate-800/60">
-                  {filteredTopics.length > 0 ? (
-                    filteredTopics.map((topic) => {
-                      const topicIndex = grammarData.findIndex(t => t.id === topic.id);
-                      const isActive = activeTopic === topic.id;
-                      return (
-                        <button
-                          key={topic.id}
-                          type="button"
-                          onClick={() => {
-                            setActiveTopic(topic.id);
-                            setIsDropdownOpen(false);
-                            setSearchQuery("");
-                          }}
-                          className={`w-full text-left px-4 py-3 transition-colors flex items-center justify-between gap-3 cursor-pointer ${
-                            isActive 
-                              ? 'bg-indigo-950/70 text-indigo-300 border-l-4 border-indigo-500' 
-                              : 'hover:bg-slate-800/80 text-slate-300 hover:text-white border-l-4 border-transparent'
-                          }`}
-                        >
-                          <div className="flex items-center gap-3 min-w-0">
-                            <span className={`w-5 h-5 rounded text-[11px] font-mono font-bold flex items-center justify-center flex-shrink-0 ${
-                              isActive ? 'bg-indigo-500 text-white' : 'bg-slate-800 text-slate-400'
-                            }`}>
-                              {topicIndex + 1}
-                            </span>
-                            <div className="truncate">
-                              <div className="text-xs sm:text-sm font-semibold truncate">
-                                {isTr ? topic.titleTr : topic.titleEn}
-                              </div>
-                              <div className="text-[10px] text-slate-500 truncate">
-                                {isTr ? topic.titleEn : topic.titleTr}
-                              </div>
-                            </div>
-                          </div>
-                          {isActive && (
-                            <i className="fa-solid fa-check text-indigo-400 text-xs flex-shrink-0"></i>
-                          )}
-                        </button>
-                      );
-                    })
-                  ) : (
-                    <div className="p-6 text-center text-slate-500 text-xs sm:text-sm">
-                      <i className="fa-solid fa-circle-exclamation text-base mb-1 block"></i>
-                      {isTr ? "Eşleşen gramer konusu bulunamadı." : "No matching topics found."}
-                    </div>
+          {/* Dropdown Açılır Menü Listesi (Tüm genişliği kaplar ve taşma yapmaz) */}
+          {isDropdownOpen && (
+            <div className="absolute top-full left-0 right-0 mt-2 z-50 bg-slate-900/98 border border-slate-600 rounded-2xl shadow-2xl overflow-hidden animate-fadeIn backdrop-blur-md max-w-full">
+              {/* Arama Kutusu */}
+              <div className="p-2.5 sm:p-3 border-b border-slate-800 bg-slate-950/80 sticky top-0 z-10">
+                <div className="relative">
+                  <i className="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 text-xs"></i>
+                  <input
+                    type="text"
+                    autoFocus
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    placeholder={isTr ? "Gramer konularında ara..." : "Search grammar topics..."}
+                    className="w-full bg-slate-800/90 border border-slate-700 rounded-xl pl-9 pr-8 py-2 text-xs sm:text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                  />
+                  {searchQuery && (
+                    <button
+                      type="button"
+                      onClick={() => setSearchQuery("")}
+                      className="absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-rose-400 p-1 text-xs"
+                    >
+                      <i className="fa-solid fa-xmark"></i>
+                    </button>
                   )}
                 </div>
               </div>
-            )}
-          </div>
 
-          {/* Sonraki Konu Butonu */}
-          <button
-            type="button"
-            onClick={handleNextTopic}
-            disabled={currentIndex >= grammarData.length - 1}
-            title={isTr ? (nextTopic ? `Sonraki: ${nextTopic.titleTr}` : 'Son konu') : 'Next topic'}
-            className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-slate-900 border border-slate-700 text-slate-300 hover:text-white hover:border-slate-500 disabled:opacity-30 disabled:hover:border-slate-700 disabled:hover:text-slate-300 flex items-center justify-center transition-all flex-shrink-0 cursor-pointer disabled:cursor-not-allowed shadow-inner"
-          >
-            <i className="fa-solid fa-chevron-right text-sm"></i>
-          </button>
+              {/* Konu Maddeleri */}
+              <div className="max-h-64 sm:max-h-96 overflow-y-auto scrollbar-thin scrollbar-thumb-slate-700 divide-y divide-slate-800/60">
+                {filteredTopics.length > 0 ? (
+                  filteredTopics.map((topic) => {
+                    const topicIndex = grammarData.findIndex(t => t.id === topic.id);
+                    const isActive = activeTopic === topic.id;
+                    return (
+                      <button
+                        key={topic.id}
+                        type="button"
+                        onClick={() => {
+                          setActiveTopic(topic.id);
+                          setIsDropdownOpen(false);
+                          setSearchQuery("");
+                        }}
+                        className={`w-full text-left px-3.5 sm:px-4 py-2.5 sm:py-3 transition-colors flex items-center justify-between gap-2.5 sm:gap-3 cursor-pointer ${
+                          isActive 
+                            ? 'bg-indigo-950/70 text-indigo-300 border-l-4 border-indigo-500' 
+                            : 'hover:bg-slate-800/80 text-slate-300 hover:text-white border-l-4 border-transparent'
+                        }`}
+                      >
+                        <div className="flex items-center gap-2.5 sm:gap-3 min-w-0 flex-1">
+                          <span className={`w-5 h-5 rounded text-[11px] font-mono font-bold flex items-center justify-center flex-shrink-0 ${
+                            isActive ? 'bg-indigo-500 text-white' : 'bg-slate-800 text-slate-400'
+                          }`}>
+                            {topicIndex + 1}
+                          </span>
+                          <div className="min-w-0 flex-1 truncate">
+                            <div className="text-xs sm:text-sm font-semibold truncate">
+                              {isTr ? topic.titleTr : topic.titleEn}
+                            </div>
+                            <div className="text-[10px] sm:text-xs text-slate-400 truncate">
+                              {isTr ? topic.titleEn : topic.titleTr}
+                            </div>
+                          </div>
+                        </div>
+                        {isActive && (
+                          <i className="fa-solid fa-check text-indigo-400 text-xs flex-shrink-0"></i>
+                        )}
+                      </button>
+                    );
+                  })
+                ) : (
+                  <div className="p-6 text-center text-slate-500 text-xs sm:text-sm">
+                    <i className="fa-solid fa-circle-exclamation text-base mb-1 block"></i>
+                    {isTr ? "Eşleşen gramer konusu bulunamadı." : "No matching topics found."}
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
         </div>
       </div>
 

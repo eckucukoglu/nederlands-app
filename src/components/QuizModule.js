@@ -495,17 +495,32 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
   // Sola kaydırma: Soruyu geç (veya soru yanıtlandıysa sıradaki soru)
   // Sağa kaydırma: Bilmiyorum (veya soru yanıtlandıysa sıradaki soru)
   // Yukarı kaydırma: İyi soru olarak işaretle
-  // Aşağı kaydırma: Ekranı kapat (yalnızca sayfa tepesindeyken)
+  // Aşağı kaydırma: Ekranı kapat
   const handleTouchStart = (e) => {
     if (e.stopPropagation) e.stopPropagation();
     if (!e.touches || e.touches.length === 0) return;
     const touch = e.touches[0];
+    const container = scrollContainerRef.current;
+    
+    // Dikey kaydırma çubuğu (scrollbar) var mı?
+    // scrollHeight > clientHeight ise içerik dikeyde kaydırılabilir durumdadır
+    const hasScrollbar = Boolean(
+      container && (container.scrollHeight > container.clientHeight + 4)
+    );
+
+    // Dokunma sorunun başlık / header alanından mı başladı?
+    const isHeaderTouch = Boolean(
+      e.target?.closest?.('[data-quiz-header="true"], .quiz-question-header, .quiz-modal-header')
+    );
+
     touchStartRef.current = {
       x: touch.clientX,
       y: touch.clientY,
       time: Date.now(),
       target: e.target,
-      scrollTop: scrollContainerRef.current ? scrollContainerRef.current.scrollTop : 0
+      scrollTop: container ? container.scrollTop : 0,
+      hasScrollbar,
+      isHeaderTouch
     };
   };
 
@@ -547,18 +562,31 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
       return;
     }
 
-    // 2. Dikey Kaydırma (Vertical Swipe)
+    // 2. Dikey Kaydırma (Vertical Swipe: Yukarı / Aşağı)
     if (absY > absX && absY >= VERTICAL_THRESHOLD) {
+      const container = scrollContainerRef.current;
+      const currentHasScrollbar = Boolean(
+        container && (container.scrollHeight > container.clientHeight + 4)
+      );
+      const hasScrollbar = touchStartRef.current.hasScrollbar || currentHasScrollbar;
+      const isHeaderTouch = touchStartRef.current.isHeaderTouch;
+
+      // Kullanıcı Kuralı:
+      // "Quiz kısmında yukarı aşağı kaydirmalar yalnızca kaydırma çubuğu yoksa çalışsın. 
+      // Kaydırma çubuğu varsa sorunun başlık kismindan calissin yalnizca"
+      if (hasScrollbar && !isHeaderTouch) {
+        // Kaydırma çubuğu var ve hareket soru başlığından başlamadı;
+        // İçeriğin dikey kaydırılmasına (scroll) öncelik ver, yukarı/aşağı jestini yok say!
+        return;
+      }
+
       if (deltaY < 0) {
         // Yukarı kaydırma: İyi soru diye işaretle
         handleGoodToggle();
       } else {
         // Aşağı kaydırma: Ekranı kapat
-        const initialScrollTop = touchStartRef.current.scrollTop;
-        if (initialScrollTop <= 15) {
-          showGestureToast(isTr ? 'Kapatılıyor... ✕' : 'Closing... ✕', 'fa-xmark', 'text-slate-400');
-          if (onClose) onClose();
-        }
+        showGestureToast(isTr ? 'Kapatılıyor... ✕' : 'Closing... ✕', 'fa-xmark', 'text-slate-400');
+        if (onClose) onClose();
       }
       return;
     }
@@ -754,7 +782,7 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
         )}
         
         {/* Header */}
-        <div className="px-4 sm:px-6 py-3 sm:py-3.5 border-b border-slate-800 bg-slate-800/80 flex-none space-y-2.5">
+        <div data-quiz-header="true" className="quiz-modal-header px-4 sm:px-6 py-3 sm:py-3.5 border-b border-slate-800 bg-slate-800/80 flex-none space-y-2.5 select-none">
           {/* Üst Satır: Başlık & Aksiyon Butonları */}
           <div className="flex items-center justify-between gap-2">
             <div className="flex items-center gap-2 min-w-0 flex-1">
@@ -892,7 +920,7 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
         
         {/* Content */}
         <div ref={scrollContainerRef} className="px-4 sm:px-7 py-4 sm:py-5 flex-1 flex flex-col justify-start overflow-y-auto scrollbar-thin scrollbar-thumb-slate-700">
-           <div className="text-center mb-3 sm:mb-4">
+           <div data-quiz-header="true" className="quiz-question-header text-center mb-3 sm:mb-4 select-none">
               {currentQ.tags && currentQ.tags.length > 0 && (
                 <div className="flex flex-wrap justify-center gap-1.5 mb-2">
                   {currentQ.tags.map(tag => (
