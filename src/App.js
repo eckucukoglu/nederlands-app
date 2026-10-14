@@ -193,7 +193,7 @@ const GuideContent = ({ lang }) => (
 
 
 
-function MainContent({ user, setIsAuthModalOpen }) {
+function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
   const { lang, t } = useLanguage(); 
   
   const availableChapters = [...new Set(bookSections.map(sec => sec.chapter))].filter(Boolean).sort((a, b) => a - b);
@@ -914,10 +914,10 @@ function MainContent({ user, setIsAuthModalOpen }) {
 
       {/* 1. HEADER (SADECE BU KISIM SABİT) */}
       <header className="bg-slate-950/95 backdrop-blur-md text-white shadow-md sticky top-0 z-50 border-b border-slate-800 flex-none w-full">
-        <div className="max-w-7xl mx-auto px-3 sm:px-4 py-3 flex flex-nowrap justify-between items-center gap-2">
+        <div className="max-w-7xl mx-auto px-2 sm:px-4 py-2 sm:py-2.5 flex flex-nowrap justify-between items-center gap-1.5 sm:gap-2">
           
           <div 
-            className="flex items-center space-x-2 flex-shrink min-w-0 cursor-pointer group select-none"
+            className="flex items-center space-x-1.5 sm:space-x-2 flex-shrink-0 min-w-0 cursor-pointer group select-none"
             onClick={handleTitleClick}
             onDoubleClick={(e) => { e.preventDefault(); setIsInfoModalOpen(true); }}
             title={activeTab === 'home' 
@@ -925,31 +925,35 @@ function MainContent({ user, setIsAuthModalOpen }) {
               : (lang === 'tr' ? '1 Tık: Dashboard | 2 Tık: Kılavuz' : '1 Click: Dashboard | 2 Clicks: Guide')
             }
           >
-            <div className={`p-2 rounded-xl backdrop-blur flex-shrink-0 transition-colors ${
+            <div className={`w-7 h-7 sm:w-9 sm:h-9 rounded-lg sm:rounded-xl flex items-center justify-center transition-all duration-200 ${
               activeTab === 'home' 
-                ? 'bg-brand-600 text-white shadow-md' 
-                : 'bg-brand-900/50 text-brand-400 group-hover:bg-brand-800/50 group-hover:text-brand-300'
+                ? 'bg-brand-500 text-white shadow-[0_0_12px_rgba(14,165,233,0.7)] ring-1 ring-brand-300' 
+                : 'bg-slate-800/80 hover:bg-slate-800 text-slate-400 hover:text-brand-300 border border-slate-700/60'
             }`}>
-              <i className="fa-solid fa-book-medical text-xl"></i>
+              <i className="fa-solid fa-book-medical text-sm sm:text-lg"></i>
             </div>
             <div className="hidden sm:block truncate">
-              <h1 className={`font-bold text-lg leading-tight truncate transition-colors ${
+              <h1 className={`font-bold text-base sm:text-lg leading-tight truncate transition-colors ${
                 activeTab === 'home' ? 'text-brand-300' : 'text-slate-100 group-hover:text-brand-300'
               }`}>Nederlands in Gang</h1>
-              <p className="text-xs text-brand-300 truncate">Interactief Oefenportaal (A1 → A2)</p>
+              <p className="text-[11px] text-brand-400/80 truncate">Interactief Oefenportaal (A1 → A2)</p>
             </div>
             
           </div>
 
-          <div className="flex items-center space-x-1 sm:space-x-2 flex-shrink-0 overflow-visible">
+          <div className="flex items-center gap-1 sm:gap-1.5 flex-shrink-0 overflow-visible">
             
             {/* FULL QUIZ BUTONU */}
             <button 
               onClick={() => setIsFullQuizOpen(true)}
-              className="p-1.5 sm:p-2 rounded-full transition-colors flex items-center justify-center bg-teal-900/30 text-teal-400 hover:bg-teal-600 hover:text-white border border-teal-800/30 shadow-sm"
+              className={`w-7 h-7 sm:w-8.5 sm:h-8.5 rounded-full transition-all duration-200 flex items-center justify-center cursor-pointer border ${
+                isFullQuizOpen 
+                  ? 'bg-teal-500 text-white shadow-[0_0_12px_rgba(20,184,166,0.7)] border-teal-400 ring-1 ring-teal-300' 
+                  : 'bg-slate-800/70 hover:bg-slate-800 text-slate-400 hover:text-teal-400 border-slate-700/60'
+              }`}
               title={lang === 'tr' ? 'Genel Sınav & Full Quiz' : 'Full Quiz Mode'}
             >
-              <i className="fa-solid fa-graduation-cap text-lg sm:text-xl"></i>
+              <i className="fa-solid fa-graduation-cap text-xs sm:text-base"></i>
             </button>
 
             {/* SUMMARY BUTONU */}
@@ -972,12 +976,17 @@ function MainContent({ user, setIsAuthModalOpen }) {
                 setIsChapterExpanded(false); 
                 setIsSearchExpanded(false);
               }}
-              className={`p-1.5 sm:p-2 rounded-full transition-colors flex items-center justify-center ${isSummaryMode ? 'bg-amber-600 text-white shadow-md' : 'bg-amber-900/30 text-amber-400 hover:bg-amber-600 hover:text-white border border-amber-800/30'}`}
+              className={`w-7 h-7 sm:w-8.5 sm:h-8.5 rounded-full transition-all duration-200 flex items-center justify-center cursor-pointer border ${
+                isSummaryMode 
+                  ? 'bg-amber-500 text-white shadow-[0_0_12px_rgba(245,158,11,0.7)] border-amber-400 ring-1 ring-amber-300' 
+                  : 'bg-slate-800/70 hover:bg-slate-800 text-slate-400 hover:text-amber-400 border-slate-700/60'
+              }`}
               title={lang === 'tr' ? 'Özet (Summary)' : 'Summary'}
             >
-              <i className="fa-solid fa-chalkboard-user text-lg sm:text-xl"></i>
+              <i className="fa-solid fa-chalkboard-user text-xs sm:text-base"></i>
             </button>
 
+            {/* FLASHCARDS BUTONU */}
             <button 
               onClick={() => {
                 if (activeTab === 'flashcards') {
@@ -989,12 +998,17 @@ function MainContent({ user, setIsAuthModalOpen }) {
                 setIsChapterExpanded(false); 
                 setIsSearchExpanded(false);
               }}
-              className={`p-1.5 sm:p-2 rounded-full transition-colors flex items-center justify-center ${activeTab === 'flashcards' ? 'bg-rose-600 text-white shadow-md' : 'bg-rose-900/30 text-rose-400 hover:bg-rose-600 hover:text-white border border-rose-800/30'}`}
+              className={`w-7 h-7 sm:w-8.5 sm:h-8.5 rounded-full transition-all duration-200 flex items-center justify-center cursor-pointer border ${
+                activeTab === 'flashcards' 
+                  ? 'bg-rose-500 text-white shadow-[0_0_12px_rgba(244,63,94,0.7)] border-rose-400 ring-1 ring-rose-300' 
+                  : 'bg-slate-800/70 hover:bg-slate-800 text-slate-400 hover:text-rose-400 border-slate-700/60'
+              }`}
               title={t('flashcards')}
             >
-              <i className="fa-solid fa-clone text-lg sm:text-xl"></i>
+              <i className="fa-solid fa-clone text-xs sm:text-base"></i>
             </button>
 
+            {/* GRAMMAR BUTONU */}
             <button 
               onClick={() => {
                 if (activeTab === 'grammar') {
@@ -1006,12 +1020,17 @@ function MainContent({ user, setIsAuthModalOpen }) {
                 setIsChapterExpanded(false); 
                 setIsSearchExpanded(false);
               }}
-              className={`p-1.5 sm:p-2 rounded-full transition-colors flex items-center justify-center ${activeTab === 'grammar' ? 'bg-indigo-600 text-white shadow-md' : 'bg-indigo-900/30 text-indigo-400 hover:bg-indigo-600 hover:text-white border border-indigo-800/30'}`}
+              className={`w-7 h-7 sm:w-8.5 sm:h-8.5 rounded-full transition-all duration-200 flex items-center justify-center cursor-pointer border ${
+                activeTab === 'grammar' 
+                  ? 'bg-indigo-500 text-white shadow-[0_0_12px_rgba(99,102,241,0.7)] border-indigo-400 ring-1 ring-indigo-300' 
+                  : 'bg-slate-800/70 hover:bg-slate-800 text-slate-400 hover:text-indigo-400 border-slate-700/60'
+              }`}
               title={lang === 'tr' ? 'Gramer Referansı' : 'Grammar Reference'}
             >
-              <i className="fa-solid fa-spell-check text-lg sm:text-xl"></i>
+              <i className="fa-solid fa-spell-check text-xs sm:text-base"></i>
             </button>
 
+            {/* VERBS BUTONU */}
             <button 
               onClick={() => {
                 if (activeTab === 'verbs') {
@@ -1023,21 +1042,31 @@ function MainContent({ user, setIsAuthModalOpen }) {
                 setIsChapterExpanded(false); 
                 setIsSearchExpanded(false);
               }}
-              className={`p-1.5 sm:p-2 rounded-full transition-colors flex items-center justify-center ${activeTab === 'verbs' ? 'bg-sky-600 text-white shadow-md' : 'bg-sky-900/30 text-sky-400 hover:bg-sky-600 hover:text-white border border-sky-800/30'}`}
+              className={`w-7 h-7 sm:w-8.5 sm:h-8.5 rounded-full transition-all duration-200 flex items-center justify-center cursor-pointer border ${
+                activeTab === 'verbs' 
+                  ? 'bg-sky-500 text-white shadow-[0_0_12px_rgba(14,165,233,0.7)] border-sky-400 ring-1 ring-sky-300' 
+                  : 'bg-slate-800/70 hover:bg-slate-800 text-slate-400 hover:text-sky-400 border-slate-700/60'
+              }`}
               title={lang === 'tr' ? 'Düzensiz Fiiller' : 'Irregular Verbs'}
             >
-              <i className="fa-solid fa-bolt text-lg sm:text-xl"></i>
+              <i className="fa-solid fa-bolt text-xs sm:text-base"></i>
             </button>
 
+            {/* AUTH / PROFİL BUTONU */}
             <button 
               onClick={() => setIsAuthModalOpen(true)}
-              className="p-1.5 sm:p-2 rounded-full hover:bg-slate-800 transition-colors flex items-center justify-center relative group"
+              className={`w-7 h-7 sm:w-8.5 sm:h-8.5 rounded-full transition-all duration-200 flex items-center justify-center relative cursor-pointer border ${
+                isAuthModalOpen 
+                  ? 'bg-emerald-500 text-white shadow-[0_0_12px_rgba(16,185,129,0.7)] border-emerald-400 ring-1 ring-emerald-300' 
+                  : 'bg-slate-800/70 hover:bg-slate-800 text-slate-400 hover:text-emerald-400 border-slate-700/60'
+              }`}
               title={t('accountSync')}
             >
-              <i className={`fa-solid fa-circle-user text-xl sm:text-2xl ${user ? 'text-emerald-400' : 'text-slate-400 group-hover:text-brand-400'}`}></i>
-              {user && <div className="absolute top-0 right-0 w-2.5 h-2.5 bg-emerald-500 border-2 border-slate-950 rounded-full"></div>}
+              <i className="fa-solid fa-circle-user text-xs sm:text-base"></i>
+              {user && <div className="absolute top-0 right-0 w-2 h-2 bg-emerald-400 border border-slate-950 rounded-full shadow-[0_0_4px_rgba(52,211,153,0.9)]"></div>}
             </button>
 
+            {/* ARAMA BUTONU */}
             <div className="relative flex items-center" ref={searchRef}>
               <div className={`hidden sm:flex transition-all duration-300 ease-in-out overflow-hidden items-center ${isSearchExpanded ? 'w-56 opacity-100 mr-1' : 'w-0 opacity-0'}`}>
                 <form onSubmit={handleGlobalSearch} className="w-full relative">
@@ -1077,10 +1106,14 @@ function MainContent({ user, setIsAuthModalOpen }) {
                     }
                   }
                 }}
-                className={`p-1.5 sm:p-2 rounded-full transition-colors flex items-center justify-center ${isSearchExpanded ? 'hidden sm:flex bg-brand-600 hover:bg-brand-500 text-white' : 'hover:bg-slate-800 text-slate-400 hover:text-brand-400'}`}
+                className={`w-7 h-7 sm:w-8.5 sm:h-8.5 rounded-full transition-all duration-200 flex items-center justify-center cursor-pointer border ${
+                  (isMobileSearchOpen || isSearchExpanded)
+                    ? 'bg-brand-500 text-white shadow-[0_0_12px_rgba(14,165,233,0.7)] border-brand-400 ring-1 ring-brand-300' 
+                    : 'bg-slate-800/70 hover:bg-slate-800 text-slate-400 hover:text-brand-400 border-slate-700/60'
+                }`}
                 title={t('searchTitle')}
               >
-                <i className="fa-solid fa-magnifying-glass text-lg sm:text-xl"></i>
+                <i className="fa-solid fa-magnifying-glass text-xs sm:text-base"></i>
               </button>
 
               {isSearchExpanded && searchResults && searchResults.length > 0 && (
@@ -1090,22 +1123,29 @@ function MainContent({ user, setIsAuthModalOpen }) {
               )}
             </div>
 
-            <div className="h-6 w-[1px] bg-slate-700 my-auto mx-0.5 sm:mx-1"></div>
+            <div className="h-4 sm:h-5 w-[1px] bg-slate-800 mx-0.5 flex-shrink-0"></div>
 
+            {/* CHAPTER MENÜSÜ */}
             <div className="relative flex items-center" ref={chapterMenuRef}>
               <button
                 onClick={() => { setIsChapterExpanded(!isChapterExpanded); setIsSearchExpanded(false); }}
-                className={`flex items-center justify-center px-3 sm:px-4 h-9 rounded-full font-extrabold text-xs sm:text-sm transition-all border shadow-sm flex-shrink-0 ${isChapterExpanded ? 'bg-brand-600 text-white border-brand-500' : 'bg-slate-800 text-slate-200 border-slate-700 hover:bg-slate-700'}`}
+                className={`flex items-center justify-center h-7 sm:h-8.5 px-2 sm:px-3 rounded-full font-extrabold text-[11px] sm:text-xs transition-all border shadow-sm flex-shrink-0 cursor-pointer ${
+                  isChapterExpanded 
+                    ? 'bg-brand-500 text-white border-brand-400 shadow-[0_0_12px_rgba(14,165,233,0.6)] ring-1 ring-brand-300' 
+                    : 'bg-slate-800/80 text-slate-200 border-slate-700/70 hover:bg-slate-700 hover:text-white'
+                }`}
                 title={t('changeChapter')}
               >
-                {/* Mobilde sadece Ü17 vb. gösterilir, masaüstünde tam metin */}
-                <span className="sm:hidden whitespace-nowrap flex items-center gap-1">
-                   {lang === 'tr' ? 'Ü' : 'Ch'}{currentChapter} {isChapterFullyCompleted(currentChapter) && <i className="fa-solid fa-circle-check text-emerald-400"></i>}
+                {/* Mobilde kompakt Ü17, masaüstünde tam metin */}
+                <span className="sm:hidden whitespace-nowrap flex items-center gap-0.5">
+                   {lang === 'tr' ? 'Ü' : 'Ch'}{currentChapter}
+                   {isChapterFullyCompleted(currentChapter) && <i className="fa-solid fa-circle-check text-emerald-400 text-[9px]"></i>}
                 </span>
                 <span className="hidden sm:flex items-center gap-1.5 whitespace-nowrap">
-                   {lang === 'tr' ? 'Ünite' : 'Chapter'} {currentChapter} {isChapterFullyCompleted(currentChapter) && <i className="fa-solid fa-circle-check text-emerald-400"></i>}
+                   {lang === 'tr' ? 'Ünite' : 'Chapter'} {currentChapter}
+                   {isChapterFullyCompleted(currentChapter) && <i className="fa-solid fa-circle-check text-emerald-400 text-[10px]"></i>}
                 </span>
-                <i className={`fa-solid fa-chevron-${isChapterExpanded ? 'up' : 'down'} ml-2 text-[10px]`}></i>
+                <i className={`fa-solid fa-chevron-${isChapterExpanded ? 'up' : 'down'} ml-1 text-[8px] transition-transform`}></i>
               </button>
 
               {isChapterExpanded && (
@@ -1119,7 +1159,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
                           handleChapterChange({ target: { value: ch }});
                           setIsChapterExpanded(false); 
                         }}
-                        className={`w-full px-4 py-3 flex flex-col text-left text-sm transition-colors ${currentChapter === ch ? 'bg-slate-700/50 text-brand-300 font-bold border-l-4 border-brand-400' : 'text-slate-300 hover:bg-slate-700/30 border-l-4 border-transparent'}`}
+                        className={`w-full px-4 py-3 flex flex-col text-left text-sm transition-colors cursor-pointer ${currentChapter === ch ? 'bg-slate-700/50 text-brand-300 font-bold border-l-4 border-brand-400' : 'text-slate-300 hover:bg-slate-700/30 border-l-4 border-transparent'}`}
                       >
                         <div className="flex justify-between items-center w-full">
                           <span className="font-bold">{lang === 'tr' ? 'Ünite' : 'Chapter'} {ch}</span>
@@ -1533,7 +1573,7 @@ export default function App() {
   return (
     <LanguageProvider>
       <AuthModal isOpen={isAuthModalOpen} onClose={() => setIsAuthModalOpen(false)} user={user} />
-      <MainContent user={user} setIsAuthModalOpen={setIsAuthModalOpen} />
+      <MainContent user={user} isAuthModalOpen={isAuthModalOpen} setIsAuthModalOpen={setIsAuthModalOpen} />
     </LanguageProvider>
   );
 }
