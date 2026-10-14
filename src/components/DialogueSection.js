@@ -684,7 +684,7 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
         <div className="bg-slate-800 rounded-2xl p-6 shadow-lg border border-slate-700 space-y-6 animate-fadeIn">
           <h3 className="text-xl font-bold text-slate-100 border-b border-slate-700 pb-2 mb-4 flex items-center space-x-2">
             <i className="fa-solid fa-pen-to-square text-brand-400"></i>
-            <span>{lang === 'tr' ? 'Bölüm Egzersizleri' : 'Section Exercises'}</span>
+            <span>{lang === 'tr' ? 'Bölüm Soruları' : 'Section Questions'}</span>
           </h3>
 
           {sectionData.exerciseGroups.map((group, gIdx) => (

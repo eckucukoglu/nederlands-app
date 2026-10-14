@@ -452,6 +452,8 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
         }
       } else if (e.key === 'ArrowRight') {
         e.preventDefault();
+        if (e.stopPropagation) e.stopPropagation();
+        if (e.stopImmediatePropagation) e.stopImmediatePropagation();
         if (isAnswered) {
           showGestureToast(isTr ? 'Sıradaki Soru ⏭' : 'Next Question ⏭', 'fa-forward', 'text-amber-400');
           goToNextState();
@@ -461,15 +463,21 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
         }
       } else if (e.key === 'ArrowLeft') {
         e.preventDefault();
+        if (e.stopPropagation) e.stopPropagation();
+        if (e.stopImmediatePropagation) e.stopImmediatePropagation();
         if (!isAnswered) {
           showGestureToast(isTr ? 'Bilmiyorum ✕' : "Don't know ✕", 'fa-circle-question', 'text-rose-400');
           handleDontKnow();
         }
       } else if (e.key === 'ArrowUp') {
         e.preventDefault();
+        if (e.stopPropagation) e.stopPropagation();
+        if (e.stopImmediatePropagation) e.stopImmediatePropagation();
         handleGoodToggle();
       } else if (e.key === 'ArrowDown') {
         e.preventDefault();
+        if (e.stopPropagation) e.stopPropagation();
+        if (e.stopImmediatePropagation) e.stopImmediatePropagation();
         showGestureToast(isTr ? 'Kapatılıyor... ✕' : 'Closing... ✕', 'fa-xmark', 'text-slate-400');
         if (onClose) onClose();
       }
@@ -486,6 +494,7 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
   // Yukarı kaydırma: İyi soru olarak işaretle
   // Aşağı kaydırma: Ekranı kapat (yalnızca sayfa tepesindeyken)
   const handleTouchStart = (e) => {
+    if (e.stopPropagation) e.stopPropagation();
     if (!e.touches || e.touches.length === 0) return;
     const touch = e.touches[0];
     touchStartRef.current = {
@@ -498,6 +507,7 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
   };
 
   const handleTouchEnd = (e) => {
+    if (e.stopPropagation) e.stopPropagation();
     if (!e.changedTouches || e.changedTouches.length === 0) return;
     const touch = e.changedTouches[0];
     const deltaX = touch.clientX - touchStartRef.current.x;
@@ -555,7 +565,14 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
   // HİÇ SORU BULUNAMADIĞINDA ÇIKAN EKRAN (Scroll Eklendi)
   if (deck.length === 0) {
     return (
-      <div className="fixed inset-0 z-[150] flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm" onClick={onClose}>
+      <div 
+        data-quiz-module="true"
+        className="fixed inset-0 z-[150] flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm" 
+        onClick={onClose}
+        onTouchStart={(e) => e.stopPropagation()}
+        onTouchMove={(e) => e.stopPropagation()}
+        onTouchEnd={(e) => e.stopPropagation()}
+      >
         <div className="bg-slate-900 w-full max-w-md rounded-3xl shadow-2xl border border-slate-700 p-6 sm:p-8 text-center max-h-[90vh] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-700" onClick={e => e.stopPropagation()}>
           <i className="fa-solid fa-ghost text-4xl text-slate-500 mb-4"></i>
           <h3 className="text-xl font-bold text-slate-200 mb-2">{isTr ? 'Soru Bulunamadı' : 'No Questions Found'}</h3>
@@ -608,7 +625,14 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
     }
 
     return (
-      <div className="fixed inset-0 z-[150] flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm" onClick={onClose}>
+      <div 
+        data-quiz-module="true"
+        className="fixed inset-0 z-[150] flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm" 
+        onClick={onClose}
+        onTouchStart={(e) => e.stopPropagation()}
+        onTouchMove={(e) => e.stopPropagation()}
+        onTouchEnd={(e) => e.stopPropagation()}
+      >
         <div className="bg-slate-900 w-full max-w-lg rounded-3xl shadow-2xl border border-slate-700 p-6 sm:p-8 flex flex-col items-center animate-fadeIn max-h-[90vh] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-700 relative" onClick={e => e.stopPropagation()}>
           
           <button onClick={onClose} className="absolute top-4 right-4 text-slate-500 hover:text-rose-400 text-xl transition-colors bg-slate-900 w-8 h-8 flex items-center justify-center rounded-full z-10">
@@ -703,10 +727,18 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
   };
 
   return (
-    <div className="fixed inset-0 z-[150] flex items-center justify-center p-2 sm:p-4 md:p-6 bg-slate-950/85 backdrop-blur-sm" onClick={onClose}>
+    <div 
+      data-quiz-module="true"
+      className="fixed inset-0 z-[150] flex items-center justify-center p-2 sm:p-4 md:p-6 bg-slate-950/85 backdrop-blur-sm" 
+      onClick={onClose}
+      onTouchStart={(e) => e.stopPropagation()}
+      onTouchMove={(e) => e.stopPropagation()}
+      onTouchEnd={(e) => e.stopPropagation()}
+    >
       {/* ANA TEST EKRANI - Okunaklı, Zarif, Mobil Kaydırma (Swipe) ve Yön Tuşları Uyumlu */}
       <div 
         onTouchStart={handleTouchStart}
+        onTouchMove={(e) => e.stopPropagation()}
         onTouchEnd={handleTouchEnd}
         className="bg-slate-900/98 backdrop-blur-md w-full max-w-2xl min-h-[350px] sm:min-h-[370px] rounded-2xl sm:rounded-3xl shadow-2xl border border-slate-700/80 flex flex-col overflow-hidden relative max-h-[94vh] sm:max-h-[92vh]" 
         onClick={e => e.stopPropagation()}

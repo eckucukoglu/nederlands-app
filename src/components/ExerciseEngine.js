@@ -11,8 +11,7 @@ const translations = {
     myNote: "Mijn Notitie (Notum):",
     notePlaceholder: "Notun (max 100 kar.)...",
     defaultNote: "Önemli Bölüm",
-    bookQuestions: "Kitaptaki Sorular",
-    extraPractice: "Ekstra Pratik",
+    sectionQuestions: "Bölüm Soruları",
     typeAnswer: "Cevabını yaz...",
     correct: "✔️ Juist! (Doğru)",
     incorrect: "❌ Onjuist. (Yanlış)",
@@ -27,8 +26,7 @@ const translations = {
     myNote: "Mijn Notitie (My Note):",
     notePlaceholder: "Your note (max 100 char.)...",
     defaultNote: "Important Section",
-    bookQuestions: "Book Exercises",
-    extraPractice: "Extra Practice",
+    sectionQuestions: "Section Questions",
     typeAnswer: "Type your answer...",
     correct: "✔️ Juist! (Correct)",
     incorrect: "❌ Onjuist. (Incorrect)",
@@ -43,7 +41,6 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
   const { lang } = useLanguage();
   const t = translations[lang] || translations['tr'];
 
-  const [subTab, setSubTab] = useState("book");
   const [answers, setAnswers] = useState({});
   const [showResults, setShowResults] = useState(false);
   const [qStats, setQStats] = useState(JSON.parse(localStorage.getItem('questionStats')) || {});
@@ -58,7 +55,6 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
   const isSummaryMode = sectionData?.id?.startsWith('On-Class-'); 
 
   useEffect(() => {
-    setSubTab("book");      
     setAnswers({});         
     setShowResults(false);  
     setShowFavInput(false); 
@@ -67,9 +63,7 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
 
   if (!sectionData) return null;
 
-  const bookExercises = sectionData.exerciseGroups?.filter(g => !g.isExtra) || [];
-  const extraExercises = sectionData.exerciseGroups?.filter(g => g.isExtra) || [];
-  const currentGroups = subTab === "book" ? bookExercises : extraExercises;
+  const currentGroups = sectionData.exerciseGroups || [];
 
   const handleAnswerChange = (qId, value) => {
     setAnswers({ ...answers, [qId]: value });
@@ -184,40 +178,18 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
           </div>
         </div>
 
-        {/* SAĞ KISIM: Quiz Butonu ve Kitap/Ekstra Seçenekleri */}
-        <div className="flex flex-col items-end gap-3 w-full lg:w-auto relative z-10">
-          
-          {/* ÇALIŞ & TEST ET BUTONU */}
-          {isSummaryMode && (
-             <button 
-               onClick={() => setIsQuizOpen(true)}
-               className="flex items-center justify-center gap-2 bg-amber-600/20 text-amber-400 hover:bg-amber-600 hover:text-white border border-amber-500/50 hover:border-amber-500 px-5 py-2.5 rounded-xl text-sm font-bold transition-all shadow-sm group w-full sm:w-auto"
-             >
-               <i className="fa-solid fa-dumbbell group-hover:animate-bounce"></i> 
-               {t.practiceSummary}
-             </button>
-          )}
-
-          {/* TAB'LAR */}
-          <div className="bg-slate-900/50 p-1.5 rounded-xl flex space-x-1 w-full sm:w-auto border border-slate-700/50">
-            <button
-              onClick={() => { setSubTab("book"); setShowResults(false); }}
-              className={`flex-1 sm:flex-none px-4 py-2 rounded-lg text-xs font-bold transition-all flex items-center justify-center space-x-2 ${
-                subTab === "book" ? "bg-slate-700 text-brand-300 shadow-sm" : "text-slate-400 hover:text-slate-200 hover:bg-slate-800"
-              }`}
+        {/* SAĞ KISIM: Quiz Butonu (Summary Modu) */}
+        {isSummaryMode && (
+          <div className="flex flex-col items-end gap-3 w-full lg:w-auto relative z-10">
+            <button 
+              onClick={() => setIsQuizOpen(true)}
+              className="flex items-center justify-center gap-2 bg-amber-600/20 text-amber-400 hover:bg-amber-600 hover:text-white border border-amber-500/50 hover:border-amber-500 px-5 py-2.5 rounded-xl text-sm font-bold transition-all shadow-sm group w-full sm:w-auto"
             >
-              <i className="fa-solid fa-book-open"></i><span>{t.bookQuestions}</span>
-            </button>
-            <button
-              onClick={() => { setSubTab("extra"); setShowResults(false); }}
-              className={`flex-1 sm:flex-none px-4 py-2 rounded-lg text-xs font-bold transition-all flex items-center justify-center space-x-2 ${
-                subTab === "extra" ? "bg-brand-600 text-white shadow-sm" : "text-slate-400 hover:text-slate-200 hover:bg-slate-800"
-              }`}
-            >
-              <i className="fa-solid fa-fire text-amber-400"></i><span>{t.extraPractice}</span>
+              <i className="fa-solid fa-dumbbell group-hover:animate-bounce"></i> 
+              {t.practiceSummary}
             </button>
           </div>
-        </div>
+        )}
 
       </div>
 
@@ -230,14 +202,25 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
         </div>
       )}
 
-      {/* SORULAR (KİTAP / EKSTRA) BÖLÜMÜ */}
-      <div className="bg-slate-800 rounded-2xl p-6 shadow-lg border border-slate-700 space-y-6">
-        {currentGroups.map((group, gIdx) => (
-          <div key={gIdx} className="space-y-6 mb-8">
-            <h3 className="font-bold text-brand-400 border-b border-slate-700 pb-2 flex items-center space-x-2">
-              <i className="fa-solid fa-pen-to-square"></i>
-              <span>{group.instruction}</span>
+      {/* BÖLÜM SORULARI */}
+      {currentGroups.length > 0 && (
+        <div className="bg-slate-800 rounded-2xl p-6 shadow-lg border border-slate-700 space-y-6">
+          <div className="border-b border-slate-700 pb-3 flex items-center justify-between">
+            <h3 className="text-xl font-bold text-slate-100 flex items-center space-x-2.5">
+              <i className="fa-solid fa-pen-to-square text-brand-400"></i>
+              <span>{t.sectionQuestions}</span>
             </h3>
+            <span className="text-xs bg-slate-900/80 text-brand-300 border border-slate-700 px-3 py-1 rounded-full font-bold">
+              {currentGroups.reduce((acc, g) => acc + (g.questions?.length || 0), 0)} {lang === 'tr' ? 'Soru' : 'Questions'}
+            </span>
+          </div>
+
+          {currentGroups.map((group, gIdx) => (
+            <div key={gIdx} className="space-y-6 mb-8">
+              <h4 className="font-bold text-brand-400 border-b border-slate-700/60 pb-2 flex items-center space-x-2 text-sm sm:text-base">
+                <i className="fa-solid fa-circle-question text-xs text-brand-400/70"></i>
+                <span>{group.instruction}</span>
+              </h4>
 
             {group.questions.map((q, idx) => {
               const userAns = answers[q.id];
@@ -296,14 +279,13 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
           </div>
         ))}
 
-        {currentGroups.length > 0 && (
-          <div className="flex justify-end pt-4 border-t border-slate-700">
-            <button onClick={handleVerify} className="px-6 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white text-sm font-bold shadow-lg transition">
-              {t.verifyAnswers}
-            </button>
-          </div>
-        )}
+        <div className="flex justify-end pt-4 border-t border-slate-700">
+          <button onClick={handleVerify} className="px-6 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white text-sm font-bold shadow-lg transition">
+            {t.verifyAnswers}
+          </button>
+        </div>
       </div>
+    )}
 
       {/* YENİ EKLENEN: QUIZ MODÜLÜ */}
       {isQuizOpen && (

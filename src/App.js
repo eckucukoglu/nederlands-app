@@ -322,10 +322,17 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
     }
   }, [isSearchExpanded]);
 
+  const isAnyModalOrQuizActive = () => {
+    if (isFullQuizOpen || isInfoModalOpen || isFeedbackOpen || isAuthModalOpen || customWordModal.isOpen) return true;
+    if (typeof document !== 'undefined' && document.querySelector('[data-quiz-module="true"]')) return true;
+    return false;
+  };
+
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (activeTab === 'flashcards' || activeTab === 'verbs' || activeTab === 'grammar' || activeTab === 'home') return;
       if (['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement.tagName)) return;
+      if (isAnyModalOrQuizActive()) return;
 
       if (isSummaryMode) {
         const sumList = summaryChaptersList.map(ch => `On-Class-${ch}`);
@@ -350,15 +357,20 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [currentIndex, currentSections, activeTab, isSummaryMode, summaryChaptersList]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentIndex, currentSections, activeTab, isSummaryMode, summaryChaptersList, isFullQuizOpen, isInfoModalOpen, isFeedbackOpen, isAuthModalOpen, customWordModal.isOpen]);
 
   const handleTouchStart = (e) => {
+    if (isAnyModalOrQuizActive()) return;
+    if (e.target?.closest?.('[data-quiz-module="true"]')) return;
     touchStartX.current = e.touches[0].clientX;
     touchStartY.current = e.touches[0].clientY;
   };
 
   const handleTouchEnd = (e) => {
     if (activeTab === 'flashcards' || activeTab === 'verbs' || activeTab === 'grammar' || activeTab === 'home') return;
+    if (isAnyModalOrQuizActive()) return;
+    if (e.target?.closest?.('[data-quiz-module="true"]')) return;
     const touchEndX = e.changedTouches[0].clientX;
     const touchEndY = e.changedTouches[0].clientY;
 
