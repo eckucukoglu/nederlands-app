@@ -458,16 +458,19 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
           showGestureToast(isTr ? 'Sıradaki Soru ⏭' : 'Next Question ⏭', 'fa-forward', 'text-amber-400');
           goToNextState();
         } else {
-          showGestureToast(isTr ? 'Soruyu Geç ⏭' : 'Skip ⏭', 'fa-forward', 'text-amber-400');
-          handleSkip();
+          showGestureToast(isTr ? 'Bilmiyorum ✕' : "Don't know ✕", 'fa-circle-question', 'text-rose-400');
+          handleDontKnow();
         }
       } else if (e.key === 'ArrowLeft') {
         e.preventDefault();
         if (e.stopPropagation) e.stopPropagation();
         if (e.stopImmediatePropagation) e.stopImmediatePropagation();
-        if (!isAnswered) {
-          showGestureToast(isTr ? 'Bilmiyorum ✕' : "Don't know ✕", 'fa-circle-question', 'text-rose-400');
-          handleDontKnow();
+        if (isAnswered) {
+          showGestureToast(isTr ? 'Sıradaki Soru ⏭' : 'Next Question ⏭', 'fa-forward', 'text-amber-400');
+          goToNextState();
+        } else {
+          showGestureToast(isTr ? 'Soruyu Geç ⏭' : 'Skip ⏭', 'fa-forward', 'text-amber-400');
+          handleSkip();
         }
       } else if (e.key === 'ArrowUp') {
         e.preventDefault();
@@ -489,8 +492,8 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
   }, [isAnswered, currentQ, userAnswer, userMatches, currentIndex, deck.length, isGood, goodQuestions]);
 
   // Mobil Dokunmatik / Kaydırma (Swipe) Hareketleri:
-  // Sağa kaydırma: Soruyu geç
-  // Sola kaydırma: Bilmiyorum
+  // Sola kaydırma: Soruyu geç (veya soru yanıtlandıysa sıradaki soru)
+  // Sağa kaydırma: Bilmiyorum (veya soru yanıtlandıysa sıradaki soru)
   // Yukarı kaydırma: İyi soru olarak işaretle
   // Aşağı kaydırma: Ekranı kapat (yalnızca sayfa tepesindeyken)
   const handleTouchStart = (e) => {
@@ -521,23 +524,22 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
     const absX = Math.abs(deltaX);
     const absY = Math.abs(deltaY);
 
-    const HORIZONTAL_THRESHOLD = 50; // px
+    const HORIZONTAL_THRESHOLD = 40; // px (akıcı ve hassas algılama)
     const VERTICAL_THRESHOLD = 75; // px
 
     // 1. Yatay Kaydırma (Horizontal Swipe)
     if (absX > absY && absX >= HORIZONTAL_THRESHOLD) {
-      if (deltaX > 0) {
-        // Sağa kaydırma: Soruyu geç
-        if (isAnswered) {
-          showGestureToast(isTr ? 'Sıradaki Soru ⏭' : 'Next Question ⏭', 'fa-forward', 'text-amber-400');
-          goToNextState();
-        } else {
+      if (isAnswered) {
+        // Soru yanıtlandıktan sonra açıklama alanındayken kaydırarak doğrudan sıradaki soruya geç
+        showGestureToast(isTr ? 'Sıradaki Soru ⏭' : 'Next Question ⏭', 'fa-forward', 'text-amber-400');
+        goToNextState();
+      } else {
+        if (deltaX < 0) {
+          // Sola kaydırma: Soruyu geç
           showGestureToast(isTr ? 'Soruyu Geç ⏭' : 'Skip ⏭', 'fa-forward', 'text-amber-400');
           handleSkip();
-        }
-      } else {
-        // Sola kaydırma: Bilmiyorum
-        if (!isAnswered) {
+        } else {
+          // Sağa kaydırma: Bilmiyorum
           showGestureToast(isTr ? 'Bilmiyorum ✕' : "Don't know ✕", 'fa-circle-question', 'text-rose-400');
           handleDontKnow();
         }
@@ -1262,15 +1264,25 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
 
            {/* Cevap Geribildirim Kutusu */}
            {isAnswered && (
-             <div className={`mt-2 p-3.5 sm:p-4 rounded-2xl border animate-fadeIn flex flex-col gap-1.5 max-w-xl mx-auto w-full shadow-lg ${isCorrect ? 'bg-emerald-950/40 border-emerald-800/70' : 'bg-rose-950/40 border-rose-800/70'}`}>
+             <div 
+               onClick={goToNextState}
+               className={`mt-2 p-3.5 sm:p-4 rounded-2xl border animate-fadeIn flex flex-col gap-1.5 max-w-xl mx-auto w-full shadow-lg cursor-pointer transition-all hover:scale-[1.005] select-none ${isCorrect ? 'bg-emerald-950/40 border-emerald-800/70 hover:bg-emerald-950/60' : 'bg-rose-950/40 border-rose-800/70 hover:bg-rose-950/60'}`}
+               title={isTr ? "Sonraki soruya geçmek için dokunun veya kaydırın" : "Tap or swipe to continue to next question"}
+             >
                <div className="flex items-center justify-between">
                  <h4 className={`text-sm sm:text-base font-bold flex items-center gap-2 ${isCorrect ? 'text-emerald-400' : 'text-rose-400'}`}>
                    <i className={`fa-solid ${isCorrect ? 'fa-circle-check text-base' : 'fa-circle-xmark text-base'}`}></i>
                    {isCorrect ? (isTr ? 'Tebrikler! Doğru Cevap!' : 'Correct!') : (isTr ? 'Yanlış Cevap' : 'Incorrect')}
                  </h4>
-                 <span className="text-xs text-slate-400 font-mono hidden sm:inline">
-                   {isTr ? 'Devam etmek için Enter ↵' : 'Press Enter ↵ to continue'}
-                 </span>
+                 <div className="flex items-center gap-1.5 text-xs text-slate-400 font-mono">
+                   <span className="hidden sm:inline">
+                     {isTr ? 'Devam: Enter ↵ veya Kaydır' : 'Continue: Enter ↵ or Swipe'}
+                   </span>
+                   <span className="sm:hidden text-[11px] text-amber-300 font-medium flex items-center gap-1">
+                     <i className="fa-solid fa-angles-right text-[10px] animate-pulse"></i>
+                     {isTr ? 'Kaydır / Dokun ⏭' : 'Swipe / Tap ⏭'}
+                   </span>
+                 </div>
                </div>
 
                {currentQ.type === 'matching' ? (
@@ -1326,22 +1338,22 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
                  )}
 
                  <button 
-                   onClick={handleDontKnow}
-                   className="flex-1 sm:flex-initial bg-slate-800/90 hover:bg-rose-950/50 text-slate-300 hover:text-rose-300 px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl font-semibold border border-slate-700 hover:border-rose-800/60 transition-all text-xs sm:text-sm flex items-center justify-center gap-1.5 sm:gap-2 cursor-pointer shadow-sm"
-                   title={isTr ? 'Yanlış kabul edilir (Sol Yön Tuşu / Sola Kaydır)' : 'Counts as incorrect (Arrow Left / Swipe Left)'}
+                   onClick={handleSkip}
+                   className="flex-1 sm:flex-initial bg-slate-800/90 hover:bg-slate-750 text-slate-300 hover:text-white px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl font-semibold border border-slate-700 hover:border-slate-600 transition-all text-xs sm:text-sm flex items-center justify-center gap-1.5 sm:gap-2 cursor-pointer shadow-sm"
+                   title={isTr ? 'Skoru etkilemeden sonraki soruya geçer (Sol Yön Tuşu / Sola Kaydır)' : 'Skip without affecting score (Arrow Left / Swipe Left)'}
                  >
-                   <i className="fa-solid fa-circle-question text-rose-400 text-xs"></i> 
-                   <span>{isTr ? 'Bilmiyorum' : "Don't know"}</span>
+                   <i className="fa-solid fa-forward text-amber-400 text-xs"></i> 
+                   <span>{isTr ? 'Soruyu Geç' : 'Skip'}</span>
                    <span className="hidden sm:inline text-[10px] text-slate-500 font-mono">(←)</span>
                  </button>
 
                  <button 
-                   onClick={handleSkip}
-                   className="flex-1 sm:flex-initial bg-slate-800/90 hover:bg-slate-750 text-slate-300 hover:text-white px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl font-semibold border border-slate-700 hover:border-slate-600 transition-all text-xs sm:text-sm flex items-center justify-center gap-1.5 sm:gap-2 cursor-pointer shadow-sm"
-                   title={isTr ? 'Skoru etkilemeden sonraki soruya geçer (Sağ Yön Tuşu / Sağa Kaydır)' : 'Skip without affecting score (Arrow Right / Swipe Right)'}
+                   onClick={handleDontKnow}
+                   className="flex-1 sm:flex-initial bg-slate-800/90 hover:bg-rose-950/50 text-slate-300 hover:text-rose-300 px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl font-semibold border border-slate-700 hover:border-rose-800/60 transition-all text-xs sm:text-sm flex items-center justify-center gap-1.5 sm:gap-2 cursor-pointer shadow-sm"
+                   title={isTr ? 'Yanlış kabul edilir (Sağ Yön Tuşu / Sağa Kaydır)' : 'Counts as incorrect (Arrow Right / Swipe Right)'}
                  >
-                   <i className="fa-solid fa-forward text-amber-400 text-xs"></i> 
-                   <span>{isTr ? 'Soruyu Geç' : 'Skip'}</span>
+                   <i className="fa-solid fa-circle-question text-rose-400 text-xs"></i> 
+                   <span>{isTr ? 'Bilmiyorum' : "Don't know"}</span>
                    <span className="hidden sm:inline text-[10px] text-slate-500 font-mono">(→)</span>
                  </button>
                </>
@@ -1351,7 +1363,7 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
                  className="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-500 text-white px-8 sm:px-10 py-3 sm:py-3.5 rounded-xl sm:rounded-2xl font-bold border border-indigo-500/80 shadow-lg transition-all text-sm sm:text-base flex items-center justify-center gap-2.5 cursor-pointer"
                >
                  <span>{currentIndex < deck.length - 1 ? (isTr ? 'Sıradaki Soru' : 'Next Question') : (isTr ? 'Testi Bitir' : 'Finish')}</span>
-                 <span className="text-xs opacity-75 font-mono hidden sm:inline">(Enter ↵ veya →)</span>
+                 <span className="text-xs opacity-75 font-mono hidden sm:inline">(Enter ↵ veya Kaydır)</span>
                  <i className="fa-solid fa-arrow-right text-xs"></i>
                </button>
              )}
@@ -1359,17 +1371,17 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
 
            {/* Yön Tuşları & Mobil Kaydırma (Swipe) Kısayol Çubuğu */}
            <div className="pt-2.5 pb-1 border-t border-slate-800/70 mt-2.5 flex items-center justify-between text-[10px] sm:text-[11px] text-slate-400 font-medium px-2 flex-wrap gap-1.5 select-none max-w-xl mx-auto w-full">
-             <span className="flex items-center gap-1.5 hover:text-slate-200 transition-colors" title={isTr ? "Sola kaydır veya Sol Yön Tuşu: Bilmiyorum" : "Swipe left or Arrow Left: Don't know"}>
+             <span className="flex items-center gap-1.5 hover:text-slate-200 transition-colors" title={isTr ? "Sola kaydır veya Sol Yön Tuşu: Soruyu geç" : "Swipe left or Arrow Left: Skip question"}>
                <kbd className="px-1.5 py-0.5 bg-slate-800 border border-slate-700 rounded text-slate-300 font-mono text-[9px] sm:text-[10px]">←</kbd>
-               <span>{isTr ? "Sola: Bilmiyorum" : "Left: Don't know"}</span>
+               <span>{isTr ? "Sola: Geç" : "Left: Skip"}</span>
              </span>
              <span className="flex items-center gap-1.5 hover:text-slate-200 transition-colors" title={isTr ? "Yukarı kaydır veya Yukarı Yön Tuşu: İyi soru olarak işaretle" : "Swipe up or Arrow Up: Mark good question"}>
                <kbd className="px-1.5 py-0.5 bg-slate-800 border border-slate-700 rounded text-slate-300 font-mono text-[9px] sm:text-[10px]">↑</kbd>
                <span>{isTr ? "Yukarı: İyi Soru" : "Up: Good Q"}</span>
              </span>
-             <span className="flex items-center gap-1.5 hover:text-slate-200 transition-colors" title={isTr ? "Sağa kaydır veya Sağ Yön Tuşu: Soruyu geç" : "Swipe right or Arrow Right: Skip question"}>
+             <span className="flex items-center gap-1.5 hover:text-slate-200 transition-colors" title={isTr ? "Sağa kaydır veya Sağ Yön Tuşu: Bilmiyorum" : "Swipe right or Arrow Right: Don't know"}>
                <kbd className="px-1.5 py-0.5 bg-slate-800 border border-slate-700 rounded text-slate-300 font-mono text-[9px] sm:text-[10px]">→</kbd>
-               <span>{isTr ? "Sağa: Geç" : "Right: Skip"}</span>
+               <span>{isTr ? "Sağa: Bilmiyorum" : "Right: Don't know"}</span>
              </span>
              <span className="flex items-center gap-1.5 hover:text-slate-200 transition-colors" title={isTr ? "Aşağı kaydır veya Aşağı Yön Tuşu: Ekranı kapat" : "Swipe down or Arrow Down: Close"}>
                <kbd className="px-1.5 py-0.5 bg-slate-800 border border-slate-700 rounded text-slate-300 font-mono text-[9px] sm:text-[10px]">↓</kbd>
