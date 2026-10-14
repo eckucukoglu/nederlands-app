@@ -334,6 +334,57 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
     return false;
   };
 
+  const goToNextSection = () => {
+    if (activeTab === 'flashcards' || activeTab === 'verbs' || activeTab === 'grammar' || activeTab === 'home') return;
+    if (isAnyModalOrQuizActive()) return;
+    if (currentIndex === -1) return;
+
+    if (currentIndex < currentSections.length - 1) {
+      setPreviousTab(currentSections[currentIndex].id);
+      setActiveTab(currentSections[currentIndex + 1].id);
+    } else {
+      // Summary'deyiz: bir sonraki chapter'a geç
+      const chIdx = availableChapters.indexOf(currentChapter);
+      if (chIdx !== -1 && chIdx < availableChapters.length - 1) {
+        const nextCh = availableChapters[chIdx + 1];
+        const nextSections = bookSections
+          .filter(sec => sec.chapter === nextCh)
+          .sort((a, b) => {
+            const aIsSum = a.id.startsWith('On-Class-');
+            const bIsSum = b.id.startsWith('On-Class-');
+            if (aIsSum && !bIsSum) return 1;
+            if (!aIsSum && bIsSum) return -1;
+            return 0;
+          });
+        const targetId = nextSections.length > 0 ? nextSections[0].id : `${nextCh}.1`;
+        setPreviousTab(currentSections[currentIndex].id);
+        setCurrentChapter(nextCh);
+        setActiveTab(targetId);
+      }
+    }
+  };
+
+  const goToPrevSection = () => {
+    if (activeTab === 'flashcards' || activeTab === 'verbs' || activeTab === 'grammar' || activeTab === 'home') return;
+    if (isAnyModalOrQuizActive()) return;
+    if (currentIndex === -1) return;
+
+    if (currentIndex > 0) {
+      setPreviousTab(currentSections[currentIndex].id);
+      setActiveTab(currentSections[currentIndex - 1].id);
+    } else {
+      // .1 section'ındayız: Chapter 1 hariç, bir önceki chapter'ın summary kısmına geç
+      const chIdx = availableChapters.indexOf(currentChapter);
+      if (chIdx > 0) {
+        const prevCh = availableChapters[chIdx - 1];
+        const prevSummaryId = `On-Class-${prevCh}`;
+        setPreviousTab(currentSections[currentIndex].id);
+        setCurrentChapter(prevCh);
+        setActiveTab(prevSummaryId);
+      }
+    }
+  };
+
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (activeTab === 'flashcards' || activeTab === 'verbs' || activeTab === 'grammar' || activeTab === 'home') return;
@@ -341,16 +392,16 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
       if (isAnyModalOrQuizActive()) return;
 
       if (e.key === 'ArrowLeft') {
-        if (currentIndex > 0) setActiveTab(currentSections[currentIndex - 1].id);
+        goToPrevSection();
       } else if (e.key === 'ArrowRight') {
-        if (currentIndex < currentSections.length - 1) setActiveTab(currentSections[currentIndex + 1].id);
+        goToNextSection();
       }
     };
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentIndex, currentSections, isFullQuizOpen, isInfoModalOpen, isFeedbackOpen, isAuthModalOpen, customWordModal.isOpen]);
+  }, [currentIndex, currentSections, currentChapter, activeTab, isFullQuizOpen, isInfoModalOpen, isFeedbackOpen, isAuthModalOpen, customWordModal.isOpen]);
 
   const handleTouchStart = (e) => {
     if (isAnyModalOrQuizActive()) return;
@@ -371,9 +422,9 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
 
     if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 60) {
       if (deltaX < 0) {
-        if (currentIndex < currentSections.length - 1) setActiveTab(currentSections[currentIndex + 1].id);
+        goToNextSection();
       } else {
-        if (currentIndex > 0) setActiveTab(currentSections[currentIndex - 1].id);
+        goToPrevSection();
       }
     }
   };
