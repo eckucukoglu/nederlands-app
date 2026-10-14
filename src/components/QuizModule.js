@@ -765,9 +765,9 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
           </div>
 
           {/* Alt Satır: Soru İstatistiği & Filtreler */}
-          <div className="flex items-center justify-between gap-2 pt-0.5 flex-wrap sm:flex-nowrap">
+          <div className="flex items-center justify-between gap-1.5 sm:gap-2 pt-0.5 flex-wrap sm:flex-nowrap">
             {/* Soru İstatistiği */}
-            <div className="flex items-center gap-2 text-xs sm:text-sm font-bold bg-slate-950/70 px-3 py-1.5 rounded-xl border border-slate-700/80 shadow-inner">
+            <div className="flex items-center gap-1.5 sm:gap-2 text-[11px] sm:text-xs font-bold bg-slate-950/70 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-xl border border-slate-700/80 shadow-inner flex-shrink-0">
               <span className="text-slate-400 font-medium">{isTr ? 'Bu Soru:' : 'This Q:'}</span>
               <span className="text-emerald-400 flex items-center gap-1" title={isTr ? 'Doğru' : 'Correct'}>
                 <i className="fa-solid fa-check text-[10px]"></i> {qHistory.correct}
@@ -779,10 +779,10 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
             </div>
             
             {/* Filtreler ve Etiket Arama */}
-            <div className="flex items-center bg-slate-950/70 p-1 rounded-xl border border-slate-700/80 gap-1.5 flex-wrap sm:flex-nowrap">
+            <div className="flex items-center bg-slate-950/70 p-1 rounded-xl border border-slate-700/80 gap-1 sm:gap-1.5 flex-nowrap w-full sm:w-auto overflow-x-auto no-scrollbar">
               <button 
                 onClick={() => toggleFilter('weak')}
-                className={`text-xs sm:text-sm font-bold px-3 py-1.5 rounded-lg transition-all flex items-center gap-1.5 cursor-pointer ${
+                className={`text-[11px] sm:text-xs font-bold px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg transition-all flex items-center gap-1 cursor-pointer flex-shrink-0 whitespace-nowrap ${
                   activeFilter === 'weak' 
                     ? 'bg-rose-900/80 text-rose-200 border border-rose-700/80 shadow-sm' 
                     : 'text-slate-400 hover:text-slate-200'
@@ -793,7 +793,7 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
 
               <button 
                 onClick={() => toggleFilter('unattempted')}
-                className={`text-xs sm:text-sm font-bold px-3 py-1.5 rounded-lg transition-all flex items-center gap-1.5 cursor-pointer ${
+                className={`text-[11px] sm:text-xs font-bold px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg transition-all flex items-center gap-1 cursor-pointer flex-shrink-0 whitespace-nowrap ${
                   activeFilter === 'unattempted' 
                     ? 'bg-sky-900/80 text-sky-200 border border-sky-700/80 shadow-sm' 
                     : 'text-slate-400 hover:text-slate-200'
@@ -801,29 +801,29 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
               >
                 {isTr ? 'Çözülmeyenler' : 'Unseen'}
               </button>
-              <div className="h-4 w-[1px] bg-slate-700 mx-0.5 hidden sm:block"></div>
+              <div className="h-4 w-[1px] bg-slate-700 mx-0.5 hidden sm:block flex-shrink-0"></div>
 
               {/* Manuel Tag Giriş Alanı */}
-              <form onSubmit={handleTagSubmit} className="flex items-center gap-1">
-                <div className={`flex items-center bg-slate-900 rounded-lg px-2 py-1 border transition-all ${
+              <form onSubmit={handleTagSubmit} className="flex items-center gap-1 flex-1 sm:flex-initial min-w-0">
+                <div className={`flex items-center bg-slate-900 rounded-lg px-2 py-1 border transition-all flex-1 min-w-0 ${
                   activeTags.length > 0 && activeTags[0] === (tagInput.replace(/^#/, '').trim())
                     ? 'border-indigo-500 ring-2 ring-indigo-500/30'
                     : 'border-slate-700 focus-within:border-indigo-500'
                 }`}>
-                  <span className="text-xs text-indigo-400 font-bold mr-1 select-none">#</span>
+                  <span className="text-xs text-indigo-400 font-bold mr-1 select-none flex-shrink-0">#</span>
                   <input 
                     type="text"
                     list="quiz-tag-suggestions"
                     value={tagInput}
                     onChange={(e) => setTagInput(e.target.value)}
                     placeholder={isTr ? "etiket..." : "tag..."}
-                    className="bg-transparent text-xs sm:text-sm text-slate-100 placeholder-slate-500 focus:outline-none w-20 sm:w-28 font-medium"
+                    className="bg-transparent text-xs text-slate-100 placeholder-slate-500 focus:outline-none w-full min-w-[48px] sm:w-24 font-medium truncate"
                   />
                   {tagInput && (
                     <button 
                       type="button" 
                       onClick={handleClearTagFilter}
-                      className="text-slate-400 hover:text-rose-400 ml-1 p-0.5 text-xs cursor-pointer"
+                      className="text-slate-400 hover:text-rose-400 ml-0.5 p-0.5 text-xs cursor-pointer flex-shrink-0"
                       title={isTr ? "Etiket filtresini temizle" : "Clear tag filter"}
                     >
                       <i className="fa-solid fa-xmark"></i>
@@ -834,7 +834,7 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
                 <button
                   type="submit"
                   disabled={!tagInput.trim()}
-                  className="text-xs sm:text-sm font-bold px-2.5 py-1.5 rounded-lg bg-indigo-950/80 text-indigo-300 border border-indigo-800/80 hover:bg-indigo-900 disabled:opacity-40 transition-all flex items-center cursor-pointer disabled:cursor-not-allowed shadow-sm"
+                  className="text-xs font-bold px-2 sm:px-2.5 py-1 sm:py-1.5 rounded-lg bg-indigo-950/80 text-indigo-300 border border-indigo-800/80 hover:bg-indigo-900 disabled:opacity-40 transition-all flex items-center cursor-pointer disabled:cursor-not-allowed shadow-sm flex-shrink-0"
                   title={isTr ? "Bu etikete göre soruları filtrele" : "Filter by this tag"}
                 >
                   <i className="fa-solid fa-magnifying-glass text-xs"></i>
