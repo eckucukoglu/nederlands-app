@@ -431,10 +431,7 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
   };
 
   // Klavyedeki Yön Tuşları:
-  // Sağa (ArrowRight): Soruyu geç
-  // Sola (ArrowLeft): Bilmiyorum
-  // Yukarı (ArrowUp): İyi soru olarak işaretle
-  // Aşağı (ArrowDown): Ekranı kapat
+  // Sağa (ArrowRight) & Sola (ArrowLeft): Soruyu geç (veya yanıttan sonra sıradaki soru)
   useEffect(() => {
     const handleKeyDown = (e) => {
       // Input veya textarea alanında yazarken yön tuşlarını çalıştırma
@@ -450,18 +447,7 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
         } else if (currentQ?.type === 'matching' && Object.keys(userMatches).length > 0) {
           handleCheck();
         }
-      } else if (e.key === 'ArrowRight') {
-        e.preventDefault();
-        if (e.stopPropagation) e.stopPropagation();
-        if (e.stopImmediatePropagation) e.stopImmediatePropagation();
-        if (isAnswered) {
-          showGestureToast(isTr ? 'Sıradaki Soru ⏭' : 'Next Question ⏭', 'fa-forward', 'text-amber-400');
-          goToNextState();
-        } else {
-          showGestureToast(isTr ? 'Bilmiyorum ✕' : "Don't know ✕", 'fa-circle-question', 'text-rose-400');
-          handleDontKnow();
-        }
-      } else if (e.key === 'ArrowLeft') {
+      } else if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
         e.preventDefault();
         if (e.stopPropagation) e.stopPropagation();
         if (e.stopImmediatePropagation) e.stopImmediatePropagation();
@@ -472,17 +458,6 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
           showGestureToast(isTr ? 'Soruyu Geç ⏭' : 'Skip ⏭', 'fa-forward', 'text-amber-400');
           handleSkip();
         }
-      } else if (e.key === 'ArrowUp') {
-        e.preventDefault();
-        if (e.stopPropagation) e.stopPropagation();
-        if (e.stopImmediatePropagation) e.stopImmediatePropagation();
-        handleGoodToggle();
-      } else if (e.key === 'ArrowDown') {
-        e.preventDefault();
-        if (e.stopPropagation) e.stopPropagation();
-        if (e.stopImmediatePropagation) e.stopImmediatePropagation();
-        showGestureToast(isTr ? 'Kapatılıyor... ✕' : 'Closing... ✕', 'fa-xmark', 'text-slate-400');
-        if (onClose) onClose();
       }
     };
 
@@ -492,35 +467,16 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
   }, [isAnswered, currentQ, userAnswer, userMatches, currentIndex, deck.length, isGood, goodQuestions]);
 
   // Mobil Dokunmatik / Kaydırma (Swipe) Hareketleri:
-  // Sola kaydırma: Soruyu geç (veya soru yanıtlandıysa sıradaki soru)
-  // Sağa kaydırma: Bilmiyorum (veya soru yanıtlandıysa sıradaki soru)
-  // Yukarı kaydırma: İyi soru olarak işaretle
-  // Aşağı kaydırma: Ekranı kapat
+  // Sağa veya sola kaydırma: Soruyu geç (veya soru yanıtlandıysa sıradaki soru)
   const handleTouchStart = (e) => {
     if (e.stopPropagation) e.stopPropagation();
     if (!e.touches || e.touches.length === 0) return;
     const touch = e.touches[0];
-    const container = scrollContainerRef.current;
-    
-    // Dikey kaydırma çubuğu (scrollbar) var mı?
-    // scrollHeight > clientHeight ise içerik dikeyde kaydırılabilir durumdadır
-    const hasScrollbar = Boolean(
-      container && (container.scrollHeight > container.clientHeight + 4)
-    );
-
-    // Dokunma sorunun başlık / header alanından mı başladı?
-    const isHeaderTouch = Boolean(
-      e.target?.closest?.('[data-quiz-header="true"], .quiz-question-header, .quiz-modal-header')
-    );
-
     touchStartRef.current = {
       x: touch.clientX,
       y: touch.clientY,
       time: Date.now(),
-      target: e.target,
-      scrollTop: container ? container.scrollTop : 0,
-      hasScrollbar,
-      isHeaderTouch
+      target: e.target
     };
   };
 
@@ -540,53 +496,17 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
     const absY = Math.abs(deltaY);
 
     const HORIZONTAL_THRESHOLD = 40; // px (akıcı ve hassas algılama)
-    const VERTICAL_THRESHOLD = 75; // px
 
-    // 1. Yatay Kaydırma (Horizontal Swipe)
+    // Yalnızca Yatay Kaydırma (Horizontal Swipe: Sağa / Sola)
     if (absX > absY && absX >= HORIZONTAL_THRESHOLD) {
       if (isAnswered) {
         // Soru yanıtlandıktan sonra açıklama alanındayken kaydırarak doğrudan sıradaki soruya geç
         showGestureToast(isTr ? 'Sıradaki Soru ⏭' : 'Next Question ⏭', 'fa-forward', 'text-amber-400');
         goToNextState();
       } else {
-        if (deltaX < 0) {
-          // Sola kaydırma: Soruyu geç
-          showGestureToast(isTr ? 'Soruyu Geç ⏭' : 'Skip ⏭', 'fa-forward', 'text-amber-400');
-          handleSkip();
-        } else {
-          // Sağa kaydırma: Bilmiyorum
-          showGestureToast(isTr ? 'Bilmiyorum ✕' : "Don't know ✕", 'fa-circle-question', 'text-rose-400');
-          handleDontKnow();
-        }
-      }
-      return;
-    }
-
-    // 2. Dikey Kaydırma (Vertical Swipe: Yukarı / Aşağı)
-    if (absY > absX && absY >= VERTICAL_THRESHOLD) {
-      const container = scrollContainerRef.current;
-      const currentHasScrollbar = Boolean(
-        container && (container.scrollHeight > container.clientHeight + 4)
-      );
-      const hasScrollbar = touchStartRef.current.hasScrollbar || currentHasScrollbar;
-      const isHeaderTouch = touchStartRef.current.isHeaderTouch;
-
-      // Kullanıcı Kuralı:
-      // "Quiz kısmında yukarı aşağı kaydirmalar yalnızca kaydırma çubuğu yoksa çalışsın. 
-      // Kaydırma çubuğu varsa sorunun başlık kismindan calissin yalnizca"
-      if (hasScrollbar && !isHeaderTouch) {
-        // Kaydırma çubuğu var ve hareket soru başlığından başlamadı;
-        // İçeriğin dikey kaydırılmasına (scroll) öncelik ver, yukarı/aşağı jestini yok say!
-        return;
-      }
-
-      if (deltaY < 0) {
-        // Yukarı kaydırma: İyi soru diye işaretle
-        handleGoodToggle();
-      } else {
-        // Aşağı kaydırma: Ekranı kapat
-        showGestureToast(isTr ? 'Kapatılıyor... ✕' : 'Closing... ✕', 'fa-xmark', 'text-slate-400');
-        if (onClose) onClose();
+        // Sağa ve sola kaydırmaların ikisi de soruyu geçer (bilmiyorum olarak işaretlemez)
+        showGestureToast(isTr ? 'Soruyu Geç ⏭' : 'Skip ⏭', 'fa-forward', 'text-amber-400');
+        handleSkip();
       }
       return;
     }
@@ -1368,21 +1288,20 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
                  <button 
                    onClick={handleSkip}
                    className="flex-1 sm:flex-initial bg-slate-800/90 hover:bg-slate-750 text-slate-300 hover:text-white px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl font-semibold border border-slate-700 hover:border-slate-600 transition-all text-xs sm:text-sm flex items-center justify-center gap-1.5 sm:gap-2 cursor-pointer shadow-sm"
-                   title={isTr ? 'Skoru etkilemeden sonraki soruya geçer (Sol Yön Tuşu / Sola Kaydır)' : 'Skip without affecting score (Arrow Left / Swipe Left)'}
+                   title={isTr ? 'Skoru etkilemeden sonraki soruya geçer (Yön Tuşları / Sağa-Sola Kaydır)' : 'Skip without affecting score (Arrow Keys / Swipe)'}
                  >
                    <i className="fa-solid fa-forward text-amber-400 text-xs"></i> 
                    <span>{isTr ? 'Soruyu Geç' : 'Skip'}</span>
-                   <span className="hidden sm:inline text-[10px] text-slate-500 font-mono">(←)</span>
+                   <span className="hidden sm:inline text-[10px] text-slate-500 font-mono">(← / →)</span>
                  </button>
 
                  <button 
                    onClick={handleDontKnow}
                    className="flex-1 sm:flex-initial bg-slate-800/90 hover:bg-rose-950/50 text-slate-300 hover:text-rose-300 px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl font-semibold border border-slate-700 hover:border-rose-800/60 transition-all text-xs sm:text-sm flex items-center justify-center gap-1.5 sm:gap-2 cursor-pointer shadow-sm"
-                   title={isTr ? 'Yanlış kabul edilir (Sağ Yön Tuşu / Sağa Kaydır)' : 'Counts as incorrect (Arrow Right / Swipe Right)'}
+                   title={isTr ? 'Yanlış kabul edilir' : 'Counts as incorrect'}
                  >
                    <i className="fa-solid fa-circle-question text-rose-400 text-xs"></i> 
                    <span>{isTr ? 'Bilmiyorum' : "Don't know"}</span>
-                   <span className="hidden sm:inline text-[10px] text-slate-500 font-mono">(→)</span>
                  </button>
                </>
              ) : (
@@ -1398,22 +1317,11 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
            </div>
 
            {/* Yön Tuşları & Mobil Kaydırma (Swipe) Kısayol Çubuğu */}
-           <div className="pt-2.5 pb-1 border-t border-slate-800/70 mt-2.5 flex items-center justify-between text-[10px] sm:text-[11px] text-slate-400 font-medium px-2 flex-wrap gap-1.5 select-none max-w-xl mx-auto w-full">
-             <span className="flex items-center gap-1.5 hover:text-slate-200 transition-colors" title={isTr ? "Sola kaydır veya Sol Yön Tuşu: Soruyu geç" : "Swipe left or Arrow Left: Skip question"}>
+           <div className="pt-2.5 pb-1 border-t border-slate-800/70 mt-2.5 flex items-center justify-center gap-2 sm:gap-3 text-[10px] sm:text-[11px] text-slate-400 font-medium px-2 flex-wrap select-none max-w-xl mx-auto w-full">
+             <span className="flex items-center gap-1.5 hover:text-slate-200 transition-colors" title={isTr ? "Sağa veya sola kaydır / Yön tuşları: Soruyu geç" : "Swipe left or right / Arrow keys: Skip question"}>
                <kbd className="px-1.5 py-0.5 bg-slate-800 border border-slate-700 rounded text-slate-300 font-mono text-[9px] sm:text-[10px]">←</kbd>
-               <span>{isTr ? "Sola: Geç" : "Left: Skip"}</span>
-             </span>
-             <span className="flex items-center gap-1.5 hover:text-slate-200 transition-colors" title={isTr ? "Yukarı kaydır veya Yukarı Yön Tuşu: İyi soru olarak işaretle" : "Swipe up or Arrow Up: Mark good question"}>
-               <kbd className="px-1.5 py-0.5 bg-slate-800 border border-slate-700 rounded text-slate-300 font-mono text-[9px] sm:text-[10px]">↑</kbd>
-               <span>{isTr ? "Yukarı: İyi Soru" : "Up: Good Q"}</span>
-             </span>
-             <span className="flex items-center gap-1.5 hover:text-slate-200 transition-colors" title={isTr ? "Sağa kaydır veya Sağ Yön Tuşu: Bilmiyorum" : "Swipe right or Arrow Right: Don't know"}>
                <kbd className="px-1.5 py-0.5 bg-slate-800 border border-slate-700 rounded text-slate-300 font-mono text-[9px] sm:text-[10px]">→</kbd>
-               <span>{isTr ? "Sağa: Bilmiyorum" : "Right: Don't know"}</span>
-             </span>
-             <span className="flex items-center gap-1.5 hover:text-slate-200 transition-colors" title={isTr ? "Aşağı kaydır veya Aşağı Yön Tuşu: Ekranı kapat" : "Swipe down or Arrow Down: Close"}>
-               <kbd className="px-1.5 py-0.5 bg-slate-800 border border-slate-700 rounded text-slate-300 font-mono text-[9px] sm:text-[10px]">↓</kbd>
-               <span>{isTr ? "Aşağı: Kapat" : "Down: Close"}</span>
+               <span>{isTr ? "Sağa / Sola Kaydır: Soruyu Geç" : "Swipe Left / Right: Skip"}</span>
              </span>
            </div>
         </div>
