@@ -1,5 +1,5 @@
 // src/components/QuizModule.js
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { quizQuestions } from '../data/quizData';
 import { auth, toggleReportQuestion, toggleGoodQuestion } from '../firebase'; 
@@ -48,6 +48,26 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
   const [wrongTagsCloud, setWrongTagsCloud] = useState({}); 
   const [reportedQuestions, setReportedQuestions] = useState(() => JSON.parse(localStorage.getItem('reportedQuestions')) || {}); 
   const [goodQuestions, setGoodQuestions] = useState(() => JSON.parse(localStorage.getItem('goodQuestions')) || {}); 
+
+  // Kısayol & Kaydırma (Swipe) Geri Bildirim Toast'ı
+  const [gestureToast, setGestureToast] = useState(null);
+  const toastTimeoutRef = useRef(null);
+  const touchStartRef = useRef({ x: 0, y: 0, time: 0, target: null, scrollTop: 0 });
+  const scrollContainerRef = useRef(null);
+
+  const showGestureToast = (message, icon, colorClass = "text-teal-400") => {
+    if (toastTimeoutRef.current) clearTimeout(toastTimeoutRef.current);
+    setGestureToast({ message, icon, colorClass });
+    toastTimeoutRef.current = setTimeout(() => {
+      setGestureToast(null);
+    }, 1100);
+  };
+
+  useEffect(() => {
+    return () => {
+      if (toastTimeoutRef.current) clearTimeout(toastTimeoutRef.current);
+    };
+  }, []);
 
   // Modal açıkken arka plan sayfasının kaydırılmasını (Scrollbar 1) engelle
   useEffect(() => {
@@ -173,26 +193,28 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
 
   const handleGoodToggle = async () => {
     if (!currentQ) return;
-    if (!auth.currentUser) {
-      alert(isTr ? "İyi soru olarak işaretlemek için giriş yapmalısınız." : "You must be logged in to mark as a good question.");
-      return;
-    }
-
     const newStatus = !isGood;
     
-    try {
-      await toggleGoodQuestion(currentQ, auth.currentUser, newStatus);
-      
-      const updatedGoods = { ...goodQuestions, [currentQ.id]: newStatus };
-      setGoodQuestions(updatedGoods);
-      localStorage.setItem('goodQuestions', JSON.stringify(updatedGoods));
+    // Yerel depolama ve state güncellemesi (misafir kullanıcılar dahil)
+    const updatedGoods = { ...goodQuestions, [currentQ.id]: newStatus };
+    setGoodQuestions(updatedGoods);
+    localStorage.setItem('goodQuestions', JSON.stringify(updatedGoods));
 
-    } catch (error) {
-      console.error(error);
-      alert(isTr 
-        ? "İyi soru işaretlenirken bir hata oluştu. Lütfen bağlantınızı veya izinleri kontrol edin." 
-        : "An error occurred while marking good question. Please check your connection."
-      );
+    showGestureToast(
+      newStatus 
+        ? (isTr ? 'İyi Soru Olarak İşaretlendi 👍' : 'Marked as Good Question 👍') 
+        : (isTr ? 'İyi Soru İşareti Kaldırıldı' : 'Removed from Good Questions'),
+      'fa-thumbs-up',
+      newStatus ? 'text-emerald-400' : 'text-slate-400'
+    );
+
+    // Giriş yapmışsa Firebase Firestore ile senkronize et
+    if (auth.currentUser) {
+      try {
+        await toggleGoodQuestion(currentQ, auth.currentUser, newStatus);
+      } catch (error) {
+        console.error("Firebase toggleGoodQuestion hatası:", error);
+      }
     }
   };
 
@@ -362,24 +384,30 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
     setActiveSlotId(null);
   };
 
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.key === 'Enter') {
-        if (isAnswered) {
-          goToNextState();
-        } else if (currentQ?.type === 'fill_in' && userAnswer.trim()) {
-          handleCheck();
-        } else if (currentQ?.type === 'matching' && Object.keys(userMatches).length > 0) {
-          handleCheck();
-        }
-      }
-    };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isAnswered, currentQ, userAnswer, userMatches, currentIndex, deck.length]);
+  const goToNextState = () => {
+    if (currentIndex < deck.length - 1) {
+      setCurrentIndex(prev => prev + 1);
+      setUserAnswer('');
+      setUserMatches({});
+      setActiveSlotId(null);
+      setIsAnswered(false);
+      setIsCorrect(false);
+    } else {
+      setIsFinished(true); 
+    }
+  };
+
+  const handleNext = () => {
+    goToNextState();
+  };
+
+  const handleSkip = () => {
+    setSessionScore(prev => ({ ...prev, skipped: prev.skipped + 1 }));
+    goToNextState();
+  };
 
   const handleDontKnow = () => {
+    if (isAnswered) return;
     setIsCorrect(false);
     setIsAnswered(true);
     setUserAnswer(isTr ? 'Bilinmiyor / Pas' : 'Unknown');
@@ -402,25 +430,125 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
     localStorage.setItem('quizHistory', JSON.stringify(newHistory));
   };
 
-  const handleSkip = () => {
-    setSessionScore(prev => ({ ...prev, skipped: prev.skipped + 1 }));
-    goToNextState();
+  // Klavyedeki Yön Tuşları:
+  // Sağa (ArrowRight): Soruyu geç
+  // Sola (ArrowLeft): Bilmiyorum
+  // Yukarı (ArrowUp): İyi soru olarak işaretle
+  // Aşağı (ArrowDown): Ekranı kapat
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      // Input veya textarea alanında yazarken yön tuşlarını çalıştırma
+      if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA')) {
+        return;
+      }
+
+      if (e.key === 'Enter') {
+        if (isAnswered) {
+          goToNextState();
+        } else if (currentQ?.type === 'fill_in' && userAnswer.trim()) {
+          handleCheck();
+        } else if (currentQ?.type === 'matching' && Object.keys(userMatches).length > 0) {
+          handleCheck();
+        }
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        if (isAnswered) {
+          showGestureToast(isTr ? 'Sıradaki Soru ⏭' : 'Next Question ⏭', 'fa-forward', 'text-amber-400');
+          goToNextState();
+        } else {
+          showGestureToast(isTr ? 'Soruyu Geç ⏭' : 'Skip ⏭', 'fa-forward', 'text-amber-400');
+          handleSkip();
+        }
+      } else if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        if (!isAnswered) {
+          showGestureToast(isTr ? 'Bilmiyorum ✕' : "Don't know ✕", 'fa-circle-question', 'text-rose-400');
+          handleDontKnow();
+        }
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        handleGoodToggle();
+      } else if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        showGestureToast(isTr ? 'Kapatılıyor... ✕' : 'Closing... ✕', 'fa-xmark', 'text-slate-400');
+        if (onClose) onClose();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isAnswered, currentQ, userAnswer, userMatches, currentIndex, deck.length, isGood, goodQuestions]);
+
+  // Mobil Dokunmatik / Kaydırma (Swipe) Hareketleri:
+  // Sağa kaydırma: Soruyu geç
+  // Sola kaydırma: Bilmiyorum
+  // Yukarı kaydırma: İyi soru olarak işaretle
+  // Aşağı kaydırma: Ekranı kapat (yalnızca sayfa tepesindeyken)
+  const handleTouchStart = (e) => {
+    if (!e.touches || e.touches.length === 0) return;
+    const touch = e.touches[0];
+    touchStartRef.current = {
+      x: touch.clientX,
+      y: touch.clientY,
+      time: Date.now(),
+      target: e.target,
+      scrollTop: scrollContainerRef.current ? scrollContainerRef.current.scrollTop : 0
+    };
   };
 
-  const handleNext = () => {
-    goToNextState();
-  };
+  const handleTouchEnd = (e) => {
+    if (!e.changedTouches || e.changedTouches.length === 0) return;
+    const touch = e.changedTouches[0];
+    const deltaX = touch.clientX - touchStartRef.current.x;
+    const deltaY = touch.clientY - touchStartRef.current.y;
+    const deltaTime = Date.now() - touchStartRef.current.time;
 
-  const goToNextState = () => {
-    if (currentIndex < deck.length - 1) {
-      setCurrentIndex(prev => prev + 1);
-      setUserAnswer('');
-      setUserMatches({});
-      setActiveSlotId(null);
-      setIsAnswered(false);
-      setIsCorrect(false);
-    } else {
-      setIsFinished(true); 
+    // Uzun basma (> 800ms) veya input üzeri dokunmaları yok say
+    if (deltaTime > 800) return;
+    if (touchStartRef.current.target?.closest('input, textarea, select')) return;
+
+    const absX = Math.abs(deltaX);
+    const absY = Math.abs(deltaY);
+
+    const HORIZONTAL_THRESHOLD = 50; // px
+    const VERTICAL_THRESHOLD = 75; // px
+
+    // 1. Yatay Kaydırma (Horizontal Swipe)
+    if (absX > absY && absX >= HORIZONTAL_THRESHOLD) {
+      if (deltaX > 0) {
+        // Sağa kaydırma: Soruyu geç
+        if (isAnswered) {
+          showGestureToast(isTr ? 'Sıradaki Soru ⏭' : 'Next Question ⏭', 'fa-forward', 'text-amber-400');
+          goToNextState();
+        } else {
+          showGestureToast(isTr ? 'Soruyu Geç ⏭' : 'Skip ⏭', 'fa-forward', 'text-amber-400');
+          handleSkip();
+        }
+      } else {
+        // Sola kaydırma: Bilmiyorum
+        if (!isAnswered) {
+          showGestureToast(isTr ? 'Bilmiyorum ✕' : "Don't know ✕", 'fa-circle-question', 'text-rose-400');
+          handleDontKnow();
+        }
+      }
+      return;
+    }
+
+    // 2. Dikey Kaydırma (Vertical Swipe)
+    if (absY > absX && absY >= VERTICAL_THRESHOLD) {
+      if (deltaY < 0) {
+        // Yukarı kaydırma: İyi soru diye işaretle
+        handleGoodToggle();
+      } else {
+        // Aşağı kaydırma: Ekranı kapat
+        const initialScrollTop = touchStartRef.current.scrollTop;
+        if (initialScrollTop <= 15) {
+          showGestureToast(isTr ? 'Kapatılıyor... ✕' : 'Closing... ✕', 'fa-xmark', 'text-slate-400');
+          if (onClose) onClose();
+        }
+      }
+      return;
     }
   };
 
@@ -576,8 +704,20 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
 
   return (
     <div className="fixed inset-0 z-[150] flex items-center justify-center p-2 sm:p-4 md:p-6 bg-slate-950/85 backdrop-blur-sm" onClick={onClose}>
-      {/* ANA TEST EKRANI - Okunaklı, Zarif & Mobil Uyumlu */}
-      <div className="bg-slate-900/98 backdrop-blur-md w-full max-w-2xl min-h-[350px] sm:min-h-[370px] rounded-2xl sm:rounded-3xl shadow-2xl border border-slate-700/80 flex flex-col overflow-hidden relative max-h-[94vh] sm:max-h-[92vh]" onClick={e => e.stopPropagation()}>
+      {/* ANA TEST EKRANI - Okunaklı, Zarif, Mobil Kaydırma (Swipe) ve Yön Tuşları Uyumlu */}
+      <div 
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+        className="bg-slate-900/98 backdrop-blur-md w-full max-w-2xl min-h-[350px] sm:min-h-[370px] rounded-2xl sm:rounded-3xl shadow-2xl border border-slate-700/80 flex flex-col overflow-hidden relative max-h-[94vh] sm:max-h-[92vh]" 
+        onClick={e => e.stopPropagation()}
+      >
+        {/* Kısayol & Jest Toast Bildirimi */}
+        {gestureToast && (
+          <div className="absolute top-16 left-1/2 -translate-x-1/2 z-50 pointer-events-none animate-fadeIn flex items-center gap-2.5 px-4 py-2 rounded-full border shadow-2xl backdrop-blur-md text-xs sm:text-sm font-bold bg-slate-900/95 text-slate-100 border-slate-700">
+            <i className={`fa-solid ${gestureToast.icon} ${gestureToast.colorClass}`}></i>
+            <span>{gestureToast.message}</span>
+          </div>
+        )}
         
         {/* Header */}
         <div className="px-4 sm:px-6 py-3 sm:py-3.5 border-b border-slate-800 bg-slate-800/80 flex-none space-y-2.5">
@@ -717,7 +857,7 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
         </div>
         
         {/* Content */}
-        <div className="px-4 sm:px-7 py-4 sm:py-5 flex-1 flex flex-col justify-start overflow-y-auto scrollbar-thin scrollbar-thumb-slate-700">
+        <div ref={scrollContainerRef} className="px-4 sm:px-7 py-4 sm:py-5 flex-1 flex flex-col justify-start overflow-y-auto scrollbar-thin scrollbar-thumb-slate-700">
            <div className="text-center mb-3 sm:mb-4">
               {currentQ.tags && currentQ.tags.length > 0 && (
                 <div className="flex flex-wrap justify-center gap-1.5 mb-2">
@@ -1155,18 +1295,22 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
 
                  <button 
                    onClick={handleDontKnow}
-                   className="flex-1 sm:flex-initial bg-slate-800/90 hover:bg-rose-950/50 text-slate-300 hover:text-rose-300 px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl font-semibold border border-slate-700 hover:border-rose-800/60 transition-all text-xs sm:text-sm flex items-center justify-center gap-2 cursor-pointer shadow-sm"
-                   title={isTr ? 'Yanlış kabul edilir' : 'Counts as incorrect'}
+                   className="flex-1 sm:flex-initial bg-slate-800/90 hover:bg-rose-950/50 text-slate-300 hover:text-rose-300 px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl font-semibold border border-slate-700 hover:border-rose-800/60 transition-all text-xs sm:text-sm flex items-center justify-center gap-1.5 sm:gap-2 cursor-pointer shadow-sm"
+                   title={isTr ? 'Yanlış kabul edilir (Sol Yön Tuşu / Sola Kaydır)' : 'Counts as incorrect (Arrow Left / Swipe Left)'}
                  >
-                   <i className="fa-solid fa-circle-question text-rose-400 text-xs"></i> {isTr ? 'Bilmiyorum' : "Don't know"}
+                   <i className="fa-solid fa-circle-question text-rose-400 text-xs"></i> 
+                   <span>{isTr ? 'Bilmiyorum' : "Don't know"}</span>
+                   <span className="hidden sm:inline text-[10px] text-slate-500 font-mono">(←)</span>
                  </button>
 
                  <button 
                    onClick={handleSkip}
-                   className="flex-1 sm:flex-initial bg-slate-800/90 hover:bg-slate-750 text-slate-300 hover:text-white px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl font-semibold border border-slate-700 hover:border-slate-600 transition-all text-xs sm:text-sm flex items-center justify-center gap-2 cursor-pointer shadow-sm"
-                   title={isTr ? 'Skoru etkilemeden sonraki soruya geçer' : 'Skip without affecting score'}
+                   className="flex-1 sm:flex-initial bg-slate-800/90 hover:bg-slate-750 text-slate-300 hover:text-white px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl font-semibold border border-slate-700 hover:border-slate-600 transition-all text-xs sm:text-sm flex items-center justify-center gap-1.5 sm:gap-2 cursor-pointer shadow-sm"
+                   title={isTr ? 'Skoru etkilemeden sonraki soruya geçer (Sağ Yön Tuşu / Sağa Kaydır)' : 'Skip without affecting score (Arrow Right / Swipe Right)'}
                  >
-                   <i className="fa-solid fa-forward text-amber-400 text-xs"></i> {isTr ? 'Soruyu Geç' : 'Skip'}
+                   <i className="fa-solid fa-forward text-amber-400 text-xs"></i> 
+                   <span>{isTr ? 'Soruyu Geç' : 'Skip'}</span>
+                   <span className="hidden sm:inline text-[10px] text-slate-500 font-mono">(→)</span>
                  </button>
                </>
              ) : (
@@ -1175,10 +1319,30 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
                  className="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-500 text-white px-8 sm:px-10 py-3 sm:py-3.5 rounded-xl sm:rounded-2xl font-bold border border-indigo-500/80 shadow-lg transition-all text-sm sm:text-base flex items-center justify-center gap-2.5 cursor-pointer"
                >
                  <span>{currentIndex < deck.length - 1 ? (isTr ? 'Sıradaki Soru' : 'Next Question') : (isTr ? 'Testi Bitir' : 'Finish')}</span>
-                 <span className="text-xs opacity-75 font-mono hidden sm:inline">(Enter ↵)</span>
+                 <span className="text-xs opacity-75 font-mono hidden sm:inline">(Enter ↵ veya →)</span>
                  <i className="fa-solid fa-arrow-right text-xs"></i>
                </button>
              )}
+           </div>
+
+           {/* Yön Tuşları & Mobil Kaydırma (Swipe) Kısayol Çubuğu */}
+           <div className="pt-2.5 pb-1 border-t border-slate-800/70 mt-2.5 flex items-center justify-between text-[10px] sm:text-[11px] text-slate-400 font-medium px-2 flex-wrap gap-1.5 select-none max-w-xl mx-auto w-full">
+             <span className="flex items-center gap-1.5 hover:text-slate-200 transition-colors" title={isTr ? "Sola kaydır veya Sol Yön Tuşu: Bilmiyorum" : "Swipe left or Arrow Left: Don't know"}>
+               <kbd className="px-1.5 py-0.5 bg-slate-800 border border-slate-700 rounded text-slate-300 font-mono text-[9px] sm:text-[10px]">←</kbd>
+               <span>{isTr ? "Sola: Bilmiyorum" : "Left: Don't know"}</span>
+             </span>
+             <span className="flex items-center gap-1.5 hover:text-slate-200 transition-colors" title={isTr ? "Yukarı kaydır veya Yukarı Yön Tuşu: İyi soru olarak işaretle" : "Swipe up or Arrow Up: Mark good question"}>
+               <kbd className="px-1.5 py-0.5 bg-slate-800 border border-slate-700 rounded text-slate-300 font-mono text-[9px] sm:text-[10px]">↑</kbd>
+               <span>{isTr ? "Yukarı: İyi Soru" : "Up: Good Q"}</span>
+             </span>
+             <span className="flex items-center gap-1.5 hover:text-slate-200 transition-colors" title={isTr ? "Sağa kaydır veya Sağ Yön Tuşu: Soruyu geç" : "Swipe right or Arrow Right: Skip question"}>
+               <kbd className="px-1.5 py-0.5 bg-slate-800 border border-slate-700 rounded text-slate-300 font-mono text-[9px] sm:text-[10px]">→</kbd>
+               <span>{isTr ? "Sağa: Geç" : "Right: Skip"}</span>
+             </span>
+             <span className="flex items-center gap-1.5 hover:text-slate-200 transition-colors" title={isTr ? "Aşağı kaydır veya Aşağı Yön Tuşu: Ekranı kapat" : "Swipe down or Arrow Down: Close"}>
+               <kbd className="px-1.5 py-0.5 bg-slate-800 border border-slate-700 rounded text-slate-300 font-mono text-[9px] sm:text-[10px]">↓</kbd>
+               <span>{isTr ? "Aşağı: Kapat" : "Down: Close"}</span>
+             </span>
            </div>
         </div>
 

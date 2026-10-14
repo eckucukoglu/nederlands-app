@@ -1,5 +1,5 @@
 // src/components/Grammar.js
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useRef, useEffect } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import QuizModule from './QuizModule';
 
@@ -1833,115 +1833,308 @@ const grammarData = [
 export default function Grammar() {
   const { lang } = useLanguage();
   const isTr = lang === 'tr';
-  const [searchTerm, setSearchTerm] = useState('');
   const [activeTopic, setActiveTopic] = useState(grammarData[0].id);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
   const [isQuizOpen, setIsQuizOpen] = useState(false);
 
+  const dropdownRef = useRef(null);
+
+  // Dışarı tıklandığında dropdown menüyü kapat
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsDropdownOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  // Escape tuşu ile dropdown'ı kapat
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') setIsDropdownOpen(false);
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
+  const currentIndex = grammarData.findIndex(t => t.id === activeTopic);
+  const activeContent = grammarData[currentIndex >= 0 ? currentIndex : 0];
+
   const filteredTopics = useMemo(() => {
-    if (!searchTerm) return grammarData;
-    const lower = searchTerm.toLowerCase();
+    if (!searchQuery.trim()) return grammarData;
+    const lower = searchQuery.toLowerCase();
     return grammarData.filter(topic => 
       topic.titleTr.toLowerCase().includes(lower) || 
       topic.titleEn.toLowerCase().includes(lower)
     );
-  }, [searchTerm]);
+  }, [searchQuery]);
 
-  const activeContent = grammarData.find(t => t.id === activeTopic);
+  const handlePrevTopic = () => {
+    if (currentIndex > 0) {
+      setActiveTopic(grammarData[currentIndex - 1].id);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  const handleNextTopic = () => {
+    if (currentIndex < grammarData.length - 1) {
+      setActiveTopic(grammarData[currentIndex + 1].id);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  const prevTopic = currentIndex > 0 ? grammarData[currentIndex - 1] : null;
+  const nextTopic = currentIndex < grammarData.length - 1 ? grammarData[currentIndex + 1] : null;
 
   return (
-    <div className="w-full max-w-6xl mx-auto flex flex-col md:flex-row gap-6 animate-fadeIn pb-12">
+    <div className="w-full max-w-5xl mx-auto flex flex-col gap-6 animate-fadeIn pb-16">
       
-      {/* SOL MENÜ (Konu Listesi) */}
-      <div className="w-full md:w-1/3 lg:w-1/4 flex flex-col gap-4">
-        {/* Arama */}
-        <div className="bg-slate-800 border border-slate-700 rounded-3xl p-5 shadow-xl relative overflow-hidden">
-          <div className="absolute top-0 right-0 p-4 opacity-5 pointer-events-none">
-             <i className="fa-solid fa-book-open-reader text-7xl text-indigo-400"></i>
+      {/* EN ÜST: DROPDOWN MENÜ & GEZİNME PANELİ */}
+      <div className="bg-slate-800 border border-slate-700 rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-xl relative">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 mb-4">
+          {/* Başlık & İkon */}
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 flex-shrink-0 shadow-inner">
+              <i className="fa-solid fa-spell-check text-lg"></i>
+            </div>
+            <div>
+              <h2 className="text-base sm:text-lg font-extrabold text-white flex items-center gap-2">
+                {isTr ? 'Gramer Konuları' : 'Grammar Topics'}
+                <span className="text-[11px] font-semibold font-mono px-2 py-0.5 rounded-full bg-slate-900 border border-slate-700 text-indigo-300">
+                  {currentIndex + 1} / {grammarData.length}
+                </span>
+              </h2>
+              <p className="text-xs text-slate-400">
+                {isTr ? 'Aşağıdaki menüden dilediğiniz konuyu seçin' : 'Select any grammar topic from the dropdown below'}
+              </p>
+            </div>
           </div>
-          <h2 className="text-xl font-extrabold text-indigo-400 mb-4 flex items-center gap-3 relative z-10">
-             <i className="fa-solid fa-spell-check"></i> 
-             {isTr ? 'Gramer Referansı' : 'Grammar Reference'}
-          </h2>
+
+          {/* Hızlı Test Butonu */}
+          {activeContent && (
+            <button 
+              onClick={() => setIsQuizOpen(true)}
+              className="flex-shrink-0 flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-500 text-white border border-indigo-500/80 px-4 sm:px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all shadow-md group cursor-pointer"
+            >
+              <i className="fa-solid fa-dumbbell group-hover:rotate-12 transition-transform"></i> 
+              <span>{isTr ? 'Konuyu Test Et' : 'Practice Topic'}</span>
+            </button>
+          )}
+        </div>
+
+        {/* DROPDOWN VE YÖN BUTONLARI */}
+        <div className="flex items-center gap-2 sm:gap-3">
+          {/* Önceki Konu Butonu */}
+          <button
+            type="button"
+            onClick={handlePrevTopic}
+            disabled={currentIndex <= 0}
+            title={isTr ? (prevTopic ? `Önceki: ${prevTopic.titleTr}` : 'İlk konu') : 'Previous topic'}
+            className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-slate-900 border border-slate-700 text-slate-300 hover:text-white hover:border-slate-500 disabled:opacity-30 disabled:hover:border-slate-700 disabled:hover:text-slate-300 flex items-center justify-center transition-all flex-shrink-0 cursor-pointer disabled:cursor-not-allowed shadow-inner"
+          >
+            <i className="fa-solid fa-chevron-left text-sm"></i>
+          </button>
+
+          {/* Ana Dropdown Menü Butonu & Paneli */}
+          <div ref={dropdownRef} className="relative flex-1">
+            <button
+              type="button"
+              onClick={() => setIsDropdownOpen(prev => !prev)}
+              className="w-full flex items-center justify-between gap-3 bg-slate-900/95 hover:bg-slate-900 border border-slate-600 hover:border-indigo-500 rounded-xl sm:rounded-2xl px-3.5 sm:px-4 py-2.5 sm:py-3 text-left transition-all shadow-inner group cursor-pointer ring-0 focus:ring-2 focus:ring-indigo-500/50"
+            >
+              <div className="flex items-center gap-2.5 sm:gap-3 min-w-0">
+                <span className="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-indigo-500/20 text-indigo-400 border border-indigo-500/30 text-xs sm:text-sm font-bold flex items-center justify-center flex-shrink-0 font-mono">
+                  {currentIndex + 1}
+                </span>
+                <div className="truncate">
+                  <div className="text-xs sm:text-sm font-bold text-slate-100 group-hover:text-indigo-300 transition-colors truncate">
+                    {isTr ? activeContent?.titleTr : activeContent?.titleEn}
+                  </div>
+                  <div className="text-[10px] sm:text-xs text-slate-400 truncate">
+                    {isTr ? activeContent?.titleEn : activeContent?.titleTr}
+                  </div>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 flex-shrink-0 text-slate-400 group-hover:text-indigo-400 transition-colors">
+                <span className="text-[10px] sm:text-xs font-mono font-semibold px-2 py-0.5 rounded bg-slate-800 border border-slate-700 hidden md:inline">
+                  {isTr ? 'Değiştir' : 'Change'}
+                </span>
+                <i className={`fa-solid fa-chevron-down text-xs transition-transform duration-200 ${isDropdownOpen ? 'rotate-180 text-indigo-400' : ''}`}></i>
+              </div>
+            </button>
+
+            {/* Dropdown Açılır Menü Listesi */}
+            {isDropdownOpen && (
+              <div className="absolute top-full left-0 right-0 mt-2 z-50 bg-slate-900/98 border border-slate-600 rounded-2xl shadow-2xl overflow-hidden animate-fadeIn backdrop-blur-md">
+                {/* Arama Kutusu */}
+                <div className="p-3 border-b border-slate-800 bg-slate-950/80 sticky top-0 z-10">
+                  <div className="relative">
+                    <i className="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 text-xs"></i>
+                    <input
+                      type="text"
+                      autoFocus
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      placeholder={isTr ? "Gramer konularında ara..." : "Search grammar topics..."}
+                      className="w-full bg-slate-800/90 border border-slate-700 rounded-xl pl-9 pr-8 py-2 text-xs sm:text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                    />
+                    {searchQuery && (
+                      <button
+                        type="button"
+                        onClick={() => setSearchQuery("")}
+                        className="absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-rose-400 p-1 text-xs"
+                      >
+                        <i className="fa-solid fa-xmark"></i>
+                      </button>
+                    )}
+                  </div>
+                </div>
+
+                {/* Konu Maddeleri */}
+                <div className="max-h-72 sm:max-h-96 overflow-y-auto scrollbar-thin scrollbar-thumb-slate-700 divide-y divide-slate-800/60">
+                  {filteredTopics.length > 0 ? (
+                    filteredTopics.map((topic) => {
+                      const topicIndex = grammarData.findIndex(t => t.id === topic.id);
+                      const isActive = activeTopic === topic.id;
+                      return (
+                        <button
+                          key={topic.id}
+                          type="button"
+                          onClick={() => {
+                            setActiveTopic(topic.id);
+                            setIsDropdownOpen(false);
+                            setSearchQuery("");
+                          }}
+                          className={`w-full text-left px-4 py-3 transition-colors flex items-center justify-between gap-3 cursor-pointer ${
+                            isActive 
+                              ? 'bg-indigo-950/70 text-indigo-300 border-l-4 border-indigo-500' 
+                              : 'hover:bg-slate-800/80 text-slate-300 hover:text-white border-l-4 border-transparent'
+                          }`}
+                        >
+                          <div className="flex items-center gap-3 min-w-0">
+                            <span className={`w-5 h-5 rounded text-[11px] font-mono font-bold flex items-center justify-center flex-shrink-0 ${
+                              isActive ? 'bg-indigo-500 text-white' : 'bg-slate-800 text-slate-400'
+                            }`}>
+                              {topicIndex + 1}
+                            </span>
+                            <div className="truncate">
+                              <div className="text-xs sm:text-sm font-semibold truncate">
+                                {isTr ? topic.titleTr : topic.titleEn}
+                              </div>
+                              <div className="text-[10px] text-slate-500 truncate">
+                                {isTr ? topic.titleEn : topic.titleTr}
+                              </div>
+                            </div>
+                          </div>
+                          {isActive && (
+                            <i className="fa-solid fa-check text-indigo-400 text-xs flex-shrink-0"></i>
+                          )}
+                        </button>
+                      );
+                    })
+                  ) : (
+                    <div className="p-6 text-center text-slate-500 text-xs sm:text-sm">
+                      <i className="fa-solid fa-circle-exclamation text-base mb-1 block"></i>
+                      {isTr ? "Eşleşen gramer konusu bulunamadı." : "No matching topics found."}
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Sonraki Konu Butonu */}
+          <button
+            type="button"
+            onClick={handleNextTopic}
+            disabled={currentIndex >= grammarData.length - 1}
+            title={isTr ? (nextTopic ? `Sonraki: ${nextTopic.titleTr}` : 'Son konu') : 'Next topic'}
+            className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-slate-900 border border-slate-700 text-slate-300 hover:text-white hover:border-slate-500 disabled:opacity-30 disabled:hover:border-slate-700 disabled:hover:text-slate-300 flex items-center justify-center transition-all flex-shrink-0 cursor-pointer disabled:cursor-not-allowed shadow-inner"
+          >
+            <i className="fa-solid fa-chevron-right text-sm"></i>
+          </button>
+        </div>
+      </div>
+
+      {/* İÇERİK KARTI (Geniş & Rahat Okunabilir) */}
+      {activeContent && (
+        <div className="w-full bg-slate-800 border border-slate-700 rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-9 shadow-xl relative overflow-hidden">
+          <div className="absolute top-0 right-0 p-8 opacity-5 pointer-events-none">
+            <i className="fa-solid fa-pen-ruler text-9xl text-indigo-400"></i>
+          </div>
+
+          {/* İçerik Başlığı & Egzersiz Butonu */}
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 border-b border-slate-700 pb-5 relative z-10">
+            <div className="flex items-center gap-3">
+              <span className="w-8 h-8 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 font-mono font-bold text-sm flex items-center justify-center flex-shrink-0">
+                {currentIndex + 1}
+              </span>
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white leading-tight">
+                {isTr ? activeContent.titleTr : activeContent.titleEn}
+              </h3>
+            </div>
+            
+            <button 
+              onClick={() => setIsQuizOpen(true)}
+              className="flex-shrink-0 flex items-center justify-center gap-2 bg-indigo-600/20 text-indigo-400 hover:bg-indigo-600 hover:text-white border border-indigo-500/50 hover:border-indigo-500 px-5 py-2.5 rounded-xl font-bold transition-all shadow-sm group cursor-pointer text-xs sm:text-sm"
+            >
+              <i className="fa-solid fa-dumbbell group-hover:animate-bounce"></i> 
+              {isTr ? 'Çalış & Test Et' : 'Practice'}
+            </button>
+          </div>
+
+          {/* Konu İçeriği */}
           <div className="relative z-10">
-            <i className="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500 text-sm"></i>
-            <input
-              type="text"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              placeholder={isTr ? 'Konu ara...' : 'Search topics...'}
-              className="w-full bg-slate-900/80 border border-slate-600 rounded-xl pl-10 pr-3 py-3 text-sm text-slate-200 focus:outline-none focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400 shadow-inner"
+            {activeContent.content(isTr)}
+          </div>
+
+          {/* Alt Gezinme Butonları (Önceki - Test - Sonraki) */}
+          <div className="mt-10 pt-6 border-t border-slate-700/80 flex flex-col sm:flex-row items-center justify-between gap-3 relative z-10">
+            {prevTopic ? (
+              <button
+                type="button"
+                onClick={handlePrevTopic}
+                className="w-full sm:w-auto flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-slate-300 hover:text-white hover:border-indigo-500 transition-all text-xs sm:text-sm font-semibold cursor-pointer"
+              >
+                <i className="fa-solid fa-arrow-left text-xs"></i>
+                <span className="truncate max-w-[200px]">{isTr ? prevTopic.titleTr : prevTopic.titleEn}</span>
+              </button>
+            ) : <div className="hidden sm:block"></div>}
+
+            <button
+              type="button"
+              onClick={() => setIsQuizOpen(true)}
+              className="w-full sm:w-auto flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs sm:text-sm transition-all shadow-md cursor-pointer"
+            >
+              <i className="fa-solid fa-dumbbell"></i>
+              <span>{isTr ? 'Bu Konuyu Test Et' : 'Practice Topic'}</span>
+            </button>
+
+            {nextTopic ? (
+              <button
+                type="button"
+                onClick={handleNextTopic}
+                className="w-full sm:w-auto flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-slate-300 hover:text-white hover:border-indigo-500 transition-all text-xs sm:text-sm font-semibold cursor-pointer"
+              >
+                <span className="truncate max-w-[200px]">{isTr ? nextTopic.titleTr : nextTopic.titleEn}</span>
+                <i className="fa-solid fa-arrow-right text-xs"></i>
+              </button>
+            ) : <div className="hidden sm:block"></div>}
+          </div>
+
+          {/* QUIZ MODAL ÇAĞRISI */}
+          {isQuizOpen && (
+            <QuizModule 
+              tags={activeContent.tags} 
+              onClose={() => setIsQuizOpen(false)} 
+              title={isTr ? activeContent.titleTr : activeContent.titleEn}
             />
-          </div>
+          )}
         </div>
-
-        {/* Konu Listesi */}
-        <div className="bg-slate-800 border border-slate-700 rounded-2xl shadow-md overflow-hidden flex flex-col">
-           <div className="overflow-y-auto max-h-[400px] md:max-h-[600px] scrollbar-thin scrollbar-thumb-slate-600">
-             {filteredTopics.length > 0 ? (
-               <div className="flex flex-col">
-                 {filteredTopics.map((topic) => (
-                   <button
-                     key={topic.id}
-                     onClick={() => setActiveTopic(topic.id)}
-                     className={`text-left px-5 py-4 text-sm font-semibold transition-colors border-l-4 ${activeTopic === topic.id ? 'bg-slate-700/50 text-indigo-300 border-indigo-500' : 'text-slate-400 border-transparent hover:bg-slate-700/30 hover:text-slate-200'}`}
-                   >
-                     {isTr ? topic.titleTr : topic.titleEn}
-                   </button>
-                 ))}
-               </div>
-             ) : (
-               <div className="p-6 text-center text-slate-500 text-sm">
-                 {isTr ? 'Sonuç bulunamadı.' : 'No results found.'}
-               </div>
-             )}
-           </div>
-        </div>
-      </div>
-
-      {/* SAĞ İÇERİK (Detaylar) */}
-      <div className="w-full md:w-2/3 lg:w-3/4">
-        {activeContent ? (
-          <div className="bg-slate-800 border border-slate-700 rounded-3xl p-6 sm:p-8 shadow-xl relative overflow-hidden h-full">
-             <div className="absolute top-0 right-0 p-8 opacity-5 pointer-events-none">
-                <i className="fa-solid fa-pen-ruler text-9xl text-indigo-400"></i>
-             </div>
-             
-             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 border-b border-slate-700 pb-4 relative z-10">
-               <h3 className="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
-                 {isTr ? activeContent.titleTr : activeContent.titleEn}
-               </h3>
-               
-               <button 
-                 onClick={() => setIsQuizOpen(true)}
-                 className="flex-shrink-0 flex items-center justify-center gap-2 bg-indigo-600/20 text-indigo-400 hover:bg-indigo-600 hover:text-white border border-indigo-500/50 hover:border-indigo-500 px-5 py-2.5 rounded-xl font-bold transition-all shadow-sm group"
-               >
-                 <i className="fa-solid fa-dumbbell group-hover:animate-bounce"></i> 
-                 {isTr ? 'Çalış & Test Et' : 'Practice'}
-               </button>
-             </div>
-             
-             <div className="relative z-10">
-                {activeContent.content(isTr)}
-             </div>
-
-             {/* QUIZ MODAL ÇAĞRISI (Doğru etiketleri dizi olarak gönderir) */}
-             {isQuizOpen && (
-               <QuizModule 
-                 tags={activeContent.tags} 
-                 onClose={() => setIsQuizOpen(false)} 
-                 title={isTr ? activeContent.titleTr : activeContent.titleEn}
-               />
-             )}
-          </div>
-        ) : (
-          <div className="bg-slate-800 border border-slate-700 rounded-3xl p-8 text-center flex flex-col items-center justify-center shadow-xl h-full min-h-[300px]">
-             <i className="fa-solid fa-arrow-pointer text-4xl text-slate-600 mb-4 animate-bounce"></i>
-             <p className="text-slate-400 font-medium">
-               {isTr ? 'Lütfen sol taraftan bir gramer konusu seçin.' : 'Please select a grammar topic from the left.'}
-             </p>
-          </div>
-        )}
-      </div>
+      )}
 
     </div>
   );
