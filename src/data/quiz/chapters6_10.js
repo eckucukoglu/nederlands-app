@@ -102,7 +102,7 @@ export const chapters6_10 = [
       "met een lepel",
       "met een vork",
       "met een mes",
-      "Misschien later."
+      "groentesoep met stokbrood"
     ],
     "correctAnswer": "met een lepel",
     "explanationTr": "Çorba kaşıkla (met een lepel) içilir/yenir.",
@@ -129,7 +129,7 @@ export const chapters6_10 = [
     "explanationTr": "Diyalogda Jasper'in mineraalwater (maden suyu) içtiği belirtilir.",
     "explanationEn": "The dialogue states that Jasper drinks mineral water.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch6_010",
@@ -144,7 +144,7 @@ export const chapters6_10 = [
       "mosterdsoep en spaanse salade",
       "biefstuk met frietjes",
       "kip met rijst",
-      "Ik heb helaas geen tijd vandaag."
+      "groentesoep met stokbrood"
     ],
     "correctAnswer": "mosterdsoep en spaanse salade",
     "explanationTr": "Başlangıç olarak hardal çorbası ve İspanyol salatası alırlar.",
@@ -165,7 +165,7 @@ export const chapters6_10 = [
       "biefstuk met frietjes",
       "spaanse salade",
       "mosterdsoep",
-      "Misschien later."
+      "appelsap"
     ],
     "correctAnswer": "biefstuk met frietjes",
     "explanationTr": "Ana yemek olarak patates kızartmalı biftek (biefstuk met frietjes) seçer.",
@@ -290,7 +290,7 @@ export const chapters6_10 = [
       "Ja, ik houd van kip.",
       "Nee, ik houd van kip.",
       "Ik vind het stom.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dank je wel, dat is erg vriendelijk van je."
     ],
     "correctAnswer": "Ja, ik houd van kip.",
     "explanationTr": "Tavuk sevdiğinizi onaylamak için 'Ja, ik houd van kip' denir.",
@@ -354,7 +354,7 @@ export const chapters6_10 = [
       "Nee, ik houd niet van mosselen.",
       "Ja, ik houd van mosselen.",
       "Ik vind mosselen lekker.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dank je wel, dat is erg vriendelijk van je."
     ],
     "correctAnswer": "Nee, ik houd niet van mosselen.",
     "explanationTr": "Sevmediğini belirtmek için 'Nee, ik houd niet van...' kalıbı kullanılır.",
@@ -646,7 +646,7 @@ export const chapters6_10 = [
     "explanationTr": "'restaurant' kelimesi het-woord'dur ('het restaurant').",
     "explanationEn": "'restaurant' is a het-woord ('het restaurant').",
     "difficulty": 3,
-    "quality": 2,
+    "quality": 1,
     "options": [
       "het",
       "ik",
@@ -666,7 +666,7 @@ export const chapters6_10 = [
       "Jasper en Christine",
       "Alleen Jasper",
       "De serveerster",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "Jasper en Christine",
     "explanationTr": "Diyalogda hem Jasper'in hem de Christine'in mineraalwater içtiği yazar.",
@@ -815,7 +815,7 @@ export const chapters6_10 = [
       "wit",
       "wi",
       "wien",
-      "Misschien later."
+      "om vier uur"
     ]
   },
   {
@@ -835,7 +835,7 @@ export const chapters6_10 = [
       "zwart",
       "zwar",
       "zwaren",
-      "Misschien later."
+      "om vier uur"
     ]
   },
   {
@@ -891,7 +891,7 @@ export const chapters6_10 = [
       "blouse and button-up shirt",
       "dress and skirt",
       "shoes and suit",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "blouse and button-up shirt",
     "explanationTr": "'de bloes' bluz, 'het overhemd' ise düğmeli gömlek (button-up shirt) demektir.",
@@ -912,7 +912,7 @@ export const chapters6_10 = [
       "skirt and dress",
       "coat and jacket",
       "pants and jeans",
-      "Misschien later."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "skirt and dress",
     "explanationTr": "'de rok' etek, 'de jurk' ise elbise demektir.",
@@ -933,7 +933,7 @@ export const chapters6_10 = [
       "coat/jacket, shoes, and suit",
       "shirt, skirt, blouse",
       "trousers, sweater, t-shirt",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "coat/jacket, shoes, and suit",
     "explanationTr": "'de jas' mont/ceket, 'de schoenen' ayakkabılar, 'het pak' ise takım elbisedir.",
@@ -975,7 +975,7 @@ export const chapters6_10 = [
       "een lichte spijkerbroek, een laag model",
       "een donkere spijkerbroek, een hoog model",
       "een zwarte spijkerbroek, een strak model",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "een lichte spijkerbroek, een laag model",
     "explanationTr": "Açık renk ve düşük bel (laag model) bir kot aratmaktadır.",
@@ -1035,7 +1035,7 @@ export const chapters6_10 = [
       "klein - kleiner - het kleinst",
       "klein - kleinder - het kleinstst",
       "klein - more klein - most klein",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "klein - kleiner - het kleinst",
     "explanationTr": "Düzenli sıfatlarda comparatief '-er', superlatief ise '-st' alır: klein - kleiner - het kleinst.",
@@ -1055,7 +1055,7 @@ export const chapters6_10 = [
       "duur - duurder - het duurst",
       "duur - duurer - het duurstst",
       "duur - more duur - most duur",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "duur - duurder - het duurst",
     "explanationTr": "'duur' sıfatı 'duurder - het duurst' şeklinde düzenli kurala uyar.",
@@ -1075,7 +1075,7 @@ export const chapters6_10 = [
       "goed - beter - het best",
       "goed - gooder - het goodst",
       "goed - meler - het mest",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "goed - beter - het best",
     "explanationTr": "'goed' sıfatı düzensizdir: goed - beter - het best.",
@@ -1095,7 +1095,7 @@ export const chapters6_10 = [
       "veel - meer - het meest",
       "veel - veelder - het veelst",
       "veel - minder - het minst",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "veel - meer - het meest",
     "explanationTr": "'veel' kelimesinin karşılaştırma halleri 'meer' ve 'het meest'tir.",
@@ -1115,7 +1115,7 @@ export const chapters6_10 = [
       "weinig - minder - het minst",
       "weinig - meer - het meest",
       "weinig - kleiner - het kleinst",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "weinig - minder - het minst",
     "explanationTr": "'weinig' kelimesi 'minder' ve 'het minst' olarak çekimlenir.",
@@ -1135,7 +1135,7 @@ export const chapters6_10 = [
       "graag - liever - het liefst",
       "graag - graager - het graagst",
       "graag - beter - het best",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "graag - liever - het liefst",
     "explanationTr": "'graag' zarfı 'liever' ve 'het liefst' şeklini alır.",
@@ -1199,7 +1199,7 @@ export const chapters6_10 = [
     "options": [
       "liefst",
       "lief",
-      "Misschien later.",
+      "om vier uur",
       "liefere"
     ]
   },
@@ -1481,7 +1481,7 @@ export const chapters6_10 = [
       "Nee, we zeggen gewoon 'geen'.",
       "Ja, dat is correct.",
       "Alleen bij de-woorden.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Nee, we zeggen gewoon 'geen'.",
     "explanationTr": "Hollandacada 'geen een' kullanılmaz. Doğrudan 'geen' denir (Ik heb geen auto).",
@@ -1607,7 +1607,7 @@ export const chapters6_10 = [
       "Direct voor het substantief (directly before the noun).",
       "Direct na het substantief (directly after the noun).",
       "Aan het einde van de zin (at the end of the sentence).",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Direct voor het substantief (directly before the noun).",
     "explanationTr": "'geen' kelimesi her zaman nitelediği ismin hemen BİR ÖNCESİNDE yer alır (Subject + verb + geen + noun).",
@@ -1628,7 +1628,7 @@ export const chapters6_10 = [
       "Alleen als het substantief specifiek/bepaald is (met de, het, mijn, jouw, dat, etc.).",
       "Als het substantief meervoud is.",
       "Als het substantief geen artikel heeft.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Alleen als het substantief specifiek/bepaald is (met de, het, mijn, jouw, dat, etc.).",
     "explanationTr": "İsimlerin önünde 'niet' SADECE isim belirli (spesifik) olduğunda kullanılır (de, het, benim, senin, bu, şu vb. varsa).",
@@ -1670,7 +1670,7 @@ export const chapters6_10 = [
       "Met 'niet'",
       "Met 'geen'",
       "Met 'geen een'",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "Met 'niet'",
     "explanationTr": "Fiilleri/eylemleri olumsuz yapmak için daima 'niet' kullanılır.",
@@ -1691,7 +1691,7 @@ export const chapters6_10 = [
       "Met 'niet'",
       "Met 'geen'",
       "Zonder extra woord",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "Met 'niet'",
     "explanationTr": "Sıfatları (güzel, büyük, iyi vb.) olumsuz yapmak için 'niet' kullanılır.",
@@ -1712,7 +1712,7 @@ export const chapters6_10 = [
       "Met 'niet'",
       "Met 'geen'",
       "Met 'nergens'",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "Met 'niet'",
     "explanationTr": "Mekan ve yer bildiren ifadeler 'niet' kelimesiyle olumsuz yapılır.",
@@ -1733,7 +1733,7 @@ export const chapters6_10 = [
       "'niet' komt voor (before) het adjectief.",
       "'niet' komt na (after) het adjectief.",
       "'niet' staat helemaal achteraan de zin.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "'niet' komt voor (before) het adjectief.",
     "explanationTr": "Sıfatları olumsuz yaparken 'niet' her zaman sıfattan ÖNCE (voor) gelir.",
@@ -1754,7 +1754,7 @@ export const chapters6_10 = [
       "'niet' komt meestal voor de plaats (before the place).",
       "'niet' komt meestal na de plaats (after the place).",
       "'niet' staat aan het begin van de zin.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "'niet' komt meestal voor de plaats (before the place).",
     "explanationTr": "Yer bildirirken 'niet' genellikle mekandan/yerden ÖNCE (voor) gelir.",
@@ -1775,7 +1775,7 @@ export const chapters6_10 = [
       "'niet' komt meestal NA het werkwoord / later in de zin.",
       "'niet' komt VOOR het werkwoord.",
       "'niet' vervangt het werkwoord.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "'niet' komt meestal NA het werkwoord / later in de zin.",
     "explanationTr": "Basit fiilleri olumsuz yaparken 'niet' genellikle fiilden SONRA (veya cümlenin sonlarına doğru) gelir.",
@@ -1796,7 +1796,7 @@ export const chapters6_10 = [
       "'niet' komt VOOR de informatie die je negatief wilt maken.",
       "'niet' komt NA de informatie die je negatief wilt maken.",
       "'niet' moet aan het einde staan.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "'niet' komt VOOR de informatie die je negatief wilt maken.",
     "explanationTr": "Ekstra bilgi (örneğin zaman) eklendiğinde, 'niet' olumsuz yapmak istediğiniz bilginin ÖNÜNE konur.",
@@ -1817,7 +1817,7 @@ export const chapters6_10 = [
       "Omdat 'mijn boek' een specifiek substantief is.",
       "Omdat 'boek' een het-woord is.",
       "Omdat het boek niet bestaat.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Omdat 'mijn boek' een specifiek substantief is.",
     "explanationTr": "'mijn' kelimesi kitabı belirli/spesifik hale getirdiği için 'geen' yerine 'niet' kullanılmalıdır.",
@@ -1838,7 +1838,7 @@ export const chapters6_10 = [
       "Zij drinkt geen thee.",
       "Zij drinkt niet thee.",
       "Zij drinkt thee niet.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Zij drinkt geen thee.",
     "explanationTr": "'thee' sayılamayan belirsiz bir isimdir, bu yüzden 'geen' (hiç çay) kullanılır.",
@@ -1859,7 +1859,7 @@ export const chapters6_10 = [
       "Ik heb geen tijd.",
       "Ik heb niet tijd.",
       "Ik heb tijd niet.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dank je wel, dat is erg vriendelijk van je."
     ],
     "correctAnswer": "Ik heb geen tijd.",
     "explanationTr": "'tijd' (zaman) kelimesi belirsiz bir isimdir, bu yüzden 'geen tijd' denir.",
@@ -1880,7 +1880,7 @@ export const chapters6_10 = [
       "Als de focus op het werkwoord ligt (bijv. Ik kan dan niet).",
       "Als de focus op een zelfstandig naamwoord ligt.",
       "Als er 'een' voor het woord staat.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Als de focus op het werkwoord ligt (bijv. Ik kan dan niet).",
     "explanationTr": "Özet kurallarına göre odak fiil üzerinde olduğunda 'niet' kullanılır.",
@@ -1901,7 +1901,7 @@ export const chapters6_10 = [
       "Omdat de focus op het adjectief (sıfat) ligt.",
       "Omdat 'huis' een onbepaald naamwoord is.",
       "Omdat het een plaatsaanduiding is.",
-      "Ik heb helaas geen tijd vandaag."
+      "een ruime slaapkamer"
     ],
     "correctAnswer": "Omdat de focus op het adjectief (sıfat) ligt.",
     "explanationTr": "Cümledeki odak 'mooi' sıfatı üzerinde olduğu için 'niet' kullanılmıştır.",
@@ -1922,7 +1922,7 @@ export const chapters6_10 = [
       "Omdat de focus op het substantief ligt met 'een' of niets ervoor, dus gebruiken we 'geen'.",
       "Omdat 'hond' een adjectief is.",
       "Omdat het om een locatie gaat.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Omdat de focus op het substantief ligt met 'een' of niets ervoor, dus gebruiken we 'geen'.",
     "explanationTr": "İsimden önce 'een' veya hiçbir şey olmadığında isim odaklı olumsuzlama için 'geen' tercih edilir.",
@@ -1943,7 +1943,7 @@ export const chapters6_10 = [
       "Omdat de focus op een locatie / plaats ligt.",
       "Omdat 'Amsterdam' een onbepaald naamwoord is.",
       "Omdat het een werkwoord is.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Omdat de focus op een locatie / plaats ligt.",
     "explanationTr": "Konum/yer (location) bildiren durumlarda 'niet' kullanılır.",
@@ -1964,7 +1964,7 @@ export const chapters6_10 = [
       "Als er specifieke woorden voor staan zoals de, het, deze, die, mijn, jouw, haar, etc.",
       "Als het woord in het meervoud staat.",
       "Als er geen artikel aanwezig is.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Als er specifieke woorden voor staan zoals de, het, deze, die, mijn, jouw, haar, etc.",
     "explanationTr": "İsimden önce de, het, mijn, jouw, haar gibi belirli/spesifik kelimeler varsa 'niet' kullanılır.",
@@ -2048,7 +2048,7 @@ export const chapters6_10 = [
       "06.00 - 12.00",
       "12.00 - 18.00",
       "18.00 - 24.00",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "06.00 - 12.00",
     "explanationTr": "Özet tablosuna göre 'de ochtend' 06:00 ile 12:00 arasını kapsar.",
@@ -2069,7 +2069,7 @@ export const chapters6_10 = [
       "12.00 - 18.00",
       "06.00 - 12.00",
       "00.00 - 06.00",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "12.00 - 18.00",
     "explanationTr": "'de middag' 12:00 ile 18:00 saatleri arasındadır.",
@@ -2090,7 +2090,7 @@ export const chapters6_10 = [
       "18.00 - 24.00",
       "12.00 - 18.00",
       "06.00 - 12.00",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "18.00 - 24.00",
     "explanationTr": "'de avond' 18:00 ile 24:00 saatleri arasındadır.",
@@ -2174,7 +2174,7 @@ export const chapters6_10 = [
       "Ik ben gegaan.",
       "Ik heb gegaan.",
       "Ik zijn gegaan.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Ik ben gegaan.",
     "explanationTr": "'gaan' yönelme/hareket bildirdiği için 'zijn' ile çekimlenir: Ik ben gegaan.",
@@ -2195,7 +2195,7 @@ export const chapters6_10 = [
       "Time (when) - Manner (how) - Place (where)",
       "Tense - Mood - Person",
       "Topic - Meaning - Pronunciation",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Time (when) - Manner (how) - Place (where)",
     "explanationTr": "TeMPo kuralı sırasıyla Zaman (Time), Tarz (Manner) ve Yer/Mekan (Place) sıralamasını ifade eder.",
@@ -2258,7 +2258,7 @@ export const chapters6_10 = [
       "Nee, nooit.",
       "Ja, altijd.",
       "Alleen in het meervoud.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Nee, nooit.",
     "explanationTr": "Altın kural: be-, ge-, her-, ver-, ont- ile başlayan fiiller perfectumda başına ekstra 'ge-' almaz.",
@@ -2279,7 +2279,7 @@ export const chapters6_10 = [
       "heb besteld",
       "heb gebesteld",
       "ben besteld",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "heb besteld",
     "explanationTr": "'bestellen' fiili 'be-' ile başladığı için 'ge-' almaz ve düzenli kuralla 'besteld' olur.",
@@ -2300,7 +2300,7 @@ export const chapters6_10 = [
       "'Bedoelen' is voor wat een persoon wil zeggen (intend), 'betekenen' is voor de betekenis van een woord of situatie (mean).",
       "'Bedoelen' is voor woorden, 'betekenen' is voor personen.",
       "Er is geen verschil, ze betekenen hetzelfde.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "'Bedoelen' is voor wat een persoon wil zeggen (intend), 'betekenen' is voor de betekenis van een woord of situatie (mean).",
     "explanationTr": "'Bedoelen' bir kişinin ne demek/kastetmek istediğini (intend) ifade ederken, 'betekenen' bir kelimenin, işaretin veya durumun anlamını (mean) ifade eder.",
@@ -2363,7 +2363,7 @@ export const chapters6_10 = [
       "'Verstaan' betekent dat je iemand fysiek hoort, 'begrijpen' betekent dat je de betekenis snapt.",
       "'Verstaan' is voor de betekenis, 'begrijpen' is voor het horen.",
       "Het zijn synoniemen.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "'Verstaan' betekent dat je iemand fysiek hoort, 'begrijpen' betekent dat je de betekenis snapt.",
     "explanationTr": "'Verstaan' fiziksel olarak sesi duymak ve ayırt etmek, 'begrijpen' ise duyulan şeyin anlamını kavramak (anlamak) demektir.",
@@ -2591,7 +2591,7 @@ export const chapters6_10 = [
       "het voorlicht en het achterlicht",
       "de rem en de ketting",
       "het zadel en het wiel",
-      "Ik heb helaas geen tijd vandaag."
+      "de band oppompen bij de fietsenmaker"
     ],
     "correctAnswer": "het voorlicht en het achterlicht",
     "explanationTr": "Ön lamba 'het voorlicht', arka lamba 'het achterlicht'tir.",
@@ -2654,7 +2654,7 @@ export const chapters6_10 = [
       "ladybug / dear lord animal",
       "butterfly",
       "platypus",
-      "Ik heb helaas geen tijd vandaag."
+      "om vier uur"
     ],
     "correctAnswer": "ladybug / dear lord animal",
     "explanationTr": "'lieveheersbeestje' uğur böceği (ladybug) demektir. Kelime anlamı 'dear lord animal'dır.",
@@ -2714,7 +2714,7 @@ export const chapters6_10 = [
       "Dat is niet heel slim.",
       "Dat is niet goed.",
       "Dat is vervelend.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Dat is niet heel slim.",
     "explanationTr": "'slim' akıllı demektir. 'Dat is niet heel slim' cümlesi 'Bu çok akıllıca değil' anlamına gelir.",
@@ -2735,7 +2735,7 @@ export const chapters6_10 = [
       "stam + te/de",
       "stam + ten/den",
       "stam + en",
-      "Misschien later."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "stam + te/de",
     "explanationTr": "Düzenli fiillerin tekil şahıs hikaye geçmiş zaman (imperfectum) formunda köke '-te' veya '-de' eklenir.",
@@ -2778,7 +2778,7 @@ export const chapters6_10 = [
       "werkte",
       "werkde",
       "werkten",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "werkte",
     "explanationTr": "'werken' kökü 'werk', 'k' harfi 'soft ketchup' kuralına uyduğu için '+te' alır (werkte).",
@@ -2799,7 +2799,7 @@ export const chapters6_10 = [
       "fietsten",
       "fietste",
       "fietsden",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "fietsten",
     "explanationTr": "'fiets' kökü 's' ile bittiğinden '+te' kuralına uyar. Çoğul 'wij' olduğu için '+ten' eklenir (fietsten).",
@@ -2882,8 +2882,8 @@ export const chapters6_10 = [
     "options": [
       "gingen",
       "ging",
-      "Misschien later.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen.",
+      "om vier uur"
     ],
     "correctAnswer": "gingen",
     "explanationTr": "'gaan' (gitmek) fiilinin çoğul geçmiş zaman hali 'gingen'dir.",
@@ -2904,7 +2904,7 @@ export const chapters6_10 = [
       "kwam",
       "kwamen",
       "komde",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "kwam",
     "explanationTr": "'komen' (gelmek) fiilinin tekil geçmiş zaman hali 'kwam'dır.",
@@ -2945,8 +2945,8 @@ export const chapters6_10 = [
     "options": [
       "vond",
       "vonden",
-      "Misschien later.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen.",
+      "om vier uur"
     ],
     "correctAnswer": "vond",
     "explanationTr": "'vinden' (bulmak/düşünmek) fiilinin tekil geçmiş zaman hali 'vond'dur.",
@@ -2967,7 +2967,7 @@ export const chapters6_10 = [
       "deed",
       "deden",
       "doede",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "deed",
     "explanationTr": "'doen' (yapmak) fiilinin tekil geçmiş zaman hali 'deed'dir.",
@@ -3009,7 +3009,7 @@ export const chapters6_10 = [
       "viel",
       "vielen",
       "valde",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "viel",
     "explanationTr": "'vallen' (düşmek) fiilinin tekil geçmiş zaman hali 'viel'dir.",
@@ -3052,7 +3052,7 @@ export const chapters6_10 = [
       "mocht",
       "mochten",
       "mogde",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "mocht",
     "explanationTr": "'mogen' (izinli olmak) fiilinin tekil geçmiş zamanı 'mocht' olur.",
@@ -3074,7 +3074,7 @@ export const chapters6_10 = [
       "wilde / wou",
       "wilden",
       "wilte",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "wilde / wou",
     "explanationTr": "'willen' (istemek) fiilinin tekil geçmiş zamanı 'wilde' (veya konuşma dilinde 'wou') şeklindedir.",
@@ -3096,7 +3096,7 @@ export const chapters6_10 = [
       "moesten",
       "moest",
       "moetden",
-      "Misschien later."
+      "appelsap"
     ],
     "correctAnswer": "moesten",
     "explanationTr": "'moeten' (zorunda olmak) fiilinin çoğul geçmiş zamanı 'moesten'dir.",
@@ -3118,7 +3118,7 @@ export const chapters6_10 = [
       "kon",
       "konden",
       "kunde",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "kon",
     "explanationTr": "'kunnen' (yapabilmek) fiilinin tekil geçmiş zamanı 'kon' şeklindedir.",
@@ -3183,7 +3183,7 @@ export const chapters6_10 = [
       "Voor beweging (movement) of verandering van situatie (state change).",
       "Voor alle regelmatige werkwoorden.",
       "Als de laatste letter in soft ketchup zit.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Voor beweging (movement) of verandering van situatie (state change).",
     "explanationTr": "'zijn' yardımcı fiili yön bildiren hareketlerde veya durum değişikliklerinde kullanılır. Aksi halde 'hebben' kullanılır.",
@@ -3224,7 +3224,7 @@ export const chapters6_10 = [
       "turn left and right",
       "go upstairs and downstairs",
       "walk straight",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "turn left and right",
     "explanationTr": "'linksaf gaan' sola dönmek, 'rechtsaf gaan' sağa dönmek demektir.",
@@ -3287,13 +3287,13 @@ export const chapters6_10 = [
       "today's special",
       "the menu",
       "the bill",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "today's special",
     "explanationTr": "'de dagschotel' günün yemeği (today's special) demektir.",
     "explanationEn": "'de dagschotel' means 'today's special'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "sum_ch6_1012",
@@ -3434,7 +3434,7 @@ export const chapters6_10 = [
       "(ik vind het) vies",
       "ik houd niet van ...",
       "het gaat wel",
-      "Ik heb helaas geen tijd vandaag."
+      "groentesoep met stokbrood"
     ],
     "correctAnswer": "(ik vind het) vies",
     "explanationTr": "Yemek için en olumsuz derece (--) 'vies' (iğrenç/kötü) kelimesidir.",
@@ -3497,7 +3497,7 @@ export const chapters6_10 = [
       "Tussen de 5 en 10 procent",
       "Ongeveer 20 procent",
       "Nederlanders geven geen fooi",
-      "Ik heb helaas geen tijd vandaag."
+      "groentesoep met stokbrood"
     ],
     "correctAnswer": "Tussen de 5 en 10 procent",
     "explanationTr": "Hollanda'da restoranlarda genellikle yüzde 5 ile 10 arası bahşiş (fooi) verilir.",
@@ -3518,7 +3518,7 @@ export const chapters6_10 = [
       "Serveerster / ober en taxichauffeur",
       "Groenteboer en docent",
       "Dokter en kapper",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Serveerster / ober en taxichauffeur",
     "explanationTr": "Kültür notuna göre garsonlara ve taksicilere bahşiş verilirken manav, öğretmen veya doktora verilmez.",
@@ -3738,7 +3738,7 @@ export const chapters6_10 = [
       "moet",
       "moe",
       "moeen",
-      "Misschien later."
+      "appelsap"
     ]
   },
   {
@@ -3817,7 +3817,7 @@ export const chapters6_10 = [
       "Nee, niet één tafeltje is vrij.",
       "Ja, er zijn veel tafels vrij.",
       "Ja, er is één tafel vrij.",
-      "Ik heb helaas geen tijd vandaag."
+      "groentesoep met stokbrood"
     ],
     "correctAnswer": "Nee, niet één tafeltje is vrij.",
     "explanationTr": "Metinde restoranda tek bir boş masa bile olmadığı ('Niet één tafeltje is vrij') belirtilir.",
@@ -3837,7 +3837,7 @@ export const chapters6_10 = [
       "Dat moet u eerst aan die mensen vragen, meneer!",
       "Gaat u uw gang.",
       "U moet hier wachten.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Dat moet u eerst aan die mensen vragen, meneer!",
     "explanationTr": "Garson, anlatıcıya 'Bunu önce o insanlara sormalısınız beyefendi!' der.",
@@ -3857,7 +3857,7 @@ export const chapters6_10 = [
       "i - ie",
       "a - aa",
       "o - oo",
-      "Misschien later."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "i - ie",
     "explanationTr": "Sayfa 93 ve 94'te yer alan telaffuz alıştırmaları 'i' ve 'ie' sesleri arasındaki farka odaklanır.",
@@ -4193,7 +4193,7 @@ export const chapters6_10 = [
       "mij / me",
       "jou / je",
       "hem",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "mij / me",
     "explanationTr": "'ik' (ben) öznesinin nesne hali 'mij' veya 'me' (beni/bana) şeklindedir.",
@@ -4214,7 +4214,7 @@ export const chapters6_10 = [
       "jou / je",
       "mij / me",
       "hem",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "jou / je",
     "explanationTr": "'jij / je' (sen) öznesinin nesne hali 'jou' veya 'je' (seni/sana) şeklindedir.",
@@ -4424,7 +4424,7 @@ export const chapters6_10 = [
       "deze",
       "die",
       "dit",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "deze",
     "explanationTr": "Yakındaki bir de-woord için 'deze' (bu) kullanılır.",
@@ -4445,7 +4445,7 @@ export const chapters6_10 = [
       "die",
       "deze",
       "dat",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "die",
     "explanationTr": "Uzaktaki bir de-woord için 'die' (şu/o) kullanılır.",
@@ -4466,7 +4466,7 @@ export const chapters6_10 = [
       "dit",
       "dat",
       "deze",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "dit",
     "explanationTr": "Yakındaki bir het-woord için 'dit' (bu) kullanılır.",
@@ -4487,7 +4487,7 @@ export const chapters6_10 = [
       "dat",
       "dit",
       "die",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "dat",
     "explanationTr": "Uzaktaki bir het-woord için 'dat' (şu/o) kullanılır.",
@@ -4508,7 +4508,7 @@ export const chapters6_10 = [
       "deze",
       "die",
       "dit",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "deze",
     "explanationTr": "Yakındaki çoğul isimler için her zaman 'deze' (bunlar) kullanılır.",
@@ -4529,7 +4529,7 @@ export const chapters6_10 = [
       "die",
       "deze",
       "dat",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "die",
     "explanationTr": "Uzaktaki çoğul isimler için her zaman 'die' (şunlar/onlar) kullanılır.",
@@ -4550,7 +4550,7 @@ export const chapters6_10 = [
       "kleiner (dan)",
       "kleinst",
       "meest klein",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "kleiner (dan)",
     "explanationTr": "Düzenli sıfatların karşılaştırma hali sonuna '-er' alarak yapılır: kleiner (dan) [daha küçük].",
@@ -4571,7 +4571,7 @@ export const chapters6_10 = [
       "(het) kleinst",
       "kleiner",
       "meest klein",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "(het) kleinst",
     "explanationTr": "Düzenli sıfatların en üstünlük hali sonuna '-st' alarak yapılır: (het) kleinst [en küçük].",
@@ -4593,7 +4593,7 @@ export const chapters6_10 = [
       "beter (dan)",
       "goeder",
       "meer goed",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "beter (dan)",
     "explanationTr": "'goed' (iyi) sıfatı düzensizdir, karşılaştırma hali 'beter (dan)' (daha iyi) olur.",
@@ -4615,7 +4615,7 @@ export const chapters6_10 = [
       "(het) best",
       "(het) beterst",
       "(het) goedst",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "(het) best",
     "explanationTr": "'goed' sıfatının en üstünlük hali '(het) best' (en iyi) şeklindedir.",
@@ -4637,7 +4637,7 @@ export const chapters6_10 = [
       "meer (dan)",
       "veeler",
       "beter",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "meer (dan)",
     "explanationTr": "'veel' (çok) sıfatının karşılaştırma hali 'meer (dan)' (daha fazla) şeklindedir.",
@@ -4659,7 +4659,7 @@ export const chapters6_10 = [
       "(het) meest",
       "(het) meerst",
       "(het) veelst",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "(het) meest",
     "explanationTr": "'veel' sıfatının en üstünlük hali '(het) meest' (en çok) olur.",
@@ -4681,7 +4681,7 @@ export const chapters6_10 = [
       "minder (dan)",
       "weiniger",
       "meer",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "minder (dan)",
     "explanationTr": "'weinig' (az) sıfatının karşılaştırma hali 'minder (dan)' (daha az) olur.",
@@ -4703,7 +4703,7 @@ export const chapters6_10 = [
       "(het) minst",
       "(het) minder",
       "(het) weinigst",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "(het) minst",
     "explanationTr": "'weinig' sıfatının en üstünlük hali '(het) minst' (en az) şeklindedir.",
@@ -4725,7 +4725,7 @@ export const chapters6_10 = [
       "liever (dan)",
       "graager",
       "meer graag",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "liever (dan)",
     "explanationTr": "'graag' (memnuniyetle/severek) kelimesinin karşılaştırma hali 'liever (dan)' (tercihen/daha çok severek) olur.",
@@ -4747,7 +4747,7 @@ export const chapters6_10 = [
       "(het) liefst",
       "(het) graags",
       "(het) meest graag",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "(het) liefst",
     "explanationTr": "'graag' kelimesinin en üstünlük hali '(het) liefst' (en tercihen/en çok severek) şeklindedir.",
@@ -4768,7 +4768,7 @@ export const chapters6_10 = [
       "even + basisvorm + als (bijv. even klein als)",
       "meer + basisvorm + als",
       "zo + comparatief + als",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "even + basisvorm + als (bijv. even klein als)",
     "explanationTr": "Eşitlik durumunda 'even [sıfatın yalın hali] als' (kadar ...) yapısı kullanılır.",
@@ -4789,7 +4789,7 @@ export const chapters6_10 = [
       "directeur Schomaker Mannenmode",
       "directeur van een supermarkt",
       "directeur van een school",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "directeur Schomaker Mannenmode",
     "explanationTr": "Metinde Jos Schomaker'in 'Schomaker Mannenmode' (erkek giyimi) direktörü olduğu belirtilir.",
@@ -4810,7 +4810,7 @@ export const chapters6_10 = [
       "Nee, hij draagt zijn kleding niet te lang.",
       "Ja, hij draagt zijn kleding heel lang.",
       "Hij draagt nooit eigen kleding.",
-      "Ik heb helaas geen tijd vandaag."
+      "een donkerblauwe wollen trui"
     ],
     "correctAnswer": "Nee, hij draagt zijn kleding niet te lang.",
     "explanationTr": "Metinde 'Ik draag mijn kleren niet te lang' diyerek kıyafetlerini çok uzun süre giymediğini söyler.",
@@ -4831,7 +4831,7 @@ export const chapters6_10 = [
       "Ze moeten absoluut comfortabel zijn.",
       "Ze moeten de duurste zijn.",
       "Ze moeten zwart zijn.",
-      "Ik heb helaas geen tijd vandaag."
+      "een donkerblauwe wollen trui"
     ],
     "correctAnswer": "Ze moeten absoluut comfortabel zijn.",
     "explanationTr": "Çalışırken odaklanabilmek için kıyafetlerinin 'absoluut comfortabel' (kesinlikle rahat) olması gerektiğini belirtir.",
@@ -4977,7 +4977,7 @@ export const chapters6_10 = [
       "Om zelfstandige naamwoorden (met 'een' of zonder lidwoord) te ontkennen (bijv. Ik heb geen idee).",
       "Om werkwoorden te ontkennen.",
       "Om bijvoeglijke naamwoorden te ontkennen.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Om zelfstandige naamwoorden (met 'een' of zonder lidwoord) te ontkennen (bijv. Ik heb geen idee).",
     "explanationTr": "'geen' kelimesi belirsiz isimleri (önünde 'een' olan veya artikeli olmayan) olumsuz yapmak için kullanılır.",
@@ -4998,7 +4998,7 @@ export const chapters6_10 = [
       "Om de rest van de zin te ontkennen, zoals bijvoeglijke naamwoorden, werkwoorden of specifieke plaatsen (bijv. niet ver, dat gebruiken we niet).",
       "Alleen voor meervoudsvormen.",
       "Om een nieuw zelfstandig naamwoord te introduceren.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Om de rest van de zin te ontkennen, zoals bijvoeglijke naamwoorden, werkwoorden of specifieke plaatsen (bijv. niet ver, dat gebruiken we niet).",
     "explanationTr": "'niet' fiilleri, sıfatları veya belirli durumları olumsuzlaştırmak için kullanılır.",
@@ -5060,7 +5060,7 @@ export const chapters6_10 = [
     "options": [
       "naast",
       "naa",
-      "Misschien later.",
+      "badkamer",
       "naaere"
     ],
     "correctAnswer": "naast",
@@ -5271,7 +5271,7 @@ export const chapters6_10 = [
       "Ze vinden de trappen erg steil.",
       "Ze vinden de trappen erg breed.",
       "Ze vinden dat er geen trappen zijn.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Ze vinden de trappen erg steil.",
     "explanationTr": "Yabancılar genellikle Hollanda evlerindeki merdivenleri çok dik (steil) bulurlar.",
@@ -5292,7 +5292,7 @@ export const chapters6_10 = [
       "Grote ramen en veel licht.",
       "Heel grote kamers.",
       "Veel privacy.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Grote ramen en veel licht.",
     "explanationTr": "Büyük pencereler (grote ramen) ve çok ışık (veel licht) alması olumlu özelliklerdendir.",
@@ -5313,7 +5313,7 @@ export const chapters6_10 = [
       "Je hebt geen privacy, mensen kunnen 's avonds naar binnen kijken.",
       "Ze zijn te zwaar om te openen.",
       "Ze maken het huis te koud.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Je hebt geen privacy, mensen kunnen 's avonds naar binnen kijken.",
     "explanationTr": "Büyük pencereler yüzünden gece dışarıdan içerisinin görünmesi gizlilik (privacy) eksikliğine neden olur.",
@@ -5334,7 +5334,7 @@ export const chapters6_10 = [
       "De wc / het toilet",
       "De slaapkamer",
       "De meterkast",
-      "Misschien later."
+      "een ruime slaapkamer"
     ],
     "correctAnswer": "De wc / het toilet",
     "explanationTr": "Metinde tuvalet genellikle evdeki 'en küçük oda' (kleinste kamertje) olarak adlandırılır.",
@@ -5355,7 +5355,7 @@ export const chapters6_10 = [
       "35 vierkante meter",
       "50 vierkante meter",
       "20 vierkante meter",
-      "Misschien later."
+      "een ruime slaapkamer"
     ],
     "correctAnswer": "35 vierkante meter",
     "explanationTr": "Diyalogda oturma odasının 35 metrekare (35 vierkante meter) olduğu belirtilmektedir.",
@@ -5376,7 +5376,7 @@ export const chapters6_10 = [
       "Op de derde verdieping",
       "Op de begane grond",
       "Op de eerste verdieping",
-      "Misschien later."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Op de derde verdieping",
     "explanationTr": "Emlakçı dairenin üçüncü katta (derde verdieping) olduğunu söyler.",
@@ -5417,7 +5417,7 @@ export const chapters6_10 = [
       "Omdat ze het een leuke, zonnige kamer vindt en met haar vriend wil overleggen.",
       "Omdat ze de huurprijs te hoog vindt.",
       "Omdat ze een bad wil.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Omdat ze het een leuke, zonnige kamer vindt en met haar vriend wil overleggen.",
     "explanationTr": "Patricia evi güzel ve güneşli bulduğu için erkek arkadaşıyla görüşüp (overleggen) randevu almak ister.",
@@ -5774,7 +5774,7 @@ export const chapters6_10 = [
       "Mijn keel doet pijn / zeer.",
       "Ik heb hoofdpijn.",
       "Ik ben ziek.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Mijn keel doet pijn / zeer.",
     "explanationTr": "Hasta boğazının ağrıdığını ifade etmek için 'Mijn keel doet pijn / zeer' der.",
@@ -5795,7 +5795,7 @@ export const chapters6_10 = [
       "De bultjes jeuken verschrikkelijk.",
       "Ik voel me niet goed.",
       "Mijn keel doet pijn.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "De bultjes jeuken verschrikkelijk.",
     "explanationTr": "Kızarıklık veya kabarcıkların korkunç derecede kaşındığını söylemek için 'De bultjes jeuken verschrikkelijk' kalıbı kullanılır.",
@@ -5816,7 +5816,7 @@ export const chapters6_10 = [
       "Ik ben ziek.",
       "Ik voel me goed.",
       "Ik slaap slecht.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Ik ben ziek.",
     "explanationTr": "Hasta olduğunu belirtmek için 'Ik ben ziek' ifadesi kullanılır.",
@@ -5879,7 +5879,7 @@ export const chapters6_10 = [
       "Beterschap.",
       "Gefeliciteerd.",
       "Smakelijk eten.",
-      "Ik heb helaas geen tijd vandaag."
+      "om vier uur"
     ],
     "correctAnswer": "Beterschap.",
     "explanationTr": "Hasta olan birine 'Geçmiş olsun' (Get well soon) demek için 'Beterschap' denir.",
@@ -5984,7 +5984,7 @@ export const chapters6_10 = [
       "'s middags",
       "elke ochtend",
       "'s avonds",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "'s middags",
     "explanationTr": "'Her öğleden sonra' (every afternoon) ifadesi günlük dilde kısaca ''s middags' olarak geçer.",
@@ -6069,7 +6069,7 @@ export const chapters6_10 = [
       "Ze krijgen geen extra 'ge-' als prefix.",
       "Ze krijgen een dubbele 'ge-'.",
       "Ze veranderen in onregelmatige werkwoorden.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Ze krijgen geen extra 'ge-' als prefix.",
     "explanationTr": "be-, ge-, her-, ver- veya ont- ile başlayan fiiller perfectum (geçmiş zaman) formunda fazladan 'ge-' ön eki almazlar.",
@@ -6111,7 +6111,7 @@ export const chapters6_10 = [
       "betaald",
       "gebetaald",
       "betaalt",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "betaald",
     "explanationTr": "'betalen' fiili 'be-' ile başladığı için fazladan 'ge-' almaz, kurala göre sonuna '-d' gelir: 'betaald'.",
@@ -6132,7 +6132,7 @@ export const chapters6_10 = [
       "verhuurd",
       "geverhuurd",
       "verhuurt",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "verhuurd",
     "explanationTr": "'verhuren' fiili 'ver-' ile başladığı için 'ge-' almaz ve sonuna '-d' eklenir: 'verhuurd'.",
@@ -6153,7 +6153,7 @@ export const chapters6_10 = [
       "ontmoet",
       "geontmoet",
       "ontmoeten",
-      "Misschien later."
+      "appelsap"
     ],
     "correctAnswer": "ontmoet",
     "explanationTr": "'ontmoeten' fiili 'ont-' ile başladığı için 'ge-' almaz. Kökü 't' ile bittiği için kendi formunda kalır: 'ontmoet'.",
@@ -6174,7 +6174,7 @@ export const chapters6_10 = [
       "Bij werkwoorden van richting of verandering van situatie (bijv. gaan, komen, beginnen).",
       "Bij alle onregelmatige werkwoorden.",
       "Als de zin ontkennend is.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Bij werkwoorden van richting of verandering van situatie (bijv. gaan, komen, beginnen).",
     "explanationTr": "Perfectum formunda, yön veya durum değişikliği bildiren fiiller (gaan, komen, beginnen gibi) ile 'hebben' yerine 'zijn' kullanılır.",
@@ -6279,7 +6279,7 @@ export const chapters6_10 = [
       "iets bijzonders",
       "iets bijzonder",
       "iets bijzonderes",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "iets bijzonders",
     "explanationTr": "Kurala göre 'iets' kelimesinden sonra gelen sıfatlara '-s' takısı eklenir: iets bijzonders.",
@@ -6300,7 +6300,7 @@ export const chapters6_10 = [
       "Zij had griep (met hoge koorts, pijn en moest in bed blijven).",
       "Zij had een lichte verkoudheid.",
       "Zij had een gebroken been.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Zij had griep (met hoge koorts, pijn en moest in bed blijven).",
     "explanationTr": "Okuma parçasına ve cevap anahtarına göre Jenny gribe (griep) yakalanmıştır; ateşi vardı, her yeri ağrıyordu ve yataktan çıkamadı.",
@@ -6321,7 +6321,7 @@ export const chapters6_10 = [
       "Hij was verkouden (hij werkte, maar moest hoesten, niezen en zijn neus snuiten).",
       "Hij had griep en kon niet lopen.",
       "Hij had hoofdpijn en moest naar het ziekenhuis.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Hij was verkouden (hij werkte, maar moest hoesten, niezen en zijn neus snuiten).",
     "explanationTr": "Okuma parçasına ve cevap anahtarına göre Peter soğuk algınlığı (verkoudheid) geçirmiştir; öksürüyor, hapşırıyor ve burnunu siliyordu ama çalışabiliyordu.",
@@ -6342,7 +6342,7 @@ export const chapters6_10 = [
       "Op werkdagen van 8.00 tot 12.00 uur en van 13.30 tot 17.00 uur.",
       "24 uur per dag, 7 dagen per week.",
       "Alleen in de ochtend tot 13.00 uur.",
-      "Ik heb helaas geen tijd vandaag."
+      "een ruime slaapkamer"
     ],
     "correctAnswer": "Op werkdagen van 8.00 tot 12.00 uur en van 13.30 tot 17.00 uur.",
     "explanationTr": "Kitaptaki kültürel bilgilere göre aile hekimlerinin (huisarts) standart çalışma saatleri iş günleri 8.00-12.00 ile 13.30-17.00 arasıdır.",
@@ -6363,7 +6363,7 @@ export const chapters6_10 = [
       "De spoedlijn of huisartsenpost.",
       "De politie.",
       "Je buren.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "De spoedlijn of huisartsenpost.",
     "explanationTr": "Çalışma saatleri dışında veya acil durumlarda nöbetçi doktora 'de spoedlijn' (acil durum hattı) üzerinden ulaşılır.",
@@ -6426,7 +6426,7 @@ export const chapters6_10 = [
       "rechts afslaan",
       "links afslaan",
       "rechtdoor gaan",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "rechts afslaan",
     "explanationTr": "'rechts afslaan' sağa dönmek (turn right) demektir.",
@@ -6447,7 +6447,7 @@ export const chapters6_10 = [
       "seat / saddle",
       "wheel",
       "lock",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "seat / saddle",
     "explanationTr": "'het zadel' bisiklet selesi / koltuğu (seat / saddle) demektir.",
@@ -6468,7 +6468,7 @@ export const chapters6_10 = [
       "pedal",
       "brake",
       "light",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "pedal",
     "explanationTr": "'de trapper' bisiklet pedalıdır.",
@@ -6489,7 +6489,7 @@ export const chapters6_10 = [
       "front light",
       "rear light",
       "bell",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "front light",
     "explanationTr": "'het voorlicht' bisikletin ön farı/ışığıdır (front light).",
@@ -6510,7 +6510,7 @@ export const chapters6_10 = [
       "rear light",
       "front light",
       "lock",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "rear light",
     "explanationTr": "'het achterlicht' bisikletin arka lambasıdır (rear light).",
@@ -6636,7 +6636,7 @@ export const chapters6_10 = [
       "'Bedoelen' is voor wat een persoon bedoelt (person means), 'betekenen' is voor wat een woord of ding betekent (thing means).",
       "'Betekenen' is voor personen, 'bedoelen' is voor dingen.",
       "Er is geen verschil.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "'Bedoelen' is voor wat een persoon bedoelt (person means), 'betekenen' is voor wat een woord of ding betekent (thing means).",
     "explanationTr": "'bedoelen' kişilerin ne kastettiği (demek istediği) için, 'betekenen' ise kelime veya nesnelerin ne anlama geldiği için kullanılır.",
@@ -6662,7 +6662,7 @@ export const chapters6_10 = [
       "betekent",
       "beteken",
       "betekenen",
-      "Misschien later."
+      "om vier uur"
     ]
   },
   {
@@ -6683,7 +6683,7 @@ export const chapters6_10 = [
       "bedoelt",
       "bedoel",
       "bedoelen",
-      "Misschien later."
+      "om vier uur"
     ]
   },
   {
@@ -6699,7 +6699,7 @@ export const chapters6_10 = [
       "stam + te(n) of de(n) afhankelijk van de 'soft ketchup' regel.",
       "stam + t",
       "infinitief + ge",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "stam + te(n) of de(n) afhankelijk van de 'soft ketchup' regel.",
     "explanationTr": "Düzenli fiillerin hikaye geçmiş zamanı (imperfectum), kökün 'soft ketchup' harflerinden biriyle bitip bitmediğine bağlı olarak '+te(n)' veya '+de(n)' almasıyla oluşturulur.",
@@ -6724,7 +6724,7 @@ export const chapters6_10 = [
     "options": [
       "fietste",
       "fiet",
-      "Misschien later.",
+      "om vier uur",
       "fietere"
     ]
   },
@@ -6805,7 +6805,7 @@ export const chapters6_10 = [
       "mocht",
       "moogde",
       "moogte",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "mocht",
     "explanationTr": "'mogen' (izinli olmak) fiilinin tekil geçmiş zaman hali 'mocht' şeklindedir.",
@@ -6827,7 +6827,7 @@ export const chapters6_10 = [
       "wilde / wou",
       "wilte",
       "wilde / wilden",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "wilde / wou",
     "explanationTr": "'willen' (istemek) fiilinin tekil geçmiş zaman hali 'wilde' veya 'wou' olabilir.",
@@ -6849,7 +6849,7 @@ export const chapters6_10 = [
       "moest",
       "moette",
       "moetde",
-      "Misschien later."
+      "appelsap"
     ],
     "correctAnswer": "moest",
     "explanationTr": "'moeten' (zorunda olmak) fiilinin tekil geçmiş zaman hali 'moest' şeklindedir.",
@@ -6871,7 +6871,7 @@ export const chapters6_10 = [
       "kon",
       "koste",
       "kunde",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "kon",
     "explanationTr": "'kunnen' (yapabilmek) fiilinin tekil geçmiş zaman hali 'kon' şeklindedir.",
@@ -6893,7 +6893,7 @@ export const chapters6_10 = [
       "zou",
       "zulte",
       "zulde",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "zou",
     "explanationTr": "'zullen' fiilinin tekil geçmiş zaman hali 'zou' şeklindedir.",
@@ -6914,8 +6914,8 @@ export const chapters6_10 = [
     "options": [
       "konden",
       "kondde",
-      "Misschien later.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen.",
+      "om vier uur"
     ],
     "correctAnswer": "konden",
     "explanationTr": "Çoğul özneler için 'kunnen' fiilinin geçmiş zamanı 'konden' olur.",
@@ -6936,8 +6936,8 @@ export const chapters6_10 = [
     "options": [
       "moesten",
       "moestte",
-      "Misschien later.",
-      "Ik heb helaas geen tijd vandaag."
+      "groentesoep met stokbrood",
+      "appelsap"
     ],
     "correctAnswer": "moesten",
     "explanationTr": "Çoğul özneler için 'moeten' fiilinin geçmiş zamanı 'moesten' olur.",
@@ -6958,7 +6958,7 @@ export const chapters6_10 = [
       "Voor zaken die afgesloten zijn (completed actions).",
       "Voor het beschrijven van achtergrondinformatie.",
       "Voor de toekomstige tijd.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Voor zaken die afgesloten zijn (completed actions).",
     "explanationTr": "Hollandacada tamamlanmış, bitmiş olaylar (afgesloten zaken) için perfectum kullanılır.",
@@ -6979,7 +6979,7 @@ export const chapters6_10 = [
       "Voor beschrijvingen (descriptions / background details).",
       "Voor afgesloten acties in het verleden.",
       "Om een bevel te geven.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Voor beschrijvingen (descriptions / background details).",
     "explanationTr": "Geçmişteki durumları betimlemek ve arka plan detayları vermek için (beschrijvingen) imperfectum kullanılır.",
@@ -6999,7 +6999,7 @@ export const chapters6_10 = [
       "Zijn eigen fietsen zijn allemaal gestolen.",
       "Hij vindt de fiets van zijn vriendin mooier.",
       "Zijn fiets is bij de fietsenmaker.",
-      "Ik heb helaas geen tijd vandaag."
+      "de band oppompen bij de fietsenmaker"
     ],
     "correctAnswer": "Zijn eigen fietsen zijn allemaal gestolen.",
     "explanationTr": "Metne göre Andreas'ın üç bisikleti de çalınmıştır (gestolen).",
@@ -7019,7 +7019,7 @@ export const chapters6_10 = [
       "De bel, het heeft een vrolijk geluid als een mini-kerkklok.",
       "De kleur van de fiets.",
       "Het stuur.",
-      "Ik heb helaas geen tijd vandaag."
+      "de band oppompen bij de fietsenmaker"
     ],
     "correctAnswer": "De bel, het heeft een vrolijk geluid als een mini-kerkklok.",
     "explanationTr": "Ronald bisikletindeki en güzel şeyin, neşeli sesiyle mini bir kilise çanına benzeyen zili (de bel) olduğunu söyler.",
@@ -7039,7 +7039,7 @@ export const chapters6_10 = [
       "Een omafiets.",
       "Een mountainbike.",
       "Een racefiets.",
-      "Ik heb helaas geen tijd vandaag."
+      "om vier uur"
     ],
     "correctAnswer": "Een omafiets.",
     "explanationTr": "Jarno, uzun zamandır istediği bir 'omafiets' (klasik kadın bisikleti) aldığını anlatır.",
@@ -7059,7 +7059,7 @@ export const chapters6_10 = [
       "In Nederland fietst iedereen, van kind tot professor.",
       "Alleen studenten fietsen in Nederland.",
       "Mensen fietsen alleen in het weekend.",
-      "Ik heb helaas geen tijd vandaag."
+      "de band oppompen bij de fietsenmaker"
     ],
     "correctAnswer": "In Nederland fietst iedereen, van kind tot professor.",
     "explanationTr": "Kültür notuna göre Hollanda'da çocuktan profesöre kadar herkes bisiklete biner.",
@@ -7168,7 +7168,7 @@ export const chapters6_10 = [
       "moet",
       "moe",
       "moeen",
-      "Misschien later."
+      "om vier uur"
     ]
   },
   {
@@ -7231,7 +7231,7 @@ export const chapters6_10 = [
       "neemt",
       "neem",
       "neemen",
-      "Misschien later."
+      "appelsap"
     ]
   },
   {
@@ -7399,7 +7399,7 @@ export const chapters6_10 = [
       "zit",
       "zi",
       "zien",
-      "Misschien later."
+      "overhemd"
     ]
   },
   {
@@ -7420,7 +7420,7 @@ export const chapters6_10 = [
       "staat",
       "staa",
       "staaen",
-      "Misschien later."
+      "om vier uur"
     ]
   },
   {

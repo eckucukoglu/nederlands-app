@@ -49,7 +49,7 @@ const matchingQuestionsBase = [
     "explanationTr": "Aile üyeleri ve tanışma ifadeleri: 'vader' (baba), 'heet' (adlandırılmak), 'zussen' (kız kardeşler), 'kennis maken' (tanışmak), 'vrouw' (eş/kadın).",
     "explanationEn": "Family and introduction terms: 'vader' (father), 'heet' (is called), 'zussen' (sisters), 'kennis maken' (to meet), 'vrouw' (wife).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_extra_002",
@@ -97,7 +97,7 @@ const matchingQuestionsBase = [
     "explanationTr": "'koffie' (kahve siparişi), 'Spaans' (İspanyolca), 'eerste' (sıra sayısı), 'cent' (para birimi), 'betalen' (ödemek).",
     "explanationEn": "'koffie' (coffee), 'Spaans' (Spanish language), 'eerste' (first), 'cent' (cents), 'betalen' (to pay).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_extra_003",
@@ -157,7 +157,7 @@ const matchingQuestionsBase = [
       "verbs_present",
       "word_order"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies de juiste persoonsvorm of vraagwoord:",
+    "questionNl": "Kies de juiste persoonsvorm of vraagwoord:",
     "instructionTr": "Geniş/şimdiki zaman fiil çekimi ve soru kalıplarını eşleştirin.",
     "instructionEn": "Match the correct verb form or question word.",
     "items": [
@@ -205,7 +205,7 @@ const matchingQuestionsBase = [
       "possessive_pronouns",
       "articles"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste bezittelijk voornaamwoord of lidwoord:",
+    "questionNl": "Kies het juiste bezittelijk voornaamwoord of lidwoord:",
     "instructionTr": "İyelik zamirlerini ve artikelleri uygun boşluklarla eşleştirin.",
     "instructionEn": "Match possessive pronouns and articles to the correct sentences.",
     "items": [
@@ -254,7 +254,7 @@ const matchingQuestionsBase = [
       "canteen",
       "cafe_phrases"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste woord voor een cafébezoek of voorstel:",
+    "questionNl": "Kies het juiste woord voor een cafébezoek of voorstel:",
     "instructionTr": "Kafe diyaloğu ve 'zullen' öneri kalıbındaki boşlukları doldurun.",
     "instructionEn": "Fill in the blanks for café dialogues and suggestions with 'zullen'.",
     "items": [
@@ -303,7 +303,7 @@ const matchingQuestionsBase = [
       "countries",
       "opening_hours"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het passende woord over herkomst en tijden:",
+    "questionNl": "Kies het passende woord over herkomst en tijden:",
     "instructionTr": "Köken, dil ve çalışma saatleri ile ilgili boşlukları tamamlayın.",
     "instructionEn": "Complete the blanks regarding origin, language, and opening hours.",
     "items": [
@@ -352,7 +352,7 @@ const matchingQuestionsBase = [
       "emotions",
       "adjectives"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste bijvoeglijk naamwoord voor personen:",
+    "questionNl": "Kies het juiste bijvoeglijk naamwoord voor personen:",
     "instructionTr": "Kişi tasviri ve ruh hali bildiren sıfatları eşleştirin.",
     "instructionEn": "Match adjectives describing personal appearance and feelings.",
     "items": [
@@ -487,7 +487,7 @@ const matchingQuestionsBase = [
     "explanationTr": "'dat is alles' (hepsi bu kadar), 'van u' (sizden), 'per bakje' (kutu/kase başına), 'terug' (para üstü), 'prullenbak' (çöp kutusu).",
     "explanationEn": "'alles' (that's all), 'van u' (polite 'from you'), 'bakje' (punnet/tub), 'terug' (change back), 'prullenbak' (trash bin).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_extra_011",
@@ -597,7 +597,7 @@ const matchingQuestionsBase = [
       "groente_fruit",
       "clothing"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste zelfstandig naamwoord in enkelvoud of meervoud:",
+    "questionNl": "Kies het juiste zelfstandig naamwoord in enkelvoud of meervoud:",
     "instructionTr": "Pazar ve giyim isimlerinin tekil/çoğul formlarını eşleştirin.",
     "instructionEn": "Match singular and plural nouns for market items and clothing.",
     "items": [
@@ -683,7 +683,7 @@ const matchingQuestionsBase = [
     "explanationTr": "'passen' (denemek), 'mag' (yasak/izin: mag niet roken), 'willen' (istemek), 'strak' (dar/sıkı), 'winkel' (mağaza).",
     "explanationEn": "'passen' (to try on), 'mag' (may/allowed), 'willen' (to want), 'strak' (tight), 'winkel' (store).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_extra_015",
@@ -695,7 +695,7 @@ const matchingQuestionsBase = [
       "clothing",
       "adjectives"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies de juiste kleur of bijvoeglijk naamwoord:",
+    "questionNl": "Kies de juiste kleur of bijvoeglijk naamwoord:",
     "instructionTr": "Renkler ve kıyafet niteliklerini eşleştirin.",
     "instructionEn": "Match colors and clothing attributes to the sentences.",
     "items": [
@@ -987,7 +987,7 @@ const matchingQuestionsBase = [
       "bike_repair",
       "traffic"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste fietsonderdeel of verkeerswoord:",
+    "questionNl": "Kies het juiste fietsonderdeel of verkeerswoord:",
     "instructionTr": "Bisiklet parçaları ve tamir terimlerini doğru cümlelere yerleştirin.",
     "instructionEn": "Place bicycle parts and repair terms into the sentences.",
     "items": [
@@ -1024,7 +1024,7 @@ const matchingQuestionsBase = [
     "explanationTr": "'plakken' (yama yapmak), 'zadel' (sele), 'licht' (far/ışık), 'helpen' (yardım etmek), 'rem' (fren).",
     "explanationEn": "'plakken' (to patch a tire), 'zadel' (saddle), 'licht' (light), 'helpen' (to help), 'rem' (brake).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_match_extra_022",
@@ -1277,7 +1277,7 @@ const matchingQuestionsBase = [
       "opinions",
       "conversation"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies de juiste reactie of uitdrukking voor een mening:",
+    "questionNl": "Kies de juiste reactie of uitdrukking voor een mening:",
     "instructionTr": "Sohbette tepki verme ve fikir belirtme kalıplarını eşleştirin.",
     "instructionEn": "Match conversational reactions and opinion expressions.",
     "items": [
@@ -1326,7 +1326,7 @@ const matchingQuestionsBase = [
       "visiting_friends",
       "social"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste woord voor een belofte of sociaal bezoek:",
+    "questionNl": "Kies het juiste woord voor een belofte of sociaal bezoek:",
     "instructionTr": "Söz verme ('zullen') ve misafirlik ifadelerini eşleştirin.",
     "instructionEn": "Match words for promises with 'zullen' and visiting friends.",
     "items": [
@@ -1375,7 +1375,7 @@ const matchingQuestionsBase = [
       "indirect_questions",
       "routine"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste woord voor sporten en indirecte vragen:",
+    "questionNl": "Kies het juiste woord voor sporten en indirecte vragen:",
     "instructionTr": "Spor salonu ve dolaylı soru kalıplarını eşleştirin.",
     "instructionEn": "Match words for fitness and indirect questions.",
     "items": [
@@ -1424,7 +1424,7 @@ const matchingQuestionsBase = [
       "weather",
       "probability"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste woord voor toekomst en waarschijnlijkheid:",
+    "questionNl": "Kies het juiste woord voor toekomst en waarschijnlijkheid:",
     "instructionTr": "Gelecek zaman ve olasılık bildiren ('zullen' / 'gaan') yapıları eşleştirin.",
     "instructionEn": "Match words expressing future and probability.",
     "items": [
@@ -1522,7 +1522,7 @@ const matchingQuestionsBase = [
       "shopping",
       "grammar"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste aanwijzend voornaamwoord of woord:",
+    "questionNl": "Kies het juiste aanwijzend voornaamwoord of woord:",
     "instructionTr": "Bağımsız işaret zamirleri ('deze', 'die', 'dit', 'dat') kalıplarını eşleştirin.",
     "instructionEn": "Match independent demonstrative pronouns to the sentences.",
     "items": [
@@ -1571,7 +1571,7 @@ const matchingQuestionsBase = [
       "tickets",
       "culture"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste woord voor bioscoop en ontspanning:",
+    "questionNl": "Kies het juiste woord voor bioscoop en ontspanning:",
     "instructionTr": "Sinema, film türleri ve bilet kelimelerini doğru cümlelere yerleştirin.",
     "instructionEn": "Place cinema, film genre, and ticketing words into the sentences.",
     "items": [
@@ -1815,7 +1815,7 @@ const matchingQuestionsBase = [
       "police",
       "theft"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste woord voor een aangifte bij de politie:",
+    "questionNl": "Kies het juiste woord voor een aangifte bij de politie:",
     "instructionTr": "Polise suç duyurusunda bulunma (aangifte doen) kelimelerini eşleştirin.",
     "instructionEn": "Match terms used when filing a police report for theft.",
     "items": [
@@ -1864,7 +1864,7 @@ const matchingQuestionsBase = [
       "appearance",
       "clothing"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste woord voor het beschrijven van een verdachte:",
+    "questionNl": "Kies het juiste woord voor het beschrijven van een verdachte:",
     "instructionTr": "Şüpheli şahsın eşkal ve giyim tarifindeki boşlukları doldurun.",
     "instructionEn": "Fill in the blanks describing a suspect's appearance and clothes.",
     "items": [
@@ -2256,7 +2256,7 @@ const matchingQuestionsBase = [
       "clothing",
       "weather"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste woord voor fietsen door weer en wind:",
+    "questionNl": "Kies het juiste woord voor fietsen door weer en wind:",
     "instructionTr": "Hollanda havasında bisiklet sürme ve yağmur giysilerini eşleştirin.",
     "instructionEn": "Match words for cycling in Dutch weather and rain gear.",
     "items": [
@@ -2293,7 +2293,7 @@ const matchingQuestionsBase = [
     "explanationTr": "'regenjas' (yağmurluk), 'spatbord' (çamurluk), 'wind' (rüzgar: tegenwind = karşı rüzgar), 'handschoenen' (eldivenler), 'reflectors' (reflektörler).",
     "explanationEn": "'regenjas' (raincoat), 'spatbord' (mudguard), 'wind' (wind), 'handschoenen' (gloves), 'reflectors' (reflectors).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_match_extra_048",
@@ -2403,7 +2403,7 @@ const matchingQuestionsBase = [
       "weather",
       "small_talk"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste woord voor een gezellige fietstocht en het weer:",
+    "questionNl": "Kies het juiste woord voor een gezellige fietstocht en het weer:",
     "instructionTr": "Bisiklet turu, hava durumu sohbeti ve arkadaşlık terimlerini eşleştirin.",
     "instructionEn": "Match words for a cycling trip, weather talk, and leisure.",
     "items": [
@@ -2440,7 +2440,7 @@ const matchingQuestionsBase = [
     "explanationTr": "'warm' (ılık/sıcak), 'netwerk' (ağ - bisiklet rota ağı), 'opeten' (yiyip bitirmek), 'spanning' (bandenspanning - lastik basıncı), 'droog' (kuru/yağışsız).",
     "explanationEn": "'warm' (warm), 'netwerk' (network), 'opeten' (to eat up), 'spanning' (pressure), 'droog' (dry).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_match_extra_051",
@@ -2452,7 +2452,7 @@ const matchingQuestionsBase = [
       "reflexive_verbs",
       "routine"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste woord voor fitness en inschrijving:",
+    "questionNl": "Kies het juiste woord voor fitness en inschrijving:",
     "instructionTr": "Spor salonuna kayıt ve egzersiz rutinindeki kelimeleri eşleştirin.",
     "instructionEn": "Match words for fitness routines and gym registration.",
     "items": [
@@ -2489,7 +2489,7 @@ const matchingQuestionsBase = [
     "explanationTr": "'inschrijfformulier' (kayıt formu), 'contributie' (üyelik aidatı), 'douchen' (duş almak), 'handdoek' (havlu), 'uitvoeren' (uygulamak/yapmak).",
     "explanationEn": "'formulier' (form), 'contributie' (membership fee), 'douchen' (to shower), 'handdoek' (towel), 'uitvoeren' (to perform).",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_match_extra_052",
@@ -2550,7 +2550,7 @@ const matchingQuestionsBase = [
       "opinions",
       "culture"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste woord voor een filmavondje met vrienden:",
+    "questionNl": "Kies het juiste woord voor een filmavondje met vrienden:",
     "instructionTr": "Sinema akşamı ve film değerlendirmesi ile ilgili kelimeleri eşleştirin.",
     "instructionEn": "Match words for a cinema evening and film review.",
     "items": [
@@ -2599,7 +2599,7 @@ const matchingQuestionsBase = [
       "routine",
       "sports"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste woord voor de ochtendroutine en het huishouden:",
+    "questionNl": "Kies het juiste woord voor de ochtendroutine en het huishouden:",
     "instructionTr": "Sabah rutini ve ev işleri cümlelerindeki boşlukları doldurun.",
     "instructionEn": "Fill in the blanks for morning routine and household activities.",
     "items": [
@@ -2746,7 +2746,7 @@ const matchingQuestionsBase = [
       "indirect_questions",
       "modal_verbs"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste woord voor het geven en vragen van advies:",
+    "questionNl": "Kies het juiste woord voor het geven en vragen van advies:",
     "instructionTr": "Tavsiye isteme ve kibarca yol gösterme kalıplarını eşleştirin.",
     "instructionEn": "Match phrases for asking and giving advice politely.",
     "items": [
@@ -2795,7 +2795,7 @@ const matchingQuestionsBase = [
       "prepositions",
       "grammar"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste voornaamwoordelijk bijwoord (er + voorzetsel):",
+    "questionNl": "Kies het juiste voornaamwoordelijk bijwoord (er + voorzetsel):",
     "instructionTr": "'Er' ve edat birleşimlerini (erin, erop, ermee, ernaar, erover) eşleştirin.",
     "instructionEn": "Match pronominal adverbs (er + preposition: erin, erop, ermee, ernaar, erover).",
     "items": [
@@ -2832,7 +2832,7 @@ const matchingQuestionsBase = [
     "explanationTr": "'erin' (içine), 'erop' (üstüne), 'ernaar kijken' (ona bakmak/izlemek), 'erover praten' (onun hakkında konuşmak), 'ermee doen' (onunla yapmak).",
     "explanationEn": "'erin' (in it), 'op' (erop - on it), 'ernaar' (at it), 'erover' (about it), 'ermee' (with it).",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_match_extra_059",
@@ -2844,7 +2844,7 @@ const matchingQuestionsBase = [
       "social",
       "traffic"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste woord voor treinreizen en sociaal verkeer:",
+    "questionNl": "Kies het juiste woord voor treinreizen en sociaal verkeer:",
     "instructionTr": "Yoğun saatlerde yolculuk ve sosyal nezaket ifadelerini eşleştirin.",
     "instructionEn": "Match terms for rush hour travel and social courtesies.",
     "items": [
@@ -2881,7 +2881,7 @@ const matchingQuestionsBase = [
     "explanationTr": "'spits' (yoğun saat / rush hour), 'vrij' (boş), 'gehad' (naar de zin gehad - keyif aldım), 'korting' (indirim), 'uitchecken' (çıkış okutması yapmak).",
     "explanationEn": "'spits' (rush hour), 'vrij' (free/unoccupied), 'gehad' (enjoyed myself), 'korting' (discount), 'checken' (uitchecken - check out).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_match_extra_060",
@@ -2942,7 +2942,7 @@ const matchingQuestionsBase = [
       "groente_fruit",
       "telwoorden"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies de juiste maat of verpakkingseenheid:",
+    "questionNl": "Kies de juiste maat of verpakkingseenheid:",
     "instructionTr": "Pazardaki ölçü birimleri, paketleme ve miktarları eşleştirin.",
     "instructionEn": "Match measurement units, packaging, and quantities at the market.",
     "items": [
@@ -3040,7 +3040,7 @@ const matchingQuestionsBase = [
       "clothing",
       "prices"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste woord voor winkelacties en betalingen:",
+    "questionNl": "Kies het juiste woord voor winkelacties en betalingen:",
     "instructionTr": "İndirimler, iade koşulları ve alışveriş terimlerini eşleştirin.",
     "instructionEn": "Match store promotions, return policies, and shopping terms.",
     "items": [
@@ -3236,7 +3236,7 @@ const matchingQuestionsBase = [
       "social",
       "clothing"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste woord voor verjaardagscadeaus en feestjes:",
+    "questionNl": "Kies het juiste woord voor verjaardagscadeaus en feestjes:",
     "instructionTr": "Doğum günü hediyeleri, paketleme ve kutlama kelimelerini eşleştirin.",
     "instructionEn": "Match terms for birthday presents, gift-wrapping, and festivities.",
     "items": [
@@ -3383,7 +3383,7 @@ const matchingQuestionsBase = [
       "routine",
       "adjectives"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste woord voor fit blijven en sportieve discipline:",
+    "questionNl": "Kies het juiste woord voor fit blijven en sportieve discipline:",
     "instructionTr": "Antrenman programı, kondisyon ve motivasyon kelimelerini eşleştirin.",
     "instructionEn": "Match vocabulary on workout routines, stamina, and consistency.",
     "items": [
@@ -3481,7 +3481,7 @@ const matchingQuestionsBase = [
       "daily_routine",
       "continuous"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste woord voor het beschrijven van een gebeurtenis:",
+    "questionNl": "Kies het juiste woord voor het beschrijven van een gebeurtenis:",
     "instructionTr": "Olay anını anlatma ve tanıklık ifadelerini eşleştirin.",
     "instructionEn": "Match words describing a witnessed event and routine.",
     "items": [
@@ -3530,7 +3530,7 @@ const matchingQuestionsBase = [
       "police",
       "lost_found"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste woord voor bagage en meldingen:",
+    "questionNl": "Kies het juiste woord voor bagage en meldingen:",
     "instructionTr": "Bagaj kaybı ve kayıp eşya bildirimi kelimelerini eşleştirin.",
     "instructionEn": "Match terms for luggage reporting and transit lost-property.",
     "items": [
@@ -3677,7 +3677,7 @@ const matchingQuestionsBase = [
       "police",
       "theft"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste woord bij diefstal in een sportcomplex:",
+    "questionNl": "Kies het juiste woord bij diefstal in een sportcomplex:",
     "instructionTr": "Spor tesisi hırsızlık tutanağı kelimelerini eşleştirin.",
     "instructionEn": "Match vocabulary regarding sports facility locker thefts.",
     "items": [
@@ -3775,7 +3775,7 @@ const matchingQuestionsBase = [
       "advice",
       "safety"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste woord voor preventietips en veiligheid:",
+    "questionNl": "Kies het juiste woord voor preventietips en veiligheid:",
     "instructionTr": "Hırsızlığı önleme ve güvenlik tavsiyeleri kelimelerini eşleştirin.",
     "instructionEn": "Match terms for burglary prevention and safety advice.",
     "items": [
@@ -3872,7 +3872,7 @@ const matchingQuestionsBase = [
       "police",
       "indirect_questions"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste woord voor de afronding van een politiemelding:",
+    "questionNl": "Kies het juiste woord voor de afronding van een politiemelding:",
     "instructionTr": "Polis ifade tutanağı ve işlemin tamamlanması terimlerini eşleştirin.",
     "instructionEn": "Match terms completing a formal police report.",
     "items": [
@@ -3958,7 +3958,7 @@ const matchingQuestionsBase = [
     "explanationTr": "'zijn' (çoğul anne-baba), 'doe jij' (inversiyonda kök 'doe'), 'gaat' (3. tekil), 'Heeft u' (u zamiriyle heeft), 'zie' (ik zie).",
     "explanationEn": "'zijn' (plural are), 'doe' (inversion with jij), 'gaat' (3rd person singular goes), 'Heeft' (polite has), 'zie' (1st person see).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_extra_082",
@@ -4019,7 +4019,7 @@ const matchingQuestionsBase = [
       "comparatives",
       "adjectives_inflection"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies de juiste vorm van het bijvoeglijk naamwoord:",
+    "questionNl": "Kies de juiste vorm van het bijvoeglijk naamwoord:",
     "instructionTr": "Sıfat çekimi (-e eki kuralı) ve karşılaştırma derecelerini eşleştirin.",
     "instructionEn": "Match inflected adjectives and comparative/superlative forms.",
     "items": [
@@ -4068,7 +4068,7 @@ const matchingQuestionsBase = [
       "past_tenses",
       "grammar"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste voltooid deelwoord (perfectum):",
+    "questionNl": "Kies het juiste voltooid deelwoord (perfectum):",
     "instructionTr": "Düzensiz fiillerin geçmiş zaman ortaçlarını (voltooid deelwoord) eşleştirin.",
     "instructionEn": "Match irregular past participles in the present perfect tense.",
     "items": [
@@ -4166,7 +4166,7 @@ const matchingQuestionsBase = [
       "past_tenses",
       "grammar"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies de juiste sterke verleden tijd (klinkerverandering van lange ij naar ee):",
+    "questionNl": "Kies de juiste sterke verleden tijd (klinkerverandering van lange ij naar ee):",
     "instructionTr": "Kök sesli değişimi (ij -> ee) gösteren düzensiz geçmiş zaman fiillerini eşleştirin.",
     "instructionEn": "Match strong past tense verbs with ij -> ee vowel change.",
     "items": [
@@ -4656,7 +4656,7 @@ const matchingQuestionsBase = [
       "bike",
       "future_zullen"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste woord voor sportieve buitenactiviteiten:",
+    "questionNl": "Kies het juiste woord voor sportieve buitenactiviteiten:",
     "instructionTr": "Açık hava sporları, koşu ve bisiklet rotası kelimelerini eşleştirin.",
     "instructionEn": "Match terms for outdoor sports, jogging, and cycle tracks.",
     "items": [
@@ -4754,7 +4754,7 @@ const matchingQuestionsBase = [
       "culture",
       "living"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste woord voor weekendactiviteiten en gezelligheid:",
+    "questionNl": "Kies het juiste woord voor weekendactiviteiten en gezelligheid:",
     "instructionTr": "Hafta sonu etkinlikleri, sanat ve samimi sohbet kelimelerini eşleştirin.",
     "instructionEn": "Match vocabulary for leisure activities, arts, and socializing.",
     "items": [
@@ -4852,7 +4852,7 @@ const matchingQuestionsBase = [
       "police",
       "subordinate_clauses"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste woord voor de afronding van alle thema's (reis, veiligheid en maatschappij):",
+    "questionNl": "Kies het juiste woord voor de afronding van alle thema's (reis, veiligheid en maatschappij):",
     "instructionTr": "Tüm temaların (seyahat, emniyet, resmi işlemler ve dil kuralları) büyük sentezini eşleştirin.",
     "instructionEn": "Match the culminating grand synthesis of travel, civic safety, and sentence structures.",
     "items": [
@@ -4899,7 +4899,7 @@ const matchingQuestionsBase = [
       "kennismaking",
       "begroeting"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste woord voor elke zin:",
+    "questionNl": "Kies het juiste woord voor elke zin:",
     "instructionTr": "Aşağıdaki cümlelerdeki boşlukları kelime havuzundaki doğru kelimelerle eşleştirin.",
     "instructionEn": "Match the blanks in each sentence with the correct word from the pool.",
     "items": [
@@ -4983,7 +4983,7 @@ const matchingQuestionsBase = [
     "explanationTr": "Özne-fiil uyumu: 'ik drink' (kök), 'jij staat' (stam+t), 'de docent stelt' (hij -> stam+t), 'wij eten' (çoğul -> mastar), 'zij leren' (çoğul -> mastar).",
     "explanationEn": "Subject-verb agreement: 'ik drink' (stem), 'jij staat' (stem+t), 'de docent stelt' (stem+t), 'wij eten' (plural infinitive), 'zij leren' (plural infinitive).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_matching_ch4_directions",
@@ -5030,7 +5030,7 @@ const matchingQuestionsBase = [
     "explanationTr": "Yol tarifi kalıpları: 'naar links' (sola), 'tot aan de kruising' (kavşağa kadar), 'overkant' (karşı taraf), 'oversteken' (karşıya geçmek), 'de weg naar...' (yol).",
     "explanationEn": "Direction phrases: 'naar links' (to the left), 'kruising' (intersection), 'overkant' (opposite side), 'oversteken' (cross), 'de weg' (the way).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_matching_ch8_housing",
@@ -5077,7 +5077,7 @@ const matchingQuestionsBase = [
     "explanationTr": "Konut terminolojisi: 'per maand' (aylık), 'ruime woonkamer' (geniş oturma odası), 'beschikbaar' (müsait/uygun), 'zonnige tuin' (güneşli bahçe), 'ingebouwde koelkast' (ankastre buzdolabı).",
     "explanationEn": "Housing terminology: 'per maand' (per month), 'woonkamer' (living room), 'beschikbaar' (available), 'tuin' (garden), 'koelkast' (refrigerator).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_matching_prepositions",
@@ -5086,7 +5086,7 @@ const matchingQuestionsBase = [
       "prepositions",
       "word_order"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste voorzetsel:",
+    "questionNl": "Kies het juiste voorzetsel:",
     "instructionTr": "Cümlelerdeki boşlukları doğru edatlar (voorzetsels) ile eşleştirin.",
     "instructionEn": "Match the blanks in the sentences with the correct prepositions.",
     "items": [
@@ -5172,7 +5172,7 @@ const matchingQuestionsBase = [
     "explanationTr": "Kalıplar: 'mag ik hebben' (alabilir miyim), 'kwart over negen' (dokuzu çeyrek geçe), 'spelt' (hecelemek), 'zonder suiker' (şekersiz), 'afspreken' (buluşmak/sözleşmek).",
     "explanationEn": "Phrases: 'mag ik hebben' (may I have), 'kwart over negen' (quarter past nine), 'spelt' (spell), 'zonder suiker' (without sugar), 'afspreken' (meet up).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_ch1_3_grammar",
@@ -5186,7 +5186,7 @@ const matchingQuestionsBase = [
       "negation",
       "verbs_present"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Vul het juiste woord in voor zinsbouw en ontkenning:",
+    "questionNl": "Vul het juiste woord in voor zinsbouw en ontkenning:",
     "instructionTr": "Cümle dizilimi (inversie), soru ve olumsuzluk (niet/geen) kurallarına göre doğru kelimeleri eşleştirin.",
     "instructionEn": "Match the correct words according to word order (inversion), questions, and negation rules.",
     "items": [
@@ -5272,7 +5272,7 @@ const matchingQuestionsBase = [
     "explanationTr": "Yön ve pazar terminolojisi: 'de afslag nemen' (çıkışa girmek), 'zoete mandarijnen' (çoğul isim önünde sıfat -e alır), 'het station' (istasyon), 'een mooi museum' (het-woord ve een olunca sıfat -e almaz), 'kosten' (fiyat sorma).",
     "explanationEn": "Directions & market terms: 'afslag nemen' (take exit), 'zoete mandarijnen' (plural takes -e), 'het station', 'een mooi museum' (het-word with een gets no -e), 'kosten' (cost).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_ch4_6_city_food",
@@ -5321,7 +5321,7 @@ const matchingQuestionsBase = [
     "explanationTr": "Ulaşım ve restoran kalıpları: 'de bushalte' (otobüs durağı), 'reserveren' (rezervasyon yapmak), 'vis' (balık menüsü), 'lopen' (yürümek), 'apart afrekenen' (hesabı ayrı ayrı ödemek).",
     "explanationEn": "Transport & restaurant phrases: 'bushalte' (bus stop), 'reserveren' (to reserve), 'vis' (fish main dish), 'lopen' (walk), 'apart afrekenen' (split the bill).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_ch6_8_clothing_housing",
@@ -5419,7 +5419,7 @@ const matchingQuestionsBase = [
     "explanationTr": "Kural: 'mogen' izin/yasak ('niet mag' yasaktır), 'onder het bed' (yatağın altında), 'moeten' zorunluluk ('wij moeten inpakken'), 'aan de muur' (duvarda asılı), 'kun jij' (yapabilir misin - inversie).",
     "explanationEn": "Rules: 'mogen' permission/prohibition ('niet mag'), 'onder het bed' (under the bed), 'moeten' necessity ('wij moeten'), 'aan de muur' (on the wall), 'kun jij' (can you).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_ch8_10_health_bike",
@@ -5468,7 +5468,7 @@ const matchingQuestionsBase = [
     "explanationTr": "Sağlık ve bisiklet terimleri: 'hoofdpijn' (baş ağrısı), 'los' (gevşek/bol), 'innemen' (ilaç almak/yutmak), 'vervangen' (yenisiyle değiştirmek), 'centrale verwarming' (merkezi ısıtma/kalorifer).",
     "explanationEn": "Health & bike repair terms: 'hoofdpijn' (headache), 'los' (loose), 'innemen' (take medicine), 'vervangen' (replace), 'centrale verwarming' (central heating).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_ch8_10_reflexive_er",
@@ -5529,7 +5529,7 @@ const matchingQuestionsBase = [
       "perfectum",
       "events"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste woord voor feesten en vrije tijd (Hoofdstuk 10-12):",
+    "questionNl": "Kies het juiste woord voor feesten en vrije tijd (Hoofdstuk 10-12):",
     "instructionTr": "Doğum günü kutlaması, etkinlikler ve geçmiş zaman cümlelerini doğru kelimelerle tamamlayın.",
     "instructionEn": "Complete the sentences about birthday parties, events, and past tense with the correct words.",
     "items": [
@@ -5578,7 +5578,7 @@ const matchingQuestionsBase = [
       "irregular_verbs",
       "perfectum"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste onregelmatige voltooid deelwoord (Perfectum):",
+    "questionNl": "Kies het juiste onregelmatige voltooid deelwoord (Perfectum):",
     "instructionTr": "Düzensiz fiillerin 3. hallerini (voltooid deelwoord) uygun cümlelerle eşleştirin.",
     "instructionEn": "Match the irregular past participles (perfectum) with the appropriate sentences.",
     "items": [
@@ -5664,7 +5664,7 @@ const matchingQuestionsBase = [
     "explanationTr": "Bağlaç ve spor kuralları: 'want' düz cümle yapar ('want ik moet studeren'), 'omdat' yan cümle (bijzin) yapar ve fiili sona atar ('omdat ze grieperig is'). 'opwarmen' (ısınmak), 'sportschool' (spor salonu), 'uitnodigen -> uitgenodigd' (davet etmek).",
     "explanationEn": "Conjunction & gym rules: 'want' keeps normal word order, 'omdat' sends verb to end of clause. 'opwarmen' (warm up), 'sportschool' (gym), 'uitgenodigd' (invited).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_ch13_15_separable_transport",
@@ -5725,7 +5725,7 @@ const matchingQuestionsBase = [
       "relative_clauses",
       "cinema"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste betrekkelijk voornaamwoord of bioscoopwoord (Hoofdstuk 15-17):",
+    "questionNl": "Kies het juiste betrekkelijk voornaamwoord of bioscoopwoord (Hoofdstuk 15-17):",
     "instructionTr": "İlgi zamirleri (die/dat) ve sinema/film kültürü kelimelerini uygun boşluklara yerleştirin.",
     "instructionEn": "Match the relative pronouns (die/dat) and cinema vocabulary with the blanks.",
     "items": [
@@ -5825,7 +5825,7 @@ const matchingQuestionsBase = [
       "police",
       "household"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste woord voor huishouden en politiebureau (Hoofdstuk 16-18):",
+    "questionNl": "Kies het juiste woord voor huishouden en politiebureau (Hoofdstuk 16-18):",
     "instructionTr": "Ev işleri ve polis merkezinde şikayet/tutanak bildirme kelimelerini doğru cümlelerle eşleştirin.",
     "instructionEn": "Match the household chores and police report vocabulary with the sentences.",
     "items": [
@@ -6058,7 +6058,7 @@ const matchingQuestionsBase = [
     "explanationTr": "Aile ilişkileri: opa (dede), tante (hala/teyze), broer (erkek kardeş), neef (kuzen/yeğen), familie (aile/akrabalar).",
     "explanationEn": "Family relations: opa (grandfather), tante (aunt), broer (brother), neef (cousin/nephew), familie (family).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_conv_002",
@@ -6106,7 +6106,7 @@ const matchingQuestionsBase = [
     "explanationTr": "Kafede sipariş ifadeleri: koffie (kahve), rekening (hesap), afrekenen (hesap ödemek), water (su), slagroom (krem şanti).",
     "explanationEn": "Café vocabulary: koffie (coffee), rekening (bill), afrekenen (to settle/pay), water (water), slagroom (whipped cream).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_conv_003",
@@ -6202,7 +6202,7 @@ const matchingQuestionsBase = [
     "explanationTr": "Sofra takımları: lepel (kaşık), mes (bıçak), vork (çatal), bord (tabak), glas (bardak).",
     "explanationEn": "Tableware: lepel (spoon), mes (knife), vork (fork), bord (plate), glas (glass).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_conv_005",
@@ -6262,7 +6262,7 @@ const matchingQuestionsBase = [
       "shopping",
       "matching"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste kledingstuk in de kledingwinkel:",
+    "questionNl": "Kies het juiste kledingstuk in de kledingwinkel:",
     "instructionTr": "Giyim mağazasındaki kıyafetleri doğru cümlelerle eşleştirin.",
     "instructionEn": "Match the clothing items in the clothing store.",
     "items": [
@@ -6310,7 +6310,7 @@ const matchingQuestionsBase = [
       "groceries",
       "matching"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste boodschappen-woord in de supermarkt:",
+    "questionNl": "Kies het juiste boodschappen-woord in de supermarkt:",
     "instructionTr": "Süpermarkette alışveriş yaparken kullanılan ürünleri eşleştirin.",
     "instructionEn": "Match the grocery words in the supermarket.",
     "items": [
@@ -6347,7 +6347,7 @@ const matchingQuestionsBase = [
     "explanationTr": "Market ürünleri: brood (ekmek), kaas (peynir), fruit (meyve), groenten (sebzeler), kassa (kasa).",
     "explanationEn": "Groceries: brood (bread), kaas (cheese), fruit (fruit), groenten (vegetables), kassa (checkout/cashier).",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_match_conv_008",
@@ -6648,7 +6648,7 @@ const matchingQuestionsBase = [
       "grammar",
       "matching"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste bezittelijk voornaamwoord (bezit):",
+    "questionNl": "Kies het juiste bezittelijk voornaamwoord (bezit):",
     "instructionTr": "İyelik zamirlerini (possessive pronouns) doğru cümlelerle eşleştirin.",
     "instructionEn": "Match the possessive pronouns with the correct sentences.",
     "items": [
@@ -6696,7 +6696,7 @@ const matchingQuestionsBase = [
       "grammar",
       "matching"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste aanwijzend voornaamwoord (deze/die/dit/dat):",
+    "questionNl": "Kies het juiste aanwijzend voornaamwoord (deze/die/dit/dat):",
     "instructionTr": "İşaret zamirlerini (aanwijzende voornaamwoorden) doğru boşluklara yerleştirin.",
     "instructionEn": "Match the demonstrative pronouns (deze/die/dit/dat).",
     "items": [
@@ -6744,7 +6744,7 @@ const matchingQuestionsBase = [
       "grammar",
       "matching"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies de juiste trap van vergelijking (comparatief / superlatief):",
+    "questionNl": "Kies de juiste trap van vergelijking (comparatief / superlatief):",
     "instructionTr": "Karşılaştırma ve üstünlük derecelerini (comparatief/superlatief) eşleştirin.",
     "instructionEn": "Match the degrees of comparison (comparative and superlative).",
     "items": [
@@ -6888,7 +6888,7 @@ const matchingQuestionsBase = [
       "food_drink",
       "matching"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste voltooid deelwoord (eten en drinken):",
+    "questionNl": "Kies het juiste voltooid deelwoord (eten en drinken):",
     "instructionTr": "Yeme ve içme ile ilgili tamamlanmış geçmiş zaman ortaçlarını (voltooid deelwoord) eşleştirin.",
     "instructionEn": "Match the past participles related to food and drink.",
     "items": [
@@ -7165,7 +7165,7 @@ const matchingQuestionsBase = [
     "explanationTr": "Selamlaşma ve vedalaşma: Goedemorgen (günaydın), Goedemiddag (iyi günler), Goedenavond (iyi akşamlar), Welterusten (iyi uykular), Doei (hoşça kal).",
     "explanationEn": "Greetings: Goedemorgen (morning), Goedemiddag (afternoon), Goedenavond (evening), Welterusten (goodnight), Doei (bye).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_conv_025",
@@ -7272,7 +7272,7 @@ const matchingQuestionsBase = [
       "seasons",
       "matching"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste weerwoord of seizoen:",
+    "questionNl": "Kies het juiste weerwoord of seizoen:",
     "instructionTr": "Hava durumu ve mevsimlerle ilgili kelimeleri eşleştirin.",
     "instructionEn": "Match the weather and seasonal terms.",
     "items": [
@@ -7560,7 +7560,7 @@ const matchingQuestionsBase = [
       "onderwijs",
       "matching"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste woord voor het tienminutengesprek op school:",
+    "questionNl": "Kies het juiste woord voor het tienminutengesprek op school:",
     "instructionTr": "Okulda öğretmenle görüşme (tienminutengesprek) terimlerini eşleştirin.",
     "instructionEn": "Match terms used during parent-teacher meetings at school.",
     "items": [
@@ -7656,7 +7656,7 @@ const matchingQuestionsBase = [
       "ruilen",
       "matching"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste woord voor kleding ruilen in de winkel:",
+    "questionNl": "Kies het juiste woord voor kleding ruilen in de winkel:",
     "instructionTr": "Mağazada kıyafet değiştirme (ruilen) ve fiş ile ilgili kelimeleri eşleştirin.",
     "instructionEn": "Match terms for returning or exchanging clothing in a store.",
     "items": [
@@ -7752,7 +7752,7 @@ const matchingQuestionsBase = [
       "pakket",
       "matching"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste woord voor post en pakketbezorging:",
+    "questionNl": "Kies het juiste woord voor post en pakketbezorging:",
     "instructionTr": "Posta ve kargo teslimatı ile ilgili kelimeleri eşleştirin.",
     "instructionEn": "Match terms for post and parcel delivery.",
     "items": [
@@ -7800,7 +7800,7 @@ const matchingQuestionsBase = [
       "maatschappij",
       "matching"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste woord voor meedoen in de samenleving (participatie):",
+    "questionNl": "Kies het juiste woord voor meedoen in de samenleving (participatie):",
     "instructionTr": "Topluma katılım ve gönüllü çalışmalar ile ilgili kelimeleri eşleştirin.",
     "instructionEn": "Match terms about participating in Dutch society and volunteering.",
     "items": [
@@ -7896,7 +7896,7 @@ const matchingQuestionsBase = [
       "medicatie",
       "matching"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste woord bij het bezoek aan de apotheek:",
+    "questionNl": "Kies het juiste woord bij het bezoek aan de apotheek:",
     "instructionTr": "Eczaneden ilaç alma ve kullanım talimatları ile ilgili kelimeleri eşleştirin.",
     "instructionEn": "Match terms used at the pharmacy and for medication instructions.",
     "items": [
@@ -7944,7 +7944,7 @@ const matchingQuestionsBase = [
       "uitnodiging",
       "matching"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies de juiste reactie op een uitnodiging:",
+    "questionNl": "Kies de juiste reactie op een uitnodiging:",
     "instructionTr": "Davetlere olumlu veya olumsuz yanıt verme kalıplarını eşleştirin.",
     "instructionEn": "Match appropriate responses to social invitations.",
     "items": [
@@ -7992,7 +7992,7 @@ const matchingQuestionsBase = [
       "betalen",
       "matching"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste bank- en betaalwoord:",
+    "questionNl": "Kies het juiste bank- en betaalwoord:",
     "instructionTr": "Banka, ödeme ve para işlemleri ile ilgili terimleri eşleştirin.",
     "instructionEn": "Match banking and payment transaction terms.",
     "items": [
@@ -8040,7 +8040,7 @@ const matchingQuestionsBase = [
       "hobby",
       "matching"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste woord voor vrije tijd en sport:",
+    "questionNl": "Kies het juiste woord voor vrije tijd en sport:",
     "instructionTr": "Boş zaman, hobiler ve spor aktiviteleri ile ilgili kelimeleri eşleştirin.",
     "instructionEn": "Match terms for leisure time, hobbies, and sports activities.",
     "items": [
@@ -8088,7 +8088,7 @@ const matchingQuestionsBase = [
       "babbel",
       "matching"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies de passende reactie in een informeel praatje (small talk):",
+    "questionNl": "Kies de passende reactie in een informeel praatje (small talk):",
     "instructionTr": "Günlük informal sohbetlerde (small talk) uygun karşılıkları eşleştirin.",
     "instructionEn": "Match the natural responses in everyday small talk.",
     "items": [
@@ -8136,7 +8136,7 @@ const matchingQuestionsBase = [
       "boodschappen",
       "matching"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies de juiste uitdrukking op de wekelijkse markt:",
+    "questionNl": "Kies de juiste uitdrukking op de wekelijkse markt:",
     "instructionTr": "Haftalık pazarda (op de markt) alışveriş yaparken kullanılan ifadeleri eşleştirin.",
     "instructionEn": "Match expressions used when shopping at the weekly open-air market.",
     "items": [
@@ -8184,7 +8184,7 @@ const matchingQuestionsBase = [
       "horeca",
       "matching"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste drankje bij de bestelling:",
+    "questionNl": "Kies het juiste drankje bij de bestelling:",
     "instructionTr": "İçecek siparişlerinde kullanılan kelimeleri doğru tanımlarla eşleştirin.",
     "instructionEn": "Match beverage orders with their descriptions.",
     "items": [
@@ -8232,7 +8232,7 @@ const matchingQuestionsBase = [
       "gevoelens",
       "matching"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies de juiste gemoedstoestand (emotie / gevoel):",
+    "questionNl": "Kies de juiste gemoedstoestand (emotie / gevoel):",
     "instructionTr": "Duygu durumları ve hisleri doğru bağlamlarla eşleştirin.",
     "instructionEn": "Match emotional states and feelings with the correct contexts.",
     "items": [
@@ -8280,7 +8280,7 @@ const matchingQuestionsBase = [
       "fietsen",
       "matching"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies het juiste verkeerswoord voor veilig fietsen in Nederland:",
+    "questionNl": "Kies het juiste verkeerswoord voor veilig fietsen in Nederland:",
     "instructionTr": "Hollanda'da güvenli bisiklet kullanımı ve trafik kurallarını eşleştirin.",
     "instructionEn": "Match terms for safe cycling and traffic rules in the Netherlands.",
     "items": [
@@ -8317,7 +8317,7 @@ const matchingQuestionsBase = [
     "explanationTr": "Bisiklet ve trafik: licht (far/ışık), fietspad (bisiklet yolu), hand (el uzatmak), slot (kilit), stoppen (durmak).",
     "explanationEn": "Cycling safety: licht (light), fietspad (bike lane), hand (signal by hand), slot (lock), stoppen (to stop).",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_match_adv_019",
@@ -8328,7 +8328,7 @@ const matchingQuestionsBase = [
       "smaak",
       "matching"
     ],
-    "questionNl": "Kies het juiste woord voor de situatie in het dagelijks leven: Kies de juiste uitdrukking om over eten en smaak te praten:",
+    "questionNl": "Kies de juiste uitdrukking om over eten en smaak te praten:",
     "instructionTr": "Yemeklerin tadı ve beğenisi hakkında konuşurken kullanılan ifadeleri eşleştirin.",
     "instructionEn": "Match expressions used to describe food quality and taste.",
     "items": [

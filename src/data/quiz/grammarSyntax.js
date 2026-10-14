@@ -510,7 +510,7 @@ export const grammarSyntax = [
       "lacht",
       "lach",
       "lachen",
-      "Misschien later."
+      "om vier uur"
     ]
   },
   {
@@ -610,7 +610,7 @@ export const grammarSyntax = [
       "doe",
       "doet",
       "doen",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "doe",
     "explanationTr": "'Wat' başa gelir, sonra fiil. 'jij' fiilden sonra olduğu için 't' düşer.",
@@ -774,7 +774,7 @@ export const grammarSyntax = [
       "drink",
       "drinkt",
       "drinken",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "drinken",
     "explanationTr": "Modal fiil (Wilt) cümlenin ikinci sırasında veya soru olduğu için en başındadır, asıl fiil sonda mastar halindedir.",
@@ -1000,7 +1000,7 @@ export const grammarSyntax = [
       "sport",
       "sporten",
       "gesport",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "sporten",
     "explanationTr": "Devrik cümle (inversie) olsa da kural değişmez: ana fiil (sporten) sona gider.",
@@ -1068,7 +1068,7 @@ export const grammarSyntax = [
       "neemt",
       "neem",
       "neemen",
-      "Misschien later."
+      "om vier uur"
     ]
   },
   {
@@ -1084,7 +1084,7 @@ export const grammarSyntax = [
     "explanationTr": "Soru cümlesi: 'Schoonmaken'. Ana fiil 'maken' başa gelir, 'jij' fiilden sonra olduğu için 't' düşer (Maak jij). Prefix 'schoon' sonda kalır.",
     "explanationEn": "Question: 'Schoonmaken'. Main verb 'maken' comes first, 't' drops because 'jij' follows (Maak jij). Prefix 'schoon' stays at the end.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "Maak",
       "Maakt",
@@ -1105,12 +1105,12 @@ export const grammarSyntax = [
     "explanationTr": "'Uitnodigen' (davet etmek). Soru kelimesinden sonra fiil gelir (nodigt), 'uit' eki ise cümlenin en sonuna gider.",
     "explanationEn": "'Uitnodigen' (to invite). The verb follows the question word (nodigt), and the prefix 'uit' goes to the very end.",
     "difficulty": 2,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "nodigt",
       "nodig",
       "nodigen",
-      "Misschien later."
+      "om vier uur"
     ]
   },
   {
@@ -1131,7 +1131,7 @@ export const grammarSyntax = [
     "explanationTr": "Ayrılabilen fiillerin ilk parçası (prefix) şimdiki zaman ve hikaye geçmiş zamanda her zaman cümlenin EN SONUNA gider.",
     "explanationEn": "The first part (prefix) of a separable verb always goes to the VERY END of the sentence in the present and simple past tense.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_sep_009",
@@ -1167,7 +1167,7 @@ export const grammarSyntax = [
       "opstaan",
       "staan op",
       "opgestaan",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "opstaan",
     "explanationTr": "Cümlede modal/yardımcı fiil (wil/ga) varsa, ayrılabilen fiil AYRILMAZ ve mastar halinde cümlenin sonuna bütün olarak gider.",
@@ -1194,7 +1194,7 @@ export const grammarSyntax = [
     "explanationTr": "'Moeten' modal fiili kullanıldığı için 'afrekenen' ayrılmadan mastar halinde sonda kullanılır.",
     "explanationEn": "Because the modal verb 'Moeten' is used, 'afrekenen' stays together as an infinitive at the end.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_sep_015",
@@ -1215,7 +1215,7 @@ export const grammarSyntax = [
     "explanationTr": "Modal fiiller (willen, moeten, kunnen vb.) ayrılabilen fiillerin ayrılmasını engeller ve onları mastar olarak sona atar.",
     "explanationEn": "Modal verbs (willen, moeten, kunnen etc.) prevent separable verbs from splitting and push them as infinitives to the end.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_ref_037",
@@ -1589,7 +1589,7 @@ export const grammarSyntax = [
       "staat",
       "staa",
       "staaen",
-      "Misschien later."
+      "om vier uur"
     ]
   },
   {
@@ -1623,7 +1623,7 @@ export const grammarSyntax = [
       "Er zijn een probleem.",
       "Er is veel problemen.",
       "Er is een probleem.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Er is een probleem.",
     "explanationTr": "'een probleem' tekil olduğu için 'is' kullanılır. 'veel problemen' çoğul olduğu için 'zijn' gerektirirdi.",
@@ -1663,7 +1663,7 @@ export const grammarSyntax = [
       "Er is de man ziek.",
       "Er zijn de studenten hier.",
       "Er zit een vogel in de boom.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Er zit een vogel in de boom.",
     "explanationTr": "'Er' yapısı BELİRLİ öznelerle (de man, de studenten) KULLANILMAZ. 'een vogel' (bir kuş) belirsizdir, bu yüzden doğrudur.",
@@ -1840,7 +1840,7 @@ export const grammarSyntax = [
       "Ik ben aan het schoonmaken mijn kamer.",
       "Ik ben mijn kamer aan het schoonmaken.",
       "Ik aan het schoonmaken ben mijn kamer.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Ik ben mijn kamer aan het schoonmaken.",
     "explanationTr": "Nesne (mijn kamer), yardımcı fiil (ben) ile 'aan het' yapısının ARASINA girer.",
@@ -1946,7 +1946,7 @@ export const grammarSyntax = [
       "staat",
       "staa",
       "staaen",
-      "Misschien later."
+      "om vier uur"
     ]
   },
   {
@@ -1961,7 +1961,7 @@ export const grammarSyntax = [
       "'Daar' legt de nadruk (vurgu) op de plaats.",
       "'Er' is meervoud.",
       "Er is geen verschil.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "'Daar' legt de nadruk (vurgu) op de plaats.",
     "explanationTr": "'Daar' kullanıldığında 'ORADA' diyerek yere özel bir vurgu yapılmış olur.",
@@ -2453,7 +2453,7 @@ export const grammarSyntax = [
       "wil",
       "wille",
       "wilt",
-      "Misschien later."
+      "badkamer"
     ],
     "correctAnswer": "wil",
     "explanationTr": "Yan cümle ('Voordat we naar huis gaan') başa geldiği için, virgülünden sonraki ana cümlede inversie (fiir öznenin önüne geçer) olur: 'wil ik'.",
@@ -2596,7 +2596,7 @@ export const grammarSyntax = [
       "Ik blijf thuis, omdat ik ben ziek.",
       "Ik blijf thuis, omdat ik ziek ben.",
       "Ik blijf thuis, want ik ziek ben.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Ik blijf thuis, omdat ik ziek ben.",
     "explanationTr": "'omdat' yan cümle yarattığı için fiil ('ben') en sonda olmalıdır.",
@@ -2636,7 +2636,7 @@ export const grammarSyntax = [
       "We gaan niet naar het strand, want het regent.",
       "We gaan niet naar het strand, want regent het.",
       "We gaan niet naar het strand, omdat regent het.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "We gaan niet naar het strand, want het regent.",
     "explanationTr": "Anlam aynıdır ('çünkü'), ancak 'want' sonrasında normal sıra ('het regent') yer alır.",
@@ -2743,7 +2743,7 @@ export const grammarSyntax = [
       "zodat",
       "zoda",
       "zodaen",
-      "Misschien later."
+      "om vier uur"
     ]
   },
   {
@@ -2924,7 +2924,7 @@ export const grammarSyntax = [
       "schijnt",
       "schijn",
       "schijnen",
-      "Misschien later."
+      "om vier uur"
     ]
   },
   {
@@ -3049,7 +3049,7 @@ export const grammarSyntax = [
     "explanationTr": "Cümle zaman bildiren bir kelimeyle (Zondag) başladığında fiil 2. pozisyonda kalır ve özneyle yer değiştirir (inversie): Zondag ga ik...",
     "explanationEn": "When a sentence starts with time (Zondag), the verb stays in 2nd position and inverts with the subject: Zondag ga ik...",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1019",

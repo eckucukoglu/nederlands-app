@@ -288,7 +288,7 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
   const sectionMeasureRef = useRef(null); 
   const mobileSearchRef = useRef(null); 
   const navGroupRef = useRef(null);
-  const [expandedNavGroup, setExpandedNavGroup] = useState(null); // 'study' | 'reference' | null
+  const [expandedNavGroup, setExpandedNavGroup] = useState(null); // 'reference' | null
 
   const touchStartX = useRef(0);
   const touchStartY = useRef(0);
@@ -309,14 +309,10 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
   };
   const activeNavFeature = getActiveNavFeature();
 
-  const isStudyFeature = activeNavFeature === 'quiz' || activeNavFeature === 'flashcards';
   const isReferenceFeature = activeNavFeature === 'summary' || activeNavFeature === 'grammar' || activeNavFeature === 'verbs';
 
   const showActiveAtFarLeft = Boolean(
-    activeNavFeature && !(
-      (expandedNavGroup === 'study' && isStudyFeature) ||
-      (expandedNavGroup === 'reference' && isReferenceFeature)
-    )
+    isReferenceFeature && expandedNavGroup !== 'reference'
   );
 
   const isChapterFullyCompleted = (chNum) => {
@@ -981,33 +977,9 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
 
           <div className="flex items-center gap-1.5 sm:gap-2 flex-shrink-0 overflow-visible" ref={navGroupRef}>
             
-            {/* 1. AKTİF BÖLÜM BUTONU (Açılmışsa en solda gösterilir) */}
+            {/* 1. AKTİF REFERANS BÖLÜMÜ (Açılmışsa ve referans kapalıysa en solda gösterilir) */}
             {showActiveAtFarLeft && (
               <div className="animate-nav-pop">
-                {activeNavFeature === 'quiz' && (
-                  <button 
-                    onClick={() => {
-                      setIsFullQuizOpen(false);
-                      setExpandedNavGroup(null);
-                    }}
-                    className="w-9 h-9 sm:w-10 sm:h-10 rounded-full transition-all duration-200 flex items-center justify-center cursor-pointer bg-teal-600 text-white border-2 border-teal-300 shadow-[0_0_14px_rgba(20,184,166,0.8)] ring-2 ring-teal-300/60"
-                    title={lang === 'tr' ? 'Genel Sınavı Kapat' : 'Close Full Quiz'}
-                  >
-                    <i className="fa-solid fa-graduation-cap text-base sm:text-lg"></i>
-                  </button>
-                )}
-                {activeNavFeature === 'flashcards' && (
-                  <button 
-                    onClick={() => {
-                      setActiveTab(previousTab || 'home');
-                      setExpandedNavGroup(null);
-                    }}
-                    className="w-9 h-9 sm:w-10 sm:h-10 rounded-full transition-all duration-200 flex items-center justify-center cursor-pointer bg-rose-600 text-white border-2 border-rose-300 shadow-[0_0_14px_rgba(244,63,94,0.8)] ring-2 ring-rose-300/60"
-                    title={lang === 'tr' ? 'Kelime Kartlarını Kapat' : 'Close Flashcards'}
-                  >
-                    <i className="fa-solid fa-clone text-base sm:text-lg"></i>
-                  </button>
-                )}
                 {activeNavFeature === 'summary' && (
                   <button 
                     onClick={() => {
@@ -1047,67 +1019,46 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
               </div>
             )}
 
-            {/* 2. ÇALIŞ GRUBU (Quiz & Flashcards) */}
-            {expandedNavGroup === 'study' ? (
-              <div className="flex items-center gap-1.5 sm:gap-2 animate-nav-pop">
-                {/* Full Quiz Butonu */}
-                <button 
-                  onClick={() => {
-                    setIsFullQuizOpen(true);
-                    setExpandedNavGroup(null);
-                    setIsChapterExpanded(false); 
-                    setIsSearchExpanded(false);
-                  }}
-                  className={`w-9 h-9 sm:w-10 sm:h-10 rounded-full transition-all duration-200 flex items-center justify-center cursor-pointer ${
-                    isFullQuizOpen 
-                      ? 'bg-teal-600 text-white border-2 border-teal-300 shadow-[0_0_14px_rgba(20,184,166,0.8)] ring-2 ring-teal-300/60' 
-                      : 'bg-teal-950/50 text-teal-400 hover:bg-teal-900/60 hover:text-teal-200 border border-teal-800/50 shadow-sm'
-                  }`}
-                  title={lang === 'tr' ? 'Genel Sınav & Full Quiz' : 'Full Quiz Mode'}
-                >
-                  <i className="fa-solid fa-graduation-cap text-base sm:text-lg"></i>
-                </button>
+            {/* 2. QUIZ BUTONU (HER ZAMAN GÖRÜNÜR) */}
+            <button 
+              onClick={() => {
+                setIsFullQuizOpen(!isFullQuizOpen);
+                setExpandedNavGroup(null);
+                setIsChapterExpanded(false); 
+                setIsSearchExpanded(false);
+              }}
+              className={`w-9 h-9 sm:w-10 sm:h-10 rounded-full transition-all duration-200 flex items-center justify-center cursor-pointer ${
+                isFullQuizOpen 
+                  ? 'bg-teal-600 text-white border-2 border-teal-300 shadow-[0_0_14px_rgba(20,184,166,0.8)] ring-2 ring-teal-300/60' 
+                  : 'bg-teal-950/50 text-teal-400 hover:bg-teal-900/60 hover:text-teal-200 border border-teal-800/50 shadow-sm'
+              }`}
+              title={lang === 'tr' ? 'Genel Sınav & Full Quiz' : 'Full Quiz Mode'}
+            >
+              <i className="fa-solid fa-graduation-cap text-base sm:text-lg"></i>
+            </button>
 
-                {/* Flashcards Butonu */}
-                <button 
-                  onClick={() => {
-                    if (activeTab === 'flashcards') {
-                      setActiveTab(previousTab || 'home');
-                    } else {
-                      if (activeTab !== 'home' && activeTab !== 'verbs' && activeTab !== 'grammar' && !activeTab.startsWith('On-Class-')) setPreviousTab(activeTab);
-                      setActiveTab("flashcards");
-                    }
-                    setExpandedNavGroup(null);
-                    setIsChapterExpanded(false); 
-                    setIsSearchExpanded(false);
-                  }}
-                  className={`w-9 h-9 sm:w-10 sm:h-10 rounded-full transition-all duration-200 flex items-center justify-center cursor-pointer ${
-                    activeTab === 'flashcards' 
-                      ? 'bg-rose-600 text-white border-2 border-rose-300 shadow-[0_0_14px_rgba(244,63,94,0.8)] ring-2 ring-rose-300/60' 
-                      : 'bg-rose-950/50 text-rose-400 hover:bg-rose-900/60 hover:text-rose-200 border border-rose-800/50 shadow-sm'
-                  }`}
-                  title={t('flashcards')}
-                >
-                  <i className="fa-solid fa-clone text-base sm:text-lg"></i>
-                </button>
-              </div>
-            ) : (
-              <button 
-                onClick={() => {
-                  setExpandedNavGroup('study');
-                  setIsChapterExpanded(false); 
-                  setIsSearchExpanded(false);
-                }}
-                className={`w-9 h-9 sm:w-10 sm:h-10 rounded-full transition-all duration-200 flex items-center justify-center cursor-pointer ${
-                  (activeNavFeature === 'quiz' || activeNavFeature === 'flashcards')
-                    ? 'bg-purple-900/40 text-purple-300 border border-purple-500/40'
-                    : 'bg-purple-950/50 text-purple-400 hover:bg-purple-900/60 hover:text-purple-200 border border-purple-800/50 shadow-sm'
-                }`}
-                title={lang === 'tr' ? 'Çalış (Quiz & Kelime Kartları)' : 'Study (Quiz & Flashcards)'}
-              >
-                <i className="fa-solid fa-brain text-base sm:text-lg"></i>
-              </button>
-            )}
+            {/* 3. FLASHCARDS BUTONU (HER ZAMAN GÖRÜNÜR) */}
+            <button 
+              onClick={() => {
+                if (activeTab === 'flashcards') {
+                  setActiveTab(previousTab || 'home');
+                } else {
+                  if (activeTab !== 'home' && activeTab !== 'verbs' && activeTab !== 'grammar' && !activeTab.startsWith('On-Class-')) setPreviousTab(activeTab);
+                  setActiveTab("flashcards");
+                }
+                setExpandedNavGroup(null);
+                setIsChapterExpanded(false); 
+                setIsSearchExpanded(false);
+              }}
+              className={`w-9 h-9 sm:w-10 sm:h-10 rounded-full transition-all duration-200 flex items-center justify-center cursor-pointer ${
+                activeTab === 'flashcards' 
+                  ? 'bg-rose-600 text-white border-2 border-rose-300 shadow-[0_0_14px_rgba(244,63,94,0.8)] ring-2 ring-rose-300/60' 
+                  : 'bg-rose-950/50 text-rose-400 hover:bg-rose-900/60 hover:text-rose-200 border border-rose-800/50 shadow-sm'
+              }`}
+              title={t('flashcards')}
+            >
+              <i className="fa-solid fa-clone text-base sm:text-lg"></i>
+            </button>
 
             {/* 3. REFERENCE GRUBU (Summaries, Grammar, Verbs) */}
             {expandedNavGroup === 'reference' ? (

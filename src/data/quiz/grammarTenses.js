@@ -129,7 +129,7 @@ export const grammarTenses = [
     "quality": 1,
     "options": [
       "praat",
-      "Misschien later.",
+      "vragen",
       "praten",
       "gepraat"
     ]
@@ -143,7 +143,7 @@ export const grammarTenses = [
     "questionNl": "— Kun je haar goed verstaan?\n— Soms is het lastig, want zij ___ heel erg snel als ze zenuwachtig is.",
     "options": [
       "praat",
-      "Misschien later.",
+      "vragen",
       "praten",
       "gepraat"
     ],
@@ -471,7 +471,7 @@ export const grammarTenses = [
       "Werkt",
       "Werk",
       "Werken",
-      "Misschien later."
+      "badkamer"
     ],
     "correctAnswer": "Werkt",
     "explanationTr": "3. tekil şahıs (hij) soru cümlesinde de olsa fiilin '-t' harfi kalır.",
@@ -775,7 +775,7 @@ export const grammarTenses = [
       "werkde",
       "werkte",
       "gewerkt",
-      "Misschien later."
+      "vragen"
     ],
     "correctAnswer": "werkte",
     "explanationTr": "Imperfectum (Hikaye Geçmiş Zaman). 'werk' kökünün sonu 'k' ile bittiği için '+te' eklenir: werkte.",
@@ -817,7 +817,7 @@ export const grammarTenses = [
       "speelde",
       "speelte",
       "gespeeld",
-      "Misschien later."
+      "vragen"
     ],
     "correctAnswer": "speelde",
     "explanationTr": "Imperfectum. 'speel' kökü 'soft ketchup' kuralına uymaz, bu yüzden '+de' eklenir: speelde.",
@@ -880,7 +880,7 @@ export const grammarTenses = [
       "gefietst",
       "gefietste",
       "gefietstd",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "gefietst",
     "explanationTr": "Perfectum. 'fietsen' kökü 'fiets'. Son harf 's' (soft ketchup içinde VAR), bu yüzden '+t' alır.",
@@ -906,7 +906,7 @@ export const grammarTenses = [
       "gekookt",
       "gekook",
       "gekooken",
-      "Misschien later."
+      "appelsap"
     ]
   },
   {
@@ -922,7 +922,7 @@ export const grammarTenses = [
       "praat",
       "praatte",
       "praatde",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "praatte",
     "explanationTr": "Imperfectum. 'praten' kökü 'praat'. Kök zaten 't' ile bitiyor ve 't' harfi soft ketchup kuralında '+te' almasını gerektiriyor. İki 't' yan yana gelir: praatte.",
@@ -1090,7 +1090,7 @@ export const grammarTenses = [
       "gevertaald",
       "vertaald",
       "vertaalde",
-      "Misschien later."
+      "vragen"
     ],
     "correctAnswer": "vertaald",
     "explanationTr": "'ver-' ile başlayan fiiller 'ge-' takısı almaz. (vertalen -> vertaald).",
@@ -1363,7 +1363,7 @@ export const grammarTenses = [
       "moeste",
       "moest",
       "moesten",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "moest",
     "explanationTr": "Modal fiil (Imperfectum): 'moeten' tekil için 'moest' olur.",
@@ -1429,7 +1429,7 @@ export const grammarTenses = [
       "zocht",
       "zoch",
       "zochen",
-      "Misschien later."
+      "vragen"
     ]
   },
   {
@@ -1450,7 +1450,7 @@ export const grammarTenses = [
       "kocht",
       "koch",
       "kochen",
-      "Misschien later."
+      "badkamer"
     ]
   },
   {
@@ -1487,7 +1487,7 @@ export const grammarTenses = [
     "explanationTr": "Imperfectum. 'opstaan' -> 'staan' fiilinin geçmiş zamanı 'stond'dur. 'op' cümlenin sonundadır.",
     "explanationEn": "Imperfectum. 'opstaan' -> the past of 'staan' is 'stond'. 'op' is at the end.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "stond",
       "niet stond",
@@ -1508,7 +1508,7 @@ export const grammarTenses = [
     "explanationTr": "Imperfectum. Çoğul özne (we) için 'maken' fiilinin geçmiş zamanı 'maakten' olur. 'schoon' sondadır.",
     "explanationEn": "Imperfectum. The past plural of 'maken' is 'maakten'. 'schoon' is at the end.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "maakten",
       "maakt",
@@ -1533,7 +1533,7 @@ export const grammarTenses = [
       "komt",
       "kom",
       "komen",
-      "Misschien later."
+      "halte"
     ]
   },
   {
@@ -1549,7 +1549,7 @@ export const grammarTenses = [
     "explanationTr": "Perfectum. 'uitnodigen' -> uit + ge + nodigd = uitgenodigd.",
     "explanationEn": "Perfectum. 'uitnodigen' -> uit + ge + nodigd = uitgenodigd.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "uitgenodigd",
       "uitnodigd",
@@ -1591,7 +1591,7 @@ export const grammarTenses = [
     "explanationTr": "Perfectum. 'opstaan' durum/konum değişikliği bildirdiği için 'zijn' (is) ile kullanılır. 3. hali: op + ge + staan = opgestaan.",
     "explanationEn": "Perfectum. 'opstaan' indicates a change of state, so it uses 'zijn' (is). Past participle: op + ge + staan = opgestaan.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "opgestaan",
       "opstaan",
@@ -1633,7 +1633,7 @@ export const grammarTenses = [
     "explanationTr": "Perfectum. 'schoonmaken' -> schoon + ge + maakt = schoongemaakt.",
     "explanationEn": "Perfectum. 'schoonmaken' -> schoon + ge + maakt = schoongemaakt.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "schoongemaakt",
       "schoongemaaktt",
@@ -1675,7 +1675,7 @@ export const grammarTenses = [
     "explanationTr": "Perfectum. 'doen' düzensizdir (gedaan). aan + ge + daan = aangedaan.",
     "explanationEn": "Perfectum. 'doen' is irregular (gedaan). aan + ge + daan = aangedaan.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "aangedaan",
       "aandaan",
@@ -1696,7 +1696,7 @@ export const grammarTenses = [
     "explanationTr": "Perfectum. 'voorstellen' (önermek) -> voor + ge + steld = voorgesteld.",
     "explanationEn": "Perfectum. 'voorstellen' (to propose) -> voor + ge + steld = voorgesteld.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "voorgesteld",
       "voorsteld",
@@ -1723,7 +1723,7 @@ export const grammarTenses = [
     "explanationTr": "Perfectum. 'terugkomen' -> terug + ge + komen = teruggekomen.",
     "explanationEn": "Perfectum. 'terugkomen' -> terug + ge + komen = teruggekomen.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_ref_038",
@@ -1844,7 +1844,7 @@ export const grammarTenses = [
       "gaat",
       "gaa",
       "gaaen",
-      "Misschien later."
+      "vragen"
     ]
   },
   {
@@ -1925,7 +1925,7 @@ export const grammarTenses = [
       "Gaat",
       "Gaa",
       "Gaaen",
-      "Misschien later."
+      "om vier uur"
     ]
   },
   {
@@ -2001,7 +2001,7 @@ export const grammarTenses = [
       "zult",
       "zal",
       "zult / zal",
-      "Misschien later."
+      "vragen"
     ],
     "correctAnswer": "zult / zal",
     "explanationTr": "'Jij' için 'zullen' fiilinin çekimi 'zult' veya 'zal' olabilir. İkisi de doğrudur.",
@@ -2067,7 +2067,7 @@ export const grammarTenses = [
       "Zult",
       "Zul",
       "Zulen",
-      "Misschien later."
+      "vragen"
     ]
   },
   {
@@ -2104,7 +2104,7 @@ export const grammarTenses = [
       "Een voorstel (Teklif)",
       "Een waarschijnlijkheid (Olasılık)",
       "Een belofte (Söz/Vaat)",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Een belofte (Söz/Vaat)",
     "explanationTr": "'Sırrını kimseye söylemeyeceğim' demek, açıkça bir söz vermektir (belofte).",
@@ -2125,7 +2125,7 @@ export const grammarTenses = [
       "Een belofte (Söz/Vaat)",
       "Een waarschijnlijkheid (Olasılık/Tahmin)",
       "Een voorstel (Teklif)",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Een waarschijnlijkheid (Olasılık/Tahmin)",
     "explanationTr": "'Bu muhtemelen çok paraya mal olur!' güçlü bir tahmin/olasılık ifade eder.",
@@ -2283,7 +2283,7 @@ export const grammarTenses = [
       "wacht",
       "wachten",
       "gewacht",
-      "Misschien later."
+      "vragen"
     ],
     "correctAnswer": "wachten",
     "explanationTr": "'Aan het' yapısı her zaman fiilin mastarını (infinitief) ister: 'wachten'.",
@@ -2538,7 +2538,7 @@ export const grammarTenses = [
     "explanationTr": "Ayrılabilir fiillerin perfectum halinde, 'ge' eki ön ek ile fiil kökü arasına girer (af + ge + rekend = afgerekend).",
     "explanationEn": "In the perfectum of a separable verb, the '-ge-' is placed between the prefix and the stem (e.g., afgerekend).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1066",

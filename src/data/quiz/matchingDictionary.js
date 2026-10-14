@@ -1,7 +1,5 @@
 // src/data/quiz/matchingDictionary.js
-// Comprehensive matching questions covering 100% of Nederlands in Gang textbook vocabulary
-// Chapters 1 to 18 + Bijlage 7 Register & Thematic Appendices
-
+// 100% comprehensive coverage of textbook & appendix vocabulary
 export const matchingDictionary = [
   {
     "id": "q_match_dict_001",
@@ -241,7 +239,7 @@ export const matchingDictionary = [
     "explanationTr": "Tanışma ve selamlaşma: 'drie' (üç), 'we' (biz), 'beginnen' (başlamak), 'met' (ile), 'kennismaken' (tanışmak).",
     "explanationEn": "Introductions and greetings: 'drie' (three), 'we' (we), 'beginnen' (to begin / start), 'met' (with), 'kennismaken' (to get to know).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_006",
@@ -289,7 +287,7 @@ export const matchingDictionary = [
     "explanationTr": "Tanışma ve selamlaşma: 'wie' (kim), 'ben' (im / yim), 'jij' (sen (vurgulu)), 'wat' (ne / biraz), 'jouw' (senin (vurgulu)).",
     "explanationEn": "Introductions and greetings: 'wie' (who), 'ben' (am), 'jij' (you (sing)), 'wat' (what / a bit), 'jouw' (your (sing)).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_007",
@@ -337,7 +335,7 @@ export const matchingDictionary = [
     "explanationTr": "Tanışma ve selamlaşma: 'naam' (isim), 'mijn' (benim), 'dag' (gün), 'je' (sen, senin), 'voornaam' (ad).",
     "explanationEn": "Introductions and greetings: 'naam' (name), 'mijn' (my), 'dag' (day), 'je' (you / your, yourself, yourselves), 'voornaam' (first name).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_008",
@@ -385,7 +383,7 @@ export const matchingDictionary = [
     "explanationTr": "Tanışma ve selamlaşma: 'achternaam' (soyadı), 'uit' (-den, dışarı), 'welk' (hangi), 'land' (ülke), 'Engeland' (İngiltere).",
     "explanationEn": "Introductions and greetings: 'achternaam' (surname), 'uit' (from), 'welk' (which), 'land' (country), 'Engeland' (England).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_009",
@@ -433,7 +431,7 @@ export const matchingDictionary = [
     "explanationTr": "Tanışma ve selamlaşma: 'kom' (geliyorum), 'buurman' (erkek komşu), 'van' (-in, -den), 'hoe' (nasıl), 'hoe heet jij' (adın ne?).",
     "explanationEn": "Introductions and greetings: 'kom' (come), 'buurman' (neighbour (m)), 'van' (of), 'hoe' (how (what)), 'hoe heet jij' (what's your name?).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_010",
@@ -481,7 +479,7 @@ export const matchingDictionary = [
     "explanationTr": "Tanışma ve selamlaşma: 'heet' (adlandırılmak), 'vandaan' (-den / nereden), 'waar' (nerede / doğru), 'China' (Çin), 'woon' (yaşamak).",
     "explanationEn": "Introductions and greetings: 'heet' (is called), 'vandaan' (where ... from), 'waar' (where / true), 'China' (China), 'woon' (live).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_011",
@@ -529,7 +527,7 @@ export const matchingDictionary = [
     "explanationTr": "Tanışma ve selamlaşma: 'nu' (şimdi), 'in' (içinde, içeri), 'adres' (adres), 'nummer' (numara), 'antwoord' (cevap).",
     "explanationEn": "Introductions and greetings: 'nu' (now), 'in' (in), 'adres' (address), 'nummer' (number), 'antwoord' (answer).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_012",
@@ -577,7 +575,7 @@ export const matchingDictionary = [
     "explanationTr": "Tanışma ve selamlaşma: 'nee' (hayır), 'postcode' (posta kodu), 'u' (siz (kibar)), 'mevrouw' (bayan, hanımefendi), 'woont' (yaşamak).",
     "explanationEn": "Introductions and greetings: 'nee' (no), 'postcode' (postal code), 'u' (you), 'mevrouw' (Ms / Mrs 1, woman / lady), 'woont' (live).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_013",
@@ -625,7 +623,7 @@ export const matchingDictionary = [
     "explanationTr": "Tanışma ve selamlaşma: 'ook' (de, da, ayrıca), 'zeg' (ya / doğrusu), 'maar' (ama, fakat, sadece), 'hoor' ((vurgu, tabii ki)), 'ja' (evet).",
     "explanationEn": "Introductions and greetings: 'ook' (also), 'zeg' ((interjection)), 'maar' (just 1, but 2), 'hoor' (for emphasis), 'ja' (yes).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_014",
@@ -673,7 +671,7 @@ export const matchingDictionary = [
     "explanationTr": "Tanışma ve selamlaşma: 'hier' (burada, buraya), 'al' (zaten, çoktan), 'twintig' (yirmi), 'jaar' (yıl), 'gaan verder' (devam etmek).",
     "explanationEn": "Introductions and greetings: 'hier' (here), 'al' (already), 'twintig' (twenty), 'jaar' (year), 'gaan verder' (go on (continue)).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_015",
@@ -721,7 +719,7 @@ export const matchingDictionary = [
     "explanationTr": "Tanışma ve selamlaşma: 'les' (ders), 'heeft' (sahip), 'iedereen' (herkes), 'boek' (kitap), 'het' ((belirli artikel), o).",
     "explanationEn": "Introductions and greetings: 'les' (lesson), 'heeft' (has), 'iedereen' (everyone), 'boek' (book), 'het' (the, it).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_016",
@@ -769,7 +767,7 @@ export const matchingDictionary = [
     "explanationTr": "Tanışma ve selamlaşma: 'tekst' (metin), 'één' (bir), 'op' (üzerinde), 'bladzijde' (sayfa), 'acht' (sekiz).",
     "explanationEn": "Introductions and greetings: 'tekst' (text), 'één' (one), 'op' (on), 'bladzijde' (page), 'acht' (eight).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_017",
@@ -817,7 +815,7 @@ export const matchingDictionary = [
     "explanationTr": "Tanışma ve selamlaşma: 'luisteren' (dinlemek), 'naar' (-e doğru / -ye), 'lezen' (okumak), 'stoppen' (durmak), 'even' (bir an, biraz).",
     "explanationEn": "Introductions and greetings: 'luisteren' (listen), 'naar' (to), 'lezen' (to read), 'stoppen' (to stop), 'even' (for a moment).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_018",
@@ -865,7 +863,7 @@ export const matchingDictionary = [
     "explanationTr": "Tanışma ve selamlaşma: 'is' (dir / dır), 'pauze' (mola), 'tot straks' (az sonra görüşürüz), 'straks' (birazdan, az sonra), 'welkom' (hoş geldiniz).",
     "explanationEn": "Introductions and greetings: 'is' (is), 'pauze' (break), 'tot straks' (see you later), 'straks' (soon / later), 'welkom' (welcome).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_019",
@@ -914,7 +912,7 @@ export const matchingDictionary = [
     "explanationTr": "Köken, ülkeler ve diller: 'zitten' (oturmak), 'kantine' (kantin, yemekhane), 'deze' (bu, bunlar), 'plaats' (yer, koltuk), 'vrij' (serbest, özgür, boş).",
     "explanationEn": "Origins, countries, and languages: 'zitten' (to sit), 'kantine' (canteen), 'deze' (this / these), 'plaats' (seat / place), 'vrij' (free).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_020",
@@ -963,7 +961,7 @@ export const matchingDictionary = [
     "explanationTr": "Köken, ülkeler ve diller: 'ja hoor' (evet, tabii ki), 'zo' (öyle, böyle), 'een' (bir (belirsiz artikel)), 'lekker' (güzel, lezzetli), 'kopje' (fincan).",
     "explanationEn": "Origins, countries, and languages: 'ja hoor' (yes / yes of course), 'zo' (okay / so), 'een' (a(n)), 'lekker' (nice / delicious 2, well 13, nicely 15), 'kopje' (cup).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_021",
@@ -1012,7 +1010,7 @@ export const matchingDictionary = [
     "explanationTr": "Köken, ülkeler ve diller: 'koffie' (kahve), 'al lang' (uzun zamandır), 'pas' (henüz, ancak), 'of' (veya, ya da), 'welke' (hangi).",
     "explanationEn": "Origins, countries, and languages: 'koffie' (coffee), 'al lang' (for a long time), 'pas' (only), 'of' (or), 'welke' (which).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_022",
@@ -1061,7 +1059,7 @@ export const matchingDictionary = [
     "explanationTr": "Köken, ülkeler ve diller: 'eigenlijk' (aslında), 'vandaag' (bugün), 'donderdag' (perşembe), 'augustus' (ağustos), 'morgen' (yarın).",
     "explanationEn": "Origins, countries, and languages: 'eigenlijk' (actually / really), 'vandaag' (today), 'donderdag' (Thursday), 'augustus' (August), 'morgen' (tomorrow).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_023",
@@ -1110,7 +1108,7 @@ export const matchingDictionary = [
     "explanationTr": "Köken, ülkeler ve diller: 'ik ben jarig' (benim doğum günüm), 'wat leuk' (ne kadar güzel), 'december' (aralık), 'dus' (bu yüzden, yani), 'winter' (kış).",
     "explanationEn": "Origins, countries, and languages: 'ik ben jarig' (it's my birthday), 'wat leuk' (how nice), 'december' (december), 'dus' (so / therefore), 'winter' (winter).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_024",
@@ -1159,7 +1157,7 @@ export const matchingDictionary = [
     "explanationTr": "Köken, ülkeler ve diller: 'krijg' (almak), 'nog' (hala, daha), 'bezoek' (ziyaret / ziyaretçi), 'broer' (erkek kardeş), 'jonger' (daha genç).",
     "explanationEn": "Origins, countries, and languages: 'krijg' (get / receive), 'nog' (as well, any), 'bezoek' (visit / visitors), 'broer' (brother), 'jonger' (younger).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_025",
@@ -1208,7 +1206,7 @@ export const matchingDictionary = [
     "explanationTr": "Köken, ülkeler ve diller: 'maar' (ama, fakat, sadece), 'wel' (kesinlikle / -di (vurgu)), 'langer' (daha uzun), 'nog meer' (daha fazla), 'broers' (erkek kardeşler).",
     "explanationEn": "Origins, countries, and languages: 'maar' (just 1, but 2), 'wel' (certainly / quite), 'langer' (taller), 'nog meer' (any more), 'broers' (brothers).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_026",
@@ -1257,7 +1255,7 @@ export const matchingDictionary = [
     "explanationTr": "Köken, ülkeler ve diller: 'zussen' (kız kardeşler), 'zus' (kız kardeş), 'kijk' (bak / bakmak), 'foto' (fotoğraf), 'goh' (ah, oh (şaşırma)).",
     "explanationEn": "Origins, countries, and languages: 'zussen' (sisters), 'zus' (sister), 'kijk' (look), 'foto' (photo), 'goh' (oh).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_027",
@@ -1306,7 +1304,7 @@ export const matchingDictionary = [
     "explanationTr": "Köken, ülkeler ve diller: 'heel' (çok), 'ander' (diğer), 'type' (tip, çeşit), 'kort' (kısa), 'blond' (sarışın).",
     "explanationEn": "Origins, countries, and languages: 'heel' (very), 'ander' (other), 'type' (type), 'kort' (short 2), 'blond' (blond).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_028",
@@ -1355,7 +1353,7 @@ export const matchingDictionary = [
     "explanationTr": "Köken, ülkeler ve diller: 'haar' (onun (kadın)), 'donker' (karanlık, koyu), 'ouders' (ebeveynler), 'bezoek' (ziyaret), 'op dit moment' (şu anda).",
     "explanationEn": "Origins, countries, and languages: 'haar' (her), 'donker' (dark), 'ouders' (parents), 'bezoek' (visit), 'op dit moment' (at the moment).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_029",
@@ -1404,7 +1402,7 @@ export const matchingDictionary = [
     "explanationTr": "Köken, ülkeler ve diller: 'Indonesië' (Endonezya), 'doen' (yapmak, çalışmak), 'daar' (orada, oraya), 'op vakantie' (tatilde), 'vakantie' (tatil).",
     "explanationEn": "Origins, countries, and languages: 'Indonesië' (Indonesia), 'doen' (to do, to work), 'daar' (there), 'op vakantie' (on holiday), 'vakantie' (holiday).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_030",
@@ -1453,7 +1451,7 @@ export const matchingDictionary = [
     "explanationTr": "Köken, ülkeler ve diller: 'vader' (baba), 'voor' (için, önce, önünde), 'zijn' (olmak / onun), 'werk' (iş), 'seizoen' (mevsim).",
     "explanationEn": "Origins, countries, and languages: 'vader' (father), 'voor' (for, before, in front of), 'zijn' (to be / his), 'werk' (work), 'seizoen' (season).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_031",
@@ -1502,7 +1500,7 @@ export const matchingDictionary = [
     "explanationTr": "Köken, ülkeler ve diller: 'wanneer' (ne zaman), 'zomer' (yaz), 'weet' (bilmek), 'niet' (değil, -me (olumsuzluk)), 'vertel' (anlatmak).",
     "explanationEn": "Origins, countries, and languages: 'wanneer' (when), 'zomer' (summer), 'weet' (know), 'niet' (not), 'vertel' (tell).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_032",
@@ -1551,7 +1549,7 @@ export const matchingDictionary = [
     "explanationTr": "Köken, ülkeler ve diller: 'eens' ((vurgu/onaylama, -bir)), 'over' (hakkında), 'familie' (aile), 'dat' (o, şu), 'wil' (istiyorum).",
     "explanationEn": "Origins, countries, and languages: 'eens' ((usually untranslated)), 'over' (about), 'familie' (family), 'dat' (that), 'wil' (want).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_033",
@@ -1600,7 +1598,7 @@ export const matchingDictionary = [
     "explanationTr": "Köken, ülkeler ve diller: 'laat' (geç), 'uur' (saat), 'moeten' (-meli, zorında olmak), 'weer' (hava / tekrar), 'naar' (-e doğru / -ye).",
     "explanationEn": "Origins, countries, and languages: 'laat' (late), 'uur' (o'clock), 'moeten' (must / should 2, to have to), 'weer' (weather / again), 'naar' (to).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_034",
@@ -1649,7 +1647,7 @@ export const matchingDictionary = [
     "explanationTr": "Kafede sipariş verme ve kutlama: 'viert' (kutluyor), 'verjaardag' (doğum günü), 'café' (kafe, pub), 'samen' (birlikte), 'gefeliciteerd' (tebrikler).",
     "explanationEn": "Ordering in a cafe and celebrations: 'viert' (is celebrating), 'verjaardag' (birthday), 'café' (cafe / pub), 'samen' (together), 'gefeliciteerd' (congratulations, happy birthday).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_035",
@@ -1698,7 +1696,7 @@ export const matchingDictionary = [
     "explanationTr": "Kafede sipariş verme ve kutlama: 'dank je wel' (teşekkür ederim), 'dit is' (bu), 'prettig met je kennis te maken' (seninle tanıştığıma memnun oldum), 'kennen' (bilmek, tanımak), 'elkaar' (birbirini).",
     "explanationEn": "Ordering in a cafe and celebrations: 'dank je wel' (thank you), 'dit is' (this is), 'prettig met je kennis te maken' (nice to meet you), 'kennen' (to know), 'elkaar' (each other).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_036",
@@ -1747,7 +1745,7 @@ export const matchingDictionary = [
     "explanationTr": "Kafede sipariş verme ve kutlama: 'drinken' (içmek), 'ik trakteer' (ben ısmarlıyorum), 'wil graag' (memnuniyetle isterim), 'cola' (her zaman coca-cola), 'biertje' (bira).",
     "explanationEn": "Ordering in a cafe and celebrations: 'drinken' (to drink), 'ik trakteer' (it's my treat), 'wil graag' (would like), 'cola' (cola), 'biertje' (beer).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_037",
@@ -1796,7 +1794,7 @@ export const matchingDictionary = [
     "explanationTr": "Kafede sipariş verme ve kutlama: 'neem' (almak), 'rode' (kırmızı), 'wijn' (şarap), 'roep' (çağırmak), 'ober' (garson).",
     "explanationEn": "Ordering in a cafe and celebrations: 'neem' (have (take)), 'rode' (red), 'wijn' (wine), 'roep' (call), 'ober' (waiter).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_038",
@@ -1845,7 +1843,7 @@ export const matchingDictionary = [
     "explanationTr": "Kafede sipariş verme ve kutlama: 'mag' (izinli olmak), 'bestellen' (sipariş vermek), 'alstublieft' (lütfen (kibar)), 'Franse' (Fransız), 'Spaanse' (İspanyol).",
     "explanationEn": "Ordering in a cafe and celebrations: 'mag' (may / allowed), 'bestellen' (to order), 'alstublieft' (please), 'Franse' (French), 'Spaanse' (Spanish).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_039",
@@ -1894,7 +1892,7 @@ export const matchingDictionary = [
     "explanationTr": "Kafede sipariş verme ve kutlama: 'Zuid-Afrikaanse' (Güney Afrikalı), 'de' ((belirli artikel)), 'nou' (şey, hani, şimdi), 'proost' (şerefe), 'op je verjaardag' (doğum günün kutlu olsun).",
     "explanationEn": "Ordering in a cafe and celebrations: 'Zuid-Afrikaanse' (South African), 'de' (the), 'nou' (well, now), 'proost' (cheers), 'op je verjaardag' (happy birthday).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_040",
@@ -1943,7 +1941,7 @@ export const matchingDictionary = [
     "explanationTr": "Kafede sipariş verme ve kutlama: 'bedankt' (teşekkürler), 'poosje' (kısa süre), 'later' (sonra), 'zullen' (-ecek / -acak), 'nog een keer' (bir kez daha).",
     "explanationEn": "Ordering in a cafe and celebrations: 'bedankt' (thanks), 'poosje' (short while), 'later' (later), 'zullen' (will / shall), 'nog een keer' (once more).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_041",
@@ -1992,7 +1990,7 @@ export const matchingDictionary = [
     "explanationTr": "Kafede sipariş verme ve kutlama: 'dat is' (o -dir), 'goed' (iyi, tamam), 'idee' (fikir), 'hetzelfde' (aynı), 'ja, graag' (evet lütfen).",
     "explanationEn": "Ordering in a cafe and celebrations: 'dat is' (that is), 'goed' (good, fine, okay), 'idee' (idea), 'hetzelfde' (the same), 'ja, graag' (yes please).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_042",
@@ -2041,7 +2039,7 @@ export const matchingDictionary = [
     "explanationTr": "Kafede sipariş verme ve kutlama: 'dit' (bu), 'rondje' (tur, içecek turu), 'betaal' (ödemek), 'geef' (vermek), 'nog maar' (sadece, daha yeni).",
     "explanationEn": "Ordering in a cafe and celebrations: 'dit' (this), 'rondje' (round), 'betaal' (pay), 'geef' (give), 'nog maar' (another).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_043",
@@ -2090,7 +2088,7 @@ export const matchingDictionary = [
     "explanationTr": "Kafede sipariş verme ve kutlama: 'glas' (bardak, cam), 'afrekenen' (hesabı ödemek), 'alles' (her şey), 'daarom' (bu yüzden, bu nedenle), 'eerste' (birinci).",
     "explanationEn": "Ordering in a cafe and celebrations: 'glas' (glass), 'afrekenen' (to pay / settle the bill), 'alles' (everything), 'daarom' (that's why), 'eerste' (first).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_044",
@@ -2139,7 +2137,7 @@ export const matchingDictionary = [
     "explanationTr": "Kafede sipariş verme ve kutlama: 'tweede' (ikinci), 'viert' (kutluyor), 'verjaardag' (doğum günü), 'café' (kafe, pub), 'samen' (birlikte).",
     "explanationEn": "Ordering in a cafe and celebrations: 'tweede' (second), 'viert' (is celebrating), 'verjaardag' (birthday), 'café' (cafe / pub), 'samen' (together).",
     "difficulty": 1,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_045",
@@ -2188,7 +2186,7 @@ export const matchingDictionary = [
     "explanationTr": "Randevulaşma ve zaman: 'straat' (sokak, cadde), 'vriend' (erkek arkadaş, dost), 'tegen' (karşılaşıyor), 'hé' (hey), 'geleden' (önce).",
     "explanationEn": "Making appointments and time: 'straat' (street), 'vriend' ((boy)friend), 'tegen' (meets), 'hé' (hey), 'geleden' (ago).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_046",
@@ -2237,7 +2235,7 @@ export const matchingDictionary = [
     "explanationTr": "Randevulaşma ve zaman: 'leuk' (güzel, hoş, eğlenceli), 'prima' (harika, pek iyi), 'jou' (seni, sana), 'gaat wel' (idare eder, fena değil), 'problemen' (problemler).",
     "explanationEn": "Making appointments and time: 'leuk' (nice), 'prima' (wonderful), 'jou' (you), 'gaat wel' (all right, it's okay), 'problemen' (problems).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_047",
@@ -2286,7 +2284,7 @@ export const matchingDictionary = [
     "explanationTr": "Randevulaşma ve zaman: 'buren' (komşular), 'niet zo' (o kadar değil), 'belangrijk' (önemli), 'gaan' (gitmek), 'week' (hafta).",
     "explanationEn": "Making appointments and time: 'buren' (neighbours), 'niet zo' (not so), 'belangrijk' (important), 'gaan' (to go), 'week' (week).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_048",
@@ -2335,7 +2333,7 @@ export const matchingDictionary = [
     "explanationTr": "Randevulaşma ve zaman: 'paar dagen' (birkaç gün), 'Venetië' (Venedik), 'wauw' (vay canına), 'prachtig' (harika, muhteşem), 'veel' (çok).",
     "explanationEn": "Making appointments and time: 'paar dagen' (a few days), 'Venetië' (Venice), 'wauw' (wow), 'prachtig' (fine / splendid), 'veel' (many).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_049",
@@ -2384,7 +2382,7 @@ export const matchingDictionary = [
     "explanationTr": "Randevulaşma ve zaman: 'foto's maken' (fotoğraf çekmek), 'sinds' (-den beri), 'nieuw' (yeni), 'camera' (kamera), 'romantische' (romantik).",
     "explanationEn": "Making appointments and time: 'foto's maken' (to take photos), 'sinds' (since), 'nieuw' (new), 'camera' (camera), 'romantische' (romantic).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_050",
@@ -2433,7 +2431,7 @@ export const matchingDictionary = [
     "explanationTr": "Randevulaşma ve zaman: 'film' (film), 'na' (-den sonra), 'kijken naar' (-e bakmak), 'direct' (hemen, doğrudan), 'iets' (bir şey, biraz).",
     "explanationEn": "Making appointments and time: 'film' (film), 'na' (after), 'kijken naar' (to look at), 'direct' (right now, straightaway), 'iets' (something).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_051",
@@ -2482,7 +2480,7 @@ export const matchingDictionary = [
     "explanationTr": "Randevulaşma ve zaman: 'afspreken' (randevulaşmak, sözleşmek), 'goed' (iyi, tamam), 'thuis' (evde), 'afspraak' (randevu), 'maken' (yapmak).",
     "explanationEn": "Making appointments and time: 'afspreken' (to set a date / make an appointment), 'goed' (good, fine, okay), 'thuis' (at home), 'afspraak' (date / appointment), 'maken' (to make 4, to do).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_052",
@@ -2531,7 +2529,7 @@ export const matchingDictionary = [
     "explanationTr": "Randevulaşma ve zaman: 'datum' (tarih), 'lukt' (başarılı oluyor / oluyor), 'dan' (o zaman, -den/-dan), 'kan' (yapabilirim (yetenek/ihtimal)), 'blijf' (kalmak).",
     "explanationEn": "Making appointments and time: 'datum' (date), 'lukt' (works / succeeds), 'dan' (then, than), 'kan' (can), 'blijf' (stay).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_053",
@@ -2580,7 +2578,7 @@ export const matchingDictionary = [
     "explanationTr": "Randevulaşma ve zaman: 'eten' (yemek yemek), 'zal' (-ecek / -ayım mı), 'spaghetti carbonara' (karbonatlı spagetti), 'plan' (plan), 'schrijf' (yazmak).",
     "explanationEn": "Making appointments and time: 'eten' (to eat), 'zal' (will / shall), 'spaghetti carbonara' (spaghetti carbonara), 'plan' (plan, intention), 'schrijf' (write).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_054",
@@ -2629,7 +2627,7 @@ export const matchingDictionary = [
     "explanationTr": "Randevulaşma ve zaman: 'agenda' (ajanda), 'hartstikke' (çok, tamamen (vurgu)), 'hartstikke leuk' (harika / çok güzel), 'vind ik ook' (bence de), 'ik moet ervandoor' (benim gitmem lazım).",
     "explanationEn": "Making appointments and time: 'agenda' (diary), 'hartstikke' (very / completely), 'hartstikke leuk' (terrific / very nice), 'vind ik ook' (I think so too), 'ik moet ervandoor' (I have to go).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_055",
@@ -2678,7 +2676,7 @@ export const matchingDictionary = [
     "explanationTr": "Randevulaşma ve zaman: 'ervandoor' (ayrılmak / gitmek), 'gauw' (çabuk, hızlıca), 'winkel' (dükkan, mağaza), 'wens' (dilemek), 'jullie' (siz (çoğul), sizin).",
     "explanationEn": "Making appointments and time: 'ervandoor' (away / off), 'gauw' (quickly), 'winkel' (shop), 'wens' (wish), 'jullie' (you (pl), your (pl)).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_056",
@@ -2727,7 +2725,7 @@ export const matchingDictionary = [
     "explanationTr": "Randevulaşma ve zaman: 'fijne' (iyi / güzel), 'doe de groeten aan' (...'a selam söyle), 'volgende' (gelecek, sonraki), 'tot dan' (o zamana dek), 'straat' (sokak, cadde).",
     "explanationEn": "Making appointments and time: 'fijne' (nice / good), 'doe de groeten aan' (give my regards to), 'volgende' (next), 'tot dan' (until then), 'straat' (street).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_057",
@@ -2776,7 +2774,7 @@ export const matchingDictionary = [
     "explanationTr": "Pazar ve market alışverişi: 'boodschappen doen' (alışveriş yapmak), 'markt' (pazar, market), 'groenteboer' (manav), 'er' (orada, var), 'wie is er aan de beurt' (sıra kimde).",
     "explanationEn": "Groceries and shopping at the market: 'boodschappen doen' (to go shopping), 'markt' (market), 'groenteboer' (greengrocer), 'er' (there), 'wie is er aan de beurt' (who's next).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_058",
@@ -2825,7 +2823,7 @@ export const matchingDictionary = [
     "explanationTr": "Pazar ve market alışverişi: 'beurt' (sıra), 'alsjeblieft' (lütfen), 'kleine' (küçük), 'courgette' (kabak), 'gele' (sarı).",
     "explanationEn": "Groceries and shopping at the market: 'beurt' (turn), 'alsjeblieft' (please), 'kleine' (small), 'courgette' (courgette), 'gele' (yellow).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_059",
@@ -2874,7 +2872,7 @@ export const matchingDictionary = [
     "explanationTr": "Pazar ve market alışverişi: 'paprika's' (dolmalık biber), 'mooie' (güzel), 'tomaten' (domatesler), 'altijd' (her zaman), 'sorry' (üzgünüm, kusura bakmayın).",
     "explanationEn": "Groceries and shopping at the market: 'paprika's' (bell peppers), 'mooie' (nice), 'tomaten' (tomatoes), 'altijd' (always), 'sorry' (sorry).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_060",
@@ -2923,7 +2921,7 @@ export const matchingDictionary = [
     "explanationTr": "Pazar ve market alışverişi: 'natuurlijk' (tabii ki), 'anders nog iets' (başka bir şey (isteğiniz var mı)?), 'typisch' (tipik), 'gerecht' (yemek (tabak, öğün)), 'buitenlanders' (yabancılar).",
     "explanationEn": "Groceries and shopping at the market: 'natuurlijk' (of course), 'anders nog iets' (anything else), 'typisch' (typical), 'gerecht' (dish), 'buitenlanders' (foreigners).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_061",
@@ -2972,7 +2970,7 @@ export const matchingDictionary = [
     "explanationTr": "Pazar ve market alışverişi: 'andijvie' (hindiba), 'stamppot' (ezilmiş patates ve sebze yemeği), 'spekjes' (pastırma), 'vaak' (sık sık), 'heerlijk' (lezzetli, harika).",
     "explanationEn": "Groceries and shopping at the market: 'andijvie' (endive), 'stamppot' (mashed potato and vegetables), 'spekjes' (bacon), 'vaak' (often), 'heerlijk' (delicious, exquisite, wonderful).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_062",
@@ -3021,7 +3019,7 @@ export const matchingDictionary = [
     "explanationTr": "Pazar ve market alışverişi: 'goedkope' (ucuz), 'hoeveel' (ne kadar, kaç tane), 'nodig' (ihtiyacı olmak), 'personen' (kişiler), 'ongeveer' (yaklaşık).",
     "explanationEn": "Groceries and shopping at the market: 'goedkope' (cheap), 'hoeveel' (how much / how many), 'nodig' (need), 'personen' (people), 'ongeveer' (about).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_063",
@@ -3070,7 +3068,7 @@ export const matchingDictionary = [
     "explanationTr": "Pazar ve market alışverişi: 'halve' (yarım), 'kilo' (kilo), 'aardappels' (patatesler), 'slager' (kasap), 'was' (idi (tekil)).",
     "explanationEn": "Groceries and shopping at the market: 'halve' (half), 'kilo' (kilo), 'aardappels' (potatoes), 'slager' (butcher), 'was' (was).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_064",
@@ -3119,7 +3117,7 @@ export const matchingDictionary = [
     "explanationTr": "Pazar ve market alışverişi: 'bloemkool' (karnabahar), 'bakje' (küçük kap, sepet), 'champignons' (mantarlar), 'peterselie' (maydanoz), 'bosje' (küçük demet).",
     "explanationEn": "Groceries and shopping at the market: 'bloemkool' (cauliflower), 'bakje' (punnet), 'champignons' (mushrooms), 'peterselie' (parsley), 'bosje' (bunch).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_065",
@@ -3168,7 +3166,7 @@ export const matchingDictionary = [
     "explanationTr": "Pazar ve market alışverişi: 'verder' (başka), 'boontjes' (fasulyeler), 'verse' (taze), 'knoflook' (sarımsak), 'komkommers' (salatalıklar).",
     "explanationEn": "Groceries and shopping at the market: 'verder' (anything else?), 'boontjes' (beans), 'verse' (fresh), 'knoflook' (garlic), 'komkommers' (cucumbers).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_066",
@@ -3217,7 +3215,7 @@ export const matchingDictionary = [
     "explanationTr": "Pazar ve market alışverişi: 'euro' (euro), 'wel' (kesinlikle / -di (vurgu)), 'genoeg' (yeterli), 'waarnaartoe' (nereye), 'cent' (sent).",
     "explanationEn": "Groceries and shopping at the market: 'euro' (euro), 'wel' (certainly / quite), 'genoeg' (enough), 'waarnaartoe' (where to), 'cent' (cent).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_067",
@@ -3266,7 +3264,7 @@ export const matchingDictionary = [
     "explanationTr": "Pazar ve market alışverişi: 'erbij' (yanında), 'geeft niet' (önemli değil / sorun yok), 'prettig' (hoş, güzel), 'weekend' (hafta sonu), 'boodschappen doen' (alışveriş yapmak).",
     "explanationEn": "Groceries and shopping at the market: 'erbij' (with it), 'geeft niet' (doesn't matter), 'prettig' (nice), 'weekend' (weekend), 'boodschappen doen' (to go shopping).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_068",
@@ -3315,7 +3313,7 @@ export const matchingDictionary = [
     "explanationTr": "Restoranda yemek ve günlük rutin: 'vriendin' (kız arkadaş, dost), 'restaurant' (restoran), 'serveerster' (garson (kadın)), 'tafel' (masa), 'ons' (bizim, bize).",
     "explanationEn": "Dining out and daily routines: 'vriendin' ((girl)friend), 'restaurant' (restaurant), 'serveerster' (waitress), 'tafel' (table), 'ons' (our, us, ourselves).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_069",
@@ -3364,7 +3362,7 @@ export const matchingDictionary = [
     "explanationTr": "Restoranda yemek ve günlük rutin: 'bij' (yanında, yakınında), 'raam' (pencere), 'gaan zitten' (oturmak), 'menukaart' (menü), 'alvast' (şimdiden).",
     "explanationEn": "Dining out and daily routines: 'bij' (next to, near), 'raam' (window), 'gaan zitten' (to sit down), 'menukaart' (menu), 'alvast' (in the meantime).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_070",
@@ -3413,7 +3411,7 @@ export const matchingDictionary = [
     "explanationTr": "Restoranda yemek ve günlük rutin: 'te' (-e, çok), 'mineraalwater' (maden suyu), 'ik heb dorst' (susadım), 'dorst' (susuzluk), 'mij' (beni, bana).",
     "explanationEn": "Dining out and daily routines: 'te' (to, too), 'mineraalwater' (mineral water), 'ik heb dorst' (I'm thirsty), 'dorst' (thirst), 'mij' (me).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_071",
@@ -3462,7 +3460,7 @@ export const matchingDictionary = [
     "explanationTr": "Restoranda yemek ve günlük rutin: 'alleen' (sadece, yalnız), 'hoofdgerecht' (ana yemek), 'ik heb honger' (açım), 'honger' (açlık), 'voorgerecht' (başlangıç yemeği).",
     "explanationEn": "Dining out and daily routines: 'alleen' (only), 'hoofdgerecht' (main course), 'ik heb honger' (I am hungry), 'honger' (hunger), 'voorgerecht' (starter).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_072",
@@ -3511,7 +3509,7 @@ export const matchingDictionary = [
     "explanationTr": "Restoranda yemek ve günlük rutin: 'misschien' (belki), 'nagerecht' (tatlı (yemek sonrası)), 'mosterdsoep' (hardal çorbası), 'mosterd' (hardal), 'soep' (çorba).",
     "explanationEn": "Dining out and daily routines: 'misschien' (perhaps), 'nagerecht' (dessert), 'mosterdsoep' (mustard soup), 'mosterd' (mustard), 'soep' (soup).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_073",
@@ -3560,7 +3558,7 @@ export const matchingDictionary = [
     "explanationTr": "Restoranda yemek ve günlük rutin: 'erg' (çok), 'als' (olarak, eğer), 'biefstuk' (biftek), 'frietjes' (patates kızartması), 'eh' (hımm).",
     "explanationEn": "Dining out and daily routines: 'erg' (very), 'als' (as, if), 'biefstuk' (steak), 'frietjes' (chips), 'eh' (um).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_074",
@@ -3609,7 +3607,7 @@ export const matchingDictionary = [
     "explanationTr": "Restoranda yemek ve günlük rutin: 'salade' (salata), 'kip' (tavuk), 'rijst' (pirinç, pilav), 'o nee' (o hayır), 'geen' (yok, hiç (olumsuzluk)).",
     "explanationEn": "Dining out and daily routines: 'salade' (salad), 'kip' (chicken), 'rijst' (rice), 'o nee' (oh no), 'geen' (no).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_075",
@@ -3658,7 +3656,7 @@ export const matchingDictionary = [
     "explanationTr": "Restoranda yemek ve günlük rutin: 'vlees' (et), 'toch' (yine de, -meli, öyle değil mi), 'vegetarische' (vejetaryen), 'dagschotel' (günün menüsü/yemeği), 'kiezen' (seçmek).",
     "explanationEn": "Dining out and daily routines: 'vlees' (meat), 'toch' (after all), 'vegetarische' (vegetarian), 'dagschotel' (today's special), 'kiezen' (to choose).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_076",
@@ -3707,7 +3705,7 @@ export const matchingDictionary = [
     "explanationTr": "Restoranda yemek ve günlük rutin: 'eet smakelijk' (afiyet olsun), 'mes' (bıçak), 'vork' (çatal), 'momentje' (bir an, bir küçük moment), 'lepel' (kaşık).",
     "explanationEn": "Dining out and daily routines: 'eet smakelijk' (bon appetit), 'mes' (knife), 'vork' (fork), 'momentje' (one moment), 'lepel' (spoon).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_077",
@@ -3756,7 +3754,7 @@ export const matchingDictionary = [
     "explanationTr": "Restoranda yemek ve günlük rutin: 'halen' (getirmek, almak), 'beetje' (biraz), 'moeilijk' (zor), 'gaat wel' (idare eder, fena değil), 'soort' (tür, çeşit).",
     "explanationEn": "Dining out and daily routines: 'halen' (to fetch, take), 'beetje' (a bit), 'moeilijk' (difficult), 'gaat wel' (all right, it's okay), 'soort' (type / kind).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_078",
@@ -3805,7 +3803,7 @@ export const matchingDictionary = [
     "explanationTr": "Restoranda yemek ve günlük rutin: 'paella' (paella), 'houd' (sevmek), 'mosselen' (midye), 'proef' (tatmak), 'wat' (ne / biraz).",
     "explanationEn": "Dining out and daily routines: 'paella' (paella), 'houd' (like / love), 'mosselen' (mussels), 'proef' (try / taste), 'wat' (what / a bit).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_079",
@@ -3854,7 +3852,7 @@ export const matchingDictionary = [
     "explanationTr": "Restoranda yemek ve günlük rutin: 'beetje' (biraz), 'vet' (yağlı), 'toetje' (tatlı), 'ijs' (dondurma, buz), 'vruchten' (meyveler).",
     "explanationEn": "Dining out and daily routines: 'beetje' (a bit), 'vet' (greasy / rich), 'toetje' (dessert), 'ijs' (icecream), 'vruchten' (fruit).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_080",
@@ -3903,7 +3901,7 @@ export const matchingDictionary = [
     "explanationTr": "Restoranda yemek ve günlük rutin: 'chocola' (çikolata), 'slagroom' (krem şanti), 'zonder' (-sız, -siz), 'cappuccino' (kapuçino), 'rekening' (hesap).",
     "explanationEn": "Dining out and daily routines: 'chocola' (chocolate), 'slagroom' (whipped cream), 'zonder' (without), 'cappuccino' (cappuccino), 'rekening' (bill / check).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_081",
@@ -3952,7 +3950,7 @@ export const matchingDictionary = [
     "explanationTr": "Restoranda yemek ve günlük rutin: 'laat de rest maar zitten' (üstü kalsın), 'laten' (bırakmak), 'dank u' (teşekkür ederim), 'avond' (akşam), 'vriendin' (kız arkadaş, dost).",
     "explanationEn": "Dining out and daily routines: 'laat de rest maar zitten' (keep the change), 'laten' (leave / let), 'dank u' (thank you (formal)), 'avond' (evening), 'vriendin' ((girl)friend).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_082",
@@ -4001,7 +3999,7 @@ export const matchingDictionary = [
     "explanationTr": "Kıyafet alışverişi: 'kledingzaak' (giyim mağazası), 'kleding' (kıyafet, giysi), 'zaak' (dükkan, iş yeri), 'om' (için), 'broek' (pantolon).",
     "explanationEn": "Shopping for clothes: 'kledingzaak' (clothes shop), 'kleding' (clothes), 'zaak' (shop / store), 'om' (in order to), 'broek' (trousers).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_083",
@@ -4050,7 +4048,7 @@ export const matchingDictionary = [
     "explanationTr": "Kıyafet alışverişi: 'kopen' (satın almak), 'verkoopster' (kadın satış elemanı), 'helpen' (yardım etmek), 'meisje' (kız çocuk), 'jongen' (yavrular (hayvan)).",
     "explanationEn": "Shopping for clothes: 'kopen' (to buy), 'verkoopster' (saleswoman), 'helpen' (to help), 'meisje' (girl), 'jongen' (litter).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_084",
@@ -4099,7 +4097,7 @@ export const matchingDictionary = [
     "explanationTr": "Kıyafet alışverişi: 'zoek' (arıyorum), 'spijkerbroek' (kot pantolon), 'maat' (beden, ölçü), 'normaal' (normalde), 'soms' (bazen).",
     "explanationEn": "Shopping for clothes: 'zoek' (am looking), 'spijkerbroek' (jeans), 'maat' (size), 'normaal' (usually), 'soms' (sometimes).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_085",
@@ -4148,7 +4146,7 @@ export const matchingDictionary = [
     "explanationTr": "Kıyafet alışverişi: 'groter' (daha büyük), 'kleur' (renk), 'wat voor' (ne tür), 'model' (model, tarz), 'lichte' (açık (renk) / hafif).",
     "explanationEn": "Shopping for clothes: 'groter' (larger), 'kleur' (colour), 'wat voor' (what kind of), 'model' (style), 'lichte' (light).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_086",
@@ -4197,7 +4195,7 @@ export const matchingDictionary = [
     "explanationTr": "Kıyafet alışverişi: 'laag' (alçak, düşük), 'verschillende' (farklı, çeşitli), 'merken' (markalar), 'probeert' (deneyin), 'allebei' (her ikisi).",
     "explanationEn": "Shopping for clothes: 'laag' (low), 'verschillende' (different), 'merken' (brands), 'probeert' (try on / try), 'allebei' (both).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_087",
@@ -4246,7 +4244,7 @@ export const matchingDictionary = [
     "explanationTr": "Kıyafet alışverişi: 'ergens' (bir yerde), 'passen' (denemek, uymak), 'paskamers' (deneme kabinleri), 'zitten' (oturmak), 'beter' (daha iyi).",
     "explanationEn": "Shopping for clothes: 'ergens' (somewhere), 'passen' (to try on), 'paskamers' (changing rooms), 'zitten' (to sit), 'beter' (better).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_088",
@@ -4295,7 +4293,7 @@ export const matchingDictionary = [
     "explanationTr": "Kıyafet alışverişi: 'dan' (o zaman, -den/-dan), 'die' (o, şu), 'hem' (onu, ona (erkek)), 'wijd' (geniş), 'kleinere' (daha küçük).",
     "explanationEn": "Shopping for clothes: 'dan' (then, than), 'die' (that), 'hem' (him, it), 'wijd' (wide), 'kleinere' (smaller).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_089",
@@ -4344,7 +4342,7 @@ export const matchingDictionary = [
     "explanationTr": "Kıyafet alışverişi: 'spijt me' (özür dilerim, üzgünüm), 'kleinste' (en küçük), 'dit' (bu), 'eventueel' (gerekirse, ihtimal dahilinde), 'ruilen' (değiştirmek, takas etmek).",
     "explanationEn": "Shopping for clothes: 'spijt me' (I'm sorry), 'kleinste' (smallest), 'dit' (this), 'eventueel' (if necessary), 'ruilen' (to exchange).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_090",
@@ -4393,7 +4391,7 @@ export const matchingDictionary = [
     "explanationTr": "Kıyafet alışverişi: 'binnen' (içinde, içeri), 'bon' (fiş, makbuz), 'T-shirts' (tişörtler), 'liggen' (yatmak, uzanmak, bulunmak), 'allerlei' (her türlü, çeşit çeşit).",
     "explanationEn": "Shopping for clothes: 'binnen' (within), 'bon' (receipt), 'T-shirts' (T-shirts), 'liggen' (to lie), 'allerlei' (all kinds of).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_091",
@@ -4442,7 +4440,7 @@ export const matchingDictionary = [
     "explanationTr": "Kıyafet alışverişi: 'wit' (beyaz), 'zwart' (siyah), 'roze' (pembe), 'groen' (yeşil), 'blauw' (mavi).",
     "explanationEn": "Shopping for clothes: 'wit' (white), 'zwart' (black), 'roze' (pink), 'groen' (green), 'blauw' (blue).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_092",
@@ -4491,7 +4489,7 @@ export const matchingDictionary = [
     "explanationTr": "Kıyafet alışverişi: 'beslissen' (karar vermek), 'staat me het best' (bana en çok yakışan), 'best' (en iyi, iyi), 'pinnen' (kartla ödemek), 'kledingzaak' (giyim mağazası).",
     "explanationEn": "Shopping for clothes: 'beslissen' (to decide), 'staat me het best' (suits me best), 'best' (best), 'pinnen' (to pay by debit card), 'kledingzaak' (clothes shop).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_093",
@@ -4540,7 +4538,7 @@ export const matchingDictionary = [
     "explanationTr": "Ev, kiralama ve konut: 'makelaar' (emlakçı), 'woonruimte' (yaşam alanı), 'stad' (şehir), 'mezelf' (kendim), 'vriend' (erkek arkadaş, dost).",
     "explanationEn": "Housing, renting, and homes: 'makelaar' (real estate agent), 'woonruimte' (accommodation), 'stad' (city / town), 'mezelf' (myself), 'vriend' ((boy)friend).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_094",
@@ -4589,7 +4587,7 @@ export const matchingDictionary = [
     "explanationTr": "Ev, kiralama ve konut: 'samenwonen' (birlikte yaşamak), 'bepaald' (belirli), 'woning' (konut), 'tuin' (bahçe), 'bovenwoning' (üst kat daire).",
     "explanationEn": "Housing, renting, and homes: 'samenwonen' (to live together), 'bepaald' (certain), 'woning' (house), 'tuin' (garden), 'bovenwoning' (upstairs flat).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_095",
@@ -4638,7 +4636,7 @@ export const matchingDictionary = [
     "explanationTr": "Ev, kiralama ve konut: 'appartement' (daire), 'mogelijkheden' (imkanlar / seçenekler), 'zie' (görmek), 'formulier' (form), 'maximale' (maksimum).",
     "explanationEn": "Housing, renting, and homes: 'appartement' (apartment), 'mogelijkheden' (options / possibilities), 'zie' (see), 'formulier' (form), 'maximale' (maximum).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_096",
@@ -4687,7 +4685,7 @@ export const matchingDictionary = [
     "explanationTr": "Ev, kiralama ve konut: 'huurprijs' (kira bedeli), 'huren' (kiralamak), 'laten zien' (göstermek), 'computer' (bilgisayar), 'derde' (üçüncü).",
     "explanationEn": "Housing, renting, and homes: 'huurprijs' (rent), 'huren' (to rent), 'laten zien' (to show), 'computer' (computer), 'derde' (third).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_097",
@@ -4736,7 +4734,7 @@ export const matchingDictionary = [
     "explanationTr": "Ev, kiralama ve konut: 'verdieping' (kat), 'oude' (eski), 'buurt' (mahalle), 'ver' (uzak), 'centrum' (şehir merkezi).",
     "explanationEn": "Housing, renting, and homes: 'verdieping' (floor / storey), 'oude' (old), 'buurt' (neighbourhood), 'ver' (far), 'centrum' (city centre).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_098",
@@ -4785,7 +4783,7 @@ export const matchingDictionary = [
     "explanationTr": "Ev, kiralama ve konut: 'dicht bij' (yakınında), 'park' (park), 'woonkamer' (oturma odası), 'vierkante meter' (metrekare), 'vierkante' (kare).",
     "explanationEn": "Housing, renting, and homes: 'dicht bij' (close to), 'park' (park), 'woonkamer' (living room), 'vierkante meter' (square metre), 'vierkante' (square).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_099",
@@ -4834,7 +4832,7 @@ export const matchingDictionary = [
     "explanationTr": "Ev, kiralama ve konut: 'meter' (metre), 'open' (açık), 'keuken' (mutfak), 'ruime' (geniş / ferah), 'slaapkamers' (yatak odaları).",
     "explanationEn": "Housing, renting, and homes: 'meter' (metre), 'open' (open), 'keuken' (kitchen), 'ruime' (spacious), 'slaapkamers' (bedrooms).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_100",
@@ -4883,7 +4881,7 @@ export const matchingDictionary = [
     "explanationTr": "Ev, kiralama ve konut: 'balkon' (balkon), 'westen' (batı), 'gang' (koridor), 'wc' (tuvalet), 'eenvoudige' (basit / sade).",
     "explanationEn": "Housing, renting, and homes: 'balkon' (balcony), 'westen' (west), 'gang' (passage(way)), 'wc' (toilet), 'eenvoudige' (simple).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_101",
@@ -4932,7 +4930,7 @@ export const matchingDictionary = [
     "explanationTr": "Ev, kiralama ve konut: 'badkamer' (banyo), 'douche' (duş), 'hoeven' (gerekmek, ihtiyacı olmak (genellikle olumsuz kullanılır)), 'bad' (banyo, küvet), 'gebruiken' (kullanmak).",
     "explanationEn": "Housing, renting, and homes: 'badkamer' (bathroom), 'douche' (shower), 'hoeven' (to need), 'bad' (bath), 'gebruiken' (to use).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_102",
@@ -4981,7 +4979,7 @@ export const matchingDictionary = [
     "explanationTr": "Ev, kiralama ve konut: 'geschikte' (uygun), 'huizen' (evler), 'te huur' (kiralık), 'huur' (kiralamak), 'huisje' (küçük ev).",
     "explanationEn": "Housing, renting, and homes: 'geschikte' (suitable), 'huizen' (houses), 'te huur' (to let), 'huur' (rent), 'huisje' (house).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_103",
@@ -5030,7 +5028,7 @@ export const matchingDictionary = [
     "explanationTr": "Ev, kiralama ve konut: 'want' (çünkü), 'verhuren' (kiraya vermek), 'gemeubileerd' (eşyalı), 'kasten' (dolaplar), 'bedden' (yataklar).",
     "explanationEn": "Housing, renting, and homes: 'want' (because), 'verhuren' (to let out), 'gemeubileerd' (furnished), 'kasten' (cupboards), 'bedden' (beds).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_104",
@@ -5079,7 +5077,7 @@ export const matchingDictionary = [
     "explanationTr": "Ev, kiralama ve konut: 'stoelen' (sandalyeler), 'bureau' (çalışma masası), 'bank' (kanepe / koltuk), 'voordeel' (avantaj), 'niets' (hiçbir şey).",
     "explanationEn": "Housing, renting, and homes: 'stoelen' (chairs), 'bureau' (desk), 'bank' (couch / sofa), 'voordeel' (advantage), 'niets' (nothing).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_105",
@@ -5128,7 +5126,7 @@ export const matchingDictionary = [
     "explanationTr": "Ev, kiralama ve konut: 'zonnige' (güneşli), 'kamer' (oda), 'benedenwoning' (zemin kat daire), 'dat lijkt me fantastisch' (bu bana harika geliyor), 'waar' (nerede / doğru).",
     "explanationEn": "Housing, renting, and homes: 'zonnige' (sunny), 'kamer' (room / living room), 'benedenwoning' (ground-floor flat), 'dat lijkt me fantastisch' (that sounds great to me), 'waar' (where / true).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_106",
@@ -5177,7 +5175,7 @@ export const matchingDictionary = [
     "explanationTr": "Ev, kiralama ve konut: 'overleggen' (istişare etmek, görüşmek), 'bel' (zil), 'zo snel mogelijk' (mümkün olduğunca çabuk), 'nieuwe' (yeni), 'makelaar' (emlakçı).",
     "explanationEn": "Housing, renting, and homes: 'overleggen' (to discuss), 'bel' (bell), 'zo snel mogelijk' (as soon as possible), 'nieuwe' (new), 'makelaar' (real estate agent).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_107",
@@ -5226,7 +5224,7 @@ export const matchingDictionary = [
     "explanationTr": "Sağlık, vücut ve doktor: 'meneer' (bay, beyefendi), 'huisarts' (aile hekimi, doktor), 'dokter' (doktor), 'wat is er aan de hand' (sorun nedir / ne oldu), 'zoals' (gibi).",
     "explanationEn": "Health, the body, and doctor visits: 'meneer' (Mr 9, man), 'huisarts' (doctor / gp), 'dokter' (doctor), 'wat is er aan de hand' (what's wrong), 'zoals' (as).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_108",
@@ -5275,7 +5273,7 @@ export const matchingDictionary = [
     "explanationTr": "Sağlık, vücut ve doktor: 'onder' (altında / kaplı), 'bultjes' (kabarcıklar), 'armen' (kollar), 'benen' (bacaklar), 'buik' (karın).",
     "explanationEn": "Health, the body, and doctor visits: 'onder' (covered in), 'bultjes' (lumps), 'armen' (arms), 'benen' (legs), 'buik' (stomach).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_109",
@@ -5324,7 +5322,7 @@ export const matchingDictionary = [
     "explanationTr": "Sağlık, vücut ve doktor: 'rug' (sırt), 'gezicht' (yüz), 'jeuken' (kaşınmak), 'verschrikkelijk' (korkunç, berbat), 'van alles' (her türden şey).",
     "explanationEn": "Health, the body, and doctor visits: 'rug' (back), 'gezicht' (face), 'jeuken' (to itch), 'verschrikkelijk' (terrible), 'van alles' (everything).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_110",
@@ -5373,7 +5371,7 @@ export const matchingDictionary = [
     "explanationTr": "Sağlık, vücut ve doktor: 'geprobeerd' (denedi), 'geholpen' (yardım etti / işe yaradı), 'begonnen' (başladı), 'gisteravond' (dün akşam), 'gedaan' (yaptı).",
     "explanationEn": "Health, the body, and doctor visits: 'geprobeerd' (tried), 'geholpen' (helped), 'begonnen' (begun), 'gisteravond' (yesterday evening), 'gedaan' (done).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_111",
@@ -5422,7 +5420,7 @@ export const matchingDictionary = [
     "explanationTr": "Sağlık, vücut ve doktor: 'overdag' (gündüz vakti), 'gewerkt' (çalıştı), 'klanten' (müşteriler), 'bekeken' (inceledi / baktı), 'voetbalvereniging' (futbol kulübü).",
     "explanationEn": "Health, the body, and doctor visits: 'overdag' (during the day), 'gewerkt' (worked), 'klanten' (clients), 'bekeken' (looked at), 'voetbalvereniging' (football club).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_112",
@@ -5471,7 +5469,7 @@ export const matchingDictionary = [
     "explanationTr": "Sağlık, vücut ve doktor: 'geweest' (bulundu / gitti), 'wedstrijdje' ((küçük) maç), 'gespeeld' (oynadı), 'daarna' (ondan sonra), 'gedronken' (içti).",
     "explanationEn": "Health, the body, and doctor visits: 'geweest' (been), 'wedstrijdje' (match), 'gespeeld' (played), 'daarna' (after that), 'gedronken' (drunk).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_113",
@@ -5520,7 +5518,7 @@ export const matchingDictionary = [
     "explanationTr": "Sağlık, vücut ve doktor: 'bijzonders' (özel (bir şey)), 'gegeten' (yedi), 'afgelopen' (geçen, bitmiş), 'vergeten' (unutmak), 'denken' (düşünmek).",
     "explanationEn": "Health, the body, and doctor visits: 'bijzonders' (special), 'gegeten' (eaten), 'afgelopen' (past, last few), 'vergeten' (to forget), 'denken' (to think).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_114",
@@ -5569,7 +5567,7 @@ export const matchingDictionary = [
     "explanationTr": "Sağlık, vücut ve doktor: 'o ja' (öyle ya, aa evet), 'rijp' (olgun), 'emmers' (kovalar), 'vol' (dolu), 'vorig' (geçen).",
     "explanationEn": "Health, the body, and doctor visits: 'o ja' (oh yes), 'rijp' (ripe), 'emmers' (buckets), 'vol' (full), 'vorig' (last).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_115",
@@ -5618,7 +5616,7 @@ export const matchingDictionary = [
     "explanationTr": "Sağlık, vücut ve doktor: 'klachten' (şikayetler), 'lijkt op' (benziyor), 'allergische' (alerjik), 'reactie' (tepki, reaksiyon), 'mee' (beraberinde vermek).",
     "explanationEn": "Health, the body, and doctor visits: 'klachten' (complaints), 'lijkt op' (looks like), 'allergische' (allergic), 'reactie' (reaction), 'mee' (along with).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_116",
@@ -5667,7 +5665,7 @@ export const matchingDictionary = [
     "explanationTr": "Sağlık, vücut ve doktor: 'zalf' (merhem), 'tegen' (karşı), 'jeuk' (kaşıntı), 'anders' (aksi takdirde, farklı), 'krabt' (kaşımak).",
     "explanationEn": "Health, the body, and doctor visits: 'zalf' (ointment), 'tegen' (against), 'jeuk' (itch), 'anders' (otherwise, different), 'krabt' (scratch).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_117",
@@ -5716,7 +5714,7 @@ export const matchingDictionary = [
     "explanationTr": "Sağlık, vücut ve doktor: 'huid' (cilt, ten), 'kapot' (bozuk, kırık), 'sterkte' (geçmiş olsun / güç dilerim), 'meneer' (bay, beyefendi), 'huisarts' (aile hekimi, doktor).",
     "explanationEn": "Health, the body, and doctor visits: 'huid' (skin), 'kapot' (open, broken), 'sterkte' (good luck, get well soon), 'meneer' (Mr 9, man), 'huisarts' (doctor / gp).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_118",
@@ -5765,7 +5763,7 @@ export const matchingDictionary = [
     "explanationTr": "Bisiklet ve trafik: 'fiets' (bisiklet), 'fietsenmaker' (bisiklet tamircisi), 'inderdaad' (gerçekten de, aynen öyle), 'duidelijk' (açık, net), 'lijkt' (görünüyor / benziyor).",
     "explanationEn": "Bicycles, traffic, and repairs: 'fiets' (bicycle), 'fietsenmaker' (cycle repairman), 'inderdaad' (indeed), 'duidelijk' (clear), 'lijkt' (seems / appears).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_119",
@@ -5814,7 +5812,7 @@ export const matchingDictionary = [
     "explanationTr": "Bisiklet ve trafik: 'total loss' (hurda / pert), 'gebeurd' (oldu / gerçekleşti), 'gevallen' (düştü), 'regende' (yağmur yağıyordu), 'glad' (kaygan).",
     "explanationEn": "Bicycles, traffic, and repairs: 'total loss' (a write-off), 'gebeurd' (happened), 'gevallen' (fallen), 'regende' (was raining), 'glad' (slippery).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_120",
@@ -5863,7 +5861,7 @@ export const matchingDictionary = [
     "explanationTr": "Bisiklet ve trafik: 'fietste weg' (bisikletle uzaklaştı), 'fietsen' (bisiklete binmek), 'praktijk' (pratik, muayenehane), 'wilde' (istedi), 'rechts afslaan' (sağa dönmek).",
     "explanationEn": "Bicycles, traffic, and repairs: 'fietste weg' (cycled away), 'fietsen' (to cycle), 'praktijk' (practice), 'wilde' (wanted), 'rechts afslaan' (to turn right).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_121",
@@ -5912,7 +5910,7 @@ export const matchingDictionary = [
     "explanationTr": "Bisiklet ve trafik: 'gleed weg' (kaydı), 'mankeerde' (kusuru/hasarı vardı), 'zelf' (kendi), 'slag in het wiel' (tekerde akort bozukluğu), 'wiel' (tekerlek).",
     "explanationEn": "Bicycles, traffic, and repairs: 'gleed weg' (slipped), 'mankeerde' (was wrong), 'zelf' (oneself), 'slag in het wiel' (the wheel is crooked), 'wiel' (wheel).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_122",
@@ -5961,7 +5959,7 @@ export const matchingDictionary = [
     "explanationTr": "Bisiklet ve trafik: 'stuur' (gidon), 'zadel' (sele), 'staan' (ayakta durmak, yakışmak), 'scheef' (eğri), 'ding' (şey, nesne).",
     "explanationEn": "Bicycles, traffic, and repairs: 'stuur' (handlebars), 'zadel' (seat), 'staan' (to suit, to stand), 'scheef' (crooked), 'ding' (thing).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_123",
@@ -6010,7 +6008,7 @@ export const matchingDictionary = [
     "explanationTr": "Bisiklet ve trafik: 'zo'n' (böyle bir), 'bagagedrager' (bagaj taşıyıcı), 'afgebroken' (kırılmış / kopmuş), 'bedoelt' (kastediyor), 'trapper' (pedal).",
     "explanationEn": "Bicycles, traffic, and repairs: 'zo'n' (such a), 'bagagedrager' (carrier), 'afgebroken' (broken), 'bedoelt' (mean), 'trapper' (pedal).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_124",
@@ -6059,7 +6057,7 @@ export const matchingDictionary = [
     "explanationTr": "Bisiklet ve trafik: 'kapot' (bozuk, kırık), 'banden' (lastikler), 'verstaan' (anlamak, duymak), 'logisch' (mantıklı), 'helemaal' (tamamen, hiç).",
     "explanationEn": "Bicycles, traffic, and repairs: 'kapot' (open, broken), 'banden' (tyres), 'verstaan' (to hear, to understand), 'logisch' (logical), 'helemaal' (completely, at all).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_125",
@@ -6108,7 +6106,7 @@ export const matchingDictionary = [
     "explanationTr": "Bisiklet ve trafik: 'rijdt' (sürüyor / gidiyor), 'remmen' (fren), 'deden' (çalışıyordu / yapıyordu), 'controleren' (kontrol etmek), 'orde' (düzen).",
     "explanationEn": "Bicycles, traffic, and repairs: 'rijdt' (goes (rides)), 'remmen' (bicycle brakes), 'deden' (worked / did), 'controleren' (to check), 'orde' (order / condition).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_126",
@@ -6157,7 +6155,7 @@ export const matchingDictionary = [
     "explanationTr": "Bisiklet ve trafik: 'tiptop in orde' (kusursuz düzenli), 'leer' (deri), 'uitdrukking' (deyim / ifade), 'klaar' (hazır, bitmiş), 'Koningsdag' (Kral Günü).",
     "explanationEn": "Bicycles, traffic, and repairs: 'tiptop in orde' (in tip-top condition), 'leer' (leather), 'uitdrukking' (expression), 'klaar' (ready), 'Koningsdag' (King's Day).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_127",
@@ -6206,7 +6204,7 @@ export const matchingDictionary = [
     "explanationTr": "Bisiklet ve trafik: 'feestdag' (resmi tatil), 'feest' (parti, kutlama), 'betekent' (anlamına gelir), 'gesloten' (kapalı), 'einde' (son).",
     "explanationEn": "Bicycles, traffic, and repairs: 'feestdag' (public holiday), 'feest' (party / celebration), 'betekent' (means), 'gesloten' (closed), 'einde' (end).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_128",
@@ -6255,7 +6253,7 @@ export const matchingDictionary = [
     "explanationTr": "Bisiklet ve trafik: 'ophalen' (gidip almak, toplamak), 'fiets' (bisiklet), 'fietsenmaker' (bisiklet tamircisi), 'inderdaad' (gerçekten de, aynen öyle), 'duidelijk' (açık, net).",
     "explanationEn": "Bicycles, traffic, and repairs: 'ophalen' (to collect, to get), 'fiets' (bicycle), 'fietsenmaker' (cycle repairman), 'inderdaad' (indeed), 'duidelijk' (clear).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_129",
@@ -6304,7 +6302,7 @@ export const matchingDictionary = [
     "explanationTr": "Kutlama, doğum günü ve aile: 'buurvrouw' (kadın komşu), 'leven' (yaşam, hayat), 'hoera' (yaşasın), 'van harte gefeliciteerd' (yürekten tebrikler), 'feliciteren' (tebrik etmek).",
     "explanationEn": "Parties, birthdays, and family: 'buurvrouw' (neighbour (f)), 'leven' (life), 'hoera' (hooray), 'van harte gefeliciteerd' (happy birthday / congratulations), 'feliciteren' (congratulate on).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_130",
@@ -6353,7 +6351,7 @@ export const matchingDictionary = [
     "explanationTr": "Kutlama, doğum günü ve aile: 'cadeautje' (küçük hediye), 'kaartje' (bilet, küçük kart), 'festival' (festival), 'hoop' (umut etmek), 'dat' (o, şu).",
     "explanationEn": "Parties, birthdays, and family: 'cadeautje' (present), 'kaartje' (ticket), 'festival' (festival), 'hoop' (hope), 'dat' (that).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_131",
@@ -6402,7 +6400,7 @@ export const matchingDictionary = [
     "explanationTr": "Kutlama, doğum günü ve aile: 'nog geen' (henüz değil), 'Cubaanse' (Küba'ya ait), 'muziek' (müzik), 'ben gek op' (...'ya bayılmak / delisi olmak), 'me herinneren' (hatırlamak).",
     "explanationEn": "Parties, birthdays, and family: 'nog geen' (not yet), 'Cubaanse' (Cuban), 'muziek' (music), 'ben gek op' (am crazy about), 'me herinneren' (remember).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_132",
@@ -6451,7 +6449,7 @@ export const matchingDictionary = [
     "explanationTr": "Kutlama, doğum günü ve aile: 'keer' (kez / sefer), 'verteld' (söyledi / anlattı), 'taart' (pasta), 'je weet de weg' (yolu biliyorsun), 'open' (açık / açmak).",
     "explanationEn": "Parties, birthdays, and family: 'keer' (time), 'verteld' (told), 'taart' (cake), 'je weet de weg' (you know the way), 'open' (open).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_133",
@@ -6500,7 +6498,7 @@ export const matchingDictionary = [
     "explanationTr": "Kutlama, doğum günü ve aile: 'deur' (kapı), 'eerst' (ilk, birinci), 'gezien' (gördüm / görüldü), 'bedrijf' (şirket), 'accountant' (muhasebeci).",
     "explanationEn": "Parties, birthdays, and family: 'deur' (door), 'eerst' (first), 'gezien' (seen), 'bedrijf' (company), 'accountant' (accountant).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_134",
@@ -6549,7 +6547,7 @@ export const matchingDictionary = [
     "explanationTr": "Kutlama, doğum günü ve aile: 'vergis ik me' (yanılıyor muyum?), 'kantoor' (ofis, büro), 'eigen' (kendi), 'baas' (patron), 'druk' (meşgul, kalabalık).",
     "explanationEn": "Parties, birthdays, and family: 'vergis ik me' (am I mistaken), 'kantoor' (office), 'eigen' (own), 'baas' (boss), 'druk' (busy).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_135",
@@ -6598,7 +6596,7 @@ export const matchingDictionary = [
     "explanationTr": "Kutlama, doğum günü ve aile: 'tijd' (zaman, vakit), 'verveel me' (canım sıkılıyor), 'nooit' (asla, hiç), 'buitenland' (yurtdışı), 'hoor' ((vurgu, tabii ki)).",
     "explanationEn": "Parties, birthdays, and family: 'tijd' (time), 'verveel me' (am bored), 'nooit' (never), 'buitenland' (abroad), 'hoor' (for emphasis).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_136",
@@ -6647,7 +6645,7 @@ export const matchingDictionary = [
     "explanationTr": "Kutlama, doğum günü ve aile: 'Duits' (Almanca, Alman), 'accent' (aksan), 'dat klopt' (doğru, öyle), 'sinds kort' (son zamanlarda), 'bevalt me' (bu benim hoşuma gidiyor).",
     "explanationEn": "Parties, birthdays, and family: 'Duits' (German), 'accent' (accent), 'dat klopt' (that's right), 'sinds kort' (recently), 'bevalt me' (I enjoy it / like it).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_137",
@@ -6696,7 +6694,7 @@ export const matchingDictionary = [
     "explanationTr": "Kutlama, doğum günü ve aile: 'studeer' (eğitim/okul okumak), 'student' (öğrenci), 'logopedie' (dil ve konuşma terapisi), 'naast' (yanında), 'bijbaantje' (ek iş, yarı zamanlı iş).",
     "explanationEn": "Parties, birthdays, and family: 'studeer' (study), 'student' (student), 'logopedie' (speech therapy), 'naast' (next to, besides), 'bijbaantje' (job on the side, part-time job).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_138",
@@ -6745,7 +6743,7 @@ export const matchingDictionary = [
     "explanationTr": "Kutlama, doğum günü ve aile: 'studie' (eğitim, öğrenim), 'iedere' (her), 'bioscoop' (sinema), 'interesseer je' (ilgileniyor musun), 'gewoon' (sadece, sıradan, normal).",
     "explanationEn": "Parties, birthdays, and family: 'studie' (study), 'iedere' (each / every), 'bioscoop' (cinema), 'interesseer je' (are you interested), 'gewoon' (just, ordinary).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_139",
@@ -6794,7 +6792,7 @@ export const matchingDictionary = [
     "explanationTr": "Kutlama, doğum günü ve aile: 'begrijp' (anlıyorum), 'snel' (hızlı), 'hobby' (hobi), 'niet echt' (pek sayılmaz, gerçekten değil), 'sport' (spor).",
     "explanationEn": "Parties, birthdays, and family: 'begrijp' (understand), 'snel' (fast, quick), 'hobby' (hobby), 'niet echt' (not really), 'sport' (sport).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_140",
@@ -6843,7 +6841,7 @@ export const matchingDictionary = [
     "explanationTr": "Kutlama, doğum günü ve aile: 'zwemmen' (yüzmek), 'wandelen' (yürümek), 'wat toevallig' (ne tesadüf), 'Wandelbeurs' (Yürüyüş Fuarı), 'bereid me voor op' (hazırlanıyorum).",
     "explanationEn": "Parties, birthdays, and family: 'zwemmen' (to swim), 'wandelen' (to walk / hike), 'wat toevallig' (what a coincidence), 'Wandelbeurs' (Walking Fair), 'bereid me voor op' (am getting ready for).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_141",
@@ -6892,7 +6890,7 @@ export const matchingDictionary = [
     "explanationTr": "Kutlama, doğum günü ve aile: 'wandelreis' (yürüyüş gezisi), 'reis' (seyahat, gezi), 'Chili' (Şili), 'informatie' (bilgi), 'interessant' (ilginç).",
     "explanationEn": "Parties, birthdays, and family: 'wandelreis' (walking tour), 'reis' (trip), 'Chili' (Chile), 'informatie' (information), 'interessant' (interesting).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_142",
@@ -6941,7 +6939,7 @@ export const matchingDictionary = [
     "explanationTr": "Kutlama, doğum günü ve aile: 'opschrijven' (not etmek, yazmak), 'onthouden' (akılda tutmak), 'langzamer' (daha yavaş), 'pen' (tükenmez kalem), 'papier' (kâğıt).",
     "explanationEn": "Parties, birthdays, and family: 'opschrijven' (to write down), 'onthouden' (to remember), 'langzamer' (more slowly), 'pen' (pen), 'papier' (paper).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_143",
@@ -6990,7 +6988,7 @@ export const matchingDictionary = [
     "explanationTr": "Kutlama, doğum günü ve aile: 'praten' (konuşmak), 'buurvrouw' (kadın komşu), 'leven' (yaşam, hayat), 'hoera' (yaşasın), 'van harte gefeliciteerd' (yürekten tebrikler).",
     "explanationEn": "Parties, birthdays, and family: 'praten' (to speak), 'buurvrouw' (neighbour (f)), 'leven' (life), 'hoera' (hooray), 'van harte gefeliciteerd' (happy birthday / congratulations).",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_144",
@@ -7039,7 +7037,7 @@ export const matchingDictionary = [
     "explanationTr": "Yol sorma ve toplu taşıma: 'station' (istasyon), 'Bent u hier bekend' (burayı biliyor musunuz (tanıdık mı)), 'bekend' (tanıdık / buralı), 'voorbijganger' (yoldan geçen kimse), 'buschauffeur' (otobüs şoförü).",
     "explanationEn": "Asking directions and transit: 'station' (station), 'Bent u hier bekend' (do you know your way around here), 'bekend' (known), 'voorbijganger' (passer-by), 'buschauffeur' (bus driver).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_145",
@@ -7088,7 +7086,7 @@ export const matchingDictionary = [
     "explanationTr": "Yol sorma ve toplu taşıma: 'bus' (otobüs), 'chauffeur' (şoför), 'lopen' (yürümek), 'te' (-e, çok), 'zeker' (kesinlikle).",
     "explanationEn": "Asking directions and transit: 'bus' (bus), 'chauffeur' (driver), 'lopen' (to walk), 'te' (to, too), 'zeker' (certainly).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_146",
@@ -7137,7 +7135,7 @@ export const matchingDictionary = [
     "explanationTr": "Yol sorma ve toplu taşıma: 'vanaf' (-den itibaren), 'tram' (tramvay), 'lijn' (hat, çizgi), 'hebt geluk' (şanslısınız), 'aan' (varmak / gelmek).",
     "explanationEn": "Asking directions and transit: 'vanaf' (from), 'tram' (tram), 'lijn' (line / number), 'hebt geluk' (are lucky), 'aan' (arrives).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_147",
@@ -7186,7 +7184,7 @@ export const matchingDictionary = [
     "explanationTr": "Yol sorma ve toplu taşıma: 'net' (henüz, tam), 'direct' (hemen, doğrudan), 'instappen' (binmek (araç)), 'stuk' (parça), 'ingang' (giriş).",
     "explanationEn": "Asking directions and transit: 'net' (just, like), 'direct' (right now, straightaway), 'instappen' (to get in), 'stuk' (piece), 'ingang' (entrance).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_148",
@@ -7235,7 +7233,7 @@ export const matchingDictionary = [
     "explanationTr": "Yol sorma ve toplu taşıma: 'oversteken' (karşıya geçmek), 'balie' (danışma, vezne, banko), 'hal' (hol, koridor, giriş salonu), 'portier' (kapıcı), 'boven' (yukarısı, üst kat).",
     "explanationEn": "Asking directions and transit: 'oversteken' (cross), 'balie' (information desk, counter), 'hal' (hall), 'portier' (porter), 'boven' (upstairs).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_149",
@@ -7284,7 +7282,7 @@ export const matchingDictionary = [
     "explanationTr": "Yol sorma ve toplu taşıma: 'op' (yukarı çıkmak), 'trap' (merdiven), 'rechtdoor' (düz devam), 'tot' (-e kadar), 'herkent' (tanımak).",
     "explanationEn": "Asking directions and transit: 'op' (go up), 'trap' (stairs), 'rechtdoor' (straight ahead), 'tot' (until), 'herkent' (recognize).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_150",
@@ -7333,7 +7331,7 @@ export const matchingDictionary = [
     "explanationTr": "Yol sorma ve toplu taşıma: 'linksaf' (sola dön), 'eind' (son), 'rechts' (sağda, sağa), 'mee' (yanına almak), 'plattegrond' (şehir planı, harita).",
     "explanationEn": "Asking directions and transit: 'linksaf' (to the left), 'eind' (end), 'rechts' (on the right), 'mee' (with you), 'plattegrond' (map).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_151",
@@ -7382,7 +7380,7 @@ export const matchingDictionary = [
     "explanationTr": "Yol sorma ve toplu taşıma: 'toiletten' (tuvaletler), 'beneden' (aşağısı, alt kat), 'hoek' (köşe), 'om' (köşeyi dönmek), 'af' (aşağı inmek).",
     "explanationEn": "Asking directions and transit: 'toiletten' (toilets), 'beneden' (downstairs), 'hoek' (corner), 'om' (turn around), 'af' (go down).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_152",
@@ -7431,7 +7429,7 @@ export const matchingDictionary = [
     "explanationTr": "Yol sorma ve toplu taşıma: 'uitlopen' (uzamak, sarkmak), 'vanzelf' (kendiliğinden), 'bordjes' (küçük tabelalar), 'volgen' (takip etmek), 'makkelijker' (daha kolay).",
     "explanationEn": "Asking directions and transit: 'uitlopen' (to walk down), 'vanzelf' (as a matter of course), 'bordjes' (signs), 'volgen' (follow), 'makkelijker' (easier).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_153",
@@ -7480,7 +7478,7 @@ export const matchingDictionary = [
     "explanationTr": "Duygular, arkadaşlık ve ilişkiler: 'bezoekt' (ziyaret ediyor), 'kom binnen' (içeri gel), 'kerk' (kilise), 'zei' (dedin / dedi), 'kon' (olabilirdi / yapabildi).",
     "explanationEn": "Emotions, friendship, and relations: 'bezoekt' (is visiting), 'kom binnen' (come in), 'kerk' (church), 'zei' (said), 'kon' (could).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_154",
@@ -7529,7 +7527,7 @@ export const matchingDictionary = [
     "explanationTr": "Duygular, arkadaşlık ve ilişkiler: 'missen' (özlemek, kaçırmak), 'gelukkig' (neyse ki, mutlu), 'meegenomen' (getirdi), 'moest' (gerekiyordu), 'auto' (araba).",
     "explanationEn": "Emotions, friendship, and relations: 'missen' (to go wrong / fail 13, to miss 16), 'gelukkig' (fortunately, happy), 'meegenomen' (brought), 'moest' (had to), 'auto' (car).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_155",
@@ -7578,7 +7576,7 @@ export const matchingDictionary = [
     "explanationTr": "Duygular, arkadaşlık ve ilişkiler: 'brengen' (getirmek, götürmek), 'lekker' (güzel, lezzetli), 'groeten' (selamlar), 'Doe haar de groeten terug' (ona da çok selam söyle), 'vroeg' (erken).",
     "explanationEn": "Emotions, friendship, and relations: 'brengen' (to take, to bring), 'lekker' (nice / delicious 2, well 13, nicely 15), 'groeten' (greetings), 'Doe haar de groeten terug' (give her my regards), 'vroeg' (early).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_156",
@@ -7627,7 +7625,7 @@ export const matchingDictionary = [
     "explanationTr": "Duygular, arkadaşlık ve ilişkiler: 'verontschuldigen' (özür dilemek), 'uit' (kapatmak / çıkarmak), 'weer' (hava / tekrar), 'hè' (değil mi, hı), 'Zeg dat wel' (sorma / aynen öyle / haklısın).",
     "explanationEn": "Emotions, friendship, and relations: 'verontschuldigen' (to apologize), 'uit' (switch off / take off), 'weer' (weather / again), 'hè' (isn't it / eh), 'Zeg dat wel' (you can say that again).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_157",
@@ -7676,7 +7674,7 @@ export const matchingDictionary = [
     "explanationTr": "Duygular, arkadaşlık ve ilişkiler: 'koud' (soğuk), 'nat' (ıslak), 'verkouden' (üşütmüş), 'ik ben toe aan' (ihtiyacım var), 'aan' (açık olmak).",
     "explanationEn": "Emotions, friendship, and relations: 'koud' (cold), 'nat' (wet), 'verkouden' (have a cold), 'ik ben toe aan' (I am ready for / I need), 'aan' (have on / switched on).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_158",
@@ -7725,7 +7723,7 @@ export const matchingDictionary = [
     "explanationTr": "Duygular, arkadaşlık ve ilişkiler: 'verwarming' (ısıtma, kalorifer), 'belachelijk' (gülünç, saçma), 'geloof' (inanmak), 'schijnt' (görünüşe göre / parlıyor), 'kom verder' (içeri buyurun).",
     "explanationEn": "Emotions, friendship, and relations: 'verwarming' (heating), 'belachelijk' (ridiculous), 'geloof' (believe), 'schijnt' (seems), 'kom verder' (come in / step inside).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_159",
@@ -7774,7 +7772,7 @@ export const matchingDictionary = [
     "explanationTr": "Duygular, arkadaşlık ve ilişkiler: 'ah' (ah), 'lekker warm' (sıcacık), 'warm' (sıcak), 'doos' (kutu), 'bonbons' (çikolatalar).",
     "explanationEn": "Emotions, friendship, and relations: 'ah' (ah), 'lekker warm' (nice and warm), 'warm' (warm), 'doos' (box), 'bonbons' (chocolates).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_160",
@@ -7823,7 +7821,7 @@ export const matchingDictionary = [
     "explanationTr": "Duygular, arkadaşlık ve ilişkiler: 'bos' (demet), 'bloemen' (çiçekler), 'vaas' (vazo), 'zetten' (demlemek / koymak), 'snijd' (kesmek).",
     "explanationEn": "Emotions, friendship, and relations: 'bos' (bunch), 'bloemen' (flowers), 'vaas' (vase), 'zetten' (put / make (tea)), 'snijd' (cut).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_161",
@@ -7872,7 +7870,7 @@ export const matchingDictionary = [
     "explanationTr": "Duygular, arkadaşlık ve ilişkiler: 'schuin' (çapraz, eğik), 'afsnijden' (kesmek, yolunu kesmek), 'houden' (sevmek), 'dieren' (hayvanlar), 'hond' (köpek).",
     "explanationEn": "Emotions, friendship, and relations: 'schuin' (at an angle), 'afsnijden' (to cut off), 'houden' (love / like), 'dieren' (animals), 'hond' (dog).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_162",
@@ -7921,7 +7919,7 @@ export const matchingDictionary = [
     "explanationTr": "Duygular, arkadaşlık ve ilişkiler: 'katten' (kediler), 'vissen' (balıklar), 'jawel' (evet (vurgulu), bilakis), 'meestal' (genellikle), 'gezellig' (keyifli, samimi, hoş).",
     "explanationEn": "Emotions, friendship, and relations: 'katten' (cats), 'vissen' (fish), 'jawel' (oh yes), 'meestal' (usually), 'gezellig' (pleasant / sociable).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_163",
@@ -7970,7 +7968,7 @@ export const matchingDictionary = [
     "explanationTr": "Duygular, arkadaşlık ve ilişkiler: 'hadden' (sahiptik / vardı), 'ongeluk' (kaza), 'gehad' (geçirmiş), 'onder de auto gekomen' (arabanın altında kalmış), 'verdriet' (üzüntü).",
     "explanationEn": "Emotions, friendship, and relations: 'hadden' (used to have / had), 'ongeluk' (accident), 'gehad' (had), 'onder de auto gekomen' (was run over), 'verdriet' (grief / sorrow).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_164",
@@ -8019,7 +8017,7 @@ export const matchingDictionary = [
     "explanationTr": "Duygular, arkadaşlık ve ilişkiler: 'verdriet' (üzüntü, keder), 'dood' (ölüm), 'volgens mij' (bence), 'volgens' (göre), 'gezondheid' (sağlık).",
     "explanationEn": "Emotions, friendship, and relations: 'verdriet' (grief), 'dood' (death), 'volgens mij' (in my opinion), 'volgens' (according to), 'gezondheid' (health).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_165",
@@ -8068,7 +8066,7 @@ export const matchingDictionary = [
     "explanationTr": "Duygular, arkadaşlık ve ilişkiler: 'lachen' (gülmek), 'gezond' (sağlıklı), 'mee' (birlikte gelmek), 'schuur' (kulübe, deponun yeri), 'twee weken geleden' (iki hafta önce).",
     "explanationEn": "Emotions, friendship, and relations: 'lachen' (to laugh), 'gezond' (healthy), 'mee' (come along), 'schuur' (shed), 'twee weken geleden' (two weeks ago).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_166",
@@ -8117,7 +8115,7 @@ export const matchingDictionary = [
     "explanationTr": "Duygular, arkadaşlık ve ilişkiler: 'jongen' (yavrular (hayvan)), 'gekregen' (aldı / elde etti), 'iemand' (birisi), 'laatste' (son), 'bezoekt' (ziyaret ediyor).",
     "explanationEn": "Emotions, friendship, and relations: 'jongen' (litter), 'gekregen' (had), 'iemand' (someone), 'laatste' (last), 'bezoekt' (is visiting).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_167",
@@ -8166,7 +8164,7 @@ export const matchingDictionary = [
     "explanationTr": "Spor, fitness ve serbest zaman: 'sportschool' (spor salonu), 'school' (okul), 'inschrijven' (kaydolmak), 'mensen' (insanlar), 'in de rij staan' (kuyrukta beklemek).",
     "explanationEn": "Sports, fitness, and hobbies: 'sportschool' (sports club), 'school' (school), 'inschrijven' (register / enroll), 'mensen' (people (person)), 'in de rij staan' (to queue (up)).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_168",
@@ -8215,7 +8213,7 @@ export const matchingDictionary = [
     "explanationTr": "Spor, fitness ve serbest zaman: 'lid' (üye), 'abonnement' (abonelik), 'verschil' (fark), 'elke' (her), 'opzeggen' (iptal etmek, feshetmek).",
     "explanationEn": "Sports, fitness, and hobbies: 'lid' (member), 'abonnement' (subscription), 'verschil' (difference), 'elke' (each), 'opzeggen' (to cancel).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_169",
@@ -8264,7 +8262,7 @@ export const matchingDictionary = [
     "explanationTr": "Spor, fitness ve serbest zaman: 'bedrag' (miktar, tutar), 'beide' (ikisi de, her ikisi), 'onbeperkt' (sınırsız), 'sporten' (spor yapmak), 'speciale' (özel).",
     "explanationEn": "Sports, fitness, and hobbies: 'bedrag' (amount), 'beide' (both), 'onbeperkt' (unlimited), 'sporten' (play sports), 'speciale' (special).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_170",
@@ -8313,7 +8311,7 @@ export const matchingDictionary = [
     "explanationTr": "Spor, fitness ve serbest zaman: 'aanbieding' (teklif, indirim), 'procent' (yüzde), 'korting' (indirim), 'gratis' (bedava, ücretsiz), 'zeker' (kesinlikle).",
     "explanationEn": "Sports, fitness, and hobbies: 'aanbieding' (offer), 'procent' (per cent), 'korting' (discount), 'gratis' (free), 'zeker' (certainly).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_171",
@@ -8362,7 +8360,7 @@ export const matchingDictionary = [
     "explanationTr": "Spor, fitness ve serbest zaman: 'conditie' (kondisyon, form), 'verbeteren' (geliştirmek, düzeltmek), 'spieren' (kaslar), 'versterken' (güçlendirmek), 'gewicht' (ağırlık, kilo).",
     "explanationEn": "Sports, fitness, and hobbies: 'conditie' (physical condition, fitness), 'verbeteren' (to improve), 'spieren' (muscles), 'versterken' (to strengthen), 'gewicht' (weight).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_172",
@@ -8411,7 +8409,7 @@ export const matchingDictionary = [
     "explanationTr": "Spor, fitness ve serbest zaman: 'verliezen' (kaybetmek), 'doelen' (hedefler), 'nogal' (oldukça), 'plan' (planlamak / niyetinde olmak), 'trouwen' (evlenmek).",
     "explanationEn": "Sports, fitness, and hobbies: 'verliezen' (to lose), 'doelen' (goals, targets), 'nogal' (quite, rather), 'plan' (intend), 'trouwen' (to marry).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_173",
@@ -8460,7 +8458,7 @@ export const matchingDictionary = [
     "explanationTr": "Spor, fitness ve serbest zaman: 'liefde' (aşk, sevgi), 'leven' (yaşam, hayat), 'fitte' (formda / fit), 'aantrekkelijke' (çekici), 'man' (adam, eş).",
     "explanationEn": "Sports, fitness, and hobbies: 'liefde' (love), 'leven' (life), 'fitte' (healthy), 'aantrekkelijke' (attractive), 'man' (man).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_174",
@@ -8509,7 +8507,7 @@ export const matchingDictionary = [
     "explanationTr": "Spor, fitness ve serbest zaman: 'krachttraining' (kuvvet antrenmanı), 'kracht' (güç, kuvvet), 'training' (antrenman), 'waarschijnlijk' (muhtemelen), 'cardio' (kardiyo).",
     "explanationEn": "Sports, fitness, and hobbies: 'krachttraining' (weight training), 'kracht' (strength, power), 'training' (training), 'waarschijnlijk' (probably), 'cardio' (cardio fitness).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_175",
@@ -8558,7 +8556,7 @@ export const matchingDictionary = [
     "explanationTr": "Spor, fitness ve serbest zaman: 'groepsles' (grup dersi), 'groep' (grup), 'mee' (birlikte bakmak), 'rooster' (program, ders programı), 'aan' (sunmak).",
     "explanationEn": "Sports, fitness, and hobbies: 'groepsles' (group lesson), 'groep' (group), 'mee' (watch along), 'rooster' (schedule), 'aan' (offer).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_176",
@@ -8607,7 +8605,7 @@ export const matchingDictionary = [
     "explanationTr": "Spor, fitness ve serbest zaman: 'virtuele' (sanal), 'veranderen' (değiştirmek), 'manier' (tarz, biçim), 'op die manier' (bu şekilde), 'regelmatig' (düzenli olarak).",
     "explanationEn": "Sports, fitness, and hobbies: 'virtuele' (virtual), 'veranderen' (to change), 'manier' (way, manner), 'op die manier' (in that way), 'regelmatig' (regularly).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_177",
@@ -8656,7 +8654,7 @@ export const matchingDictionary = [
     "explanationTr": "Spor, fitness ve serbest zaman: 'sturen' (göndermek), 'nieuwsbrief' (bülten), 'nieuws' (haberler), 'brief' (mektup), 'klinkt' (kulağa geliyor).",
     "explanationEn": "Sports, fitness, and hobbies: 'sturen' (to send), 'nieuwsbrief' (newsletter), 'nieuws' (news), 'brief' (letter), 'klinkt' (sound).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_178",
@@ -8705,7 +8703,7 @@ export const matchingDictionary = [
     "explanationTr": "Spor, fitness ve serbest zaman: 'sportkleren' (spor kıyafetleri), 'kleren' (giysiler), 'in' (yürürlüğe girmek), 'buikspierkwartier' (karın kası antrenmanı), 'meteen' (derhalve, hemen).",
     "explanationEn": "Sports, fitness, and hobbies: 'sportkleren' (sports clothes), 'kleren' (clothes), 'in' (becomes effective), 'buikspierkwartier' (abs workout), 'meteen' (straightaway).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_179",
@@ -8754,7 +8752,7 @@ export const matchingDictionary = [
     "explanationTr": "Spor, fitness ve serbest zaman: 'meedoen' (katılmak), 'aandoen' (giymek, açmak (ışık vb.)), 'klaar' (hazırlamak), 'pasje' (kart), 'verkopen' (satmak).",
     "explanationEn": "Sports, fitness, and hobbies: 'meedoen' (to join in), 'aandoen' (to put on), 'klaar' (prepare), 'pasje' (card), 'verkopen' (to sell).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_180",
@@ -8803,7 +8801,7 @@ export const matchingDictionary = [
     "explanationTr": "Spor, fitness ve serbest zaman: 'energiedrankjes' (enerji içecekleri), 'energie' (enerji), 'drankje' (içecek), 'automaat' (otomat), 'muntgeld' (madeni para).",
     "explanationEn": "Sports, fitness, and hobbies: 'energiedrankjes' (energy drinks), 'energie' (energy), 'drankje' (drink), 'automaat' (vending machine), 'muntgeld' (cash).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_181",
@@ -8852,7 +8850,7 @@ export const matchingDictionary = [
     "explanationTr": "Spor, fitness ve serbest zaman: 'saldo' (bakiye), 'laden' (şarj etmek, yüklemek), 'veel plezier' (iyi eğlenceler), 'plezier' (eğlence, zevk), 'spierpijn' (kas ağrısı).",
     "explanationEn": "Sports, fitness, and hobbies: 'saldo' (balance), 'laden' (to charge), 'veel plezier' (have fun), 'plezier' (fun), 'spierpijn' (muscular pain).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_182",
@@ -8901,7 +8899,7 @@ export const matchingDictionary = [
     "explanationTr": "Spor, fitness ve serbest zaman: 'bang' (korkmuş), 'sportschool' (spor salonu), 'school' (okul), 'inschrijven' (kaydolmak), 'mensen' (insanlar).",
     "explanationEn": "Sports, fitness, and hobbies: 'bang' (afraid), 'sportschool' (sports club), 'school' (school), 'inschrijven' (register / enroll), 'mensen' (people (person)).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_183",
@@ -8950,7 +8948,7 @@ export const matchingDictionary = [
     "explanationTr": "Tatil, seyahat ve konaklama: 'openbaar vervoer' (toplu taşıma), 'Colombia' (Kolombiya), 'ging' (gitti / geçti), 'vliegtuig' (uçak), 'duurde' (sürdü).",
     "explanationEn": "Holidays, travel, and hotels: 'openbaar vervoer' (public transport), 'Colombia' (Columbia), 'ging' (went), 'vliegtuig' (aeroplane), 'duurde' (took / lasted).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_184",
@@ -8999,7 +8997,7 @@ export const matchingDictionary = [
     "explanationTr": "Tatil, seyahat ve konaklama: 'helaas' (maalesef), 'logeren' (misafir olarak kalmak), 'pakken' (paketler), 'veilig' (güvenli), 'trein' (tren).",
     "explanationEn": "Holidays, travel, and hotels: 'helaas' (unfortunately), 'logeren' (to stay), 'pakken' (packets), 'veilig' (safe), 'trein' (train).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_185",
@@ -9048,7 +9046,7 @@ export const matchingDictionary = [
     "explanationTr": "Tatil, seyahat ve konaklama: 'tas' (çanta), 'geweldig' (harika, müthiş), 'vertrekt' (kalkıyor (araç)), 'koffer' (bavul, valiz), 'dragen' (taşımak, giymek).",
     "explanationEn": "Holidays, travel, and hotels: 'tas' (bag), 'geweldig' (fantastic), 'vertrekt' (leaves), 'koffer' (suitcase), 'dragen' (to carry).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_186",
@@ -9097,7 +9095,7 @@ export const matchingDictionary = [
     "explanationTr": "Tatil, seyahat ve konaklama: 'grapje' (şaka), 'raampje' (küçük pencere), 'net als' (-in aynısı gibi, - gibi), 'vroeger' (eskiden), 'lekker' (güzel, lezzetli).",
     "explanationEn": "Holidays, travel, and hotels: 'grapje' (joke), 'raampje' (window), 'net als' (just like), 'vroeger' (in the old days), 'lekker' (nice / delicious 2, well 13, nicely 15).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_187",
@@ -9146,7 +9144,7 @@ export const matchingDictionary = [
     "explanationTr": "Tatil, seyahat ve konaklama: 'buiten' (dışarı), 'reis' (seyahat, gezi), 'spoor' (peron, tren yolu), 'achter de rug' (geride kalmış), 'pony's' (midilliler).",
     "explanationEn": "Holidays, travel, and hotels: 'buiten' (outside), 'reis' (trip), 'spoor' (platform), 'achter de rug' (behind you / over), 'pony's' (ponies).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_188",
@@ -9195,7 +9193,7 @@ export const matchingDictionary = [
     "explanationTr": "Tatil, seyahat ve konaklama: 'wei' (çayır, otlak), 'net' (henüz, tam), 'shetlandpony' (Shetland midillisi), 'landschap' (peyzaj, manzara), 'anders' (aksi takdirde, farklı).",
     "explanationEn": "Holidays, travel, and hotels: 'wei' (field), 'net' (just, like), 'shetlandpony' (Shetland pony), 'landschap' (landscape), 'anders' (otherwise, different).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_189",
@@ -9244,7 +9242,7 @@ export const matchingDictionary = [
     "explanationTr": "Tatil, seyahat ve konaklama: 'plat' (düz), 'berg' (dağ), 'gewend' (alışkın), 'opletten' (dikkat etmek), 'zo meteen' (birazdan).",
     "explanationEn": "Holidays, travel, and hotels: 'plat' (flat), 'berg' (mountain), 'gewend' (used to), 'opletten' (to pay attention), 'zo meteen' (very soon).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_190",
@@ -9293,7 +9291,7 @@ export const matchingDictionary = [
     "explanationTr": "Tatil, seyahat ve konaklama: 'natuurgebied' (doğa alanı, koruma alanı), 'natuur' (doğa), 'gebied' (bölge, alan), 'echt' (gerçek, gerçekten), 'lucht' (gökyüzü, hava).",
     "explanationEn": "Holidays, travel, and hotels: 'natuurgebied' (nature reserve), 'natuur' (nature), 'gebied' (area), 'echt' (real), 'lucht' (sky).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_191",
@@ -9342,7 +9340,7 @@ export const matchingDictionary = [
     "explanationTr": "Tatil, seyahat ve konaklama: 'schilderijen' (tablolar), 'stukje' (parça), 'molen' (değirmen), 'broodjes' (sandviçler), 'onderweg' (yolda).",
     "explanationEn": "Holidays, travel, and hotels: 'schilderijen' (paintings), 'stukje' (piece), 'molen' (windmill), 'broodjes' (bread rolls), 'onderweg' (on the way).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_192",
@@ -9391,7 +9389,7 @@ export const matchingDictionary = [
     "explanationTr": "Tatil, seyahat ve konaklama: 'kaas' (peynir), 'moe' (yorgun), 'welterusten' (iyi geceler), 'goede reis' (iyi yolculuklar), 'wakker' (uyandırmak).",
     "explanationEn": "Holidays, travel, and hotels: 'kaas' (cheese), 'moe' (tired), 'welterusten' (sleep well), 'goede reis' (have a good trip), 'wakker' (wake up).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_193",
@@ -9440,7 +9438,7 @@ export const matchingDictionary = [
     "explanationTr": "Tiyatro, sinema ve kültür: 'caissère' (kasiyer), 'reserveren' (rezervasyon yapmak), 'voorstelling' (gösteri, temsil), 'wat stom' (ne kadar aptalca), 'verkeerd' (yanlış).",
     "explanationEn": "Theatre, cinema, and culture: 'caissère' (box office assistant), 'reserveren' (to book), 'voorstelling' (show / session), 'wat stom' (how stupid), 'verkeerd' (wrong).",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_194",
@@ -9489,7 +9487,7 @@ export const matchingDictionary = [
     "explanationTr": "Tiyatro, sinema ve kültür: 'gekeken' (baktım), 'is al bezig' (zaten başladı), 'begin' (başlangıç), 'gemist' (kaçırdım), 'draaien' (dönmek, göstermek (film vb.)).",
     "explanationEn": "Theatre, cinema, and culture: 'gekeken' (looked), 'is al bezig' (has already started), 'begin' (beginning), 'gemist' (missed), 'draaien' (to be showing).",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_195",
@@ -9538,7 +9536,7 @@ export const matchingDictionary = [
     "explanationTr": "Tiyatro, sinema ve kültür: 'zomerhitte' (yaz sıcaklığı), 'zomer' (yaz), 'hitte' (sıcaklık, aşırı sıcak), 'eerder' (daha erken), 'opgenomen' (çekildi (kamera)).",
     "explanationEn": "Theatre, cinema, and culture: 'zomerhitte' (summer heat), 'zomer' (summer), 'hitte' (heat), 'eerder' (earlier), 'opgenomen' (filmed).",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_196",
@@ -9587,7 +9585,7 @@ export const matchingDictionary = [
     "explanationTr": "Tiyatro, sinema ve kültür: 'naar een verhaal van' (uyarlaması), 'natuurdocumentaire' (doğa belgeseli), 'documentaire' (belgesel), 'gesproken' (konuşulan / seslendirme), 'ondertiteling' (altyazı).",
     "explanationEn": "Theatre, cinema, and culture: 'naar een verhaal van' (based on a story by), 'natuurdocumentaire' (nature documentary), 'documentaire' (documentary), 'gesproken' (spoken), 'ondertiteling' (subtitles).",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_197",
@@ -9636,7 +9634,7 @@ export const matchingDictionary = [
     "explanationTr": "Tiyatro, sinema ve kültür: 'ondertiteld' (altyazılı), 'bijna' (neredeyse), 'rang' (kategori / mevki), 'caissère' (kasiyer), 'reserveren' (rezervasyon yapmak).",
     "explanationEn": "Theatre, cinema, and culture: 'ondertiteld' (subtitled), 'bijna' (almost), 'rang' (class / tier), 'caissère' (box office assistant), 'reserveren' (to book).",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_198",
@@ -9685,7 +9683,7 @@ export const matchingDictionary = [
     "explanationTr": "Eğitim, üniversite ve teknoloji: 'studentenhuis' (öğrenci evi), 'filosofie' (felsefe), 'informatietechnologie' (bilgi teknolojisi (IT)), 'technologie' (teknoloji), 'wekker' (çalar saat).",
     "explanationEn": "Studies, university, and technology: 'studentenhuis' (student house), 'filosofie' (philosophy), 'informatietechnologie' (information technology), 'technologie' (technology), 'wekker' (alarm clock).",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_199",
@@ -9734,7 +9732,7 @@ export const matchingDictionary = [
     "explanationTr": "Eğitim, üniversite ve teknoloji: 'schat' (hazine, sevgilim), 'heerlijk' (lezzetli, harika), 'gedroomd' (rüya gördüm), 'tropisch' (tropik), 'eiland' (ada).",
     "explanationEn": "Studies, university, and technology: 'schat' (darling), 'heerlijk' (delicious, exquisite, wonderful), 'gedroomd' (dreamt), 'tropisch' (tropical), 'eiland' (island).",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_200",
@@ -9783,7 +9781,7 @@ export const matchingDictionary = [
     "explanationTr": "Eğitim, üniversite ve teknoloji: 'vogels' (kuşlar), 'helemaal' (tamamen, hiç), 'wakker' (uyanık), 'uitgerust' (dinlenmiş), 'op' (ayağa kalkmak / kalkmak).",
     "explanationEn": "Studies, university, and technology: 'vogels' (birds), 'helemaal' (completely, at all), 'wakker' (awake), 'uitgerust' (well-rested), 'op' (get up).",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_201",
@@ -9832,7 +9830,7 @@ export const matchingDictionary = [
     "explanationTr": "Eğitim, üniversite ve teknoloji: 'douchen' (duş almak), 'ontbijtje' (kahvaltı), 'tijdens' (-esznasında, sırasında), 'gewoon' (sadece, sıradan, normal), 'programma' (program).",
     "explanationEn": "Studies, university, and technology: 'douchen' (to shower), 'ontbijtje' (breakfast), 'tijdens' (during), 'gewoon' (just, ordinary), 'programma' (program).",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_202",
@@ -9881,7 +9879,7 @@ export const matchingDictionary = [
     "explanationTr": "Eğitim, üniversite ve teknoloji: 'college' (ders, üniversite dersi), 'bibliotheek' (kütüphane), 'tentamen' (sınav), 'filosofiegeschiedenis' (felsefe tarihi), 'geschiedenis' (tarih).",
     "explanationEn": "Studies, university, and technology: 'college' (lecture, class), 'bibliotheek' (library), 'tentamen' (examination), 'filosofiegeschiedenis' (history of philosophy), 'geschiedenis' (history).",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_203",
@@ -9930,7 +9928,7 @@ export const matchingDictionary = [
     "explanationTr": "Eğitim, üniversite ve teknoloji: 'bank' (kanepe / koltuk), 'hypotheek' (ipotek, konut kredisi), 'avondeten' (akşam yemeği), 'pasta' (makarna), 'gehaktballetjes' (köfteler).",
     "explanationEn": "Studies, university, and technology: 'bank' (couch / sofa), 'hypotheek' (mortgage), 'avondeten' (dinner, evening meal), 'pasta' (pasta), 'gehaktballetjes' (meatballs).",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_204",
@@ -9979,7 +9977,7 @@ export const matchingDictionary = [
     "explanationTr": "Eğitim, üniversite ve teknoloji: 'tomatensaus' (domates sosu), 'saus' (sos), 'wassen' (yıkamak), 'storing' (arıza), 'systeem' (sistem).",
     "explanationEn": "Studies, university, and technology: 'tomatensaus' (tomato sauce), 'saus' (sauce), 'wassen' (to wash), 'storing' (fault), 'systeem' (system).",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_205",
@@ -10028,7 +10026,7 @@ export const matchingDictionary = [
     "explanationTr": "Eğitim, üniversite ve teknoloji: 'kwijt' (kaybetmiş / kayıp), 'gegevens' (veriler), 'vreemd' (tuhaf, yabancı), 'gekookt' (pişirdin), 'pittig' (acılı, baharatlı).",
     "explanationEn": "Studies, university, and technology: 'kwijt' (lost), 'gegevens' (data), 'vreemd' (strange), 'gekookt' (cooked), 'pittig' (spicy).",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_206",
@@ -10077,7 +10075,7 @@ export const matchingDictionary = [
     "explanationTr": "Eğitim, üniversite ve teknoloji: 'ontzettend' (acayip, çok), 'zaal' (salon, oda), 'geluncht' (öğle yemeği yedik), 'komt terug' (geri dönüyor), 'mooi' (güzel, harika).",
     "explanationEn": "Studies, university, and technology: 'ontzettend' (really, very), 'zaal' (room, hall), 'geluncht' (had lunch), 'komt terug' (coming back), 'mooi' (nice, great).",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_207",
@@ -10126,7 +10124,7 @@ export const matchingDictionary = [
     "explanationTr": "Eğitim, üniversite ve teknoloji: 'lust' (isterim), 'thee' (çay), 'rustig' (sessiz, sakin), 'behalve' (haricinde, dışında), 'vaste' (sabit).",
     "explanationEn": "Studies, university, and technology: 'lust' (fancy), 'thee' (tea), 'rustig' (quiet), 'behalve' (except, besides), 'vaste' (regular).",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_208",
@@ -10175,7 +10173,7 @@ export const matchingDictionary = [
     "explanationTr": "Eğitim, üniversite ve teknoloji: 'publiek' (seyirci, halk), 'niemand' (hiç kimse), 'deel' (bölüm, parça), 'serie' (dizi, seri), 'uitgenodigd' (davet ettim).",
     "explanationEn": "Studies, university, and technology: 'publiek' (audience), 'niemand' (nobody), 'deel' (part, episode), 'serie' (series), 'uitgenodigd' (invited).",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_209",
@@ -10224,7 +10222,7 @@ export const matchingDictionary = [
     "explanationTr": "Eğitim, üniversite ve teknoloji: 'lieverd' (canım, tatlım), 'studentenhuis' (öğrenci evi), 'filosofie' (felsefe), 'informatietechnologie' (bilgi teknolojisi (IT)), 'technologie' (teknoloji).",
     "explanationEn": "Studies, university, and technology: 'lieverd' (sweetheart), 'studentenhuis' (student house), 'filosofie' (philosophy), 'informatietechnologie' (information technology), 'technologie' (technology).",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_210",
@@ -10273,7 +10271,7 @@ export const matchingDictionary = [
     "explanationTr": "Polis, ihbar ve güvenlik: 'politie' (polis), 'nadat' (-dikten sonra), 'portemonnee' (cüzdan), 'gestolen' (çalındı), 'aangifte doen' (ihbarda bulunmak).",
     "explanationEn": "Police, reporting crimes, and safety: 'politie' (police), 'nadat' (after), 'portemonnee' (wallet / purse), 'gestolen' (stolen), 'aangifte doen' (to report (a crime)).",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_211",
@@ -10322,7 +10320,7 @@ export const matchingDictionary = [
     "explanationTr": "Polis, ihbar ve güvenlik: 'politieagent' (polis memuru), 'via' (yoluyla, vasıtasıyla), 'zat' (oturuyordum), 'terras' (teras), 'zulk' (böyle).",
     "explanationEn": "Police, reporting crimes, and safety: 'politieagent' (police officer), 'via' (by way of), 'zat' (was sitting), 'terras' (terrace), 'zulk' (such).",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_212",
@@ -10371,7 +10369,7 @@ export const matchingDictionary = [
     "explanationTr": "Polis, ihbar ve güvenlik: 'toen' (-diğinde, o zaman), 'lag' (duruyordu), 'overal' (her yerde), 'gezocht' (aradım), 'nergens' (hiçbir yerde).",
     "explanationEn": "Police, reporting crimes, and safety: 'toen' (when), 'lag' (was / lay), 'overal' (everywhere), 'gezocht' (searched), 'nergens' (nowhere).",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_213",
@@ -10420,7 +10418,7 @@ export const matchingDictionary = [
     "explanationTr": "Polis, ihbar ve güvenlik: 'gelegd' (koydum), 'had' (sahipti), 'omdat' (çünkü), 'rits' (fermuar), 'zodat' (böylece, -sın diye).",
     "explanationEn": "Police, reporting crimes, and safety: 'gelegd' (placed), 'had' (had), 'omdat' (because), 'rits' (zip), 'zodat' (so that).",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_214",
@@ -10469,7 +10467,7 @@ export const matchingDictionary = [
     "explanationTr": "Polis, ihbar ve güvenlik: 'geld' (para), 'steeds' (sürekli), 'viel' (düşüyordu), 'gehaald' (çıkardım), 'dader' (suçlu, fail).",
     "explanationEn": "Police, reporting crimes, and safety: 'geld' (money), 'steeds' (always), 'viel' (fell), 'gehaald' (took), 'dader' (culprit).",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_215",
@@ -10518,7 +10516,7 @@ export const matchingDictionary = [
     "explanationTr": "Polis, ihbar ve güvenlik: 'terwijl' (-iken, iken ki), 'namelijk' (yani, zira, çünkü), 'slim' (akıllı, zeki), 'eruit' (görünmek), 'oei' (eyvah, ooh).",
     "explanationEn": "Police, reporting crimes, and safety: 'terwijl' (while), 'namelijk' (it so happens), 'slim' (clever), 'eruit' (looks like), 'oei' (uh / oh).",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_216",
@@ -10567,7 +10565,7 @@ export const matchingDictionary = [
     "explanationTr": "Polis, ihbar ve güvenlik: 'in ieder geval' (her halükarda, en azından), 'leer' (deri), 'verder' (başka, ileride), 'rijbewijs' (ehliyet), 'identiteitskaart' (kimlik kartı).",
     "explanationEn": "Police, reporting crimes, and safety: 'in ieder geval' (at any rate), 'leer' (leather), 'verder' (otherwise), 'rijbewijs' (driver's licence), 'identiteitskaart' (ID card).",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_217",
@@ -10616,7 +10614,7 @@ export const matchingDictionary = [
     "explanationTr": "Polis, ihbar ve güvenlik: 'bankpas' (banka kartı), 'bankrekening' (banka hesabı), 'rekening' (hesap), 'blokkeren' (engellemek, bloke etmek), 'onmiddellijk' (derhalve, derhal).",
     "explanationEn": "Police, reporting crimes, and safety: 'bankpas' (bank card), 'bankrekening' (bank account), 'rekening' (bill / check), 'blokkeren' (to block), 'onmiddellijk' (immediately / at once).",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_218",
@@ -10665,7 +10663,7 @@ export const matchingDictionary = [
     "explanationTr": "Polis, ihbar ve güvenlik: 'hoewel' (-e rağmen), 'handig' (kullanışlı), 'hoezo' (nasıl yani, ne münasebet), 'ophalen' (gidip almak, toplamak), 'vervelend' (can sıkıcı).",
     "explanationEn": "Police, reporting crimes, and safety: 'hoewel' (although), 'handig' (handy), 'hoezo' (how come), 'ophalen' (to collect, to get), 'vervelend' (annoying).",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_219",
@@ -10714,7 +10712,7 @@ export const matchingDictionary = [
     "explanationTr": "Polis, ihbar ve güvenlik: 'opgeschreven' (yazılı / yazdım), 'zodra' (- yapar yapmaz), 'gevonden' (bulunursa), 'contact' (iletişime geçmek), 'kans' (şans, fırsat).",
     "explanationEn": "Police, reporting crimes, and safety: 'opgeschreven' (written down), 'zodra' (as soon as), 'gevonden' (found), 'contact' (contact), 'kans' (chance).",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_220",
@@ -10763,7 +10761,7 @@ export const matchingDictionary = [
     "explanationTr": "Polis, ihbar ve güvenlik: 'als' (olarak, eğer), 'eerlijk' (dürüst), 'politie' (polis), 'nadat' (-dikten sonra), 'portemonnee' (cüzdan).",
     "explanationEn": "Police, reporting crimes, and safety: 'als' (as, if), 'eerlijk' (honest), 'politie' (police), 'nadat' (after), 'portemonnee' (wallet / purse).",
     "difficulty": 5,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_match_dict_221",

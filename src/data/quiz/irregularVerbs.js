@@ -13,9 +13,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ een appeltaart voor het bezoek.",
     "options": [
       "bakte",
-      "gebakken",
-      "bakken",
-      "Misschien later."
+      "bakten",
+      "bakt",
+      "gebakken"
     ],
     "correctAnswer": "bakte",
     "explanationTr": "'bakken' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'bakte' şeklindedir.",
@@ -37,7 +37,7 @@ export const irregularVerbs = [
       "gebakken",
       "bakte",
       "bakken",
-      "Misschien later."
+      "bakten"
     ],
     "correctAnswer": "gebakken",
     "explanationTr": "'bakken' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gebakken'dir (hebben ile kullanılır).",
@@ -58,8 +58,8 @@ export const irregularVerbs = [
     "options": [
       "begon",
       "begonnen",
-      "beginnen",
-      "Misschien later."
+      "begint",
+      "beginnen"
     ],
     "correctAnswer": "begon",
     "explanationTr": "'beginnen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'begon' şeklindedir.",
@@ -81,7 +81,7 @@ export const irregularVerbs = [
       "begonnen",
       "begon",
       "beginnen",
-      "gebeginnen"
+      "beginnende"
     ],
     "correctAnswer": "begonnen",
     "explanationTr": "'beginnen' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'begonnen'dir (zijn ile kullanılır).",
@@ -102,8 +102,8 @@ export const irregularVerbs = [
     "options": [
       "begreep",
       "begrepen",
-      "begrijpen",
-      "Misschien later."
+      "begrijpt",
+      "begrijpen"
     ],
     "correctAnswer": "begreep",
     "explanationTr": "'begrijpen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'begreep' şeklindedir.",
@@ -125,7 +125,7 @@ export const irregularVerbs = [
       "begrepen",
       "begreep",
       "begrijpen",
-      "gebegrijpen"
+      "begrijpende"
     ],
     "correctAnswer": "begrepen",
     "explanationTr": "'begrijpen' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'begrepen'dir (hebben ile kullanılır).",
@@ -146,8 +146,8 @@ export const irregularVerbs = [
     "options": [
       "bewoog",
       "bewogen",
-      "bewegen",
-      "Misschien later."
+      "beweegt",
+      "bewegen"
     ],
     "correctAnswer": "bewoog",
     "explanationTr": "'bewegen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'bewoog' şeklindedir.",
@@ -169,7 +169,7 @@ export const irregularVerbs = [
       "bewogen",
       "bewoog",
       "bewegen",
-      "gebewegen"
+      "bewegende"
     ],
     "correctAnswer": "bewogen",
     "explanationTr": "'bewegen' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'bewogen'dir (hebben ile kullanılır).",
@@ -189,9 +189,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ het Rijksmuseum in Amsterdam.",
     "options": [
       "bezocht",
-      "bezoeken",
-      "Misschien later.",
-      "Ik heb helaas geen tijd vandaag."
+      "bezochten",
+      "bezoekt",
+      "bezoeken"
     ],
     "correctAnswer": "bezocht",
     "explanationTr": "'bezoeken' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'bezocht' şeklindedir.",
@@ -212,8 +212,8 @@ export const irregularVerbs = [
     "options": [
       "bezocht",
       "bezoeken",
-      "gebezoeken",
-      "Misschien later."
+      "bezoekende",
+      "bezochten"
     ],
     "correctAnswer": "bezocht",
     "explanationTr": "'bezoeken' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'bezocht'dir (hebben ile kullanılır).",
@@ -233,9 +233,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ gisteren vanwege de regen binnen.",
     "options": [
       "bleef",
-      "gebleven",
-      "blijven",
-      "Misschien later."
+      "bleven",
+      "blijft",
+      "gebleven"
     ],
     "correctAnswer": "bleef",
     "explanationTr": "'blijven' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'bleef' şeklindedir.",
@@ -277,9 +277,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ mijn linkerarm tijdens het schaatsen.",
     "options": [
       "brak",
-      "gebroken",
-      "breken",
-      "Misschien later."
+      "braken",
+      "breekt",
+      "gebroken"
     ],
     "correctAnswer": "brak",
     "explanationTr": "'breken' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'brak' şeklindedir.",
@@ -321,9 +321,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ de kinderen met de fiets naar school.",
     "options": [
       "bracht",
-      "gebracht",
-      "brengen",
-      "Misschien later."
+      "brachten",
+      "brengt",
+      "gebracht"
     ],
     "correctAnswer": "bracht",
     "explanationTr": "'brengen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'bracht' şeklindedir.",
@@ -365,9 +365,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ aan een mooie vakantie in Spanje.",
     "options": [
       "dacht",
-      "gedacht",
-      "denken",
-      "Misschien later."
+      "dachten",
+      "denkt",
+      "gedacht"
     ],
     "correctAnswer": "dacht",
     "explanationTr": "'denken' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'dacht' şeklindedir.",
@@ -409,9 +409,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ gisteren de wekelijkse boodschappen.",
     "options": [
       "deed",
-      "gedaan",
-      "doen",
-      "Misschien later."
+      "deden",
+      "doet",
+      "gedaan"
     ],
     "correctAnswer": "deed",
     "explanationTr": "'doen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'deed' şeklindedir.",
@@ -453,9 +453,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ een warme winterjas tegen de kou.",
     "options": [
       "droeg",
-      "gedragen",
-      "dragen",
-      "Misschien later."
+      "droegen",
+      "draagt",
+      "gedragen"
     ],
     "correctAnswer": "droeg",
     "explanationTr": "'dragen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'droeg' şeklindedir.",
@@ -477,7 +477,7 @@ export const irregularVerbs = [
       "gedragen",
       "droeg",
       "dragen",
-      "Misschien later."
+      "droegen"
     ],
     "correctAnswer": "gedragen",
     "explanationTr": "'dragen' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gedragen'dir (hebben ile kullanılır).",
@@ -497,9 +497,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ een kop warme thee met honing.",
     "options": [
       "dronk",
-      "gedronken",
-      "drinken",
-      "Misschien later."
+      "dronken",
+      "drinkt",
+      "gedronken"
     ],
     "correctAnswer": "dronk",
     "explanationTr": "'drinken' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'dronk' şeklindedir.",
@@ -541,9 +541,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ een kom soep tijdens de lunch.",
     "options": [
       "at",
-      "gegeten",
-      "eten",
-      "Misschien later."
+      "aten",
+      "eet",
+      "gegeten"
     ],
     "correctAnswer": "at",
     "explanationTr": "'eten' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'at' şeklindedir.",
@@ -585,9 +585,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ met de sneltrein naar Rotterdam.",
     "options": [
       "ging",
-      "gegaan",
-      "gaan",
-      "Misschien later."
+      "gingen",
+      "gaat",
+      "gegaan"
     ],
     "correctAnswer": "ging",
     "explanationTr": "'gaan' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'ging' şeklindedir.",
@@ -609,7 +609,7 @@ export const irregularVerbs = [
       "gegaan",
       "ging",
       "gaan",
-      "Misschien later."
+      "gingen"
     ],
     "correctAnswer": "gegaan",
     "explanationTr": "'gaan' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gegaan'dir (zijn ile kullanılır).",
@@ -629,9 +629,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ een mooi cadeau aan mijn buurvrouw.",
     "options": [
       "gaf",
-      "gegeven",
-      "geven",
-      "Misschien later."
+      "gaven",
+      "geeft",
+      "gegeven"
     ],
     "correctAnswer": "gaf",
     "explanationTr": "'geven' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'gaf' şeklindedir.",
@@ -653,7 +653,7 @@ export const irregularVerbs = [
       "gegeven",
       "gaf",
       "geven",
-      "Misschien later."
+      "gevende"
     ],
     "correctAnswer": "gegeven",
     "explanationTr": "'geven' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gegeven'dir (hebben ile kullanılır).",
@@ -673,9 +673,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ de natte regenjas aan de kapstok.",
     "options": [
       "hing",
-      "gehangen",
-      "hangen",
-      "Misschien later."
+      "hingen",
+      "hangt",
+      "gehangen"
     ],
     "correctAnswer": "hing",
     "explanationTr": "'hangen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'hing' şeklindedir.",
@@ -697,7 +697,7 @@ export const irregularVerbs = [
       "gehangen",
       "hing",
       "hangen",
-      "Misschien later."
+      "hingen"
     ],
     "correctAnswer": "gehangen",
     "explanationTr": "'hangen' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gehangen'dir (hebben ile kullanılır).",
@@ -717,9 +717,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ gisteren drie drukke afspraken.",
     "options": [
       "had",
-      "gehad",
-      "hebben",
-      "Misschien later."
+      "hadden",
+      "heeft",
+      "gehad"
     ],
     "correctAnswer": "had",
     "explanationTr": "'hebben' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'had' şeklindedir.",
@@ -761,9 +761,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ de buurvrouw met zware tassen.",
     "options": [
       "hielp",
-      "geholpen",
-      "helpen",
-      "werken"
+      "hielpen",
+      "helpt",
+      "geholpen"
     ],
     "correctAnswer": "hielp",
     "explanationTr": "'helpen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'hielp' şeklindedir.",
@@ -805,9 +805,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ altijd al van klassieke muziek.",
     "options": [
       "hield",
-      "gehouden",
-      "houden",
-      "Misschien later."
+      "hielden",
+      "houdt",
+      "gehouden"
     ],
     "correctAnswer": "hield",
     "explanationTr": "'houden' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'hield' şeklindedir.",
@@ -829,7 +829,7 @@ export const irregularVerbs = [
       "gehouden",
       "hield",
       "houden",
-      "Misschien later."
+      "hielden"
     ],
     "correctAnswer": "gehouden",
     "explanationTr": "'houden' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gehouden'dir (hebben ile kullanılır).",
@@ -849,9 +849,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ een gezond gerecht van de kaart.",
     "options": [
       "koos",
-      "gekozen",
-      "kiezen",
-      "Misschien later."
+      "kozen",
+      "kiest",
+      "gekozen"
     ],
     "correctAnswer": "koos",
     "explanationTr": "'kiezen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'koos' şeklindedir.",
@@ -893,9 +893,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ naar het achtuurjournaal op tv.",
     "options": [
       "keek",
-      "gekeken",
-      "kijken",
-      "Misschien later."
+      "keken",
+      "kijkt",
+      "gekeken"
     ],
     "correctAnswer": "keek",
     "explanationTr": "'kijken' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'keek' şeklindedir.",
@@ -937,9 +937,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ gisteren precies op tijd op het werk.",
     "options": [
       "kwam",
-      "gekomen",
-      "komen",
-      "Misschien later."
+      "kwamen",
+      "komt",
+      "gekomen"
     ],
     "correctAnswer": "kwam",
     "explanationTr": "'komen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'kwam' şeklindedir.",
@@ -961,7 +961,7 @@ export const irregularVerbs = [
       "gekomen",
       "kwam",
       "komen",
-      "Misschien later."
+      "kwamen"
     ],
     "correctAnswer": "gekomen",
     "explanationTr": "'komen' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gekomen'dir (zijn ile kullanılır).",
@@ -981,9 +981,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ een warme trui in de winkelstraat.",
     "options": [
       "kocht",
-      "gekocht",
-      "kopen",
-      "Misschien later."
+      "kochten",
+      "koopt",
+      "gekocht"
     ],
     "correctAnswer": "kocht",
     "explanationTr": "'kopen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'kocht' şeklindedir.",
@@ -1025,9 +1025,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ een officiële brief van de gemeente.",
     "options": [
       "kreeg",
-      "gekregen",
-      "krijgen",
-      "Misschien later."
+      "kregen",
+      "krijgt",
+      "gekregen"
     ],
     "correctAnswer": "kreeg",
     "explanationTr": "'krijgen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'kreeg' şeklindedir.",
@@ -1069,9 +1069,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ gisteren helaas niet komen.",
     "options": [
       "kon",
-      "gekund",
-      "kunnen",
-      "Misschien later."
+      "konden",
+      "kan",
+      "gekund"
     ],
     "correctAnswer": "kon",
     "explanationTr": "'kunnen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'kon' şeklindedir.",
@@ -1113,9 +1113,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ om de grappige opmerking van Daan.",
     "options": [
       "lachte",
-      "gelachen",
-      "lachen",
-      "Misschien later."
+      "lachten",
+      "lacht",
+      "gelachen"
     ],
     "correctAnswer": "lachte",
     "explanationTr": "'lachen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'lachte' şeklindedir.",
@@ -1137,7 +1137,7 @@ export const irregularVerbs = [
       "gelachen",
       "lachte",
       "lachen",
-      "Misschien later."
+      "lachten"
     ],
     "correctAnswer": "gelachen",
     "explanationTr": "'lachen' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gelachen'dir (hebben ile kullanılır).",
@@ -1157,9 +1157,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ mijn stadsfiets bij het station staan.",
     "options": [
       "liet",
-      "gelaten",
-      "laten",
-      "Misschien later."
+      "lieten",
+      "laat",
+      "gelaten"
     ],
     "correctAnswer": "liet",
     "explanationTr": "'laten' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'liet' şeklindedir.",
@@ -1181,7 +1181,7 @@ export const irregularVerbs = [
       "gelaten",
       "liet",
       "laten",
-      "Misschien later."
+      "lieten"
     ],
     "correctAnswer": "gelaten",
     "explanationTr": "'laten' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gelaten'dir (hebben ile kullanılır).",
@@ -1201,9 +1201,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ elke avond een hoofdstuk in bed.",
     "options": [
       "las",
-      "gelezen",
-      "lezen",
-      "Misschien later."
+      "lazen",
+      "leest",
+      "gelezen"
     ],
     "correctAnswer": "las",
     "explanationTr": "'lezen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'las' şeklindedir.",
@@ -1225,7 +1225,7 @@ export const irregularVerbs = [
       "gelezen",
       "las",
       "lezen",
-      "Misschien later."
+      "lazen"
     ],
     "correctAnswer": "gelezen",
     "explanationTr": "'lezen' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gelezen'dir (hebben ile kullanılır).",
@@ -1245,9 +1245,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ de hele middag lekker in het park.",
     "options": [
       "lag",
-      "gelegen",
-      "liggen",
-      "Misschien later."
+      "lagen",
+      "ligt",
+      "gelegen"
     ],
     "correctAnswer": "lag",
     "explanationTr": "'liggen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'lag' şeklindedir.",
@@ -1289,9 +1289,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ een uur stevig door het bos.",
     "options": [
       "liep",
-      "gelopen",
-      "lopen",
-      "Misschien later."
+      "liepen",
+      "loopt",
+      "gelopen"
     ],
     "correctAnswer": "liep",
     "explanationTr": "'lopen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'liep' şeklindedir.",
@@ -1313,7 +1313,7 @@ export const irregularVerbs = [
       "gelopen",
       "liep",
       "lopen",
-      "Misschien later."
+      "liepen"
     ],
     "correctAnswer": "gelopen",
     "explanationTr": "'lopen' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gelopen'dir (zijn ile kullanılır).",
@@ -1333,9 +1333,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ gisteren overwerken op de afdeling.",
     "options": [
       "moest",
-      "gemoeten",
-      "moeten",
-      "Misschien later."
+      "moesten",
+      "moet",
+      "gemoeten"
     ],
     "correctAnswer": "moest",
     "explanationTr": "'moeten' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'moest' şeklindedir.",
@@ -1357,7 +1357,7 @@ export const irregularVerbs = [
       "gemoeten",
       "moest",
       "moeten",
-      "Misschien later."
+      "moesten"
     ],
     "correctAnswer": "gemoeten",
     "explanationTr": "'moeten' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gemoeten'dir (hebben ile kullanılır).",
@@ -1377,9 +1377,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ vroeger van school naar huis.",
     "options": [
       "mocht",
-      "gemogen",
-      "mogen",
-      "Misschien later."
+      "mochten",
+      "mag",
+      "gemogen"
     ],
     "correctAnswer": "mocht",
     "explanationTr": "'mogen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'mocht' şeklindedir.",
@@ -1401,7 +1401,7 @@ export const irregularVerbs = [
       "gemogen",
       "mocht",
       "mogen",
-      "Misschien later."
+      "mochten"
     ],
     "correctAnswer": "gemogen",
     "explanationTr": "'mogen' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gemogen'dir (hebben ile kullanılır).",
@@ -1421,9 +1421,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ elke ochtend de trein van acht uur.",
     "options": [
       "nam",
-      "genomen",
-      "nemen",
-      "Misschien later."
+      "namen",
+      "neemt",
+      "genomen"
     ],
     "correctAnswer": "nam",
     "explanationTr": "'nemen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'nam' şeklindedir.",
@@ -1466,8 +1466,8 @@ export const irregularVerbs = [
     "options": [
       "ontbeet",
       "ontbeten",
-      "ontbijten",
-      "Misschien later."
+      "ontbijt",
+      "ontbijten"
     ],
     "correctAnswer": "ontbeet",
     "explanationTr": "'ontbijten' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'ontbeet' şeklindedir.",
@@ -1489,7 +1489,7 @@ export const irregularVerbs = [
       "ontbeten",
       "ontbeet",
       "ontbijten",
-      "geontbijten"
+      "ontbijtende"
     ],
     "correctAnswer": "ontbeten",
     "explanationTr": "'ontbijten' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'ontbeten'dir (hebben ile kullanılır).",
@@ -1509,9 +1509,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ een oude vriend op de markt.",
     "options": [
       "ontmoette",
+      "ontmoetten",
       "ontmoet",
-      "ontmoeten",
-      "Misschien later."
+      "ontmoeten"
     ],
     "correctAnswer": "ontmoette",
     "explanationTr": "'ontmoeten' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'ontmoette' şeklindedir.",
@@ -1531,9 +1531,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat heb je vanochtend gedaan?\n— Ik heb veel nieuwe buren in de straat ___.",
     "options": [
       "ontmoet",
-      "Misschien later.",
+      "ontmoette",
       "ontmoeten",
-      "geontmoeten"
+      "ontmoetende"
     ],
     "correctAnswer": "ontmoet",
     "explanationTr": "'ontmoeten' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'ontmoet'dir (hebben ile kullanılır).",
@@ -1553,9 +1553,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ vanmorgen heel vroeg om zes uur.",
     "options": [
       "stond op",
-      "opgestaan",
-      "opstaan",
-      "Misschien later."
+      "stonden op",
+      "staat op",
+      "opgestaan"
     ],
     "correctAnswer": "stond op",
     "explanationTr": "'opstaan' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'stond op' şeklindedir.",
@@ -1597,9 +1597,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ bij het groene voetgangerslicht.",
     "options": [
       "stak over",
-      "overgestoken",
-      "oversteken",
-      "belangrijk"
+      "staken over",
+      "steekt over",
+      "overgestoken"
     ],
     "correctAnswer": "stak over",
     "explanationTr": "'oversteken' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'stak over' şeklindedir.",
@@ -1641,9 +1641,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ voorzichtig over de gladde weg.",
     "options": [
       "reed",
-      "gereden",
-      "rijden",
-      "Misschien later."
+      "reden",
+      "rijdt",
+      "gereden"
     ],
     "correctAnswer": "reed",
     "explanationTr": "'rijden' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'reed' şeklindedir.",
@@ -1685,9 +1685,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ de ober voor het betalen.",
     "options": [
       "riep",
-      "geroepen",
-      "roepen",
-      "Misschien later."
+      "riepen",
+      "roept",
+      "geroepen"
     ],
     "correctAnswer": "riep",
     "explanationTr": "'roepen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'riep' şeklindedir.",
@@ -1709,7 +1709,7 @@ export const irregularVerbs = [
       "geroepen",
       "riep",
       "roepen",
-      "Misschien later."
+      "riepen"
     ],
     "correctAnswer": "geroepen",
     "explanationTr": "'roepen' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'geroepen'dir (hebben ile kullanılır).",
@@ -1729,9 +1729,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ een nette e-mail naar de docent.",
     "options": [
       "schreef",
-      "geschreven",
-      "schrijven",
-      "werken"
+      "schreven",
+      "schrijft",
+      "geschreven"
     ],
     "correctAnswer": "schreef",
     "explanationTr": "'schrijven' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'schreef' şeklindedir.",
@@ -1773,9 +1773,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ vannacht heerlijk en rustig.",
     "options": [
       "sliep",
-      "geslapen",
-      "slapen",
-      "Misschien later."
+      "sliepen",
+      "slaapt",
+      "geslapen"
     ],
     "correctAnswer": "sliep",
     "explanationTr": "'slapen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'sliep' şeklindedir.",
@@ -1797,7 +1797,7 @@ export const irregularVerbs = [
       "geslapen",
       "sliep",
       "slapen",
-      "Misschien later."
+      "sliepen"
     ],
     "correctAnswer": "geslapen",
     "explanationTr": "'slapen' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'geslapen'dir (hebben ile kullanılır).",
@@ -1817,9 +1817,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ alle ramen voor vertrek.",
     "options": [
       "sloot",
-      "gesloten",
-      "sluiten",
-      "Misschien later."
+      "sloten",
+      "sluit",
+      "gesloten"
     ],
     "correctAnswer": "sloot",
     "explanationTr": "'sluiten' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'sloot' şeklindedir.",
@@ -1861,9 +1861,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ de groenten fijn voor de maaltijd.",
     "options": [
       "sneed",
-      "gesneden",
-      "snijden",
-      "Misschien later."
+      "sneden",
+      "snijdt",
+      "gesneden"
     ],
     "correctAnswer": "sneed",
     "explanationTr": "'snijden' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'sneed' şeklindedir.",
@@ -1905,9 +1905,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ gisteren lang met de huisarts.",
     "options": [
       "sprak",
-      "gesproken",
-      "spreken",
-      "Misschien later."
+      "spraken",
+      "spreekt",
+      "gesproken"
     ],
     "correctAnswer": "sprak",
     "explanationTr": "'spreken' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'sprak' şeklindedir.",
@@ -1949,9 +1949,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ twintig minuten in de rij voor kassa.",
     "options": [
       "stond",
-      "gestaan",
-      "staan",
-      "Misschien later."
+      "stonden",
+      "staat",
+      "gestaan"
     ],
     "correctAnswer": "stond",
     "explanationTr": "'staan' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'stond' şeklindedir.",
@@ -1973,7 +1973,7 @@ export const irregularVerbs = [
       "gestaan",
       "stond",
       "staan",
-      "Misschien later."
+      "stonden"
     ],
     "correctAnswer": "gestaan",
     "explanationTr": "'staan' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gestaan'dir (hebben ile kullanılır).",
@@ -1993,9 +1993,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ per ongeluk van de gladde fiets.",
     "options": [
       "viel",
-      "gevallen",
-      "vallen",
-      "Misschien later."
+      "vielen",
+      "valt",
+      "gevallen"
     ],
     "correctAnswer": "viel",
     "explanationTr": "'vallen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'viel' şeklindedir.",
@@ -2017,7 +2017,7 @@ export const irregularVerbs = [
       "gevallen",
       "viel",
       "vallen",
-      "Misschien later."
+      "vielen"
     ],
     "correctAnswer": "gevallen",
     "explanationTr": "'vallen' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gevallen'dir (zijn ile kullanılır).",
@@ -2037,9 +2037,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ helemaal mijn sleutels mee te nemen.",
     "options": [
       "vergat",
-      "vergeten",
-      "Misschien later.",
-      "Ik heb helaas geen tijd vandaag."
+      "vergaten",
+      "vergeet",
+      "vergeten"
     ],
     "correctAnswer": "vergat",
     "explanationTr": "'vergeten' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'vergat' şeklindedir.",
@@ -2060,8 +2060,8 @@ export const irregularVerbs = [
     "options": [
       "vergeten",
       "vergat",
-      "gevergeten",
-      "Misschien later."
+      "vergetende",
+      "vergaten"
     ],
     "correctAnswer": "vergeten",
     "explanationTr": "'vergeten' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'vergeten'dir (zijn ile kullanılır).",
@@ -2082,8 +2082,8 @@ export const irregularVerbs = [
     "options": [
       "verloor",
       "verloren",
-      "verliezen",
-      "Misschien later."
+      "verliest",
+      "verliezen"
     ],
     "correctAnswer": "verloor",
     "explanationTr": "'verliezen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'verloor' şeklindedir.",
@@ -2105,7 +2105,7 @@ export const irregularVerbs = [
       "verloren",
       "verloor",
       "verliezen",
-      "geverliezen"
+      "verliezende"
     ],
     "correctAnswer": "verloren",
     "explanationTr": "'verliezen' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'verloren'dir (hebben ile kullanılır).",
@@ -2126,8 +2126,8 @@ export const irregularVerbs = [
     "options": [
       "vertrok",
       "vertrokken",
-      "vertrekken",
-      "Misschien later."
+      "vertrekt",
+      "vertrekken"
     ],
     "correctAnswer": "vertrok",
     "explanationTr": "'vertrekken' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'vertrok' şeklindedir.",
@@ -2149,7 +2149,7 @@ export const irregularVerbs = [
       "vertrokken",
       "vertrok",
       "vertrekken",
-      "gevertrekken"
+      "vertrekkende"
     ],
     "correctAnswer": "vertrokken",
     "explanationTr": "'vertrekken' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'vertrokken'dir (zijn ile kullanılır).",
@@ -2169,9 +2169,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ die Nederlandse film erg boeiend.",
     "options": [
       "vond",
-      "gevonden",
-      "vinden",
-      "Misschien later."
+      "vonden",
+      "vindt",
+      "gevonden"
     ],
     "correctAnswer": "vond",
     "explanationTr": "'vinden' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'vond' şeklindedir.",
@@ -2213,9 +2213,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ rechtstreeks naar Istanbul.",
     "options": [
       "vloog",
-      "gevlogen",
-      "vliegen",
-      "Misschien later."
+      "vlogen",
+      "vliegt",
+      "gevlogen"
     ],
     "correctAnswer": "vloog",
     "explanationTr": "'vliegen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'vloog' şeklindedir.",
@@ -2257,9 +2257,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ de weg naar het ziekenhuis.",
     "options": [
       "vroeg",
-      "gevraagd",
-      "vragen",
-      "belangrijk"
+      "vroegen",
+      "vraagt",
+      "gevraagd"
     ],
     "correctAnswer": "vroeg",
     "explanationTr": "'vragen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'vroeg' şeklindedir.",
@@ -2301,9 +2301,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ de kleren direct in de wasmachine.",
     "options": [
       "waste",
-      "gewassen",
-      "wassen",
-      "Misschien later."
+      "wasten",
+      "wast",
+      "gewassen"
     ],
     "correctAnswer": "waste",
     "explanationTr": "'wassen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'waste' şeklindedir.",
@@ -2325,7 +2325,7 @@ export const irregularVerbs = [
       "gewassen",
       "waste",
       "wassen",
-      "Misschien later."
+      "wasten"
     ],
     "correctAnswer": "gewassen",
     "explanationTr": "'wassen' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gewassen'dir (hebben ile kullanılır).",
@@ -2345,9 +2345,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ het antwoord op die vraag niet.",
     "options": [
       "wist",
-      "geweten",
-      "weten",
-      "Misschien later."
+      "wisten",
+      "weet",
+      "geweten"
     ],
     "correctAnswer": "wist",
     "explanationTr": "'weten' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'wist' şeklindedir.",
@@ -2369,7 +2369,7 @@ export const irregularVerbs = [
       "geweten",
       "wist",
       "weten",
-      "Misschien later."
+      "wisten"
     ],
     "correctAnswer": "geweten",
     "explanationTr": "'weten' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'geweten'dir (hebben ile kullanılır).",
@@ -2389,9 +2389,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ graag een kopje koffie bestellen.",
     "options": [
       "wilde",
-      "gewild",
-      "willen",
-      "Misschien later."
+      "wilden",
+      "wil",
+      "gewild"
     ],
     "correctAnswer": "wilde",
     "explanationTr": "'willen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'wilde' şeklindedir.",
@@ -2433,9 +2433,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ vorige week dertig jaar oud.",
     "options": [
       "werd",
-      "geworden",
-      "worden",
-      "Misschien later."
+      "werden",
+      "wordt",
+      "geworden"
     ],
     "correctAnswer": "werd",
     "explanationTr": "'worden' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'werd' şeklindedir.",
@@ -2457,7 +2457,7 @@ export const irregularVerbs = [
       "geworden",
       "werd",
       "worden",
-      "Misschien later."
+      "werden"
     ],
     "correctAnswer": "geworden",
     "explanationTr": "'worden' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'geworden'dir (zijn ile kullanılır).",
@@ -2477,9 +2477,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ vriendelijk 'goedemorgen' tegen de buren.",
     "options": [
       "zei",
-      "gezegd",
-      "zeggen",
-      "Misschien later."
+      "zeiden",
+      "zegt",
+      "gezegd"
     ],
     "correctAnswer": "zei",
     "explanationTr": "'zeggen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'zei' şeklindedir.",
@@ -2521,9 +2521,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ mijn docent toevallig in de supermarkt.",
     "options": [
       "zag",
-      "gezien",
-      "zien",
-      "Misschien later."
+      "zagen",
+      "ziet",
+      "gezien"
     ],
     "correctAnswer": "zag",
     "explanationTr": "'zien' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'zag' şeklindedir.",
@@ -2545,7 +2545,7 @@ export const irregularVerbs = [
       "gezien",
       "zag",
       "zien",
-      "Misschien later."
+      "zagen"
     ],
     "correctAnswer": "gezien",
     "explanationTr": "'zien' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gezien'dir (hebben ile kullanılır).",
@@ -2565,9 +2565,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ gisteren de hele dag op kantoor.",
     "options": [
       "was",
-      "geweest",
-      "zijn",
-      "Misschien later."
+      "waren",
+      "is",
+      "geweest"
     ],
     "correctAnswer": "was",
     "explanationTr": "'zijn' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'was' şeklindedir.",
@@ -2609,9 +2609,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ een vrolijk liedje voor de jarige.",
     "options": [
       "zong",
-      "gezongen",
-      "zingen",
-      "Misschien later."
+      "zongen",
+      "zingt",
+      "gezongen"
     ],
     "correctAnswer": "zong",
     "explanationTr": "'zingen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'zong' şeklindedir.",
@@ -2653,9 +2653,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ gezellig op het terras in de zon.",
     "options": [
       "zat",
-      "gezeten",
-      "zitten",
-      "Misschien later."
+      "zaten",
+      "zit",
+      "gezeten"
     ],
     "correctAnswer": "zat",
     "explanationTr": "'zitten' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'zat' şeklindedir.",
@@ -2697,9 +2697,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ overal naar de leesbril in huis.",
     "options": [
       "zocht",
-      "gezocht",
-      "zoeken",
-      "Misschien later."
+      "zochten",
+      "zoekt",
+      "gezocht"
     ],
     "correctAnswer": "zocht",
     "explanationTr": "'zoeken' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'zocht' şeklindedir.",
@@ -2741,9 +2741,9 @@ export const irregularVerbs = [
     "questionNl": "— Wat deed je gisteren?\n— Ik ___ elke zaterdagochtend in het zwembad.",
     "options": [
       "zwom",
-      "gezwommen",
-      "zwemmen",
-      "Misschien later."
+      "zwommen",
+      "zwemt",
+      "gezwommen"
     ],
     "correctAnswer": "zwom",
     "explanationTr": "'zwemmen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'zwom' şeklindedir.",

@@ -118,7 +118,7 @@ export const dialoguesReading = [
       "gaat",
       "gaa",
       "gaaen",
-      "Misschien later."
+      "gaate"
     ]
   },
   {
@@ -199,7 +199,7 @@ export const dialoguesReading = [
       "fietst",
       "fiets",
       "fietsen",
-      "Misschien later."
+      "fietste"
     ]
   },
   {
@@ -241,7 +241,7 @@ export const dialoguesReading = [
       "drinkt",
       "drink",
       "drinken",
-      "Misschien later."
+      "drinkte"
     ]
   },
   {
@@ -282,7 +282,7 @@ export const dialoguesReading = [
       "woont",
       "woon",
       "woonen",
-      "Misschien later."
+      "woonte"
     ]
   },
   {
@@ -318,7 +318,7 @@ export const dialoguesReading = [
       "moet",
       "moeten",
       "moetst",
-      "Misschien later."
+      "moete"
     ],
     "correctAnswer": "moet",
     "explanationTr": "Bart (hij) için 'moeten' modal fiilinin çekimi 'moet' şeklindedir.",
@@ -402,7 +402,7 @@ export const dialoguesReading = [
       "hobby's",
       "boeken",
       "broertje",
-      "Misschien later."
+      "hobby'ste"
     ],
     "correctAnswer": "broertje",
     "explanationTr": "'-tje' küçültme ekidir. 'broertje' küçük erkek kardeş demektir.",
@@ -417,17 +417,17 @@ export const dialoguesReading = [
       "reading_comprehension",
       "articles_plurals"
     ],
-    "questionNl": "Lees de tekst: 'Ik heb veel hobby'\n\nLees de tekst: 'Ik heb veel hobby's. Ik lees boeken, ik kijk films en ik eet graag kiwi's. Mijn broertje houdt van auto's.' Wat is het enkelvoud van 'kiwi's'?",
+    "questionNl": "Lees de tekst: 'Ik heb veel hobby\\'s. Ik lees boeken, ik kijk films en ik eet graag kiwi\\'s. Mijn broertje houdt van auto\\'s.'\\n\\nWat is het enkelvoud van 'kiwi\\'s'?",
     "correctAnswer": "kiwi",
     "explanationTr": "Çoğul eki olan -'s atıldığında geriye tekil olan 'kiwi' kelimesi kalır.",
     "explanationEn": "Removing the plural suffix -'s leaves the singular word 'kiwi'.",
     "difficulty": 2,
-    "quality": 2,
+    "quality": 1,
     "options": [
       "kiwi",
-      "niet kiwi",
-      "geen kiwi",
-      "wel kiwi"
+      "kiwis",
+      "kiwie",
+      "kiwien"
     ]
   },
   {
@@ -462,7 +462,7 @@ export const dialoguesReading = [
     "explanationTr": "'Steden' kelimesi 'stad' (şehir) kelimesinin düzensiz çoğuludur.",
     "explanationEn": "'Steden' is the irregular plural of 'stad' (city).",
     "difficulty": 2,
-    "quality": 2,
+    "quality": 1,
     "options": [
       "stad",
       "niet stad",
@@ -482,7 +482,7 @@ export const dialoguesReading = [
     "explanationTr": "'Kinderen' kelimesi 'kind' (çocuk) kelimesinin düzensiz çoğuludur.",
     "explanationEn": "'Kinderen' is the irregular plural of 'kind' (child).",
     "difficulty": 2,
-    "quality": 2,
+    "quality": 1,
     "options": [
       "kind",
       "niet kind",
@@ -502,7 +502,7 @@ export const dialoguesReading = [
     "explanationTr": "'Eieren' kelimesi 'ei' (yumurta) kelimesinin düzensiz çoğuludur.",
     "explanationEn": "'Eieren' is the irregular plural of 'ei' (egg).",
     "difficulty": 2,
-    "quality": 2,
+    "quality": 1,
     "options": [
       "ei",
       "niet ei",
@@ -542,7 +542,7 @@ export const dialoguesReading = [
       "Omdat het eindigt op een onbeklemtoonde -e",
       "Omdat het eindigt op -s",
       "Omdat het onregelmatig is",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Omdat het eindigt op een onbeklemtoonde -e",
     "explanationTr": "Kantine gibi sonu vurgusuz '-e' ile biten kelimeler, çoğul olurken '-s' eki alırlar.",
@@ -562,7 +562,7 @@ export const dialoguesReading = [
     "explanationTr": "Çoğul eki olan -'s silindiğinde tekil hal olan 'paprika' bulunur.",
     "explanationEn": "Removing the plural -'s suffix leaves the singular form 'paprika'.",
     "difficulty": 4,
-    "quality": 2,
+    "quality": 1,
     "options": [
       "paprika",
       "niet paprika",
@@ -603,7 +603,7 @@ export const dialoguesReading = [
       "'huis' is een het-woord en het is indefiniet (een)",
       "'huis' is een de-woord",
       "Omdat 'oud' een uitzondering is",
-      "Ik heb helaas geen tijd vandaag."
+      "een ruime slaapkamer"
     ],
     "correctAnswer": "'huis' is een het-woord en het is indefiniet (een)",
     "explanationTr": "Metinde geçen 'een oud huis' kuralı: het-woord + een = sıfata ek yok.",
@@ -663,7 +663,7 @@ export const dialoguesReading = [
       "Omdat 'het' definiet (bepaald) is",
       "Omdat 'water' meervoud is",
       "Omdat 'koud' onregelmatig is",
-      "Ik heb helaas geen tijd vandaag."
+      "groentesoep met stokbrood"
     ],
     "correctAnswer": "Omdat 'het' definiet (bepaald) is",
     "explanationTr": "Aynı kelime (water). Önünde artikel yoksa belirsiz (koud water). Önünde 'het' varsa belirlidir ve sıfat '-e' alır (het koude water).",
@@ -744,7 +744,7 @@ export const dialoguesReading = [
       "'budget' is een het-woord en 'geen' is indefiniet",
       "'budget' is een de-woord",
       "Het staat na het substantief",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "'budget' is een het-woord en 'geen' is indefiniet",
     "explanationTr": "Altın Kural: 'budget' het-woord'dur. 'geen' belirsiz yapar, bu yüzden sıfat ek almaz.",
@@ -784,7 +784,7 @@ export const dialoguesReading = [
       "Omdat het al op -en eindigt",
       "Omdat 'auto' een het-woord is",
       "Omdat het meervoud is",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Omdat het al op -en eindigt",
     "explanationTr": "Kendi yapısında '-en' ile biten sıfatlar (eigen, open) ekstra '-e' takısı almaz.",
@@ -824,7 +824,7 @@ export const dialoguesReading = [
       "Omdat er een modaal werkwoord ('wil') in de zin staat.",
       "Omdat het een vraag is.",
       "Omdat 'zingen' onregelmatig is.",
-      "Ik heb helaas geen tijd vandaag."
+      "een ruime slaapkamer"
     ],
     "correctAnswer": "Omdat er een modaal werkwoord ('wil') in de zin staat.",
     "explanationTr": "Cümlede kipli (modal) fiil varsa, asıl fiil (zingen) cümlenin en sonuna gider.",
@@ -849,7 +849,7 @@ export const dialoguesReading = [
       "moet",
       "moe",
       "moeen",
-      "Misschien later."
+      "moete"
     ]
   },
   {
@@ -904,7 +904,7 @@ export const dialoguesReading = [
       "Omdat het de beleefde vorm (kibar form) is met 'u'",
       "Omdat het meervoud is",
       "Omdat het een vraag is",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Omdat het de beleefde vorm (kibar form) is met 'u'",
     "explanationTr": "'u' (siz) hitabıyla resmi/kibar emir verilirken 'stam + t' (Gaat u) kullanılır.",
@@ -944,7 +944,7 @@ export const dialoguesReading = [
       "Een voorstel (Öneri / Teklif)",
       "Een waarschijnlijkheid (Olasılık)",
       "Een belofte (Söz)",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Een voorstel (Öneri / Teklif)",
     "explanationTr": "'Zal ik...' (Yapayım mı?) yapısı, birine bir şey teklif ederken (voorstel) kullanılır.",
@@ -1025,7 +1025,7 @@ export const dialoguesReading = [
       "Ik",
       "Jan",
       "Marie",
-      "Misschien later."
+      "Niemand"
     ],
     "correctAnswer": "Marie",
     "explanationTr": "Metinde açıkça 'De fiets van Marie is het oudst' (En eski bisiklet Marie'nin) yazmaktadır.",
@@ -1105,7 +1105,7 @@ export const dialoguesReading = [
       "Ja, ze is jonger",
       "Nee, ze is ouder",
       "Nee, ze is even oud als Thomas",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Nee, ze is even oud als Thomas",
     "explanationTr": "Metinde 'Zij is even oud als Thomas' (O Thomas ile aynı yaşta) yazmaktadır. Eşitlik durumu vardır.",
@@ -1145,7 +1145,7 @@ export const dialoguesReading = [
       "Omdat 'student' een de-woord is.",
       "Omdat het superlatief voor een substantief staat.",
       "Omdat het meervoud is.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Omdat het superlatief voor een substantief staat.",
     "explanationTr": "Superlatief bir ismin önüne geldiğinde her zaman '-e' takısı alır. (de oudst + e = de oudste).",
@@ -1226,7 +1226,7 @@ export const dialoguesReading = [
       "Omdat chocolademelk vrouwelijk is.",
       "Omdat het woord 'vinden' een uitzondering is en geen 'het' krijgt voor een superlatief.",
       "Omdat het in de verleden tijd staat.",
-      "Ik heb helaas geen tijd vandaag."
+      "groentesoep met stokbrood"
     ],
     "correctAnswer": "Omdat het woord 'vinden' een uitzondering is en geen 'het' krijgt voor een superlatief.",
     "explanationTr": "'Vinden' fiili kullanıldığında, kendisinden sonra gelen superlatief kelimesi (lekkerst) 'het' artikeli almaz. Bu bir istisnadır.",
@@ -1287,7 +1287,7 @@ export const dialoguesReading = [
       "Omdat 'restaurant' een het-woord is, en er staat 'een' voor.",
       "Omdat 'groter' onregelmatig is.",
       "Omdat het een comparatief is.",
-      "Ik heb helaas geen tijd vandaag."
+      "groentesoep met stokbrood"
     ],
     "correctAnswer": "Omdat 'restaurant' een het-woord is, en er staat 'een' voor.",
     "explanationTr": "Altın Sıfat Kuralı: 'Restaurant' bir het-woord'dur ve önünde belirsiz artikel 'een' vardır. Bu durumda sıfat (comparatief de olsa) '-e' takısı almaz.",
@@ -1307,7 +1307,7 @@ export const dialoguesReading = [
       "Omdat 'auto' een de-woord is.",
       "Omdat 'auto' een het-woord is.",
       "Omdat het meervoud is.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Omdat 'auto' een de-woord is.",
     "explanationTr": "'Auto' bir de-woord'dur. De-woorden nesne durumundayken 'hem' ile işaret edilir.",
@@ -1332,7 +1332,7 @@ export const dialoguesReading = [
       "niet",
       "nie",
       "nieen",
-      "Misschien later."
+      "niete"
     ]
   },
   {
@@ -1347,7 +1347,7 @@ export const dialoguesReading = [
       "Om iets of iemand te presenteren gebruiken we altijd 'dit' of 'dat'.",
       "Omdat 'auto' een uitzondering is.",
       "Omdat het woord 'nieuwe' er staat.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Om iets of iemand te presenteren gebruiken we altijd 'dit' of 'dat'.",
     "explanationTr": "Sunum (presenteren) yaparken nesnenin de/het veya çoğul olmasına bakılmaksızın daima 'Dit is/zijn' veya 'Dat is/zijn' kalıbı kullanılır.",
@@ -1367,7 +1367,7 @@ export const dialoguesReading = [
       "Tom en Emma",
       "De bioscoop",
       "De film",
-      "Misschien later."
+      "appelsap"
     ],
     "correctAnswer": "Tom en Emma",
     "explanationTr": "Bağımsız işaret zamiri 'Die' burada kendinden önceki cümlede sorulan kişileri (Tom ve Emma) işaret etmektedir.",
@@ -1430,7 +1430,7 @@ export const dialoguesReading = [
       "Omdat het een beschrijving (tasvir) is van het verleden.",
       "Omdat het een afgesloten actie is.",
       "Omdat 'zijn' onregelmatig is.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Omdat het een beschrijving (tasvir) is van het verleden.",
     "explanationTr": "'Hava güzeldi' cümlesi geçmişteki bir durumu/ortamı tasvir ettiği (beschrijving) için Imperfectum (was) kullanılır.",
@@ -1456,7 +1456,7 @@ export const dialoguesReading = [
       "ontmoet",
       "ontmoe",
       "ontmoeen",
-      "Misschien later."
+      "ontmoete"
     ]
   },
   {
@@ -1472,7 +1472,7 @@ export const dialoguesReading = [
       "drinken",
       "dronken",
       "drink",
-      "Misschien later."
+      "drinkt"
     ],
     "correctAnswer": "drinken",
     "explanationTr": "Diyalogdaki 'We dronken' (İçtik), düzensiz 'drinken' fiilinin çoğul hikaye geçmiş zaman halidir.",
@@ -1538,7 +1538,7 @@ export const dialoguesReading = [
       "Omdat de letter 'l' niet in soft ketchup zit.",
       "Omdat het een onregelmatig werkwoord is.",
       "Omdat het meervoud is.",
-      "Ik heb helaas geen tijd vandaag."
+      "een ruime slaapkamer"
     ],
     "correctAnswer": "Omdat de letter 'l' niet in soft ketchup zit.",
     "explanationTr": "'speel' kökünün son harfi olan 'l', soft ketchup ünsüzlerinden biri olmadığı için '+de' alır.",
@@ -1560,7 +1560,7 @@ export const dialoguesReading = [
       "Omdat er richting is (naar het bos).",
       "Omdat 'fietsen' altijd met 'zijn' is.",
       "Omdat het meervoud is.",
-      "Ik heb helaas geen tijd vandaag."
+      "een ruime slaapkamer"
     ],
     "correctAnswer": "Omdat er richting is (naar het bos).",
     "explanationTr": "Cümlede 'naar het bos' (ormana doğru) diyerek YÖN belirtildiği için 'zijn' kullanılmıştır.",
@@ -1587,7 +1587,7 @@ export const dialoguesReading = [
       "ontdekt",
       "ontdek",
       "ontdeken",
-      "Misschien later."
+      "ontdekte"
     ]
   },
   {
@@ -1624,7 +1624,7 @@ export const dialoguesReading = [
       "opstaan",
       "staan op",
       "opgestaan",
-      "Misschien later."
+      "appelsap"
     ],
     "correctAnswer": "opstaan",
     "explanationTr": "Metinde geçen 'sta ... op' ayrılabilen fiilinin mastar hali 'opstaan'dır (kalkmak).",
@@ -1646,7 +1646,7 @@ export const dialoguesReading = [
       "Omdat er een modaal werkwoord ('moet') in de zin staat.",
       "Omdat het in de toekomst is.",
       "Omdat het de laatste zin is.",
-      "Ik heb helaas geen tijd vandaag."
+      "groentesoep met stokbrood"
     ],
     "correctAnswer": "Omdat er een modaal werkwoord ('moet') in de zin staat.",
     "explanationTr": "Cümlede 'moet' modal fiili olduğu için ayrılabilen fiil ayrılmaz ve mastar halinde cümlenin sonuna gider.",
@@ -1749,7 +1749,7 @@ export const dialoguesReading = [
       "Omdat de actie wederkerig (reciprocal/karşılıklı) is.",
       "Omdat 'helpen' geen reflexief werkwoord is.",
       "Beide antwoorden zijn correct.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Beide antwoorden zijn correct.",
     "explanationTr": "Hem 'helpen' fiili dönüşlü (reflexive) değildir, hem de eylem karşılıklı yapıldığı için (birbirimize yardım ediyoruz) 'elkaar' kullanılmalıdır.",
@@ -1833,7 +1833,7 @@ export const dialoguesReading = [
       "Hij gaat een feest organiseren",
       "Hij gaat op vakantie",
       "Hij gaat verhuizen",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Hij gaat een feest organiseren",
     "explanationTr": "Metinde 'Ik ga een groot feest voor haar organiseren' (Onun için büyük bir parti organize edeceğim) yazıyor.",
@@ -1854,7 +1854,7 @@ export const dialoguesReading = [
       "Een belofte (Söz vermek)",
       "Een waarschijnlijkheid (Olasılık)",
       "Een gewoonte (Alışkanlık)",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Een belofte (Söz vermek)",
     "explanationTr": "'Alışverişi ben yapacağım' diyerek kız arkadaşına veya okuyucuya bir nevi söz vermektedir (belofte).",
@@ -1875,7 +1875,7 @@ export const dialoguesReading = [
       "Het is heel waarschijnlijk (olası) dat ze blij is.",
       "Ik beloof dat ze blij is.",
       "Ze was gisteren blij.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Het is heel waarschijnlijk (olası) dat ze blij is.",
     "explanationTr": "'zal wel' yapısı, güçlü bir ihtimal/tahmin (waarschijnlijkheid) belirtir: 'Kesin çok mutlu olacak!'.",
@@ -1917,7 +1917,7 @@ export const dialoguesReading = [
       "Omdat 'gaan' als hulpwerkwoord wordt gebruikt.",
       "Omdat het in de verleden tijd staat.",
       "Omdat het een bijzin is.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Omdat 'gaan' als hulpwerkwoord wordt gebruikt.",
     "explanationTr": "'Gaan' yardımcı fiil olarak kullanıldığında asıl eylem her zaman cümlenin sonuna gider.",
@@ -1938,7 +1938,7 @@ export const dialoguesReading = [
       "Morgen komt hij wel naar kantoor.",
       "De directeur is ziek vandaag.",
       "Ik denk dat het een lange vergadering zal worden.",
-      "Ik heb helaas geen tijd vandaag."
+      "drie keer per dag een tabletje innemen"
     ],
     "correctAnswer": "Morgen komt hij wel naar kantoor.",
     "explanationTr": "'Morgen' (Yarın) kelimesi ile gelecek belirtilirken 'komt' (şimdiki zaman) fiili kullanılmıştır.",
@@ -1980,7 +1980,7 @@ export const dialoguesReading = [
       "Een voorstel (Öneri / Teklif)",
       "Een waarschijnlijkheid (Olasılık)",
       "Een belofte (Söz)",
-      "Ik heb helaas geen tijd vandaag."
+      "drie keer per dag een tabletje innemen"
     ],
     "correctAnswer": "Een voorstel (Öneri / Teklif)",
     "explanationTr": "'Zullen we...?' (Yapalım mı?) kalıbı her zaman birisine teklif veya öneri sunarken kullanılır.",
@@ -2001,7 +2001,7 @@ export const dialoguesReading = [
       "Omdat 'zal' (zullen) het andere werkwoord naar het einde van de zin stuurt.",
       "Omdat het woord 'denk' in de zin staat.",
       "Omdat het een vraag is.",
-      "Ik heb helaas geen tijd vandaag."
+      "drie keer per dag een tabletje innemen"
     ],
     "correctAnswer": "Omdat 'zal' (zullen) het andere werkwoord naar het einde van de zin stuurt.",
     "explanationTr": "'Zal' yardımcı fiil olduğu için asıl fiil olan 'worden'i cümlenin sonuna itmiştir.",
@@ -2027,7 +2027,7 @@ export const dialoguesReading = [
       "komt",
       "kom",
       "komen",
-      "Misschien later."
+      "komte"
     ]
   },
   {
@@ -2062,7 +2062,7 @@ export const dialoguesReading = [
       "Lotte's huis",
       "De stad",
       "Het feest",
-      "Misschien later."
+      "vragen"
     ],
     "correctAnswer": "De stad",
     "explanationTr": "'Daar' (Orada), bir önceki cümlede bahsedilen 'de stad' (şehir) lokasyonuna vurgu yapmaktadır.",
@@ -2103,7 +2103,7 @@ export const dialoguesReading = [
       "Hij is aan het wachten.",
       "Hij is zich aan het klaarmaken.",
       "Hij is op het feest.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Hij is aan het wachten.",
     "explanationTr": "Metnin son cümlesi 'Mijn vriend is al aan het wachten' (Erkek arkadaşım zaten bekliyor) diyor.",
@@ -2123,7 +2123,7 @@ export const dialoguesReading = [
       "Omdat 'veel mensen' indefiniet is en er geen extra nadruk op de plaats is in deze nieuwe zin.",
       "Omdat het meervoud is.",
       "Omdat 'Er' altijd na 'restaurant' komt.",
-      "Ik heb helaas geen tijd vandaag."
+      "groentesoep met stokbrood"
     ],
     "correctAnswer": "Omdat 'veel mensen' indefiniet is en er geen extra nadruk op de plaats is in deze nieuwe zin.",
     "explanationTr": "Buradaki odak 'çok insanın çalışmasıdır' (belirsiz özne), mekanın kendisine özel bir vurgu yapmaya gerek duyulmamıştır.",
@@ -2143,13 +2143,13 @@ export const dialoguesReading = [
       "In de straat",
       "In het nieuwe restaurant",
       "Pizza",
-      "Misschien later."
+      "groentesoep met stokbrood"
     ],
     "correctAnswer": "In het nieuwe restaurant",
     "explanationTr": "'Daar' (Orada) kelimesi bahsedilen yeni restoranı işaret etmektedir.",
     "explanationEn": "The word 'Daar' (There) points back to the new restaurant mentioned.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_read_ercont_047",
@@ -2163,7 +2163,7 @@ export const dialoguesReading = [
       "Het geeft een gewoonte (alışkanlık) aan.",
       "Het geeft aan dat de actie NU (op dit moment) bezig is.",
       "Het is verleden tijd.",
-      "Ik heb helaas geen tijd vandaag."
+      "groentesoep met stokbrood"
     ],
     "correctAnswer": "Het geeft aan dat de actie NU (op dit moment) bezig is.",
     "explanationTr": "'aan het' kalıbı eylemin TAM OLARAK ŞU ANDA gerçekleştiğini gösterir. (Şu an pizza yiyoruz).",
@@ -2209,7 +2209,7 @@ export const dialoguesReading = [
       "Ligt",
       "lig",
       "ligen",
-      "Misschien later."
+      "Ligte"
     ]
   },
   {
@@ -2244,7 +2244,7 @@ export const dialoguesReading = [
       "Om een contrast / zıtlık te tonen tussen de wens en de realiteit.",
       "Om een reden te geven.",
       "Om een keuze te presenteren.",
-      "Ik heb helaas geen tijd vandaag."
+      "een donkerblauwe wollen trui"
     ],
     "correctAnswer": "Om een contrast / zıtlık te tonen tussen de wens en de realiteit.",
     "explanationTr": "İtalya'ya gitmek istemesi ile yeterli paraya sahip olmaması arasında bir zıtlık vardır; bu yüzden 'maar' kullanılır.",
@@ -2284,7 +2284,7 @@ export const dialoguesReading = [
       "De motor",
       "De broer",
       "De auto",
-      "Misschien later."
+      "vragen"
     ],
     "correctAnswer": "De motor",
     "explanationTr": "Bağımsız işaret zamiri 'Die', bir önceki cümlede geçen tekil de-woord olan 'de motor' kelimesine atıfta bulunur.",
@@ -2324,7 +2324,7 @@ export const dialoguesReading = [
       "Om de autosleutels te presenteren / introduceren.",
       "Omdat sleutels een de-woord zijn.",
       "Omdat het in de verleden tijd staat.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Om de autosleutels te presenteren / introduceren.",
     "explanationTr": "Anahtarları sunmak/tanıtmak (presenteren) amacıyla 'Dit zijn' kalıbı kullanılmıştır (Çoğul olmalarına rağmen).",
@@ -2344,7 +2344,7 @@ export const dialoguesReading = [
       "Tom bleef thuis.",
       "Tom ging naar de wedstrijd.",
       "Tom ging in de regen voetballen.",
-      "Ik heb helaas geen tijd vandaag."
+      "een ruime slaapkamer"
     ],
     "correctAnswer": "Tom bleef thuis.",
     "explanationTr": "Yağmurun başlaması ve evde kalması 'dus' (bu yüzden) bağlacıyla birbirine bağlanan bir sonuçtur.",
@@ -2404,7 +2404,7 @@ export const dialoguesReading = [
       "Omdat vogels meervoud zijn en we hier een presentatie/introductie doen.",
       "Omdat vogels het-woorden zijn.",
       "Omdat het in de verleden tijd staat.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Omdat vogels meervoud zijn en we hier een presentatie/introductie doen.",
     "explanationEn": "Because birds are plural and we are doing a presentation/introduction here.",
@@ -2443,7 +2443,7 @@ export const dialoguesReading = [
       "'Want' geeft een reden, 'maar' geeft een tegenstelling (zıtlık) aan.",
       "'Want' geeft een gevolg, 'maar' geeft een keuze.",
       "Er is geen verschil.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "'Want' geeft een reden, 'maar' geeft een tegenstelling (zıtlık) aan.",
     "explanationTr": "'Want' sebep bildirirken, 'maar' iki durum arasındaki zıtlığı vurgular.",
@@ -2483,7 +2483,7 @@ export const dialoguesReading = [
       "Omdat 'schoenen' meervoud is (en meervoud is altijd de-woord).",
       "Omdat 'schoenen' een het-woord is.",
       "Omdat het om personen gaat.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Omdat 'schoenen' meervoud is (en meervoud is altijd de-woord).",
     "explanationEn": "Because 'schoenen' is plural (and plurals are always de-words).",
@@ -2522,7 +2522,7 @@ export const dialoguesReading = [
       "Omdat het regent.",
       "Omdat de kat slaapt.",
       "Omdat de zon schijnt.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Omdat het regent.",
     "explanationTr": "Metnin ilk cümlesinde 'Omdat het vandaag regent, blijf ik lekker binnen' yazmaktadır.",
@@ -2543,7 +2543,7 @@ export const dialoguesReading = [
       "Omdat de zin begint met een bijzin (Omdat het vandaag regent).",
       "Omdat het een vraag is.",
       "Omdat er 'want' wordt gebruikt.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Omdat de zin begint met een bijzin (Omdat het vandaag regent).",
     "explanationTr": "Yan cümle ('Omdat...') ile başlayan cümlelerde ana cümlede her zaman inversie (devrik yapı) olur.",
@@ -2568,7 +2568,7 @@ export const dialoguesReading = [
       "slaapt",
       "slaap",
       "slaapen",
-      "Misschien later."
+      "slaapte"
     ]
   },
   {
@@ -2624,7 +2624,7 @@ export const dialoguesReading = [
       "Omdat hij zijn examen heeft gehaald.",
       "Omdat hij naar het feestje gaat.",
       "Omdat hij vroeg moet opstaan.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Omdat hij zijn examen heeft gehaald.",
     "explanationTr": "Metinde 'want hij heeft zijn examen gehaald' diyerek mutluluğunun sebebi açıklanmıştır.",
@@ -2670,7 +2670,7 @@ export const dialoguesReading = [
     "explanationTr": "'Hoewel' kelimesi 'rağmen' (although) anlamı katmaktadır.",
     "explanationEn": "'Hoewel' adds the meaning of 'although'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 1
   },
   {
     "id": "q_read_bijz_044",
@@ -2706,7 +2706,7 @@ export const dialoguesReading = [
       "Het werkwoord verschuift naar het einde van het zinsdeel.",
       "Het werkwoord blijft op de tweede plaats.",
       "Het werkwoord verdwijnt helemaal.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Het werkwoord verschuift naar het einde van het zinsdeel.",
     "explanationTr": "'want' ana cümle bağlar (fiil ortada kalır), 'omdat' yan cümle bağlar (fiil sona gider).",
@@ -2747,7 +2747,7 @@ export const dialoguesReading = [
       "Omdat de zin begint met een bijzin.",
       "Omdat het een vraag is.",
       "Omdat er 'want' staat.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Omdat de zin begint met een bijzin.",
     "explanationTr": "Cümlenin ilk kısmı yan cümle olduğu için ana cümle devriktir (drink ik).",
@@ -2827,7 +2827,7 @@ export const dialoguesReading = [
       "Mark",
       "De broer van Sarah",
       "Ik",
-      "Misschien later."
+      "vragen"
     ],
     "correctAnswer": "Mark",
     "explanationTr": "Metinde 'hem' kelimesi Mark'ı (eril nesne - hem) temsil etmektedir.",
@@ -2867,7 +2867,7 @@ export const dialoguesReading = [
       "Mark en zijn vrouw Sarah",
       "De broer",
       "Ik",
-      "Misschien later."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Mark en zijn vrouw Sarah",
     "explanationTr": "'hen' burada çoğul/çift olan Mark ve Sarah'yı (onları/onlarda) belirtmektedir.",
@@ -2907,7 +2907,7 @@ export const dialoguesReading = [
       "Omdat 'tuin' een de-woord is.",
       "Omdat 'tuin' meervoud is.",
       "Omdat het in de verleden tijd staat.",
-      "Ik heb helaas geen tijd vandaag."
+      "een ruime slaapkamer"
     ],
     "correctAnswer": "Omdat 'tuin' een de-woord is.",
     "explanationTr": "'tuin' bir de-woord olduğu için 'onze' kullanılır.",
@@ -2987,7 +2987,7 @@ export const dialoguesReading = [
       "Omdat 'zich' het reflexieve pronomen is bij 'hij'.",
       "Omdat 'hij' een object is.",
       "Omdat het meervoud is.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Omdat 'zich' het reflexieve pronomen is bij 'hij'.",
     "explanationTr": "'hij' öznesi dönüştü eylemde 'zich' zamirini gerektirir.",
@@ -3107,7 +3107,7 @@ export const dialoguesReading = [
       "Possessief pronomen (İyelik)",
       "Objectvorm (Nesne)",
       "Reflexief pronomen (Dönüşlü)",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Possessief pronomen (İyelik)",
     "explanationTr": "Bu kelimeler kime ait olduğunu gösteren 'possessief pronomen' (iyelik zamirleri) sütununda yer alır.",

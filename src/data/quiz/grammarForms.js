@@ -36,7 +36,7 @@ export const grammarForms = [
     "options": [
       "lekkere",
       "lekker",
-      "Misschien later.",
+      "om vier uur",
       "lekkers"
     ]
   },
@@ -492,7 +492,7 @@ export const grammarForms = [
       "Omdat het op -em eindigt",
       "Omdat het op een klinker eindigt",
       "Omdat het onregelmatig is",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Omdat het op -em eindigt",
     "explanationTr": "Sonu '-em' ile biten çok heceli kelimeler '-s' eki alarak çoğul olur.",
@@ -816,7 +816,7 @@ export const grammarForms = [
       "lekker",
       "lekkere",
       "lekkerste",
-      "Misschien later."
+      "appelsap"
     ],
     "correctAnswer": "lekkere",
     "explanationTr": "'Pizza' de-woord'dur. Bu yüzden sıfat her zaman '-e' takısı alır.",
@@ -973,7 +973,7 @@ export const grammarForms = [
       "groot",
       "grote",
       "groten",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "grote",
     "explanationTr": "Çoğul ('huizen') olduğu için artikel olmasa da sıfat '-e' alır (grote).",
@@ -1030,7 +1030,7 @@ export const grammarForms = [
       "goed",
       "goede",
       "goeden",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "goede",
     "explanationTr": "'Ideeën' çoğuldur. Sıfat '-e' alır.",
@@ -1111,7 +1111,7 @@ export const grammarForms = [
       "koud",
       "koude",
       "kouds",
-      "Misschien later."
+      "appelsap"
     ]
   },
   {
@@ -1130,7 +1130,7 @@ export const grammarForms = [
       "aardig",
       "aardige",
       "aardigs",
-      "Misschien later."
+      "om vier uur"
     ]
   },
   {
@@ -1150,7 +1150,7 @@ export const grammarForms = [
       "klein",
       "kleine",
       "kleins",
-      "Misschien later."
+      "om vier uur"
     ]
   },
   {
@@ -1164,7 +1164,7 @@ export const grammarForms = [
       "goed",
       "goede",
       "goeden",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "goed",
     "explanationTr": "Sıfat (goed) isimden (Dat idee) sonra gelmektedir.",
@@ -1202,7 +1202,7 @@ export const grammarForms = [
       "katoen",
       "katoene",
       "katoenen",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "katoenen",
     "explanationTr": "Materyal bildiren sıfatlar (pamuklu) '-en' eki ile kullanılır.",
@@ -1302,7 +1302,7 @@ export const grammarForms = [
       "Gaat",
       "Gaa",
       "Gaaen",
-      "Misschien later."
+      "om vier uur"
     ]
   },
   {
@@ -1416,7 +1416,7 @@ export const grammarForms = [
       "Wacht",
       "Wach",
       "Wachen",
-      "Misschien later."
+      "om vier uur"
     ]
   },
   {
@@ -1471,7 +1471,7 @@ export const grammarForms = [
       "moet",
       "hoeft",
       "hoeft niet",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "hoeft",
     "explanationTr": "'Moeten' (zorunda olmak) sorusunun OLUMSUZU 'hoeven niet te' (gerek yok) yapısıdır.",
@@ -2106,7 +2106,7 @@ export const grammarForms = [
     "options": [
       "lekkerste",
       "lekker",
-      "Misschien later.",
+      "om vier uur",
       "lekkerere"
     ]
   },
@@ -2276,7 +2276,7 @@ export const grammarForms = [
       "Dit of Dat",
       "Deze of Die",
       "Hij of Zij",
-      "Misschien later."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Dit of Dat",
     "explanationTr": "Sunum/tanıtım (presenteren) cümleleri her zaman 'Dit is/zijn' veya 'Dat is/zijn' ile başlar.",
@@ -2436,7 +2436,7 @@ export const grammarForms = [
       "moet",
       "moe",
       "moeen",
-      "Misschien later."
+      "om vier uur"
     ]
   },
   {
@@ -2456,7 +2456,7 @@ export const grammarForms = [
       "Moet",
       "Moe",
       "Moeen",
-      "Misschien later."
+      "om vier uur"
     ]
   },
   {
@@ -2471,7 +2471,7 @@ export const grammarForms = [
     "explanationTr": "'Zal' (gelecek zaman/teklif) fiili asıl eylemi sona mastar halinde atar. Ayrılabilen fiiller bu durumda ayrılmaz.",
     "explanationEn": "The verb 'Zal' pushes the main action to the end as an infinitive. Separable verbs do not split in this case.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "uitnodigen",
       "uitnodigt",
@@ -2491,7 +2491,7 @@ export const grammarForms = [
     "explanationTr": "'Kan' (kunnen) modal fiili sebebiyle 'dichtdoen' ayrılmadan sona gider.",
     "explanationEn": "Because of the modal verb 'Kan' (kunnen), 'dichtdoen' goes to the end without splitting.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "dichtdoen",
       "dichtdo",
@@ -2593,7 +2593,7 @@ export const grammarForms = [
       "Die",
       "Dat",
       "Dit",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "Die",
     "explanationTr": "Bağımsız işaret zamiri: 'Kaas' bir de-woord'dur (de kaas). Tekil bir de-woord ismin yerine geçerken 'Die' kullanılır.",
@@ -2632,7 +2632,7 @@ export const grammarForms = [
       "Die",
       "Dat",
       "Deze",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "Dat",
     "explanationTr": "Bağımsız işaret zamiri: 'Naardermeer' bir het-woord'dur (het meer). Tekil het-woord yerine 'Dat' kullanılır.",
@@ -2670,7 +2670,7 @@ export const grammarForms = [
       "dat",
       "die",
       "dit",
-      "Misschien later."
+      "badkamer"
     ],
     "correctAnswer": "dat",
     "explanationTr": "Bütün bir eyleme veya cümleye ('ev ödevi yapma' eylemi) bağımsız olarak atıfta bulunurken 'dat' kullanılır.",
@@ -2708,7 +2708,7 @@ export const grammarForms = [
       "Dit",
       "Deze",
       "Die",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "Dit",
     "explanationTr": "SUNUM YAPMAK (Presenteren): Birini veya bir şeyi tanıtırken / sunarken daima 'Dit is' veya 'Dat is' kullanılır.",
@@ -2747,7 +2747,7 @@ export const grammarForms = [
       "Dat",
       "Die",
       "Deze",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "Dat",
     "explanationTr": "Bir kitabı sunarken/işaret ederken uzakta/genel bağlamdaysa 'Dat is' kullanılır.",
@@ -2785,7 +2785,7 @@ export const grammarForms = [
       "Dit is / Dat is (of meervoud zijn)",
       "Deze is / Die is",
       "Hij is / Zij is",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Dit is / Dat is (of meervoud zijn)",
     "explanationTr": "Tanıtım ve sunumlarda (presenteren) 'Dit is/zijn' veya 'Dat is/zijn' standart kalıptır.",
@@ -2824,7 +2824,7 @@ export const grammarForms = [
       "Die",
       "Dat",
       "Dit",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "Die",
     "explanationTr": "'Pen' bir de-woord'dur (de pen). Tekil de-woord yerine bağımsız zamir olarak 'Die' kullanılır.",
@@ -2881,7 +2881,7 @@ export const grammarForms = [
       "Die",
       "Dat",
       "Dit",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "Die",
     "explanationTr": "'auto's' çoğul olduğu için bağımsız zamir 'Die' olur.",
@@ -2939,7 +2939,7 @@ export const grammarForms = [
       "mij / me",
       "mijn",
       "me",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "mij / me",
     "explanationTr": "'ik' (ben) zamirinin nesne durumu (beni/bana) 'mij' veya 'me'dir.",
@@ -2959,7 +2959,7 @@ export const grammarForms = [
       "jouw / je",
       "jou",
       "jij",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "jouw / je",
     "explanationTr": "'jij / je' (sen) için iyelik zamiri (senin) 'jouw' veya 'je'dir.",
@@ -3162,7 +3162,7 @@ export const grammarForms = [
       "zich, u",
       "me, je",
       "ons",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "zich, u",
     "explanationTr": "'u' zamiri için hem 'zich' hem de 'u' dönüşlü zamir olarak kullanılabilir.",
@@ -3229,7 +3229,7 @@ export const grammarForms = [
       "regent",
       "regen",
       "regenen",
-      "Misschien later."
+      "om vier uur"
     ]
   },
   {
@@ -3286,7 +3286,7 @@ export const grammarForms = [
       "mijn",
       "ik",
       "me",
-      "Misschien later."
+      "om vier uur"
     ],
     "correctAnswer": "mijn",
     "explanationTr": "'ik' (ben) öznesinin iyelik zamiri (possessief pronomen) 'mijn' (benim) kelimesidir.",
@@ -3407,7 +3407,7 @@ export const grammarForms = [
       "-je, -pje, -tje",
       "-en, -s, -'s",
       "-er, -st, -der",
-      "Misschien later."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "-je, -pje, -tje",
     "explanationTr": "Küçültme sözcükleri ismin sonuna genellikle -je, -pje of -tje eklenerek yapılır.",
@@ -3448,7 +3448,7 @@ export const grammarForms = [
       "Je voegt altijd een -s toe (bijv. rondjes).",
       "Je voegt altijd -en toe (bijv. rondjeen).",
       "Je gebruikt een apostrof-'s (bijv. rondje's).",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Je voegt altijd een -s toe (bijv. rondjes).",
     "explanationTr": "Tüm küçültme kelimeleri (diminutief) çoğul yapıldığında sonuna '-s' alır.",
@@ -3468,7 +3468,7 @@ export const grammarForms = [
       "-en (bijv. boeken)",
       "-s (bijv. boeks)",
       "-'s (bijv. boek's)",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "-en (bijv. boeken)",
     "explanationTr": "Hollandaca kelimelerin büyük bir çoğunluğu çoğul yapılırken '-en' takısı alır.",
@@ -3488,7 +3488,7 @@ export const grammarForms = [
       "Meestal bij buitenlandse woorden, en woorden eindigend op onbeklemtoonde -el, -em, -en, -er, -je, -e.",
       "Altijd als het woord één lettergreep heeft.",
       "Nooit, alle woorden krijgen -en.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Meestal bij buitenlandse woorden, en woorden eindigend op onbeklemtoonde -el, -em, -en, -er, -je, -e.",
     "explanationTr": "Yabancı kökenli kelimeler en -el, -em, -en, -er, -je, -e ile biten kelimeler çoğulda genellikle '-s' takısı alır.",
@@ -3508,7 +3508,7 @@ export const grammarForms = [
       "Wanneer het eindigt op de lange klinkers -a, -i, -o, -u of -y (bijv. paprika's, auto's).",
       "Wanneer het een diminutief is.",
       "Wanneer het een Nederlands woord is met één syllabe.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Wanneer het eindigt op de lange klinkers -a, -i, -o, -u of -y (bijv. paprika's, auto's).",
     "explanationTr": "Uzun ünlü harflerden -a, -i, -o, -u veya -y ile biten kelimeler çoğul yapılırken telaffuzun bozulmaması için kesme işareti en s (-'s) alır.",
@@ -3528,7 +3528,7 @@ export const grammarForms = [
       "Bij een het-woord met het onbepaalde lidwoord 'een' (of zonder lidwoord).",
       "Bij een de-woord in het meervoud.",
       "Bij een de-woord met het bepaalde lidwoord 'de'.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Bij een het-woord met het onbepaalde lidwoord 'een' (of zonder lidwoord).",
     "explanationTr": "Sıfatlar yalnızca 'een + het-woord' veya artikelsiz 'het-woord' durumunda sonlarına '-e' almazlar (örn. een klein bosje).",
@@ -3553,7 +3553,7 @@ export const grammarForms = [
       "kleine",
       "klein",
       "kleins",
-      "Misschien later."
+      "om vier uur"
     ]
   },
   {
@@ -3568,7 +3568,7 @@ export const grammarForms = [
       "Als het adjectief predicatief gebruikt wordt (achter het substantief met 'zijn', bijv. De koffie is lekker).",
       "Als het adjectief voor een de-woord staat.",
       "Als het in het meervoud staat.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Als het adjectief predicatief gebruikt wordt (achter het substantief met 'zijn', bijv. De koffie is lekker).",
     "explanationTr": "Sıfat, ismin önünde değil de cümlenin sonunda yüklem olarak (predicatief) kullanıldığında hiçbir zaman '-e' almaz.",
@@ -3628,7 +3628,7 @@ export const grammarForms = [
       "maar, even, eens",
       "niet, geen, nooit",
       "altijd, vaak, soms",
-      "Misschien later."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "maar, even, eens",
     "explanationTr": "Emir cümlelerini daha samimi of yumuşak hale getirmek için 'maar', 'even', 'eens' gibi kelimeler eklenir.",
@@ -3648,7 +3648,7 @@ export const grammarForms = [
       "Meestal aan het einde van de zin (bijv. Ik moet naar de les gaan).",
       "Direct na het modale werkwoord (bijv. Ik moet gaan naar de les).",
       "Helemaal aan het begin van de zin.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Meestal aan het einde van de zin (bijv. Ik moet naar de les gaan).",
     "explanationTr": "Modal fiiller çekimli olarak 2. sıraya yerleşirken, cümlenin ana eylemi olan mastar (infinitief) cümlenin en sonuna gider.",
@@ -3673,7 +3673,7 @@ export const grammarForms = [
       "Wilt",
       "Wil",
       "Wilen",
-      "Misschien later."
+      "om vier uur"
     ]
   },
   {
@@ -3688,7 +3688,7 @@ export const grammarForms = [
       "Je voegt -er toe achter het adjectief (bijv. kleiner, groter).",
       "Je voegt -st toe (bijv. kleinst, grootst).",
       "Je voegt -der toe (bijv. kleinder, grootder).",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Je voegt -er toe achter het adjectief (bijv. kleiner, groter).",
     "explanationTr": "Düzenli sıfatların karşılaştırma hali (comparatief) sonlarına '-er' eklenerek yapılır (kleiner, groter).",
@@ -3708,7 +3708,7 @@ export const grammarForms = [
       "Je voegt -der toe (bijv. duurder).",
       "Je voegt alleen -er toe (bijv. duurer).",
       "Het adjectief verandert niet.",
-      "Ik heb helaas geen tijd vandaag."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Je voegt -der toe (bijv. duurder).",
     "explanationTr": "Sıfat '-r' harfi ile bitiyorsa, telaffuz kolaylığı için karşılaştırma halinde sonuna '-der' eklenir (duur -> duurder).",
@@ -3729,7 +3729,7 @@ export const grammarForms = [
       "beter / best",
       "goeder / goedst",
       "meer goed / meest goed",
-      "Misschien later."
+      "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "beter / best",
     "explanationTr": "'goed' (iyi) sıfatı düzensizdir. Karşılaştırma hali 'beter', en üstünlük hali ise 'best' şeklindedir.",
@@ -4080,7 +4080,7 @@ export const grammarForms = [
     "explanationTr": "Şimdiki zaman en geçmiş zamanda (imperfectum) ayrılabilir fiilin ön eki cümlenin en sonuna gider.",
     "explanationEn": "In the present and imperfect tenses in a main clause, the separable prefix goes to the very end of the sentence.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1065",
@@ -4101,7 +4101,7 @@ export const grammarForms = [
     "explanationTr": "Modal fiil kullanıldığında, ayrılabilir fiil ayrılmaz en mastar halinde (infinitief) cümlenin sonuna gider.",
     "explanationEn": "When a modal verb is used, the separable verb is not separated and is placed at the end of the sentence as an infinitive.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1068",
