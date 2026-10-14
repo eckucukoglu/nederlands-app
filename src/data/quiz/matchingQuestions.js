@@ -1,6 +1,8 @@
 // src/data/quiz/matchingQuestions.js
 // Auto-generated modular quiz dataset with pedagogical ratings (difficulty 1-5, quality 1-2)
-export const matchingQuestions = [
+import { matchingDictionary } from './matchingDictionary.js';
+
+const matchingQuestionsBase = [
   {
     "id": "q_match_extra_001",
     "type": "matching",
@@ -8413,4 +8415,9 @@ export const matchingQuestions = [
     "difficulty": 1,
     "quality": 2
   }
+];
+
+export const matchingQuestions = [
+  ...matchingQuestionsBase,
+  ...matchingDictionary
 ];
