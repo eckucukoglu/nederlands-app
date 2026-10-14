@@ -186,7 +186,7 @@ const GuideContent = ({ lang }) => (
 );
 
 // --- ANA SAYFA (HOME VIEW) BİLEŞENİ ---
-const HomeView = ({ favorites, completed, goToSection, lang, bookSections }) => {
+const HomeView = ({ favorites, completed, goToSection, lang, bookSections, lastTabBeforeHome, onReturn, getSectionTitle }) => {
   const hasData = Object.keys(favorites).length > 0 || Object.keys(completed).length > 0;
 
   const getSecTitle = (secId) => {
@@ -201,10 +201,22 @@ const HomeView = ({ favorites, completed, goToSection, lang, bookSections }) => 
 
   if (!hasData) {
     return (
-      <div className="bg-slate-800 rounded-3xl shadow-2xl border border-slate-700 p-6 sm:p-8 max-w-4xl mx-auto">
-         <h2 className="text-2xl sm:text-3xl font-extrabold text-brand-400 mb-6 flex items-center gap-3">
-           <i className="fa-solid fa-hands-clapping"></i> {lang === 'tr' ? 'Nederlands in Gang\'a Hoş Geldiniz!' : 'Welcome to Nederlands in Gang!'}
-         </h2>
+      <div className="bg-slate-800 rounded-3xl shadow-2xl border border-slate-700 p-6 sm:p-8 max-w-4xl mx-auto space-y-6">
+         <div className="flex justify-between items-center flex-wrap gap-3">
+           <h2 className="text-2xl sm:text-3xl font-extrabold text-brand-400 flex items-center gap-3">
+             <i className="fa-solid fa-hands-clapping"></i> {lang === 'tr' ? 'Nederlands in Gang\'a Hoş Geldiniz!' : 'Welcome to Nederlands in Gang!'}
+           </h2>
+           {lastTabBeforeHome && lastTabBeforeHome !== 'home' && onReturn && (
+             <button
+               onClick={onReturn}
+               className="px-3.5 py-2 rounded-xl bg-slate-900/80 hover:bg-slate-700 text-brand-300 hover:text-white border border-slate-700 hover:border-brand-500/50 text-xs sm:text-sm font-semibold transition-all flex items-center gap-2 shadow-sm"
+               title={lang === 'tr' ? 'Kaldığın ekrana geri dön' : 'Return to previous screen'}
+             >
+               <i className="fa-solid fa-arrow-left"></i>
+               <span>{lang === 'tr' ? 'Kaldığın Yere Dön' : 'Return'}{getSectionTitle ? `: ${getSectionTitle(lastTabBeforeHome)}` : ''}</span>
+             </button>
+           )}
+         </div>
          <GuideContent lang={lang} />
       </div>
     );
@@ -212,9 +224,21 @@ const HomeView = ({ favorites, completed, goToSection, lang, bookSections }) => 
 
   return (
     <div className="space-y-8 max-w-6xl mx-auto w-full">
-       <div className="border-b border-slate-800 pb-4">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-100 mb-2 tracking-tight">Mijn Dashboard</h2>
-          <p className="text-sm text-slate-400">{lang === 'tr' ? 'Favori ve tamamladığınız bölümler.' : 'Your favorite and completed sections.'}</p>
+       <div className="border-b border-slate-800 pb-4 flex justify-between items-center flex-wrap gap-3">
+          <div>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-100 mb-2 tracking-tight">Mijn Dashboard</h2>
+            <p className="text-sm text-slate-400">{lang === 'tr' ? 'Favori ve tamamladığınız bölümler.' : 'Your favorite and completed sections.'}</p>
+          </div>
+          {lastTabBeforeHome && lastTabBeforeHome !== 'home' && onReturn && (
+            <button
+              onClick={onReturn}
+              className="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-brand-300 hover:text-white border border-slate-700 hover:border-brand-500/50 text-xs sm:text-sm font-semibold transition-all flex items-center gap-2 shadow-sm"
+              title={lang === 'tr' ? 'Kaldığın ekrana geri dön' : 'Return to previous screen'}
+            >
+              <i className="fa-solid fa-arrow-left"></i>
+              <span>{lang === 'tr' ? 'Kaldığın Yere Dön' : 'Return'}{getSectionTitle ? `: ${getSectionTitle(lastTabBeforeHome)}` : ''}</span>
+            </button>
+          )}
        </div>
 
        {Object.keys(favorites).length > 0 && (
@@ -301,6 +325,21 @@ function MainContent({ user, setIsAuthModalOpen }) {
   });
 
   const [previousTab, setPreviousTab] = useState('home');
+
+  const [lastTabBeforeHome, setLastTabBeforeHome] = useState(() => {
+    const saved = localStorage.getItem('lastTabBeforeHome');
+    if (saved && saved !== 'home') return saved;
+    const savedTab = localStorage.getItem(`lastVisitedTab_${currentChapter}`);
+    if (savedTab && savedTab !== 'home') return savedTab;
+    return `${currentChapter}.1`;
+  });
+
+  useEffect(() => {
+    if (activeTab !== 'home') {
+      setLastTabBeforeHome(activeTab);
+      localStorage.setItem('lastTabBeforeHome', activeTab);
+    }
+  }, [activeTab]);
 
   const [isSearchExpanded, setIsSearchExpanded] = useState(false);
   const [isMobileSearchOpen, setIsMobileSearchOpen] = useState(false);
@@ -712,7 +751,9 @@ function MainContent({ user, setIsAuthModalOpen }) {
   }, [currentChapter]);
 
   useEffect(() => {
-    localStorage.setItem(`lastVisitedTab_${currentChapter}`, activeTab);
+    if (activeTab !== 'home') {
+      localStorage.setItem(`lastVisitedTab_${currentChapter}`, activeTab);
+    }
   }, [activeTab, currentChapter]);
 
   const handleChapterChange = (e) => {
@@ -720,7 +761,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
     setCurrentChapter(newChapter);
     const savedTab = localStorage.getItem(`lastVisitedTab_${newChapter}`);
     
-    if (savedTab && !savedTab.includes('On-Class')) {
+    if (savedTab && !savedTab.includes('On-Class') && savedTab !== 'home') {
        setActiveTab(savedTab);
     } else {
        setActiveTab(`${newChapter}.1`);
@@ -728,6 +769,7 @@ function MainContent({ user, setIsAuthModalOpen }) {
   };
 
   const getSectionTitle = (secId) => {
+    if (!secId || secId === 'home') return "Dashboard";
     if (secId === 'flashcards') return "Flashcards";
     if (secId === 'verbs') return lang === 'tr' ? "Düzensiz Fiiller" : "Irregular Verbs";
     if (secId === 'grammar') return lang === 'tr' ? "Gramer Referansı" : "Grammar Reference";
@@ -735,10 +777,34 @@ function MainContent({ user, setIsAuthModalOpen }) {
        const ch = secId.replace('On-Class-', '');
        return lang === 'tr' ? `Ünite ${ch} Özeti` : `Chapter ${ch} Summary`;
     }
-    const sec = currentSections.find(s => s.id === secId);
-    if (sec && sec.title) return sec.title;
-    if (secId.endsWith('.1')) return lang === 'tr' ? "Diyalog" : "Dialogue";
-    return lang === 'tr' ? "Alıştırma" : "Exercise";
+    const sec = bookSections.find(s => s.id === secId);
+    if (sec && sec.title) return `${secId} - ${sec.title}`;
+    if (secId.endsWith('.1')) return `${secId} (${lang === 'tr' ? "Diyalog" : "Dialogue"})`;
+    return `${secId} (${lang === 'tr' ? "Alıştırma" : "Exercise"})`;
+  };
+
+  const handleTitleClick = () => {
+    setIsChapterExpanded(false); 
+    setIsSearchExpanded(false);
+
+    if (activeTab === 'home') {
+      const target = lastTabBeforeHome || localStorage.getItem('lastTabBeforeHome') || `${currentChapter}.1`;
+      if (target.startsWith('On-Class-')) {
+        const ch = Number(target.replace('On-Class-', ''));
+        if (!isNaN(ch) && availableChapters.includes(ch)) {
+          setCurrentChapter(ch);
+        }
+      } else if (target.includes('.')) {
+        const ch = Number(target.split('.')[0]);
+        if (!isNaN(ch) && availableChapters.includes(ch)) {
+          setCurrentChapter(ch);
+        }
+      }
+      setActiveTab(target);
+    } else {
+      setLastTabBeforeHome(activeTab);
+      setActiveTab('home');
+    }
   };
 
   const renderSearchResults = () => {
@@ -954,15 +1020,24 @@ function MainContent({ user, setIsAuthModalOpen }) {
           
           <div 
             className="flex items-center space-x-2 flex-shrink min-w-0 cursor-pointer group select-none"
-            onClick={() => setActiveTab('home')}
+            onClick={handleTitleClick}
             onDoubleClick={(e) => { e.preventDefault(); setIsInfoModalOpen(true); }}
-            title={lang === 'tr' ? '1 Tık: Ana Sayfa | 2 Tık: Kılavuz' : '1 Click: Home | 2 Clicks: Guide'}
+            title={activeTab === 'home' 
+              ? (lang === 'tr' ? '1 Tık: Kaldığın Ekrana Dön | 2 Tık: Kılavuz' : '1 Click: Return to Previous Screen | 2 Clicks: Guide')
+              : (lang === 'tr' ? '1 Tık: Dashboard | 2 Tık: Kılavuz' : '1 Click: Dashboard | 2 Clicks: Guide')
+            }
           >
-            <div className="bg-brand-900/50 p-2 rounded-xl backdrop-blur flex-shrink-0 group-hover:bg-brand-800/50 transition-colors">
-              <i className="fa-solid fa-book-medical text-xl text-brand-400 group-hover:text-brand-300"></i>
+            <div className={`p-2 rounded-xl backdrop-blur flex-shrink-0 transition-colors ${
+              activeTab === 'home' 
+                ? 'bg-brand-600 text-white shadow-md' 
+                : 'bg-brand-900/50 text-brand-400 group-hover:bg-brand-800/50 group-hover:text-brand-300'
+            }`}>
+              <i className="fa-solid fa-book-medical text-xl"></i>
             </div>
             <div className="hidden sm:block truncate">
-              <h1 className="font-bold text-lg leading-tight text-slate-100 truncate group-hover:text-brand-300 transition-colors">Nederlands in Gang</h1>
+              <h1 className={`font-bold text-lg leading-tight truncate transition-colors ${
+                activeTab === 'home' ? 'text-brand-300' : 'text-slate-100 group-hover:text-brand-300'
+              }`}>Nederlands in Gang</h1>
               <p className="text-xs text-brand-300 truncate">Interactief Oefenportaal (A1 → A2)</p>
             </div>
             
@@ -1453,6 +1528,9 @@ function MainContent({ user, setIsAuthModalOpen }) {
             goToSection={goToSection} 
             lang={lang} 
             bookSections={bookSections}
+            lastTabBeforeHome={lastTabBeforeHome}
+            onReturn={handleTitleClick}
+            getSectionTitle={getSectionTitle}
           />
         )}
 
