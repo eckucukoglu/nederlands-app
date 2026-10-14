@@ -10,6 +10,7 @@ import Grammar from './components/Grammar';
 import QuizModule from './components/QuizModule'; 
 import FloatingFeedback from './components/FloatingFeedback';
 import AdminReports from './components/AdminReports';
+import HomeView from './components/HomeView';
 
 import { bookSections, vocabulary } from './data';
 import { globalDictionary } from './data/globalDictionary';
@@ -185,114 +186,11 @@ const GuideContent = ({ lang }) => (
   </div>
 );
 
-// --- ANA SAYFA (HOME VIEW) BİLEŞENİ ---
-const HomeView = ({ favorites, completed, goToSection, lang, bookSections, lastTabBeforeHome, onReturn, getSectionTitle }) => {
-  const hasData = Object.keys(favorites).length > 0 || Object.keys(completed).length > 0;
+// --- ANA SAYFA (HOME VIEW) BİLEŞENİ ARTIK src/components/HomeView.js DOSYASINDA ---
 
-  const getSecTitle = (secId) => {
-    const sec = bookSections.find(s => s.id === secId);
-    if (sec && sec.title) return sec.title;
-    if (secId.includes('On-Class')) {
-       const ch = secId.replace('On-Class-', '');
-       return lang === 'tr' ? `Ünite ${ch} Özeti` : `Chapter ${ch} Summary`;
-    }
-    return lang === 'tr' ? 'Diyalog / Alıştırma' : 'Dialogue / Exercise';
-  };
 
-  if (!hasData) {
-    return (
-      <div className="bg-slate-800 rounded-3xl shadow-2xl border border-slate-700 p-6 sm:p-8 max-w-4xl mx-auto space-y-6">
-         <div className="flex justify-between items-center flex-wrap gap-3">
-           <h2 className="text-2xl sm:text-3xl font-extrabold text-brand-400 flex items-center gap-3">
-             <i className="fa-solid fa-hands-clapping"></i> {lang === 'tr' ? 'Nederlands in Gang\'a Hoş Geldiniz!' : 'Welcome to Nederlands in Gang!'}
-           </h2>
-           {lastTabBeforeHome && lastTabBeforeHome !== 'home' && onReturn && (
-             <button
-               onClick={onReturn}
-               className="px-3.5 py-2 rounded-xl bg-slate-900/80 hover:bg-slate-700 text-brand-300 hover:text-white border border-slate-700 hover:border-brand-500/50 text-xs sm:text-sm font-semibold transition-all flex items-center gap-2 shadow-sm"
-               title={lang === 'tr' ? 'Kaldığın ekrana geri dön' : 'Return to previous screen'}
-             >
-               <i className="fa-solid fa-arrow-left"></i>
-               <span>{lang === 'tr' ? 'Kaldığın Yere Dön' : 'Return'}{getSectionTitle ? `: ${getSectionTitle(lastTabBeforeHome)}` : ''}</span>
-             </button>
-           )}
-         </div>
-         <GuideContent lang={lang} />
-      </div>
-    );
-  }
 
-  return (
-    <div className="space-y-8 max-w-6xl mx-auto w-full">
-       <div className="border-b border-slate-800 pb-4 flex justify-between items-center flex-wrap gap-3">
-          <div>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-100 mb-2 tracking-tight">Mijn Dashboard</h2>
-            <p className="text-sm text-slate-400">{lang === 'tr' ? 'Favori ve tamamladığınız bölümler.' : 'Your favorite and completed sections.'}</p>
-          </div>
-          {lastTabBeforeHome && lastTabBeforeHome !== 'home' && onReturn && (
-            <button
-              onClick={onReturn}
-              className="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-brand-300 hover:text-white border border-slate-700 hover:border-brand-500/50 text-xs sm:text-sm font-semibold transition-all flex items-center gap-2 shadow-sm"
-              title={lang === 'tr' ? 'Kaldığın ekrana geri dön' : 'Return to previous screen'}
-            >
-              <i className="fa-solid fa-arrow-left"></i>
-              <span>{lang === 'tr' ? 'Kaldığın Yere Dön' : 'Return'}{getSectionTitle ? `: ${getSectionTitle(lastTabBeforeHome)}` : ''}</span>
-            </button>
-          )}
-       </div>
 
-       {Object.keys(favorites).length > 0 && (
-         <div>
-            <h3 className="text-lg font-bold text-amber-400 mb-4 flex items-center gap-2">
-              <i className="fa-solid fa-star"></i> {lang === 'tr' ? 'Favorilerim' : 'Favorites'}
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-               {Object.entries(favorites).map(([secId, note]) => (
-                   <div 
-                     key={secId} 
-                     onClick={() => goToSection(secId)} 
-                     className="cursor-pointer bg-slate-800 p-4 rounded-xl border border-amber-500/30 hover:border-amber-400 hover:shadow-[0_0_15px_rgba(251,191,36,0.15)] hover:-translate-y-1 transition-all shadow-md group flex flex-col gap-3"
-                   >
-                       <div className="flex justify-between items-start gap-2">
-                           <h4 className="font-bold text-slate-200 text-[15px] leading-snug group-hover:text-white transition-colors">
-                              {secId.includes('On-Class') ? (lang === 'tr' ? `Özet ${secId.replace('On-Class-','')}` : `Sum ${secId.replace('On-Class-','')}`) : secId} - {getSecTitle(secId)}
-                           </h4>
-                           <div className="bg-amber-900/30 p-1.5 rounded-lg flex items-center justify-center border border-amber-500/20">
-                             <i className="fa-solid fa-star text-amber-400 text-xs"></i>
-                           </div>
-                       </div>
-                       <div className="bg-slate-900/60 p-3 rounded-lg border border-slate-700/50 flex-1 relative overflow-hidden">
-                           <i className="fa-solid fa-quote-left absolute top-2 left-2 text-slate-700 text-xl opacity-30"></i>
-                           <p className="text-[13px] text-amber-200/90 italic line-clamp-3 leading-relaxed relative z-10 pl-4">{note}</p>
-                       </div>
-                   </div>
-               ))}
-            </div>
-         </div>
-       )}
-
-       {Object.keys(completed).length > 0 && (
-         <div>
-            <h3 className="text-lg font-bold text-emerald-400 mb-4 flex items-center gap-2">
-              <i className="fa-solid fa-circle-check"></i> {lang === 'tr' ? 'Tamamlananlar' : 'Completed'}
-            </h3>
-            <div className="flex flex-wrap gap-3">
-               {Object.keys(completed).map(secId => (
-                   <button 
-                     key={secId} 
-                     onClick={() => goToSection(secId)} 
-                     className="bg-slate-800/80 border border-emerald-700/50 text-emerald-400 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold hover:bg-emerald-600 hover:text-white hover:border-emerald-500 hover:shadow-[0_0_10px_rgba(52,211,153,0.3)] hover:-translate-y-0.5 transition-all flex items-center gap-2"
-                   >
-                       <i className="fa-solid fa-check"></i> 
-                       {secId.includes('On-Class') ? (lang === 'tr' ? `Ünite ${secId.replace('On-Class-','')} Özeti` : `Chapter ${secId.replace('On-Class-','')} Summary`) : secId} - {getSecTitle(secId)}
-                   </button>
-               ))}
-            </div>
-         </div>
-       )}
-    </div>
-  );
-};
 
 
 function MainContent({ user, setIsAuthModalOpen }) {
@@ -1531,6 +1429,9 @@ function MainContent({ user, setIsAuthModalOpen }) {
             lastTabBeforeHome={lastTabBeforeHome}
             onReturn={handleTitleClick}
             getSectionTitle={getSectionTitle}
+            setActiveTab={setActiveTab}
+            setIsFullQuizOpen={setIsFullQuizOpen}
+            GuideContent={GuideContent}
           />
         )}
 
