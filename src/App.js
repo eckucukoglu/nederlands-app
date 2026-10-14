@@ -937,12 +937,12 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
               : (lang === 'tr' ? '1 Tık: Dashboard | 2 Tık: Kılavuz' : '1 Click: Dashboard | 2 Clicks: Guide')
             }
           >
-            <div className={`w-7 h-7 sm:w-9 sm:h-9 rounded-lg sm:rounded-xl flex items-center justify-center transition-all duration-200 ${
+            <div className={`w-8.5 h-8.5 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center transition-all duration-200 ${
               activeTab === 'home' 
-                ? 'bg-brand-500 text-white shadow-[0_0_12px_rgba(14,165,233,0.7)] ring-1 ring-brand-300' 
-                : 'bg-slate-800/80 hover:bg-slate-800 text-slate-400 hover:text-brand-300 border border-slate-700/60'
+                ? 'bg-brand-600 text-white border-2 border-brand-300 shadow-[0_0_14px_rgba(14,165,233,0.8)] ring-2 ring-brand-300/60' 
+                : 'bg-brand-950/40 text-brand-400 hover:bg-brand-900/50 hover:text-brand-300 border border-brand-500/30'
             }`}>
-              <i className="fa-solid fa-book-medical text-sm sm:text-lg"></i>
+              <i className="fa-solid fa-book-medical text-base sm:text-xl"></i>
             </div>
             <div className="hidden sm:block truncate">
               <h1 className={`font-bold text-base sm:text-lg leading-tight truncate transition-colors ${
@@ -958,14 +958,14 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
             {/* FULL QUIZ BUTONU */}
             <button 
               onClick={() => setIsFullQuizOpen(true)}
-              className={`w-7 h-7 sm:w-8.5 sm:h-8.5 rounded-full transition-all duration-200 flex items-center justify-center cursor-pointer border ${
+              className={`w-8.5 h-8.5 sm:w-10 sm:h-10 rounded-full transition-all duration-200 flex items-center justify-center cursor-pointer ${
                 isFullQuizOpen 
-                  ? 'bg-teal-500 text-white shadow-[0_0_12px_rgba(20,184,166,0.7)] border-teal-400 ring-1 ring-teal-300' 
-                  : 'bg-slate-800/70 hover:bg-slate-800 text-slate-400 hover:text-teal-400 border-slate-700/60'
+                  ? 'bg-teal-600 text-white border-2 border-teal-300 shadow-[0_0_14px_rgba(20,184,166,0.8)] ring-2 ring-teal-300/60' 
+                  : 'bg-teal-950/50 text-teal-400 hover:bg-teal-900/60 hover:text-teal-200 border border-teal-800/50 shadow-sm'
               }`}
               title={lang === 'tr' ? 'Genel Sınav & Full Quiz' : 'Full Quiz Mode'}
             >
-              <i className="fa-solid fa-graduation-cap text-xs sm:text-base"></i>
+              <i className="fa-solid fa-graduation-cap text-sm sm:text-lg"></i>
             </button>
 
             {/* SUMMARY BUTONU */}
@@ -988,14 +988,14 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
                 setIsChapterExpanded(false); 
                 setIsSearchExpanded(false);
               }}
-              className={`w-7 h-7 sm:w-8.5 sm:h-8.5 rounded-full transition-all duration-200 flex items-center justify-center cursor-pointer border ${
+              className={`w-8.5 h-8.5 sm:w-10 sm:h-10 rounded-full transition-all duration-200 flex items-center justify-center cursor-pointer ${
                 isSummaryMode 
-                  ? 'bg-amber-500 text-white shadow-[0_0_12px_rgba(245,158,11,0.7)] border-amber-400 ring-1 ring-amber-300' 
-                  : 'bg-slate-800/70 hover:bg-slate-800 text-slate-400 hover:text-amber-400 border-slate-700/60'
+                  ? 'bg-amber-600 text-white border-2 border-amber-300 shadow-[0_0_14px_rgba(245,158,11,0.8)] ring-2 ring-amber-300/60' 
+                  : 'bg-amber-950/50 text-amber-400 hover:bg-amber-900/60 hover:text-amber-200 border border-amber-800/50 shadow-sm'
               }`}
               title={lang === 'tr' ? 'Özet (Summary)' : 'Summary'}
             >
-              <i className="fa-solid fa-chalkboard-user text-xs sm:text-base"></i>
+              <i className="fa-solid fa-chalkboard-user text-sm sm:text-lg"></i>
             </button>
 
             {/* FLASHCARDS BUTONU */}
@@ -1010,14 +1010,14 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
                 setIsChapterExpanded(false); 
                 setIsSearchExpanded(false);
               }}
-              className={`w-7 h-7 sm:w-8.5 sm:h-8.5 rounded-full transition-all duration-200 flex items-center justify-center cursor-pointer border ${
+              className={`w-8.5 h-8.5 sm:w-10 sm:h-10 rounded-full transition-all duration-200 flex items-center justify-center cursor-pointer ${
                 activeTab === 'flashcards' 
-                  ? 'bg-rose-500 text-white shadow-[0_0_12px_rgba(244,63,94,0.7)] border-rose-400 ring-1 ring-rose-300' 
-                  : 'bg-slate-800/70 hover:bg-slate-800 text-slate-400 hover:text-rose-400 border-slate-700/60'
+                  ? 'bg-rose-600 text-white border-2 border-rose-300 shadow-[0_0_14px_rgba(244,63,94,0.8)] ring-2 ring-rose-300/60' 
+                  : 'bg-rose-950/50 text-rose-400 hover:bg-rose-900/60 hover:text-rose-200 border border-rose-800/50 shadow-sm'
               }`}
               title={t('flashcards')}
             >
-              <i className="fa-solid fa-clone text-xs sm:text-base"></i>
+              <i className="fa-solid fa-clone text-sm sm:text-lg"></i>
             </button>
 
             {/* GRAMMAR BUTONU */}
@@ -1032,14 +1032,14 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
                 setIsChapterExpanded(false); 
                 setIsSearchExpanded(false);
               }}
-              className={`w-7 h-7 sm:w-8.5 sm:h-8.5 rounded-full transition-all duration-200 flex items-center justify-center cursor-pointer border ${
+              className={`w-8.5 h-8.5 sm:w-10 sm:h-10 rounded-full transition-all duration-200 flex items-center justify-center cursor-pointer ${
                 activeTab === 'grammar' 
-                  ? 'bg-indigo-500 text-white shadow-[0_0_12px_rgba(99,102,241,0.7)] border-indigo-400 ring-1 ring-indigo-300' 
-                  : 'bg-slate-800/70 hover:bg-slate-800 text-slate-400 hover:text-indigo-400 border-slate-700/60'
+                  ? 'bg-indigo-600 text-white border-2 border-indigo-300 shadow-[0_0_14px_rgba(99,102,241,0.8)] ring-2 ring-indigo-300/60' 
+                  : 'bg-indigo-950/50 text-indigo-400 hover:bg-indigo-900/60 hover:text-indigo-200 border border-indigo-800/50 shadow-sm'
               }`}
               title={lang === 'tr' ? 'Gramer Referansı' : 'Grammar Reference'}
             >
-              <i className="fa-solid fa-spell-check text-xs sm:text-base"></i>
+              <i className="fa-solid fa-spell-check text-sm sm:text-lg"></i>
             </button>
 
             {/* VERBS BUTONU */}
@@ -1054,28 +1054,34 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
                 setIsChapterExpanded(false); 
                 setIsSearchExpanded(false);
               }}
-              className={`w-7 h-7 sm:w-8.5 sm:h-8.5 rounded-full transition-all duration-200 flex items-center justify-center cursor-pointer border ${
+              className={`w-8.5 h-8.5 sm:w-10 sm:h-10 rounded-full transition-all duration-200 flex items-center justify-center cursor-pointer ${
                 activeTab === 'verbs' 
-                  ? 'bg-sky-500 text-white shadow-[0_0_12px_rgba(14,165,233,0.7)] border-sky-400 ring-1 ring-sky-300' 
-                  : 'bg-slate-800/70 hover:bg-slate-800 text-slate-400 hover:text-sky-400 border-slate-700/60'
+                  ? 'bg-sky-600 text-white border-2 border-sky-300 shadow-[0_0_14px_rgba(14,165,233,0.8)] ring-2 ring-sky-300/60' 
+                  : 'bg-sky-950/50 text-sky-400 hover:bg-sky-900/60 hover:text-sky-200 border border-sky-800/50 shadow-sm'
               }`}
               title={lang === 'tr' ? 'Düzensiz Fiiller' : 'Irregular Verbs'}
             >
-              <i className="fa-solid fa-bolt text-xs sm:text-base"></i>
+              <i className="fa-solid fa-bolt text-sm sm:text-lg"></i>
             </button>
 
-            {/* AUTH / PROFİL BUTONU */}
+            {/* AUTH / PROFİL BUTONU (Login Olmuşsa Yeşil) */}
             <button 
               onClick={() => setIsAuthModalOpen(true)}
-              className={`w-7 h-7 sm:w-8.5 sm:h-8.5 rounded-full transition-all duration-200 flex items-center justify-center relative cursor-pointer border ${
-                isAuthModalOpen 
-                  ? 'bg-emerald-500 text-white shadow-[0_0_12px_rgba(16,185,129,0.7)] border-emerald-400 ring-1 ring-emerald-300' 
-                  : 'bg-slate-800/70 hover:bg-slate-800 text-slate-400 hover:text-emerald-400 border-slate-700/60'
+              className={`w-8.5 h-8.5 sm:w-10 sm:h-10 rounded-full transition-all duration-200 flex items-center justify-center relative cursor-pointer ${
+                user 
+                  ? (isAuthModalOpen 
+                      ? 'bg-emerald-600 text-white border-2 border-emerald-300 shadow-[0_0_15px_rgba(16,185,129,0.9)] ring-2 ring-emerald-300/60' 
+                      : 'bg-emerald-950/50 text-emerald-400 hover:bg-emerald-900/60 hover:text-emerald-200 border border-emerald-500/50 shadow-[0_0_8px_rgba(16,185,129,0.25)]')
+                  : (isAuthModalOpen
+                      ? 'bg-cyan-600 text-white border-2 border-cyan-300 shadow-[0_0_15px_rgba(6,182,212,0.9)] ring-2 ring-cyan-300/60'
+                      : 'bg-slate-800/80 text-slate-400 hover:bg-slate-800 hover:text-slate-200 border border-slate-700/60 shadow-sm')
               }`}
               title={t('accountSync')}
             >
-              <i className="fa-solid fa-circle-user text-xs sm:text-base"></i>
-              {user && <div className="absolute top-0 right-0 w-2 h-2 bg-emerald-400 border border-slate-950 rounded-full shadow-[0_0_4px_rgba(52,211,153,0.9)]"></div>}
+              <i className={`fa-solid fa-circle-user text-sm sm:text-lg ${user ? (isAuthModalOpen ? 'text-white' : 'text-emerald-400') : ''}`}></i>
+              {user && (
+                <div className="absolute top-0 right-0 w-2.5 h-2.5 bg-emerald-400 border border-slate-950 rounded-full shadow-[0_0_6px_rgba(52,211,153,1)]"></div>
+              )}
             </button>
 
             {/* ARAMA BUTONU */}
@@ -1118,14 +1124,14 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
                     }
                   }
                 }}
-                className={`w-7 h-7 sm:w-8.5 sm:h-8.5 rounded-full transition-all duration-200 flex items-center justify-center cursor-pointer border ${
+                className={`w-8.5 h-8.5 sm:w-10 sm:h-10 rounded-full transition-all duration-200 flex items-center justify-center cursor-pointer ${
                   (isMobileSearchOpen || isSearchExpanded)
-                    ? 'bg-brand-500 text-white shadow-[0_0_12px_rgba(14,165,233,0.7)] border-brand-400 ring-1 ring-brand-300' 
-                    : 'bg-slate-800/70 hover:bg-slate-800 text-slate-400 hover:text-brand-400 border-slate-700/60'
+                    ? 'bg-brand-600 text-white border-2 border-brand-300 shadow-[0_0_14px_rgba(14,165,233,0.8)] ring-2 ring-brand-300/60' 
+                    : 'bg-slate-800/80 text-slate-400 hover:text-brand-300 hover:bg-slate-800 border border-slate-700/60 shadow-sm'
                 }`}
                 title={t('searchTitle')}
               >
-                <i className="fa-solid fa-magnifying-glass text-xs sm:text-base"></i>
+                <i className="fa-solid fa-magnifying-glass text-sm sm:text-lg"></i>
               </button>
 
               {isSearchExpanded && searchResults && searchResults.length > 0 && (
@@ -1135,29 +1141,29 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
               )}
             </div>
 
-            <div className="h-4 sm:h-5 w-[1px] bg-slate-800 mx-0.5 flex-shrink-0"></div>
+            <div className="h-5 sm:h-6 w-[1px] bg-slate-800 mx-0.5 flex-shrink-0"></div>
 
             {/* CHAPTER MENÜSÜ */}
             <div className="relative flex items-center" ref={chapterMenuRef}>
               <button
                 onClick={() => { setIsChapterExpanded(!isChapterExpanded); setIsSearchExpanded(false); }}
-                className={`flex items-center justify-center h-7 sm:h-8.5 px-2 sm:px-3 rounded-full font-extrabold text-[11px] sm:text-xs transition-all border shadow-sm flex-shrink-0 cursor-pointer ${
+                className={`flex items-center justify-center h-8.5 sm:h-10 px-2.5 sm:px-3.5 rounded-full font-extrabold text-xs sm:text-xs transition-all border shadow-sm flex-shrink-0 cursor-pointer ${
                   isChapterExpanded 
-                    ? 'bg-brand-500 text-white border-brand-400 shadow-[0_0_12px_rgba(14,165,233,0.6)] ring-1 ring-brand-300' 
+                    ? 'bg-brand-600 text-white border-2 border-brand-300 shadow-[0_0_14px_rgba(14,165,233,0.8)] ring-2 ring-brand-300/60' 
                     : 'bg-slate-800/80 text-slate-200 border-slate-700/70 hover:bg-slate-700 hover:text-white'
                 }`}
                 title={t('changeChapter')}
               >
                 {/* Mobilde kompakt Ü17, masaüstünde tam metin */}
-                <span className="sm:hidden whitespace-nowrap flex items-center gap-0.5">
+                <span className="sm:hidden whitespace-nowrap flex items-center gap-1">
                    {lang === 'tr' ? 'Ü' : 'Ch'}{currentChapter}
-                   {isChapterFullyCompleted(currentChapter) && <i className="fa-solid fa-circle-check text-emerald-400 text-[9px]"></i>}
+                   {isChapterFullyCompleted(currentChapter) && <i className="fa-solid fa-circle-check text-emerald-400 text-[10px]"></i>}
                 </span>
                 <span className="hidden sm:flex items-center gap-1.5 whitespace-nowrap">
                    {lang === 'tr' ? 'Ünite' : 'Chapter'} {currentChapter}
-                   {isChapterFullyCompleted(currentChapter) && <i className="fa-solid fa-circle-check text-emerald-400 text-[10px]"></i>}
+                   {isChapterFullyCompleted(currentChapter) && <i className="fa-solid fa-circle-check text-emerald-400 text-xs"></i>}
                 </span>
-                <i className={`fa-solid fa-chevron-${isChapterExpanded ? 'up' : 'down'} ml-1 text-[8px] transition-transform`}></i>
+                <i className={`fa-solid fa-chevron-${isChapterExpanded ? 'up' : 'down'} ml-1.5 text-[9px] transition-transform`}></i>
               </button>
 
               {isChapterExpanded && (
