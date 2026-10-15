@@ -111,98 +111,111 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
   return (
     <div className="space-y-6" onClick={() => setShowFavInput(false)}>
       
-      {/* BAŞLIK VE AKSİYON KUTUSU */}
-      <div className="bg-slate-800 rounded-2xl p-6 shadow-lg border border-slate-700 flex flex-col lg:flex-row justify-between items-start gap-6 relative overflow-hidden">
-        
-        {/* Dekoratif Arka Plan İkonu (Summary / Reading Modu İçin) */}
-        {isSummaryMode && (
-           <div className="absolute top-0 right-0 p-8 opacity-5 pointer-events-none">
-             <i className="fa-solid fa-chalkboard-user text-9xl text-amber-400"></i>
-           </div>
-        )}
-        {isReadingMode && (
-           <div className="absolute top-0 right-0 p-8 opacity-5 pointer-events-none">
-             <i className="fa-solid fa-book-open text-9xl text-indigo-400"></i>
-           </div>
-        )}
-
-        {/* SOL KISIM: Başlık, Chapter Etiketi, Favori/Tamamlandı İkonları */}
-        <div className="flex-1 w-full relative z-10">
-          <div className="inline-flex items-center space-x-2 bg-brand-900/30 border border-brand-500/20 text-brand-400 font-bold px-3 py-1 rounded-full text-xs mb-3">
-            <i className="fa-solid fa-stethoscope"></i>
-            <span>Hoofdstuk ({t.chapter}) {chapterNum} • {isSummaryMode ? 'Summary' : isReadingMode ? (lang === 'tr' ? 'Reading (Okuma)' : 'Reading') : `${t.section} ${sectionData.id}`}</span>
-          </div>
+      {/* BAŞLIK VE AKSİYON KUTUSU (Reading ve Summary modlarında kontroller kendi barlarında olduğu için gizlenir) */}
+      {!isReadingMode && !isSummaryMode && (
+        <div className="bg-slate-800 rounded-2xl p-6 shadow-lg border border-slate-700 flex flex-col lg:flex-row justify-between items-start gap-6 relative overflow-hidden">
           
-          <div className="flex items-center justify-between w-full">
-            <div className="flex items-center space-x-3">
-              <div>
-                <h2 className="text-2xl font-extrabold text-slate-100">{sectionData.title}</h2>
-                {isFav && (
-                  <span className="text-xs text-amber-400 font-medium flex items-center gap-1 mt-1">
-                    <i className="fa-solid fa-star text-[10px]"></i> {favorites[sectionData.id]}
-                  </span>
-                )}
-              </div>
-              
-              {/* İKON ALANI (TİK + YILDIZ) */}
-              <div className="relative flex items-center space-x-3">
-                <button onClick={(e) => { e.stopPropagation(); toggleCompleted(sectionData.id); }} className="text-2xl transition-transform hover:scale-110 focus:outline-none mt-1">
-                  {isComp ? (
-                    <i className="fa-solid fa-circle-check text-emerald-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.6)]"></i>
-                  ) : (
-                    <i className="fa-regular fa-circle-check text-slate-500 hover:text-emerald-400 transition-colors"></i>
-                  )}
-                </button>
+          {/* Dekoratif Arka Plan İkonu (Summary Modu İçin) */}
+          {isSummaryMode && (
+             <div className="absolute top-0 right-0 p-8 opacity-5 pointer-events-none">
+               <i className="fa-solid fa-chalkboard-user text-9xl text-amber-400"></i>
+             </div>
+          )}
 
-                <div className="flex items-center">
-                  <button onClick={handleStarClick} className="text-2xl transition-transform hover:scale-110 focus:outline-none mt-1">
-                    {isFav ? (
-                      <i className="fa-solid fa-star text-amber-400 drop-shadow-[0_0_8px_rgba(251,191,36,0.6)]"></i>
+          {/* SOL KISIM: Başlık, Chapter Etiketi, Favori/Tamamlandı İkonları */}
+          <div className="flex-1 w-full relative z-10">
+            <div className="inline-flex items-center space-x-2 bg-brand-900/30 border border-brand-500/20 text-brand-400 font-bold px-3 py-1 rounded-full text-xs mb-3">
+              <i className="fa-solid fa-stethoscope"></i>
+              <span>Hoofdstuk ({t.chapter}) {chapterNum} • {isSummaryMode ? (lang === 'tr' ? 'Özet' : 'Summary') : `${t.section} ${sectionData.id}`}</span>
+            </div>
+            
+            <div className="flex flex-wrap items-center justify-between w-full gap-4">
+              <div className="flex flex-wrap items-center gap-3">
+                <div>
+                  <h2 className="text-2xl font-extrabold text-slate-100">
+                    {typeof sectionData.title === 'object' 
+                      ? (sectionData.title[lang] || sectionData.title.tr || sectionData.title.en) 
+                      : sectionData.title}
+                  </h2>
+                  {isFav && (
+                    <span className="text-xs text-amber-400 font-medium flex items-center gap-1 mt-1">
+                      <i className="fa-solid fa-star text-[10px]"></i> {favorites[sectionData.id]}
+                    </span>
+                  )}
+                </div>
+                
+                {/* İKON ALANI (TİK + YILDIZ + FAVORİ GİRİŞİ) */}
+                <div className="flex items-center space-x-3">
+                  <button onClick={(e) => { e.stopPropagation(); toggleCompleted(sectionData.id); }} className="text-2xl transition-transform hover:scale-110 focus:outline-none cursor-pointer">
+                    {isComp ? (
+                      <i className="fa-solid fa-circle-check text-emerald-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.6)]"></i>
                     ) : (
-                      <i className="fa-regular fa-star text-slate-500 hover:text-amber-400 transition-colors"></i>
+                      <i className="fa-regular fa-circle-check text-slate-500 hover:text-emerald-400 transition-colors"></i>
                     )}
                   </button>
-                </div>
 
-                {showFavInput && (
-                  <div className="absolute right-0 top-full mt-3 bg-slate-800 p-2 rounded-xl shadow-2xl border border-slate-600 z-50 flex items-center gap-2" onClick={e => e.stopPropagation()}>
-                    <input
-                      autoFocus
-                      maxLength={100}
-                      value={favNote}
-                      onChange={e => setFavNote(e.target.value)}
-                      onKeyDown={e => { if (e.key === 'Enter') saveFavorite(e); }}
-                      placeholder={t.notePlaceholder}
-                      className="bg-slate-900 border border-slate-600 text-slate-200 text-xs rounded-lg px-2.5 py-1.5 w-36 focus:outline-none focus:border-amber-400"
-                    />
-                    <button onClick={saveFavorite} className="bg-emerald-600 hover:bg-emerald-500 text-white p-1.5 rounded-lg text-xs transition-colors">
-                      <i className="fa-solid fa-check"></i>
+                  <div className="flex items-center">
+                    <button onClick={handleStarClick} className="text-2xl transition-transform hover:scale-110 focus:outline-none cursor-pointer">
+                      {isFav ? (
+                        <i className="fa-solid fa-star text-amber-400 drop-shadow-[0_0_8px_rgba(251,191,36,0.6)]"></i>
+                      ) : (
+                        <i className="fa-regular fa-star text-slate-500 hover:text-amber-400 transition-colors"></i>
+                      )}
                     </button>
                   </div>
-                )}
+
+                  {showFavInput && (
+                    <div className="flex items-center gap-1.5 bg-slate-900 border border-amber-500/50 p-1 rounded-xl shadow-lg animate-fadeIn" onClick={e => e.stopPropagation()}>
+                      <input
+                        autoFocus
+                        maxLength={100}
+                        value={favNote}
+                        onChange={e => setFavNote(e.target.value)}
+                        onKeyDown={e => { 
+                          if (e.key === 'Enter') saveFavorite(e); 
+                          if (e.key === 'Escape') setShowFavInput(false);
+                        }}
+                        placeholder={t.notePlaceholder}
+                        className="bg-transparent text-slate-200 text-xs px-2.5 py-1 w-36 sm:w-44 focus:outline-none placeholder-slate-500"
+                      />
+                      <button onClick={saveFavorite} className="bg-amber-600 hover:bg-amber-500 text-white px-2 py-1 rounded-lg text-xs font-bold transition-colors cursor-pointer flex items-center justify-center shadow-sm">
+                        <i className="fa-solid fa-check"></i>
+                      </button>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           </div>
+
+          {/* SAĞ KISIM: Quiz Butonu (Summary Modu) */}
+          {isSummaryMode && (
+            <div className="flex flex-col items-end gap-3 w-full lg:w-auto relative z-10">
+              <button 
+                onClick={() => setIsQuizOpen(true)}
+                className="flex items-center justify-center gap-2 bg-amber-600/20 text-amber-400 hover:bg-amber-600 hover:text-white border border-amber-500/50 hover:border-amber-500 px-5 py-2.5 rounded-xl text-sm font-bold transition-all shadow-sm group w-full sm:w-auto"
+              >
+                <i className="fa-solid fa-dumbbell group-hover:animate-bounce"></i> 
+                {t.practiceSummary}
+              </button>
+            </div>
+          )}
+
         </div>
-
-        {/* SAĞ KISIM: Quiz Butonu (Summary Modu) */}
-        {isSummaryMode && (
-          <div className="flex flex-col items-end gap-3 w-full lg:w-auto relative z-10">
-            <button 
-              onClick={() => setIsQuizOpen(true)}
-              className="flex items-center justify-center gap-2 bg-amber-600/20 text-amber-400 hover:bg-amber-600 hover:text-white border border-amber-500/50 hover:border-amber-500 px-5 py-2.5 rounded-xl text-sm font-bold transition-all shadow-sm group w-full sm:w-auto"
-            >
-              <i className="fa-solid fa-dumbbell group-hover:animate-bounce"></i> 
-              {t.practiceSummary}
-            </button>
-          </div>
-        )}
-
-      </div>
+      )}
 
       {/* READING / OKUMA PARÇASI */}
       {sectionData.readingPassage && (
-        <ReadingPassage data={sectionData.readingPassage} lang={lang} />
+        <ReadingPassage 
+          data={sectionData.readingPassage} 
+          lang={lang} 
+          chapterId={chapterNum || sectionData.chapter || (sectionData.id?.startsWith('Reading-') ? Number(sectionData.id.replace('Reading-', '')) : 1)}
+          sectionId={sectionData.id}
+          favorites={favorites}
+          toggleFavorite={toggleFavorite}
+          completed={completed}
+          toggleCompleted={toggleCompleted}
+        />
       )}
 
       {/* TEORİ BÖLÜMÜ */}

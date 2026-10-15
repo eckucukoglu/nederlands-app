@@ -50,139 +50,292 @@ const GuideContent = ({ lang }) => (
   <div className="space-y-6 text-slate-300 text-sm leading-relaxed">
     {lang === 'tr' ? (
       <>
-        <div className="bg-brand-900/20 border border-brand-700/50 p-4 rounded-xl">
-          <p>Bu uygulama, <em>"Nederlands in Gang"</em> kitabının 3. sürümünü takip etmek amacıyla geliştirilmiş <strong>ticari olmayan</strong>, açık kaynaklı bir projedir. Size kişiselleştirilmiş ve etkileşimli bir Hollandaca öğrenme deneyimi sunmak için <strong>Google Gemini</strong> ile birlikte özenle kodlanmıştır.</p>
+        {/* TANITIM KARTI */}
+        <div className="bg-brand-900/20 border border-brand-500/30 p-4 sm:p-5 rounded-2xl flex items-start gap-3.5">
+          <div className="w-10 h-10 rounded-xl bg-brand-500/20 border border-brand-500/30 flex items-center justify-center flex-shrink-0 text-brand-400 mt-0.5 shadow-sm">
+            <i className="fa-solid fa-graduation-cap text-lg"></i>
+          </div>
+          <div>
+            <h4 className="font-bold text-brand-300 text-sm sm:text-base mb-1">Nederlands in Gang (A1 → A2) Etkileşimli Çalışma Portalı</h4>
+            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Bu platform, <em>"Nederlands in Gang"</em> ders kitabını takip eden öğrenciler için geliştirilmiş <strong>ücretsiz, reklamsız ve açık kaynaklı</strong> modern bir öğrenme aracıdır. Hollandaca dil becerilerinizi (dinleme, okuma, kelime dağarcığı ve gramer) interaktif alıştırmalarla pekiştirmeniz için tasarlanmıştır.
+            </p>
+          </div>
         </div>
+
+        {/* ANA ÖZELLİKLER GRİDİ */}
         <div>
-          <h4 className="font-bold text-brand-300 text-base mb-3 border-b border-slate-700 pb-2"><i className="fa-solid fa-book-open mr-2"></i>Nasıl Kullanılır?</h4>
-          <ul className="space-y-4">
-            <li className="flex items-start gap-3">
-              <div className="w-8 h-8 rounded-lg bg-indigo-900/50 border border-indigo-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-indigo-400"><i className="fa-solid fa-comments"></i></div>
-              <div>
-                <strong className="text-slate-200 block mb-1">Diyaloglar & Etkileşimli Okuma</strong>
-                Ünite diyaloglarını okuyun ve dinleyin. Çevirisini görmek için <u>altı noktalı kelimelerin</u> üzerine tıklayın. Bir kelimeyi anında "Biliyorum" (<i className="fa-solid fa-check text-emerald-400"></i>) veya "Bilmiyorum" (<i className="fa-solid fa-xmark text-rose-400"></i>) olarak işaretleyebilirsiniz. Bu işlem, kelimeyi otomatik olarak <strong>Benim Kelime Havuzum</strong>'a kaydeder.
+          <h4 className="font-bold text-slate-100 text-base mb-4 flex items-center gap-2 border-b border-slate-800 pb-2.5">
+            <i className="fa-solid fa-compass text-brand-400"></i>
+            <span>Temel Özellikler ve Kullanım Rehberi</span>
+          </h4>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+            {/* 1. Diyaloglar */}
+            <div className="p-4 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-slate-600 transition-colors">
+              <div className="flex items-center gap-2.5 mb-2">
+                <div className="w-8 h-8 rounded-lg bg-indigo-500/15 border border-indigo-500/30 flex items-center justify-center text-indigo-400 flex-shrink-0">
+                  <i className="fa-solid fa-comments text-xs"></i>
+                </div>
+                <strong className="text-slate-100 text-sm font-bold">1. Etkileşimli Diyaloglar & Ses Hızı Ayarı</strong>
               </div>
-            </li>
-            <li className="flex items-start gap-3">
-              <div className="w-8 h-8 rounded-lg bg-rose-900/50 border border-rose-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-rose-400"><i className="fa-solid fa-clone"></i></div>
-              <div>
-                <strong className="text-slate-200 block mb-1">Flashcards & Benim Kelime Havuzum</strong>
-                Etkileşimli flashcard'lar ile kelime pratiği yapın. İsterseniz sadece seçtiğiniz üniteye özel kelimeleri çalışabilir, isterseniz de <strong>Benim Kelime Havuzum</strong> moduna geçerek site genelinde etkileşime girdiğiniz tüm kelimeleri tekrar edebilirsiniz. Yalnızca "Bilinmeyen" kelimeleri filtreleyebilir veya listenizi tek tuşla panoya kopyalayabilirsiniz.
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Her ünitedeki diyalogları konuşmacı renkleriyle ayrılmış olarak okuyun. Cümleleri tek tek dinleyebilir veya <strong>"Diyaloğu Dinle"</strong> butonuyla tümünü kesintisiz çalabilirsiniz. Analog hız baremiyle (<strong>0.6x - 1.4x</strong>) ses hızını dilediğiniz gibi ayarlayabilirsiniz.
+              </p>
+            </div>
+
+            {/* 2. Okuma & Anlama */}
+            <div className="p-4 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-slate-600 transition-colors">
+              <div className="flex items-center gap-2.5 mb-2">
+                <div className="w-8 h-8 rounded-lg bg-blue-500/15 border border-blue-500/30 flex items-center justify-center text-blue-400 flex-shrink-0">
+                  <i className="fa-solid fa-book-open text-xs"></i>
+                </div>
+                <strong className="text-slate-100 text-sm font-bold">2. Okuma & Anlama (Reading) Parçaları</strong>
               </div>
-            </li>
-            <li className="flex items-start gap-3">
-              <div className="w-8 h-8 rounded-lg bg-indigo-900/50 border border-indigo-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-indigo-400"><i className="fa-solid fa-spell-check"></i></div>
-              <div>
-                <strong className="text-slate-200 block mb-1">Gramer Referansı & Fiiller</strong>
-                Arama çubuğunun solundaki butonları kullanarak Hollandaca gramer kurallarına, detaylı örneklere, istisnalara ve en sık kullanılan düzensiz fiil listelerine anında ulaşabilirsiniz.
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Her ünite için hazırlanan özgün okuma metinlerini sesli olarak dinleyin ve takip edin. Okuma parçalarındaki hızı da bağımsız olarak ayarlayabilir, ardından anlama (comprehension) sorularını çözerek bilginizi ölçebilirsiniz.
+              </p>
+            </div>
+
+            {/* 3. Tıklanabilir Kelimeler & Havuz */}
+            <div className="p-4 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-slate-600 transition-colors">
+              <div className="flex items-center gap-2.5 mb-2">
+                <div className="w-8 h-8 rounded-lg bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-400 flex-shrink-0">
+                  <i className="fa-solid fa-hand-pointer text-xs"></i>
+                </div>
+                <strong className="text-slate-100 text-sm font-bold">3. Tıklanabilir Kelimeler & Kelime Havuzum</strong>
               </div>
-            </li>
-            <li className="flex items-start gap-3">
-              <div className="w-8 h-8 rounded-lg bg-teal-900/50 border border-teal-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-teal-400"><i className="fa-solid fa-graduation-cap"></i></div>
-              <div>
-                <strong className="text-slate-200 block mb-1">Pratik Testleri & Genel Sınav</strong>
-                Gramer ve Düzensiz Fiiller bölümlerindeki <strong>Çalış & Test Et</strong> butonlarıyla o konuya özel testler çözebilir veya üst menüdeki kep simgesine (🎓) tıklayarak tüm konulardan oluşan <strong>Genel Sınav</strong>'a katılabilirsiniz. Çözdüğünüz soruların istatistikleri tutulur.
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Diyalog ve okuma metinlerindeki altı noktalı kelimelere tıklayarak Türkçe ve İngilizce karşılıklarını, örnek cümlelerini inceleyin. Kelimeleri tek tıkla <strong>"Biliyorum" (Yeşil)</strong> veya <strong>"Bilmiyorum" (Kırmızı)</strong> olarak işaretleyip kişisel <strong>Kelime Havuzunuza</strong> ekleyin.
+              </p>
+            </div>
+
+            {/* 4. Flashcards */}
+            <div className="p-4 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-slate-600 transition-colors">
+              <div className="flex items-center gap-2.5 mb-2">
+                <div className="w-8 h-8 rounded-lg bg-rose-500/15 border border-rose-500/30 flex items-center justify-center text-rose-400 flex-shrink-0">
+                  <i className="fa-solid fa-clone text-xs"></i>
+                </div>
+                <strong className="text-slate-100 text-sm font-bold">4. Akıllı Flashcards (Kelime Kartları)</strong>
               </div>
-            </li>
-            <li className="flex items-start gap-3">
-              <div className="w-8 h-8 rounded-lg bg-sky-900/50 border border-sky-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-sky-400"><i className="fa-solid fa-magnifying-glass"></i></div>
-              <div>
-                <strong className="text-slate-200 block mb-1">Akıllı Sözlük Araması (Tersten Arama Destekli)</strong>
-                Herhangi bir Hollandaca, Türkçe veya İngilizce kelimeyi bulmak için üstteki arama çubuğunu kullanın. Aradığınız kelime bulunduğunuz ünitede olmasa bile, arama sonuçlarından doğrudan "biliyorum/bilmiyorum" şeklinde işaretleyebilir ve kişisel takip sisteminize anında ekleyebilirsiniz.
+              <p className="text-xs text-slate-300 leading-relaxed">
+                3D çevirmeli kartlarla pratik yapın. İster seçtiğiniz ünitenin kelimelerini, ister site genelinde biriktirdiğiniz <strong>"Benim Kelime Havuzum"</strong> modunu çalışın. Sadece "Bilinmeyen" kelimeleri filtreleyebilir veya listenizi panoya kopyalayabilirsiniz.
+              </p>
+            </div>
+
+            {/* 5. Gramer & Düzensiz Fiiller */}
+            <div className="p-4 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-slate-600 transition-colors">
+              <div className="flex items-center gap-2.5 mb-2">
+                <div className="w-8 h-8 rounded-lg bg-purple-500/15 border border-purple-500/30 flex items-center justify-center text-purple-400 flex-shrink-0">
+                  <i className="fa-solid fa-spell-check text-xs"></i>
+                </div>
+                <strong className="text-slate-100 text-sm font-bold">5. Gramer Rehberi & Düzensiz Fiiller</strong>
               </div>
-            </li>
-            <li className="flex items-start gap-3">
-              <div className="w-8 h-8 rounded-lg bg-amber-900/50 border border-amber-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-amber-400"><i className="fa-solid fa-chalkboard-user"></i></div>
-              <div>
-                <strong className="text-slate-200 block mb-1">Özet (Summary) Bölümleri</strong>
-                Üst menüdeki tahta ikonundan ulaşabileceğiniz bu bölümler, gerçek sınıf notlarına dayanan kapsamlı gramer özetleri, telaffuz ipuçları ve ekstra egzersizler içerir.
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Tüm A1/A2 Hollandaca dilbilgisi kurallarını ve tablolarını inceleyin. En sık kullanılan düzensiz fiillerin zaman çekimlerini (Imperfectum & Perfectum) öğrenin ve her konu için özel alıştırma testlerini çözün.
+              </p>
+            </div>
+
+            {/* 6. Ünite Özetleri & Sınavlar */}
+            <div className="p-4 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-slate-600 transition-colors">
+              <div className="flex items-center gap-2.5 mb-2">
+                <div className="w-8 h-8 rounded-lg bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-400 flex-shrink-0">
+                  <i className="fa-solid fa-chalkboard-user text-xs"></i>
+                </div>
+                <strong className="text-slate-100 text-sm font-bold">6. Ünite Özetleri (Summary) & Quizler</strong>
               </div>
-            </li>
-            <li className="flex items-start gap-3">
-              <div className="w-8 h-8 rounded-lg bg-purple-900/50 border border-purple-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-purple-400"><i className="fa-solid fa-right-left"></i></div>
-              <div>
-                <strong className="text-slate-200 block mb-1">Bölümler Arası Hızlı Geçiş</strong>
-                Ders bölümleri arasında klavyenizdeki <strong>sol/sağ ok tuşlarını</strong> kullanarak veya mobilde ekranı <strong>sağa/sola kaydırarak (swipe)</strong> anında gezinebilirsiniz.
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Her ünite sonundaki <strong>Özet (Summary)</strong> bölümünde sınıf ders notlarına dayalı özetler ve ünite sonu pratik testi (<strong>Practice</strong> butonu) yer alır. Üst menüdeki kep (🎓) simgesinden ise tüm konuları kapsayan <strong>Genel Sınav</strong>'a katılabilirsiniz.
+              </p>
+            </div>
+
+            {/* 7. İlerleme & Favoriler */}
+            <div className="p-4 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-slate-600 transition-colors">
+              <div className="flex items-center gap-2.5 mb-2">
+                <div className="w-8 h-8 rounded-lg bg-teal-500/15 border border-teal-500/30 flex items-center justify-center text-teal-400 flex-shrink-0">
+                  <i className="fa-solid fa-circle-check text-xs"></i>
+                </div>
+                <strong className="text-slate-100 text-sm font-bold">7. İlerleme Takibi & Favoriler</strong>
               </div>
-            </li>
-            <li className="flex items-start gap-3">
-              <div className="w-8 h-8 rounded-lg bg-emerald-900/50 border border-emerald-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-emerald-400"><i className="fa-solid fa-cloud-arrow-up"></i></div>
-              <div>
-                <strong className="text-slate-200 block mb-1">Bulut Senkronizasyonu & Üyelik</strong>
-                Profil simgesini (<i className="fa-solid fa-circle-user"></i>) kullanarak giriş yaptığınızda ilerlemeniz güvenli bir şekilde buluta kaydedilir. Cihaz değiştirseniz bile verileriniz asla kaybolmaz.
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Tamamladığınız bölümleri yeşil tik (<i className="fa-solid fa-circle-check text-emerald-400"></i>) ile işaretleyerek Dashboard üzerinden ünite tamamlama yüzdenizi takip edin. Önemli bulduğunuz bölümlere özel notlar ekleyerek favorilere (<i className="fa-solid fa-star text-amber-400"></i>) kaydedin.
+              </p>
+            </div>
+
+            {/* 8. Akıllı Arama & Bulut Eşitleme */}
+            <div className="p-4 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-slate-600 transition-colors">
+              <div className="flex items-center gap-2.5 mb-2">
+                <div className="w-8 h-8 rounded-lg bg-sky-500/15 border border-sky-500/30 flex items-center justify-center text-sky-400 flex-shrink-0">
+                  <i className="fa-solid fa-cloud-arrow-up text-xs"></i>
+                </div>
+                <strong className="text-slate-100 text-sm font-bold">8. Çok Dilli Arama & Bulut Eşitleme</strong>
               </div>
-            </li>
-          </ul>
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Üst arama çubuğundan Hollandaca, Türkçe veya İngilizce kelimeleri anında bulun ve doğrudan sonuçlardan kelime durumunuzu güncelleyin. Profilinizle (<i className="fa-solid fa-circle-user"></i>) giriş yaptığınızda tüm ilerlemeniz ve kelimeleriniz buluta yedeklenir.
+              </p>
+            </div>
+          </div>
         </div>
       </>
     ) : (
       <>
-        <div className="bg-brand-900/20 border border-brand-700/50 p-4 rounded-xl">
-          <p>This application is a <strong>non-commercial</strong>, open-source project designed to track and support the 3rd edition of the <em>"Nederlands in Gang"</em> textbook. It was meticulously developed in collaboration with <strong>Google Gemini</strong> to create a personalized, interactive Dutch learning experience.</p>
+        {/* INTRO CARD */}
+        <div className="bg-brand-900/20 border border-brand-500/30 p-4 sm:p-5 rounded-2xl flex items-start gap-3.5">
+          <div className="w-10 h-10 rounded-xl bg-brand-500/20 border border-brand-500/30 flex items-center justify-center flex-shrink-0 text-brand-400 mt-0.5 shadow-sm">
+            <i className="fa-solid fa-graduation-cap text-lg"></i>
+          </div>
+          <div>
+            <h4 className="font-bold text-brand-300 text-sm sm:text-base mb-1">Nederlands in Gang (A1 → A2) Interactive Study Portal</h4>
+            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              This platform is a <strong>free, ad-free, and open-source</strong> companion app for students studying the <em>"Nederlands in Gang"</em> textbook. It is carefully crafted to help you practice and reinforce listening, reading, vocabulary, and grammar through interactive exercises.
+            </p>
+          </div>
         </div>
+
+        {/* CORE FEATURES GRID */}
         <div>
-          <h4 className="font-bold text-brand-300 text-base mb-3 border-b border-slate-700 pb-2"><i className="fa-solid fa-book-open mr-2"></i>How to Use the App</h4>
-          <ul className="space-y-4">
-            <li className="flex items-start gap-3">
-              <div className="w-8 h-8 rounded-lg bg-indigo-900/50 border border-indigo-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-indigo-400"><i className="fa-solid fa-comments"></i></div>
-              <div>
-                <strong className="text-slate-200 block mb-1">Dialogues & Interactive Reading</strong>
-                Read and listen to chapter dialogues. Click on <u>any dotted word</u> to see its translation. You can instantly mark it as "Known" (<i className="fa-solid fa-check text-emerald-400"></i>) or "Unknown" (<i className="fa-solid fa-xmark text-rose-400"></i>). This action automatically saves the word to <strong>My Word Pool</strong>.
+          <h4 className="font-bold text-slate-100 text-base mb-4 flex items-center gap-2 border-b border-slate-800 pb-2.5">
+            <i className="fa-solid fa-compass text-brand-400"></i>
+            <span>Core Features & User Guide</span>
+          </h4>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+            {/* 1. Dialogues */}
+            <div className="p-4 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-slate-600 transition-colors">
+              <div className="flex items-center gap-2.5 mb-2">
+                <div className="w-8 h-8 rounded-lg bg-indigo-500/15 border border-indigo-500/30 flex items-center justify-center text-indigo-400 flex-shrink-0">
+                  <i className="fa-solid fa-comments text-xs"></i>
+                </div>
+                <strong className="text-slate-100 text-sm font-bold">1. Interactive Dialogues & Audio Speed</strong>
               </div>
-            </li>
-            <li className="flex items-start gap-3">
-              <div className="w-8 h-8 rounded-lg bg-rose-900/50 border border-rose-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-rose-400"><i className="fa-solid fa-clone"></i></div>
-              <div>
-                <strong className="text-slate-200 block mb-1">Flashcards & My Word Pool</strong>
-                Practice vocabulary with interactive flashcards. You can study chapter-specific words, or switch to <strong>My Word Pool</strong> to review every word you have ever interacted with.
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Read chapter dialogues color-coded by speaker. Listen line-by-line or play the entire dialogue continuously with <strong>"Play Full Dialogue"</strong>. Adjust playback speed using the analog slider (<strong>0.6x - 1.4x</strong>).
+              </p>
+            </div>
+
+            {/* 2. Reading Comprehension */}
+            <div className="p-4 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-slate-600 transition-colors">
+              <div className="flex items-center gap-2.5 mb-2">
+                <div className="w-8 h-8 rounded-lg bg-blue-500/15 border border-blue-500/30 flex items-center justify-center text-blue-400 flex-shrink-0">
+                  <i className="fa-solid fa-book-open text-xs"></i>
+                </div>
+                <strong className="text-slate-100 text-sm font-bold">2. Reading Passages & Comprehension</strong>
               </div>
-            </li>
-            <li className="flex items-start gap-3">
-              <div className="w-8 h-8 rounded-lg bg-indigo-900/50 border border-indigo-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-indigo-400"><i className="fa-solid fa-spell-check"></i></div>
-              <div>
-                <strong className="text-slate-200 block mb-1">Grammar Reference & Verbs</strong>
-                Use the buttons next to the search bar to instantly access Dutch grammar rules, detailed examples, exceptions, and lists of frequently used irregular verbs.
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Listen and read along with dedicated reading texts crafted for each chapter. Fine-tune speech speed, inspect unfamiliar words, and test your understanding with comprehension quiz questions.
+              </p>
+            </div>
+
+            {/* 3. Clickable Words & Word Pool */}
+            <div className="p-4 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-slate-600 transition-colors">
+              <div className="flex items-center gap-2.5 mb-2">
+                <div className="w-8 h-8 rounded-lg bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-400 flex-shrink-0">
+                  <i className="fa-solid fa-hand-pointer text-xs"></i>
+                </div>
+                <strong className="text-slate-100 text-sm font-bold">3. Clickable Words & My Word Pool</strong>
               </div>
-            </li>
-            <li className="flex items-start gap-3">
-              <div className="w-8 h-8 rounded-lg bg-teal-900/50 border border-teal-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-teal-400"><i className="fa-solid fa-graduation-cap"></i></div>
-              <div>
-                <strong className="text-slate-200 block mb-1">Practice Tests & Full Quiz</strong>
-                You can take topic-specific tests using the <strong>Practice</strong> buttons in the Grammar and Irregular Verbs sections, or take a comprehensive <strong>Full Quiz</strong> by clicking the graduation cap icon (🎓) in the top menu. Your performance statistics are recorded.
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Click any dotted word in dialogues and reading passages to see its English and Turkish definitions with examples. Mark words as <strong>"Known" (Green)</strong> or <strong>"Unknown" (Red)</strong> to instantly save them to your personal <strong>Word Pool</strong>.
+              </p>
+            </div>
+
+            {/* 4. Flashcards */}
+            <div className="p-4 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-slate-600 transition-colors">
+              <div className="flex items-center gap-2.5 mb-2">
+                <div className="w-8 h-8 rounded-lg bg-rose-500/15 border border-rose-500/30 flex items-center justify-center text-rose-400 flex-shrink-0">
+                  <i className="fa-solid fa-clone text-xs"></i>
+                </div>
+                <strong className="text-slate-100 text-sm font-bold">4. Smart Vocabulary Flashcards</strong>
               </div>
-            </li>
-            <li className="flex items-start gap-3">
-              <div className="w-8 h-8 rounded-lg bg-sky-900/50 border border-sky-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-sky-400"><i className="fa-solid fa-magnifying-glass"></i></div>
-              <div>
-                <strong className="text-slate-200 block mb-1">Smart Dictionary Search (Reverse Search Supported)</strong>
-                Use the search bar at the top to find any Dutch, English or Turkish word. Even if it's not in the current chapter, you can still mark it as known/unknown directly from the search results.
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Practice vocabulary with interactive 3D cards. Study words specific to a chapter or switch to <strong>"My Word Pool"</strong> to review all interacted words. Filter by "Unknown" words, shuffle cards, or copy vocabulary to your clipboard.
+              </p>
+            </div>
+
+            {/* 5. Grammar & Verbs */}
+            <div className="p-4 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-slate-600 transition-colors">
+              <div className="flex items-center gap-2.5 mb-2">
+                <div className="w-8 h-8 rounded-lg bg-purple-500/15 border border-purple-500/30 flex items-center justify-center text-purple-400 flex-shrink-0">
+                  <i className="fa-solid fa-spell-check text-xs"></i>
+                </div>
+                <strong className="text-slate-100 text-sm font-bold">5. Grammar Reference & Irregular Verbs</strong>
               </div>
-            </li>
-            <li className="flex items-start gap-3">
-              <div className="w-8 h-8 rounded-lg bg-amber-900/50 border border-amber-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-amber-400"><i className="fa-solid fa-chalkboard-user"></i></div>
-              <div>
-                <strong className="text-slate-200 block mb-1">Summary Sections</strong>
-                These sections in the top menu contain comprehensive grammar summaries, pronunciation tips, and extra exercises based on real classroom notes.
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Explore comprehensive A1/A2 grammar rules, structured summary tables, and exceptions. Master essential irregular verbs across present, imperfect, and perfect tenses with built-in practice quizzes.
+              </p>
+            </div>
+
+            {/* 6. Summaries & Quizzes */}
+            <div className="p-4 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-slate-600 transition-colors">
+              <div className="flex items-center gap-2.5 mb-2">
+                <div className="w-8 h-8 rounded-lg bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-400 flex-shrink-0">
+                  <i className="fa-solid fa-chalkboard-user text-xs"></i>
+                </div>
+                <strong className="text-slate-100 text-sm font-bold">6. Chapter Summaries & Quizzes</strong>
               </div>
-            </li>
-            <li className="flex items-start gap-3">
-              <div className="w-8 h-8 rounded-lg bg-purple-900/50 border border-purple-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-purple-400"><i className="fa-solid fa-right-left"></i></div>
-              <div>
-                <strong className="text-slate-200 block mb-1">Easy Section Navigation</strong>
-                You can quickly switch between lesson sections using the <strong>left/right arrow keys</strong> on your keyboard or by <strong>swiping left/right</strong> on mobile devices.
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Review classroom lecture notes and key takeaways in the <strong>Summary</strong> section. Take quick chapter tests via the <strong>Practice</strong> button or launch the comprehensive <strong>Full Quiz</strong> (🎓).
+              </p>
+            </div>
+
+            {/* 7. Progress & Favorites */}
+            <div className="p-4 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-slate-600 transition-colors">
+              <div className="flex items-center gap-2.5 mb-2">
+                <div className="w-8 h-8 rounded-lg bg-teal-500/15 border border-teal-500/30 flex items-center justify-center text-teal-400 flex-shrink-0">
+                  <i className="fa-solid fa-circle-check text-xs"></i>
+                </div>
+                <strong className="text-slate-100 text-sm font-bold">7. Progress Tracking & Bookmarks</strong>
               </div>
-            </li>
-            <li className="flex items-start gap-3">
-              <div className="w-8 h-8 rounded-lg bg-emerald-900/50 border border-emerald-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-emerald-400"><i className="fa-solid fa-cloud-arrow-up"></i></div>
-              <div>
-                <strong className="text-slate-200 block mb-1">Cloud Sync & Membership</strong>
-                By signing in using the profile icon (<i className="fa-solid fa-circle-user"></i>), your progress is securely synchronized to the cloud. You will never lose your progress.
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Mark sections, reading passages, and summaries as completed (<i className="fa-solid fa-circle-check text-emerald-400"></i>) to monitor your chapter completion on the Dashboard. Bookmark important sections with personal notes (<i className="fa-solid fa-star text-amber-400"></i>).
+              </p>
+            </div>
+
+            {/* 8. Search & Cloud Sync */}
+            <div className="p-4 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-slate-600 transition-colors">
+              <div className="flex items-center gap-2.5 mb-2">
+                <div className="w-8 h-8 rounded-lg bg-sky-500/15 border border-sky-500/30 flex items-center justify-center text-sky-400 flex-shrink-0">
+                  <i className="fa-solid fa-cloud-arrow-up text-xs"></i>
+                </div>
+                <strong className="text-slate-100 text-sm font-bold">8. Multilingual Search & Cloud Sync</strong>
               </div>
-            </li>
-          </ul>
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Search across Dutch, Turkish, and English terms with instant reverse lookup. Sign in with your account (<i className="fa-solid fa-circle-user"></i>) to keep your word pool and progress securely synchronized across all devices.
+              </p>
+            </div>
+          </div>
         </div>
       </>
     )}
+
+    {/* EN ALTTA GITHUB BAĞLANTISI */}
+    <div className="bg-slate-800/80 border border-slate-700/80 p-4 sm:p-5 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4 mt-6 shadow-sm">
+      <div className="flex items-center gap-3 text-center sm:text-left">
+        <div className="w-10 h-10 rounded-xl bg-slate-700/60 border border-slate-600/60 flex items-center justify-center text-slate-200 flex-shrink-0 shadow-inner">
+          <i className="fa-brands fa-github text-xl"></i>
+        </div>
+        <div>
+          <strong className="block text-slate-100 text-sm font-bold">
+            {lang === 'tr' ? 'Açık Kaynak Kodlu Proje' : 'Open Source Project'}
+          </strong>
+          <span className="text-xs text-slate-400">
+            {lang === 'tr' 
+              ? 'Kaynak kodları inceleyebilir, projeye katkıda bulunabilir veya GitHub üzerinden yıldız verebilirsiniz.' 
+              : 'Feel free to review the source code, contribute, or star the repository on GitHub.'}
+          </span>
+        </div>
+      </div>
+      <a 
+        href="https://github.com/eckucukoglu/nederlands-app" 
+        target="_blank" 
+        rel="noreferrer" 
+        className="flex items-center gap-2 bg-slate-700 hover:bg-slate-600 text-white px-4 py-2.5 rounded-xl transition-all font-semibold text-xs shadow-sm hover:scale-105 active:scale-95 flex-shrink-0 cursor-pointer"
+      >
+        <i className="fa-brands fa-github text-base"></i>
+        <span>GitHub Repository</span>
+        <i className="fa-solid fa-arrow-up-right-from-square text-[10px] ml-0.5 opacity-70"></i>
+      </a>
+    </div>
   </div>
 );
 
@@ -233,11 +386,18 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
   });
 
   useEffect(() => {
+    setShowSummaryFavInput(false);
+    setSummaryFavNote("");
+    setIsSummaryQuizOpen(false);
     if (activeTab !== 'home') {
       setLastTabBeforeHome(activeTab);
       localStorage.setItem('lastTabBeforeHome', activeTab);
     }
   }, [activeTab]);
+
+  const [isSummaryQuizOpen, setIsSummaryQuizOpen] = useState(false);
+  const [showSummaryFavInput, setShowSummaryFavInput] = useState(false);
+  const [summaryFavNote, setSummaryFavNote] = useState("");
 
   const [isSearchExpanded, setIsSearchExpanded] = useState(false);
   const [isMobileSearchOpen, setIsMobileSearchOpen] = useState(false);
@@ -303,9 +463,10 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
 
   const isSummaryMode = activeTab.startsWith('On-Class-');
   const isReadingMode = activeTab.startsWith('Reading-');
+  const isDialogueMode = activeTab.endsWith('.1') && !isSummaryMode && !isReadingMode;
 
   const isChapterFullyCompleted = (chNum) => {
-    const chapterSections = bookSections.filter(s => s.chapter === chNum && !s.id.includes('On-Class') && !s.id.includes('Reading'));
+    const chapterSections = bookSections.filter(s => s.chapter === chNum);
     if (chapterSections.length === 0) return false;
     return chapterSections.every(s => completed[s.id]);
   };
@@ -711,15 +872,22 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
     if (secId === 'grammar') return lang === 'tr' ? "Gramer Referansı" : "Grammar Reference";
     if (secId.includes('On-Class')) {
        const ch = secId.replace('On-Class-', '');
-       return lang === 'tr' ? `Ünite ${ch} Özeti` : `Chapter ${ch} Summary`;
+       return lang === 'tr' ? `Ünite ${ch} - Özet` : `Chapter ${ch} - Summary`;
     }
     if (secId.includes('Reading')) {
        const ch = secId.replace('Reading-', '');
-       return lang === 'tr' ? `Ünite ${ch} - Reading (Okuma)` : `Chapter ${ch} - Reading`;
+       return lang === 'tr' ? `Ünite ${ch} - Okuma & Anlama` : `Chapter ${ch} - Reading Comprehension`;
+    }
+    if (secId.endsWith('.1')) {
+       const ch = secId.split('.')[0];
+       return lang === 'tr' ? `Ünite ${ch} - Diyalog` : `Chapter ${ch} - Dialogue`;
     }
     const sec = bookSections.find(s => s.id === secId);
-    if (sec && sec.title) return `${secId} - ${sec.title}`;
-    if (secId.endsWith('.1')) return `${secId} (${lang === 'tr' ? "Diyalog" : "Dialogue"})`;
+    if (sec && sec.title) {
+      const titleStr = typeof sec.title === 'object' ? (sec.title[lang] || sec.title.tr || sec.title.en) : sec.title;
+      const clean = String(titleStr).replace(new RegExp(`^(?:${secId.replace('.', '\\.')}\\s*[-–:]?\\s*)+`, 'i'), '').trim();
+      return clean ? `${secId} - ${clean}` : secId;
+    }
     return `${secId} (${lang === 'tr' ? "Alıştırma" : "Exercise"})`;
   };
 
@@ -959,6 +1127,15 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
         />
       )}
 
+      {/* SUMMARY QUIZ MODAL */}
+      {isSummaryQuizOpen && (
+        <QuizModule 
+          tags={[`summary_ch${currentChapter}`]} 
+          onClose={() => setIsSummaryQuizOpen(false)} 
+          title={lang === 'tr' ? `Ünite Özeti Testi (H${currentChapter})` : `Chapter Summary Quiz (H${currentChapter})`}
+        />
+      )}
+
       {/* 1. HEADER (SADECE BU KISIM SABİT) */}
       <header className="bg-slate-950/95 backdrop-blur-md text-white shadow-md sticky top-0 z-50 border-b border-slate-800 flex-none w-full">
         <div className="max-w-7xl mx-auto px-2 sm:px-4 py-2 sm:py-2.5 flex flex-nowrap justify-between items-center gap-1.5 sm:gap-2">
@@ -966,10 +1143,9 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
           <div 
             className="flex items-center space-x-1.5 sm:space-x-2 flex-shrink-0 min-w-0 cursor-pointer group select-none"
             onClick={handleTitleClick}
-            onDoubleClick={(e) => { e.preventDefault(); setIsInfoModalOpen(true); }}
             title={activeTab === 'home' 
-              ? (lang === 'tr' ? '1 Tık: Kaldığın Ekrana Dön | 2 Tık: Kılavuz' : '1 Click: Return to Previous Screen | 2 Clicks: Guide')
-              : (lang === 'tr' ? '1 Tık: Dashboard | 2 Tık: Kılavuz' : '1 Click: Dashboard | 2 Clicks: Guide')
+              ? (lang === 'tr' ? 'Kaldığın Ekrana Dön' : 'Return to Previous Screen')
+              : (lang === 'tr' ? 'Dashboard' : 'Dashboard')
             }
           >
             <div className={`w-9 h-9 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center transition-all duration-200 ${
@@ -1261,7 +1437,9 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
           
           <div 
             ref={sectionMeasureRef} 
-            className="w-full max-w-full overflow-x-auto hide-scroll whitespace-nowrap flex justify-center items-center gap-2 px-10 sm:px-12" 
+            className={`w-full max-w-full overflow-x-auto hide-scroll whitespace-nowrap flex justify-center items-center gap-2 px-10 sm:px-12 ${
+              isSummaryMode ? 'pr-48 sm:pr-56' : ''
+            }`} 
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
             <div className="flex items-center justify-center flex-nowrap gap-1.5 sm:gap-2 px-1 flex-shrink-0">
@@ -1271,6 +1449,7 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
                 const isF = favorites[sec.id];
                 const isSummary = sec.id.startsWith('On-Class-');
                 const isReading = sec.id.startsWith('Reading-');
+                const isDialogue = sec.id.endsWith('.1');
                 return (
                   <button
                     key={sec.id}
@@ -1289,7 +1468,8 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
                   >
                     {isSummary && <i className="fa-solid fa-chalkboard-user text-[10px]"></i>}
                     {isReading && <i className="fa-solid fa-book-open text-[10px]"></i>}
-                    <span>{isSummary ? (lang === 'tr' ? 'Özet' : 'Summary') : isReading ? (lang === 'tr' ? 'Okuma' : 'Reading') : sec.id}</span>
+                    {isDialogue && <i className="fa-solid fa-comments text-[10px]"></i>}
+                    <span>{isSummary ? (lang === 'tr' ? 'Özet' : 'Summary') : isReading ? (lang === 'tr' ? 'Okuma' : 'Reading') : isDialogue ? (lang === 'tr' ? 'Diyalog' : 'Dialogue') : sec.id}</span>
                     {isF && <i className="fa-solid fa-star text-amber-400 text-[10px]"></i>}
                     {isF && favorites[sec.id] && (
                       <span className={`text-[10px] font-normal truncate max-w-[80px] ${isActive ? 'text-amber-200' : 'text-amber-400/80'}`}>
@@ -1303,15 +1483,110 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
             </div>
           </div>
 
-          {/* SABİT GERİ BİLDİRİM (+) BUTONU */}
-          <button 
-            type="button"
-            onClick={() => setIsFeedbackOpen(true)}
-            className="absolute right-3 sm:right-4 z-10 w-7 h-7 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-brand-300 border border-slate-700 hover:border-brand-500/60 flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105 active:scale-95 group flex-shrink-0"
-            title={lang === 'tr' ? 'Geri Bildirim / Öneri Ekle (+)' : 'Add Feedback / Suggestion (+)'}
-          >
-            <i className="fa-solid fa-plus text-xs group-hover:rotate-90 transition-transform duration-200"></i>
-          </button>
+          {/* SAĞ TARAF AKSİYONLARI */}
+          <div className="absolute right-3 sm:right-4 z-10 flex items-center gap-2 sm:gap-2.5">
+            {isSummaryMode && (
+              <>
+                {/* PRACTICE BUTONU */}
+                <button
+                  type="button"
+                  onClick={() => setIsSummaryQuizOpen(true)}
+                  className="flex items-center gap-1.5 h-8 px-3 rounded-full text-xs font-bold bg-amber-600/20 hover:bg-amber-600 text-amber-400 hover:text-white border border-amber-500/50 hover:border-amber-500 transition-all shadow-sm group cursor-pointer"
+                  title={lang === 'tr' ? "Ünite Özeti Testi (Pratik Yap)" : "Practice Summary Quiz"}
+                >
+                  <i className="fa-solid fa-dumbbell group-hover:animate-bounce text-[11px]"></i>
+                  <span>Practice</span>
+                </button>
+
+                {/* TAMAMLANDI BUTONU */}
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    toggleCompleted(activeTab);
+                  }}
+                  className="text-xl transition-transform hover:scale-110 focus:outline-none cursor-pointer flex items-center justify-center w-7 h-7"
+                  title={completed[activeTab] ? (lang === 'tr' ? "Tamamlandı olarak işaretlendi" : "Marked as completed") : (lang === 'tr' ? "Tamamlandı olarak işaretle" : "Mark as completed")}
+                >
+                  {completed[activeTab] ? (
+                    <i className="fa-solid fa-circle-check text-emerald-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.6)]"></i>
+                  ) : (
+                    <i className="fa-regular fa-circle-check text-slate-500 hover:text-emerald-400 transition-colors"></i>
+                  )}
+                </button>
+
+                {/* FAVORİ BUTONU & POPUP */}
+                <div className="relative flex items-center">
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      if (favorites[activeTab]) {
+                        toggleFavorite(activeTab, null);
+                      } else {
+                        setShowSummaryFavInput(true);
+                      }
+                    }}
+                    className="text-xl transition-transform hover:scale-110 focus:outline-none cursor-pointer flex items-center justify-center w-7 h-7"
+                    title={favorites[activeTab] ? `Favori: ${favorites[activeTab]}` : (lang === 'tr' ? "Favorilere ekle" : "Add to favorites")}
+                  >
+                    {favorites[activeTab] ? (
+                      <i className="fa-solid fa-star text-amber-400 drop-shadow-[0_0_8px_rgba(251,191,36,0.6)]"></i>
+                    ) : (
+                      <i className="fa-regular fa-star text-slate-500 hover:text-amber-400 transition-colors"></i>
+                    )}
+                  </button>
+
+                  {showSummaryFavInput && (
+                    <div 
+                      className="absolute right-0 top-full mt-2 bg-slate-900 border border-amber-500/50 p-1.5 rounded-xl shadow-2xl z-50 flex items-center gap-1.5 animate-fadeIn" 
+                      onClick={e => e.stopPropagation()}
+                    >
+                      <input
+                        autoFocus
+                        maxLength={100}
+                        value={summaryFavNote}
+                        onChange={e => setSummaryFavNote(e.target.value)}
+                        onKeyDown={e => { 
+                          if (e.key === 'Enter') {
+                            e.stopPropagation();
+                            toggleFavorite(activeTab, summaryFavNote.trim() || (lang === 'tr' ? "Önemli Özet" : "Important Summary"));
+                            setShowSummaryFavInput(false);
+                            setSummaryFavNote("");
+                          } 
+                          if (e.key === 'Escape') setShowSummaryFavInput(false);
+                        }}
+                        placeholder={lang === 'tr' ? "Notun (max 100 kar.)..." : "Your note (max 100 char.)..."}
+                        className="bg-slate-950 text-slate-200 text-xs px-2.5 py-1 w-36 sm:w-48 rounded-lg border border-slate-700 focus:outline-none focus:border-amber-400 placeholder-slate-500"
+                      />
+                      <button 
+                        type="button"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          toggleFavorite(activeTab, summaryFavNote.trim() || (lang === 'tr' ? "Önemli Özet" : "Important Summary"));
+                          setShowSummaryFavInput(false);
+                          setSummaryFavNote("");
+                        }} 
+                        className="bg-amber-600 hover:bg-amber-500 text-white px-2 py-1 rounded-lg text-xs font-bold transition-colors cursor-pointer flex items-center justify-center shadow-sm"
+                      >
+                        <i className="fa-solid fa-check"></i>
+                      </button>
+                    </div>
+                  )}
+                </div>
+              </>
+            )}
+
+            {/* SABİT GERİ BİLDİRİM (+) BUTONU */}
+            <button 
+              type="button"
+              onClick={() => setIsFeedbackOpen(true)}
+              className="w-7 h-7 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-brand-300 border border-slate-700 hover:border-brand-500/60 flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105 active:scale-95 group flex-shrink-0"
+              title={lang === 'tr' ? 'Geri Bildirim / Öneri Ekle (+)' : 'Add Feedback / Suggestion (+)'}
+            >
+              <i className="fa-solid fa-plus text-xs group-hover:rotate-90 transition-transform duration-200"></i>
+            </button>
+          </div>
         </div>
       </div>
 
@@ -1325,7 +1600,7 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
             >
             <div className="flex items-center justify-between w-full">
               <span className="text-slate-200 text-sm font-bold truncate text-left">
-                {activeTab === 'home' ? 'Dashboard' : (activeTab === 'flashcards' ? t('flashcards') : activeTab === 'verbs' ? (lang === 'tr' ? 'Düzensiz Fiiller' : 'Irregular Verbs') : activeTab === 'grammar' ? (lang === 'tr' ? 'Gramer Referansı' : 'Grammar Reference') : (isSummaryMode ? (lang === 'tr' ? `Ünite ${currentChapter} - Summary (Özet)` : `Chapter ${currentChapter} - Summary`) : isReadingMode ? (lang === 'tr' ? `Ünite ${currentChapter} - Reading (Okuma)` : `Chapter ${currentChapter} - Reading`) : (lang === 'tr' ? `Bölüm ${activeTab}` : `Section ${activeTab}`)))}
+                {activeTab === 'home' ? 'Dashboard' : (activeTab === 'flashcards' ? t('flashcards') : activeTab === 'verbs' ? (lang === 'tr' ? 'Düzensiz Fiiller' : 'Irregular Verbs') : activeTab === 'grammar' ? (lang === 'tr' ? 'Gramer Referansı' : 'Grammar Reference') : (isSummaryMode ? (lang === 'tr' ? `Ünite ${currentChapter} - Özet` : `Chapter ${currentChapter} - Summary`) : isReadingMode ? (lang === 'tr' ? `Ünite ${currentChapter} - Okuma & Anlama` : `Chapter ${currentChapter} - Reading Comprehension`) : isDialogueMode ? (lang === 'tr' ? `Ünite ${currentChapter} - Diyalog` : `Chapter ${currentChapter} - Dialogue`) : (lang === 'tr' ? `Bölüm ${activeTab}` : `Section ${activeTab}`)))}
               </span>
               <div className="flex items-center gap-2 flex-shrink-0">
                 {activeTab !== 'flashcards' && activeTab !== 'verbs' && activeTab !== 'grammar' && activeTab !== 'home' && (
@@ -1362,6 +1637,47 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
               })}
             </div>
           </button>
+          {isSummaryMode && (
+            <div className="flex items-center gap-1.5 flex-shrink-0">
+              <button
+                type="button"
+                onClick={() => setIsSummaryQuizOpen(true)}
+                className="flex items-center gap-1 bg-amber-600/20 hover:bg-amber-600 text-amber-400 hover:text-white border border-amber-500/50 h-7 px-2.5 rounded-lg text-xs font-bold transition-colors"
+                title="Practice"
+              >
+                <i className="fa-solid fa-dumbbell text-[10px]"></i>
+                <span className="hidden xs:inline">Practice</span>
+              </button>
+              <button
+                type="button"
+                onClick={(e) => { e.stopPropagation(); toggleCompleted(activeTab); }}
+                className="text-lg w-7 h-7 flex items-center justify-center focus:outline-none"
+                title={completed[activeTab] ? (lang === 'tr' ? "Tamamlandı" : "Completed") : (lang === 'tr' ? "Tamamla" : "Complete")}
+              >
+                {completed[activeTab] ? (
+                  <i className="fa-solid fa-circle-check text-emerald-400"></i>
+                ) : (
+                  <i className="fa-regular fa-circle-check text-slate-500"></i>
+                )}
+              </button>
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  if (favorites[activeTab]) toggleFavorite(activeTab, null);
+                  else toggleFavorite(activeTab, lang === 'tr' ? "Önemli Özet" : "Important Summary");
+                }}
+                className="text-lg w-7 h-7 flex items-center justify-center focus:outline-none"
+                title={favorites[activeTab] ? (favorites[activeTab] === true ? "Favori" : `Favori: ${favorites[activeTab]}`) : (lang === 'tr' ? "Favori Ekle" : "Add Favorite")}
+              >
+                {favorites[activeTab] ? (
+                  <i className="fa-solid fa-star text-amber-400"></i>
+                ) : (
+                  <i className="fa-regular fa-star text-slate-500"></i>
+                )}
+              </button>
+            </div>
+          )}
           <button
             type="button"
             onClick={() => setIsFeedbackOpen(true)}
@@ -1381,6 +1697,7 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
                   const isF = favorites[sec.id];
                   const isSummary = sec.id.startsWith('On-Class-');
                   const isReading = sec.id.startsWith('Reading-');
+                  const isDialogue = sec.id.endsWith('.1');
                   return (
                     <button
                       key={sec.id}
@@ -1400,10 +1717,12 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
                       <div className="flex flex-col text-left truncate pr-2 flex-1">
                         <span className="truncate">
                           {isSummary 
-                            ? (lang === 'tr' ? `Ünite ${sec.chapter} - Summary (Özet)` : `Chapter ${sec.chapter} - Summary`)
+                            ? (lang === 'tr' ? `Ünite ${sec.chapter} - Özet` : `Chapter ${sec.chapter} - Summary`)
                             : isReading
-                            ? (lang === 'tr' ? `Ünite ${sec.chapter} - Reading (Okuma)` : `Chapter ${sec.chapter} - Reading`)
-                            : `${sec.id} - ${getSectionTitle(sec.id)}`
+                            ? (lang === 'tr' ? `Ünite ${sec.chapter} - Okuma & Anlama` : `Chapter ${sec.chapter} - Reading Comprehension`)
+                            : isDialogue
+                            ? (lang === 'tr' ? `Ünite ${sec.chapter} - Diyalog` : `Chapter ${sec.chapter} - Dialogue`)
+                            : getSectionTitle(sec.id)
                           }
                         </span>
                         {favorites[sec.id] && (

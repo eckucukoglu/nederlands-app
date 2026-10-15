@@ -563,8 +563,8 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
               )}
             </button>
 
-            <div className="relative flex items-center">
-              <button onClick={handleStarClick} className="text-xl transition-transform hover:scale-110 focus:outline-none">
+            <div className="flex items-center">
+              <button onClick={handleStarClick} className="text-xl transition-transform hover:scale-110 focus:outline-none cursor-pointer">
                 {isFav ? (
                   <i className="fa-solid fa-star text-amber-400 drop-shadow-[0_0_8px_rgba(251,191,36,0.6)]"></i>
                 ) : (
@@ -574,17 +574,20 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
             </div>
 
             {showFavInput && (
-              <div className="absolute right-0 top-full mt-3 bg-slate-800 p-2 rounded-xl shadow-2xl border border-slate-600 z-50 flex items-center gap-2" onClick={e => e.stopPropagation()}>
+              <div className="flex items-center gap-1.5 bg-slate-900 border border-amber-500/50 p-1 rounded-xl shadow-lg animate-fadeIn" onClick={e => e.stopPropagation()}>
                 <input
                   autoFocus
                   maxLength={100}
                   value={favNote}
                   onChange={e => setFavNote(e.target.value)}
-                  onKeyDown={e => { if (e.key === 'Enter') saveFavorite(e); }}
+                  onKeyDown={e => { 
+                    if (e.key === 'Enter') saveFavorite(e); 
+                    if (e.key === 'Escape') setShowFavInput(false);
+                  }}
                   placeholder={lang === 'tr' ? "Notun (max 100 kar.)..." : "Your note (max 100 char.)..."}
-                  className="bg-slate-900 border border-slate-600 text-slate-200 text-xs rounded-lg px-2.5 py-1.5 w-36 focus:outline-none focus:border-amber-400"
+                  className="bg-transparent text-slate-200 text-xs px-2.5 py-1 w-36 sm:w-44 focus:outline-none placeholder-slate-500"
                 />
-                <button onClick={saveFavorite} className="bg-emerald-600 hover:bg-emerald-500 text-white p-1.5 rounded-lg text-xs transition-colors">
+                <button onClick={saveFavorite} className="bg-amber-600 hover:bg-amber-500 text-white px-2 py-1 rounded-lg text-xs font-bold transition-colors cursor-pointer flex items-center justify-center shadow-sm">
                   <i className="fa-solid fa-check"></i>
                 </button>
               </div>

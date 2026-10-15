@@ -763,7 +763,10 @@ export const chapter1Sections = [
   {
     id: "Reading-1",
     chapter: 1,
-    title: "Reading Okuma",
+    title: {
+      tr: "Okuma & Anlama",
+      en: "Reading Comprehension"
+    },
     readingPassage: {
       title: "De eerste lesdag van de cursus Nederlands",
       level: "Niveau A1 • 18 Zinnen",

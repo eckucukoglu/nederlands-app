@@ -292,8 +292,10 @@ export default function HomeView({
       const chCurriculumWords = vocabulary.filter(w => w.chapter === ch);
       
       let dialogueStatuses = {};
+      let readingStatuses = {};
       try {
         dialogueStatuses = JSON.parse(localStorage.getItem(`dialogueWordStatuses_${ch}`)) || {};
+        readingStatuses = JSON.parse(localStorage.getItem(`readingWordStatuses_${ch}`)) || {};
       } catch (e) {}
 
       let learnedCount = 0;
@@ -303,7 +305,7 @@ export default function HomeView({
         const lowerNL = (word.nl || '').toLowerCase();
         const poolItem = globalWordPool[lowerNL];
         const fcItem = flashcardStats[word.id] || flashcardStats[lowerNL] || flashcardStats[word.nl];
-        const diagStatus = dialogueStatuses[lowerNL];
+        const diagStatus = dialogueStatuses[lowerNL] || readingStatuses[lowerNL];
 
         const isLearned = 
           poolItem?.status === 'known' || 
@@ -365,9 +367,9 @@ export default function HomeView({
     // ----------------------------------------------------
     // D) 3. SÜTUN: BÖLÜM & ÜNİTE TAMAMLAMA ANALİZİ (SECTIONS)
     // ----------------------------------------------------
-    const normalSections = bookSections.filter(s => !s.id.includes('On-Class') && !s.id.includes('Reading'));
-    const totalBookSections = normalSections.length || 85;
-    const completedSectionsCount = normalSections.filter(s => completed[s.id]).length;
+    const allSections = bookSections;
+    const totalBookSections = allSections.length || 103;
+    const completedSectionsCount = allSections.filter(s => completed[s.id]).length;
     const sectionsProgressPercent = totalBookSections > 0 
       ? Math.min(100, Math.round((completedSectionsCount / totalBookSections) * 100)) 
       : 0;
@@ -377,11 +379,11 @@ export default function HomeView({
       const chSections = bookSections.filter(s => s.chapter === ch && !s.id.includes('On-Class') && !s.id.includes('Reading'));
       const readingSec = bookSections.find(s => s.chapter === ch && s.id.includes('Reading'));
       const summarySec = bookSections.find(s => s.chapter === ch && s.id.includes('On-Class'));
-      const completedCount = chSections.filter(s => completed[s.id]).length;
-      const totalCount = chSections.length;
-      const isFullyDone = totalCount > 0 && completedCount === totalCount;
       const isReadingDone = readingSec ? !!completed[readingSec.id] : false;
       const isSummaryDone = summarySec ? !!completed[summarySec.id] : false;
+      const totalCount = chSections.length + (readingSec ? 1 : 0) + (summarySec ? 1 : 0);
+      const completedCount = chSections.filter(s => completed[s.id]).length + (readingSec && isReadingDone ? 1 : 0) + (summarySec && isSummaryDone ? 1 : 0);
+      const isFullyDone = totalCount > 0 && completedCount === totalCount;
       const progress = totalCount > 0 ? Math.round((completedCount / totalCount) * 100) : 0;
       const info = CHAPTER_INFO[ch] || {};
 
@@ -455,17 +457,28 @@ export default function HomeView({
   }, [completed, favorites, bookSections, statsVersion]);
 
   const getSecTitle = (secId) => {
-    const sec = bookSections.find(s => s.id === secId);
-    if (sec && sec.title) return sec.title;
+    if (!secId) return '';
     if (secId.includes('On-Class')) {
        const ch = secId.replace('On-Class-', '');
-       return isTr ? `Ünite ${ch} Özeti` : `Chapter ${ch} Summary`;
+       return isTr ? `Ünite ${ch} - Özet` : `Chapter ${ch} - Summary`;
     }
     if (secId.includes('Reading')) {
        const ch = secId.replace('Reading-', '');
-       return isTr ? `Ünite ${ch} Okuma` : `Chapter ${ch} Reading`;
+       return isTr ? `Ünite ${ch} - Okuma & Anlama` : `Chapter ${ch} - Reading Comprehension`;
     }
-    return isTr ? 'Diyalog / Alıştırma' : 'Dialogue / Exercise';
+    if (secId.endsWith('.1')) {
+       const ch = secId.split('.')[0];
+       return isTr ? `Ünite ${ch} - Diyalog` : `Chapter ${ch} - Dialogue`;
+    }
+    const sec = bookSections.find(s => s.id === secId);
+    if (sec && sec.title) {
+      const rawTitle = typeof sec.title === 'object' 
+        ? (sec.title[lang] || (isTr ? sec.title.tr : sec.title.en)) 
+        : sec.title;
+      const clean = String(rawTitle).replace(new RegExp(`^(?:${secId.replace('.', '\\.')}\\s*[-–:]?\\s*)+`, 'i'), '').trim();
+      return clean ? `${secId} - ${clean}` : secId;
+    }
+    return isTr ? `${secId} - Alıştırma` : `${secId} - Exercise`;
   };
 
   // Seviye Rozeti Belirleme (0 - 100 Birleşik Skora Göre)
@@ -1467,6 +1480,7 @@ export default function HomeView({
                       <div className="flex flex-wrap gap-1.5">
                         {ch.sections.map(sec => {
                           const isDone = !!completed[sec.id];
+                          const isDialogue = sec.id.endsWith('.1');
                           return (
                             <button
                               key={sec.id}
@@ -1476,10 +1490,10 @@ export default function HomeView({
                                   ? 'bg-emerald-950/70 border-emerald-600/70 text-emerald-300 hover:bg-emerald-800 hover:text-white'
                                   : 'bg-slate-900/80 border-slate-700 text-slate-400 hover:bg-slate-750 hover:text-slate-200'
                               }`}
-                              title={sec.title || sec.id}
+                              title={isDialogue ? (isTr ? `Ünite ${ch.chapterNum} - Diyalog` : `Chapter ${ch.chapterNum} - Dialogue`) : getSecTitle(sec.id)}
                             >
-                              <i className={`text-[10px] ${isDone ? 'fa-solid fa-check text-emerald-400' : 'fa-regular fa-circle text-slate-600'}`}></i>
-                              <span>{sec.id}</span>
+                              <i className={`text-[10px] ${isDone ? 'fa-solid fa-check text-emerald-400' : isDialogue ? 'fa-solid fa-comments text-brand-400/80' : 'fa-regular fa-circle text-slate-600'}`}></i>
+                              <span>{isDialogue ? (isTr ? 'Diyalog' : 'Dialogue') : sec.id}</span>
                             </button>
                           );
                         })}
@@ -1491,12 +1505,12 @@ export default function HomeView({
                             onClick={() => goToSection(ch.readingSection.id)}
                             className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer border ${
                               ch.isReadingDone
-                                ? 'bg-indigo-950/80 border-indigo-500/70 text-indigo-300 hover:bg-indigo-800 hover:text-white'
+                                ? 'bg-emerald-950/70 border-emerald-600/70 text-emerald-300 hover:bg-emerald-800 hover:text-white'
                                 : 'bg-slate-900/80 border-indigo-900/50 text-indigo-400/80 hover:bg-indigo-950/50 hover:text-indigo-300'
                             }`}
-                            title={isTr ? 'Okuma & Anlama (Reading)' : 'Reading Comprehension'}
+                            title={isTr ? 'Okuma & Anlama' : 'Reading Comprehension'}
                           >
-                            <i className="fa-solid fa-book-open text-[10px]"></i>
+                            <i className={`text-[10px] ${ch.isReadingDone ? 'fa-solid fa-check text-emerald-400' : 'fa-solid fa-book-open'}`}></i>
                             <span>{isTr ? 'Okuma' : 'Reading'}</span>
                           </button>
                         )}
@@ -1508,12 +1522,12 @@ export default function HomeView({
                             onClick={() => goToSection(ch.summarySection.id)}
                             className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer border ${
                               ch.isSummaryDone
-                                ? 'bg-amber-950/80 border-amber-500/70 text-amber-300 hover:bg-amber-800 hover:text-white'
+                                ? 'bg-emerald-950/70 border-emerald-600/70 text-emerald-300 hover:bg-emerald-800 hover:text-white'
                                 : 'bg-slate-900/80 border-amber-900/50 text-amber-400/80 hover:bg-amber-950/50 hover:text-amber-300'
                             }`}
                             title={isTr ? 'Ünite Özeti' : 'Chapter Summary'}
                           >
-                            <i className="fa-solid fa-chalkboard-user text-[10px]"></i>
+                            <i className={`text-[10px] ${ch.isSummaryDone ? 'fa-solid fa-check text-emerald-400' : 'fa-solid fa-chalkboard-user'}`}></i>
                             <span>{isTr ? 'Özet' : 'Summary'}</span>
                           </button>
                         )}
@@ -1551,11 +1565,7 @@ export default function HomeView({
               >
                 <div className="flex justify-between items-start gap-2">
                   <h4 className="font-bold text-slate-200 text-[15px] leading-snug group-hover:text-white transition-colors">
-                    {secId.includes('On-Class') 
-                      ? (isTr ? `Özet ${secId.replace('On-Class-','')}` : `Sum ${secId.replace('On-Class-','')}`) 
-                      : secId.includes('Reading')
-                      ? (isTr ? `Okuma ${secId.replace('Reading-','')}` : `Reading ${secId.replace('Reading-','')}`)
-                      : secId} - {getSecTitle(secId)}
+                    {getSecTitle(secId)}
                   </h4>
                   <div className="bg-amber-900/30 p-1.5 rounded-lg flex items-center justify-center border border-amber-500/20 flex-shrink-0">
                     <i className="fa-solid fa-star text-amber-400 text-xs"></i>
@@ -1597,11 +1607,7 @@ export default function HomeView({
               >
                 <i className="fa-solid fa-check text-[11px]"></i> 
                 <span>
-                  {secId.includes('On-Class') 
-                    ? (isTr ? `Ünite ${secId.replace('On-Class-','')} Özeti` : `Chapter ${secId.replace('On-Class-','')} Summary`) 
-                    : secId.includes('Reading')
-                    ? (isTr ? `Ünite ${secId.replace('Reading-','')} Okuması` : `Chapter ${secId.replace('Reading-','')} Reading`)
-                    : secId} - {getSecTitle(secId)}
+                  {getSecTitle(secId)}
                 </span>
               </button>
             ))}

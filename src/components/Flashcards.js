@@ -24,6 +24,8 @@ const translations = {
     know: "Biliyorum",
     allWordsOption: "Tüm Kelimeler",
     dialogueOption: "Diyalog (Bilinmeyenler)",
+    readingOption: "Okuma (Bilinmeyenler)",
+    emptyReadingEx: "Bu ünitenin okuma metninde henüz 'Bilinmeyen' olarak işaretlenmiş bir kelime bulunmuyor.",
     globalPoolOption: "👤 Benim Kelime Havuzum",
     bookPoolOption: "📚 Kitabın Kelime Havuzu",
     myPool: "Benim Kelime Havuzum",
@@ -46,6 +48,7 @@ const translations = {
   en: {
     emptyGlobalEx: "You haven't marked any words on the site yet.",
     emptyDialogEx: "There are no words marked as 'Unknown' in this chapter's dialogue.",
+    emptyReadingEx: "There are no words marked as 'Unknown' in this chapter's reading text.",
     emptyFilterTitle: "Klaar!",
     emptyFilterEn: "No unknown words",
     emptyFilterEx: "Great! There are no unknown words left in this category.",
@@ -61,6 +64,7 @@ const translations = {
     know: "Know",
     allWordsOption: "All Words",
     dialogueOption: "Dialogue (Unknowns)",
+    readingOption: "Reading (Unknowns)",
     globalPoolOption: "👤 My Word Pool",
     bookPoolOption: "📚 Book's Word Pool",
     myPool: "My Word Pool",
@@ -152,6 +156,13 @@ export default function Flashcards({ initialChapter }) {
       newDeck = [...globalDictionary];
     } else if (mode === 'all') {
       newDeck = chapterVocab;
+    } else if (mode === 'reading') {
+      const saved = JSON.parse(localStorage.getItem(`readingUnknowns_${targetChapter}`)) || [];
+      if (saved.length > 0) {
+        newDeck = saved;
+      } else {
+        newDeck = [{ id: 'empty', nl: "Geen woorden", en: "No words selected", tr: "Kelime seçilmedi", example: t.emptyReadingEx || t.emptyDialogEx }];
+      }
     } else {
       const saved = JSON.parse(localStorage.getItem(`dialogueUnknowns_${targetChapter}`)) || [];
       if (saved.length > 0) {
@@ -165,7 +176,7 @@ export default function Flashcards({ initialChapter }) {
     setCurrentIndex(0);
     setIsFlipped(false);
     setSessionStats({ known: 0, unknown: 0 });
-  }, [targetChapter, mode, lang, globalPool, chapterVocab, t.emptyGlobalEx, t.emptyDialogEx]);
+  }, [targetChapter, mode, lang, globalPool, chapterVocab, t.emptyGlobalEx, t.emptyDialogEx, t.emptyReadingEx]);
 
   useEffect(() => {
     setCurrentIndex(0);
@@ -329,6 +340,17 @@ export default function Flashcards({ initialChapter }) {
       delete statuses[lowerNL]; 
       localStorage.setItem(statusKey, JSON.stringify(statuses));
       deletedFrom = lang === 'tr' ? "Diyalog Kelimelerim listesinden" : "Dialogue Words";
+    } else if (mode === 'reading') {
+      const storageKey = `readingUnknowns_${targetChapter}`;
+      let existingUnknowns = JSON.parse(localStorage.getItem(storageKey)) || [];
+      existingUnknowns = existingUnknowns.filter(w => w.nl?.toLowerCase() !== lowerNL);
+      localStorage.setItem(storageKey, JSON.stringify(existingUnknowns));
+      
+      const statusKey = `readingWordStatuses_${targetChapter}`;
+      const statuses = JSON.parse(localStorage.getItem(statusKey)) || {};
+      delete statuses[lowerNL]; 
+      localStorage.setItem(statusKey, JSON.stringify(statuses));
+      deletedFrom = lang === 'tr' ? "Okuma Kelimelerim listesinden" : "Reading Words";
     }
 
     const msg = lang === 'tr' 
@@ -476,35 +498,36 @@ export default function Flashcards({ initialChapter }) {
         <button 
           onClick={() => { setMode('all'); setStudyUnknownsOnly(false); }}
           className={`flex-1 py-3 px-4 rounded-xl font-bold transition-all shadow-sm flex items-center justify-center gap-2 border ${
-            (mode === 'all' || mode === 'dialogue') ? 'bg-sky-600 text-white border-sky-500 shadow-md' : 'bg-slate-800 text-slate-300 border-slate-700 hover:bg-slate-700'
+            (mode === 'all' || mode === 'dialogue' || mode === 'reading') ? 'bg-sky-600 text-white border-sky-500 shadow-md' : 'bg-slate-800 text-slate-300 border-slate-700 hover:bg-slate-700'
           }`}
         >
           <i className="fa-solid fa-layer-group"></i> {t.chapterWords}
         </button>
       </div>
 
-      {(mode === 'all' || mode === 'dialogue') && (
-        <div className="flex flex-col sm:flex-row gap-4 bg-slate-800/80 p-4 rounded-2xl border border-slate-700 items-center justify-between shadow-inner animate-fadeIn mb-6">
-           <div className="flex bg-slate-900 p-1.5 rounded-xl relative w-full sm:w-80 items-center border border-slate-700">
-              <div 
-                className={`absolute top-1.5 bottom-1.5 w-[calc(50%-4px)] bg-brand-600 rounded-lg transition-transform duration-300 ease-in-out shadow-sm ${
-                  mode === 'dialogue' ? 'translate-x-[calc(100%+2px)]' : 'translate-x-1'
-                }`}
-              ></div>
+      {(mode === 'all' || mode === 'dialogue' || mode === 'reading') && (
+        <div className="flex flex-col lg:flex-row gap-4 bg-slate-800/80 p-4 rounded-2xl border border-slate-700 items-center justify-between shadow-inner animate-fadeIn mb-6">
+           <div className="flex flex-wrap sm:flex-nowrap bg-slate-900 p-1.5 rounded-xl w-full lg:w-auto items-center border border-slate-700 gap-1">
               <button 
-                 className={`flex-1 z-10 text-[11px] sm:text-xs font-bold py-2 text-center transition-colors ${mode === 'all' ? 'text-white' : 'text-slate-400 hover:text-slate-200'}`} 
+                 className={`flex-1 sm:flex-initial sm:px-3.5 text-[11px] sm:text-xs font-bold py-2 rounded-lg text-center transition-all ${mode === 'all' ? 'bg-brand-600 text-white shadow-sm' : 'text-slate-400 hover:text-slate-200'}`} 
                  onClick={() => { setMode('all'); setStudyUnknownsOnly(false); }}
               >
                  {t.allWordsOption}
               </button>
               <button 
-                 className={`flex-1 z-10 text-[11px] sm:text-xs font-bold py-2 text-center transition-colors ${mode === 'dialogue' ? 'text-white' : 'text-slate-400 hover:text-slate-200'}`} 
+                 className={`flex-1 sm:flex-initial sm:px-3.5 text-[11px] sm:text-xs font-bold py-2 rounded-lg text-center transition-all ${mode === 'dialogue' ? 'bg-brand-600 text-white shadow-sm' : 'text-slate-400 hover:text-slate-200'}`} 
                  onClick={() => { setMode('dialogue'); setStudyUnknownsOnly(false); }}
               >
                  {t.dialogueOption}
               </button>
+              <button 
+                 className={`flex-1 sm:flex-initial sm:px-3.5 text-[11px] sm:text-xs font-bold py-2 rounded-lg text-center transition-all ${mode === 'reading' ? 'bg-brand-600 text-white shadow-sm' : 'text-slate-400 hover:text-slate-200'}`} 
+                 onClick={() => { setMode('reading'); setStudyUnknownsOnly(false); }}
+              >
+                 {t.readingOption}
+              </button>
            </div>
-           <div className="w-full sm:w-auto flex items-center gap-2">
+           <div className="w-full lg:w-auto flex items-center justify-end gap-2">
              <i className="fa-solid fa-filter text-slate-400 hidden sm:block"></i>
              <select 
                 value={targetChapter} 
@@ -537,8 +560,8 @@ export default function Flashcards({ initialChapter }) {
           <i className="fa-solid fa-right-left"></i> {t.flipCards}
         </button>
         
-        {/* Yalnızca Bilinmeyenler Butonu: dialogue HARİÇ tüm modlarda (global, all, book_pool) görünür. */}
-        {mode !== 'dialogue' && (
+        {/* Yalnızca Bilinmeyenler Butonu: dialogue ve reading HARİÇ modlarda görünür */}
+        {mode !== 'dialogue' && mode !== 'reading' && (
           <button 
             onClick={() => setStudyUnknownsOnly(!studyUnknownsOnly)}
             className={`border rounded-xl px-4 py-2.5 text-sm font-semibold shadow-sm transition-colors flex items-center gap-2 ${
@@ -551,7 +574,7 @@ export default function Flashcards({ initialChapter }) {
           </button>
         )}
 
-        {(mode === 'global' || mode === 'dialogue') && (
+        {(mode === 'global' || mode === 'dialogue' || mode === 'reading') && (
           <button 
             onClick={removeCurrentWord}
             disabled={!currentWord || currentWord.id?.startsWith('empty')}
