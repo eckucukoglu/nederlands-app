@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import QuizModule from './QuizModule';
+import ReadingPassage from './ReadingPassage';
 import { speakDutch as speakDutchAudio } from '../utils/speech';
 
 const translations = {
@@ -53,6 +54,7 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
   const isFav = favorites && favorites[sectionData?.id];
   const isComp = completed && completed[sectionData?.id];
   const isSummaryMode = sectionData?.id?.startsWith('On-Class-'); 
+  const isReadingMode = sectionData?.id?.startsWith('Reading-'); 
 
   useEffect(() => {
     setAnswers({});         
@@ -112,10 +114,15 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
       {/* BAŞLIK VE AKSİYON KUTUSU */}
       <div className="bg-slate-800 rounded-2xl p-6 shadow-lg border border-slate-700 flex flex-col lg:flex-row justify-between items-start gap-6 relative overflow-hidden">
         
-        {/* Dekoratif Arka Plan İkonu (Summary Modu İçin) */}
+        {/* Dekoratif Arka Plan İkonu (Summary / Reading Modu İçin) */}
         {isSummaryMode && (
            <div className="absolute top-0 right-0 p-8 opacity-5 pointer-events-none">
              <i className="fa-solid fa-chalkboard-user text-9xl text-amber-400"></i>
+           </div>
+        )}
+        {isReadingMode && (
+           <div className="absolute top-0 right-0 p-8 opacity-5 pointer-events-none">
+             <i className="fa-solid fa-book-open text-9xl text-indigo-400"></i>
            </div>
         )}
 
@@ -123,7 +130,7 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
         <div className="flex-1 w-full relative z-10">
           <div className="inline-flex items-center space-x-2 bg-brand-900/30 border border-brand-500/20 text-brand-400 font-bold px-3 py-1 rounded-full text-xs mb-3">
             <i className="fa-solid fa-stethoscope"></i>
-            <span>Hoofdstuk ({t.chapter}) {chapterNum} • {isSummaryMode ? 'Summary' : `${t.section} ${sectionData.id}`}</span>
+            <span>Hoofdstuk ({t.chapter}) {chapterNum} • {isSummaryMode ? 'Summary' : isReadingMode ? (lang === 'tr' ? 'Reading (Okuma)' : 'Reading') : `${t.section} ${sectionData.id}`}</span>
           </div>
           
           <div className="flex items-center justify-between w-full">
@@ -192,6 +199,11 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
         )}
 
       </div>
+
+      {/* READING / OKUMA PARÇASI */}
+      {sectionData.readingPassage && (
+        <ReadingPassage data={sectionData.readingPassage} lang={lang} />
+      )}
 
       {/* TEORİ BÖLÜMÜ */}
       {sectionData.theory && (

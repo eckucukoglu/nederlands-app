@@ -365,7 +365,7 @@ export default function HomeView({
     // ----------------------------------------------------
     // D) 3. SÜTUN: BÖLÜM & ÜNİTE TAMAMLAMA ANALİZİ (SECTIONS)
     // ----------------------------------------------------
-    const normalSections = bookSections.filter(s => !s.id.includes('On-Class'));
+    const normalSections = bookSections.filter(s => !s.id.includes('On-Class') && !s.id.includes('Reading'));
     const totalBookSections = normalSections.length || 85;
     const completedSectionsCount = normalSections.filter(s => completed[s.id]).length;
     const sectionsProgressPercent = totalBookSections > 0 
@@ -374,11 +374,13 @@ export default function HomeView({
 
     const availableChapters = Array.from({ length: 18 }, (_, i) => i + 1);
     const chapterSectionStats = availableChapters.map(ch => {
-      const chSections = bookSections.filter(s => s.chapter === ch && !s.id.includes('On-Class'));
+      const chSections = bookSections.filter(s => s.chapter === ch && !s.id.includes('On-Class') && !s.id.includes('Reading'));
+      const readingSec = bookSections.find(s => s.chapter === ch && s.id.includes('Reading'));
       const summarySec = bookSections.find(s => s.chapter === ch && s.id.includes('On-Class'));
       const completedCount = chSections.filter(s => completed[s.id]).length;
       const totalCount = chSections.length;
       const isFullyDone = totalCount > 0 && completedCount === totalCount;
+      const isReadingDone = readingSec ? !!completed[readingSec.id] : false;
       const isSummaryDone = summarySec ? !!completed[summarySec.id] : false;
       const progress = totalCount > 0 ? Math.round((completedCount / totalCount) * 100) : 0;
       const info = CHAPTER_INFO[ch] || {};
@@ -392,9 +394,11 @@ export default function HomeView({
         totalCount,
         completedCount,
         isFullyDone,
+        isReadingDone,
         isSummaryDone,
         progress,
         sections: chSections,
+        readingSection: readingSec,
         summarySection: summarySec
       };
     });
@@ -456,6 +460,10 @@ export default function HomeView({
     if (secId.includes('On-Class')) {
        const ch = secId.replace('On-Class-', '');
        return isTr ? `Ünite ${ch} Özeti` : `Chapter ${ch} Summary`;
+    }
+    if (secId.includes('Reading')) {
+       const ch = secId.replace('Reading-', '');
+       return isTr ? `Ünite ${ch} Okuma` : `Chapter ${ch} Reading`;
     }
     return isTr ? 'Diyalog / Alıştırma' : 'Dialogue / Exercise';
   };
@@ -1476,6 +1484,23 @@ export default function HomeView({
                           );
                         })}
 
+                        {/* Reading / Okuma Butonu */}
+                        {ch.readingSection && (
+                          <button
+                            key={ch.readingSection.id}
+                            onClick={() => goToSection(ch.readingSection.id)}
+                            className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer border ${
+                              ch.isReadingDone
+                                ? 'bg-indigo-950/80 border-indigo-500/70 text-indigo-300 hover:bg-indigo-800 hover:text-white'
+                                : 'bg-slate-900/80 border-indigo-900/50 text-indigo-400/80 hover:bg-indigo-950/50 hover:text-indigo-300'
+                            }`}
+                            title={isTr ? 'Okuma & Anlama (Reading)' : 'Reading Comprehension'}
+                          >
+                            <i className="fa-solid fa-book-open text-[10px]"></i>
+                            <span>{isTr ? 'Okuma' : 'Reading'}</span>
+                          </button>
+                        )}
+
                         {/* Summary / Özet Butonu */}
                         {ch.summarySection && (
                           <button
@@ -1528,6 +1553,8 @@ export default function HomeView({
                   <h4 className="font-bold text-slate-200 text-[15px] leading-snug group-hover:text-white transition-colors">
                     {secId.includes('On-Class') 
                       ? (isTr ? `Özet ${secId.replace('On-Class-','')}` : `Sum ${secId.replace('On-Class-','')}`) 
+                      : secId.includes('Reading')
+                      ? (isTr ? `Okuma ${secId.replace('Reading-','')}` : `Reading ${secId.replace('Reading-','')}`)
                       : secId} - {getSecTitle(secId)}
                   </h4>
                   <div className="bg-amber-900/30 p-1.5 rounded-lg flex items-center justify-center border border-amber-500/20 flex-shrink-0">
@@ -1572,6 +1599,8 @@ export default function HomeView({
                 <span>
                   {secId.includes('On-Class') 
                     ? (isTr ? `Ünite ${secId.replace('On-Class-','')} Özeti` : `Chapter ${secId.replace('On-Class-','')} Summary`) 
+                    : secId.includes('Reading')
+                    ? (isTr ? `Ünite ${secId.replace('Reading-','')} Okuması` : `Chapter ${secId.replace('Reading-','')} Reading`)
                     : secId} - {getSecTitle(secId)}
                 </span>
               </button>

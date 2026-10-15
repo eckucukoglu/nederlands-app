@@ -764,133 +764,44 @@ export const chapter1Sections = [
     id: "Reading-1",
     chapter: 1,
     title: "Reading Okuma",
-    theory: (lang) => (
-      <>
-        {lang === 'tr' ? (
-          <div className="space-y-4">
-            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.7)', padding: '24px', borderRadius: '16px', borderLeft: '4px solid #6366f1', marginBottom: '20px' }} className="shadow-lg">
-              <div className="flex items-center gap-2 mb-3">
-                <span className="bg-indigo-900/60 text-indigo-300 text-xs font-bold px-2.5 py-1 rounded-md border border-indigo-700/50 uppercase tracking-wider">
-                  📖 Reading Okuma
-                </span>
-                <span className="text-xs text-slate-400">Niveau A1 • 18 Zinnen</span>
-              </div>
-              <h3 style={{ margin: '0 0 12px 0', color: '#a5b4fc', fontSize: '1.25rem', fontWeight: '800' }}>
-                De eerste lesdag van de cursus Nederlands
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-400 mb-4 leading-relaxed">
-                Aşağıdaki okuma parçasını dikkatlice okuyunuz. Bu parça 1. Bölümde öğrendiğiniz tanışma kalıpları, kişi zamirleri, düzenli fiil çekimleri (<code className="text-indigo-300">zijn</code>, <code className="text-indigo-300">wonen</code>, <code className="text-indigo-300">werken</code>, <code className="text-indigo-300">leren</code>), sayılar ve heceleme kuralları kullanılarak hazırlanmıştır. Metnin altındaki 20 soruluk anlama testini çözerek kendinizi test edebilirsiniz.
-              </p>
-
-              {/* Okuma Parçası Kartı */}
-              <div className="bg-slate-950/80 p-5 sm:p-6 rounded-xl border border-indigo-900/50 text-slate-100 text-sm sm:text-base leading-relaxed space-y-3 font-normal">
-                <p>
-                  Het is maandagochtend negen uur en de cursus Nederlands begint. De docent staat voor de klas en zegt: <em>"Goedemorgen allemaal, welkom in Utrecht!"</em> De docent heet meneer De Vries en hij komt uit Nederland. In het lokaal zitten veertien cursisten uit verschillende landen. De cursisten luisteren aandachtig naar de docent.
-                </p>
-                <p>
-                  Eerst stelt iedereen zich voor: wat is je naam, waar kom je vandaan en waar woon je? Een jonge vrouw begint: <em>"Hallo, ik ben Selin, ik ben vierentwintig jaar en ik kom uit Turkije."</em> Selin woont nu in Amsterdam, in de Kerkstraat op nummer achttien. Ze spreekt al goed Engels en Turks, en nu leert ze Nederlands voor haar werk. Meneer De Vries vraagt: <em>"Kun je jouw achternaam spellen, Selin?"</em> Selin antwoordt rustig: <em>"Ja hoor, Y - I - L - M - A - Z, met een Griekse ij aan het begin."</em>
-                </p>
-                <p>
-                  Naast Selin zit Lucas; hij komt uit Spanje en woont samen met een vriend in Utrecht. Lucas werkt in een internationaal restaurant en zijn hobby is de krant lezen en hardlopen. Om half elf hebben de studenten een korte pauze van twintig minuten. In de kantine drinken Selin en Lucas een kopje koffie en praten over hun huiswerk. Lucas vraagt vriendelijk: <em>"Hoe gaat het met jou, Selin?"</em> en zij antwoordt met een glimlach: <em>"Alles goed, dank je wel!"</em>
-                </p>
-                <p>
-                  Na de pauze luisteren de studenten naar een dialoog en maken ze opdrachten in het boek. Om twaalf uur is de les klaar en meneer De Vries zegt: <em>"Goed gewerkt allemaal, tot morgen!"</em>
-                </p>
-              </div>
-
-              {/* Kelime & Gramer İpuçları */}
-              <div className="mt-4 pt-4 border-t border-slate-700/60 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-300">
-                <div className="bg-slate-900/60 p-3 rounded-lg border border-slate-800">
-                  <h4 className="font-bold text-indigo-400 mb-1 flex items-center gap-1.5">
-                    <i className="fa-solid fa-book-open text-[11px]"></i> Anahtar Kelimeler:
-                  </h4>
-                  <ul className="space-y-1 list-disc pl-4 text-slate-300">
-                    <li><strong>het lokaal:</strong> derslik / sınıf</li>
-                    <li><strong>aandachtig:</strong> dikkatlice</li>
-                    <li><strong>zich voorstellen:</strong> kendini tanıtmak</li>
-                    <li><strong>de krant lezen:</strong> gazete okumak</li>
-                    <li><strong>hardlopen:</strong> koşu yapmak</li>
-                  </ul>
-                </div>
-                <div className="bg-slate-900/60 p-3 rounded-lg border border-slate-800">
-                  <h4 className="font-bold text-indigo-400 mb-1 flex items-center gap-1.5">
-                    <i className="fa-solid fa-clock text-[11px]"></i> Zaman & Sayılar:
-                  </h4>
-                  <ul className="space-y-1 list-disc pl-4 text-slate-300">
-                    <li><strong>negen uur:</strong> saat 9 (09:00)</li>
-                    <li><strong>half elf:</strong> saat 10:30</li>
-                    <li><strong>twaalf uur:</strong> saat 12 (12:00)</li>
-                    <li><strong>veertien (14) cursisten:</strong> 14 kursiyer</li>
-                    <li><strong>vierentwintig (24) jaar:</strong> 24 yaşında</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        ) : (
-          <div className="space-y-4">
-            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.7)', padding: '24px', borderRadius: '16px', borderLeft: '4px solid #6366f1', marginBottom: '20px' }} className="shadow-lg">
-              <div className="flex items-center gap-2 mb-3">
-                <span className="bg-indigo-900/60 text-indigo-300 text-xs font-bold px-2.5 py-1 rounded-md border border-indigo-700/50 uppercase tracking-wider">
-                  📖 Reading Okuma
-                </span>
-                <span className="text-xs text-slate-400">Level A1 • 18 Sentences</span>
-              </div>
-              <h3 style={{ margin: '0 0 12px 0', color: '#a5b4fc', fontSize: '1.25rem', fontWeight: '800' }}>
-                De eerste lesdag van de cursus Nederlands (First Day of the Dutch Course)
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-400 mb-4 leading-relaxed">
-                Read the following reading passage carefully. It incorporates introductions, personal pronouns, present tense regular verbs (<code className="text-indigo-300">zijn</code>, <code className="text-indigo-300">wonen</code>, <code className="text-indigo-300">werken</code>, <code className="text-indigo-300">leren</code>), numbers, and spelling learned in Chapter 1. Test your understanding with the 20 comprehension questions below.
-              </p>
-
-              {/* Reading Passage Card */}
-              <div className="bg-slate-950/80 p-5 sm:p-6 rounded-xl border border-indigo-900/50 text-slate-100 text-sm sm:text-base leading-relaxed space-y-3 font-normal">
-                <p>
-                  Het is maandagochtend negen uur en de cursus Nederlands begint. De docent staat voor de klas en zegt: <em>"Goedemorgen allemaal, welkom in Utrecht!"</em> De docent heet meneer De Vries en hij komt uit Nederland. In het lokaal zitten veertien cursisten uit verschillende landen. De cursisten luisteren aandachtig naar de docent.
-                </p>
-                <p>
-                  Eerst stelt iedereen zich voor: wat is je naam, waar kom je vandaan en waar woon je? Een jonge vrouw begint: <em>"Hallo, ik ben Selin, ik ben vierentwintig jaar en ik kom uit Turkije."</em> Selin woont nu in Amsterdam, in de Kerkstraat op nummer achttien. Ze spreekt al goed Engels en Turks, en nu leert ze Nederlands voor haar werk. Meneer De Vries vraagt: <em>"Kun je jouw achternaam spellen, Selin?"</em> Selin antwoordt rustig: <em>"Ja hoor, Y - I - L - M - A - Z, met een Griekse ij aan het begin."</em>
-                </p>
-                <p>
-                  Naast Selin zit Lucas; hij komt uit Spanje en woont samen met een vriend in Utrecht. Lucas werkt in een internationaal restaurant en zijn hobby is de krant lezen en hardlopen. Om half elf hebben de studenten een korte pauze van twintig minuten. In de kantine drinken Selin en Lucas een kopje koffie en praten over hun huiswerk. Lucas vraagt vriendelijk: <em>"Hoe gaat het met jou, Selin?"</em> en zij antwoordt met een glimlach: <em>"Alles goed, dank je wel!"</em>
-                </p>
-                <p>
-                  Na de pauze luisteren de studenten naar een dialoog en maken ze opdrachten in het boek. Om twaalf uur is de les klaar en meneer De Vries zegt: <em>"Goed gewerkt allemaal, tot morgen!"</em>
-                </p>
-              </div>
-
-              {/* Vocabulary & Grammar Hints */}
-              <div className="mt-4 pt-4 border-t border-slate-700/60 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-300">
-                <div className="bg-slate-900/60 p-3 rounded-lg border border-slate-800">
-                  <h4 className="font-bold text-indigo-400 mb-1 flex items-center gap-1.5">
-                    <i className="fa-solid fa-book-open text-[11px]"></i> Key Vocabulary:
-                  </h4>
-                  <ul className="space-y-1 list-disc pl-4 text-slate-300">
-                    <li><strong>het lokaal:</strong> classroom</li>
-                    <li><strong>aandachtig:</strong> attentively</li>
-                    <li><strong>zich voorstellen:</strong> to introduce oneself</li>
-                    <li><strong>de krant lezen:</strong> reading the newspaper</li>
-                    <li><strong>hardlopen:</strong> running</li>
-                  </ul>
-                </div>
-                <div className="bg-slate-900/60 p-3 rounded-lg border border-slate-800">
-                  <h4 className="font-bold text-indigo-400 mb-1 flex items-center gap-1.5">
-                    <i className="fa-solid fa-clock text-[11px]"></i> Time & Numbers:
-                  </h4>
-                  <ul className="space-y-1 list-disc pl-4 text-slate-300">
-                    <li><strong>negen uur:</strong> 9 o'clock (09:00)</li>
-                    <li><strong>half elf:</strong> half past ten (10:30)</li>
-                    <li><strong>twaalf uur:</strong> 12 o'clock (12:00)</li>
-                    <li><strong>veertien (14) cursisten:</strong> 14 students</li>
-                    <li><strong>vierentwintig (24) jaar:</strong> 24 years old</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-      </>
-    ),
+    readingPassage: {
+      title: "De eerste lesdag van de cursus Nederlands",
+      level: "Niveau A1 • 18 Zinnen",
+      intro: {
+        tr: "Aşağıdaki okuma parçasını dikkatlice okuyunuz. Bu parça 1. Bölümde öğrendiğiniz tanışma kalıpları, kişi zamirleri, düzenli fiil çekimleri (zijn, wonen, werken, leren), sayılar ve heceleme kuralları kullanılarak hazırlanmıştır. Paragraf yanlarındaki ses butonlarını kullanarak metni dinleyebilir veya üst kısımdaki butonla tüm metni dinleyebilirsiniz. Metnin altındaki 20 soruluk anlama testini çözerek kendinizi test edebilirsiniz.",
+        en: "Read the following reading passage carefully. It incorporates introductions, personal pronouns, present tense regular verbs (zijn, wonen, werken, leren), numbers, and spelling learned in Chapter 1. Use the audio buttons to listen paragraph by paragraph or listen to the full text. Test your understanding with the 20 comprehension questions below."
+      },
+      paragraphs: [
+        "Het is maandagochtend negen uur en de cursus Nederlands begint. De docent staat voor de klas en zegt: \"Goedemorgen allemaal, welkom in Utrecht!\" De docent heet meneer De Vries en hij komt uit Nederland. In het lokaal zitten veertien cursisten uit verschillende landen. De cursisten luisteren aandachtig naar de docent.",
+        "Eerst stelt iedereen zich voor: wat is je naam, waar kom je vandaan en waar woon je? Een jonge vrouw begint: \"Hallo, ik ben Selin, ik ben vierentwintig jaar en ik kom uit Turkije.\" Selin woont nu in Amsterdam, in de Kerkstraat op nummer achttien. Ze spreekt al goed Engels en Turks, en nu leert ze Nederlands voor haar werk. Meneer De Vries vraagt: \"Kun je jouw achternaam spellen, Selin?\" Selin antwoordt rustig: \"Ja hoor, Y - I - L - M - A - Z, met een Griekse ij aan het begin.\"",
+        "Naast Selin zit Lucas; hij komt uit Spanje en woont samen met een vriend in Utrecht. Lucas werkt in een internationaal restaurant en zijn hobby is de krant lezen en hardlopen. Om half elf hebben de studenten een korte pauze van twintig minuten. In de kantine drinken Selin en Lucas een kopje koffie en praten over hun huiswerk. Lucas vraagt vriendelijk: \"Hoe gaat het met jou, Selin?\" en zij antwoordt met een glimlach: \"Alles goed, dank je wel!\"",
+        "Na de pauze luisteren de studenten naar een dialoog en maken ze opdrachten in het boek. Om twaalf uur is de les klaar en meneer De Vries zegt: \"Goed gewerkt allemaal, tot morgen!\""
+      ],
+      hints: [
+        {
+          title: { tr: "Anahtar Kelimeler", en: "Key Vocabulary" },
+          icon: "fa-book-open",
+          items: [
+            { term: "het lokaal", tr: "derslik / sınıf", en: "classroom" },
+            { term: "aandachtig", tr: "dikkatlice", en: "attentively" },
+            { term: "zich voorstellen", tr: "kendini tanıtmak", en: "to introduce oneself" },
+            { term: "de krant lezen", tr: "gazete okumak", en: "reading the newspaper" },
+            { term: "hardlopen", tr: "koşu yapmak", en: "running" }
+          ]
+        },
+        {
+          title: { tr: "Zaman & Sayılar", en: "Time & Numbers" },
+          icon: "fa-clock",
+          items: [
+            { term: "negen uur", tr: "saat 9 (09:00)", en: "9 o'clock (09:00)" },
+            { term: "half elf", tr: "saat 10:30", en: "half past ten (10:30)" },
+            { term: "twaalf uur", tr: "saat 12 (12:00)", en: "12 o'clock (12:00)" },
+            { term: "veertien (14) cursisten", tr: "14 kursiyer", en: "14 students" },
+            { term: "vierentwintig (24) jaar", tr: "24 yaşında", en: "24 years old" }
+          ]
+        }
+      ]
+    },
     exerciseGroups: [
       {
         instruction: "Deel 1: Directe Begrip & Feiten (1-7: Doğrudan Bilgi / Direct Facts)",

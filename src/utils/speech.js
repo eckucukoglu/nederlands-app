@@ -145,8 +145,19 @@ export const getSpeakerVoiceConfig = (speakerName = '') => {
   return { pitch: 1.0, voice: selectedVoice };
 };
 
+// Chrome/Chromium uzun metinlerde 15 saniye sonra takılma sorununu önleyen heartbeat mekanizması
+let speechHeartbeatTimer = null;
+
+const clearHeartbeat = () => {
+  if (speechHeartbeatTimer) {
+    clearInterval(speechHeartbeatTimer);
+    speechHeartbeatTimer = null;
+  }
+};
+
 // Seslendirmeyi anında durdurma fonksiyonu
 export const cancelDutchSpeech = () => {
+  clearHeartbeat();
   if (typeof window !== 'undefined' && window.speechSynthesis) {
     window.speechSynthesis.cancel();
   }
@@ -157,7 +168,8 @@ export const speakDutch = (text, options = {}) => {
   if (typeof window === 'undefined' || !window.speechSynthesis) return;
   if (!text || typeof text !== 'string') return;
 
-  // Önceki seslendirmeyi durdur
+  // Önceki seslendirmeyi durdur ve heartbeat'i temizle
+  clearHeartbeat();
   window.speechSynthesis.cancel();
 
   const utterance = new SpeechSynthesisUtterance(text);
@@ -179,12 +191,25 @@ export const speakDutch = (text, options = {}) => {
   const currentRate = options.rate !== undefined ? options.rate : getSpeechRate();
   utterance.rate = currentRate;
 
-  if (options.onEnd) {
-    utterance.onend = options.onEnd;
-  }
-  if (options.onError) {
-    utterance.onerror = options.onError;
-  }
+  utterance.onend = (e) => {
+    clearHeartbeat();
+    if (options.onEnd) options.onEnd(e);
+  };
+
+  utterance.onerror = (e) => {
+    clearHeartbeat();
+    if (options.onError) options.onError(e);
+  };
+
+  // Uzun paragrafların kesilmemesi için her 10 saniyede bir pause/resume döngüsü
+  speechHeartbeatTimer = setInterval(() => {
+    if (typeof window !== 'undefined' && window.speechSynthesis && window.speechSynthesis.speaking) {
+      window.speechSynthesis.pause();
+      window.speechSynthesis.resume();
+    } else {
+      clearHeartbeat();
+    }
+  }, 10000);
 
   window.speechSynthesis.speak(utterance);
 };
