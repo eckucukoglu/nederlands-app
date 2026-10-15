@@ -761,9 +761,9 @@ export const chapter1Sections = [
     ]
   },
   {
-    id: "1.10",
+    id: "Reading-1",
     chapter: 1,
-    title: "1.10 Lezen: De eerste lesdag",
+    title: "Reading Okuma",
     theory: (lang) => (
       <>
         {lang === 'tr' ? (
@@ -771,7 +771,7 @@ export const chapter1Sections = [
             <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.7)', padding: '24px', borderRadius: '16px', borderLeft: '4px solid #6366f1', marginBottom: '20px' }} className="shadow-lg">
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-indigo-900/60 text-indigo-300 text-xs font-bold px-2.5 py-1 rounded-md border border-indigo-700/50 uppercase tracking-wider">
-                  📖 Leesvaardigheid (Okuma Anlama)
+                  📖 Reading Okuma
                 </span>
                 <span className="text-xs text-slate-400">Niveau A1 • 18 Zinnen</span>
               </div>
@@ -832,7 +832,7 @@ export const chapter1Sections = [
             <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.7)', padding: '24px', borderRadius: '16px', borderLeft: '4px solid #6366f1', marginBottom: '20px' }} className="shadow-lg">
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-indigo-900/60 text-indigo-300 text-xs font-bold px-2.5 py-1 rounded-md border border-indigo-700/50 uppercase tracking-wider">
-                  📖 Reading Comprehension
+                  📖 Reading Okuma
                 </span>
                 <span className="text-xs text-slate-400">Level A1 • 18 Sentences</span>
               </div>
@@ -897,49 +897,49 @@ export const chapter1Sections = [
         isExtra: false,
         questions: [
           {
-            id: "1.10_reading_1",
+            id: "reading_1_1",
             type: "multiple_choice",
             question: "Hoe laat begint de cursus Nederlands op maandagochtend?",
             options: ["Om 08:30 uur", "Om 09:00 uur", "Om 10:30 uur", "Om 12:00 uur"],
             correctAnswer: "Om 09:00 uur"
           },
           {
-            id: "1.10_reading_2",
+            id: "reading_1_2",
             type: "multiple_choice",
             question: "Wie is de docent van de klas?",
             options: ["Meneer De Vries", "Lucas", "Meneer Yilmaz", "Meneer Jansen"],
             correctAnswer: "Meneer De Vries"
           },
           {
-            id: "1.10_reading_3",
+            id: "reading_1_3",
             type: "multiple_choice",
             question: "Hoeveel cursisten zitten er in het lokaal?",
             options: ["Twaalf (12)", "Veertien (14)", "Vierentwintig (24)", "Achttien (18)"],
             correctAnswer: "Veertien (14)"
           },
           {
-            id: "1.10_reading_4",
+            id: "reading_1_4",
             type: "multiple_choice",
             question: "Uit welk land komt Selin?",
             options: ["Uit Spanje", "Uit Nederland", "Uit Turkije", "Uit Engeland"],
             correctAnswer: "Uit Turkije"
           },
           {
-            id: "1.10_reading_5",
+            id: "reading_1_5",
             type: "multiple_choice",
             question: "Hoe oud is Selin?",
             options: ["Achttien jaar (18)", "Twintig jaar (20)", "Vierentwintig jaar (24)", "Veertig jaar (40)"],
             correctAnswer: "Vierentwintig jaar (24)"
           },
           {
-            id: "1.10_reading_6",
+            id: "reading_1_6",
             type: "multiple_choice",
             question: "Waar woont Selin nu?",
             options: ["In Utrecht", "In Amsterdam", "In Den Haag", "In Rotterdam"],
             correctAnswer: "In Amsterdam"
           },
           {
-            id: "1.10_reading_7",
+            id: "reading_1_7",
             type: "multiple_choice",
             question: "Wat is het huisnummer van Selin in de Kerkstraat?",
             options: ["Nummer 8", "Nummer 14", "Nummer 18", "Nummer 24"],
@@ -952,49 +952,49 @@ export const chapter1Sections = [
         isExtra: false,
         questions: [
           {
-            id: "1.10_reading_8",
+            id: "reading_1_8",
             type: "multiple_choice",
             question: "Welke talen spreekt Selin al goed volgens de tekst?",
             options: ["Alleen Nederlands", "Turks en Engels", "Engels en Spaans", "Turks en Spaans"],
             correctAnswer: "Turks en Engels"
           },
           {
-            id: "1.10_reading_9",
+            id: "reading_1_9",
             type: "multiple_choice",
             question: "Waarom leert Selin nu Nederlands?",
             options: ["Voor haar werk", "Voor haar studie aan de universiteit", "Omdat haar hele familie in Utrecht woont", "Alleen voor haar vakantie"],
             correctAnswer: "Voor haar werk"
           },
           {
-            id: "1.10_reading_10",
+            id: "reading_1_10",
             type: "multiple_choice",
             question: "Met welke letter begint de achternaam van Selin (Yilmaz) volgens het Nederlandse alfabet?",
             options: ["Met een lange ij", "Met een Griekse ij (Griekse y)", "Met een korte ei", "Met een dubbele i"],
             correctAnswer: "Met een Griekse ij (Griekse y)"
           },
           {
-            id: "1.10_reading_11",
+            id: "reading_1_11",
             type: "multiple_choice",
             question: "Waar komt Lucas vandaan en waar woont hij nu?",
             options: ["Hij komt uit Spanje en woont in Utrecht.", "Hij komt uit Spanje en woont in Amsterdam.", "Hij komt uit Nederland en woont in Utrecht.", "Hij komt uit Turkije en woont in Madrid."],
             correctAnswer: "Hij komt uit Spanje en woont in Utrecht."
           },
           {
-            id: "1.10_reading_12",
+            id: "reading_1_12",
             type: "multiple_choice",
             question: "Met wie woont Lucas samen in Utrecht?",
             options: ["Met zijn familie", "Alleen", "Met een vriend", "Met Selin"],
             correctAnswer: "Met een vriend"
           },
           {
-            id: "1.10_reading_13",
+            id: "reading_1_13",
             type: "multiple_choice",
             question: "Wat voor werk doet Lucas?",
             options: ["Hij is docent op de taalschool.", "Hij werkt in een internationaal restaurant.", "Hij werkt op een kantoor in Amsterdam.", "Hij heeft nog geen baan."],
             correctAnswer: "Hij werkt in een internationaal restaurant."
           },
           {
-            id: "1.10_reading_14",
+            id: "reading_1_14",
             type: "multiple_choice",
             question: "Wat zijn de hobby's van Lucas volgens de tekst?",
             options: ["Muziek luisteren en zwemmen", "Voetbal kijken en koken", "De krant lezen en hardlopen", "Fietsen en schrijven"],
@@ -1007,42 +1007,42 @@ export const chapter1Sections = [
         isExtra: false,
         questions: [
           {
-            id: "1.10_reading_15",
+            id: "reading_1_15",
             type: "multiple_choice",
             question: "Hoe laat hebben de cursisten pauze en hoelang duurt die?",
             options: ["Om 10:00 uur (15 minuten)", "Om 10:30 uur (20 minuten)", "Om 11:00 uur (30 minuten)", "Om 11:30 uur (10 minuten)"],
             correctAnswer: "Om 10:30 uur (20 minuten)"
           },
           {
-            id: "1.10_reading_16",
+            id: "reading_1_16",
             type: "multiple_choice",
             question: "Waar gaan Selin en Lucas naartoe in de pauze en wat doen ze?",
             options: ["Ze gaan naar buiten en lopen hard.", "Ze gaan naar de kantine, drinken koffie en praten over hun huiswerk.", "Ze blijven in het lokaal en lezen de krant.", "Ze gaan naar een restaurant in de stad."],
             correctAnswer: "Ze gaan naar de kantine, drinken koffie en praten over hun huiswerk."
           },
           {
-            id: "1.10_reading_17",
+            id: "reading_1_17",
             type: "multiple_choice",
             question: "Wat antwoordt Selin als Lucas vriendelijk vraagt: 'Hoe gaat het met jou, Selin?'?",
             options: ["'Tot ziens, dank je wel!'", "'Nee, pas drie dagen.'", "'Alles goed, dank je wel!'", "'Goedemorgen, tot morgen!'"],
             correctAnswer: "'Alles goed, dank je wel!'"
           },
           {
-            id: "1.10_reading_18",
+            id: "reading_1_18",
             type: "multiple_choice",
             question: "Wat doen de studenten direct NA de pauze in het lokaal?",
             options: ["Ze gaan direct naar huis.", "Ze luisteren naar een dialoog en maken opdrachten in het boek.", "Ze doen een moeilijk examen.", "Ze stellen zich opnieuw voor."],
             correctAnswer: "Ze luisteren naar een dialoog en maken opdrachten in het boek."
           },
           {
-            id: "1.10_reading_19",
+            id: "reading_1_19",
             type: "multiple_choice",
             question: "Hoe laat is de les afgelopen en wat zegt meneer De Vries bij het afscheid?",
             options: ["Om 11:30 uur: 'Tot ziens allemaal!'", "Om 12:00 uur: 'Goed gewerkt allemaal, tot morgen!'", "Om 12:30 uur: 'Fijne pauze!'", "Om 13:00 uur: 'Tot straks in de kantine!'"],
             correctAnswer: "Om 12:00 uur: 'Goed gewerkt allemaal, tot morgen!'"
           },
           {
-            id: "1.10_reading_20",
+            id: "reading_1_20",
             type: "multiple_choice",
             question: "Welke uitspraak is NIET waar (onjuist) volgens de tekst?",
             options: ["De cursus Nederlands vindt plaats in de stad Utrecht.", "Meneer De Vries vraagt Selin om haar achternaam te spellen.", "Lucas woont samen met Selin in Amsterdam.", "Er zitten cursisten uit verschillende landen in de klas."],
