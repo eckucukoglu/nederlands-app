@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './App.css';
 import DialogueSection from './components/DialogueSection';
+import VocabularySection from './components/VocabularySection';
 import ExerciseEngine from './components/ExerciseEngine';
 import Flashcards from './components/Flashcards';
 import AuthModal from './components/AuthModal';
@@ -464,6 +465,7 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
   const isSummaryMode = activeTab.startsWith('On-Class-');
   const isReadingMode = activeTab.startsWith('Reading-');
   const isDialogueMode = activeTab.endsWith('.1') && !isSummaryMode && !isReadingMode;
+  const isVocabularyMode = activeTab.endsWith('.2') && !isSummaryMode && !isReadingMode;
 
   const isChapterFullyCompleted = (chNum) => {
     const chapterSections = bookSections.filter(s => s.chapter === chNum);
@@ -881,6 +883,10 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
     if (secId.endsWith('.1')) {
        const ch = secId.split('.')[0];
        return lang === 'tr' ? `Ünite ${ch} - Diyalog` : `Chapter ${ch} - Dialogue`;
+    }
+    if (secId.endsWith('.2')) {
+       const ch = secId.split('.')[0];
+       return lang === 'tr' ? `Ünite ${ch} - Vocabulary` : `Chapter ${ch} - Vocabulary`;
     }
     const sec = bookSections.find(s => s.id === secId);
     if (sec && sec.title) {
@@ -1450,6 +1456,7 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
                 const isSummary = sec.id.startsWith('On-Class-');
                 const isReading = sec.id.startsWith('Reading-');
                 const isDialogue = sec.id.endsWith('.1');
+                const isVocabulary = sec.id.endsWith('.2');
                 return (
                   <button
                     key={sec.id}
@@ -1462,14 +1469,15 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
                     title={favorites[sec.id] ? `Favori Notu: ${favorites[sec.id]}` : ''}
                     className={`relative flex items-center h-9 px-3.5 sm:px-4 rounded-full text-[11px] sm:text-xs font-extrabold transition-all border shadow-sm whitespace-nowrap gap-1.5 ${
                       isActive 
-                        ? (isSummary ? 'bg-amber-600 text-white border-amber-500 z-10' : isReading ? 'bg-indigo-600 text-white border-indigo-500 z-10' : 'bg-brand-600 text-white border-brand-500 z-10')
-                        : (isSummary ? 'bg-amber-950/40 text-amber-300 border-amber-800/60 hover:bg-amber-900/50 hover:text-amber-200' : isReading ? 'bg-indigo-950/40 text-indigo-300 border-indigo-800/60 hover:bg-indigo-900/50 hover:text-indigo-200' : 'bg-slate-800 text-slate-400 border-slate-700 hover:bg-slate-700 hover:text-slate-200')
+                        ? (isSummary ? 'bg-amber-600 text-white border-amber-500 z-10' : isReading ? 'bg-indigo-600 text-white border-indigo-500 z-10' : isVocabulary ? 'bg-purple-600 text-white border-purple-500 z-10' : 'bg-brand-600 text-white border-brand-500 z-10')
+                        : (isSummary ? 'bg-amber-950/40 text-amber-300 border-amber-800/60 hover:bg-amber-900/50 hover:text-amber-200' : isReading ? 'bg-indigo-950/40 text-indigo-300 border-indigo-800/60 hover:bg-indigo-900/50 hover:text-indigo-200' : isVocabulary ? 'bg-purple-950/40 text-purple-300 border-purple-800/60 hover:bg-purple-900/50 hover:text-purple-200' : 'bg-slate-800 text-slate-400 border-slate-700 hover:bg-slate-700 hover:text-slate-200')
                     }`}
                   >
                     {isSummary && <i className="fa-solid fa-chalkboard-user text-[10px]"></i>}
                     {isReading && <i className="fa-solid fa-book-open text-[10px]"></i>}
                     {isDialogue && <i className="fa-solid fa-comments text-[10px]"></i>}
-                    <span>{isSummary ? (lang === 'tr' ? 'Özet' : 'Summary') : isReading ? (lang === 'tr' ? 'Okuma' : 'Reading') : isDialogue ? (lang === 'tr' ? 'Diyalog' : 'Dialogue') : sec.id}</span>
+                    {isVocabulary && <i className="fa-solid fa-spell-check text-[10px]"></i>}
+                    <span>{isSummary ? (lang === 'tr' ? 'Özet' : 'Summary') : isReading ? (lang === 'tr' ? 'Okuma' : 'Reading') : isDialogue ? (lang === 'tr' ? 'Diyalog' : 'Dialogue') : isVocabulary ? 'Vocabulary' : sec.id}</span>
                     {isF && <i className="fa-solid fa-star text-amber-400 text-[10px]"></i>}
                     {isF && favorites[sec.id] && (
                       <span className={`text-[10px] font-normal truncate max-w-[80px] ${isActive ? 'text-amber-200' : 'text-amber-400/80'}`}>
@@ -1600,7 +1608,7 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
             >
             <div className="flex items-center justify-between w-full">
               <span className="text-slate-200 text-sm font-bold truncate text-left">
-                {activeTab === 'home' ? 'Dashboard' : (activeTab === 'flashcards' ? t('flashcards') : activeTab === 'verbs' ? (lang === 'tr' ? 'Düzensiz Fiiller' : 'Irregular Verbs') : activeTab === 'grammar' ? (lang === 'tr' ? 'Gramer Referansı' : 'Grammar Reference') : (isSummaryMode ? (lang === 'tr' ? `Ünite ${currentChapter} - Özet` : `Chapter ${currentChapter} - Summary`) : isReadingMode ? (lang === 'tr' ? `Ünite ${currentChapter} - Okuma & Anlama` : `Chapter ${currentChapter} - Reading Comprehension`) : isDialogueMode ? (lang === 'tr' ? `Ünite ${currentChapter} - Diyalog` : `Chapter ${currentChapter} - Dialogue`) : (lang === 'tr' ? `Bölüm ${activeTab}` : `Section ${activeTab}`)))}
+                {activeTab === 'home' ? 'Dashboard' : (activeTab === 'flashcards' ? t('flashcards') : activeTab === 'verbs' ? (lang === 'tr' ? 'Düzensiz Fiiller' : 'Irregular Verbs') : activeTab === 'grammar' ? (lang === 'tr' ? 'Gramer Referansı' : 'Grammar Reference') : (isSummaryMode ? (lang === 'tr' ? `Ünite ${currentChapter} - Özet` : `Chapter ${currentChapter} - Summary`) : isReadingMode ? (lang === 'tr' ? `Ünite ${currentChapter} - Okuma & Anlama` : `Chapter ${currentChapter} - Reading Comprehension`) : isDialogueMode ? (lang === 'tr' ? `Ünite ${currentChapter} - Diyalog` : `Chapter ${currentChapter} - Dialogue`) : isVocabularyMode ? (lang === 'tr' ? `Ünite ${currentChapter} - Vocabulary` : `Chapter ${currentChapter} - Vocabulary`) : (lang === 'tr' ? `Bölüm ${activeTab}` : `Section ${activeTab}`)))}
               </span>
               <div className="flex items-center gap-2 flex-shrink-0">
                 {activeTab !== 'flashcards' && activeTab !== 'verbs' && activeTab !== 'grammar' && activeTab !== 'home' && (
@@ -1698,6 +1706,7 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
                   const isSummary = sec.id.startsWith('On-Class-');
                   const isReading = sec.id.startsWith('Reading-');
                   const isDialogue = sec.id.endsWith('.1');
+                  const isVocabulary = sec.id.endsWith('.2');
                   return (
                     <button
                       key={sec.id}
@@ -1710,7 +1719,7 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
                       }}
                       className={`w-full px-4 py-3 flex items-center justify-between text-sm transition-colors ${
                         activeTab === sec.id 
-                          ? (isSummary ? 'bg-slate-700/50 text-amber-300 font-bold border-l-4 border-amber-400' : isReading ? 'bg-slate-700/50 text-indigo-300 font-bold border-l-4 border-indigo-400' : 'bg-slate-700/50 text-brand-300 font-bold border-l-4 border-brand-400')
+                          ? (isSummary ? 'bg-slate-700/50 text-amber-300 font-bold border-l-4 border-amber-400' : isReading ? 'bg-slate-700/50 text-indigo-300 font-bold border-l-4 border-indigo-400' : isVocabulary ? 'bg-slate-700/50 text-purple-300 font-bold border-l-4 border-purple-400' : 'bg-slate-700/50 text-brand-300 font-bold border-l-4 border-brand-400')
                           : 'text-slate-300 hover:bg-slate-700/30 border-l-4 border-transparent'
                       }`}
                     >
@@ -1722,6 +1731,8 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
                             ? (lang === 'tr' ? `Ünite ${sec.chapter} - Okuma & Anlama` : `Chapter ${sec.chapter} - Reading Comprehension`)
                             : isDialogue
                             ? (lang === 'tr' ? `Ünite ${sec.chapter} - Diyalog` : `Chapter ${sec.chapter} - Dialogue`)
+                            : isVocabulary
+                            ? (lang === 'tr' ? `Ünite ${sec.chapter} - Vocabulary` : `Chapter ${sec.chapter} - Vocabulary`)
                             : getSectionTitle(sec.id)
                           }
                         </span>
@@ -1773,8 +1784,19 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
             toggleCompleted={toggleCompleted} 
           />
         )}
+
+        {(activeTab !== 'home' && activeTab !== 'verbs' && activeTab !== 'grammar' && activeTab !== 'flashcards' && activeTab.endsWith('.2') && !isSummaryMode) && (
+          <VocabularySection 
+            sectionId={activeTab} 
+            chapterNum={currentChapter}
+            favorites={favorites} 
+            toggleFavorite={toggleFavorite} 
+            completed={completed} 
+            toggleCompleted={toggleCompleted} 
+          />
+        )}
         
-        {activeTab !== 'home' && activeTab !== 'flashcards' && activeTab !== 'verbs' && activeTab !== 'grammar' && bookSections.find(s => s.id === activeTab) && !activeTab.endsWith('.1') && (
+        {activeTab !== 'home' && activeTab !== 'flashcards' && activeTab !== 'verbs' && activeTab !== 'grammar' && bookSections.find(s => s.id === activeTab) && !activeTab.endsWith('.1') && !activeTab.endsWith('.2') && (
           <ExerciseEngine 
             sectionData={bookSections.find(s => s.id === activeTab)} 
             chapterNum={currentChapter} 

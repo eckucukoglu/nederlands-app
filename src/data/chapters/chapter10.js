@@ -103,7 +103,14 @@ export const chapter10Sections = [
       }
     ]
   },
-  {
+    {
+    id: "10.2",
+    chapter: 10,
+    title: "Vocabulary",
+    theory: null,
+    exerciseGroups: []
+  },
+{
     id: "10.3",
     chapter: 10,
     title: "10.3 / 10.4 Begrijpen & Bedoelen",

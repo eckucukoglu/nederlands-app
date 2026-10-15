@@ -124,7 +124,14 @@ export const chapter3Sections = [
         isExtra: false,
         questions: [
           { id: "3.1_opd1_1", type: "multiple_choice", question: "1. Edit, Andres en Susy zijn...", options: ["a) in een café.", "b) in de les."], correctAnswer: "a) in een café." },
-          { id: "3.1_opd1_2", type: "multiple_choice", question: "2. Andres is...", options: ["a) de zus van Edit.", "b) de broer van Edit."], correctAnswer: "b) de broer van Edit." },
+            {
+    id: "3.2",
+    chapter: 3,
+    title: "Vocabulary",
+    theory: null,
+    exerciseGroups: []
+  },
+{ id: "3.1_opd1_2", type: "multiple_choice", question: "2. Andres is...", options: ["a) de zus van Edit.", "b) de broer van Edit."], correctAnswer: "b) de broer van Edit." },
           { id: "3.1_opd1_3", type: "multiple_choice", question: "3. Edit en Susy kennen elkaar...", options: ["a) van de cursus.", "b) van het werk."], correctAnswer: "a) van de cursus." },
           { id: "3.1_opd1_4", type: "multiple_choice", question: "4. Edit is jarig en zij geeft...", options: ["a) een rondje.", "b) een glas wijn."], correctAnswer: "a) een rondje." },
           { id: "3.1_opd1_5", type: "multiple_choice", question: "5. Andres betaalt...", options: ["a) alles.", "b) het tweede rondje."], correctAnswer: "b) het tweede rondje." }

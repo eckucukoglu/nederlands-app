@@ -128,7 +128,7 @@ export const chapter15Sections = [
   {
     id: "15.2",
     chapter: 15,
-    title: "15.2 Woordenlijst & 15.3 Beschrijven",
+    title: "Vocabulary",
     theory: (lang) => (
       <>
         {lang === 'tr' ? (

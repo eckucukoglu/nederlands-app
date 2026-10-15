@@ -470,6 +470,10 @@ export default function HomeView({
        const ch = secId.split('.')[0];
        return isTr ? `Ünite ${ch} - Diyalog` : `Chapter ${ch} - Dialogue`;
     }
+    if (secId.endsWith('.2')) {
+       const ch = secId.split('.')[0];
+       return isTr ? `Ünite ${ch} - Vocabulary` : `Chapter ${ch} - Vocabulary`;
+    }
     const sec = bookSections.find(s => s.id === secId);
     if (sec && sec.title) {
       const rawTitle = typeof sec.title === 'object' 
@@ -1481,6 +1485,7 @@ export default function HomeView({
                         {ch.sections.map(sec => {
                           const isDone = !!completed[sec.id];
                           const isDialogue = sec.id.endsWith('.1');
+                          const isVocabulary = sec.id.endsWith('.2');
                           return (
                             <button
                               key={sec.id}
@@ -1490,10 +1495,24 @@ export default function HomeView({
                                   ? 'bg-emerald-950/70 border-emerald-600/70 text-emerald-300 hover:bg-emerald-800 hover:text-white'
                                   : 'bg-slate-900/80 border-slate-700 text-slate-400 hover:bg-slate-750 hover:text-slate-200'
                               }`}
-                              title={isDialogue ? (isTr ? `Ünite ${ch.chapterNum} - Diyalog` : `Chapter ${ch.chapterNum} - Dialogue`) : getSecTitle(sec.id)}
+                              title={
+                                isDialogue 
+                                  ? (isTr ? `Ünite ${ch.chapterNum} - Diyalog` : `Chapter ${ch.chapterNum} - Dialogue`) 
+                                  : isVocabulary
+                                  ? (isTr ? `Ünite ${ch.chapterNum} - Vocabulary` : `Chapter ${ch.chapterNum} - Vocabulary`)
+                                  : getSecTitle(sec.id)
+                              }
                             >
-                              <i className={`text-[10px] ${isDone ? 'fa-solid fa-check text-emerald-400' : isDialogue ? 'fa-solid fa-comments text-brand-400/80' : 'fa-regular fa-circle text-slate-600'}`}></i>
-                              <span>{isDialogue ? (isTr ? 'Diyalog' : 'Dialogue') : sec.id}</span>
+                              <i className={`text-[10px] ${
+                                isDone 
+                                  ? 'fa-solid fa-check text-emerald-400' 
+                                  : isDialogue 
+                                  ? 'fa-solid fa-comments text-brand-400/80' 
+                                  : isVocabulary
+                                  ? 'fa-solid fa-spell-check text-purple-400/80'
+                                  : 'fa-regular fa-circle text-slate-600'
+                              }`}></i>
+                              <span>{isDialogue ? (isTr ? 'Diyalog' : 'Dialogue') : isVocabulary ? 'Vocabulary' : sec.id}</span>
                             </button>
                           );
                         })}

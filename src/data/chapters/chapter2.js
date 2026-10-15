@@ -132,7 +132,14 @@ export const chapter2Sections = [
         isExtra: false,
         questions: [
           { id: "2.1_opd1_1", type: "multiple_choice", question: "Waar zijn Susy en Edit?", options: ["In de les.", "In de kantine.", "In Indonesië."], correctAnswer: "In de kantine." },
-          { id: "2.1_opd1_2", type: "multiple_choice", question: "Wat drinkt Susy?", options: ["Koffie", "Thee", "Water"], correctAnswer: "Koffie" },
+            {
+    id: "2.2",
+    chapter: 2,
+    title: "Vocabulary",
+    theory: null,
+    exerciseGroups: []
+  },
+{ id: "2.1_opd1_2", type: "multiple_choice", question: "Wat drinkt Susy?", options: ["Koffie", "Thee", "Water"], correctAnswer: "Koffie" },
           { id: "2.1_opd1_3", type: "multiple_choice", question: "Woont Susy al lang in Utrecht?", options: ["Ja, al 10 jaar.", "Nee, pas drie dagen of vier.", "Nee, ze woont in Amsterdam."], correctAnswer: "Nee, pas drie dagen of vier." },
           { id: "2.1_opd1_4", type: "multiple_choice", question: "Welke dag is het in de tekst?", options: ["Maandag 20 augustus", "Donderdag 20 augustus", "Vrijdag 21 augustus"], correctAnswer: "Donderdag 20 augustus" },
           { id: "2.1_opd1_5", type: "multiple_choice", question: "Wanneer is Edit jarig?", options: ["Vandaag", "Morgen", "In december"], correctAnswer: "Morgen" },

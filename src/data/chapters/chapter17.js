@@ -136,7 +136,14 @@ export const chapter17Sections = [
         isExtra: false,
         questions: [
           { id: "17.1_opd1_1", type: "multiple_choice", question: "Wat studeert Tina?", options: ["Informatietechnologie", "Filosofie", "Geschiedenis"], correctAnswer: "Filosofie" },
-          { id: "17.1_opd1_2", type: "multiple_choice", question: "Wat is het beroep van Sam?", options: ["Computerprogrammateur / IT", "Caissère in de bioscoop", "Makelaar"], correctAnswer: "Computerprogrammateur / IT" },
+            {
+    id: "17.2",
+    chapter: 17,
+    title: "Vocabulary",
+    theory: null,
+    exerciseGroups: []
+  },
+{ id: "17.1_opd1_2", type: "multiple_choice", question: "Wat is het beroep van Sam?", options: ["Computerprogrammateur / IT", "Caissère in de bioscoop", "Makelaar"], correctAnswer: "Computerprogrammateur / IT" },
           { id: "17.1_opd1_3", type: "multiple_choice", question: "Waarom heeft Sam slecht geslapen?", options: ["Omdat hij ziek is", "Omdat hij nadenkt over een probleem op zijn werk", "Omdat het te warm is"], correctAnswer: "Omdat hij nadenkt over een probleem op zijn werk" }
         ]
       }

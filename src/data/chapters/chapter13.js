@@ -132,7 +132,14 @@ export const chapter13Sections = [
         isExtra: false,
         questions: [
           { id: "13.1_opd1_1", type: "multiple_choice", question: "1. Bas gaat op bezoek bij...", options: ["a) zijn vrienden.", "b) zijn broer."], correctAnswer: "a) zijn vrienden." },
-          { id: "13.1_opd1_2", type: "multiple_choice", question: "2. De route naar Paul en Janine was...", options: ["a) niet zo gemakkelijk te vinden.", "b) gemakkelijk te vinden."], correctAnswer: "b) gemakkelijk te vinden." },
+            {
+    id: "13.2",
+    chapter: 13,
+    title: "Vocabulary",
+    theory: null,
+    exerciseGroups: []
+  },
+{ id: "13.1_opd1_2", type: "multiple_choice", question: "2. De route naar Paul en Janine was...", options: ["a) niet zo gemakkelijk te vinden.", "b) gemakkelijk te vinden."], correctAnswer: "b) gemakkelijk te vinden." },
           { id: "13.1_opd1_3", type: "multiple_choice", question: "3. Maria, de vriendin van Bas,...", options: ["a) komt niet.", "b) komt later."], correctAnswer: "a) komt niet." },
           { id: "13.1_opd1_4", type: "multiple_choice", question: "4. Bas heeft...", options: ["a) bloemen en bonbons meegenomen.", "b) bonbons en een vaas met bloemen meegenomen."], correctAnswer: "a) bloemen en bonbons meegenomen." },
           { id: "13.1_opd1_5", type: "multiple_choice", question: "5. Paul en Janine hebben...", options: ["a) veel dieren.", "b) alleen nog een kat."], correctAnswer: "a) veel dieren." },

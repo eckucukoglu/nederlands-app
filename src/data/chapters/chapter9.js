@@ -99,7 +99,14 @@ export const chapter9Sections = [
     ),
     exerciseGroups: [{ instruction: "Extra Oefeningen: Begrip van de dialoog (Dialogue Comprehension)", isExtra: true, questions: generateSmartQuestions(9, "Dialoog Woordenschat", 5, chapter9Vocab) }]
   },
-  {
+    {
+    id: "9.2",
+    chapter: 9,
+    title: "Vocabulary",
+    theory: null,
+    exerciseGroups: []
+  },
+{
     id: "9.3", chapter: 9, title: "9.3 Bij de huisarts",
     theory: (lang) => (
       <>

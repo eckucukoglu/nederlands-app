@@ -152,7 +152,14 @@ export const chapter1Sections = [
         isExtra: true,
         questions: [
           { id: "1.1_smart_1", type: "multiple_choice", question: "Hoeveel docenten hebben de cursisten?", options: ["Eén docent", "Twee docenten", "Drie docenten"], correctAnswer: "Twee docenten" },
-          { id: "1.1_smart_2", type: "multiple_choice", question: "Uit welk land komt Susy?", options: ["Uit Nederland", "Uit China", "Uit Engeland"], correctAnswer: "Uit Engeland" },
+            {
+    id: "1.2",
+    chapter: 1,
+    title: "Vocabulary",
+    theory: null,
+    exerciseGroups: []
+  },
+{ id: "1.1_smart_2", type: "multiple_choice", question: "Uit welk land komt Susy?", options: ["Uit Nederland", "Uit China", "Uit Engeland"], correctAnswer: "Uit Engeland" },
           { id: "1.1_smart_3", type: "multiple_choice", question: "Waarom zegt de docent 'Zeg maar jij, hoor' tegen Ning? (Why does the teacher say 'Zeg maar jij'?)", options: ["Omdat ze 'u' te formeel vindt (She finds 'u' too formal). Ze wil tutoyeren.", "Omdat ze boos is.", "Omdat Ning geen Nederlands spreekt."], correctAnswer: "Omdat ze 'u' te formeel vindt (She finds 'u' too formal). Ze wil tutoyeren." }
         ]
       }

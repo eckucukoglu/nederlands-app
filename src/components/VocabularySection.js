@@ -1,0 +1,767 @@
+// src/components/VocabularySection.js
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import { vocabulary, bookSections } from '../data';
+import { globalDictionary } from '../data/globalDictionary';
+import { useLanguage } from '../contexts/LanguageContext';
+import { speakDutch } from '../utils/speech';
+import { 
+  POS_CATEGORIES, 
+  CHAPTER_THEMES, 
+  WORD_METADATA, 
+  groupChapterWords 
+} from '../data/vocabCategories';
+
+export default function VocabularySection({
+  sectionId = '1.2',
+  chapterNum = 1,
+  favorites = {},
+  toggleFavorite,
+  completed = {},
+  toggleCompleted
+}) {
+  const { lang, t } = useLanguage();
+  const isTr = lang === 'tr';
+
+  const chNum = useMemo(() => {
+    if (chapterNum) return Number(chapterNum);
+    if (sectionId && sectionId.includes('.')) {
+      return Number(sectionId.split('.')[0]);
+    }
+    return 1;
+  }, [chapterNum, sectionId]);
+
+  // Sayfaya ait kelimeler
+  const chapterWords = useMemo(() => {
+    return vocabulary.filter(w => w.chapter === chNum);
+  }, [chNum]);
+
+  // Section data (varsa egzersizler için)
+  const sectionData = useMemo(() => {
+    return bookSections.find(s => s.id === sectionId);
+  }, [sectionId]);
+
+  // UI Durumları
+  const [groupType, setGroupType] = useState('alphabetical'); // 'alphabetical' | 'functional' | 'contextual'
+  const [searchQuery, setSearchQuery] = useState('');
+  const [statusFilter, setStatusFilter] = useState('all'); // 'all' | 'known' | 'unknown' | 'unmarked'
+  const [wordStatuses, setWordStatuses] = useState({});
+  const [selectedWord, setSelectedWord] = useState(null);
+  const [popupPos, setPopupPos] = useState({ x: 0, y: 0 });
+
+  // Favori Notu State
+  const [showFavInput, setShowFavInput] = useState(false);
+  const [favNote, setFavNote] = useState('');
+
+  // Egzersiz State'leri (varsa)
+  const [answers, setAnswers] = useState({});
+  const [showResults, setShowResults] = useState(false);
+
+  // Kelime durumlarını yükle
+  const fetchStatuses = useCallback(() => {
+    const saved = localStorage.getItem(`vocabularyWordStatuses_${chNum}`);
+    let statuses = saved ? JSON.parse(saved) : {};
+
+    // Dialogue ve Reading durumlarından da al
+    const diagSaved = localStorage.getItem(`dialogueWordStatuses_${chNum}`);
+    if (diagSaved) {
+      try {
+        const dObj = JSON.parse(diagSaved);
+        Object.entries(dObj).forEach(([w, st]) => {
+          if (!statuses[w]) statuses[w] = st;
+        });
+      } catch (e) {}
+    }
+
+    const readSaved = localStorage.getItem(`readingWordStatuses_${chNum}`);
+    if (readSaved) {
+      try {
+        const rObj = JSON.parse(readSaved);
+        Object.entries(rObj).forEach(([w, st]) => {
+          if (!statuses[w]) statuses[w] = st;
+        });
+      } catch (e) {}
+    }
+
+    // Global word pool'dan da senkronize et
+    const pool = JSON.parse(localStorage.getItem('globalWordPool')) || {};
+    chapterWords.forEach(w => {
+      const lowerNL = (w.nl || '').toLowerCase();
+      const cleanNL = lowerNL.replace(/^(de|het|een)\s+/, '').replace(/\(.*?\)/g, '').trim();
+      const poolItem = pool[lowerNL] || pool[cleanNL];
+      if (poolItem && poolItem.status && !statuses[lowerNL]) {
+        statuses[lowerNL] = poolItem.status;
+      }
+    });
+
+    setWordStatuses(statuses);
+  }, [chNum, chapterWords]);
+
+  useEffect(() => {
+    fetchStatuses();
+    window.addEventListener('wordStatusUpdated', fetchStatuses);
+    return () => window.removeEventListener('wordStatusUpdated', fetchStatuses);
+  }, [fetchStatuses]);
+
+  // Kelime durumunu getir
+  const getStatusOfWord = useCallback((word) => {
+    const lowerNL = (word.nl || '').toLowerCase();
+    const cleanNL = lowerNL.replace(/^(de|het|een)\s+/, '').replace(/\(.*?\)/g, '').trim();
+    return wordStatuses[lowerNL] || wordStatuses[cleanNL] || null;
+  }, [wordStatuses]);
+
+  // Filtrelenmiş kelimeler
+  const filteredWords = useMemo(() => {
+    let result = chapterWords;
+
+    if (searchQuery.trim()) {
+      const q = searchQuery.toLowerCase().trim();
+      result = result.filter(w => {
+        const matchNL = (w.nl || '').toLowerCase().includes(q);
+        const matchEN = (w.en || '').toLowerCase().includes(q);
+        const meta = WORD_METADATA[w.id];
+        const matchTR = meta && meta.tr ? meta.tr.toLowerCase().includes(q) : false;
+        return matchNL || matchEN || matchTR;
+      });
+    }
+
+    if (statusFilter !== 'all') {
+      result = result.filter(w => {
+        const st = getStatusOfWord(w);
+        if (statusFilter === 'known') return st === 'known';
+        if (statusFilter === 'unknown') return st === 'unknown';
+        if (statusFilter === 'unmarked') return !st;
+        return true;
+      });
+    }
+
+    return result;
+  }, [chapterWords, searchQuery, statusFilter, getStatusOfWord]);
+
+  // Gruplanmış kelimeler
+  const groupedSections = useMemo(() => {
+    return groupChapterWords(filteredWords, chNum, groupType);
+  }, [filteredWords, chNum, groupType]);
+
+  // İstatistikler
+  const stats = useMemo(() => {
+    let knownCount = 0;
+    let unknownCount = 0;
+    let unmarkedCount = 0;
+
+    chapterWords.forEach(w => {
+      const st = getStatusOfWord(w);
+      if (st === 'known') knownCount++;
+      else if (st === 'unknown') unknownCount++;
+      else unmarkedCount++;
+    });
+
+    const total = chapterWords.length;
+    const progressPercent = total > 0 ? Math.round((knownCount / total) * 100) : 0;
+
+    return { total, knownCount, unknownCount, unmarkedCount, progressPercent };
+  }, [chapterWords, getStatusOfWord]);
+
+  // Kelimeye tıklayınca modal aç
+  const handleWordCardClick = (e, word) => {
+    e.stopPropagation();
+    let yPosition = e.clientY + 15;
+    if (yPosition + 320 > window.innerHeight) {
+      yPosition = e.clientY - 280;
+    }
+    setPopupPos({ x: Math.min(Math.max(e.clientX, 150), window.innerWidth - 150), y: Math.max(yPosition, 70) });
+    setSelectedWord(word);
+  };
+
+  // Kelime Durumu Değiştir (Biliyorum / Bilmiyorum)
+  const setWordKnowledge = (word, status) => {
+    const lowerNL = (word.nl || '').toLowerCase();
+    const cleanNL = lowerNL.replace(/^(de|het|een)\s+/, '').replace(/\(.*?\)/g, '').trim();
+
+    const pool = JSON.parse(localStorage.getItem('globalWordPool')) || {};
+    const meta = WORD_METADATA[word.id] || {};
+
+    const wordEntry = {
+      id: word.id,
+      nl: word.nl,
+      en: word.en,
+      tr: meta.tr || "Çeviri bulunamadı",
+      example: word.example || "",
+      chapter: chNum,
+      status: status,
+      addedAt: new Date().toISOString()
+    };
+
+    if (status === undefined) {
+      delete pool[lowerNL];
+      delete pool[cleanNL];
+    } else {
+      pool[lowerNL] = wordEntry;
+      pool[cleanNL] = wordEntry;
+    }
+    localStorage.setItem('globalWordPool', JSON.stringify(pool));
+
+    const newStatuses = { ...wordStatuses };
+    if (status === undefined) {
+      delete newStatuses[lowerNL];
+      delete newStatuses[cleanNL];
+    } else {
+      newStatuses[lowerNL] = status;
+      newStatuses[cleanNL] = status;
+    }
+
+    setWordStatuses(newStatuses);
+    localStorage.setItem(`vocabularyWordStatuses_${chNum}`, JSON.stringify(newStatuses));
+    window.dispatchEvent(new Event('wordStatusUpdated'));
+    setSelectedWord(null);
+  };
+
+  // Toplu "Hepsini Biliyorum Olarak İşaretle" Butonu
+  const handleMarkAllKnown = () => {
+    const pool = JSON.parse(localStorage.getItem('globalWordPool')) || {};
+    const newStatuses = { ...wordStatuses };
+
+    filteredWords.forEach(word => {
+      const lowerNL = (word.nl || '').toLowerCase();
+      const cleanNL = lowerNL.replace(/^(de|het|een)\s+/, '').replace(/\(.*?\)/g, '').trim();
+      const meta = WORD_METADATA[word.id] || {};
+
+      const entry = {
+        id: word.id,
+        nl: word.nl,
+        en: word.en,
+        tr: meta.tr || "Çeviri bulunamadı",
+        example: word.example || "",
+        chapter: chNum,
+        status: 'known',
+        addedAt: new Date().toISOString()
+      };
+
+      pool[lowerNL] = entry;
+      pool[cleanNL] = entry;
+      newStatuses[lowerNL] = 'known';
+      newStatuses[cleanNL] = 'known';
+    });
+
+    localStorage.setItem('globalWordPool', JSON.stringify(pool));
+    localStorage.setItem(`vocabularyWordStatuses_${chNum}`, JSON.stringify(newStatuses));
+    setWordStatuses(newStatuses);
+    window.dispatchEvent(new Event('wordStatusUpdated'));
+  };
+
+  const isFav = !!favorites[sectionId];
+  const isComp = !!completed[sectionId];
+
+  const handleSaveFav = (e) => {
+    e.preventDefault();
+    if (toggleFavorite) {
+      toggleFavorite(sectionId, favNote.trim() || (isTr ? `Ünite ${chNum} Kelimeleri` : `Chapter ${chNum} Vocabulary`));
+    }
+    setShowFavInput(false);
+    setFavNote('');
+  };
+
+  // Modal içindeki aktif kelimenin durumu
+  const selectedWordStatus = selectedWord ? getStatusOfWord(selectedWord) : null;
+  const metaForSelected = selectedWord ? WORD_METADATA[selectedWord.id] : null;
+
+  return (
+    <div className="max-w-5xl mx-auto px-3 sm:px-6 py-6 space-y-6 animate-fadeIn text-slate-100">
+      
+      {/* ======================================================== */}
+      {/* 1. ÜST BAŞLIK VE KONTROL KARTI                           */}
+      {/* ======================================================== */}
+      <div className="bg-slate-800/90 rounded-2xl p-5 sm:p-6 border border-slate-700/80 shadow-xl backdrop-blur-sm">
+        
+        {/* Üst Satır: Başlık, Rozet ve Sağ Aksiyon Butonları */}
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b border-slate-700/70 pb-5">
+          <div className="flex items-center gap-3">
+            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white shadow-lg shadow-indigo-500/20 flex-shrink-0">
+              <i className="fa-solid fa-spell-check text-xl"></i>
+            </div>
+            <div>
+              <div className="flex items-center gap-2">
+                <span className="text-xs font-bold uppercase tracking-wider text-indigo-400 bg-indigo-950/60 border border-indigo-700/50 px-2 py-0.5 rounded-md">
+                  {sectionId} • Vocabulary
+                </span>
+                <span className="text-xs text-slate-400 font-medium">
+                  {isTr ? `${chNum}. Ünite Kelime Listesi` : `Chapter ${chNum} Word List`}
+                </span>
+              </div>
+              <h1 className="text-xl sm:text-2xl font-black text-slate-100 tracking-tight mt-0.5">
+                {isTr ? `Ünite ${chNum} - Kelimeler` : `Chapter ${chNum} - Vocabulary`}
+              </h1>
+            </div>
+          </div>
+
+          {/* Aksiyon Butonları (Toplu İşaretle, Tamamlandı, Favori) */}
+          <div className="flex items-center gap-2 self-stretch sm:self-auto justify-end flex-wrap">
+            {/* Toplu İşaretle Butonu */}
+            <button
+              onClick={handleMarkAllKnown}
+              className="bg-slate-900/80 border border-slate-700 hover:border-emerald-500 hover:bg-emerald-950/40 text-slate-300 hover:text-emerald-400 px-3 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 shadow-sm cursor-pointer"
+              title={isTr ? 'Görüntülenen tüm kelimeleri biliyorum olarak işaretle' : 'Mark all visible words as known'}
+            >
+              <i className="fa-solid fa-check-double text-emerald-400"></i>
+              <span className="hidden sm:inline">{isTr ? 'Tümünü Biliyorum Yap' : 'Mark All Known'}</span>
+            </button>
+
+            {/* Tamamlandı Butonu */}
+            <button
+              onClick={() => toggleCompleted && toggleCompleted(sectionId)}
+              className={`p-2.5 rounded-xl border transition cursor-pointer flex items-center justify-center shadow-sm ${
+                isComp
+                  ? 'bg-emerald-600 border-emerald-400 text-white shadow-md shadow-emerald-600/30'
+                  : 'bg-slate-900/80 border-slate-700 text-slate-400 hover:bg-slate-750 hover:text-slate-200'
+              }`}
+              title={isComp ? (isTr ? 'Tamamlandı işaretini kaldır' : 'Mark as uncompleted') : (isTr ? 'Bölümü tamamlandı olarak işaretle' : 'Mark section as completed')}
+            >
+              <i className="fa-solid fa-check text-sm"></i>
+            </button>
+
+            {/* Favorilere Ekle Butonu */}
+            <button
+              onClick={() => {
+                if (isFav) {
+                  toggleFavorite(sectionId);
+                } else {
+                  setShowFavInput(!showFavInput);
+                }
+              }}
+              className={`p-2.5 rounded-xl border transition cursor-pointer flex items-center justify-center shadow-sm ${
+                isFav
+                  ? 'bg-amber-500 border-amber-400 text-slate-950 shadow-md shadow-amber-500/30'
+                  : 'bg-slate-900/80 border-slate-700 text-slate-400 hover:bg-slate-750 hover:text-amber-400'
+              }`}
+              title={isFav ? (isTr ? 'Favorilerden çıkar' : 'Remove from favorites') : (isTr ? 'Favorilere ekle' : 'Add to favorites')}
+            >
+              <i className={`fa-star text-sm ${isFav ? 'fa-solid' : 'fa-regular'}`}></i>
+            </button>
+          </div>
+        </div>
+
+        {/* Favori Notu Giriş Alanı */}
+        {showFavInput && (
+          <form onSubmit={handleSaveFav} className="mt-4 pt-4 border-t border-slate-700/60 flex items-center gap-2">
+            <input
+              type="text"
+              value={favNote}
+              onChange={(e) => setFavNote(e.target.value)}
+              placeholder={isTr ? "Favori için not (örn: zor kelimeler)..." : "Note for favorite..."}
+              maxLength={80}
+              className="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2 text-xs text-slate-200 focus:outline-none focus:border-amber-400"
+              autoFocus
+            />
+            <button type="submit" className="bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold px-3.5 py-2 rounded-xl transition cursor-pointer">
+              {isTr ? 'Kaydet' : 'Save'}
+            </button>
+            <button type="button" onClick={() => setShowFavInput(false)} className="text-slate-400 hover:text-slate-200 text-xs px-2 cursor-pointer">
+              {isTr ? 'İptal' : 'Cancel'}
+            </button>
+          </form>
+        )}
+
+        {/* İlerleme ve İstatistikler Satırı */}
+        <div className="mt-5 grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
+          <div className="bg-slate-900/70 border border-slate-800 p-2.5 rounded-xl">
+            <span className="text-[11px] text-slate-400 font-medium block">{isTr ? 'Toplam Kelime' : 'Total Words'}</span>
+            <span className="text-lg font-black text-slate-200">{stats.total}</span>
+          </div>
+          <div className="bg-slate-900/70 border border-emerald-900/40 p-2.5 rounded-xl">
+            <span className="text-[11px] text-emerald-400 font-medium block flex items-center justify-center gap-1">
+              <i className="fa-solid fa-check text-[10px]"></i> {isTr ? 'Biliyorum' : 'Known'}
+            </span>
+            <span className="text-lg font-black text-emerald-400">{stats.knownCount}</span>
+          </div>
+          <div className="bg-slate-900/70 border border-rose-900/40 p-2.5 rounded-xl">
+            <span className="text-[11px] text-rose-400 font-medium block flex items-center justify-center gap-1">
+              <i className="fa-solid fa-xmark text-[10px]"></i> {isTr ? 'Bilmiyorum' : 'Unknown'}
+            </span>
+            <span className="text-lg font-black text-rose-400">{stats.unknownCount}</span>
+          </div>
+          <div className="bg-slate-900/70 border border-slate-800 p-2.5 rounded-xl">
+            <span className="text-[11px] text-slate-400 font-medium block">{isTr ? 'Öğrenme Oranı' : 'Progress'}</span>
+            <span className="text-lg font-black text-indigo-400">{stats.progressPercent}%</span>
+          </div>
+        </div>
+
+        {/* İlerleme Çubuğu */}
+        <div className="mt-3 w-full bg-slate-900 h-2 rounded-full overflow-hidden border border-slate-700/50">
+          <div 
+            className="bg-gradient-to-r from-indigo-500 to-emerald-400 h-full transition-all duration-500"
+            style={{ width: `${stats.progressPercent}%` }}
+          ></div>
+        </div>
+      </div>
+
+      {/* ======================================================== */}
+      {/* 2. GRUPLAMA SEÇİCİ VE FİLTRE ÇUBUĞU                      */}
+      {/* ======================================================== */}
+      <div className="bg-slate-800/80 rounded-2xl p-4 border border-slate-700/80 shadow-md flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4">
+        
+        {/* Gruplama Tipi Butonları (3 Tür: Alfabetik, Fonksiyonel, Contextual) */}
+        <div className="flex bg-slate-900/90 p-1 rounded-xl border border-slate-700 self-start sm:self-auto overflow-x-auto w-full md:w-auto">
+          <button
+            onClick={() => setGroupType('alphabetical')}
+            className={`flex-1 sm:flex-initial px-3.5 py-1.5 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1.5 cursor-pointer whitespace-nowrap ${
+              groupType === 'alphabetical'
+                ? 'bg-indigo-600 text-white shadow-md'
+                : 'text-slate-400 hover:text-slate-200'
+            }`}
+          >
+            <i className="fa-solid fa-arrow-down-a-z text-xs"></i>
+            <span>{isTr ? 'Alfabetik' : 'Alphabetical'}</span>
+          </button>
+
+          <button
+            onClick={() => setGroupType('functional')}
+            className={`flex-1 sm:flex-initial px-3.5 py-1.5 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1.5 cursor-pointer whitespace-nowrap ${
+              groupType === 'functional'
+                ? 'bg-indigo-600 text-white shadow-md'
+                : 'text-slate-400 hover:text-slate-200'
+            }`}
+          >
+            <i className="fa-solid fa-tags text-xs"></i>
+            <span>{isTr ? 'Fonksiyonel' : 'Functional'}</span>
+          </button>
+
+          <button
+            onClick={() => setGroupType('contextual')}
+            className={`flex-1 sm:flex-initial px-3.5 py-1.5 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1.5 cursor-pointer whitespace-nowrap ${
+              groupType === 'contextual'
+                ? 'bg-indigo-600 text-white shadow-md'
+                : 'text-slate-400 hover:text-slate-200'
+            }`}
+          >
+            <i className="fa-solid fa-layer-group text-xs"></i>
+            <span>{isTr ? 'Bağlamsal (Konular)' : 'Contextual'}</span>
+          </button>
+        </div>
+
+        {/* Sağ Taraf: Arama ve Durum Filtreleri */}
+        <div className="flex items-center gap-2 flex-1 md:justify-end flex-wrap sm:flex-nowrap">
+          {/* Canlı Arama Input */}
+          <div className="relative flex-1 sm:max-w-[220px]">
+            <i className="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-500 text-xs"></i>
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder={isTr ? "Kelime ara..." : "Search words..."}
+              className="w-full bg-slate-900 border border-slate-700 rounded-xl pl-8 pr-7 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-indigo-500 transition"
+            />
+            {searchQuery && (
+              <button 
+                onClick={() => setSearchQuery('')}
+                className="absolute right-2.5 top-2 text-slate-400 hover:text-slate-200 text-xs cursor-pointer"
+              >
+                <i className="fa-solid fa-circle-xmark"></i>
+              </button>
+            )}
+          </div>
+
+          {/* Durum Filtreleri Dropdown / Butonlar */}
+          <select
+            value={statusFilter}
+            onChange={(e) => setStatusFilter(e.target.value)}
+            className="bg-slate-900 border border-slate-700 text-slate-300 text-xs font-semibold rounded-xl px-2.5 py-1.5 focus:outline-none focus:border-indigo-500 cursor-pointer"
+          >
+            <option value="all">{isTr ? 'Tüm Durumlar' : 'All Statuses'}</option>
+            <option value="known">🟢 {isTr ? 'Biliyorum' : 'Known'}</option>
+            <option value="unknown">🔴 {isTr ? 'Bilmiyorum' : 'Unknown'}</option>
+            <option value="unmarked">⚪ {isTr ? 'İşaretsiz' : 'Unmarked'}</option>
+          </select>
+        </div>
+      </div>
+
+      {/* Alfabetik Hızlı Atlama Çubuğu (Yalnızca alfabetik modda ve arama yokken) */}
+      {groupType === 'alphabetical' && !searchQuery && (
+        <div className="flex items-center gap-1.5 overflow-x-auto py-1 scrollbar-thin scrollbar-thumb-slate-700">
+          <span className="text-[11px] font-bold text-slate-500 uppercase mr-1 flex-shrink-0">
+            {isTr ? 'Harfler:' : 'Letters:'}
+          </span>
+          {groupedSections.map(group => (
+            <a
+              key={group.key}
+              href={`#${group.key}`}
+              className="w-7 h-7 flex-shrink-0 rounded-lg bg-slate-800/80 hover:bg-indigo-600 hover:text-white border border-slate-700 text-xs font-bold text-slate-300 flex items-center justify-center transition shadow-sm"
+            >
+              {group.title}
+            </a>
+          ))}
+        </div>
+      )}
+
+      {/* ======================================================== */}
+      {/* 3. GRUPLANMIŞ KELİME KARTLARI LİSTESİ                    */}
+      {/* ======================================================== */}
+      <div className="space-y-6">
+        {groupedSections.length === 0 ? (
+          <div className="bg-slate-800/60 rounded-2xl p-8 border border-slate-700/60 text-center">
+            <i className="fa-solid fa-folder-open text-3xl text-slate-600 mb-3"></i>
+            <p className="text-sm font-semibold text-slate-400">
+              {isTr ? 'Aradığınız kriterlere uygun kelime bulunamadı.' : 'No words found matching your search.'}
+            </p>
+          </div>
+        ) : (
+          groupedSections.map(group => {
+            const groupTitle = typeof group.title === 'object'
+              ? (group.title[lang] || group.title.tr || group.title.en)
+              : group.title;
+
+            return (
+              <div 
+                key={group.key} 
+                id={group.key}
+                className="bg-slate-800/50 rounded-2xl p-4 sm:p-5 border border-slate-700/70 shadow-sm"
+              >
+                {/* Grup Başlığı */}
+                <div className="flex items-center justify-between border-b border-slate-700/60 pb-3 mb-4">
+                  <div className="flex items-center gap-2.5">
+                    <span className="w-8 h-8 rounded-lg bg-indigo-950/60 border border-indigo-700/40 text-indigo-400 flex items-center justify-center text-sm shadow-inner">
+                      <i className={group.icon || 'fa-solid fa-folder'}></i>
+                    </span>
+                    <h3 className="font-extrabold text-slate-100 text-base sm:text-lg tracking-tight">
+                      {groupTitle}
+                    </h3>
+                  </div>
+                  <span className="text-xs font-bold text-slate-400 bg-slate-900 px-2.5 py-1 rounded-full border border-slate-700/60">
+                    {group.words.length} {isTr ? 'kelime' : 'words'}
+                  </span>
+                </div>
+
+                {/* Kelimeler Izgarası (Grid) */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                  {group.words.map(word => {
+                    const status = getStatusOfWord(word);
+                    const meta = WORD_METADATA[word.id];
+                    const trMeaning = meta?.tr;
+
+                    let statusBorder = 'border-slate-700/80 hover:border-slate-600 bg-slate-900/60';
+                    let statusIcon = null;
+
+                    if (status === 'known') {
+                      statusBorder = 'border-emerald-500/50 bg-emerald-950/20 hover:border-emerald-400 shadow-[0_0_10px_rgba(52,211,153,0.1)]';
+                      statusIcon = <i className="fa-solid fa-circle-check text-emerald-400 text-xs"></i>;
+                    } else if (status === 'unknown') {
+                      statusBorder = 'border-rose-500/50 bg-rose-950/20 hover:border-rose-400 shadow-[0_0_10px_rgba(251,113,133,0.1)]';
+                      statusIcon = <i className="fa-solid fa-circle-xmark text-rose-400 text-xs"></i>;
+                    }
+
+                    return (
+                      <div
+                        key={word.id}
+                        onClick={(e) => handleWordCardClick(e, word)}
+                        className={`group relative p-3.5 rounded-xl border transition-all duration-200 cursor-pointer flex flex-col justify-between gap-2 hover:-translate-y-0.5 shadow-sm ${statusBorder}`}
+                      >
+                        {/* Üst Satır: Felemenkçe Kelime & Telaffuz & Durum Rozeti */}
+                        <div className="flex items-start justify-between gap-2">
+                          <span className={`font-bold text-sm sm:text-base leading-snug tracking-tight ${
+                            status === 'known' ? 'text-emerald-300' : status === 'unknown' ? 'text-rose-300' : 'text-slate-100 group-hover:text-indigo-300'
+                          }`}>
+                            {word.nl}
+                          </span>
+
+                          <div className="flex items-center gap-1.5 flex-shrink-0">
+                            {statusIcon}
+                            <button
+                              type="button"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                speakDutch(word.nl);
+                              }}
+                              className="w-7 h-7 rounded-lg bg-slate-800 hover:bg-indigo-600 text-slate-400 hover:text-white flex items-center justify-center transition border border-slate-700/70"
+                              title={isTr ? 'Dinle' : 'Listen'}
+                            >
+                              <i className="fa-solid fa-volume-high text-[11px]"></i>
+                            </button>
+                          </div>
+                        </div>
+
+                        {/* Alt Satır: İngilizce / Türkçe Çeviri Önizlemesi */}
+                        <div className="text-xs text-slate-400 leading-normal line-clamp-1">
+                          {isTr && trMeaning ? (
+                            <span className="text-slate-300 font-medium">{trMeaning}</span>
+                          ) : (
+                            <span className="text-slate-300 font-medium">{word.en}</span>
+                          )}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            );
+          })
+        )}
+      </div>
+
+      {/* ======================================================== */}
+      {/* 4. EGZERSİZ ALANI (Bölümün egzersizleri varsa, örn: 5.2)  */}
+      {/* ======================================================== */}
+      {sectionData?.exerciseGroups && sectionData.exerciseGroups.length > 0 && (
+        <div className="bg-slate-800/90 rounded-2xl p-6 shadow-xl border border-slate-700 space-y-6 mt-8">
+          <h3 className="text-xl font-bold text-slate-100 border-b border-slate-700 pb-3 flex items-center gap-2">
+            <i className="fa-solid fa-pen-to-square text-indigo-400"></i>
+            <span>{isTr ? 'Bölüm Alıştırmaları' : 'Section Exercises'}</span>
+          </h3>
+
+          {sectionData.exerciseGroups.map((group, gIdx) => (
+            <div key={gIdx} className="space-y-4 mb-6">
+              <h4 className="font-bold text-indigo-300 border-b border-slate-700/50 pb-2">
+                {group.instruction}
+              </h4>
+
+              <div className="space-y-4">
+                {group.questions.map((q) => {
+                  const userAns = answers[q.id] || "";
+                  const isCorrect = userAns.toLowerCase().trim() === q.correctAnswer.toLowerCase().trim();
+
+                  return (
+                    <div key={q.id} className="bg-slate-900/60 p-4 rounded-xl border border-slate-700/70 space-y-2">
+                      <p className="font-semibold text-sm text-slate-200">{q.question}</p>
+
+                      {q.type === 'multiple_choice' ? (
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2">
+                          {q.options.map((opt, oIdx) => (
+                            <button
+                              key={oIdx}
+                              onClick={() => setAnswers(prev => ({ ...prev, [q.id]: opt }))}
+                              className={`px-3 py-2 rounded-lg text-xs font-semibold text-left transition border ${
+                                userAns === opt
+                                  ? 'bg-indigo-600 border-indigo-400 text-white shadow-md'
+                                  : 'bg-slate-800 border-slate-700 text-slate-300 hover:bg-slate-750'
+                              }`}
+                            >
+                              {opt}
+                            </button>
+                          ))}
+                        </div>
+                      ) : (
+                        <input
+                          type="text"
+                          value={userAns}
+                          onChange={(e) => setAnswers(prev => ({ ...prev, [q.id]: e.target.value }))}
+                          placeholder={isTr ? "Cevabınızı yazın..." : "Type your answer..."}
+                          className="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-xs text-slate-200 focus:outline-none focus:border-indigo-500"
+                        />
+                      )}
+
+                      {showResults && (
+                        <div className={`text-xs font-bold mt-2 flex items-center gap-1.5 ${isCorrect ? 'text-emerald-400' : 'text-rose-400'}`}>
+                          <i className={`fa-solid ${isCorrect ? 'fa-check' : 'fa-xmark'}`}></i>
+                          <span>{isCorrect ? (isTr ? 'Doğru!' : 'Correct!') : `${isTr ? 'Doğru cevap:' : 'Correct answer:'} ${q.correctAnswer}`}</span>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          ))}
+
+          <div className="pt-3 border-t border-slate-700 flex justify-end">
+            <button
+              onClick={() => setShowResults(!showResults)}
+              className="bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold px-4 py-2 rounded-xl transition cursor-pointer shadow-md"
+            >
+              {showResults ? (isTr ? 'Sonuçları Gizle' : 'Hide Results') : (isTr ? 'Cevapları Kontrol Et' : 'Check Answers')}
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* ======================================================== */}
+      {/* 5. KELİME ÇEVİRİ VE İŞARETLEME MODAL POPUP                */}
+      {/* ======================================================== */}
+      {selectedWord && (
+        <>
+          <div 
+            className="fixed inset-0 z-40" 
+            onClick={() => setSelectedWord(null)}
+          ></div>
+
+          <div 
+            className="fixed bg-slate-800 border border-slate-600 p-4 rounded-2xl shadow-2xl z-50 min-w-[260px] max-w-[320px] transform -translate-x-1/2 max-h-[380px] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-600 animate-fadeIn" 
+            style={{ left: `${popupPos.x}px`, top: `${popupPos.y}px` }} 
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Modal Üst: Başlık & Telaffuz */}
+            <div className="flex justify-between items-center border-b border-slate-700 pb-2 mb-3">
+              <div className="flex items-center gap-2">
+                <h3 className="font-extrabold text-indigo-400 text-base leading-tight">
+                  {selectedWord.nl}
+                </h3>
+                <button 
+                  type="button"
+                  onClick={() => speakDutch(selectedWord.nl)}
+                  className="text-slate-400 hover:text-indigo-300 cursor-pointer p-1"
+                  title={isTr ? 'Dinle' : 'Listen'}
+                >
+                  <i className="fa-solid fa-volume-high text-xs"></i>
+                </button>
+              </div>
+              <button 
+                onClick={() => setSelectedWord(null)} 
+                className="text-slate-400 hover:text-slate-200 cursor-pointer text-sm"
+              >
+                <i className="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+
+            {/* Çeviriler */}
+            <div className="space-y-1.5 mb-3 text-xs leading-relaxed">
+              {metaForSelected?.tr && (
+                <div className="flex items-start gap-1.5">
+                  <span className="flex-shrink-0">🇹🇷</span>
+                  <span className="text-slate-200 font-semibold">{metaForSelected.tr}</span>
+                </div>
+              )}
+              <div className="flex items-start gap-1.5">
+                <span className="flex-shrink-0">🇬🇧</span>
+                <span className="text-slate-300 font-medium">{selectedWord.en}</span>
+              </div>
+            </div>
+
+            {/* Örnek Cümle */}
+            {selectedWord.example && (
+              <div className="bg-slate-900/80 p-2.5 rounded-xl border border-slate-700/60 mb-3 text-[11px] text-slate-300 italic">
+                <span className="font-semibold text-indigo-300 block mb-0.5 not-italic">
+                  {isTr ? 'Örnek Cümle:' : 'Example:'}
+                </span>
+                "{selectedWord.example}"
+              </div>
+            )}
+
+            {/* Hızlı İşaretleme Butonları */}
+            <div className="pt-2 border-t border-slate-700 flex gap-2">
+              <button 
+                onClick={() => setWordKnowledge(selectedWord, 'known')} 
+                className={`flex-1 py-1.5 px-2 rounded-lg text-xs font-bold flex items-center justify-center gap-1 transition cursor-pointer shadow-sm ${
+                  selectedWordStatus === 'known'
+                    ? 'bg-emerald-600 text-white shadow-emerald-900/50'
+                    : 'bg-emerald-950/60 border border-emerald-600/70 text-emerald-400 hover:bg-emerald-800 hover:text-white'
+                }`}
+              >
+                <i className="fa-solid fa-check text-[11px]"></i>
+                <span>{isTr ? 'Biliyorum' : 'I know'}</span>
+              </button>
+
+              <button 
+                onClick={() => setWordKnowledge(selectedWord, 'unknown')} 
+                className={`flex-1 py-1.5 px-2 rounded-lg text-xs font-bold flex items-center justify-center gap-1 transition cursor-pointer shadow-sm ${
+                  selectedWordStatus === 'unknown'
+                    ? 'bg-rose-600 text-white shadow-rose-900/50'
+                    : 'bg-rose-950/60 border border-rose-600/70 text-rose-400 hover:bg-rose-800 hover:text-white'
+                }`}
+              >
+                <i className="fa-solid fa-xmark text-[11px]"></i>
+                <span>{isTr ? 'Bilmiyorum' : "Don't know"}</span>
+              </button>
+            </div>
+          </div>
+        </>
+      )}
+
+    </div>
+  );
+}

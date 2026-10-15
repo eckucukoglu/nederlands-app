@@ -147,7 +147,14 @@ export const chapter6Sections = [
         isExtra: false,
         questions: [
           { id: "6.1_opd1_1", type: "multiple_choice", question: "1. Jasper en Christine willen bij het raam zitten.", options: ["waar", "niet waar"], correctAnswer: "waar" },
-          { id: "6.1_opd1_2", type: "multiple_choice", question: "2. Jasper neemt alleen een hoofdgerecht.", options: ["waar", "niet waar"], correctAnswer: "niet waar" },
+            {
+    id: "6.2",
+    chapter: 6,
+    title: "Vocabulary",
+    theory: null,
+    exerciseGroups: []
+  },
+{ id: "6.1_opd1_2", type: "multiple_choice", question: "2. Jasper neemt alleen een hoofdgerecht.", options: ["waar", "niet waar"], correctAnswer: "niet waar" },
           { id: "6.1_opd1_3", type: "multiple_choice", question: "3. Christine neemt de Spaanse salade als voorgerecht.", options: ["waar", "niet waar"], correctAnswer: "waar" },
           { id: "6.1_opd1_4", type: "multiple_choice", question: "4. De serveerster moet nog een vork halen.", options: ["waar", "niet waar"], correctAnswer: "niet waar" },
           { id: "6.1_opd1_5", type: "multiple_choice", question: "5. Jasper vindt de soep erg lekker.", options: ["waar", "niet waar"], correctAnswer: "waar" },

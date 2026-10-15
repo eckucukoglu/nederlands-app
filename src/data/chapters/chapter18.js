@@ -116,7 +116,14 @@ export const chapter18Sections = [
         isExtra: false,
         questions: [
           { id: "18.1_opd1_1", type: "multiple_choice", question: "Wat gebeurde er als EERSTE in het verhaal?", options: ["Sam gaat naar de politie.", "Sam zit op een terras met een collega.", "Sam koopt een nieuwe portemonnee."], correctAnswer: "Sam zit op een terras met een collega." },
-          { id: "18.1_opd1_2", type: "multiple_choice", question: "Wat deed Sam nadat hij merkte dat zijn portemonnee weg was?", options: ["Hij blokkeerde meteen zijn pinpas.", "Hij ging direct naar de politie om aangifte te doen."], correctAnswer: "Hij ging direct naar de politie om aangifte te doen." }
+            {
+    id: "18.2",
+    chapter: 18,
+    title: "Vocabulary",
+    theory: null,
+    exerciseGroups: []
+  },
+{ id: "18.1_opd1_2", type: "multiple_choice", question: "Wat deed Sam nadat hij merkte dat zijn portemonnee weg was?", options: ["Hij blokkeerde meteen zijn pinpas.", "Hij ging direct naar de politie om aangifte te doen."], correctAnswer: "Hij ging direct naar de politie om aangifte te doen." }
         ]
       }
     ]

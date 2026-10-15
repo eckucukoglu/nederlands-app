@@ -103,7 +103,14 @@ export const chapter12Sections = [
         isExtra: false,
         questions: [
           { id: "12.1_opd1_1", type: "multiple_choice", question: "Waar is Kirsten aan het begin van de dialoog?", options: ["Op de Wandelbeurs", "Op het station in Amsterdam", "In het restaurant"], correctAnswer: "Op het station in Amsterdam" },
-          { id: "12.1_opd1_2", type: "multiple_choice", question: "Wat vraagt Kirsten aan de buschauffeur?", options: ["Of de tram stopt.", "Of ze naar de Evenementenhal kan lopen of dat het te ver is.", "Waar ze de plattegrond kan vinden."], correctAnswer: "Of ze naar de Evenementenhal kan lopen of dat het te ver is." },
+            {
+    id: "12.2",
+    chapter: 12,
+    title: "Vocabulary",
+    theory: null,
+    exerciseGroups: []
+  },
+{ id: "12.1_opd1_2", type: "multiple_choice", question: "Wat vraagt Kirsten aan de buschauffeur?", options: ["Of de tram stopt.", "Of ze naar de Evenementenhal kan lopen of dat het te ver is.", "Waar ze de plattegrond kan vinden."], correctAnswer: "Of ze naar de Evenementenhal kan lopen of dat het te ver is." },
           { id: "12.1_opd1_3", type: "multiple_choice", question: "Hoe gaat ze naar de Evenementenhal?", options: ["Met de bus", "Lopend", "Met de tram (lijn 25)"], correctAnswer: "Met de tram (lijn 25)" },
           { id: "12.1_opd1_4", type: "multiple_choice", question: "Waar stopt lijn 25?", options: ["Ver weg van de hal.", "Tegenover de ingang van de Evenementenhal.", "Bij het restaurant."], correctAnswer: "Tegenover de ingang van de Evenementenhal." },
           { id: "12.1_opd1_5", type: "multiple_choice", question: "Waar is de Wandelbeurs precies?", options: ["Beneden in hal 1.", "Boven, op de eerste verdieping, in hal 3.", "Buiten het gebouw."], correctAnswer: "Boven, op de eerste verdieping, in hal 3." },

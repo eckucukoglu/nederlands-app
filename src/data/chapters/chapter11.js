@@ -131,7 +131,14 @@ export const chapter11Sections = [
         isExtra: true,
         questions: [
           { id: "11.1_smart_1", type: "multiple_choice", question: "Waarom geeft Tom een kaartje voor Festival Cubana aan Marit?", options: ["Omdat Tom zelf niet kan gaan.", "Omdat Marit van Cubaanse muziek houdt.", "Omdat Peter ook naar het festival gaat."], correctAnswer: "Omdat Marit van Cubaanse muziek houdt." },
-          { id: "11.1_smart_2", type: "fill_in", question: "Kirsten vindt dat Tom te snel praat. Ze vraagt: 'Kun je misschien iets ________ praten?'", correctAnswer: "langzamer" },
+            {
+    id: "11.2",
+    chapter: 11,
+    title: "Vocabulary",
+    theory: null,
+    exerciseGroups: []
+  },
+{ id: "11.1_smart_2", type: "fill_in", question: "Kirsten vindt dat Tom te snel praat. Ze vraagt: 'Kun je misschien iets ________ praten?'", correctAnswer: "langzamer" },
           { id: "11.1_smart_3", type: "multiple_choice", question: "Wat betekent de zin 'Ik ben gek op films'?", options: ["Ben filmlerden nefret ederim.", "Ben filmlere bayılırım / hastasıyım.", "Ben filmlerde oynamak istiyorum."], correctAnswer: "Ben filmlere bayılırım / hastasıyım." }
         ]
       }

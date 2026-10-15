@@ -119,7 +119,14 @@ export const chapter7Sections = [
         isExtra: false,
         questions: [
           { id: "7.1_opd1_1", type: "multiple_choice", question: "1. Sandra wil...", options: ["a) een spijkerbroek kopen.", "b) alleen even kijken."], correctAnswer: "a) een spijkerbroek kopen." },
-          { id: "7.1_opd1_2", type: "multiple_choice", question: "2. Sandra heeft...", options: ["a) maat 42.", "b) maat 40."], correctAnswer: "b) maat 40." },
+            {
+    id: "7.2",
+    chapter: 7,
+    title: "Vocabulary",
+    theory: null,
+    exerciseGroups: []
+  },
+{ id: "7.1_opd1_2", type: "multiple_choice", question: "2. Sandra heeft...", options: ["a) maat 42.", "b) maat 40."], correctAnswer: "b) maat 40." },
           { id: "7.1_opd1_3", type: "multiple_choice", question: "3. Sandra past...", options: ["a) twee spijkerbroeken.", "b) een lichte spijkerbroek."], correctAnswer: "a) twee spijkerbroeken." },
           { id: "7.1_opd1_4", type: "multiple_choice", question: "4. Sandra vindt de tweede broek...", options: ["a) een beetje wijd.", "b) een beetje klein."], correctAnswer: "a) een beetje wijd." },
           { id: "7.1_opd1_5", type: "multiple_choice", question: "5. Sandra koopt uiteindleijk...", options: ["a) een wit en een roze T-shirt.", "b) een wit, een rood en een roze T-shirt."], correctAnswer: "a) een wit en een roze T-shirt." }

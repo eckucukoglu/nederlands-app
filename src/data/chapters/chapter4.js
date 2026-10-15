@@ -122,7 +122,14 @@ export const chapter4Sections = [
         isExtra: false,
         questions: [
           { id: "4.1_opd1_1", type: "multiple_choice", question: "1. Bert en Hans hebben elkaar lang niet gezien.", options: ["waar", "niet waar"], correctAnswer: "waar" },
-          { id: "4.1_opd1_2", type: "multiple_choice", question: "2. Hans en Wilma gaan in Venetië wonen.", options: ["waar", "niet waar"], correctAnswer: "niet waar" },
+            {
+    id: "4.2",
+    chapter: 4,
+    title: "Vocabulary",
+    theory: null,
+    exerciseGroups: []
+  },
+{ id: "4.1_opd1_2", type: "multiple_choice", question: "2. Hans en Wilma gaan in Venetië wonen.", options: ["waar", "niet waar"], correctAnswer: "niet waar" },
           { id: "4.1_opd1_3", type: "multiple_choice", question: "3. Hans gaat een film maken in de vakantie.", options: ["waar", "niet waar"], correctAnswer: "waar" },
           { id: "4.1_opd1_4", type: "multiple_choice", question: "4. Hans en Bert maken een afspraak om samen te eten.", options: ["waar", "niet waar"], correctAnswer: "waar" },
           { id: "4.1_opd1_5", type: "multiple_choice", question: "5. Hans en Wilma komen 30 augustus bij Bert eten.", options: ["waar", "niet waar"], correctAnswer: "niet waar" }
