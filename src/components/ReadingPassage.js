@@ -279,6 +279,97 @@ export default function ReadingPassage({
     setSelectedWords(matches);
   };
 
+  // --- BULK (TOPLU) PARAGRAF KELİMELERİNİ BİLİYORUM İŞARETLEME ---
+  const handleMarkParagraphAsKnown = (e, cleanWords) => {
+    e.stopPropagation();
+
+    const allVocab = [...vocabulary, ...globalDictionary];
+    const uniqueVocabMap = new Map();
+    allVocab.forEach(item => uniqueVocabMap.set(item.nl.toLowerCase(), item));
+
+    const pool = JSON.parse(localStorage.getItem('globalWordPool')) || {};
+    const storageKey = `readingUnknowns_${chapterId}`;
+    let existingUnknowns = JSON.parse(localStorage.getItem(storageKey)) || [];
+    const newStatuses = { ...wordStatuses };
+    let hasChanges = false;
+
+    cleanWords.forEach(cleanWord => {
+      if (!cleanWord) return;
+      if (newStatuses[cleanWord] === 'known') return; // Zaten biliniyorsa geç
+
+      let wordObj = null;
+
+      // 1. Önce tam eşleşme ara (Exact match)
+      if (uniqueVocabMap.has(cleanWord)) {
+        wordObj = uniqueVocabMap.get(cleanWord);
+      } else {
+        // 2. "de", "het", "een" gibi article ile başlayanları ara
+        const articleMatch = allVocab.find(v => 
+          v.nl.toLowerCase() === `de ${cleanWord}` || 
+          v.nl.toLowerCase() === `het ${cleanWord}` || 
+          v.nl.toLowerCase() === `een ${cleanWord}`
+        );
+
+        if (articleMatch) {
+          wordObj = articleMatch;
+        } else {
+          // 3. Parantez içi veya cümle içi kelimeleri regex ile ara (örn: "gedroomd (dromen)")
+          try {
+            const regex = new RegExp(`\\b${cleanWord}\\b`, 'i');
+            const boundaryMatch = allVocab.find(v => regex.test(v.nl));
+            if (boundaryMatch) {
+              wordObj = boundaryMatch;
+            }
+          } catch(err) { console.error(err); }
+        }
+      }
+
+      // 4. Eğer sözlükte hiç yoksa, fallback listesine bak veya genel nesne oluştur
+      if (!wordObj) {
+        const fallback = fallbackDictionary[cleanWord];
+        wordObj = {
+          nl: cleanWord,
+          en: fallback || "Translation not available",
+          tr: "Çeviri bulunamadı",
+          example: fallback ? "Uit de tekst" : (isTr ? "Sözlükte bulunamadı" : "Not found in dictionary")
+        };
+      }
+
+      // Eğer geçerli bir sözlük/fallback kelimesi bulunduysa listeye ekle
+      if (wordObj) {
+        hasChanges = true;
+        pool[wordObj.nl.toLowerCase()] = { ...wordObj, status: 'known', addedAt: new Date().toISOString() };
+        existingUnknowns = existingUnknowns.filter(w => w.nl.toLowerCase() !== wordObj.nl.toLowerCase() && w.nl.toLowerCase() !== cleanWord);
+        
+        newStatuses[cleanWord] = 'known';
+        
+        const lowerNL = wordObj.nl.toLowerCase();
+        newStatuses[lowerNL] = 'known';
+        
+        if (lowerNL.includes('(')) {
+          const parts = lowerNL.split('(');
+          const mainPart = parts[0].trim();
+          const insideParen = parts[1].replace(')', '').trim();
+          if (mainPart) newStatuses[mainPart] = 'known';
+          if (insideParen) newStatuses[insideParen] = 'known';
+        }
+
+        const articleMatch = lowerNL.match(/^(de|het|een)\s+(.+)$/);
+        if (articleMatch) {
+          newStatuses[articleMatch[2].trim()] = 'known';
+        }
+      }
+    });
+
+    if (hasChanges) {
+      localStorage.setItem('globalWordPool', JSON.stringify(pool));
+      localStorage.setItem(storageKey, JSON.stringify(existingUnknowns));
+      localStorage.setItem(`readingWordStatuses_${chapterId}`, JSON.stringify(newStatuses));
+      setWordStatuses(newStatuses);
+      window.dispatchEvent(new Event('wordStatusUpdated'));
+    }
+  };
+
   const saveToGlobalPool = (wordObj, status) => {
     const pool = JSON.parse(localStorage.getItem('globalWordPool')) || {};
     if (status === undefined) {
@@ -598,6 +689,9 @@ export default function ReadingPassage({
         <div className="space-y-3 font-normal">
           {paragraphs.map((para, idx) => {
             const isThisPlaying = playingIdx === idx;
+            const paraWords = para.text.split(' ');
+            const cleanWords = paraWords.map(w => w.replace(/[.,?!:;–—"“”'‘’()]/g, '').toLowerCase()).filter(Boolean);
+            const areAllKnown = cleanWords.length > 0 && cleanWords.every(cw => wordStatuses[cw] === 'known');
 
             return (
               <div
@@ -621,6 +715,19 @@ export default function ReadingPassage({
                     title={isThisPlaying ? (isTr ? 'Durdur' : 'Stop') : (isTr ? 'Paragrafı Dinle' : 'Listen to paragraph')}
                   >
                     <i className={`text-sm fa-solid ${isThisPlaying ? 'fa-stop' : 'fa-volume-high'}`}></i>
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={(e) => handleMarkParagraphAsKnown(e, cleanWords)}
+                    className={`w-9 h-9 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center transition-all cursor-pointer border shadow-sm ${
+                      areAllKnown
+                        ? 'bg-emerald-950/40 border-emerald-500/60 text-emerald-400 hover:bg-emerald-900/50'
+                        : 'bg-slate-900 border-slate-700 hover:bg-emerald-950/40 hover:border-emerald-500 hover:text-emerald-400 text-slate-500'
+                    }`}
+                    title={isTr ? 'Tüm paragrafı biliyorum olarak işaretle' : 'Mark all words in paragraph as known'}
+                  >
+                    <i className="fa-solid fa-check-double text-xs sm:text-sm"></i>
                   </button>
 
                   <span className="text-[10px] font-bold text-slate-500 tracking-wider">
