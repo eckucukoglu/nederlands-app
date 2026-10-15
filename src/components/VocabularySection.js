@@ -1,12 +1,9 @@
 // src/components/VocabularySection.js
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { vocabulary, bookSections } from '../data';
-import { globalDictionary } from '../data/globalDictionary';
 import { useLanguage } from '../contexts/LanguageContext';
 import { speakDutch } from '../utils/speech';
 import { 
-  POS_CATEGORIES, 
-  CHAPTER_THEMES, 
   WORD_METADATA, 
   groupChapterWords 
 } from '../data/vocabCategories';
@@ -19,7 +16,7 @@ export default function VocabularySection({
   completed = {},
   toggleCompleted
 }) {
-  const { lang, t } = useLanguage();
+  const { lang } = useLanguage();
   const isTr = lang === 'tr';
 
   const chNum = useMemo(() => {

@@ -650,6 +650,323 @@ export const chapter2Sections = [
     ]
   },
   {
+    id: "Reading-2",
+    chapter: 2,
+    title: {
+      tr: "Okuma & Anlama",
+      en: "Reading Comprehension"
+    },
+    readingPassage: {
+      title: "Een gezellige lunchpauze in de kantine",
+      level: "Niveau A1 • 18 Zinnen",
+      intro: {
+        tr: "Aşağıdaki okuma parçasını dikkatlice okuyunuz. Bu metin 2. Bölümde öğrendiğiniz kantin diyalogları, saatler (de klok), günler ve aylar, zaman edatları (in, op, om), iyelik zamirleri (mijn, jouw, zijn, haar, ons/onze), aile ilişkileri ve insan betimlemeleri kullanılarak bir öğretmen titizliğiyle hazırlanmıştır. Paragraf yanlarındaki ses butonlarıyla metni dinleyebilir veya üst kısımdaki butonla tüm parçayı dinleyebilirsiniz. Kelimelerin üzerine tıklayarak anında sözlük anlamlarına bakabilir ve metnin altındaki 20 soruluk anlama testini çözerek kendinizi test edebilirsiniz.",
+        en: "Read the following reading passage carefully. It incorporates canteen dialogues, telling time (de klok), days and months, prepositions of time (in, op, om), possessive pronouns (mijn, jouw, zijn, haar, ons/onze), family relationships, and personal descriptions learned in Chapter 2. Use the audio buttons to listen paragraph by paragraph or listen to the full text. Click on any word to check its meaning in the dictionary, and test your understanding with the 20 comprehension questions below."
+      },
+      paragraphs: [
+        "Het is donderdag 20 augustus. Om half een 's middags hebben de cursisten van de taalschool in Utrecht pauze. Susy en haar klasgenoot Edit lopen naar de drukke kantine. Er zijn veel mensen, maar aan een ronde tafel bij het raam is nog een stoel leeg. Susy vraagt beleefd aan een student: \"Pardon, is deze plaats nog vrij?\" De student lacht vriendelijk en antwoordt: \"Ja hoor, ga lekker zitten!\" Susy haalt een lekker kopje koffie en een broodje kaas. Edit kiest een warme tosti en een kopje zwarte thee met suiker.",
+        "Terwijl ze aan tafel zitten, kijkt Edit op haar horloge. \"Hoe laat is het eigenlijk?\" vraagt Susy nieuwsgierig. Edit antwoordt: \"Het is nu tien voor een. Onze les begint weer om kwart over een, dus we hebben nog vijfentwintig minuten.\" Susy vraagt: \"Welke dag is het vandaag precies?\" Edit glimlacht trots: \"Vandaag is het donderdag, maar morgen, op vrijdag 21 augustus, ben ik jarig!\" Susy roept enthousiast: \"Wat leuk, alvast van harte gefeliciteerd! Ik ben zelf in december jarig, dus midden in de koude winter.\"",
+        "Susy vraagt aan haar vriendin: \"Krijg je morgen ook bezoek voor je verjaardag?\" Edit vertelt: \"Ja zeker! Mijn broer Daan komt zaterdagochtend naar Utrecht. Hij is twee jaar jonger dan ik, maar hij is wel veel langer. En mijn zus Eva komt ook met haar man. Eva is een heel ander type dan ik: zij heeft kort, blond haar en een bril, terwijl ik lang, donker haar heb.\" Susy vraagt: \"En komen jullie ouders ook op bezoek?\" Edit schudt haar hoofd: \"Nee, onze vader en moeder zijn op dit moment in Indonesië. Mijn vader werkt daar voor zijn bedrijf in de zomer. Zij komen pas in oktober terug naar Nederland.\"",
+        "Dan kijkt Susy op de grote klok aan de muur. Het is precies vijf over een. \"Kijk eens aan, we moeten over tien minuten weer in het lokaal zijn!\" zegt Susy. Ze ruimen netjes hun kopjes en borden op. Edit zegt vrolijk: \"Zaterdag vieren we mijn feestje en zondag rusten we lekker uit.\" Samen lopen de twee vriendinnen met hun boeken door de gang terug naar de klas van meneer De Vries."
+      ],
+      hints: [
+        {
+          title: { tr: "Anahtar Kelimeler", en: "Key Vocabulary" },
+          icon: "fa-book-open",
+          items: [
+            { term: "de plaats", tr: "yer / koltuk", en: "seat / place" },
+            { term: "vrij", tr: "boş / serbest", en: "free / vacant" },
+            { term: "jarig zijn", tr: "doğum günü olmak", en: "having one's birthday" },
+            { term: "het bezoek", tr: "ziyaret / misafir", en: "visitor(s) / visit" },
+            { term: "opruimen", tr: "toparlamak / temizlemek", en: "to clear / tidy up" }
+          ]
+        },
+        {
+          title: { tr: "Saatler & Zaman", en: "Clock & Time" },
+          icon: "fa-clock",
+          items: [
+            { term: "half een (12:30)", tr: "saat on iki buçuk (12:30)", en: "half past twelve (12:30)" },
+            { term: "tien voor een (12:50)", tr: "bire on var (12:50)", en: "ten to one (12:50)" },
+            { term: "vijf over een (13:05)", tr: "biri beş geçiyor (13:05)", en: "five past one (13:05)" },
+            { term: "kwart over een (13:15)", tr: "biri çeyrek geçiyor (13:15)", en: "quarter past one (13:15)" },
+            { term: "over tien minuten", tr: "on dakika sonra / içinde", en: "in ten minutes" }
+          ]
+        },
+        {
+          title: { tr: "Zaman Edatları & İyelik", en: "Prepositions & Possessives" },
+          icon: "fa-tags",
+          items: [
+            { term: "op + dag / datum", tr: "op donderdag / op 21 augustus (gün ve tarihlerde 'op')", en: "on Thursday / on 21 August" },
+            { term: "om + tijd", tr: "om half een / om kwart over een (saatlerde 'om')", en: "at half past twelve / at 1:15" },
+            { term: "in + maand / seizoen", tr: "in december / in de winter (ay ve mevsimlerde 'in')", en: "in December / in winter" },
+            { term: "ons / onze", tr: "ons bedrijf (het-woord), onze les / ouders (de / meervoud)", en: "our company, our class / parents" },
+            { term: "zijn / haar / hun", tr: "zijn (onun - e), haar (onun - d), hun (onların)", en: "his, her, their" }
+          ]
+        }
+      ]
+    },
+    exerciseGroups: [
+      {
+        instruction: "Deel 1: Directe Begrip & Feiten (1-7: Doğrudan Bilgi ve Olaylar / Direct Facts & Events)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_2_1",
+            type: "multiple_choice",
+            question: "Waar zijn Susy en Edit aan het begin van de tekst?",
+            options: [
+              "In het klaslokaal met meneer De Vries",
+              "In de kantine van de taalschool in Utrecht",
+              "In een restaurant in Amsterdam",
+              "Op het centraal station van Utrecht"
+            ],
+            correctAnswer: "In de kantine van de taalschool in Utrecht"
+          },
+          {
+            id: "reading_2_2",
+            type: "multiple_choice",
+            question: "Wat vraagt Susy beleefd aan de student aan de ronde tafel?",
+            options: [
+              "\"Hoe laat begint de les?\"",
+              "\"Pardon, is deze plaats nog vrij?\"",
+              "\"Waar is het lokaal van meneer De Vries?\"",
+              "\"Mag ik jouw horloge lenen?\""
+            ],
+            correctAnswer: "\"Pardon, is deze plaats nog vrij?\""
+          },
+          {
+            id: "reading_2_3",
+            type: "multiple_choice",
+            question: "Wat haalt Susy voor zichzelf te eten en te drinken?",
+            options: [
+              "Een kopje thee en een tosti",
+              "Een lekker kopje koffie en een broodje kaas",
+              "Een glas koud water en een verse appel",
+              "Alleen een kopje zwarte koffie met suiker"
+            ],
+            correctAnswer: "Een lekker kopje koffie en een broodje kaas"
+          },
+          {
+            id: "reading_2_4",
+            type: "multiple_choice",
+            question: "Wat kiest Edit voor haar lunch?",
+            options: [
+              "Koffie met melk en een broodje kaas",
+              "Een kopje thee zonder suiker en een salade",
+              "Een warme tosti en een kopje zwarte thee met suiker",
+              "Sinaasappelsap en een koekje"
+            ],
+            correctAnswer: "Een warme tosti en een kopje zwarte thee met suiker"
+          },
+          {
+            id: "reading_2_5",
+            type: "multiple_choice",
+            question: "Wat doen de twee vriendinnen aan het einde van de pauze voordat ze weggaan?",
+            options: [
+              "Ze laten alles op tafel staan voor de schoonmaker.",
+              "Ze ruimen netjes hun kopjes en borden op.",
+              "Ze nemen hun kopjes mee naar het klaslokaal.",
+              "De docent ruimt de kantinetafel voor hen op."
+            ],
+            correctAnswer: "Ze ruimen netjes hun kopjes en borden op."
+          },
+          {
+            id: "reading_2_6",
+            type: "multiple_choice",
+            question: "Naar wie lopen Susy en Edit terug na de lunchpauze?",
+            options: [
+              "Naar hun familie in Groningen",
+              "Naar de klas van docent meneer De Vries",
+              "Naar de directeur van de school",
+              "Naar de bibliotheek voor zelfstudie"
+            ],
+            correctAnswer: "Naar de klas van docent meneer De Vries"
+          },
+          {
+            id: "reading_2_7",
+            type: "multiple_choice",
+            question: "Wat gaan Edit en haar familieleden op zondag doen volgens de tekst?",
+            options: [
+              "Ze hebben extra Nederlandse les.",
+              "Ze vieren het grote verjaardagsfeest van Edit.",
+              "Ze rusten lekker uit.",
+              "Ze reizen naar Indonesië."
+            ],
+            correctAnswer: "Ze rusten lekker uit."
+          }
+        ]
+      },
+      {
+        instruction: "Deel 2: Tijd, Kalender & Preposities (8-13: Saat, Takvim ve Zaman Edatları / Time, Dates & Prepositions)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_2_8",
+            type: "multiple_choice",
+            question: "Welke dag en datum is het vandaag in het verhaal?",
+            options: [
+              "Woensdag 19 augustus",
+              "Donderdag 20 augustus",
+              "Vrijdag 21 augustus",
+              "Zaterdag 22 augustus"
+            ],
+            correctAnswer: "Donderdag 20 augustus"
+          },
+          {
+            id: "reading_2_9",
+            type: "multiple_choice",
+            question: "Hoe laat hebben de cursisten pauze gekregen ('s middags)?",
+            options: [
+              "Om 12:00 uur (twaalf uur)",
+              "Om 12:30 uur (half een)",
+              "Om 12:50 uur (tien voor een)",
+              "Om 13:15 uur (kwart over een)"
+            ],
+            correctAnswer: "Om 12:30 uur (half een)"
+          },
+          {
+            id: "reading_2_10",
+            type: "multiple_choice",
+            question: "Hoe laat begint de les weer na de lunchpauze?",
+            options: [
+              "Om 12:45 uur (kwart voor een)",
+              "Om 13:00 uur (één uur)",
+              "Om 13:15 uur (kwart over een)",
+              "Om 13:30 uur (half twee)"
+            ],
+            correctAnswer: "Om 13:15 uur (kwart over een)"
+          },
+          {
+            id: "reading_2_11",
+            type: "multiple_choice",
+            question: "Edit zegt: 'Het is nu tien voor een'. Hoe schrijf je deze tijd op een digitale klok?",
+            options: [
+              "12:10 uur",
+              "12:50 uur",
+              "13:10 uur",
+              "13:50 uur"
+            ],
+            correctAnswer: "12:50 uur"
+          },
+          {
+            id: "reading_2_12",
+            type: "multiple_choice",
+            question: "Op welke datum en welke dag is Edit jarig?",
+            options: [
+              "Op donderdag 20 augustus",
+              "Op vrijdag 21 augustus",
+              "Op zaterdag 22 augustus",
+              "In het midden van december"
+            ],
+            correctAnswer: "Op vrijdag 21 augustus"
+          },
+          {
+            id: "reading_2_13",
+            type: "multiple_choice",
+            question: "In welke maand en in welk seizoen is Susy jarig?",
+            options: [
+              "In augustus, in de zomer",
+              "In oktober, in de herfst",
+              "In december, in de winter",
+              "In april, in de lente"
+            ],
+            correctAnswer: "In december, in de winter"
+          }
+        ]
+      },
+      {
+        instruction: "Deel 3: Familie, Uiterlijk & Grammatica (14-20: Aile, Betimleme ve Dilbilgisi / Family, Descriptions & Grammar)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_2_14",
+            type: "multiple_choice",
+            question: "Wie is Daan en wanneer komt hij naar Utrecht?",
+            options: [
+              "Hij is de docent en hij komt op vrijdagmiddag.",
+              "Hij is de broer van Edit en hij komt zaterdagochtend.",
+              "Hij is de man van Eva en hij komt donderdagavond.",
+              "Hij is de vader van Edit en hij komt pas in oktober."
+            ],
+            correctAnswer: "Hij is de broer van Edit en hij komt zaterdagochtend."
+          },
+          {
+            id: "reading_2_15",
+            type: "multiple_choice",
+            question: "Wat is waar over het verschil tussen Edit en haar broer Daan?",
+            options: [
+              "Daan is twee jaar ouder en korter dan Edit.",
+              "Daan is twee jaar jonger, maar hij is wel veel langer dan Edit.",
+              "Edit en Daan zijn een tweeling en precies even lang.",
+              "Daan heeft kort blond haar en een bril."
+            ],
+            correctAnswer: "Daan is twee jaar jonger, maar hij is wel veel langer dan Edit."
+          },
+          {
+            id: "reading_2_16",
+            type: "multiple_choice",
+            question: "Hoe ziet Eva (de zus van Edit) eruit volgens de beschrijving in de tekst?",
+            options: [
+              "Zij heeft lang donker haar, net als Edit.",
+              "Zij heeft kort, blond haar en een bril.",
+              "Zij is heel lang en heeft zwart krullend haar.",
+              "Zij heeft blond haar en draagt geen bril."
+            ],
+            correctAnswer: "Zij heeft kort, blond haar en een bril."
+          },
+          {
+            id: "reading_2_17",
+            type: "multiple_choice",
+            question: "Waarom kunnen de ouders van Edit niet op haar verjaardag in Nederland komen?",
+            options: [
+              "Ze zijn ziek thuis in Groningen.",
+              "Ze hebben geen vakantie gekregen van hun taalschool.",
+              "Ze zijn op dit moment in Indonesië voor het werk van haar vader.",
+              "Ze vieren vakantie met vrienden in Spanje."
+            ],
+            correctAnswer: "Ze zijn op dit moment in Indonesië voor het werk van haar vader."
+          },
+          {
+            id: "reading_2_18",
+            type: "multiple_choice",
+            question: "In welke maand komen de ouders van Edit pas terug naar Nederland?",
+            options: [
+              "In augustus",
+              "In september",
+              "In oktober",
+              "In december"
+            ],
+            correctAnswer: "In oktober"
+          },
+          {
+            id: "reading_2_19",
+            type: "multiple_choice",
+            question: "Kijk naar de zin: \"...onze vader en moeder zijn op dit moment in Indonesië.\" Waarom staat er 'onze' en niet 'ons'?",
+            options: [
+              "Omdat 'vader en moeder' meervoud is (de ouders).",
+              "Omdat Indonesië een 'het'-woord is.",
+              "Omdat een onderwerp in de hoofdzin altijd 'onze' vereist.",
+              "Het maakt in de Nederlandse grammatica geen enkel verschil."
+            ],
+            correctAnswer: "Omdat 'vader en moeder' meervoud is (de ouders)."
+          },
+          {
+            id: "reading_2_20",
+            type: "multiple_choice",
+            question: "Welke bewering over de gebeurtenissen in de tekst is NIET waar (onjuist)?",
+            options: [
+              "Susy drinkt een kopje koffie en eet een broodje kaas in de pauze.",
+              "Edit viert haar verjaardag gezellig samen met haar ouders in Utrecht.",
+              "De les van meneer De Vries begint weer om kwart over een (13:15).",
+              "Daan is twee jaar jonger dan Edit, maar hij is wel langer dan zij."
+            ],
+            correctAnswer: "Edit viert haar verjaardag gezellig samen met haar ouders in Utrecht."
+          }
+        ]
+      }
+    ]
+  },
+  {
     id: "On-Class-2",
     chapter: 2,
     title: "Summary",
