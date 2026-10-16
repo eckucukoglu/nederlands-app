@@ -9,7 +9,7 @@ import {
   grammarSyntax, 
   grammarForms, 
   dialoguesReading 
-} from '../data';
+} from '../data/quizData';
 import QuizModule from './QuizModule';
 import { generateSmartQuestions } from '../data/questionGenerator';
 
@@ -379,7 +379,7 @@ export default function HomeView({
         return {
           ...topic,
           total,
-          attempted: learned + learning,
+          attempted: (learned + learning) > 0 ? (learned + learning) : qAttempted,
           correct: learned,
           incorrect: learning,
           mastered: learned,
