@@ -450,6 +450,8 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
     return calculateOverallProgress({ completed, favorites, bookSections });
   }, [completed, favorites, progressVersion]);
 
+  const headerProgressPercent = Math.max(0, Math.min(100, overallStats?.overallProgress || 0));
+
   const [searchToast, setSearchToast] = useState(null);
   
   const [customWordModal, setCustomWordModal] = useState({ isOpen: false, word: '', status: '' });
@@ -1155,23 +1157,54 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
       <header className="bg-slate-950/95 backdrop-blur-md text-white shadow-md sticky top-0 z-50 border-b border-slate-800 flex-none w-full relative transition-colors">
         
         {/* ARKA PLAN DİNAMİK İLERLEME BARI (Soldan Sağa Ambient Dolgu - Sadece arka planı sınırlar, menülerin taşmasını engellemez) */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
-          <div 
-            className="absolute inset-y-0 left-0 transition-all duration-1000 ease-out overflow-hidden"
-            style={{ width: `${Math.max(0, Math.min(100, overallStats?.overallProgress || 0))}%` }}
-          >
-            {/* Belli belirsiz, zarif degradeli dolgu */}
-            <div className="w-full h-full bg-gradient-to-r from-teal-500/15 via-sky-500/15 to-indigo-500/20"></div>
-            {/* İlerleme bitiş noktasındaki hafif dikey ışık ve ışıma */}
-            <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-r from-transparent via-teal-400/10 to-teal-400/25 blur-sm pointer-events-none"></div>
-            <div className="absolute right-0 top-0 bottom-0 w-[1.5px] bg-gradient-to-b from-teal-400/20 via-teal-300/50 to-indigo-400/20 shadow-[0_0_8px_rgba(45,212,191,0.5)] pointer-events-none"></div>
-          </div>
+        <div className="absolute inset-0 pointer-events-none overflow-hidden z-0 select-none">
+          {headerProgressPercent > 0 && (
+            <>
+              {/* 1. DİNAMİK AMBIENT DOLGU (Soldan Sağa Yumuşak Aurora Akışı) */}
+              <div 
+                className="absolute inset-y-0 left-0 transition-all duration-1000 ease-out"
+                style={{ width: `${headerProgressPercent}%` }}
+              >
+                {/* Ana Arka Plan Degrade Dolgusu (Bitiş ucu dikey düz kesik olmasın diye maskImage ile yumuşakça karararak erir) */}
+                <div 
+                  className="w-full h-full bg-gradient-to-r from-teal-500/10 via-sky-500/15 to-indigo-500/15"
+                  style={{
+                    maskImage: 'linear-gradient(to right, black calc(100% - 48px), rgba(0,0,0,0.4) calc(100% - 12px), transparent 100%)',
+                    WebkitMaskImage: 'linear-gradient(to right, black calc(100% - 48px), rgba(0,0,0,0.4) calc(100% - 12px), transparent 100%)'
+                  }}
+                />
 
-          {/* İNCE ALT KENAR İLERLEME ÇİZGİSİ */}
-          <div 
-            className="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-teal-400 via-sky-400 to-indigo-400 transition-all duration-1000 ease-out shadow-[0_0_8px_rgba(45,212,191,0.7)]"
-            style={{ width: `${Math.max(0, Math.min(100, overallStats?.overallProgress || 0))}%` }}
-          ></div>
+                {/* 2. UÇ NOKTADAKİ ELEGANT AURORA IŞIK SÜZMESİ (Dümdüz dikey çizgi yerine açılı ve buğulu dinamik ışık) */}
+                {/* Geniş yumuşak atmosferik ışıma (Halo / Aurora) */}
+                <div className="absolute -right-12 top-1/2 -translate-y-1/2 w-32 h-20 bg-teal-400/15 blur-2xl rounded-full pointer-events-none" />
+
+                {/* Açılı, zarif ışık huzmesi (Slanted Light Sheen - -skew-x-[22deg]) */}
+                <div className="absolute -right-8 top-0 bottom-0 w-16 -skew-x-[22deg] origin-bottom-right bg-gradient-to-r from-transparent via-teal-400/20 to-transparent blur-sm pointer-events-none" />
+                
+                {/* İnce tatlı ışık vurgusu (Dikey değil, tatlı bir açıyla yukarıdan aşağıya süzülen hat) */}
+                <div className="absolute -right-2 top-0 bottom-0 w-6 -skew-x-[22deg] origin-bottom-right bg-gradient-to-b from-transparent via-teal-300/30 to-transparent blur-[1px] pointer-events-none" />
+              </div>
+
+              {/* 3. İNCE ALT KENAR İLERLEME ÇİZGİSİ & PARLAYAN KOMET UCU */}
+              <div 
+                className="absolute bottom-0 left-0 h-[2px] transition-all duration-1000 ease-out"
+                style={{ width: `${headerProgressPercent}%` }}
+              >
+                {/* Ray çizgisi (Hafif degradeli neon) */}
+                <div className="w-full h-full bg-gradient-to-r from-teal-500/40 via-sky-400/70 to-teal-300 shadow-[0_0_8px_rgba(45,212,191,0.5)]" />
+
+                {/* Uç Noktadaki Mücevher / Komet Işıltısı (Noktasal Parlama & Flare) */}
+                <div className="absolute right-0 bottom-0 translate-x-1/2 mb-[1px] flex items-center justify-center pointer-events-none">
+                  {/* Dış buğulu hale */}
+                  <div className="absolute w-6 h-6 rounded-full bg-teal-400/25 blur-sm" />
+                  {/* Yatay mini ışık hüzmesi */}
+                  <div className="absolute w-6 h-[2px] bg-gradient-to-r from-transparent via-teal-200 to-white blur-[0.5px] shadow-[0_0_6px_rgba(45,212,191,0.8)]" />
+                  {/* Merkez parlak kristal nokta */}
+                  <div className="w-2 h-2 rounded-full bg-gradient-to-tr from-teal-200 via-white to-sky-200 shadow-[0_0_8px_rgba(45,212,191,1),0_0_3px_#fff]" />
+                </div>
+              </div>
+            </>
+          )}
         </div>
 
         <div className="max-w-7xl mx-auto px-2 sm:px-4 py-2 sm:py-2.5 flex flex-nowrap justify-between items-center gap-1.5 sm:gap-2 relative z-10">
