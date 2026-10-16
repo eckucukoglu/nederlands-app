@@ -217,7 +217,10 @@ export const chapter7Sections = [
         questions: [
           { id: "7.3_smart_1", type: "fill_in", question: "Vertaal (Translate): 'Ben pembe bir elbise arıyorum. / I'm looking for a pink dress.' -> Ik zoek een ________ jurk.", correctAnswer: "roze" },
           { id: "7.3_smart_2", type: "multiple_choice", question: "Wat is 'de jas' in het Engels of Turks?", options: ["the dress / elbise", "the coat / mont", "the skirt / etek"], correctAnswer: "the coat / mont" },
-          { id: "7.3_smart_3", type: "multiple_choice", question: "Welke kleding draag je op je benen? (Which clothing do you wear on your legs?)", options: ["De trui", "De bloes", "De spijkerbroek"], correctAnswer: "De spijkerbroek" }
+          { id: "7.3_smart_3", type: "multiple_choice", question: "Welke kleding draag je op je benen? (Which clothing do you wear on your legs?)", options: ["De spijkerbroek", "De trui", "De bloes", "De jas"], correctAnswer: "De spijkerbroek" },
+          { id: "7.3_smart_4", type: "multiple_choice", question: "Welk kledingstuk draag je als het buiten koud en winderig is?", options: ["Een warme jas en een sjaal", "Alleen een T-shirt", "Een zwembroek", "Een korte rok"], correctAnswer: "Een warme jas en een sjaal" },
+          { id: "7.3_smart_5", type: "multiple_choice", question: "Wat betekent de kleur 'oranje' voor Nederland?", options: ["Het is de nationale kleur van het koningshuis en de nationale teams.", "Het is de kleur van het openbaar vervoer.", "Het betekent dat winkels gesloten zijn.", "Het is de traditionele kleur voor bruiloften."], correctAnswer: "Het is de nationale kleur van het koningshuis en de nationale teams." },
+          { id: "7.3_smart_6", type: "multiple_choice", question: "Wat is het meervoud van 'de schoen'?", options: ["de schoenen", "de schoens", "de schoenenen", "de schoen"], correctAnswer: "de schoenen" }
         ]
       }
     ]
@@ -584,7 +587,10 @@ export const chapter7Sections = [
         questions: [
           { id: "7.10_opd14_1", type: "multiple_choice", question: "1. De trui is oud (twintig jaar).", options: ["waar", "niet waar"], correctAnswer: "waar" },
           { id: "7.10_opd14_2", type: "multiple_choice", question: "2. Na het wassen zit de trui niet goed.", options: ["waar", "niet waar"], correctAnswer: "niet waar" },
-          { id: "7.10_opd14_3", type: "multiple_choice", question: "3. Jos Schomaker wil dat mensen vaak nieuwe kleren kopen (anders is het niet goed voor zijn winkel).", options: ["waar", "niet waar"], correctAnswer: "waar" }
+          { id: "7.10_opd14_3", type: "multiple_choice", question: "3. Jos Schomaker wil dat mensen vaak nieuwe kleren kopen (anders is het niet goed voor zijn winkel).", options: ["waar", "niet waar"], correctAnswer: "waar" },
+          { id: "7.10_opd14_4", type: "multiple_choice", question: "Wat is belangrijk als je een kledingstuk wilt ruilen in een Nederlandse winkel?", options: ["Je moet het aankoopbewijs (de kassa-bon) meenemen en het kaartje moet eraan zitten.", "Je mag het kledingstuk pas na een jaar ruilen.", "Je moet altijd de winkelmanager bellen.", "Kleren kunnen in Nederland nooit geruild worden."], correctAnswer: "Je moet het aankoopbewijs (de kassa-bon) meenemen en het kaartje moet eraan zitten." },
+          { id: "7.10_opd14_5", type: "multiple_choice", question: "Wat betekent het woord 'korting' op een etalage?", options: ["İndirim / Discount (je betaalt minder)", "Uitverkocht / Sold out", "Nieuwe collectie", "Alleen voor leden"], correctAnswer: "İndirim / Discount (je betaalt minder)" },
+          { id: "7.10_opd14_6", type: "multiple_choice", question: "Wat betekent 'uitverkoop' of 'opruiming' in een kledingwinkel?", options: ["Sezon sonu indirimi / Sale", "Mağaza kapalı", "Pahalı ürünler", "Toptan satış"], correctAnswer: "Sezon sonu indirimi / Sale" }
         ]
       }
     ]

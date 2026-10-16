@@ -139,7 +139,9 @@ export const chapter17Sections = [
 
 
 { id: "17.1_opd1_2", type: "multiple_choice", question: "Wat is het beroep van Sam?", options: ["Computerprogrammateur / IT", "Caissère in de bioscoop", "Makelaar"], correctAnswer: "Computerprogrammateur / IT" },
-          { id: "17.1_opd1_3", type: "multiple_choice", question: "Waarom heeft Sam slecht geslapen?", options: ["Omdat hij ziek is", "Omdat hij nadenkt over een probleem op zijn werk", "Omdat het te warm is"], correctAnswer: "Omdat hij nadenkt over een probleem op zijn werk" }
+          { id: "17.1_opd1_3", type: "multiple_choice", question: "Waarom heeft Sam slecht geslapen?", options: ["Omdat hij nadenkt over een probleem op zijn werk", "Omdat hij ziek is met hoge koorts", "Omdat het te warm was in de slaapkamer", "Omdat de buren feest vierden"], correctAnswer: "Omdat hij nadenkt over een probleem op zijn werk" },
+          { id: "17.1_opd1_4", type: "multiple_choice", question: "Wat doet Tina in het dagelijks leven volgens het verhaal?", options: ["Ze studeert en doet tentamens.", "Ze is piloot bij de KLM.", "Ze heeft een eigen restaurant.", "Ze werkt als tandarts."], correctAnswer: "Ze studeert en doet tentamens." },
+          { id: "17.1_opd1_5", type: "multiple_choice", question: "Wat besluiten Sam en Tina 's avonds te eten na een lange werkdag?", options: ["Stamppot boerenkool", "Sushi uit een Japans restaurant", "Spaghetti bolognese", "Pannenkoeken met stroop"], correctAnswer: "Stamppot boerenkool" }
         ]
       }
     ]
@@ -239,7 +241,9 @@ export const chapter17Sections = [
         questions: [
           { id: "17.3_opd5_1", type: "multiple_choice", question: "Je belt de huisarts omdat je niet kunt komen. Wat zeg je?", options: ["Ik wil graag een afspraak verzetten.", "Ik wil een pizza bestellen.", "Ik heb iets laten liggen."], correctAnswer: "Ik wil graag een afspraak verzetten." },
           { id: "17.3_opd5_2", type: "multiple_choice", question: "Je bent je portemonnee vergeten in de bioscoop. Wat zeg je?", options: ["Ik heb gisteren iets laten liggen.", "Ik wil mijn afspraak annuleren.", "Ik wil een tentamen doen."], correctAnswer: "Ik heb gisteren iets laten liggen." },
-          { id: "17.3_opd5_3", type: "fill_in", question: "Vertaal: 'Bir randevuyu ertelemek/başka tarihe almak': Een afspraak ________.", correctAnswer: "verzetten" }
+          { id: "17.3_opd5_3", type: "fill_in", question: "Vertaal: 'Bir randevuyu ertelemek/başka tarihe almak': Een afspraak ________.", correctAnswer: "verzetten" },
+          { id: "17.3_opd5_4", type: "multiple_choice", question: "Wat zeg je als je iemand belt en diegene is er niet, maar je wilt teruggebeld worden?", options: ["'Kunt u vragen of hij mij vanmiddag terugbelt?'", "'Hang nu direct maar op.'", "'Ik bel de politie wel.'", "'Geef mij onmiddellijk iemand anders.'"], correctAnswer: "'Kunt u vragen of hij mij vanmiddag terugbelt?'" },
+          { id: "17.3_opd5_5", type: "multiple_choice", question: "Wat is de beleefde manier om een telefoongesprek in het Nederlands te openen als beller?", options: ["'Goedemorgen, u spreekt met...' of 'Goedemorgen, met...'", "'Wie ben jij en wat wil je van mij?'", "'Zeg maar wat er is.'", "'Ja hallo, luister eens goed.'"], correctAnswer: "'Goedemorgen, u spreekt met...' of 'Goedemorgen, met...'" }
         ]
       }
     ]
@@ -406,7 +410,10 @@ export const chapter17Sections = [
         isExtra: true,
         questions: [
           { id: "17.6_smart_1", type: "multiple_choice", question: "Waar spreken Nederlanders af met vrienden (meestal)?", options: ["Alleen thuis achter closed doors", "In een café of restaurant", "Op het station"], correctAnswer: "In een café of restaurant" },
-          { id: "17.6_smart_2", type: "multiple_choice", question: "Welk woord heeft een duidelijke 'r' klank vooraan?", options: ["lopen", "roepen", "lezen"], correctAnswer: "roepen" }
+          { id: "17.6_smart_2", type: "multiple_choice", question: "Welk woord heeft een duidelijke 'r' klank vooraan?", options: ["roepen", "lopen", "lezen", "luisteren"], correctAnswer: "roepen" },
+          { id: "17.6_smart_3", type: "multiple_choice", question: "Wat zijn de gebruikelijke regels rondom geluidsoverlast (lawaai) in een Nederlands appartementencomplex (VvE)?", options: ["Na 22:00 uur moet het rustig zijn en mag je geen luide muziek draaien of klussen in huis.", "Je mag 24 uur per dag onbeperkt harde muziek draaien.", "Je moet altijd de politie bellen als de buren op hun balkon praten.", "Er zijn geen enkele regels voor rust."], correctAnswer: "Na 22:00 uur moet het rustig zijn en mag je geen luide muziek draaien of klussen in huis." },
+          { id: "17.6_smart_4", type: "multiple_choice", question: "Wat doe je traditioneel in Nederland als je een verjaardagsfeestje geeft in je flat en luide muziek verwacht?", options: ["Je stelt de buren van tevoren netjes op de hoogte met een briefje of een vriendelijk praatje.", "Je vraagt officiële toestemming aan de burgemeester.", "Je nodigt verplicht iedereen uit de hele straat uit.", "Je doet alsof je er zelf niet bij bent."], correctAnswer: "Je stelt de buren van tevoren netjes op de hoogte met een briefje of een vriendelijk praatje." },
+          { id: "17.6_smart_5", type: "multiple_choice", question: "Welk woord begint met een duidelijke 'l' klank en betekent 'wandelen / te voet gaan'?", options: ["lopen", "roepen", "rijden", "reizen"], correctAnswer: "lopen" }
         ]
       }
     ]

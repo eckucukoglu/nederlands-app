@@ -134,7 +134,10 @@ export const chapter11Sections = [
 
 
 { id: "11.1_smart_2", type: "fill_in", question: "Kirsten vindt dat Tom te snel praat. Ze vraagt: 'Kun je misschien iets ________ praten?'", correctAnswer: "langzamer" },
-          { id: "11.1_smart_3", type: "multiple_choice", question: "Wat betekent de zin 'Ik ben gek op films'?", options: ["Ben filmlerden nefret ederim.", "Ben filmlere bayılırım / hastasıyım.", "Ben filmlerde oynamak istiyorum."], correctAnswer: "Ben filmlere bayılırım / hastasıyım." }
+          { id: "11.1_smart_3", type: "multiple_choice", question: "Wat betekent de zin 'Ik ben gek op films'?", options: ["Ben filmlere bayılırım / hastasıyım (I am crazy about films)", "Ben filmlerden nefret ederim", "Ben filmlerde oynamak istiyorum", "Hiç film izlemem"], correctAnswer: "Ben filmlere bayılırım / hastasıyım (I am crazy about films)" },
+          { id: "11.1_smart_4", type: "multiple_choice", question: "Hoe begroet je de jarige en wat zeg je om te feliciteren?", options: ["'Van harte gefeliciteerd met je verjaardag!'", "'Gecondoleerd met de situatie!'", "'Sterkte met je dag!'", "'Eet smakelijk allemaal!'"], correctAnswer: "'Van harte gefeliciteerd met je verjaardag!'" },
+          { id: "11.1_smart_5", type: "multiple_choice", question: "Iemand vraagt op een feestje: 'Wat doe je in het dagelijks leven?' Wat bedoelt die persoon?", options: ["Wat voor werk of studie doe je?", "Hoe laat ga je naar bed?", "Hoeveel eet je per dag?", "Waarom ben je hier gekomen?"], correctAnswer: "Wat voor werk of studie doe je?" },
+          { id: "11.1_smart_6", type: "multiple_choice", question: "Kirsten komt uit Duitsland. Wat vraagt Tom aan haar over haar verblijf in Nederland?", options: ["'Hoelang woon je al in Nederland en bevalt het je hier?'", "'Wanneer ga je weer terug naar huis?'", "'Hoeveel belasting betaal je?'", "'Waarom praat je geen Engels?'"], correctAnswer: "'Hoelang woon je al in Nederland en bevalt het je hier?'" }
         ]
       }
     ]
@@ -585,7 +588,10 @@ export const chapter11Sections = [
         isExtra: true,
         questions: [
           { id: "11.8_smart_1", type: "multiple_choice", question: "Je komt binnen op een Nederlands verjaardagsfeestje. Wie feliciteer je?", options: ["Alleen de jarige (sadece doğum günü çocuğu / only the birthday person).", "De jarige en zijn/haar partner, ouders, familie.", "Niemand, je gaat gewoon zitten."], correctAnswer: "De jarige en zijn/haar partner, ouders, familie." },
-          { id: "11.8_smart_2", type: "multiple_choice", question: "Wat doe je met een cadeautje (hediye / gift) in Nederland als je het krijgt?", options: ["Je pakt het direct uit (hemen açarsın / open it immediately).", "Je bewaart het voor later in je tas.", "Je weigert het 3 keer voordat je het pakt."], correctAnswer: "Je pakt het direct uit (hemen açarsın / open it immediately)." }
+          { id: "11.8_smart_2", type: "multiple_choice", question: "Wat doe je met een cadeautje (hediye / gift) in Nederland als je het krijgt?", options: ["Je pakt het direct uit (hemen açarsın / open it immediately in front of the giver).", "Je bewaart het ongeopend voor later in je tas.", "Je weigert het 3 keer voordat je het aanneemt.", "Je geeft het direct door aan een ander."], correctAnswer: "Je pakt het direct uit (hemen açarsın / open it immediately in front of the giver)." },
+          { id: "11.8_smart_3", type: "multiple_choice", question: "Wat zingen de gasten traditiegetrouw voor de jarige in Nederland?", options: ["'Lang zal hij/ze leven in de gloria!'", "'Het Wilhelmus (het volkslied)'", "'Sinterklaas kapoentje'", "'Stille nacht, heilige nacht'"], correctAnswer: "'Lang zal hij/ze leven in de gloria!'" },
+          { id: "11.8_smart_4", type: "multiple_choice", question: "Wat wordt er op een Nederlands verjaardagsfeestje vrijwel altijd geserveerd bij de koffie?", options: ["Taart of gebak (vaak appeltaart of slagroomtaart)", "Warme linzensoep met brood", "Een uitgebreid driegangendiner", "Alleen een glaasje kraanwater"], correctAnswer: "Taart of gebak (vaak appeltaart of slagroomtaart)" },
+          { id: "11.8_smart_5", type: "multiple_choice", question: "Wat is de 'Sjwa' (stomme e) in het Nederlandse woord 'makkelijk'?", options: ["De letters 'e' en 'ij' worden uitgesproken als een korte, doffe 'uh'-klank (/makkuluk/)", "De 'e' wordt uitgesproken als een hele lange 'ee'", "De 'e' wordt helemaal niet uitgesproken en overgeslagen", "De lettergreep krijgt de hoofdklemtoon"], correctAnswer: "De letters 'e' en 'ij' worden uitgesproken als een korte, doffe 'uh'-klank (/makkuluk/)" }
         ]
       }
     ]

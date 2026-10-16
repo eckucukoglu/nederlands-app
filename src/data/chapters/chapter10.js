@@ -1,6 +1,5 @@
 // src/data/chapters/chapter10.js
 import React from 'react';
-import { generateSmartQuestions } from '../questionGenerator';
 
 export const chapter10Vocab = [
   { id: "10_1", chapter: 10, nl: "de fiets", en: "bike / bicycle", example: "Ik ga met de fiets." },
@@ -97,9 +96,15 @@ export const chapter10Sections = [
     ),
     exerciseGroups: [
       {
-        instruction: "Extra Oefeningen (20 vragen) - Dialoog Test (Dialogue Test)",
-        isExtra: true,
-        questions: generateSmartQuestions(10, "Dialoog", 20, chapter10Vocab)
+        instruction: "Opdracht: Begrip van de dialoog 'Bij de fietsenmaker' (Reading Comprehension)",
+        isExtra: false,
+        questions: [
+          { id: "10.1_diag_1", type: "multiple_choice", question: "Waarom brengt mevrouw Kirbas haar fiets naar de fietsenmaker?", options: ["Haar achterband is lek en de ketting ligt eraf.", "Ze wil een nieuwe elektrische scooter kopen.", "Haar fiets is gisteren gestolen.", "Ze wil haar fiets laten overschilderen."], correctAnswer: "Haar achterband is lek en de ketting ligt eraf." },
+          { id: "10.1_diag_2", type: "multiple_choice", question: "Wat vraagt mevrouw Kirbas over de reparatie van de band?", options: ["'Kunt u mijn band voor vanmiddag plakken of vervangen?'", "'Hoeveel kost een nieuwe auto?'", "'Waar is het treinstation?'", "'Kunt u mij naar huis brengen?'"], correctAnswer: "'Kunt u mijn band voor vanmiddag plakken of vervangen?'" },
+          { id: "10.1_diag_3", type: "multiple_choice", question: "Wat betekent 'een lekke band plakken' in het Nederlands?", options: ["Patlak lastiğe yama yapmak (repareren met een plakkertje)", "Lastiği çöpe atmak", "Lastiği sarıya boyamak", "Bisikleti kilitlemek"], correctAnswer: "Patlak lastiğe yama yapmak (repareren met een plakkertje)" },
+          { id: "10.1_diag_4", type: "multiple_choice", question: "Wat biedt de fietsenmaker vaak aan als je fiets een hele dag in reparatie moet blijven?", options: ["Een leenfiets (ödünç bisiklet / loan bike om te gebruiken)", "Een gratis lunchbon", "Een vliegticket", "Een nieuwe regenjas"], correctAnswer: "Een leenfiets (ödünç bisiklet / loan bike om te gebruiken)" },
+          { id: "10.1_diag_5", type: "multiple_choice", question: "Wat moet je in Nederland altijd doen als je je fiets buiten parkeert bij het station?", options: ["Goed op slot zetten met minimaal twee sloten (bijv. ringslot en kettingslot)", "De banden leeg laten lopen tegen diefstal", "De fiets niet op slot zetten", "Een briefje op het stuur plakken"], correctAnswer: "Goed op slot zetten met minimaal twee sloten (bijv. ringslot en kettingslot)" }
+        ]
       }
     ]
   },
@@ -108,7 +113,19 @@ export const chapter10Sections = [
     chapter: 10,
     title: "Vocabulary",
     theory: null,
-    exerciseGroups: []
+    exerciseGroups: [
+      {
+        instruction: "Slimme Oefeningen (Smart Exercises): Fietscultuur & Klanken in Nederland",
+        isExtra: true,
+        questions: [
+          { id: "10.9_smart_1", type: "multiple_choice", question: "Waarom fietst bijna iedereen in Nederland, van jong tot oud?", options: ["Door de vlakke wegen, een netwerk van veilige fietspaden en de korte afstanden in de stad", "Omdat auto's verboden zijn in het hele land", "Omdat er geen bussen of treinen rijden", "Omdat benzine overal gratis is"], correctAnswer: "Door de vlakke wegen, een netwerk van veilige fietspaden en de korte afstanden in de stad" },
+          { id: "10.9_smart_2", type: "multiple_choice", question: "Wat is wettelijk verplicht op je fiets als je in het donker rijdt in Nederland?", options: ["Een wit of geel voorlicht en een rood achterlicht", "Een helm met zwaailicht", "Een speciale reflecterende zonnebril", "Gele handschoenen"], correctAnswer: "Een wit of geel voorlicht en een rood achterlicht" },
+          { id: "10.9_smart_3", type: "multiple_choice", question: "Mag je een mobiele telefoon in je hand houden tijdens het fietsen?", options: ["Nee, dat is ten strengste verboden en je kunt een forse boete krijgen.", "Ja, dat mag altijd zonder limiet.", "Alleen als je rustig fietst op de stoep.", "Alleen op zondagen."], correctAnswer: "Nee, dat is ten strengste verboden en je kunt een forse boete krijgen." },
+          { id: "10.9_smart_4", type: "multiple_choice", question: "Welk woord bevat de tweeklank (diftong) 'ui'?", options: ["thuis", "grijs", "deur", "blijven"], correctAnswer: "thuis" },
+          { id: "10.9_smart_5", type: "multiple_choice", question: "Wat is het verschil tussen 'deur' (eu-klank) en 'duur' (uu-klank)?", options: ["'Deur' betekent kapı (door); 'duur' betekent pahalı (expensive).", "Ze betekenen precies hetzelfde.", "'Deur' is een dier, 'duur' is een plant.", "'Duur' betekent kapı, 'deur' betekent pahalı."], correctAnswer: "'Deur' betekent kapı (door); 'duur' betekent pahalı (expensive)." }
+        ]
+      }
+    ]
   },
   {
     id: "10.3",
@@ -746,7 +763,19 @@ export const chapter10Sections = [
         )}
       </>
     ),
-    exerciseGroups: []
+    exerciseGroups: [
+      {
+        instruction: "Slimme Oefeningen (Smart Exercises): Fietscultuur & Klanken in Nederland",
+        isExtra: true,
+        questions: [
+          { id: "10.9_smart_1", type: "multiple_choice", question: "Waarom fietst bijna iedereen in Nederland, van jong tot oud?", options: ["Door de vlakke wegen, een netwerk van veilige fietspaden en de korte afstanden in de stad", "Omdat auto's verboden zijn in het hele land", "Omdat er geen bussen of treinen rijden", "Omdat benzine overal gratis is"], correctAnswer: "Door de vlakke wegen, een netwerk van veilige fietspaden en de korte afstanden in de stad" },
+          { id: "10.9_smart_2", type: "multiple_choice", question: "Wat is wettelijk verplicht op je fiets als je in het donker rijdt in Nederland?", options: ["Een wit of geel voorlicht en een rood achterlicht", "Een helm met zwaailicht", "Een speciale reflecterende zonnebril", "Gele handschoenen"], correctAnswer: "Een wit of geel voorlicht en een rood achterlicht" },
+          { id: "10.9_smart_3", type: "multiple_choice", question: "Mag je een mobiele telefoon in je hand houden tijdens het fietsen?", options: ["Nee, dat is ten strengste verboden en je kunt een forse boete krijgen.", "Ja, dat mag altijd zonder limiet.", "Alleen als je rustig fietst op de stoep.", "Alleen op zondagen."], correctAnswer: "Nee, dat is ten strengste verboden en je kunt een forse boete krijgen." },
+          { id: "10.9_smart_4", type: "multiple_choice", question: "Welk woord bevat de tweeklank (diftong) 'ui'?", options: ["thuis", "grijs", "deur", "blijven"], correctAnswer: "thuis" },
+          { id: "10.9_smart_5", type: "multiple_choice", question: "Wat is het verschil tussen 'deur' (eu-klank) en 'duur' (uu-klank)?", options: ["'Deur' betekent kapı (door); 'duur' betekent pahalı (expensive).", "Ze betekenen precies hetzelfde.", "'Deur' is een dier, 'duur' is een plant.", "'Duur' betekent kapı, 'deur' betekent pahalı."], correctAnswer: "'Deur' betekent kapı (door); 'duur' betekent pahalı (expensive)." }
+        ]
+      }
+    ]
   },
     {
     id: "Reading-10",

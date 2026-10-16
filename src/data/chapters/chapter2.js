@@ -646,7 +646,11 @@ export const chapter2Sections = [
         isExtra: true,
         questions: [
           { id: "2.13_smart_1", type: "multiple_choice", question: "Welk woord heeft een LANGE 'aa' klank? (Which word has a LONG 'aa' sound?)", options: ["dag", "was", "jaar"], correctAnswer: "jaar" },
-          { id: "2.13_smart_2", type: "multiple_choice", question: "Welk woord heeft een KORTE 'a' klank? (Which word has a SHORT 'a' sound?)", options: ["naam", "land", "plaats"], correctAnswer: "land" }
+          { id: "2.13_smart_2", type: "multiple_choice", question: "Welk woord heeft een KORTE 'a' klank? (Which word has a SHORT 'a' sound?)", options: ["naam", "land", "plaats"], correctAnswer: "land" },
+          { id: "2.13_smart_3", type: "multiple_choice", question: "Wanneer mag je in Nederland het alarmnummer 1-1-2 bellen?", options: ["Alleen bij levensbedreigende situaties of spoed", "Om de weg te vragen in de stad", "Als je de openingstijden van de winkel wilt weten", "Als je je huissleutel kwijt bent"], correctAnswer: "Alleen bij levensbedreigende situaties of spoed" },
+          { id: "2.13_smart_4", type: "multiple_choice", question: "Welke hulpdiensten kun je bereiken via 1-1-2?", options: ["Politie, brandweer en ambulance", "Alleen de tandarts en huisarts", "De douane en de belastingdienst", "De buschauffeur en treinmachinist"], correctAnswer: "Politie, brandweer en ambulance" },
+          { id: "2.13_smart_5", type: "multiple_choice", question: "Welk woordpaar heeft een korte klinker tegenover een lange klinker (short vs long vowel)?", options: ["man - maan", "pen - pet", "vis - wit", "dak - bad"], correctAnswer: "man - maan" },
+          { id: "2.13_smart_6", type: "multiple_choice", question: "Wat is het meervoud van het woord 'de dag'?", options: ["de dagen", "de dags", "de daggen", "de daagen"], correctAnswer: "de dagen" }
         ]
       }
     ]

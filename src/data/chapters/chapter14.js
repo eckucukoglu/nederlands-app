@@ -491,7 +491,10 @@ export const chapter14Sections = [
         isExtra: false,
         questions: [
           { id: "14.5_opd8_1", type: "multiple_choice", question: "Wat doet Sander morgenmiddag om 14.00 uur? (Plan: studeren in de bibliotheek)", options: ["Morgenmiddag gaat hij in de bibliotheek studeren.", "Morgenmiddag studeerde hij.", "Hij studeert gisteren."], correctAnswer: "Morgenmiddag gaat hij in de bibliotheek studeren." },
-          { id: "14.5_opd8_2", type: "multiple_choice", question: "Wat is je eigen plan? Wat doe je na de les? (Kies een logisch futurum antwoord)", options: ["Ik ben naar huis gegaan.", "Ik ga naar huis / Ik ga boodschappen doen.", "Ik slaap gisteren."], correctAnswer: "Ik ga naar huis / Ik ga boodschappen doen." }
+          { id: "14.5_opd8_2", type: "multiple_choice", question: "Wat is je eigen plan? Wat doe je na de les? (Kies een logisch futurum antwoord)", options: ["Ik ga naar huis / Ik ga boodschappen doen.", "Ik ben naar huis gegaan.", "Ik sliep gisteren.", "Ik was thuis geweest."], correctAnswer: "Ik ga naar huis / Ik ga boodschappen doen." },
+          { id: "14.5_opd8_3", type: "multiple_choice", question: "Hoe druk je in het Nederlands een toekomstig plan uit met het werkwoord 'gaan'?", options: ["persoonsvorm van 'gaan' + infinitief helemaal aan het einde van de zin", "alleen het werkwoord 'gaan' in de tegenwoordige tijd zonder ander werkwoord", "persoonsvorm van 'hebben' + voltooid deelwoord", "onderwerp + infinitief"], correctAnswer: "persoonsvorm van 'gaan' + infinitief helemaal aan het einde van de zin" },
+          { id: "14.5_opd8_4", type: "multiple_choice", question: "Welke zin drukt een toekomstige handeling (futurum) uit met een tijdsbepaling in de presens?", options: ["Morgenochtend vlieg ik om acht uur naar Spanje.", "Gisteren vloog ik om acht uur naar Spanje.", "Ik ben gisteren naar Spanje gevlogen.", "Ik vlieg altijd graag in de zomer."], correctAnswer: "Morgenochtend vlieg ik om acht uur naar Spanje." },
+          { id: "14.5_opd8_5", type: "multiple_choice", question: "Wat betekent de zin: 'Volgende week gaan we een nieuw abonnement afsluiten bij de sportschool'?", options: ["Gelecek hafta spor salonunda yeni bir üyelik başlatacağız (plan/niyet)", "Geçen hafta spor salonuna üye olduk", "Spor salonundan ayrılmak istiyoruz", "Spor salonu gelecek hafta kapalı olacak"], correctAnswer: "Gelecek hafta spor salonunda yeni bir üyelik başlatacağız (plan/niyet)" }
         ]
       }
     ]
@@ -607,7 +610,10 @@ export const chapter14Sections = [
         isExtra: true,
         questions: [
           { id: "14.7_smart_1", type: "multiple_choice", question: "Welk woord heeft een 'oe' klank (Türkçedeki 'U' gibi okunur / Sounds like 'oo' in 'boot')?", options: ["bus", "buurt", "groen"], correctAnswer: "groen" },
-          { id: "14.7_smart_2", type: "multiple_choice", question: "Welke sport doen de meeste Nederlanders (tussen 18-50 jaar) volgens de grafiek?", options: ["Voetbal", "Fitness", "Joggen"], correctAnswer: "Fitness" }
+          { id: "14.7_smart_2", type: "multiple_choice", question: "Welke sport doen de meeste Nederlanders (tussen 18-50 jaar) volgens de grafiek?", options: ["Fitness (25%)", "Voetbal (8%)", "Joggen (17%)", "Tennis (5%)"], correctAnswer: "Fitness (25%)" },
+          { id: "14.7_smart_3", type: "multiple_choice", question: "Welk woord bevat de korte 'u' klank (kısa ve yutulan ses)?", options: ["bus", "buurt", "groen", "boek"], correctAnswer: "bus" },
+          { id: "14.7_smart_4", type: "multiple_choice", question: "Welk woord bevat de lange 'uu' klank?", options: ["buurt", "bus", "broek", "stok"], correctAnswer: "buurt" },
+          { id: "14.7_smart_5", type: "multiple_choice", question: "Waarom zijn sportverenigingen en sportclubs zo belangrijk in de Nederlandse maatschappij?", options: ["Het zijn belangrijke plekken voor gezondheid, sociale contacten en integratie in de buurt.", "Sporten is wettelijk verplicht voor alle burgers.", "Zonder sportclubabonnement mag je niet stemmen.", "Sportclubs zijn uitsluitend bedoeld voor topsporters."], correctAnswer: "Het zijn belangrijke plekken voor gezondheid, sociale contacten en integratie in de buurt." }
         ]
       }
     ]

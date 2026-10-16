@@ -585,7 +585,10 @@ export const chapter5Sections = [
         questions: [
           { id: "5.8_smart_1", type: "multiple_choice", question: "Hoe maak je een commando/imperatief vriendelijk (kibar / polite)?", options: ["Je gebruikt het hele werkwoord.", "Je gebruikt woorden zoals 'maar', 'even' of 'eens'.", "Je zegt altijd 'alstublieft' twee keer."], correctAnswer: "Je gebruikt woorden zoals 'maar', 'even' of 'eens'." },
           { id: "5.8_smart_2", type: "multiple_choice", question: "De groenteboer kijkt je vriendelijk aan en vraagt wat je wilt. Wat zegt hij?", options: ["Zeg het maar!", "Zeg jij!", "U zegt nu!"], correctAnswer: "Zeg het maar!" },
-          { id: "5.8_smart_3", type: "fill_in", question: "Maak de zin vriendelijk: 'Kom ________ binnen.' (İçeri gelin buyrun / Come right in).", correctAnswer: "maar" }
+          { id: "5.8_smart_3", type: "fill_in", question: "Maak de zin vriendelijk: 'Kom ________ binnen.' (İçeri gelin buyrun / Come right in).", correctAnswer: "maar" },
+          { id: "5.8_smart_4", type: "multiple_choice", question: "Wat is de imperatief (emir kipi) van het werkwoord 'luisteren'?", options: ["Luister goed!", "Luistert u!", "Luisteren!", "Je luistert!"], correctAnswer: "Luister goed!" },
+          { id: "5.8_smart_5", type: "multiple_choice", question: "De dokter onderzoekt je en zegt: '________ rustig adem!'", options: ["Haal", "Ademt", "Ademen", "Ademden"], correctAnswer: "Haal" },
+          { id: "5.8_smart_6", type: "multiple_choice", question: "Waarom voegt men woorden zoals 'maar', 'even' of 'eens' toe aan een imperatief?", options: ["Om de instructie vriendelijker en minder bevelend te maken", "Omdat het grammaticaal verplicht is in het meervoud", "Om te laten zien dat het gisteren gebeurde", "Om er een vraagzin van te maken"], correctAnswer: "Om de instructie vriendelijker en minder bevelend te maken" }
         ]
       }
     ]
@@ -622,7 +625,11 @@ export const chapter5Sections = [
         instruction: "Opdracht 12: Begrip van het recept (Tarif okuma anlama / Recipe reading comprehension).",
         isExtra: false,
         questions: [
-          { id: "5.9_opd12_1", type: "multiple_choice", question: "Je maakt stamppot andijvie. Hoelang duurt dit ongeveer (koken, bakken, stampen)?", options: ["20 minuten", "3 kwartier (45 dk)", "2 uur"], correctAnswer: "3 kwartier (45 dk)" }
+          { id: "5.9_opd12_1", type: "multiple_choice", question: "Je maakt stamppot andijvie. Hoelang duurt dit ongeveer (koken, bakken, stampen)?", options: ["3 kwartier (45 dk)", "20 minuten", "2 uur", "10 minuten"], correctAnswer: "3 kwartier (45 dk)" },
+          { id: "5.9_opd12_2", type: "multiple_choice", question: "Wat is het hoofdingrediënt van een traditionele Nederlandse stamppot?", options: ["Gekookte en gestampte aardappelen met groenten", "Rijst met zoetzure groenten", "Pasta met room en spekjes", "Gebakken brood met beleg"], correctAnswer: "Gekookte en gestampte aardappelen met groenten" },
+          { id: "5.9_opd12_3", type: "multiple_choice", question: "Welk vleesproduct hoort traditioneel bij een Hollandse boerenkoolstamppot?", options: ["Rookworst (gerookte worst)", "Kebab", "Biefstuk", "Kipfilet"], correctAnswer: "Rookworst (gerookte worst)" },
+          { id: "5.9_opd12_4", type: "multiple_choice", question: "Wat voor soort gerecht is 'snert' in Nederland?", options: ["Dikke Hollandse erwtensoep (bezelye çorbası)", "Een zoet dessert met ijs", "Een hartige pannenkoek", "Koude pastasalade"], correctAnswer: "Dikke Hollandse erwtensoep (bezelye çorbası)" },
+          { id: "5.9_opd12_5", type: "multiple_choice", question: "Wat betekent het werkwoord 'stampen' bij het bereiden van stamppot?", options: ["Aardappelen met een stamper fijnmaken tot puree", "Groenten in kleine blokjes snijden", "Vlees op hoog vuur braden", "Water laten koken"], correctAnswer: "Aardappelen met een stamper fijnmaken tot puree" }
         ]
       }
     ]
@@ -677,7 +684,10 @@ export const chapter5Sections = [
         questions: [
           { id: "5.10_smart_1", type: "multiple_choice", question: "Welk woord heeft een LANGE 'uu' klank?", options: ["cursus", "buurman", "lukken"], correctAnswer: "buurman" },
           { id: "5.10_smart_2", type: "multiple_choice", question: "Hoe laat eten de meeste Nederlanders hun avondeten?", options: ["Rond 18.00 uur", "Rond 20.00 uur", "Rond 22.00 uur"], correctAnswer: "Rond 18.00 uur" },
-          { id: "5.10_smart_3", type: "multiple_choice", question: "Wat eten Nederlanders vaak tijdens de lunch?", options: ["Een warme maaltijd (bijv. pasta)", "Boterhammen (sandviç/ekmek)", "Alleen een appel"], correctAnswer: "Boterhammen (sandviç/ekmek)" }
+          { id: "5.10_smart_3", type: "multiple_choice", question: "Wat eten Nederlanders vaak tijdens de lunch?", options: ["Boterhammen (sandviç/ekmek)", "Een uitgebreide warme maaltijd (bijv. pasta)", "Alleen een appel", "Drie gangen met soep"], correctAnswer: "Boterhammen (sandviç/ekmek)" },
+          { id: "5.10_smart_4", type: "multiple_choice", question: "Hoeveel gram is 'een pond' op de Nederlandse weekmarkt?", options: ["500 gram", "250 gram", "1000 gram", "100 gram"], correctAnswer: "500 gram" },
+          { id: "5.10_smart_5", type: "multiple_choice", question: "Hoeveel gram is 'een ons' kaas of vleeswaren?", options: ["100 gram", "50 gram", "200 gram", "500 gram"], correctAnswer: "100 gram" },
+          { id: "5.10_smart_6", type: "multiple_choice", question: "Wat betekent het typisch Nederlandse handgebaar 'wapperen' (el sallamak) na of tijdens het eten?", options: ["Het eten smaakt heerlijk / lekker!", "Het eten is koud geworden.", "De ober moet direct de rekening brengen.", "Ik heb te veel gegeten."], correctAnswer: "Het eten smaakt heerlijk / lekker!" }
         ]
       }
     ]

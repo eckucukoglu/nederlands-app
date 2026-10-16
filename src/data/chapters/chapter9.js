@@ -1,6 +1,5 @@
 // src/data/chapters/chapter9.js
 import React from 'react';
-import { generateSmartQuestions } from '../questionGenerator';
 
 export const chapter9Vocab = [
   { id: "9_1", chapter: 9, nl: "meneer", en: "Mr", example: "Dag meneer Smit." },
@@ -97,14 +96,38 @@ export const chapter9Sections = [
         )}
       </>
     ),
-    exerciseGroups: [{ instruction: "Extra Oefeningen: Begrip van de dialoog (Dialogue Comprehension)", isExtra: true, questions: generateSmartQuestions(9, "Dialoog Woordenschat", 5, chapter9Vocab) }]
+    exerciseGroups: [
+      {
+        instruction: "Opdracht: Begrip van de dialoog 'Bij de huisarts' (Dialogue Comprehension)",
+        isExtra: false,
+        questions: [
+          { id: "9.1_diag_1", type: "multiple_choice", question: "Waarom heeft meneer Smit een afspraak bij de huisarts?", options: ["Hij heeft last van rode bultjes en verschrikkelijke jeuk.", "Hij heeft zijn arm gebroken tijdens het sporten.", "Hij wil een nieuw paspoort aanvragen bij de gemeente.", "Hij wil slaaptabletten kopen voor zijn reis."], correctAnswer: "Hij heeft last van rode bultjes en verschrikkelijke jeuk." },
+          { id: "9.1_diag_2", type: "multiple_choice", question: "Wat vraagt de huisarts als eerste om de situatie te onderzoeken?", options: ["'Wat is er aan de hand en wat zijn de klachten?'", "'Hoeveel geld heeft u op uw bankrekening?'", "'Wat voor werk doet uw vrouw?'", "'Waar gaat u volgende week op vakantie?'"], correctAnswer: "'Wat is er aan de hand en what zijn de klachten?'" },
+          { id: "9.1_diag_3", type: "multiple_choice", question: "Wat schrijft de huisarts voor tegen de jeukende bultjes?", options: ["Een recept voor een verzachtende zalf bij de apotheek", "Een kuur van zware antibiotica", "Direct een operatie in het ziekenhuis", "Twee weken bedrust zonder medicijnen"], correctAnswer: "Een recept voor een verzachtende zalf bij de apotheek" },
+          { id: "9.1_diag_4", type: "multiple_choice", question: "Waar moet je in Nederland naartoe om de medicijnen van een doktersrecept op te halen?", options: ["Naar de apotheek", "Naar het gemeentehuis", "Naar de supermarkt", "Naar het politiebureau"], correctAnswer: "Naar de apotheek" },
+          { id: "9.1_diag_5", type: "multiple_choice", question: "Wat moet je altijd meenemen als je naar een nieuwe huisarts of apotheek gaat?", options: ["Je identiteitsbewijs (ID/paspoort) en je zorgverzekeringspas", "Een officieel doktersdiploma", "Contant geld van minimaal 100 euro", "Twee recente pasfoto's"], correctAnswer: "Je identiteitsbewijs (ID/paspoort) en je zorgverzekeringspas" }
+        ]
+      }
+    ]
   },
     {
     id: "9.2",
     chapter: 9,
     title: "Vocabulary",
     theory: null,
-    exerciseGroups: []
+    exerciseGroups: [
+      {
+        instruction: "Slimme Oefeningen (Smart Exercises): Gezondheidszorg & Uitspraak in Nederland",
+        isExtra: true,
+        questions: [
+          { id: "9.10_smart_1", type: "multiple_choice", question: "Wat is de rol van de huisarts als 'poortwachter' (gatekeeper) in het Nederlandse zorgsysteem?", options: ["Je moet eerst naar de huisarts; zonder verwijzing kun je niet naar een specialist in het ziekenhuis.", "De huisarts bewaakt letterlijk de ingang van het ziekenhuis.", "De huisarts int de gemeentebelastingen.", "De huisarts behandelt alleen verkeersongevallen."], correctAnswer: "Je moet eerst naar de huisarts; zonder verwijzing kun je niet naar een specialist in het ziekenhuis." },
+          { id: "9.10_smart_2", type: "multiple_choice", question: "Wat adviseert een Nederlandse huisarts vaak bij een gewone verkoudheid of milde griep?", options: ["Uitzieken, voldoende rust nemen en eventueel paracetamol tegen de pijn", "Direct zware antibiotica slikken", "Twee weken in het ziekenhuis blijven liggen", "Direct naar de eerste hulp (SEH) gaan"], correctAnswer: "Uitzieken, voldoende rust nemen en eventueel paracetamol tegen de pijn" },
+          { id: "9.10_smart_3", type: "multiple_choice", question: "Welke instantie bel je 's avonds of in het weekend voor een dringende medische klacht die niet kan wachten tot de volgende ochtend?", options: ["De Huisartsenpost (HAP)", "Direct het alarmnummer 1-1-2", "De dierenarts", "Het politiebureau"], correctAnswer: "De Huisartsenpost (HAP)" },
+          { id: "9.10_smart_4", type: "multiple_choice", question: "Welke klank hoor je aan het einde van de Nederlandse woorden 'bed', 'wit', 'hoofd' en 'kast'?", options: ["Altijd een harde /t/ klank", "Een zachte /d/ klank", "Een /s/ klank", "Een stomme /e/"], correctAnswer: "Altijd een harde /t/ klank" },
+          { id: "9.10_smart_5", type: "multiple_choice", question: "Wat gebeurt er bij 'verbonden spraak' (ulama) in de zin 'Ik weet het niet'?", options: ["De woorden vloeien natuurlijk in elkaar over: /ik-wee-tut-niet/", "Elk woord wordt strikt los met een seconde stilte uitgesproken", "De letters worden achterstevoren uitgesproken", "De klinkers worden allemaal weggelaten"], correctAnswer: "De woorden vloeien natuurlijk in elkaar over: /ik-wee-tut-niet/" }
+        ]
+      }
+    ]
   },
 {
     id: "9.3", chapter: 9, title: "9.3 Bij de huisarts",
@@ -138,7 +161,10 @@ export const chapter9Sections = [
         isExtra: true,
         questions: [
           { id: "9.3_smart_1", type: "multiple_choice", question: "Als de dokter vraagt 'Waar hebt u pijn?', wat is een logisch antwoord?", options: ["Ik heb gisteren gewerkt.", "Mijn rug doet heel veel pijn.", "Ik wil graag een zalf."], correctAnswer: "Mijn rug doet heel veel pijn." },
-          { id: "9.3_smart_2", type: "multiple_choice", question: "Hoe zeg je 'My throat hurts' in het Nederlands?", options: ["Mijn arm doet zeer.", "Ik voel me niet goed.", "Mijn keel doet pijn."], correctAnswer: "Mijn keel doet pijn." }
+          { id: "9.3_smart_2", type: "multiple_choice", question: "Hoe zeg je 'My throat hurts' in het Nederlands?", options: ["Mijn keel doet pijn.", "Mijn arm doet zeer.", "Ik voel me niet goed.", "Mijn buik is vol."], correctAnswer: "Mijn keel doet pijn." },
+          { id: "9.3_smart_3", type: "multiple_choice", question: "Wat betekent de vraag van de assistente: 'Hebt u koorts gemeten?'", options: ["Ateşinizi ölçtünüz mü? (Did you measure your temperature?)", "Öksürdünüz mü?", "Ne zaman yemek yediniz?", "İlaç aldınız mı?"], correctAnswer: "Ateşinizi ölçtünüz mü? (Did you measure your temperature?)" },
+          { id: "9.3_smart_4", type: "multiple_choice", question: "Je belt de huisartsenpraktijk. Hoe vraag je beleefd om een afspraak?", options: ["Goedemorgen, ik wil graag een afspraak maken met de dokter voor vanmiddag.", "Kom nu naar mijn huis, ik ben ziek.", "Geef mij direct medicijnen.", "Ik wil een dokter spreken zonder afspraak."], correctAnswer: "Goedemorgen, ik wil graag een afspraak maken met de dokter voor vanmiddag." },
+          { id: "9.3_smart_5", type: "multiple_choice", question: "Wat doet de huisarts als je klacht gespecialiseerd ziekenhuisonderzoek vereist?", options: ["Hij schrijft een verwijsbrief (sevk mektubu) voor de specialist in het ziekenhuis.", "Hij stuurt je naar de drogist voor snoepjes.", "Hij zegt dat je niets mag doen.", "Hij belt direct de politie."], correctAnswer: "Hij schrijft een verwijsbrief (sevk mektubu) voor de specialist in het ziekenhuis." }
         ]
       }
     ]
@@ -167,7 +193,10 @@ export const chapter9Sections = [
         questions: [
           { id: "9.4_smart_1", type: "fill_in", question: "Je draagt een horloge (saat/watch) om je ________.", correctAnswer: "pols" },
           { id: "9.4_smart_2", type: "fill_in", question: "Je gebruikt je ________ om te kijken/zien. (to see/look)", correctAnswer: "ogen" },
-          { id: "9.4_smart_3", type: "multiple_choice", question: "Wat is het meervoud (plural) van 'het been'?", options: ["de beens", "de benen", "de beenen"], correctAnswer: "de benen" }
+          { id: "9.4_smart_3", type: "multiple_choice", question: "Wat is het meervoud (plural) van 'het been'?", options: ["de benen", "de beens", "de beenen", "het benen"], correctAnswer: "de benen" },
+          { id: "9.4_smart_4", type: "multiple_choice", question: "Welk lichaamsdeel gebruik je om te luisteren en te horen?", options: ["Je oren", "Je neus", "Je mond", "Je knieën"], correctAnswer: "Je oren" },
+          { id: "9.4_smart_5", type: "multiple_choice", question: "Je bent gevallen tijdens het fietsen en kunt niet meer lopen. Waar heb je pijn?", options: ["Aan je enkel, knie of been", "Aan je haar", "Aan je neus", "Aan je oren"], correctAnswer: "Aan je enkel, knie of been" },
+          { id: "9.4_smart_6", type: "multiple_choice", question: "Wat is het meervoud van 'de vinger'?", options: ["de vingers", "de vingeren", "de vinger", "de vingerse"], correctAnswer: "de vingers" }
         ]
       }
     ]
@@ -226,7 +255,10 @@ export const chapter9Sections = [
         questions: [
           { id: "9.5_opd_1", type: "multiple_choice", question: "Je collega zegt: 'Ik voel me beroerd en heb 39 graden koorts.' Wat zeg je?", options: ["Gefeliciteerd!", "Beterschap!", "Eet smakelijk!"], correctAnswer: "Beterschap!" },
           { id: "9.5_opd_2", type: "multiple_choice", question: "Je buurman moet morgen een zware operatie ondergaan in het ziekenhuis. Wat wens je hem?", options: ["Sterkte!", "Tot ziens!", "Alstublieft!"], correctAnswer: "Sterkte!" },
-          { id: "9.5_opd_3", type: "multiple_choice", question: "Je vriend heeft morgen zijn rijexamen (driving test). Wat zeg je?", options: ["Succes!", "Gecondoleerd!", "Beterschap!"], correctAnswer: "Succes!" }
+          { id: "9.5_opd_3", type: "multiple_choice", question: "Je vriend heeft morgen zijn rijexamen (driving test). Wat zeg je?", options: ["Succes!", "Gecondoleerd!", "Beterschap!", "Smakelijk eten!"], correctAnswer: "Succes!" },
+          { id: "9.5_opd_4", type: "multiple_choice", question: "Wat zeg je tegen iemand die verkouden is en niest?", options: ["Gezondheid!", "Gefeliciteerd!", "Gecondoleerd!", "Eet smakelijk!"], correctAnswer: "Gezondheid!" },
+          { id: "9.5_opd_5", type: "multiple_choice", question: "Je bent ziek en kunt vandaag niet werken. Wat moet je 's ochtends vroeg doen?", options: ["Je werkgever bellen om je ziek te melden (ziekmelden)", "Gewoon thuisblijven zonder iemand in te lichten", "Een brief per post sturen", "Je buurman vragen om jouw werk te doen"], correctAnswer: "Je werkgever bellen om je ziek te melden (ziekmelden)" },
+          { id: "9.5_opd_6", type: "multiple_choice", question: "Wat is het verschil tussen 'Beterschap' en 'Sterkte'?", options: ["'Beterschap' is voor herstel van ziekte; 'Sterkte' is voor zware situaties of tegenslag.", "Er is geen enkel verschil.", "'Sterkte' is alleen voor sportwedstrijden.", "'Beterschap' gebruik je bij verjaardagen."], correctAnswer: "'Beterschap' is voor herstel van ziekte; 'Sterkte' is voor zware situaties of tegenslag." }
         ]
       }
     ]
@@ -499,7 +531,9 @@ export const chapter9Sections = [
         isExtra: true,
         questions: [
           { id: "9.8_smart_1", type: "multiple_choice", question: "Kies de juiste vorm:", options: ["iets mooi", "iets moois", "iets mooie"], correctAnswer: "iets moois" },
-          { id: "9.8_smart_2", type: "fill_in", question: "We hebben vandaag niets ________ (bijzonder) gedaan.", correctAnswer: "bijzonders" }
+          { id: "9.8_smart_2", type: "fill_in", question: "We hebben vandaag niets ________ (bijzonder) gedaan.", correctAnswer: "bijzonders" },
+          { id: "9.8_smart_3", type: "multiple_choice", question: "Wat gebeurt er met een adjectief na 'iets' of 'niets'?", options: ["Het krijgt een -s (bijv. iets warms, niets nieuws)", "Het krijgt een -en (bijv. iets warmen)", "Het verandert nooit", "Het krijgt altijd -tjes"], correctAnswer: "Het krijgt een -s (bijv. iets warms, niets nieuws)" },
+          { id: "9.8_smart_4", type: "multiple_choice", question: "Welke zin is grammaticaal correct?", options: ["Wil je iets kouds drinken?", "Wil je iets koud drinken?", "Wil je iets koude drinken?", "Wil je iets kouden drinken?"], correctAnswer: "Wil je iets kouds drinken?" }
         ]
       }
     ]
@@ -549,7 +583,10 @@ export const chapter9Sections = [
         isExtra: false,
         questions: [
           { id: "9.9_opd13_1", type: "fill_in", question: "Huisarts: wat is er _____ de hand?", correctAnswer: "aan" },
-          { id: "9.9_opd13_2", type: "fill_in", question: "Meneer Smit: zit ik _____ de rode bultjes...", correctAnswer: "onder" }
+          { id: "9.9_opd13_2", type: "fill_in", question: "Meneer Smit: zit ik _____ de rode bultjes...", correctAnswer: "onder" },
+          { id: "9.9_opd13_3", type: "multiple_choice", question: "Wat vind je in het doosje van een medicijn met uitleg over gebruik en bijwerkingen?", options: ["De bijsluiter (prospectus / leaflet)", "Het kasbonnetje", "Een medisch woordenboek", "Een doktersrecept"], correctAnswer: "De bijsluiter (prospectus / leaflet)" },
+          { id: "9.9_opd13_4", type: "multiple_choice", question: "Wat betekent de instructie: 'Driemaal daags één tablet innemen vóór de maaltijd'?", options: ["Günde 3 kez yemekten önce bir tablet alın", "Haftada 3 kez yemekten sonra alın", "Günde 1 kez yatmadan önce alın", "Her 3 saatte bir aç karnına alın"], correctAnswer: "Günde 3 kez yemekten önce bir tablet alın" },
+          { id: "9.9_opd13_5", type: "multiple_choice", question: "Wat is het verschil tussen een 'drogist' (zoals Kruidvat) en een 'apotheek' in Nederland?", options: ["Bij de drogist koop je zelfzorgmiddelen (shampoo, pleisters, lichte pijnstillers); bij de apotheek haal je receptmedicijnen van de arts.", "Er is geen enkel verschil.", "Bij de apotheek kun je alleen brillen kopen.", "Bij de drogist werken uitsluitend artsen."], correctAnswer: "Bij de drogist koop je zelfzorgmiddelen (shampoo, pleisters, lichte pijnstillers); bij de apotheek haal je receptmedicijnen van de arts." }
         ]
       }
     ]
@@ -613,7 +650,19 @@ export const chapter9Sections = [
         )}
       </>
     ),
-    exerciseGroups: []
+    exerciseGroups: [
+      {
+        instruction: "Slimme Oefeningen (Smart Exercises): Gezondheidszorg & Uitspraak in Nederland",
+        isExtra: true,
+        questions: [
+          { id: "9.10_smart_1", type: "multiple_choice", question: "Wat is de rol van de huisarts als 'poortwachter' (gatekeeper) in het Nederlandse zorgsysteem?", options: ["Je moet eerst naar de huisarts; zonder verwijzing kun je niet naar een specialist in het ziekenhuis.", "De huisarts bewaakt letterlijk de deuren van het ziekenhuis.", "De huisarts int de gemeentebelastingen.", "De huisarts behandelt alleen verkeersongevallen."], correctAnswer: "Je moet eerst naar de huisarts; zonder verwijzing kun je niet naar een specialist in het ziekenhuis." },
+          { id: "9.10_smart_2", type: "multiple_choice", question: "Wat adviseert een Nederlandse huisarts vaak bij een gewone verkoudheid of milde griep?", options: ["Uitzieken, voldoende rust nemen en eventueel paracetamol tegen de pijn", "Direct zware antibiotica slikken", "Twee weken in het ziekenhuis blijven liggen", "Direct naar de eerste hulp (SEH) gaan"], correctAnswer: "Uitzieken, voldoende rust nemen en eventueel paracetamol tegen de pijn" },
+          { id: "9.10_smart_3", type: "multiple_choice", question: "Welke instantie bel je 's avonds of in het weekend voor een dringende medische klacht die niet kan wachten tot de volgende ochtend?", options: ["De Huisartsenpost (HAP)", "Direct het alarmnummer 1-1-2", "De dierenarts", "Het politiebureau"], correctAnswer: "De Huisartsenpost (HAP)" },
+          { id: "9.10_smart_4", type: "multiple_choice", question: "Welke klank hoor je aan het einde van de Nederlandse woorden 'bed', 'wit', 'hoofd' en 'kast'?", options: ["Altijd een harde /t/ klank", "Een zachte /d/ klank", "Een /s/ klank", "Een stomme /e/"], correctAnswer: "Altijd een harde /t/ klank" },
+          { id: "9.10_smart_5", type: "multiple_choice", question: "Wat gebeurt er bij 'verbonden spraak' (ulama) in de zin 'Ik weet het niet'?", options: ["De woorden vloeien natuurlijk in elkaar over: /ik-wee-tut-niet/", "Elk woord wordt strikt los met een seconde stilte uitgesproken", "De letters worden achterstevoren uitgesproken", "De klinkers worden allemaal weggelaten"], correctAnswer: "De woorden vloeien natuurlijk in elkaar over: /ik-wee-tut-niet/" }
+        ]
+      }
+    ]
   },
     {
     id: "Reading-9",

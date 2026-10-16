@@ -7,6 +7,7 @@ import {
   WORD_METADATA, 
   groupChapterWords 
 } from '../data/vocabCategories';
+import { CHAPTER_VOCAB_GUIDES } from '../data/vocabGuides';
 
 export default function VocabularySection({
   sectionId = '1.2',
@@ -44,6 +45,7 @@ export default function VocabularySection({
   const [wordStatuses, setWordStatuses] = useState({});
   const [selectedWord, setSelectedWord] = useState(null);
   const [popupPos, setPopupPos] = useState({ x: 0, y: 0 });
+  const [showGuide, setShowGuide] = useState(false);
 
   // Favori Notu State
   const [showFavInput, setShowFavInput] = useState(false);
@@ -406,6 +408,94 @@ export default function VocabularySection({
           ></div>
         </div>
       </div>
+
+      {/* ÜNİTE KELİME REHBERİ & KONU ANLATIMI KARTI */}
+      {CHAPTER_VOCAB_GUIDES[chNum] && (
+        <div className="bg-slate-800/90 rounded-2xl border border-indigo-900/50 shadow-lg overflow-hidden transition-all duration-300">
+          <div 
+            onClick={() => setShowGuide(!showGuide)}
+            className="p-4 sm:p-5 flex items-center justify-between cursor-pointer hover:bg-slate-800/50 transition-colors select-none"
+          >
+            <div className="flex items-center gap-3 min-w-0">
+              <div className="w-10 h-10 rounded-xl bg-indigo-500/20 border border-indigo-500/30 flex items-center justify-center text-indigo-400 flex-shrink-0 shadow-sm">
+                <i className={`${CHAPTER_VOCAB_GUIDES[chNum].icon || 'fa-solid fa-lightbulb'} text-base sm:text-lg`}></i>
+              </div>
+              <div className="min-w-0">
+                <h3 className="text-sm sm:text-base font-bold text-slate-100 flex items-center gap-2">
+                  <span>{CHAPTER_VOCAB_GUIDES[chNum].title[lang] || CHAPTER_VOCAB_GUIDES[chNum].title.tr}</span>
+                  <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-indigo-950 text-indigo-300 border border-indigo-800">
+                    A2 Rehber
+                  </span>
+                </h3>
+                <p className="text-xs text-slate-400 mt-0.5 line-clamp-1">
+                  {CHAPTER_VOCAB_GUIDES[chNum].summary[lang] || CHAPTER_VOCAB_GUIDES[chNum].summary.tr}
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-2 flex-shrink-0 ml-3">
+              <span className="text-xs font-bold text-indigo-400 hidden sm:inline">
+                {showGuide ? (isTr ? 'Gizle' : 'Hide') : (isTr ? 'Konu Anlatımını Gör' : 'View Guide')}
+              </span>
+              <div className={`w-8 h-8 rounded-lg bg-slate-900/80 border border-slate-700 flex items-center justify-center text-indigo-400 transition-transform duration-300 ${showGuide ? 'rotate-180' : ''}`}>
+                <i className="fa-solid fa-chevron-down text-xs"></i>
+              </div>
+            </div>
+          </div>
+
+          {showGuide && (
+            <div className="px-4 pb-5 sm:px-6 sm:pb-6 pt-2 border-t border-slate-700/60 space-y-4 animate-fadeIn">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5 pt-2">
+                {CHAPTER_VOCAB_GUIDES[chNum].keyPatterns.map((pat, idx) => (
+                  <div key={idx} className="bg-slate-900/70 border border-slate-700/80 rounded-xl p-3.5 space-y-2">
+                    <h4 className="text-xs font-extrabold text-indigo-300 uppercase tracking-wider flex items-center gap-1.5">
+                      <i className="fa-solid fa-star text-[10px] text-amber-400"></i>
+                      <span>{pat.rule[lang] || pat.rule.tr}</span>
+                    </h4>
+                    <p className="text-xs text-slate-300 leading-relaxed">
+                      {pat.explanation[lang] || pat.explanation.tr}
+                    </p>
+                    {pat.examples && pat.examples.length > 0 && (
+                      <div className="bg-slate-950/60 p-2.5 rounded-lg border border-slate-800 space-y-1">
+                        <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Örnekler:</span>
+                        {pat.examples.map((ex, exIdx) => (
+                          <div key={exIdx} className="text-xs text-slate-200 font-medium flex items-center justify-between gap-2">
+                            <span>• {ex}</span>
+                            <button
+                              type="button"
+                              onClick={(e) => { e.stopPropagation(); speakDutch(ex); }}
+                              className="text-slate-500 hover:text-indigo-300 text-[10px] p-0.5"
+                              title={isTr ? 'Dinle' : 'Listen'}
+                            >
+                              <i className="fa-solid fa-volume-high"></i>
+                            </button>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+
+              {CHAPTER_VOCAB_GUIDES[chNum].inburgeringTip && (
+                <div className="bg-amber-950/30 border border-amber-600/40 rounded-xl p-3.5 flex items-start gap-3">
+                  <div className="w-7 h-7 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <i className="fa-solid fa-graduation-cap text-xs"></i>
+                  </div>
+                  <div>
+                    <h5 className="text-xs font-bold text-amber-300 uppercase tracking-wider mb-1">
+                      {isTr ? '💡 A2 Inburgering Sınav Püf Noktası' : '💡 A2 Inburgering Exam Tip'}
+                    </h5>
+                    <p className="text-xs text-slate-300 leading-relaxed">
+                      {CHAPTER_VOCAB_GUIDES[chNum].inburgeringTip[lang] || CHAPTER_VOCAB_GUIDES[chNum].inburgeringTip.tr}
+                    </p>
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+      )}
 
       {/* ======================================================== */}
       {/* 2. GRUPLAMA SEÇİCİ VE FİLTRE ÇUBUĞU                      */}

@@ -192,7 +192,9 @@ export const chapter15Sections = [
           { id: "15.3_opd2_1", type: "multiple_choice", question: "Kies de juiste openingszin om iemands aandacht te vragen naar een mooie molen: '________, daar staat een oude molen!'", options: ["Kijk eens", "Hoor eens", "Luister eens"], correctAnswer: "Kijk eens" },
           { id: "15.3_opd2_2", type: "multiple_choice", question: "Kies de juiste zin: '________ wat een prachtige lucht vandaag!'", options: ["Moet je eens zien", "Moet je eens horen", "Zal je eens weten"], correctAnswer: "Moet je eens zien" },
           { id: "15.3_opd2_3", type: "fill_in", question: "Vertaal: 'Çayırda küçük midilliler yürüyor' -> 'Daar lopen kleine pony's in de ________.'", correctAnswer: "wei" },
-          { id: "15.3_opd2_4", type: "multiple_choice", question: "Wat is typisch voor het Nederlandse landschap volgens de tekst?", options: ["Het is heel bergachtig.", "Het is heel plat, geen berg te zien.", "Er zijn overal dichte bossen."], correctAnswer: "Het is heel plat, geen berg te zien." }
+          { id: "15.3_opd2_4", type: "multiple_choice", question: "Wat is typisch voor het Nederlandse landschap volgens de tekst?", options: ["Het is heel plat, geen berg te zien.", "Het is heel bergachtig met steile rotsen.", "Er zijn overal dichte oerbossen.", "Het land ligt vol met vulkanen."], correctAnswer: "Het is heel plat, geen berg te zien." },
+          { id: "15.3_opd2_5", type: "multiple_choice", question: "Wat zeg je als je in de trein zit en je reisgenoot wilt wijzen op grazende dieren buiten?", options: ["'Kijk eens, wat een prachtige zwart-witte koeien in de wei!'", "'Luister eens naar die koeien!'", "'Stop de trein onmiddellijk!'", "'Ik wil een koe kopen.'"], correctAnswer: "'Kijk eens, wat een prachtige zwart-witte koeien in de wei!'" },
+          { id: "15.3_opd2_6", type: "multiple_choice", question: "Waarom staan er in het traditionele Nederlandse landschap zoveel windmolens (molens)?", options: ["Om het water uit de polders weg te pompen en graan te malen", "Om elektriciteit te leveren aan de hogesnelheidstrein", "Als decoratie speciaal voor toeristen", "Als uitkijktorens voor de grenspolitie"], correctAnswer: "Om het water uit de polders weg te pompen en graan te malen" }
         ]
       }
     ]
@@ -378,7 +380,9 @@ export const chapter15Sections = [
         questions: [
           { id: "15.6_opd13_1", type: "multiple_choice", question: "Wat gebeurde er als EERSTE in het verhaal?", options: ["In Eindhoven moesten we lang wachten.", "Wij namen de trein van Maastricht naar Amsterdam.", "We kregen koffie en thee van de NS."], correctAnswer: "Wij namen de trein van Maastricht naar Amsterdam." },
           { id: "15.6_opd13_2", type: "multiple_choice", question: "Wat is de juiste logische volgorde in Eindhoven?", options: ["Eerst wachten, dan koffie krijgen, dan de trein naar Utrecht nemen.", "Eerst koffie krijgen, dan wachten, dan de trein nemen.", "Eerst de trein nemen, dan wachten."], correctAnswer: "Eerst wachten, dan koffie krijgen, dan de trein naar Utrecht nemen." },
-          { id: "15.6_opd13_3", type: "multiple_choice", question: "Wat was het resultaat aan het eind?", options: ["De stemming was heel negatief.", "Wij hebben nieuwe kennissen in Utrecht.", "Ze bereikten Amsterdam."], correctAnswer: "Wij hebben nieuwe kennissen in Utrecht." }
+          { id: "15.6_opd13_3", type: "multiple_choice", question: "Wat was het resultaat aan het eind van de dag?", options: ["Wij hebben nu een mooie reisherinnering en nieuwe kennissen in Utrecht.", "De stemming was woedend en negatief.", "Ze bereikten Amsterdam ruim voor het middaguur.", "Ze moesten de hele nacht op straat slapen."], correctAnswer: "Wij hebben nu een mooie reisherinnering en nieuwe kennissen in Utrecht." },
+          { id: "15.6_opd13_4", type: "multiple_choice", question: "Wat deden de reizigers toen de trein niet verder kon rijden door hevige sneeuwval?", options: ["Ze wachtten geduldig op het perron en kregen gratis warme koffie en thee van het NS-personeel.", "Ze gingen met de politie mee naar een hotel.", "Ze gingen te voet over het spoor naar Amsterdam.", "Ze bleven 24 uur slapen in de trein."], correctAnswer: "Ze wachtten geduldig op het perron en kregen gratis warme koffie en thee van het NS-personeel." },
+          { id: "15.6_opd13_5", type: "multiple_choice", question: "Hoe kijk je terug op een onverwachte gebeurtenis die toch sympathiek afliep? Welk Nederlands woord gebruik je?", options: ["Een mooie reisherinnering (güzel bir seyahat anısı)", "Een verschrikkelijke ramp", "Een officiële boete", "Een formele sollicitatie"], correctAnswer: "Een mooie reisherinnering (güzel bir seyahat anısı)" }
         ]
       }
     ]
@@ -442,7 +446,10 @@ export const chapter15Sections = [
         isExtra: true,
         questions: [
           { id: "15.7_smart_1", type: "multiple_choice", question: "Welke kleuren hebben de treinen (van de NS) in Nederland?", options: ["Donkergroen en wit", "Rood en zwart", "Geel en blauw"], correctAnswer: "Geel en blauw" },
-          { id: "15.7_smart_2", type: "multiple_choice", question: "Waarvoor staat de afkorting 'NS' in Nederland?", options: ["Nieuwe Spoorwegen", "Nederlandse Spoorwegen", "Noordelijke Spoorwegen"], correctAnswer: "Nederlandse Spoorwegen" }
+          { id: "15.7_smart_2", type: "multiple_choice", question: "Waarvoor staat de afkorting 'NS' in Nederland?", options: ["Nederlandse Spoorwegen", "Nieuwe Spoorwegen", "Noordelijke Spoorwegen", "Nationale Snelwegen"], correctAnswer: "Nederlandse Spoorwegen" },
+          { id: "15.7_smart_3", type: "multiple_choice", question: "Wat moet je altijd doen met je ov-chipkaart of betaalpas als je met de trein reist?", options: ["Inchecken bij vertrek en uitchecken bij aankomst bij de poortjes of paaltjes", "Alleen inchecken; uitchecken is niet nodig", "De kaart laten zien aan de machinist", "Een stempel halen bij de stationskiosk"], correctAnswer: "Inchecken bij vertrek en uitchecken bij aankomst bij de poortjes of paaltjes" },
+          { id: "15.7_smart_4", type: "multiple_choice", question: "Wat zijn de 'spitsuren' (de spits) in het Nederlandse openbaar vervoer?", options: ["De drukke ochtend- en avonduren waarin veel forenzen reizen (ong. 06:30-09:00 en 16:00-18:30)", "De nachtelijke uren waarin er geen treinen rijden", "De rustige zondagmiddag", "De uren dat alle kaartjes gratis zijn"], correctAnswer: "De drukke ochtend- en avonduren waarin veel forenzen reizen (ong. 06:30-09:00 en 16:00-18:30)" },
+          { id: "15.7_smart_5", type: "multiple_choice", question: "Welk woord bevat de nasale 'ng' klank?", options: ["belangrijk", "bekend", "blauw", "buiten"], correctAnswer: "belangrijk" }
         ]
       }
     ]

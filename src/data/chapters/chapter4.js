@@ -231,7 +231,9 @@ export const chapter4Sections = [
         isExtra: true,
         questions: [
           { id: "4.3_smart_1", type: "multiple_choice", question: "Iemand vraagt: 'Hoe gaat het met Hans?'. Welk antwoord is correct?", options: ["Hans is goed.", "Het gaat goed met Hans.", "Hans gaat goed."], correctAnswer: "Het gaat goed met Hans." },
-          { id: "4.3_smart_2", type: "fill_in", question: "Je voelt je fantastisch. A: 'Alles goed?' -> B: 'Ja, ________!'", correctAnswer: "prima" }
+          { id: "4.3_smart_2", type: "fill_in", question: "Je voelt je fantastisch. A: 'Alles goed?' -> B: 'Ja, ________!'", correctAnswer: "prima" },
+          { id: "4.3_smart_3", type: "multiple_choice", question: "Iemand vraagt: 'Alles goed?' Je voelt je een beetje grieperig. Wat zeg je eerlijk en beleefd?", options: ["Niet zo best, ik ben een beetje ziek.", "Ja hoor, fantastisch!", "Graag gedaan.", "Tot morgen!"], correctAnswer: "Niet zo best, ik ben een beetje ziek." },
+          { id: "4.3_smart_4", type: "multiple_choice", question: "Wat betekent de uitdrukking 'Het gaat wel' in het Nederlands?", options: ["İdare eder / Şöyle böyle (orta düzeyde)", "Harika, mükemmel", "Çok hastayım", "Hiç anlamadım"], correctAnswer: "İdare eder / Şöyle böyle (orta düzeyde)" }
         ]
       }
     ]
@@ -459,7 +461,10 @@ export const chapter4Sections = [
         isExtra: false,
         questions: [
           { id: "4.7_opd8_1", type: "multiple_choice", question: "Je werkt tot 17.00 uur. Wanneer is het secretariaat nog open voor jou om langs te gaan?", options: ["Op woensdag", "Op donderdag", "In het weekend"], correctAnswer: "Op donderdag" },
-          { id: "4.7_opd8_2", type: "multiple_choice", question: "Kun je op dinsdag om 10.00 uur het secretariaat bellen (telefoneren)?", options: ["Ja", "Nee"], correctAnswer: "Ja" }
+          { id: "4.7_opd8_2", type: "multiple_choice", question: "Kun je op dinsdag om 10.00 uur het secretariaat bellen (telefoneren)?", options: ["Ja, het secretariaat is vanaf 9.00 uur telefonisch bereikbaar.", "Nee, pas vanaf 12.00 uur.", "Nee, alleen op afspraak."], correctAnswer: "Ja, het secretariaat is vanaf 9.00 uur telefonisch bereikbaar." },
+          { id: "4.7_opd8_3", type: "multiple_choice", question: "Wat betekent de afkorting 't/m' in een zin zoals 'geopend van maandag t/m vrijdag'?", options: ["tot en met (pazartesiden cumaya kadar dahil)", "tussen middag", "tegen middernacht", "tweede maand"], correctAnswer: "tot en met (pazartesiden cumaya kadar dahil)" },
+          { id: "4.7_opd8_4", type: "multiple_choice", question: "Wat betekent een bordje met 'Gesloten' op een winkeldeur?", options: ["De winkel is dicht.", "De winkel is open.", "U mag naar binnen.", "Er is korting."], correctAnswer: "De winkel is dicht." },
+          { id: "4.7_opd8_5", type: "multiple_choice", question: "Wat is 'koopavond' in veel Nederlandse steden?", options: ["Een vaste avond (vaak donderdag) waarop winkels langer open zijn (bijv. tot 21:00)", "Een avond waarop alle producten gratis zijn", "Een markt alleen voor tweedehands spullen", "Een veiling van antieke meubels"], correctAnswer: "Een vaste avond (vaak donderdag) waarop winkels langer open zijn (bijv. tot 21:00)" }
         ]
       }
     ]
@@ -515,7 +520,10 @@ export const chapter4Sections = [
         isExtra: true,
         questions: [
           { id: "4.8_smart_1", type: "multiple_choice", question: "Welk woord heeft een KORTE 'e' klank?", options: ["geven", "zes", "tegen"], correctAnswer: "zes" },
-          { id: "4.8_smart_2", type: "multiple_choice", question: "In Nederland ga je op zondag bij je vriendin op bezoek. Wat is de regel?", options: ["Je gaat gewoon naar haar huis (spontaan).", "Je maakt eerst een afspraak (bellen/appen).", "Je neemt altijd bloemen mee."], correctAnswer: "Je maakt eerst een afspraak (bellen/appen)." }
+          { id: "4.8_smart_2", type: "multiple_choice", question: "In Nederland ga je op zondag bij je vriendin op bezoek. Wat is de regel?", options: ["Je maakt eerst een afspraak (bellen/appen).", "Je gaat gewoon onaangekondigd naar haar huis.", "Je neemt verplicht een cadeau mee.", "Je wacht tot ze jou uitnodigt."], correctAnswer: "Je maakt eerst een afspraak (bellen/appen)." },
+          { id: "4.8_smart_3", type: "multiple_choice", question: "Hoe begroeten goede vrienden of familieleden elkaar traditioneel in Nederland bij een felicitatie of feestje?", options: ["Met drie kussen op de wangen (drie zoenen)", "Met een diepe buiging", "Met een formele buiging zonder woorden", "Door elkaars hand drie keer te schudden"], correctAnswer: "Met drie kussen op de wangen (drie zoenen)" },
+          { id: "4.8_smart_4", type: "multiple_choice", question: "Je ontmoet je nieuwe manager of een officiële instantie (zoals de gemeente). Wat is de beste begroeting?", options: ["Een stevige handdruk, vriendelijk oogcontact en 'Goedemorgen meneer/mevrouw'", "Drie zoenen op de wangen", "Zeggen: 'Hoi gozer!'", "Zwaaien van een grote afstand"], correctAnswer: "Een stevige handdruk, vriendelijk oogcontact en 'Goedemorgen meneer/mevrouw'" },
+          { id: "4.8_smart_5", type: "multiple_choice", question: "Welk woord bevat een LANGE 'ee' klank?", options: ["geven", "tekst", "zes", "hebben"], correctAnswer: "geven" }
         ]
       }
     ]

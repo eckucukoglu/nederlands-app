@@ -415,7 +415,9 @@ export const chapter12Sections = [
         questions: [
           { id: "12.5_opd9_1", type: "multiple_choice", question: "1. Vanaf welke leeftijd moet je een kaartje (ticket) kopen?", options: ["Vanaf 12 jaar", "Vanaf 13 jaar (daarvoor is het gratis onder begeleiding)", "Voor iedereen is het gratis"], correctAnswer: "Vanaf 13 jaar (daarvoor is het gratis onder begeleiding)" },
           { id: "12.5_opd9_2", type: "multiple_choice", question: "2. Kun je bij de Fiets en Wandelbeurs parkeren?", options: ["Ja, voor € 3,50 per uur.", "Nee, er is geen parkeerplaats.", "Ja, het is gratis."], correctAnswer: "Ja, voor € 3,50 per uur." },
-          { id: "12.5_opd9_3", type: "multiple_choice", question: "3. Hoelang duurt de Fiets en Wandelbeurs?", options: ["Twee dagen (11 t/m 12 februari).", "Een week.", "Één dag."], correctAnswer: "Twee dagen (11 t/m 12 februari)." }
+          { id: "12.5_opd9_3", type: "multiple_choice", question: "3. Hoelang duurt de Fiets en Wandelbeurs?", options: ["Twee dagen (11 t/m 12 februari).", "Een hele week.", "Slechts één ochtend.", "Een maand."], correctAnswer: "Twee dagen (11 t/m 12 februari)." },
+          { id: "12.5_opd9_4", type: "multiple_choice", question: "4. Mogen honden mee naar de Fiets en Wandelbeurs volgens de regels?", options: ["Ja, mits aangelijnd (tasmalı olmak şartıyla)", "Nee, honden zijn ten strengste verboden", "Alleen honden kleiner dan 5 kilo", "Alleen buiten op het parkeerterrein"], correctAnswer: "Ja, mits aangelijnd (tasmalı olmak şartıyla)" },
+          { id: "12.5_opd9_5", type: "multiple_choice", question: "5. Wat is het maximale parkeertarief per dag bij de beurslocatie Jaarbeurs?", options: ["€ 14,00 per dag", "€ 3,50 per dag", "Gratis voor alle automobilisten", "€ 50,00 per dag"], correctAnswer: "€ 14,00 per dag" }
         ]
       }
     ]
@@ -471,7 +473,10 @@ export const chapter12Sections = [
         isExtra: true,
         questions: [
           { id: "12.6_cult_1", type: "multiple_choice", question: "Je wilt volgend jaar naar Spanje op vakantie en zoekt inspiratie. Naar welke beurs ga je?", options: ["De Woonbeurs", "De Vakantiebeurs", "De Huishoudbeurs"], correctAnswer: "De Vakantiebeurs" },
-          { id: "12.6_cult_2", type: "multiple_choice", question: "Je zoekt nieuwe meubels voor je woonkamer. Naar welke beurs ga je?", options: ["De Woonbeurs", "De Vakantiebeurs", "De Fiets en Wandelbeurs"], correctAnswer: "De Woonbeurs" }
+          { id: "12.6_cult_2", type: "multiple_choice", question: "Je zoekt nieuwe meubels en inspiratie voor je woonkamer. Naar welke beurs ga je?", options: ["De Woonbeurs", "De Vakantiebeurs", "De Fiets en Wandelbeurs", "De Boekenbeurs"], correctAnswer: "De Woonbeurs" },
+          { id: "12.6_cult_3", type: "multiple_choice", question: "Welke twee Nederlandse klankcombinaties klinken exact hetzelfde?", options: ["'ou' en 'au' (bijv. koud en blauw)", "'ui' en 'eu'", "'oe' en 'uu'", "'ei' en 'ie'"], correctAnswer: "'ou' en 'au' (bijv. koud en blauw)" },
+          { id: "12.6_cult_4", type: "multiple_choice", question: "Welk woord bevat de typisch Nederlandse diftong 'ui'?", options: ["buiten", "auto", "koud", "groen"], correctAnswer: "buiten" },
+          { id: "12.6_cult_5", type: "multiple_choice", question: "Wat is 'de Jaarbeurs' in Utrecht?", options: ["Een groot conferentie- en evenementencentrum voor beurzen en congressen", "Een jaarlijkse kermis op het plein", "Een grote supermarktketen", "Een treinstation"], correctAnswer: "Een groot conferentie- en evenementencentrum voor beurzen en congressen" }
         ]
       }
     ]

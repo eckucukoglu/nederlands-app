@@ -370,7 +370,10 @@ export const chapter6Sections = [
         questions: [
           { id: "6.4_opd_1", type: "multiple_choice", question: "Waarmee snijd je vlees in een restaurant?", options: ["Met een mes", "Met een lepel", "Met een glas"], correctAnswer: "Met een mes" },
           { id: "6.4_opd_2", type: "multiple_choice", question: "Wat is 'ijs met chocoladesaus' in een driegangenmenu?", options: ["Het voorgerecht", "Het hoofdgerecht", "Het nagerecht (toetje)"], correctAnswer: "Het nagerecht (toetje)" },
-          { id: "6.4_opd_3", type: "fill_in", question: "Je wilt betalen. Wat zeg je tegen de ober? -> 'Mag ik de ________, alstublieft?'", correctAnswer: "rekening" }
+          { id: "6.4_opd_3", type: "fill_in", question: "Je wilt betalen. Wat zeg je tegen de ober? -> 'Mag ik de ________, alstublieft?'", correctAnswer: "rekening" },
+          { id: "6.4_opd_4", type: "multiple_choice", question: "Waarmee eet je soep in een restaurant?", options: ["Met een lepel", "Met een mes", "Met een vork", "Met een bord"], correctAnswer: "Met een lepel" },
+          { id: "6.4_opd_5", type: "multiple_choice", question: "Wat betekent 'pinnen' in een restaurant of café in Nederland?", options: ["Betalen met je pinpas / bankpas", "Contant met munten betalen", "Een cheque uitschrijven", "Op rekening kopen en later betalen"], correctAnswer: "Betalen met je pinpas / bankpas" },
+          { id: "6.4_opd_6", type: "multiple_choice", question: "Wat zeg je als je de rekening wilt afronden en de serveerster een fooi wilt geven?", options: ["Maak er maar 40 euro van.", "Ik wil gratis eten.", "Ik heb geen geld bij me.", "Geef mij de baas."], correctAnswer: "Maak er maar 40 euro van." }
         ]
       }
     ]
@@ -512,7 +515,11 @@ export const chapter6Sections = [
         instruction: "Opdracht 9: Wat denkt de serveerster over de ik-persoon? (What does the waitress think?)",
         isExtra: false,
         questions: [
-          { id: "6.6_opd9_1", type: "multiple_choice", question: "Waarom zegt de serveerster: 'Dat moet u eerst aan die mensen vragen, meneer!'?", options: ["a) Hij kent de mensen aan die tafel niet.", "b) Hij is niet goed genoeg voor dit restaurant.", "c) Hij wil bij zijn vrienden aan tafel zitten."], correctAnswer: "a) Hij kent de mensen aan die tafel niet." }
+          { id: "6.6_opd9_1", type: "multiple_choice", question: "Waarom zegt de serveerster: 'Dat moet u eerst aan die mensen vragen, meneer!'?", options: ["a) Hij kent de mensen aan die tafel niet (volgens de serveerster).", "b) Hij is niet goed genoeg voor dit restaurant.", "c) Hij wil bij zijn vrienden aan tafel zitten."], correctAnswer: "a) Hij kent de mensen aan die tafel niet (volgens de serveerster)." },
+          { id: "6.6_opd9_2", type: "multiple_choice", question: "Waarom had de man een rood hoofd toen hij in het restaurant aankwam?", options: ["Omdat hij heel hard gefietst had om op tijd te komen", "Omdat het restaurant heel heet was", "Omdat hij boos was op de ober", "Omdat hij pittig gegeten had"], correctAnswer: "Omdat hij heel hard gefietst had om op tijd te komen" },
+          { id: "6.6_opd9_3", type: "multiple_choice", question: "Waarom kon de man niet direct een eigen vrije tafel vinden?", options: ["Er was geen enkel tafeltje meer vrij in het restaurant.", "Het restaurant was al gesloten.", "Hij was zijn portemonnee vergeten.", "Hij had geen schoenen aan."], correctAnswer: "Er was geen enkel tafeltje meer vrij in het restaurant." },
+          { id: "6.6_opd9_4", type: "multiple_choice", question: "Wat moet je in Nederland doen als je met vrienden uit eten wilt gaan op een drukke zaterdagavond?", options: ["Van tevoren een tafel reserveren", "Gewoon onaangekondigd binnenlopen", "Buiten blijven wachten tot iemand weggaat", "De eigenaar van tevoren een brief sturen"], correctAnswer: "Van tevoren een tafel reserveren" },
+          { id: "6.6_opd9_5", type: "multiple_choice", question: "Hoe vraag je beleefd aan de telefoon of er een tafel vrij is voor vanavond?", options: ["Goedenavond, heeft u vanavond om zeven uur een tafel voor vier personen vrij?", "Hoi, ik wil nu eten, geef mij een tafel.", "Ik kom eraan, maak plaats.", "Waar is mijn tafel?"], correctAnswer: "Goedenavond, heeft u vanavond om zeven uur een tafel voor vier personen vrij?" }
         ]
       }
     ]
@@ -559,7 +566,10 @@ export const chapter6Sections = [
         questions: [
           { id: "6.7_smart_1", type: "multiple_choice", question: "Welk woord heeft een LANGE 'ie' klank?", options: ["kip", "misschien", "zitten"], correctAnswer: "misschien" },
           { id: "6.7_smart_2", type: "multiple_choice", question: "Hoeveel fooi geef je in een Nederlands restaurant als je tevreden bent?", options: ["Je geeft geen fooi, dat is onbeleefd.", "Tussen de 5 en 10 procent.", "Altijd 20 procent."], correctAnswer: "Tussen de 5 en 10 procent." },
-          { id: "6.7_smart_3", type: "fill_in", question: "De rekening is €28. Je geeft €30 en zegt: 'Laat de ________ maar zitten.' (Üstü kalsın / Keep the change).", correctAnswer: "rest" }
+          { id: "6.7_smart_3", type: "fill_in", question: "De rekening is €28. Je geeft €30 en zegt: 'Laat de ________ maar zitten.' (Üstü kalsın / Keep the change).", correctAnswer: "rest" },
+          { id: "6.7_smart_4", type: "multiple_choice", question: "Welk woord heeft een KORTE 'i' klank?", options: ["kip", "bier", "biefstuk", "vier"], correctAnswer: "kip" },
+          { id: "6.7_smart_5", type: "multiple_choice", question: "Is een fooi geven in een Nederlands café verplicht bij een kopje koffie?", options: ["Nee, het is nooit verplicht, maar een klein bedrag afronden mag wel.", "Ja, het is wettelijk verplicht om 15% te geven.", "Nee, fooien zijn verboden in cafés.", "Alleen als de bediening vriendelijk glimlacht."], correctAnswer: "Nee, het is nooit verplicht, maar een klein bedrag afronden mag wel." },
+          { id: "6.7_smart_6", type: "multiple_choice", question: "Wat betekent 'apart afrekenen' als je met collega's uit eten bent?", options: ["Iedereen betaalt zijn eigen drankjes en eten apart.", "Eén persoon betaalt alles voor iedereen.", "De baas betaalt de hele rekening.", "De rekening wordt naar kantoor gestuurd."], correctAnswer: "Iedereen betaalt zijn eigen drankjes en eten apart." }
         ]
       }
     ]

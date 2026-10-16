@@ -118,7 +118,10 @@ export const chapter18Sections = [
           { id: "18.1_opd1_1", type: "multiple_choice", question: "Wat gebeurde er als EERSTE in het verhaal?", options: ["Sam gaat naar de politie.", "Sam zit op een terras met een collega.", "Sam koopt een nieuwe portemonnee."], correctAnswer: "Sam zit op een terras met een collega." },
 
 
-{ id: "18.1_opd1_2", type: "multiple_choice", question: "Wat deed Sam nadat hij merkte dat zijn portemonnee weg was?", options: ["Hij blokkeerde meteen zijn pinpas.", "Hij ging direct naar de politie om aangifte te doen."], correctAnswer: "Hij ging direct naar de politie om aangifte te doen." }
+{ id: "18.1_opd1_2", type: "multiple_choice", question: "Wat deed Sam nadat hij merkte dat zijn portemonnee weg was?", options: ["Hij ging direct naar de politie om aangifte te doen.", "Hij blokkeerde meteen zijn pinpas.", "Hij kocht meteen een nieuwe portemonnee.", "Hij ging gewoon verder koffie drinken."], correctAnswer: "Hij ging direct naar de politie om aangifte te doen." },
+          { id: "18.1_opd1_3", type: "multiple_choice", question: "Waarom moet Sam zo snel mogelijk zijn bankpas laten blokkeren bij diefstal?", options: ["Om te voorkomen dat de dief geld van zijn bankrekening pint of contactloos betaalt", "Omdat de pas beschadigd is geraakt", "Omdat hij een nieuwe pincode wil instellen", "Omdat hij geen rente meer wil betalen"], correctAnswer: "Om te voorkomen dat de dief geld van zijn bankrekening pint of contactloos betaalt" },
+          { id: "18.1_opd1_4", type: "multiple_choice", question: "Wat vraagt de politieagent als Sam aangifte komt doen van de diefstal van zijn portemonnee?", options: ["Om een nauwkeurige beschrijving (signalement) van mogelijke verdachten, tijdstip en locatie", "Om direct contant 50 euro aangiftekosten te betalen", "Waarom hij überhaupt op een terras ging zitten", "Of hij de dief zelf wil arresteren"], correctAnswer: "Om een nauwkeurige beschrijving (signalement) van mogelijke verdachten, tijdstip en locatie" },
+          { id: "18.1_opd1_5", type: "multiple_choice", question: "Welk telefoonnummer bel je in Nederland voor de politie bij GEEN spoed (geen levensgevaar)?", options: ["0900-8844", "1-1-2", "0800-7000", "0900-1234"], correctAnswer: "0900-8844" }
         ]
       }
     ]
@@ -404,7 +407,11 @@ export const chapter18Sections = [
         instruction: "Slimme Oefeningen (Smart Exercises): Advies Test",
         isExtra: true,
         questions: [
-          { id: "18.5_smart_1", type: "multiple_choice", question: "Je portemonnee is gestolen. Je vraagt aan een vriend: 'Wat kan ik het beste doen?'. Wat is een passend advies?", options: ["Je kunt het beste gaan slapen.", "Je kunt het beste direct naar de politie gaan en je bankpas blokkeren.", "Je kunt het beste een nieuwe auto kopen."], correctAnswer: "Je kunt het beste direct naar de politie gaan en je bankpas blokkeren." }
+          { id: "18.5_smart_1", type: "multiple_choice", question: "Je portemonnee is gestolen. Je vraagt aan een vriend: 'Wat kan ik het beste doen?'. Wat is een passend advies?", options: ["Je kunt het beste direct naar de politie gaan om aangifte te doen en je bankpas blokkeren.", "Je kunt het beste gaan slapen en niets doen.", "Je kunt het beste een nieuwe auto kopen.", "Je kunt het beste de ober van het terras de schuld geven."], correctAnswer: "Je kunt het beste direct naar de politie gaan om aangifte te doen en je bankpas blokkeren." },
+          { id: "18.5_smart_2", type: "multiple_choice", question: "Hoe geef je iemand beleefd een dringend advies met 'Ik raad je aan om...'?", options: ["'Ik raad je aan om direct contact op te nemen met je bank.'", "'Je moet nu direct gaan slapen.'", "'Waarom vraag je mij om hulp?'", "'Ik weet het ook niet.'"], correctAnswer: "'Ik raad je aan om direct contact op te nemen met je bank.'" },
+          { id: "18.5_smart_3", type: "multiple_choice", question: "Hoe vraag je iemand om advies als je twijfelt over een belangrijke beslissing?", options: ["'Wat raad jij mij aan?' of 'Wat zou jij doen in mijn situatie?'", "'Vertel mij niets.'", "'Waarom praat je tegen mij?'", "'Ik wil geen enkel advies horen.'"], correctAnswer: "'Wat raad jij mij aan?' of 'Wat zou jij doen in mijn situatie?'" },
+          { id: "18.5_smart_4", type: "multiple_choice", question: "Welk woord bevat het achtervoegsel '-isch' (uitgesproken als /ies/)?", options: ["logisch", "prachtig", "vriendelijk", "moeilijk"], correctAnswer: "logisch" },
+          { id: "18.5_smart_5", type: "multiple_choice", question: "Hoe klinkt de klankcombinatie 'sch' aan het begin van Nederlandse woorden zoals 'school' en 'schrijven'?", options: ["Als een /s/ gevolgd door een raspende keelklank /ch/", "Als de Engelse /sh/-klank in 'shoe'", "Als een harde /sk/-klank zoals in 'sky'", "Als een stomme /s/"], correctAnswer: "Als een /s/ gevolgd door een raspende keelklank /ch/" }
         ]
       }
     ]

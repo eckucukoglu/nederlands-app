@@ -155,7 +155,10 @@ export const chapter1Sections = [
 
 
 { id: "1.1_smart_2", type: "multiple_choice", question: "Uit welk land komt Susy?", options: ["Uit Nederland", "Uit China", "Uit Engeland"], correctAnswer: "Uit Engeland" },
-          { id: "1.1_smart_3", type: "multiple_choice", question: "Waarom zegt de docent 'Zeg maar jij, hoor' tegen Ning? (Why does the teacher say 'Zeg maar jij'?)", options: ["Omdat ze 'u' te formeel vindt (She finds 'u' too formal). Ze wil tutoyeren.", "Omdat ze boos is.", "Omdat Ning geen Nederlands spreekt."], correctAnswer: "Omdat ze 'u' te formeel vindt (She finds 'u' too formal). Ze wil tutoyeren." }
+          { id: "1.1_smart_3", type: "multiple_choice", question: "Waarom zegt de docent 'Zeg maar jij, hoor' tegen Ning? (Why does the teacher say 'Zeg maar jij'?)", options: ["Omdat ze 'u' te formeel vindt (She finds 'u' too formal). Ze wil tutoyeren.", "Omdat ze boos is.", "Omdat Ning geen Nederlands spreekt."], correctAnswer: "Omdat ze 'u' te formeel vindt (She finds 'u' too formal). Ze wil tutoyeren." },
+          { id: "1.1_smart_4", type: "multiple_choice", question: "Waar woont Susy nu volgens de dialoog?", options: ["In Utrecht", "In Amsterdam", "In Londen", "In Den Haag"], correctAnswer: "In Utrecht" },
+          { id: "1.1_smart_5", type: "multiple_choice", question: "Wat vraagt de docent aan Ning over haar adres?", options: ["Op welk nummer woon je?", "Hoeveel kost je kamer?", "Woon je alleen?", "Heb je een balkon?"], correctAnswer: "Op welk nummer woon je?" },
+          { id: "1.1_smart_6", type: "multiple_choice", question: "Wat betekent de uitdrukking 'tot straks' aan het einde van de les?", options: ["Birazdan görüşürüz (See you in a bit)", "Hoşça kal, bir daha görüşmeyiz", "Günaydın", "Özür dilerim"], correctAnswer: "Birazdan görüşürüz (See you in a bit)" }
         ]
       }
     ]
@@ -429,7 +432,8 @@ export const chapter1Sections = [
         instruction: "Opdracht 5: Je krijgt een blad van je docent. (Klassikale oefening)",
         isExtra: false,
         questions: [
-          { id: "1.5_opd5_1", type: "multiple_choice", question: "Dit is een spreekopdracht voor in de klas. Begrijp je hoe je getallen moet zeggen?", options: ["Ja, ik begrijp het.", "Nee, ik moet nog oefenen."], correctAnswer: "Ja, ik begrijp het." }
+          { id: "1.5_opd5_1", type: "multiple_choice", question: "Hoe schrijf je het getal 74 als woord in het Nederlands? (How is 74 written as a word?)", options: ["vierenzestig", "vierenzeventig", "zevenenveertig", "vierenvijftig"], correctAnswer: "vierenzeventig" },
+          { id: "1.5_opd5_2", type: "multiple_choice", question: "Welk getal hoort bij 'drieënzestig'?", options: ["36", "63", "33", "60"], correctAnswer: "63" }
         ]
       },
       {
@@ -509,7 +513,9 @@ export const chapter1Sections = [
         instruction: "Opdracht 7: Ga in alfabetische volgorde staan.",
         isExtra: false,
         questions: [
-          { id: "1.6_opd7_1", type: "multiple_choice", question: "Dit is een klasopdracht. Weet je hoe het alfabet werkt?", options: ["Ja", "Nee"], correctAnswer: "Ja" }
+          { id: "1.6_opd7_1", type: "multiple_choice", question: "Welke lettercombinatie wordt in het Nederlands 'lange ij' genoemd?", options: ["ei", "ij", "y", "ie"], correctAnswer: "ij" },
+          { id: "1.6_opd7_2", type: "multiple_choice", question: "Welke klinkers (vowels) zitten er in het woord 'Nederlands'?", options: ["e, e, a", "e, a, o", "i, e, u", "a, a, e"], correctAnswer: "e, e, a" },
+          { id: "1.6_opd7_3", type: "multiple_choice", question: "Hoe spel je de achternaam 'De Vries'?", options: ["D - E - spatie - V - R - I - E - S", "D - E - V - R - Y - S", "D - E - V - R - I - J - S", "D - A - V - R - E - S"], correctAnswer: "D - E - spatie - V - R - I - E - S" }
         ]
       }
     ]

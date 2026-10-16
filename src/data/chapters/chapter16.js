@@ -288,7 +288,10 @@ export const chapter16Sections = [
         isExtra: true,
         questions: [
           { id: "16.5_smart_1", type: "multiple_choice", question: "Hoe spreek je (telaffuz / pronounce) het woord 'makkelijk' uit?", options: ["makke-lijk", "makke-lik / makke-luk", "makke-liek"], correctAnswer: "makke-lik / makke-luk" },
-          { id: "16.5_smart_2", type: "multiple_choice", question: "Hoe spreek je het woord 'jarig' uit?", options: ["ja-rieg", "ja-rug / ja-rih", "ja-rij"], correctAnswer: "ja-rug / ja-rih" }
+          { id: "16.5_smart_2", type: "multiple_choice", question: "Hoe spreek je het woord 'jarig' uit?", options: ["ja-rug / ja-rih (met een doffe u/ıh klank)", "ja-rieg met een lange ie", "ja-rij", "ja-rok"], correctAnswer: "ja-rug / ja-rih (met een doffe u/ıh klank)" },
+          { id: "16.5_smart_3", type: "multiple_choice", question: "Hoe spreek je het achtervoegsel (suffix) '-ig' uit in woorden zoals 'veilig' en 'rustig'?", options: ["Als een doffe /uhg/ (met een zachte keelklank)", "Als een scherpe /iech/", "Als /igge/", "Als een stomme letter die je niet hoort"], correctAnswer: "Als een doffe /uhg/ (met een zachte keelklank)" },
+          { id: "16.5_smart_4", type: "multiple_choice", question: "Hoe spreek je het achtervoegsel '-lijk' uit in woorden zoals 'moeilijk' en 'vrolijk'?", options: ["Als /luk/ (zoals in het Engelse 'look' / Nederlandse 'luk')", "Als /lijk/ met een scherpe lange ij", "Als /liek/", "Als /laaik/"], correctAnswer: "Als /luk/ (zoals in het Engelse 'look' / Nederlandse 'luk')" },
+          { id: "16.5_smart_5", type: "multiple_choice", question: "Wat betekent het 'Kijkwijzer' classificatiesysteem bij films en televisie in Nederland?", options: ["Het geeft deskundig advies over geschiktheid en leeftijdsgrenzen (bijv. geweld, angst, seks)", "Het toont welke film de meeste bioscoopkaartjes verkoopt", "Het toont hoe duur een bioscoopkaartje is", "Het selecteert automatisch de juiste ondertiteling"], correctAnswer: "Het geeft deskundig advies over geschiktheid en leeftijdsgrenzen (bijv. geweld, angst, seks)" }
         ]
       }
     ]

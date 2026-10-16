@@ -194,7 +194,10 @@ export const chapter8Sections = [
         questions: [
           { id: "8.3_opd_1", type: "multiple_choice", question: "Wat is 'de begane grond' in het Engels of Turks?", options: ["The basement / Bodrum", "The roof / Çatı", "The ground floor / Zemin kat"], correctAnswer: "The ground floor / Zemin kat" },
           { id: "8.3_opd_2", type: "multiple_choice", question: "Een woning op de tweede etage met een balkon noem je meestal een...", options: ["benedenwoning", "bovenwoning", "garage"], correctAnswer: "bovenwoning" },
-          { id: "8.3_opd_3", type: "fill_in", question: "Vertaal (Translate): 'I rent an apartment.' -> Ik huur een ________.", correctAnswer: "appartement" }
+          { id: "8.3_opd_3", type: "fill_in", question: "Vertaal (Translate): 'I rent an apartment.' -> Ik huur een ________.", correctAnswer: "appartement" },
+          { id: "8.3_opd_4", type: "multiple_choice", question: "Wat is een 'rijtjeshuis' in Nederland?", options: ["Een eengezinswoning die aan beide kanten aan andere huizen vastzit", "Een vrijstaand huis midden in het bos", "Een studio op de tiende etage", "Een woonboot op de gracht"], correctAnswer: "Een eengezinswoning die aan beide kanten aan andere huizen vastzit" },
+          { id: "8.3_opd_5", type: "multiple_choice", question: "Wat is het verschil tussen 'huren' en 'kopen'?", options: ["Bij huren betaal je elke maand aan de eigenaar, bij kopen word je zelf eigenaar.", "Huren is altijd duurder dan kopen.", "Bij kopen mag je geen meubels neerzetten.", "Er is geen enkel verschil."], correctAnswer: "Bij huren betaal je elke maand aan de eigenaar, bij kopen word je zelf eigenaar." },
+          { id: "8.3_opd_6", type: "multiple_choice", question: "Wat is de rol van een makelaar bij het zoeken naar een woning?", options: ["Hij helpt bij het kopen, verkopen of huren van een woning.", "Hij bezorgt meubels bij je thuis.", "Hij repareert lekkende kranen.", "Hij int de gemeentebelastingen."], correctAnswer: "Hij helpt bij het kopen, verkopen of huren van een woning." }
         ]
       }
     ]
@@ -267,7 +270,10 @@ export const chapter8Sections = [
         questions: [
           { id: "8.4_opd_1", type: "multiple_choice", question: "Waar slaap je meestal in huis?", options: ["In de keuken", "In de slaapkamer", "In de schuur"], correctAnswer: "In de slaapkamer" },
           { id: "8.4_opd_2", type: "multiple_choice", question: "Waar zet je je fiets vaak neer bij een Nederlands rijtjeshuis?", options: ["In het schuurtje of de tuin", "In de badkamer", "In de slaapkamer"], correctAnswer: "In het schuurtje of de tuin" },
-          { id: "8.4_opd_3", type: "fill_in", question: "In een flat zonder lift neem je altijd de ________ om naar boven te gaan.", correctAnswer: "trap" }
+          { id: "8.4_opd_3", type: "fill_in", question: "In een flat zonder lift neem je altijd de ________ om naar boven te gaan.", correctAnswer: "trap" },
+          { id: "8.4_opd_4", type: "multiple_choice", question: "Waar vind je de wasmachine vaak in een Nederlands huis?", options: ["Op zolder, in de badkamer of in de bijkeuken", "In de voortuin", "Op het dak", "In de brievenbus"], correctAnswer: "Op zolder, in de badkamer of in de bijkeuken" },
+          { id: "8.4_opd_5", type: "multiple_choice", question: "Wat is een 'zolder'?", options: ["De hoogste verdieping van een huis direct onder het dak (tavan arası)", "De kelder onder de grond", "De parkeerplaats voor de auto", "Het balkon aan de voorzijde"], correctAnswer: "De hoogste verdieping van een huis direct onder het dak (tavan arası)" },
+          { id: "8.4_opd_6", type: "multiple_choice", question: "Waarom hebben veel huizen in Nederland een 'schuurtje' in de achtertuin?", options: ["Om fietsen, tuingereedschap en containers veilig neer te zetten", "Om in te slapen tijdens de zomer", "Om een winkel te beginnen", "Om de auto in te parkeren"], correctAnswer: "Om fietsen, tuingereedschap en containers veilig neer te zetten" }
         ]
       }
     ]
@@ -337,7 +343,11 @@ export const chapter8Sections = [
         isExtra: false,
         questions: [
           { id: "8.5_opd_1", type: "multiple_choice", question: "Een woning huren zonder meubels, maar met vloer en gordijnen heet...", options: ["gemeubileerd", "gestoffeerd", "kaal"], correctAnswer: "gestoffeerd" },
-          { id: "8.5_opd_2", type: "multiple_choice", question: "Waarop zit je als je tv kijkt in de woonkamer?", options: ["Op de bank of een stoel", "Op de koelkast", "Op de lamp"], correctAnswer: "Op de bank of een stoel" }
+          { id: "8.5_opd_2", type: "multiple_choice", question: "Waarop zit je als je tv kijkt in de woonkamer?", options: ["Op de bank of een comfortabele stoel", "Op de koelkast", "Op de lamp", "Op de boekenkast"], correctAnswer: "Op de bank of een comfortabele stoel" },
+          { id: "8.5_opd_3", type: "multiple_choice", question: "Wat betekent 'gemeubileerd huren'?", options: ["De woning heeft al tafels, stoelen, een bed en kasten.", "De woning heeft geen vloer en geen gordijnen.", "De woning wordt gedeeld met 10 studenten.", "De woning heeft alleen een fornuis."], correctAnswer: "De woning heeft al tafels, stoelen, een bed en kasten." },
+          { id: "8.5_opd_4", type: "multiple_choice", question: "Wat betekent het als een advertentie zegt dat een huis 'kaal' wordt opgeleverd?", options: ["Er ligt geen vloer en er hangen geen lampen of gordijnen in.", "Het huis is volledig ingericht met luxe meubels.", "Het huis heeft geen dak.", "Het huis heeft een grote tuin."], correctAnswer: "Er ligt geen vloer en er hangen geen lampen of gordijnen in." },
+          { id: "8.5_opd_5", type: "multiple_choice", question: "Waar hang je je jassen en kleren in op?", options: ["In de kledingkast", "Onder het bed", "In de koelkast", "Op de vensterbank"], correctAnswer: "In de kledingkast" },
+          { id: "8.5_opd_6", type: "multiple_choice", question: "Waarop zet je borden en kopjes tijdens het ontbijt of diner?", options: ["Op de eettafel", "Op het bureau", "Op de wasmachine", "Op het tapijt"], correctAnswer: "Op de eettafel" }
         ]
       }
     ]
@@ -620,7 +630,10 @@ export const chapter8Sections = [
         instruction: "Cultuur Test: Wat vinden buitenlanders van de huizen in Nederland? (What do foreigners think about Dutch houses?)",
         isExtra: true,
         questions: [
-          { id: "8.9_cult_1", type: "multiple_choice", question: "Wat is een typisch kenmerk van Hollandse huizen volgens buitenlanders?", options: ["De trappen zijn erg makkelijk.", "Grote ramen met veel licht, maar geen privacy 's avonds.", "De wc's zijn erg groot."], correctAnswer: "Grote ramen met veel licht, maar geen privacy 's avonds." }
+          { id: "8.9_cult_1", type: "multiple_choice", question: "Wat is een typisch kenmerk van Hollandse huizen volgens buitenlanders?", options: ["Grote ramen met veel licht, maar weinig privacy 's avonds.", "De trappen zijn heel erg breed en plat.", "De wc's zijn enorm ruim.", "De huizen hebben geen ramen."], correctAnswer: "Grote ramen met veel licht, maar weinig privacy 's avonds." },
+          { id: "8.9_cult_2", type: "multiple_choice", question: "Waarom verbazen veel nieuwkomers zich over de gordijnen in Nederlandse huizen?", options: ["Omdat veel Nederlanders 's avonds de gordijnen open laten", "Omdat er nergens gordijnen te koop zijn", "Omdat gordijnen verplicht zwart moeten zijn", "Omdat gordijnen alleen van wol zijn"], correctAnswer: "Omdat veel Nederlanders 's avonds de gordijnen open laten" },
+          { id: "8.9_cult_3", type: "multiple_choice", question: "Wat is typerend voor de trappen in traditionele oude Nederlandse herenhuizen?", options: ["Ze zijn vaak erg steil en smal.", "Ze zijn heel breed met zachte kussens.", "Ze hebben altijd een automatische lift.", "Er zijn geen trappen, alleen hellingen."], correctAnswer: "Ze zijn vaak erg steil en smal." },
+          { id: "8.9_cult_4", type: "multiple_choice", question: "Wat is 'huurtoeslag' in Nederland?", options: ["Een financiële bijdrage van de overheid om de huur te betalen voor mensen met een lager inkomen", "Een extra belasting op dure villa's", "Een boete als je te laat betaalt", "Een korting op meubels"], correctAnswer: "Een financiële bijdrage van de overheid om de huur te betalen voor mensen met een lager inkomen" }
         ]
       }
     ]
