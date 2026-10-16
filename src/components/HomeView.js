@@ -35,6 +35,20 @@ const CHAPTER_INFO = {
   18: { tr: "Bij de politie (Poliste & Toplum)", en: "Bij de politie (At the Police)", nl: "Bij de politie", icon: "fa-solid fa-shield-halved" }
 };
 
+// 10 Kademeli Deneyim (XP) ve Seviye Sistemi
+const LEVEL_TIERS = [
+  { level: 1, minXp: 0, maxXp: 250, titleTr: "Acemi Kaşif", titleEn: "Beginner Explorer", rank: "A1.1", icon: "fa-solid fa-compass", color: "from-sky-500 to-blue-600", badgeColor: "text-sky-300 bg-sky-950/80 border-sky-600 shadow-[0_0_10px_rgba(56,189,248,0.2)]" },
+  { level: 2, minXp: 250, maxXp: 600, titleTr: "Hevesli Öğrenci", titleEn: "Eager Learner", rank: "A1.1", icon: "fa-solid fa-seedling", color: "from-emerald-500 to-teal-600", badgeColor: "text-emerald-300 bg-emerald-950/80 border-emerald-600 shadow-[0_0_10px_rgba(16,185,129,0.2)]" },
+  { level: 3, minXp: 600, maxXp: 1200, titleTr: "Kelime Avcısı", titleEn: "Word Hunter", rank: "A1.2", icon: "fa-solid fa-brain", color: "from-teal-500 to-cyan-600", badgeColor: "text-teal-300 bg-teal-950/80 border-teal-600 shadow-[0_0_10px_rgba(20,184,166,0.2)]" },
+  { level: 4, minXp: 1200, maxXp: 2100, titleTr: "Cümle Mimarı", titleEn: "Sentence Builder", rank: "A1.2", icon: "fa-solid fa-cubes", color: "from-indigo-500 to-blue-600", badgeColor: "text-indigo-300 bg-indigo-950/80 border-indigo-600 shadow-[0_0_10px_rgba(99,102,241,0.2)]" },
+  { level: 5, minXp: 2100, maxXp: 3500, titleTr: "Gramer Yolcusu", titleEn: "Grammar Voyager", rank: "A1+", icon: "fa-solid fa-feather-pointed", color: "from-purple-500 to-indigo-600", badgeColor: "text-purple-300 bg-purple-950/80 border-purple-600 shadow-[0_0_10px_rgba(168,85,247,0.2)]" },
+  { level: 6, minXp: 3500, maxXp: 5500, titleTr: "Diyalog Ustası", titleEn: "Dialogue Crafter", rank: "A2.1", icon: "fa-solid fa-comments", color: "from-amber-500 to-orange-600", badgeColor: "text-amber-300 bg-amber-950/80 border-amber-600 shadow-[0_0_10px_rgba(245,158,11,0.25)]" },
+  { level: 7, minXp: 5500, maxXp: 8500, titleTr: "Metin Kaşifi", titleEn: "Text Explorer", rank: "A2.1", icon: "fa-solid fa-book-open-reader", color: "from-rose-500 to-pink-600", badgeColor: "text-rose-300 bg-rose-950/80 border-rose-600 shadow-[0_0_10px_rgba(244,63,94,0.25)]" },
+  { level: 8, minXp: 8500, maxXp: 12500, titleTr: "Akıcı Konuşmacı", titleEn: "Fluent Speaker", rank: "A2.2", icon: "fa-solid fa-microphone-lines", color: "from-cyan-500 to-teal-600", badgeColor: "text-cyan-300 bg-cyan-950/80 border-cyan-600 shadow-[0_0_10px_rgba(6,182,212,0.25)]" },
+  { level: 9, minXp: 12500, maxXp: 18000, titleTr: "Dil Rehberi", titleEn: "Language Mentor", rank: "A2+", icon: "fa-solid fa-award", color: "from-yellow-400 to-amber-500", badgeColor: "text-yellow-300 bg-yellow-950/80 border-yellow-600 shadow-[0_0_12px_rgba(234,179,8,0.3)]" },
+  { level: 10, minXp: 18000, maxXp: 18000, titleTr: "Hollanda Fatihi", titleEn: "Dutch Master", rank: "A2 Master", icon: "fa-solid fa-crown", color: "from-yellow-400 to-amber-600", badgeColor: "text-amber-200 bg-amber-950/90 border-amber-500 shadow-[0_0_15px_rgba(245,158,11,0.5)]" }
+];
+
 export default function HomeView({
   favorites = {},
   completed = {},
@@ -196,8 +210,20 @@ export default function HomeView({
     const totalBookWords = vocabulary.length || 1066;
     const totalLearnedWords = chapterVocabStats.reduce((acc, c) => acc + c.learnedCount, 0);
     const totalLearningWords = chapterVocabStats.reduce((acc, c) => acc + c.learningCount, 0);
+    const starredVerbsCount = Array.isArray(starredVerbs) ? starredVerbs.length : 0;
+
+    // Çok Boyutlu Kelime İlerlemesi:
+    // 1) Tam öğrenilen kelimeler (1.0 puan)
+    // 2) Çalışılmakta olan kelimeler (0.40 puan - aktif hafıza çabasının karşılığı)
+    // 3) Flashcard pratik hacmi bonusu (her 10 tekrar = +1 kelime puanı, maks 80)
+    // 4) Yıldızlanan düzensiz fiiller (+0.50 puan)
+    const effectiveWordPoints = totalLearnedWords + 
+      (totalLearningWords * 0.40) + 
+      Math.min(80, Math.floor(totalFlashcardReviews / 10)) + 
+      (starredVerbsCount * 0.50);
+
     const wordsProgressPercent = totalBookWords > 0 
-      ? Math.min(100, Math.round((totalLearnedWords / totalBookWords) * 100)) 
+      ? Math.min(100, Math.round((effectiveWordPoints / totalBookWords) * 100)) 
       : 0;
 
     // ----------------------------------------------------
@@ -227,10 +253,21 @@ export default function HomeView({
     const totalQuizQuestions = quizQuestions?.length || 2204;
     const goodQuestionsCount = Object.keys(goodQuestions).length;
 
-    // Sorulardaki genel ilerleme yüzdesi (Çözülen soru / Toplam soru)
-    const questionsProgressPercent = totalQuizQuestions > 0 
-      ? Math.min(100, Math.round((uniqueAttempted / totalQuizQuestions) * 100)) 
-      : 0;
+    // Çok Boyutlu Soru & Quiz İlerlemesi:
+    // 400 Puanlık Müfredat Yetkinlik Kıyas Noktası (Tüm ünite sınavları, gramer testleri ve diyalog quizleri)
+    // 1) Çözülen her özgün soru: 1.0 puan
+    // 2) Kusursuz ustalaşılan sorular: +0.50 puan bonus
+    // 3) Çözüm tekrar hacmi: Her 10 doğru cevap = +0.5 puan (maks 50)
+    // 4) Favori / İyi soru seçimi: +0.50 puan bonus
+    // 5) Yüksek doğruluk bonusu: %70 ve üzeri doğrulukta ivme bonusu
+    const accuracyBonus = quizAccuracy >= 70 ? Math.round((quizAccuracy - 70) * 0.5) : 0;
+    const repetitionBonus = Math.min(50, Math.floor(totalQuizCorrect / 10) * 0.5);
+    const curationBonus = goodQuestionsCount * 0.5;
+    const masteryBonus = masteredCount * 0.5;
+
+    const effectiveQuestionPoints = uniqueAttempted + masteryBonus + repetitionBonus + curationBonus + accuracyBonus;
+    const QUESTION_BENCHMARK = 400;
+    const questionsProgressPercent = Math.min(100, Math.round((effectiveQuestionPoints / QUESTION_BENCHMARK) * 100));
 
     // Set'ler ile O(1) Hızlı Gramer/Beceri Kontrolü
     const grammarTensesSet = new Set(grammarTenses.map(q => q.id));
@@ -442,9 +479,37 @@ export default function HomeView({
       }
       return false;
     }).length;
-    const sectionsProgressPercent = totalBookSections > 0 
-      ? Math.min(100, Math.round((completedSectionsCount / totalBookSections) * 100)) 
-      : 0;
+
+    // Kısmi Bölüm Katkıları (Kelimeler, diyaloglar ve okuma bölümlerindeki çalışmalar)
+    let partialSectionPoints = 0;
+    allSections.forEach(s => {
+      if (completed[s.id]) return;
+      if (s.id.endsWith('.2')) {
+        const v = chapterVocabStats.find(c => c.chapterNum === s.chapter);
+        if (v && v.progress > 0 && v.progress < 100) {
+          partialSectionPoints += (v.progress / 100);
+        }
+      } else if (s.id.endsWith('.1')) {
+        try {
+          const diagSt = JSON.parse(localStorage.getItem(`dialogueWordStatuses_${s.chapter}`)) || {};
+          const studiedCount = Object.keys(diagSt).length;
+          if (studiedCount > 0) {
+            partialSectionPoints += Math.min(0.7, studiedCount * 0.08);
+          }
+        } catch (e) {}
+      } else if (s.id.includes('Reading')) {
+        try {
+          const readSt = JSON.parse(localStorage.getItem(`readingWordStatuses_${s.chapter}`)) || {};
+          const studiedCount = Object.keys(readSt).length;
+          if (studiedCount > 0) {
+            partialSectionPoints += Math.min(0.7, studiedCount * 0.08);
+          }
+        } catch (e) {}
+      }
+    });
+
+    const totalFavoritesCount = Object.keys(favorites).length;
+    const notesBonus = Math.min(5, totalFavoritesCount * 0.25);
 
     const availableChapters = Array.from({ length: 18 }, (_, i) => i + 1);
     const chapterSectionStats = availableChapters.map(ch => {
@@ -492,16 +557,49 @@ export default function HomeView({
     });
 
     const completedChaptersCount = chapterSectionStats.filter(c => c.isFullyDone).length;
-    const totalFavoritesCount = Object.keys(favorites).length;
-    const starredVerbsCount = Array.isArray(starredVerbs) ? starredVerbs.length : 0;
+    // Her tam bitirilen ünite için büyük motivasyon bonusu (+0.50 bölüm puanı)
+    const chapterMasteryBonus = completedChaptersCount * 0.50;
+
+    const totalSectionPoints = completedSectionsCount + partialSectionPoints + chapterMasteryBonus + notesBonus;
+    const sectionsProgressPercent = totalBookSections > 0 
+      ? Math.min(100, Math.round((totalSectionPoints / totalBookSections) * 100)) 
+      : 0;
 
     // ----------------------------------------------------
-    // E) BİRLEŞİK İLERLEME (OVERALL PROGRESS - 3 SÜTUNUN ORTALAMASI)
+    // E) BİRLEŞİK İLERLEME (OVERALL PROGRESS - AĞIRLIKLI 3 SÜTUN)
     // ----------------------------------------------------
-    // Kullanıcının belirttiği gibi: Toplam kelimeler, üniteler ve sorulardaki durumun ortalaması
-    const overallProgress = Math.min(100, Math.round(
-      (sectionsProgressPercent + wordsProgressPercent + questionsProgressPercent) / 3
-    ));
+    // Bölümler (%35) + Kelimeler (%35) + Sorular & Pratik (%30)
+    const rawOverall = (sectionsProgressPercent * 0.35) + 
+                       (wordsProgressPercent * 0.35) + 
+                       (questionsProgressPercent * 0.30);
+                       
+    // Kullanıcının yaptığı en ufak bir çalışma dahi varsa (soru, kelime, tekrar, bölüm)
+    // genel ilerlemenin 0 kalmamasını sağlayacak hassas taban kontrolü:
+    const hasAnyActivity = uniqueAttempted > 0 || totalLearnedWords > 0 || totalLearningWords > 0 || completedSectionsCount > 0 || totalFlashcardReviews > 0 || partialSectionPoints > 0;
+    const overallProgress = Math.min(100, hasAnyActivity ? Math.max(1, Math.round(rawOverall)) : 0);
+
+    // ----------------------------------------------------
+    // F) XP & SEVİYE SİSTEMİ (HER ÇALIŞMA BİR İLERLEMEDİR)
+    // ----------------------------------------------------
+    const totalXP = Math.round(
+      (uniqueAttempted * 10) +
+      (totalQuizCorrect * 15) +
+      (masteredCount * 25) +
+      (totalLearnedWords * 20) +
+      (totalLearningWords * 8) +
+      (totalFlashcardReviews * 4) +
+      (completedSectionsCount * 60) +
+      (completedChaptersCount * 300) +
+      (totalFavoritesCount * 15) +
+      (starredVerbsCount * 20)
+    );
+
+    const currentTier = LEVEL_TIERS.slice().reverse().find(t => totalXP >= t.minXp) || LEVEL_TIERS[0];
+    const nextTier = LEVEL_TIERS.find(t => t.level === currentTier.level + 1) || null;
+    const xpInCurrentTier = totalXP - currentTier.minXp;
+    const xpNeededForTier = nextTier ? (nextTier.minXp - currentTier.minXp) : 1;
+    const tierProgressPercent = nextTier ? Math.min(100, Math.max(0, Math.round((xpInCurrentTier / xpNeededForTier) * 100))) : 100;
+    const xpToNextLevel = nextTier ? Math.max(0, nextTier.minXp - totalXP) : 0;
 
     return {
       // 1. Sorular
@@ -514,6 +612,8 @@ export default function HomeView({
       masteredCount,
       weakCount,
       goodQuestionsCount,
+      effectiveQuestionPoints: Math.round(effectiveQuestionPoints),
+      questionBenchmark: QUESTION_BENCHMARK,
       questionsProgressPercent,
       topicStats,
 
@@ -524,12 +624,14 @@ export default function HomeView({
       totalLearningWords,
       totalFlashcardReviews,
       flashcardAccuracy,
+      effectiveWordPoints: Math.round(effectiveWordPoints),
       wordsProgressPercent,
       chapterVocabStats,
 
       // 3. Bölümler
       totalBookSections,
       completedSectionsCount,
+      partialSectionPoints: Number(partialSectionPoints.toFixed(1)),
       sectionsProgressPercent,
       totalChapters: 18,
       completedChaptersCount,
@@ -537,8 +639,13 @@ export default function HomeView({
       totalFavoritesCount,
       starredVerbsCount,
 
-      // 4. Birleşik Ortalama
-      overallProgress
+      // 4. Birleşik Ortalama & XP
+      overallProgress,
+      totalXP,
+      currentTier,
+      nextTier,
+      tierProgressPercent,
+      xpToNextLevel
     };
   }, [completed, favorites, bookSections, statsVersion]);
 
@@ -571,37 +678,23 @@ export default function HomeView({
     return isTr ? `${secId} - Alıştırma` : `${secId} - Exercise`;
   };
 
-  // Seviye Rozeti Belirleme (0 - 100 Birleşik Skora Göre)
-  const getLevelBadge = (prog) => {
-    if (prog >= 75) {
-      return {
-        badge: isTr ? "A2 Sınav Seviyesi" : "A2 Exam Ready",
-        color: "text-emerald-300 bg-emerald-950/80 border-emerald-600 shadow-[0_0_12px_rgba(16,185,129,0.3)]",
-        icon: "fa-solid fa-trophy"
-      };
-    }
-    if (prog >= 50) {
-      return {
-        badge: isTr ? "A2 Hazırlık Aşaması" : "A2 In Progress",
-        color: "text-brand-300 bg-brand-950/80 border-brand-600 shadow-[0_0_12px_rgba(14,165,233,0.3)]",
-        icon: "fa-solid fa-rocket"
-      };
-    }
-    if (prog >= 25) {
-      return {
-        badge: isTr ? "A1 İleri Düzey" : "A1 Advanced",
-        color: "text-amber-300 bg-amber-950/80 border-amber-600 shadow-[0_0_12px_rgba(245,158,11,0.3)]",
-        icon: "fa-solid fa-seedling"
-      };
-    }
+  // Seviye ve Deneyim (XP) Bilgisi
+  const levelInfo = useMemo(() => {
+    const tier = stats?.currentTier || LEVEL_TIERS[0];
+    const isTurkish = isTr;
     return {
-      badge: isTr ? "A1 Başlangıç" : "A1 Beginner",
-      color: "text-sky-300 bg-sky-950/80 border-sky-600 shadow-[0_0_12px_rgba(56,189,248,0.2)]",
-      icon: "fa-solid fa-compass"
+      level: tier.level,
+      title: isTurkish ? tier.titleTr : tier.titleEn,
+      rank: tier.rank,
+      badge: `${isTurkish ? 'Seviye' : 'Level'} ${tier.level}: ${isTurkish ? tier.titleTr : tier.titleEn} (${tier.rank})`,
+      color: tier.badgeColor,
+      icon: tier.icon,
+      totalXP: stats?.totalXP || 0,
+      tierProgressPercent: stats?.tierProgressPercent || 0,
+      xpToNextLevel: stats?.xpToNextLevel || 0,
+      nextTierTitle: stats?.nextTier ? (isTurkish ? stats.nextTier.titleTr : stats.nextTier.titleEn) : null
     };
-  };
-
-  const levelInfo = getLevelBadge(stats.overallProgress);
+  }, [stats?.currentTier, stats?.nextTier, stats?.totalXP, stats?.tierProgressPercent, stats?.xpToNextLevel, isTr]);
 
   // Soru Konu Filtreleme
   const filteredTopics = useMemo(() => {
@@ -630,13 +723,17 @@ export default function HomeView({
       {/* 1. ÜST BAŞLIK & GERİ DÖNÜŞ AKSİYONU */}
       <div className="border-b border-slate-800 pb-4 flex justify-between items-center flex-wrap gap-3">
         <div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 flex-wrap">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-100 tracking-tight">
               Mijn Dashboard
             </h2>
             <span className={`text-[11px] font-extrabold px-3 py-1 rounded-full border flex items-center gap-1.5 ${levelInfo.color}`}>
               <i className={levelInfo.icon}></i>
               {levelInfo.badge}
+            </span>
+            <span className="text-[11px] font-black px-2.5 py-1 rounded-full bg-amber-950/70 border border-amber-600/60 text-amber-300 flex items-center gap-1 shadow-sm">
+              <i className="fa-solid fa-bolt text-amber-400"></i>
+              {stats.totalXP.toLocaleString()} XP
             </span>
           </div>
           <p className="text-xs sm:text-sm text-slate-400 mt-1">
@@ -664,7 +761,7 @@ export default function HomeView({
         <div className="absolute bottom-0 left-0 -mb-10 -ml-10 w-72 h-72 bg-teal-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
         <div className="relative z-10 flex flex-col gap-6">
-          {/* Üst Kısım: Genel Başlık, Yüzde ve Butonlar */}
+          {/* Üst Kısım: Genel Başlık, Yüzde ve Motto */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div>
               <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-400">
@@ -674,11 +771,16 @@ export default function HomeView({
               <h3 className="text-xl sm:text-2xl font-black text-slate-100 mt-1">
                 {isTr ? 'A1 → A2 Genel İlerleme Durumu' : 'A1 → A2 Overall Progress Index'}
               </h3>
-              <p className="text-xs text-slate-400 mt-1">
-                {isTr 
-                  ? 'İlerlemeniz: Bölümler, Kelimeler ve Sorulardaki başarı durumunuzun eşit ağırlıklı ortalamasıdır.' 
-                  : 'Calculated as the equal average of your progress across Sections, Vocabulary, and Questions.'}
-              </p>
+              
+              {/* MOTTO PİLL */}
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-gradient-to-r from-teal-500/15 via-brand-500/15 to-indigo-500/15 border border-brand-500/30 text-[11px] font-semibold text-brand-300 mt-2 shadow-sm">
+                <i className="fa-solid fa-fire text-amber-400 animate-pulse"></i>
+                <span>
+                  {isTr 
+                    ? 'Her Çalışma Bir İlerlemedir: Çözülen her soru, öğrenilen her kelime ve tamamlanan her bölüm seviyenizi anında yükseltir.' 
+                    : 'Every Action Matters: Every question answered, word studied, and section completed moves your progress forward.'}
+                </span>
+              </div>
             </div>
 
             <div className="flex items-center gap-4 flex-shrink-0">
@@ -693,6 +795,47 @@ export default function HomeView({
             </div>
           </div>
 
+          {/* XP & SEVİYE İLERLEME ŞERİDİ */}
+          <div className="bg-slate-800/60 rounded-2xl p-3.5 border border-slate-700/60 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-inner">
+            <div className="flex items-center gap-3 w-full sm:w-auto">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500/20 to-orange-500/20 border border-amber-500/40 flex items-center justify-center text-amber-300 text-lg flex-shrink-0 shadow-sm">
+                <i className={levelInfo.icon}></i>
+              </div>
+              <div>
+                <div className="flex items-center gap-2">
+                  <span className="text-xs font-black text-amber-300 uppercase tracking-wider">
+                    {isTr ? `Seviye ${levelInfo.level}` : `Level ${levelInfo.level}`} • {levelInfo.title}
+                  </span>
+                  <span className="text-[10px] px-2 py-0.5 rounded-full bg-slate-900 border border-slate-700 font-bold text-slate-300">
+                    {levelInfo.rank}
+                  </span>
+                </div>
+                <p className="text-[11px] text-slate-400 mt-0.5">
+                  {levelInfo.nextTierTitle 
+                    ? (isTr ? `Sonraki Seviye: ${levelInfo.nextTierTitle} (${levelInfo.xpToNextLevel.toLocaleString()} XP kaldı)` : `Next: ${levelInfo.nextTierTitle} (${levelInfo.xpToNextLevel.toLocaleString()} XP left)`)
+                    : (isTr ? 'En yüksek seviyeye ulaşıldı!' : 'Max Level Reached!')}
+                </p>
+              </div>
+            </div>
+
+            <div className="w-full sm:w-64 space-y-1">
+              <div className="flex justify-between text-[11px]">
+                <span className="text-amber-400 font-mono font-bold flex items-center gap-1">
+                  <i className="fa-solid fa-bolt text-xs"></i> {stats.totalXP.toLocaleString()} XP
+                </span>
+                <span className="text-slate-400 font-mono">
+                  %{levelInfo.tierProgressPercent}
+                </span>
+              </div>
+              <div className="w-full bg-slate-900 rounded-full h-2 overflow-hidden border border-slate-800">
+                <div 
+                  className="bg-gradient-to-r from-amber-400 via-orange-400 to-rose-400 h-full rounded-full transition-all duration-500"
+                  style={{ width: `${Math.max(4, levelInfo.tierProgressPercent)}%` }}
+                ></div>
+              </div>
+            </div>
+          </div>
+
           {/* Ana İlerleme Çubuğu */}
           <div className="space-y-1.5">
             <div className="w-full bg-slate-800/90 rounded-full h-4 overflow-hidden p-0.5 border border-slate-700/80 shadow-inner">
@@ -701,12 +844,14 @@ export default function HomeView({
                 style={{ width: `${Math.max(3, stats.overallProgress)}%` }}
               ></div>
             </div>
-            <div className="flex justify-between items-center text-[11px] text-slate-400 px-1">
-              <span>0% Başlangıç</span>
-              <span className="font-mono text-slate-300">
-                ( %{stats.sectionsProgressPercent} + %{stats.wordsProgressPercent} + %{stats.questionsProgressPercent} ) ÷ 3 = %{stats.overallProgress}
+            <div className="flex justify-between items-center text-[11px] text-slate-400 px-1 flex-wrap gap-2">
+              <span>0% {isTr ? 'Başlangıç' : 'Start'}</span>
+              <span className="font-mono text-slate-300 text-center">
+                {isTr 
+                  ? `Dersler: %${stats.sectionsProgressPercent} (x0.35) + Kelimeler: %${stats.wordsProgressPercent} (x0.35) + Sorular: %${stats.questionsProgressPercent} (x0.30) = %${stats.overallProgress}`
+                  : `Sections: %${stats.sectionsProgressPercent} (x0.35) + Vocab: %${stats.wordsProgressPercent} (x0.35) + Quizzes: %${stats.questionsProgressPercent} (x0.30) = %${stats.overallProgress}`}
               </span>
-              <span>100% Tam Yetkinlik</span>
+              <span>100% {isTr ? 'A2 Yetkinlik' : 'A2 Mastery'}</span>
             </div>
           </div>
 
@@ -740,6 +885,10 @@ export default function HomeView({
                 <span>{isTr ? 'Tamamlanan:' : 'Completed:'}</span>
                 <span className="font-bold text-slate-200">{stats.completedSectionsCount} / {stats.totalBookSections}</span>
               </div>
+              <div className="mt-1 text-[10px] text-indigo-300/80 flex items-center gap-1">
+                <i className="fa-solid fa-circle-check text-[9px]"></i>
+                <span>{isTr ? `+${stats.completedChaptersCount} ünite bonusu & kısmi puanlar` : `+${stats.completedChaptersCount} chapter bonus & partials`}</span>
+              </div>
             </div>
 
             {/* Sütun 2: Kelimeler & Hazne */}
@@ -770,6 +919,10 @@ export default function HomeView({
                 <span>{isTr ? 'Öğrenilen:' : 'Mastered:'}</span>
                 <span className="font-bold text-slate-200">{stats.totalLearnedWords} / {stats.totalBookWords}</span>
               </div>
+              <div className="mt-1 text-[10px] text-emerald-300/80 flex items-center gap-1">
+                <i className="fa-solid fa-chart-line text-[9px]"></i>
+                <span>{isTr ? `${stats.totalLearningWords} çalışılan • +${stats.totalFlashcardReviews} flashcard` : `${stats.totalLearningWords} in review • +${stats.totalFlashcardReviews} cards`}</span>
+              </div>
             </div>
 
             {/* Sütun 3: Sorular & Quizler */}
@@ -799,6 +952,53 @@ export default function HomeView({
               <div className="flex items-center justify-between text-[11px] text-slate-400">
                 <span>{isTr ? 'Çözülen Soru:' : 'Attempted:'}</span>
                 <span className="font-bold text-slate-200">{stats.uniqueAttempted} / {stats.totalQuizQuestions}</span>
+              </div>
+              <div className="mt-1 text-[10px] text-teal-300/80 flex items-center gap-1">
+                <i className="fa-solid fa-star text-[9px]"></i>
+                <span>{isTr ? `${stats.masteredCount} kusursuz • 400 hedef puan` : `${stats.masteredCount} mastered • 400 target pts`}</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Aksiyon Etki Tablosu (Action Impact Strip) */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1 border-t border-slate-700/50">
+            <div className="p-2.5 rounded-xl bg-slate-800/40 border border-slate-700/50 flex items-center gap-2.5">
+              <span className="w-7 h-7 rounded-lg bg-teal-500/15 border border-teal-500/30 flex items-center justify-center text-teal-400 text-xs flex-shrink-0">
+                <i className="fa-solid fa-clipboard-check"></i>
+              </span>
+              <div className="min-w-0">
+                <div className="text-[11px] font-bold text-slate-200 truncate">{isTr ? '1 Soru Çözümü' : '1 Question'}</div>
+                <div className="text-[10px] text-teal-300 font-mono">+10-25 XP • Quiz %</div>
+              </div>
+            </div>
+
+            <div className="p-2.5 rounded-xl bg-slate-800/40 border border-slate-700/50 flex items-center gap-2.5">
+              <span className="w-7 h-7 rounded-lg bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-xs flex-shrink-0">
+                <i className="fa-solid fa-brain"></i>
+              </span>
+              <div className="min-w-0">
+                <div className="text-[11px] font-bold text-slate-200 truncate">{isTr ? '1 Kelime Pratiği' : '1 Word Study'}</div>
+                <div className="text-[10px] text-emerald-300 font-mono">+8-20 XP • Kelime %</div>
+              </div>
+            </div>
+
+            <div className="p-2.5 rounded-xl bg-slate-800/40 border border-slate-700/50 flex items-center gap-2.5">
+              <span className="w-7 h-7 rounded-lg bg-indigo-500/15 border border-indigo-500/30 flex items-center justify-center text-indigo-400 text-xs flex-shrink-0">
+                <i className="fa-solid fa-book-bookmark"></i>
+              </span>
+              <div className="min-w-0">
+                <div className="text-[11px] font-bold text-slate-200 truncate">{isTr ? 'Bölüm Bitirme' : 'Section Done'}</div>
+                <div className="text-[10px] text-indigo-300 font-mono">+60 XP • Ders %</div>
+              </div>
+            </div>
+
+            <div className="p-2.5 rounded-xl bg-slate-800/40 border border-slate-700/50 flex items-center gap-2.5">
+              <span className="w-7 h-7 rounded-lg bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-400 text-xs flex-shrink-0">
+                <i className="fa-solid fa-medal"></i>
+              </span>
+              <div className="min-w-0">
+                <div className="text-[11px] font-bold text-slate-200 truncate">{isTr ? 'Ünite Bitirme' : 'Chapter Done'}</div>
+                <div className="text-[10px] text-amber-300 font-mono">+300 XP • Bonus %</div>
               </div>
             </div>
           </div>
