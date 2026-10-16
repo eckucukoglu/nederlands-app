@@ -79,70 +79,128 @@ export const getDutchVoices = () => {
   });
 };
 
-// Konuşmacının adından veya rolünden cinsiyet tahmini (diyaloglarda farklı doğal ses atamak için)
-const femaleNames = new Set([
-  'emma', 'eva', 'lotte', 'sanne', 'lisa', 'anna', 'sophie', 'sarah', 'fleur', 
-  'anouk', 'karin', 'elena', 'maria', 'vrouw', 'moeder', 'dochter', 'meisje', 
-  'doktersassistente', 'vriendin', 'serveerster', 'verkoopster', 'mevrouw',
-  'kirsten', 'marit', 'janine', 'amira', 'caissière', 'caissiere', 'tina',
-  'susy', 'edit', 'christine', 'sandra', 'patricia'
-]);
+// Konuşmacının adından veya rolünden cinsiyet tespiti
+export const detectSpeakerGender = (speakerName = '') => {
+  if (!speakerName) return 'neutral';
+  
+  // Normalizasyon: Küçük harfe çevir ve aksanları temizle (é, è, ë, ç vb.)
+  const raw = speakerName.trim().toLowerCase();
+  const normalized = raw
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '');
 
-const maleNames = new Set([
-  'sam', 'dijs', 'tom', 'daan', 'bram', 'lars', 'sem', 'lucas', 'milan', 
-  'levi', 'finn', 'jan', 'peter', 'man', 'vader', 'zoon', 'jongen', 
-  'dokter', 'arts', 'politieagent', 'ober', 'verkoper', 'makelaar', 'fietsenmaker',
-  'meneer', 'buschauffeur', 'portier', 'voorbijganger', 'bas', 'paul', 'tjeerd',
-  'buurman', 'andres', 'bert', 'hans', 'jasper', 'huisarts'
-]);
+  const words = normalized.split(/[\s,/-]+/);
+
+  // Doğrudan kadın unvan / rol / anahtar kelimeleri
+  const femaleRoles = [
+    'vrouw', 'mevrouw', 'meisje', 'moeder', 'dochter', 'zus', 'oma', 'tante', 
+    'vriendin', 'serveerster', 'verkoopster', 'caissiere', 'doktersassistente', 
+    'assistente', 'buurvrouw', 'dame', 'lerares', 'studente', 'vrouwen', 'dames'
+  ];
+
+  // Doğrudan erkek unvan / rol / anahtar kelimeleri
+  const maleRoles = [
+    'man', 'meneer', 'jongen', 'vader', 'zoon', 'broer', 'opa', 'oom', 
+    'vriend', 'ober', 'verkoper', 'makelaar', 'fietsenmaker', 'huisarts', 
+    'dokter', 'arts', 'politieagent', 'agent', 'portier', 'buschauffeur', 
+    'buurman', 'heer', 'docent', 'cursist', 'leraar', 'student', 'verteller', 
+    'voorbijganger', 'mannen', 'heren'
+  ];
+
+  // Kadın isimleri listesi (müfredattaki tüm diyalog karakterleri dahil)
+  const femaleNames = new Set([
+    'amira', 'anna', 'anouk', 'christine', 'colette', 'claire', 'edit', 'elena', 
+    'ellen', 'emma', 'eva', 'fenna', 'fleur', 'janine', 'karin', 'kirsten', 
+    'laura', 'lisa', 'lotte', 'maria', 'marit', 'ning', 'patricia', 'sandra', 
+    'sanne', 'sarah', 'saskia', 'sophie', 'susy', 'tina', 'charlotte', 'willeke',
+    'inge', 'danielle', 'esther', 'monique', 'astrid', 'bianca'
+  ]);
+
+  // Erkek isimleri listesi (müfredattaki tüm diyalog karakterleri dahil)
+  const maleNames = new Set([
+    'andres', 'arthur', 'bart', 'bas', 'bert', 'bram', 'daan', 'dijs', 
+    'finn', 'frank', 'hans', 'jan', 'jasper', 'lars', 'levi', 'luc', 
+    'lucas', 'maarten', 'milan', 'paul', 'peter', 'ruben', 'sam', 'sem', 
+    'tjeerd', 'tom', 'xander', 'willem', 'johan', 'thijs', 'stefan', 'koen', 
+    'mark', 'arjan', 'dennis', 'tim', 'jeroen', 'sander', 'erik', 'kevin'
+  ]);
+
+  // 1. Rol kontrolü
+  for (const role of femaleRoles) {
+    if (words.includes(role) || normalized.includes(role)) return 'female';
+  }
+  for (const role of maleRoles) {
+    if (words.includes(role) || normalized.includes(role)) return 'male';
+  }
+
+  // 2. İsim kontrolü
+  for (const w of words) {
+    if (femaleNames.has(w)) return 'female';
+    if (maleNames.has(w)) return 'male';
+  }
+
+  return 'neutral';
+};
 
 export const getSpeakerVoiceConfig = (speakerName = '') => {
-  const name = (speakerName || '').trim().toLowerCase();
-  
-  let isFemale = false;
-  let isMale = false;
-
-  if (name) {
-    for (const f of femaleNames) {
-      if (name.includes(f)) { isFemale = true; break; }
-    }
-    if (!isFemale) {
-      for (const m of maleNames) {
-        if (name.includes(m)) { isMale = true; break; }
-      }
-    }
-  }
+  const gender = detectSpeakerGender(speakerName);
+  const isFemale = gender === 'female';
+  const isMale = gender === 'male';
 
   const dutchVoices = getDutchVoices();
   let selectedVoice = null;
+  let voiceGender = 'unknown';
 
   if (dutchVoices.length > 0) {
-    selectedVoice = dutchVoices[0];
+    selectedVoice = dutchVoices[0]; // varsayılan
 
-    // Sistemde birden fazla Hollandaca ses varsa karakter cinsiyetine veya konuşmacıya göre ata
-    if (dutchVoices.length > 1) {
-      const femaleVoices = dutchVoices.filter(v => 
-        /female|vrouw|fenna|colette|claire|ellen|laura/i.test(v.name)
-      );
-      const maleVoices = dutchVoices.filter(v => 
-        /male|man|maarten|bart|xander|ruben/i.test(v.name)
-      );
+    const femaleVoiceRegex = /female|vrouw|fenna|colette|claire|ellen|saskia|laura|anna|emma|dfa|dfd|dff|woman/i;
+    const maleVoiceRegex = /male|man|maarten|bart|xander|ruben|daan|frank|bram|arthur|luc|dfb|dfc|dfe/i;
 
-      if (isFemale && femaleVoices.length > 0) {
-        selectedVoice = femaleVoices[0];
-      } else if (isMale && maleVoices.length > 0) {
-        selectedVoice = maleVoices[0];
-      } else if (name) {
-        // Cinsiyet belirli değilse iki farklı konuşmacı dönüşümlü farklı ses alsın
-        const charSum = name.split('').reduce((acc, c) => acc + c.charCodeAt(0), 0);
-        selectedVoice = dutchVoices[charSum % dutchVoices.length];
-      }
+    const femaleVoices = dutchVoices.filter(v => femaleVoiceRegex.test(v.name));
+    const maleVoices = dutchVoices.filter(v => maleVoiceRegex.test(v.name));
+
+    if (isFemale && femaleVoices.length > 0) {
+      selectedVoice = femaleVoices[0];
+      voiceGender = 'female';
+    } else if (isMale && maleVoices.length > 0) {
+      selectedVoice = maleVoices[0];
+      voiceGender = 'male';
+    } else if (dutchVoices.length > 1) {
+      // Cinsiyet belirli değilse iki farklı konuşmacı dönüşümlü farklı ses alsın
+      const charSum = (speakerName || '').split('').reduce((acc, c) => acc + c.charCodeAt(0), 0);
+      selectedVoice = dutchVoices[charSum % dutchVoices.length];
+      if (femaleVoiceRegex.test(selectedVoice.name)) voiceGender = 'female';
+      else if (maleVoiceRegex.test(selectedVoice.name)) voiceGender = 'male';
+    } else {
+      // Tek ses varsa adından tahmin et
+      if (femaleVoiceRegex.test(selectedVoice.name)) voiceGender = 'female';
+      else if (maleVoiceRegex.test(selectedVoice.name)) voiceGender = 'male';
     }
   }
 
-  // ÖNEMLİ: Pitch (ses perdesi) DAİMA 1.0 (doğal) bırakılmalıdır!
-  // Web Speech API'de suni pitch değişimi ses frekansını bozup robotikleştirir ve telaffuz anlaşılmaz hale gelir.
-  return { pitch: 1.0, voice: selectedVoice };
+  // Akıllı Perde (Pitch) Yönetimi:
+  // Eğer tarayıcıda özel erkek veya kadın sesi yoksa, ya da tek bir ses yüklüyse
+  // (örneğin masaüstü Chrome'da varsayılan Google Nederlands dişi sestir),
+  // perdede yapılan doğal frekans ayarı konuşmacının net olarak kadın veya erkek
+  // olduğunu kulakla anında ayırt ettirir.
+  let pitch = 1.0;
+
+  if (isMale) {
+    if (voiceGender === 'male') {
+      pitch = 0.95; // Doğal erkek register'ı
+    } else {
+      pitch = 0.78; // Dişi veya genel sesi derin, rezonanslı doğal erkek sesine dönüştürür
+    }
+  } else if (isFemale) {
+    if (voiceGender === 'female') {
+      pitch = 1.05; // Doğal kadın register'ı
+    } else {
+      pitch = 1.18; // Erkek veya genel sesi berrak, canlı kadın sesine dönüştürür
+    }
+  }
+
+  return { pitch, voice: selectedVoice, gender };
 };
 
 // Chrome/Chromium uzun metinlerde 15 saniye sonra takılma sorununu önleyen heartbeat mekanizması

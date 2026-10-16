@@ -6,6 +6,7 @@ import {
   speakDutch as speakDutchAudio, 
   speakDutchWithHighlight, 
   parseTextTokens, 
+  detectSpeakerGender,
   getSpeechRate, 
   setSpeechRate, 
   cancelDutchSpeech 
@@ -730,7 +731,25 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
                 
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center justify-between gap-2 mb-1">
-                    <span className={`font-bold text-xs uppercase tracking-wider ${style.text}`}>{line.speaker}</span>
+                    <span className={`font-bold text-xs uppercase tracking-wider flex items-center gap-1.5 ${style.text}`}>
+                      <i 
+                        className={`text-[10px] ${
+                          detectSpeakerGender(line.speaker) === 'female' 
+                            ? 'fa-solid fa-venus text-rose-400' 
+                            : detectSpeakerGender(line.speaker) === 'male' 
+                            ? 'fa-solid fa-mars text-sky-400' 
+                            : 'fa-regular fa-user text-slate-400'
+                        }`} 
+                        title={
+                          detectSpeakerGender(line.speaker) === 'female' 
+                            ? (lang === 'tr' ? 'Kadın Konuşmacı (Kadın Sesi)' : 'Female Speaker') 
+                            : detectSpeakerGender(line.speaker) === 'male' 
+                            ? (lang === 'tr' ? 'Erkek Konuşmacı (Erkek Sesi)' : 'Male Speaker') 
+                            : ''
+                        }
+                      ></i>
+                      <span>{line.speaker}</span>
+                    </span>
                     {isLinePlaying && (
                       <span className="inline-flex items-center gap-1.5 text-[10px] font-bold text-amber-300 bg-amber-950/70 px-2.5 py-0.5 rounded-full border border-amber-600/60 shadow-[0_0_10px_rgba(245,158,11,0.25)] animate-pulse">
                         <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shadow-[0_0_5px_#fbbf24]"></span>
