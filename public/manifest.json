@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Nederlands",
+  "name": "Nederlands - A1/A2 Inburgering & Oefenportaal",
+  "description": "Nederlands in Gang A1-A2 ve Inburgering sınavı hazırlık portalı: interaktif bölümler, sesli okuma ve 2.450+ soru havuzu.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +21,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#0d9488",
+  "background_color": "#0f172a"
 }
