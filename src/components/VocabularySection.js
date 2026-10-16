@@ -490,9 +490,6 @@ export default function VocabularySection({
       {/* Alfabetik Hızlı Atlama Çubuğu (Yalnızca alfabetik modda ve arama yokken) */}
       {groupType === 'alphabetical' && !searchQuery && (
         <div className="flex items-center flex-wrap gap-1.5 py-1.5 w-full max-w-full min-w-0">
-          <span className="text-[11px] font-bold text-slate-500 uppercase mr-1 flex-shrink-0">
-            {isTr ? 'Harfler:' : 'Letters:'}
-          </span>
           {groupedSections.map(group => (
             <a
               key={group.key}
