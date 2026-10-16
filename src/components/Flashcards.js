@@ -122,9 +122,15 @@ export default function Flashcards({ initialChapter, chapter }) {
     if (!word) return { nl: "", tr: "", en: "", example: "" };
     if (word.id?.startsWith('empty')) return word;
 
-    const match = globalDictionary.find(
-      item => item.nl.toLowerCase() === word.nl?.toLowerCase()
-    );
+    const lower = (word.nl || '').toLowerCase().trim();
+    const cleanLower = lower.replace(/^(de|het|een)\s+/, '').replace(/\(.*?\)/g, '').trim();
+
+    const match = globalDictionary.find(item => {
+      const itemLow = item.nl.toLowerCase().trim();
+      if (itemLow === lower) return true;
+      const itemClean = itemLow.replace(/^(de|het|een)\s+/, '').replace(/\(.*?\)/g, '').trim();
+      return itemClean === cleanLower || itemLow === cleanLower;
+    });
 
     return {
       ...word,

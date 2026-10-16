@@ -392,7 +392,7 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
     let matches = [];
     try {
       const regex = new RegExp(`\\b${cleanWord}\\b`, 'i');
-      matches = uniqueVocab.filter(v => regex.test(v.nl));
+      matches = uniqueVocab.filter(v => regex.test(v.nl) || regex.test(v.nl.replace(/['’]/g, '')));
     } catch (err) {
       console.error("Regex error:", err);
     }
@@ -412,10 +412,16 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
     }
 
     matches.sort((a, b) => {
-      const aIsExact = a.nl.toLowerCase() === cleanWord ? -1 : 1;
-      const bIsExact = b.nl.toLowerCase() === cleanWord ? -1 : 1;
-      if (aIsExact !== bIsExact) return aIsExact - bIsExact;
-      return a.nl.length - b.nl.length;
+      const getScore = (item) => {
+        const low = item.nl.toLowerCase();
+        const lowNoApos = low.replace(/['’]/g, '');
+        if (low === cleanWord || lowNoApos === cleanWord) return 100;
+        if (low === `de ${cleanWord}` || low === `het ${cleanWord}` || low === `een ${cleanWord}`) return 90;
+        if (low.startsWith(`${cleanWord} (`) || lowNoApos.startsWith(`${cleanWord} (`)) return 85;
+        if (low.includes(`(${cleanWord})`)) return 80;
+        return 50 - Math.min(item.nl.length, 40);
+      };
+      return getScore(b) - getScore(a);
     });
 
     setSelectedWords(matches);

@@ -622,7 +622,7 @@ export const WORD_METADATA = {
   "1_12": {
     "pos": "expression",
     "context": "classroom",
-    "tr": ""
+    "tr": "öğretmenler (öğretmen)"
   },
   "1_13": {
     "pos": "pronoun",
@@ -787,7 +787,7 @@ export const WORD_METADATA = {
   "1_45": {
     "pos": "expression",
     "context": "greetings",
-    "tr": ""
+    "tr": "senin adın ne?"
   },
   "1_46": {
     "pos": "verb",
@@ -947,7 +947,7 @@ export const WORD_METADATA = {
   "1_77": {
     "pos": "number",
     "context": "numbers_time",
-    "tr": ""
+    "tr": "bir (1)"
   },
   "1_78": {
     "pos": "preposition",
@@ -962,7 +962,7 @@ export const WORD_METADATA = {
   "1_80": {
     "pos": "number",
     "context": "numbers_time",
-    "tr": ""
+    "tr": "sekiz (8)"
   },
   "1_81": {
     "pos": "verb",
@@ -1057,7 +1057,7 @@ export const WORD_METADATA = {
   "2_10": {
     "pos": "noun",
     "context": "food_drinks",
-    "tr": ""
+    "tr": "fincan"
   },
   "2_11": {
     "pos": "noun",
@@ -1717,7 +1717,7 @@ export const WORD_METADATA = {
   "4_16": {
     "pos": "noun",
     "context": "core_words",
-    "tr": ""
+    "tr": "birkaç gün"
   },
   "4_17": {
     "pos": "adverb_conjunction",
@@ -1892,7 +1892,7 @@ export const WORD_METADATA = {
   "4_51": {
     "pos": "adverb_conjunction",
     "context": "core_words",
-    "tr": ""
+    "tr": "gitmek / ayrılmak üzere (kaçmak)"
   },
   "4_52": {
     "pos": "adverb_conjunction",
@@ -1957,7 +1957,7 @@ export const WORD_METADATA = {
   "5_5": {
     "pos": "expression",
     "context": "market_shopping",
-    "tr": ""
+    "tr": "sıra kimde?"
   },
   "5_6": {
     "pos": "noun",
@@ -2012,12 +2012,12 @@ export const WORD_METADATA = {
   "5_16": {
     "pos": "adverb_conjunction",
     "context": "core_words",
-    "tr": ""
+    "tr": "tabii ki / elbette"
   },
   "5_17": {
     "pos": "expression",
     "context": "core_words",
-    "tr": ""
+    "tr": "başka bir şey var mı?"
   },
   "5_18": {
     "pos": "adverb_conjunction",
@@ -2117,7 +2117,7 @@ export const WORD_METADATA = {
   "5_37": {
     "pos": "noun",
     "context": "quantities_weights",
-    "tr": ""
+    "tr": "küçük kap / kutu"
   },
   "5_38": {
     "pos": "noun",
@@ -2132,12 +2132,12 @@ export const WORD_METADATA = {
   "5_40": {
     "pos": "noun",
     "context": "core_words",
-    "tr": ""
+    "tr": "demet"
   },
   "5_41": {
     "pos": "expression",
     "context": "core_words",
-    "tr": ""
+    "tr": "başka bir arzunuz var mı?"
   },
   "5_42": {
     "pos": "noun",
@@ -2502,7 +2502,7 @@ export const WORD_METADATA = {
   "6_60": {
     "pos": "noun",
     "context": "core_words",
-    "tr": ""
+    "tr": "meyveler (meyve)"
   },
   "6_61": {
     "pos": "noun",
@@ -2542,7 +2542,7 @@ export const WORD_METADATA = {
   "6_68": {
     "pos": "expression",
     "context": "core_words",
-    "tr": ""
+    "tr": "teşekkür ederim (resmi)"
   },
   "6_69": {
     "pos": "noun",
@@ -2567,7 +2567,7 @@ export const WORD_METADATA = {
   "7_4": {
     "pos": "preposition",
     "context": "core_words",
-    "tr": ""
+    "tr": "...-mek / -mak için"
   },
   "7_5": {
     "pos": "noun",
@@ -3067,7 +3067,7 @@ export const WORD_METADATA = {
   "8_50": {
     "pos": "noun",
     "context": "real_estate",
-    "tr": ""
+    "tr": "küçük ev"
   },
   "8_51": {
     "pos": "adverb_conjunction",
@@ -3182,7 +3182,7 @@ export const WORD_METADATA = {
   "9_4": {
     "pos": "expression",
     "context": "core_words",
-    "tr": ""
+    "tr": "sorun nedir? / ne oldu?"
   },
   "9_5": {
     "pos": "adverb_conjunction",
@@ -3192,7 +3192,7 @@ export const WORD_METADATA = {
   "9_6": {
     "pos": "expression",
     "context": "core_words",
-    "tr": ""
+    "tr": "her yerim kabarcık / döküntü içinde"
   },
   "9_7": {
     "pos": "noun",
@@ -3712,7 +3712,7 @@ export const WORD_METADATA = {
   "11_6": {
     "pos": "noun",
     "context": "gifts_surprises",
-    "tr": ""
+    "tr": "hediye"
   },
   "11_7": {
     "pos": "noun",
@@ -3977,17 +3977,17 @@ export const WORD_METADATA = {
   "11_59": {
     "pos": "noun",
     "context": "core_words",
-    "tr": ""
+    "tr": "Yürüyüş Fuarı"
   },
   "11_60": {
     "pos": "expression",
     "context": "core_words",
-    "tr": ""
+    "tr": "...için hazırlanıyorum (hazırlanmak)"
   },
   "11_61": {
     "pos": "noun",
     "context": "core_words",
-    "tr": ""
+    "tr": "yürüyüş gezisi / turu"
   },
   "11_62": {
     "pos": "noun",
@@ -4022,7 +4022,7 @@ export const WORD_METADATA = {
   "11_68": {
     "pos": "expression",
     "context": "core_words",
-    "tr": ""
+    "tr": "daha yavaş (yavaş)"
   },
   "11_69": {
     "pos": "noun",
@@ -4047,7 +4047,7 @@ export const WORD_METADATA = {
   "12_2": {
     "pos": "expression",
     "context": "core_words",
-    "tr": ""
+    "tr": "Buraları biliyor musunuz? (tanıdık mısınız?)"
   },
   "12_3": {
     "pos": "adverb_conjunction",
@@ -4142,7 +4142,7 @@ export const WORD_METADATA = {
   "12_21": {
     "pos": "verb",
     "context": "directions_orientation",
-    "tr": ""
+    "tr": "karşıdan karşıya geçmek"
   },
   "12_22": {
     "pos": "noun",
@@ -4232,12 +4232,12 @@ export const WORD_METADATA = {
   "12_39": {
     "pos": "verb",
     "context": "core_words",
-    "tr": ""
+    "tr": "(köşeyi) dönmek"
   },
   "12_40": {
     "pos": "verb",
     "context": "directions_orientation",
-    "tr": ""
+    "tr": "(aşağı) inmek"
   },
   "12_41": {
     "pos": "adverb_conjunction",
@@ -4362,7 +4362,7 @@ export const WORD_METADATA = {
   "13_20": {
     "pos": "expression",
     "context": "core_words",
-    "tr": ""
+    "tr": "Kesinlikle öyle! / Ne demezsin!"
   },
   "13_21": {
     "pos": "adjective",
@@ -4387,7 +4387,7 @@ export const WORD_METADATA = {
   "13_25": {
     "pos": "verb",
     "context": "core_words",
-    "tr": ""
+    "tr": "açık tutmak / üzerinde olmak"
   },
   "13_26": {
     "pos": "noun",
@@ -4532,12 +4532,12 @@ export const WORD_METADATA = {
   "13_54": {
     "pos": "expression",
     "context": "core_words",
-    "tr": ""
+    "tr": "arabanın altında kaldı"
   },
   "13_55": {
     "pos": "expression",
     "context": "core_words",
-    "tr": ""
+    "tr": "...için çok üzüldük / yas tuttuk"
   },
   "13_56": {
     "pos": "noun",
@@ -4852,7 +4852,7 @@ export const WORD_METADATA = {
   "14_49": {
     "pos": "expression",
     "context": "core_words",
-    "tr": ""
+    "tr": "bu şekilde / o yolla"
   },
   "14_50": {
     "pos": "adverb_conjunction",
@@ -5072,7 +5072,7 @@ export const WORD_METADATA = {
   "15_17": {
     "pos": "noun",
     "context": "nature_landscape",
-    "tr": ""
+    "tr": "pencere (küçük pencere)"
   },
   "15_18": {
     "pos": "expression",
@@ -5197,7 +5197,7 @@ export const WORD_METADATA = {
   "15_42": {
     "pos": "noun",
     "context": "core_words",
-    "tr": ""
+    "tr": "parça / kısım"
   },
   "15_43": {
     "pos": "noun",
@@ -5437,7 +5437,7 @@ export const WORD_METADATA = {
   "17_17": {
     "pos": "noun",
     "context": "morning_evening",
-    "tr": ""
+    "tr": "kahvaltı"
   },
   "17_18": {
     "pos": "preposition",
@@ -5717,7 +5717,7 @@ export const WORD_METADATA = {
   "18_17": {
     "pos": "verb",
     "context": "core_words",
-    "tr": ""
+    "tr": "sahipti / vardı (sahip olmak)"
   },
   "18_18": {
     "pos": "adverb_conjunction",
