@@ -1,5 +1,5 @@
 // src/data/quiz/chapters11_15.js
-// Auto-generated modular quiz dataset with pedagogical ratings (difficulty 1-5, quality 1-2)
+// Auto-calibrated modular quiz dataset for CEFR A2 Inburgering exam prep
 export const chapters11_15 = [
   {
     "id": "sum_ch11_001",
@@ -159,7 +159,7 @@ export const chapters11_15 = [
     "correctAnswer": "ik werkte",
     "explanationTr": "'werken' kökü 'k' (soft ketchup) ile bittiği için '+te' alır: ik werkte.",
     "explanationEn": "Stem of 'werken' ends in 'k' (soft ketchup), so it takes '+te': ik werkte.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -180,7 +180,7 @@ export const chapters11_15 = [
     "correctAnswer": "hij speelde",
     "explanationTr": "'spelen' kökü 'l' harfiyle biter (soft ketchup içinde yoktur), bu yüzden '+de' alır: hij speelde.",
     "explanationEn": "Stem of 'spelen' ends in 'l' (not in soft ketchup), so it takes '+de': hij speelde.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -201,7 +201,7 @@ export const chapters11_15 = [
     "correctAnswer": "ik herhaalde",
     "explanationTr": "'herhalen' kökü 'l' ile bittiği için '+de' alır: ik herhaalde.",
     "explanationEn": "Stem of 'herhalen' takes '+de': ik herhaalde.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -222,7 +222,7 @@ export const chapters11_15 = [
     "correctAnswer": "ik woonde",
     "explanationTr": "'wonen' kökü 'n' ile biter, imperfectum'da '+de' alır: ik woonde.",
     "explanationEn": "Stem of 'wonen' takes '+de' in the imperfectum: ik woonde.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -264,7 +264,7 @@ export const chapters11_15 = [
     "correctAnswer": "wij werkten",
     "explanationTr": "Çoğul 'wij' için imperfectum kuralı 'stam + ten' şeklindedir: wij werkten.",
     "explanationEn": "For plural 'wij', the imperfectum rule gives 'stam + ten': wij werkten.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -285,7 +285,7 @@ export const chapters11_15 = [
     "correctAnswer": "jullie speelden",
     "explanationTr": "Çoğul 'jullie' için imperfectum kuralı 'stam + den' şeklindedir: jullie speelden.",
     "explanationEn": "For plural 'jullie', the imperfectum rule gives 'stam + den': jullie speelden.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -423,7 +423,7 @@ export const chapters11_15 = [
     "correctAnswer": "in",
     "explanationTr": "Hikaye geçmiş zamanda da ayrılabilen fiilin prefixi ('in') sona gider.",
     "explanationEn": "In the imperfectum, the prefix ('in') of the separable verb also goes to the end.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2,
     "options": [
       "in",
@@ -1343,7 +1343,7 @@ export const chapters11_15 = [
     "correctAnswer": "Wat vind je van...? / Hoe vind je ...?",
     "explanationTr": "Meydan/fikir sormak için 'Wat vind je van...?' veya 'Hoe vind je...?' kalıpları kullanılır.",
     "explanationEn": "To ask for an opinion, use 'Wat vind je van...?' or 'Hoe vind je...?'.",
-    "difficulty": 5,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -1364,7 +1364,7 @@ export const chapters11_15 = [
     "correctAnswer": "Ik vind [...] / Volgens mij ...",
     "explanationTr": "Fikir belirtirken 'Ik vind [sıfat/nesne]' veya 'Volgens mij ...' kalıpları seçilir.",
     "explanationEn": "To express an opinion, use 'Ik vind [...]' or 'Volgens mij ...'.",
-    "difficulty": 5,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -1948,7 +1948,7 @@ export const chapters11_15 = [
     "correctAnswer": "Zijn conditie verbeteren, spieren versterken en gewicht verliezen.",
     "explanationTr": "Paul kondisyonunu geliştirmek, kaslarını güçlendirmek ve kilo vermek istemektedir.",
     "explanationEn": "Paul wants to improve his stamina, strengthen his muscles, and also lose weight.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -2358,7 +2358,7 @@ export const chapters11_15 = [
     "correctAnswer": "Good, dank je. En met jou?",
     "explanationTr": "Hal hatır sorulduğunda 'İyi, teşekkürler. Ya sen?' demek için bu kalıp kullanılır.",
     "explanationEn": "When asked how you are, a standard polite reply is 'Good, dank je. En met jou?'.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -2579,7 +2579,7 @@ export const chapters11_15 = [
     "correctAnswer": "Bij de-words (en meervoud / personen)",
     "explanationTr": "'die' de-woord isimler, çoğullar ve kişiler için kullanılır.",
     "explanationEn": "'die' is used for de-words, plurals, and people.",
-    "difficulty": 5,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -2621,7 +2621,7 @@ export const chapters11_15 = [
     "correctAnswer": "Die / zij",
     "explanationTr": "Özet notlarında kişilere atıfta bulunmak için 'Die/zij' kullanılabileceği gösterilmiştir.",
     "explanationEn": "The summary notes show that 'Die/zij' can be used to refer to a person.",
-    "difficulty": 5,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -2642,7 +2642,7 @@ export const chapters11_15 = [
     "correctAnswer": "Bij het-words, een idee of een hele zin",
     "explanationTr": "'dat' het-woord isimler, fikirler veya bütün bir cümle için kullanılır.",
     "explanationEn": "'dat' is used for het-words, an idea, or an entire sentence.",
-    "difficulty": 5,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -3005,7 +3005,7 @@ export const chapters11_15 = [
     "correctAnswer": "die",
     "explanationTr": "De-woord isimler için 'die' kullanılır.",
     "explanationEn": "For de-words, we use 'die'.",
-    "difficulty": 5,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -3025,7 +3025,7 @@ export const chapters11_15 = [
     "correctAnswer": "dat",
     "explanationTr": "Het-woord isimler için 'dat' kullanılır.",
     "explanationEn": "For het-words, we use 'dat'.",
-    "difficulty": 5,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -3045,7 +3045,7 @@ export const chapters11_15 = [
     "correctAnswer": "Ja, ook bij personen en meervoud.",
     "explanationTr": "'die' kişilere ve çoğul isimlere de atıfta bulunabilir.",
     "explanationEn": "'die' can also refer to people and plurals.",
-    "difficulty": 5,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -3065,7 +3065,7 @@ export const chapters11_15 = [
     "correctAnswer": "Verwijzen naar een idee of een hele zin.",
     "explanationTr": "'dat' aynı zamanda bir fikre veya bütün bir cümleye atıfta bulunabilir.",
     "explanationEn": "'dat' can also refer back to an idea or an entire sentence.",
-    "difficulty": 5,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -3836,7 +3836,7 @@ export const chapters11_15 = [
     "correctAnswer": "Ja, honden met een rustig gedrag zijn toegelaten, mits aangelijnd.",
     "explanationTr": "Metinde uysal köpeklerin tasmalı olmak (mits aangelijnd) şartıyla kabul edildiği yazmaktadır.",
     "explanationEn": "The text states that well-behaved dogs are allowed, provided they are on a leash (mits aangelijnd).",
-    "difficulty": 3,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -4636,7 +4636,7 @@ export const chapters11_15 = [
     "correctAnswer": "50%",
     "explanationTr": "Grafikte diğer sporların (overig) toplam payı %50 olarak gösterilmektedir.",
     "explanationEn": "The diagram indicates that 'overig' (other sports) makes up 50%.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -4846,7 +4846,7 @@ export const chapters11_15 = [
     "correctAnswer": "Voor de-woorden, personen en meervoudsvormen.",
     "explanationTr": "'die' zamiri tek başına kullanılırken 'de-woorden' (de artikelli kelimeler), kişiler ve çoğullar için kullanılır.",
     "explanationEn": "The pronoun 'die' used independently refers to de-words, people, and plural nouns.",
-    "difficulty": 5,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -5323,7 +5323,7 @@ export const chapters11_15 = [
     "correctAnswer": "vervelen",
     "explanationTr": "'Zich vervelen' (canı sıkılmak) fiilinin çoğul (ze = onlar) çekimi 'vervelen'dir.",
     "explanationEn": "For subject 'ze' (they plural), the reflexive verb 'zich vervelen' (to be bored) conjugates as 'vervelen'.",
-    "difficulty": 4,
+    "difficulty": 2,
     "quality": 2,
     "options": [
       "vervelen",
@@ -5392,7 +5392,7 @@ export const chapters11_15 = [
     "correctAnswer": "kwam ... tegen",
     "explanationTr": "'Tegenkomen' geçmiş zamanda da ayrılır. 'Komen' fiilinin imperfectum hali 'kwam' olup 'tegen' cümlenin sonuna gider: 'Gisteren kwam ik Peter tegen.'",
     "explanationEn": "In the imperfectum, separable verbs also split: 'komen' becomes irregular past 'kwam' at 2nd position, and 'tegen' goes to the end.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -5916,7 +5916,7 @@ export const chapters11_15 = [
     "correctAnswer": "Die is in de les.",
     "explanationTr": "İnsanlara gayriresmi ama çok yaygın şekilde atıfta bulunurken 'de'-kelimesi mantığıyla 'Die' kullanılır: 'Die is in de les.'",
     "explanationEn": "When referring back demonstratively to people in natural Dutch conversation, 'Die' is standard: 'Die is in de les.'",
-    "difficulty": 5,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -5937,7 +5937,7 @@ export const chapters11_15 = [
     "correctAnswer": "Dat / Het is een prachtig natuurgebied.",
     "explanationTr": "'Het Naardermeer' bir het-kelimesidir. 'Het'-kelimelerine atıfta bulunurken 'Dat' veya 'Het' kullanılır.",
     "explanationEn": "Since 'Naardermeer' is a 'het'-word, you refer back to it using 'Dat' (or 'Het'): 'Dat is een prachtig natuurgebied.'",
-    "difficulty": 5,
+    "difficulty": 3,
     "quality": 2
   },
   {

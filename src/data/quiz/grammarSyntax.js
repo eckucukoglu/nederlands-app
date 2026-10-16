@@ -1,5 +1,5 @@
 // src/data/quiz/grammarSyntax.js
-// Auto-generated modular quiz dataset with pedagogical ratings (difficulty 1-5, quality 1-2)
+// Auto-calibrated modular quiz dataset for CEFR A2 Inburgering exam prep
 export const grammarSyntax = [
   {
     "id": "q_verb_pres_2",
@@ -71,7 +71,7 @@ export const grammarSyntax = [
     "correctAnswer": "vind",
     "explanationTr": "ALTIN KURAL! Soru cümlesinde 'jij' veya 'je' fiilden SONRA gelirse, fiildeki 't' eki DÜŞER. Sadece kök kullanılır (vind).",
     "explanationEn": "GOLDEN RULE! In a question, if 'jij/je' comes AFTER the verb, the 't' is DROPPED. Only the stem is used (vind).",
-    "difficulty": 4,
+    "difficulty": 2,
     "quality": 2,
     "options": [
       "vind",
@@ -97,8 +97,8 @@ export const grammarSyntax = [
     "correctAnswer": "vindt",
     "explanationTr": "Dikkat! Devrik yapıda 't' düşme kuralı SADECE 'jij/je' için geçerlidir. 'u' zamirinde 't' harfi daima kalır.",
     "explanationEn": "Attention! The rule of dropping the 't' ONLY applies to 'jij/je'. With the formal 'u', the 't' always stays.",
-    "difficulty": 4,
-    "quality": 1
+    "difficulty": 2,
+    "quality": 2
   },
   {
     "id": "q_pres_016",
@@ -112,7 +112,7 @@ export const grammarSyntax = [
     "explanationTr": "'jij' fiilden sonra geldiği için 't' düşer (wordt -> word).",
     "explanationEn": "Because 'jij' comes after the verb, the 't' drops (wordt -> word).",
     "difficulty": 2,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "word",
       "wordt",
@@ -178,7 +178,7 @@ export const grammarSyntax = [
     "explanationTr": "Soru cümlesinde 'je/jij' fiilden sonra gelince 't' düşer. (Ziet -> Zie).",
     "explanationEn": "In a question, when 'je/jij' follows the verb, the 't' drops. (Ziet -> Zie).",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_wo_001",
@@ -406,7 +406,7 @@ export const grammarSyntax = [
     "explanationTr": "ALTIN KURAL! Soru cümlesinde 'jij' fiilden SONRA geldiği için fiildeki '-t' harfi düşer.",
     "explanationEn": "GOLDEN RULE! In a question, because 'jij' comes AFTER the verb, the '-t' is dropped.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_wo_020",
@@ -427,7 +427,7 @@ export const grammarSyntax = [
     "explanationTr": "'jij' fiilden sonra geldiği için 'hebben' fiilindeki '-t' düşer (hebt -> heb).",
     "explanationEn": "Because 'jij' follows the verb, the '-t' on 'hebben' drops (hebt -> heb).",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_wo_021",
@@ -505,7 +505,7 @@ export const grammarSyntax = [
     "explanationTr": "Soru kelimesi + Fiil + Özne. Özne 'hij' olduğu için '-t' kalır.",
     "explanationEn": "Question word + Verb + Subject. The subject is 'hij', so the '-t' stays.",
     "difficulty": 2,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "lacht",
       "lach",
@@ -532,7 +532,7 @@ export const grammarSyntax = [
     "explanationTr": "'Je zus' (kız kardeşin) 3. tekil şahıstır. Fiil kökü zaten 't' ile bittiği için ekstra 't' almaz (heet).",
     "explanationEn": "'Je zus' is 3rd person singular. The stem already ends in 't', so it takes no extra 't' (heet).",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_wo_027",
@@ -547,7 +547,7 @@ export const grammarSyntax = [
     "explanationTr": "'Welke' soru grubu başa gelir. 'jij' fiilden sonra geldiği için 't' düşer.",
     "explanationEn": "'Welke' question group comes first. Because 'jij' is after the verb, the 't' drops.",
     "difficulty": 2,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "spreek",
       "spreekt",
@@ -574,7 +574,7 @@ export const grammarSyntax = [
     "explanationTr": "Soru grubu (Welk boek) + Fiil + Özne (jij). Fiilden sonraki 'jij' kuralı işler ve 't' düşer.",
     "explanationEn": "Question group + Verb + Subject (jij). The post-verb 'jij' rule applies, dropping the 't'.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_wo_029",
@@ -589,7 +589,7 @@ export const grammarSyntax = [
     "explanationTr": "'Hoeveel broers' başa gelir, sonra fiil, sonra özne. 'jij' fiilin sağına düştüğü için 'hebt' yerine 'heb' olur.",
     "explanationEn": "'Hoeveel broers' is first, then the verb, then subject. Since 'jij' is to the right of the verb, 'hebt' becomes 'heb'.",
     "difficulty": 2,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "heb",
       "heeft",
@@ -616,7 +616,7 @@ export const grammarSyntax = [
     "explanationTr": "'Wat' başa gelir, sonra fiil. 'jij' fiilden sonra olduğu için 't' düşer.",
     "explanationEn": "'Wat' comes first, then the verb. Because 'jij' is after the verb, the 't' drops.",
     "difficulty": 2,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_wo_031",
@@ -671,7 +671,7 @@ export const grammarSyntax = [
     "explanationTr": "Soru cümlesinde de kural değişmez. Kipli fiil (Kan) başa gelir, asıl fiil (helpen) cümlenin en sonuna gider.",
     "explanationEn": "The rule remains in a question. The modal verb (Kan) is at the front, and the main verb (helpen) goes to the very end.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "helpen",
       "help",
@@ -698,7 +698,7 @@ export const grammarSyntax = [
     "explanationTr": "Soru kelimesi (Wat) + Modal Fiil (wil) + Özne + Zaman + Ana Fiil (Sonda ve mastar).",
     "explanationEn": "Question word (Wat) + Modal (wil) + Subject + Time + Main Verb (At the end, infinitive).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_wo_035",
@@ -739,7 +739,7 @@ export const grammarSyntax = [
     "explanationTr": "'Mag' (mogen) izin fiilidir, ana eylemi bildiren 'parkeren' cümlenin sonunda mastar halinde yer alır.",
     "explanationEn": "'Mag' (mogen) is a modal verb of permission, the main action 'parkeren' stays at the end in the infinitive.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_wo_037",
@@ -780,7 +780,7 @@ export const grammarSyntax = [
     "explanationTr": "Modal fiil (Wilt) cümlenin ikinci sırasında veya soru olduğu için en başındadır, asıl fiil sonda mastar halindedir.",
     "explanationEn": "The modal verb is in the 2nd position or 1st in a question, the main verb is infinitive at the end.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_wo_039",
@@ -795,7 +795,7 @@ export const grammarSyntax = [
     "explanationTr": "'Zullen' ile öneri sunarken de ana eylem (gaan) cümlenin sonunda yer alır.",
     "explanationEn": "When making a suggestion with 'Zullen', the main action (gaan) is also placed at the end of the sentence.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "ga",
       "gaat",
@@ -822,7 +822,7 @@ export const grammarSyntax = [
     "explanationTr": "Soru kelimesi (Waar) + modal fiil (kan) + özne (ik) + nesne (de auto) + ana fiil (parkeren).",
     "explanationEn": "Question word (Waar) + modal verb (kan) + subject (ik) + object (de auto) + main verb (parkeren).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_mod_012",
@@ -857,7 +857,7 @@ export const grammarSyntax = [
     "explanationTr": "Soru cümlesinde de kural aynıdır: Modal fiil başta, ana fiil (helpen) mastar olarak sonda.",
     "explanationEn": "The rule is the same in questions: Modal verb at the front, main verb (helpen) as infinitive at the end.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "helpen",
       "help",
@@ -884,7 +884,7 @@ export const grammarSyntax = [
     "explanationTr": "'Mag' izin fiilidir, asıl eylem 'roken' (içmek) mastar olarak sona gider.",
     "explanationEn": "'Mag' is the modal for permission, the main action 'roken' goes to the end in the infinitive.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_mod_015",
@@ -898,7 +898,7 @@ export const grammarSyntax = [
     "explanationTr": "Modal fiilli (wil) bir cümlede asıl eylem daima sona gider: 'komen'.",
     "explanationEn": "In a sentence with a modal (wil), the main action always goes to the end: 'komen'.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "kom",
       "komt",
@@ -964,7 +964,7 @@ export const grammarSyntax = [
     "explanationTr": "Hollandacada bağlamdan çok net anlaşılan 'gaan' (gitmek) gibi fiiller modal fiillerden sonra düşürülebilir.",
     "explanationEn": "In Dutch, obvious verbs like 'gaan' (to go) can be omitted after modal verbs if the context is clear.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_mod_019",
@@ -979,7 +979,7 @@ export const grammarSyntax = [
     "explanationTr": "Teklif cümlesi: 'Zullen' başta, asıl eylem 'eten' sonda.",
     "explanationEn": "Proposal sentence: 'Zullen' at the beginning, main action 'eten' at the end.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "eet",
       "eten",
@@ -1293,7 +1293,7 @@ export const grammarSyntax = [
     "explanationTr": "Soru cümlesinde 'jij' fiilden sonra gelince 'gaan' fiilindeki 't' düşer: Ga.",
     "explanationEn": "In a question, when 'jij' comes after the verb, the 't' in 'gaan' drops: Ga.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "Ga",
       "Gaat",
@@ -1320,7 +1320,7 @@ export const grammarSyntax = [
     "explanationTr": "'jullie' çoğul bir şahıs olduğu için fiil çekimi her zaman mastar (gaan) olur.",
     "explanationEn": "'jullie' is a plural person, so the verb conjugation is always the infinitive (gaan).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_fut_033",
@@ -1420,7 +1420,7 @@ export const grammarSyntax = [
     "explanationTr": "Soru cümlesinde (Zal ik...) ana eylem cümlenin sonunda olur (bellen).",
     "explanationEn": "In a question sentence (Zal ik...), the main action is at the end of the sentence (bellen).",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "bellen",
       "bell",
@@ -1462,7 +1462,7 @@ export const grammarSyntax = [
     "explanationTr": "'Gaat' fiili kullanıldığı için 'vertrekken' sonda ve mastar (infinitief) olmalıdır.",
     "explanationEn": "Because the verb 'Gaat' is used, 'vertrekken' must be at the end and as an infinitive.",
     "difficulty": 4,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "vertrekken",
       "vertrekk",
@@ -1490,7 +1490,7 @@ export const grammarSyntax = [
     "explanationTr": "Bir teklif olan 'Zullen we...' yapısında ana eylem cümlenin sonunda yer alır (zitten).",
     "explanationEn": "In the proposal structure 'Zullen we...', the main action is placed at the end of the sentence (zitten).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_er_cont_001",
@@ -1503,7 +1503,7 @@ export const grammarSyntax = [
     "correctAnswer": "Er",
     "explanationTr": "Cümlede belirli bir özne yoksa ve belirsiz bir durumdan ('geen plaats' - yer yok) bahsediliyorsa cümleye 'Er' ile başlanır. (İngilizcedeki 'There is' gibi).",
     "explanationEn": "If the sentence lacks a definite subject and talks about an indefinite situation ('geen plaats' - no room), the sentence starts with 'Er'. (Like 'There is' in English).",
-    "difficulty": 2,
+    "difficulty": 4,
     "quality": 2,
     "options": [
       "Er",
@@ -1529,7 +1529,7 @@ export const grammarSyntax = [
     "correctAnswer": "Er",
     "explanationTr": "Özne 'veel problemen' (belirsiz ve çoğul) olduğu için cümlenin başında 'Er' kullanılır.",
     "explanationEn": "Because the subject is 'veel problemen' (indefinite and plural), 'Er' is used at the beginning of the sentence.",
-    "difficulty": 2,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -1543,7 +1543,7 @@ export const grammarSyntax = [
     "correctAnswer": "zitten",
     "explanationTr": "'Er' cümleye başlar ama asıl özne 'vijf studenten' (çoğul) olduğu için fiil de çoğul (zitten) olur.",
     "explanationEn": "'Er' starts the sentence, but the real subject is 'vijf studenten' (plural), so the verb is plural (zitten).",
-    "difficulty": 2,
+    "difficulty": 4,
     "quality": 2,
     "options": [
       "zitten",
@@ -1569,8 +1569,8 @@ export const grammarSyntax = [
     "correctAnswer": "Omdat 'een kat' een indefiniet subject is.",
     "explanationTr": "'een kat' (bir kedi) belirsiz bir öznedir. Belirsiz öznelerle Hollandacada genellikle 'Er' yapısı kullanılır.",
     "explanationEn": "'een kat' (a cat) is an indefinite subject. With indefinite subjects, the 'Er' structure is typically used in Dutch.",
-    "difficulty": 5,
-    "quality": 1
+    "difficulty": 4,
+    "quality": 2
   },
   {
     "id": "q_er_cont_005",
@@ -1583,8 +1583,8 @@ export const grammarSyntax = [
     "correctAnswer": "staat",
     "explanationTr": "Özne 'een man' (tekil ve belirsiz). Bu yüzden 'staan' fiili 3. tekil şahıs formunda 'staat' olur.",
     "explanationEn": "The subject is 'een man' (singular and indefinite). Therefore, the verb 'staan' becomes 'staat' in the 3rd person singular form.",
-    "difficulty": 2,
-    "quality": 1,
+    "difficulty": 4,
+    "quality": 2,
     "options": [
       "staat",
       "staa",
@@ -1603,7 +1603,7 @@ export const grammarSyntax = [
     "correctAnswer": "Er",
     "explanationTr": "'twee boeken' (iki kitap) belirsiz bir öznedir (hangi iki kitap olduğu belli değil). 'Er' ile başlanır.",
     "explanationEn": "'twee boeken' (two books) is an indefinite subject (we don't know which two). It starts with 'Er'.",
-    "difficulty": 2,
+    "difficulty": 4,
     "quality": 2,
     "options": [
       "Er",
@@ -1628,7 +1628,7 @@ export const grammarSyntax = [
     "correctAnswer": "Er is een probleem.",
     "explanationTr": "'een probleem' tekil olduğu için 'is' kullanılır. 'veel problemen' çoğul olduğu için 'zijn' gerektirirdi.",
     "explanationEn": "'een probleem' is singular, so 'is' is used. 'veel problemen' is plural and would require 'zijn'.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -1642,7 +1642,7 @@ export const grammarSyntax = [
     "correctAnswer": "werken",
     "explanationTr": "'twintig mensen' (yirmi insan) çoğul bir özne olduğu için fiil mastar (werken) halindedir.",
     "explanationEn": "'twintig mensen' (twenty people) is a plural subject, so the verb is in the infinitive (werken).",
-    "difficulty": 2,
+    "difficulty": 4,
     "quality": 2,
     "options": [
       "werk",
@@ -1668,8 +1668,8 @@ export const grammarSyntax = [
     "correctAnswer": "Er zit een vogel in de boom.",
     "explanationTr": "'Er' yapısı BELİRLİ öznelerle (de man, de studenten) KULLANILMAZ. 'een vogel' (bir kuş) belirsizdir, bu yüzden doğrudur.",
     "explanationEn": "The 'Er' structure is NOT USED with DEFINITE subjects (de man, de studenten). 'een vogel' (a bird) is indefinite, so it's correct.",
-    "difficulty": 3,
-    "quality": 1
+    "difficulty": 4,
+    "quality": 2
   },
   {
     "id": "q_er_cont_012",
@@ -1681,7 +1681,7 @@ export const grammarSyntax = [
     "correctAnswer": "er",
     "explanationTr": "Yer bildirirken vurgu yoksa ve cümlenin ortasında yer alıyorsa 'er' (orada) kullanılır.",
     "explanationEn": "When indicating a place without emphasis and in the middle of the sentence, 'er' (there) is used.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2,
     "options": [
       "er",
@@ -1701,7 +1701,7 @@ export const grammarSyntax = [
     "correctAnswer": "Daar",
     "explanationTr": "Cümlenin en başında Tayland'a özel bir vurgu yapılıyor. Bu yüzden 'Daar' kullanılır.",
     "explanationEn": "There is a specific emphasis on Thailand at the very beginning of the sentence. Therefore, 'Daar' is used.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2,
     "options": [
       "Daar",
@@ -1720,8 +1720,8 @@ export const grammarSyntax = [
     "correctAnswer": "daar",
     "explanationTr": "Masadaki spesifik bir yeri işaret edip gösterdiğimiz için (İşte orada!) 'daar' kelimesi daha uygundur.",
     "explanationEn": "Because we are pointing to a specific place on the table (Right there!), 'daar' is more appropriate.",
-    "difficulty": 3,
-    "quality": 1,
+    "difficulty": 4,
+    "quality": 2,
     "options": [
       "daar",
       "daart",
@@ -1746,8 +1746,8 @@ export const grammarSyntax = [
     "correctAnswer": "er",
     "explanationTr": "Londen hakkında konuşulurken vurgusuz yer bildirmek için cümlenin ortasında 'er' kullanılır.",
     "explanationEn": "When talking about London, 'er' is used in the middle of the sentence to indicate the place without emphasis.",
-    "difficulty": 3,
-    "quality": 1
+    "difficulty": 4,
+    "quality": 2
   },
   {
     "id": "q_er_cont_018",
@@ -1760,7 +1760,7 @@ export const grammarSyntax = [
     "correctAnswer": "Daar",
     "explanationTr": "'Orada Hollanda kralı yaşıyor.' Cümle başına vurgulu yer geldiği için 'Daar' kullanılır.",
     "explanationEn": "'There lives the king of the Netherlands.' Because it starts with a stressed place, 'Daar' is used.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2,
     "options": [
       "Daar",
@@ -1786,7 +1786,7 @@ export const grammarSyntax = [
     "correctAnswer": "er",
     "explanationTr": "'er', cümlenin ortasında Utrecht'e atıfta bulunarak 'orada' (vurgusuz) anlamına gelir.",
     "explanationEn": "'er' refers back to Utrecht in the middle of the sentence meaning 'there' (unstressed).",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -1799,8 +1799,8 @@ export const grammarSyntax = [
     "correctAnswer": "er",
     "explanationTr": "'Er', miktar veya sayı belirtirken de kullanılır ('Bende ondan hiç yok'). 'Ik heb er geen' çok yaygın bir kalıptır.",
     "explanationEn": "'Er' is also used when indicating quantity/number ('I have none of it'). 'Ik heb er geen' is a very common phrase.",
-    "difficulty": 3,
-    "quality": 1,
+    "difficulty": 4,
+    "quality": 2,
     "options": [
       "er",
       "ert",
@@ -1820,7 +1820,7 @@ export const grammarSyntax = [
     "explanationTr": "Soru cümlesinde 'je' (sen) için 'zijn' fiilinin çekimi 'ben' olur. (Ben je aan het...).",
     "explanationEn": "In a question, the conjugation of 'zijn' for 'je' (you) is 'ben'. (Ben je aan het...).",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "ben",
       "is",
@@ -1861,7 +1861,7 @@ export const grammarSyntax = [
     "explanationTr": "Soru kısmı: 'Wat doe je?' (Ne yapıyorsun?). 'je' fiilden sonra olduğu için 't' düştü.",
     "explanationEn": "Question part: 'Wat doe je?' (What are you doing?). 't' is dropped because 'je' follows the verb.",
     "difficulty": 2,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "doe",
       "doet",
@@ -1880,7 +1880,7 @@ export const grammarSyntax = [
     "correctAnswer": "is",
     "explanationTr": "Hem 'Er' kullanımı hem de continuous var. Özne 'iemand' (biri) tekil olduğu için 'is' kullanılır.",
     "explanationEn": "Both 'Er' and continuous usage. The subject 'iemand' (someone) is singular, so 'is' is used.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2,
     "options": [
       "ben",
@@ -1906,8 +1906,8 @@ export const grammarSyntax = [
     "correctAnswer": "slapen",
     "explanationTr": "Hem yer bildiren 'daar' hem de continuous kalıbı 'aan het' var. 'Aan het' mastar ister (slapen).",
     "explanationEn": "Contains both the place indicator 'daar' and the continuous pattern 'aan het'. 'Aan het' takes the infinitive (slapen).",
-    "difficulty": 3,
-    "quality": 1
+    "difficulty": 4,
+    "quality": 2
   },
   {
     "id": "q_cont_035",
@@ -1920,7 +1920,7 @@ export const grammarSyntax = [
     "correctAnswer": "Er",
     "explanationTr": "Belirsiz 'geen suiker' (şeker yok) durumundan bahsederken cümleye 'Er' ile başlanır.",
     "explanationEn": "When talking about the indefinite 'geen suiker' (no sugar), the sentence starts with 'Er'.",
-    "difficulty": 2,
+    "difficulty": 4,
     "quality": 2,
     "options": [
       "Er",
@@ -1940,7 +1940,7 @@ export const grammarSyntax = [
     "correctAnswer": "staat",
     "explanationTr": "Özne 'een grote boom' (tekil) olduğu için 'staan' fiili 'staat' olur.",
     "explanationEn": "Since the subject is 'een grote boom' (singular), the verb 'staan' becomes 'staat'.",
-    "difficulty": 2,
+    "difficulty": 4,
     "quality": 2,
     "options": [
       "staat",
@@ -1967,7 +1967,7 @@ export const grammarSyntax = [
     "explanationTr": "'Daar' kullanıldığında 'ORADA' diyerek yere özel bir vurgu yapılmış olur.",
     "explanationEn": "When 'Daar' is used, it means 'THERE', placing special emphasis on the location.",
     "difficulty": 4,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_conj_pron_001",
@@ -2037,7 +2037,7 @@ export const grammarSyntax = [
     "explanationTr": "Seçenek sunarken 'of' kullanılır.",
     "explanationEn": "When offering choices, 'of' (or) is used.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "of",
       "maar",
@@ -2151,7 +2151,7 @@ export const grammarSyntax = [
     "explanationTr": "Sonuç bildiren ana cümleleri birbirine bağlamak için 'dus' kullanılır.",
     "explanationEn": "To connect main clauses indicating a result, 'dus' (so) is used.",
     "difficulty": 3,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "dus",
       "want",
@@ -2177,7 +2177,7 @@ export const grammarSyntax = [
     "explanationTr": "Bu 5 bağlaç iki ana cümleyi (hoofdzin) birbirine bağlar; dolayısıyla sonraki cümlede Özne + Fiil dizilimi bozulmaz.",
     "explanationEn": "These 5 conjunctions connect two main clauses; thus, the Subject + Verb order in the following clause is preserved.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_conj_pron_026",
@@ -2234,7 +2234,7 @@ export const grammarSyntax = [
     "explanationTr": "İki içecek arasında seçim sunuluyor ('of' - veya).",
     "explanationEn": "Offering a choice between two drinks ('of' - or).",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_conj_pron_029",
@@ -2292,7 +2292,7 @@ export const grammarSyntax = [
     "explanationTr": "Bu beşli ana cümleleri birbirine bağlar ve kelime sırasını değiştirmez.",
     "explanationEn": "These five connect main clauses and do not alter the word order.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_read_conj_043",
@@ -2312,7 +2312,7 @@ export const grammarSyntax = [
     "explanationTr": "'Dus' bir ana cümle bağlacıdır; arkasından gelen cümlede Özne + Fiil sıralaması bozulmaz.",
     "explanationEn": "'Dus' is a main clause conjunction; the Subject + Verb order in the following clause is not disrupted.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_bijz_001",
@@ -2515,7 +2515,7 @@ export const grammarSyntax = [
     "correctAnswer": "regende",
     "explanationTr": "'hoewel' (rağmen) yan cümle bağlacıdır. Fiil imperfectum geçmiş zamanda sona gider: 'regende'.",
     "explanationEn": "'hoewel' (although) is a subclause conjunction. The verb goes to the end in simple past: 'regende'.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2,
     "options": [
       "regende",
@@ -2804,7 +2804,7 @@ export const grammarSyntax = [
     "correctAnswer": "Hoewel",
     "explanationTr": "'Hasta olmama rağmen' anlamı için 'Hoewel' (although/rağmen) kullanılır.",
     "explanationEn": "For the meaning 'Although I am sick', 'Hoewel' is used.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -3028,7 +3028,7 @@ export const grammarSyntax = [
     "explanationTr": "Standart Felemenkçe düz cümlede özne (Ik) 1. sırada, çekimli fiil (drink) 2. sırada, zaman ve nesne ise daha sonra gelir.",
     "explanationEn": "In a standard Dutch main clause, the subject (Ik) is 1st, finite verb (drink) is 2nd, followed by time and object.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1018",
@@ -3112,7 +3112,7 @@ export const grammarSyntax = [
     "explanationTr": "'Want' bağlacı ana cümle düzenini (subject + verb) korur: '...want ik heb hoofdpijn.'",
     "explanationEn": "'Want' keeps standard main clause word order (subject + verb): '...want ik heb hoofdpijn.'",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "gr_1070",
@@ -3175,8 +3175,8 @@ export const grammarSyntax = [
     "correctAnswer": "Er staan veel mensen te wachten bij de bushalte.",
     "explanationTr": "'Er' özne pozisyonunda kullanıldığında fiil hemen 2. sırada yer alır: 'Er staan veel mensen...'",
     "explanationEn": "When 'Er' is the dummy subject, the finite verb follows directly in 2nd position: 'Er staan veel mensen...'",
-    "difficulty": 3,
-    "quality": 1
+    "difficulty": 4,
+    "quality": 2
   },
   {
     "id": "gr_1073",
@@ -3196,7 +3196,7 @@ export const grammarSyntax = [
     "correctAnswer": "daar / Er",
     "explanationTr": "'Daar' vurgulu yer işaret eder (orada), 'Er' ise belirsiz bir durumun varlığını bildirir.",
     "explanationEn": "'Daar' points stressed location (there), while 'Er' functions as unstressed existential subject.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   }
 ];

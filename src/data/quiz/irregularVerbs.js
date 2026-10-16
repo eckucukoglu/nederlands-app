@@ -1,5 +1,5 @@
 // src/data/quiz/irregularVerbs.js
-// Auto-generated modular quiz dataset with pedagogical ratings (difficulty 1-5, quality 1-2)
+// Auto-calibrated modular quiz dataset for CEFR A2 Inburgering exam prep
 export const irregularVerbs = [
   {
     "id": "q_irreg_bakken_i1",
@@ -18,10 +18,10 @@ export const irregularVerbs = [
       "gebakken"
     ],
     "correctAnswer": "bakte",
-    "explanationTr": "'bakken' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'bakte' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'bakken' is 'bakte'.",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'bakken' (fırında pişirmek) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'bakte' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'bakken' (to bake) is 'bakte'.",
+    "difficulty": 4,
+    "quality": 2
   },
   {
     "id": "q_irreg_bakken_f1",
@@ -40,10 +40,10 @@ export const irregularVerbs = [
       "bakten"
     ],
     "correctAnswer": "gebakken",
-    "explanationTr": "'bakken' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gebakken'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'bakken' is 'gebakken' (used with auxiliary 'hebben').",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'bakken' (fırında pişirmek) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gebakken'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'bakken' (to bake) is 'gebakken' (conjugated with auxiliary 'hebben').",
+    "difficulty": 4,
+    "quality": 2
   },
   {
     "id": "q_irreg_beginnen_i1",
@@ -62,10 +62,10 @@ export const irregularVerbs = [
       "beginnen"
     ],
     "correctAnswer": "begon",
-    "explanationTr": "'beginnen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'begon' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'beginnen' is 'begon'.",
+    "explanationTr": "'beginnen' (başlamak) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'begon' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'beginnen' (to begin / start) is 'begon'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_beginnen_f1",
@@ -84,10 +84,10 @@ export const irregularVerbs = [
       "beginnende"
     ],
     "correctAnswer": "begonnen",
-    "explanationTr": "'beginnen' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'begonnen'dir (zijn ile kullanılır).",
-    "explanationEn": "The past participle of 'beginnen' is 'begonnen' (used with auxiliary 'zijn').",
+    "explanationTr": "'beginnen' (başlamak) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'begonnen'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'beginnen' (to begin / start) is 'begonnen' (conjugated with auxiliary 'hebben').",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_begrijpen_i1",
@@ -106,10 +106,10 @@ export const irregularVerbs = [
       "begrijpen"
     ],
     "correctAnswer": "begreep",
-    "explanationTr": "'begrijpen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'begreep' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'begrijpen' is 'begreep'.",
+    "explanationTr": "'begrijpen' (anlamak) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'begreep' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'begrijpen' (to understand) is 'begreep'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_begrijpen_f1",
@@ -128,10 +128,10 @@ export const irregularVerbs = [
       "begrijpende"
     ],
     "correctAnswer": "begrepen",
-    "explanationTr": "'begrijpen' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'begrepen'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'begrijpen' is 'begrepen' (used with auxiliary 'hebben').",
+    "explanationTr": "'begrijpen' (anlamak) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'begrepen'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'begrijpen' (to understand) is 'begrepen' (conjugated with auxiliary 'hebben').",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_bewegen_i1",
@@ -150,10 +150,10 @@ export const irregularVerbs = [
       "bewegen"
     ],
     "correctAnswer": "bewoog",
-    "explanationTr": "'bewegen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'bewoog' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'bewegen' is 'bewoog'.",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'bewegen' (hareket etmek / spor yapmak) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'bewoog' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'bewegen' (to move / exercise) is 'bewoog'.",
+    "difficulty": 5,
+    "quality": 2
   },
   {
     "id": "q_irreg_bewegen_f1",
@@ -172,10 +172,10 @@ export const irregularVerbs = [
       "bewegende"
     ],
     "correctAnswer": "bewogen",
-    "explanationTr": "'bewegen' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'bewogen'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'bewegen' is 'bewogen' (used with auxiliary 'hebben').",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'bewegen' (hareket etmek / spor yapmak) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'bewogen'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'bewegen' (to move / exercise) is 'bewogen' (conjugated with auxiliary 'hebben').",
+    "difficulty": 5,
+    "quality": 2
   },
   {
     "id": "q_irreg_bezoeken_i1",
@@ -194,10 +194,10 @@ export const irregularVerbs = [
       "bezoeken"
     ],
     "correctAnswer": "bezocht",
-    "explanationTr": "'bezoeken' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'bezocht' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'bezoeken' is 'bezocht'.",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'bezoeken' (ziyaret etmek) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'bezocht' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'bezoeken' (to visit) is 'bezocht'.",
+    "difficulty": 4,
+    "quality": 2
   },
   {
     "id": "q_irreg_bezoeken_f1",
@@ -216,10 +216,10 @@ export const irregularVerbs = [
       "bezochten"
     ],
     "correctAnswer": "bezocht",
-    "explanationTr": "'bezoeken' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'bezocht'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'bezoeken' is 'bezocht' (used with auxiliary 'hebben').",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'bezoeken' (ziyaret etmek) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'bezocht'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'bezoeken' (to visit) is 'bezocht' (conjugated with auxiliary 'hebben').",
+    "difficulty": 4,
+    "quality": 2
   },
   {
     "id": "q_irreg_blijven_i1",
@@ -238,10 +238,10 @@ export const irregularVerbs = [
       "gebleven"
     ],
     "correctAnswer": "bleef",
-    "explanationTr": "'blijven' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'bleef' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'blijven' is 'bleef'.",
+    "explanationTr": "'blijven' (kalmak) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'bleef' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'blijven' (to stay / remain) is 'bleef'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_blijven_f1",
@@ -260,10 +260,10 @@ export const irregularVerbs = [
       "geblijven"
     ],
     "correctAnswer": "gebleven",
-    "explanationTr": "'blijven' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gebleven'dir (zijn ile kullanılır).",
-    "explanationEn": "The past participle of 'blijven' is 'gebleven' (used with auxiliary 'zijn').",
+    "explanationTr": "'blijven' (kalmak) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gebleven'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'blijven' (to stay / remain) is 'gebleven' (conjugated with auxiliary 'hebben').",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_breken_i1",
@@ -282,10 +282,10 @@ export const irregularVerbs = [
       "gebroken"
     ],
     "correctAnswer": "brak",
-    "explanationTr": "'breken' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'brak' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'breken' is 'brak'.",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'breken' (kırmak / kırılmak) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'brak' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'breken' (to break) is 'brak'.",
+    "difficulty": 5,
+    "quality": 2
   },
   {
     "id": "q_irreg_breken_f1",
@@ -304,10 +304,10 @@ export const irregularVerbs = [
       "gebreken"
     ],
     "correctAnswer": "gebroken",
-    "explanationTr": "'breken' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gebroken'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'breken' is 'gebroken' (used with auxiliary 'hebben').",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'breken' (kırmak / kırılmak) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gebroken'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'breken' (to break) is 'gebroken' (conjugated with auxiliary 'hebben').",
+    "difficulty": 5,
+    "quality": 2
   },
   {
     "id": "q_irreg_brengen_i1",
@@ -326,10 +326,10 @@ export const irregularVerbs = [
       "gebracht"
     ],
     "correctAnswer": "bracht",
-    "explanationTr": "'brengen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'bracht' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'brengen' is 'bracht'.",
+    "explanationTr": "'brengen' (getirmek / götürmek) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'bracht' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'brengen' (to bring / take to) is 'bracht'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_brengen_f1",
@@ -348,10 +348,10 @@ export const irregularVerbs = [
       "gebrengen"
     ],
     "correctAnswer": "gebracht",
-    "explanationTr": "'brengen' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gebracht'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'brengen' is 'gebracht' (used with auxiliary 'hebben').",
+    "explanationTr": "'brengen' (getirmek / götürmek) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gebracht'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'brengen' (to bring / take to) is 'gebracht' (conjugated with auxiliary 'hebben').",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_denken_i1",
@@ -370,10 +370,10 @@ export const irregularVerbs = [
       "gedacht"
     ],
     "correctAnswer": "dacht",
-    "explanationTr": "'denken' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'dacht' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'denken' is 'dacht'.",
+    "explanationTr": "'denken' (düşünmek) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'dacht' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'denken' (to think) is 'dacht'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_denken_f1",
@@ -392,10 +392,10 @@ export const irregularVerbs = [
       "gedenken"
     ],
     "correctAnswer": "gedacht",
-    "explanationTr": "'denken' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gedacht'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'denken' is 'gedacht' (used with auxiliary 'hebben').",
+    "explanationTr": "'denken' (düşünmek) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gedacht'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'denken' (to think) is 'gedacht' (conjugated with auxiliary 'hebben').",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_doen_i1",
@@ -414,10 +414,10 @@ export const irregularVerbs = [
       "gedaan"
     ],
     "correctAnswer": "deed",
-    "explanationTr": "'doen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'deed' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'doen' is 'deed'.",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'doen' (yapmak) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'deed' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'doen' (to do) is 'deed'.",
+    "difficulty": 2,
+    "quality": 2
   },
   {
     "id": "q_irreg_doen_f1",
@@ -436,10 +436,10 @@ export const irregularVerbs = [
       "gedoen"
     ],
     "correctAnswer": "gedaan",
-    "explanationTr": "'doen' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gedaan'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'doen' is 'gedaan' (used with auxiliary 'hebben').",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'doen' (yapmak) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gedaan'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'doen' (to do) is 'gedaan' (conjugated with auxiliary 'hebben').",
+    "difficulty": 2,
+    "quality": 2
   },
   {
     "id": "q_irreg_dragen_i1",
@@ -458,10 +458,10 @@ export const irregularVerbs = [
       "gedragen"
     ],
     "correctAnswer": "droeg",
-    "explanationTr": "'dragen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'droeg' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'dragen' is 'droeg'.",
+    "explanationTr": "'dragen' (giymek / taşımak) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'droeg' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'dragen' (to wear / carry) is 'droeg'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_dragen_f1",
@@ -480,10 +480,10 @@ export const irregularVerbs = [
       "droegen"
     ],
     "correctAnswer": "gedragen",
-    "explanationTr": "'dragen' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gedragen'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'dragen' is 'gedragen' (used with auxiliary 'hebben').",
+    "explanationTr": "'dragen' (giymek / taşımak) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gedragen'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'dragen' (to wear / carry) is 'gedragen' (conjugated with auxiliary 'hebben').",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_drinken_i1",
@@ -502,10 +502,10 @@ export const irregularVerbs = [
       "gedronken"
     ],
     "correctAnswer": "dronk",
-    "explanationTr": "'drinken' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'dronk' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'drinken' is 'dronk'.",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'drinken' (içmek) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'dronk' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'drinken' (to drink) is 'dronk'.",
+    "difficulty": 2,
+    "quality": 2
   },
   {
     "id": "q_irreg_drinken_f1",
@@ -524,10 +524,10 @@ export const irregularVerbs = [
       "gedrinken"
     ],
     "correctAnswer": "gedronken",
-    "explanationTr": "'drinken' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gedronken'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'drinken' is 'gedronken' (used with auxiliary 'hebben').",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'drinken' (içmek) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gedronken'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'drinken' (to drink) is 'gedronken' (conjugated with auxiliary 'hebben').",
+    "difficulty": 2,
+    "quality": 2
   },
   {
     "id": "q_irreg_eten_i1",
@@ -546,10 +546,10 @@ export const irregularVerbs = [
       "gegeten"
     ],
     "correctAnswer": "at",
-    "explanationTr": "'eten' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'at' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'eten' is 'at'.",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'eten' (yemek) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'at' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'eten' (to eat) is 'at'.",
+    "difficulty": 2,
+    "quality": 2
   },
   {
     "id": "q_irreg_eten_f1",
@@ -568,10 +568,10 @@ export const irregularVerbs = [
       "geeten"
     ],
     "correctAnswer": "gegeten",
-    "explanationTr": "'eten' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gegeten'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'eten' is 'gegeten' (used with auxiliary 'hebben').",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'eten' (yemek) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gegeten'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'eten' (to eat) is 'gegeten' (conjugated with auxiliary 'hebben').",
+    "difficulty": 2,
+    "quality": 2
   },
   {
     "id": "q_irreg_gaan_i1",
@@ -590,10 +590,10 @@ export const irregularVerbs = [
       "gegaan"
     ],
     "correctAnswer": "ging",
-    "explanationTr": "'gaan' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'ging' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'gaan' is 'ging'.",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'gaan' (gitmek) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'ging' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'gaan' (to go) is 'ging'.",
+    "difficulty": 2,
+    "quality": 2
   },
   {
     "id": "q_irreg_gaan_f1",
@@ -612,10 +612,10 @@ export const irregularVerbs = [
       "gingen"
     ],
     "correctAnswer": "gegaan",
-    "explanationTr": "'gaan' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gegaan'dir (zijn ile kullanılır).",
-    "explanationEn": "The past participle of 'gaan' is 'gegaan' (used with auxiliary 'zijn').",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'gaan' (gitmek) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gegaan'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'gaan' (to go) is 'gegaan' (conjugated with auxiliary 'hebben').",
+    "difficulty": 2,
+    "quality": 2
   },
   {
     "id": "q_irreg_geven_i1",
@@ -634,10 +634,10 @@ export const irregularVerbs = [
       "gegeven"
     ],
     "correctAnswer": "gaf",
-    "explanationTr": "'geven' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'gaf' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'geven' is 'gaf'.",
+    "explanationTr": "'geven' (vermek) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'gaf' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'geven' (to give) is 'gaf'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_geven_f1",
@@ -656,10 +656,10 @@ export const irregularVerbs = [
       "gevende"
     ],
     "correctAnswer": "gegeven",
-    "explanationTr": "'geven' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gegeven'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'geven' is 'gegeven' (used with auxiliary 'hebben').",
+    "explanationTr": "'geven' (vermek) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gegeven'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'geven' (to give) is 'gegeven' (conjugated with auxiliary 'hebben').",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_hangen_i1",
@@ -678,10 +678,10 @@ export const irregularVerbs = [
       "gehangen"
     ],
     "correctAnswer": "hing",
-    "explanationTr": "'hangen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'hing' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'hangen' is 'hing'.",
+    "explanationTr": "'hangen' (asmak / asılı durmak) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'hing' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'hangen' (to hang) is 'hing'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_hangen_f1",
@@ -700,10 +700,10 @@ export const irregularVerbs = [
       "hingen"
     ],
     "correctAnswer": "gehangen",
-    "explanationTr": "'hangen' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gehangen'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'hangen' is 'gehangen' (used with auxiliary 'hebben').",
+    "explanationTr": "'hangen' (asmak / asılı durmak) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gehangen'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'hangen' (to hang) is 'gehangen' (conjugated with auxiliary 'hebben').",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_hebben_i1",
@@ -722,10 +722,10 @@ export const irregularVerbs = [
       "gehad"
     ],
     "correctAnswer": "had",
-    "explanationTr": "'hebben' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'had' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'hebben' is 'had'.",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'hebben' (sahip olmak) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'had' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'hebben' (to have) is 'had'.",
+    "difficulty": 2,
+    "quality": 2
   },
   {
     "id": "q_irreg_hebben_f1",
@@ -744,10 +744,10 @@ export const irregularVerbs = [
       "gehebben"
     ],
     "correctAnswer": "gehad",
-    "explanationTr": "'hebben' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gehad'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'hebben' is 'gehad' (used with auxiliary 'hebben').",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'hebben' (sahip olmak) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gehad'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'hebben' (to have) is 'gehad' (conjugated with auxiliary 'hebben').",
+    "difficulty": 2,
+    "quality": 2
   },
   {
     "id": "q_irreg_helpen_i1",
@@ -766,10 +766,10 @@ export const irregularVerbs = [
       "geholpen"
     ],
     "correctAnswer": "hielp",
-    "explanationTr": "'helpen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'hielp' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'helpen' is 'hielp'.",
+    "explanationTr": "'helpen' (yardım etmek) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'hielp' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'helpen' (to help) is 'hielp'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_helpen_f1",
@@ -788,10 +788,10 @@ export const irregularVerbs = [
       "gehelpen"
     ],
     "correctAnswer": "geholpen",
-    "explanationTr": "'helpen' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'geholpen'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'helpen' is 'geholpen' (used with auxiliary 'hebben').",
+    "explanationTr": "'helpen' (yardım etmek) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'geholpen'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'helpen' (to help) is 'geholpen' (conjugated with auxiliary 'hebben').",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_houden_i1",
@@ -810,10 +810,10 @@ export const irregularVerbs = [
       "gehouden"
     ],
     "correctAnswer": "hield",
-    "explanationTr": "'houden' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'hield' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'houden' is 'hield'.",
+    "explanationTr": "'houden' (tutmak / sevmek (houden van)) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'hield' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'houden' (to hold / love) is 'hield'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_houden_f1",
@@ -832,10 +832,10 @@ export const irregularVerbs = [
       "hielden"
     ],
     "correctAnswer": "gehouden",
-    "explanationTr": "'houden' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gehouden'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'houden' is 'gehouden' (used with auxiliary 'hebben').",
+    "explanationTr": "'houden' (tutmak / sevmek (houden van)) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gehouden'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'houden' (to hold / love) is 'gehouden' (conjugated with auxiliary 'hebben').",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_kiezen_i1",
@@ -854,10 +854,10 @@ export const irregularVerbs = [
       "gekozen"
     ],
     "correctAnswer": "koos",
-    "explanationTr": "'kiezen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'koos' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'kiezen' is 'koos'.",
+    "explanationTr": "'kiezen' (seçmek) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'koos' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'kiezen' (to choose) is 'koos'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_kiezen_f1",
@@ -876,10 +876,10 @@ export const irregularVerbs = [
       "gekiezen"
     ],
     "correctAnswer": "gekozen",
-    "explanationTr": "'kiezen' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gekozen'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'kiezen' is 'gekozen' (used with auxiliary 'hebben').",
+    "explanationTr": "'kiezen' (seçmek) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gekozen'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'kiezen' (to choose) is 'gekozen' (conjugated with auxiliary 'hebben').",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_kijken_i1",
@@ -898,10 +898,10 @@ export const irregularVerbs = [
       "gekeken"
     ],
     "correctAnswer": "keek",
-    "explanationTr": "'kijken' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'keek' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'kijken' is 'keek'.",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'kijken' (bakmak / izlemek) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'keek' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'kijken' (to look / watch) is 'keek'.",
+    "difficulty": 2,
+    "quality": 2
   },
   {
     "id": "q_irreg_kijken_f1",
@@ -920,10 +920,10 @@ export const irregularVerbs = [
       "gekijken"
     ],
     "correctAnswer": "gekeken",
-    "explanationTr": "'kijken' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gekeken'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'kijken' is 'gekeken' (used with auxiliary 'hebben').",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'kijken' (bakmak / izlemek) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gekeken'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'kijken' (to look / watch) is 'gekeken' (conjugated with auxiliary 'hebben').",
+    "difficulty": 2,
+    "quality": 2
   },
   {
     "id": "q_irreg_komen_i1",
@@ -942,10 +942,10 @@ export const irregularVerbs = [
       "gekomen"
     ],
     "correctAnswer": "kwam",
-    "explanationTr": "'komen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'kwam' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'komen' is 'kwam'.",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'komen' (gelmek) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'kwam' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'komen' (to come) is 'kwam'.",
+    "difficulty": 2,
+    "quality": 2
   },
   {
     "id": "q_irreg_komen_f1",
@@ -964,10 +964,10 @@ export const irregularVerbs = [
       "kwamen"
     ],
     "correctAnswer": "gekomen",
-    "explanationTr": "'komen' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gekomen'dir (zijn ile kullanılır).",
-    "explanationEn": "The past participle of 'komen' is 'gekomen' (used with auxiliary 'zijn').",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'komen' (gelmek) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gekomen'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'komen' (to come) is 'gekomen' (conjugated with auxiliary 'hebben').",
+    "difficulty": 2,
+    "quality": 2
   },
   {
     "id": "q_irreg_kopen_i1",
@@ -986,10 +986,10 @@ export const irregularVerbs = [
       "gekocht"
     ],
     "correctAnswer": "kocht",
-    "explanationTr": "'kopen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'kocht' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'kopen' is 'kocht'.",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'kopen' (satın almak) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'kocht' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'kopen' (to buy) is 'kocht'.",
+    "difficulty": 2,
+    "quality": 2
   },
   {
     "id": "q_irreg_kopen_f1",
@@ -1008,10 +1008,10 @@ export const irregularVerbs = [
       "gekopen"
     ],
     "correctAnswer": "gekocht",
-    "explanationTr": "'kopen' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gekocht'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'kopen' is 'gekocht' (used with auxiliary 'hebben').",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'kopen' (satın almak) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gekocht'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'kopen' (to buy) is 'gekocht' (conjugated with auxiliary 'hebben').",
+    "difficulty": 2,
+    "quality": 2
   },
   {
     "id": "q_irreg_krijgen_i1",
@@ -1030,10 +1030,10 @@ export const irregularVerbs = [
       "gekregen"
     ],
     "correctAnswer": "kreeg",
-    "explanationTr": "'krijgen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'kreeg' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'krijgen' is 'kreeg'.",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'krijgen' (almak / elde etmek) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'kreeg' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'krijgen' (to get / receive) is 'kreeg'.",
+    "difficulty": 2,
+    "quality": 2
   },
   {
     "id": "q_irreg_krijgen_f1",
@@ -1052,10 +1052,10 @@ export const irregularVerbs = [
       "gekrijgen"
     ],
     "correctAnswer": "gekregen",
-    "explanationTr": "'krijgen' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gekregen'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'krijgen' is 'gekregen' (used with auxiliary 'hebben').",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'krijgen' (almak / elde etmek) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gekregen'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'krijgen' (to get / receive) is 'gekregen' (conjugated with auxiliary 'hebben').",
+    "difficulty": 2,
+    "quality": 2
   },
   {
     "id": "q_irreg_kunnen_i1",
@@ -1074,10 +1074,10 @@ export const irregularVerbs = [
       "gekund"
     ],
     "correctAnswer": "kon",
-    "explanationTr": "'kunnen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'kon' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'kunnen' is 'kon'.",
+    "explanationTr": "'kunnen' (-ebilmek / yapabilmek (modal)) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'kon' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'kunnen' (can / to be able to) is 'kon'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_kunnen_f1",
@@ -1096,10 +1096,10 @@ export const irregularVerbs = [
       "gekunnen"
     ],
     "correctAnswer": "gekund",
-    "explanationTr": "'kunnen' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gekund'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'kunnen' is 'gekund' (used with auxiliary 'hebben').",
+    "explanationTr": "'kunnen' (-ebilmek / yapabilmek (modal)) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gekund'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'kunnen' (can / to be able to) is 'gekund' (conjugated with auxiliary 'hebben').",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_lachen_i1",
@@ -1118,10 +1118,10 @@ export const irregularVerbs = [
       "gelachen"
     ],
     "correctAnswer": "lachte",
-    "explanationTr": "'lachen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'lachte' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'lachen' is 'lachte'.",
+    "explanationTr": "'lachen' (gülmek) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'lachte' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'lachen' (to laugh) is 'lachte'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_lachen_f1",
@@ -1140,10 +1140,10 @@ export const irregularVerbs = [
       "lachten"
     ],
     "correctAnswer": "gelachen",
-    "explanationTr": "'lachen' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gelachen'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'lachen' is 'gelachen' (used with auxiliary 'hebben').",
+    "explanationTr": "'lachen' (gülmek) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gelachen'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'lachen' (to laugh) is 'gelachen' (conjugated with auxiliary 'hebben').",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_laten_i1",
@@ -1162,10 +1162,10 @@ export const irregularVerbs = [
       "gelaten"
     ],
     "correctAnswer": "liet",
-    "explanationTr": "'laten' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'liet' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'laten' is 'liet'.",
+    "explanationTr": "'laten' (bırakmak / izin vermek) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'liet' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'laten' (to let / leave) is 'liet'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_laten_f1",
@@ -1184,10 +1184,10 @@ export const irregularVerbs = [
       "lieten"
     ],
     "correctAnswer": "gelaten",
-    "explanationTr": "'laten' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gelaten'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'laten' is 'gelaten' (used with auxiliary 'hebben').",
+    "explanationTr": "'laten' (bırakmak / izin vermek) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gelaten'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'laten' (to let / leave) is 'gelaten' (conjugated with auxiliary 'hebben').",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_lezen_i1",
@@ -1206,10 +1206,10 @@ export const irregularVerbs = [
       "gelezen"
     ],
     "correctAnswer": "las",
-    "explanationTr": "'lezen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'las' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'lezen' is 'las'.",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'lezen' (okumak) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'las' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'lezen' (to read) is 'las'.",
+    "difficulty": 2,
+    "quality": 2
   },
   {
     "id": "q_irreg_lezen_f1",
@@ -1228,10 +1228,10 @@ export const irregularVerbs = [
       "lazen"
     ],
     "correctAnswer": "gelezen",
-    "explanationTr": "'lezen' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gelezen'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'lezen' is 'gelezen' (used with auxiliary 'hebben').",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'lezen' (okumak) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gelezen'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'lezen' (to read) is 'gelezen' (conjugated with auxiliary 'hebben').",
+    "difficulty": 2,
+    "quality": 2
   },
   {
     "id": "q_irreg_liggen_i1",
@@ -1250,10 +1250,10 @@ export const irregularVerbs = [
       "gelegen"
     ],
     "correctAnswer": "lag",
-    "explanationTr": "'liggen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'lag' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'liggen' is 'lag'.",
+    "explanationTr": "'liggen' (uzanmak / yatay durmak) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'lag' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'liggen' (to lie / be situated) is 'lag'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_liggen_f1",
@@ -1272,10 +1272,10 @@ export const irregularVerbs = [
       "geliggen"
     ],
     "correctAnswer": "gelegen",
-    "explanationTr": "'liggen' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gelegen'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'liggen' is 'gelegen' (used with auxiliary 'hebben').",
+    "explanationTr": "'liggen' (uzanmak / yatay durmak) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gelegen'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'liggen' (to lie / be situated) is 'gelegen' (conjugated with auxiliary 'hebben').",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_lopen_i1",
@@ -1294,10 +1294,10 @@ export const irregularVerbs = [
       "gelopen"
     ],
     "correctAnswer": "liep",
-    "explanationTr": "'lopen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'liep' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'lopen' is 'liep'.",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'lopen' (yürümek / koşmak) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'liep' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'lopen' (to walk / run) is 'liep'.",
+    "difficulty": 2,
+    "quality": 2
   },
   {
     "id": "q_irreg_lopen_f1",
@@ -1316,10 +1316,10 @@ export const irregularVerbs = [
       "liepen"
     ],
     "correctAnswer": "gelopen",
-    "explanationTr": "'lopen' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gelopen'dir (zijn ile kullanılır).",
-    "explanationEn": "The past participle of 'lopen' is 'gelopen' (used with auxiliary 'zijn').",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'lopen' (yürümek / koşmak) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gelopen'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'lopen' (to walk / run) is 'gelopen' (conjugated with auxiliary 'hebben').",
+    "difficulty": 2,
+    "quality": 2
   },
   {
     "id": "q_irreg_moeten_i1",
@@ -1338,10 +1338,10 @@ export const irregularVerbs = [
       "gemoeten"
     ],
     "correctAnswer": "moest",
-    "explanationTr": "'moeten' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'moest' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'moeten' is 'moest'.",
+    "explanationTr": "'moeten' (zorunda olmak (modal)) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'moest' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'moeten' (must / to have to) is 'moest'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_moeten_f1",
@@ -1360,10 +1360,10 @@ export const irregularVerbs = [
       "moesten"
     ],
     "correctAnswer": "gemoeten",
-    "explanationTr": "'moeten' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gemoeten'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'moeten' is 'gemoeten' (used with auxiliary 'hebben').",
+    "explanationTr": "'moeten' (zorunda olmak (modal)) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gemoeten'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'moeten' (must / to have to) is 'gemoeten' (conjugated with auxiliary 'hebben').",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_mogen_i1",
@@ -1382,10 +1382,10 @@ export const irregularVerbs = [
       "gemogen"
     ],
     "correctAnswer": "mocht",
-    "explanationTr": "'mogen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'mocht' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'mogen' is 'mocht'.",
+    "explanationTr": "'mogen' (izinli olmak / -ebilmek (modal)) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'mocht' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'mogen' (may / to be allowed to) is 'mocht'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_mogen_f1",
@@ -1404,10 +1404,10 @@ export const irregularVerbs = [
       "mochten"
     ],
     "correctAnswer": "gemogen",
-    "explanationTr": "'mogen' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gemogen'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'mogen' is 'gemogen' (used with auxiliary 'hebben').",
+    "explanationTr": "'mogen' (izinli olmak / -ebilmek (modal)) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gemogen'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'mogen' (may / to be allowed to) is 'gemogen' (conjugated with auxiliary 'hebben').",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_nemen_i1",
@@ -1426,10 +1426,10 @@ export const irregularVerbs = [
       "genomen"
     ],
     "correctAnswer": "nam",
-    "explanationTr": "'nemen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'nam' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'nemen' is 'nam'.",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'nemen' (almak) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'nam' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'nemen' (to take) is 'nam'.",
+    "difficulty": 2,
+    "quality": 2
   },
   {
     "id": "q_irreg_nemen_f1",
@@ -1448,10 +1448,10 @@ export const irregularVerbs = [
       "genemen"
     ],
     "correctAnswer": "genomen",
-    "explanationTr": "'nemen' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'genomen'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'nemen' is 'genomen' (used with auxiliary 'hebben').",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'nemen' (almak) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'genomen'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'nemen' (to take) is 'genomen' (conjugated with auxiliary 'hebben').",
+    "difficulty": 2,
+    "quality": 2
   },
   {
     "id": "q_irreg_ontbijten_i1",
@@ -1470,10 +1470,10 @@ export const irregularVerbs = [
       "ontbijten"
     ],
     "correctAnswer": "ontbeet",
-    "explanationTr": "'ontbijten' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'ontbeet' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'ontbijten' is 'ontbeet'.",
+    "explanationTr": "'ontbijten' (kahvaltı yapmak) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'ontbeet' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'ontbijten' (to have breakfast) is 'ontbeet'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_ontbijten_f1",
@@ -1492,10 +1492,10 @@ export const irregularVerbs = [
       "ontbijtende"
     ],
     "correctAnswer": "ontbeten",
-    "explanationTr": "'ontbijten' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'ontbeten'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'ontbijten' is 'ontbeten' (used with auxiliary 'hebben').",
+    "explanationTr": "'ontbijten' (kahvaltı yapmak) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'ontbeten'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'ontbijten' (to have breakfast) is 'ontbeten' (conjugated with auxiliary 'hebben').",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_ontmoeten_i1",
@@ -1514,10 +1514,10 @@ export const irregularVerbs = [
       "ontmoeten"
     ],
     "correctAnswer": "ontmoette",
-    "explanationTr": "'ontmoeten' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'ontmoette' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'ontmoeten' is 'ontmoette'.",
+    "explanationTr": "'ontmoeten' (karşılaşmak / buluşmak) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'ontmoette' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'ontmoeten' (to meet) is 'ontmoette'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_ontmoeten_f1",
@@ -1536,10 +1536,10 @@ export const irregularVerbs = [
       "ontmoetende"
     ],
     "correctAnswer": "ontmoet",
-    "explanationTr": "'ontmoeten' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'ontmoet'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'ontmoeten' is 'ontmoet' (used with auxiliary 'hebben').",
+    "explanationTr": "'ontmoeten' (karşılaşmak / buluşmak) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'ontmoet'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'ontmoeten' (to meet) is 'ontmoet' (conjugated with auxiliary 'hebben').",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_opstaan_i1",
@@ -1558,10 +1558,10 @@ export const irregularVerbs = [
       "opgestaan"
     ],
     "correctAnswer": "stond op",
-    "explanationTr": "'opstaan' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'stond op' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'opstaan' is 'stond op'.",
+    "explanationTr": "'opstaan' (yataktan kalkmak / ayağa kalkmak) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'stond op' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'opstaan' (to get up) is 'stond op'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_opstaan_f1",
@@ -1580,10 +1580,10 @@ export const irregularVerbs = [
       "geopstaan"
     ],
     "correctAnswer": "opgestaan",
-    "explanationTr": "'opstaan' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'opgestaan'dir (zijn ile kullanılır).",
-    "explanationEn": "The past participle of 'opstaan' is 'opgestaan' (used with auxiliary 'zijn').",
+    "explanationTr": "'opstaan' (yataktan kalkmak / ayağa kalkmak) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'opgestaan'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'opstaan' (to get up) is 'opgestaan' (conjugated with auxiliary 'hebben').",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_oversteken_i1",
@@ -1602,10 +1602,10 @@ export const irregularVerbs = [
       "overgestoken"
     ],
     "correctAnswer": "stak over",
-    "explanationTr": "'oversteken' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'stak over' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'oversteken' is 'stak over'.",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'oversteken' (karşıdan karşıya geçmek) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'stak over' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'oversteken' (to cross (the street)) is 'stak over'.",
+    "difficulty": 5,
+    "quality": 2
   },
   {
     "id": "q_irreg_oversteken_f1",
@@ -1624,10 +1624,10 @@ export const irregularVerbs = [
       "geoversteken"
     ],
     "correctAnswer": "overgestoken",
-    "explanationTr": "'oversteken' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'overgestoken'dir (zijn ile kullanılır).",
-    "explanationEn": "The past participle of 'oversteken' is 'overgestoken' (used with auxiliary 'zijn').",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'oversteken' (karşıdan karşıya geçmek) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'overgestoken'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'oversteken' (to cross (the street)) is 'overgestoken' (conjugated with auxiliary 'hebben').",
+    "difficulty": 5,
+    "quality": 2
   },
   {
     "id": "q_irreg_rijden_i1",
@@ -1646,10 +1646,10 @@ export const irregularVerbs = [
       "gereden"
     ],
     "correctAnswer": "reed",
-    "explanationTr": "'rijden' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'reed' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'rijden' is 'reed'.",
+    "explanationTr": "'rijden' (araç sürmek / gitmek) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'reed' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'rijden' (to drive / ride) is 'reed'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_rijden_f1",
@@ -1668,10 +1668,10 @@ export const irregularVerbs = [
       "gerijden"
     ],
     "correctAnswer": "gereden",
-    "explanationTr": "'rijden' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gereden'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'rijden' is 'gereden' (used with auxiliary 'hebben').",
+    "explanationTr": "'rijden' (araç sürmek / gitmek) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gereden'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'rijden' (to drive / ride) is 'gereden' (conjugated with auxiliary 'hebben').",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_roepen_i1",
@@ -1690,10 +1690,10 @@ export const irregularVerbs = [
       "geroepen"
     ],
     "correctAnswer": "riep",
-    "explanationTr": "'roepen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'riep' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'roepen' is 'riep'.",
+    "explanationTr": "'roepen' (bağırmak / seslenmek) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'riep' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'roepen' (to shout / call) is 'riep'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_roepen_f1",
@@ -1712,10 +1712,10 @@ export const irregularVerbs = [
       "riepen"
     ],
     "correctAnswer": "geroepen",
-    "explanationTr": "'roepen' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'geroepen'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'roepen' is 'geroepen' (used with auxiliary 'hebben').",
+    "explanationTr": "'roepen' (bağırmak / seslenmek) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'geroepen'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'roepen' (to shout / call) is 'geroepen' (conjugated with auxiliary 'hebben').",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_schrijven_i1",
@@ -1734,10 +1734,10 @@ export const irregularVerbs = [
       "geschreven"
     ],
     "correctAnswer": "schreef",
-    "explanationTr": "'schrijven' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'schreef' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'schrijven' is 'schreef'.",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'schrijven' (yazmak) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'schreef' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'schrijven' (to write) is 'schreef'.",
+    "difficulty": 2,
+    "quality": 2
   },
   {
     "id": "q_irreg_schrijven_f1",
@@ -1756,10 +1756,10 @@ export const irregularVerbs = [
       "geschrijven"
     ],
     "correctAnswer": "geschreven",
-    "explanationTr": "'schrijven' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'geschreven'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'schrijven' is 'geschreven' (used with auxiliary 'hebben').",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'schrijven' (yazmak) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'geschreven'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'schrijven' (to write) is 'geschreven' (conjugated with auxiliary 'hebben').",
+    "difficulty": 2,
+    "quality": 2
   },
   {
     "id": "q_irreg_slapen_i1",
@@ -1778,10 +1778,10 @@ export const irregularVerbs = [
       "geslapen"
     ],
     "correctAnswer": "sliep",
-    "explanationTr": "'slapen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'sliep' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'slapen' is 'sliep'.",
+    "explanationTr": "'slapen' (uyumak) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'sliep' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'slapen' (to sleep) is 'sliep'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_slapen_f1",
@@ -1800,10 +1800,10 @@ export const irregularVerbs = [
       "sliepen"
     ],
     "correctAnswer": "geslapen",
-    "explanationTr": "'slapen' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'geslapen'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'slapen' is 'geslapen' (used with auxiliary 'hebben').",
+    "explanationTr": "'slapen' (uyumak) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'geslapen'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'slapen' (to sleep) is 'geslapen' (conjugated with auxiliary 'hebben').",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_sluiten_i1",
@@ -1822,10 +1822,10 @@ export const irregularVerbs = [
       "gesloten"
     ],
     "correctAnswer": "sloot",
-    "explanationTr": "'sluiten' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'sloot' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'sluiten' is 'sloot'.",
+    "explanationTr": "'sluiten' (kapatmak / kilitlenmek) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'sloot' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'sluiten' (to close / shut) is 'sloot'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_sluiten_f1",
@@ -1844,10 +1844,10 @@ export const irregularVerbs = [
       "gesluiten"
     ],
     "correctAnswer": "gesloten",
-    "explanationTr": "'sluiten' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gesloten'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'sluiten' is 'gesloten' (used with auxiliary 'hebben').",
+    "explanationTr": "'sluiten' (kapatmak / kilitlenmek) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gesloten'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'sluiten' (to close / shut) is 'gesloten' (conjugated with auxiliary 'hebben').",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_snijden_i1",
@@ -1866,10 +1866,10 @@ export const irregularVerbs = [
       "gesneden"
     ],
     "correctAnswer": "sneed",
-    "explanationTr": "'snijden' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'sneed' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'snijden' is 'sneed'.",
+    "explanationTr": "'snijden' (kesmek / dilimlemek) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'sneed' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'snijden' (to cut / slice) is 'sneed'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_snijden_f1",
@@ -1888,10 +1888,10 @@ export const irregularVerbs = [
       "gesnijden"
     ],
     "correctAnswer": "gesneden",
-    "explanationTr": "'snijden' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gesneden'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'snijden' is 'gesneden' (used with auxiliary 'hebben').",
+    "explanationTr": "'snijden' (kesmek / dilimlemek) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gesneden'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'snijden' (to cut / slice) is 'gesneden' (conjugated with auxiliary 'hebben').",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_spreken_i1",
@@ -1910,10 +1910,10 @@ export const irregularVerbs = [
       "gesproken"
     ],
     "correctAnswer": "sprak",
-    "explanationTr": "'spreken' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'sprak' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'spreken' is 'sprak'.",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'spreken' (konuşmak) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'sprak' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'spreken' (to speak) is 'sprak'.",
+    "difficulty": 2,
+    "quality": 2
   },
   {
     "id": "q_irreg_spreken_f1",
@@ -1932,10 +1932,10 @@ export const irregularVerbs = [
       "gespreken"
     ],
     "correctAnswer": "gesproken",
-    "explanationTr": "'spreken' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gesproken'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'spreken' is 'gesproken' (used with auxiliary 'hebben').",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'spreken' (konuşmak) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gesproken'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'spreken' (to speak) is 'gesproken' (conjugated with auxiliary 'hebben').",
+    "difficulty": 2,
+    "quality": 2
   },
   {
     "id": "q_irreg_staan_i1",
@@ -1954,10 +1954,10 @@ export const irregularVerbs = [
       "gestaan"
     ],
     "correctAnswer": "stond",
-    "explanationTr": "'staan' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'stond' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'staan' is 'stond'.",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'staan' (ayakta durmak) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'stond' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'staan' (to stand) is 'stond'.",
+    "difficulty": 2,
+    "quality": 2
   },
   {
     "id": "q_irreg_staan_f1",
@@ -1976,10 +1976,10 @@ export const irregularVerbs = [
       "stonden"
     ],
     "correctAnswer": "gestaan",
-    "explanationTr": "'staan' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gestaan'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'staan' is 'gestaan' (used with auxiliary 'hebben').",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'staan' (ayakta durmak) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gestaan'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'staan' (to stand) is 'gestaan' (conjugated with auxiliary 'hebben').",
+    "difficulty": 2,
+    "quality": 2
   },
   {
     "id": "q_irreg_vallen_i1",
@@ -1998,10 +1998,10 @@ export const irregularVerbs = [
       "gevallen"
     ],
     "correctAnswer": "viel",
-    "explanationTr": "'vallen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'viel' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'vallen' is 'viel'.",
+    "explanationTr": "'vallen' (düşmek) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'viel' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'vallen' (to fall) is 'viel'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_vallen_f1",
@@ -2020,10 +2020,10 @@ export const irregularVerbs = [
       "vielen"
     ],
     "correctAnswer": "gevallen",
-    "explanationTr": "'vallen' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gevallen'dir (zijn ile kullanılır).",
-    "explanationEn": "The past participle of 'vallen' is 'gevallen' (used with auxiliary 'zijn').",
+    "explanationTr": "'vallen' (düşmek) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gevallen'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'vallen' (to fall) is 'gevallen' (conjugated with auxiliary 'hebben').",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_vergeten_i1",
@@ -2042,10 +2042,10 @@ export const irregularVerbs = [
       "vergeten"
     ],
     "correctAnswer": "vergat",
-    "explanationTr": "'vergeten' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'vergat' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'vergeten' is 'vergat'.",
+    "explanationTr": "'vergeten' (unutmak) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'vergat' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'vergeten' (to forget) is 'vergat'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_vergeten_f1",
@@ -2064,10 +2064,10 @@ export const irregularVerbs = [
       "vergaten"
     ],
     "correctAnswer": "vergeten",
-    "explanationTr": "'vergeten' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'vergeten'dir (zijn ile kullanılır).",
-    "explanationEn": "The past participle of 'vergeten' is 'vergeten' (used with auxiliary 'zijn').",
+    "explanationTr": "'vergeten' (unutmak) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'vergeten'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'vergeten' (to forget) is 'vergeten' (conjugated with auxiliary 'hebben').",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_verliezen_i1",
@@ -2086,10 +2086,10 @@ export const irregularVerbs = [
       "verliezen"
     ],
     "correctAnswer": "verloor",
-    "explanationTr": "'verliezen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'verloor' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'verliezen' is 'verloor'.",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'verliezen' (kaybetmek) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'verloor' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'verliezen' (to lose) is 'verloor'.",
+    "difficulty": 5,
+    "quality": 2
   },
   {
     "id": "q_irreg_verliezen_f1",
@@ -2108,10 +2108,10 @@ export const irregularVerbs = [
       "verliezende"
     ],
     "correctAnswer": "verloren",
-    "explanationTr": "'verliezen' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'verloren'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'verliezen' is 'verloren' (used with auxiliary 'hebben').",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'verliezen' (kaybetmek) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'verloren'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'verliezen' (to lose) is 'verloren' (conjugated with auxiliary 'hebben').",
+    "difficulty": 5,
+    "quality": 2
   },
   {
     "id": "q_irreg_vertrekken_i1",
@@ -2130,10 +2130,10 @@ export const irregularVerbs = [
       "vertrekken"
     ],
     "correctAnswer": "vertrok",
-    "explanationTr": "'vertrekken' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'vertrok' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'vertrekken' is 'vertrok'.",
+    "explanationTr": "'vertrekken' (hareket etmek / yola çıkmak) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'vertrok' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'vertrekken' (to depart / leave) is 'vertrok'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_vertrekken_f1",
@@ -2152,10 +2152,10 @@ export const irregularVerbs = [
       "vertrekkende"
     ],
     "correctAnswer": "vertrokken",
-    "explanationTr": "'vertrekken' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'vertrokken'dir (zijn ile kullanılır).",
-    "explanationEn": "The past participle of 'vertrekken' is 'vertrokken' (used with auxiliary 'zijn').",
+    "explanationTr": "'vertrekken' (hareket etmek / yola çıkmak) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'vertrokken'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'vertrekken' (to depart / leave) is 'vertrokken' (conjugated with auxiliary 'hebben').",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_vinden_i1",
@@ -2174,10 +2174,10 @@ export const irregularVerbs = [
       "gevonden"
     ],
     "correctAnswer": "vond",
-    "explanationTr": "'vinden' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'vond' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'vinden' is 'vond'.",
+    "explanationTr": "'vinden' (bulmak / düşüncesinde olmak) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'vond' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'vinden' (to find / think) is 'vond'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_vinden_f1",
@@ -2196,10 +2196,10 @@ export const irregularVerbs = [
       "gevinden"
     ],
     "correctAnswer": "gevonden",
-    "explanationTr": "'vinden' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gevonden'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'vinden' is 'gevonden' (used with auxiliary 'hebben').",
+    "explanationTr": "'vinden' (bulmak / düşüncesinde olmak) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gevonden'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'vinden' (to find / think) is 'gevonden' (conjugated with auxiliary 'hebben').",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_vliegen_i1",
@@ -2218,10 +2218,10 @@ export const irregularVerbs = [
       "gevlogen"
     ],
     "correctAnswer": "vloog",
-    "explanationTr": "'vliegen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'vloog' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'vliegen' is 'vloog'.",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'vliegen' (uçmak) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'vloog' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'vliegen' (to fly) is 'vloog'.",
+    "difficulty": 4,
+    "quality": 2
   },
   {
     "id": "q_irreg_vliegen_f1",
@@ -2240,10 +2240,10 @@ export const irregularVerbs = [
       "gevliegen"
     ],
     "correctAnswer": "gevlogen",
-    "explanationTr": "'vliegen' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gevlogen'dir (zijn ile kullanılır).",
-    "explanationEn": "The past participle of 'vliegen' is 'gevlogen' (used with auxiliary 'zijn').",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'vliegen' (uçmak) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gevlogen'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'vliegen' (to fly) is 'gevlogen' (conjugated with auxiliary 'hebben').",
+    "difficulty": 4,
+    "quality": 2
   },
   {
     "id": "q_irreg_vragen_i1",
@@ -2262,10 +2262,10 @@ export const irregularVerbs = [
       "gevraagd"
     ],
     "correctAnswer": "vroeg",
-    "explanationTr": "'vragen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'vroeg' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'vragen' is 'vroeg'.",
+    "explanationTr": "'vragen' (sormak / istemek) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'vroeg' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'vragen' (to ask) is 'vroeg'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_vragen_f1",
@@ -2284,10 +2284,10 @@ export const irregularVerbs = [
       "gevragen"
     ],
     "correctAnswer": "gevraagd",
-    "explanationTr": "'vragen' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gevraagd'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'vragen' is 'gevraagd' (used with auxiliary 'hebben').",
+    "explanationTr": "'vragen' (sormak / istemek) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gevraagd'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'vragen' (to ask) is 'gevraagd' (conjugated with auxiliary 'hebben').",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_wassen_i1",
@@ -2306,10 +2306,10 @@ export const irregularVerbs = [
       "gewassen"
     ],
     "correctAnswer": "waste",
-    "explanationTr": "'wassen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'waste' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'wassen' is 'waste'.",
+    "explanationTr": "'wassen' (yıkamak) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'waste' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'wassen' (to wash) is 'waste'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_wassen_f1",
@@ -2328,10 +2328,10 @@ export const irregularVerbs = [
       "wasten"
     ],
     "correctAnswer": "gewassen",
-    "explanationTr": "'wassen' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gewassen'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'wassen' is 'gewassen' (used with auxiliary 'hebben').",
+    "explanationTr": "'wassen' (yıkamak) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gewassen'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'wassen' (to wash) is 'gewassen' (conjugated with auxiliary 'hebben').",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_weten_i1",
@@ -2350,10 +2350,10 @@ export const irregularVerbs = [
       "geweten"
     ],
     "correctAnswer": "wist",
-    "explanationTr": "'weten' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'wist' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'weten' is 'wist'.",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'weten' (bilmek) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'wist' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'weten' (to know (a fact)) is 'wist'.",
+    "difficulty": 2,
+    "quality": 2
   },
   {
     "id": "q_irreg_weten_f1",
@@ -2372,10 +2372,10 @@ export const irregularVerbs = [
       "wisten"
     ],
     "correctAnswer": "geweten",
-    "explanationTr": "'weten' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'geweten'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'weten' is 'geweten' (used with auxiliary 'hebben').",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'weten' (bilmek) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'geweten'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'weten' (to know (a fact)) is 'geweten' (conjugated with auxiliary 'hebben').",
+    "difficulty": 2,
+    "quality": 2
   },
   {
     "id": "q_irreg_willen_i1",
@@ -2394,10 +2394,10 @@ export const irregularVerbs = [
       "gewild"
     ],
     "correctAnswer": "wilde",
-    "explanationTr": "'willen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'wilde' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'willen' is 'wilde'.",
+    "explanationTr": "'willen' (istemek (modal)) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'wilde' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'willen' (to want) is 'wilde'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_willen_f1",
@@ -2416,10 +2416,10 @@ export const irregularVerbs = [
       "gewillen"
     ],
     "correctAnswer": "gewild",
-    "explanationTr": "'willen' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gewild'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'willen' is 'gewild' (used with auxiliary 'hebben').",
+    "explanationTr": "'willen' (istemek (modal)) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gewild'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'willen' (to want) is 'gewild' (conjugated with auxiliary 'hebben').",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_worden_i1",
@@ -2438,10 +2438,10 @@ export const irregularVerbs = [
       "geworden"
     ],
     "correctAnswer": "werd",
-    "explanationTr": "'worden' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'werd' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'worden' is 'werd'.",
+    "explanationTr": "'worden' (olmak / haline gelmek) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'werd' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'worden' (to become) is 'werd'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_worden_f1",
@@ -2460,10 +2460,10 @@ export const irregularVerbs = [
       "werden"
     ],
     "correctAnswer": "geworden",
-    "explanationTr": "'worden' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'geworden'dir (zijn ile kullanılır).",
-    "explanationEn": "The past participle of 'worden' is 'geworden' (used with auxiliary 'zijn').",
+    "explanationTr": "'worden' (olmak / haline gelmek) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'geworden'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'worden' (to become) is 'geworden' (conjugated with auxiliary 'hebben').",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_zeggen_i1",
@@ -2482,10 +2482,10 @@ export const irregularVerbs = [
       "gezegd"
     ],
     "correctAnswer": "zei",
-    "explanationTr": "'zeggen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'zei' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'zeggen' is 'zei'.",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'zeggen' (söylemek) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'zei' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'zeggen' (to say) is 'zei'.",
+    "difficulty": 2,
+    "quality": 2
   },
   {
     "id": "q_irreg_zeggen_f1",
@@ -2504,10 +2504,10 @@ export const irregularVerbs = [
       "gezeggen"
     ],
     "correctAnswer": "gezegd",
-    "explanationTr": "'zeggen' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gezegd'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'zeggen' is 'gezegd' (used with auxiliary 'hebben').",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'zeggen' (söylemek) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gezegd'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'zeggen' (to say) is 'gezegd' (conjugated with auxiliary 'hebben').",
+    "difficulty": 2,
+    "quality": 2
   },
   {
     "id": "q_irreg_zien_i1",
@@ -2526,10 +2526,10 @@ export const irregularVerbs = [
       "gezien"
     ],
     "correctAnswer": "zag",
-    "explanationTr": "'zien' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'zag' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'zien' is 'zag'.",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'zien' (görmek) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'zag' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'zien' (to see) is 'zag'.",
+    "difficulty": 2,
+    "quality": 2
   },
   {
     "id": "q_irreg_zien_f1",
@@ -2548,10 +2548,10 @@ export const irregularVerbs = [
       "zagen"
     ],
     "correctAnswer": "gezien",
-    "explanationTr": "'zien' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gezien'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'zien' is 'gezien' (used with auxiliary 'hebben').",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'zien' (görmek) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gezien'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'zien' (to see) is 'gezien' (conjugated with auxiliary 'hebben').",
+    "difficulty": 2,
+    "quality": 2
   },
   {
     "id": "q_irreg_zijn_i1",
@@ -2570,10 +2570,10 @@ export const irregularVerbs = [
       "geweest"
     ],
     "correctAnswer": "was",
-    "explanationTr": "'zijn' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'was' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'zijn' is 'was'.",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'zijn' (olmak (to be)) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'was' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'zijn' (to be) is 'was'.",
+    "difficulty": 2,
+    "quality": 2
   },
   {
     "id": "q_irreg_zijn_f1",
@@ -2592,10 +2592,10 @@ export const irregularVerbs = [
       "gezijn"
     ],
     "correctAnswer": "geweest",
-    "explanationTr": "'zijn' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'geweest'dir (zijn ile kullanılır).",
-    "explanationEn": "The past participle of 'zijn' is 'geweest' (used with auxiliary 'zijn').",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'zijn' (olmak (to be)) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'geweest'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'zijn' (to be) is 'geweest' (conjugated with auxiliary 'hebben').",
+    "difficulty": 2,
+    "quality": 2
   },
   {
     "id": "q_irreg_zingen_i1",
@@ -2614,10 +2614,10 @@ export const irregularVerbs = [
       "gezongen"
     ],
     "correctAnswer": "zong",
-    "explanationTr": "'zingen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'zong' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'zingen' is 'zong'.",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'zingen' (şarkı söylemek) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'zong' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'zingen' (to sing) is 'zong'.",
+    "difficulty": 4,
+    "quality": 2
   },
   {
     "id": "q_irreg_zingen_f1",
@@ -2636,10 +2636,10 @@ export const irregularVerbs = [
       "gezingen"
     ],
     "correctAnswer": "gezongen",
-    "explanationTr": "'zingen' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gezongen'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'zingen' is 'gezongen' (used with auxiliary 'hebben').",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'zingen' (şarkı söylemek) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gezongen'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'zingen' (to sing) is 'gezongen' (conjugated with auxiliary 'hebben').",
+    "difficulty": 4,
+    "quality": 2
   },
   {
     "id": "q_irreg_zitten_i1",
@@ -2658,10 +2658,10 @@ export const irregularVerbs = [
       "gezeten"
     ],
     "correctAnswer": "zat",
-    "explanationTr": "'zitten' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'zat' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'zitten' is 'zat'.",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'zitten' (oturmak) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'zat' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'zitten' (to sit) is 'zat'.",
+    "difficulty": 2,
+    "quality": 2
   },
   {
     "id": "q_irreg_zitten_f1",
@@ -2680,10 +2680,10 @@ export const irregularVerbs = [
       "gezitten"
     ],
     "correctAnswer": "gezeten",
-    "explanationTr": "'zitten' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gezeten'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'zitten' is 'gezeten' (used with auxiliary 'hebben').",
-    "difficulty": 3,
-    "quality": 1
+    "explanationTr": "'zitten' (oturmak) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gezeten'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'zitten' (to sit) is 'gezeten' (conjugated with auxiliary 'hebben').",
+    "difficulty": 2,
+    "quality": 2
   },
   {
     "id": "q_irreg_zoeken_i1",
@@ -2702,10 +2702,10 @@ export const irregularVerbs = [
       "gezocht"
     ],
     "correctAnswer": "zocht",
-    "explanationTr": "'zoeken' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'zocht' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'zoeken' is 'zocht'.",
+    "explanationTr": "'zoeken' (aramak) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'zocht' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'zoeken' (to search / look for) is 'zocht'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_zoeken_f1",
@@ -2724,10 +2724,10 @@ export const irregularVerbs = [
       "gezoeken"
     ],
     "correctAnswer": "gezocht",
-    "explanationTr": "'zoeken' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gezocht'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'zoeken' is 'gezocht' (used with auxiliary 'hebben').",
+    "explanationTr": "'zoeken' (aramak) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gezocht'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'zoeken' (to search / look for) is 'gezocht' (conjugated with auxiliary 'hebben').",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_zwemmen_i1",
@@ -2746,10 +2746,10 @@ export const irregularVerbs = [
       "gezwommen"
     ],
     "correctAnswer": "zwom",
-    "explanationTr": "'zwemmen' düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'zwom' şeklindedir.",
-    "explanationEn": "The simple past (imperfectum) singular of 'zwemmen' is 'zwom'.",
+    "explanationTr": "'zwemmen' (yüzmek) düzensiz fiilinin geçmiş zaman (imperfectum) tekil çekimi 'zwom' şeklindedir (özneye göre çekimlenir).",
+    "explanationEn": "The simple past (imperfectum) singular form of 'zwemmen' (to swim) is 'zwom'.",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   },
   {
     "id": "q_irreg_zwemmen_f1",
@@ -2768,9 +2768,9 @@ export const irregularVerbs = [
       "gezwemmen"
     ],
     "correctAnswer": "gezwommen",
-    "explanationTr": "'zwemmen' fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gezwommen'dir (hebben ile kullanılır).",
-    "explanationEn": "The past participle of 'zwemmen' is 'gezwommen' (used with auxiliary 'hebben').",
+    "explanationTr": "'zwemmen' (yüzmek) fiilinin tamamlanmış geçmiş zaman (voltooid deelwoord) hali 'gezwommen'dir ('hebben' yardımcı fiili ile kullanılır).",
+    "explanationEn": "The past participle of 'zwemmen' (to swim) is 'gezwommen' (conjugated with auxiliary 'hebben').",
     "difficulty": 3,
-    "quality": 1
+    "quality": 2
   }
 ];

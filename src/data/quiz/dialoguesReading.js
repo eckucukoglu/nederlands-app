@@ -1,5 +1,5 @@
 // src/data/quiz/dialoguesReading.js
-// Auto-generated modular quiz dataset with pedagogical ratings (difficulty 1-5, quality 1-2)
+// Auto-calibrated modular quiz dataset for CEFR A2 Inburgering exam prep
 export const dialoguesReading = [
   {
     "id": "q_reading_039",
@@ -262,7 +262,7 @@ export const dialoguesReading = [
     "correctAnswer": "Vindt",
     "explanationTr": "Anna (zij) öznesi olduğu için soru cümlesinde bile '-t' düşmez. ('Vind' köküne 't' eklenir: Vindt).",
     "explanationEn": "Because the subject is Anna (zij), the '-t' doesn't drop even in a question. ('t' is added to 'Vind': Vindt).",
-    "difficulty": 4,
+    "difficulty": 2,
     "quality": 2
   },
   {
@@ -422,7 +422,7 @@ export const dialoguesReading = [
     "explanationTr": "Çoğul eki olan -'s atıldığında geriye tekil olan 'kiwi' kelimesi kalır.",
     "explanationEn": "Removing the plural suffix -'s leaves the singular word 'kiwi'.",
     "difficulty": 2,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "kiwi",
       "kiwis",
@@ -462,7 +462,7 @@ export const dialoguesReading = [
     "explanationTr": "'Steden' kelimesi 'stad' (şehir) kelimesinin düzensiz çoğuludur.",
     "explanationEn": "'Steden' is the irregular plural of 'stad' (city).",
     "difficulty": 2,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "stad",
       "niet stad",
@@ -482,7 +482,7 @@ export const dialoguesReading = [
     "explanationTr": "'Kinderen' kelimesi 'kind' (çocuk) kelimesinin düzensiz çoğuludur.",
     "explanationEn": "'Kinderen' is the irregular plural of 'kind' (child).",
     "difficulty": 2,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "kind",
       "niet kind",
@@ -502,7 +502,7 @@ export const dialoguesReading = [
     "explanationTr": "'Eieren' kelimesi 'ei' (yumurta) kelimesinin düzensiz çoğuludur.",
     "explanationEn": "'Eieren' is the irregular plural of 'ei' (egg).",
     "difficulty": 2,
-    "quality": 1,
+    "quality": 2,
     "options": [
       "ei",
       "niet ei",
@@ -547,7 +547,7 @@ export const dialoguesReading = [
     "correctAnswer": "Omdat het eindigt op een onbeklemtoonde -e",
     "explanationTr": "Kantine gibi sonu vurgusuz '-e' ile biten kelimeler, çoğul olurken '-s' eki alırlar.",
     "explanationEn": "Words ending with an unaccented '-e' like kantine, take an '-s' suffix in the plural.",
-    "difficulty": 4,
+    "difficulty": 2,
     "quality": 2
   },
   {
@@ -561,8 +561,8 @@ export const dialoguesReading = [
     "correctAnswer": "paprika",
     "explanationTr": "Çoğul eki olan -'s silindiğinde tekil hal olan 'paprika' bulunur.",
     "explanationEn": "Removing the plural -'s suffix leaves the singular form 'paprika'.",
-    "difficulty": 4,
-    "quality": 1,
+    "difficulty": 2,
+    "quality": 2,
     "options": [
       "paprika",
       "niet paprika",
@@ -588,7 +588,7 @@ export const dialoguesReading = [
     "correctAnswer": "de",
     "explanationTr": "'Broodje' (küçük ekmek) tekil halde 'het' alsa bile, çoğul olduğu an ('broodjes') daima 'de' artikeli alır.",
     "explanationEn": "Although 'broodje' takes 'het' in the singular, the moment it becomes plural ('broodjes') it always takes 'de'.",
-    "difficulty": 4,
+    "difficulty": 2,
     "quality": 2
   },
   {
@@ -703,7 +703,7 @@ export const dialoguesReading = [
     "correctAnswer": "verse",
     "explanationTr": "'Groenten' çoğuldur. Çoğul isimlerin önündeki sıfatlar daima '-e' alır.",
     "explanationEn": "'Groenten' is plural. Adjectives before plural nouns always get an '-e'.",
-    "difficulty": 4,
+    "difficulty": 2,
     "quality": 2,
     "options": [
       "verse",
@@ -1312,7 +1312,7 @@ export const dialoguesReading = [
     "correctAnswer": "Omdat 'auto' een de-woord is.",
     "explanationTr": "'Auto' bir de-woord'dur. De-woorden nesne durumundayken 'hem' ile işaret edilir.",
     "explanationEn": "'Auto' is a de-word. De-words are referred to with 'hem' in the object position.",
-    "difficulty": 3,
+    "difficulty": 2,
     "quality": 2
   },
   {
@@ -1435,7 +1435,7 @@ export const dialoguesReading = [
     "correctAnswer": "Omdat het een beschrijving (tasvir) is van het verleden.",
     "explanationTr": "'Hava güzeldi' cümlesi geçmişteki bir durumu/ortamı tasvir ettiği (beschrijving) için Imperfectum (was) kullanılır.",
     "explanationEn": "'The weather was nice' describes a past state/background (beschrijving), so Imperfectum (was) is used.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -1477,7 +1477,7 @@ export const dialoguesReading = [
     "correctAnswer": "drinken",
     "explanationTr": "Diyalogdaki 'We dronken' (İçtik), düzensiz 'drinken' fiilinin çoğul hikaye geçmiş zaman halidir.",
     "explanationEn": "'We dronken' (We drank) is the plural simple past of the irregular verb 'drinken'.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -1493,7 +1493,7 @@ export const dialoguesReading = [
     "correctAnswer": "praatten",
     "explanationTr": "'praten' kökü 'praat'. Imperfectum çoğul (we) olduğu için '+ten' eklenir: praatten.",
     "explanationEn": "Stem of 'praten' is 'praat'. Plural imperfectum (we) adds '+ten': praatten.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2,
     "options": [
       "praatten",
@@ -1515,7 +1515,7 @@ export const dialoguesReading = [
     "correctAnswer": "woonde",
     "explanationTr": "Hikaye anlatımı (Imperfectum). 'wonen' kökü 'woon' + de = woonde.",
     "explanationEn": "Storytelling (Imperfectum). Stem 'woon' + de = woonde.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2,
     "options": [
       "woonde",
@@ -1543,7 +1543,7 @@ export const dialoguesReading = [
     "correctAnswer": "Omdat de letter 'l' niet in soft ketchup zit.",
     "explanationTr": "'speel' kökünün son harfi olan 'l', soft ketchup ünsüzlerinden biri olmadığı için '+de' alır.",
     "explanationEn": "The last letter of the stem 'speel' is 'l', which is not in soft ketchup, so it takes '+de'.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -1609,7 +1609,7 @@ export const dialoguesReading = [
     "correctAnswer": "moeten",
     "explanationTr": "'moesten', 'moeten' (zorunda olmak) modal fiilinin çoğul geçmiş zaman halidir.",
     "explanationEn": "'moesten' is the plural simple past of the modal verb 'moeten' (must).",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -2067,7 +2067,7 @@ export const dialoguesReading = [
     "correctAnswer": "De stad",
     "explanationTr": "'Daar' (Orada), bir önceki cümlede bahsedilen 'de stad' (şehir) lokasyonuna vurgu yapmaktadır.",
     "explanationEn": "'Daar' (There) emphasizes the location 'de stad' (the city) mentioned in the previous sentence.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -2128,7 +2128,7 @@ export const dialoguesReading = [
     "correctAnswer": "Omdat 'veel mensen' indefiniet is en er geen extra nadruk op de plaats is in deze nieuwe zin.",
     "explanationTr": "Buradaki odak 'çok insanın çalışmasıdır' (belirsiz özne), mekanın kendisine özel bir vurgu yapmaya gerek duyulmamıştır.",
     "explanationEn": "The focus here is on 'many people working' (indefinite subject), there is no need for extra emphasis on the place itself.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -2148,8 +2148,8 @@ export const dialoguesReading = [
     "correctAnswer": "In het nieuwe restaurant",
     "explanationTr": "'Daar' (Orada) kelimesi bahsedilen yeni restoranı işaret etmektedir.",
     "explanationEn": "The word 'Daar' (There) points back to the new restaurant mentioned.",
-    "difficulty": 3,
-    "quality": 1
+    "difficulty": 4,
+    "quality": 2
   },
   {
     "id": "q_read_ercont_047",
@@ -2203,7 +2203,7 @@ export const dialoguesReading = [
     "correctAnswer": "Ligt",
     "explanationTr": "'een telefoon' tekil olduğu için 'liggen' fiili 'Ligt' olur.",
     "explanationEn": "Because 'een telefoon' is singular, the verb 'liggen' becomes 'Ligt'.",
-    "difficulty": 2,
+    "difficulty": 4,
     "quality": 2,
     "options": [
       "Ligt",
@@ -2407,9 +2407,10 @@ export const dialoguesReading = [
       "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Omdat vogels meervoud zijn en we hier een presentatie/introductie doen.",
-    "explanationEn": "Because birds are plural and we are doing a presentation/introduction here.",
+    "explanationEn": "Because birds are plural and we are doing a presentation/introduction here, the structure 'Dit zijn...' is used.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 2,
+    "explanationTr": "'Kuşlar' (vogels) çoğul bir kelimedir ve burada yeni bir tanıtım/sunum yapıldığı için çoğul haliyle 'Dit zijn...' kalıbı kullanılır."
   },
   {
     "id": "q_read_conj_046",
@@ -2486,9 +2487,10 @@ export const dialoguesReading = [
       "Dat is een heel goed plan voor morgen."
     ],
     "correctAnswer": "Omdat 'schoenen' meervoud is (en meervoud is altijd de-woord).",
-    "explanationEn": "Because 'schoenen' is plural (and plurals are always de-words).",
+    "explanationEn": "Because 'schoenen' is plural, and in Dutch all plural nouns take 'die' when referenced.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 2,
+    "explanationTr": "'Schoenen' (ayakkabılar) çoğul bir kelimedir ve Hollandacada tüm çoğul isimlere gönderme yapılırken 'die' kullanılır."
   },
   {
     "id": "q_read_conj_050",
@@ -2669,8 +2671,8 @@ export const dialoguesReading = [
     "correctAnswer": "Yarın erken kalkması gerekmesine rağmen",
     "explanationTr": "'Hoewel' kelimesi 'rağmen' (although) anlamı katmaktadır.",
     "explanationEn": "'Hoewel' adds the meaning of 'although'.",
-    "difficulty": 4,
-    "quality": 1
+    "difficulty": 5,
+    "quality": 2
   },
   {
     "id": "q_read_bijz_044",
