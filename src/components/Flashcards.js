@@ -86,13 +86,20 @@ const translations = {
   }
 };
 
-export default function Flashcards({ initialChapter }) {
+export default function Flashcards({ initialChapter, chapter }) {
   const { lang } = useLanguage();
   const t = translations[lang] || translations['tr'];
 
   const availableChapters = [...new Set(vocabulary.map(v => v.chapter))].filter(Boolean).sort((a, b) => a - b);
   
-  const [targetChapter, setTargetChapter] = useState(initialChapter || availableChapters[availableChapters.length - 1] || 9);
+  const [targetChapter, setTargetChapter] = useState(chapter || initialChapter || availableChapters[availableChapters.length - 1] || 9);
+
+  useEffect(() => {
+    if (chapter) {
+      setTargetChapter(chapter);
+      setMode(prev => (prev === 'global' || prev === 'book_pool' ? 'all' : prev));
+    }
+  }, [chapter]);
   
   const [deckData, setDeckData] = useState([]); 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -520,8 +527,8 @@ export default function Flashcards({ initialChapter }) {
       </div>
 
       {(mode === 'all' || mode === 'dialogue' || mode === 'reading') && (
-        <div className="flex flex-col lg:flex-row gap-4 bg-slate-800/80 p-4 rounded-2xl border border-slate-700 items-center justify-between shadow-inner animate-fadeIn mb-6">
-           <div className="flex flex-wrap sm:flex-nowrap bg-slate-900 p-1.5 rounded-xl w-full lg:w-auto items-center border border-slate-700 gap-1">
+        <div className="flex justify-center bg-slate-800/80 p-2 sm:p-2.5 rounded-2xl border border-slate-700 shadow-inner animate-fadeIn mb-6">
+           <div className="flex flex-wrap sm:flex-nowrap bg-slate-900 p-1.5 rounded-xl w-full sm:w-auto items-center justify-center border border-slate-700 gap-1">
               <button 
                  className={`flex-1 sm:flex-initial sm:px-3.5 text-[11px] sm:text-xs font-bold py-2 rounded-lg text-center transition-all ${mode === 'all' ? 'bg-brand-600 text-white shadow-sm' : 'text-slate-400 hover:text-slate-200'}`} 
                  onClick={() => { setMode('all'); setStudyUnknownsOnly(false); }}
@@ -540,18 +547,6 @@ export default function Flashcards({ initialChapter }) {
               >
                  {t.readingOption}
               </button>
-           </div>
-           <div className="w-full lg:w-auto flex items-center justify-end gap-2">
-             <i className="fa-solid fa-filter text-slate-400 hidden sm:block"></i>
-             <select 
-                value={targetChapter} 
-                onChange={(e) => setTargetChapter(Number(e.target.value))}
-                className="w-full sm:w-auto bg-slate-900 text-slate-200 border border-slate-600 rounded-xl px-4 py-2.5 text-sm font-semibold focus:outline-none focus:border-brand-400 shadow-sm cursor-pointer"
-             >
-                {availableChapters.map(ch => (
-                   <option key={ch} value={ch}>Hoofdstuk {ch}</option>
-                ))}
-             </select>
            </div>
         </div>
       )}

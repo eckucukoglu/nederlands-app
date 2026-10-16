@@ -876,6 +876,12 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
   const handleChapterChange = (e) => {
     const newChapter = Number(e.target.value);
     setCurrentChapter(newChapter);
+
+    if (activeTab === 'flashcards') {
+      // Flashcards açıkken chapter değişirse sayfadan çıkma, o chapter'ın kelimelerini aç
+      return;
+    }
+
     const savedTab = localStorage.getItem(`lastVisitedTab_${newChapter}`);
     
     if (savedTab && !savedTab.includes('On-Class') && savedTab !== 'home') {
@@ -1748,7 +1754,7 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
           />
         )}
 
-        {activeTab === 'flashcards' && <Flashcards initialChapter={currentChapter} />}
+        {activeTab === 'flashcards' && <Flashcards chapter={currentChapter} initialChapter={currentChapter} />}
         {activeTab === 'verbs' && <IrregularVerbs />}
         {activeTab === 'grammar' && <Grammar />}
       </main>
