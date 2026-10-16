@@ -450,6 +450,9 @@ export const speakDutchWithHighlight = (text, options = {}) => {
   // Önceki seslendirmeyi durdur ve yeni oturum başlat
   cancelDutchSpeech();
   const sessionId = currentHighlightSession;
+  if (typeof window !== 'undefined') {
+    window.dispatchEvent(new CustomEvent('dutchSpeechStarted'));
+  }
   startUnpauseWatchdog();
 
   let currentChunkTimers = null;

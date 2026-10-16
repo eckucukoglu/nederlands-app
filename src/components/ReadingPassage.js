@@ -10,6 +10,8 @@ import {
   getSpeechRate, 
   setSpeechRate 
 } from '../utils/speech';
+import { STUDIO_AUDIO } from '../data/studioAudio';
+import StudioAudioPlayer from './StudioAudioPlayer';
 
 const fallbackDictionary = {
   "de": "the", "een": "a/an", "het": "the", "ik": "I", "u": "you (formal)", "we": "we", "ze": "they", "mijn": "my", "uw": "your",
@@ -130,14 +132,7 @@ export default function ReadingPassage({
     return { id: p.id || idx, text: p.text };
   });
 
-  // Bileşen kapandığında veya bölüm değiştiğinde seslendirmeyi durdur
-  useEffect(() => {
-    return () => {
-      stopPlayback();
-    };
-  }, [data]);
-
-  const stopPlayback = () => {
+  const stopPlayback = useCallback(() => {
     playAllSessionRef.current++;
     if (playAllTimeoutRef.current) {
       clearTimeout(playAllTimeoutRef.current);
@@ -148,7 +143,26 @@ export default function ReadingPassage({
     setIsPlayingAll(false);
     setActiveWordIdx(null);
     setActiveSentenceIdx(null);
-  };
+  }, []);
+
+  // Bileşen kapandığında veya bölüm değiştiğinde seslendirmeyi durdur
+  useEffect(() => {
+    return () => {
+      stopPlayback();
+    };
+  }, [data, stopPlayback]);
+
+  // Stüdyo podcast seslendirmesi başladığında Web Speech döngüsünü durdur
+  useEffect(() => {
+    const handleStudioStarted = () => {
+      stopPlayback();
+    };
+    window.addEventListener('studioAudioStarted', handleStudioStarted);
+    return () => window.removeEventListener('studioAudioStarted', handleStudioStarted);
+  }, [stopPlayback]);
+
+  const chNum = parseInt(chapterId, 10);
+  const studioAudio = STUDIO_AUDIO.reading[chNum];
 
   const handleSpeechRateChange = (e) => {
     const newRate = parseFloat(e.target.value);
@@ -794,6 +808,15 @@ export default function ReadingPassage({
           <p className="text-xs sm:text-sm text-slate-400 mb-4 leading-relaxed">
             {introText}
           </p>
+        )}
+
+        {/* STÜDYO PODCAST SES KAYDI BİLEŞENİ */}
+        {studioAudio && (
+          <StudioAudioPlayer 
+            audioData={studioAudio} 
+            lang={lang} 
+            type="reading" 
+          />
         )}
 
         {/* PARAGRAFLAR LİSTESİ */}

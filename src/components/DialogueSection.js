@@ -10,6 +10,8 @@ import {
   setSpeechRate, 
   cancelDutchSpeech 
 } from '../utils/speech'; 
+import { STUDIO_AUDIO } from '../data/studioAudio';
+import StudioAudioPlayer from './StudioAudioPlayer'; 
 
 const fallbackDictionary = {
   "de": "the", "een": "a/an", "het": "the", "ik": "I", "u": "you (formal)", "we": "we", "ze": "they", "mijn": "my", "uw": "your",
@@ -122,6 +124,22 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
       stopPlayingAll();
     };
   }, [stopPlayingAll]);
+
+  // Stüdyo podcast seslendirmesi başladığında Web Speech döngüsünü durdur
+  useEffect(() => {
+    const handleStudioStarted = () => {
+      stopPlayingAll();
+    };
+    window.addEventListener('studioAudioStarted', handleStudioStarted);
+    return () => window.removeEventListener('studioAudioStarted', handleStudioStarted);
+  }, [stopPlayingAll]);
+
+  const chNum = parseInt(chapterId, 10);
+  const studioAudio = (STUDIO_AUDIO.dialogues[chNum]?.sectionId === sectionId) 
+    ? STUDIO_AUDIO.dialogues[chNum] 
+    : (!STUDIO_AUDIO.dialogues[chNum]?.sectionId && STUDIO_AUDIO.dialogues[chNum]) 
+      ? STUDIO_AUDIO.dialogues[chNum] 
+      : null;
 
   useEffect(() => {
     setAnswers({});         
@@ -695,6 +713,15 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
           </div>
         </div>
         
+        {/* STÜDYO PODCAST SES KAYDI BİLEŞENİ */}
+        {studioAudio && (
+          <StudioAudioPlayer 
+            audioData={studioAudio} 
+            lang={lang} 
+            type="dialogue" 
+          />
+        )}
+
         <div className="space-y-3">
           {activeDialogue.map((line, idx) => {
             const tokens = parseTextTokens(line.text);
