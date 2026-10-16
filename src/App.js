@@ -1152,25 +1152,27 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
 
 
       {/* 1. HEADER (SADECE BU KISIM SABİT - ARKA PLAN İLERLEME BARI ENTEGRELİ) */}
-      <header className="bg-slate-950/95 backdrop-blur-md text-white shadow-md sticky top-0 z-50 border-b border-slate-800 flex-none w-full relative overflow-hidden transition-colors">
+      <header className="bg-slate-950/95 backdrop-blur-md text-white shadow-md sticky top-0 z-50 border-b border-slate-800 flex-none w-full relative transition-colors">
         
-        {/* ARKA PLAN DİNAMİK İLERLEME BARI (Soldan Sağa Ambient Dolgu) */}
-        <div 
-          className="absolute inset-y-0 left-0 pointer-events-none transition-all duration-1000 ease-out z-0 overflow-hidden"
-          style={{ width: `${Math.max(0, Math.min(100, overallStats?.overallProgress || 0))}%` }}
-        >
-          {/* Belli belirsiz, zarif degradeli dolgu */}
-          <div className="w-full h-full bg-gradient-to-r from-teal-500/15 via-sky-500/15 to-indigo-500/20"></div>
-          {/* İlerleme bitiş noktasındaki hafif dikey ışık ve ışıma */}
-          <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-r from-transparent via-teal-400/10 to-teal-400/25 blur-sm pointer-events-none"></div>
-          <div className="absolute right-0 top-0 bottom-0 w-[1.5px] bg-gradient-to-b from-teal-400/20 via-teal-300/50 to-indigo-400/20 shadow-[0_0_8px_rgba(45,212,191,0.5)] pointer-events-none"></div>
-        </div>
+        {/* ARKA PLAN DİNAMİK İLERLEME BARI (Soldan Sağa Ambient Dolgu - Sadece arka planı sınırlar, menülerin taşmasını engellemez) */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
+          <div 
+            className="absolute inset-y-0 left-0 transition-all duration-1000 ease-out overflow-hidden"
+            style={{ width: `${Math.max(0, Math.min(100, overallStats?.overallProgress || 0))}%` }}
+          >
+            {/* Belli belirsiz, zarif degradeli dolgu */}
+            <div className="w-full h-full bg-gradient-to-r from-teal-500/15 via-sky-500/15 to-indigo-500/20"></div>
+            {/* İlerleme bitiş noktasındaki hafif dikey ışık ve ışıma */}
+            <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-r from-transparent via-teal-400/10 to-teal-400/25 blur-sm pointer-events-none"></div>
+            <div className="absolute right-0 top-0 bottom-0 w-[1.5px] bg-gradient-to-b from-teal-400/20 via-teal-300/50 to-indigo-400/20 shadow-[0_0_8px_rgba(45,212,191,0.5)] pointer-events-none"></div>
+          </div>
 
-        {/* İNCE ALT KENAR İLERLEME ÇİZGİSİ */}
-        <div 
-          className="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-teal-400 via-sky-400 to-indigo-400 transition-all duration-1000 ease-out z-10 shadow-[0_0_8px_rgba(45,212,191,0.7)]"
-          style={{ width: `${Math.max(0, Math.min(100, overallStats?.overallProgress || 0))}%` }}
-        ></div>
+          {/* İNCE ALT KENAR İLERLEME ÇİZGİSİ */}
+          <div 
+            className="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-teal-400 via-sky-400 to-indigo-400 transition-all duration-1000 ease-out shadow-[0_0_8px_rgba(45,212,191,0.7)]"
+            style={{ width: `${Math.max(0, Math.min(100, overallStats?.overallProgress || 0))}%` }}
+          ></div>
+        </div>
 
         <div className="max-w-7xl mx-auto px-2 sm:px-4 py-2 sm:py-2.5 flex flex-nowrap justify-between items-center gap-1.5 sm:gap-2 relative z-10">
           
