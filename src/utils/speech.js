@@ -144,10 +144,10 @@ export const detectSpeakerGender = (speakerName = '') => {
 
   // Kadın isimleri listesi (müfredattaki tüm diyalog karakterleri dahil)
   const femaleNames = new Set([
-    'amira', 'anna', 'anouk', 'christine', 'colette', 'claire', 'edit', 'elena', 
-    'ellen', 'emma', 'eva', 'fenna', 'fleur', 'janine', 'karin', 'kirsten', 
+    'amira', 'anna', 'anouk', 'ayse', 'christine', 'colette', 'claire', 'edit', 'elena', 
+    'ellen', 'emma', 'eva', 'fatima', 'fenna', 'fleur', 'janine', 'karin', 'kirsten', 
     'laura', 'lisa', 'lotte', 'maria', 'marit', 'ning', 'patricia', 'sandra', 
-    'sanne', 'sarah', 'saskia', 'sophie', 'susy', 'tina', 'charlotte', 'willeke',
+    'sanne', 'sarah', 'saskia', 'selin', 'sophie', 'susy', 'tina', 'charlotte', 'willeke',
     'inge', 'danielle', 'esther', 'monique', 'astrid', 'bianca'
   ]);
 
@@ -249,98 +249,47 @@ export const getSpeakerVoiceConfig = (speakerName = '') => {
   return { pitch, voice: selectedVoice, gender };
 };
 
-// Chrome/Chromium uzun metinlerde 15 saniye sonra takılma sorununu önleyen heartbeat mekanizması
-let speechHeartbeatTimer = null;
-
-const clearHeartbeat = () => {
-  if (speechHeartbeatTimer) {
-    clearInterval(speechHeartbeatTimer);
-    speechHeartbeatTimer = null;
-  }
-};
+// Çöp toplayıcının (GC) konuşma devam ederken utterance nesnesini silmesini engelleyen güçlü referans kümesi
+const activeUtterances = new Set();
+if (typeof window !== 'undefined') {
+  window._activeDutchUtterances = activeUtterances;
+}
 
 let currentHighlightSession = 0;
+let unpauseWatchdogTimer = null;
+
+const startUnpauseWatchdog = () => {
+  if (unpauseWatchdogTimer) clearInterval(unpauseWatchdogTimer);
+  unpauseWatchdogTimer = setInterval(() => {
+    if (typeof window !== 'undefined' && window.speechSynthesis) {
+      if (window.speechSynthesis.paused) {
+        window.speechSynthesis.resume();
+      }
+    }
+  }, 1000);
+};
+
+const stopUnpauseWatchdog = () => {
+  if (unpauseWatchdogTimer) {
+    clearInterval(unpauseWatchdogTimer);
+    unpauseWatchdogTimer = null;
+  }
+};
 
 // Seslendirmeyi anında durdurma fonksiyonu
 export const cancelDutchSpeech = () => {
   currentHighlightSession++;
-  clearHeartbeat();
+  stopUnpauseWatchdog();
+  activeUtterances.clear();
   if (typeof window !== 'undefined' && window.speechSynthesis) {
-    window.speechSynthesis.cancel();
+    try {
+      window.speechSynthesis.cancel();
+      // Olası takılı kalmış paused durumunu serbest bırak
+      if (window.speechSynthesis.paused) {
+        window.speechSynthesis.resume();
+      }
+    } catch (e) {}
   }
-};
-
-// Ana konuşma fonksiyonu
-export const speakDutch = (text, options = {}) => {
-  if (typeof window === 'undefined' || !window.speechSynthesis) return;
-  if (!text || typeof text !== 'string') return;
-
-  const trimmed = text.trim();
-  // Sadece parantez, nokta veya sembol içeren metinleri seslendirmeye çalışma
-  if (!trimmed || /^[\s().,?!–—…]+$/.test(trimmed)) {
-    if (options.onEnd) options.onEnd();
-    return;
-  }
-
-  // Önceki seslendirmeyi durdur ve heartbeat'i temizle
-  clearHeartbeat();
-  window.speechSynthesis.cancel();
-
-  // Tekil kelime seslendirmelerinde parantez içindeki açıklamaları temizle: "ben (zijn)" -> "ben"
-  let cleanText = text;
-  if (!options.onBoundary && !options.onWord && /\([^)]*\)/.test(cleanText)) {
-    cleanText = cleanText.replace(/\s*\([^)]*\)/g, '').trim() || text;
-  }
-
-  const utterance = new SpeechSynthesisUtterance(cleanText);
-  utterance.volume = 1.0;
-
-  // Konuşmacı konfigürasyonu
-  const { pitch, voice } = getSpeakerVoiceConfig(options.speaker);
-  
-  if (voice) {
-    utterance.voice = voice;
-    utterance.lang = voice.lang || 'nl-NL';
-  } else {
-    utterance.lang = 'nl-NL';
-  }
-
-  // Pitch doğal (1.0) veya akıllı mikro-ayar
-  utterance.pitch = options.pitch !== undefined ? options.pitch : pitch;
-
-  // Hız ayarı
-  const currentRate = options.rate !== undefined ? options.rate : getSpeechRate();
-  utterance.rate = currentRate;
-
-  utterance.onstart = (e) => {
-    if (options.onStart) options.onStart(e);
-  };
-
-  utterance.onboundary = (e) => {
-    if (options.onBoundary) options.onBoundary(e);
-  };
-
-  utterance.onend = (e) => {
-    clearHeartbeat();
-    if (options.onEnd) options.onEnd(e);
-  };
-
-  utterance.onerror = (e) => {
-    clearHeartbeat();
-    if (options.onError) options.onError(e);
-  };
-
-  // Uzun paragrafların kesilmemesi için her 10 saniyede bir pause/resume döngüsü
-  speechHeartbeatTimer = setInterval(() => {
-    if (typeof window !== 'undefined' && window.speechSynthesis && window.speechSynthesis.speaking) {
-      window.speechSynthesis.pause();
-      window.speechSynthesis.resume();
-    } else {
-      clearHeartbeat();
-    }
-  }, 10000);
-
-  window.speechSynthesis.speak(utterance);
 };
 
 // Metni kelime ve cümle tokenlarına ayırarak karakter konumlarını hesapla
@@ -394,7 +343,95 @@ export const findTokenIndexAtChar = (tokens, charIndex) => {
   return closest;
 };
 
-// Seslendirmeyi kelime ve cümle bazında ışıklı senkronizasyon ile yürüten fonksiyon
+// Uzun metinleri ve paragrafları tarayıcının 15 saniyelik kesilme sınırına takılmayacak
+// doğal cümle ve cümlecik parçalarına bölen akıllı böleme fonksiyonu
+export const buildSpeechChunks = (text, tokens, maxChunkLength = 160) => {
+  if (!tokens || tokens.length === 0) {
+    if (!text || !text.trim()) return [];
+    return [{
+      sentenceIndex: 0,
+      text: text.trim(),
+      startChar: 0,
+      endChar: text.length,
+      startTokenIdx: 0,
+      endTokenIdx: 0
+    }];
+  }
+
+  const sentences = [];
+  tokens.forEach((t, idx) => {
+    const sIdx = t.sentenceIndex;
+    if (!sentences[sIdx]) sentences[sIdx] = [];
+    sentences[sIdx].push({ ...t, tokenIdx: idx });
+  });
+
+  const chunks = [];
+
+  sentences.forEach((sTokens, sIdx) => {
+    if (!sTokens || sTokens.length === 0) return;
+
+    const sStartChar = sTokens[0].startChar;
+    const sEndChar = sTokens[sTokens.length - 1].endChar;
+    const sText = text.substring(sStartChar, sEndChar);
+
+    // Eğer cümle 160 karakterden kısaysa ve 15 kelimeden azsa tek parça olarak al
+    if (sText.length <= maxChunkLength && sTokens.length <= 15) {
+      chunks.push({
+        sentenceIndex: sIdx,
+        text: sText,
+        startChar: sStartChar,
+        endChar: sEndChar,
+        startTokenIdx: sTokens[0].tokenIdx,
+        endTokenIdx: sTokens[sTokens.length - 1].tokenIdx
+      });
+      return;
+    }
+
+    // Uzun cümleleri noktalama işaretlerinden (, ; : – —) veya güvenli kelime sınırlarından böl
+    let currentChunkTokens = [];
+    let currentStartChar = sTokens[0].startChar;
+
+    for (let i = 0; i < sTokens.length; i++) {
+      const t = sTokens[i];
+      currentChunkTokens.push(t);
+      const curLength = t.endChar - currentStartChar;
+      const isClauseBoundary = /[;,:\-–—]$/.test(t.raw) || (t.raw.endsWith(',') && curLength > 50);
+      const isTooLong = curLength >= maxChunkLength && i < sTokens.length - 1;
+
+      if ((isClauseBoundary && curLength > 40) || isTooLong) {
+        const cEndChar = t.endChar;
+        chunks.push({
+          sentenceIndex: sIdx,
+          text: text.substring(currentStartChar, cEndChar),
+          startChar: currentStartChar,
+          endChar: cEndChar,
+          startTokenIdx: currentChunkTokens[0].tokenIdx,
+          endTokenIdx: currentChunkTokens[currentChunkTokens.length - 1].tokenIdx
+        });
+        currentChunkTokens = [];
+        if (i + 1 < sTokens.length) {
+          currentStartChar = sTokens[i + 1].startChar;
+        }
+      }
+    }
+
+    if (currentChunkTokens.length > 0) {
+      const lastToken = currentChunkTokens[currentChunkTokens.length - 1];
+      chunks.push({
+        sentenceIndex: sIdx,
+        text: text.substring(currentStartChar, lastToken.endChar),
+        startChar: currentStartChar,
+        endChar: lastToken.endChar,
+        startTokenIdx: currentChunkTokens[0].tokenIdx,
+        endTokenIdx: lastToken.tokenIdx
+      });
+    }
+  });
+
+  return chunks;
+};
+
+// Seslendirmeyi kelime ve cümle bazında kesintisiz parça kuyruğu (chunk queue) ile yürüten ana fonksiyon
 export const speakDutchWithHighlight = (text, options = {}) => {
   if (typeof window === 'undefined' || !window.speechSynthesis) {
     if (options.onEnd) options.onEnd();
@@ -405,15 +442,27 @@ export const speakDutchWithHighlight = (text, options = {}) => {
     return { cancel: () => {} };
   }
 
-  const tokens = parseTextTokens(text);
-  if (tokens.length === 0) {
+  const trimmed = text.trim();
+  if (!trimmed || /^[\s().,?!–—…]+$/.test(trimmed)) {
     if (options.onEnd) options.onEnd();
     return { cancel: () => {} };
   }
 
-  const sessionId = ++currentHighlightSession;
+  const tokens = parseTextTokens(text);
+  const chunks = buildSpeechChunks(text, tokens);
+
+  if (chunks.length === 0) {
+    if (options.onEnd) options.onEnd();
+    return { cancel: () => {} };
+  }
+
+  // Önceki seslendirmeyi durdur ve yeni oturum başlat
+  cancelDutchSpeech();
+  const sessionId = currentHighlightSession;
+  startUnpauseWatchdog();
+
   let fallbackTimer = null;
-  let hasReceivedBoundary = false;
+  let chunkWatchdogTimer = null;
   let currentWordIdx = -1;
   let currentSentIdx = -1;
 
@@ -445,75 +494,144 @@ export const speakDutchWithHighlight = (text, options = {}) => {
       clearInterval(fallbackTimer);
       fallbackTimer = null;
     }
+    if (chunkWatchdogTimer) {
+      clearTimeout(chunkWatchdogTimer);
+      chunkWatchdogTimer = null;
+    }
+    stopUnpauseWatchdog();
     emitWord(null);
   };
 
   const currentRate = options.rate !== undefined ? options.rate : getSpeechRate();
+  const { pitch, voice } = getSpeakerVoiceConfig(options.speaker);
+  const currentPitch = options.pitch !== undefined ? options.pitch : pitch;
 
-  speakDutch(text, {
-    speaker: options.speaker,
-    rate: currentRate,
-    pitch: options.pitch,
-    onStart: (e) => {
+  const playChunk = (index) => {
+    if (sessionId !== currentHighlightSession) return;
+
+    if (index >= chunks.length) {
+      cleanup();
+      if (options.onEnd) options.onEnd();
+      return;
+    }
+
+    const chunk = chunks[index];
+
+    // Cümle geçişini bildir ve ilk kelimeyi vurgula
+    if (options.onSentence) {
+      currentSentIdx = chunk.sentenceIndex;
+      options.onSentence(chunk.sentenceIndex);
+    }
+    if (chunk.startTokenIdx !== undefined && chunk.startTokenIdx >= 0) {
+      emitWord(chunk.startTokenIdx);
+    }
+
+    const utterance = new SpeechSynthesisUtterance(chunk.text);
+    utterance.volume = 1.0;
+    utterance.rate = currentRate;
+    utterance.pitch = currentPitch;
+
+    if (voice) {
+      utterance.voice = voice;
+      utterance.lang = voice.lang || 'nl-NL';
+    } else {
+      utterance.lang = 'nl-NL';
+    }
+
+    // GC tarafından bellekten silinmesini önlemek için referansı sakla
+    activeUtterances.add(utterance);
+
+    let hasReceivedBoundary = false;
+
+    // Boundary desteği olmayan tarayıcılar için chunk bazlı akıllı zamanlayıcı
+    if (fallbackTimer) clearInterval(fallbackTimer);
+    const chunkTokens = tokens.slice(chunk.startTokenIdx, chunk.endTokenIdx + 1);
+    const charsPerSec = 14 * currentRate;
+    let cumulativeTime = 0;
+    const chunkWordTimes = chunkTokens.map(t => {
+      const durationMs = Math.max(160, (t.raw.length / charsPerSec) * 1000);
+      const start = cumulativeTime;
+      cumulativeTime += durationMs;
+      return { tokenIdx: t.tokenIdx !== undefined ? t.tokenIdx : tokens.indexOf(t), startMs: start };
+    });
+
+    const chunkStartTime = Date.now();
+    fallbackTimer = setInterval(() => {
+      if (sessionId !== currentHighlightSession) {
+        clearInterval(fallbackTimer);
+        return;
+      }
+      if (hasReceivedBoundary) return;
+
+      const elapsed = Date.now() - chunkStartTime;
+      let activeTIdx = chunk.endTokenIdx;
+      for (let i = 0; i < chunkWordTimes.length; i++) {
+        if (elapsed < chunkWordTimes[i].startMs) {
+          activeTIdx = Math.max(chunk.startTokenIdx, (chunkWordTimes[i - 1]?.tokenIdx ?? chunk.startTokenIdx));
+          break;
+        }
+      }
+      emitWord(activeTIdx);
+    }, 50);
+
+    // Olası tarayıcı takılmalarına karşı güvenlik zamanlayıcısı (Watchdog)
+    if (chunkWatchdogTimer) clearTimeout(chunkWatchdogTimer);
+    const maxExpectedMs = Math.max(4000, (chunk.text.length / (7 * currentRate)) * 1000 + 3500);
+    chunkWatchdogTimer = setTimeout(() => {
       if (sessionId !== currentHighlightSession) return;
-      emitWord(0);
-      if (options.onStart) options.onStart(e);
+      if (activeUtterances.has(utterance)) {
+        activeUtterances.delete(utterance);
+        if (fallbackTimer) clearInterval(fallbackTimer);
+        playChunk(index + 1);
+      }
+    }, maxExpectedMs);
 
-      // Web Speech API boundary olayı desteklenmeyen ortamlar için akıllı zamanlama yedeği
-      const startTime = Date.now();
-      const charsPerSec = 14 * currentRate;
-      let cumulativeTime = 0;
-      const wordStartTimes = tokens.map(t => {
-        const durationMs = Math.max(180, (t.raw.length / charsPerSec) * 1000);
-        const start = cumulativeTime;
-        cumulativeTime += durationMs;
-        return start;
-      });
+    utterance.onstart = (e) => {
+      if (sessionId !== currentHighlightSession) return;
+      if (index === 0 && options.onStart) options.onStart(e);
+    };
 
-      fallbackTimer = setInterval(() => {
-        if (sessionId !== currentHighlightSession) {
-          clearInterval(fallbackTimer);
-          return;
-        }
-        if (hasReceivedBoundary) return;
-
-        const elapsed = Date.now() - startTime;
-        let activeIdx = tokens.length - 1;
-        for (let i = 0; i < wordStartTimes.length; i++) {
-          if (elapsed < wordStartTimes[i]) {
-            activeIdx = Math.max(0, i - 1);
-            break;
-          }
-        }
-        emitWord(activeIdx);
-      }, 50);
-    },
-    onBoundary: (e) => {
+    utterance.onboundary = (e) => {
       if (sessionId !== currentHighlightSession) return;
       if (e.name === 'word' || e.charIndex !== undefined) {
         hasReceivedBoundary = true;
-        const idx = findTokenIndexAtChar(tokens, e.charIndex);
-        if (idx >= 0 && idx < tokens.length) {
-          emitWord(idx);
-        }
-      } else if (e.name === 'sentence') {
-        const idx = findTokenIndexAtChar(tokens, e.charIndex);
-        if (idx >= 0 && idx < tokens.length) {
-          emitWord(idx);
+        const globalChar = chunk.startChar + (e.charIndex || 0);
+        const wIdx = findTokenIndexAtChar(tokens, globalChar);
+        if (wIdx >= 0 && wIdx < tokens.length) {
+          emitWord(wIdx);
         }
       }
-    },
-    onEnd: (e) => {
+    };
+
+    utterance.onend = () => {
+      activeUtterances.delete(utterance);
+      if (fallbackTimer) clearInterval(fallbackTimer);
+      if (chunkWatchdogTimer) clearTimeout(chunkWatchdogTimer);
       if (sessionId !== currentHighlightSession) return;
-      cleanup();
-      if (options.onEnd) options.onEnd(e);
-    },
-    onError: (e) => {
+
+      // Kesintisiz şekilde sıradaki cümleye geç
+      playChunk(index + 1);
+    };
+
+    utterance.onerror = (e) => {
+      activeUtterances.delete(utterance);
+      if (fallbackTimer) clearInterval(fallbackTimer);
+      if (chunkWatchdogTimer) clearTimeout(chunkWatchdogTimer);
       if (sessionId !== currentHighlightSession) return;
-      cleanup();
-      if (options.onError) options.onError(e);
-    }
-  });
+
+      if (e.error === 'interrupted' || e.error === 'canceled') {
+        cleanup();
+        return;
+      }
+      // Hata durumunda kuyruğu kilitlemeden sıradaki parçaya devam et
+      playChunk(index + 1);
+    };
+
+    window.speechSynthesis.speak(utterance);
+  };
+
+  // İlk parçayı başlat
+  playChunk(0);
 
   return {
     cancel: () => {
@@ -524,6 +642,25 @@ export const speakDutchWithHighlight = (text, options = {}) => {
       cancelDutchSpeech();
     }
   };
+};
+
+// Standart konuşma fonksiyonu (kelime veya metin seslendirmeleri)
+export const speakDutch = (text, options = {}) => {
+  if (typeof window === 'undefined' || !window.speechSynthesis) return;
+  if (!text || typeof text !== 'string') return;
+
+  let cleanText = text.trim();
+  if (!cleanText || /^[\s().,?!–—…]+$/.test(cleanText)) {
+    if (options.onEnd) options.onEnd();
+    return;
+  }
+
+  // Tekil kelime seslendirmelerinde parantez içindeki açıklamaları temizle: "ben (zijn)" -> "ben"
+  if (!options.onBoundary && !options.onWord && /\([^)]*\)/.test(cleanText)) {
+    cleanText = cleanText.replace(/\s*\([^)]*\)/g, '').trim() || text;
+  }
+
+  return speakDutchWithHighlight(cleanText, options);
 };
 
 // Hız ve ses testi için örnek cümle
