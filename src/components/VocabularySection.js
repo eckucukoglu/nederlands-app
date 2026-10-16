@@ -248,8 +248,20 @@ export default function VocabularySection({
   const isFav = !!favorites[sectionId];
   const isComp = !!completed[sectionId];
 
+  const handleStarClick = (e) => {
+    e.stopPropagation();
+    if (isFav) {
+      if (toggleFavorite) toggleFavorite(sectionId, null);
+    } else {
+      setShowFavInput(true);
+    }
+  };
+
   const handleSaveFav = (e) => {
-    e.preventDefault();
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
     if (toggleFavorite) {
       toggleFavorite(sectionId, favNote.trim() || (isTr ? `Ünite ${chNum} Kelimeleri` : `Chapter ${chNum} Vocabulary`));
     }
@@ -302,60 +314,65 @@ export default function VocabularySection({
               <span className="hidden sm:inline">{isTr ? 'Tümünü Biliyorum Yap' : 'Mark All Known'}</span>
             </button>
 
-            {/* Tamamlandı Butonu */}
+            {/* Tamamlandı Butonu (Sitenin geri kalanıyla tam uyumlu) */}
             <button
-              onClick={() => toggleCompleted && toggleCompleted(sectionId)}
-              className={`p-2.5 rounded-xl border transition cursor-pointer flex items-center justify-center shadow-sm ${
-                isComp
-                  ? 'bg-emerald-600 border-emerald-400 text-white shadow-md shadow-emerald-600/30'
-                  : 'bg-slate-900/80 border-slate-700 text-slate-400 hover:bg-slate-750 hover:text-slate-200'
-              }`}
-              title={isComp ? (isTr ? 'Tamamlandı işaretini kaldır' : 'Mark as uncompleted') : (isTr ? 'Bölümü tamamlandı olarak işaretle' : 'Mark section as completed')}
+              type="button"
+              onClick={(e) => { e.stopPropagation(); toggleCompleted && toggleCompleted(sectionId); }}
+              className="text-2xl transition-transform hover:scale-110 focus:outline-none cursor-pointer flex items-center justify-center ml-1"
+              title={isComp ? (isTr ? 'Tamamlandı olarak işaretlendi' : 'Marked as completed') : (isTr ? 'Tamamlandı olarak işaretle' : 'Mark as completed')}
             >
-              <i className="fa-solid fa-check text-sm"></i>
+              {isComp ? (
+                <i className="fa-solid fa-circle-check text-emerald-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.6)]"></i>
+              ) : (
+                <i className="fa-regular fa-circle-check text-slate-500 hover:text-emerald-400 transition-colors"></i>
+              )}
             </button>
 
-            {/* Favorilere Ekle Butonu */}
-            <button
-              onClick={() => {
-                if (isFav) {
-                  toggleFavorite(sectionId);
-                } else {
-                  setShowFavInput(!showFavInput);
-                }
-              }}
-              className={`p-2.5 rounded-xl border transition cursor-pointer flex items-center justify-center shadow-sm ${
-                isFav
-                  ? 'bg-amber-500 border-amber-400 text-slate-950 shadow-md shadow-amber-500/30'
-                  : 'bg-slate-900/80 border-slate-700 text-slate-400 hover:bg-slate-750 hover:text-amber-400'
-              }`}
-              title={isFav ? (isTr ? 'Favorilerden çıkar' : 'Remove from favorites') : (isTr ? 'Favorilere ekle' : 'Add to favorites')}
-            >
-              <i className={`fa-star text-sm ${isFav ? 'fa-solid' : 'fa-regular'}`}></i>
-            </button>
+            {/* Favorilere Ekle Butonu (Sitenin geri kalanıyla tam uyumlu) */}
+            <div className="flex items-center relative">
+              <button
+                type="button"
+                onClick={handleStarClick}
+                className="text-2xl transition-transform hover:scale-110 focus:outline-none cursor-pointer flex items-center justify-center"
+                title={isFav ? (isTr ? 'Favorilerden çıkar' : 'Remove from favorites') : (isTr ? 'Favorilere ekle' : 'Add to favorites')}
+              >
+                {isFav ? (
+                  <i className="fa-solid fa-star text-amber-400 drop-shadow-[0_0_8px_rgba(251,191,36,0.6)]"></i>
+                ) : (
+                  <i className="fa-regular fa-star text-slate-500 hover:text-amber-400 transition-colors"></i>
+                )}
+              </button>
+
+              {/* Favori Notu Popover Giriş Alanı */}
+              {showFavInput && (
+                <div 
+                  className="flex items-center gap-1.5 bg-slate-900 border border-amber-500/50 p-1 rounded-xl shadow-lg animate-fadeIn absolute right-0 top-full mt-2 z-30" 
+                  onClick={e => e.stopPropagation()}
+                >
+                  <input
+                    autoFocus
+                    maxLength={100}
+                    value={favNote}
+                    onChange={(e) => setFavNote(e.target.value)}
+                    onKeyDown={(e) => { 
+                      if (e.key === 'Enter') handleSaveFav(e); 
+                      if (e.key === 'Escape') setShowFavInput(false);
+                    }}
+                    placeholder={isTr ? "Notun (max 100 kar.)..." : "Your note (max 100 char.)..."}
+                    className="bg-transparent text-slate-200 text-xs px-2.5 py-1 w-36 sm:w-44 focus:outline-none placeholder-slate-500"
+                  />
+                  <button 
+                    type="button"
+                    onClick={handleSaveFav} 
+                    className="bg-amber-600 hover:bg-amber-500 text-white px-2 py-1 rounded-lg text-xs font-bold transition-colors cursor-pointer flex items-center justify-center shadow-sm"
+                  >
+                    <i className="fa-solid fa-check"></i>
+                  </button>
+                </div>
+              )}
+            </div>
           </div>
         </div>
-
-        {/* Favori Notu Giriş Alanı */}
-        {showFavInput && (
-          <form onSubmit={handleSaveFav} className="mt-4 pt-4 border-t border-slate-700/60 flex items-center gap-2">
-            <input
-              type="text"
-              value={favNote}
-              onChange={(e) => setFavNote(e.target.value)}
-              placeholder={isTr ? "Favori için not (örn: zor kelimeler)..." : "Note for favorite..."}
-              maxLength={80}
-              className="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2 text-xs text-slate-200 focus:outline-none focus:border-amber-400"
-              autoFocus
-            />
-            <button type="submit" className="bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold px-3.5 py-2 rounded-xl transition cursor-pointer">
-              {isTr ? 'Kaydet' : 'Save'}
-            </button>
-            <button type="button" onClick={() => setShowFavInput(false)} className="text-slate-400 hover:text-slate-200 text-xs px-2 cursor-pointer">
-              {isTr ? 'İptal' : 'Cancel'}
-            </button>
-          </form>
-        )}
 
         {/* İlerleme ve İstatistikler Satırı */}
         <div className="mt-5 grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
