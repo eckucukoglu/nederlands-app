@@ -37,15 +37,21 @@ export const getVoices = () => {
 };
 
 // Tarayıcı sesleri yüklendiğinde cache'i güncelle
+// Tarayıcı sesleri hazır olduğunda önbelleği derhal güncelle
 if (typeof window !== 'undefined' && window.speechSynthesis) {
+  const updateVoices = () => {
+    try {
+      const v = window.speechSynthesis.getVoices();
+      if (v && v.length > 0) cachedVoices = v;
+    } catch (e) {}
+  };
+  updateVoices();
   if (window.speechSynthesis.onvoiceschanged !== undefined) {
-    window.speechSynthesis.onvoiceschanged = () => {
-      cachedVoices = window.speechSynthesis.getVoices();
-    };
+    window.speechSynthesis.onvoiceschanged = updateVoices;
   }
 }
 
-// En kaliteli Hollandaca sesleri filtrele ve puanla
+// En kaliteli, doğal ve insansı Hollandaca sesleri filtrele ve puanla
 export const getDutchVoices = () => {
   const voices = getVoices();
   if (!voices || voices.length === 0) return [];
@@ -53,26 +59,55 @@ export const getDutchVoices = () => {
   const dutchVoices = voices.filter(v => {
     if (!v || !v.lang) return false;
     const lang = v.lang.toLowerCase().replace('_', '-');
-    return lang.startsWith('nl') || lang.includes('nld') || (v.name && v.name.toLowerCase().includes('dutch'));
+    const name = (v.name || '').toLowerCase();
+    return (
+      lang.startsWith('nl') || 
+      lang.startsWith('nld') || 
+      name.includes('dutch') || 
+      name.includes('nederlands') || 
+      name.includes('flemish')
+    );
   });
 
   return dutchVoices.sort((a, b) => {
     const score = (voice) => {
-      let s = 10;
+      let s = 100;
       const n = (voice.name || '').toLowerCase();
       const l = (voice.lang || '').toLowerCase().replace('_', '-');
 
-      // Online / Natural / Neural en kaliteli seslerdir (özellikle Edge ve cloud)
-      if (n.includes('natural') || n.includes('neural') || n.includes('online')) s += 40;
-      // Google sesleri çok nettir (Chrome)
-      if (n.includes('google')) s += 30;
-      // Apple Siri / Premium / Enhanced sesleri (Safari/macOS/iOS)
-      if (n.includes('premium') || n.includes('enhanced') || n.includes('siri')) s += 25;
-      // Hollanda aksanı (Belçika flaman yerine standart nl-NL)
-      if (l === 'nl-nl') s += 5;
-      if (voice.default) s += 2;
-      // espeak veya compact sesler kalitesizdir, geriye at
-      if (n.includes('compact') || n.includes('espeak')) s -= 50;
+      // 1. En Üst Seviye: Modern Neural / Natural Online Sesler (Edge, Azure Neural)
+      // Bu sesler gerçek insan gibi nefes alan, melodik ve robotik olmayan en gelişmiş seslerdir.
+      if (n.includes('natural') || n.includes('neural')) s += 120;
+      if (n.includes('online')) s += 40;
+
+      // 2. Apple Siri & Premium / Enhanced Sesleri (Safari, iOS, macOS)
+      // Apple'ın stüdyo kayıtlı gelişmiş sesleri (Xander, Claire, Siri)
+      if (n.includes('siri')) s += 100;
+      if (n.includes('premium')) s += 90;
+      if (n.includes('enhanced')) s += 80;
+
+      // 3. Google Yüksek Kaliteli Bulut & WaveNet Sesleri (Chrome Desktop & Android)
+      if (n.includes('google')) s += 70;
+      if (n.includes('wavenet') || n.includes('network')) s += 50;
+
+      // 4. Standart Hollanda Aksanı (nl-NL standardı, Belçika flaman yerine öncelikli)
+      if (l === 'nl-nl' || l === 'nl') s += 20;
+      if (l === 'nl-be') s += 10;
+      if (voice.default) s += 5;
+
+      // 5. Mekanik / Düşük Kaliteli Sesleri Güçlü Şekilde Geriye At
+      // eSpeak, festival veya compact gibi 80'ler tarzı robotik sesler asla ilk tercih olmamalıdır
+      if (n.includes('compact')) s -= 50;
+      if (
+        n.includes('espeak') || 
+        n.includes('festival') || 
+        n.includes('mbrola') || 
+        n.includes('flite') || 
+        n.includes('speech-dispatcher')
+      ) {
+        s -= 400;
+      }
+
       return s;
     };
     return score(b) - score(a);
@@ -152,52 +187,63 @@ export const getSpeakerVoiceConfig = (speakerName = '') => {
   let voiceGender = 'unknown';
 
   if (dutchVoices.length > 0) {
-    selectedVoice = dutchVoices[0]; // varsayılan
-
-    const femaleVoiceRegex = /female|vrouw|fenna|colette|claire|ellen|saskia|laura|anna|emma|dfa|dfd|dff|woman/i;
-    const maleVoiceRegex = /male|man|maarten|bart|xander|ruben|daan|frank|bram|arthur|luc|dfb|dfc|dfe/i;
+    // Geniş ve doğru cinsiyet tanıma desenleri (Google Nederlands ve Android sesleri dahil!)
+    const femaleVoiceRegex = /female|vrouw|woman|google|fenna|colette|claire|ellen|saskia|laura|anna|emma|dena|dfa|dfd|dff/i;
+    const maleVoiceRegex = /\bmale\b|\bman\b|maarten|bart|xander|ruben|daan|frank|bram|arthur|luc|arnaud|dfb|dfc|dfe/i;
 
     const femaleVoices = dutchVoices.filter(v => femaleVoiceRegex.test(v.name));
     const maleVoices = dutchVoices.filter(v => maleVoiceRegex.test(v.name));
 
     if (isFemale && femaleVoices.length > 0) {
-      selectedVoice = femaleVoices[0];
+      // Eğer aynı cinsiyette birden fazla kaliteli ses varsa konuşmacı adına göre dönüşümlü kullan
+      const hash = Math.abs((speakerName || '').split('').reduce((acc, c) => acc + c.charCodeAt(0), 0));
+      selectedVoice = femaleVoices[hash % femaleVoices.length];
       voiceGender = 'female';
     } else if (isMale && maleVoices.length > 0) {
-      selectedVoice = maleVoices[0];
+      const hash = Math.abs((speakerName || '').split('').reduce((acc, c) => acc + c.charCodeAt(0), 0));
+      selectedVoice = maleVoices[hash % maleVoices.length];
       voiceGender = 'male';
     } else if (dutchVoices.length > 1) {
-      // Cinsiyet belirli değilse iki farklı konuşmacı dönüşümlü farklı ses alsın
-      const charSum = (speakerName || '').split('').reduce((acc, c) => acc + c.charCodeAt(0), 0);
-      selectedVoice = dutchVoices[charSum % dutchVoices.length];
-      if (femaleVoiceRegex.test(selectedVoice.name)) voiceGender = 'female';
-      else if (maleVoiceRegex.test(selectedVoice.name)) voiceGender = 'male';
+      // Belirli bir cinsiyet eşleşmesi yoksa mevcut sesler arasında konuşmacı bazlı dağıt
+      const hash = Math.abs((speakerName || '').split('').reduce((acc, c) => acc + c.charCodeAt(0), 0));
+      selectedVoice = dutchVoices[hash % dutchVoices.length];
+      if (maleVoiceRegex.test(selectedVoice.name)) voiceGender = 'male';
+      else if (femaleVoiceRegex.test(selectedVoice.name)) voiceGender = 'female';
     } else {
-      // Tek ses varsa adından tahmin et
-      if (femaleVoiceRegex.test(selectedVoice.name)) voiceGender = 'female';
-      else if (maleVoiceRegex.test(selectedVoice.name)) voiceGender = 'male';
+      // Tek ses varsa (örn: Chrome masaüstünde yalnızca Google Nederlands yüklüyse)
+      selectedVoice = dutchVoices[0];
+      if (maleVoiceRegex.test(selectedVoice.name)) voiceGender = 'male';
+      else if (femaleVoiceRegex.test(selectedVoice.name)) voiceGender = 'female';
     }
   }
 
-  // Akıllı Perde (Pitch) Yönetimi:
-  // Eğer tarayıcıda özel erkek veya kadın sesi yoksa, ya da tek bir ses yüklüyse
-  // (örneğin masaüstü Chrome'da varsayılan Google Nederlands dişi sestir),
-  // perdede yapılan doğal frekans ayarı konuşmacının net olarak kadın veya erkek
-  // olduğunu kulakla anında ayırt ettirir.
+  // --- DOĞAL VE İNSANSI PERDE (PITCH) YÖNETİMİ ---
+  // Eski kodda kullanılan 0.78 ve 1.18 gibi sert perde değişiklikleri
+  // tarayıcıların sentezleyicilerinde aşırı mekanik, teneke gibi metalik ve robotik
+  // bir tınıya yol açıyordu.
+  // Burada: Gerçek erkek veya kadın sesi bulunduğunda perde kesinlikle 1.0 (orijinal insan tınısı) tutulur.
+  // Tek bir ses olan ortamlarda ise sadece çok hafif (en fazla %5-6) mikromikron tonlama yapılır;
+  // böylece ses kalitesi bozulmaz, metalikleşmez ve konuşma hissi tamamen doğal kalır.
   let pitch = 1.0;
 
   if (isMale) {
     if (voiceGender === 'male') {
-      pitch = 0.95; // Doğal erkek register'ı
+      pitch = 1.0; // Gerçek erkek sesi -> Orijinal doğal perde
     } else {
-      pitch = 0.78; // Dişi veya genel sesi derin, rezonanslı doğal erkek sesine dönüştürür
+      // Kadın/genel ses üzerinden erkek konuşmacı:
+      // 0.78 yerine 0.94 -> Metalik robotikleşme olmadan hafifçe tok ve doğal erkek tonu
+      pitch = 0.94;
     }
   } else if (isFemale) {
     if (voiceGender === 'female') {
-      pitch = 1.05; // Doğal kadın register'ı
+      pitch = 1.0; // Gerçek kadın sesi -> Orijinal doğal perde
     } else {
-      pitch = 1.18; // Erkek veya genel sesi berrak, canlı kadın sesine dönüştürür
+      // Erkek/genel ses üzerinden kadın konuşmacı:
+      // 1.18 yerine 1.04 -> Çizgi film karakterine dönüşmeden berrak, canlı kadın tonu
+      pitch = 1.04;
     }
+  } else {
+    pitch = 1.0; // Anlatıcı veya genel metinler daima saf doğal perde
   }
 
   return { pitch, voice: selectedVoice, gender };
@@ -229,11 +275,25 @@ export const speakDutch = (text, options = {}) => {
   if (typeof window === 'undefined' || !window.speechSynthesis) return;
   if (!text || typeof text !== 'string') return;
 
+  const trimmed = text.trim();
+  // Sadece parantez, nokta veya sembol içeren metinleri seslendirmeye çalışma
+  if (!trimmed || /^[\s().,?!–—…]+$/.test(trimmed)) {
+    if (options.onEnd) options.onEnd();
+    return;
+  }
+
   // Önceki seslendirmeyi durdur ve heartbeat'i temizle
   clearHeartbeat();
   window.speechSynthesis.cancel();
 
-  const utterance = new SpeechSynthesisUtterance(text);
+  // Tekil kelime seslendirmelerinde parantez içindeki açıklamaları temizle: "ben (zijn)" -> "ben"
+  let cleanText = text;
+  if (!options.onBoundary && !options.onWord && /\([^)]*\)/.test(cleanText)) {
+    cleanText = cleanText.replace(/\s*\([^)]*\)/g, '').trim() || text;
+  }
+
+  const utterance = new SpeechSynthesisUtterance(cleanText);
+  utterance.volume = 1.0;
 
   // Konuşmacı konfigürasyonu
   const { pitch, voice } = getSpeakerVoiceConfig(options.speaker);
@@ -245,7 +305,7 @@ export const speakDutch = (text, options = {}) => {
     utterance.lang = 'nl-NL';
   }
 
-  // Pitch daima doğal (1.0) veya açıkça belirtilmişse options.pitch
+  // Pitch doğal (1.0) veya akıllı mikro-ayar
   utterance.pitch = options.pitch !== undefined ? options.pitch : pitch;
 
   // Hız ayarı
