@@ -326,9 +326,14 @@ export const parseTextTokens = (text) => {
 export const findTokenIndexAtChar = (tokens, charIndex) => {
   if (!tokens || tokens.length === 0) return -1;
   for (let i = 0; i < tokens.length; i++) {
-    const nextStart = i < tokens.length - 1 ? tokens[i + 1].startChar : tokens[i].endChar + 9999;
-    if (charIndex >= tokens[i].startChar && charIndex < nextStart) {
+    const t = tokens[i];
+    // Kelimenin doğrudan kendi karakter aralığı
+    if (charIndex >= t.startChar && charIndex <= t.endChar) {
       return i;
+    }
+    // Kelimeler arasındaki boşlukta ise ve sıradaki kelimeye geçildiyse gecikmeyi önlemek için sıradaki kelimeye geç
+    if (i < tokens.length - 1 && charIndex > t.endChar && charIndex < tokens[i + 1].startChar) {
+      return i + 1;
     }
   }
   let closest = 0;
@@ -546,16 +551,30 @@ export const speakDutchWithHighlight = (text, options = {}) => {
     // Boundary desteği olmayan tarayıcılar için chunk bazlı akıllı zamanlayıcı
     if (fallbackTimer) clearInterval(fallbackTimer);
     const chunkTokens = tokens.slice(chunk.startTokenIdx, chunk.endTokenIdx + 1);
-    const charsPerSec = 14 * currentRate;
+    // Doğal Hollandaca konuşma temposu (~17 karakter/sn)
+    const charsPerSec = 17.0 * currentRate;
     let cumulativeTime = 0;
     const chunkWordTimes = chunkTokens.map(t => {
-      const durationMs = Math.max(160, (t.raw.length / charsPerSec) * 1000);
+      // Kısa fonksiyonel kelimeler (de, het, ik, en, op) için taban süreyi 75ms'ye çekerek gecikmeyi önle
+      const cleanLen = (t.clean && t.clean.length > 0) ? t.clean.length : t.raw.length;
+      const baseMs = (cleanLen / charsPerSec) * 1000;
+      let durationMs = Math.max(75, baseMs);
+
+      // Cümlecik veya cümle sonu nefes alma duraklamalarını hesaba kat
+      if (/[;,:\-–—]$/.test(t.raw)) {
+        durationMs += 100;
+      } else if (/[.!?]$/.test(t.raw)) {
+        durationMs += 160;
+      }
+
       const start = cumulativeTime;
       cumulativeTime += durationMs;
       return { tokenIdx: t.tokenIdx !== undefined ? t.tokenIdx : tokens.indexOf(t), startMs: start };
     });
 
     const chunkStartTime = Date.now();
+    // 45ms pozitif avans: ses kulağa ulaştığı anda ışığın kelimeyle kusursuz senkronize olmasını sağlar
+    const visualLeadMs = 45;
     fallbackTimer = setInterval(() => {
       if (sessionId !== currentHighlightSession) {
         clearInterval(fallbackTimer);
@@ -563,7 +582,7 @@ export const speakDutchWithHighlight = (text, options = {}) => {
       }
       if (hasReceivedBoundary) return;
 
-      const elapsed = Date.now() - chunkStartTime;
+      const elapsed = (Date.now() - chunkStartTime) + visualLeadMs;
       let activeTIdx = chunk.endTokenIdx;
       for (let i = 0; i < chunkWordTimes.length; i++) {
         if (elapsed < chunkWordTimes[i].startMs) {
@@ -572,7 +591,7 @@ export const speakDutchWithHighlight = (text, options = {}) => {
         }
       }
       emitWord(activeTIdx);
-    }, 50);
+    }, 30);
 
     // Olası tarayıcı takılmalarına karşı güvenlik zamanlayıcısı (Watchdog)
     if (chunkWatchdogTimer) clearTimeout(chunkWatchdogTimer);
