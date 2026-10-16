@@ -310,17 +310,23 @@ const GuideContent = ({ lang }) => (
       </>
     )}
 
-    {/* EN ALTTA GITHUB BAĞLANTISI */}
+    {/* EN ALTTA GITHUB BAĞLANTISI & VERSİYON BİLGİSİ */}
     <div className="bg-slate-800/80 border border-slate-700/80 p-4 sm:p-5 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4 mt-6 shadow-sm">
       <div className="flex items-center gap-3 text-center sm:text-left">
         <div className="w-10 h-10 rounded-xl bg-slate-700/60 border border-slate-600/60 flex items-center justify-center text-slate-200 flex-shrink-0 shadow-inner">
           <i className="fa-brands fa-github text-xl"></i>
         </div>
         <div>
-          <strong className="block text-slate-100 text-sm font-bold">
-            {lang === 'tr' ? 'Açık Kaynak Kodlu Proje' : 'Open Source Project'}
-          </strong>
-          <span className="text-xs text-slate-400">
+          <div className="flex items-center gap-2 justify-center sm:justify-start flex-wrap">
+            <strong className="block text-slate-100 text-sm font-bold">
+              {lang === 'tr' ? 'Açık Kaynak Kodlu Proje' : 'Open Source Project'}
+            </strong>
+            <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-950/80 border border-emerald-600/60 text-emerald-300 font-mono text-[11px] font-extrabold tracking-wide shadow-sm">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              Version v1.0
+            </span>
+          </div>
+          <span className="text-xs text-slate-400 block mt-0.5">
             {lang === 'tr' 
               ? 'Kaynak kodları inceleyebilir, projeye katkıda bulunabilir veya GitHub üzerinden yıldız verebilirsiniz.' 
               : 'Feel free to review the source code, contribute, or star the repository on GitHub.'}
@@ -335,6 +341,7 @@ const GuideContent = ({ lang }) => (
       >
         <i className="fa-brands fa-github text-base"></i>
         <span>GitHub Repository</span>
+        <span className="text-[10px] bg-slate-800/90 text-brand-300 font-mono font-bold px-1.5 py-0.5 rounded border border-slate-600/60">v1.0</span>
         <i className="fa-solid fa-arrow-up-right-from-square text-[10px] ml-0.5 opacity-70"></i>
       </a>
     </div>
@@ -1134,15 +1141,6 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
             
             <div className="overflow-y-auto p-6 flex-1 scrollbar-thin scrollbar-thumb-slate-700 space-y-6">
                <GuideContent lang={lang} />
-               <div className="bg-slate-800/50 border border-slate-700 p-4 rounded-xl flex items-center justify-between mt-6">
-                <div>
-                  <strong className="block text-slate-200">Open Source Project</strong>
-                  <span className="text-xs text-slate-400">Feel free to contribute or review the code.</span>
-                </div>
-                <a href="https://github.com/eckucukoglu/nederlands-app" target="_blank" rel="noreferrer" className="flex items-center gap-2 bg-slate-700 hover:bg-slate-600 text-white px-4 py-2 rounded-lg transition-colors font-medium shadow-sm">
-                  <i className="fa-brands fa-github text-lg"></i> GitHub
-                </a>
-              </div>
             </div>
           </div>
         </div>
