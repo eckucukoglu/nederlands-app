@@ -528,21 +528,16 @@ export default function HomeView({
               </div>
             </div>
 
-            {/* Matematiksel Sağlama ve Formül */}
-            <div className="rounded-2xl bg-slate-950/80 border border-slate-800 p-4 space-y-2">
-              <div className="text-xs font-bold text-amber-300 flex items-center gap-1.5">
-                <i className="fa-solid fa-lightbulb"></i>
-                {isTr ? 'Neden 3 Chapter Bitirince %40 Değil de ~%10-%12 Görünür?' : 'Why Completing 3 Chapters Shows ~10-12% Instead of 40%?'}
-              </div>
-              <p className="text-xs text-slate-400 leading-relaxed">
+            {/* Matematiksel Formül */}
+            <div className="rounded-2xl bg-slate-950/80 border border-slate-800 p-3 font-mono text-xs text-teal-300 flex items-center justify-between flex-wrap gap-2">
+              <span>
                 {isTr 
-                  ? 'Toplam 18 ünite, ~3.069 soru ve 1.066+ kelime bulunan bir müfredatta 3 ünite tamamlamak, tüm platformun yaklaşık 1/6\'sına (%16.7) denk gelir. Matematiksel tavanımız tam 10.000 XP olduğundan, 3 üniteyi bitiren bir öğrenci yaklaşık 1.000-1.200 XP kazanır ve ilerlemesi yapay olarak şişirilmeden tam hakkıyla %10-%12 olarak hesaplanır.'
-                  : 'In an 18-chapter curriculum with ~3,069 questions and 1,066+ words, 3 chapters represent roughly 1/6th (~16.7%) of total content. With our exact 10,000 XP ceiling, completing 3 chapters yields ~1,000-1,200 XP, accurately registering at ~10-12% without artificial inflation.'}
-              </p>
-              <div className="p-2.5 rounded-xl bg-slate-900 border border-slate-800 font-mono text-xs text-teal-300 flex items-center justify-between flex-wrap gap-2">
-                <span>Toplam XP = Bölüm (3.500) + Kelime (3.500) + Soru (3.000) = Maks 10.000 XP</span>
-                <span className="font-bold text-slate-100">İlerleme % = Toplam XP / 100</span>
-              </div>
+                  ? 'Toplam XP = Bölüm (3.500) + Kelime (3.500) + Soru (3.000) = Maks 10.000 XP' 
+                  : 'Total XP = Sections (3,500) + Words (3,500) + Questions (3,000) = Max 10,000 XP'}
+              </span>
+              <span className="font-bold text-slate-100">
+                {isTr ? 'İlerleme % = Toplam XP / 100' : 'Progress % = Total XP / 100'}
+              </span>
             </div>
 
             {/* Buton */}
