@@ -461,7 +461,7 @@ export const speakDutchWithHighlight = (text, options = {}) => {
   const sessionId = currentHighlightSession;
   startUnpauseWatchdog();
 
-  let fallbackTimer = null;
+  let currentChunkTimers = null;
   let chunkWatchdogTimer = null;
   let currentWordIdx = -1;
   let currentSentIdx = -1;
@@ -490,9 +490,9 @@ export const speakDutchWithHighlight = (text, options = {}) => {
   };
 
   const cleanup = () => {
-    if (fallbackTimer) {
-      clearInterval(fallbackTimer);
-      fallbackTimer = null;
+    if (currentChunkTimers) {
+      currentChunkTimers();
+      currentChunkTimers = null;
     }
     if (chunkWatchdogTimer) {
       clearTimeout(chunkWatchdogTimer);
@@ -516,6 +516,7 @@ export const speakDutchWithHighlight = (text, options = {}) => {
     }
 
     const chunk = chunks[index];
+    const chunkTokens = tokens.slice(chunk.startTokenIdx, chunk.endTokenIdx + 1);
 
     // Cümle geçişini bildir ve ilk kelimeyi vurgula
     if (options.onSentence) {
@@ -542,37 +543,68 @@ export const speakDutchWithHighlight = (text, options = {}) => {
     activeUtterances.add(utterance);
 
     let hasReceivedBoundary = false;
+    let fallbackTimer = null;
+    let fallbackActivationTimeout = null;
 
-    // Boundary desteği olmayan tarayıcılar için chunk bazlı akıllı zamanlayıcı
-    if (fallbackTimer) clearInterval(fallbackTimer);
-    const chunkTokens = tokens.slice(chunk.startTokenIdx, chunk.endTokenIdx + 1);
-    const charsPerSec = 14 * currentRate;
-    let cumulativeTime = 0;
-    const chunkWordTimes = chunkTokens.map(t => {
-      const durationMs = Math.max(160, (t.raw.length / charsPerSec) * 1000);
-      const start = cumulativeTime;
-      cumulativeTime += durationMs;
-      return { tokenIdx: t.tokenIdx !== undefined ? t.tokenIdx : tokens.indexOf(t), startMs: start };
-    });
-
-    let chunkStartTime = Date.now();
-    fallbackTimer = setInterval(() => {
-      if (sessionId !== currentHighlightSession) {
+    const clearThisChunkTimers = () => {
+      if (fallbackTimer) {
         clearInterval(fallbackTimer);
-        return;
+        fallbackTimer = null;
       }
+      if (fallbackActivationTimeout) {
+        clearTimeout(fallbackActivationTimeout);
+        fallbackActivationTimeout = null;
+      }
+    };
+    currentChunkTimers = clearThisChunkTimers;
+
+    // Boundary desteği olmayan tarayıcılarda (örn. Linux Chromium) çalışan doğal zamanlayıcı
+    const startFallbackTimer = (speechStartTime) => {
+      if (sessionId !== currentHighlightSession) return;
       if (hasReceivedBoundary) return;
 
-      const elapsed = Date.now() - chunkStartTime;
-      let activeTIdx = chunk.endTokenIdx;
-      for (let i = 0; i < chunkWordTimes.length; i++) {
-        if (elapsed < chunkWordTimes[i].startMs) {
-          activeTIdx = Math.max(chunk.startTokenIdx, (chunkWordTimes[i - 1]?.tokenIdx ?? chunk.startTokenIdx));
-          break;
+      const charsPerSec = 13.5 * currentRate;
+      let cumulative = 0;
+      const wordTimes = chunkTokens.map((t, idx) => {
+        const nextStart = idx < chunkTokens.length - 1 ? chunkTokens[idx + 1].startChar : t.endChar;
+        const spanLen = Math.max(t.raw.length, nextStart - t.startChar);
+        let duration = (spanLen / charsPerSec) * 1000;
+        duration = Math.max(180, duration);
+        if (/[;,:\-–—]$/.test(t.raw)) {
+          duration += 200;
+        } else if (/[.!?]$/.test(t.raw)) {
+          duration += 350;
         }
-      }
-      emitWord(activeTIdx);
-    }, 50);
+        const startMs = cumulative;
+        cumulative += duration;
+        return { tokenIdx: chunk.startTokenIdx + idx, startMs };
+      });
+
+      fallbackTimer = setInterval(() => {
+        if (sessionId !== currentHighlightSession) {
+          clearThisChunkTimers();
+          return;
+        }
+        if (hasReceivedBoundary) {
+          clearThisChunkTimers();
+          return;
+        }
+
+        const elapsed = Date.now() - speechStartTime;
+        let targetIdx = chunk.startTokenIdx;
+        for (let i = 0; i < wordTimes.length; i++) {
+          if (elapsed >= wordTimes[i].startMs) {
+            targetIdx = wordTimes[i].tokenIdx;
+          } else {
+            break;
+          }
+        }
+        // Kesin ileri akış (asla geri sarmaz)
+        if (targetIdx >= currentWordIdx) {
+          emitWord(targetIdx);
+        }
+      }, 40);
+    };
 
     // Olası tarayıcı takılmalarına karşı güvenlik zamanlayıcısı (Watchdog)
     if (chunkWatchdogTimer) clearTimeout(chunkWatchdogTimer);
@@ -581,33 +613,54 @@ export const speakDutchWithHighlight = (text, options = {}) => {
       if (sessionId !== currentHighlightSession) return;
       if (activeUtterances.has(utterance)) {
         activeUtterances.delete(utterance);
-        if (fallbackTimer) clearInterval(fallbackTimer);
+        clearThisChunkTimers();
         playChunk(index + 1);
       }
     }, maxExpectedMs);
 
     utterance.onstart = (e) => {
       if (sessionId !== currentHighlightSession) return;
-      // Ses gerçekte başladığı anda zamanlayıcı referansını sıfırla (erken koşmayı önler)
-      chunkStartTime = Date.now();
       if (index === 0 && options.onStart) options.onStart(e);
+
+      const actualSpeechStartTime = Date.now();
+      // Eğer tarayıcı ilk 200ms içinde native boundary olayı üretmezse yedek zamanlayıcıyı devreye al
+      fallbackActivationTimeout = setTimeout(() => {
+        if (sessionId !== currentHighlightSession) return;
+        if (hasReceivedBoundary) return;
+        startFallbackTimer(actualSpeechStartTime);
+      }, 200);
     };
 
     utterance.onboundary = (e) => {
       if (sessionId !== currentHighlightSession) return;
-      if (e.name === 'word' || (!e.name && e.charIndex !== undefined)) {
-        hasReceivedBoundary = true;
-        const globalChar = chunk.startChar + (e.charIndex || 0);
-        const wIdx = findTokenIndexAtChar(tokens, globalChar);
-        if (wIdx >= 0 && wIdx < tokens.length) {
-          emitWord(wIdx);
+      // Yalnızca kelime sınırlarını işle (cümle sınırlarında charIndex=0 olup başa sarmayı engeller)
+      if (e.name && e.name !== 'word') return;
+
+      hasReceivedBoundary = true;
+      clearThisChunkTimers();
+
+      const charIdx = e.charIndex !== undefined ? e.charIndex : 0;
+      // Chunk içindeki token karakter aralıkları ile doğrudan ve güvenli eşleştirme
+      for (let i = 0; i < chunkTokens.length; i++) {
+        const localStart = chunkTokens[i].startChar - chunk.startChar;
+        const nextLocalStart = i < chunkTokens.length - 1
+          ? chunkTokens[i + 1].startChar - chunk.startChar
+          : Infinity;
+
+        if (charIdx >= localStart && charIdx < nextLocalStart) {
+          const targetIdx = chunk.startTokenIdx + i;
+          // Kesin ileri akış kuralı: Seslendirme motoruyla uyumlu, asla geri sarmaz
+          if (targetIdx >= currentWordIdx) {
+            emitWord(targetIdx);
+          }
+          break;
         }
       }
     };
 
     utterance.onend = () => {
       activeUtterances.delete(utterance);
-      if (fallbackTimer) clearInterval(fallbackTimer);
+      clearThisChunkTimers();
       if (chunkWatchdogTimer) clearTimeout(chunkWatchdogTimer);
       if (sessionId !== currentHighlightSession) return;
 
@@ -617,7 +670,7 @@ export const speakDutchWithHighlight = (text, options = {}) => {
 
     utterance.onerror = (e) => {
       activeUtterances.delete(utterance);
-      if (fallbackTimer) clearInterval(fallbackTimer);
+      clearThisChunkTimers();
       if (chunkWatchdogTimer) clearTimeout(chunkWatchdogTimer);
       if (sessionId !== currentHighlightSession) return;
 
