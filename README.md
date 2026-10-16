@@ -1,6 +1,6 @@
 # 🇳🇱 Nederlands in Gang - Interactief Oefenportaal (A1 → A2)
 
-[![Version](https://img.shields.io/badge/version-v1.0.0-10B981.svg?style=for-the-badge)](https://github.com/eckucukoglu/nederlands-app/releases/tag/v1.0.0)
+[![Version](https://img.shields.io/badge/version-v0.1.0-10B981.svg?style=for-the-badge)](https://github.com/eckucukoglu/nederlands-app/releases/tag/v0.1.0)
 [![Firebase Hosting](https://img.shields.io/badge/hosting-live-FFCA28.svg?style=for-the-badge&logo=firebase&logoColor=black)](https://nederlands-app.web.app)
 [![React](https://img.shields.io/badge/react-19.x-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)](https://react.dev/)
 [![TailwindCSS](https://img.shields.io/badge/tailwindcss-3.x-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
@@ -15,7 +15,7 @@ An open-source, interactive, and personalized web application designed to track 
 
 ---
 
-## 🌟 Key Highlights & Features (v1.0)
+## 🌟 Key Highlights & Features (v0.1.0)
 
 ### 📚 1. Complete 18-Chapter Curriculum
 * **Dialogues (`.1`)**: Authentic everyday conversations in Dutch with audio playback and side-by-side comprehension.

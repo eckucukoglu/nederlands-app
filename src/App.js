@@ -20,6 +20,7 @@ import { auth, isSignInWithEmailLink, signInWithEmailLink, onAuthStateChanged, h
 import { LanguageProvider, useLanguage } from './contexts/LanguageContext';
 import { speakDutch as speakDutchAudio } from './utils/speech';
 import { calculateOverallProgress } from './utils/progress';
+import { APP_VERSION } from './version';
 
 const chapterTitles = {
   1: "Welkom", 2: "In de kantine", 3: "In het café", 4: "Op straat", 5: "Op de markt",
@@ -323,7 +324,7 @@ const GuideContent = ({ lang }) => (
             </strong>
             <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-950/80 border border-emerald-600/60 text-emerald-300 font-mono text-[11px] font-extrabold tracking-wide shadow-sm">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-              Version v1.0
+              Version {APP_VERSION}
             </span>
           </div>
           <span className="text-xs text-slate-400 block mt-0.5">
@@ -341,7 +342,7 @@ const GuideContent = ({ lang }) => (
       >
         <i className="fa-brands fa-github text-base"></i>
         <span>GitHub Repository</span>
-        <span className="text-[10px] bg-slate-800/90 text-brand-300 font-mono font-bold px-1.5 py-0.5 rounded border border-slate-600/60">v1.0</span>
+        <span className="text-[10px] bg-slate-800/90 text-brand-300 font-mono font-bold px-1.5 py-0.5 rounded border border-slate-600/60">{APP_VERSION}</span>
         <i className="fa-solid fa-arrow-up-right-from-square text-[10px] ml-0.5 opacity-70"></i>
       </a>
     </div>
