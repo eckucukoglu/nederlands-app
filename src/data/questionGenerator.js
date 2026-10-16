@@ -24,14 +24,16 @@ export const generateSmartQuestions = (targetChapter, topic, count, chapterVocab
         type: "multiple_choice",
         question: `Wat is de Nederlandse vertaling van: "${wordObj.en}"?`,
         options: shuffle([wordObj.nl, ...wrongOptions]),
-        correctAnswer: wordObj.nl
+        correctAnswer: wordObj.nl,
+        tags: [`vocab_ch${targetChapter}`, 'vocab', `ch${targetChapter}`]
       });
     } else {
       questions.push({
         id: `extra_h${targetChapter}_${topic}_${i}`,
         type: "fill_in",
         question: `Vertaal naar het Nederlands: "${wordObj.en}"`,
-        correctAnswer: wordObj.nl
+        correctAnswer: wordObj.nl,
+        tags: [`vocab_ch${targetChapter}`, 'vocab', `ch${targetChapter}`]
       });
     }
   }

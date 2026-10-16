@@ -12,7 +12,7 @@ const DIFFICULTY_LEVELS = [
   { level: 5, labelTr: 'B1 Hazırlık', labelEn: 'B1 Prep', shortTr: 'B1', shortEn: 'B1', color: 'bg-rose-950/90 text-rose-300 border-rose-800/80 hover:bg-rose-900' },
 ];
 
-export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
+export default function QuizModule({ tags = [], customQuestions = null, onClose, title = "Oefening" }) {
   const { lang } = useLanguage();
   const isTr = lang === 'tr';
 
@@ -35,13 +35,14 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
   // Tüm mevcut etiketlerin listesi (Datalist otomatik tamamlama için)
   const allAvailableTags = useMemo(() => {
     const tagSet = new Set();
-    quizQuestions.forEach(q => {
+    const sourceQuestions = customQuestions || quizQuestions;
+    sourceQuestions.forEach(q => {
       if (q.tags && Array.isArray(q.tags)) {
         q.tags.forEach(t => tagSet.add(t));
       }
     });
     return Array.from(tagSet).sort();
-  }, []);
+  }, [customQuestions]);
   
   const [isFinished, setIsFinished] = useState(false);
   const [sessionScore, setSessionScore] = useState({ correct: 0, incorrect: 0, skipped: 0 });
@@ -89,9 +90,10 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
   useEffect(() => {
     const history = JSON.parse(localStorage.getItem('quizHistory')) || {};
     
+    const sourceQuestions = customQuestions || quizQuestions;
     let filtered = activeTags.length === 0 
-        ? [...quizQuestions] 
-        : quizQuestions.filter(q => q.tags && q.tags.some(tag => activeTags.includes(tag)));
+        ? [...sourceQuestions] 
+        : sourceQuestions.filter(q => q.tags && q.tags.some(tag => activeTags.includes(tag)));
     
     if (selectedDifficulty !== null) {
       filtered = filtered.filter(q => q.difficulty === selectedDifficulty);
@@ -124,7 +126,7 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
     setIsFinished(false);
     setSessionScore({ correct: 0, incorrect: 0, skipped: 0 });
     setWrongTagsCloud({});
-  }, [activeTags, activeFilter, selectedDifficulty]);
+  }, [activeTags, activeFilter, selectedDifficulty, customQuestions]);
 
   const currentQ = deck[currentIndex];
   const qHistory = currentQ ? quizHistory[currentQ.id] || { correct: 0, incorrect: 0 } : null;

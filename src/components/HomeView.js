@@ -11,6 +11,7 @@ import {
   dialoguesReading 
 } from '../data/quizData';
 import QuizModule from './QuizModule';
+import { generateSmartQuestions } from '../data/questionGenerator';
 
 // Ünite Başlıkları ve Anlamları
 const CHAPTER_INFO = {
@@ -101,7 +102,106 @@ export default function HomeView({
     } catch (e) {}
 
     // ----------------------------------------------------
-    // B) 1. SÜTUN: SORULAR & QUIZ ANALİZİ (TOPIC / CHAPTER BAZLI)
+    // B) 1. SÜTUN: KELİMELER & FLASHCARD ANALİZİ (ÜNİTE BAZLI)
+    // ----------------------------------------------------
+    const poolWords = Object.values(globalWordPool);
+    const totalPoolWords = poolWords.length;
+
+    let flashcardKnownTotal = 0;
+    let flashcardUnknownTotal = 0;
+    Object.values(flashcardStats).forEach(s => {
+      flashcardKnownTotal += (Number(s.known) || 0);
+      flashcardUnknownTotal += (Number(s.unknown) || 0);
+    });
+    const totalFlashcardReviews = flashcardKnownTotal + flashcardUnknownTotal;
+    const flashcardAccuracy = totalFlashcardReviews > 0 
+      ? Math.round((flashcardKnownTotal / totalFlashcardReviews) * 100) 
+      : 0;
+
+    // Ünite 1 - 18 Kelime Dağılımını Hesapla (dialogue, reading ve vocabulary WordStatuses dahil)
+    const chapterVocabStats = Array.from({ length: 18 }, (_, idx) => {
+      const ch = idx + 1;
+      const chCurriculumWords = vocabulary.filter(w => w.chapter === ch);
+      
+      let dialogueStatuses = {};
+      let readingStatuses = {};
+      let vocabStatuses = {};
+      try {
+        dialogueStatuses = JSON.parse(localStorage.getItem(`dialogueWordStatuses_${ch}`)) || {};
+        readingStatuses = JSON.parse(localStorage.getItem(`readingWordStatuses_${ch}`)) || {};
+        vocabStatuses = JSON.parse(localStorage.getItem(`vocabularyWordStatuses_${ch}`)) || {};
+      } catch (e) {}
+
+      let learnedCount = 0;
+      let learningCount = 0;
+
+      chCurriculumWords.forEach(word => {
+        const lowerNL = (word.nl || '').toLowerCase();
+        const poolItem = globalWordPool[lowerNL];
+        const fcItem = flashcardStats[word.id] || flashcardStats[lowerNL] || flashcardStats[word.nl];
+        const diagStatus = vocabStatuses[lowerNL] || dialogueStatuses[lowerNL] || readingStatuses[lowerNL];
+
+        const isLearned = 
+          poolItem?.status === 'known' || 
+          fcItem?.lastStatus === 'known' || 
+          (fcItem && fcItem.known > fcItem.unknown) || 
+          diagStatus === 'known';
+
+        const isLearning = !isLearned && (
+          poolItem?.status === 'unknown' || 
+          (fcItem && (fcItem.unknown > 0 || fcItem.known > 0)) || 
+          diagStatus === 'unknown'
+        );
+
+        if (isLearned) learnedCount++;
+        else if (isLearning) learningCount++;
+      });
+
+      // Havuzda olup bu üniteye ait özel eklenen kelimeler
+      const extraPoolChWords = poolWords.filter(w => {
+        if (w.chapter !== ch) return false;
+        const lower = (w.nl || '').toLowerCase();
+        return !chCurriculumWords.some(cw => (cw.nl || '').toLowerCase() === lower);
+      });
+
+      extraPoolChWords.forEach(w => {
+        if (w.status === 'known') learnedCount++;
+        else if (w.status === 'unknown') learningCount++;
+      });
+
+      const totalWords = chCurriculumWords.length + extraPoolChWords.length;
+      const unstudied = Math.max(0, totalWords - learnedCount - learningCount);
+      const progress = totalWords > 0 ? Math.round((learnedCount / totalWords) * 100) : 0;
+      const studiedTotal = learnedCount + learningCount;
+
+      const isVocabSectionDone = Boolean(completed[`${ch}.2`] || (chCurriculumWords.length > 0 && learnedCount === chCurriculumWords.length));
+      const info = CHAPTER_INFO[ch] || {};
+
+      return {
+        chapterNum: ch,
+        titleTr: info.tr || `Ünite ${ch}`,
+        titleEn: info.en || `Chapter ${ch}`,
+        nlTitle: info.nl || `Hoofdstuk ${ch}`,
+        icon: info.icon || "fa-solid fa-book",
+        totalWords,
+        learnedCount,
+        learningCount,
+        unstudied,
+        studiedTotal,
+        progress,
+        isVocabSectionDone
+      };
+    });
+
+    const totalBookWords = vocabulary.length || 1066;
+    const totalLearnedWords = chapterVocabStats.reduce((acc, c) => acc + c.learnedCount, 0);
+    const totalLearningWords = chapterVocabStats.reduce((acc, c) => acc + c.learningCount, 0);
+    const wordsProgressPercent = totalBookWords > 0 
+      ? Math.min(100, Math.round((totalLearnedWords / totalBookWords) * 100)) 
+      : 0;
+
+    // ----------------------------------------------------
+    // C) 2. SÜTUN: SORULAR & QUIZ ANALİZİ (TOPIC / CHAPTER / GRAMMAR / VOCAB BAZLI)
     // ----------------------------------------------------
     const attemptedQIds = Object.keys(quizHistory);
     const uniqueAttempted = attemptedQIds.length;
@@ -140,9 +240,9 @@ export default function HomeView({
     const dialoguesReadingSet = new Set(dialoguesReading.map(q => q.id));
     const matchingSet = new Set(matchingQuestions.map(q => q.id));
 
-    // 24 Konuluk Detaylı Soru Listesi
+    // 42 Konuluk Detaylı Soru & Sınav Listesi (18 Ünite + 6 Gramer + 18 Kelime Sınavı)
     const rawTopics = [
-      // 18 Ünite Konusu
+      // 18 Ünite Konusu (Özet & Diyalog Sınavları)
       ...Array.from({ length: 18 }, (_, idx) => {
         const ch = idx + 1;
         const info = CHAPTER_INFO[ch] || {};
@@ -150,9 +250,9 @@ export default function HomeView({
           id: `ch${ch}`,
           category: 'chapters',
           chapterNum: ch,
-          titleTr: info.tr || `Ünite ${ch}`,
-          titleEn: info.en || `Chapter ${ch}`,
-          nlTitle: info.nl || `Hoofdstuk ${ch}`,
+          titleTr: `Ünite ${ch}: ${info.tr ? info.tr.split('(')[0].trim() : ''} (Özet Sınavı)`,
+          titleEn: `Chapter ${ch}: ${info.en ? info.en.split('(')[0].trim() : ''} (Summary Quiz)`,
+          nlTitle: `${info.nl || `Hoofdstuk ${ch}`} Toets`,
           icon: info.icon || "fa-solid fa-book",
           tags: [`summary_ch${ch}`, `dialogue_ch${ch}`, `ch${ch}`],
           matcher: (q) => {
@@ -224,11 +324,71 @@ export default function HomeView({
         icon: 'fa-solid fa-link',
         tags: ['matching'],
         matcher: (q) => matchingSet.has(q.id)
-      }
+      },
+      // 18 Ünite Kelime Sınavları (Vocabulary Quizzes)
+      ...Array.from({ length: 18 }, (_, idx) => {
+        const ch = idx + 1;
+        const info = CHAPTER_INFO[ch] || {};
+        const chVocab = vocabulary.filter(w => w.chapter === ch);
+        return {
+          id: `vocab_ch${ch}`,
+          category: 'vocabulary',
+          chapterNum: ch,
+          titleTr: `Kelime Sınavı: Ünite ${ch} (${info.tr ? info.tr.split('(')[0].trim() : ''})`,
+          titleEn: `Vocab Quiz: Chapter ${ch} (${info.en ? info.en.split('(')[0].trim() : ''})`,
+          nlTitle: `Woorden H${ch} (${chVocab.length} Woorden)`,
+          icon: "fa-solid fa-spell-check",
+          tags: [`vocab_ch${ch}`, 'vocab', `ch${ch}`],
+          vocabCount: chVocab.length,
+          getCustomQuestions: () => generateSmartQuestions(ch, "Woordenschat", 15, chVocab),
+          matcher: (q) => {
+            const tags = q.tags || [];
+            return tags.includes(`vocab_ch${ch}`) || (q.id && q.id.startsWith(`extra_h${ch}_`));
+          }
+        };
+      })
     ];
 
     // Konu Bazlı İstatistikleri Hesapla
     const topicStats = rawTopics.map(topic => {
+      if (topic.category === 'vocabulary') {
+        const ch = topic.chapterNum;
+        const vStat = chapterVocabStats.find(v => v.chapterNum === ch);
+        const total = topic.vocabCount || (vStat ? vStat.totalWords : 50);
+        const learned = vStat ? vStat.learnedCount : 0;
+        const learning = vStat ? vStat.learningCount : 0;
+        const progress = vStat ? vStat.progress : 0;
+
+        const topicQuestions = quizQuestions.filter(topic.matcher);
+        let qAttempted = 0, qCorrect = 0, qIncorrect = 0;
+        topicQuestions.forEach(q => {
+          const hist = quizHistory[q.id];
+          if (hist) {
+            const c = Number(hist.correct) || 0;
+            const inc = Number(hist.incorrect) || 0;
+            if (c + inc > 0) {
+              qAttempted++;
+              qCorrect += c;
+              qIncorrect += inc;
+            }
+          }
+        });
+        const qAttempts = qCorrect + qIncorrect;
+        const accuracy = qAttempts > 0 ? Math.round((qCorrect / qAttempts) * 100) : (progress > 0 ? progress : 0);
+
+        return {
+          ...topic,
+          total,
+          attempted: (learned + learning) > 0 ? (learned + learning) : qAttempted,
+          correct: learned,
+          incorrect: learning,
+          mastered: learned,
+          weak: learning,
+          accuracy,
+          progress
+        };
+      }
+
       const topicQuestions = quizQuestions.filter(topic.matcher);
       const total = topicQuestions.length;
       let attempted = 0;
@@ -270,119 +430,39 @@ export default function HomeView({
     });
 
     // ----------------------------------------------------
-    // C) 2. SÜTUN: KELİMELER & FLASHCARD ANALİZİ (ÜNİTE BAZLI)
-    // ----------------------------------------------------
-    const poolWords = Object.values(globalWordPool);
-    const totalPoolWords = poolWords.length;
-
-    let flashcardKnownTotal = 0;
-    let flashcardUnknownTotal = 0;
-    Object.values(flashcardStats).forEach(s => {
-      flashcardKnownTotal += (Number(s.known) || 0);
-      flashcardUnknownTotal += (Number(s.unknown) || 0);
-    });
-    const totalFlashcardReviews = flashcardKnownTotal + flashcardUnknownTotal;
-    const flashcardAccuracy = totalFlashcardReviews > 0 
-      ? Math.round((flashcardKnownTotal / totalFlashcardReviews) * 100) 
-      : 0;
-
-    // Ünite 1 - 18 Kelime Dağılımını Hesapla
-    const chapterVocabStats = Array.from({ length: 18 }, (_, idx) => {
-      const ch = idx + 1;
-      const chCurriculumWords = vocabulary.filter(w => w.chapter === ch);
-      
-      let dialogueStatuses = {};
-      let readingStatuses = {};
-      try {
-        dialogueStatuses = JSON.parse(localStorage.getItem(`dialogueWordStatuses_${ch}`)) || {};
-        readingStatuses = JSON.parse(localStorage.getItem(`readingWordStatuses_${ch}`)) || {};
-      } catch (e) {}
-
-      let learnedCount = 0;
-      let learningCount = 0;
-
-      chCurriculumWords.forEach(word => {
-        const lowerNL = (word.nl || '').toLowerCase();
-        const poolItem = globalWordPool[lowerNL];
-        const fcItem = flashcardStats[word.id] || flashcardStats[lowerNL] || flashcardStats[word.nl];
-        const diagStatus = dialogueStatuses[lowerNL] || readingStatuses[lowerNL];
-
-        const isLearned = 
-          poolItem?.status === 'known' || 
-          fcItem?.lastStatus === 'known' || 
-          (fcItem && fcItem.known > fcItem.unknown) || 
-          diagStatus === 'known';
-
-        const isLearning = !isLearned && (
-          poolItem?.status === 'unknown' || 
-          (fcItem && (fcItem.unknown > 0 || fcItem.known > 0)) || 
-          diagStatus === 'unknown'
-        );
-
-        if (isLearned) learnedCount++;
-        else if (isLearning) learningCount++;
-      });
-
-      // Havuzda olup bu üniteye ait özel eklenen kelimeler
-      const extraPoolChWords = poolWords.filter(w => {
-        if (w.chapter !== ch) return false;
-        const lower = (w.nl || '').toLowerCase();
-        return !chCurriculumWords.some(cw => (cw.nl || '').toLowerCase() === lower);
-      });
-
-      extraPoolChWords.forEach(w => {
-        if (w.status === 'known') learnedCount++;
-        else if (w.status === 'unknown') learningCount++;
-      });
-
-      const totalWords = chCurriculumWords.length + extraPoolChWords.length;
-      const unstudied = Math.max(0, totalWords - learnedCount - learningCount);
-      const progress = totalWords > 0 ? Math.round((learnedCount / totalWords) * 100) : 0;
-      const studiedTotal = learnedCount + learningCount;
-
-      const info = CHAPTER_INFO[ch] || {};
-
-      return {
-        chapterNum: ch,
-        titleTr: info.tr || `Ünite ${ch}`,
-        titleEn: info.en || `Chapter ${ch}`,
-        nlTitle: info.nl || `Hoofdstuk ${ch}`,
-        icon: info.icon || "fa-solid fa-book",
-        totalWords,
-        learnedCount,
-        learningCount,
-        unstudied,
-        studiedTotal,
-        progress
-      };
-    });
-
-    const totalBookWords = vocabulary.length || 1066;
-    const totalLearnedWords = chapterVocabStats.reduce((acc, c) => acc + c.learnedCount, 0);
-    const totalLearningWords = chapterVocabStats.reduce((acc, c) => acc + c.learningCount, 0);
-    const wordsProgressPercent = totalBookWords > 0 
-      ? Math.min(100, Math.round((totalLearnedWords / totalBookWords) * 100)) 
-      : 0;
-
-    // ----------------------------------------------------
     // D) 3. SÜTUN: BÖLÜM & ÜNİTE TAMAMLAMA ANALİZİ (SECTIONS)
     // ----------------------------------------------------
     const allSections = bookSections;
     const totalBookSections = allSections.length || 103;
-    const completedSectionsCount = allSections.filter(s => completed[s.id]).length;
+    const completedSectionsCount = allSections.filter(s => {
+      if (completed[s.id]) return true;
+      if (s.id.endsWith('.2')) {
+        const v = chapterVocabStats.find(c => c.chapterNum === s.chapter);
+        return v && v.progress === 100;
+      }
+      return false;
+    }).length;
     const sectionsProgressPercent = totalBookSections > 0 
       ? Math.min(100, Math.round((completedSectionsCount / totalBookSections) * 100)) 
       : 0;
 
     const availableChapters = Array.from({ length: 18 }, (_, i) => i + 1);
     const chapterSectionStats = availableChapters.map(ch => {
-      const chSections = bookSections.filter(s => s.chapter === ch && !s.id.includes('On-Class') && !s.id.includes('Reading'));
+      const dialogueSec = bookSections.find(s => s.chapter === ch && s.id.endsWith('.1'));
+      const vocabSec = bookSections.find(s => s.chapter === ch && s.id.endsWith('.2'));
+      const exerciseSecs = bookSections.filter(s => s.chapter === ch && !s.id.endsWith('.1') && !s.id.endsWith('.2') && !s.id.includes('Reading') && !s.id.includes('On-Class'));
       const readingSec = bookSections.find(s => s.chapter === ch && s.id.includes('Reading'));
       const summarySec = bookSections.find(s => s.chapter === ch && s.id.includes('On-Class'));
-      const isReadingDone = readingSec ? !!completed[readingSec.id] : false;
-      const isSummaryDone = summarySec ? !!completed[summarySec.id] : false;
-      const totalCount = chSections.length + (readingSec ? 1 : 0) + (summarySec ? 1 : 0);
-      const completedCount = chSections.filter(s => completed[s.id]).length + (readingSec && isReadingDone ? 1 : 0) + (summarySec && isSummaryDone ? 1 : 0);
+
+      const chVocab = chapterVocabStats.find(v => v.chapterNum === ch);
+      const isVocabDone = vocabSec ? Boolean(completed[vocabSec.id] || (chVocab && chVocab.progress === 100)) : false;
+      const isDialogueDone = dialogueSec ? Boolean(completed[dialogueSec.id]) : false;
+      const isReadingDone = readingSec ? Boolean(completed[readingSec.id]) : false;
+      const isSummaryDone = summarySec ? Boolean(completed[summarySec.id]) : false;
+      const completedExerciseCount = exerciseSecs.filter(s => completed[s.id]).length;
+
+      const totalCount = (dialogueSec ? 1 : 0) + (vocabSec ? 1 : 0) + exerciseSecs.length + (readingSec ? 1 : 0) + (summarySec ? 1 : 0);
+      const completedCount = (isDialogueDone ? 1 : 0) + (isVocabDone ? 1 : 0) + completedExerciseCount + (isReadingDone ? 1 : 0) + (isSummaryDone ? 1 : 0);
       const isFullyDone = totalCount > 0 && completedCount === totalCount;
       const progress = totalCount > 0 ? Math.round((completedCount / totalCount) * 100) : 0;
       const info = CHAPTER_INFO[ch] || {};
@@ -396,12 +476,18 @@ export default function HomeView({
         totalCount,
         completedCount,
         isFullyDone,
+        isDialogueDone,
+        isVocabDone,
         isReadingDone,
         isSummaryDone,
         progress,
-        sections: chSections,
+        dialogueSection: dialogueSec,
+        vocabSection: vocabSec,
+        exerciseSections: exerciseSecs,
         readingSection: readingSec,
-        summarySection: summarySec
+        summarySection: summarySec,
+        sections: [dialogueSec, vocabSec, ...exerciseSecs].filter(Boolean),
+        vocabStats: chVocab
       };
     });
 
@@ -521,6 +607,7 @@ export default function HomeView({
   const filteredTopics = useMemo(() => {
     if (topicFilter === 'chapters') return stats.topicStats.filter(t => t.category === 'chapters');
     if (topicFilter === 'grammar') return stats.topicStats.filter(t => t.category === 'grammar');
+    if (topicFilter === 'vocabulary') return stats.topicStats.filter(t => t.category === 'vocabulary');
     return stats.topicStats;
   }, [stats.topicStats, topicFilter]);
 
@@ -530,8 +617,9 @@ export default function HomeView({
       {/* 0. ÖZEL KONU QUIZ MODALI */}
       {activeQuizTopic && (
         <QuizModule 
-          tags={activeQuizTopic.tags}
-          title={isTr ? `${activeQuizTopic.titleTr} Quiz` : `${activeQuizTopic.titleEn} Quiz`}
+          tags={activeQuizTopic.tags || []}
+          customQuestions={activeQuizTopic.customQuestions || (typeof activeQuizTopic.getCustomQuestions === 'function' ? activeQuizTopic.getCustomQuestions() : null)}
+          title={isTr ? `${activeQuizTopic.titleTr}` : `${activeQuizTopic.titleEn}`}
           onClose={() => {
             setActiveQuizTopic(null);
             setStatsVersion(v => v + 1);
@@ -730,6 +818,14 @@ export default function HomeView({
 
               {setActiveTab && (
                 <>
+                  <button
+                    onClick={() => setActiveTabId('vocabulary')}
+                    className="px-3.5 py-2.5 rounded-xl bg-purple-950/70 hover:bg-purple-900/90 border border-purple-800/60 text-purple-300 hover:text-white text-xs sm:text-sm font-semibold flex items-center gap-2 transition-all shadow-sm"
+                  >
+                    <i className="fa-solid fa-spell-check text-xs"></i>
+                    {isTr ? 'Kelime Durumu' : 'Vocabulary Hub'}
+                  </button>
+
                   <button
                     onClick={() => setActiveTab('flashcards')}
                     className="px-3.5 py-2.5 rounded-xl bg-rose-950/70 hover:bg-rose-900/90 border border-rose-800/60 text-rose-300 hover:text-white text-xs sm:text-sm font-semibold flex items-center gap-2 transition-all shadow-sm"
@@ -1117,7 +1213,7 @@ export default function HomeView({
               </p>
             </div>
 
-            <div className="flex items-center gap-1.5 bg-slate-900 p-1 rounded-xl border border-slate-700">
+            <div className="flex items-center gap-1.5 bg-slate-900 p-1 rounded-xl border border-slate-700 flex-wrap">
               <button
                 onClick={() => setTopicFilter('all')}
                 className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
@@ -1126,7 +1222,7 @@ export default function HomeView({
                     : 'text-slate-400 hover:text-white'
                 }`}
               >
-                {isTr ? 'Tümü (24 Konu)' : 'All (24 Topics)'}
+                {isTr ? 'Tümü (42 Konu)' : 'All (42 Topics)'}
               </button>
               <button
                 onClick={() => setTopicFilter('chapters')}
@@ -1136,7 +1232,7 @@ export default function HomeView({
                     : 'text-slate-400 hover:text-white'
                 }`}
               >
-                {isTr ? 'Üniteler (1-18)' : 'Chapters (1-18)'}
+                {isTr ? 'Ünite Sınavları (1-18)' : 'Chapter Quizzes (1-18)'}
               </button>
               <button
                 onClick={() => setTopicFilter('grammar')}
@@ -1147,6 +1243,17 @@ export default function HomeView({
                 }`}
               >
                 {isTr ? 'Gramer & Beceriler' : 'Grammar & Skills'}
+              </button>
+              <button
+                onClick={() => setTopicFilter('vocabulary')}
+                className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                  topicFilter === 'vocabulary'
+                    ? 'bg-purple-600 text-white shadow-sm'
+                    : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                <i className="fa-solid fa-spell-check text-[10px] mr-1"></i>
+                {isTr ? 'Kelime Sınavları (1-18)' : 'Vocab Quizzes (1-18)'}
               </button>
             </div>
           </div>
@@ -1240,10 +1347,18 @@ export default function HomeView({
                   {/* Buton: Bu Konudan Quiz Başlat */}
                   <button
                     onClick={() => setActiveQuizTopic(topic)}
-                    className="w-full py-2 rounded-xl bg-slate-800 hover:bg-teal-600 text-teal-300 hover:text-white border border-teal-800/60 hover:border-teal-500 text-xs font-bold flex items-center justify-center gap-1.5 transition-all shadow-sm active:scale-[0.98]"
+                    className={`w-full py-2 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 transition-all shadow-sm active:scale-[0.98] border ${
+                      topic.category === 'vocabulary'
+                        ? 'bg-slate-800 hover:bg-purple-600 text-purple-300 hover:text-white border-purple-800/60 hover:border-purple-500'
+                        : 'bg-slate-800 hover:bg-teal-600 text-teal-300 hover:text-white border-teal-800/60 hover:border-teal-500'
+                    }`}
                   >
-                    <i className="fa-solid fa-play text-[10px]"></i>
-                    <span>{isTr ? 'Bu Konudan Quiz Çöz' : 'Practice Topic'}</span>
+                    <i className={`${topic.category === 'vocabulary' ? 'fa-solid fa-spell-check' : 'fa-solid fa-play'} text-[10px]`}></i>
+                    <span>
+                      {topic.category === 'vocabulary'
+                        ? (isTr ? 'Kelime Sınavı Çöz' : 'Start Vocab Quiz')
+                        : (isTr ? 'Bu Konudan Quiz Çöz' : 'Practice Topic')}
+                    </span>
                   </button>
                 </div>
               );
@@ -1316,15 +1431,23 @@ export default function HomeView({
                         </div>
                       </div>
 
-                      <span className={`text-[10px] font-extrabold px-2 py-0.5 rounded-full border flex-shrink-0 ${
-                        isFullyLearned
-                          ? 'bg-emerald-950/80 text-emerald-300 border-emerald-700'
-                          : ch.learnedCount > 0
-                            ? 'bg-emerald-950/60 text-emerald-400 border-emerald-800/60'
-                            : 'bg-slate-800 text-slate-400 border-slate-700'
-                      }`}>
-                        %{ch.progress}
-                      </span>
+                      <div className="flex items-center gap-1.5 flex-shrink-0">
+                        {ch.isVocabSectionDone && (
+                          <span className="text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-emerald-950/80 text-emerald-300 border border-emerald-600 flex items-center gap-1" title={isTr ? 'X.2 Vocabulary Bölümü Tamamlandı' : 'Section X.2 Completed'}>
+                            <i className="fa-solid fa-check text-[9px]"></i>
+                            <span>X.2</span>
+                          </span>
+                        )}
+                        <span className={`text-[10px] font-extrabold px-2 py-0.5 rounded-full border ${
+                          isFullyLearned
+                            ? 'bg-emerald-950/80 text-emerald-300 border-emerald-700'
+                            : ch.learnedCount > 0
+                              ? 'bg-emerald-950/60 text-emerald-400 border-emerald-800/60'
+                              : 'bg-slate-800 text-slate-400 border-slate-700'
+                        }`}>
+                          %{ch.progress}
+                        </span>
+                      </div>
                     </div>
 
                     {/* Çok Segmentli Renkli İlerleme Çubuğu */}
@@ -1370,17 +1493,47 @@ export default function HomeView({
                     </div>
                   </div>
 
-                  {/* Buton: Bu Ünitenin Flashcard'larını Aç */}
-                  <button
-                    onClick={() => {
-                      if (setCurrentChapter) setCurrentChapter(ch.chapterNum);
-                      if (setActiveTab) setActiveTab('flashcards');
-                    }}
-                    className="w-full py-2 rounded-xl bg-slate-800 hover:bg-emerald-600 text-emerald-300 hover:text-white border border-emerald-800/60 hover:border-emerald-500 text-xs font-bold flex items-center justify-center gap-1.5 transition-all shadow-sm active:scale-[0.98]"
-                  >
-                    <i className="fa-solid fa-clone text-[10px]"></i>
-                    <span>{isTr ? 'Bu Üniteyi Çalış' : 'Study Chapter Words'}</span>
-                  </button>
+                  {/* Hızlı Aksiyonlar: X.2 Vocabulary Aç, Kelime Sınavı, Flashcard */}
+                  <div className="space-y-2 mt-2">
+                    <div className="grid grid-cols-2 gap-2">
+                      <button
+                        onClick={() => goToSection && goToSection(`${ch.chapterNum}.2`)}
+                        className="py-2 px-2.5 rounded-xl bg-purple-950/60 hover:bg-purple-900/80 text-purple-300 hover:text-white border border-purple-800/60 hover:border-purple-500 text-xs font-bold flex items-center justify-center gap-1.5 transition-all shadow-sm active:scale-[0.98]"
+                        title={isTr ? `Ünite ${ch.chapterNum} Vocabulary Bölümünü Aç` : `Open Chapter ${ch.chapterNum} Vocabulary Section`}
+                      >
+                        <i className="fa-solid fa-spell-check text-[11px]"></i>
+                        <span className="truncate">{isTr ? 'X.2 Kelimeler' : 'X.2 Vocab'}</span>
+                      </button>
+
+                      <button
+                        onClick={() => {
+                          const chVocab = vocabulary.filter(w => w.chapter === ch.chapterNum);
+                          setActiveQuizTopic({
+                            titleTr: `${ch.titleTr} - Kelime Sınavı`,
+                            titleEn: `${ch.titleEn} - Vocab Quiz`,
+                            tags: [`vocab_ch${ch.chapterNum}`, 'vocab'],
+                            customQuestions: generateSmartQuestions(ch.chapterNum, "Woordenschat", 15, chVocab)
+                          });
+                        }}
+                        className="py-2 px-2.5 rounded-xl bg-teal-950/60 hover:bg-teal-900/80 text-teal-300 hover:text-white border border-teal-800/60 hover:border-teal-500 text-xs font-bold flex items-center justify-center gap-1.5 transition-all shadow-sm active:scale-[0.98]"
+                        title={isTr ? `Ünite ${ch.chapterNum} Kelimelerinden 15 Soruluk Sınav Başlat` : `Start 15-question Vocab Quiz for Chapter ${ch.chapterNum}`}
+                      >
+                        <i className="fa-solid fa-clipboard-question text-[11px]"></i>
+                        <span className="truncate">{isTr ? 'Kelime Sınavı' : 'Vocab Quiz'}</span>
+                      </button>
+                    </div>
+
+                    <button
+                      onClick={() => {
+                        if (setCurrentChapter) setCurrentChapter(ch.chapterNum);
+                        if (setActiveTab) setActiveTab('flashcards');
+                      }}
+                      className="w-full py-1.5 rounded-xl bg-slate-800 hover:bg-slate-750 text-slate-300 hover:text-white border border-slate-700 text-xs font-semibold flex items-center justify-center gap-1.5 transition-all shadow-sm active:scale-[0.98]"
+                    >
+                      <i className="fa-solid fa-clone text-[10px] text-rose-400"></i>
+                      <span>{isTr ? 'Flashcard Çalış' : 'Study Flashcards'}</span>
+                    </button>
+                  </div>
                 </div>
               );
             })}
@@ -1483,9 +1636,10 @@ export default function HomeView({
                       </span>
                       <div className="flex flex-wrap gap-1.5">
                         {ch.sections.map(sec => {
-                          const isDone = !!completed[sec.id];
                           const isDialogue = sec.id.endsWith('.1');
                           const isVocabulary = sec.id.endsWith('.2');
+                          const isDone = !!completed[sec.id] || (isVocabulary && ch.isVocabDone);
+                          const vocabProgress = isVocabulary && ch.vocabStats ? ch.vocabStats.progress : 0;
                           return (
                             <button
                               key={sec.id}
@@ -1493,13 +1647,15 @@ export default function HomeView({
                               className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer border ${
                                 isDone
                                   ? 'bg-emerald-950/70 border-emerald-600/70 text-emerald-300 hover:bg-emerald-800 hover:text-white'
+                                  : isVocabulary && vocabProgress > 0
+                                  ? 'bg-purple-950/60 border-purple-600/70 text-purple-300 hover:bg-purple-900/80 hover:text-white'
                                   : 'bg-slate-900/80 border-slate-700 text-slate-400 hover:bg-slate-750 hover:text-slate-200'
                               }`}
                               title={
                                 isDialogue 
                                   ? (isTr ? `Ünite ${ch.chapterNum} - Diyalog` : `Chapter ${ch.chapterNum} - Dialogue`) 
                                   : isVocabulary
-                                  ? (isTr ? `Ünite ${ch.chapterNum} - Vocabulary` : `Chapter ${ch.chapterNum} - Vocabulary`)
+                                  ? (isTr ? `Ünite ${ch.chapterNum} - Vocabulary (%${vocabProgress} Öğrenildi)` : `Chapter ${ch.chapterNum} - Vocabulary (${vocabProgress}% Learned)`)
                                   : getSecTitle(sec.id)
                               }
                             >
@@ -1509,10 +1665,16 @@ export default function HomeView({
                                   : isDialogue 
                                   ? 'fa-solid fa-comments text-brand-400/80' 
                                   : isVocabulary
-                                  ? 'fa-solid fa-spell-check text-purple-400/80'
+                                  ? (vocabProgress > 0 ? 'fa-solid fa-chart-pie text-purple-400' : 'fa-solid fa-spell-check text-purple-400/80')
                                   : 'fa-regular fa-circle text-slate-600'
                               }`}></i>
-                              <span>{isDialogue ? (isTr ? 'Diyalog' : 'Dialogue') : isVocabulary ? 'Vocabulary' : sec.id}</span>
+                              <span>
+                                {isDialogue 
+                                  ? (isTr ? 'Diyalog' : 'Dialogue') 
+                                  : isVocabulary 
+                                  ? (vocabProgress > 0 && !isDone ? `Vocabulary (%${vocabProgress})` : 'Vocabulary') 
+                                  : sec.id}
+                              </span>
                             </button>
                           );
                         })}
@@ -1551,6 +1713,50 @@ export default function HomeView({
                           </button>
                         )}
                       </div>
+                    </div>
+                  </div>
+
+                  {/* Ünite Kartı Hızlı Aksiyonları (Kelime & Sınav Butonları) */}
+                  <div className="mt-4 pt-3 border-t border-slate-800/80 flex items-center justify-between gap-2 flex-wrap">
+                    <div className="flex items-center gap-1.5 text-xs text-slate-400">
+                      <i className="fa-solid fa-spell-check text-purple-400 text-xs"></i>
+                      <span className="font-semibold text-slate-300">
+                        {ch.vocabStats?.learnedCount || 0}/{ch.vocabStats?.totalWords || 0}
+                      </span>
+                      <span className="text-[11px] text-slate-500">
+                        {isTr ? 'kelime biliniyor' : 'words known'}
+                      </span>
+                    </div>
+
+                    <div className="flex items-center gap-1.5">
+                      <button
+                        onClick={() => {
+                          const chVocab = vocabulary.filter(w => w.chapter === ch.chapterNum);
+                          setActiveQuizTopic({
+                            titleTr: `${ch.titleTr} - Kelime Sınavı`,
+                            titleEn: `${ch.titleEn} - Vocab Quiz`,
+                            tags: [`vocab_ch${ch.chapterNum}`, 'vocab'],
+                            customQuestions: generateSmartQuestions(ch.chapterNum, "Woordenschat", 15, chVocab)
+                          });
+                        }}
+                        className="py-1 px-2.5 rounded-lg bg-teal-950/60 hover:bg-teal-900 text-teal-300 hover:text-white border border-teal-800/60 text-xs font-bold flex items-center gap-1 transition-all active:scale-[0.98]"
+                        title={isTr ? '15 Soruluk Kelime Sınavı Başlat' : 'Start 15-question Vocab Quiz'}
+                      >
+                        <i className="fa-solid fa-clipboard-question text-[10px]"></i>
+                        <span>{isTr ? 'Kelime Sınavı' : 'Vocab Quiz'}</span>
+                      </button>
+
+                      <button
+                        onClick={() => {
+                          const topic = stats.topicStats.find(t => t.id === `ch${ch.chapterNum}`);
+                          if (topic) setActiveQuizTopic(topic);
+                        }}
+                        className="py-1 px-2.5 rounded-lg bg-indigo-950/60 hover:bg-indigo-900 text-indigo-300 hover:text-white border border-indigo-800/60 text-xs font-bold flex items-center gap-1 transition-all active:scale-[0.98]"
+                        title={isTr ? 'Ünite Özet Sınavı Başlat' : 'Start Chapter Summary Quiz'}
+                      >
+                        <i className="fa-solid fa-pen-to-square text-[10px]"></i>
+                        <span>{isTr ? 'Özet Sınavı' : 'Summary Quiz'}</span>
+                      </button>
                     </div>
                   </div>
                 </div>
