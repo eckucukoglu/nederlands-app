@@ -12,6 +12,7 @@ import {
 } from '../data/quizData';
 import QuizModule from './QuizModule';
 import { generateSmartQuestions } from '../data/questionGenerator';
+import { calculateOverallProgress, LEVEL_TIERS } from '../utils/progress';
 
 // Ünite Başlıkları ve Anlamları
 const CHAPTER_INFO = {
@@ -25,7 +26,7 @@ const CHAPTER_INFO = {
   8: { tr: "Bij de makelaar (Emlakçıda & Konut)", en: "Bij de makelaar (Real Estate)", nl: "Bij de makelaar", icon: "fa-solid fa-house" },
   9: { tr: "Bij de huisarts (Doktorda & Sağlık)", en: "Bij de huisarts (At the Doctor)", nl: "Bij de huisarts", icon: "fa-solid fa-user-doctor" },
   10: { tr: "Bij de fietsenmaker (Bisiklet & Ulaşım)", en: "Bij de fietsenmaker (Bike Repair)", nl: "Bij de fietsenmaker", icon: "fa-solid fa-bicycle" },
-  11: { tr: "Op een verjaardag (Doğum Günü & İş)", en: "Op een verjaardag (Birthday & Work)", nl: "Op een verjaardag", icon: "fa-solid fa-cake-candles" },
+  11: { tr: "Op een verjaardag (Doğum Günü & İş)", en: "Op een verjaardag (Birthday & Work)", nl: "Op bir verjaardag", icon: "fa-solid fa-cake-candles" },
   12: { tr: "Naar de Evenementenhal (Etkinlikler)", en: "Naar de Evenementenhal (Events & Fairs)", nl: "Naar de Evenementenhal", icon: "fa-solid fa-ticket" },
   13: { tr: "Bij vrienden (Arkadaşlarda & Ziyaret)", en: "Bij vrienden (With Friends)", nl: "Bij vrienden", icon: "fa-solid fa-users" },
   14: { tr: "In de sportschool (Spor & Yaşam)", en: "In de sportschool (In the Gym)", nl: "In de sportschool", icon: "fa-solid fa-dumbbell" },
@@ -34,20 +35,6 @@ const CHAPTER_INFO = {
   17: { tr: "Thuis (Evde & Aile Yaşamı)", en: "Thuis (At Home)", nl: "Thuis", icon: "fa-solid fa-couch" },
   18: { tr: "Bij de politie (Poliste & Toplum)", en: "Bij de politie (At the Police)", nl: "Bij de politie", icon: "fa-solid fa-shield-halved" }
 };
-
-// 10 Kademeli Deneyim (XP) ve Seviye Sistemi
-const LEVEL_TIERS = [
-  { level: 1, minXp: 0, maxXp: 250, titleTr: "Acemi Kaşif", titleEn: "Beginner Explorer", rank: "A1.1", icon: "fa-solid fa-compass", color: "from-sky-500 to-blue-600", badgeColor: "text-sky-300 bg-sky-950/80 border-sky-600 shadow-[0_0_10px_rgba(56,189,248,0.2)]" },
-  { level: 2, minXp: 250, maxXp: 600, titleTr: "Hevesli Öğrenci", titleEn: "Eager Learner", rank: "A1.1", icon: "fa-solid fa-seedling", color: "from-emerald-500 to-teal-600", badgeColor: "text-emerald-300 bg-emerald-950/80 border-emerald-600 shadow-[0_0_10px_rgba(16,185,129,0.2)]" },
-  { level: 3, minXp: 600, maxXp: 1200, titleTr: "Kelime Avcısı", titleEn: "Word Hunter", rank: "A1.2", icon: "fa-solid fa-brain", color: "from-teal-500 to-cyan-600", badgeColor: "text-teal-300 bg-teal-950/80 border-teal-600 shadow-[0_0_10px_rgba(20,184,166,0.2)]" },
-  { level: 4, minXp: 1200, maxXp: 2100, titleTr: "Cümle Mimarı", titleEn: "Sentence Builder", rank: "A1.2", icon: "fa-solid fa-cubes", color: "from-indigo-500 to-blue-600", badgeColor: "text-indigo-300 bg-indigo-950/80 border-indigo-600 shadow-[0_0_10px_rgba(99,102,241,0.2)]" },
-  { level: 5, minXp: 2100, maxXp: 3500, titleTr: "Gramer Yolcusu", titleEn: "Grammar Voyager", rank: "A1+", icon: "fa-solid fa-feather-pointed", color: "from-purple-500 to-indigo-600", badgeColor: "text-purple-300 bg-purple-950/80 border-purple-600 shadow-[0_0_10px_rgba(168,85,247,0.2)]" },
-  { level: 6, minXp: 3500, maxXp: 5500, titleTr: "Diyalog Ustası", titleEn: "Dialogue Crafter", rank: "A2.1", icon: "fa-solid fa-comments", color: "from-amber-500 to-orange-600", badgeColor: "text-amber-300 bg-amber-950/80 border-amber-600 shadow-[0_0_10px_rgba(245,158,11,0.25)]" },
-  { level: 7, minXp: 5500, maxXp: 8500, titleTr: "Metin Kaşifi", titleEn: "Text Explorer", rank: "A2.1", icon: "fa-solid fa-book-open-reader", color: "from-rose-500 to-pink-600", badgeColor: "text-rose-300 bg-rose-950/80 border-rose-600 shadow-[0_0_10px_rgba(244,63,94,0.25)]" },
-  { level: 8, minXp: 8500, maxXp: 12500, titleTr: "Akıcı Konuşmacı", titleEn: "Fluent Speaker", rank: "A2.2", icon: "fa-solid fa-microphone-lines", color: "from-cyan-500 to-teal-600", badgeColor: "text-cyan-300 bg-cyan-950/80 border-cyan-600 shadow-[0_0_10px_rgba(6,182,212,0.25)]" },
-  { level: 9, minXp: 12500, maxXp: 18000, titleTr: "Dil Rehberi", titleEn: "Language Mentor", rank: "A2+", icon: "fa-solid fa-award", color: "from-yellow-400 to-amber-500", badgeColor: "text-yellow-300 bg-yellow-950/80 border-yellow-600 shadow-[0_0_12px_rgba(234,179,8,0.3)]" },
-  { level: 10, minXp: 18000, maxXp: 18000, titleTr: "Hollanda Fatihi", titleEn: "Dutch Master", rank: "A2 Master", icon: "fa-solid fa-crown", color: "from-yellow-400 to-amber-600", badgeColor: "text-amber-200 bg-amber-950/90 border-amber-500 shadow-[0_0_15px_rgba(245,158,11,0.5)]" }
-];
 
 export default function HomeView({
   favorites = {},
@@ -83,6 +70,9 @@ export default function HomeView({
   // Veri güncelleme sürümü (Quiz veya kart bittiğinde yeniden hesaplama tetiklemek için)
   const [statsVersion, setStatsVersion] = useState(0);
 
+  // 10.000 XP Matematik Açıklama Modalı
+  const [showProgressInfoModal, setShowProgressInfoModal] = useState(false);
+
   useEffect(() => {
     const handleStorageUpdate = () => setStatsVersion(v => v + 1);
     window.addEventListener('wordStatusUpdated', handleStorageUpdate);
@@ -100,176 +90,12 @@ export default function HomeView({
     // statsVersion bağımlılığı yeniden hesaplamayı tetikler
     if (statsVersion < 0) return null;
 
-    // ----------------------------------------------------
-    // A) YEREL DEPOLAMA (LOCALSTORAGE) VERİLERİNİ ÇEK
-    // ----------------------------------------------------
-    let quizHistory = {};
-    let goodQuestions = {};
-    let globalWordPool = {};
-    let flashcardStats = {};
-    let starredVerbs = [];
+    const baseStats = calculateOverallProgress({ completed, favorites, bookSections });
 
+    let quizHistory = {};
     try {
       quizHistory = JSON.parse(localStorage.getItem('quizHistory')) || {};
-      goodQuestions = JSON.parse(localStorage.getItem('goodQuestions')) || {};
-      globalWordPool = JSON.parse(localStorage.getItem('globalWordPool')) || {};
-      flashcardStats = JSON.parse(localStorage.getItem('flashcardStats')) || {};
-      starredVerbs = JSON.parse(localStorage.getItem('starredIrregularVerbs')) || [];
     } catch (e) {}
-
-    // ----------------------------------------------------
-    // B) 1. SÜTUN: KELİMELER & FLASHCARD ANALİZİ (ÜNİTE BAZLI)
-    // ----------------------------------------------------
-    const poolWords = Object.values(globalWordPool);
-    const totalPoolWords = poolWords.length;
-
-    let flashcardKnownTotal = 0;
-    let flashcardUnknownTotal = 0;
-    Object.values(flashcardStats).forEach(s => {
-      flashcardKnownTotal += (Number(s.known) || 0);
-      flashcardUnknownTotal += (Number(s.unknown) || 0);
-    });
-    const totalFlashcardReviews = flashcardKnownTotal + flashcardUnknownTotal;
-    const flashcardAccuracy = totalFlashcardReviews > 0 
-      ? Math.round((flashcardKnownTotal / totalFlashcardReviews) * 100) 
-      : 0;
-
-    // Ünite 1 - 18 Kelime Dağılımını Hesapla (dialogue, reading ve vocabulary WordStatuses dahil)
-    const chapterVocabStats = Array.from({ length: 18 }, (_, idx) => {
-      const ch = idx + 1;
-      const chCurriculumWords = vocabulary.filter(w => w.chapter === ch);
-      
-      let dialogueStatuses = {};
-      let readingStatuses = {};
-      let vocabStatuses = {};
-      try {
-        dialogueStatuses = JSON.parse(localStorage.getItem(`dialogueWordStatuses_${ch}`)) || {};
-        readingStatuses = JSON.parse(localStorage.getItem(`readingWordStatuses_${ch}`)) || {};
-        vocabStatuses = JSON.parse(localStorage.getItem(`vocabularyWordStatuses_${ch}`)) || {};
-      } catch (e) {}
-
-      let learnedCount = 0;
-      let learningCount = 0;
-
-      chCurriculumWords.forEach(word => {
-        const lowerNL = (word.nl || '').toLowerCase();
-        const poolItem = globalWordPool[lowerNL];
-        const fcItem = flashcardStats[word.id] || flashcardStats[lowerNL] || flashcardStats[word.nl];
-        const diagStatus = vocabStatuses[lowerNL] || dialogueStatuses[lowerNL] || readingStatuses[lowerNL];
-
-        const isLearned = 
-          poolItem?.status === 'known' || 
-          fcItem?.lastStatus === 'known' || 
-          (fcItem && fcItem.known > fcItem.unknown) || 
-          diagStatus === 'known';
-
-        const isLearning = !isLearned && (
-          poolItem?.status === 'unknown' || 
-          (fcItem && (fcItem.unknown > 0 || fcItem.known > 0)) || 
-          diagStatus === 'unknown'
-        );
-
-        if (isLearned) learnedCount++;
-        else if (isLearning) learningCount++;
-      });
-
-      // Havuzda olup bu üniteye ait özel eklenen kelimeler
-      const extraPoolChWords = poolWords.filter(w => {
-        if (w.chapter !== ch) return false;
-        const lower = (w.nl || '').toLowerCase();
-        return !chCurriculumWords.some(cw => (cw.nl || '').toLowerCase() === lower);
-      });
-
-      extraPoolChWords.forEach(w => {
-        if (w.status === 'known') learnedCount++;
-        else if (w.status === 'unknown') learningCount++;
-      });
-
-      const totalWords = chCurriculumWords.length + extraPoolChWords.length;
-      const unstudied = Math.max(0, totalWords - learnedCount - learningCount);
-      const progress = totalWords > 0 ? Math.round((learnedCount / totalWords) * 100) : 0;
-      const studiedTotal = learnedCount + learningCount;
-
-      const isVocabSectionDone = Boolean(completed[`${ch}.2`] || (chCurriculumWords.length > 0 && learnedCount === chCurriculumWords.length));
-      const info = CHAPTER_INFO[ch] || {};
-
-      return {
-        chapterNum: ch,
-        titleTr: info.tr || `Ünite ${ch}`,
-        titleEn: info.en || `Chapter ${ch}`,
-        nlTitle: info.nl || `Hoofdstuk ${ch}`,
-        icon: info.icon || "fa-solid fa-book",
-        totalWords,
-        learnedCount,
-        learningCount,
-        unstudied,
-        studiedTotal,
-        progress,
-        isVocabSectionDone
-      };
-    });
-
-    const totalBookWords = vocabulary.length || 1066;
-    const totalLearnedWords = chapterVocabStats.reduce((acc, c) => acc + c.learnedCount, 0);
-    const totalLearningWords = chapterVocabStats.reduce((acc, c) => acc + c.learningCount, 0);
-    const starredVerbsCount = Array.isArray(starredVerbs) ? starredVerbs.length : 0;
-
-    // Çok Boyutlu Kelime İlerlemesi:
-    // 1) Tam öğrenilen kelimeler (1.0 puan)
-    // 2) Çalışılmakta olan kelimeler (0.40 puan - aktif hafıza çabasının karşılığı)
-    // 3) Flashcard pratik hacmi bonusu (her 10 tekrar = +1 kelime puanı, maks 80)
-    // 4) Yıldızlanan düzensiz fiiller (+0.50 puan)
-    const effectiveWordPoints = totalLearnedWords + 
-      (totalLearningWords * 0.40) + 
-      Math.min(80, Math.floor(totalFlashcardReviews / 10)) + 
-      (starredVerbsCount * 0.50);
-
-    const wordsProgressPercent = totalBookWords > 0 
-      ? Math.min(100, Math.round((effectiveWordPoints / totalBookWords) * 100)) 
-      : 0;
-
-    // ----------------------------------------------------
-    // C) 2. SÜTUN: SORULAR & QUIZ ANALİZİ (TOPIC / CHAPTER / GRAMMAR / VOCAB BAZLI)
-    // ----------------------------------------------------
-    const attemptedQIds = Object.keys(quizHistory);
-    const uniqueAttempted = attemptedQIds.length;
-    let totalQuizCorrect = 0;
-    let totalQuizIncorrect = 0;
-    let masteredCount = 0;
-    let weakCount = 0;
-
-    attemptedQIds.forEach(id => {
-      const q = quizHistory[id] || {};
-      const c = Number(q.correct) || 0;
-      const inc = Number(q.incorrect) || 0;
-      totalQuizCorrect += c;
-      totalQuizIncorrect += inc;
-      if (c > 0 && inc === 0) masteredCount++;
-      if (inc > c) weakCount++;
-    });
-
-    const totalQuizAttempts = totalQuizCorrect + totalQuizIncorrect;
-    const quizAccuracy = totalQuizAttempts > 0 
-      ? Math.round((totalQuizCorrect / totalQuizAttempts) * 100) 
-      : 0;
-    const totalQuizQuestions = quizQuestions?.length || 2204;
-    const goodQuestionsCount = Object.keys(goodQuestions).length;
-
-    // Çok Boyutlu Soru & Quiz İlerlemesi:
-    // 400 Puanlık Müfredat Yetkinlik Kıyas Noktası (Tüm ünite sınavları, gramer testleri ve diyalog quizleri)
-    // 1) Çözülen her özgün soru: 1.0 puan
-    // 2) Kusursuz ustalaşılan sorular: +0.50 puan bonus
-    // 3) Çözüm tekrar hacmi: Her 10 doğru cevap = +0.5 puan (maks 50)
-    // 4) Favori / İyi soru seçimi: +0.50 puan bonus
-    // 5) Yüksek doğruluk bonusu: %70 ve üzeri doğrulukta ivme bonusu
-    const accuracyBonus = quizAccuracy >= 70 ? Math.round((quizAccuracy - 70) * 0.5) : 0;
-    const repetitionBonus = Math.min(50, Math.floor(totalQuizCorrect / 10) * 0.5);
-    const curationBonus = goodQuestionsCount * 0.5;
-    const masteryBonus = masteredCount * 0.5;
-
-    const effectiveQuestionPoints = uniqueAttempted + masteryBonus + repetitionBonus + curationBonus + accuracyBonus;
-    const QUESTION_BENCHMARK = 400;
-    const questionsProgressPercent = Math.min(100, Math.round((effectiveQuestionPoints / QUESTION_BENCHMARK) * 100));
 
     // Set'ler ile O(1) Hızlı Gramer/Beceri Kontrolü
     const grammarTensesSet = new Set(grammarTenses.map(q => q.id));
@@ -392,7 +218,7 @@ export default function HomeView({
     const topicStats = rawTopics.map(topic => {
       if (topic.category === 'vocabulary') {
         const ch = topic.chapterNum;
-        const vStat = chapterVocabStats.find(v => v.chapterNum === ch);
+        const vStat = baseStats.chapterVocabStats?.find(v => v.chapterNum === ch);
         const total = topic.vocabCount || (vStat ? vStat.totalWords : 50);
         const learned = vStat ? vStat.learnedCount : 0;
         const learning = vStat ? vStat.learningCount : 0;
@@ -468,186 +294,9 @@ export default function HomeView({
       };
     });
 
-    // ----------------------------------------------------
-    // D) 3. SÜTUN: BÖLÜM & ÜNİTE TAMAMLAMA ANALİZİ (SECTIONS)
-    // ----------------------------------------------------
-    const allSections = bookSections;
-    const totalBookSections = allSections.length || 103;
-    const completedSectionsCount = allSections.filter(s => {
-      if (completed[s.id]) return true;
-      if (s.id.endsWith('.2')) {
-        const v = chapterVocabStats.find(c => c.chapterNum === s.chapter);
-        return v && v.progress === 100;
-      }
-      return false;
-    }).length;
-
-    // Kısmi Bölüm Katkıları (Kelimeler, diyaloglar ve okuma bölümlerindeki çalışmalar)
-    let partialSectionPoints = 0;
-    allSections.forEach(s => {
-      if (completed[s.id]) return;
-      if (s.id.endsWith('.2')) {
-        const v = chapterVocabStats.find(c => c.chapterNum === s.chapter);
-        if (v && v.progress > 0 && v.progress < 100) {
-          partialSectionPoints += (v.progress / 100);
-        }
-      } else if (s.id.endsWith('.1')) {
-        try {
-          const diagSt = JSON.parse(localStorage.getItem(`dialogueWordStatuses_${s.chapter}`)) || {};
-          const studiedCount = Object.keys(diagSt).length;
-          if (studiedCount > 0) {
-            partialSectionPoints += Math.min(0.7, studiedCount * 0.08);
-          }
-        } catch (e) {}
-      } else if (s.id.includes('Reading')) {
-        try {
-          const readSt = JSON.parse(localStorage.getItem(`readingWordStatuses_${s.chapter}`)) || {};
-          const studiedCount = Object.keys(readSt).length;
-          if (studiedCount > 0) {
-            partialSectionPoints += Math.min(0.7, studiedCount * 0.08);
-          }
-        } catch (e) {}
-      }
-    });
-
-    const totalFavoritesCount = Object.keys(favorites).length;
-    const notesBonus = Math.min(5, totalFavoritesCount * 0.25);
-
-    const availableChapters = Array.from({ length: 18 }, (_, i) => i + 1);
-    const chapterSectionStats = availableChapters.map(ch => {
-      const dialogueSec = bookSections.find(s => s.chapter === ch && s.id.endsWith('.1'));
-      const vocabSec = bookSections.find(s => s.chapter === ch && s.id.endsWith('.2'));
-      const exerciseSecs = bookSections.filter(s => s.chapter === ch && !s.id.endsWith('.1') && !s.id.endsWith('.2') && !s.id.includes('Reading') && !s.id.includes('On-Class'));
-      const readingSec = bookSections.find(s => s.chapter === ch && s.id.includes('Reading'));
-      const summarySec = bookSections.find(s => s.chapter === ch && s.id.includes('On-Class'));
-
-      const chVocab = chapterVocabStats.find(v => v.chapterNum === ch);
-      const isVocabDone = vocabSec ? Boolean(completed[vocabSec.id] || (chVocab && chVocab.progress === 100)) : false;
-      const isDialogueDone = dialogueSec ? Boolean(completed[dialogueSec.id]) : false;
-      const isReadingDone = readingSec ? Boolean(completed[readingSec.id]) : false;
-      const isSummaryDone = summarySec ? Boolean(completed[summarySec.id]) : false;
-      const completedExerciseCount = exerciseSecs.filter(s => completed[s.id]).length;
-
-      const totalCount = (dialogueSec ? 1 : 0) + (vocabSec ? 1 : 0) + exerciseSecs.length + (readingSec ? 1 : 0) + (summarySec ? 1 : 0);
-      const completedCount = (isDialogueDone ? 1 : 0) + (isVocabDone ? 1 : 0) + completedExerciseCount + (isReadingDone ? 1 : 0) + (isSummaryDone ? 1 : 0);
-      const isFullyDone = totalCount > 0 && completedCount === totalCount;
-      const progress = totalCount > 0 ? Math.round((completedCount / totalCount) * 100) : 0;
-      const info = CHAPTER_INFO[ch] || {};
-
-      return {
-        chapterNum: ch,
-        titleTr: info.tr || `Ünite ${ch}`,
-        titleEn: info.en || `Chapter ${ch}`,
-        nlTitle: info.nl || `Hoofdstuk ${ch}`,
-        icon: info.icon || "fa-solid fa-book",
-        totalCount,
-        completedCount,
-        isFullyDone,
-        isDialogueDone,
-        isVocabDone,
-        isReadingDone,
-        isSummaryDone,
-        progress,
-        dialogueSection: dialogueSec,
-        vocabSection: vocabSec,
-        exerciseSections: exerciseSecs,
-        readingSection: readingSec,
-        summarySection: summarySec,
-        sections: [dialogueSec, vocabSec, ...exerciseSecs].filter(Boolean),
-        vocabStats: chVocab
-      };
-    });
-
-    const completedChaptersCount = chapterSectionStats.filter(c => c.isFullyDone).length;
-    // Her tam bitirilen ünite için büyük motivasyon bonusu (+0.50 bölüm puanı)
-    const chapterMasteryBonus = completedChaptersCount * 0.50;
-
-    const totalSectionPoints = completedSectionsCount + partialSectionPoints + chapterMasteryBonus + notesBonus;
-    const sectionsProgressPercent = totalBookSections > 0 
-      ? Math.min(100, Math.round((totalSectionPoints / totalBookSections) * 100)) 
-      : 0;
-
-    // ----------------------------------------------------
-    // E) BİRLEŞİK İLERLEME (OVERALL PROGRESS - AĞIRLIKLI 3 SÜTUN)
-    // ----------------------------------------------------
-    // Bölümler (%35) + Kelimeler (%35) + Sorular & Pratik (%30)
-    const rawOverall = (sectionsProgressPercent * 0.35) + 
-                       (wordsProgressPercent * 0.35) + 
-                       (questionsProgressPercent * 0.30);
-                       
-    // Kullanıcının yaptığı en ufak bir çalışma dahi varsa (soru, kelime, tekrar, bölüm)
-    // genel ilerlemenin 0 kalmamasını sağlayacak hassas taban kontrolü:
-    const hasAnyActivity = uniqueAttempted > 0 || totalLearnedWords > 0 || totalLearningWords > 0 || completedSectionsCount > 0 || totalFlashcardReviews > 0 || partialSectionPoints > 0;
-    const overallProgress = Math.min(100, hasAnyActivity ? Math.max(1, Math.round(rawOverall)) : 0);
-
-    // ----------------------------------------------------
-    // F) XP & SEVİYE SİSTEMİ (HER ÇALIŞMA BİR İLERLEMEDİR)
-    // ----------------------------------------------------
-    const totalXP = Math.round(
-      (uniqueAttempted * 10) +
-      (totalQuizCorrect * 15) +
-      (masteredCount * 25) +
-      (totalLearnedWords * 20) +
-      (totalLearningWords * 8) +
-      (totalFlashcardReviews * 4) +
-      (completedSectionsCount * 60) +
-      (completedChaptersCount * 300) +
-      (totalFavoritesCount * 15) +
-      (starredVerbsCount * 20)
-    );
-
-    const currentTier = LEVEL_TIERS.slice().reverse().find(t => totalXP >= t.minXp) || LEVEL_TIERS[0];
-    const nextTier = LEVEL_TIERS.find(t => t.level === currentTier.level + 1) || null;
-    const xpInCurrentTier = totalXP - currentTier.minXp;
-    const xpNeededForTier = nextTier ? (nextTier.minXp - currentTier.minXp) : 1;
-    const tierProgressPercent = nextTier ? Math.min(100, Math.max(0, Math.round((xpInCurrentTier / xpNeededForTier) * 100))) : 100;
-    const xpToNextLevel = nextTier ? Math.max(0, nextTier.minXp - totalXP) : 0;
-
     return {
-      // 1. Sorular
-      uniqueAttempted,
-      totalQuizAttempts,
-      totalQuizCorrect,
-      totalQuizIncorrect,
-      quizAccuracy,
-      totalQuizQuestions,
-      masteredCount,
-      weakCount,
-      goodQuestionsCount,
-      effectiveQuestionPoints: Math.round(effectiveQuestionPoints),
-      questionBenchmark: QUESTION_BENCHMARK,
-      questionsProgressPercent,
-      topicStats,
-
-      // 2. Kelimeler
-      totalPoolWords,
-      totalBookWords,
-      totalLearnedWords,
-      totalLearningWords,
-      totalFlashcardReviews,
-      flashcardAccuracy,
-      effectiveWordPoints: Math.round(effectiveWordPoints),
-      wordsProgressPercent,
-      chapterVocabStats,
-
-      // 3. Bölümler
-      totalBookSections,
-      completedSectionsCount,
-      partialSectionPoints: Number(partialSectionPoints.toFixed(1)),
-      sectionsProgressPercent,
-      totalChapters: 18,
-      completedChaptersCount,
-      chapterSectionStats,
-      totalFavoritesCount,
-      starredVerbsCount,
-
-      // 4. Birleşik Ortalama & XP
-      overallProgress,
-      totalXP,
-      currentTier,
-      nextTier,
-      tierProgressPercent,
-      xpToNextLevel
+      ...baseStats,
+      topicStats
     };
   }, [completed, favorites, bookSections, statsVersion]);
 
@@ -722,6 +371,194 @@ export default function HomeView({
         />
       )}
 
+      {/* 0.1. 10.000 XP VE İLERLEME MATEMATİĞİ BİLGİLENDİRME MODALI */}
+      {showProgressInfoModal && (
+        <div 
+          className="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-3 sm:p-5 overflow-y-auto"
+          onClick={() => setShowProgressInfoModal(false)}
+        >
+          <div 
+            className="bg-slate-900 border border-slate-700/80 rounded-3xl max-w-2xl w-full p-5 sm:p-7 shadow-2xl relative my-auto space-y-5 animate-fade-in text-slate-200 max-h-[90vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Modal Başlığı ve Kapatma Butonu */}
+            <div className="flex items-start justify-between gap-4 border-b border-slate-800 pb-4">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-teal-500/20 via-brand-500/20 to-indigo-500/20 border border-teal-500/40 flex items-center justify-center text-teal-300 text-lg flex-shrink-0 shadow-sm">
+                  <i className="fa-solid fa-calculator"></i>
+                </div>
+                <div>
+                  <h3 className="text-lg sm:text-xl font-black text-slate-100 flex items-center gap-2 flex-wrap">
+                    <span>{isTr ? '10.000 XP İlerleme & Puanlama Sistemi' : '10,000 XP Progress & Scoring System'}</span>
+                    <span className="text-[10px] px-2 py-0.5 rounded-full bg-teal-950 border border-teal-600/50 text-teal-300 font-mono font-bold">
+                      100% = 10.000 XP
+                    </span>
+                  </h3>
+                  <p className="text-xs text-slate-400 mt-0.5">
+                    {isTr 
+                      ? 'Şişirilmemiş, matematiksel olarak denk ve her eyleminizin sayıldığı tavan puanlama modeli.' 
+                      : 'A transparent, mathematically balanced ceiling where every study action directly moves the needle.'}
+                  </p>
+                </div>
+              </div>
+
+              <button
+                type="button"
+                onClick={() => setShowProgressInfoModal(false)}
+                className="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition flex items-center justify-center flex-shrink-0 cursor-pointer"
+                aria-label="Close"
+              >
+                <i className="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+
+            {/* Kullanıcının Canlı Puan Özeti (Spotlight) */}
+            <div className="rounded-2xl bg-gradient-to-r from-teal-950/50 via-slate-850 to-indigo-950/50 border border-slate-700/80 p-4 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-inner">
+              <div className="flex items-center gap-3 w-full sm:w-auto">
+                <div className="w-11 h-11 rounded-xl bg-amber-950/70 border border-amber-600/50 flex items-center justify-center text-amber-300 text-xl shadow-sm flex-shrink-0">
+                  <i className={levelInfo.icon}></i>
+                </div>
+                <div>
+                  <div className="text-xs font-bold text-slate-300">
+                    {isTr ? 'Mevcut Seviyeniz:' : 'Current Level:'} <span className="text-amber-300 font-extrabold">{levelInfo.title}</span> ({levelInfo.rank})
+                  </div>
+                  <div className="text-[11px] text-slate-400 mt-0.5">
+                    {levelInfo.nextTierTitle 
+                      ? (isTr ? `Sonraki kademeye ${levelInfo.xpToNextLevel.toLocaleString()} XP kaldı` : `${levelInfo.xpToNextLevel.toLocaleString()} XP to next tier`)
+                      : (isTr ? 'En üst mertebeye ulaşıldı!' : 'Max Level achieved!')}
+                  </div>
+                </div>
+              </div>
+
+              <div className="text-left sm:text-right sm:border-l sm:border-slate-700/80 sm:pl-4 w-full sm:w-auto">
+                <div className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-teal-300 to-indigo-300 font-mono">
+                  {stats.totalXP.toLocaleString()} / 10.000 XP
+                </div>
+                <div className="text-[11px] font-bold text-teal-400">
+                  %{stats.overallProgress} {isTr ? 'Genel İlerleme Oranı' : 'Overall Progress'}
+                </div>
+              </div>
+            </div>
+
+            {/* Matematiksel Dağılım Kartları (3 Sütun) */}
+            <div className="space-y-3">
+              <div className="text-xs font-black text-slate-400 uppercase tracking-wider flex items-center gap-1.5">
+                <i className="fa-solid fa-cubes text-teal-400"></i>
+                {isTr ? '3 Temel Direk ve Puan Dağılımı' : '3 Main Pillars & Point Distribution'}
+              </div>
+
+              <div className="grid grid-cols-1 gap-3">
+                {/* Sütun 1: Müfredat ve Bölümler */}
+                <div className="bg-slate-800/60 rounded-2xl p-4 border border-indigo-900/40 space-y-2">
+                  <div className="flex items-center justify-between flex-wrap gap-2">
+                    <div className="flex items-center gap-2">
+                      <span className="w-7 h-7 rounded-lg bg-indigo-950/80 border border-indigo-700/50 flex items-center justify-center text-indigo-400 text-xs">
+                        <i className="fa-solid fa-book-open"></i>
+                      </span>
+                      <span className="font-extrabold text-slate-200 text-sm">
+                        {isTr ? '1. Müfredat Dersleri & Bölümler' : '1. Course Sections & Chapters'}
+                      </span>
+                    </div>
+                    <span className="text-xs font-mono font-black text-indigo-400 bg-indigo-950/80 px-2 py-0.5 rounded-md border border-indigo-800/60">
+                      {stats.sectionsXP.toLocaleString()} / 3.500 XP (%35)
+                    </span>
+                  </div>
+                  <p className="text-xs text-slate-300 leading-relaxed">
+                    {isTr 
+                      ? '18 ünitedeki 169 bölümün (Diyalog .1, Vocabulary .2, Alıştırmalar, Okuma Parçaları ve Sınıf İçi Özetler) her biri ~17.8 XP kazandırır (Toplam 3.000 XP). Ayrıca eksiksiz bitirilen her 18 ünite için ~27.8 XP tamamlama rozeti verilir (Toplam 500 XP).'
+                      : '169 sections across 18 chapters yield ~17.8 XP each (3,000 XP total). In addition, fully completing all sections in each chapter awards a chapter mastery badge of ~27.8 XP (500 XP total).'}
+                  </p>
+                  <div className="flex justify-between text-[11px] text-slate-400 pt-1 border-t border-slate-700/40">
+                    <span>{isTr ? 'Tamamlanan Bölüm:' : 'Completed Sections:'} <strong className="text-slate-200">{stats.completedSectionsCount} / {stats.totalBookSections}</strong></span>
+                    <span>{isTr ? 'Eksiksiz Ünite:' : 'Mastered Chapters:'} <strong className="text-slate-200">{stats.completedChaptersCount} / 18</strong></span>
+                  </div>
+                </div>
+
+                {/* Sütun 2: Kelimeler & Flashcards */}
+                <div className="bg-slate-800/60 rounded-2xl p-4 border border-emerald-900/40 space-y-2">
+                  <div className="flex items-center justify-between flex-wrap gap-2">
+                    <div className="flex items-center gap-2">
+                      <span className="w-7 h-7 rounded-lg bg-emerald-950/80 border border-emerald-700/50 flex items-center justify-center text-emerald-400 text-xs">
+                        <i className="fa-solid fa-brain"></i>
+                      </span>
+                      <span className="font-extrabold text-slate-200 text-sm">
+                        {isTr ? '2. Kelime Haznesi & Flashcards' : '2. Vocabulary & Flashcards'}
+                      </span>
+                    </div>
+                    <span className="text-xs font-mono font-black text-emerald-400 bg-emerald-950/80 px-2 py-0.5 rounded-md border border-emerald-800/60">
+                      {stats.wordsXP.toLocaleString()} / 3.500 XP (%35)
+                    </span>
+                  </div>
+                  <p className="text-xs text-slate-300 leading-relaxed">
+                    {isTr 
+                      ? 'Kitabın 1.066 müfredat kelimesi ve kendi eklediğiniz sözlük kelimeleri kapsanır. "Biliyorum" (Known) olarak işaretlenen her kelime tam puan (kelime başı ~3.28 XP), "Öğreniyorum" kelimeleri %30 puan sağlar. Tüm kelimeler öğrenildiğinde tam 3.500 XP kazanılır.'
+                      : 'Covers 1,066 curriculum words plus custom vocabulary. Every word marked as "Known" awards full credit (~3.28 XP), while "Learning" words grant 30% credit. Full mastery awards exactly 3,500 XP.'}
+                  </p>
+                  <div className="flex justify-between text-[11px] text-slate-400 pt-1 border-t border-slate-700/40">
+                    <span>{isTr ? 'Biliyorum:' : 'Mastered:'} <strong className="text-slate-200">{stats.totalLearnedWords} / {stats.targetWordCount || stats.totalBookWords}</strong></span>
+                    <span>{isTr ? 'Çalışılan / Tekrar:' : 'In Review / Flashcards:'} <strong className="text-slate-200">{stats.totalLearningWords} • +{stats.totalFlashcardReviews}</strong></span>
+                  </div>
+                </div>
+
+                {/* Sütun 3: Soru Bankası & Quizler */}
+                <div className="bg-slate-800/60 rounded-2xl p-4 border border-teal-900/40 space-y-2">
+                  <div className="flex items-center justify-between flex-wrap gap-2">
+                    <div className="flex items-center gap-2">
+                      <span className="w-7 h-7 rounded-lg bg-teal-950/80 border border-teal-700/50 flex items-center justify-center text-teal-400 text-xs">
+                        <i className="fa-solid fa-clipboard-question"></i>
+                      </span>
+                      <span className="font-extrabold text-slate-200 text-sm">
+                        {isTr ? '3. Soru Bankası & Sınavlar' : '3. Question Bank & Quizzes'}
+                      </span>
+                    </div>
+                    <span className="text-xs font-mono font-black text-teal-400 bg-teal-950/80 px-2 py-0.5 rounded-md border border-teal-800/60">
+                      {stats.questionsXP.toLocaleString()} / 3.000 XP (%30)
+                    </span>
+                  </div>
+                  <p className="text-xs text-slate-300 leading-relaxed">
+                    {isTr 
+                      ? 'Sitedeki ~3.069 soru ve test havuzunu kapsar. Doğru çözülen her benzersiz soru 2.600 XP havuzundan pay alır. Hatasız ustalık (0 yanlışla çözme) 250 XP ve %70+ genel başarı oranı 150 XP bonus ekler.'
+                      : 'Covers all ~3,069 questions across all units and grammar tests. Correct answers earn from the 2,600 XP base pool, with 250 XP for perfect mastery (0 mistakes) and 150 XP for high accuracy (70%+).'}
+                  </p>
+                  <div className="flex justify-between text-[11px] text-slate-400 pt-1 border-t border-slate-700/40">
+                    <span>{isTr ? 'Doğru Çözülen:' : 'Unique Correct:'} <strong className="text-slate-200">{stats.uniqueCorrect || 0} / {stats.totalQuizQuestions}</strong></span>
+                    <span>{isTr ? 'Kusursuz / Başarı:' : 'Mastered / Accuracy:'} <strong className="text-slate-200">{stats.masteredCount} • %{stats.quizAccuracy}</strong></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Matematiksel Sağlama ve Formül */}
+            <div className="rounded-2xl bg-slate-950/80 border border-slate-800 p-4 space-y-2">
+              <div className="text-xs font-bold text-amber-300 flex items-center gap-1.5">
+                <i className="fa-solid fa-lightbulb"></i>
+                {isTr ? 'Neden 3 Chapter Bitirince %40 Değil de ~%10-%12 Görünür?' : 'Why Completing 3 Chapters Shows ~10-12% Instead of 40%?'}
+              </div>
+              <p className="text-xs text-slate-400 leading-relaxed">
+                {isTr 
+                  ? 'Toplam 18 ünite, ~3.069 soru ve 1.066+ kelime bulunan bir müfredatta 3 ünite tamamlamak, tüm platformun yaklaşık 1/6\'sına (%16.7) denk gelir. Matematiksel tavanımız tam 10.000 XP olduğundan, 3 üniteyi bitiren bir öğrenci yaklaşık 1.000-1.200 XP kazanır ve ilerlemesi yapay olarak şişirilmeden tam hakkıyla %10-%12 olarak hesaplanır.'
+                  : 'In an 18-chapter curriculum with ~3,069 questions and 1,066+ words, 3 chapters represent roughly 1/6th (~16.7%) of total content. With our exact 10,000 XP ceiling, completing 3 chapters yields ~1,000-1,200 XP, accurately registering at ~10-12% without artificial inflation.'}
+              </p>
+              <div className="p-2.5 rounded-xl bg-slate-900 border border-slate-800 font-mono text-xs text-teal-300 flex items-center justify-between flex-wrap gap-2">
+                <span>Toplam XP = Bölüm (3.500) + Kelime (3.500) + Soru (3.000) = Maks 10.000 XP</span>
+                <span className="font-bold text-slate-100">İlerleme % = Toplam XP / 100</span>
+              </div>
+            </div>
+
+            {/* Buton */}
+            <div className="flex justify-end pt-2">
+              <button
+                type="button"
+                onClick={() => setShowProgressInfoModal(false)}
+                className="px-5 py-2.5 rounded-xl bg-teal-600 hover:bg-teal-500 text-white font-bold text-xs sm:text-sm shadow-md transition cursor-pointer"
+              >
+                {isTr ? 'Anladım, Teşekkürler' : 'Got it, Thanks'}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* 1. ÜST BAŞLIK & GERİ DÖNÜŞ AKSİYONU */}
       <div className="border-b border-slate-800 pb-4 flex justify-between items-center flex-wrap gap-3">
         <div>
@@ -787,9 +624,20 @@ export default function HomeView({
 
             <div className="flex items-center gap-4 flex-shrink-0">
               <div className="text-right">
-                <span className="text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-brand-300 to-indigo-300">
-                  %{stats.overallProgress}
-                </span>
+                <div className="flex items-center justify-end gap-2.5">
+                  <span className="text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-brand-300 to-indigo-300">
+                    %{stats.overallProgress}
+                  </span>
+                  <button
+                    type="button"
+                    onClick={() => setShowProgressInfoModal(true)}
+                    className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-800/90 hover:bg-slate-700 text-teal-400 hover:text-teal-200 border border-teal-500/40 hover:border-teal-400 transition-all flex items-center justify-center text-xs sm:text-sm shadow-md hover:scale-110 active:scale-95 cursor-pointer flex-shrink-0"
+                    title={isTr ? "10.000 XP İlerleme ve Puanlama Matematiği" : "10,000 XP Progress & Scoring Math"}
+                    aria-label="Progress Math Information"
+                  >
+                    <i className="fa-solid fa-info"></i>
+                  </button>
+                </div>
                 <span className="block text-[11px] font-semibold text-slate-400">
                   {isTr ? 'Ortalama İlerleme' : 'Average Progress'}
                 </span>
@@ -847,13 +695,13 @@ export default function HomeView({
               ></div>
             </div>
             <div className="flex justify-between items-center text-[11px] text-slate-400 px-1 flex-wrap gap-2">
-              <span>0% {isTr ? 'Başlangıç' : 'Start'}</span>
+              <span>0% {isTr ? 'Başlangıç' : 'Start'} (0 XP)</span>
               <span className="font-mono text-slate-300 text-center">
                 {isTr 
-                  ? `Dersler: %${stats.sectionsProgressPercent} (x0.35) + Kelimeler: %${stats.wordsProgressPercent} (x0.35) + Sorular: %${stats.questionsProgressPercent} (x0.30) = %${stats.overallProgress}`
-                  : `Sections: %${stats.sectionsProgressPercent} (x0.35) + Vocab: %${stats.wordsProgressPercent} (x0.35) + Quizzes: %${stats.questionsProgressPercent} (x0.30) = %${stats.overallProgress}`}
+                  ? `Dersler: %${stats.sectionsProgressPercent} (${stats.sectionsXP.toLocaleString()}/3.500 XP) + Kelimeler: %${stats.wordsProgressPercent} (${stats.wordsXP.toLocaleString()}/3.500 XP) + Sorular: %${stats.questionsProgressPercent} (${stats.questionsXP.toLocaleString()}/3.000 XP) = %${stats.overallProgress} (${stats.totalXP.toLocaleString()}/10.000 XP)`
+                  : `Sections: %${stats.sectionsProgressPercent} (${stats.sectionsXP.toLocaleString()}/3,500 XP) + Vocab: %${stats.wordsProgressPercent} (${stats.wordsXP.toLocaleString()}/3,500 XP) + Quizzes: %${stats.questionsProgressPercent} (${stats.questionsXP.toLocaleString()}/3,000 XP) = %${stats.overallProgress} (${stats.totalXP.toLocaleString()}/10,000 XP)`}
               </span>
-              <span>100% {isTr ? 'A2 Yetkinlik' : 'A2 Mastery'}</span>
+              <span>100% {isTr ? 'A2 Yetkinlik' : 'A2 Mastery'} (10.000 XP)</span>
             </div>
           </div>
 
@@ -884,12 +732,12 @@ export default function HomeView({
                 ></div>
               </div>
               <div className="flex items-center justify-between text-[11px] text-slate-400">
-                <span>{isTr ? 'Tamamlanan:' : 'Completed:'}</span>
-                <span className="font-bold text-slate-200">{stats.completedSectionsCount} / {stats.totalBookSections}</span>
+                <span>{isTr ? 'Bölüm Puanı:' : 'Section Score:'}</span>
+                <span className="font-bold text-slate-200">{stats.sectionsXP.toLocaleString()} / 3.500 XP</span>
               </div>
-              <div className="mt-1 text-[10px] text-indigo-300/80 flex items-center gap-1">
-                <i className="fa-solid fa-circle-check text-[9px]"></i>
-                <span>{isTr ? `+${stats.completedChaptersCount} ünite bonusu & kısmi puanlar` : `+${stats.completedChaptersCount} chapter bonus & partials`}</span>
+              <div className="mt-1 text-[10px] text-indigo-300/80 flex items-center justify-between">
+                <span>{stats.completedSectionsCount}/{stats.totalBookSections} {isTr ? 'bölüm' : 'secs'}</span>
+                <span>{isTr ? `+${stats.completedChaptersCount} tam ünite (${Math.round((stats.completedChaptersCount/18)*500)} XP)` : `+${stats.completedChaptersCount} chapters (${Math.round((stats.completedChaptersCount/18)*500)} XP)`}</span>
               </div>
             </div>
 
@@ -918,12 +766,12 @@ export default function HomeView({
                 ></div>
               </div>
               <div className="flex items-center justify-between text-[11px] text-slate-400">
-                <span>{isTr ? 'Öğrenilen:' : 'Mastered:'}</span>
-                <span className="font-bold text-slate-200">{stats.totalLearnedWords} / {stats.totalBookWords}</span>
+                <span>{isTr ? 'Kelime Puanı:' : 'Vocab Score:'}</span>
+                <span className="font-bold text-slate-200">{stats.wordsXP.toLocaleString()} / 3.500 XP</span>
               </div>
-              <div className="mt-1 text-[10px] text-emerald-300/80 flex items-center gap-1">
-                <i className="fa-solid fa-chart-line text-[9px]"></i>
-                <span>{isTr ? `${stats.totalLearningWords} çalışılan • +${stats.totalFlashcardReviews} flashcard` : `${stats.totalLearningWords} in review • +${stats.totalFlashcardReviews} cards`}</span>
+              <div className="mt-1 text-[10px] text-emerald-300/80 flex items-center justify-between">
+                <span>{stats.totalLearnedWords}/{stats.targetWordCount || stats.totalBookWords} {isTr ? 'biliyorum' : 'known'}</span>
+                <span>{isTr ? `${stats.totalLearningWords} çalışılan • +${stats.totalFlashcardReviews} kart` : `${stats.totalLearningWords} review • +${stats.totalFlashcardReviews} cards`}</span>
               </div>
             </div>
 
@@ -952,17 +800,17 @@ export default function HomeView({
                 ></div>
               </div>
               <div className="flex items-center justify-between text-[11px] text-slate-400">
-                <span>{isTr ? 'Çözülen Soru:' : 'Attempted:'}</span>
-                <span className="font-bold text-slate-200">{stats.uniqueAttempted} / {stats.totalQuizQuestions}</span>
+                <span>{isTr ? 'Soru Puanı:' : 'Quiz Score:'}</span>
+                <span className="font-bold text-slate-200">{stats.questionsXP.toLocaleString()} / 3.000 XP</span>
               </div>
-              <div className="mt-1 text-[10px] text-teal-300/80 flex items-center gap-1">
-                <i className="fa-solid fa-star text-[9px]"></i>
-                <span>{isTr ? `${stats.masteredCount} kusursuz • 400 hedef puan` : `${stats.masteredCount} mastered • 400 target pts`}</span>
+              <div className="mt-1 text-[10px] text-teal-300/80 flex items-center justify-between">
+                <span>{stats.uniqueCorrect || 0}/{stats.totalQuizQuestions} {isTr ? 'doğru' : 'correct'}</span>
+                <span>{isTr ? `${stats.masteredCount} kusursuz • %${stats.quizAccuracy} doğruluk` : `${stats.masteredCount} mastered • %${stats.quizAccuracy}`}</span>
               </div>
             </div>
           </div>
 
-          {/* Aksiyon Etki Tablosu (Action Impact Strip) */}
+          {/* Aksiyon Etki Tablosu (Action Impact Strip - 10.000 XP) */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1 border-t border-slate-700/50">
             <div className="p-2.5 rounded-xl bg-slate-800/40 border border-slate-700/50 flex items-center gap-2.5">
               <span className="w-7 h-7 rounded-lg bg-teal-500/15 border border-teal-500/30 flex items-center justify-center text-teal-400 text-xs flex-shrink-0">
@@ -970,7 +818,7 @@ export default function HomeView({
               </span>
               <div className="min-w-0">
                 <div className="text-[11px] font-bold text-slate-200 truncate">{isTr ? '1 Soru Çözümü' : '1 Question'}</div>
-                <div className="text-[10px] text-teal-300 font-mono">+10-25 XP • Quiz %</div>
+                <div className="text-[10px] text-teal-300 font-mono">+0.85-0.98 XP • 3.000 XP</div>
               </div>
             </div>
 
@@ -979,8 +827,8 @@ export default function HomeView({
                 <i className="fa-solid fa-brain"></i>
               </span>
               <div className="min-w-0">
-                <div className="text-[11px] font-bold text-slate-200 truncate">{isTr ? '1 Kelime Pratiği' : '1 Word Study'}</div>
-                <div className="text-[10px] text-emerald-300 font-mono">+8-20 XP • Kelime %</div>
+                <div className="text-[11px] font-bold text-slate-200 truncate">{isTr ? '1 Kelime (Biliyorum)' : '1 Word (Known)'}</div>
+                <div className="text-[10px] text-emerald-300 font-mono">+3.28 XP • 3.500 XP</div>
               </div>
             </div>
 
@@ -990,7 +838,7 @@ export default function HomeView({
               </span>
               <div className="min-w-0">
                 <div className="text-[11px] font-bold text-slate-200 truncate">{isTr ? 'Bölüm Bitirme' : 'Section Done'}</div>
-                <div className="text-[10px] text-indigo-300 font-mono">+60 XP • Ders %</div>
+                <div className="text-[10px] text-indigo-300 font-mono">+17.8 XP • 3.000 XP</div>
               </div>
             </div>
 
@@ -1000,7 +848,7 @@ export default function HomeView({
               </span>
               <div className="min-w-0">
                 <div className="text-[11px] font-bold text-slate-200 truncate">{isTr ? 'Ünite Bitirme' : 'Chapter Done'}</div>
-                <div className="text-[10px] text-amber-300 font-mono">+300 XP • Bonus %</div>
+                <div className="text-[10px] text-amber-300 font-mono">+27.8 XP • 500 XP</div>
               </div>
             </div>
           </div>

@@ -23,18 +23,18 @@ export const CHAPTER_INFO = {
   18: { tr: "Bij de politie (Poliste & Toplum)", en: "Bij de politie (At the Police)", nl: "Bij de politie", icon: "fa-solid fa-shield-halved" }
 };
 
-// 10 Kademeli Deneyim (XP) ve Seviye Sistemi
+// 10 Kademeli Deneyim (XP) ve Seviye Sistemi (10.000 XP Tavan)
 export const LEVEL_TIERS = [
-  { level: 1, minXp: 0, maxXp: 250, titleTr: "Acemi Kaşif", titleEn: "Beginner Explorer", rank: "A1.1", icon: "fa-solid fa-compass", color: "from-sky-500 to-blue-600", badgeColor: "text-sky-300 bg-sky-950/80 border-sky-600 shadow-[0_0_10px_rgba(56,189,248,0.2)]" },
-  { level: 2, minXp: 250, maxXp: 600, titleTr: "Hevesli Öğrenci", titleEn: "Eager Learner", rank: "A1.1", icon: "fa-solid fa-seedling", color: "from-emerald-500 to-teal-600", badgeColor: "text-emerald-300 bg-emerald-950/80 border-emerald-600 shadow-[0_0_10px_rgba(16,185,129,0.2)]" },
-  { level: 3, minXp: 600, maxXp: 1200, titleTr: "Kelime Avcısı", titleEn: "Word Hunter", rank: "A1.2", icon: "fa-solid fa-brain", color: "from-teal-500 to-cyan-600", badgeColor: "text-teal-300 bg-teal-950/80 border-teal-600 shadow-[0_0_10px_rgba(20,184,166,0.2)]" },
-  { level: 4, minXp: 1200, maxXp: 2100, titleTr: "Cümle Mimarı", titleEn: "Sentence Builder", rank: "A1.2", icon: "fa-solid fa-cubes", color: "from-indigo-500 to-blue-600", badgeColor: "text-indigo-300 bg-indigo-950/80 border-indigo-600 shadow-[0_0_10px_rgba(99,102,241,0.2)]" },
-  { level: 5, minXp: 2100, maxXp: 3500, titleTr: "Gramer Yolcusu", titleEn: "Grammar Voyager", rank: "A1+", icon: "fa-solid fa-feather-pointed", color: "from-purple-500 to-indigo-600", badgeColor: "text-purple-300 bg-purple-950/80 border-purple-600 shadow-[0_0_10px_rgba(168,85,247,0.2)]" },
-  { level: 6, minXp: 3500, maxXp: 5500, titleTr: "Diyalog Ustası", titleEn: "Dialogue Crafter", rank: "A2.1", icon: "fa-solid fa-comments", color: "from-amber-500 to-orange-600", badgeColor: "text-amber-300 bg-amber-950/80 border-amber-600 shadow-[0_0_10px_rgba(245,158,11,0.25)]" },
-  { level: 7, minXp: 5500, maxXp: 8500, titleTr: "Metin Kaşifi", titleEn: "Text Explorer", rank: "A2.1", icon: "fa-solid fa-book-open-reader", color: "from-rose-500 to-pink-600", badgeColor: "text-rose-300 bg-rose-950/80 border-rose-600 shadow-[0_0_10px_rgba(244,63,94,0.25)]" },
-  { level: 8, minXp: 8500, maxXp: 12500, titleTr: "Akıcı Konuşmacı", titleEn: "Fluent Speaker", rank: "A2.2", icon: "fa-solid fa-microphone-lines", color: "from-cyan-500 to-teal-600", badgeColor: "text-cyan-300 bg-cyan-950/80 border-cyan-600 shadow-[0_0_10px_rgba(6,182,212,0.25)]" },
-  { level: 9, minXp: 12500, maxXp: 18000, titleTr: "Dil Rehberi", titleEn: "Language Mentor", rank: "A2+", icon: "fa-solid fa-award", color: "from-yellow-400 to-amber-500", badgeColor: "text-yellow-300 bg-yellow-950/80 border-yellow-600 shadow-[0_0_12px_rgba(234,179,8,0.3)]" },
-  { level: 10, minXp: 18000, maxXp: 18000, titleTr: "Hollanda Fatihi", titleEn: "Dutch Master", rank: "A2 Master", icon: "fa-solid fa-crown", color: "from-yellow-400 to-amber-600", badgeColor: "text-amber-200 bg-amber-950/90 border-amber-500 shadow-[0_0_15px_rgba(245,158,11,0.5)]" }
+  { level: 1, minXp: 0, maxXp: 500, titleTr: "Acemi Kaşif", titleEn: "Beginner Explorer", rank: "A1.1", icon: "fa-solid fa-compass", color: "from-sky-500 to-blue-600", badgeColor: "text-sky-300 bg-sky-950/80 border-sky-600 shadow-[0_0_10px_rgba(56,189,248,0.2)]" },
+  { level: 2, minXp: 500, maxXp: 1200, titleTr: "Hevesli Öğrenci", titleEn: "Eager Learner", rank: "A1.1", icon: "fa-solid fa-seedling", color: "from-emerald-500 to-teal-600", badgeColor: "text-emerald-300 bg-emerald-950/80 border-emerald-600 shadow-[0_0_10px_rgba(16,185,129,0.2)]" },
+  { level: 3, minXp: 1200, maxXp: 2200, titleTr: "Kelime Avcısı", titleEn: "Word Hunter", rank: "A1.2", icon: "fa-solid fa-brain", color: "from-teal-500 to-cyan-600", badgeColor: "text-teal-300 bg-teal-950/80 border-teal-600 shadow-[0_0_10px_rgba(20,184,166,0.2)]" },
+  { level: 4, minXp: 2200, maxXp: 3400, titleTr: "Cümle Mimarı", titleEn: "Sentence Builder", rank: "A1.2", icon: "fa-solid fa-cubes", color: "from-indigo-500 to-blue-600", badgeColor: "text-indigo-300 bg-indigo-950/80 border-indigo-600 shadow-[0_0_10px_rgba(99,102,241,0.2)]" },
+  { level: 5, minXp: 3400, maxXp: 4800, titleTr: "Gramer Yolcusu", titleEn: "Grammar Voyager", rank: "A1+", icon: "fa-solid fa-feather-pointed", color: "from-purple-500 to-indigo-600", badgeColor: "text-purple-300 bg-purple-950/80 border-purple-600 shadow-[0_0_10px_rgba(168,85,247,0.2)]" },
+  { level: 6, minXp: 4800, maxXp: 6300, titleTr: "Diyalog Ustası", titleEn: "Dialogue Crafter", rank: "A2.1", icon: "fa-solid fa-comments", color: "from-amber-500 to-orange-600", badgeColor: "text-amber-300 bg-amber-950/80 border-amber-600 shadow-[0_0_10px_rgba(245,158,11,0.25)]" },
+  { level: 7, minXp: 6300, maxXp: 7800, titleTr: "Metin Kaşifi", titleEn: "Text Explorer", rank: "A2.1", icon: "fa-solid fa-book-open-reader", color: "from-rose-500 to-pink-600", badgeColor: "text-rose-300 bg-rose-950/80 border-rose-600 shadow-[0_0_10px_rgba(244,63,94,0.25)]" },
+  { level: 8, minXp: 7800, maxXp: 9000, titleTr: "Akıcı Konuşmacı", titleEn: "Fluent Speaker", rank: "A2.2", icon: "fa-solid fa-microphone-lines", color: "from-cyan-500 to-teal-600", badgeColor: "text-cyan-300 bg-cyan-950/80 border-cyan-600 shadow-[0_0_10px_rgba(6,182,212,0.25)]" },
+  { level: 9, minXp: 9000, maxXp: 9800, titleTr: "Dil Rehberi", titleEn: "Language Mentor", rank: "A2+", icon: "fa-solid fa-award", color: "from-yellow-400 to-amber-500", badgeColor: "text-yellow-300 bg-yellow-950/80 border-yellow-600 shadow-[0_0_12px_rgba(234,179,8,0.3)]" },
+  { level: 10, minXp: 9800, maxXp: 10000, titleTr: "Hollanda Fatihi", titleEn: "Dutch Master", rank: "A2 Master", icon: "fa-solid fa-crown", color: "from-yellow-400 to-amber-600", badgeColor: "text-amber-200 bg-amber-950/90 border-amber-500 shadow-[0_0_15px_rgba(245,158,11,0.5)]" }
 ];
 
 export function notifyProgressUpdated() {
@@ -148,21 +148,24 @@ export function calculateOverallProgress({ completed = {}, favorites = {}, bookS
     };
   });
 
+  // 1. Ünite 1 - 18 Kelime Dağılımı ve Hazne Analizi (Sütun 2: Maks 3.500 XP)
   const totalBookWords = vocabulary.length || 1066;
   const totalLearnedWords = chapterVocabStats.reduce((acc, c) => acc + c.learnedCount, 0);
   const totalLearningWords = chapterVocabStats.reduce((acc, c) => acc + c.learningCount, 0);
   const starredVerbsCount = Array.isArray(starredVerbs) ? starredVerbs.length : 0;
 
-  const effectiveWordPoints = totalLearnedWords + 
-    (totalLearningWords * 0.40) + 
-    Math.min(80, Math.floor(totalFlashcardReviews / 10)) + 
-    (starredVerbsCount * 0.50);
-
-  const wordsProgressPercent = totalBookWords > 0 
-    ? Math.min(100, Math.round((effectiveWordPoints / totalBookWords) * 100)) 
+  // Hedef kelime evreni: Müfredattaki 1.066 kelime + kullanıcının eklediği özgün havuz kelimeleri
+  const targetWordCount = Math.max(1066, totalBookWords + Math.max(0, totalPoolWords - totalBookWords));
+  const flashcardBonus = Math.min(100, Math.floor(totalFlashcardReviews / 20));
+  const starredBonus = Math.min(50, starredVerbsCount);
+  const effectiveWordScore = totalLearnedWords + (totalLearningWords * 0.30) + flashcardBonus + starredBonus;
+  const wordProgressRatio = targetWordCount > 0 
+    ? Math.min(1.0, effectiveWordScore / targetWordCount) 
     : 0;
+  const wordsXP = Math.min(3500, Math.round(wordProgressRatio * 3500));
+  const wordsProgressPercent = Math.min(100, Math.round((wordsXP / 3500) * 100));
 
-  // 2. Soru & Quiz İstatistikleri
+  // 2. Soru & Quiz İstatistikleri (Sütun 3: Maks 3.000 XP)
   const attemptedQIds = Object.keys(quizHistory);
   const uniqueAttempted = attemptedQIds.length;
   let totalQuizCorrect = 0;
@@ -184,21 +187,20 @@ export function calculateOverallProgress({ completed = {}, favorites = {}, bookS
   const quizAccuracy = totalQuizAttempts > 0 
     ? Math.round((totalQuizCorrect / totalQuizAttempts) * 100) 
     : 0;
-  const totalQuizQuestions = quizQuestions?.length || 2204;
+  const totalQuizQuestions = quizQuestions?.length || 3069;
   const goodQuestionsCount = Object.keys(goodQuestions).length;
 
-  const accuracyBonus = quizAccuracy >= 70 ? Math.round((quizAccuracy - 70) * 0.5) : 0;
-  const repetitionBonus = Math.min(50, Math.floor(totalQuizCorrect / 10) * 0.5);
-  const curationBonus = goodQuestionsCount * 0.5;
-  const masteryBonus = masteredCount * 0.5;
+  const uniqueCorrect = attemptedQIds.filter(id => (quizHistory[id]?.correct || 0) > 0).length;
+  const accuracyBonus = quizAccuracy >= 70 ? Math.round((quizAccuracy - 70) * 3.33) : 0; // Maks 100 XP
+  const repetitionBonus = Math.min(50, Math.floor(totalQuizCorrect / 20)); // Maks 50 XP
+  const masteryXP = totalQuizQuestions > 0 ? Math.min(250, Math.round((masteredCount / totalQuizQuestions) * 250)) : 0;
+  const baseQuestionsXP = totalQuizQuestions > 0 ? Math.min(2600, Math.round((uniqueCorrect / totalQuizQuestions) * 2600)) : 0;
+  const questionsXP = Math.min(3000, baseQuestionsXP + masteryXP + accuracyBonus + repetitionBonus);
+  const questionsProgressPercent = Math.min(100, Math.round((questionsXP / 3000) * 100));
 
-  const effectiveQuestionPoints = uniqueAttempted + masteryBonus + repetitionBonus + curationBonus + accuracyBonus;
-  const QUESTION_BENCHMARK = 400;
-  const questionsProgressPercent = Math.min(100, Math.round((effectiveQuestionPoints / QUESTION_BENCHMARK) * 100));
-
-  // 3. Bölüm & Ders İstatistikleri
+  // 3. Bölüm & Ders İstatistikleri (Sütun 1: Maks 3.500 XP)
   const allSections = bookSections;
-  const totalBookSections = allSections.length || 103;
+  const totalBookSections = allSections.length || 169;
   const completedSectionsCount = allSections.filter(s => {
     if (completed[s.id]) return true;
     if (s.id.endsWith('.2')) {
@@ -221,7 +223,7 @@ export function calculateOverallProgress({ completed = {}, favorites = {}, bookS
         const diagSt = JSON.parse(localStorage.getItem(`dialogueWordStatuses_${s.chapter}`)) || {};
         const studiedCount = Object.keys(diagSt).length;
         if (studiedCount > 0) {
-          partialSectionPoints += Math.min(0.7, studiedCount * 0.08);
+          partialSectionPoints += Math.min(0.5, studiedCount * 0.05);
         }
       } catch (e) {}
     } else if (s.id.includes('Reading')) {
@@ -229,14 +231,13 @@ export function calculateOverallProgress({ completed = {}, favorites = {}, bookS
         const readSt = JSON.parse(localStorage.getItem(`readingWordStatuses_${s.chapter}`)) || {};
         const studiedCount = Object.keys(readSt).length;
         if (studiedCount > 0) {
-          partialSectionPoints += Math.min(0.7, studiedCount * 0.08);
+          partialSectionPoints += Math.min(0.5, studiedCount * 0.05);
         }
       } catch (e) {}
     }
   });
 
   const totalFavoritesCount = Object.keys(favorites).length;
-  const notesBonus = Math.min(5, totalFavoritesCount * 0.25);
 
   const availableChapters = Array.from({ length: 18 }, (_, i) => i + 1);
   const chapterSectionStats = availableChapters.map(ch => {
@@ -284,45 +285,41 @@ export function calculateOverallProgress({ completed = {}, favorites = {}, bookS
   });
 
   const completedChaptersCount = chapterSectionStats.filter(c => c.isFullyDone).length;
-  const chapterMasteryBonus = completedChaptersCount * 0.50;
 
-  const totalSectionPoints = completedSectionsCount + partialSectionPoints + chapterMasteryBonus + notesBonus;
-  const sectionsProgressPercent = totalBookSections > 0 
-    ? Math.min(100, Math.round((totalSectionPoints / totalBookSections) * 100)) 
+  // 169 Bölüm (3.000 XP) + 18 Tam Ünite Tamamlama Rozeti (500 XP) = 3.500 XP
+  const baseSectionProgressRatio = totalBookSections > 0 
+    ? Math.min(1.0, (completedSectionsCount + (partialSectionPoints * 0.5)) / totalBookSections)
     : 0;
+  const baseSectionsXP = Math.round(baseSectionProgressRatio * 3000);
+  const chapterMasteryXP = Math.round((completedChaptersCount / 18) * 500);
+  const sectionsXP = Math.min(3500, baseSectionsXP + chapterMasteryXP);
+  const sectionsProgressPercent = Math.min(100, Math.round((sectionsXP / 3500) * 100));
 
-  // 4. Birleşik İlerleme (35% Bölümler + 35% Kelimeler + 30% Sorular)
-  const rawOverall = (sectionsProgressPercent * 0.35) + 
-                     (wordsProgressPercent * 0.35) + 
-                     (questionsProgressPercent * 0.30);
-                     
-  const hasAnyActivity = uniqueAttempted > 0 || totalLearnedWords > 0 || totalLearningWords > 0 || completedSectionsCount > 0 || totalFlashcardReviews > 0 || partialSectionPoints > 0;
-  const overallProgress = Math.min(100, hasAnyActivity ? Math.max(1, Math.round(rawOverall)) : 0);
+  // 4. BİRLEŞİK TOPLAM XP (TAVAN: 10.000 XP) & GENEL İLERLEME (%)
+  const totalXP = Math.min(10000, sectionsXP + wordsXP + questionsXP);
+  const hasAnyActivity = totalXP > 0 || uniqueAttempted > 0 || totalLearnedWords > 0 || totalLearningWords > 0 || completedSectionsCount > 0 || totalFlashcardReviews > 0 || partialSectionPoints > 0;
+  const overallProgress = Math.min(100, hasAnyActivity ? Math.max(1, Math.round((totalXP / 10000) * 100)) : 0);
 
-  // 5. XP & Seviye Sistemi
-  const totalXP = Math.round(
-    (uniqueAttempted * 10) +
-    (totalQuizCorrect * 15) +
-    (masteredCount * 25) +
-    (totalLearnedWords * 20) +
-    (totalLearningWords * 8) +
-    (totalFlashcardReviews * 4) +
-    (completedSectionsCount * 60) +
-    (completedChaptersCount * 300) +
-    (totalFavoritesCount * 15) +
-    (starredVerbsCount * 20)
-  );
-
+  // 5. XP & Seviye Sistemi (10 Kademe)
   const currentTier = LEVEL_TIERS.slice().reverse().find(t => totalXP >= t.minXp) || LEVEL_TIERS[0];
   const nextTier = LEVEL_TIERS.find(t => t.level === currentTier.level + 1) || null;
   const xpInCurrentTier = totalXP - currentTier.minXp;
-  const xpNeededForTier = nextTier ? (nextTier.minXp - currentTier.minXp) : 1;
+  const xpNeededForTier = nextTier ? (nextTier.minXp - currentTier.minXp) : (10000 - currentTier.minXp);
   const tierProgressPercent = nextTier ? Math.min(100, Math.max(0, Math.round((xpInCurrentTier / xpNeededForTier) * 100))) : 100;
   const xpToNextLevel = nextTier ? Math.max(0, nextTier.minXp - totalXP) : 0;
 
   return {
-    // 1. Sorular
+    // 10.000 XP & Genel İlerleme
+    maxXP: 10000,
+    totalXP,
+    overallProgress,
+
+    // 1. Sorular & Quizler (Maks 3.000 XP)
+    questionsXP,
+    questionsMaxXP: 3000,
+    questionsProgressPercent,
     uniqueAttempted,
+    uniqueCorrect,
     totalQuizAttempts,
     totalQuizCorrect,
     totalQuizIncorrect,
@@ -331,35 +328,34 @@ export function calculateOverallProgress({ completed = {}, favorites = {}, bookS
     masteredCount,
     weakCount,
     goodQuestionsCount,
-    effectiveQuestionPoints: Math.round(effectiveQuestionPoints),
-    questionBenchmark: QUESTION_BENCHMARK,
-    questionsProgressPercent,
 
-    // 2. Kelimeler
+    // 2. Kelimeler & Hazne (Maks 3.500 XP)
+    wordsXP,
+    wordsMaxXP: 3500,
+    wordsProgressPercent,
+    targetWordCount,
     totalPoolWords,
     totalBookWords,
     totalLearnedWords,
     totalLearningWords,
     totalFlashcardReviews,
     flashcardAccuracy,
-    effectiveWordPoints: Math.round(effectiveWordPoints),
-    wordsProgressPercent,
     chapterVocabStats,
 
-    // 3. Bölümler
+    // 3. Bölümler & Dersler (Maks 3.500 XP)
+    sectionsXP,
+    sectionsMaxXP: 3500,
+    sectionsProgressPercent,
     totalBookSections,
     completedSectionsCount,
     partialSectionPoints: Number(partialSectionPoints.toFixed(1)),
-    sectionsProgressPercent,
     totalChapters: 18,
     completedChaptersCount,
     chapterSectionStats,
     totalFavoritesCount,
     starredVerbsCount,
 
-    // 4. Birleşik Ortalama & XP
-    overallProgress,
-    totalXP,
+    // Seviye & Tier
     currentTier,
     nextTier,
     tierProgressPercent,

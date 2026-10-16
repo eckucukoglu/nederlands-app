@@ -1157,7 +1157,7 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
         {/* ARKA PLAN DİNAMİK İLERLEME BARI (Soldan Sağa Ambient Dolgu) */}
         <div 
           className="absolute inset-y-0 left-0 pointer-events-none transition-all duration-1000 ease-out z-0 overflow-hidden"
-          style={{ width: `${Math.max(0, Math.min(100, overallStats.overallProgress))}%` }}
+          style={{ width: `${Math.max(0, Math.min(100, overallStats?.overallProgress || 0))}%` }}
         >
           {/* Belli belirsiz, zarif degradeli dolgu */}
           <div className="w-full h-full bg-gradient-to-r from-teal-500/15 via-sky-500/15 to-indigo-500/20"></div>
@@ -1169,7 +1169,7 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
         {/* İNCE ALT KENAR İLERLEME ÇİZGİSİ */}
         <div 
           className="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-teal-400 via-sky-400 to-indigo-400 transition-all duration-1000 ease-out z-10 shadow-[0_0_8px_rgba(45,212,191,0.7)]"
-          style={{ width: `${Math.max(0, Math.min(100, overallStats.overallProgress))}%` }}
+          style={{ width: `${Math.max(0, Math.min(100, overallStats?.overallProgress || 0))}%` }}
         ></div>
 
         <div className="max-w-7xl mx-auto px-2 sm:px-4 py-2 sm:py-2.5 flex flex-nowrap justify-between items-center gap-1.5 sm:gap-2 relative z-10">
