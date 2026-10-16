@@ -310,6 +310,7 @@ export default function IrregularVerbs() {
         : [...prev, verbInf];
       
       localStorage.setItem('starredIrregularVerbs', JSON.stringify(newStarred));
+      window.dispatchEvent(new Event('progressUpdated'));
       return newStarred;
     });
   };

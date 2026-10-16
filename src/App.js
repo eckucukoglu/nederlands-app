@@ -1,5 +1,5 @@
 // src/App.js
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import './App.css';
 import DialogueSection from './components/DialogueSection';
 import VocabularySection from './components/VocabularySection';
@@ -19,6 +19,7 @@ import { auth, isSignInWithEmailLink, signInWithEmailLink, onAuthStateChanged, h
 
 import { LanguageProvider, useLanguage } from './contexts/LanguageContext';
 import { speakDutch as speakDutchAudio } from './utils/speech';
+import { calculateOverallProgress } from './utils/progress';
 
 const chapterTitles = {
   1: "Welkom", 2: "In de kantine", 3: "In het café", 4: "Op straat", 5: "Op de markt",
@@ -428,6 +429,26 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
     window.addEventListener('wordStatusUpdated', fetchStatuses);
     return () => window.removeEventListener('wordStatusUpdated', fetchStatuses);
   }, []);
+
+  // Genel İlerleme Durumu ve Başlık İlerleme Barı (Soldan Sağa Dinamik Arka Plan)
+  const [progressVersion, setProgressVersion] = useState(0);
+
+  useEffect(() => {
+    const handleProgressUpdate = () => setProgressVersion(v => v + 1);
+    window.addEventListener('wordStatusUpdated', handleProgressUpdate);
+    window.addEventListener('progressUpdated', handleProgressUpdate);
+    window.addEventListener('storage', handleProgressUpdate);
+    return () => {
+      window.removeEventListener('wordStatusUpdated', handleProgressUpdate);
+      window.removeEventListener('progressUpdated', handleProgressUpdate);
+      window.removeEventListener('storage', handleProgressUpdate);
+    };
+  }, []);
+
+  const overallStats = useMemo(() => {
+    if (progressVersion < 0) return null;
+    return calculateOverallProgress({ completed, favorites, bookSections });
+  }, [completed, favorites, progressVersion]);
 
   const [searchToast, setSearchToast] = useState(null);
   
@@ -1130,19 +1151,40 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
 
 
 
-      {/* 1. HEADER (SADECE BU KISIM SABİT) */}
-      <header className="bg-slate-950/95 backdrop-blur-md text-white shadow-md sticky top-0 z-50 border-b border-slate-800 flex-none w-full">
-        <div className="max-w-7xl mx-auto px-2 sm:px-4 py-2 sm:py-2.5 flex flex-nowrap justify-between items-center gap-1.5 sm:gap-2">
+      {/* 1. HEADER (SADECE BU KISIM SABİT - ARKA PLAN İLERLEME BARI ENTEGRELİ) */}
+      <header className="bg-slate-950/95 backdrop-blur-md text-white shadow-md sticky top-0 z-50 border-b border-slate-800 flex-none w-full relative overflow-hidden transition-colors">
+        
+        {/* ARKA PLAN DİNAMİK İLERLEME BARI (Soldan Sağa Ambient Dolgu) */}
+        <div 
+          className="absolute inset-y-0 left-0 pointer-events-none transition-all duration-1000 ease-out z-0 overflow-hidden"
+          style={{ width: `${Math.max(0, Math.min(100, overallStats.overallProgress))}%` }}
+        >
+          {/* Belli belirsiz, zarif degradeli dolgu */}
+          <div className="w-full h-full bg-gradient-to-r from-teal-500/15 via-sky-500/15 to-indigo-500/20"></div>
+          {/* İlerleme bitiş noktasındaki hafif dikey ışık ve ışıma */}
+          <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-r from-transparent via-teal-400/10 to-teal-400/25 blur-sm pointer-events-none"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-[1.5px] bg-gradient-to-b from-teal-400/20 via-teal-300/50 to-indigo-400/20 shadow-[0_0_8px_rgba(45,212,191,0.5)] pointer-events-none"></div>
+        </div>
+
+        {/* İNCE ALT KENAR İLERLEME ÇİZGİSİ */}
+        <div 
+          className="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-teal-400 via-sky-400 to-indigo-400 transition-all duration-1000 ease-out z-10 shadow-[0_0_8px_rgba(45,212,191,0.7)]"
+          style={{ width: `${Math.max(0, Math.min(100, overallStats.overallProgress))}%` }}
+        ></div>
+
+        <div className="max-w-7xl mx-auto px-2 sm:px-4 py-2 sm:py-2.5 flex flex-nowrap justify-between items-center gap-1.5 sm:gap-2 relative z-10">
           
           <div 
             className="flex items-center space-x-1.5 sm:space-x-2 flex-shrink-0 min-w-0 cursor-pointer group select-none"
             onClick={handleTitleClick}
             title={activeTab === 'home' 
               ? (lang === 'tr' ? 'Kaldığın Ekrana Dön' : 'Return to Previous Screen')
-              : (lang === 'tr' ? 'Dashboard' : 'Dashboard')
+              : (lang === 'tr' 
+                  ? `Mijn Dashboard (Genel İlerleme: %${overallStats.overallProgress} • ${overallStats.currentTier?.titleTr || ''})` 
+                  : `Dashboard (Overall Progress: %${overallStats.overallProgress} • ${overallStats.currentTier?.titleEn || ''})`)
             }
           >
-            <div className={`w-9 h-9 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center transition-all duration-200 ${
+            <div className={`w-9 h-9 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center transition-all duration-200 relative ${
               activeTab === 'home' 
                 ? 'bg-brand-600 text-white border-2 border-brand-300 shadow-[0_0_14px_rgba(14,165,233,0.8)] ring-2 ring-brand-300/60' 
                 : 'bg-brand-950/40 text-brand-400 hover:bg-brand-900/50 hover:text-brand-300 border border-brand-500/30'
@@ -1150,9 +1192,19 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
               <i className="fa-solid fa-book-medical text-base sm:text-xl"></i>
             </div>
             <div className="hidden sm:block truncate">
-              <h1 className={`font-bold text-base sm:text-lg leading-tight truncate transition-colors ${
-                activeTab === 'home' ? 'text-brand-300' : 'text-slate-100 group-hover:text-brand-300'
-              }`}>Nederlands in Gang</h1>
+              <div className="flex items-center gap-2">
+                <h1 className={`font-bold text-base sm:text-lg leading-tight truncate transition-colors ${
+                  activeTab === 'home' ? 'text-brand-300' : 'text-slate-100 group-hover:text-brand-300'
+                }`}>Nederlands in Gang</h1>
+                {overallStats.overallProgress > 0 && (
+                  <span 
+                    className="text-[10px] font-black px-1.5 py-0.5 rounded-md bg-teal-950/70 border border-teal-500/40 text-teal-300 font-mono tracking-tight shadow-sm"
+                    title={lang === 'tr' ? `Genel Müfredat İlerlemeniz: %${overallStats.overallProgress}` : `Overall Progress: %${overallStats.overallProgress}`}
+                  >
+                    %{overallStats.overallProgress}
+                  </span>
+                )}
+              </div>
               <p className="text-[11px] text-brand-400/80 truncate">Interactief Oefenportaal (A1 → A2)</p>
             </div>
             

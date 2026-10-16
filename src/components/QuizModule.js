@@ -215,6 +215,7 @@ export default function QuizModule({ tags = [], customQuestions = null, onClose,
       const updatedGoods = { ...goodQuestions, [currentQ.id]: newStatus };
       setGoodQuestions(updatedGoods);
       localStorage.setItem('goodQuestions', JSON.stringify(updatedGoods));
+      window.dispatchEvent(new Event('progressUpdated'));
 
       showGestureToast(
         newStatus 
@@ -300,6 +301,7 @@ export default function QuizModule({ tags = [], customQuestions = null, onClose,
 
       setQuizHistory(newHistory);
       localStorage.setItem('quizHistory', JSON.stringify(newHistory));
+      window.dispatchEvent(new Event('progressUpdated'));
       return;
     }
 
@@ -333,6 +335,7 @@ export default function QuizModule({ tags = [], customQuestions = null, onClose,
     
     setQuizHistory(newHistory);
     localStorage.setItem('quizHistory', JSON.stringify(newHistory));
+    window.dispatchEvent(new Event('progressUpdated'));
   };
 
   const handleOptionSelect = (opt) => {
@@ -442,6 +445,7 @@ export default function QuizModule({ tags = [], customQuestions = null, onClose,
 
     setQuizHistory(newHistory);
     localStorage.setItem('quizHistory', JSON.stringify(newHistory));
+    window.dispatchEvent(new Event('progressUpdated'));
   };
 
   // Klavyedeki Yön Tuşları:

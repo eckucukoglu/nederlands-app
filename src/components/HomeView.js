@@ -86,9 +86,11 @@ export default function HomeView({
   useEffect(() => {
     const handleStorageUpdate = () => setStatsVersion(v => v + 1);
     window.addEventListener('wordStatusUpdated', handleStorageUpdate);
+    window.addEventListener('progressUpdated', handleStorageUpdate);
     window.addEventListener('storage', handleStorageUpdate);
     return () => {
       window.removeEventListener('wordStatusUpdated', handleStorageUpdate);
+      window.removeEventListener('progressUpdated', handleStorageUpdate);
       window.removeEventListener('storage', handleStorageUpdate);
     };
   }, []);
