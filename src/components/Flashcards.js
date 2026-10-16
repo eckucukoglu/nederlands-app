@@ -108,7 +108,6 @@ export default function Flashcards({ initialChapter }) {
   const [copied, setCopied] = useState(false);
   
   const [toastMessage, setToastMessage] = useState(null);
-  const [globalPool, setGlobalPool] = useState({});
 
   const chapterVocab = useMemo(() => vocabulary.filter(v => v.chapter === targetChapter), [targetChapter]);
 
@@ -127,17 +126,6 @@ export default function Flashcards({ initialChapter }) {
       example: word.example || match?.example || ""
     };
   }, []);
-
-  const fetchGlobalPool = useCallback(() => {
-    const pool = JSON.parse(localStorage.getItem('globalWordPool')) || {};
-    setGlobalPool(pool);
-  }, []);
-
-  useEffect(() => {
-    fetchGlobalPool();
-    window.addEventListener('wordStatusUpdated', fetchGlobalPool);
-    return () => window.removeEventListener('wordStatusUpdated', fetchGlobalPool);
-  }, [fetchGlobalPool]);
 
   useEffect(() => {
     const freshStats = JSON.parse(localStorage.getItem('flashcardStats')) || {};
@@ -176,7 +164,7 @@ export default function Flashcards({ initialChapter }) {
     setCurrentIndex(0);
     setIsFlipped(false);
     setSessionStats({ known: 0, unknown: 0 });
-  }, [targetChapter, mode, lang, globalPool, chapterVocab, t.emptyGlobalEx, t.emptyDialogEx, t.emptyReadingEx]);
+  }, [targetChapter, mode, lang, chapterVocab, t.emptyGlobalEx, t.emptyDialogEx, t.emptyReadingEx]);
 
   useEffect(() => {
     setCurrentIndex(0);
