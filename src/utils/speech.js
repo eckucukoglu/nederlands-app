@@ -179,72 +179,11 @@ export const detectSpeakerGender = (speakerName = '') => {
 
 export const getSpeakerVoiceConfig = (speakerName = '') => {
   const gender = detectSpeakerGender(speakerName);
-  const isFemale = gender === 'female';
-  const isMale = gender === 'male';
-
   const dutchVoices = getDutchVoices();
-  let selectedVoice = null;
-  let voiceGender = 'unknown';
-
-  if (dutchVoices.length > 0) {
-    // Geniş ve doğru cinsiyet tanıma desenleri (Google Nederlands ve Android sesleri dahil!)
-    const femaleVoiceRegex = /female|vrouw|woman|google|fenna|colette|claire|ellen|saskia|laura|anna|emma|dena|dfa|dfd|dff/i;
-    const maleVoiceRegex = /\bmale\b|\bman\b|maarten|bart|xander|ruben|daan|frank|bram|arthur|luc|arnaud|dfb|dfc|dfe/i;
-
-    const femaleVoices = dutchVoices.filter(v => femaleVoiceRegex.test(v.name));
-    const maleVoices = dutchVoices.filter(v => maleVoiceRegex.test(v.name));
-
-    if (isFemale && femaleVoices.length > 0) {
-      // Eğer aynı cinsiyette birden fazla kaliteli ses varsa konuşmacı adına göre dönüşümlü kullan
-      const hash = Math.abs((speakerName || '').split('').reduce((acc, c) => acc + c.charCodeAt(0), 0));
-      selectedVoice = femaleVoices[hash % femaleVoices.length];
-      voiceGender = 'female';
-    } else if (isMale && maleVoices.length > 0) {
-      const hash = Math.abs((speakerName || '').split('').reduce((acc, c) => acc + c.charCodeAt(0), 0));
-      selectedVoice = maleVoices[hash % maleVoices.length];
-      voiceGender = 'male';
-    } else if (dutchVoices.length > 1) {
-      // Belirli bir cinsiyet eşleşmesi yoksa mevcut sesler arasında konuşmacı bazlı dağıt
-      const hash = Math.abs((speakerName || '').split('').reduce((acc, c) => acc + c.charCodeAt(0), 0));
-      selectedVoice = dutchVoices[hash % dutchVoices.length];
-      if (maleVoiceRegex.test(selectedVoice.name)) voiceGender = 'male';
-      else if (femaleVoiceRegex.test(selectedVoice.name)) voiceGender = 'female';
-    } else {
-      // Tek ses varsa (örn: Chrome masaüstünde yalnızca Google Nederlands yüklüyse)
-      selectedVoice = dutchVoices[0];
-      if (maleVoiceRegex.test(selectedVoice.name)) voiceGender = 'male';
-      else if (femaleVoiceRegex.test(selectedVoice.name)) voiceGender = 'female';
-    }
-  }
-
-  // --- DOĞAL VE İNSANSI PERDE (PITCH) YÖNETİMİ ---
-  // Eski kodda kullanılan 0.78 ve 1.18 gibi sert perde değişiklikleri
-  // tarayıcıların sentezleyicilerinde aşırı mekanik, teneke gibi metalik ve robotik
-  // bir tınıya yol açıyordu.
-  // Burada: Gerçek erkek veya kadın sesi bulunduğunda perde kesinlikle 1.0 (orijinal insan tınısı) tutulur.
-  // Tek bir ses olan ortamlarda ise sadece çok hafif (en fazla %5-6) mikromikron tonlama yapılır;
-  // böylece ses kalitesi bozulmaz, metalikleşmez ve konuşma hissi tamamen doğal kalır.
-  let pitch = 1.0;
-
-  if (isMale) {
-    if (voiceGender === 'male') {
-      pitch = 1.0; // Gerçek erkek sesi -> Orijinal doğal perde
-    } else {
-      // Kadın/genel ses üzerinden erkek konuşmacı:
-      // 0.78 yerine 0.94 -> Metalik robotikleşme olmadan hafifçe tok ve doğal erkek tonu
-      pitch = 0.94;
-    }
-  } else if (isFemale) {
-    if (voiceGender === 'female') {
-      pitch = 1.0; // Gerçek kadın sesi -> Orijinal doğal perde
-    } else {
-      // Erkek/genel ses üzerinden kadın konuşmacı:
-      // 1.18 yerine 1.04 -> Çizgi film karakterine dönüşmeden berrak, canlı kadın tonu
-      pitch = 1.04;
-    }
-  } else {
-    pitch = 1.0; // Anlatıcı veya genel metinler daima saf doğal perde
-  }
+  // En kaliteli, doğal ve insansı Hollandaca ses (Neural / Natural / Google Nederlands)
+  const selectedVoice = dutchVoices.length > 0 ? dutchVoices[0] : null;
+  // Farklı kişiler için perdeyi (pitch) değiştirme; daima temiz ve doğal insan perdesi (1.0) kullan
+  const pitch = 1.0;
 
   return { pitch, voice: selectedVoice, gender };
 };
@@ -374,8 +313,8 @@ export const buildSpeechChunks = (text, tokens, maxChunkLength = 160) => {
     const sEndChar = sTokens[sTokens.length - 1].endChar;
     const sText = text.substring(sStartChar, sEndChar);
 
-    // Eğer cümle 160 karakterden kısaysa ve 15 kelimeden azsa tek parça olarak al
-    if (sText.length <= maxChunkLength && sTokens.length <= 15) {
+    // Doğal cümle ezgisi ve noktalama tonlamasını korumak için tek parça olarak al
+    if (sText.length <= maxChunkLength && sTokens.length <= 22) {
       chunks.push({
         sentenceIndex: sIdx,
         text: sText,
@@ -664,8 +603,28 @@ export const speakDutchWithHighlight = (text, options = {}) => {
       if (chunkWatchdogTimer) clearTimeout(chunkWatchdogTimer);
       if (sessionId !== currentHighlightSession) return;
 
-      // Kesintisiz şekilde sıradaki cümleye geç
-      playChunk(index + 1);
+      if (index + 1 >= chunks.length) {
+        cleanup();
+        if (options.onEnd) options.onEnd();
+        return;
+      }
+
+      // Noktalama işaretlerine göre doğal insan nefes ve duraklama payı
+      const lastToken = chunkTokens[chunkTokens.length - 1];
+      const lastRaw = lastToken ? lastToken.raw : '';
+      let pauseDuration = 320;
+      if (/[?!]/.test(lastRaw)) {
+        pauseDuration = 380; // Soru ve ünlemden sonra doğal düşünme/cevap bekleme duraklaması
+      } else if (/[,;:]/.test(lastRaw)) {
+        pauseDuration = 200; // Cümlecik veya iki nokta üst üste duraklaması
+      }
+
+      const scaledPause = Math.round(pauseDuration / Math.max(0.7, Math.min(1.5, currentRate)));
+
+      setTimeout(() => {
+        if (sessionId !== currentHighlightSession) return;
+        playChunk(index + 1);
+      }, scaledPause);
     };
 
     utterance.onerror = (e) => {
