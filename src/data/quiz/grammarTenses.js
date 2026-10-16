@@ -18,7 +18,7 @@ export const grammarTenses = [
     "explanationTr": "'ik' (ben) zamirinde fiil sadece kök (stam) halindedir. '-t' almaz.",
     "explanationEn": "For 'ik' (I), the verb is just the stem. It does not take a '-t'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 3
   },
   {
     "id": "q_verb_pres_3",
@@ -37,7 +37,7 @@ export const grammarTenses = [
     "explanationTr": "'Mijn ouders' (ailem) çoğul olduğu için 'zijn' kullanılır.",
     "explanationEn": "'Mijn ouders' (my parents) is plural, so 'zijn' is used.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 3
   },
   {
     "id": "q_pres_001",
@@ -50,7 +50,7 @@ export const grammarTenses = [
     "explanationTr": "'Ik' (ben) zamiri için fiilin sadece kök (stam) hali kullanılır. 'werken' fiilinin kökü 'werk'tir.",
     "explanationEn": "For the pronoun 'ik' (I), we only use the stem (stam) of the verb. The stem of 'werken' is 'werk'.",
     "difficulty": 2,
-    "quality": 2,
+    "quality": 3,
     "options": [
       "werk",
       "werkt",
@@ -75,7 +75,7 @@ export const grammarTenses = [
     "explanationTr": "'Jij' (sen) zamiri için fiil köküne '-t' harfi eklenir (stam + t). Kök: 'lees' -> 'leest'.",
     "explanationEn": "For the pronoun 'jij' (you), a '-t' is added to the verb stem (stam + t). Stem: 'lees' -> 'leest'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 3
   },
   {
     "id": "q_pres_003",
@@ -88,7 +88,7 @@ export const grammarTenses = [
     "explanationTr": "'Mijn vader' (hij/o) 3. tekil şahıstır. Bu yüzden 'stam + t' kuralı uygulanır. Kök: 'slaap' -> 'slaapt'.",
     "explanationEn": "'Mijn vader' is 3rd person singular (hij). Therefore, the 'stam + t' rule applies. Stem: 'slaap' -> 'slaapt'.",
     "difficulty": 2,
-    "quality": 2,
+    "quality": 3,
     "options": [
       "slaapt",
       "slaap",
@@ -113,7 +113,7 @@ export const grammarTenses = [
     "explanationTr": "Çoğul zamirlerde (wij, jullie, zij) fiil her zaman mastar (infinitief) halinde kalır.",
     "explanationEn": "With plural pronouns (wij, jullie, zij), the verb always remains in its infinitive form.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 3
   },
   {
     "id": "q_pres_006",
@@ -126,7 +126,7 @@ export const grammarTenses = [
     "explanationTr": "'Praten' fiilinin kökü 'praat'tır. 'Ik' öznesi için ek almaz.",
     "explanationEn": "The stem of 'praten' is 'praat'. For the subject 'ik', it takes no suffix.",
     "difficulty": 2,
-    "quality": 2,
+    "quality": 3,
     "options": [
       "praat",
       "vragen",
@@ -151,7 +151,7 @@ export const grammarTenses = [
     "explanationTr": "Fiil kökü zaten 't' harfi ile bitiyorsa (praat), 3. tekil şahısta (hij/zij/het) fazladan bir 't' daha eklenmez.",
     "explanationEn": "If the stem already ends in 't' (praat), no extra 't' is added for the 3rd person singular (hij/zij/het).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 3
   },
   {
     "id": "q_pres_008",
@@ -164,7 +164,7 @@ export const grammarTenses = [
     "explanationTr": "'Antwoorden' fiilinin kökü 'antwoord' kelimesidir. 'Ik' için hiçbir ek almaz.",
     "explanationEn": "The stem of 'antwoorden' is 'antwoord'. For 'ik', it gets no suffix.",
     "difficulty": 2,
-    "quality": 2,
+    "quality": 3,
     "options": [
       "antwoord",
       "antwoordt",
@@ -189,7 +189,7 @@ export const grammarTenses = [
     "explanationTr": "'De docent' (hij/zij) olduğu için köke 't' eklenir. (antwoord + t = antwoordt). Yazılışta 'dt' olur.",
     "explanationEn": "'De docent' is 3rd person singular, so we add a 't' to the stem. (antwoord + t = antwoordt).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 3
   },
   {
     "id": "q_pres_010",
@@ -202,7 +202,7 @@ export const grammarTenses = [
     "explanationTr": "'Ik' öznesi için sadece kök (vind) kullanılır.",
     "explanationEn": "For the subject 'ik', only the stem (vind) is used.",
     "difficulty": 2,
-    "quality": 2,
+    "quality": 3,
     "options": [
       "vind",
       "vindt",
@@ -227,7 +227,7 @@ export const grammarTenses = [
     "explanationTr": "'Mijn zus' (zij) olduğu için köke 't' eklenir. (vind + t = vindt).",
     "explanationEn": "'Mijn zus' is 3rd person singular, so 't' is added. (vind + t = vindt).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 3
   },
   {
     "id": "q_pres_014",
@@ -240,7 +240,7 @@ export const grammarTenses = [
     "explanationTr": "'Worden' fiilinin kökü 'word' kelimesidir. 'Ik' için kök değişmez.",
     "explanationEn": "The stem of 'worden' is 'word'. For 'ik', it remains the stem.",
     "difficulty": 2,
-    "quality": 2,
+    "quality": 3,
     "options": [
       "word",
       "wordt",
@@ -265,7 +265,7 @@ export const grammarTenses = [
     "explanationTr": "'De situatie' (het/o) olduğu için köke 't' eklenir (wordt).",
     "explanationEn": "'De situatie' acts as 3rd person singular (it), so a 't' is added (wordt).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 3
   },
   {
     "id": "q_pres_017",
@@ -284,7 +284,7 @@ export const grammarTenses = [
     "explanationTr": "'Zijn' (olmak) düzensiz bir fiildir. 'Ik' için 'ben' kullanılır.",
     "explanationEn": "'Zijn' (to be) is highly irregular. For 'ik', it is 'ben'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 3
   },
   {
     "id": "q_pres_018",
@@ -297,7 +297,7 @@ export const grammarTenses = [
     "explanationTr": "'Zijn' fiilinde 'jij' çekimi 'bent' şeklindedir.",
     "explanationEn": "The 'jij' form of the verb 'zijn' is 'bent'.",
     "difficulty": 2,
-    "quality": 2,
+    "quality": 3,
     "options": [
       "bent",
       "ben",
@@ -316,7 +316,7 @@ export const grammarTenses = [
     "explanationTr": "'u' zamirinde devrik cümlede bile 't' düşmez, bu yüzden 'bent u' doğrudur.",
     "explanationEn": "For 'u', the 't' never drops in inversion, so it is 'bent u'.",
     "difficulty": 2,
-    "quality": 2,
+    "quality": 3,
     "options": [
       "bent",
       "is",
@@ -341,7 +341,7 @@ export const grammarTenses = [
     "explanationTr": "3. tekil şahıslar (hij, zij, het) için 'zijn' fiili 'is' olur.",
     "explanationEn": "For 3rd person singular (hij, zij, het), the verb 'zijn' becomes 'is'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 3
   },
   {
     "id": "q_pres_022",
@@ -354,7 +354,7 @@ export const grammarTenses = [
     "explanationTr": "'Hebben' (sahip olmak) düzensizdir. 'Ik' için 'heb' kullanılır.",
     "explanationEn": "'Hebben' (to have) is irregular. For 'ik', it is 'heb'.",
     "difficulty": 2,
-    "quality": 2,
+    "quality": 3,
     "options": [
       "heb",
       "hebt",
@@ -379,7 +379,7 @@ export const grammarTenses = [
     "explanationTr": "'Hebben' fiilinde 'jij' çekimi 'hebt' şeklindedir.",
     "explanationEn": "The 'jij' form of 'hebben' is 'hebt'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 3
   },
   {
     "id": "q_pres_025",
@@ -398,7 +398,7 @@ export const grammarTenses = [
     "explanationTr": "3. tekil şahıs (hij, zij, het) için 'hebben' fiili düzensiz olarak 'heeft' olur.",
     "explanationEn": "For 3rd person singular (hij, zij, het), 'hebben' irregularly becomes 'heeft'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 3
   },
   {
     "id": "q_pres_050",
@@ -411,7 +411,7 @@ export const grammarTenses = [
     "explanationTr": "Çoğul şahıs 'jullie' için fiil daima mastar halindedir.",
     "explanationEn": "For the plural person 'jullie', the verb is always in its infinitive form.",
     "difficulty": 2,
-    "quality": 2,
+    "quality": 3,
     "options": [
       "weten",
       "weet",
@@ -431,7 +431,7 @@ export const grammarTenses = [
     "explanationTr": "Evet/Hayır sorularında fiil başa gelir. 'Ik' için 'zijn' fiilinin çekimi 'Ben'dir.",
     "explanationEn": "In yes/no questions, the verb comes first. For 'Ik', the conjugation of 'zijn' is 'Ben'.",
     "difficulty": 2,
-    "quality": 2,
+    "quality": 3,
     "options": [
       "Ben",
       "Bent",
@@ -451,7 +451,7 @@ export const grammarTenses = [
     "explanationTr": "Soru cümlesi olsa da 'u' zamirinde '-t' düşmez. O yüzden 'Woont u' olur.",
     "explanationEn": "Even in a question, the '-t' doesn't drop for 'u'. So it remains 'Woont u'.",
     "difficulty": 2,
-    "quality": 2,
+    "quality": 3,
     "options": [
       "Woont",
       "Woon",
@@ -471,13 +471,13 @@ export const grammarTenses = [
       "Werkt",
       "Werk",
       "Werken",
-      "badkamer"
+      "Werkte"
     ],
     "correctAnswer": "Werkt",
     "explanationTr": "3. tekil şahıs (hij) soru cümlesinde de olsa fiilin '-t' harfi kalır.",
     "explanationEn": "For 3rd person singular (hij), the verb keeps its '-t' even in a question.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 3
   },
   {
     "id": "q_wo_015",
@@ -491,7 +491,7 @@ export const grammarTenses = [
     "explanationTr": "Çoğul öznelerde (wij) soru cümlesi de olsa fiil mastar halindedir.",
     "explanationEn": "With plural subjects (wij), the verb stays in the infinitive even in a question.",
     "difficulty": 2,
-    "quality": 2,
+    "quality": 3,
     "options": [
       "Gaan",
       "Gaat",
@@ -517,7 +517,7 @@ export const grammarTenses = [
     "explanationTr": "'Jullie' çoğul bir özne olduğu için fiil mastar halinde (hebben) başa gelir.",
     "explanationEn": "'Jullie' is a plural subject, so the verb comes first in its infinitive form (hebben).",
     "difficulty": 2,
-    "quality": 2
+    "quality": 3
   },
   {
     "id": "q_wo_017",
@@ -531,7 +531,7 @@ export const grammarTenses = [
     "explanationTr": "Tekil 'zij' (o - kadın) öznesi için 'hebben' fiilinin çekimi 'heeft' olur.",
     "explanationEn": "For the singular subject 'zij' (she), the conjugation of 'hebben' is 'heeft'.",
     "difficulty": 2,
-    "quality": 2,
+    "quality": 3,
     "options": [
       "Heeft",
       "Hebt",
@@ -557,7 +557,7 @@ export const grammarTenses = [
     "explanationTr": "'De kinderen' (çocuklar) çoğul olduğu için yardımcı fiil 'zijn' başa gelir.",
     "explanationEn": "'De kinderen' (the children) is plural, so the auxiliary verb 'zijn' comes first.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 3
   },
   {
     "id": "q_wo_019",
@@ -571,7 +571,7 @@ export const grammarTenses = [
     "explanationTr": "Soru cümlesinde 'u' zamiri için 'zijn' fiilinin çekimi 'Bent'tir.",
     "explanationEn": "In a question, the conjugation of 'zijn' for the pronoun 'u' is 'Bent'.",
     "difficulty": 2,
-    "quality": 2,
+    "quality": 3,
     "options": [
       "Bent",
       "Is",
@@ -591,7 +591,7 @@ export const grammarTenses = [
     "explanationTr": "'Wie' (kim) soru kelimesi özne görevindeyse, her zaman 3. tekil şahıs (hij/zij) gibi işlem görür. Bu yüzden 'heeft' kullanılır.",
     "explanationEn": "When 'Wie' (who) acts as the subject, it is always treated as 3rd person singular. So 'heeft' is used.",
     "difficulty": 2,
-    "quality": 2,
+    "quality": 3,
     "options": [
       "heeft",
       "hebben",
@@ -610,8 +610,8 @@ export const grammarTenses = [
     "correctAnswer": "gebakken",
     "explanationTr": "KURAL: Sıfat olarak kullanılan '-en' ile biten 3. hal fiiller (perfectumvormen) '-e' almaz.",
     "explanationEn": "RULE: Past participles ending in '-en' used as adjectives do not take an '-e'.",
-    "difficulty": 3,
-    "quality": 2,
+    "difficulty": 4,
+    "quality": 3,
     "options": [
       "gebakken",
       "bakken",
@@ -636,8 +636,8 @@ export const grammarTenses = [
     "correctAnswer": "wil / wilt",
     "explanationTr": "'willen' (istemek) fiilinin 'jij/je' için iki çekimi vardır: 'wil' veya 'wilt'. İkisi de doğrudur.",
     "explanationEn": "The verb 'willen' (to want) has two conjugations for 'jij/je': 'wil' or 'wilt'. Both are correct.",
-    "difficulty": 2,
-    "quality": 2
+    "difficulty": 3,
+    "quality": 3
   },
   {
     "id": "q_mod_003",
@@ -650,8 +650,8 @@ export const grammarTenses = [
     "correctAnswer": "moet",
     "explanationTr": "'moeten' (zorunda olmak) fiili 3. tekil şahıs (hij, zij, het) için 'moet' olarak çekimlenir.",
     "explanationEn": "The verb 'moeten' (must) is conjugated as 'moet' for 3rd person singular (hij, zij, het).",
-    "difficulty": 2,
-    "quality": 2,
+    "difficulty": 3,
+    "quality": 3,
     "options": [
       "moet",
       "mag",
@@ -676,8 +676,8 @@ export const grammarTenses = [
     "correctAnswer": "kunnen",
     "explanationTr": "Çoğul şahıslarda (wij, jullie, zij) modal fiiller her zaman mastar (infinitief) halindedir.",
     "explanationEn": "For plural subjects (wij, jullie, zij), modal verbs are always in their infinitive form.",
-    "difficulty": 2,
-    "quality": 2
+    "difficulty": 3,
+    "quality": 3
   },
   {
     "id": "q_mod_005",
@@ -690,13 +690,13 @@ export const grammarTenses = [
     "correctAnswer": "zullen",
     "explanationTr": "'Jullie' çoğul bir özne olduğu için 'zullen' fiili mastar halinde kullanılır.",
     "explanationEn": "'Jullie' is a plural subject, so the verb 'zullen' remains in the infinitive.",
-    "difficulty": 2,
-    "quality": 2,
+    "difficulty": 3,
+    "quality": 3,
     "options": [
       "zullen",
-      "zull",
-      "zullt",
-      "zullde"
+      "werkt",
+      "wonen",
+      "maakt"
     ]
   },
   {
@@ -717,8 +717,8 @@ export const grammarTenses = [
     "correctAnswer": "Kunt",
     "explanationTr": "Soru cümlesinde 'u' (siz) zamiri için 'kunnen' fiilinin çekimi 'kunt' veya 'kan' olabilir, ancak kibar formda 'kunt u' daha yaygındır.",
     "explanationEn": "In a question with 'u', the conjugation of 'kunnen' is usually 'Kunt' (Kunt u...?). 'Kan u' is also possible but 'Kunt u' is standard.",
-    "difficulty": 2,
-    "quality": 2
+    "difficulty": 3,
+    "quality": 3
   },
   {
     "id": "q_mod_009",
@@ -732,8 +732,8 @@ export const grammarTenses = [
     "correctAnswer": "Mag",
     "explanationTr": "Soru cümlesinde 'ik' için 'mogen' fiili 'Mag' olur.",
     "explanationEn": "In a question, 'mogen' for 'ik' becomes 'Mag'.",
-    "difficulty": 2,
-    "quality": 2,
+    "difficulty": 3,
+    "quality": 3,
     "options": [
       "Mag",
       "niet Mag",
@@ -753,8 +753,8 @@ export const grammarTenses = [
     "correctAnswer": "gewerkt",
     "explanationTr": "Perfectum (Geçmiş Zaman). 'werken' fiilinin kökü 'werk'. Son harfi 'k' (soft ketchup içinde var), bu yüzden '+t' alır: gewerkt.",
     "explanationEn": "Perfectum (Present Perfect). The stem of 'werken' is 'werk'. The last letter 'k' is in 'soft ketchup', so it takes '+t': gewerkt.",
-    "difficulty": 3,
-    "quality": 2,
+    "difficulty": 4,
+    "quality": 3,
     "options": [
       "gewerkt",
       "werktte",
@@ -772,16 +772,16 @@ export const grammarTenses = [
     ],
     "questionNl": "— Situatie:\n'Vroeger ___ hij in een restaurant.'",
     "options": [
-      "werkde",
       "werkte",
       "gewerkt",
-      "vragen"
+      "vragen",
+      "werkt"
     ],
     "correctAnswer": "werkte",
     "explanationTr": "Imperfectum (Hikaye Geçmiş Zaman). 'werk' kökünün sonu 'k' ile bittiği için '+te' eklenir: werkte.",
     "explanationEn": "Imperfectum (Simple Past). The stem 'werk' ends in 'k', so '+te' is added: werkte.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 3
   },
   {
     "id": "q_past_003",
@@ -795,8 +795,8 @@ export const grammarTenses = [
     "correctAnswer": "gespeeld",
     "explanationTr": "Perfectum. 'spelen' kökü 'speel'. Son harfi 'l' (soft ketchup içinde YOK), bu yüzden '+d' alır: gespeeld.",
     "explanationEn": "Perfectum. Stem of 'spelen' is 'speel'. The last letter 'l' is NOT in 'soft ketchup', so it takes '+d': gespeeld.",
-    "difficulty": 3,
-    "quality": 2,
+    "difficulty": 4,
+    "quality": 3,
     "options": [
       "gespeeld",
       "speeldte",
@@ -823,7 +823,7 @@ export const grammarTenses = [
     "explanationTr": "Imperfectum. 'speel' kökü 'soft ketchup' kuralına uymaz, bu yüzden '+de' eklenir: speelde.",
     "explanationEn": "Imperfectum. The stem 'speel' does not fall under the 'soft ketchup' rule, so '+de' is added: speelde.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 3
   },
   {
     "id": "q_past_005",
@@ -838,7 +838,7 @@ export const grammarTenses = [
     "explanationTr": "Imperfectum. 'wonen' kökü 'woon'. 'n' harfi 'soft ketchup' içinde yoktur, bu yüzden '+de' eklenir.",
     "explanationEn": "Imperfectum. Stem of 'wonen' is 'woon'. 'n' is not in 'soft ketchup', so '+de' is added.",
     "difficulty": 4,
-    "quality": 2,
+    "quality": 3,
     "options": [
       "woonde",
       "niet woonde",
@@ -858,8 +858,8 @@ export const grammarTenses = [
     "correctAnswer": "geluisterd",
     "explanationTr": "Perfectum. 'luisteren' kökü 'luister'. 'r' harfi 'soft ketchup' içinde olmadığı için '+d' alır.",
     "explanationEn": "Perfectum. Stem of 'luisteren' is 'luister'. 'r' is not in 'soft ketchup', so it takes '+d'.",
-    "difficulty": 3,
-    "quality": 2,
+    "difficulty": 4,
+    "quality": 3,
     "options": [
       "geluisterd",
       "niet geluisterd",
@@ -880,13 +880,13 @@ export const grammarTenses = [
       "gefietst",
       "gefietste",
       "gefietstd",
-      "om vier uur"
+      "werkt"
     ],
     "correctAnswer": "gefietst",
     "explanationTr": "Perfectum. 'fietsen' kökü 'fiets'. Son harf 's' (soft ketchup içinde VAR), bu yüzden '+t' alır.",
     "explanationEn": "Perfectum. Stem of 'fietsen' is 'fiets'. 's' is in 'soft ketchup', so it takes '+t'.",
-    "difficulty": 3,
-    "quality": 2
+    "difficulty": 4,
+    "quality": 3
   },
   {
     "id": "q_past_008",
@@ -900,13 +900,13 @@ export const grammarTenses = [
     "correctAnswer": "gekookt",
     "explanationTr": "Perfectum. 'koken' kökü 'kook'. Son harf 'k' (soft ketchup içinde var), bu yüzden '+t' alır.",
     "explanationEn": "Perfectum. Stem of 'koken' is 'kook'. 'k' is in 'soft ketchup', so it takes '+t'.",
-    "difficulty": 3,
-    "quality": 2,
+    "difficulty": 4,
+    "quality": 3,
     "options": [
       "gekookt",
       "gekook",
       "gekooken",
-      "appelsap"
+      "werkt"
     ]
   },
   {
@@ -922,13 +922,13 @@ export const grammarTenses = [
       "praat",
       "praatte",
       "praatde",
-      "om vier uur"
+      "werkt"
     ],
     "correctAnswer": "praatte",
     "explanationTr": "Imperfectum. 'praten' kökü 'praat'. Kök zaten 't' ile bitiyor ve 't' harfi soft ketchup kuralında '+te' almasını gerektiriyor. İki 't' yan yana gelir: praatte.",
     "explanationEn": "Imperfectum. Stem is 'praat'. Ends in 't' (takes '+te'). Two t's are written together: praatte.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 3
   },
   {
     "id": "q_past_010",
@@ -943,7 +943,7 @@ export const grammarTenses = [
     "explanationTr": "Imperfectum ÇOĞUL. 'leren' kökü 'leer'. 'r' harfi soft ketchup içinde yoktur (+de). Çoğul olduğu için '+den' alır: leerden.",
     "explanationEn": "Imperfectum PLURAL. Stem is 'leer'. 'r' is not in soft ketchup (+de). Since it's plural (wij), it gets '+den': leerden.",
     "difficulty": 4,
-    "quality": 2,
+    "quality": 3,
     "options": [
       "leerden",
       "leerd",
@@ -963,8 +963,8 @@ export const grammarTenses = [
     "correctAnswer": "begonnen",
     "explanationTr": "Perfectum. 'beginnen' (başlamak) bir durum değişikliği (verandering van situatie) olduğu için 'zijn' (is) ile kullanılır. Düzensizdir: begonnen.",
     "explanationEn": "Perfectum. 'beginnen' (to start) indicates a change of situation, so it uses 'zijn' (is). It is irregular: begonnen.",
-    "difficulty": 3,
-    "quality": 2,
+    "difficulty": 4,
+    "quality": 3,
     "options": [
       "begonnen",
       "begon",
@@ -984,8 +984,8 @@ export const grammarTenses = [
     "correctAnswer": "gestopt",
     "explanationTr": "Perfectum. 'stoppen' (durmak/bırakmak) durum değişikliği olduğu için 'zijn' ile kullanılır.",
     "explanationEn": "Perfectum. 'stoppen' (to stop) indicates a change of state, so it is used with 'zijn'.",
-    "difficulty": 3,
-    "quality": 2,
+    "difficulty": 4,
+    "quality": 3,
     "options": [
       "gestopt",
       "stoptte",
@@ -1005,8 +1005,8 @@ export const grammarTenses = [
     "correctAnswer": "geworden",
     "explanationTr": "Perfectum. 'worden' (olmak) bir durum değişikliğidir ve 'zijn' ile kullanılır. 3. hali 'geworden'dir.",
     "explanationEn": "Perfectum. 'worden' (to become) is a change of state and uses 'zijn'. Its past participle is 'geworden'.",
-    "difficulty": 3,
-    "quality": 2,
+    "difficulty": 4,
+    "quality": 3,
     "options": [
       "geworden",
       "wordente",
@@ -1026,8 +1026,8 @@ export const grammarTenses = [
     "correctAnswer": "gebeld",
     "explanationTr": "'bellen' kökü 'bel' -> l harfi soft ketchup'ta yok -> +d (gebeld).",
     "explanationEn": "Stem of 'bellen' is 'bel' -> l is not in soft ketchup -> +d (gebeld).",
-    "difficulty": 3,
-    "quality": 2,
+    "difficulty": 4,
+    "quality": 3,
     "options": [
       "gebeld",
       "beldte",
@@ -1053,8 +1053,8 @@ export const grammarTenses = [
     "correctAnswer": "geweest",
     "explanationTr": "'zijn' (olmak) fiilinin 3. hali (perfectum) 'geweest'tir ve kendisi yine 'zijn' ile kullanılır.",
     "explanationEn": "The past participle of 'zijn' (to be) is 'geweest', and it is used with the auxiliary 'zijn'.",
-    "difficulty": 3,
-    "quality": 2
+    "difficulty": 4,
+    "quality": 3
   },
   {
     "id": "q_past_021",
@@ -1068,8 +1068,8 @@ export const grammarTenses = [
     "correctAnswer": "betaald",
     "explanationTr": "ALTIN KURAL: Fiil be-, ge-, her-, ver-, ont- eklerinden biriyle başlıyorsa, perfectumda başına 'ge-' ALMAZ. (betalen -> betaald).",
     "explanationEn": "GOLDEN RULE: If a verb starts with be-, ge-, her-, ver-, ont-, it does NOT get a 'ge-' prefix in the perfectum. (betalen -> betaald).",
-    "difficulty": 3,
-    "quality": 2,
+    "difficulty": 4,
+    "quality": 3,
     "options": [
       "betaald",
       "betaaldt",
@@ -1095,8 +1095,8 @@ export const grammarTenses = [
     "correctAnswer": "vertaald",
     "explanationTr": "'ver-' ile başlayan fiiller 'ge-' takısı almaz. (vertalen -> vertaald).",
     "explanationEn": "Verbs starting with 'ver-' do not take the 'ge-' prefix. (vertalen -> vertaald).",
-    "difficulty": 3,
-    "quality": 2
+    "difficulty": 4,
+    "quality": 3
   },
   {
     "id": "q_past_023",
@@ -1110,8 +1110,8 @@ export const grammarTenses = [
     "correctAnswer": "herhaald",
     "explanationTr": "'her-' ile başlayan fiiller 'ge-' almaz. Kök 'herhaal' + d = herhaald.",
     "explanationEn": "Verbs starting with 'her-' don't get 'ge-'. Stem 'herhaal' + d = herhaald.",
-    "difficulty": 3,
-    "quality": 2,
+    "difficulty": 4,
+    "quality": 3,
     "options": [
       "herhaald",
       "niet herhaald",
@@ -1137,8 +1137,8 @@ export const grammarTenses = [
     "correctAnswer": "ontdekt",
     "explanationTr": "'ont-' ile başlayan fiiller 'ge-' almaz. Kök 'ontdek' + t = ontdekt.",
     "explanationEn": "Verbs starting with 'ont-' don't get 'ge-'. Stem 'ontdek' + t = ontdekt.",
-    "difficulty": 3,
-    "quality": 2
+    "difficulty": 4,
+    "quality": 3
   },
   {
     "id": "q_past_025",
@@ -1152,8 +1152,8 @@ export const grammarTenses = [
     "correctAnswer": "gebeurd",
     "explanationTr": "'ge-' ile başlayan fiiller fazladan bir 'ge-' daha almaz. (gebeuren -> gebeurd).",
     "explanationEn": "Verbs already starting with 'ge-' do not get an extra 'ge-'. (gebeuren -> gebeurd).",
-    "difficulty": 3,
-    "quality": 2,
+    "difficulty": 4,
+    "quality": 3,
     "options": [
       "gebeurd",
       "beurdte",
@@ -1179,8 +1179,8 @@ export const grammarTenses = [
     "correctAnswer": "begrepen",
     "explanationTr": "'begrijpen' düzensizdir (begreep, begrepen). 'be-' ile başladığı için 'ge-' almaz.",
     "explanationEn": "'begrijpen' is irregular (begreep, begrepen). Since it starts with 'be-', it gets no 'ge-'.",
-    "difficulty": 3,
-    "quality": 2
+    "difficulty": 4,
+    "quality": 3
   },
   {
     "id": "q_past_027",
@@ -1194,8 +1194,8 @@ export const grammarTenses = [
     "correctAnswer": "verkocht",
     "explanationTr": "'verkopen' düzensizdir (kocht -> verkocht). 'ver-' ile başladığı için 'ge-' almaz.",
     "explanationEn": "'verkopen' is irregular (kocht -> verkocht). Starts with 'ver-', so no 'ge-'.",
-    "difficulty": 3,
-    "quality": 2,
+    "difficulty": 4,
+    "quality": 3,
     "options": [
       "verkocht",
       "verkochtt",
@@ -1222,7 +1222,7 @@ export const grammarTenses = [
     "explanationTr": "'vertrekken' düzensizdir. 'ver-' ile başlar, 'ge-' almaz.",
     "explanationEn": "'vertrekken' is irregular. Starts with 'ver-', gets no 'ge-'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 3
   },
   {
     "id": "q_past_029",
@@ -1236,8 +1236,8 @@ export const grammarTenses = [
     "correctAnswer": "ontmoet",
     "explanationTr": "'ontmoeten' (buluşmak) fiili 'ont-' ile başlar, bu yüzden 'ge-' almaz. Kökü 'ontmoet' t ile bittiği için aynen kalır.",
     "explanationEn": "'ontmoeten' starts with 'ont-', so no 'ge-'. Stem ends in 't', so it stays 'ontmoet'.",
-    "difficulty": 3,
-    "quality": 2,
+    "difficulty": 4,
+    "quality": 3,
     "options": [
       "ontmoet",
       "ontmoett",
@@ -1264,7 +1264,7 @@ export const grammarTenses = [
     "explanationTr": "'vergeten' düzensizdir ve 3. hali yine 'vergeten'dır. 'ver-' ile başladığı için 'ge-' almaz.",
     "explanationEn": "'vergeten' is irregular and its past participle is also 'vergeten'. Starts with 'ver-', gets no 'ge-'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 3
   },
   {
     "id": "q_past_031",
@@ -1279,7 +1279,7 @@ export const grammarTenses = [
     "explanationTr": "DÜZENSİZ (Imperfectum): 'zijn' fiilinin 'ik/jij/hij' için hikaye geçmiş zaman hali 'was'tır.",
     "explanationEn": "IRREGULAR (Imperfectum): The simple past of 'zijn' for 'ik/jij/hij' is 'was'.",
     "difficulty": 4,
-    "quality": 2,
+    "quality": 3,
     "options": [
       "was",
       "niet was",
@@ -1300,7 +1300,7 @@ export const grammarTenses = [
     "explanationTr": "DÜZENSİZ (Imperfectum): 'hebben' fiilinin çoğul (wij/jullie/zij) geçmiş zaman hali 'hadden'dır.",
     "explanationEn": "IRREGULAR (Imperfectum): The plural simple past of 'hebben' is 'hadden'.",
     "difficulty": 4,
-    "quality": 2,
+    "quality": 3,
     "options": [
       "hadden",
       "hadd",
@@ -1327,7 +1327,7 @@ export const grammarTenses = [
     "explanationTr": "Modal fiil (Imperfectum): 'willen' fiilinin geçmiş zamanı 'wilde' veya konuşma dilinde 'wou'dur.",
     "explanationEn": "Modal verb (Imperfectum): The past of 'willen' is 'wilde' (or 'wou' informally).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 3
   },
   {
     "id": "q_past_034",
@@ -1342,7 +1342,7 @@ export const grammarTenses = [
     "explanationTr": "Modal fiil (Imperfectum): 'kunnen' çoğul için 'konden' olur.",
     "explanationEn": "Modal verb (Imperfectum): 'kunnen' becomes 'konden' for plural.",
     "difficulty": 4,
-    "quality": 2,
+    "quality": 3,
     "options": [
       "konden",
       "kond",
@@ -1363,13 +1363,13 @@ export const grammarTenses = [
       "moeste",
       "moest",
       "moesten",
-      "om vier uur"
+      "werkt"
     ],
     "correctAnswer": "moest",
     "explanationTr": "Modal fiil (Imperfectum): 'moeten' tekil için 'moest' olur.",
     "explanationEn": "Modal verb (Imperfectum): 'moeten' becomes 'moest' for singular.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 3
   },
   {
     "id": "q_past_036",
@@ -1408,7 +1408,7 @@ export const grammarTenses = [
     "correctAnswer": "Perfectum",
     "explanationTr": "Geçmişte anlık olarak olup bitmiş, tamamlanmış olaylar (Afgesloten zaken) için Perfectum (hebben/zijn + 3. hal) kullanılır.",
     "explanationEn": "For single, completed actions in the past (Afgesloten zaken), the Perfectum is used.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -1424,7 +1424,7 @@ export const grammarTenses = [
     "explanationTr": "DÜZENSİZ: 'zoeken' (aramak) fiilinin tekil imperfectum hali 'zocht' olur.",
     "explanationEn": "IRREGULAR: The singular imperfectum of 'zoeken' (to search) is 'zocht'.",
     "difficulty": 4,
-    "quality": 2,
+    "quality": 3,
     "options": [
       "zocht",
       "zoch",
@@ -1445,12 +1445,12 @@ export const grammarTenses = [
     "explanationTr": "DÜZENSİZ: 'kopen' (satın almak) fiilinin tekil imperfectum hali 'kocht' olur.",
     "explanationEn": "IRREGULAR: The singular imperfectum of 'kopen' (to buy) is 'kocht'.",
     "difficulty": 4,
-    "quality": 2,
+    "quality": 3,
     "options": [
       "kocht",
-      "koch",
-      "kochen",
-      "badkamer"
+      "kochten",
+      "koopt",
+      "gekocht"
     ]
   },
   {
@@ -1472,7 +1472,7 @@ export const grammarTenses = [
     "explanationTr": "DÜZENSİZ: 'vragen' (sormak) fiilinin imperfectum hali 'vroeg' olur.",
     "explanationEn": "IRREGULAR: The imperfectum of 'vragen' (to ask) is 'vroeg'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 3
   },
   {
     "id": "q_sep_007",
@@ -1487,7 +1487,7 @@ export const grammarTenses = [
     "explanationTr": "Imperfectum. 'opstaan' -> 'staan' fiilinin geçmiş zamanı 'stond'dur. 'op' cümlenin sonundadır.",
     "explanationEn": "Imperfectum. 'opstaan' -> the past of 'staan' is 'stond'. 'op' is at the end.",
     "difficulty": 4,
-    "quality": 2,
+    "quality": 3,
     "options": [
       "stond",
       "niet stond",
@@ -1508,7 +1508,7 @@ export const grammarTenses = [
     "explanationTr": "Imperfectum. Çoğul özne (we) için 'maken' fiilinin geçmiş zamanı 'maakten' olur. 'schoon' sondadır.",
     "explanationEn": "Imperfectum. The past plural of 'maken' is 'maakten'. 'schoon' is at the end.",
     "difficulty": 4,
-    "quality": 2,
+    "quality": 3,
     "options": [
       "maakten",
       "maakt",
@@ -1527,8 +1527,8 @@ export const grammarTenses = [
     "correctAnswer": "komt",
     "explanationTr": "'aankomen' (varmak/ulaşmak). 'De trein' tekil olduğu için 'komt' olur, 'aan' sonda yer alır.",
     "explanationEn": "'aankomen' (to arrive). 'De trein' is singular so it becomes 'komt', 'aan' is placed at the end.",
-    "difficulty": 2,
-    "quality": 2,
+    "difficulty": 3,
+    "quality": 3,
     "options": [
       "komt",
       "kom",
@@ -1548,8 +1548,8 @@ export const grammarTenses = [
     "correctAnswer": "uitgenodigd",
     "explanationTr": "Perfectum. 'uitnodigen' -> uit + ge + nodigd = uitgenodigd.",
     "explanationEn": "Perfectum. 'uitnodigen' -> uit + ge + nodigd = uitgenodigd.",
-    "difficulty": 3,
-    "quality": 2,
+    "difficulty": 4,
+    "quality": 3,
     "options": [
       "uitgenodigd",
       "uitnodigd",
@@ -1569,8 +1569,8 @@ export const grammarTenses = [
     "correctAnswer": "afgerekend",
     "explanationTr": "Perfectum. 'afrekenen' -> af + ge + rekend = afgerekend.",
     "explanationEn": "Perfectum. 'afrekenen' -> af + ge + rekend = afgerekend.",
-    "difficulty": 3,
-    "quality": 2,
+    "difficulty": 4,
+    "quality": 3,
     "options": [
       "afgerekend",
       "afrekend",
@@ -1590,8 +1590,8 @@ export const grammarTenses = [
     "correctAnswer": "opgestaan",
     "explanationTr": "Perfectum. 'opstaan' durum/konum değişikliği bildirdiği için 'zijn' (is) ile kullanılır. 3. hali: op + ge + staan = opgestaan.",
     "explanationEn": "Perfectum. 'opstaan' indicates a change of state, so it uses 'zijn' (is). Past participle: op + ge + staan = opgestaan.",
-    "difficulty": 3,
-    "quality": 2,
+    "difficulty": 4,
+    "quality": 3,
     "options": [
       "opgestaan",
       "opstaan",
@@ -1611,8 +1611,8 @@ export const grammarTenses = [
     "correctAnswer": "meegenomen",
     "explanationTr": "Perfectum. 'nemen' düzensizdir (genomen). mee + ge + nomen = meegenomen.",
     "explanationEn": "Perfectum. 'nemen' is irregular (genomen). mee + ge + nomen = meegenomen.",
-    "difficulty": 3,
-    "quality": 2,
+    "difficulty": 4,
+    "quality": 3,
     "options": [
       "meegenomen",
       "meegenom",
@@ -1632,8 +1632,8 @@ export const grammarTenses = [
     "correctAnswer": "schoongemaakt",
     "explanationTr": "Perfectum. 'schoonmaken' -> schoon + ge + maakt = schoongemaakt.",
     "explanationEn": "Perfectum. 'schoonmaken' -> schoon + ge + maakt = schoongemaakt.",
-    "difficulty": 3,
-    "quality": 2,
+    "difficulty": 4,
+    "quality": 3,
     "options": [
       "schoongemaakt",
       "schoongemaaktt",
@@ -1653,8 +1653,8 @@ export const grammarTenses = [
     "correctAnswer": "binnengekomen",
     "explanationTr": "Perfectum. 'komen' hareket/yönelme bildirdiği için 'zijn' (is) ile kullanılır. binnen + ge + komen = binnengekomen.",
     "explanationEn": "Perfectum. 'komen' implies motion, so it uses 'zijn' (is). binnen + ge + komen = binnengekomen.",
-    "difficulty": 3,
-    "quality": 2,
+    "difficulty": 4,
+    "quality": 3,
     "options": [
       "binnengekomen",
       "binnenkomen",
@@ -1674,8 +1674,8 @@ export const grammarTenses = [
     "correctAnswer": "aangedaan",
     "explanationTr": "Perfectum. 'doen' düzensizdir (gedaan). aan + ge + daan = aangedaan.",
     "explanationEn": "Perfectum. 'doen' is irregular (gedaan). aan + ge + daan = aangedaan.",
-    "difficulty": 3,
-    "quality": 2,
+    "difficulty": 4,
+    "quality": 3,
     "options": [
       "aangedaan",
       "aandaan",
@@ -1695,8 +1695,8 @@ export const grammarTenses = [
     "correctAnswer": "voorgesteld",
     "explanationTr": "Perfectum. 'voorstellen' (önermek) -> voor + ge + steld = voorgesteld.",
     "explanationEn": "Perfectum. 'voorstellen' (to propose) -> voor + ge + steld = voorgesteld.",
-    "difficulty": 3,
-    "quality": 2,
+    "difficulty": 4,
+    "quality": 3,
     "options": [
       "voorgesteld",
       "voorsteld",
@@ -1722,8 +1722,8 @@ export const grammarTenses = [
     "correctAnswer": "teruggekomen",
     "explanationTr": "Perfectum. 'terugkomen' -> terug + ge + komen = teruggekomen.",
     "explanationEn": "Perfectum. 'terugkomen' -> terug + ge + komen = teruggekomen.",
-    "difficulty": 3,
-    "quality": 2
+    "difficulty": 4,
+    "quality": 3
   },
   {
     "id": "q_ref_038",
@@ -1738,7 +1738,7 @@ export const grammarTenses = [
     "explanationTr": "Perfectum cümlesi. 'Hij' için dönüşlü zamir 'zich'tir. Yardımcı fiil 'heeft' kullanılmıştır.",
     "explanationEn": "Perfectum sentence. For 'Hij', the reflexive pronoun is 'zich'. The auxiliary verb is 'heeft'.",
     "difficulty": 4,
-    "quality": 2,
+    "quality": 3,
     "options": [
       "zich",
       "me",
@@ -1759,7 +1759,7 @@ export const grammarTenses = [
     "explanationTr": "Geçmiş zaman cümlesinde 'wij' öznesi için dönüşlü zamir 'ons' kullanılır.",
     "explanationEn": "In a past tense sentence, for the subject 'wij', the reflexive pronoun 'ons' is used.",
     "difficulty": 4,
-    "quality": 2,
+    "quality": 3,
     "options": [
       "ons",
       "mij",
@@ -1779,7 +1779,7 @@ export const grammarTenses = [
     "explanationTr": "Gelecek zamandan (volgend weekend) bahsederken şimdiki zaman (presens) fiili kullanılabilir. 'ik' için 'zijn' çekimi 'ben'dir.",
     "explanationEn": "You can use the present tense (presens) with a future time word (volgend weekend). The 'ik' form of 'zijn' is 'ben'.",
     "difficulty": 3,
-    "quality": 2,
+    "quality": 3,
     "options": [
       "ben",
       "niet ben",
@@ -1805,7 +1805,7 @@ export const grammarTenses = [
     "explanationTr": "Gelecek zamanı belirtmek için şimdiki zaman kullanılmış. Hans (hij) 3. tekil şahıs olduğu için 'komt' olur.",
     "explanationEn": "Present tense is used to indicate the future. Hans (hij) is 3rd person singular, so it becomes 'komt'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 3
   },
   {
     "id": "q_fut_004",
@@ -1825,7 +1825,7 @@ export const grammarTenses = [
     "explanationTr": "'Wij' (biz) çoğul olduğu için fiil mastar (reizen) olarak kalır. Gelecekteki bir planı (in juli) şimdiki zamanla anlatıyoruz.",
     "explanationEn": "'Wij' (we) is plural so the verb stays in the infinitive (reizen). A future plan (in juli) is expressed using present tense.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 3
   },
   {
     "id": "q_fut_006",
@@ -1839,7 +1839,7 @@ export const grammarTenses = [
     "explanationTr": "Planlanmış niyet (intentie) için 'gaan' kullanılır. Eva (zij) için 'gaat' olur.",
     "explanationEn": "For planned intentions, 'gaan' is used. For Eva (zij), it becomes 'gaat'.",
     "difficulty": 3,
-    "quality": 2,
+    "quality": 3,
     "options": [
       "gaat",
       "gaa",
@@ -1865,7 +1865,7 @@ export const grammarTenses = [
     "explanationTr": "Yakın gelecek/niyet için 'gaan'. 'We' çoğul olduğu için 'gaan' mastar olarak kalır.",
     "explanationEn": "For near future/intentions, 'gaan' is used. Because 'We' is plural, it remains 'gaan'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 3
   },
   {
     "id": "q_fut_010",
@@ -1879,12 +1879,12 @@ export const grammarTenses = [
     "explanationTr": "'ik' için 'gaan' fiili 'ga' olarak çekimlenir.",
     "explanationEn": "For 'ik', the verb 'gaan' is conjugated as 'ga'.",
     "difficulty": 3,
-    "quality": 2,
+    "quality": 3,
     "options": [
       "ga",
-      "niet ga",
-      "geen ga",
-      "wel ga"
+      "werkt",
+      "wonen",
+      "maakt"
     ]
   },
   {
@@ -1905,7 +1905,7 @@ export const grammarTenses = [
     "explanationTr": "'Zij' çoğul (onlar) olduğu için 'gaan' kullanılır.",
     "explanationEn": "'Zij' is plural (they), so 'gaan' is used.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 3
   },
   {
     "id": "q_fut_012",
@@ -1920,12 +1920,12 @@ export const grammarTenses = [
     "explanationTr": "Resmi 'u' zamirinde soru cümlesi de olsa '-t' kalır. 'Gaat u'.",
     "explanationEn": "With the formal pronoun 'u', the '-t' remains even in a question. 'Gaat u'.",
     "difficulty": 3,
-    "quality": 2,
+    "quality": 3,
     "options": [
       "Gaat",
       "Gaa",
       "Gaaen",
-      "om vier uur"
+      "werkt"
     ]
   },
   {
@@ -1940,13 +1940,13 @@ export const grammarTenses = [
       "zult",
       "zal",
       "zullen",
-      "zullde"
+      "werkt"
     ],
     "correctAnswer": "zal",
     "explanationTr": "Resmi/kesin gelecek eylemlerde 'zullen' kullanılır. 3. tekil şahıs (hij) için 'zal' olur.",
     "explanationEn": "For formal/certain future actions, 'zullen' is used. For 3rd person singular (hij), it is 'zal'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 3
   },
   {
     "id": "q_fut_014",
@@ -1960,12 +1960,12 @@ export const grammarTenses = [
     "explanationTr": "Çoğul (we) olduğu için 'zullen' mastar halinde kalır. Resmi bir anons ifadesidir.",
     "explanationEn": "Because it is plural (we), 'zullen' remains in the infinitive. It's a formal announcement expression.",
     "difficulty": 3,
-    "quality": 2,
+    "quality": 3,
     "options": [
       "zullen",
-      "zull",
-      "zullt",
-      "zullde"
+      "werkt",
+      "wonen",
+      "maakt"
     ]
   },
   {
@@ -1987,7 +1987,7 @@ export const grammarTenses = [
     "explanationTr": "Bir teklif (voorstel) sunuluyor. Öznesi 'ik' olduğu için 'Zal' kullanılır.",
     "explanationEn": "A proposal (voorstel) is being made. Since the subject is 'ik', 'Zal' is used.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 3
   },
   {
     "id": "q_fut_017",
@@ -2007,7 +2007,7 @@ export const grammarTenses = [
     "explanationTr": "'Jij' için 'zullen' fiilinin çekimi 'zult' veya 'zal' olabilir. İkisi de doğrudur.",
     "explanationEn": "For 'Jij', the conjugation of 'zullen' can be 'zult' or 'zal'. Both are correct.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 3
   },
   {
     "id": "q_fut_018",
@@ -2021,12 +2021,12 @@ export const grammarTenses = [
     "explanationTr": "3. tekil şahıs (hij/zij/het) için 'zullen' çekimi her zaman 'zal'dır.",
     "explanationEn": "For the 3rd person singular (hij/zij/het), the conjugation of 'zullen' is always 'zal'.",
     "difficulty": 3,
-    "quality": 2,
+    "quality": 3,
     "options": [
       "zal",
-      "niet zal",
-      "geen zal",
-      "wel zal"
+      "werkt",
+      "wonen",
+      "maakt"
     ]
   },
   {
@@ -2041,13 +2041,13 @@ export const grammarTenses = [
       "zal",
       "zult",
       "zullen",
-      "zullde"
+      "werkt"
     ],
     "correctAnswer": "zullen",
     "explanationTr": "Çoğul (wij) özne ile 'zullen' mastar olarak kullanılır. Bu resmi bir gelecek eylemidir.",
     "explanationEn": "With the plural (wij) subject, 'zullen' is used as an infinitive. This is a formal future action.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 3
   },
   {
     "id": "q_fut_020",
@@ -2062,7 +2062,7 @@ export const grammarTenses = [
     "explanationTr": "'u' (resmi siz) için 'zullen' çekimi 'zult' şeklindedir (zal u da duyulabilir ama zult u daha doğrudur).",
     "explanationEn": "For 'u' (formal you), the conjugation of 'zullen' is 'zult' (zal u can also be heard, but zult u is more precise).",
     "difficulty": 3,
-    "quality": 2,
+    "quality": 3,
     "options": [
       "Zult",
       "Zul",
@@ -2083,12 +2083,12 @@ export const grammarTenses = [
     "explanationTr": "Bir vaat/söz (belofte). 'We' için 'zullen' kullanılır.",
     "explanationEn": "A promise (belofte). For 'We', 'zullen' is used.",
     "difficulty": 3,
-    "quality": 2,
+    "quality": 3,
     "options": [
       "zullen",
-      "zull",
-      "zullt",
-      "zullde"
+      "werkt",
+      "wonen",
+      "maakt"
     ]
   },
   {
@@ -2101,12 +2101,12 @@ export const grammarTenses = [
     ],
     "questionNl": "In het dagelijks leven: Wat is de functie van 'zullen' in deze zin? 'Ik zal je geheim aan niemand vertellen.'",
     "options": [
-      "Een voorstel (Teklif)",
-      "Een waarschijnlijkheid (Olasılık)",
-      "Een belofte (Söz/Vaat)",
-      "Dat is een heel goed plan voor morgen."
+      "Een belofte (Söz / Vaat)",
+      "Een voorstel (Teklif / Öneri)",
+      "Een waarschijnlijkheid (Olasılık / Tahmin)",
+      "Een bevel (Emir)"
     ],
-    "correctAnswer": "Een belofte (Söz/Vaat)",
+    "correctAnswer": "Een belofte (Söz / Vaat)",
     "explanationTr": "'Sırrını kimseye söylemeyeceğim' demek, açıkça bir söz vermektir (belofte).",
     "explanationEn": "Saying 'I will not tell your secret to anyone' is clearly making a promise (belofte).",
     "difficulty": 3,
@@ -2122,12 +2122,12 @@ export const grammarTenses = [
     ],
     "questionNl": "In het dagelijks leven: Wat is de functie van 'zullen' in: 'Dat zal wel veel geld kosten!'?",
     "options": [
-      "Een belofte (Söz/Vaat)",
-      "Een waarschijnlijkheid (Olasılık/Tahmin)",
-      "Een voorstel (Teklif)",
-      "Dat is een heel goed plan voor morgen."
+      "Een waarschijnlijkheid (Olasılık / Tahmin)",
+      "Een belofte (Söz / Vaat)",
+      "Een voorstel (Teklif / Öneri)",
+      "Een verzoek (Rica)"
     ],
-    "correctAnswer": "Een waarschijnlijkheid (Olasılık/Tahmin)",
+    "correctAnswer": "Een waarschijnlijkheid (Olasılık / Tahmin)",
     "explanationTr": "'Bu muhtemelen çok paraya mal olur!' güçlü bir tahmin/olasılık ifade eder.",
     "explanationEn": "'That will probably cost a lot of money!' expresses a strong guess/probability.",
     "difficulty": 3,
@@ -2145,13 +2145,13 @@ export const grammarTenses = [
       "ben",
       "is",
       "heb",
-      "geben"
+      "was"
     ],
     "correctAnswer": "ben",
     "explanationTr": "Şimdiki zaman hikayesi (Şu an yapıyorum) 'zijn + aan het + infinitief' ile yapılır. 'Ik' için 'ben' kullanılır.",
     "explanationEn": "Present continuous (I am doing right now) is formed with 'zijn + aan het + infinitive'. For 'Ik', 'ben' is used.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 3
   },
   {
     "id": "q_cont_022",
@@ -2165,7 +2165,7 @@ export const grammarTenses = [
     "explanationTr": "'Aan het' kalıbından sonra asıl eylem her zaman MASTAR (infinitief) halinde yazılır.",
     "explanationEn": "After the 'aan het' structure, the main action is always written in the INFINITIVE form.",
     "difficulty": 2,
-    "quality": 2,
+    "quality": 3,
     "options": [
       "fietsen",
       "gefietst",
@@ -2185,7 +2185,7 @@ export const grammarTenses = [
     "explanationTr": "Çoğul (Jullie) özne için 'zijn' yardımcı fiili 'zijn' olarak kalır.",
     "explanationEn": "For the plural (Jullie) subject, the auxiliary verb 'zijn' remains 'zijn'.",
     "difficulty": 2,
-    "quality": 2,
+    "quality": 3,
     "options": [
       "zijn",
       "mijn",
@@ -2202,16 +2202,16 @@ export const grammarTenses = [
     ],
     "questionNl": "— Situatie:\n'Zij ___ aan het lezen in de tuin.'",
     "options": [
+      "zijn",
       "ben",
       "is",
-      "zijn",
-      "geben"
+      "waren"
     ],
     "correctAnswer": "is",
     "explanationTr": "Tekil 'Zij' (o kadın) için 'zijn' fiili 'is' olur.",
     "explanationEn": "For the singular 'Zij' (she), the verb 'zijn' becomes 'is'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 3
   },
   {
     "id": "q_cont_028",
@@ -2224,7 +2224,7 @@ export const grammarTenses = [
     "explanationTr": "'Aan het' kalıbından sonra fiil mastar (wassen) halindedir.",
     "explanationEn": "After the 'aan het' pattern, the verb is in the infinitive (wassen).",
     "difficulty": 4,
-    "quality": 2,
+    "quality": 3,
     "options": [
       "wassen",
       "gewassen",
@@ -2250,7 +2250,7 @@ export const grammarTenses = [
     "explanationTr": "'De kinderen' (çocuklar) çoğul olduğu için soru cümlesine 'Zijn' ile başlanır.",
     "explanationEn": "Because 'De kinderen' (the children) is plural, the question starts with 'Zijn'.",
     "difficulty": 3,
-    "quality": 2
+    "quality": 3
   },
   {
     "id": "q_cont_032",
@@ -2263,7 +2263,7 @@ export const grammarTenses = [
     "explanationTr": "'Aan het' kalıbının ayrılmaz bir parçası olan 'aan' kelimesi boşluğa gelmelidir.",
     "explanationEn": "The word 'aan', which is an inseparable part of the 'aan het' pattern, should fill the blank.",
     "difficulty": 3,
-    "quality": 2,
+    "quality": 3,
     "options": [
       "aan",
       "in",
@@ -2289,7 +2289,7 @@ export const grammarTenses = [
     "explanationTr": "'Aan het' yapısı her zaman fiilin mastarını (infinitief) ister: 'wachten'.",
     "explanationEn": "The 'aan het' structure always requires the infinitive of the verb: 'wachten'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 3
   },
   {
     "id": "q_cont_036",
@@ -2302,7 +2302,7 @@ export const grammarTenses = [
     "explanationTr": "Şimdiki zamanın devamlılığı 'zijn + aan + het + infinitief' formülüyle sağlanır.",
     "explanationEn": "Present continuous is formed with the formula 'zijn + aan + het + infinitive'.",
     "difficulty": 3,
-    "quality": 2,
+    "quality": 3,
     "options": [
       "het",
       "de",
@@ -2328,7 +2328,7 @@ export const grammarTenses = [
     "explanationTr": "'Ik' için yardımcı fiil 'ben'dir.",
     "explanationEn": "The auxiliary verb for 'Ik' is 'ben'.",
     "difficulty": 2,
-    "quality": 2
+    "quality": 3
   },
   {
     "id": "q_cont_040",
@@ -2342,7 +2342,7 @@ export const grammarTenses = [
     "explanationTr": "Resmi 'u' zamiri için 'zijn' fiili soru cümlesinde 'Bent' şeklindedir.",
     "explanationEn": "For the formal pronoun 'u', the verb 'zijn' takes the form 'Bent' in a question.",
     "difficulty": 3,
-    "quality": 2,
+    "quality": 3,
     "options": [
       "Bent",
       "Is",
@@ -2405,7 +2405,7 @@ export const grammarTenses = [
     "explanationTr": "Özne 'we' (biz) olduğu için öneri cümlesi 'Zullen' ile başlar.",
     "explanationEn": "With the subject 'we', the suggestion starts with the plural form 'Zullen'.",
     "difficulty": 3,
-    "quality": 2,
+    "quality": 3,
     "options": [
       "Zullen",
       "Moeten",
@@ -2431,7 +2431,7 @@ export const grammarTenses = [
     "correctAnswer": "gewerkt (stam werk eindigt op k)",
     "explanationTr": "Düzenli fiillerin 3. halinde (participium), kökün son harfi 'soft ketchup' ünsüzlerinden biriyse sona '-t' eklenir.",
     "explanationEn": "In the perfectum, the regular past participle ends in '-t' if the verb's stem ends in one of the consonants of 'soft ketchup'.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -2447,12 +2447,12 @@ export const grammarTenses = [
       "Omdat werkwoorden met be-, ge-, her-, ver- en ont- geen 'ge-' krijgen.",
       "Omdat het werkwoord onregelmatig is.",
       "Omdat het een hulpwerkwoord is.",
-      "Omdat het in de verleden tijd staat."
+      "Omdat hij al andere afspraken heeft."
     ],
     "correctAnswer": "Omdat werkwoorden met be-, ge-, her-, ver- en ont- geen 'ge-' krijgen.",
     "explanationTr": "ge-, be-, her-, ver- of ont- ile başlayan fiiller 3. hallerinde ekstra 'ge-' ön eki almazlar.",
     "explanationEn": "Verbs already starting with ge-, be-, her-, ver-, or ont- do not get an additional 'ge-' prefix in the perfect tense.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -2468,7 +2468,7 @@ export const grammarTenses = [
       "Hij werkte gisteren tot laat op kantoor.",
       "Hij werkde gisteren tot laat op kantoor.",
       "Hij gewerkt gisteren tot laat op kantoor.",
-      "Hij werket gisteren tot laat op kantoor."
+      "Hij werken gisteren tot laat op kantoor."
     ],
     "correctAnswer": "Hij werkte gisteren tot laat op kantoor.",
     "explanationTr": "Düzenli fiillerin hikaye geçmiş zamanı (imperfectum), kökün 'soft ketchup' ile bitmesi durumunda sonuna '+te(n)' almasıyla oluşturulur.",
@@ -2515,7 +2515,7 @@ export const grammarTenses = [
     "correctAnswer": "Hij kon gisteren niet komen, maar hij zou het proberen.",
     "explanationTr": "'zullen' en 'kunnen' fiillerinin geçmiş zaman halleri düzensizdir: sırasıyla 'zou' en 'kon'.",
     "explanationEn": "The modal verbs 'zullen' and 'kunnen' are irregular in the imperfectum: 'zou' and 'kon' respectively.",
-    "difficulty": 5,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -2537,7 +2537,7 @@ export const grammarTenses = [
     "correctAnswer": "We hebben de drankjes aan de bar afgerekend.",
     "explanationTr": "Ayrılabilir fiillerin perfectum halinde, 'ge' eki ön ek ile fiil kökü arasına girer (af + ge + rekend = afgerekend).",
     "explanationEn": "In the perfectum of a separable verb, the '-ge-' is placed between the prefix and the stem (e.g., afgerekend).",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {

@@ -13,14 +13,14 @@ export const chapters16_18 = [
     "options": [
       "Die",
       "Dat",
-      "Dit",
-      "overhemd"
+      "Deze",
+      "Dit"
     ],
     "correctAnswer": "Die",
     "explanationTr": "Hollandacada 'de-woord' olan isimler veya kişiler için 'die' kullanılır.",
     "explanationEn": "In Dutch, 'die' is used for 'de-words' or people.",
-    "difficulty": 2,
-    "quality": 2
+    "difficulty": 4,
+    "quality": 3
   },
   {
     "id": "sum_ch16_002",
@@ -35,13 +35,13 @@ export const chapters16_18 = [
       "Dat",
       "Die",
       "Deze",
-      "badkamer"
+      "Dit"
     ],
     "correctAnswer": "Dat",
     "explanationTr": "'het-woord', bir fikir veya bütün bir cümle için 'dat' kullanılır.",
     "explanationEn": "'dat' is used to refer back to a 'het-word', an idea, or an entire sentence.",
-    "difficulty": 2,
-    "quality": 2
+    "difficulty": 4,
+    "quality": 3
   },
   {
     "id": "sum_ch16_003",
@@ -55,12 +55,12 @@ export const chapters16_18 = [
       "Dit zijn / Dat zijn",
       "Dit is / Dat is",
       "Deze is",
-      "Dat is een heel goed plan voor morgen."
+      "Die zijn / Deze zijn niet"
     ],
     "correctAnswer": "Dit zijn / Dat zijn",
     "explanationTr": "Birden fazla kişiyi sunarken 'Dit zijn' veya 'Dat zijn' kalıbı kullanılır.",
     "explanationEn": "To present multiple people, the structure 'Dit zijn / Dat zijn' is used.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -75,12 +75,12 @@ export const chapters16_18 = [
       "Dat is / Dit is",
       "Dat zijn",
       "Dit zijn",
-      "Dat is een heel goed plan voor morgen."
+      "Die zijn"
     ],
     "correctAnswer": "Dat is / Dit is",
     "explanationTr": "Tekil kişileri tanıtırken 'Dat is' veya 'Dit is' kullanılır.",
     "explanationEn": "To present singular persons, 'Dat is / Dit is' is used.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -101,8 +101,8 @@ export const chapters16_18 = [
     "correctAnswer": "hem",
     "explanationTr": "'de kaas' de-woord olduğu için nesne konumunda 'hem' ile karşılanır.",
     "explanationEn": "Since 'de kaas' is a de-word, its object form is 'hem'.",
-    "difficulty": 3,
-    "quality": 2
+    "difficulty": 4,
+    "quality": 3
   },
   {
     "id": "sum_ch16_006",
@@ -122,7 +122,7 @@ export const chapters16_18 = [
     "correctAnswer": "Ik blijf vandaag lekker binnen, want het regent buiten.",
     "explanationTr": "Voegwoorden iki cümleyi birbirine bağlayan 'tutkal' görevini görür.",
     "explanationEn": "Conjunctions join two sentences together; they are the 'glue' of sentences.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -143,7 +143,7 @@ export const chapters16_18 = [
     "correctAnswer": "Ik drink koffie en ik lees de ochtendkrant.",
     "explanationTr": "'en' bağlacı ekleme/toevoeging (and) bildirir.",
     "explanationEn": "The conjunction 'en' indicates addition (toevoeging / and).",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -164,8 +164,8 @@ export const chapters16_18 = [
     "correctAnswer": "of",
     "explanationTr": "'of' bağlacı seçenek veya alternatif (keuze/alternatief) sunar.",
     "explanationEn": "The conjunction 'of' indicates a choice or alternative.",
-    "difficulty": 3,
-    "quality": 2
+    "difficulty": 4,
+    "quality": 3
   },
   {
     "id": "sum_ch16_009",
@@ -185,8 +185,8 @@ export const chapters16_18 = [
     "correctAnswer": "maar",
     "explanationTr": "'maar' bağlacı zıtlık (tegenstelling) bildirir.",
     "explanationEn": "The conjunction 'maar' indicates contrast (tegenstelling / but).",
-    "difficulty": 3,
-    "quality": 2
+    "difficulty": 4,
+    "quality": 3
   },
   {
     "id": "sum_ch16_010",
@@ -206,8 +206,8 @@ export const chapters16_18 = [
     "correctAnswer": "want",
     "explanationTr": "'want' bağlacı sebep/gerekçe (reden) bildirir.",
     "explanationEn": "The conjunction 'want' indicates a reason (reden).",
-    "difficulty": 3,
-    "quality": 2
+    "difficulty": 4,
+    "quality": 3
   },
   {
     "id": "sum_ch16_011",
@@ -227,8 +227,8 @@ export const chapters16_18 = [
     "correctAnswer": "dus",
     "explanationTr": "'dus' bağlacı sonuç veya netice (gevolg/conclusie) bildirir.",
     "explanationEn": "The conjunction 'dus' indicates a consequence or conclusion (gevolg/conclusie).",
-    "difficulty": 3,
-    "quality": 2
+    "difficulty": 4,
+    "quality": 3
   },
   {
     "id": "sum_ch16_013",
@@ -248,7 +248,7 @@ export const chapters16_18 = [
     "correctAnswer": "Het regende hard, dus hij bleef de hele middag thuis.",
     "explanationTr": "Bu voegwoorden ana cümleleri bağladığı için kelime dizilimi değişmez (Hoofdzin + Hoofdzin).",
     "explanationEn": "These conjunctions connect main clauses, so the word order does not change.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -269,7 +269,7 @@ export const chapters16_18 = [
     "correctAnswer": "Ik heb gisterenavond een hele spannende film gezien.",
     "explanationTr": "Perfectum yapısında nesne, doğrudan 3. haldeki fiilin (voltooid deelwoord) önüne gelir.",
     "explanationEn": "In the perfectum, objects come right before the past participle.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -284,12 +284,12 @@ export const chapters16_18 = [
       "Ik heb pizza gegeten.",
       "Ik heb gegeten pizza.",
       "Ik ben pizza gegeten.",
-      "Dank je wel, dat is erg vriendelijk van je."
+      "een interessante cursus"
     ],
     "correctAnswer": "Ik heb pizza gegeten.",
     "explanationTr": "Nesne olan 'pizza', voltooid deelwoord 'gegeten' kelimesinin hemen önünde yer alır.",
     "explanationEn": "The object 'pizza' comes right before the past participle 'gegeten'.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -311,7 +311,7 @@ export const chapters16_18 = [
     "explanationTr": "'werken' kökü 'k' (soft ketchup) ile bittiği için imperfectumda '+te' alır (ik werkte).",
     "explanationEn": "Stem of 'werken' ends in 'k' (soft ketchup), so it takes '+te' in the imperfectum.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 3
   },
   {
     "id": "sum_ch16_019",
@@ -332,7 +332,7 @@ export const chapters16_18 = [
     "explanationTr": "Çoğul özneler için imperfectum kuralı gereği '-ten' eklenir (wij werkten).",
     "explanationEn": "For plural subjects, the imperfectum rule adds '-ten' (wij werkten).",
     "difficulty": 4,
-    "quality": 2
+    "quality": 3
   },
   {
     "id": "sum_ch16_020",
@@ -374,7 +374,7 @@ export const chapters16_18 = [
     "explanationTr": "'kopen' düzensiz bir fiildir; geçmiş zaman tekil hali 'kocht'tur.",
     "explanationEn": "'kopen' is irregular; its simple past singular form is 'kocht'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 3
   },
   {
     "id": "sum_ch16_022",
@@ -395,7 +395,7 @@ export const chapters16_18 = [
     "explanationTr": "'kopen' düzensiz fiilinin çoğul geçmiş zaman hali 'kochten'dir.",
     "explanationEn": "The plural simple past of the irregular verb 'kopen' is 'kochten'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 3
   },
   {
     "id": "sum_ch16_023",
@@ -408,15 +408,15 @@ export const chapters16_18 = [
     "questionNl": "— Wat dronk je gisteren bij het diner?\n— Omdat het zo warm was, ___ twee grote glazen koud water.",
     "options": [
       "ik dronk",
-      "appelsap",
       "ik gedronken",
-      "ik drink"
+      "ik drink",
+      "een interessante cursus"
     ],
     "correctAnswer": "ik dronk",
     "explanationTr": "'drinken' düzensiz bir fiildir; 'ik dronk' şeklindedir.",
     "explanationEn": "'drinken' is irregular, becoming 'ik dronk' in the simple past.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 3
   },
   {
     "id": "sum_ch16_024",
@@ -437,7 +437,7 @@ export const chapters16_18 = [
     "explanationTr": "Özet notlarına göre yönelme/hareket durumunda 'naar' (to) kullanılır.",
     "explanationEn": "According to the summary notes, movement towards a place uses 'naar'.",
     "difficulty": 4,
-    "quality": 2
+    "quality": 3
   },
   {
     "id": "sum_ch16_025",
@@ -457,7 +457,7 @@ export const chapters16_18 = [
     "correctAnswer": "Ik neem elke ochtend mijn lunchpakket mee naar mijn werk.",
     "explanationTr": "Ayrılabilen fiillerin şimdiki zamanında prefix ('mee') cümlenin sonuna gider, çekimli fiil özneden hemen sonradır.",
     "explanationEn": "In the present tense of separable verbs, the prefix ('mee') goes to the end.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -471,14 +471,14 @@ export const chapters16_18 = [
     "questionNl": "In het dagelijks leven: Waar staat het object in een zin met een gesplitst scheidbaar werkwoord?",
     "options": [
       "Het object staat tussen de gesplitste delen van het werkwoord in.",
-      "Het object staat altijd vooraan.",
-      "Het object staat achter het prefix.",
-      "Dat is een heel goed plan voor morgen."
+      "Het object staat altijd helemaal vooraan.",
+      "Het object staat achter het losse prefix.",
+      "Het object wordt altijd weggelaten."
     ],
     "correctAnswer": "Het object staat tussen de gesplitste delen van het werkwoord in.",
     "explanationTr": "Notlarda belirtildiği gibi nesne, ayrılan fiil parçalarının ARASINDA yer alır ('The object is between the split parts of the verb').",
     "explanationEn": "As noted, the object is between the split parts of the verb.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -494,12 +494,12 @@ export const chapters16_18 = [
       "Ik neem een vriend mee.",
       "Ik neem mee een vriend.",
       "Ik meeneem een vriend.",
-      "Dat is een heel goed plan voor morgen."
+      "Ik meenam een vriend."
     ],
     "correctAnswer": "Ik neem een vriend mee.",
     "explanationTr": "Nesne ('een vriend') fiilin çekimli kısmı ile prefixi ('mee') arasında yer alır.",
     "explanationEn": "The object ('een vriend') is placed between the conjugated verb part and the prefix ('mee').",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -515,7 +515,7 @@ export const chapters16_18 = [
       "ik stapte de bus in.",
       "ik instapte de bus.",
       "ik stapte in de bus.",
-      "Dat is een heel goed plan voor morgen."
+      "ik ben ingestapt de bus."
     ],
     "correctAnswer": "ik stapte de bus in.",
     "explanationTr": "İmperfectum da olsa ayrılabilen fiilin prefixi ('in') cümlenin en sonundadır.",
@@ -541,8 +541,8 @@ export const chapters16_18 = [
     "correctAnswer": "ben",
     "explanationTr": "'aankomen' hareket fiilidir, 'zijn' ile kullanılır ve perfectum hali 'aangekomen'dir.",
     "explanationEn": "'aankomen' uses 'zijn' and forms 'aangekomen' in the perfectum.",
-    "difficulty": 3,
-    "quality": 2
+    "difficulty": 4,
+    "quality": 3
   },
   {
     "id": "sum_ch16_030",
@@ -561,7 +561,7 @@ export const chapters16_18 = [
     "correctAnswer": "Wat doe je graag in je vrije tijd?",
     "explanationTr": "Özet notlarının 'Other important things' kısmında hobilerden bahsetmeyi öğrenmek yer alır.",
     "explanationEn": "The summary notes include learning to talk about your hobbies.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -581,7 +581,7 @@ export const chapters16_18 = [
     "correctAnswer": "Volgende maand gaan we verhuizen naar een nieuw appartement.",
     "explanationTr": "Gelecek zamanda kendinizi ifade etmeyi (zullen/zal, gaat/gaan) öğrenmek özetin ana konularındandır.",
     "explanationEn": "Learning how to express yourself in the future tense is a key topic.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -622,7 +622,7 @@ export const chapters16_18 = [
     "correctAnswer": "Ik heb gisteren mijn hele huis schoongemaakt.",
     "explanationTr": "Geçmişi perfectum ile ifade etmek de özet başlıkları arasındadır.",
     "explanationEn": "Expressing yourself in the perfectum is also a study objective.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -643,8 +643,8 @@ export const chapters16_18 = [
     "correctAnswer": "dus",
     "explanationTr": "'dus' bağlacı sonuç veya netice / gevolg / conclusie (so) bildirir.",
     "explanationEn": "The conjunction 'dus' indicates a consequence or conclusion (gevolg / conclusie).",
-    "difficulty": 3,
-    "quality": 2
+    "difficulty": 4,
+    "quality": 3
   },
   {
     "id": "sum_ch16_042",
@@ -664,8 +664,8 @@ export const chapters16_18 = [
     "correctAnswer": "of",
     "explanationTr": "'of' bağlacı seçenek veya alternatif / keuze / alternatief (or) sunar.",
     "explanationEn": "The conjunction 'of' indicates a choice or alternative (keuze / alternatief).",
-    "difficulty": 3,
-    "quality": 2
+    "difficulty": 4,
+    "quality": 3
   },
   {
     "id": "sum_ch16_043",
@@ -680,13 +680,13 @@ export const chapters16_18 = [
       "Welke film heb je het laatst gezien?",
       "Waar ging die film over?",
       "Wat is je favoriete film?",
-      "Hoeveel kost dit?"
+      "Kunt u dat nog een keer herhalen, alstublieft?"
     ],
     "correctAnswer": "Welke film heb je het laatst gezien?",
     "explanationTr": "Özet girişindeki örnek cümlede 'Welke film heb je het laatst gezien?' sorusu yer alır.",
     "explanationEn": "The summary opening lists 'Welke film heb je het laatst gezien?'.",
-    "difficulty": 3,
-    "quality": 2
+    "difficulty": 4,
+    "quality": 3
   },
   {
     "id": "sum_ch16_044",
@@ -701,13 +701,13 @@ export const chapters16_18 = [
       "Waar ging die film over?",
       "Welke film was dat?",
       "Wie speelde in die film?",
-      "Hoeveel kost dit?"
+      "Kunt u dat nog een keer herhalen, alstublieft?"
     ],
     "correctAnswer": "Waar ging die film over?",
     "explanationTr": "Film konusunu sormak için 'Waar ging die film over?' denir.",
     "explanationEn": "To ask about the film's topic, use 'Waar ging die film over?'.",
-    "difficulty": 3,
-    "quality": 2
+    "difficulty": 4,
+    "quality": 3
   },
   {
     "id": "sum_ch16_045",
@@ -722,13 +722,13 @@ export const chapters16_18 = [
       "Die/De film ging over natuur.",
       "Het was erg duur.",
       "Ik ben naar de bioscoop gegaan.",
-      "Dat is een heel goed plan voor morgen."
+      "Hij gaat vanmiddag met de trein naar zijn werk."
     ],
     "correctAnswer": "Die/De film ging over natuur.",
     "explanationTr": "Örnek cevap olarak 'Die/De film ging over natuur' verilmiştir.",
     "explanationEn": "The provided answer example is 'Die/De film ging over natuur'.",
-    "difficulty": 3,
-    "quality": 2
+    "difficulty": 4,
+    "quality": 3
   },
   {
     "id": "sum_ch16_046",
@@ -742,12 +742,12 @@ export const chapters16_18 = [
       "Dit zijn mijn ouders.",
       "Dat is mijn broer.",
       "Dit is mijn zus.",
-      "Dank je wel, dat is erg vriendelijk van je."
+      "een interessante cursus"
     ],
     "correctAnswer": "Dit zijn mijn ouders.",
     "explanationTr": "Çoğul sunumlar için 'Dit zijn mijn ouders' kullanılır.",
     "explanationEn": "For plural presentations, use 'Dit zijn mijn ouders'.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -762,12 +762,12 @@ export const chapters16_18 = [
       "Dat is mijn broer.",
       "Dit zijn mijn ouders.",
       "Dat zijn mijn zussen.",
-      "Dank je wel, dat is erg vriendelijk van je."
+      "een interessante cursus"
     ],
     "correctAnswer": "Dat is mijn broer.",
     "explanationTr": "Tekil erkek kardeş sunumu için 'Dat is mijn broer' denir.",
     "explanationEn": "To present a brother, say 'Dat is mijn broer'.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -782,12 +782,12 @@ export const chapters16_18 = [
       "Dat zijn mijn zussen.",
       "Dit is mijn broer.",
       "Dit zijn mijn ouders.",
-      "Dank je wel, dat is erg vriendelijk van je."
+      "een interessante cursus"
     ],
     "correctAnswer": "Dat zijn mijn zussen.",
     "explanationTr": "Çoğul kız kardeşler için 'Dat zijn mijn zussen' kullanılır.",
     "explanationEn": "For sisters in plural, use 'Dat zijn mijn zussen'.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -802,12 +802,12 @@ export const chapters16_18 = [
       "Natuurlijk heb ik dat gedaan.",
       "Nee, dat is niet zo.",
       "Ik drink geen koffie.",
-      "Dat is een heel goed plan voor morgen."
+      "Nee, helaas heb ik vandaag geen tijd."
     ],
     "correctAnswer": "Natuurlijk heb ik dat gedaan.",
     "explanationTr": "Özet görselindeki diyalog örneğinde 'Natuurlijk heb ik dat gedaan' yanıtı verilmiştir.",
     "explanationEn": "The summary dialogue example gives the response 'Natuurlijk heb ik dat gedaan'.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -821,15 +821,15 @@ export const chapters16_18 = [
     "questionNl": "— Vroeger werkte ik bij een bank.\nWelke uitgang (-te / -de) hoort bij de verleden tijd van de stam 'werk' (k zit in 't kofschip)?",
     "options": [
       "-te (ik werkte)",
-      "-de (ik werkde)",
-      "-ten (ik werkten)",
-      "-den (ik werkden)"
+      "-de (regel met -de)",
+      "-t (tegenwoordige tijd)",
+      "-en (infinitiefvorm)"
     ],
     "correctAnswer": "-te (ik werkte)",
     "explanationTr": "Özet tablosuna göre düzenli fiillerin imperfectum (geçmiş zaman) çekiminde 'ik' için '-te' eklenir.",
     "explanationEn": "According to the summary table, regular verbs take '-te' for 'ik' in the imperfectum.",
-    "difficulty": 4,
-    "quality": 2
+    "difficulty": 5,
+    "quality": 3
   },
   {
     "id": "sum_ch17_002",
@@ -849,8 +849,8 @@ export const chapters16_18 = [
     "correctAnswer": "-te (jij kookte)",
     "explanationTr": "Özet tablosuna göre 'jij' için düzenli fiillerde '-te' kullanılır.",
     "explanationEn": "According to the summary table, regular verbs take '-te' for 'jij' in the imperfectum.",
-    "difficulty": 4,
-    "quality": 2
+    "difficulty": 5,
+    "quality": 3
   },
   {
     "id": "sum_ch17_003",
@@ -870,8 +870,8 @@ export const chapters16_18 = [
     "correctAnswer": "-te (hij tenniste)",
     "explanationTr": "Özet tablosuna göre 'hij' için düzenli fiillerde '-te' kullanılır.",
     "explanationEn": "According to the summary table, regular verbs take '-te' for 'hij' in the imperfectum.",
-    "difficulty": 4,
-    "quality": 2
+    "difficulty": 5,
+    "quality": 3
   },
   {
     "id": "sum_ch17_004",
@@ -891,8 +891,8 @@ export const chapters16_18 = [
     "correctAnswer": "-ten (wij fietsten)",
     "explanationTr": "Özet tablosuna göre 'wij' (çoğul) için düzenli fiillerde '-ten' eklenir.",
     "explanationEn": "According to the summary table, regular verbs take '-ten' for 'wij' in the imperfectum.",
-    "difficulty": 4,
-    "quality": 2
+    "difficulty": 5,
+    "quality": 3
   },
   {
     "id": "sum_ch17_005",
@@ -912,8 +912,8 @@ export const chapters16_18 = [
     "correctAnswer": "-ten (jullie dansten)",
     "explanationTr": "Özet tablosuna göre 'jullie' için düzenli fiillerde '-ten' kullanılır.",
     "explanationEn": "According to the summary table, regular verbs take '-ten' for 'jullie' in the imperfectum.",
-    "difficulty": 4,
-    "quality": 2
+    "difficulty": 5,
+    "quality": 3
   },
   {
     "id": "sum_ch17_006",
@@ -933,8 +933,8 @@ export const chapters16_18 = [
     "correctAnswer": "-ten (zij misten)",
     "explanationTr": "Özet tablosuna göre 'zij' (onlar) için düzenli fiillerde '-ten' eklenir.",
     "explanationEn": "According to the summary table, regular verbs take '-ten' for plural 'zij' in the imperfectum.",
-    "difficulty": 4,
-    "quality": 2
+    "difficulty": 5,
+    "quality": 3
   },
   {
     "id": "sum_ch17_007",
@@ -949,12 +949,12 @@ export const chapters16_18 = [
       "en, of, want, dus en maar",
       "omdat, als, terwijl",
       "niet, geen, wel",
-      "Dat is een heel goed plan voor morgen."
+      "Omdat hij al andere afspraken heeft."
     ],
     "correctAnswer": "en, of, want, dus en maar",
     "explanationTr": "Özet metninde geçen ana conjuncties (bağlaçlar) 'en, of, want, dus en maar' olarak sıralanmıştır.",
     "explanationEn": "The main conjunctions listed in the summary are 'en, of, want, dus en maar'.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -965,17 +965,17 @@ export const chapters16_18 = [
       "er_daar",
       "grammar"
     ],
-    "questionNl": "In het dagelijks leven: Wanneer gebruiken we het woord 'er' in het Nederlands op basis van de regel over Engelse 'a / an'?",
+    "questionNl": "In het dagelijks leven: Wanneer gebruiken we 'er' als voorlopig onderwerp in een Nederlandse zin?",
     "options": [
-      "If the subject of a sentence in English starts with 'a' or 'an' (indefinite subject).",
-      "If the subject starts with 'the'.",
-      "If there is no subject.",
-      "Het werkwoord staat altijd vooraan."
+      "Als het werkelijke onderwerp onbepaald (indefiniet) is, zoals bij 'een' of een getal.",
+      "Als het onderwerp bepaald is met 'de' of 'het'.",
+      "Als er helemaal geen echt onderwerp in de zin voorkomt.",
+      "Alleen in ontkennende zinnen met 'geen'."
     ],
-    "correctAnswer": "If the subject of a sentence in English starts with 'a' or 'an' (indefinite subject).",
+    "correctAnswer": "Als het werkelijke onderwerp onbepaald (indefiniet) is, zoals bij 'een' of een getal.",
     "explanationTr": "Özet kuralına göre İngilizcede 'a' veya 'an' ile başlayan özneler Hollandacada 'er' ile başlar.",
     "explanationEn": "According to the rule, if an English sentence subject starts with 'a' or 'an', we use 'er'.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -990,8 +990,8 @@ export const chapters16_18 = [
     "correctAnswer": "Er",
     "explanationTr": "Belirsiz özne ile başlayan cümle 'Er is een ongeluk gebeurd' şeklinde kurulur.",
     "explanationEn": "An indefinite subject sentence translates starting with 'Er'.",
-    "difficulty": 4,
-    "quality": 2,
+    "difficulty": 5,
+    "quality": 3,
     "options": [
       "Er",
       "niet Er",
@@ -1011,8 +1011,8 @@ export const chapters16_18 = [
     "correctAnswer": "er",
     "explanationTr": "Belirsiz özne kuralı gereği 'er komt een storm' denir.",
     "explanationEn": "Following the rule for indefinite subjects, it starts with 'er'.",
-    "difficulty": 4,
-    "quality": 2,
+    "difficulty": 5,
+    "quality": 3,
     "options": [
       "er",
       "niet er",
@@ -1028,17 +1028,17 @@ export const chapters16_18 = [
       "er_daar",
       "grammar"
     ],
-    "questionNl": "In het dagelijks leven: Welke andere functie heeft 'er' in een zin volgens de notities?",
+    "questionNl": "In het dagelijks leven: Welke functie heeft 'er' als het verwijst naar een locatie?",
     "options": [
-      "It replaces location (i.e. like 'there' in English).",
-      "It replaces the verb.",
-      "It replaces the subject pronoun.",
-      "Het werkwoord staat altijd vooraan."
+      "Het vervangt een eerder genoemde plaatsaanduiding (zoals 'daar').",
+      "Het vervangt de persoonsvorm van de hoofdzin.",
+      "Het vervangt het persoonlijk voornaamwoord 'hij'.",
+      "Het geeft aan dat de zin in de toekomende tijd staat."
     ],
-    "correctAnswer": "It replaces location (i.e. like 'there' in English).",
+    "correctAnswer": "Het vervangt een eerder genoemde plaatsaanduiding (zoals 'daar').",
     "explanationTr": "'er' aynı zamanda İngilizcedeki 'there' gibi bir konumu/yeri (location) ikame eder.",
     "explanationEn": "'er' also replaces location, acting like 'there' in English.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -1053,8 +1053,8 @@ export const chapters16_18 = [
     "correctAnswer": "er",
     "explanationTr": "Yer bildiren 'there' anlamı için cümle içinde 'er' kullanılır.",
     "explanationEn": "To express 'there' regarding a location, 'er' is used in the sentence.",
-    "difficulty": 4,
-    "quality": 2,
+    "difficulty": 5,
+    "quality": 3,
     "options": [
       "er",
       "niet er",
@@ -1075,12 +1075,12 @@ export const chapters16_18 = [
       "[zijn] [...] [aan het + infinitief]",
       "[hebben] [...] [ge + stam + t]",
       "[gaan] [...] [infinitief]",
-      "Je gebruikt stam + d."
+      "Het werkwoord staat op de tweede positie."
     ],
     "correctAnswer": "[zijn] [...] [aan het + infinitief]",
     "explanationTr": "Şu an devam eden eylemler için '[zijn] [...] [aan het + infinitief]' kalıbı kullanılır.",
     "explanationEn": "The formula for present continuous is '[zijn] [...] [aan het + infinitief]'.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -1096,13 +1096,13 @@ export const chapters16_18 = [
       "om kwart over zeven (quarter past seven)",
       "om zeven uur",
       "om half acht",
-      "Dat is een heel goed plan voor morgen."
+      "Om een duidelijke reden te geven."
     ],
     "correctAnswer": "om kwart over zeven (quarter past seven)",
     "explanationTr": "Diyalogda Tina ve Sam için günün saat y<bos>4 geçe (kwart over zeven) başladığı belirtilir.",
     "explanationEn": "The dialogue states that the day starts at quarter past seven for Tina and Sam.",
-    "difficulty": 4,
-    "quality": 2
+    "difficulty": 5,
+    "quality": 3
   },
   {
     "id": "sum_ch17_025",
@@ -1117,13 +1117,13 @@ export const chapters16_18 = [
       "Sam vertrekt het eerst.",
       "Tina vertrekt het eerst.",
       "Ze vertrekken tegelijk.",
-      "Dat is een heel goed plan voor morgen."
+      "een interessante cursus"
     ],
     "correctAnswer": "Sam vertrekt het eerst.",
     "explanationTr": "Diyalogda ilk olarak Sam'in evden ayrıldığı (vertrekt het eerst) söylenir.",
     "explanationEn": "The dialogue notes that Sam leaves first.",
-    "difficulty": 4,
-    "quality": 2
+    "difficulty": 5,
+    "quality": 3
   },
   {
     "id": "sum_ch17_026",
@@ -1138,13 +1138,13 @@ export const chapters16_18 = [
       "Heeft Tina goed geslapen?",
       "Waar werkt Tina?",
       "Wat is Tina's lievelingskleur?",
-      "Hoeveel kost dit?"
+      "Kunt u dat nog een keer herhalen, alstublieft?"
     ],
     "correctAnswer": "Heeft Tina goed geslapen?",
     "explanationTr": "Opdracht 1'in ilk sorusu 'Heeft Tina goed geslapen?' şeklindedir.",
     "explanationEn": "Question 1 of Opdracht 1 asks 'Heeft Tina goed geslapen?'.",
-    "difficulty": 4,
-    "quality": 2
+    "difficulty": 5,
+    "quality": 3
   },
   {
     "id": "sum_ch17_027",
@@ -1159,13 +1159,13 @@ export const chapters16_18 = [
       "Wat gaat Tina doen vandaag? / Wat heeft Tina vandaag gedaan?",
       "Hoeveel kost de bibliotheek?",
       "Wie is Sam's broer?",
-      "Hoeveel kost dit?"
+      "Kunt u dat nog een keer herhalen, alstublieft?"
     ],
     "correctAnswer": "Wat gaat Tina doen vandaag? / Wat heeft Tina vandaag gedaan?",
     "explanationTr": "Opdracht 1'de Tina'nın bugün ne yapacağı veya ne yaptığını soran soru yer alır.",
     "explanationEn": "Opdracht 1 includes asking what Tina is going to do or has done today.",
-    "difficulty": 4,
-    "quality": 2
+    "difficulty": 5,
+    "quality": 3
   },
   {
     "id": "sum_ch17_029",
@@ -1180,13 +1180,13 @@ export const chapters16_18 = [
       "Student A is de beller (caller).",
       "Student A neemt de telefoon op.",
       "Student A luistert alleen.",
-      "Dat is een heel goed plan voor morgen."
+      "Hij gaat vanmiddag met de trein naar zijn werk."
     ],
     "correctAnswer": "Student A is de beller (caller).",
     "explanationTr": "Opdracht 5 rol yapma (roleplay) görevinde Student A arayan kişidir (caller).",
     "explanationEn": "In Opdracht 5, Student A is the caller.",
-    "difficulty": 4,
-    "quality": 2
+    "difficulty": 5,
+    "quality": 3
   },
   {
     "id": "sum_ch17_030",
@@ -1201,13 +1201,13 @@ export const chapters16_18 = [
       "Student B neemt de telefoon op.",
       "Student B belt als eerste.",
       "Student B hangt meteen op.",
-      "Dat is een heel goed plan voor morgen."
+      "Hij gaat vanmiddag met de trein naar zijn werk."
     ],
     "correctAnswer": "Student B neemt de telefoon op.",
     "explanationTr": "Opdracht 5'te Student B telefonu açar (answers the phone).",
     "explanationEn": "In Opdracht 5, Student B answers the phone.",
-    "difficulty": 4,
-    "quality": 2
+    "difficulty": 5,
+    "quality": 3
   },
   {
     "id": "sum_ch17_031",
@@ -1222,13 +1222,13 @@ export const chapters16_18 = [
       "Begin met een passende begroeting en leg de reden van bellen uit.",
       "Meteen ophangen.",
       "Vragen naar het weer.",
-      "Dat is een heel goed plan voor morgen."
+      "Hij gaat vanmiddag met de trein naar zijn werk."
     ],
     "correctAnswer": "Begin met een passende begroeting en leg de reden van bellen uit.",
     "explanationTr": "Göreve göre uygun bir selamlama ile başlanıp arama sebebi açıklanmalıdır.",
     "explanationEn": "You begin with an appropriate greeting and clearly explain the reason for calling.",
-    "difficulty": 4,
-    "quality": 2
+    "difficulty": 5,
+    "quality": 3
   },
   {
     "id": "sum_ch17_032",
@@ -1243,13 +1243,13 @@ export const chapters16_18 = [
       "Sluit af met een bevestiging, bedankje en afscheid.",
       "Schreeuwen tegen de persoon.",
       "Niks zeggen.",
-      "Dat is een heel goed plan voor morgen."
+      "Hij gaat vanmiddag met de trein naar zijn werk."
     ],
     "correctAnswer": "Sluit af met een bevestiging, bedankje en afscheid.",
     "explanationTr": "Görüşme onaylama, teşekkür ve veda ile kapatılmalıdır.",
     "explanationEn": "Finish with a confirmation, thanks, and goodbye.",
-    "difficulty": 4,
-    "quality": 2
+    "difficulty": 5,
+    "quality": 3
   },
   {
     "id": "sum_ch17_033",
@@ -1264,12 +1264,12 @@ export const chapters16_18 = [
       "Elkaar één tip geven en van rol wisselen met een nieuwe situatie.",
       "Direct naar huis gaan.",
       "De leraar bellen.",
-      "Dat is een heel goed plan voor morgen."
+      "Hij gaat vanmiddag met de trein naar zijn werk."
     ],
     "correctAnswer": "Elkaar één tip geven en van rol wisselen met een nieuwe situatie.",
     "explanationEn": "After the call, give each other one tip and switch roles using a new situation.",
-    "difficulty": 4,
-    "quality": 2,
+    "difficulty": 5,
+    "quality": 3,
     "explanationTr": "Görüşme tamamlandıktan sonra, birbirinize bir geri bildirim (ipucu) verin ve yeni bir durumla rolleri değiştirin."
   },
   {
@@ -1284,12 +1284,12 @@ export const chapters16_18 = [
       "Ik woon in Amsterdam.",
       "Ik kom uit Spanje.",
       "Mijn naam is Sam.",
-      "Dat is een heel goed plan voor morgen."
+      "een interessante cursus"
     ],
     "correctAnswer": "Ik woon in Amsterdam.",
     "explanationTr": "Örnek cevap olarak 'Ik woon in Amsterdam' verilmiştir.",
     "explanationEn": "The given example answer is 'Ik woon in Amsterdam'.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -1305,12 +1305,12 @@ export const chapters16_18 = [
       "-ten",
       "-te",
       "-de",
-      "om vier uur"
+      "werkt"
     ],
     "correctAnswer": "-ten",
     "explanationTr": "Çoğul özneler için imperfectum kuralı '-ten' (veya yumuşak ünsüz dışındakiler için '-den') eklemektir.",
     "explanationEn": "The imperfectum suffix for plural subjects like 'wij' is '-ten'.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -1326,12 +1326,12 @@ export const chapters16_18 = [
       "-ten",
       "-te",
       "-de",
-      "om vier uur"
+      "werkt"
     ],
     "correctAnswer": "-ten",
     "explanationTr": "Çoğul 'jullie' için imperfectum kuralı '-ten' eklemektir.",
     "explanationEn": "For plural 'jullie', regular verbs take '-ten' in the imperfectum.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -1347,12 +1347,12 @@ export const chapters16_18 = [
       "-ten",
       "-te",
       "-de",
-      "om vier uur"
+      "werkt"
     ],
     "correctAnswer": "-ten",
     "explanationTr": "Çoğul 'zij' (onlar) için imperfectum kuralı '-ten' eklemektir.",
     "explanationEn": "For plural 'zij', regular verbs take '-ten' in the imperfectum.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -1368,12 +1368,12 @@ export const chapters16_18 = [
       "-te",
       "-ten",
       "-de",
-      "om vier uur"
+      "werkt"
     ],
     "correctAnswer": "-te",
     "explanationTr": "'werken' kökü 'k' ile bittiği için 'ik' şahsında '-te' alır (werkte).",
     "explanationEn": "Since the stem of 'werken' ends in 'k', it takes '-te' for 'ik'.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -1384,17 +1384,17 @@ export const chapters16_18 = [
       "continuous",
       "grammar"
     ],
-    "questionNl": "In het dagelijks leven: Wat is de functie van de 'aan het' constructie in de zin 'Ik ben een pizza aan het eten'?",
+    "questionNl": "In het dagelijks leven: Wat drukt de 'aan het + infinitief' constructie uit in 'Ik ben een pizza aan het eten'?",
     "options": [
-      "It indicates an ongoing action right now (present continuous).",
-      "It indicates the past tense.",
-      "It indicates a future intention.",
-      "groentesoep met stokbrood"
+      "Een handeling die nu op dit moment bezig is (duratief / continu).",
+      "Een handeling die in het verleden is afgerond.",
+      "Een toekomstige intentie voor volgende week.",
+      "Een wens of voorwaarde die niet reëel is."
     ],
-    "correctAnswer": "It indicates an ongoing action right now (present continuous).",
+    "correctAnswer": "Een handeling die nu op dit moment bezig is (duratief / continu).",
     "explanationTr": "'aan het' yapısı şu anda devam etmekte olan bir eylemi (continuous) gösterir.",
     "explanationEn": "The 'aan het' construction indicates an ongoing action right now.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -1410,12 +1410,12 @@ export const chapters16_18 = [
       "Direct na het subject (ik)",
       "Aan het einde van de zin",
       "Voor het subject",
-      "Het werkwoord staat altijd vooraan."
+      "Het werkwoord staat op de tweede positie."
     ],
     "correctAnswer": "Direct na het subject (ik)",
     "explanationTr": "Yardımcı fiil 'zijn' özneden hemen sonra ikinci sırada yer alır (Ik ben...).",
     "explanationEn": "The auxiliary verb 'zijn' comes right after the subject in second position.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -1436,7 +1436,7 @@ export const chapters16_18 = [
     "correctAnswer": "Aan het absolute einde van de zin",
     "explanationTr": "Asıl fiil mastar halinde cümlenin en sonuna gider (maken, eten, dansen, etc.).",
     "explanationEn": "The main verb in infinitive form goes to the absolute end of the sentence.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -1447,17 +1447,17 @@ export const chapters16_18 = [
       "er_daar",
       "grammar"
     ],
-    "questionNl": "In het dagelijks leven: Wanneer gebruiken we 'er' met betrekking tot het Engelse 'a' of 'an'?",
+    "questionNl": "In het dagelijks leven: Wanneer begint een Nederlandse zin typisch met 'Er is...' of 'Er zijn...'?",
     "options": [
-      "When the subject of a sentence in English starts with 'a' or 'an'.",
-      "When the subject starts with 'the'.",
-      "When there is no noun.",
-      "Het werkwoord staat altijd vooraan."
+      "Wanneer het onderwerp onbepaald is (bijv. 'een man', 'drie katten', 'veel mensen').",
+      "Wanneer het onderwerp begint met 'de' of 'het'.",
+      "Alleen wanneer er een vraagteken achter de zin staat.",
+      "Wanneer het onderwerp een persoonsnaam is."
     ],
-    "correctAnswer": "When the subject of a sentence in English starts with 'a' or 'an'.",
+    "correctAnswer": "Wanneer het onderwerp onbepaald is (bijv. 'een man', 'drie katten', 'veel mensen').",
     "explanationTr": "Özet kurallarına göre İngilizce öznesi 'a' veya 'an' ile başlayan cümleler 'er' ile başlar.",
     "explanationEn": "Based on the summary, we use 'er' when the English sentence subject starts with 'a' or 'an'.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -1473,12 +1473,12 @@ export const chapters16_18 = [
       "Er is een ongeluk gebeurd.",
       "De auto is rood.",
       "Ik ben in Amsterdam.",
-      "Dat is een heel goed plan voor morgen."
+      "de kamer"
     ],
     "correctAnswer": "Er is een ongeluk gebeurd.",
     "explanationTr": "Özet metninde verilen örneklerden biri 'Er is een ongeluk gebeurd.' şeklindedir.",
     "explanationEn": "One of the summary examples is 'Er is een ongeluk gebeurd.'.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -1489,17 +1489,17 @@ export const chapters16_18 = [
       "er_daar",
       "grammar"
     ],
-    "questionNl": "In het dagelijks leven: Hoe vervangt 'er' een locatie in een zin?",
+    "questionNl": "In het dagelijks leven: Hoe vervangt 'er' een locatie in: 'Woon je in Utrecht? Ja, ik woon er al twee jaar'?",
     "options": [
-      "It acts like 'there' in English (e.g., It is busy there -> Het is er druk).",
-      "It acts like 'here'.",
-      "It replaces the verb.",
-      "Het werkwoord staat altijd vooraan."
+      "Het vervangt de plaatsaanduiding 'in Utrecht'.",
+      "Het vervangt het onderwerp 'ik'.",
+      "Het vervangt de tijdsbepaling 'al twee jaar'.",
+      "Het vervangt de persoonsvorm 'woon'."
     ],
-    "correctAnswer": "It acts like 'there' in English (e.g., It is busy there -> Het is er druk).",
+    "correctAnswer": "Het vervangt de plaatsaanduiding 'in Utrecht'.",
     "explanationTr": "'er' kelimesi İngilizcedeki 'there' gibi yer bildiren ifadelerin yerini alabilir.",
     "explanationEn": "'er' can replace a location, acting like 'there' in English.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -1520,7 +1520,7 @@ export const chapters16_18 = [
     "correctAnswer": "omdat",
     "explanationTr": "Bu dersteki ana conjuncties listesinde 'en, of, want, dus en maar' yer alır ('omdat' sonraki derslerin konusudur).",
     "explanationEn": "The summary lists 'en, of, want, dus en maar' as the conjunctions for this chapter.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -1536,12 +1536,12 @@ export const chapters16_18 = [
       "-ten",
       "-te",
       "-de",
-      "om vier uur"
+      "werkt"
     ],
     "correctAnswer": "-ten",
     "explanationTr": "'werken' kökü 'werk', 'wij' çoğul şahsı için '-ten' alır (werken -> werkten).",
     "explanationEn": "For 'wij', 'werken' takes '-ten' in the imperfectum (werikten -> werkten).",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -1557,12 +1557,12 @@ export const chapters16_18 = [
       "Alle werkwoorden verhuizen naar het einde van de bijzin.",
       "Alle werkwoorden blijven vooraan staan.",
       "De werkwoorden worden weggelaten.",
-      "Dat is een heel goed plan voor morgen."
+      "Het werkwoord staat op de tweede positie."
     ],
     "correctAnswer": "Alle werkwoorden verhuizen naar het einde van de bijzin.",
     "explanationTr": "Özet kurallarına göre 'omdat, zodat, dat, hoewel, terwijl, nadat' gibi yan cümle bağlacı olan bazı bağlaçlarda tüm fiiller cümlenin sonuna gider.",
     "explanationEn": "For certain conjunctions, we place ALL verbs at the end of the secondary clause.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -1578,12 +1578,12 @@ export const chapters16_18 = [
       "De 'kikker' (frog)",
       "De 'vis' (fish)",
       "De 'vogel' (bird)",
-      "Dat is een heel goed plan voor morgen."
+      "de kamer"
     ],
     "correctAnswer": "De 'kikker' (frog)",
     "explanationTr": "Notlarda fiilin cümlenin sonuna atlaması eğlenceli bir terim olan 'kikker' (kurbağa) olarak adlandırılır.",
     "explanationEn": "When the verb jumps to the end of the clause, it is called the 'kikker' (frog).",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -1599,12 +1599,12 @@ export const chapters16_18 = [
       "Er is sprake van inversie (omwisseling van werkwoord en subject) in de hoofdzin.",
       "De hoofdzin verandert niet van volgorde.",
       "De hoofdzin wordt omgedraaid in de verleden tijd.",
-      "Het werkwoord staat altijd vooraan."
+      "Het werkwoord staat op de tweede positie."
     ],
     "correctAnswer": "Er is sprake van inversie (omwisseling van werkwoord en subject) in de hoofdzin.",
     "explanationTr": "Yan cümleyle başlayıp ardından ana cümleye geçildiğinde ana cümlede inversie (devrik yapı) olur.",
     "explanationEn": "When we start with the secondary clause, the following main clause uses inversion.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -1625,7 +1625,7 @@ export const chapters16_18 = [
     "correctAnswer": "omdat",
     "explanationTr": "'omdat' yan cümle yaratarak fiili sona iterken, 'want' ana cümle bağlar.",
     "explanationEn": "'omdat' places all verbs at the end of the clause, whereas 'want' keeps normal order.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -1641,12 +1641,12 @@ export const chapters16_18 = [
       "Na 'want' volgt normale hoofdzinvolgorde, na 'omdat' gaan alle werkwoorden naar het einde.",
       "Na 'omdat' volgt normale volgorde, na 'want' gaan werkwoorden naar achteren.",
       "Er is geen verschil in woordvolgorde.",
-      "Het werkwoord staat altijd vooraan."
+      "Het werkwoord staat op de tweede positie."
     ],
     "correctAnswer": "Na 'want' volgt normale hoofdzinvolgorde, na 'omdat' gaan alle werkwoorden naar het einde.",
     "explanationTr": "'want' ana cümle bağlar (normal sıra), 'omdat' yan cümle kurarak fiili sona iter.",
     "explanationEn": "'want' keeps main clause order, while 'omdat' sends all verbs to the end.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -1661,8 +1661,8 @@ export const chapters16_18 = [
     "correctAnswer": "omdat",
     "explanationTr": "Fiilin sonda olduğu yan cümle yapısında 'omdat' kullanılır.",
     "explanationEn": "For a secondary clause where the verb is at the end, we use 'omdat'.",
-    "difficulty": 4,
-    "quality": 2,
+    "difficulty": 5,
+    "quality": 3,
     "options": [
       "omdat",
       "want",
@@ -1678,17 +1678,17 @@ export const chapters16_18 = [
       "conjunctions",
       "grammar"
     ],
-    "questionNl": "In het dagelijks leven: Wat is de juiste vertaling van de voorbeeldzin: 'Als ik geen eten eet, heb ik honger.'?",
+    "questionNl": "In het dagelijks leven: Wat is de juiste betekenis van de voorwaardelijke zin: 'Als ik geen eten eet, heb ik honger.'?",
     "options": [
-      "If I don't eat food, I am hungry.",
-      "When I am hungry, I eat food.",
-      "Because I eat food, I am not hungry.",
-      "groentesoep met stokbrood"
+      "Eğer yemek yemezsem, karnım acıkır / aç kalırım.",
+      "Karnım acıktığında hemen yemek yerim.",
+      "Yemek yediğim için hiç aç değilim.",
+      "Yemek yemeden önce ellerimi yıkarım."
     ],
-    "correctAnswer": "If I don't eat food, I am hungry.",
+    "correctAnswer": "Eğer yemek yemezsem, karnım acıkır / aç kalırım.",
     "explanationTr": "'Als' şart cümlesi kurar: 'Yemek yemezsem karnım acıkır.'",
     "explanationEn": "'Als' creates a conditional clause: 'If I don't eat food, I am hungry.'.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -1703,12 +1703,12 @@ export const chapters16_18 = [
       "Ik ben naar het park gegaan.",
       "Ik heb naar het park gegaan.",
       "Ik ben naar het park gevlogen.",
-      "Dat is een heel goed plan voor morgen."
+      "Hij gaat vanmiddag met de trein naar zijn werk."
     ],
     "correctAnswer": "Ik ben naar het park gegaan.",
     "explanationTr": "'gaan' yönelme/hareket fiili olduğunda 'zijn' ile çekimlenir: Ik ben ... gegaan.",
     "explanationEn": "'gaan' uses 'zijn' in the perfectum: Ik ben naar het park gegaan.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -1723,12 +1723,12 @@ export const chapters16_18 = [
       "Wij hebben een glas cola gedronken.",
       "Wij zijn een glas cola gedronken.",
       "Wij hebben een glas cola gedrinkt.",
-      "Dat is een heel goed plan voor morgen."
+      "Hij gaat vanmiddag met de trein naar zijn werk."
     ],
     "correctAnswer": "Wij hebben een glas cola gedronken.",
     "explanationTr": "Nesne alan eylem 'hebben' ile kurulur, 'drinken' fiilinin 3. hali 'gedronken'dir.",
     "explanationEn": "Action taking an object uses 'hebben', and the past participle of 'drinken' is 'gedronken'.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -1743,12 +1743,12 @@ export const chapters16_18 = [
       "Jullie hebben een computer gekocht.",
       "Jullie zijn een computer gekocht.",
       "Jullie hebben een computer koopd.",
-      "Dat is een heel goed plan voor morgen."
+      "Hij gaat vanmiddag met de trein naar zijn werk."
     ],
     "correctAnswer": "Jullie hebben een computer gekocht.",
     "explanationTr": "'kopen' düzensiz fiildir, 3. hali 'gekocht'tur ve 'hebben' ile kullanılır.",
     "explanationEn": "'kopen' is irregular, its past participle is 'gekocht' with 'hebben'.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -1763,12 +1763,12 @@ export const chapters16_18 = [
       "Zij heeft een taart gemaakt.",
       "Zij is een taart gemaakt.",
       "Zij heeft een taart maakd.",
-      "Dat is een heel goed plan voor morgen."
+      "Hij gaat vanmiddag met de trein naar zijn werk."
     ],
     "correctAnswer": "Zij heeft een taart gemaakt.",
     "explanationTr": "'maken' düzenli bir fiildir ('k' harfi soft ketchup kuralı gereği 't' alır): gemaakt.",
     "explanationEn": "'maken' is regular, taking 't' based on soft ketchup: gemaakt.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -1783,12 +1783,12 @@ export const chapters16_18 = [
       "Wij hebben een pizza gegeten.",
       "Wij zijn een pizza gegeten.",
       "Wij hebben een pizza geëten.",
-      "groentesoep met stokbrood"
+      "Hij gaat vanmiddag met de trein naar zijn werk."
     ],
     "correctAnswer": "Wij hebben een pizza gegeten.",
     "explanationTr": "'eten' düzensiz bir fiildir, 3. hali 'gegeten'dir.",
     "explanationEn": "'eten' is irregular, its past participle is 'gegeten'.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -1803,12 +1803,12 @@ export const chapters16_18 = [
       "Wij hebben monopoly gespeeld.",
       "Wij zijn monopoly gespeeld.",
       "Wij hebben monopoly gespeelt.",
-      "Dat is een heel goed plan voor morgen."
+      "Hij gaat vanmiddag met de trein naar zijn werk."
     ],
     "correctAnswer": "Wij hebben monopoly gespeeld.",
     "explanationTr": "'spelen' kökü 'l' ile bittiği için '+d' alır: gespeeld.",
     "explanationEn": "Stem of 'spelen' ends in 'l', taking '+d': gespeeld.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -1823,12 +1823,12 @@ export const chapters16_18 = [
       "Ik heb mijn broertje naar school gebracht.",
       "Ik ben mijn broertje naar school gebracht.",
       "Ik heb mijn broertje naar school gebrengd.",
-      "Dat is een heel goed plan voor morgen."
+      "Hij gaat vanmiddag met de trein naar zijn werk."
     ],
     "correctAnswer": "Ik heb mijn broertje naar school gebracht.",
     "explanationTr": "'brengen' fiilinin 3. hali 'gebracht'tir ve 'hebben' ile kullanılır.",
     "explanationEn": "The past participle of 'brengen' is 'gebracht' used with 'hebben'.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -1843,12 +1843,12 @@ export const chapters16_18 = [
       "ik rende",
       "ik rente",
       "ik gerend",
-      "om vier uur"
+      "een interessante cursus"
     ],
     "correctAnswer": "ik rende",
     "explanationTr": "'rennen' kökü 'ren' (n harfi soft ketchup'ta yok) olduğu için imperfectumda '+de' alır: ik rende.",
     "explanationEn": "Stem 'ren' takes '+de' in the imperfectum: ik rende.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -1862,13 +1862,13 @@ export const chapters16_18 = [
     "options": [
       "wij gebruikten",
       "wij gebruikte",
-      "Dat is een heel goed plan voor morgen.",
-      "om vier uur"
+      "een interessante cursus",
+      "de kamer"
     ],
     "correctAnswer": "wij gebruikten",
     "explanationTr": "'gebruiken' kökü 'gebruik' ('k' harfi soft ketchup içinde) ve çoğul olduğu için '+ten' alır: wij gebruikten.",
     "explanationEn": "Stem 'gebruiken' ends in 'k' (soft ketchup), taking '+ten' for plural: wij gebruikten.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -1883,12 +1883,12 @@ export const chapters16_18 = [
       "zij luisterde",
       "zij luisterte",
       "zij geluisterd",
-      "om vier uur"
+      "een interessante cursus"
     ],
     "correctAnswer": "zij luisterde",
     "explanationTr": "'luisteren' kökü 'luister' ('r' harfi soft ketchup dışındadır) tekil şahısta '+de' alır: zij luisterde.",
     "explanationEn": "Stem 'luister' takes '+de' for singular: zij luisterde.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -1908,7 +1908,7 @@ export const chapters16_18 = [
     "correctAnswer": "jullie kochten",
     "explanationTr": "'kopen' düzensiz bir fiildir; geçmiş zaman çoğul hali 'kochten'dir.",
     "explanationEn": "'kopen' is an irregular verb; its plural simple past is 'kochten'.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -1923,12 +1923,12 @@ export const chapters16_18 = [
       "hij maakte",
       "hij maakde",
       "hij gemaakt",
-      "om vier uur"
+      "een interessante cursus"
     ],
     "correctAnswer": "hij maakte",
     "explanationTr": "'maken' kökü 'maak' ('k' harfi soft ketchup) tekil şahısta '+te' alır: hij maakte.",
     "explanationEn": "Stem 'maken' ends in 'k' (soft ketchup), taking '+te' for singular: hij maakte.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -1943,12 +1943,12 @@ export const chapters16_18 = [
       "Ik bel mijn moeder op.",
       "Ik opbel mijn moeder.",
       "Ik bel op mijn moeder.",
-      "Dat is een heel goed plan voor morgen."
+      "een interessante cursus"
     ],
     "correctAnswer": "Ik bel mijn moeder op.",
     "explanationTr": "Ayrılabilen fiilin prefixi ('op') şimdiki zamanda cümlenin en sonuna gider.",
     "explanationEn": "In the present tense, the prefix ('op') of the separable verb goes to the end of the sentence.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -1963,12 +1963,12 @@ export const chapters16_18 = [
       "Ik belde mijn vriend op.",
       "Ik opbelde mijn vriend.",
       "Ik bel opde mijn vriend.",
-      "Dat is een heel goed plan voor morgen."
+      "een interessante cursus"
     ],
     "correctAnswer": "Ik belde mijn vriend op.",
     "explanationTr": "Hikaye geçmiş zamanda da ayrılabilen prefix ('op') en sondadır.",
     "explanationEn": "In the imperfectum, the separable prefix ('op') also remains at the end.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -1983,12 +1983,12 @@ export const chapters16_18 = [
       "ik heb mijn moeder opgebeld",
       "ik heb opgebeld mijn moeder",
       "ik ben mijn moeder opgebeld",
-      "Dat is een heel goed plan voor morgen."
+      "Hij gaat vanmiddag met de trein naar zijn werk."
     ],
     "correctAnswer": "ik heb mijn moeder opgebeld",
     "explanationTr": "Ayrılabilen fiillerin perfectum halinde '-ge-' eki prefix ile asıl fiilin arasına girer: opgebeld.",
     "explanationEn": "In the perfectum of separable verbs, '-ge-' is inserted between the prefix and the participle: opgebeld.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -2003,12 +2003,12 @@ export const chapters16_18 = [
       "ik kom aan.",
       "ik aankom.",
       "ik kom.",
-      "om vier uur"
+      "een interessante cursus"
     ],
     "correctAnswer": "ik kom aan.",
     "explanationTr": "'aankomen' ayrılabilir fiildir, şimdiki zamanda 'aan' sonundadır.",
     "explanationEn": "'aankomen' is separable, with 'aan' at the end in the present tense.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -2023,12 +2023,12 @@ export const chapters16_18 = [
       "ik kwam aan.",
       "ik aankwam.",
       "ik kwam.",
-      "om vier uur"
+      "een interessante cursus"
     ],
     "correctAnswer": "ik kwam aan.",
     "explanationTr": "Hikaye geçmiş zamanda 'komen' -> 'kwam', prefix 'aan' en sondadır.",
     "explanationEn": "In the imperfectum, 'komen' becomes 'kwam' with 'aan' at the end.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -2043,12 +2043,12 @@ export const chapters16_18 = [
       "Ik ben aangekomen.",
       "Ik heb aangekomen.",
       "Ik ben aangekom.",
-      "Dat is een heel goed plan voor morgen."
+      "een interessante cursus"
     ],
     "correctAnswer": "Ik ben aangekomen.",
     "explanationTr": "'aankomen' hareket fiili olduğu için 'zijn' ile çekimlenir ve perfectum hali 'aangekomen'dir.",
     "explanationEn": "'aankomen' uses 'zijn' and forms 'aangekomen' in the perfectum.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -2068,7 +2068,7 @@ export const chapters16_18 = [
     "correctAnswer": "ie",
     "explanationTr": "Özet tablosuna göre nl 'ie' fonetik olarak eng 'ee' sesine denk gelir.",
     "explanationEn": "According to the pronunciation table, Dutch 'ie' corresponds to English 'ee'.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -2088,7 +2088,7 @@ export const chapters16_18 = [
     "correctAnswer": "oe",
     "explanationTr": "Tabloya göre nl 'oe' fonetik olarak eng 'oo' sesine denk gelir.",
     "explanationEn": "Dutch 'oe' corresponds to English 'oo'.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -2103,12 +2103,12 @@ export const chapters16_18 = [
       "ou / au",
       "ui",
       "ei",
-      "om vier uur"
+      "een interessante cursus"
     ],
     "correctAnswer": "ou / au",
     "explanationTr": "Tabloya göre 'ou / au' sesleri eng '(n)ow' sesine karşılık gelir.",
     "explanationEn": "'ou / au' corresponds to English '(n)ow'.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -2128,7 +2128,7 @@ export const chapters16_18 = [
     "correctAnswer": "ui",
     "explanationTr": "Tabloya göre 'ui' sesinin oluşumu için 'aa + uu' tarifi verilmiştir.",
     "explanationEn": "'ui' corresponds to the sound combination 'aa + uu'.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -2148,7 +2148,7 @@ export const chapters16_18 = [
     "correctAnswer": "ee",
     "explanationTr": "Tabloya göre nl 'ee' fonetik olarak eng 'A' sesine denk gelir.",
     "explanationEn": "Dutch 'ee' corresponds to English 'A'.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -2168,7 +2168,7 @@ export const chapters16_18 = [
     "correctAnswer": "ei",
     "explanationTr": "Tabloya göre nl 'ei' fonetik olarak eng 'I' sesine denk gelir.",
     "explanationEn": "Dutch 'ei' corresponds to English 'I'.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -2183,12 +2183,12 @@ export const chapters16_18 = [
       "Ik ben pizza aan het eten.",
       "Ik heb pizza gegeten.",
       "Ik ga pizza eten.",
-      "Dat is een heel goed plan voor morgen."
+      "een interessante cursus"
     ],
     "correctAnswer": "Ik ben pizza aan het eten.",
     "explanationTr": "Notlardaki ilk örnek 'Ik ben pizza aan het eten' şeklindedir.",
     "explanationEn": "The first example in the notes is 'Ik ben pizza aan het eten'.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -2203,12 +2203,12 @@ export const chapters16_18 = [
       "Ik ben aan het reizen.",
       "Ik heb gereisd.",
       "Ik reis.",
-      "overstappen op het centraal station"
+      "Ik ga reizen."
     ],
     "correctAnswer": "Ik ben aan het reizen.",
     "explanationTr": "Notlardaki örneklerden biri de 'Ik ben aan het reizen'dir.",
     "explanationEn": "Another example from the notes is 'Ik ben aan het reizen'.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -2223,12 +2223,12 @@ export const chapters16_18 = [
       "Er is een sportschool. / Er zijn bananen.",
       "De sportschool is er.",
       "Bananen zijn er.",
-      "Dat is een heel goed plan voor morgen."
+      "Hij gaat vanmiddag met de trein naar zijn werk."
     ],
     "correctAnswer": "Er is een sportschool. / Er zijn bananen.",
     "explanationTr": "Notlarda 'Er is een sportschool' ve 'Er zijn bananen' örnekleri verilmiştir.",
     "explanationEn": "The notes give the examples 'Er is een sportschool' and 'Er zijn bananen'.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -2243,12 +2243,12 @@ export const chapters16_18 = [
       "Er zijn geen studenten.",
       "Er zijn niet studenten.",
       "Studenten zijn er niet.",
-      "Dank je wel, dat is erg vriendelijk van je."
+      "een interessante cursus"
     ],
     "correctAnswer": "Er zijn geen studenten.",
     "explanationTr": "Belirsiz çoğul nesne olumsuzlanırken 'geen' kullanılır: 'Er zijn geen studenten.'",
     "explanationEn": "Indefinite plural nouns are negated with 'geen': 'Er zijn geen studenten.'.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -2264,12 +2264,12 @@ export const chapters16_18 = [
       "Omdat de secundaire clause de eerste positie inneemt, waardoor het hoofdwerkwoord van de hoofdzin direct erna (als tweede element) moet komen.",
       "Omdat de grammatica dat verplicht stelt zonder reden.",
       "Omdat het werkwoord anders verdwijnt.",
-      "Dat is een heel goed plan voor morgen."
+      "Omdat hij al andere afspraken heeft."
     ],
     "correctAnswer": "Omdat de secundaire clause de eerste positie inneemt, waardoor het hoofdwerkwoord van de hoofdzin direct erna (als tweede element) moet komen.",
     "explanationTr": "Yan cümle ilk bloku işgal ettiğinden, ana cümlenin çekimli fiili 2. sırada kalmak için özneden önce gelir.",
     "explanationEn": "Since the secondary clause takes the first position, the main clause verb must immediately follow in second position (inversion).",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -2285,12 +2285,12 @@ export const chapters16_18 = [
       "aa + uu",
       "ee",
       "oo",
-      "om vier uur"
+      "een interessante cursus"
     ],
     "correctAnswer": "aa + uu",
     "explanationTr": "Özet görselinin en altındaki notlarda 'ui' sesi 'aa + uu' olarak açıklanmıştır.",
     "explanationEn": "The notes at the bottom of the summary map 'ui' to 'aa + uu'.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -2305,12 +2305,12 @@ export const chapters16_18 = [
       "Ik ben pizza aan het eten.",
       "Ik heb pizza gegeten.",
       "Ik ga pizza eten.",
-      "groentesoep met stokbrood"
+      "een interessante cursus"
     ],
     "correctAnswer": "Ik ben pizza aan het eten.",
     "explanationTr": "Özet sayfasının başındaki herhaling kısmında 'Ik ben pizza aan het eten' örneği verilmiştir.",
     "explanationEn": "The repetition section at the top of the summary gives the example 'Ik ben pizza aan het eten'.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -2325,12 +2325,12 @@ export const chapters16_18 = [
       "Ik ben aan het reizen.",
       "Ik heb gereisd.",
       "Ik reis.",
-      "overstappen op het centraal station"
+      "Ik ga reizen."
     ],
     "correctAnswer": "Ik ben aan het reizen.",
     "explanationTr": "Özet notlarındaki seyahat etme örneği 'Ik ben aan het reizen' şeklindedir.",
     "explanationEn": "The travel example in the summary notes is 'Ik ben aan het reizen'.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -2345,12 +2345,12 @@ export const chapters16_18 = [
       "Ik ben in de sportschool aan het hardlopen.",
       "Ik heb in de sportschool hardgelopen.",
       "Ik ga in de sportschool hardlopen.",
-      "Dat is een heel goed plan voor morgen."
+      "Hij gaat vanmiddag met de trein naar zijn werk."
     ],
     "correctAnswer": "Ik ben in de sportschool aan het hardlopen.",
     "explanationTr": "Spor salonunda koşu yapma örneği 'Ik ben in de sportschool aan het hardlopen' olarak belirtilmiştir.",
     "explanationEn": "Running at the gym is exemplified as 'Ik ben in de sportschool aan het hardlopen'.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -2365,12 +2365,12 @@ export const chapters16_18 = [
       "Er is een sportschool.",
       "Er zijn bananen.",
       "Er zijn geen studenten.",
-      "Dat is een heel goed plan voor morgen."
+      "een interessante cursus"
     ],
     "correctAnswer": "Er is een sportschool.",
     "explanationTr": "Tekil spor salonu varlığı için 'Er is een sportschool' örneği verilmiştir.",
     "explanationEn": "The existence of a singular gym is exemplified by 'Er is een sportschool'.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -2385,12 +2385,12 @@ export const chapters16_18 = [
       "Er zijn bananen.",
       "Er is bananen.",
       "Bananen zijn er.",
-      "Dat is een heel goed plan voor morgen."
+      "een interessante cursus"
     ],
     "correctAnswer": "Er zijn bananen.",
     "explanationTr": "Çoğul varlık için 'Er zijn bananen' örneği yer almaktadır.",
     "explanationEn": "Plural existence is exemplified by 'Er zijn bananen'.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -2406,12 +2406,12 @@ export const chapters16_18 = [
       "Er zijn geen studenten.",
       "Er zijn niet studenten.",
       "Studenten zijn er niet.",
-      "Dat is een heel goed plan voor morgen."
+      "een interessante cursus"
     ],
     "correctAnswer": "Er zijn geen studenten.",
     "explanationTr": "Belirsiz çoğul isimlerin olumsuzu 'Er zijn geen studenten' şeklinde verilmiştir.",
     "explanationEn": "The negative plural example is given as 'Er zijn geen studenten'.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -2427,12 +2427,12 @@ export const chapters16_18 = [
       "We plaatsen ALLE verba (verbs) van de bijzin aan het EINDE van de bijzin.",
       "De verba blijven vooraan staan.",
       "De verba worden weggelaten.",
-      "Het werkwoord staat altijd vooraan."
+      "Het werkwoord staat op de tweede positie."
     ],
     "correctAnswer": "We plaatsen ALLE verba (verbs) van de bijzin aan het EINDE van de bijzin.",
     "explanationTr": "Notlarda açıkça 'we place ALL VERBS of the secondary clause at the END of the SECONDARY CLAUSE' ifadesi yer alır.",
     "explanationEn": "The notes explicitly state that we place ALL VERBS of the secondary clause at the END of the SECONDARY CLAUSE.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -2448,12 +2448,12 @@ export const chapters16_18 = [
       "show / session",
       "ticket",
       "poster",
-      "om vier uur"
+      "een interessante cursus"
     ],
     "correctAnswer": "show / session",
     "explanationTr": "'de voorstelling' film seansı veya gösterim (show/session) demektir[cite: 1].",
     "explanationEn": "'de voorstelling' translates to 'show' or 'session' in a cinema[cite: 1].",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -2469,12 +2469,12 @@ export const chapters16_18 = [
       "nature documentary",
       "action movie",
       "romantic comedy",
-      "om vier uur"
+      "een interessante cursus"
     ],
     "correctAnswer": "nature documentary",
     "explanationTr": "'natuurdocumentaire' doğa belgeseli (nature documentary) anlamına gelir[cite: 1].",
     "explanationEn": "'natuurdocumentaire' translates to 'nature documentary'[cite: 1].",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -2490,12 +2490,12 @@ export const chapters16_18 = [
       "Het verbindt twee hoofdzinnen en voegt informatie toe (and).",
       "Het geeft een tegenstelling (but).",
       "Het geeft een reden (because).",
-      "Het werkwoord staat altijd vooraan."
+      "Het werkwoord staat op de tweede positie."
     ],
     "correctAnswer": "Het verbindt twee hoofdzinnen en voegt informatie toe (and).",
     "explanationTr": "'en' (ve) bağlacı iki ana cümleyi birbirine bağlar ve bilgi ekler[cite: 1].",
     "explanationEn": "The conjunction 'en' (and) connects two main clauses and adds information[cite: 1].",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -2511,12 +2511,12 @@ export const chapters16_18 = [
       "Het geeft een keuze aan tussen twee opties (or).",
       "Het geeft een reden (because).",
       "Het geeft een conclusie (so).",
-      "Dat is een heel goed plan voor morgen."
+      "Hij gaat vanmiddag met de trein naar zijn werk."
     ],
     "correctAnswer": "Het geeft een keuze aan tussen twee opties (or).",
     "explanationTr": "'of' (veya/ya da) bağlacı iki seçenek arasında seçim yapmayı ifade eder[cite: 1].",
     "explanationEn": "The conjunction 'of' (or) indicates a choice between two options[cite: 1].",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -2532,12 +2532,12 @@ export const chapters16_18 = [
       "Het geeft een tegenstelling aan (but).",
       "Het geeft een reden (because).",
       "Het voegt informatie toe (and).",
-      "Dat is een heel goed plan voor morgen."
+      "Hij gaat vanmiddag met de trein naar zijn werk."
     ],
     "correctAnswer": "Het geeft een tegenstelling aan (but).",
     "explanationTr": "'maar' (ama/fakat) bağlacı bir zıtlık veya karşıtlık (but) belirtir[cite: 1].",
     "explanationEn": "The conjunction 'maar' (but) indicates a contrast or opposition[cite: 1].",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -2553,12 +2553,12 @@ export const chapters16_18 = [
       "Het geeft de reden aan (because / for).",
       "Het geeft een conclusie (so).",
       "Het geeft een tegenstelling (but).",
-      "Dat is een heel goed plan voor morgen."
+      "Hij gaat vanmiddag met de trein naar zijn werk."
     ],
     "correctAnswer": "Het geeft de reden aan (because / for).",
     "explanationTr": "'want' (çünkü / zira) bağlacı bir eylemin nedenini (reason) açıklar[cite: 1].",
     "explanationEn": "The conjunction 'want' (because/for) provides the reason for an action[cite: 1].",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -2574,12 +2574,12 @@ export const chapters16_18 = [
       "Het geeft een conclusie of gevolg aan (so / therefore).",
       "Het geeft een reden (because).",
       "Het geeft een keuze (or).",
-      "Dat is een heel goed plan voor morgen."
+      "Hij gaat vanmiddag met de trein naar zijn werk."
     ],
     "correctAnswer": "Het geeft een conclusie of gevolg aan (so / therefore).",
     "explanationTr": "'dus' (bu yüzden / yani / dolayısıyla) bağlacı bir sonuç veya etki (so/therefore) belirtir[cite: 1].",
     "explanationEn": "The conjunction 'dus' (so/therefore) indicates a conclusion or consequence[cite: 1].",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -2595,12 +2595,12 @@ export const chapters16_18 = [
       "Conjunctie + subject + persoonsvorm (verb) + rest.",
       "Conjunctie + persoonsvorm (verb) + subject + rest.",
       "Conjunctie + rest + verb + subject.",
-      "Het werkwoord staat altijd vooraan."
+      "Het werkwoord staat op de tweede positie."
     ],
     "correctAnswer": "Conjunctie + subject + persoonsvorm (verb) + rest.",
     "explanationTr": "Bu beş bağlaçtan (en, of, maar, want, dus) sonra gelen ana cümlede normal kelime dizilimi (Özne + Fiil) korunur; devrik yapı (inversie) yapılmaz[cite: 1].",
     "explanationEn": "After these five conjunctions (en, of, maar, want, dus), the normal main clause word order (Subject + Verb) is maintained; there is no inversion[cite: 1].",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -2616,13 +2616,13 @@ export const chapters16_18 = [
       "Omdat de film al begonnen is en ze het begin heeft gemist.",
       "Omdat de film te duur is.",
       "Omdat ze de film al gezien heeft.",
-      "Dat is een heel goed plan voor morgen."
+      "Omdat hij al andere afspraken heeft."
     ],
     "correctAnswer": "Omdat de film al begonnen is en ze het begin heeft gemist.",
     "explanationTr": "Amira film çoktan başladığı ve başını kaçırmak istemediği için bileti almaktan vazgeçer[cite: 1].",
     "explanationEn": "Amira decides not to buy the ticket because the film has already started and she missed the beginning[cite: 1].",
-    "difficulty": 3,
-    "quality": 2
+    "difficulty": 4,
+    "quality": 3
   },
   {
     "id": "sum_ch16_1034",
@@ -2637,13 +2637,13 @@ export const chapters16_18 = [
       "Zomerhitte",
       "Alles is liefde",
       "De Nieuwe Wildernis",
-      "om vier uur"
+      "de kamer"
     ],
     "correctAnswer": "Zomerhitte",
     "explanationTr": "Diyalogun sonunda Amira 'Zomerhitte' filmi için birinci sınıf bir bilet alır[cite: 1].",
     "explanationEn": "At the end of the dialogue, Amira buys a first-class ticket for 'Zomerhitte'[cite: 1].",
-    "difficulty": 3,
-    "quality": 2
+    "difficulty": 4,
+    "quality": 3
   },
   {
     "id": "sum_ch16_1035",
@@ -2658,13 +2658,13 @@ export const chapters16_18 = [
       "Een natuurdocumentaire",
       "Een komedie",
       "Een actiefilm",
-      "om vier uur"
+      "de kamer"
     ],
     "correctAnswer": "Een natuurdocumentaire",
     "explanationTr": "Gişe görevlisi 'De Nieuwe Wildernis'in bir doğa belgeseli (natuurdocumentaire) olduğunu söyler[cite: 1].",
     "explanationEn": "The cashier mentions that 'De Nieuwe Wildernis' is a nature documentary[cite: 1].",
-    "difficulty": 3,
-    "quality": 2
+    "difficulty": 4,
+    "quality": 3
   },
   {
     "id": "sum_ch16_1036",
@@ -2679,12 +2679,12 @@ export const chapters16_18 = [
       "Het laat ouders en opvoeders zien tot welke leeftijd een programma of film schadelijk kan zijn voor kinderen.",
       "Het geeft een beoordeling over de kwaliteit van een film.",
       "Het laat zien hoeveel een film kost.",
-      "Dat is een heel goed plan voor morgen."
+      "Hij gaat vanmiddag met de trein naar zijn werk."
     ],
     "correctAnswer": "Het laat ouders en opvoeders zien tot welke leeftijd een programma of film schadelijk kan zijn voor kinderen.",
     "explanationTr": "Kijkwijzer, ebeveynlere bir filmin veya programın hangi yaşa kadar çocuklar için zararlı olabileceğini gösteren bir yaş sınıflandırma sistemidir.",
     "explanationEn": "Kijkwijzer is an age rating system showing parents up to what age a program or film might be harmful to children.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -2700,12 +2700,12 @@ export const chapters16_18 = [
       "Nee, de Kijkwijzer informeert niet over kwaliteit.",
       "Ja, het geeft films sterren (1 tot 5 sterren).",
       "Ja, het laat zien of een film een prijs heeft gewonnen.",
-      "Dat is een heel goed plan voor morgen."
+      "Nee, helaas heb ik vandaag geen tijd."
     ],
     "correctAnswer": "Nee, de Kijkwijzer informeert niet over kwaliteit.",
     "explanationTr": "Kijkwijzer sadece içeriğin zararlı olup olmadığını belirtir, filmin kalitesi hakkında (iyi/kötü) bilgi vermez.",
     "explanationEn": "Kijkwijzer only informs about potential harm, not about the quality of the film.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -2721,12 +2721,12 @@ export const chapters16_18 = [
       "Geweld, angst, seks, discriminatie, drugs- en/of alcoholmisbruik en grof taalgebruik.",
       "De lengte van de film en de locatie van de bioscoop.",
       "De naam van de regisseur.",
-      "Dat is een heel goed plan voor morgen."
+      "Hij gaat vanmiddag met de trein naar zijn werk."
     ],
     "correctAnswer": "Geweld, angst, seks, discriminatie, drugs- en/of alcoholmisbruik en grof taalgebruik.",
     "explanationTr": "Kijkwijzer yaş sınırının yanı sıra şiddet, korku, cinsellik, ayrımcılık, uyuşturucu/alkol ve argo gibi içerikler için de uyarı sembolleri kullanır.",
     "explanationEn": "Besides age, Kijkwijzer uses icons to warn about violence, fear, sex, discrimination, drug/alcohol abuse, and coarse language.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -2742,12 +2742,12 @@ export const chapters16_18 = [
       "Ouders zijn zelf verantwoordelijk.",
       "De bioscoopmedewerkers.",
       "De overheid.",
-      "Dat is een heel goed plan voor morgen."
+      "de kamer"
     ],
     "correctAnswer": "Ouders zijn zelf verantwoordelijk.",
     "explanationTr": "Kijkwijzer rehber niteliğindedir; çocukların ne izleyeceğinden nihai olarak ebeveynler sorumludur.",
     "explanationEn": "Kijkwijzer is a guide; parents themselves are ultimately responsible for what their children watch.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -2764,12 +2764,12 @@ export const chapters16_18 = [
       "Als '-ug' (de 'i' klinkt als een schwa/stomme e).",
       "Als een duidelijke 'i' en 'g'.",
       "Je spreekt de 'g' niet uit.",
-      "Dat is een heel goed plan voor morgen."
+      "Hij gaat vanmiddag met de trein naar zijn werk."
     ],
     "correctAnswer": "Als '-ug' (de 'i' klinkt als een schwa/stomme e).",
     "explanationTr": "Felemenkçede kelime sonundaki '-ig' eki genellikle '-ug' (kısa, vurgusuz e sesiyle) olarak telaffuz edilir.",
     "explanationEn": "In Dutch, the suffix '-ig' is typically pronounced as '-ug' (with a schwa sound).",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -2786,12 +2786,12 @@ export const chapters16_18 = [
       "Als '-luk' (de 'ij' klinkt als een schwa/stomme e).",
       "Als een duidelijke 'ij' en 'k'.",
       "Als '-liek'.",
-      "Dat is een heel goed plan voor morgen."
+      "Hij gaat vanmiddag met de trein naar zijn werk."
     ],
     "correctAnswer": "Als '-luk' (de 'ij' klinkt als een schwa/stomme e).",
     "explanationTr": "Kelime sonundaki '-lijk' eki genellikle '-luk' olarak (vurgusuz e sesiyle) telaffuz edilir.",
     "explanationEn": "The suffix '-lijk' is usually pronounced as '-luk' (with a schwa sound).",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -2812,7 +2812,7 @@ export const chapters16_18 = [
     "correctAnswer": "meatballs",
     "explanationTr": "'de gehaktballetjes' köfteler (meatballs) anlamına gelir[cite: 2].",
     "explanationEn": "'de gehaktballetjes' means 'meatballs'[cite: 2].",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -2827,12 +2827,12 @@ export const chapters16_18 = [
       "Filosofie",
       "Informatietechnologie",
       "Geschiedenis",
-      "om vier uur"
+      "een interessante cursus"
     ],
     "correctAnswer": "Filosofie",
     "explanationTr": "Metne göre Tina felsefe (filosofie) okumaktadır[cite: 1].",
     "explanationEn": "According to the text, Tina studies philosophy (filosofie)[cite: 1].",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -2847,12 +2847,12 @@ export const chapters16_18 = [
       "Computerprogrammeur",
       "Docent filosofie",
       "Caissière",
-      "om vier uur"
+      "een interessante cursus"
     ],
     "correctAnswer": "Computerprogrammeur",
     "explanationTr": "Sam bilişim teknolojileri (informatietechnologie) okumakta ve bilgisayar programcısı (computerprogrammeur) olarak çalışmaktadır[cite: 1].",
     "explanationEn": "Sam studies IT and works as a computer programmer (computerprogrammeur)[cite: 1].",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -2866,13 +2866,13 @@ export const chapters16_18 = [
     "options": [
       "Er was een ongeluk gebeurd.",
       "De buschauffeur was ziek.",
-      "Het sneeuwde.",
-      "overstappen op het centraal station"
+      "Het sneeuwde heel hard.",
+      "De bus had pech onderweg."
     ],
     "correctAnswer": "Er was een ongeluk gebeurd.",
     "explanationTr": "Metinde otobüsün gelmeme sebebi olarak bir kaza (ongeluk) olduğu belirtilmiştir[cite: 1].",
     "explanationEn": "The text states the bus didn't arrive because an accident (ongeluk) had happened[cite: 1].",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -2887,12 +2887,12 @@ export const chapters16_18 = [
       "Er was een storing in het systeem en hij was veel gegevens kwijt.",
       "Hij had ruzie met zijn baas.",
       "Hij was te laat op kantoor.",
-      "Dat is een heel goed plan voor morgen."
+      "Hij gaat vanmiddag met de trein naar zijn werk."
     ],
     "correctAnswer": "Er was een storing in het systeem en hij was veel gegevens kwijt.",
     "explanationTr": "Sam işte sistem arızası (storing) yaşamış ve çok fazla veri kaybetmiştir (gegevens kwijt)[cite: 1, 2].",
     "explanationEn": "Sam had a system fault (storing) at work and lost a lot of data (gegevens kwijt)[cite: 1, 2].",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -2907,12 +2907,12 @@ export const chapters16_18 = [
       "In de bioscoop.",
       "In een restaurant.",
       "In de bibliotheek.",
-      "Dat is een heel goed plan voor morgen."
+      "in het centrum"
     ],
     "correctAnswer": "In de bioscoop.",
     "explanationTr": "Tina akşamları sinemada gişe görevlisi (caissière) olarak çalışmaktadır[cite: 1].",
     "explanationEn": "Tina works as a cashier at the cinema in the evenings[cite: 1].",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -2928,12 +2928,12 @@ export const chapters16_18 = [
       "Als 'dummy subject' bij een onbepaald onderwerp (indefinite subject).",
       "Om een specifieke plaats aan te wijzen.",
       "Als vervanging voor een persoon.",
-      "Het werkwoord staat altijd vooraan."
+      "Om een duidelijke reden te geven."
     ],
     "correctAnswer": "Als 'dummy subject' bij een onbepaald onderwerp (indefinite subject).",
     "explanationTr": "Belirsiz bir özneyle (een ongeluk) cümle kurarken cümlenin başında sahte özne (dummy subject) olarak 'er' kullanılır.",
     "explanationEn": "When a sentence has an indefinite subject (een ongeluk), 'er' is used as a dummy subject at the beginning of the sentence.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -2949,12 +2949,12 @@ export const chapters16_18 = [
       "Het verwijst naar een ongespecificeerde plaats (there).",
       "Het is het onderwerp van de zin.",
       "Het betekent 'gisteren'.",
-      "Dat is een heel goed plan voor morgen."
+      "Het werkwoord staat op de tweede positie."
     ],
     "correctAnswer": "Het verwijst naar een ongespecificeerde plaats (there).",
     "explanationTr": "Bu cümlede 'er', 'orada' (there) anlamında, daha önce bahsedilmiş ancak vurgulanmayan bir yeri ifade etmek için kullanılmıştır.",
     "explanationEn": "In this sentence, 'er' means 'there', referring to an unstressed place previously mentioned.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -2970,12 +2970,12 @@ export const chapters16_18 = [
       "Een actie die op dit moment aan de gang is (continuous tense / ongoing action).",
       "Een actie in het verleden die is afgesloten.",
       "Een plan voor de toekomst.",
-      "Dat is een heel goed plan voor morgen."
+      "Hij gaat vanmiddag met de trein naar zijn werk."
     ],
     "correctAnswer": "Een actie die op dit moment aan de gang is (continuous tense / ongoing action).",
     "explanationTr": "'zijn + aan het + infinitief' yapısı şu anda devam eden eylemleri (Şimdiki Zamanın Hikayesi/Sürekli) ifade eder.",
     "explanationEn": "The 'zijn + aan het + infinitief' construction is used for ongoing actions (continuous tense).",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -2990,8 +2990,8 @@ export const chapters16_18 = [
     "correctAnswer": "aan het doen",
     "explanationTr": "Devamlılık bildirmek için 'aan het' ve ardından asıl fiil olan 'doen' mastar halinde gelir.",
     "explanationEn": "To express the continuous aspect, 'aan het' is followed by the infinitive 'doen'.",
-    "difficulty": 4,
-    "quality": 2,
+    "difficulty": 5,
+    "quality": 3,
     "options": [
       "aan het doen",
       "aan het do",
@@ -3011,8 +3011,8 @@ export const chapters16_18 = [
     "correctAnswer": "aan het telefoneren",
     "explanationTr": "'aan het' yapısı cümlenin sonunda mastar fiille (telefoneren) birleşir.",
     "explanationEn": "The 'aan het' structure is completed with the infinitive 'telefoneren' at the end of the sentence.",
-    "difficulty": 4,
-    "quality": 2,
+    "difficulty": 5,
+    "quality": 3,
     "options": [
       "aan het telefoneren",
       "telefoneren",
@@ -3032,12 +3032,12 @@ export const chapters16_18 = [
       "Mensen spreken vaak bij elkaar thuis af ('samen thuis').",
       "Mensen spreken nooit thuis af, altijd in een restaurant.",
       "Mensen nodigen alleen familie uit thuis.",
-      "Dat is een heel goed plan voor morgen."
+      "Hij gaat vanmiddag met de trein naar zijn werk."
     ],
     "correctAnswer": "Mensen spreken vaak bij elkaar thuis af ('samen thuis').",
     "explanationTr": "Kültür bölümüne göre Hollandalılar genellikle arkadaşlarıyla evde ('thuis') buluşmayı ve birbirlerini eve davet etmeyi severler.",
     "explanationEn": "According to the culture section, it is very common for Dutch people to meet up and invite friends over to their homes ('thuis').",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -3053,13 +3053,13 @@ export const chapters16_18 = [
       "Zijn portemonnee is gestolen en hij wil aangifte doen.",
       "Zijn fiets is gestolen.",
       "Hij is zijn rijbewijs kwijtgeraakt.",
-      "Dat is een heel goed plan voor morgen."
+      "Hij gaat vanmiddag met de trein naar zijn werk."
     ],
     "correctAnswer": "Zijn portemonnee is gestolen en hij wil aangifte doen.",
     "explanationTr": "Diyalogda Sam'in cüzdanı çalındığı için karakola gidip şikayette bulunduğu (aangifte doen) belirtilir[cite: 1].",
     "explanationEn": "In the dialogue, Sam goes to the police station to report his stolen wallet[cite: 1].",
-    "difficulty": 4,
-    "quality": 2
+    "difficulty": 5,
+    "quality": 3
   },
   {
     "id": "sum_ch18_1046",
@@ -3074,13 +3074,13 @@ export const chapters16_18 = [
       "Op de tafel op het terras.",
       "In zijn jaszak.",
       "In zijn auto.",
-      "Dat is een heel goed plan voor morgen."
+      "in het centrum"
     ],
     "correctAnswer": "Op de tafel op het terras.",
     "explanationTr": "Sam cüzdanını terastaki masanın üzerine (op tafel op het terras) koyduğunu söyler[cite: 1].",
     "explanationEn": "Sam states that he placed his wallet on the table on the terrace[cite: 1].",
-    "difficulty": 4,
-    "quality": 2
+    "difficulty": 5,
+    "quality": 3
   },
   {
     "id": "sum_ch18_1047",
@@ -3095,13 +3095,13 @@ export const chapters16_18 = [
       "Rood en hij was van leer.",
       "Zwart en van plastic.",
       "Bruin en van stof.",
-      "Dat is een heel goed plan voor morgen."
+      "een interessante cursus"
     ],
     "correctAnswer": "Rood en hij was van leer.",
     "explanationTr": "Sam cüzdanının kırmızı renkte (rood) ve deriden (van leer) olduğunu belirtir[cite: 1].",
     "explanationEn": "Sam describes his wallet as red (rood) and made of leather (van leer)[cite: 1].",
-    "difficulty": 4,
-    "quality": 2
+    "difficulty": 5,
+    "quality": 3
   },
   {
     "id": "sum_ch18_1048",
@@ -3116,13 +3116,13 @@ export const chapters16_18 = [
       "Een bankpas en een identiteitskaart.",
       "Zijn sleutels en een paspoort.",
       "Een telefoon en een creditcard.",
-      "Dat is een heel goed plan voor morgen."
+      "Hij gaat vanmiddag met de trein naar zijn werk."
     ],
     "correctAnswer": "Een bankpas en een identiteitskaart.",
     "explanationTr": "Cüzdanda 10 euronun yanı sıra banka kartı (bankpas) ve kimlik kartı (identiteitskaart) vardı[cite: 1].",
     "explanationEn": "Besides 10 euros, the wallet contained a bank card and an ID card[cite: 1].",
-    "difficulty": 4,
-    "quality": 2
+    "difficulty": 5,
+    "quality": 3
   },
   {
     "id": "sum_ch18_1049",
@@ -3137,13 +3137,13 @@ export const chapters16_18 = [
       "Ja, dat heeft hij onmiddellijk gedaan.",
       "Nee, hij was het vergeten.",
       "Nee, dat gaat de politie voor hem doen.",
-      "Dat is een heel goed plan voor morgen."
+      "Nee, helaas heb ik vandaag geen tijd."
     ],
     "correctAnswer": "Ja, dat heeft hij onmiddellijk gedaan.",
     "explanationTr": "Sam banka kartını derhal (onmiddellijk) bloke ettirdiğini söyler[cite: 1].",
     "explanationEn": "Sam says he blocked his bank card immediately (onmiddellijk)[cite: 1].",
-    "difficulty": 4,
-    "quality": 2
+    "difficulty": 5,
+    "quality": 3
   },
   {
     "id": "sum_ch18_1050",
@@ -3158,12 +3158,12 @@ export const chapters16_18 = [
       "Alle werkwoorden staan aan het eind van de bijzin.",
       "Het werkwoord staat direct na het onderwerp.",
       "De persoonsvorm staat vooraan.",
-      "Dat is een heel goed plan voor morgen."
+      "Het werkwoord staat op de tweede positie."
     ],
     "correctAnswer": "Alle werkwoorden staan aan het eind van de bijzin.",
     "explanationTr": "Yan cümle bağlaçlarından (bijv. omdat, zodat, hoewel) sonra fiiller cümlenin sonuna gider[cite: 2].",
     "explanationEn": "In a subclause following conjunctions like 'omdat' or 'zodat', all verbs go to the end[cite: 2].",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -3179,12 +3179,12 @@ export const chapters16_18 = [
       "De hoofdzin krijgt inversie (werkwoord + subject).",
       "De hoofdzin behoudt de normale volgorde (subject + werkwoord).",
       "De hoofdzin verliest zijn werkwoord.",
-      "Het werkwoord staat altijd vooraan."
+      "Het werkwoord staat op de tweede positie."
     ],
     "correctAnswer": "De hoofdzin krijgt inversie (werkwoord + subject).",
     "explanationTr": "Cümleye yan cümle ile başlandığında (bijzin + hoofdzin) ana cümlede devrik yapı (inversie) oluşur[cite: 2].",
     "explanationEn": "When a sentence starts with a subclause, the main clause gets inversion (verb + subject)[cite: 2].",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -3200,12 +3200,12 @@ export const chapters16_18 = [
       "Via internet, telefonisch, op het bureau of via een aangiftezuil.",
       "Alleen op het politiebureau.",
       "Alleen via internet.",
-      "Dat is een heel goed plan voor morgen."
+      "Hij gaat vanmiddag met de trein naar zijn werk."
     ],
     "correctAnswer": "Via internet, telefonisch, op het bureau of via een aangiftezuil.",
     "explanationTr": "Metne göre şikayetler internetten, telefondan, karakoldan veya dijital ihbar noktalarından (aangiftezuil) yapılabilir.",
     "explanationEn": "According to the text, reports can be filed via the internet, phone, police station, or an 'aangiftezuil'.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -3221,12 +3221,12 @@ export const chapters16_18 = [
       "Om de sporen veilig te stellen.",
       "Omdat ze koffie willen drinken.",
       "Omdat ze een boete willen geven.",
-      "Dat is een heel goed plan voor morgen."
+      "Omdat hij al andere afspraken heeft."
     ],
     "correctAnswer": "Om de sporen veilig te stellen.",
     "explanationTr": "Hırsızlık durumunda polis, delilleri (sporen) güvenceye almak için önceden aramanızı ve etrafı toplamamanızı tavsiye eder.",
     "explanationEn": "In case of a burglary, the police advise calling beforehand and not cleaning up to secure evidence (sporen).",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -3242,12 +3242,12 @@ export const chapters16_18 = [
       "Nee, de meeste zijn tijdens kantooruren (9:00 - 17:00) geopend.",
       "Ja, allemaal.",
       "Nee, ze zijn alleen in het weekend geopend.",
-      "Dat is een heel goed plan voor morgen."
+      "Nee, helaas heb ik vandaag geen tijd."
     ],
     "correctAnswer": "Nee, de meeste zijn tijdens kantooruren (9:00 - 17:00) geopend.",
     "explanationTr": "Hollanda'daki çoğu karakol sadece mesai saatleri (9:00 - 17:00) içinde açıktır.",
     "explanationEn": "Most police stations in the Netherlands are only open during office hours (9:00 - 17:00).",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -3263,12 +3263,12 @@ export const chapters16_18 = [
       "Wat kan ik het beste doen? / Wat moet ik doen?",
       "Hebt u de dader gezien?",
       "Weet u zeker dat uw portemonnee op tafel lag?",
-      "Hoeveel kost dit?"
+      "Kunt u dat nog een keer herhalen, alstublieft?"
     ],
     "correctAnswer": "Wat kan ik het beste doen? / Wat moet ik doen?",
     "explanationTr": "Tavsiye istemek için 'Wat kan ik het beste doen?' (En iyi ne yapabilirim?) veya 'Wat moet ik doen?' (Ne yapmalıyım?) kalıpları kullanılır.",
     "explanationEn": "To ask for advice, use phrases like 'Wat kan ik het beste doen?' or 'Wat moet ik doen?'.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -3284,12 +3284,12 @@ export const chapters16_18 = [
       "Je fiets is gestolen.",
       "Je hebt je portemonnee ergens laten liggen.",
       "Je hond is onder een auto gekomen.",
-      "Dat is een heel goed plan voor morgen."
+      "Hij gaat vanmiddag met de trein naar zijn werk."
     ],
     "correctAnswer": "Je fiets is gestolen.",
     "explanationTr": "Bisikletiniz çalındığında polise şikayette (aangifte) bulunursunuz. Ancak cüzdanınızı bir yerde unutursanız veya köpeğiniz araba altında kalırsa bu polisin müdahale edeceği bir suç değildir.",
     "explanationEn": "You file a police report if your bike is stolen. Losing your wallet or your dog being hit by a car are not criminal matters for a report.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -3310,7 +3310,7 @@ export const chapters16_18 = [
     "correctAnswer": "Dit zijn mijn ouders. / Dat zijn mijn zussen.",
     "explanationTr": "İnsanları tanıtırken çoğul dahi olsa daima 'Dit zijn...' veya 'Dat zijn...' kullanılır; asla 'Deze zijn' denmez!",
     "explanationEn": "When presenting people, Dutch strictly uses 'Dit zijn...' or 'Dat zijn...', even before plural nouns (never 'Deze zijn').",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -3325,8 +3325,8 @@ export const chapters16_18 = [
     "correctAnswer": "Dat",
     "explanationTr": "Tanıtma kalıbında uzaktaki çoğul şahıslar için 'Dat zijn...' kalıbı kullanılır.",
     "explanationEn": "In introductory presentation sentences, 'Dat zijn...' is used for pointing out people at a distance.",
-    "difficulty": 2,
-    "quality": 2,
+    "difficulty": 4,
+    "quality": 3,
     "options": [
       "Dat",
       "Deze",
@@ -3352,7 +3352,7 @@ export const chapters16_18 = [
     "correctAnswer": "Die is van mijn vader. (want 'bril' is een de-woord)",
     "explanationTr": "Hollandacada gözlük tekildir: 'de bril' (de-kelimesi). Bu yüzden ona işaret ederken 'Die' kullanılır: 'Die is van mijn vader.'",
     "explanationEn": "'Bril' (glasses) is singular and a 'de'-word ('de bril'). To refer back to it, use 'Die': 'Die is van mijn vader.'",
-    "difficulty": 2,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -3394,7 +3394,7 @@ export const chapters16_18 = [
     "correctAnswer": "Ik ga slapen, want ik ben heel moe.",
     "explanationTr": "'Want' sebep bildirir ve kelime sırasını DEĞİŞTİRMEZ: Önce özne 'ik', sonra fiil 'ben' gelir ('want ik ben heel moe').",
     "explanationEn": "'Want' expresses a reason and keeps standard subject-verb order: 'want ik ben heel moe'.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -3415,7 +3415,7 @@ export const chapters16_18 = [
     "correctAnswer": "Het object staat altijd VÓÓR het voltooid deelwoord (bijv. Ik heb de film gezien).",
     "explanationTr": "Geçmiş zamanda (perfectum) nesne her zaman geçmiş zaman ortacından (voltooid deelwoord) ÖNCE gelir: 'Ik heb de film gezien' (Asla: 'Ik heb gezien de film' denmez!).",
     "explanationEn": "In the perfect tense, the direct object MUST be placed BEFORE the past participle: 'Ik heb de film gezien' (never after!).",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -3436,7 +3436,7 @@ export const chapters16_18 = [
     "correctAnswer": "Tussen de twee gescheiden delen van het werkwoord in (Ik neem een vriend mee).",
     "explanationTr": "Ayrılabilen fiillerde nesne, çekimli fiil kökü ile cümlenin sonundaki ön ek arasına girer: 'Ik neem [een vriend] mee.'",
     "explanationEn": "With separable verbs in the present tense, the direct object is placed between the finite stem and the separable prefix: 'Ik neem een vriend mee.'",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -3457,7 +3457,7 @@ export const chapters16_18 = [
     "correctAnswer": "TUSSEN de vervoeging van 'zijn' en 'aan het' (bijv. Ik ben een pizza aan het eten).",
     "explanationTr": "Şimdiki zaman yapısında (continuous aspect) nesne veya yer, 'zijn' ile 'aan het + mastar'ın TAM ARASINA girer: 'Ik ben [een pizza] aan het eten.'",
     "explanationEn": "In the continuous 'zijn ... aan het + inf' structure, the direct object or place MUST be placed between 'zijn' and 'aan het': 'Ik ben [een pizza] aan het eten.'",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -3472,8 +3472,8 @@ export const chapters16_18 = [
     "correctAnswer": "aan het maken",
     "explanationTr": "'Zijn' fiilinin ardından eylemin şu an yapıldığını belirtmek için 'aan het + mastar' gelir: 'aan het maken'.",
     "explanationEn": "To indicate ongoing present continuous action, use 'aan het + infinitive': 'aan het maken'.",
-    "difficulty": 4,
-    "quality": 2,
+    "difficulty": 5,
+    "quality": 3,
     "options": [
       "aan het maken",
       "maken",
@@ -3492,8 +3492,8 @@ export const chapters16_18 = [
     "correctAnswer": "aan het dansen",
     "explanationTr": "'Dansen' eyleminin devam etmekte olduğunu anlatmak için 'aan het dansen' yapısı kullanılır.",
     "explanationEn": "The continuous construction for dancing right now is 'aan het dansen'.",
-    "difficulty": 4,
-    "quality": 2,
+    "difficulty": 5,
+    "quality": 3,
     "options": [
       "aan het dansen",
       "dansen",
@@ -3518,8 +3518,8 @@ export const chapters16_18 = [
     "correctAnswer": "dus (conclusie/gevolg)",
     "explanationTr": "Baş ağrısı bir sebep, ofise gelememek ise bunun sonucudur (gevolg). Sonuç bağlacı 'dus'tur (bu yüzden/dolayısıyla).",
     "explanationEn": "Having a headache leads to the consequence/result of staying home; therefore the result conjunction 'dus' (so) is correct.",
-    "difficulty": 4,
-    "quality": 2
+    "difficulty": 5,
+    "quality": 3
   },
   {
     "id": "q_onclass_17_8",
@@ -3533,8 +3533,8 @@ export const chapters16_18 = [
     "correctAnswer": "werkten",
     "explanationTr": "'Werken' düzenli bir fiildir ve stam (werk) 'k' ile biter. Çoğul (wij) imperfectum eki '-ten'dir: 'werkten'.",
     "explanationEn": "The stem of 'werken' ends in 'k' (soft ketchup), so the plural imperfectum ending for 'wij' is '-ten': 'werkten'.",
-    "difficulty": 4,
-    "quality": 2,
+    "difficulty": 5,
+    "quality": 3,
     "options": [
       "werkten",
       "werkt",
@@ -3554,8 +3554,8 @@ export const chapters16_18 = [
     "correctAnswer": "heb",
     "explanationTr": "'Want' kelime sırasını bozmaz (want ik heb honger), ancak 'omdat' fiili sona fırlatır: 'omdat ik honger heb'.",
     "explanationEn": "'Want' preserves main clause word order ('want ik heb honger'), but 'omdat' pushes the verb to the end: 'omdat ik honger heb'.",
-    "difficulty": 4,
-    "quality": 2,
+    "difficulty": 5,
+    "quality": 3,
     "options": [
       "heb",
       "hebt",
@@ -3581,7 +3581,7 @@ export const chapters16_18 = [
     "correctAnswer": "terwijl",
     "explanationTr": "'Terwijl' (-iken / while) bir yan cümle (onderschikkend) bağlacıdır ve fiili sona atar. 'Want, maar, of' ise kelime sırasını değiştirmeyen ana cümle bağlaçlarıdır.",
     "explanationEn": "'Terwijl' (while) is a subordinating conjunction that triggers end-verb placement. 'Want, maar, of' are coordinating conjunctions.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -3602,7 +3602,7 @@ export const chapters16_18 = [
     "correctAnswer": "Triggerwoord + Kikker (werkwoord achteraan in bijzin) + INVERSIE (werkwoord + onderwerp in hoofdzin)",
     "explanationTr": "Cümle yan cümle ile başlarsa: Tetikleyici (Als/Toen) + Kikker (fiil sonda) + VİRGÜL + Devrik Ana Cümle (Fiil + Özne): 'Als ik geen eten eet, heb ik honger.'",
     "explanationEn": "When starting with a subclause: Trigger word + Kikker (verb at end of subclause), comma, then INVERSION in main clause (Verb + Subject): 'Als ik niet eet, heb ik honger.'",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -3617,8 +3617,8 @@ export const chapters16_18 = [
     "correctAnswer": "heb",
     "explanationTr": "Yan cümleyle başlandığı için virgülden hemen sonra devrik yapı (inversie) gelir: Fiil 'heb' özneden 'ik' önce gelir: 'heb ik honger'.",
     "explanationEn": "Because the sentence opens with a subclause ('Als...'), inversion is required immediately after the comma: 'heb ik honger'.",
-    "difficulty": 4,
-    "quality": 2,
+    "difficulty": 5,
+    "quality": 3,
     "options": [
       "heb",
       "niet heb",
@@ -3638,13 +3638,13 @@ export const chapters16_18 = [
     "correctAnswer": "ga",
     "explanationTr": "Virgülden sonra ana cümlede devrik yapı uygulanır. 'Je' fiilden sonra geldiği için fiil '-t' almaz: 'ga je niet slagen'.",
     "explanationEn": "After the comma, inversion occurs in the main clause. Since 'je' follows the verb, the '-t' drops: 'ga je niet slagen'.",
-    "difficulty": 4,
-    "quality": 2,
+    "difficulty": 5,
+    "quality": 3,
     "options": [
       "ga",
-      "niet ga",
-      "geen ga",
-      "wel ga"
+      "werkt",
+      "wonen",
+      "maakt"
     ]
   },
   {
@@ -3659,8 +3659,8 @@ export const chapters16_18 = [
     "correctAnswer": "gaat",
     "explanationTr": "'Zodra...' yan cümlesinden sonra ana cümle devrik başlar: fiil 'gaat' özneden ('deze oude laptop') önce gelir.",
     "explanationEn": "Following the subclause introduced by 'Zodra', the main clause undergoes inversion: 'gaat deze oude laptop kapot'.",
-    "difficulty": 4,
-    "quality": 2,
+    "difficulty": 5,
+    "quality": 3,
     "options": [
       "gaat",
       "gaa",
@@ -3686,7 +3686,7 @@ export const chapters16_18 = [
     "correctAnswer": "was mijn portemonnee gestolen.",
     "explanationTr": "'Toen...' yan cümlesi bittikten sonra ana cümlede inversie (devrik yapı) zorunludur: Önce yardımcı fiil 'was', ardından özne 'mijn portemonnee' gelir.",
     "explanationEn": "After the 'Toen...' subclause, the main clause requires inversion: auxiliary verb 'was' followed by subject 'mijn portemonnee'.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -3707,7 +3707,7 @@ export const chapters16_18 = [
     "correctAnswer": "Present: Ik bel op | Imperfectum: Ik belde op | Perfectum: Ik heb opgebeld",
     "explanationTr": "'Opbellen' fiili: Şimdiki zamanda 'Ik bel op', imperfectumda 'Ik belde op', perfectumda 'Ik heb opgebeld' (ge araya girer) şeklindedir.",
     "explanationEn": "'Opbellen' conjugates as: Present: 'Ik bel op' | Imperfectum: 'Ik belde op' | Perfectum: 'Ik heb opgebeld'.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -3728,7 +3728,7 @@ export const chapters16_18 = [
     "correctAnswer": "Hij komt aan | Hij kwam aan | Hij is aangekomen",
     "explanationTr": "'Aankomen' fiili: Şimdiki zamanda 'Hij komt aan', imperfectumda 'Hij kwam aan' (düzensiz), perfectumda yön/varış bildirdiği için 'Hij is aangekomen' (zijn ile) olur.",
     "explanationEn": "'Aankomen' conjugates as: Present: 'Hij komt aan' | Imperfectum: 'Hij kwam aan' | Perfectum: 'Hij is aangekomen' (uses 'zijn').",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -3743,8 +3743,8 @@ export const chapters16_18 = [
     "correctAnswer": "mag",
     "explanationTr": "'Voordat' bağlacı yan cümle kurar; 'je' öznesi için 'mogen' fiili cümlenin en sonuna gider ve 'mag' olur.",
     "explanationEn": "The subclause conjunction 'voordat' pushes the conjugated verb 'mogen' for subject 'je' to the very end: 'mag'.",
-    "difficulty": 4,
-    "quality": 2,
+    "difficulty": 5,
+    "quality": 3,
     "options": [
       "mag",
       "magt",
@@ -3764,8 +3764,8 @@ export const chapters16_18 = [
     "correctAnswer": "brengt",
     "explanationTr": "'Terwijl' yan cümle bağlacıdır; 'Maria' (zij) öznesi için 'brengen' fiili cümlenin en sonuna gider: 'brengt'.",
     "explanationEn": "'Terwijl' is a subordinating conjunction, sending the conjugated verb for 'Maria' to the end of the clause: 'brengt'.",
-    "difficulty": 4,
-    "quality": 2,
+    "difficulty": 5,
+    "quality": 3,
     "options": [
       "brengt",
       "brengtt",

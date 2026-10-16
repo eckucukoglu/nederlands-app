@@ -48,7 +48,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Aile üyeleri ve tanışma ifadeleri: 'vader' (baba), 'heet' (adlandırılmak), 'zussen' (kız kardeşler), 'kennis maken' (tanışmak), 'vrouw' (eş/kadın).",
     "explanationEn": "Family and introduction terms: 'vader' (father), 'heet' (is called), 'zussen' (sisters), 'kennis maken' (to meet), 'vrouw' (wife).",
-    "difficulty": 1,
+    "difficulty": 2,
     "quality": 2
   },
   {
@@ -96,7 +96,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'koffie' (kahve siparişi), 'Spaans' (İspanyolca), 'eerste' (sıra sayısı), 'cent' (para birimi), 'betalen' (ödemek).",
     "explanationEn": "'koffie' (coffee), 'Spaans' (Spanish language), 'eerste' (first), 'cent' (cents), 'betalen' (to pay).",
-    "difficulty": 1,
+    "difficulty": 2,
     "quality": 2
   },
   {
@@ -144,7 +144,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'uur' (saat başı), 'af te spreken' (buluşmak/randevulaşmak), 'geen tijd' (vakti olmamak), 'kwart voor' (çeyrek kala), 'afspreken' (buluşmak).",
     "explanationEn": "'uur' (o'clock), 'af te spreken' (to meet up), 'tijd' (time), 'kwart voor' (quarter to), 'afspreken' (to arrange a meeting).",
-    "difficulty": 2,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -193,7 +193,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "İnversiyonda 'jij' fiilden sonra gelince 'stam' kalır: 'woon jij'. Çoğulda 'fietsen', 'bel ik' (inversiyon), soru için 'Hoe', 3. tekil 'staat op'.",
     "explanationEn": "Inversion with 'jij' drops -t: 'woon jij'. Plural takes infinitive 'fietsen', 'bel ik', 'Hoe', 3rd person 'staat'.",
-    "difficulty": 1,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -290,7 +290,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'Zullen we...' öneri/teklif kalıbıdır. 'iets te eten', 'bruisend water' (maden suyu), 'goed plan' (iyi fikir), 'rekening hebben' (hesabı istemek).",
     "explanationEn": "'Zullen we...' makes proposals. 'te eten' (to eat), 'bruisend water' (sparkling water), 'plan' (plan), 'rekening hebben' (to get the bill).",
-    "difficulty": 2,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -339,7 +339,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'Duits' (Almanca), 'vijf uur' (saat beş), 'gesloten' (kapalı), 'geboren' (doğmuş olmak), 'een klein beetje' (birazcık).",
     "explanationEn": "'Duits' (German language), 'vijf' (five), 'gesloten' (closed), 'geboren' (born), 'klein beetje' (a little bit).",
-    "difficulty": 1,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -388,7 +388,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'moe' (yorgun), 'groot' (uzun boylu), 'ogen' (gözler), 'in orde' (yolunda), 'geduldig' (sabırlı).",
     "explanationEn": "'moe' (tired), 'groot' (tall), 'ogen' (eyes), 'in orde' (in order/fine), 'geduldig' (patient).",
-    "difficulty": 2,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -437,7 +437,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'afspraak' (randevu), 'lang uitslapen' (geç saatlere kadar uyumak), 'trein' (tren), 'voor het slapen' (uyumadan önce), 'fijn weekend' (iyi hafta sonları).",
     "explanationEn": "'afspraak' (appointment), 'lang uitslapen' (sleep in late), 'trein' (train), 'slapen' (sleeping), 'fijn weekend' (nice weekend).",
-    "difficulty": 2,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -486,7 +486,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'dat is alles' (hepsi bu kadar), 'van u' (sizden), 'per bakje' (kutu/kase başına), 'terug' (para üstü), 'prullenbak' (çöp kutusu).",
     "explanationEn": "'alles' (that's all), 'van u' (polite 'from you'), 'bakje' (punnet/tub), 'terug' (change back), 'prullenbak' (trash bin).",
-    "difficulty": 2,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -535,7 +535,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'gereserveerd' (rezervasyon yapılmış), 'vis' (balık), 'gesmaakt' (tadı beğenildi mi kalıbı: naar wens gesmaakt), 'fooi' (bahşiş), 'verwerkt' (içerisinde kullanılmış).",
     "explanationEn": "'gereserveerd' (reserved), 'vis' (fish), 'gesmaakt' (tasted/enjoyed), 'fooi' (tip), 'verwerkt' (processed/included).",
-    "difficulty": 2,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -584,7 +584,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'lekker' (lezzetli), 'zuur' (ekşi), 'pittig' (acılı), 'gerecht' (yemek/öğün), 'friet' (patates kızartması).",
     "explanationEn": "'lekker' (tasty), 'zuur' (sour), 'pittig' (spicy), 'gerecht' (dish), 'friet' (fries).",
-    "difficulty": 2,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -633,7 +633,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'bananen' (muzlar), 'trui' (kazak), 'schoenen' (ayakkabılar), 'tomaten' (domatesler), 'appels' (elmalar).",
     "explanationEn": "'bananen' (bananas), 'trui' (sweater), 'schoenen' (shoes), 'tomaten' (tomatoes), 'appels' (apples).",
-    "difficulty": 2,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -682,7 +682,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'passen' (denemek), 'mag' (yasak/izin: mag niet roken), 'willen' (istemek), 'strak' (dar/sıkı), 'winkel' (mağaza).",
     "explanationEn": "'passen' (to try on), 'mag' (may/allowed), 'willen' (to want), 'strak' (tight), 'winkel' (store).",
-    "difficulty": 2,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -731,7 +731,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'groene' (yeşil - çekimli sıfat), 'wit overhemd' (het overhemd olduğu için yalın 'wit'), 'geel' (sarı), 'kleiner' (daha küçük), 'oranje' (turuncu).",
     "explanationEn": "'groene' (green), 'wit' (white - no -e before indefinite het-noun), 'geel' (yellow), 'kleiner' (smaller), 'oranje' (orange).",
-    "difficulty": 2,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -876,7 +876,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'geen tuin' (artikelsiz isimlerde geen), 'niet aanwezig' (sıfat/fiil olumsuzluğu), 'villa' (müstakil ev), 'appartement' (daire), 'berging' (depo/bisikletlik).",
     "explanationEn": "'geen' negates indefinite nouns (tuin). 'niet' negates adjectives/verbs. 'villa' (villa), 'appartement' (apartment), 'berging' (storage).",
-    "difficulty": 2,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -925,7 +925,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'keel' (boğaz), 'wind' (rüzgar), 'koorts' (ateş), 'enkel' (ayak bileği), 'pijn' (ağrı).",
     "explanationEn": "'keel' (throat), 'wind' (wind), 'koorts' (fever), 'enkel' (ankle), 'pijn' (pain).",
-    "difficulty": 2,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -974,7 +974,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'uitrusten' (dinlenmek), 'recept' (reçete), 'klachten' (şikayetler/semptomlar), 'apotheek' (eczane), 'beter' (daha iyi).",
     "explanationEn": "'uitrusten' (to rest), 'recept' (prescription), 'klachten' (complaints/symptoms), 'apotheek' (pharmacy), 'beter' (better).",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -1023,7 +1023,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'plakken' (yama yapmak), 'zadel' (sele), 'licht' (far/ışık), 'helpen' (yardım etmek), 'rem' (fren).",
     "explanationEn": "'plakken' (to patch a tire), 'zadel' (saddle), 'licht' (light), 'helpen' (to help), 'rem' (brake).",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -1071,7 +1071,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'bedoel' (insan kastettiğinde: wat bedoel je?), 'betekent' (kelime/şey anlama geldiğinde), 'begrijp' (anlamak), 'herhalen' (tekrar etmek), 'duidelijk' (net/açık).",
     "explanationEn": "'bedoel' (to mean/intend - person), 'betekent' (to signify - word/thing), 'begrijp' (to understand), 'herhalen' (to repeat), 'duidelijk' (clear).",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -1264,7 +1264,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'oversteken' (köprüden karşıya geçmek: steek ... over), 'rotonde' (dönel kavşak), 'opbellen' (telefon etmek: bel ... op), 'overstappen' (aktarma yapmak), 'afslaan' (sapmak: slaat ... af).",
     "explanationEn": "'over' (oversteken - to cross), 'rotonde' (roundabout), 'op' (opbellen - to call up), 'overstappen' (to transfer trains), 'af' (afslaan - to turn).",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -1313,7 +1313,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'Wat jammer' (Ne yazık!), 'Volgens mij' (Bana göre), 'Echt waar?' (Gerçekten mi?), 'ontspannen' (rahatlamak), 'cadeau' (hediye).",
     "explanationEn": "'jammer' (what a pity), 'Volgens mij' (in my opinion), 'Echt waar?' (really?), 'ontspannen' (to relax), 'cadeau' (present).",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -1362,7 +1362,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'ik zal' (söz: ik zal helpen), 'jas uitdoen' (montunu çıkarmak), 'we zullen' (biz söz veriyoruz), 'maaltijd' (yemek/ziyafet), 'te drinken' (içecek bir şey).",
     "explanationEn": "'zal' (promise: I will), 'uit' (jas uitdoen - take off coat), 'zullen' (we will), 'maaltijd' (meal), 'drinken' (to drink).",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -1460,7 +1460,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'regenen' (yağmur yağmak), 'gaan verhuizen' (taşınacağız), 'moeilijk zijn' (zor olmak), 'thuis komen' (eve gelmek), 'zonnig' (güneşli).",
     "explanationEn": "'regenen' (to rain), 'gaan' (are going to), 'zijn' (to be), 'komen' (to arrive), 'zonnig' (sunny).",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -1509,7 +1509,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'inchecken' (kart okutmak), 'spoor' (peron/hat numarası), 'vertraging' (rötar/gecikme), 'overstappen' (aktarma yapmak), 'zien' (bilet kontrolü: zien).",
     "explanationEn": "'inchecken' (check in), 'spoor' (track/platform), 'vertraging' (delay), 'overstappen' (transfer), 'zien' (to see/inspect).",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -1558,7 +1558,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'Die' (uzaktaki de-woord), 'Dat' (het-woord için: het woordenboek -> dat), 'die' (çoğul ayakkabılar), 'Dit is' (tanıtma kalıbı: dit is...), 'deze hier' (yakındaki de-woord).",
     "explanationEn": "'Die' (that one - de-word), 'Dat' (that one - het-word), 'die' (those - plural), 'Dit is' (this is), 'deze' (this one here).",
-    "difficulty": 2,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -1705,7 +1705,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'aan het' arkasından daima mastar (infinitief) gelir: 'aan het lezen', 'aan het spelen', 'aan het koken', 'aan het werken', 'aan het wandelen'.",
     "explanationEn": "'aan het' is followed directly by an infinitive: 'aan het lezen' (reading), 'spelen' (playing), 'koken' (cooking), 'werken' (working), 'wandelen' (walking).",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -1754,7 +1754,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'daar' (orada - işaret), 'er gegeten' (orada yemiş olmak), 'wonen' (yaşarlar), 'hier' (buraya), 'overal' (her yerde).",
     "explanationEn": "'daar' (over there), 'er' (referring to place), 'wonen' (live), 'hier' (here), 'overal' (everywhere).",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -1803,7 +1803,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Yan cümle bağlaçları (bijzin) fiili en sona atar: 'dat' (-dığını), 'omdat' (çünkü/-dığı için), 'Als' (eğer/-dığında), 'terwijl' (iken), 'of' (olup olmadığını).",
     "explanationEn": "Subordinating conjunctions send finite verbs to the end: 'dat' (that), 'omdat' (because), 'Als' (if/when), 'terwijl' (while), 'of' (whether).",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -1998,7 +1998,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'werk' (iş), 'collega's' (iş arkadaşları), 'ziekenhuis' (hastane), 'vergadering' (toplantı), 'pauze' (mola).",
     "explanationEn": "'werk' (work), 'collega's' (colleagues), 'ziekenhuis' (hospital), 'vergadering' (meeting), 'pauze' (break).",
-    "difficulty": 1,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -2047,7 +2047,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'recept' (tarif), 'snijden' (doğramak), 'pan' (tencere), 'ingrediënten' (malzemeler), 'zout' (tuz).",
     "explanationEn": "'recept' (recipe), 'snijden' (to cut/chop), 'pan' (pot), 'ingrediënten' (ingredients), 'zout' (salt).",
-    "difficulty": 2,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -2096,7 +2096,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'borrelen' (içki ve atıştırmalık eşliğinde sohbet etmek), 'bitterballen' (Hollanda köftesi atıştırmalığı), 'drankje' (içecek), 'kaas' (eski peynir), 'rekening' (hesap).",
     "explanationEn": "'borrelen' (drinks and snacks gathering), 'bitterballen' (croquette balls), 'drankje' (drink), 'kaas' (cheese), 'rekening' (bill).",
-    "difficulty": 2,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -2145,7 +2145,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'kostuum' (takım elbise), 'stropdas' (kravat), 'spiegel' (ayna), 'ruilen' (değiştirmek/iade etmek), 'kassa' (kasa).",
     "explanationEn": "'kostuum' (suit), 'stropdas' (tie), 'spiegel' (mirror), 'ruilen' (to exchange), 'kassa' (cash register).",
-    "difficulty": 2,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -2194,7 +2194,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'gordijnen' (perdeler), 'kleed' (halı/kilim), 'vensterbank' (pencere pervazı), 'bank' (kanepe/koltuk), 'kleur' (renk).",
     "explanationEn": "'gordijnen' (curtains), 'kleed' (rug), 'vensterbank' (windowsill), 'bank' (couch/sofa), 'kleur' (color).",
-    "difficulty": 2,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -2243,7 +2243,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'vitamines' (vitaminler), 'drinken' (içmek), 'herstel' (iyileşme), 'dieet' (beslenme düzeni/diyet), 'sterk' (güçlü).",
     "explanationEn": "'vitamines' (vitamins), 'drinken' (to drink), 'herstel' (recovery), 'dieet' (diet), 'sterk' (strong).",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -2292,7 +2292,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'regenjas' (yağmurluk), 'spatbord' (çamurluk), 'wind' (rüzgar: tegenwind = karşı rüzgar), 'handschoenen' (eldivenler), 'reflectors' (reflektörler).",
     "explanationEn": "'regenjas' (raincoat), 'spatbord' (mudguard), 'wind' (wind), 'handschoenen' (gloves), 'reflectors' (reflectors).",
-    "difficulty": 2,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -2341,7 +2341,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'dozen' (verhuisdozen - koliler), 'huisgenoten' (ev arkadaşları), 'feest' (parti), 'cadeau' (hediye), 'gezellig' (samimi/keyifli).",
     "explanationEn": "'dozen' (boxes), 'huisgenoten' (housemates), 'feest' (party), 'cadeau' (gift), 'gezellig' (cozy/sociable).",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -2390,7 +2390,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'receptie' (danışma/resepsiyon), 'eerste hulp' (acil servis), 'verdieping' (kat), 'lift' (asansör), 'garage' (otopark).",
     "explanationEn": "'receptie' (reception), 'hulp' (eerste hulp - emergency room), 'verdieping' (floor/storey), 'lift' (elevator), 'garage' (parking garage).",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -2439,7 +2439,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'warm' (ılık/sıcak), 'netwerk' (ağ - bisiklet rota ağı), 'opeten' (yiyip bitirmek), 'spanning' (bandenspanning - lastik basıncı), 'droog' (kuru/yağışsız).",
     "explanationEn": "'warm' (warm), 'netwerk' (network), 'opeten' (to eat up), 'spanning' (pressure), 'droog' (dry).",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -2537,7 +2537,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'uitstappen' (inmek: stappen uit), 'toegang' (giriş hakkı), 'perron' (peron), 'te zien' (görülebilir/sergileniyor), 'terug' (geri dönüş).",
     "explanationEn": "'uit' (uitstappen - to alight), 'toegang' (admission), 'perron' (platform), 'zien' (te zien - to see/on display), 'terug' (back).",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -2635,7 +2635,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'blijf liggen' (yatmaya devam etmek), 'ontbijt' (kahvaltı), 'inruimen' (doldurmak: vaatwasser inruimen), 'kaas' (peynir), 'acht uur' (saat sekiz).",
     "explanationEn": "'liggen' (stay in bed), 'ontbijt' (breakfast), 'in' (inruimen - load), 'kaas' (cheese), 'uur' (o'clock).",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -2831,7 +2831,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'erin' (içine), 'erop' (üstüne), 'ernaar kijken' (ona bakmak/izlemek), 'erover praten' (onun hakkında konuşmak), 'ermee doen' (onunla yapmak).",
     "explanationEn": "'erin' (in it), 'op' (erop - on it), 'ernaar' (at it), 'erover' (about it), 'ermee' (with it).",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -2880,7 +2880,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'spits' (yoğun saat / rush hour), 'vrij' (boş), 'gehad' (naar de zin gehad - keyif aldım), 'korting' (indirim), 'uitchecken' (çıkış okutması yapmak).",
     "explanationEn": "'spits' (rush hour), 'vrij' (free/unoccupied), 'gehad' (enjoyed myself), 'korting' (discount), 'checken' (uitchecken - check out).",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -2978,7 +2978,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'kilo' (kilogram), 'gram' (gram: een pond = 500 gram), 'tas' (torba/çanta), 'dozijn' (düzine: half dozijn = 6 tane), 'totale' (toplam tutar).",
     "explanationEn": "'kilo' (kilogram), 'gram' (grams), 'tas' (bag), 'dozijn' (dozen), 'totale' (total).",
-    "difficulty": 1,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -3027,7 +3027,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'voorgerecht' (başlangıç yemeği), 'hoofdgerecht' (ana yemek), 'toetje' (tatlı), 'complimenten' (övgüler/iltifatlar), 'smaak' (tat/lezzet).",
     "explanationEn": "'voorgerecht' (starter), 'hoofdgerecht' (main course), 'toetje' (dessert), 'complimenten' (compliments), 'smaak' (taste/flavor).",
-    "difficulty": 2,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -3076,7 +3076,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'korting' (indirim), 'terugbrengen' (geri getirmek/iade etmek), 'kassabon' (fiş/fatura), 'pinnen' (banka kartıyla ödemek), 'kleur' (renk).",
     "explanationEn": "'korting' (discount), 'terugbrengen' (to return), 'kassabon' (receipt), 'pinnen' (to pay by debit card), 'kleur' (color).",
-    "difficulty": 2,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -3125,7 +3125,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'bezichtiging' (ev gezmesi/gösterimi), 'zuiden' (güney cephe), 'meter' (vierkante meter - metrekare), 'sleutels' (anahtarlar), 'inbegrepen' (dahil).",
     "explanationEn": "'bezichtiging' (viewing), 'zuiden' (south), 'meter' (metres), 'sleutels' (keys), 'inbegrepen' (included).",
-    "difficulty": 2,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -3174,7 +3174,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'tanden' (dişler), 'huid' (cilt/ten), 'zeep' (sabun), 'ontspannen' (gevşemek/rahatlamak), 'balans' (su dengesi).",
     "explanationEn": "'tanden' (teeth), 'huid' (skin), 'zeep' (soap), 'ontspannen' (to relax), 'balans' (balance).",
-    "difficulty": 2,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -3223,7 +3223,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'te laat' (geç kalmak), 'excuses' (özür dilemek), 'repareren' (tamir etmek), 'halte' (durak), 'succes' (kolay gelsin/başarılar).",
     "explanationEn": "'laat' (late), 'excuses' (apologies), 'repareren' (to repair), 'halte' (bus stop), 'succes' (good luck).",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -3272,7 +3272,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'inpakpapier' (hediye paketi kağıdı), 'verjaardagskaart' (doğum günü kartı), 'leven' (Lang zal hij leven şarkısı), 'uitblazen' (üfleyip söndürmek: blaast uit), 'verrassing' (sürpriz).",
     "explanationEn": "'papier' (wrapping paper), 'kaart' (birthday card), 'leven' (Lang zal hij leven song), 'uit' (uitblazen - blow out), 'verrassing' (surprise).",
-    "difficulty": 2,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -3321,7 +3321,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'postcode' (posta kodu), 'bel' (zil), 'intercom' (diyafon), 'lift' (asansör), 'linkerkant' (sol taraf).",
     "explanationEn": "'postcode' (postal code), 'bel' (doorbell), 'intercom' (intercom), 'lift' (elevator), 'kant' (linkerkant - left side).",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -3370,7 +3370,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'soep' (çorba), 'halen' (boodschappen halen - alışveriş yapıp getirmek), 'bank' (kanepe), 'steun' (destek), 'hebben' (sahip olmak).",
     "explanationEn": "'soep' (soup), 'halen' (to fetch/pick up groceries), 'bank' (couch), 'steun' (support), 'hebben' (to have).",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -3419,7 +3419,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'trainen' (antrenman yapmak), 'spierpijn' (kas ağrısı), 'schema' (program/çizelge), 'volhouden' (pes etmemek/istikrar göstermek), 'blijven' (gehydrateerd blijven - kalmak).",
     "explanationEn": "'trainen' (to train), 'pijn' (spierpijn - muscle ache), 'schema' (schedule), 'volhouden' (to persevere), 'blijven' (to remain).",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -3517,7 +3517,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'hoorde' (duydum), 'getuige' (tanık/görgü tanığı), 'persoonsgegevens' (kişisel kimlik bilgileri), 'op klaarlichte dag' (güpegündüz), 'herinneren' (zich herinneren - hatırlamak).",
     "explanationEn": "'hoorde' (heard), 'getuige' (witness), 'gegevens' (personal details), 'dag' (klaarlichte dag - broad daylight), 'herinneren' (to remember).",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -3566,7 +3566,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'perron' (peron), 'spoorwegpersoneel' (demiryolu personeli), 'adreslabel' (adres etiketi), 'website' (web sitesi), 'bevestigingsbericht' (onay mesajı).",
     "explanationEn": "'perron' (platform), 'personeel' (staff), 'label' (address label), 'website' (website), 'bericht' (message).",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -3664,7 +3664,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'door' (içinden geçerek: door het raam), 'boven' (üzerinde), 'naast' (yanında), 'onder' (altında), 'tussen' (arasında).",
     "explanationEn": "'door' (through), 'boven' (above), 'naast' (next to), 'onder' (under), 'tussen' (between).",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -3713,7 +3713,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'kluisje' (emanet dolabı), 'verdwenen' (kaybolmuş/yok olmuş), 'nummer' (polis telefon numarası), 'achterlaten' (geride bırakmak: achter), 'ter beschikking' (kullanıma/hizmete sunmak).",
     "explanationEn": "'kluisje' (locker), 'verdwenen' (disappeared), 'nummer' (number), 'achter' (achterlaten - leave behind), 'beschikking' (ter beschikking - at disposal).",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -3762,7 +3762,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Yan cümle başa gelince ana cümle fiille başlar (inversie): 'gaan we', 'miste hij', 'was de dader', 'bleef zij'. Yan cümle içinde fiil en sondadır: 'sleutels hebt'.",
     "explanationEn": "When a subordinate clause comes first, the main clause inverts (V-S): 'gaan we', 'miste hij', 'was de dader', 'bleef zij'. Subordinate clause verb at end: 'hebt'.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -3811,7 +3811,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'nachtschoot' (emniyet kilidi dili), 'afschrikken' (korkutup caydırmak), 'lichaam' (vücut), 'apparatuur' (elektronik cihazlar), '112' (acil servis numarası).",
     "explanationEn": "'schoot' (nachtschoot - deadbolt), 'afschrikken' (to deter), 'lichaam' (body), 'apparatuur' (equipment), '112' (emergency number).",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -3908,7 +3908,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'handtekening zetten' (imza atmak), 'proces-verbaal' (resmi tutanak), 'plaatsgevonden' (meydana gelmiş), 'gevonden' (bulunmuş izler), 'procedure' (soruşturma süreci/prosedürü).",
     "explanationEn": "'zetten' (handtekening zetten - to sign), 'verbaal' (proces-verbaal - official report), 'plaatsgevonden' (taken place), 'gevonden' (found traces), 'procedure' (procedure).",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -3957,7 +3957,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'zijn' (çoğul anne-baba), 'doe jij' (inversiyonda kök 'doe'), 'gaat' (3. tekil), 'Heeft u' (u zamiriyle heeft), 'zie' (ik zie).",
     "explanationEn": "'zijn' (plural are), 'doe' (inversion with jij), 'gaat' (3rd person singular goes), 'Heeft' (polite has), 'zie' (1st person see).",
-    "difficulty": 1,
+    "difficulty": 2,
     "quality": 2
   },
   {
@@ -4006,7 +4006,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'kopen' -> kocht, 'eten' çoğul -> aten, 'drinken' -> dronk, 'nemen' -> nam, 'geven' -> gaf.",
     "explanationEn": "'kopen' -> kocht (bought), 'eten' plural -> aten (ate), 'drinken' -> dronk (drank), 'nemen' -> nam (took), 'geven' -> gaf (gave).",
-    "difficulty": 4,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -4055,7 +4055,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'een mooi boek' (belirsiz het-woord sıfata -e almaz), 'een mooie jurk' (de-woord daima -e alır), 'duurder' (karşılaştırma: dan), 'beste' (en iyi), 'snelste' (en hızlı).",
     "explanationEn": "'mooi' (no -e for indefinite het-noun), 'mooie' (-e for de-noun), 'duurder' (comparative), 'beste' (superlative of goed), 'snelste' (fastest).",
-    "difficulty": 2,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -4104,7 +4104,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'blijven' -> zijn gebleven, 'breken' -> heeft gebroken, 'lopen' -> heeft gelopen, 'vinden' -> heeft gevonden, 'verliezen' -> heeft verloren.",
     "explanationEn": "'gebleven' (stayed), 'gebroken' (broken), 'gelopen' (walked), 'gevonden' (found), 'verloren' (lost).",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -4349,7 +4349,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Süreklilik yapıları: 'zit te lezen' (oturmuş okuyor), 'staan te praten' (ayakta konuşuyorlar), 'ligt te slapen' (uzanmış uyuyor), 'loopt te zoeken' (dolanıp arıyor), 'zat te typen' (yazıyordu).",
     "explanationEn": "'lezen' (sitting reading), 'staan' (standing talking), 'slapen' (lying sleeping), 'zoeken' (walking around looking for), 'typen' (sitting typing).",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -4398,7 +4398,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'vertrekken' -> is vertrokken, 'aankomen' -> zijn aangekomen, 'vallen' -> is gevallen, 'stijgen' -> zijn gestegen, 'overlijden' -> is overleden ('zijn' ile çekimlenirler).",
     "explanationEn": "'vertrokken' (departed), 'aangekomen' (arrived), 'gevallen' (fallen), 'gestegen' (risen), 'overleden' (passed away) all conjugate with 'zijn'.",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -4447,7 +4447,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'gemeente' (belediye), 'burgerservicenummer' (BSN / vatandaşlık numarası), 'afspraak' (randevu), 'voorstellen' (kendini tanıtmak), 'stroopwafel' (karamelli Hollanda waffle'ı).",
     "explanationEn": "'gemeente' (municipality), 'nummer' (BSN number), 'afspraak' (appointment), 'stellen' (voorstellen - introduce), 'stroopwafel' (syrup waffle).",
-    "difficulty": 1,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -4496,7 +4496,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'personen' (kişilik masa), 'dagschotel' (günün yemeği), 'melk' (süt), 'complimenten' (şefe övgüler), 'vriendelijke' (güler yüzlü servis).",
     "explanationEn": "'personen' (persons), 'dagschotel' (dish of the day), 'melk' (milk), 'complimenten' (compliments), 'vriendelijke' (friendly).",
-    "difficulty": 2,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -4545,7 +4545,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'afmetingen' (ölçüler/ebatlar), 'bloembakken' (çiçek saksıları), 'hout' (ahşap/meşe odunu), 'groter' (daha büyük görünmek), 'groene' (yeşil ton).",
     "explanationEn": "'afmetingen' (dimensions), 'bloembakken' (flower boxes), 'hout' (wood), 'groter' (bigger), 'groene' (green).",
-    "difficulty": 2,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -4594,7 +4594,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'bladeren' (yapraklar), 'uitglijden' (kaymak/kayıp düşmek), 'smeren' (yağlamak: ketting smeren), 'weerstand' (bağışıklık/direnç), 'berging' (depo/bisikletlik).",
     "explanationEn": "'bladeren' (leaves), 'glijden' (uitglijden - slip), 'smeren' (to lubricate), 'weerstand' (immunity/resistance), 'berging' (storage shed).",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -4643,7 +4643,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'medicijn' (ilaç), 'water' (su), 'brengen' (getirmek), 'middel' (çare/ilaç: geneesmiddel), 'weer op de been bent' (tekrar ayağa kalkmak/iyileşmek).",
     "explanationEn": "'medicijn' (medicine), 'water' (water), 'brengen' (to bring), 'middel' (remedy), 'bent' (weer op de been zijn - be back on one's feet).",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -4692,7 +4692,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'schoenen' (hardloopschoenen - koşu ayakkabıları), 'duinen' (kumullar / Noordzeeduinen), 'lessen' (dorst lessen - susuzluğunu gidermek), 'niveau' (stressniveau - stres seviyesi), 'gaan meedoen' (katılacağız).",
     "explanationEn": "'schoenen' (running shoes), 'duinen' (coastal dunes), 'lessen' (to quench thirst), 'niveau' (stress level), 'gaan' (are going to).",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -4741,7 +4741,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'station' (istasyon), 'geschenk' (hediye), 'reis' (yolculuk), 'fluisteren' (fısıldamak), 'gezien' (görmüştük).",
     "explanationEn": "'station' (station), 'geschenk' (gift), 'reis' (journey), 'fluisteren' (to whisper), 'gezien' (seen).",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -4790,7 +4790,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'museum' (müze), 'koffietentje' (küçük şirin kafe), 'bordspel' (kutu oyunu), 'karakter' (sıcak karakterli/atmosferli), 'lachen' (zitten lachen - gülmek).",
     "explanationEn": "'museum' (museum), 'tentje' (koffietentje - coffee shop), 'spel' (bordspel - board game), 'karakter' (character), 'lachen' (laughing).",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -4839,7 +4839,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'112' (acil numara), 'ambulance' (ambulans), 'doorgeven' (bildirmek: geef door), 'sirenes' (sirenler), 'was' (ter plekke was - olay yerindeydi).",
     "explanationEn": "'112' (emergency dispatch), 'ambulance' (ambulance), 'door' (doorgeven - pass on/report), 'sirenes' (sirens), 'was' (was on the scene).",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -4888,7 +4888,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "'openbaar vervoer' (toplu taşıma), 'identiteitsbewijs' (kimlik belgesi), 'proces-verbaal' (resmi tutanak), 'zodat' (böylece/katılabilmek amacıyla), 'afgerond' (başarıyla tamamladı).",
     "explanationEn": "'vervoer' (public transport), 'bewijs' (ID card/proof of identity), 'proces-verbaal' (official police report), 'zodat' (so that), 'afgerond' (completed).",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -5029,7 +5029,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Yol tarifi kalıpları: 'naar links' (sola), 'tot aan de kruising' (kavşağa kadar), 'overkant' (karşı taraf), 'oversteken' (karşıya geçmek), 'de weg naar...' (yol).",
     "explanationEn": "Direction phrases: 'naar links' (to the left), 'kruising' (intersection), 'overkant' (opposite side), 'oversteken' (cross), 'de weg' (the way).",
-    "difficulty": 2,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -5122,7 +5122,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Edat kullanımları: araçla gitmek ('met de trein'), bir yere gitmek ('naar het restaurant'), üzerinde olmak ('op de tafel'), şehirde ikamet ('in Amsterdam'), bir şeyden korkmak ('bang voor').",
     "explanationEn": "Preposition usages: travel by ('met de trein'), direction to ('naar het restaurant'), surface ('op de tafel'), in a city ('in Amsterdam'), afraid of ('bang voor').",
-    "difficulty": 3,
+    "difficulty": 1,
     "quality": 2
   },
   {
@@ -5171,7 +5171,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Kalıplar: 'mag ik hebben' (alabilir miyim), 'kwart over negen' (dokuzu çeyrek geçe), 'spelt' (hecelemek), 'zonder suiker' (şekersiz), 'afspreken' (buluşmak/sözleşmek).",
     "explanationEn": "Phrases: 'mag ik hebben' (may I have), 'kwart over negen' (quarter past nine), 'spelt' (spell), 'zonder suiker' (without sugar), 'afspreken' (meet up).",
-    "difficulty": 1,
+    "difficulty": 2,
     "quality": 2
   },
   {
@@ -5222,7 +5222,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Gramer kuralları: Devrik cümlede zaman başa gelince fiil 2. sıraya geçer ('Morgen gaan wij'). Sayılamayan/belirsiz isimde 'geen tijd'. Soru kelimesi 'Waar'. Soru cümlesinde 'jij' fiilden sonra gelince fiildeki -t düşer ('Kom jij'). Sıfat veya zarf olumsuzluğunda 'niet'.",
     "explanationEn": "Grammar rules: Inversion moves verb to 2nd position ('Morgen gaan wij'). 'geen' before indefinite nouns ('geen tijd'). Question word 'Waar'. 'jij' after verb drops -t ('Kom jij'). 'niet' negates adjectives/verbs.",
-    "difficulty": 1,
+    "difficulty": 2,
     "quality": 2
   },
   {
@@ -5271,7 +5271,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Yön ve pazar terminolojisi: 'de afslag nemen' (çıkışa girmek), 'zoete mandarijnen' (çoğul isim önünde sıfat -e alır), 'het station' (istasyon), 'een mooi museum' (het-woord ve een olunca sıfat -e almaz), 'kosten' (fiyat sorma).",
     "explanationEn": "Directions & market terms: 'afslag nemen' (take exit), 'zoete mandarijnen' (plural takes -e), 'het station', 'een mooi museum' (het-word with een gets no -e), 'kosten' (cost).",
-    "difficulty": 2,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -5320,7 +5320,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Ulaşım ve restoran kalıpları: 'de bushalte' (otobüs durağı), 'reserveren' (rezervasyon yapmak), 'vis' (balık menüsü), 'lopen' (yürümek), 'apart afrekenen' (hesabı ayrı ayrı ödemek).",
     "explanationEn": "Transport & restaurant phrases: 'bushalte' (bus stop), 'reserveren' (to reserve), 'vis' (fish main dish), 'lopen' (walk), 'apart afrekenen' (split the bill).",
-    "difficulty": 2,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -5369,7 +5369,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Kıyafet ve konut terimleri: 'kleinere maat' (daha küçük beden - comparatief), 'borg' (depozito), 'passen' (denemek/üstüne uymak), 'verdieping' (kat), 'heerlijk' (nefis/lezzetli).",
     "explanationEn": "Clothing & housing terms: 'kleinere maat' (smaller size), 'borg' (deposit), 'passen' (try on), 'verdieping' (floor/story), 'heerlijk' (delicious).",
-    "difficulty": 2,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -5467,7 +5467,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Sağlık ve bisiklet terimleri: 'hoofdpijn' (baş ağrısı), 'los' (gevşek/bol), 'innemen' (ilaç almak/yutmak), 'vervangen' (yenisiyle değiştirmek), 'centrale verwarming' (merkezi ısıtma/kalorifer).",
     "explanationEn": "Health & bike repair terms: 'hoofdpijn' (headache), 'los' (loose), 'innemen' (take medicine), 'vervangen' (replace), 'centrale verwarming' (central heating).",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -5565,7 +5565,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Etkinlik ve geçmiş zaman: 'cadeau' (hediye), 'gepraat' (praten fiilinin perfectum hali: kofschip 't' kuralı), 'tentoonstelling' (sergi), 'gedanst' (dansen -> gedanst), 'geplakt' (plakken -> geplakt: yama yapmak).",
     "explanationEn": "Event & past tense: 'cadeau' (gift), 'gepraat' (talked, past participle), 'tentoonstelling' (exhibition), 'gedanst' (danced), 'geplakt' (patched the tire).",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -5614,7 +5614,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Düzensiz fiillerin perfectum halleri: 'vliegen' -> 'gevlogen' (zijn ile), 'lezen' -> 'gelezen', 'eten' -> 'gegeten', 'vallen' -> 'gevallen' (zijn ile), 'vinden' -> 'gevonden'.",
     "explanationEn": "Irregular participles: 'vliegen' -> 'gevlogen' (with zijn), 'lezen' -> 'gelezen', 'eten' -> 'gegeten', 'vallen' -> 'gevallen' (with zijn), 'vinden' -> 'gevonden'.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -5712,7 +5712,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Ayrılabilen fiiller ve tren seyahati: 'inchecken' (bilet okutmak), 'opbellen' (telefon etmek -> 'belt op'), 'aantrekken' (giymek -> 'trek aan'). 'spoor' (tren rayı/peron numarası), 'vertraging' (rötar/gecikme).",
     "explanationEn": "Separable verbs & travel terms: 'inchecken' (check in), 'opbellen' (call up), 'aantrekken' (put on). 'spoor' (track/platform number), 'vertraging' (delay).",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -5761,7 +5761,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "İlgi zamirleri: 'de documentaire' (de-woord) olduğu için 'die'. 'het filmfestival' (het-woord) olduğu için 'dat'. Sinema terimleri: 'hoofdrol' (başrol), 'première' (ilk gösterim), 'kassa' (bilet gişesi).",
     "explanationEn": "Relative pronouns: 'de-words' take 'die' ('de documentaire die'), 'het-words' take 'dat' ('het festival dat'). Cinema terms: 'hoofdrol' (lead role), 'première' (premiere), 'kassa' (box office).",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -5812,7 +5812,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Yan cümle bağlaçları (fiil cümlenin en sonuna gider): 'dat' (dığını/diğini), 'terwijl' (iken/aynı anda), 'als' (eğer/ise - geniş/gelecek zaman), 'doordat' (nedeniyle/sebep), 'toen' (geçmişte bir an/dığında).",
     "explanationEn": "Subordinate clause conjunctions (verbs move to the very end): 'dat' (that), 'terwijl' (while), 'als' (if/when), 'doordat' (because of/cause), 'toen' (when, in the past).",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -5911,7 +5911,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Gramer kuralları: 'werd onderzocht' (geçmiş zaman edilgen / imperfectum passief), 'wandelde' (düzenli fiil geçmiş zaman), 'wordt bezorgd' (şimdiki zaman edilgen / presens passief), 'stonden' (staan fiilinin çoğul imperfectum hali), 'is aangehouden' (bitmiş zaman edilgen / perfectum passief).",
     "explanationEn": "Grammar rules: 'werd onderzocht' (past passive), 'wandelde' (past regular), 'wordt bezorgd' (present passive), 'stonden' (past plural of staan), 'is aangehouden' (present perfect passive).",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -5960,7 +5960,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Düzensiz fiillerin imperfectum halleri: 'zitten' -> 'zat', 'doen' -> 'deed', 'zien' -> 'zagen' (çoğul), 'spreken' -> 'sprak', 'dragen' -> 'droeg'.",
     "explanationEn": "Irregular imperfectum forms: 'zitten' -> 'zat', 'doen' -> 'deed', 'zien' -> 'zagen' (plural), 'spreken' -> 'sprak', 'dragen' -> 'droeg'.",
-    "difficulty": 4,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -6009,7 +6009,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Düzensiz fiil ortaçları: 'beginnen' -> 'begonnen' (zijn ile), 'verzenden' -> 'verzonden' (hebben ile), 'blijven' -> 'gebleven' (zijn ile), 'houden' -> 'gehouden' (hebben ile), 'breken' -> 'gebroken' (zijn ile).",
     "explanationEn": "Irregular participles: 'beginnen' -> 'begonnen' (with zijn), 'verzenden' -> 'verzonden', 'blijven' -> 'gebleven' (with zijn), 'houden' -> 'gehouden', 'breken' -> 'gebroken' (with zijn).",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -6201,7 +6201,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Sofra takımları: lepel (kaşık), mes (bıçak), vork (çatal), bord (tabak), glas (bardak).",
     "explanationEn": "Tableware: lepel (spoon), mes (knife), vork (fork), bord (plate), glas (glass).",
-    "difficulty": 2,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -6250,7 +6250,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Yemek aşamaları: voorgerecht (başlangıç), hoofdgerecht (ana yemek), nagerecht (tatlı), drankjes (içecekler), vegetarische (vejetaryen).",
     "explanationEn": "Courses: voorgerecht (starter), hoofdgerecht (main course), nagerecht (dessert), drankjes (drinks), vegetarische (vegetarian).",
-    "difficulty": 2,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -6298,7 +6298,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Kıyafetler: jas (mont/kaban), schoenen (ayakkabılar), pak (takım elbise), jurk (elbise), trui (kazak).",
     "explanationEn": "Clothing: jas (coat), schoenen (shoes), pak (suit), jurk (dress), trui (sweater).",
-    "difficulty": 2,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -6346,7 +6346,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Market ürünleri: brood (ekmek), kaas (peynir), fruit (meyve), groenten (sebzeler), kassa (kasa).",
     "explanationEn": "Groceries: brood (bread), kaas (cheese), fruit (fruit), groenten (vegetables), kassa (checkout/cashier).",
-    "difficulty": 2,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -6395,7 +6395,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Sağlık şikayetleri: koorts (ateş), keelpijn (boğaz ağrısı), antibiotica (antibiyotik), medicijnen (ilaçlar), afspraak (randevu).",
     "explanationEn": "Health terms: koorts (fever), keelpijn (sore throat), antibiotica (antibiotics), medicijnen (medicine), afspraak (appointment).",
-    "difficulty": 2,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -6444,7 +6444,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Yol tarifi: rechtdoor (düz), linksaf (sola), rechtsaf (sağa), oversteken (karşıya geçmek), straat (sokak/cadde).",
     "explanationEn": "Directions: rechtdoor (straight ahead), linksaf (turn left), rechtsaf (turn right), oversteken (cross), straat (street).",
-    "difficulty": 2,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -6492,7 +6492,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Dönüşlü zamirler: ik -> me, jij -> je, hij/zij -> zich, wij -> ons, jullie -> je/zich.",
     "explanationEn": "Reflexive pronouns: ik -> me, jij -> je, hij/zij -> zich, wij -> ons, jullie -> je/zich.",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -6540,7 +6540,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Ana cümle bağlaçları (dizilimi bozmaz): en (ve), maar (ama), want (çünkü), dus (bu yüzden), of (veya).",
     "explanationEn": "Coordinating conjunctions: en (and), maar (but), want (because), dus (so/therefore), of (or).",
-    "difficulty": 3,
+    "difficulty": 1,
     "quality": 2
   },
   {
@@ -6636,7 +6636,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Nesne zamirleri: hem (onu-erkek), haar (onu-kadın), mij (bana/beni), hen (onları/onlara), ons (bizi/bize).",
     "explanationEn": "Object pronouns: hem (him), haar (her), mij (me), hen (them), ons (us).",
-    "difficulty": 2,
+    "difficulty": 1,
     "quality": 2
   },
   {
@@ -6684,7 +6684,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "İyelik zamirleri: mijn (benim), jouw (senin), zijn (onun-erkek), haar (onun-kadın), ons (bizim - het-woord).",
     "explanationEn": "Possessive pronouns: mijn (my), jouw (your), zijn (his), haar (her), ons (our for het-words).",
-    "difficulty": 2,
+    "difficulty": 1,
     "quality": 2
   },
   {
@@ -6732,7 +6732,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "İşaret zamirleri: deze (bu - de), die (şu/o - de), dit (bu - het), dat (şu/o - het veya genel fikir).",
     "explanationEn": "Demonstratives: deze (this - de), die (that - de), dit (this - het), dat (that - het or general concept).",
-    "difficulty": 2,
+    "difficulty": 1,
     "quality": 2
   },
   {
@@ -6780,7 +6780,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Karşılaştırma: groter (daha büyük), goedkoopst (en ucuz), kouder (daha soğuk), beter (daha iyi), mooist (en güzel).",
     "explanationEn": "Comparisons: groter (bigger), goedkoopst (cheapest), kouder (colder), beter (better), mooist (most beautiful).",
-    "difficulty": 2,
+    "difficulty": 1,
     "quality": 2
   },
   {
@@ -6828,7 +6828,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Hareket bildiren geçmiş zaman fiilleri: ging (gitti), kwam (geldi), liepen (yürüdüler), reed (araba sürdü), vertrok (hareket etti).",
     "explanationEn": "Motion past tense verbs: ging (went), kwam (came), liepen (walked), reed (drove), vertrok (departed).",
-    "difficulty": 3,
+    "difficulty": 1,
     "quality": 2
   },
   {
@@ -6876,7 +6876,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "İletişim fiilleri (geçmiş zaman): zei (dedi/söyledi), sprak (konuştu), schreef (yazdı), las (okudu), vroeg (sordu).",
     "explanationEn": "Communication verbs in past: zei (said), sprak (spoke), schreef (wrote), las (read), vroeg (asked).",
-    "difficulty": 3,
+    "difficulty": 1,
     "quality": 2
   },
   {
@@ -6924,7 +6924,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Yeme içme ortaçları: gegeten (yemiş), gedronken (içmiş), gebakken (pişirmiş/fırınlamış), genomen (almış), gesneden (doğramış).",
     "explanationEn": "Food & drink participles: gegeten (eaten), gedronken (drunk), gebakken (baked), genomen (taken), gesneden (cut/sliced).",
-    "difficulty": 3,
+    "difficulty": 1,
     "quality": 2
   },
   {
@@ -6972,7 +6972,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Temel günlük ortaçlar: geweest (bulunmuş/olmuş), gehad (sahip olmuş), gedaan (yapmış), gebleven (kalmış), geworden (olmuş/yaşına girmiş).",
     "explanationEn": "Core life participles: geweest (been), gehad (had), gedaan (done), gebleven (stayed), geworden (become).",
-    "difficulty": 3,
+    "difficulty": 1,
     "quality": 2
   },
   {
@@ -7020,7 +7020,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Yardımcı fiil seçimi: hareket ve durum değişikliği bildiren fiiller (gaan, blijven, vertrekken) 'zijn' ile; diğer fiiller 'hebben' ile çekimlenir.",
     "explanationEn": "Auxiliary choice: verbs of motion/change of state (gaan, blijven, vertrekken) take 'zijn'; other actions take 'hebben'.",
-    "difficulty": 3,
+    "difficulty": 1,
     "quality": 2
   },
   {
@@ -7068,7 +7068,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Modal fiiller: moet (zorunluluk), mag (izin/yasak), kan (yetenek/olabilirlik), wil (istek), zal (söz/gelecek).",
     "explanationEn": "Modal verbs: moet (obligation), mag (permission/prohibition), kan (ability), wil (desire), zal (promise/future).",
-    "difficulty": 3,
+    "difficulty": 1,
     "quality": 2
   },
   {
@@ -7116,7 +7116,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Ayrılabilen fiil ön ekleri ana cümlede cümlenin en sonuna gider: opbellen -> belt op, meenemen -> neemt mee, aankomen -> komt aan, afrekenen -> rekent af.",
     "explanationEn": "Separable prefixes move to the very end of the main clause: opbellen -> belt op, meenemen -> neemt mee, aankomen -> komt aan, afrekenen -> rekent af.",
-    "difficulty": 3,
+    "difficulty": 1,
     "quality": 2
   },
   {
@@ -7212,7 +7212,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Ev bölümleri: keuken (mutfak), woonkamer (oturma odası), slaapkamer (yatak odası), badkamer (banyo), tuin (bahçe).",
     "explanationEn": "House areas: keuken (kitchen), woonkamer (living room), slaapkamer (bedroom), badkamer (bathroom), tuin (garden).",
-    "difficulty": 2,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -7260,7 +7260,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Belediye terimleri: paspoort (pasaport), verhuizing (taşınma/adres değişikliği), balie (banko), afspraak (randevu), invullen (doldurmak).",
     "explanationEn": "Municipality terms: paspoort (passport), verhuizing (change of address), balie (desk/counter), afspraak (appointment), invullen (to fill in).",
-    "difficulty": 2,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -7308,7 +7308,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Hava durumu: regen (yağmur), zon (güneş), wind (rüzgar), sneeuw (kar), zacht (ılıman).",
     "explanationEn": "Weather terms: regen (rain), zon (sun), wind (wind), sneeuw (snow), zacht (mild).",
-    "difficulty": 2,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -7356,7 +7356,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Toplu taşıma: spoor (hat/ray), perron (peron), chipkaart (ulaşım kartı), vertraging (rötar/gecikme), overstappen (aktarma yapmak).",
     "explanationEn": "Public transport: spoor (track), perron (platform), chipkaart (smart card), vertraging (delay), overstappen (to transfer).",
-    "difficulty": 2,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -7404,7 +7404,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "İş terimleri: cv (özgeçmiş), sollicitatiegesprek (iş mülakatı), collega's (meslektaşlar), salaris (maaş), contract (sözleşme).",
     "explanationEn": "Work terms: cv (resume), sollicitatiegesprek (job interview), collega's (colleagues), salaris (salary), contract (contract).",
-    "difficulty": 2,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -7500,7 +7500,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "İşe hastalık bildirme: ziek melden (hastalık bildirmek), werken (çalışmak), herstel (iyileşme), contact opnemen (iletişime geçmek), overnemen (devralmak).",
     "explanationEn": "Calling in sick: ziek melden (call in sick), werken (work), herstel (recovery), contact opnemen (get in touch), overnemen (take over).",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -7548,7 +7548,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Komşuluk ve apartman: gang (koridor), muziek (müzik), ontmoeten (tanışmak/buluşmak), houden (tutmak), kosten (masraflar/aidat).",
     "explanationEn": "Apartment living: gang (hallway), muziek (music), ontmoeten (meet), houden (keep), kosten (costs/fees).",
-    "difficulty": 2,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -7596,7 +7596,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Okul terimleri: leraar (öğretmen), rapport (karne), schrijven (yazmak), pauze (teneffüs), bellen (aramak).",
     "explanationEn": "School terms: leraar (teacher), rapport (report card), schrijven (writing), pauze (break), bellen (to call).",
-    "difficulty": 2,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -7644,7 +7644,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Tren istasyonu terimleri: vertraging (gecikme), treinen (trenler), uitchecken (çıkış yapmak), vertrektijd (kalkış saati), balie (danışma bankosu).",
     "explanationEn": "Railway terms: vertraging (delay), treinen (trains), uitchecken (check out), vertrektijd (departure time), balie (service counter).",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -7692,7 +7692,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Alışveriş terimleri: ruilen (değiştirmek), bon (fiş), passen (denemek), korting (indirim), betalen (ödemek).",
     "explanationEn": "Store terms: ruilen (exchange), bon (receipt), passen (try on), korting (discount), betalen (pay).",
-    "difficulty": 2,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -7740,7 +7740,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "İş terimleri: baan (iş), vakantiedagen (tatil günleri), loonstrook (maaş bordrosu), overwerk (fazla mesai), contract (sözleşme).",
     "explanationEn": "Employment terms: baan (job), vakantiedagen (vacation days), loonstrook (pay slip), overwerk (overtime), contract (contract).",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -7788,7 +7788,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Posta terimleri: afhaalpunt (teslim alma noktası), postzegel (posta pulu), brievenbus (posta kutusu), zetten (imza atmak), volgen (takip etmek).",
     "explanationEn": "Postal terms: afhaalpunt (pickup point), postzegel (stamp), brievenbus (mailbox), zetten (sign), volgen (track).",
-    "difficulty": 2,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -7836,7 +7836,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Topluma katılım: vrijwilligerswerk (gönüllü iş), taalmaatje (dil koçu/arkadaşı), lenen (ödünç almak), cultuur (kültür), lid (üye).",
     "explanationEn": "Societal participation: vrijwilligerswerk (volunteer work), taalmaatje (language buddy), lenen (borrow), cultuur (culture), lid (member).",
-    "difficulty": 2,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -7884,7 +7884,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Randevu kalıpları: ontmoeten (buluşmak), ben (verhinderd ben - engelim var), agenda (ajanda), uit (goed uitkomen - uygun olmak), station (istasyon).",
     "explanationEn": "Appointment terms: ontmoeten (meet), ben (unavailable), agenda (calendar), uit (suit you), station (station).",
-    "difficulty": 2,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -7932,7 +7932,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Eczane terimleri: recept (reçete), innemen (içmek/yutmak), bijsluiter (prospektüs), bijwerking (yan etki), kopen (satın almak).",
     "explanationEn": "Pharmacy terms: recept (prescription), innemen (take pills), bijsluiter (leaflet), bijwerking (side effect), kopen (buy).",
-    "difficulty": 3,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -7980,7 +7980,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Davet kalıpları: feestje (parti), afspraak (randevu/plan), verhuizing (taşınma), gastvrouw (ev sahibesi), avond (akşam).",
     "explanationEn": "Invitation responses: feestje (party), afspraak (appointment), verhuizing (move), gastvrouw (hostess), avond (evening).",
-    "difficulty": 2,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -8028,7 +8028,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Banka ve ödeme terimleri: pincode (şifre), bankpas (banka kartı), overmaken (havale/transfer etmek), uitgaven (harcamalar), betaling (ödeme kanıtı).",
     "explanationEn": "Banking terms: pincode (PIN), bankpas (debit card), overmaken (transfer), uitgaven (expenses), betaling (proof of payment).",
-    "difficulty": 2,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -8076,7 +8076,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Hobiler ve spor: park (park), muziek (müzik), sportschool (spor salonu), natuur (doğa), boeken (kitaplar).",
     "explanationEn": "Leisure terms: park (park), muziek (music), sportschool (gym), natuur (nature), boeken (books).",
-    "difficulty": 2,
+    "difficulty": 1,
     "quality": 2
   },
   {
@@ -8124,7 +8124,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Small talk kalıpları: geniet ervan (tadını çıkar), leuk gehad (güzel geçti), slagen (başarmak/geçmek), uitrusten (dinlenmek), zeg het maar (buyrun söyleyin).",
     "explanationEn": "Small talk responses: van (enjoy it), gehad (had a good time), slagen (to pass), uit (rest well), maar (go ahead/tell me).",
-    "difficulty": 2,
+    "difficulty": 4,
     "quality": 2
   },
   {
@@ -8172,7 +8172,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Pazar alışverişi: helpen (yardımcı olmak), appels (elmalar), zo (hepsi bu kadar), bij me (yanımda var), keer (tot de volgende keer - haftaya görüşürüz).",
     "explanationEn": "Market shopping: helpen (to help), appels (apples), zo (that is all), bij me (with me), keer (until next time).",
-    "difficulty": 2,
+    "difficulty": 3,
     "quality": 2
   },
   {
@@ -8268,7 +8268,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Duygular: moe (yorgun), blij (mutlu/sevinçli), bang (korkmuş), boos (kızgın), verdrietig (üzgün).",
     "explanationEn": "Emotions: moe (tired), blij (happy), bang (scared), boos (angry), verdrietig (sad).",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -8316,7 +8316,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Bisiklet ve trafik: licht (far/ışık), fietspad (bisiklet yolu), hand (el uzatmak), slot (kilit), stoppen (durmak).",
     "explanationEn": "Cycling safety: licht (light), fietspad (bike lane), hand (signal by hand), slot (lock), stoppen (to stop).",
-    "difficulty": 4,
+    "difficulty": 5,
     "quality": 2
   },
   {
@@ -8364,7 +8364,7 @@ const matchingQuestionsBase = [
     ],
     "explanationTr": "Tat ve lezzet ifadeleri: heerlijk (lezzetli), zoet (tatlı), zout (tuzlu), vers (taze), eet smakelijk (afiyet olsun).",
     "explanationEn": "Taste terms: heerlijk (delicious), zoet (sweet), zout (salty), vers (fresh), eet smakelijk (enjoy your meal).",
-    "difficulty": 2,
+    "difficulty": 3,
     "quality": 2
   },
   {
