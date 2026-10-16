@@ -5940,7 +5940,7 @@ export const groupChapterWords = (words, chapterId, groupType) => {
     return Array.from(groupsMap.entries()).map(([letter, items]) => ({
       key: `alpha_${letter}`,
       title: letter,
-      icon: 'fa-solid fa-font',
+      icon: 'fa-solid fa-arrow-down-a-z',
       words: items
     }));
   }
