@@ -274,51 +274,51 @@ export default function VocabularySection({
   const metaForSelected = selectedWord ? WORD_METADATA[selectedWord.id] : null;
 
   return (
-    <div className="max-w-5xl mx-auto px-3 sm:px-6 py-6 space-y-6 animate-fadeIn text-slate-100">
+    <div className="w-full max-w-5xl mx-auto space-y-4 sm:space-y-6 animate-fadeIn text-slate-100 min-w-0">
       
       {/* ======================================================== */}
       {/* 1. ÜST BAŞLIK VE KONTROL KARTI                           */}
       {/* ======================================================== */}
-      <div className="bg-slate-800/90 rounded-2xl p-5 sm:p-6 border border-slate-700/80 shadow-xl backdrop-blur-sm">
+      <div className="bg-slate-800/90 rounded-2xl p-3.5 sm:p-6 border border-slate-700/80 shadow-xl backdrop-blur-sm w-full min-w-0">
         
         {/* Üst Satır: Başlık, Rozet ve Sağ Aksiyon Butonları */}
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b border-slate-700/70 pb-5">
-          <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white shadow-lg shadow-indigo-500/20 flex-shrink-0">
-              <i className="fa-solid fa-spell-check text-xl"></i>
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 sm:gap-4 border-b border-slate-700/70 pb-4 sm:pb-5 w-full min-w-0">
+          <div className="flex items-center gap-2.5 sm:gap-3 min-w-0 w-full sm:w-auto">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white shadow-lg shadow-indigo-500/20 flex-shrink-0">
+              <i className="fa-solid fa-spell-check text-lg sm:text-xl"></i>
             </div>
-            <div>
-              <div className="flex items-center gap-2">
-                <span className="text-xs font-bold uppercase tracking-wider text-indigo-400 bg-indigo-950/60 border border-indigo-700/50 px-2 py-0.5 rounded-md">
+            <div className="min-w-0 flex-1">
+              <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
+                <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-indigo-400 bg-indigo-950/60 border border-indigo-700/50 px-2 py-0.5 rounded-md flex-shrink-0">
                   {sectionId} • Vocabulary
                 </span>
-                <span className="text-xs text-slate-400 font-medium">
+                <span className="text-[11px] sm:text-xs text-slate-400 font-medium truncate">
                   {isTr ? `${chNum}. Ünite Kelime Listesi` : `Chapter ${chNum} Word List`}
                 </span>
               </div>
-              <h1 className="text-xl sm:text-2xl font-black text-slate-100 tracking-tight mt-0.5">
+              <h1 className="text-lg sm:text-2xl font-black text-slate-100 tracking-tight mt-0.5 truncate">
                 {isTr ? `Ünite ${chNum} - Kelimeler` : `Chapter ${chNum} - Vocabulary`}
               </h1>
             </div>
           </div>
 
           {/* Aksiyon Butonları (Toplu İşaretle, Tamamlandı, Favori) */}
-          <div className="flex items-center gap-2 self-stretch sm:self-auto justify-end flex-wrap">
+          <div className="flex items-center gap-2 self-stretch sm:self-auto justify-end flex-wrap pt-1 sm:pt-0">
             {/* Toplu İşaretle Butonu */}
             <button
               onClick={handleMarkAllKnown}
-              className="bg-slate-900/80 border border-slate-700 hover:border-emerald-500 hover:bg-emerald-950/40 text-slate-300 hover:text-emerald-400 px-3 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 shadow-sm cursor-pointer"
+              className="bg-slate-900/80 border border-slate-700 hover:border-emerald-500 hover:bg-emerald-950/40 text-slate-300 hover:text-emerald-400 px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-xl text-xs font-bold transition flex items-center gap-1.5 sm:gap-2 shadow-sm cursor-pointer"
               title={isTr ? 'Görüntülenen tüm kelimeleri biliyorum olarak işaretle' : 'Mark all visible words as known'}
             >
               <i className="fa-solid fa-check-double text-emerald-400"></i>
-              <span className="hidden sm:inline">{isTr ? 'Tümünü Biliyorum Yap' : 'Mark All Known'}</span>
+              <span>{isTr ? 'Tümünü Biliyorum Yap' : 'Mark All Known'}</span>
             </button>
 
             {/* Tamamlandı Butonu (Sitenin geri kalanıyla tam uyumlu) */}
             <button
               type="button"
               onClick={(e) => { e.stopPropagation(); toggleCompleted && toggleCompleted(sectionId); }}
-              className="text-2xl transition-transform hover:scale-110 focus:outline-none cursor-pointer flex items-center justify-center ml-1"
+              className="text-xl sm:text-2xl transition-transform hover:scale-110 focus:outline-none cursor-pointer flex items-center justify-center p-1"
               title={isComp ? (isTr ? 'Tamamlandı olarak işaretlendi' : 'Marked as completed') : (isTr ? 'Tamamlandı olarak işaretle' : 'Mark as completed')}
             >
               {isComp ? (
@@ -333,7 +333,7 @@ export default function VocabularySection({
               <button
                 type="button"
                 onClick={handleStarClick}
-                className="text-2xl transition-transform hover:scale-110 focus:outline-none cursor-pointer flex items-center justify-center"
+                className="text-xl sm:text-2xl transition-transform hover:scale-110 focus:outline-none cursor-pointer flex items-center justify-center p-1"
                 title={isFav ? (isTr ? 'Favorilerden çıkar' : 'Remove from favorites') : (isTr ? 'Favorilere ekle' : 'Add to favorites')}
               >
                 {isFav ? (
@@ -359,7 +359,7 @@ export default function VocabularySection({
                       if (e.key === 'Escape') setShowFavInput(false);
                     }}
                     placeholder={isTr ? "Notun (max 100 kar.)..." : "Your note (max 100 char.)..."}
-                    className="bg-transparent text-slate-200 text-xs px-2.5 py-1 w-36 sm:w-44 focus:outline-none placeholder-slate-500"
+                    className="bg-transparent text-slate-200 text-xs px-2.5 py-1 w-32 sm:w-44 focus:outline-none placeholder-slate-500"
                   />
                   <button 
                     type="button"
@@ -375,26 +375,26 @@ export default function VocabularySection({
         </div>
 
         {/* İlerleme ve İstatistikler Satırı */}
-        <div className="mt-5 grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
-          <div className="bg-slate-900/70 border border-slate-800 p-2.5 rounded-xl">
-            <span className="text-[11px] text-slate-400 font-medium block">{isTr ? 'Toplam Kelime' : 'Total Words'}</span>
-            <span className="text-lg font-black text-slate-200">{stats.total}</span>
+        <div className="mt-4 sm:mt-5 grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 text-center w-full min-w-0">
+          <div className="bg-slate-900/70 border border-slate-800 p-2 sm:p-2.5 rounded-xl min-w-0">
+            <span className="text-[10px] sm:text-[11px] text-slate-400 font-medium block truncate">{isTr ? 'Toplam Kelime' : 'Total Words'}</span>
+            <span className="text-base sm:text-lg font-black text-slate-200">{stats.total}</span>
           </div>
-          <div className="bg-slate-900/70 border border-emerald-900/40 p-2.5 rounded-xl">
-            <span className="text-[11px] text-emerald-400 font-medium block flex items-center justify-center gap-1">
+          <div className="bg-slate-900/70 border border-emerald-900/40 p-2 sm:p-2.5 rounded-xl min-w-0">
+            <span className="text-[10px] sm:text-[11px] text-emerald-400 font-medium block flex items-center justify-center gap-1 truncate">
               <i className="fa-solid fa-check text-[10px]"></i> {isTr ? 'Biliyorum' : 'Known'}
             </span>
-            <span className="text-lg font-black text-emerald-400">{stats.knownCount}</span>
+            <span className="text-base sm:text-lg font-black text-emerald-400">{stats.knownCount}</span>
           </div>
-          <div className="bg-slate-900/70 border border-rose-900/40 p-2.5 rounded-xl">
-            <span className="text-[11px] text-rose-400 font-medium block flex items-center justify-center gap-1">
+          <div className="bg-slate-900/70 border border-rose-900/40 p-2 sm:p-2.5 rounded-xl min-w-0">
+            <span className="text-[10px] sm:text-[11px] text-rose-400 font-medium block flex items-center justify-center gap-1 truncate">
               <i className="fa-solid fa-xmark text-[10px]"></i> {isTr ? 'Bilmiyorum' : 'Unknown'}
             </span>
-            <span className="text-lg font-black text-rose-400">{stats.unknownCount}</span>
+            <span className="text-base sm:text-lg font-black text-rose-400">{stats.unknownCount}</span>
           </div>
-          <div className="bg-slate-900/70 border border-slate-800 p-2.5 rounded-xl">
-            <span className="text-[11px] text-slate-400 font-medium block">{isTr ? 'Öğrenme Oranı' : 'Progress'}</span>
-            <span className="text-lg font-black text-indigo-400">{stats.progressPercent}%</span>
+          <div className="bg-slate-900/70 border border-slate-800 p-2 sm:p-2.5 rounded-xl min-w-0">
+            <span className="text-[10px] sm:text-[11px] text-slate-400 font-medium block truncate">{isTr ? 'Öğrenme Oranı' : 'Progress'}</span>
+            <span className="text-base sm:text-lg font-black text-indigo-400">{stats.progressPercent}%</span>
           </div>
         </div>
 
@@ -410,13 +410,13 @@ export default function VocabularySection({
       {/* ======================================================== */}
       {/* 2. GRUPLAMA SEÇİCİ VE FİLTRE ÇUBUĞU                      */}
       {/* ======================================================== */}
-      <div className="bg-slate-800/80 rounded-2xl p-4 border border-slate-700/80 shadow-md flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4">
+      <div className="bg-slate-800/80 rounded-2xl p-3 sm:p-4 border border-slate-700/80 shadow-md flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3 sm:gap-4 w-full min-w-0 max-w-full">
         
         {/* Gruplama Tipi Butonları (3 Tür: Alfabetik, Fonksiyonel, Contextual) */}
-        <div className="flex bg-slate-900/90 p-1 rounded-xl border border-slate-700 self-start sm:self-auto overflow-x-auto w-full md:w-auto">
+        <div className="flex bg-slate-900/90 p-1 rounded-xl border border-slate-700 overflow-x-auto w-full md:w-auto max-w-full min-w-0 scrollbar-thin scrollbar-thumb-slate-700">
           <button
             onClick={() => setGroupType('alphabetical')}
-            className={`flex-1 sm:flex-initial px-3.5 py-1.5 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1.5 cursor-pointer whitespace-nowrap ${
+            className={`flex-1 sm:flex-initial px-2.5 sm:px-3.5 py-1.5 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1.5 cursor-pointer whitespace-nowrap flex-shrink-0 ${
               groupType === 'alphabetical'
                 ? 'bg-indigo-600 text-white shadow-md'
                 : 'text-slate-400 hover:text-slate-200'
@@ -428,7 +428,7 @@ export default function VocabularySection({
 
           <button
             onClick={() => setGroupType('functional')}
-            className={`flex-1 sm:flex-initial px-3.5 py-1.5 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1.5 cursor-pointer whitespace-nowrap ${
+            className={`flex-1 sm:flex-initial px-2.5 sm:px-3.5 py-1.5 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1.5 cursor-pointer whitespace-nowrap flex-shrink-0 ${
               groupType === 'functional'
                 ? 'bg-indigo-600 text-white shadow-md'
                 : 'text-slate-400 hover:text-slate-200'
@@ -440,21 +440,21 @@ export default function VocabularySection({
 
           <button
             onClick={() => setGroupType('contextual')}
-            className={`flex-1 sm:flex-initial px-3.5 py-1.5 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1.5 cursor-pointer whitespace-nowrap ${
+            className={`flex-1 sm:flex-initial px-2.5 sm:px-3.5 py-1.5 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1.5 cursor-pointer whitespace-nowrap flex-shrink-0 ${
               groupType === 'contextual'
                 ? 'bg-indigo-600 text-white shadow-md'
                 : 'text-slate-400 hover:text-slate-200'
             }`}
           >
             <i className="fa-solid fa-layer-group text-xs"></i>
-            <span>{isTr ? 'Bağlamsal (Konular)' : 'Contextual'}</span>
+            <span>{isTr ? 'Bağlamsal' : 'Contextual'}</span>
           </button>
         </div>
 
         {/* Sağ Taraf: Arama ve Durum Filtreleri */}
-        <div className="flex items-center gap-2 flex-1 md:justify-end flex-wrap sm:flex-nowrap">
+        <div className="flex items-center gap-2 w-full md:w-auto md:justify-end min-w-0 flex-wrap sm:flex-nowrap">
           {/* Canlı Arama Input */}
-          <div className="relative flex-1 sm:max-w-[220px]">
+          <div className="relative flex-1 min-w-[130px] sm:max-w-[220px]">
             <i className="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-500 text-xs"></i>
             <input
               type="text"
@@ -477,7 +477,7 @@ export default function VocabularySection({
           <select
             value={statusFilter}
             onChange={(e) => setStatusFilter(e.target.value)}
-            className="bg-slate-900 border border-slate-700 text-slate-300 text-xs font-semibold rounded-xl px-2.5 py-1.5 focus:outline-none focus:border-indigo-500 cursor-pointer"
+            className="bg-slate-900 border border-slate-700 text-slate-300 text-xs font-semibold rounded-xl px-2.5 py-1.5 focus:outline-none focus:border-indigo-500 cursor-pointer flex-shrink-0"
           >
             <option value="all">{isTr ? 'Tüm Durumlar' : 'All Statuses'}</option>
             <option value="known">🟢 {isTr ? 'Biliyorum' : 'Known'}</option>
@@ -489,7 +489,7 @@ export default function VocabularySection({
 
       {/* Alfabetik Hızlı Atlama Çubuğu (Yalnızca alfabetik modda ve arama yokken) */}
       {groupType === 'alphabetical' && !searchQuery && (
-        <div className="flex items-center gap-1.5 overflow-x-auto py-1 scrollbar-thin scrollbar-thumb-slate-700">
+        <div className="flex items-center gap-1.5 overflow-x-auto py-1.5 scrollbar-thin scrollbar-thumb-slate-700 w-full max-w-full min-w-0">
           <span className="text-[11px] font-bold text-slate-500 uppercase mr-1 flex-shrink-0">
             {isTr ? 'Harfler:' : 'Letters:'}
           </span>
@@ -508,7 +508,7 @@ export default function VocabularySection({
       {/* ======================================================== */}
       {/* 3. GRUPLANMIŞ KELİME KARTLARI LİSTESİ                    */}
       {/* ======================================================== */}
-      <div className="space-y-6">
+      <div className="space-y-4 sm:space-y-6 w-full min-w-0">
         {groupedSections.length === 0 ? (
           <div className="bg-slate-800/60 rounded-2xl p-8 border border-slate-700/60 text-center">
             <i className="fa-solid fa-folder-open text-3xl text-slate-600 mb-3"></i>
@@ -526,25 +526,25 @@ export default function VocabularySection({
               <div 
                 key={group.key} 
                 id={group.key}
-                className="bg-slate-800/50 rounded-2xl p-4 sm:p-5 border border-slate-700/70 shadow-sm"
+                className="bg-slate-800/50 rounded-2xl p-3.5 sm:p-5 border border-slate-700/70 shadow-sm w-full min-w-0"
               >
                 {/* Grup Başlığı */}
-                <div className="flex items-center justify-between border-b border-slate-700/60 pb-3 mb-4">
-                  <div className="flex items-center gap-2.5">
-                    <span className="w-8 h-8 rounded-lg bg-indigo-950/60 border border-indigo-700/40 text-indigo-400 flex items-center justify-center text-sm shadow-inner">
+                <div className="flex items-center justify-between border-b border-slate-700/60 pb-3 mb-4 w-full min-w-0">
+                  <div className="flex items-center gap-2.5 min-w-0 flex-1">
+                    <span className="w-8 h-8 rounded-lg bg-indigo-950/60 border border-indigo-700/40 text-indigo-400 flex items-center justify-center text-sm shadow-inner flex-shrink-0">
                       <i className={group.icon || 'fa-solid fa-folder'}></i>
                     </span>
-                    <h3 className="font-extrabold text-slate-100 text-base sm:text-lg tracking-tight">
+                    <h3 className="font-extrabold text-slate-100 text-base sm:text-lg tracking-tight truncate">
                       {groupTitle}
                     </h3>
                   </div>
-                  <span className="text-xs font-bold text-slate-400 bg-slate-900 px-2.5 py-1 rounded-full border border-slate-700/60">
+                  <span className="text-xs font-bold text-slate-400 bg-slate-900 px-2.5 py-1 rounded-full border border-slate-700/60 flex-shrink-0">
                     {group.words.length} {isTr ? 'kelime' : 'words'}
                   </span>
                 </div>
 
                 {/* Kelimeler Izgarası (Grid) */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5 sm:gap-3 w-full min-w-0">
                   {group.words.map(word => {
                     const status = getStatusOfWord(word);
                     const meta = WORD_METADATA[word.id];
@@ -565,11 +565,11 @@ export default function VocabularySection({
                       <div
                         key={word.id}
                         onClick={(e) => handleWordCardClick(e, word)}
-                        className={`group relative p-3.5 rounded-xl border transition-all duration-200 cursor-pointer flex flex-col justify-between gap-2 hover:-translate-y-0.5 shadow-sm ${statusBorder}`}
+                        className={`group relative p-3 sm:p-3.5 rounded-xl border transition-all duration-200 cursor-pointer flex flex-col justify-between gap-2 hover:-translate-y-0.5 shadow-sm min-w-0 ${statusBorder}`}
                       >
                         {/* Üst Satır: Felemenkçe Kelime & Telaffuz & Durum Rozeti */}
-                        <div className="flex items-start justify-between gap-2">
-                          <span className={`font-bold text-sm sm:text-base leading-snug tracking-tight ${
+                        <div className="flex items-start justify-between gap-2 min-w-0">
+                          <span className={`font-bold text-sm sm:text-base leading-snug tracking-tight break-words min-w-0 flex-1 ${
                             status === 'known' ? 'text-emerald-300' : status === 'unknown' ? 'text-rose-300' : 'text-slate-100 group-hover:text-indigo-300'
                           }`}>
                             {word.nl}

@@ -1245,7 +1245,7 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
             
           </div>
 
-          <div className="flex items-center gap-1.5 sm:gap-2 flex-shrink-0 overflow-visible">
+          <div className="flex items-center gap-1 sm:gap-2 flex-shrink-0 overflow-visible">
             {/* 1. QUIZ BUTONU */}
             <button 
               onClick={() => {
@@ -1697,7 +1697,7 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
       )}
 
       {/* 5. ANA İÇERİK */}
-      <main className="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 text-slate-200 flex flex-col relative overflow-hidden">
+      <main className="flex-1 max-w-7xl w-full mx-auto p-3 sm:p-6 text-slate-200 flex flex-col relative min-w-0 overflow-x-hidden">
         
         {activeTab === 'home' && (
           <HomeView 
