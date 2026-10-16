@@ -806,23 +806,25 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
                             if (status === 'unknown') wordColor = '#fb7185';
 
                             return (
-                              <span 
-                                key={i} 
-                                style={{ 
-                                  color: isWordActive ? '#09090b' : wordColor, 
-                                  textDecoration: isWordActive ? 'none' : 'underline', 
-                                  textDecorationStyle: 'dotted', 
-                                  cursor: 'pointer' 
-                                }} 
-                                onClick={(e) => handleWordClick(e, i, cleanWords)}
-                                className={`transition-colors duration-150 inline-block mx-0.5 px-1 py-0.5 rounded ${
-                                  isWordActive 
-                                    ? 'bg-amber-400 text-slate-950' 
-                                    : 'hover:text-indigo-300'
-                                }`}
-                              >
-                                {token.raw}{' '}
-                              </span>
+                              <React.Fragment key={i}>
+                                <span 
+                                  style={{ 
+                                    color: isWordActive ? '#09090b' : wordColor, 
+                                    textDecoration: isWordActive ? 'none' : 'underline', 
+                                    textDecorationStyle: 'dotted', 
+                                    cursor: 'pointer' 
+                                  }} 
+                                  onClick={(e) => handleWordClick(e, i, cleanWords)}
+                                  className={`transition-colors duration-150 rounded-sm ${
+                                    isWordActive 
+                                      ? 'bg-amber-400 text-slate-950' 
+                                      : 'hover:text-indigo-300'
+                                  }`}
+                                >
+                                  {token.raw}
+                                </span>
+                                {' '}
+                              </React.Fragment>
                             );
                           })}
                         </span>
