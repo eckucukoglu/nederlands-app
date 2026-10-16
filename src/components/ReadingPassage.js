@@ -166,7 +166,7 @@ export default function ReadingPassage({
 
   // Tekil paragrafı çal / durdur
   const handleToggleParagraph = (idx) => {
-    if (playingIdx === idx && !isPlayingAll) {
+    if (playingIdx === idx) {
       stopPlayback();
       return;
     }

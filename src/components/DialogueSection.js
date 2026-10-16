@@ -146,7 +146,7 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
 
   const handlePlaySingleLine = (idx, line, e) => {
     if (e && e.stopPropagation) e.stopPropagation();
-    if (playingLineIdx === idx && !isPlayingAll) {
+    if (playingLineIdx === idx) {
       stopPlayingAll();
       return;
     }
