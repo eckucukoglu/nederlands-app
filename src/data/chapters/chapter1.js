@@ -152,18 +152,20 @@ export const chapter1Sections = [
         isExtra: true,
         questions: [
           { id: "1.1_smart_1", type: "multiple_choice", question: "Hoeveel docenten hebben de cursisten?", options: ["Eén docent", "Twee docenten", "Drie docenten"], correctAnswer: "Twee docenten" },
-            {
-    id: "1.2",
-    chapter: 1,
-    title: "Vocabulary",
-    theory: null,
-    exerciseGroups: []
-  },
+
+
 { id: "1.1_smart_2", type: "multiple_choice", question: "Uit welk land komt Susy?", options: ["Uit Nederland", "Uit China", "Uit Engeland"], correctAnswer: "Uit Engeland" },
           { id: "1.1_smart_3", type: "multiple_choice", question: "Waarom zegt de docent 'Zeg maar jij, hoor' tegen Ning? (Why does the teacher say 'Zeg maar jij'?)", options: ["Omdat ze 'u' te formeel vindt (She finds 'u' too formal). Ze wil tutoyeren.", "Omdat ze boos is.", "Omdat Ning geen Nederlands spreekt."], correctAnswer: "Omdat ze 'u' te formeel vindt (She finds 'u' too formal). Ze wil tutoyeren." }
         ]
       }
     ]
+  },
+  {
+    id: "1.2",
+    chapter: 1,
+    title: "Vocabulary",
+    theory: null,
+    exerciseGroups: []
   },
   {
     id: "1.3",
@@ -570,58 +572,172 @@ export const chapter1Sections = [
   {
     id: "1.8",
     chapter: 1,
-    title: "1.8 Begroeten en afscheid nemen",
+    title: "1.8 Begroeten, afscheid & formulieren invullen",
     theory: (lang) => (
       <>
         {lang === 'tr' ? (
           <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
             <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>👋 Begroeten (Selamlaşma) en Afscheid nemen (Vedalaşma)</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-purple-900/20 p-4 rounded-xl">
-                <h4 className="font-bold text-purple-300 mb-3 border-b border-purple-500/30 pb-1">Begroeten (Greetings):</h4>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div className="bg-purple-900/20 p-4 rounded-xl border border-purple-500/20">
+                <h4 className="font-bold text-purple-300 mb-3 border-b border-purple-500/30 pb-1">Begroeten (Selamlaşma):</h4>
                 <ul className="text-sm space-y-2 text-slate-300">
-                  <li><strong>goedemorgen</strong> (good morning)</li>
-                  <li><strong>goedemiddag</strong> (good afternoon)</li>
-                  <li><strong>goedenavond</strong> (good evening)</li>
-                  <li><strong>goedendag / dag</strong> (good day / hello)</li>
-                  <li><strong>hoi / hallo</strong> (hi / hello)</li>
+                  <li><strong>goedemorgen</strong> (günaydın - öğlen 12'ye kadar)</li>
+                  <li><strong>goedemiddag</strong> (tünaydın / iyi günler - 12:00 - 18:00 arası)</li>
+                  <li><strong>goedenavond</strong> (iyi akşamlar - 18:00'den sonra)</li>
+                  <li><strong>goedendag / dag</strong> (iyi günler / merhaba)</li>
+                  <li><strong>hoi / hallo</strong> (merhaba / selam - samimi)</li>
                 </ul>
               </div>
-              <div className="bg-indigo-900/20 p-4 rounded-xl">
-                <h4 className="font-bold text-indigo-300 mb-3 border-b border-indigo-500/30 pb-1">Afscheid nemen (Saying goodbye):</h4>
+              <div className="bg-indigo-900/20 p-4 rounded-xl border border-indigo-500/20">
+                <h4 className="font-bold text-indigo-300 mb-3 border-b border-indigo-500/30 pb-1">Afscheid nemen (Vedalaşma):</h4>
                 <ul className="text-sm space-y-2 text-slate-300">
-                  <li><strong>goedemorgen/middag/avond</strong> (vedalaşırken de söylenebilir)</li>
-                  <li><strong>dag / daag / doeg / doei</strong> (bye)</li>
-                  <li><strong>tot zo / tot straks</strong> (see you later/soon)</li>
-                  <li><strong>tot morgen</strong> (see you tomorrow)</li>
-                  <li><strong>tot ziens</strong> (goodbye, so long)</li>
+                  <li><strong>dag / daag / doeg / doei</strong> (hoşça kal / bay bay)</li>
+                  <li><strong>tot zo / tot straks</strong> (az sonra görüşürüz - aynı gün içinde)</li>
+                  <li><strong>tot morgen</strong> (yarına kadar / yarın görüşürüz)</li>
+                  <li><strong>tot volgende week</strong> (haftaya görüşürüz)</li>
+                  <li><strong>tot ziens</strong> (görüşmek üzere / hoşça kalın - resmi & genel)</li>
                 </ul>
+              </div>
+            </div>
+
+            <h3 style={{ margin: '20px 0 10px 0', color: '#38bdf8' }}>📝 Een formulier invullen (Hollanda'da Resmi Form Doldurma)</h3>
+            <p className="text-sm text-slate-300 mb-4">
+              Hollanda'da belediye (gemeente), banka, kurs veya doktor kayıtlarında karşınıza çıkacak temel form alanları:
+            </p>
+            <div className="bg-slate-800/80 p-5 rounded-xl border border-slate-700 space-y-3 text-sm">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b border-slate-700/60 pb-2">
+                <span className="font-bold text-amber-300">Voornaam:</span>
+                <span className="text-slate-200">İlk adınız (örn: Susy, Jan)</span>
+                <span className="text-xs text-slate-400 italic">Voorletter(s): Adınızın ilk harfi (örn: S.)</span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b border-slate-700/60 pb-2">
+                <span className="font-bold text-amber-300">Tussenvoegsel:</span>
+                <span className="text-slate-200">Soyad ön eki (van, de, van der, den...)</span>
+                <span className="text-xs text-amber-400/90">Örn: "van" Dijk veya "de" Boer. Formlarda ayrı kutucuktur!</span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b border-slate-700/60 pb-2">
+                <span className="font-bold text-amber-300">Achternaam:</span>
+                <span className="text-slate-200">Soyadınız (örn: Wall, Persie)</span>
+                <span className="text-xs text-slate-400">Tussenvoegsel varsa buraya sadece ana soyadı yazılır!</span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b border-slate-700/60 pb-2">
+                <span className="font-bold text-amber-300">Straat + Huisnummer:</span>
+                <span className="text-slate-200">Sokak adı + Kapı numarası</span>
+                <span className="text-xs text-slate-400">Örn: Hofstraat 22</span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b border-slate-700/60 pb-2">
+                <span className="font-bold text-amber-300">Toevoeging:</span>
+                <span className="text-slate-200">Numara eki / Daire (A, bis, II)</span>
+                <span className="text-xs text-slate-400">Örn: 22-A, 14-bis (üst kat daire)</span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b border-slate-700/60 pb-2">
+                <span className="font-bold text-amber-300">Postcode:</span>
+                <span className="text-slate-200 font-mono text-brand-300 font-semibold">1234 AB formatı</span>
+                <span className="text-xs text-slate-400">Kesinlikle 4 rakam ve 2 büyük harftir! (örn: 3581 TW)</span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b border-slate-700/60 pb-2">
+                <span className="font-bold text-amber-300">Woonplaats:</span>
+                <span className="text-slate-200">İkamet edilen şehir / kasaba</span>
+                <span className="text-xs text-slate-400">Örn: Utrecht, Amsterdam</span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b border-slate-700/60 pb-2">
+                <span className="font-bold text-amber-300">Geboortedatum:</span>
+                <span className="text-slate-200 font-mono">dd - mm - jjjj</span>
+                <span className="text-xs text-slate-400">Gün - Ay - Yıl (dag - maand - jaar)</span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b border-slate-700/60 pb-2">
+                <span className="font-bold text-amber-300">Geslacht:</span>
+                <span className="text-slate-200">Cinsiyet (Man / Vrouw)</span>
+                <span className="text-xs text-slate-400">Kısaltması: M / V</span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                <span className="font-bold text-amber-300">Handtekening:</span>
+                <span className="text-slate-200">İmza (Signature)</span>
+                <span className="text-xs text-slate-400">Belgenin altına atılan ıslak imza</span>
               </div>
             </div>
           </div>
         ) : (
           <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
             <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>👋 Begroeten (Greeting) en Afscheid nemen (Saying goodbye)</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-purple-900/20 p-4 rounded-xl">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div className="bg-purple-900/20 p-4 rounded-xl border border-purple-500/20">
                 <h4 className="font-bold text-purple-300 mb-3 border-b border-purple-500/30 pb-1">Begroeten (Greetings):</h4>
                 <ul className="text-sm space-y-2 text-slate-300">
-                  <li><strong>goedemorgen</strong> (good morning)</li>
-                  <li><strong>goedemiddag</strong> (good afternoon)</li>
-                  <li><strong>goedenavond</strong> (good evening)</li>
+                  <li><strong>goedemorgen</strong> (good morning - until 12:00)</li>
+                  <li><strong>goedemiddag</strong> (good afternoon - 12:00 to 18:00)</li>
+                  <li><strong>goedenavond</strong> (good evening - after 18:00)</li>
                   <li><strong>goedendag / dag</strong> (good day / hello)</li>
-                  <li><strong>hoi / hallo</strong> (hi / hello)</li>
+                  <li><strong>hoi / hallo</strong> (hi / hello - informal)</li>
                 </ul>
               </div>
-              <div className="bg-indigo-900/20 p-4 rounded-xl">
+              <div className="bg-indigo-900/20 p-4 rounded-xl border border-indigo-500/20">
                 <h4 className="font-bold text-indigo-300 mb-3 border-b border-indigo-500/30 pb-1">Afscheid nemen (Saying goodbye):</h4>
                 <ul className="text-sm space-y-2 text-slate-300">
-                  <li><strong>goedemorgen/middag/avond</strong> (can also be used when saying goodbye)</li>
                   <li><strong>dag / daag / doeg / doei</strong> (bye)</li>
-                  <li><strong>tot zo / tot straks</strong> (see you later/soon)</li>
+                  <li><strong>tot zo / tot straks</strong> (see you soon / later today)</li>
                   <li><strong>tot morgen</strong> (see you tomorrow)</li>
-                  <li><strong>tot ziens</strong> (goodbye, so long)</li>
+                  <li><strong>tot volgende week</strong> (see you next week)</li>
+                  <li><strong>tot ziens</strong> (goodbye - polite & general)</li>
                 </ul>
+              </div>
+            </div>
+
+            <h3 style={{ margin: '20px 0 10px 0', color: '#38bdf8' }}>📝 Een formulier invullen (Filling out a Dutch form)</h3>
+            <p className="text-sm text-slate-300 mb-4">
+              Essential form fields found on registrations at the municipality (gemeente), bank, doctor, or course:
+            </p>
+            <div className="bg-slate-800/80 p-5 rounded-xl border border-slate-700 space-y-3 text-sm">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b border-slate-700/60 pb-2">
+                <span className="font-bold text-amber-300">Voornaam:</span>
+                <span className="text-slate-200">First name (e.g. Susy, Jan)</span>
+                <span className="text-xs text-slate-400 italic">Voorletter(s): Initial(s) (e.g. S.)</span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b border-slate-700/60 pb-2">
+                <span className="font-bold text-amber-300">Tussenvoegsel:</span>
+                <span className="text-slate-200">Surname prefix (van, de, van der...)</span>
+                <span className="text-xs text-amber-400/90">E.g., "van" in Van Dijk. In NL, this has its own dedicated box!</span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b border-slate-700/60 pb-2">
+                <span className="font-bold text-amber-300">Achternaam:</span>
+                <span className="text-slate-200">Last name / Family name</span>
+                <span className="text-xs text-slate-400">If there is a tussenvoegsel, only the core surname goes here!</span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b border-slate-700/60 pb-2">
+                <span className="font-bold text-amber-300">Straat + Huisnummer:</span>
+                <span className="text-slate-200">Street + House number</span>
+                <span className="text-xs text-slate-400">E.g. Hofstraat 22</span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b border-slate-700/60 pb-2">
+                <span className="font-bold text-amber-300">Toevoeging:</span>
+                <span className="text-slate-200">House number addition</span>
+                <span className="text-xs text-slate-400">E.g. 22-A, 14-bis (upper-floor flat)</span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b border-slate-700/60 pb-2">
+                <span className="font-bold text-amber-300">Postcode:</span>
+                <span className="text-slate-200 font-mono text-brand-300 font-semibold">1234 AB format</span>
+                <span className="text-xs text-slate-400">Always 4 digits followed by 2 uppercase letters!</span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b border-slate-700/60 pb-2">
+                <span className="font-bold text-amber-300">Woonplaats:</span>
+                <span className="text-slate-200">City / Municipality</span>
+                <span className="text-xs text-slate-400">E.g. Utrecht, Amsterdam</span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b border-slate-700/60 pb-2">
+                <span className="font-bold text-amber-300">Geboortedatum:</span>
+                <span className="text-slate-200 font-mono">dd - mm - jjjj</span>
+                <span className="text-xs text-slate-400">Day - Month - Year (dag - maand - jaar)</span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b border-slate-700/60 pb-2">
+                <span className="font-bold text-amber-300">Geslacht:</span>
+                <span className="text-slate-200">Gender / Sex (Man / Vrouw)</span>
+                <span className="text-xs text-slate-400">Abbreviation: M / V</span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                <span className="font-bold text-amber-300">Handtekening:</span>
+                <span className="text-slate-200">Signature</span>
+                <span className="text-xs text-slate-400">Written signature</span>
               </div>
             </div>
           </div>
@@ -642,16 +758,19 @@ export const chapter1Sections = [
         questions: [
           { id: "1.8_opd11_1", type: "multiple_choice", question: "Wat vul je in bij 'Voornaam'?", options: ["Jouw eerste naam (bijv. Jan).", "Jouw familienaam (bijv. Smit).", "Jouw straat."], correctAnswer: "Jouw eerste naam (bijv. Jan)." },
           { id: "1.8_opd11_2", type: "multiple_choice", question: "Wat vul je in bij 'Woonplaats'?", options: ["De straat waar je woont.", "De stad of het dorp waar je woont (bijv. Utrecht).", "Je telefoonnummer."], correctAnswer: "De stad of het dorp waar je woont (bijv. Utrecht)." },
-          { id: "1.8_opd11_3", type: "multiple_choice", question: "Wat is 'Geslacht' op een formulier?", options: ["Man of Vrouw", "Jouw geboortedatum", "Je nationaliteit"], correctAnswer: "Man of Vrouw" }
+          { id: "1.8_opd11_3", type: "multiple_choice", question: "Wat is 'Geslacht' op een formulier?", options: ["Man of Vrouw", "Jouw geboortedatum", "Je nationaliteit"], correctAnswer: "Man of Vrouw" },
+          { id: "1.8_opd11_4", type: "multiple_choice", question: "Je heet 'Vincent van Gogh'. Wat vul je in bij het veld 'Tussenvoegsel'?", options: ["van", "Vincent", "Gogh"], correctAnswer: "van" },
+          { id: "1.8_opd11_5", type: "multiple_choice", question: "Welke Nederlandse postcode heeft het juiste formaat?", options: ["3581 TW", "TW 3581", "35812"], correctAnswer: "3581 TW" }
         ]
       },
       {
-        instruction: "Slimme Oefeningen (Smart Exercises): Begroeten",
+        instruction: "Slimme Oefeningen (Smart Exercises): Begroeten & Formulieren",
         isExtra: true,
         questions: [
           { id: "1.8_smart_1", type: "multiple_choice", question: "Het is 14:00 uur. Wat zeg je als je de docent ziet?", options: ["Goedemorgen", "Goedemiddag", "Goedenavond"], correctAnswer: "Goedemiddag" },
           { id: "1.8_smart_2", type: "multiple_choice", question: "Je ziet je docent morgen weer. Wat zeg je als je weggaat?", options: ["Tot morgen", "Goedendag", "Hoi"], correctAnswer: "Tot morgen" },
-          { id: "1.8_smart_3", type: "multiple_choice", question: "Je ziet je vriend over een uur weer (in an hour). Wat zeg je?", options: ["Tot morgen", "Tot ziens", "Tot straks / Tot zo"], correctAnswer: "Tot straks / Tot zo" }
+          { id: "1.8_smart_3", type: "multiple_choice", question: "Je ziet je vriend over een uur weer (in an hour). Wat zeg je?", options: ["Tot morgen", "Tot ziens", "Tot straks / Tot zo"], correctAnswer: "Tot straks / Tot zo" },
+          { id: "1.8_smart_4", type: "multiple_choice", question: "Wat betekent de toevoeging 'bis' bij een huisnummer (bijv. Hofstraat 14 bis)?", options: ["Bovenwoning / üst kat daire", "Kelder / bodrum", "Tuin / bahçe"], correctAnswer: "Bovenwoning / üst kat daire" }
         ]
       }
     ]

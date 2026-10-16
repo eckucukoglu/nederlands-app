@@ -124,13 +124,8 @@ export const chapter3Sections = [
         isExtra: false,
         questions: [
           { id: "3.1_opd1_1", type: "multiple_choice", question: "1. Edit, Andres en Susy zijn...", options: ["a) in een café.", "b) in de les."], correctAnswer: "a) in een café." },
-            {
-    id: "3.2",
-    chapter: 3,
-    title: "Vocabulary",
-    theory: null,
-    exerciseGroups: []
-  },
+
+
 { id: "3.1_opd1_2", type: "multiple_choice", question: "2. Andres is...", options: ["a) de zus van Edit.", "b) de broer van Edit."], correctAnswer: "b) de broer van Edit." },
           { id: "3.1_opd1_3", type: "multiple_choice", question: "3. Edit en Susy kennen elkaar...", options: ["a) van de cursus.", "b) van het werk."], correctAnswer: "a) van de cursus." },
           { id: "3.1_opd1_4", type: "multiple_choice", question: "4. Edit is jarig en zij geeft...", options: ["a) een rondje.", "b) een glas wijn."], correctAnswer: "a) een rondje." },
@@ -147,6 +142,13 @@ export const chapter3Sections = [
         ]
       }
     ]
+  },
+  {
+    id: "3.2",
+    chapter: 3,
+    title: "Vocabulary",
+    theory: null,
+    exerciseGroups: []
   },
   {
     id: "3.3",
@@ -463,11 +465,32 @@ export const chapter3Sections = [
   {
     id: "3.9",
     chapter: 3,
-    title: "3.9 Tekst & 3.10 Uitspraak",
+    title: "3.9 Cultuur, Tekst & 3.10 Uitspraak",
     theory: (lang) => (
       <>
         {lang === 'tr' ? (
           <>
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f59e0b', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#fbbf24' }}>🎉 Nederlandse Cultuur: Trakteren & De Kringverjaardag</h3>
+              <p className="text-sm text-slate-300 mb-3">
+                Hollanda'da doğum günü kutlamaları ve kafe kültürü hakkında bilmeniz gereken çok önemli iki gelenek:
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-200">
+                <div className="bg-amber-950/30 p-4 rounded-xl border border-amber-500/20">
+                  <h4 className="font-bold text-amber-300 mb-2">🍰 Wie jarig is, trakteert! (Doğum günü olan ısmarlar!)</h4>
+                  <p className="text-xs text-slate-300 leading-relaxed">
+                    Türkiye'den farklı olarak, Hollanda'da doğum gününüz olduğunda iş arkadaşlarınız veya arkadaşlarınız size hediye/yemek ısmarlamaz; <strong>siz herkese pasta/ikram (gebak/taart) götürürsünüz</strong> veya kafede ilk tur içkileri siz ısmarlarsınız (<em>"een rondje geven"</em>). Buna <strong>trakteren</strong> denir.
+                  </p>
+                </div>
+                <div className="bg-indigo-950/30 p-4 rounded-xl border border-indigo-500/20">
+                  <h4 className="font-bold text-indigo-300 mb-2">⭕ De Kringverjaardag (Daire Doğum Günü)</h4>
+                  <p className="text-xs text-slate-300 leading-relaxed">
+                    Tipik bir Hollanda ev doğum gününde konuklar oturma odasında büyük bir daire şeklinde otururlar. İçeri giren kişi herkesin elini tek tek sıkarak ev sahibini kutlar: <em>"Gefeliciteerd met Jan!"</em> (Jan'ın doğum gününü tebrik ederim!). Kahve eşliğinde tam 1 dilim pasta ikram edilir.
+                  </p>
+                </div>
+              </div>
+            </div>
+
             <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #6366f1', marginBottom: '20px' }}>
               <h3 style={{ margin: '0 0 10px 0', color: '#93c5fd' }}>📄 Tekst: Op het terras</h3>
               <p className="text-sm text-slate-200 italic p-4 bg-indigo-900/30 rounded-xl border border-indigo-500/30">
@@ -485,6 +508,27 @@ export const chapter3Sections = [
           </>
         ) : (
           <>
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f59e0b', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#fbbf24' }}>🎉 Dutch Culture: Trakteren & The Circle Birthday</h3>
+              <p className="text-sm text-slate-300 mb-3">
+                Two essential Dutch cultural traditions regarding birthdays and social gatherings:
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-200">
+                <div className="bg-amber-950/30 p-4 rounded-xl border border-amber-500/20">
+                  <h4 className="font-bold text-amber-300 mb-2">🍰 The Birthday Person Treats! (Trakteren)</h4>
+                  <p className="text-xs text-slate-300 leading-relaxed">
+                    In the Netherlands, when it is YOUR birthday, <strong>YOU bring cake or pastries to work</strong> or buy the first round of drinks at the cafe (<em>"een rondje geven"</em>). This custom is called <strong>trakteren</strong>.
+                  </p>
+                </div>
+                <div className="bg-indigo-950/30 p-4 rounded-xl border border-indigo-500/20">
+                  <h4 className="font-bold text-indigo-300 mb-2">⭕ De Kringverjaardag (The Circle Birthday)</h4>
+                  <p className="text-xs text-slate-300 leading-relaxed">
+                    At a traditional Dutch birthday at home, chairs are arranged in a big circle. When arriving, each guest shakes hands with everyone in the room and congratulates the whole family: <em>"Gefeliciteerd met Jan!"</em> (Congratulations on Jan's birthday!).
+                  </p>
+                </div>
+              </div>
+            </div>
+
             <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #6366f1', marginBottom: '20px' }}>
               <h3 style={{ margin: '0 0 10px 0', color: '#93c5fd' }}>📄 Tekst: Op het terras (On the terrace)</h3>
               <p className="text-sm text-slate-200 italic p-4 bg-indigo-900/30 rounded-xl border border-indigo-500/30">
@@ -505,6 +549,14 @@ export const chapter3Sections = [
     ),
     exerciseGroups: [
       {
+        instruction: "Cultuur & Begrip: Verjaardagstradities in Nederland",
+        isExtra: false,
+        questions: [
+          { id: "3.9_cult_1", type: "multiple_choice", question: "Je bent jarig in Nederland en je gaat naar je werk. Wat is de gewoonte?", options: ["Je collega's kopen een grote lunch voor jou.", "Je neemt zelf taart of gebak mee om te trakteren.", "Je blijft verplicht thuis."], correctAnswer: "Je neemt zelf taart of gebak mee om te trakteren." },
+          { id: "3.9_cult_2", type: "multiple_choice", question: "Wat betekent de uitdrukking 'een rondje geven' in een café?", options: ["Een rondje hardlopen om het café.", "Voor iedereen aan tafel een drankje bestellen en betalen.", "De ober een fooi geven."], correctAnswer: "Voor iedereen aan tafel een drankje bestellen en betalen." }
+        ]
+      },
+      {
         instruction: "Uitspraak Test: Korte 'o' of Lange 'oo'? (Short 'o' or Long 'oo'?)",
         isExtra: true,
         questions: [
@@ -515,7 +567,320 @@ export const chapter3Sections = [
       }
     ]
   },
-  {
+    {
+    id: "Reading-3",
+    chapter: 3,
+    title: {
+      tr: "Okuma & Anlama",
+      en: "Reading Comprehension"
+    },
+    readingPassage: {
+      title: "Een gezellige verjaardag op het terras",
+      level: "Niveau A1 • 18 Zinnen",
+      intro: {
+        tr: "Aşağıdaki okuma parçasını dikkatlice okuyunuz. Bu parça 3. Bölümde öğrendiğiniz kafe ve sipariş kalıpları (ik trakteer, dit rondje betaal ik, proost), 'de/het' artikelleri, devrik cümle (inversie), sıra sayıları (eerste, tweede...) ve içecek çeşitleri kullanılarak bir öğretmen titizliğiyle hazırlanmıştır. Metni dinleyebilir, kelimelerin anlamlarına tıklayarak bakabilir ve alttaki 20 soruluk anlama testini çözebilirsiniz.",
+        en: "Read the following reading passage carefully. It incorporates cafe and ordering expressions (ik trakteer, dit rondje betaal ik, proost), definite and indefinite articles (de/het), sentence inversion, ordinal numbers (eerste, tweede...), and beverage vocabulary learned in Chapter 3. Listen to the text, click words to check meanings, and answer the 20 comprehension questions below."
+      },
+      paragraphs: [
+        "Het is een zonnige vrijdagmiddag in Utrecht. De temperatuur is aangenaam en de terrassen bij de oude gracht zitten vol met vrolijke mensen. Edit viert vandaag haar vijfentwintigste verjaardag in café De Dom. Samen met haar broer Andres zit ze aan een ronde tafel buiten op het terras bij het water. Om vier uur komt Susy aanlopen. Susy lacht breed en zegt: \"Hoi Edit, van harte gefeliciteerd met je verjaardag!\" Edit bedankt haar enthousiast en stelt haar broer voor: \"Dank je wel Susy! Dit is mijn broer Andres.\" Susy geeft Andres een hand en zegt beleefd: \"Dag Andres, prettig met je kennis te maken!\"",
+        "Andres vraagt nieuwsgierig: \"Hoe kennen jullie elkaar eigenlijk?\" Susy antwoordt met een glimlach: \"Wij kennen elkaar van de cursus Nederlands bij meneer De Vries.\" Dan zegt Edit vrolijk: \"Wat willen jullie drinken vanmiddag? Ik ben vandaag jarig, dus ik trakteer!\" Andres wil graag een koud glas cola met ijs. Susy kiest een lekker vers getapt biertje. Edit besluit zelf een glas rode wijn te nemen. Edit roept de ober en vraagt: \"Pardon meneer, mag ik bestellen?\" De vriendelijke ober knikt en zegt: \"Zegt u het maar. Wilt u een Franse, een Spaanse of een Zuid-Afrikaanse rode wijn?\" Edit kiest de Spaanse wijn.",
+        "Kort daarna brengt de ober de drankjes naar de tafel. Susy en Andres heffen hun glazen en roepen luid: \"Nou Edit, proost! Op jouw verjaardag en op een mooi nieuw levensjaar!\" Ze klinken de glazen en genieten van het mooie uitzicht op de boten in het water. Andres vertelt dat dit zijn eerste bezoek aan Utrecht is, maar zijn tweede vakantie in Nederland. Een poosje later zijn alle glazen leeg. Andres zegt direct: \"Zullen we nog een keer bestellen? Dit tweede rondje betaal ik! Edit, wil jij nog hetzelfde?\" Edit antwoordt blij: \"Geef mij nog maar een glas Spaanse rode wijn, dat smaakt heerlijk!\" Susy neemt nog een biertje en Andres kiest nu ook een biertje.",
+        "Om half zes roept Edit de ober om af te rekenen: \"Ober, mogen we de rekening alstublieft?\" De ober komt met de bon en vraagt netjes: \"Wilt u alles samen betalen of apart?\" Edit legt rustig uit: \"Apart alstublieft. Ik trakteer op het eerste rondje, daarom betaal ik de eerste bestelling. Het tweede rondje betaalt mijn broer.\" Nadat alles netjes is afgerekend met de pinpas, verlaten de vrienden het terras voor een gezellige wandeling door de historische binnenstad."
+      ],
+      hints: [
+        {
+          title: { tr: "Kafe & Sipariş Kalıpları", en: "Cafe & Ordering Expressions" },
+          icon: "fa-mug-hot",
+          items: [
+            { term: "ik trakteer", tr: "ben ısmarlıyorum (benden)", en: "it's my treat / I'm paying" },
+            { term: "zegt u het maar", tr: "buyurun, sizi dinliyorum (sipariş alırken)", en: "go ahead / what can I get you" },
+            { term: "dit rondje betaal ik", tr: "bu turu (içkileri) ben ödüyorum", en: "I'll pay for this round" },
+            { term: "afrekenen", tr: "hesap ödemek", en: "to settle the bill" },
+            { term: "proost!", tr: "şerefe!", en: "cheers!" }
+          ]
+        },
+        {
+          title: { tr: "Sıra Sayıları (Rangtelwoorden)", en: "Ordinal Numbers" },
+          icon: "fa-list-ol",
+          items: [
+            { term: "het eerste rondje", tr: "ilk tur (1. içkiler)", en: "the first round" },
+            { term: "het tweede rondje", tr: "ikinci tur (2. içkiler)", en: "the second round" },
+            { term: "de eerste keer", tr: "ilk defa / ilk kez", en: "the first time" },
+            { term: "de vijfentwintigste (25ste)", tr: "yirmi beşinci", en: "the twenty-fifth" }
+          ]
+        },
+        {
+          title: { tr: "Artikeller & Devrik Cümle", en: "Articles & Inversion" },
+          icon: "fa-language",
+          items: [
+            { term: "de / het / een", tr: "het café, de gracht, het bier, de wijn, het terras", en: "the / a" },
+            { term: "inversie (V-S-O)", tr: "Om vier uur komt Susy... / Dit tweede rondje betaal ik.", en: "verb before subject after time/object" }
+          ]
+        }
+      ]
+    },
+    exerciseGroups: [
+      {
+        instruction: "Deel 1: Direct Begrip & Gebeurtenissen (1-7: Doğrudan Bilgi ve Olaylar / Direct Facts)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_3_1",
+            type: "multiple_choice",
+            question: "Waar viert Edit haar vijfentwintigste verjaardag?",
+            options: [
+              "In de klas van meneer De Vries",
+              "Buiten op het terras van café De Dom bij het water",
+              "In een duur restaurant in Amsterdam",
+              "Bij haar ouders thuis in Indonesië"
+            ],
+            correctAnswer: "Buiten op het terras van café De Dom bij het water"
+          },
+          {
+            id: "reading_3_2",
+            type: "multiple_choice",
+            question: "Wie stelt Edit aan Susy voor als ze aankomt?",
+            options: [
+              "Haar vader",
+              "Haar docent meneer De Vries",
+              "Haar broer Andres",
+              "De ober van het café"
+            ],
+            correctAnswer: "Haar broer Andres"
+          },
+          {
+            id: "reading_3_3",
+            type: "multiple_choice",
+            question: "Hoe kennen Susy en Edit elkaar volgens de tekst?",
+            options: [
+              "Ze wonen in dezelfde straat in Utrecht.",
+              "Ze werken bij hetzelfde internationale bedrijf.",
+              "Ze kennen elkaar van de cursus Nederlands.",
+              "Ze zijn samen op vakantie geweest in Spanje."
+            ],
+            correctAnswer: "Ze kennen elkaar van de cursus Nederlands."
+          },
+          {
+            id: "reading_3_4",
+            type: "multiple_choice",
+            question: "Wat drinken de drie vrienden tijdens het EERSTE rondje?",
+            options: [
+              "Drie biertjes",
+              "Cola voor Andres, bier voor Susy en Spaanse rode wijn voor Edit",
+              "Witte wijn voor Edit, thee voor Susy en koffie voor Andres",
+              "Drie glazen koud water met citroen"
+            ],
+            correctAnswer: "Cola voor Andres, bier voor Susy en Spaanse rode wijn voor Edit"
+          },
+          {
+            id: "reading_3_5",
+            type: "multiple_choice",
+            question: "Welke rode wijn kiest Edit als de ober de opties noemt?",
+            options: [
+              "De Franse rode wijn",
+              "De Zuid-Afrikaanse rode wijn",
+              "De Spaanse rode wijn",
+              "De Chileense rode wijn"
+            ],
+            correctAnswer: "De Spaanse rode wijn"
+          },
+          {
+            id: "reading_3_6",
+            type: "multiple_choice",
+            question: "Wat roepen Susy en Andres als ze klinken met hun glazen?",
+            options: [
+              "\"Tot ziens en tot morgen!\"",
+              "\"Proost! Op jouw verjaardag!\"",
+              "\"Smakelijk eten allemaal!\"",
+              "\"Prettig met u kennis te maken!\""
+            ],
+            correctAnswer: "\"Proost! Op jouw verjaardag!\""
+          },
+          {
+            id: "reading_3_7",
+            type: "multiple_choice",
+            question: "Wat zien de vrienden vanaf het terras bij de oude gracht?",
+            options: [
+              "Veel auto's en bussen in het verkeer",
+              "De boten die over het water varen",
+              "Een grote markt met kramen",
+              "Het treinstation van Utrecht"
+            ],
+            correctAnswer: "De boten die over het water varen"
+          }
+        ]
+      },
+      {
+        instruction: "Deel 2: Rondjes, Tijd & Rangtelwoorden (8-13: Sıra Sayıları ve Hesap / Numbers & Rounds)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_3_8",
+            type: "multiple_choice",
+            question: "De hoeveelste verjaardag viert Edit vandaag?",
+            options: [
+              "Haar twintigste (20ste) verjaardag",
+              "Haar vierentwintigste (24ste) verjaardag",
+              "Haar vijfentwintigste (25ste) verjaardag",
+              "Haar dertigste (30ste) verjaardag"
+            ],
+            correctAnswer: "Haar vijfentwintigste (25ste) verjaardag"
+          },
+          {
+            id: "reading_3_9",
+            type: "multiple_choice",
+            question: "Voor de hoeveelste keer bezoekt Andres de stad Utrecht?",
+            options: [
+              "Het is zijn eerste bezoek aan Utrecht.",
+              "Het is zijn tweede bezoek aan Utrecht.",
+              "Het is al zijn vijfde bezoek.",
+              "Hij woont al tien jaar in Utrecht."
+            ],
+            correctAnswer: "Het is zijn eerste bezoek aan Utrecht."
+          },
+          {
+            id: "reading_3_10",
+            type: "multiple_choice",
+            question: "Wie betaalt het TWEEDE rondje drankjes?",
+            options: [
+              "Susy",
+              "Andres",
+              "Edit",
+              "De ober geeft het gratis"
+            ],
+            correctAnswer: "Andres"
+          },
+          {
+            id: "reading_3_11",
+            type: "multiple_choice",
+            question: "Wat drinkt Andres in het tweede rondje (in tegenstelling tot het eerste rondje)?",
+            options: [
+              "Weer een glas cola",
+              "Een glas rode wijn",
+              "Een biertje",
+              "Een kopje zwarte koffie"
+            ],
+            correctAnswer: "Een biertje"
+          },
+          {
+            id: "reading_3_12",
+            type: "multiple_choice",
+            question: "Hoe laat roepen ze de ober om af te rekenen?",
+            options: [
+              "Om vier uur (16:00)",
+              "Om kwart voor vijf (16:45)",
+              "Om half zes (17:30)",
+              "Om zes uur (18:00)"
+            ],
+            correctAnswer: "Om half zes (17:30)"
+          },
+          {
+            id: "reading_3_13",
+            type: "multiple_choice",
+            question: "Hoe betalen de vrienden de rekening bij de ober?",
+            options: [
+              "Contant met briefgeld",
+              "Met de pinpas (pinnen)",
+              "Ze betalen niet omdat Edit jarig is",
+              "Met een cadeaubon van de universiteit"
+            ],
+            correctAnswer: "Met de pinpas (pinnen)"
+          }
+        ]
+      },
+      {
+        instruction: "Deel 3: Taalgebruik, Grammatica & Synthese (14-20: Dilbilgisi ve Anlama / Grammar & Synthesis)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_3_14",
+            type: "multiple_choice",
+            question: "Wat betekent de uitdrukking 'Ik trakteer' in het Nederlands?",
+            options: [
+              "Ik wil graag naar huis.",
+              "Ik betaal de kosten / het is mijn traktatie.",
+              "Ik lust geen alcohol.",
+              "Ik ben te laat voor de afspraak."
+            ],
+            correctAnswer: "Ik betaal de kosten / het is mijn traktatie."
+          },
+          {
+            id: "reading_3_15",
+            type: "multiple_choice",
+            question: "Wat zegt een ober vaak in het Nederlands wanneer hij klaar is om je bestelling op te nemen?",
+            options: [
+              "\"Tot ziens alstublieft.\"",
+              "\"Zegt u het maar.\"",
+              "\"Geen dank hoor.\"",
+              "\"Mag het ietsje meer zijn?\""
+            ],
+            correctAnswer: "\"Zegt u het maar.\""
+          },
+          {
+            id: "reading_3_16",
+            type: "multiple_choice",
+            question: "Waarom wil Edit de rekening APART betalen en niet alles samen?",
+            options: [
+              "Omdat ze ruzie hebben over het geld.",
+              "Omdat zij jarig is en daarom alleen het eerste rondje betaalt, en Andres het tweede.",
+              "Omdat Susy haar portemonnee is vergeten.",
+              "Omdat de ober geen groepstransacties accepteert."
+            ],
+            correctAnswer: "Omdat zij jarig is en daarom alleen het eerste rondje betaalt, en Andres het tweede."
+          },
+          {
+            id: "reading_3_17",
+            type: "multiple_choice",
+            question: "Welk lidwoord hoort bij de woorden 'café', 'terras' en 'bier'?",
+            options: [
+              "Altijd 'de'",
+              "Altijd 'het'",
+              "Geen lidwoord",
+              "'de' voor terras en 'het' voor bier"
+            ],
+            correctAnswer: "Altijd 'het'"
+          },
+          {
+            id: "reading_3_18",
+            type: "multiple_choice",
+            question: "Kijk naar de zinsbouw: \"Dit tweede rondje betaal ik.\" Welke grammaticale regel zien we hier?",
+            options: [
+              "Inversie: het lijdend voorwerp staat voorop, daarom komt het werkwoord (betaal) vóór het onderwerp (ik).",
+              "Een ontkenning met 'geen'.",
+              "Een vraagzin zonder vraagteken.",
+              "Een voltooid deelwoord."
+            ],
+            correctAnswer: "Inversie: het lijdend voorwerp staat voorop, daarom komt het werkwoord (betaal) vóór het onderwerp (ik)."
+          },
+          {
+            id: "reading_3_19",
+            type: "multiple_choice",
+            question: "Wat gaan Edit, Andres en Susy doen nadat ze hebben afgerekend?",
+            options: [
+              "Ze gaan meteen slapen.",
+              "Ze gaan naar de bibliotheek om huiswerk te maken.",
+              "Ze maken een gezellige wandeling door de historische binnenstad.",
+              "Ze nemen de trein terug naar Spanje."
+            ],
+            correctAnswer: "Ze maken een gezellige wandeling door de historische binnenstad."
+          },
+          {
+            id: "reading_3_20",
+            type: "multiple_choice",
+            question: "Welke bewering over de tekst is NIET waar (onjuist)?",
+            options: [
+              "Edit viert haar 25ste verjaardag buiten op een terras.",
+              "Andres drinkt in beide rondjes uitsluitend cola met ijs.",
+              "Susy drinkt zowel in het eerste als in het tweede rondje bier.",
+              "Andres is de broer van Edit."
+            ],
+            correctAnswer: "Andres drinkt in beide rondjes uitsluitend cola met ijs."
+          }
+        ]
+      }
+    ]
+  },
+{
     id: "On-Class-3",
     chapter: 3,
     title: "Summary",

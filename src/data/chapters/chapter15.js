@@ -1,6 +1,5 @@
 // src/data/chapters/chapter15.js
 import React from 'react';
-import { generateSmartQuestions } from '../questionGenerator';
 
 export const chapter15Vocab = [
   { id: "15_1", chapter: 15, nl: "het openbaar vervoer", en: "public transport", example: "Tjeerd gaat met het openbaar vervoer." },
@@ -129,38 +128,72 @@ export const chapter15Sections = [
     id: "15.2",
     chapter: 15,
     title: "Vocabulary",
+    theory: null,
+    exerciseGroups: []
+  },
+  {
+    id: "15.3",
+    chapter: 15,
+    title: "15.3 Beschrijven wat je ziet (Gördüklerini Tasvir Etmek)",
     theory: (lang) => (
       <>
         {lang === 'tr' ? (
           <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
             <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>👀 Beschrijven wat je ziet (Gördüklerini Tasvir Etmek)</h3>
-            <p className="text-sm text-slate-300">Hollandacada birine ilginç bir şeyi göstermek (dikkat çekmek) için şu kalıplar kullanılır:</p>
-            <ul style={{ margin: '10px 0', paddingLeft: '20px', color: '#cbd5e1', listStyleType: 'disc' }}>
-              <li><strong>Kijk eens...</strong> (Baksana / Şuraya bir bak...)</li>
-              <li><strong>Moet je eens zien...</strong> (Şunu bir görmelisin... / Şuna bir bak...)</li>
-            </ul>
-            <p className="text-sm text-slate-400 italic">"Kijk eens, oom Tjeerd, daar lopen heel kleine pony's in de wei." (Baksana Tjeerd amca...)</p>
-            <p className="text-sm text-slate-400 italic">"Moet je eens zien wat een mooie lucht." (Şu havanın/gökyüzünün güzelliğine bir bak).</p>
+            <p className="text-sm text-slate-300">Hollandacada trenle veya yolda giderken birinin dikkatini dışarıdaki bir şeye çekmek veya manzarayı tasvir etmek için bu kalıplar kullanılır:</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
+              <div className="bg-slate-800/80 p-3 rounded-lg border border-purple-500/30">
+                <h4 className="font-bold text-purple-300 text-sm mb-1">🔍 Dikkat Çekme Kalıpları</h4>
+                <ul className="text-xs text-purple-200 space-y-1 list-disc pl-4">
+                  <li><strong>Kijk eens...</strong> (Baksana / Şuraya bir bak...)</li>
+                  <li><strong>Moet je eens zien...</strong> (Şunu bir görmelisin... / Şuna bir bak...)</li>
+                </ul>
+              </div>
+              <div className="bg-slate-800/80 p-3 rounded-lg border border-indigo-500/30">
+                <h4 className="font-bold text-indigo-300 text-sm mb-1">🌾 Örnek Cümleler (Diyalogdan)</h4>
+                <ul className="text-xs text-indigo-200 space-y-1 list-disc pl-4">
+                  <li><em>"Kijk eens, oom Tjeerd, daar lopen heel kleine pony's in de wei."</em> (Baksana Tjeerd amca, çayırda çok küçük midilliler yürüyor.)</li>
+                  <li><em>"Moet je eens zien wat een mooie lucht. Dat is echt de Nederlandse lucht van de schilderijen."</em> (Şu gökyüzünün güzelliğine bir bak. Tam tablolardaki Hollanda göğü.)</li>
+                  <li><em>"Het is hier zo plat, geen berg te zien."</em> (Burası o kadar düz ki, hiç dağ görünmüyor.)</li>
+                </ul>
+              </div>
+            </div>
           </div>
         ) : (
           <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
             <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>👀 Beschrijven wat je ziet (Describing what you see)</h3>
-            <p className="text-sm text-slate-300">To show someone something interesting (to draw attention) in Dutch, these phrases are used:</p>
-            <ul style={{ margin: '10px 0', paddingLeft: '20px', color: '#cbd5e1', listStyleType: 'disc' }}>
-              <li><strong>Kijk eens...</strong> (Look here... / Have a look...)</li>
-              <li><strong>Moet je eens zien...</strong> (You should see this... / Take a look at this...)</li>
-            </ul>
-            <p className="text-sm text-slate-400 italic">"Kijk eens, oom Tjeerd, daar lopen heel kleine pony's in de wei." (Look, Uncle Tjeerd...)</p>
-            <p className="text-sm text-slate-400 italic">"Moet je eens zien wat een mooie lucht." (Look at what a beautiful sky).</p>
+            <p className="text-sm text-slate-300">To draw someone's attention to something interesting outside or describe the scenery:</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
+              <div className="bg-slate-800/80 p-3 rounded-lg border border-purple-500/30">
+                <h4 className="font-bold text-purple-300 text-sm mb-1">🔍 Drawing Attention</h4>
+                <ul className="text-xs text-purple-200 space-y-1 list-disc pl-4">
+                  <li><strong>Kijk eens...</strong> (Look here... / Have a look...)</li>
+                  <li><strong>Moet je eens zien...</strong> (You should see this... / Just look...)</li>
+                </ul>
+              </div>
+              <div className="bg-slate-800/80 p-3 rounded-lg border border-indigo-500/30">
+                <h4 className="font-bold text-indigo-300 text-sm mb-1">🌾 Examples (from Dialogue)</h4>
+                <ul className="text-xs text-indigo-200 space-y-1 list-disc pl-4">
+                  <li><em>"Kijk eens, oom Tjeerd, daar lopen heel kleine pony's in de wei."</em> (Look, Uncle Tjeerd, there are tiny ponies walking in the meadow.)</li>
+                  <li><em>"Moet je eens zien wat een mooie lucht. Dat is echt de Nederlandse lucht van de schilderijen."</em> (Just look at that beautiful sky. That is truly the Dutch sky from the paintings.)</li>
+                  <li><em>"Het is hier zo plat, geen berg te zien."</em> (It is so flat here, not a mountain to be seen.)</li>
+                </ul>
+              </div>
+            </div>
           </div>
         )}
       </>
     ),
     exerciseGroups: [
       {
-        instruction: "Woordenlijst Oefeningen (Vocabulary Exercises)",
-        isExtra: true,
-        questions: generateSmartQuestions(15, "Woordenlijst", 10, chapter15Vocab)
+        instruction: "Opdracht 2 & 3: Beschrijven wat je ziet (Gördüklerini Tasvir Et)",
+        isExtra: false,
+        questions: [
+          { id: "15.3_opd2_1", type: "multiple_choice", question: "Kies de juiste openingszin om iemands aandacht te vragen naar een mooie molen: '________, daar staat een oude molen!'", options: ["Kijk eens", "Hoor eens", "Luister eens"], correctAnswer: "Kijk eens" },
+          { id: "15.3_opd2_2", type: "multiple_choice", question: "Kies de juiste zin: '________ wat een prachtige lucht vandaag!'", options: ["Moet je eens zien", "Moet je eens horen", "Zal je eens weten"], correctAnswer: "Moet je eens zien" },
+          { id: "15.3_opd2_3", type: "fill_in", question: "Vertaal: 'Çayırda küçük midilliler yürüyor' -> 'Daar lopen kleine pony's in de ________.'", correctAnswer: "wei" },
+          { id: "15.3_opd2_4", type: "multiple_choice", question: "Wat is typisch voor het Nederlandse landschap volgens de tekst?", options: ["Het is heel bergachtig.", "Het is heel plat, geen berg te zien.", "Er zijn overal dichte bossen."], correctAnswer: "Het is heel plat, geen berg te zien." }
+        ]
       }
     ]
   },
@@ -414,7 +447,318 @@ export const chapter15Sections = [
       }
     ]
   },
-  {
+    {
+    id: "Reading-15",
+    chapter: 15,
+    title: {
+      tr: "Okuma & Anlama",
+      en: "Reading Comprehension"
+    },
+    readingPassage: {
+      title: "Een ontspannen treinreis door het Hollandse polderlandschap",
+      level: "Niveau A2 • 19 Zinnen",
+      intro: {
+        tr: "Aşağıdaki okuma parçasını dikkatlice okuyunuz. Bu parça 15. Bölümde öğrendiğiniz tren ve demiryolu ulaşımı terimleri (het perron, het spoor, de conducteur, inchecken / uitchecken, de vertraging), bağımsız işaret zamirleri (demonstratief pronomen: die / deze, dat klopt) ve 'dit is/zijn, dat is/zijn' kalıpları kullanılarak hazırlanmıştır. Metni dinleyebilir, kelimelerin sözlük anlamına bakabilir ve alttaki 20 soruluk testi çözebilirsiniz.",
+        en: "Read the following reading passage carefully. It incorporates train and rail travel vocabulary (platform, track, conductor, check-in / check-out, delay), independent demonstrative pronouns (die / deze, dat klopt), and introductory demonstrative phrases (dit is/zijn, dat is/zijn) learned in Chapter 15. Listen to the text, click words to check meanings, and answer the 20 comprehension questions below."
+      },
+      paragraphs: [
+        "Op vrijdagochtend maken Susy en Edit een bijzondere treinreis vanuit Utrecht Centraal naar de noordelijke stad Groningen om Edit's grootmoeder te bezoeken. Op het moderne, drukke station checken ze snel in bij de geel-blauwe toegangspoortjes met hun OV-chipkaart. Boven de brede roltrappen toont het grote digitale vertrekbord dat de gele Intercity naar Groningen om precies 09.18 uur vertrekt vanaf spoor 5b, zonder enige vertraging.",
+        "De vriendinnen stappen in de comfortabele dubbeldekkerstrein en vinden twee rustige zitplaatsen op de bovenverdieping. Susy kijkt vol bewondering door het grote raam naar buiten en zegt: \"Dit zijn werkelijk schitterende zitplaatsen! Kijk eens naar die moderne windmolens in het weiland.\" Edit knikt enthousiast: \"Ja, die wekken ontzettend veel duurzame elektriciteit op. En dat daar in de verte is een traditionele Hollandse boerderij met zwart-witte koeien.\" Ze genieten volop van het rustgevende, uitgestrekte polderlandschap.",
+        "Halverwege tussen de stations Zwolle en Assen loopt de vriendelijke treinconducteur door het rijtuig: \"Goedemorgen dames en heren, mag ik uw vervoersbewijzen alstublieft even controleren?\" Susy en Edit houden hun pasjes tegen het mobiele controleapparaat van de conducteur, dat met een vrolijk piepgeluidje groen oplicht. De conducteur glimlacht tevreden: \"Dat klopt helemaal dames, dank u wel! De trein rijdt vandaag zelfs enkele minuten voor op schema, dus we zullen mooi op tijd in Groningen aankomen.\"",
+        "Om precies 11.20 uur mindert de trein vaart en glijdt het monumentale hoofdstation van Groningen binnen. De vriendinnen pakken hun tassen, stappen uit en checken netjes uit bij de uitgangspoortjes. In de prachtige historische stationshal staat Edit's oma hen al op te wachten met een warme glimlach en een doosje traditionele Groninger koek. Edit sluit haar oma gelukkig in haar armen: \"Lieve oma, wat heerlijk om weer bij jou op bezoek te zijn!\" Samen wandelen ze ontspannen naar de binnenstad voor een gezellige lunch."
+      ],
+      hints: [
+        {
+          title: { tr: "Tren & Toplu Taşıma Terimleri", en: "Train & Public Transit Terms" },
+          icon: "fa-train",
+          items: [
+            { term: "de OV-chipkaart", tr: "toplu taşıma kartı", en: "public transport card" },
+            { term: "het perron / spoor", tr: "peron / ray", en: "platform / track" },
+            { term: "inchecken / uitchecken", tr: "kart okutarak giriş / çıkış yapmak", en: "to check in / out" },
+            { term: "de conducteur", tr: "bilet kontrolörü / kondüktör", en: "train conductor" },
+            { term: "de vertraging", tr: "rötar / gecikme", en: "delay" }
+          ]
+        },
+        {
+          title: { tr: "Bağımsız İşaret Zamirleri", en: "Independent Demonstrative Pronouns" },
+          icon: "fa-hand-point-right",
+          items: [
+            { term: "die / deze", tr: "şu / bu (ismin yerine tek başına)", en: "that one / this one" },
+            { term: "dat klopt", tr: "o doğru / tamamdır", en: "that is correct" }
+          ]
+        },
+        {
+          title: { tr: "Tanıtma: Dit is / Dat zijn", en: "Introducing: Dit is / Dat zijn" },
+          icon: "fa-tag",
+          items: [
+            { term: "dit zijn... (meervoud)", tr: "bunlar ...dır", en: "these are..." },
+            { term: "dat is... (enkelvoud)", tr: "şu ...dır", en: "that is..." }
+          ]
+        }
+      ]
+    },
+    exerciseGroups: [
+      {
+        instruction: "Deel 1: Direct Begrip & Treinreis (1-7: Doğrudan Bilgi ve Yolculuk / Direct Facts)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_15_1",
+            type: "multiple_choice",
+            question: "Waar reizen Susy en Edit op vrijdagochtend naartoe?",
+            options: [
+              "Van Utrecht naar Amsterdam voor een museumbezoek",
+              "Van Utrecht naar Groningen om Edit's grootmoeder te bezoeken",
+              "Van Rotterdam naar Den Haag voor een sollicitatie",
+              "Naar het vliegveld Schiphol"
+            ],
+            correctAnswer: "Van Utrecht naar Groningen om Edit's grootmoeder te bezoeken"
+          },
+          {
+            id: "reading_15_2",
+            type: "multiple_choice",
+            question: "Hoe laat vertrekt de Intercity-trein vanaf Utrecht Centraal?",
+            options: [
+              "Om 08.15 uur",
+              "Om 09.18 uur",
+              "Om 10.30 uur",
+              "Om 11.20 uur"
+            ],
+            correctAnswer: "Om 09.18 uur"
+          },
+          {
+            id: "reading_15_3",
+            type: "multiple_choice",
+            question: "Vanaf welk spoor vertrekt hun trein volgens het vertrekbord?",
+            options: [
+              "Vanaf spoor 1a",
+              "Vanaf spoor 3",
+              "Vanaf spoor 5b",
+              "Vanaf spoor 12"
+            ],
+            correctAnswer: "Vanaf spoor 5b"
+          },
+          {
+            id: "reading_15_4",
+            type: "multiple_choice",
+            question: "Waar gaan Susy en Edit zitten in de dubbeldekkerstrein?",
+            options: [
+              "In de bagageruimte",
+              "Op de bovenverdieping bij het raam",
+              "Beneden in de stiltecoupé",
+              "Bij het toilet"
+            ],
+            correctAnswer: "Op de bovenverdieping bij het raam"
+          },
+          {
+            id: "reading_15_5",
+            type: "multiple_choice",
+            question: "Wat zien de vriendinnen buiten in het Hollandse polderlandschap?",
+            options: [
+              "Hoge bergen met sneeuw",
+              "Moderne windmolens en een boerderij met zwart-witte koeien",
+              "Een grote zeehaven met vrachtschepen",
+              "Alleen maar tunnels"
+            ],
+            correctAnswer: "Moderne windmolens en een boerderij met zwart-witte koeien"
+          },
+          {
+            id: "reading_15_6",
+            type: "multiple_choice",
+            question: "Wie controleert de OV-chipkaarten van de reizigers tijdens de rit?",
+            options: [
+              "De machinist",
+              "De vriendelijke treinconducteur",
+              "De stationschef",
+              "Een politieagent"
+            ],
+            correctAnswer: "De vriendelijke treinconducteur"
+          },
+          {
+            id: "reading_15_7",
+            type: "multiple_choice",
+            question: "Wat heeft oma voor de vriendinnen meegenomen naar het station in Groningen?",
+            options: [
+              "Een doosje traditionele Groninger koek",
+              "Een bosje rode rozen",
+              "Twee paraplu's",
+              "Een warme winterjas"
+            ],
+            correctAnswer: "Een doosje traditionele Groninger koek"
+          }
+        ]
+      },
+      {
+        instruction: "Deel 2: Stations, Tijden & Openbaar Vervoer (8-13: İstasyonlar, Saatler ve Ulaşım / Transit)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_15_8",
+            type: "multiple_choice",
+            question: "Welke kaart gebruiken reizigers in Nederland om in en uit te checken bij het openbaar vervoer?",
+            options: [
+              "Het rijbewijs",
+              "De OV-chipkaart",
+              "De bibliotheekpas",
+              "De zorgverzekeringspas"
+            ],
+            correctAnswer: "De OV-chipkaart"
+          },
+          {
+            id: "reading_15_9",
+            type: "multiple_choice",
+            question: "Heeft de trein vertraging opgelopen volgens het verhaal?",
+            options: [
+              "Ja, meer dan een half uur vertraging",
+              "Nee, de trein rijdt zelfs enkele minuten voor op schema en arriveert precies op tijd",
+              "De trein is onderweg uitgevallen",
+              "De tekst vermeldt hier niets over"
+            ],
+            correctAnswer: "Nee, de trein rijdt zelfs enkele minuten voor op schema en arriveert precies op tijd"
+          },
+          {
+            id: "reading_15_10",
+            type: "multiple_choice",
+            question: "Hoe laat arriveert de trein op het station van Groningen?",
+            options: [
+              "Om 10.15 uur",
+              "Om 11.20 uur",
+              "Om 12.00 uur",
+              "Om 13.45 uur"
+            ],
+            correctAnswer: "Om 11.20 uur"
+          },
+          {
+            id: "reading_15_11",
+            type: "multiple_choice",
+            question: "Tussen welke twee tussenstations controleert de conducteur de kaartjes?",
+            options: [
+              "Tussen Amsterdam en Utrecht",
+              "Tussen Zwolle en Assen",
+              "Tussen Rotterdam en Den Haag",
+              "Tussen Groningen en Leeuwarden"
+            ],
+            correctAnswer: "Tussen Zwolle en Assen"
+          },
+          {
+            id: "reading_15_12",
+            type: "multiple_choice",
+            question: "Wat moeten treinreizigers altijd doen als ze hun bestemming bereiken en het station verlaten?",
+            options: [
+              "Hun kaartje weggooien in de trein",
+              "Netjes uitchecken bij de uitgangspoortjes",
+              "Zwaaien naar de machinist",
+              "Nieuw saldo opladen"
+            ],
+            correctAnswer: "Netjes uitchecken bij de uitgangspoortjes"
+          },
+          {
+            id: "reading_15_13",
+            type: "multiple_choice",
+            question: "Wat voor soort trein is een 'dubbeldekker'?",
+            options: [
+              "Een trein met twee wagons",
+              "Een trein met twee verdiepingen (boven en beneden)",
+              "Een hele langzame stoomtrein",
+              "Een nachttrein met bedden"
+            ],
+            correctAnswer: "Een trein met twee verdiepingen (boven en beneden)"
+          }
+        ]
+      },
+      {
+        instruction: "Deel 3: Aanwijzende Voornaamwoorden & Grammatica (14-20: İşaret Zamirleri ve Dil / Demonstratives)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_15_14",
+            type: "multiple_choice",
+            question: "Kijk naar de zin: \"DIT ZIJN werkelijk schitterende zitplaatsen!\" Waarom gebruiken we 'dit zijn' en niet 'dit is'?",
+            options: [
+              "Omdat 'zitplaatsen' een meervoudig zelfstandig naamwoord is.",
+              "Omdat het over een trein gaat.",
+              "Het is een vaste uitzondering.",
+              "Omdat Susy een vrouw is."
+            ],
+            correctAnswer: "Omdat 'zitplaatsen' een meervoudig zelfstandig naamwoord is."
+          },
+          {
+            id: "reading_15_15",
+            type: "multiple_choice",
+            question: "In de zin: \"Kijk eens naar die windmolens... Ja, DIE wekken veel energie op.\" Welke functie heeft 'die' hier?",
+            options: [
+              "Een zelfstandig gebruikt aanwijzend voornaamwoord dat verwijst naar de windmolens",
+              "Een betrekkelijk voornaamwoord",
+              "Een lidwoord",
+              "Een voegwoord"
+            ],
+            correctAnswer: "Een zelfstandig gebruikt aanwijzend voornaamwoord dat verwijst naar de windmolens"
+          },
+          {
+            id: "reading_15_16",
+            type: "multiple_choice",
+            question: "Wat zegt de conducteur als de OV-chipkaart geldig blijkt te zijn?",
+            options: [
+              "\"Dat klopt helemaal!\"",
+              "\"Dat mag niet!\"",
+              "\"Dat is verboden!\"",
+              "\"Dat weet ik niet!\""
+            ],
+            correctAnswer: "\"Dat klopt helemaal!\""
+          },
+          {
+            id: "reading_15_17",
+            type: "multiple_choice",
+            question: "Wat betekent het Nederlandse woord 'polderlandschap'?",
+            options: [
+              "Een woestijnlandschap met zandduinen",
+              "Typisch Nederlands drooggemalen, laaggelegen land met weiden, sloten en dijken",
+              "Een dichtbegroeid tropisch oerwoud",
+              "Een bergachtig landschap"
+            ],
+            correctAnswer: "Typisch Nederlands drooggemalen, laaggelegen land met weiden, sloten en dijken"
+          },
+          {
+            id: "reading_15_18",
+            type: "multiple_choice",
+            question: "Kijk naar de zin: \"Dat daar in de verte is een boerderij.\" Welk woord wijst hier naar een object ver weg in het enkelvoud?",
+            options: [
+              "dit",
+              "dat",
+              "deze",
+              "die"
+            ],
+            correctAnswer: "dat"
+          },
+          {
+            id: "reading_15_19",
+            type: "multiple_choice",
+            question: "Wat gaan Edit, Susy en oma doen nadat ze elkaar ontmoet hebben op het station?",
+            options: [
+              "Ze gaan meteen met de trein terug naar Utrecht.",
+              "Ze wandelen ontspannen naar de binnenstad voor een gezellige lunch.",
+              "Ze gaan naar het ziekenhuis.",
+              "Ze gaan hardlopen in het park."
+            ],
+            correctAnswer: "Ze wandelen ontspannen naar de binnenstad voor een gezellige lunch."
+          },
+          {
+            id: "reading_15_20",
+            type: "multiple_choice",
+            question: "Welke bewering over de treinreis is ONJUIST (niet waar)?",
+            options: [
+              "Susy en Edit reizen per trein naar Groningen.",
+              "De trein vertrekt vanaf spoor 5b in Utrecht.",
+              "De conducteur geeft de vriendinnen een hoge boete omdat ze niet zijn ingecheckt.",
+              "Edit's oma wacht hen op in de stationshal met Groninger koek."
+            ],
+            correctAnswer: "De conducteur geeft de vriendinnen een hoge boete omdat ze niet zijn ingecheckt."
+          }
+        ]
+      }
+    ]
+  },
+{
     id: "On-Class-15",
     chapter: 15,
     title: "Summary",

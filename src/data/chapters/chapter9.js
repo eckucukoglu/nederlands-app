@@ -173,18 +173,121 @@ export const chapter9Sections = [
     ]
   },
   {
+    id: "9.5",
+    chapter: 9,
+    title: "9.5 Reacties (Beterschap & Sterkte)",
+    theory: (lang) => (
+      <>
+        {lang === 'tr' ? (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f59e0b', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#fbbf24' }}>💬 Reacties op ziekte en problemen (Tepkiler)</h3>
+            <p className="text-sm text-slate-300 mb-4">Birinin hasta olduğunu, ameliyat olacağını veya zor bir durum yaşadığını duyduğunuzda verilen doğal Hollandaca tepkiler:</p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-200">
+              <div className="bg-amber-950/40 p-4 rounded-xl border border-amber-500/20 space-y-2">
+                <div><strong>Beterschap!</strong> (Geçmiş olsun! - Sadece hastalık, grip, kaza, yaralanma durumlarında söylenir).</div>
+                <div><strong>Sterkte!</strong> (Güç ve sabır dilerim! - Zor bir ameliyat, sınav, stresli bir durum veya kötü haberlerde).</div>
+                <div><strong>Succes!</strong> (Başarılar! / Bol şans! - Sınav, mülakat, maç öncesi).</div>
+              </div>
+              <div className="bg-rose-950/40 p-4 rounded-xl border border-rose-500/20 space-y-2">
+                <div><strong>Wat vervelend! / Wat naar!</strong> (Ne kadar can sıkıcı! / Ne kötü!).</div>
+                <div><strong>Wat erg!</strong> (Ne kadar fena / korkunç!).</div>
+                <div><strong>Dat meen je niet!</strong> (Ciddi olamazsın! / Şaka yapıyorsun!).</div>
+                <div><strong>Gecondoleerd.</strong> (Başınız sağolsun - Biri vefat ettiğinde).</div>
+              </div>
+            </div>
+          </div>
+        ) : (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f59e0b', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#fbbf24' }}>💬 Reacties (Reactions to illness & misfortune)</h3>
+            <p className="text-sm text-slate-300 mb-4">Natural Dutch phrases to express empathy, sympathy, or encouragement:</p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-200">
+              <div className="bg-amber-950/40 p-4 rounded-xl border border-amber-500/20 space-y-2">
+                <div><strong>Beterschap!</strong> (Get well soon! - Used specifically for sickness, illness, injury).</div>
+                <div><strong>Sterkte!</strong> (Stay strong! / Wishing you strength - For surgeries, difficult periods, loss, exams).</div>
+                <div><strong>Succes!</strong> (Good luck! / All the best - For an upcoming test, interview, presentation).</div>
+              </div>
+              <div className="bg-rose-950/40 p-4 rounded-xl border border-rose-500/20 space-y-2">
+                <div><strong>Wat vervelend! / Wat naar!</strong> (How unpleasant! / That's a pity!).</div>
+                <div><strong>Wat erg!</strong> (How awful / terrible!).</div>
+                <div><strong>Dat meen je niet!</strong> (You can't be serious! / No way!).</div>
+                <div><strong>Gecondoleerd.</strong> (My condolences - When someone has passed away).</div>
+              </div>
+            </div>
+          </div>
+        )}
+      </>
+    ),
+    exerciseGroups: [
+      {
+        instruction: "Opdracht: Welke reactie past het best? (Which reaction fits best?)",
+        isExtra: false,
+        questions: [
+          { id: "9.5_opd_1", type: "multiple_choice", question: "Je collega zegt: 'Ik voel me beroerd en heb 39 graden koorts.' Wat zeg je?", options: ["Gefeliciteerd!", "Beterschap!", "Eet smakelijk!"], correctAnswer: "Beterschap!" },
+          { id: "9.5_opd_2", type: "multiple_choice", question: "Je buurman moet morgen een zware operatie ondergaan in het ziekenhuis. Wat wens je hem?", options: ["Sterkte!", "Tot ziens!", "Alstublieft!"], correctAnswer: "Sterkte!" },
+          { id: "9.5_opd_3", type: "multiple_choice", question: "Je vriend heeft morgen zijn rijexamen (driving test). Wat zeg je?", options: ["Succes!", "Gecondoleerd!", "Beterschap!"], correctAnswer: "Succes!" }
+        ]
+      }
+    ]
+  },
+  {
     id: "9.6", chapter: 9, title: "9.6 Dagdelen",
     theory: (lang) => (
       <>
         {lang === 'tr' ? (
           <>
-            <h3>🕒 Dagdelen (Zaman Dilimleri)</h3>
-            <p>gisterochtend (dün sabah), vanochtend (bu sabah), morgenochtend (yarın sabah), 's ochtends (sabahları), gisteravond (dün akşam), vannacht (dün gece / bu gece)...</p>
+            <h3>⏰ Dagdelen (Günün Bölümleri)</h3>
+            <p>Hollandacada günün vakitlerini belirtirken geçmiş, şimdi ve geleceğe göre farklı ifadeler kullanılır:</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4">
+              <div className="bg-slate-800 p-3 rounded-lg border border-slate-700">
+                <h4 className="font-bold text-amber-300 mb-1">Algemeen (Rutin / Her gün):</h4>
+                <ul className="text-xs space-y-1 text-slate-300">
+                  <li><strong>'s ochtends / 's morgens:</strong> sabahları</li>
+                  <li><strong>'s middags:</strong> öğleden sonraları</li>
+                  <li><strong>'s avonds:</strong> akşamları</li>
+                  <li><strong>'s nachts:</strong> geceleri</li>
+                </ul>
+              </div>
+              <div className="bg-slate-800 p-3 rounded-lg border border-slate-700">
+                <h4 className="font-bold text-cyan-300 mb-1">Specifiek (Bugün / Dün / Yarın):</h4>
+                <ul className="text-xs space-y-1 text-slate-300">
+                  <li><strong>vanochtend / vanmorgen:</strong> bu sabah</li>
+                  <li><strong>vanmiddag:</strong> bu öğleden sonra</li>
+                  <li><strong>vanavond:</strong> bu akşam</li>
+                  <li><strong>vannacht:</strong> bu gece</li>
+                  <li><strong>gisterochtend / gistermiddag / gisteravond:</strong> dün sabah / dün öğle / dün akşam</li>
+                  <li><strong>morgenochtend / morgenmiddag / morgenavond:</strong> yarın sabah / yarın öğle / yarın akşam</li>
+                </ul>
+              </div>
+            </div>
           </>
         ) : (
           <>
-            <h3>🕒 Dagdelen (Parts of the Day)</h3>
-            <p>gisterochtend (yesterday morning), vanochtend (this morning), morgenochtend (tomorrow morning), 's ochtends (in the mornings), gisteravond (yesterday evening), vannacht (last night / tonight)...</p>
+            <h3>⏰ Times of the Day (Dagdelen)</h3>
+            <p>In Dutch, times of the day are expressed differently depending on whether they are general routines, today, yesterday, or tomorrow:</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4">
+              <div className="bg-slate-800 p-3 rounded-lg border border-slate-700">
+                <h4 className="font-bold text-amber-300 mb-1">General (Routine):</h4>
+                <ul className="text-xs space-y-1 text-slate-300">
+                  <li><strong>'s ochtends / 's morgens:</strong> in the morning</li>
+                  <li><strong>'s middags:</strong> in the afternoon</li>
+                  <li><strong>'s avonds:</strong> in the evening</li>
+                  <li><strong>'s nachts:</strong> at night</li>
+                </ul>
+              </div>
+              <div className="bg-slate-800 p-3 rounded-lg border border-slate-700">
+                <h4 className="font-bold text-cyan-300 mb-1">Specific (Today / Yesterday / Tomorrow):</h4>
+                <ul className="text-xs space-y-1 text-slate-300">
+                  <li><strong>vanochtend / vanmorgen:</strong> this morning</li>
+                  <li><strong>vanmiddag:</strong> this afternoon</li>
+                  <li><strong>vanavond:</strong> this evening / tonight</li>
+                  <li><strong>vannacht:</strong> tonight (after midnight)</li>
+                  <li><strong>gisterochtend / gistermiddag / gisteravond:</strong> yesterday morning / afternoon / evening</li>
+                  <li><strong>morgenochtend / morgenmiddag / morgenavond:</strong> tomorrow morning / afternoon / evening</li>
+                </ul>
+              </div>
+            </div>
           </>
         )}
       </>
@@ -211,35 +314,119 @@ export const chapter9Sections = [
     ]
   },
   {
-    id: "9.7", chapter: 9, title: "9.7 Perfectum",
+    id: "9.7", chapter: 9, title: "9.7 Perfectum (Het Voltooid Tegenwoordige Tijd)",
     theory: (lang) => (
       <>
         {lang === 'tr' ? (
-          <>
-            <h3>📌 Perfectum (Geçmiş Zaman)</h3>
-            <p><strong>Formule:</strong> <code>hebben / zijn + participium van een werkwoord (fiilin 3. hali)</code></p>
-            <p><strong>Soft Ketchup Kuralı:</strong> Fiilin kökü (stam) <strong>s, f, t, k, ch veya p</strong> harflerinden biriyle bitiyorsa <strong>-t</strong> alır. Diğer tüm durumlarda <strong>-d</strong> alır.</p>
-            
-            <div style={{ backgroundColor: 'rgba(59, 130, 246, 0.1)', padding: '15px', borderRadius: '8px', marginTop: '20px', borderLeft: '4px solid #3b82f6' }}>
-              <h4 style={{ margin: '0 0 10px 0', color: '#60a5fa' }}>🗣️ Spreekopdrachten (Konuşma Görevleri)</h4>
-              <p><strong>Opdracht 6:</strong> Ayağa kalkın ve birbirinize sorular sorun: <em>Wie heb je gisteren gebeld? (Dün kimi aradın?) Waar heb je gewoond? (Nerede yaşadın?)</em></p>
-              <p><strong>Opdracht 8:</strong> İkili çalışın. Birbirinize sorun: <em>Wat heb je gistermorgen gedaan? Waar ben je op vakantie geweest?</em></p>
-              <p><strong>Opdracht 10:</strong> A bir soruyla başlar. B cevaplar. A, B'nin cevabından bir kelime alarak yeni bir soru sorar.</p>
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #3b82f6', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#60a5fa' }}>📌 Het Perfectum (Hollandacada Geçmiş Zaman)</h3>
+            <p className="text-sm text-slate-300 mb-3">
+              Hollandacada günlük konuşmada geçmişte tamamlanmış eylemleri anlatmak için en yaygın zaman <strong>Perfectum</strong>dur.
+            </p>
+
+            <div className="bg-blue-950/40 p-4 rounded-xl border border-blue-500/30 text-sm mb-4">
+              <h4 className="font-bold text-blue-300 mb-1">Cümle Yapısı (Word Order):</h4>
+              <p className="font-mono text-emerald-300 font-semibold mb-2">Subject + Hulpwerkwoord (hebben/zijn) + ... + Participium (EN SONDA!)</p>
+              <p className="text-xs text-slate-300">Örnek: <em>Ik <strong>heb</strong> gisteren tot laat <strong>gewerkt</strong>.</em> (Dün geç saatlere kadar çalıştım).</p>
             </div>
-          </>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-200 mb-4">
+              <div className="bg-purple-900/20 p-4 rounded-xl border border-purple-500/20">
+                <h4 className="font-bold text-purple-300 border-b border-purple-500/30 pb-1 mb-2">1. Düzenli Fiiller: 't kofschip (Soft Ketchup)</h4>
+                <p className="text-xs text-slate-300 mb-2">Formül: <strong>ge- + fiil kökü + -t veya -d</strong></p>
+                <ul className="text-xs space-y-1.5 text-slate-300">
+                  <li>Fiil kökü <strong>s, f, t, k, ch, p</strong> ile bitiyorsa ➔ <strong>-t</strong> eklenir:
+                    <br/><em className="text-amber-300">werken ➔ werk ➔ ge-werk-t</em>
+                    <br/><em className="text-amber-300">hopen ➔ hoop ➔ ge-hoop-t</em>
+                  </li>
+                  <li>Diğer harflerle bitiyorsa ➔ <strong>-d</strong> eklenir:
+                    <br/><em className="text-teal-300">wonen ➔ woon ➔ ge-woon-d</em>
+                    <br/><em className="text-teal-300">bellen ➔ bel ➔ ge-bel-d</em>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-indigo-900/20 p-4 rounded-xl border border-indigo-500/20">
+                <h4 className="font-bold text-indigo-300 border-b border-indigo-500/30 pb-1 mb-2">2. Ön Ek Kuralı (ge- Almayanlar):</h4>
+                <p className="text-xs text-slate-300 mb-2">Fiil zaten <strong>be-, ge-, her-, ont-, ver-</strong> ile başlıyorsa, başına bir daha <em>ge-</em> GELMEZ!</p>
+                <ul className="text-xs space-y-1.5 text-slate-300">
+                  <li><strong>betalen:</strong> betaald <em>(gebetaald DEĞİL!)</em></li>
+                  <li><strong>vertellen:</strong> verteld <em>(geverteld DEĞİL!)</em></li>
+                  <li><strong>ontmoeten:</strong> ontmoet</li>
+                  <li><strong>beginnen:</strong> begonnen</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-slate-800/80 p-4 rounded-xl border border-slate-700 text-sm">
+              <h4 className="font-bold text-amber-300 mb-2">3. Hebben mi, Zijn mi?</h4>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-300">
+                <div>
+                  <strong className="text-white">HEBBEN (%90 fiil):</strong>
+                  <p>Yer değiştirmeyen eylemler, nesne alan fiiller: <em>gewerkt, gekookt, gegeten, gedronken, gelezen.</em></p>
+                </div>
+                <div>
+                  <strong className="text-white">ZIJN (Hareket & Değişim):</strong>
+                  <p>Bir yerden bir yere gitmek (yön/yer değişimi): <em>gegaan, gekomen, gereisd, gefietst naar...</em> ve <em>zijn (geweest), blijven (gebleven), beginnen (begonnen).</em></p>
+                </div>
+              </div>
+            </div>
+          </div>
         ) : (
-          <>
-            <h3>📌 Perfectum (Present Perfect Tense)</h3>
-            <p><strong>Formula:</strong> <code>hebben / zijn + participium van een werkwoord (past participle)</code></p>
-            <p><strong>'t Kofschip (Soft Ketchup) Rule:</strong> If the verb stem ends with <strong>s, f, t, k, ch or p</strong>, you write a <strong>-t</strong>. Otherwise, you use a <strong>-d</strong>.</p>
-            
-            <div style={{ backgroundColor: 'rgba(59, 130, 246, 0.1)', padding: '15px', borderRadius: '8px', marginTop: '20px', borderLeft: '4px solid #3b82f6' }}>
-              <h4 style={{ margin: '0 0 10px 0', color: '#60a5fa' }}>🗣️ Spreekopdrachten (Speaking Tasks)</h4>
-              <p><strong>Opdracht 6:</strong> Walk around and ask each other questions: <em>Wie heb je gisteren gebeld? (Who did you call yesterday?) Waar heb je gewoond? (Where did you live?)</em></p>
-              <p><strong>Opdracht 8:</strong> Work in pairs. Ask each other: <em>Wat heb je gistermorgen gedaan? Waar ben je op vakantie geweest?</em></p>
-              <p><strong>Opdracht 10:</strong> A starts with a question. B answers. A asks a new question using a word from B's answer.</p>
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #3b82f6', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#60a5fa' }}>📌 The Present Perfect (Het Perfectum)</h3>
+            <p className="text-sm text-slate-300 mb-3">
+              In everyday spoken Dutch, the <strong>Perfectum</strong> is the standard tense used to speak about past events and actions.
+            </p>
+
+            <div className="bg-blue-950/40 p-4 rounded-xl border border-blue-500/30 text-sm mb-4">
+              <h4 className="font-bold text-blue-300 mb-1">Sentence Structure (Word Order):</h4>
+              <p className="font-mono text-emerald-300 font-semibold mb-2">Subject + Auxiliary (hebben/zijn) + ... + Participle (AT THE VERY END!)</p>
+              <p className="text-xs text-slate-300">Example: <em>Ik <strong>heb</strong> gisteren tot laat <strong>gewerkt</strong>.</em> (I worked until late yesterday).</p>
             </div>
-          </>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-200 mb-4">
+              <div className="bg-purple-900/20 p-4 rounded-xl border border-purple-500/20">
+                <h4 className="font-bold text-purple-300 border-b border-purple-500/30 pb-1 mb-2">1. Regular Verbs: 't kofschip (Soft Ketchup)</h4>
+                <p className="text-xs text-slate-300 mb-2">Formula: <strong>ge- + verb stem + -t or -d</strong></p>
+                <ul className="text-xs space-y-1.5 text-slate-300">
+                  <li>If the stem ends in <strong>s, f, t, k, ch, p</strong> ➔ add <strong>-t</strong>:
+                    <br/><em className="text-amber-300">werken ➔ werk ➔ ge-werk-t</em>
+                    <br/><em className="text-amber-300">hopen ➔ hoop ➔ ge-hoop-t</em>
+                  </li>
+                  <li>For all other consonant/vowel endings ➔ add <strong>-d</strong>:
+                    <br/><em className="text-teal-300">wonen ➔ woon ➔ ge-woon-d</em>
+                    <br/><em className="text-teal-300">bellen ➔ bel ➔ ge-bel-d</em>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-indigo-900/20 p-4 rounded-xl border border-indigo-500/20">
+                <h4 className="font-bold text-indigo-300 border-b border-indigo-500/30 pb-1 mb-2">2. Inseparable Prefixes (No 'ge-'):</h4>
+                <p className="text-xs text-slate-300 mb-2">Verbs beginning with <strong>be-, ge-, her-, ont-, ver-</strong> NEVER add an extra <em>ge-</em>!</p>
+                <ul className="text-xs space-y-1.5 text-slate-300">
+                  <li><strong>betalen:</strong> betaald <em>(NOT gebetaald!)</em></li>
+                  <li><strong>vertellen:</strong> verteld <em>(NOT geverteld!)</em></li>
+                  <li><strong>ontmoeten:</strong> ontmoet</li>
+                  <li><strong>beginnen:</strong> begonnen</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-slate-800/80 p-4 rounded-xl border border-slate-700 text-sm">
+              <h4 className="font-bold text-amber-300 mb-2">3. Hebben or Zijn?</h4>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-300">
+                <div>
+                  <strong className="text-white">HEBBEN (~90% of verbs):</strong>
+                  <p>Actions, stationary verbs, transitive verbs: <em>gewerkt, gekookt, gegeten, gedronken, gelezen.</em></p>
+                </div>
+                <div>
+                  <strong className="text-white">ZIJN (Movement & Transition):</strong>
+                  <p>Movement from A to B with direction: <em>gegaan, gekomen, gereisd</em>, change of state: <em>begonnen</em>, and <em>zijn (geweest), blijven (gebleven).</em></p>
+                </div>
+              </div>
+            </div>
+          </div>
         )}
       </>
     ),
@@ -428,7 +615,321 @@ export const chapter9Sections = [
     ),
     exerciseGroups: []
   },
-  {
+    {
+    id: "Reading-9",
+    chapter: 9,
+    title: {
+      tr: "Okuma & Anlama",
+      en: "Reading Comprehension"
+    },
+    readingPassage: {
+      title: "Een bezoek aan de huisartsenpraktijk",
+      level: "Niveau A1 • 19 Zinnen",
+      intro: {
+        tr: "Aşağıdaki okuma parçasını dikkatlice okuyunuz. Bu parça 9. Bölümde öğrendiğiniz sağlık ve vücut bölümleri (de koorts, de keelpijn, het hoofd), günün bölümleri ('s ochtends, 's middags, 's nachts), geçmiş zaman (het perfectum: hebben/zijn + voltooid deelwoord) ve 'iets / niets' zamirleri kullanılarak hazırlanmıştır. Metni dinleyebilir, kelimelerin sözlük anlamına bakabilir ve alttaki 20 soruluk testi çözebilirsiniz.",
+        en: "Read the following reading passage carefully. It incorporates health & body vocabulary (fever, sore throat, head), times of day ('s ochtends, 's middags, 's nachts), present perfect tense (het perfectum), and pronouns 'iets / niets' learned in Chapter 9. Listen to the text, click words to check meanings, and answer the 20 comprehension questions below."
+      },
+      paragraphs: [
+        "Op woensdagochtend wordt Lucas wakker met hoge koorts en barstende hoofdpijn. Zijn keel voelt rood en dik aan, waardoor hij nauwelijks water kan slikken. Hij pakt met trillende handen zijn telefoon en belt om acht uur direct de huisartsenpraktijk. De vriendelijke praktijkassistente hoort zijn hese stem en vraagt rustig naar zijn geboortedatum en klachten. Ze zegt: \"U kunt vanochtend om kwart voor elf langskomen bij dokter Jansen.\"",
+        "Om kwart voor elf meldt Lucas zich bij de balie van de praktijk. Dokter Jansen roept hem binnen in de spreekkamer en vraagt vriendelijk: \"Goedemorgen meneer Moreno, ga zitten. Vertel eens, wat is er aan de hand?\" Lucas legt in het Nederlands uit: \"Het is eergisteren begonnen met een beetje keelpijn. Gisteren heb ik de hele dag gehoest en vannacht heb ik door de hoge koorts bijna niets geslapen.\" Dokter Jansen pakt een lampje, kijkt aandachtig in zijn keel en voelt aan zijn gezwollen klieren in de hals.",
+        "De dokter stelt een duidelijke diagnose: \"U heeft een flinke bacteriële keelontsteking en daarnaast heeft u griep opgelopen.\" De arts typt op zijn computer een digitaal recept voor de apotheek: \"Ik heb zojuist een antibioticakuur en sterke pijnstillers voorgeschreven. U moet drie keer per dag na de maaltijd één tablet innemen. Drink veel koud water of lauwe kamillethee en blijf minstens drie dagen rustig in bed.\" Lucas vraagt bezorgd: \"Mag ik morgenmiddag wel naar mijn werk?\" De dokter schudt beslist zijn hoofd: \"Nee, u mag absoluut niets zwaars doen tot de koorts helemaal verdwenen is.\"",
+        "Op weg naar huis stopt Lucas bij de apotheek naast de praktijk. De apothekersassistente overhandigt het doosje medicijnen en legt het gebruik duidelijk uit. Lucas betaalt via zijn Nederlandse zorgverzekering. Thuis kruipt hij direct onder zijn warme dekbed met een kopje thee met honing. Zijn studievriend Mateo stuurt hem een bemoedigend berichtje op zijn mobiel: \"Beterschap Lucas! Rust maar lekker uit, ik stuur je de lesnotities van vandaag.\""
+      ],
+      hints: [
+        {
+          title: { tr: "Sağlık & Vücut Terimleri", en: "Health & Body Terms" },
+          icon: "fa-stethoscope",
+          items: [
+            { term: "de koorts", tr: "yüksek ateş", en: "fever" },
+            { term: "de keelpijn", tr: "boğaz ağrısı", en: "sore throat" },
+            { term: "de hoofdpijn", tr: "baş ağrısı", en: "headache" },
+            { term: "de keelontsteking", tr: "boğaz iltihabı / farenjit", en: "throat infection" },
+            { term: "het recept", tr: "doktor reçetesi", en: "prescription" }
+          ]
+        },
+        {
+          title: { tr: "Geçmiş Zaman (Het Perfectum)", en: "Present Perfect Tense" },
+          icon: "fa-clock-rotate-left",
+          items: [
+            { term: "is begonnen", tr: "başladı (beginnen fiili 'zijn' alır)", en: "has started" },
+            { term: "heb gehoest", tr: "öksürdüm (hulpwerkwoord hebben)", en: "have coughed" },
+            { term: "heb geslapen", tr: "uyudum (onregelmatig werkwoord)", en: "have slept" }
+          ]
+        },
+        {
+          title: { tr: "Günün Zamanları & İfadeler", en: "Times of Day & Expressions" },
+          icon: "fa-sun",
+          items: [
+            { term: "'s ochtends / 's avonds", tr: "sabahleyin / akşamleyin", en: "in the morning / in the evening" },
+            { term: "'s nachts", tr: "geceleyin", en: "at night" },
+            { term: "iets vs niets", tr: "bir şey vs hiçbir şey", en: "something vs nothing" },
+            { term: "beterschap!", tr: "geçmiş olsun!", en: "get well soon!" }
+          ]
+        }
+      ]
+    },
+    exerciseGroups: [
+      {
+        instruction: "Deel 1: Direct Begrip & Gezondheid (1-7: Doğrudan Bilgi ve Sağlık / Direct Facts)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_9_1",
+            type: "multiple_choice",
+            question: "Met welke gezondheidsklachten wordt Lucas op woensdagochtend wakker?",
+            options: [
+              "Met buikpijn en een gebroken arm",
+              "Met hoge koorts, barstende hoofdpijn en hevige keelpijn",
+              "Alleen met een beetje lichte jeuk",
+              "Met oorpijn en kiespijn"
+            ],
+            correctAnswer: "Met hoge koorts, barstende hoofdpijn en hevige keelpijn"
+          },
+          {
+            id: "reading_9_2",
+            type: "multiple_choice",
+            question: "Hoe laat belt Lucas de huisartsenpraktijk?",
+            options: [
+              "Om 08.00 uur 's ochtends",
+              "Om 10.45 uur",
+              "Om 12.00 uur 's middags",
+              "Pas om 17.00 uur"
+            ],
+            correctAnswer: "Om 08.00 uur 's ochtends"
+          },
+          {
+            id: "reading_9_3",
+            type: "multiple_choice",
+            question: "Hoe laat heeft de assistente een afspraak gepland bij dokter Jansen?",
+            options: [
+              "Om negen uur (09.00)",
+              "Om half tien (09.30)",
+              "Om kwart voor elf (10.45)",
+              "Om twee uur 's middags (14.00)"
+            ],
+            correctAnswer: "Om kwart voor elf (10.45)"
+          },
+          {
+            id: "reading_9_4",
+            type: "multiple_choice",
+            question: "Welke diagnose stelt dokter Jansen na het lichamelijk onderzoek?",
+            options: [
+              "Een simpele lichte verkoudheid",
+              "Een flinke bacteriële keelontsteking en griep",
+              "Een allergie voor huisdieren",
+              "Helemaal niets, Lucas is kerngezond"
+            ],
+            correctAnswer: "Een flinke bacteriële keelontsteking en griep"
+          },
+          {
+            id: "reading_9_5",
+            type: "multiple_choice",
+            question: "Wat voor medicijnen schrijft dokter Jansen voor op het recept?",
+            options: [
+              "Alleen neusdruppels",
+              "Een antibioticakuur en sterke pijnstillers",
+              "Slaappillen en oogdruppels",
+              "Vitamine C tabletten"
+            ],
+            correctAnswer: "Een antibioticakuur en sterke pijnstillers"
+          },
+          {
+            id: "reading_9_6",
+            type: "multiple_choice",
+            question: "Waar haalt Lucas zijn voorgeschreven medicijnen op?",
+            options: [
+              "In de supermarkt",
+              "Bij de apotheek naast de praktijk",
+              "Op het station",
+              "Hij bestelt ze online uit Spanje"
+            ],
+            correctAnswer: "Bij de apotheek naast de praktijk"
+          },
+          {
+            id: "reading_9_7",
+            type: "multiple_choice",
+            question: "Wat wenst studievriend Mateo in zijn bemoedigende sms-bericht?",
+            options: [
+              "\"Veel plezier op je werk!\"",
+              "\"Beterschap Lucas! Rust maar lekker uit.\"",
+              "\"Kom je vanavond naar het café?\"",
+              "\"Gefeliciteerd met je verjaardag!\""
+            ],
+            correctAnswer: "\"Beterschap Lucas! Rust maar lekker uit.\""
+          }
+        ]
+      },
+      {
+        instruction: "Deel 2: Tijdstippen, Voorschriften & Dosering (8-13: Zaman ve İlaç Kullanımı / Time & Dosage)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_9_8",
+            type: "multiple_choice",
+            question: "Hoe vaak per dag moet Lucas volgens de dokter een tablet innemen?",
+            options: [
+              "Eén keer per dag voor het slapengaan",
+              "Twee keer per dag voor het ontbijt",
+              "Drie keer per dag na de maaltijd",
+              "Elk uur één tablet"
+            ],
+            correctAnswer: "Drie keer per dag na de maaltijd"
+          },
+          {
+            id: "reading_9_9",
+            type: "multiple_choice",
+            question: "Hoeveel dagen moet Lucas volgens het medisch advies minstens rustig in bed blijven?",
+            options: [
+              "Eén middag",
+              "Minstens drie dagen",
+              "Twee weken",
+              "Een hele maand"
+            ],
+            correctAnswer: "Minstens drie dagen"
+          },
+          {
+            id: "reading_9_10",
+            type: "multiple_choice",
+            question: "Wanneer zijn de eerste keelpijnklachten volgens Lucas begonnen?",
+            options: [
+              "Eergisteren",
+              "Gisteravond pas",
+              "Drie weken geleden",
+              "Vanmorgen bij het opstaan"
+            ],
+            correctAnswer: "Eergisteren"
+          },
+          {
+            id: "reading_9_11",
+            type: "multiple_choice",
+            question: "Hoeveel heeft Lucas 's nachts geslapen door de hoge koorts?",
+            options: [
+              "Hij heeft tien uur heerlijk geslapen.",
+              "Hij heeft bijna niets geslapen.",
+              "Hij heeft de hele nacht gestudeerd.",
+              "Hij weet het niet meer."
+            ],
+            correctAnswer: "Hij heeft bijna niets geslapen."
+          },
+          {
+            id: "reading_9_12",
+            type: "multiple_choice",
+            question: "Wat antwoordt dokter Jansen op de vraag of Lucas morgen mag werken?",
+            options: [
+              "\"Ja hoor, werken is juist gezond.\"",
+              "\"Alleen een halve dag.\"",
+              "\"Nee, u mag absoluut niets zwaars doen tot de koorts helemaal weg is.\"",
+              "\"Dat moet u aan uw baas vragen.\""
+            ],
+            correctAnswer: "\"Nee, u mag absoluut niets zwaars doen tot de koorts helemaal weg is.\""
+          },
+          {
+            id: "reading_9_13",
+            type: "multiple_choice",
+            question: "Hoe wordt 'geceleyin' grammaticaal correct aangeduid in het Nederlands?",
+            options: [
+              "'s ochtends",
+              "'s middags",
+              "'s avonds",
+              "'s nachts"
+            ],
+            correctAnswer: "'s nachts"
+          }
+        ]
+      },
+      {
+        instruction: "Deel 3: Perfectum, Grammatica & Cultuur (14-20: Geçmiş Zaman ve Dilbilgisi / Perfectum & Grammar)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_9_14",
+            type: "multiple_choice",
+            question: "Kijk naar de zin: \"Het is eergisteren begonnen.\" Welk hulpwerkwoord gebruikt het werkwoord 'beginnen' in het perfectum?",
+            options: [
+              "hebben (heeft begonnen)",
+              "zijn (is begonnen)",
+              "zullen (zal begonnen)",
+              "worden (wordt begonnen)"
+            ],
+            correctAnswer: "zijn (is begonnen)"
+          },
+          {
+            id: "reading_9_15",
+            type: "multiple_choice",
+            question: "Waarom eindigt het voltooid deelwoord 'gehoest' op een -t en niet op een -d?",
+            options: [
+              "Omdat de stam van 'hoesten' (hoest) eindigt op een letter uit 't kofschip (de s/t).",
+              "Omdat het een onregelmatig werkwoord is.",
+              "Omdat hoesten een medische term is.",
+              "Het is een toevallige spellingsfout."
+            ],
+            correctAnswer: "Omdat de stam van 'hoesten' (hoest) eindigt op een letter uit 't kofschip (de s/t)."
+          },
+          {
+            id: "reading_9_16",
+            type: "multiple_choice",
+            question: "Kijk naar het paar: 'iets' en 'niets'. Welk woord past in: \"Ik heb honger, mag ik ... eten?\"?",
+            options: [
+              "niets",
+              "iets",
+              "geen",
+              "nooit"
+            ],
+            correctAnswer: "iets"
+          },
+          {
+            id: "reading_9_17",
+            type: "multiple_choice",
+            question: "Welk woord is het tegenovergestelde van 'iets'?",
+            options: [
+              "alles",
+              "niets",
+              "iemand",
+              "altijd"
+            ],
+            correctAnswer: "niets"
+          },
+          {
+            id: "reading_9_18",
+            type: "multiple_choice",
+            question: "Wat is in Nederland gebruikelijk als je ziek bent en naar de dokter wilt?",
+            options: [
+              "Direct naar de spoedeisende hulp van het ziekenhuis rijden",
+              "Eerst je eigen huisarts bellen voor een afspraak",
+              "Zelf antibiotica kopen in de supermarkt",
+              "De politie bellen"
+            ],
+            correctAnswer: "Eerst je eigen huisarts bellen voor een afspraak"
+          },
+          {
+            id: "reading_9_19",
+            type: "multiple_choice",
+            question: "Wat betekent het Nederlandse woord 'beterschap'?",
+            options: [
+              "Gefeliciteerd met je succes",
+              "Wens om snel weer gezond te worden (geçmiş olsun)",
+              "Goede reis gewenst",
+              "Eet smakelijk"
+            ],
+            correctAnswer: "Wens om snel weer gezond te worden (geçmiş olsun)"
+          },
+          {
+            id: "reading_9_20",
+            type: "multiple_choice",
+            question: "Welke bewering over het verhaal van Lucas is ONJUIST (niet waar)?",
+            options: [
+              "Lucas heeft hoge koorts en hevige keelpijn.",
+              "Dokter Jansen constateert een keelontsteking en griep.",
+              "Lucas mag direct de volgende dag weer zwaar werk verrichten op zijn kantoor.",
+              "Mateo belooft om de lesnotities van de cursus naar Lucas door te sturen."
+            ],
+            correctAnswer: "Lucas mag direct de volgende dag weer zwaar werk verrichten op zijn kantoor."
+          }
+        ]
+      }
+    ]
+  },
+{
     id: "On-Class-9",
     chapter: 9,
     title: "Summary",

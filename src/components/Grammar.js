@@ -1705,6 +1705,45 @@ const grammarData = [
            </div>
         </div>
 
+        {/* Toen vs Als */}
+        <div className="mt-8">
+           <h4 className="font-bold text-lg text-emerald-400 mb-3 border-b border-slate-700 pb-2 flex items-center gap-2">
+             <i className="fa-solid fa-clock-rotate-left"></i> Toen vs Als ({isTr ? "Zaman Bağlaçları: -dığında / -ken" : "Time Conjunctions: When"})
+           </h4>
+           <p className="text-slate-300 text-sm mb-3 leading-relaxed">
+             {isTr 
+               ? "Öğrencilerin en çok karıştırdığı konulardan biri 'Toen' ve 'Als' ayrımıdır. İkisi de Türkçeye '-dığında / -ken' olarak çevrilebilir, ancak kullanım zamanları tamamen farklıdır:" 
+               : "One of the most confusing topics for learners is the difference between 'Toen' and 'Als'. Both translate to 'when', but their temporal usage is completely distinct:"}
+           </p>
+           
+           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="bg-amber-950/30 p-4 rounded-xl border border-amber-700/50 shadow-sm">
+                 <h5 className="font-bold text-amber-300 mb-2">⏳ Toen (Geçmişte Tek Bir An / When in the past)</h5>
+                 <p className="text-xs text-slate-300 mb-2">
+                   {isTr 
+                     ? "Yalnızca GEÇMİŞ ZAMANDA yaşanmış tek bir an veya olay için kullanılır:" 
+                     : "Used ONLY for a specific, single occurrence or moment in the PAST:"}
+                 </p>
+                 <div className="font-mono text-xs sm:text-sm text-amber-200 bg-slate-950/50 p-2.5 rounded border border-amber-800/40 space-y-1">
+                   <p><strong className="text-amber-400">Toen</strong> ik 20 werd, heb ik een groot feest gegeven.</p>
+                   <p>Mijn tas werd gestolen <strong className="text-amber-400">toen</strong> ik op het terras zat.</p>
+                 </div>
+              </div>
+              <div className="bg-emerald-950/30 p-4 rounded-xl border border-emerald-700/50 shadow-sm">
+                 <h5 className="font-bold text-emerald-300 mb-2">🌱 Als (Koşul / Gelecek & Şimdiki Zaman / Her Zaman)</h5>
+                 <p className="text-xs text-slate-300 mb-2">
+                   {isTr 
+                     ? "KOŞUL (eğer), ŞİMDİKİ / GELECEK ZAMAN, veya her zaman tekrarlanan olaylar için:" 
+                     : "Used for CONDITIONS (if), PRESENT / FUTURE time, or REPEATED habitual actions:"}
+                 </p>
+                 <div className="font-mono text-xs sm:text-sm text-emerald-200 bg-slate-950/50 p-2.5 rounded border border-emerald-800/40 space-y-1">
+                   <p><strong className="text-emerald-400">Als</strong> het regent, neem ik een paraplu mee.</p>
+                   <p><strong className="text-emerald-400">Als</strong> je morgen tijd hebt, gaan we fietsen.</p>
+                 </div>
+              </div>
+           </div>
+        </div>
+
         {/* Multiple verbs at the end */}
         <div className="mt-8">
            <h4 className="font-bold text-lg text-amber-400 mb-3 border-b border-slate-700 pb-2 flex items-center gap-2">

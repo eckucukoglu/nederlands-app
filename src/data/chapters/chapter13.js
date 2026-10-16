@@ -132,13 +132,8 @@ export const chapter13Sections = [
         isExtra: false,
         questions: [
           { id: "13.1_opd1_1", type: "multiple_choice", question: "1. Bas gaat op bezoek bij...", options: ["a) zijn vrienden.", "b) zijn broer."], correctAnswer: "a) zijn vrienden." },
-            {
-    id: "13.2",
-    chapter: 13,
-    title: "Vocabulary",
-    theory: null,
-    exerciseGroups: []
-  },
+
+
 { id: "13.1_opd1_2", type: "multiple_choice", question: "2. De route naar Paul en Janine was...", options: ["a) niet zo gemakkelijk te vinden.", "b) gemakkelijk te vinden."], correctAnswer: "b) gemakkelijk te vinden." },
           { id: "13.1_opd1_3", type: "multiple_choice", question: "3. Maria, de vriendin van Bas,...", options: ["a) komt niet.", "b) komt later."], correctAnswer: "a) komt niet." },
           { id: "13.1_opd1_4", type: "multiple_choice", question: "4. Bas heeft...", options: ["a) bloemen en bonbons meegenomen.", "b) bonbons en een vaas met bloemen meegenomen."], correctAnswer: "a) bloemen en bonbons meegenomen." },
@@ -147,6 +142,13 @@ export const chapter13Sections = [
         ]
       }
     ]
+  },
+  {
+    id: "13.2",
+    chapter: 13,
+    title: "Vocabulary",
+    theory: null,
+    exerciseGroups: []
   },
   {
     id: "13.3",
@@ -437,7 +439,318 @@ export const chapter13Sections = [
       }
     ]
   },
-  {
+    {
+    id: "Reading-13",
+    chapter: 13,
+    title: {
+      tr: "Okuma & Anlama",
+      en: "Reading Comprehension"
+    },
+    readingPassage: {
+      title: "Op de koffie bij meneer en mevrouw De Vries",
+      level: "Niveau A2 • 19 Zinnen",
+      intro: {
+        tr: "Aşağıdaki okuma parçasını dikkatlice okuyunuz. Bu parça 13. Bölümde öğrendiğiniz misafirlik ve ikram kültürü (op de koffie gaan, gastvrijheid), fikir belirtme kalıpları (naar mijn mening, volgens mij), havadan sudan sohbet (praten over koetjes en kalfjes), 'zullen' fiili ile söz verme (belofte) ve Hollanda hediye gelenekleri kullanılarak hazırlanmıştır. Metni dinleyebilir, kelimelerin sözlük anlamına bakabilir ve alttaki 20 soruluk testi çözebilirsiniz.",
+        en: "Read the following reading passage carefully. It incorporates Dutch hospitality & visiting customs (op de koffie gaan), expressing opinions (naar mijn mening, volgens mij), small talk (praten over koetjes en kalfjes), promises with modal 'zullen', and gift-giving etiquette learned in Chapter 13. Listen to the text, click words to check meanings, and answer the 20 comprehension questions below."
+      },
+      paragraphs: [
+        "Op zondagmiddag zijn Susy en Edit uitgenodigd voor een gezellige koffieafspraak bij hun docent Nederlands, meneer De Vries, en zijn vrouw Anja in Amersfoort. In Nederland is het een gewaardeerde traditie om iets kleins mee te nemen als je bij iemand op bezoek gaat. Bij een bloemist vlak bij het station van Amersfoort koopt Susy een prachtig, fleurig boeket verse Hollandse tulpen.",
+        "Om precies drie uur bellen de vriendinnen aan bij het karakteristieke herenhuis. Mevrouw De Vries opent gastvrij de voordeur: \"Welkom dames, wat ontzettend gezellig dat jullie er zijn! Kom gauw binnen en geef jullie jassen maar aan mij.\" Susy overhandigt het boeket met een glimlach: \"Alsjeblieft mevrouw De Vries, deze bloemen zijn voor u als dank voor de uitnodiging!\" Anja straalt van vreugde, bedankt hen hartelijk en zet de tulpen meteen in een glazen vaas met water op de tafel. In de Nederlandse cultuur is het beleefd om een cadeau direct uit te pakken en een mooie plek te geven.",
+        "In de lichte woonkamer nemen ze plaats op de comfortabele bank. Meneer De Vries schenkt dampende koffie in en serveert zelfgemaakte Hollandse boterkoek. Ze kletsen gezellig over koetjes en kalfjes: het wisselvallige herfstweer, hun ervaringen met fietsen in de regen en de recente nieuwtjes. Anja vraagt nieuwsgierig: \"Wat vinden jullie eigenlijk van het leven in Nederland tot nu toe?\" Edit deelt enthousiast haar mening: \"Naar mijn mening is Utrecht een fantastische, levendige stad met ontzettend behulpzame mensen.\" Susy vult aan: \"Volgens mij is het openbaar vervoer hier werkelijk uitstekend georganiseerd!\"",
+        "Voordat de dames weer vertrekken, bespreken ze kort hun naderende eindpresentatie voor de cursus. Meneer De Vries stelt hen gerust en doet een warme belofte: \"Maak je geen enkele zorgen dames, ik zal jullie aanstaande dinsdag persoonlijk helpen met de opbouw en de grammatica van jullie presentatie.\" Susy en Edit glimlachen opgelucht en beloven: \"Dank u wel meneer De Vries, wij zullen de teksten van tevoren alvast heel grondig voorbereiden!\" Na een onvergetelijke, leerzame middag nemen ze de stoptrein terug naar Utrecht."
+      ],
+      hints: [
+        {
+          title: { tr: "Misafirlik & İkram Terimleri", en: "Visiting & Hospitality Terms" },
+          icon: "fa-mug-hot",
+          items: [
+            { term: "op de koffie gaan", tr: "kahveye / misafirliğe gitmek", en: "to visit for coffee" },
+            { term: "de gastvrouw", tr: "ev sahibesi", en: "hostess" },
+            { term: "de vaas", tr: "vazo", en: "vase" },
+            { term: "het presentje", tr: "küçük hediye", en: "small gift" }
+          ]
+        },
+        {
+          title: { tr: "Fikir Bildirme & Sohbet", en: "Opinions & Small Talk" },
+          icon: "fa-comments",
+          items: [
+            { term: "naar mijn mening", tr: "bence / fikrime göre", en: "in my opinion" },
+            { term: "volgens mij", tr: "bana göre", en: "according to me / I think" },
+            { term: "over koetjes en kalfjes praten", tr: "havadan sudan sohbet etmek", en: "to make small talk" }
+          ]
+        },
+        {
+          title: { tr: "Söz Verme (Zullen als Belofte)", en: "Promises with 'Zullen'" },
+          icon: "fa-handshake-angle",
+          items: [
+            { term: "ik zal je helpen", tr: "sana yardım edeceğim (söz veriyorum)", en: "I will help you (promise)" },
+            { term: "wij zullen voorbereiden", tr: "hazırlayacağız", en: "we will prepare" }
+          ]
+        }
+      ]
+    },
+    exerciseGroups: [
+      {
+        instruction: "Deel 1: Direct Begrip & Bezoek (1-7: Doğrudan Bilgi ve Misafirlik / Direct Facts)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_13_1",
+            type: "multiple_choice",
+            question: "Bij wie gaan Susy en Edit op zondagmiddag op bezoek?",
+            options: [
+              "Bij Lucas en Mateo in Utrecht",
+              "Bij hun docent Nederlands meneer De Vries en zijn vrouw Anja in Amersfoort",
+              "Bij de directeur van de school",
+              "Bij een collega van Selin"
+            ],
+            correctAnswer: "Bij hun docent Nederlands meneer De Vries en zijn vrouw Anja in Amersfoort"
+          },
+          {
+            id: "reading_13_2",
+            type: "multiple_choice",
+            question: "Wat koopt Susy bij de bloemist als attentie voor de gastheer en gastvrouw?",
+            options: [
+              "Een doos chocoladebonbons",
+              "Een fleurig boeket verse Hollandse tulpen",
+              "Een fles rode wijn",
+              "Een kamerplant"
+            ],
+            correctAnswer: "Een fleurig boeket verse Hollandse tulpen"
+          },
+          {
+            id: "reading_13_3",
+            type: "multiple_choice",
+            question: "Hoe laat bellen Susy en Edit aan bij het herenhuis in Amersfoort?",
+            options: [
+              "Om 12.00 uur 's middags",
+              "Om precies 15.00 uur (drie uur)",
+              "Om 17.30 uur",
+              "Om 20.00 uur"
+            ],
+            correctAnswer: "Om precies 15.00 uur (drie uur)"
+          },
+          {
+            id: "reading_13_4",
+            type: "multiple_choice",
+            question: "Wat doet mevrouw De Vries meteen met het boeket bloemen dat ze ontvangt?",
+            options: [
+              "Ze legt de bloemen in de gang op een kastje.",
+              "Ze zet de tulpen direct in een glazen vaas met water op de tafel.",
+              "Ze geeft de bloemen terug.",
+              "Ze zet ze buiten in de tuin."
+            ],
+            correctAnswer: "Ze zet de tulpen direct in een glazen vaas met water op de tafel."
+          },
+          {
+            id: "reading_13_5",
+            type: "multiple_choice",
+            question: "Wat serveert meneer De Vries bij de dampende verse koffie?",
+            options: [
+              "Franse croissants",
+              "Zelfgemaakte Hollandse boterkoek",
+              "Haring met uitjes",
+              "Chocoladetaart uit de winkel"
+            ],
+            correctAnswer: "Zelfgemaakte Hollandse boterkoek"
+          },
+          {
+            id: "reading_13_6",
+            type: "multiple_choice",
+            question: "Wat is volgens Edit haar mening over de stad Utrecht?",
+            options: [
+              "Dat de stad veel te stil en saai is",
+              "Dat Utrecht een fantastische, levendige stad is met behulpzame mensen",
+              "Dat de stad te duur is om te wonen",
+              "Dat ze liever naar Rotterdam verhuist"
+            ],
+            correctAnswer: "Dat Utrecht een fantastische, levendige stad is met behulpzame mensen"
+          },
+          {
+            id: "reading_13_7",
+            type: "multiple_choice",
+            question: "Welke belofte doet meneer De Vries aan Susy en Edit voor hun eindpresentatie?",
+            options: [
+              "Dat hij hen een hoog cijfer geeft zonder presentatie",
+              "Dat hij hen aanstaande dinsdag persoonlijk zal helpen met de opbouw en grammatica",
+              "Dat de presentatie niet doorgaat",
+              "Dat hij een taart voor hen zal bakken"
+            ],
+            correctAnswer: "Dat hij hen aanstaande dinsdag persoonlijk zal helpen met de opbouw en grammatica"
+          }
+        ]
+      },
+      {
+        instruction: "Deel 2: Cultuur, Gewoontes & Small Talk (8-13: Kültür, Gelenekler ve Sohbet / Culture & Talk)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_13_8",
+            type: "multiple_choice",
+            question: "Wat is in Nederland een belangrijk gebruik als je een cadeau krijgt van je gasten?",
+            options: [
+              "Het cadeau pas openmaken als alle gasten weer naar huis zijn vertrokken",
+              "Het cadeau meteen uitpakken in het bijzijn van de gever en bedanken",
+              "Het cadeau weigeren uit beleefdheid",
+              "Vragen hoeveel het cadeau gekost heeft"
+            ],
+            correctAnswer: "Het cadeau meteen uitpakken in het bijzijn van de gever en bedanken"
+          },
+          {
+            id: "reading_13_9",
+            type: "multiple_choice",
+            question: "Wat betekent de Nederlandse uitdrukking: \"Praten over koetjes en kalfjes\"? ",
+            options: [
+              "Praten over de landbouw en dieren op de boerderij",
+              "Gezellig kletsen over alledaagse, lichte onderwerpen zoals het weer (small talk)",
+              "Ruzie maken over politiek",
+              "Een ernstige medische discussie voeren"
+            ],
+            correctAnswer: "Gezellig kletsen over alledaagse, lichte onderwerpen zoals het weer (small talk)"
+          },
+          {
+            id: "reading_13_10",
+            type: "multiple_choice",
+            question: "Welke onderwerpen bespreken ze tijdens hun gesprek over 'koetjes en kalfjes'?",
+            options: [
+              "Het wisselvallige herfstweer, fietsen in de regen en recente nieuwtjes",
+              "Moeilijke wiskundige formules",
+              "De huizenprijzen in Amerika",
+              "Autoreparaties"
+            ],
+            correctAnswer: "Het wisselvallige herfstweer, fietsen in de regen en recente nieuwtjes"
+          },
+          {
+            id: "reading_13_11",
+            type: "multiple_choice",
+            question: "Wat vindt Susy van het openbaar vervoer in Nederland?",
+            options: [
+              "Dat de treinen altijd te laat zijn",
+              "Dat het openbaar vervoer werkelijk uitstekend georganiseerd is",
+              "Dat het veel te ingewikkeld is",
+              "Ze heeft er geen mening over"
+            ],
+            correctAnswer: "Dat het openbaar vervoer werkelijk uitstekend georganiseerd is"
+          },
+          {
+            id: "reading_13_12",
+            type: "multiple_choice",
+            question: "In welke Nederlandse stad woont docent meneer De Vries?",
+            options: [
+              "In Utrecht",
+              "In Amersfoort",
+              "In Amsterdam",
+              "In Den Haag"
+            ],
+            correctAnswer: "In Amersfoort"
+          },
+          {
+            id: "reading_13_13",
+            type: "multiple_choice",
+            question: "Hoe reizen Susy en Edit aan het einde van de middag terug naar huis?",
+            options: [
+              "Met de fiets",
+              "Met de stoptrein",
+              "Met de taxi",
+              "Meneer De Vries brengt hen met de auto"
+            ],
+            correctAnswer: "Met de stoptrein"
+          }
+        ]
+      },
+      {
+        instruction: "Deel 3: Meningen, Zullen & Grammatica (14-20: Fikirler, 'Zullen' ve Dil / Opinions & Grammar)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_13_14",
+            type: "multiple_choice",
+            question: "Welke twee vaste uitdrukkingen worden in de tekst gebruikt om een persoonlijke mening in te leiden?",
+            options: [
+              "\"Ik weet het zeker\" en \"Niemand weet het\"",
+              "\"Naar mijn mening...\" en \"Volgens mij...\"",
+              "\"Het is verplicht...\" en \"Het moet zo...\"",
+              "\"Waarom niet...\" en \"Misschien wel...\""
+            ],
+            correctAnswer: "\"Naar mijn mening...\" en \"Volgens mij...\""
+          },
+          {
+            id: "reading_13_15",
+            type: "multiple_choice",
+            question: "Wat voor zinsfunctie heeft het hulpwerkwoord 'zullen' in de zin: \"Ik zal jullie aanstaande dinsdag persoonlijk helpen\"? ",
+            options: [
+              "Een wens of verlangen",
+              "Een belofte (toezegging)",
+              "Een bevel",
+              "Een vraag om toestemming"
+            ],
+            correctAnswer: "Een belofte (toezegging)"
+          },
+          {
+            id: "reading_13_16",
+            type: "multiple_choice",
+            question: "Welke belofte doen Susy en Edit terug aan meneer De Vries?",
+            options: [
+              "\"Wij zullen nooit meer huiswerk maken!\"",
+              "\"Wij zullen de teksten van tevoren alvast heel grondig voorbereiden!\"",
+              "\"Wij zullen niet meer naar de les komen.\"",
+              "\"Wij zullen een nieuwe leraar zoeken.\""
+            ],
+            correctAnswer: "\"Wij zullen de teksten van tevoren alvast heel grondig voorbereiden!\""
+          },
+          {
+            id: "reading_13_17",
+            type: "multiple_choice",
+            question: "Kijk naar de constructie: \"Naar mijn mening IS Utrecht een fantastische stad.\" Waarom staat het werkwoord 'is' direct na 'mening'?",
+            options: [
+              "Wegens inversie: de bepaling staat voorop, dus volgt direct de persoonsvorm (V-S).",
+              "Het is een grammaticale fout.",
+              "Omdat Utrecht een stadsnaam is.",
+              "Dat hoeft niet, het is toevallig zo geschreven."
+            ],
+            correctAnswer: "Wegens inversie: de bepaling staat voorop, dus volgt direct de persoonsvorm (V-S)."
+          },
+          {
+            id: "reading_13_18",
+            type: "multiple_choice",
+            question: "Wat is de juiste vorm van 'zullen' bij het onderwerp 'wij'?",
+            options: [
+              "zal",
+              "zult",
+              "zullen",
+              "zouden"
+            ],
+            correctAnswer: "zullen"
+          },
+          {
+            id: "reading_13_19",
+            type: "multiple_choice",
+            question: "Wat is de juiste vorm van 'zullen' bij het onderwerp 'ik'?",
+            options: [
+              "zal",
+              "zult",
+              "zullen",
+              "zulten"
+            ],
+            correctAnswer: "zal"
+          },
+          {
+            id: "reading_13_20",
+            type: "multiple_choice",
+            question: "Welke stelling over het koffiebezoek is ONJUIST (niet waar)?",
+            options: [
+              "Susy en Edit nemen een boeket tulpen mee als attentie.",
+              "Mevrouw De Vries zet de bloemen meteen in een vaas.",
+              "Meneer De Vries weigert hen te helpen met de voorbereiding van de presentatie.",
+              "Meneer De Vries serveert verse koffie en zelfgebakken boterkoek."
+            ],
+            correctAnswer: "Meneer De Vries weigert hen te helpen met de voorbereiding van de presentatie."
+          }
+        ]
+      }
+    ]
+  },
+{
     id: "On-Class-13",
     chapter: 13,
     title: "Summary",

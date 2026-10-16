@@ -466,7 +466,7 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
     groups.forEach(group => {
       group.questions.forEach(q => {
         const userAns = answers[q.id]?.toLowerCase().trim() || "";
-        const isCorrect = userAns === q.correctAnswer.toLowerCase();
+        const isCorrect = Boolean(userAns && q.correctAnswer && userAns === q.correctAnswer.toLowerCase().trim());
         if (userAns !== "") {
           const current = newStats[q.id] || { correct: 0, incorrect: 0 };
           newStats[q.id] = {
@@ -696,9 +696,9 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
                 <span>{group.instruction}</span>
               </h4>
 
-              {group.questions.map((q, idx) => {
+              {group.questions.filter(q => q && q.question).map((q, idx) => {
                 const userAns = answers[q.id];
-                const isCorrect = userAns?.toLowerCase().trim() === q.correctAnswer.toLowerCase();
+                const isCorrect = Boolean(userAns && q.correctAnswer && userAns.toLowerCase().trim() === q.correctAnswer.toLowerCase().trim());
 
                 return (
                   <div key={q.id} className="p-4 rounded-xl border border-slate-700 bg-slate-900/50 space-y-3">

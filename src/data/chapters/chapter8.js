@@ -1,6 +1,5 @@
 // src/data/chapters/chapter8.js
 import React from 'react';
-import { generateSmartQuestions } from '../questionGenerator';
 
 export const chapter8Vocab = [
   { id: "8_1", chapter: 8, nl: "de makelaar", en: "real estate agent", example: "We gaan naar de makelaar." },
@@ -138,58 +137,51 @@ export const chapter8Sections = [
     id: "8.2",
     chapter: 8,
     title: "Vocabulary",
+    theory: null,
+    exerciseGroups: []
+  },
+  {
+    id: "8.3",
+    chapter: 8,
+    title: "8.3 Soorten woonruimte",
     theory: (lang) => (
       <>
         {lang === 'tr' ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6' }}>
-              <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>🏠 Soorten woonruimte (Ev Tipleri)</h3>
-              <ul style={{ color: '#cbd5e1', listStyleType: 'none', padding: 0, margin: 0 }}>
-                <li><strong>het huis / de woning:</strong> Ev (Genel terim)</li>
-                <li><strong>de flat / het appartement:</strong> Apartman dairesi</li>
-                <li><strong>de bovenwoning:</strong> Üst kat dairesi</li>
-                <li><strong>de benedenwoning:</strong> Zemin kat dairesi</li>
-                <li><strong>de begane grond:</strong> Zemin kat (Ground floor)</li>
-                <li><strong>de verdieping:</strong> Kat (Floor/Storey)</li>
-              </ul>
-            </div>
-
-            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #ec4899' }}>
-              <h3 style={{ margin: '0 0 10px 0', color: '#f472b6' }}>🛋️ In en bij het huis (Ev bölümleri)</h3>
-              <ul style={{ color: '#cbd5e1', listStyleType: 'none', padding: 0, margin: 0 }}>
-                <li><strong>de woonkamer / slaapkamer:</strong> Oturma / yatak odası</li>
-                <li><strong>de keuken:</strong> Mutfak</li>
-                <li><strong>de badkamer / de wc:</strong> Banyo / Tuvalet</li>
-                <li><strong>de gang:</strong> Koridor</li>
-                <li><strong>de deur / het raam:</strong> Kapı / Pencere</li>
-                <li><strong>het balkon / de tuin:</strong> Balkon / Bahçe</li>
-              </ul>
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>🏠 Soorten woonruimte (Konut ve Ev Tipleri)</h3>
+            <p className="text-sm text-slate-300 mb-4">Hollanda'da kiralık veya satılık ev ararken (bij de makelaar / op Funda) karşınıza çıkacak temel ev tipleri:</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-200">
+              <div className="bg-purple-900/20 p-4 rounded-xl border border-purple-500/20 space-y-2">
+                <div><strong>de woning / het huis:</strong> Ev / Konut (Genel ad)</div>
+                <div><strong>het appartement / de flat:</strong> Apartman dairesi</div>
+                <div><strong>de studio:</strong> Tek odalı stüdyo daire</div>
+                <div><strong>de kamer:</strong> Öğrenci odası (studentenkamer)</div>
+              </div>
+              <div className="bg-indigo-900/20 p-4 rounded-xl border border-indigo-500/20 space-y-2">
+                <div><strong>de benedenwoning:</strong> Zemin kat dairesi (genellikle bahçeli)</div>
+                <div><strong>de bovenwoning:</strong> Üst kat dairesi (genellikle balkonlu)</div>
+                <div><strong>de begane grond:</strong> Zemin / Giriş kat (0. kat)</div>
+                <div><strong>de eerste / tweede verdieping:</strong> 1. / 2. kat (Hollanda'da 1. kat zemin üstündeki ilk kattır)</div>
+              </div>
             </div>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6' }}>
-              <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>🏠 Soorten woonruimte (Types of accommodation)</h3>
-              <ul style={{ color: '#cbd5e1', listStyleType: 'none', padding: 0, margin: 0 }}>
-                <li><strong>het huis / de woning:</strong> House / Dwelling</li>
-                <li><strong>de flat / het appartement:</strong> Apartment / Flat</li>
-                <li><strong>de bovenwoning:</strong> Upstairs flat</li>
-                <li><strong>de benedenwoning:</strong> Ground-floor flat</li>
-                <li><strong>de begane grond:</strong> Ground floor</li>
-                <li><strong>de verdieping:</strong> Floor / Storey</li>
-              </ul>
-            </div>
-
-            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #ec4899' }}>
-              <h3 style={{ margin: '0 0 10px 0', color: '#f472b6' }}>🛋️ In en bij het huis (In and around the house)</h3>
-              <ul style={{ color: '#cbd5e1', listStyleType: 'none', padding: 0, margin: 0 }}>
-                <li><strong>de woonkamer / slaapkamer:</strong> Living room / bedroom</li>
-                <li><strong>de keuken:</strong> Kitchen</li>
-                <li><strong>de badkamer / de wc:</strong> Bathroom / Toilet</li>
-                <li><strong>de gang:</strong> Hallway / Corridor</li>
-                <li><strong>de deur / het raam:</strong> Door / Window</li>
-                <li><strong>het balkon / de tuin:</strong> Balcony / Garden</li>
-              </ul>
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>🏠 Types of Accommodation (Soorten woonruimte)</h3>
+            <p className="text-sm text-slate-300 mb-4">Common types of housing found when searching for rent or buying in the Netherlands:</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-200">
+              <div className="bg-purple-900/20 p-4 rounded-xl border border-purple-500/20 space-y-2">
+                <div><strong>de woning / het huis:</strong> House / Dwelling</div>
+                <div><strong>het appartement / de flat:</strong> Apartment / Flat</div>
+                <div><strong>de studio:</strong> Studio apartment</div>
+                <div><strong>de kamer:</strong> Student room in a shared house</div>
+              </div>
+              <div className="bg-indigo-900/20 p-4 rounded-xl border border-indigo-500/20 space-y-2">
+                <div><strong>de benedenwoning:</strong> Ground-floor flat (often with a garden)</div>
+                <div><strong>de bovenwoning:</strong> Upstairs flat (often with a balcony)</div>
+                <div><strong>de begane grond:</strong> Ground floor (Floor 0)</div>
+                <div><strong>de eerste / tweede verdieping:</strong> First / Second floor</div>
+              </div>
             </div>
           </div>
         )}
@@ -197,12 +189,155 @@ export const chapter8Sections = [
     ),
     exerciseGroups: [
       {
-        instruction: "Opdracht 2 & Woordenlijst Oefeningen (Vocabulary Exercises)",
-        isExtra: true,
+        instruction: "Opdracht: Begrip van woonruimtes (Housing types comprehension)",
+        isExtra: false,
         questions: [
-          { id: "8.2_smart_1", type: "multiple_choice", question: "Wat is 'de begane grond' in het Engels of Turks?", options: ["The basement / Bodrum", "The roof / Çatı", "The ground floor / Zemin kat"], correctAnswer: "The ground floor / Zemin kat" },
-          { id: "8.2_smart_2", type: "fill_in", question: "Vertaal (Translate): 'I rent an apartment.' -> Ik huur een ________.", correctAnswer: "appartement" },
-          ...generateSmartQuestions(8, "Woordenlijst", 6, chapter8Vocab)
+          { id: "8.3_opd_1", type: "multiple_choice", question: "Wat is 'de begane grond' in het Engels of Turks?", options: ["The basement / Bodrum", "The roof / Çatı", "The ground floor / Zemin kat"], correctAnswer: "The ground floor / Zemin kat" },
+          { id: "8.3_opd_2", type: "multiple_choice", question: "Een woning op de tweede etage met een balkon noem je meestal een...", options: ["benedenwoning", "bovenwoning", "garage"], correctAnswer: "bovenwoning" },
+          { id: "8.3_opd_3", type: "fill_in", question: "Vertaal (Translate): 'I rent an apartment.' -> Ik huur een ________.", correctAnswer: "appartement" }
+        ]
+      }
+    ]
+  },
+  {
+    id: "8.4",
+    chapter: 8,
+    title: "8.4 In en bij het huis",
+    theory: (lang) => (
+      <>
+        {lang === 'tr' ? (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #06b6d4', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#22d3ee' }}>🚪 In en bij het huis (Evin Odaları ve Bölümleri)</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-200">
+              <div className="bg-cyan-900/20 p-4 rounded-xl border border-cyan-500/20 space-y-1.5">
+                <h4 className="font-bold text-cyan-300 border-b border-cyan-500/30 pb-1 mb-2">Binnen (Ev İçi):</h4>
+                <div><strong>de woonkamer:</strong> oturma odası / salon</div>
+                <div><strong>de slaapkamer:</strong> yatak odası</div>
+                <div><strong>de keuken:</strong> mutfak</div>
+                <div><strong>de badkamer:</strong> banyo (duş veya küvet olan yer)</div>
+                <div><strong>de wc / het toilet:</strong> tuvalet (Hollanda evlerinde banyo ve wc genelde ayrıdır)</div>
+                <div><strong>de gang / de hal:</strong> koridor / antre</div>
+                <div><strong>de zolder:</strong> tavan arası</div>
+                <div><strong>de kelder:</strong> bodrum</div>
+              </div>
+              <div className="bg-teal-900/20 p-4 rounded-xl border border-teal-500/20 space-y-1.5">
+                <h4 className="font-bold text-teal-300 border-b border-teal-500/30 pb-1 mb-2">Buiten (Ev Dışı & Eklentiler):</h4>
+                <div><strong>het balkon:</strong> balkon</div>
+                <div><strong>het terras:</strong> teras</div>
+                <div><strong>de tuin:</strong> bahçe (de voortuin: ön bahçe / de achtertuin: arka bahçe)</div>
+                <div><strong>het schuurtje:</strong> bisiklet deposu / ardiye kulübesi</div>
+                <div><strong>de garage:</strong> garaj</div>
+                <div><strong>de lift / de trap:</strong> asansör / merdiven</div>
+              </div>
+            </div>
+          </div>
+        ) : (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #06b6d4', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#22d3ee' }}>🚪 Rooms & Areas (In en bij het huis)</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-200">
+              <div className="bg-cyan-900/20 p-4 rounded-xl border border-cyan-500/20 space-y-1.5">
+                <h4 className="font-bold text-cyan-300 border-b border-cyan-500/30 pb-1 mb-2">Inside (Binnen):</h4>
+                <div><strong>de woonkamer:</strong> living room</div>
+                <div><strong>de slaapkamer:</strong> bedroom</div>
+                <div><strong>de keuken:</strong> kitchen</div>
+                <div><strong>de badkamer:</strong> bathroom</div>
+                <div><strong>de wc / het toilet:</strong> toilet (often separate in NL)</div>
+                <div><strong>de gang / de hal:</strong> hallway / corridor</div>
+                <div><strong>de zolder:</strong> attic</div>
+                <div><strong>de kelder:</strong> basement</div>
+              </div>
+              <div className="bg-teal-900/20 p-4 rounded-xl border border-teal-500/20 space-y-1.5">
+                <h4 className="font-bold text-teal-300 border-b border-teal-500/30 pb-1 mb-2">Outside (Buiten):</h4>
+                <div><strong>het balkon:</strong> balcony</div>
+                <div><strong>het terras:</strong> terrace</div>
+                <div><strong>de tuin:</strong> garden (voortuin: front / achtertuin: back)</div>
+                <div><strong>het schuurtje:</strong> bike shed / storage shed</div>
+                <div><strong>de garage:</strong> garage</div>
+                <div><strong>de lift / de trap:</strong> lift (elevator) / stairs</div>
+              </div>
+            </div>
+          </div>
+        )}
+      </>
+    ),
+    exerciseGroups: [
+      {
+        instruction: "Opdracht: Waar bevindt het zich? (Where is it located?)",
+        isExtra: false,
+        questions: [
+          { id: "8.4_opd_1", type: "multiple_choice", question: "Waar slaap je meestal in huis?", options: ["In de keuken", "In de slaapkamer", "In de schuur"], correctAnswer: "In de slaapkamer" },
+          { id: "8.4_opd_2", type: "multiple_choice", question: "Waar zet je je fiets vaak neer bij een Nederlands rijtjeshuis?", options: ["In het schuurtje of de tuin", "In de badkamer", "In de slaapkamer"], correctAnswer: "In het schuurtje of de tuin" },
+          { id: "8.4_opd_3", type: "fill_in", question: "In een flat zonder lift neem je altijd de ________ om naar boven te gaan.", correctAnswer: "trap" }
+        ]
+      }
+    ]
+  },
+  {
+    id: "8.5",
+    chapter: 8,
+    title: "8.5 Meubels & Inrichting",
+    theory: (lang) => (
+      <>
+        {lang === 'tr' ? (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #ec4899', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#f472b6' }}>🛋️ Meubels & Inrichting (Mobilyalar ve Dekorasyon)</h3>
+            <p className="text-sm text-slate-300 mb-4">Bir evin içindeki eşyalar ve kiralama durumu (gemeubileerd vs kaal):</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-200">
+              <div className="bg-pink-900/20 p-4 rounded-xl border border-pink-500/20 space-y-1.5">
+                <h4 className="font-bold text-pink-300 border-b border-pink-500/30 pb-1 mb-2">De Meubels (Mobilyalar):</h4>
+                <div><strong>de tafel / de salontafel:</strong> masa / sehpa</div>
+                <div><strong>de stoel / de fauteuil:</strong> sandalye / koltuk</div>
+                <div><strong>de bank:</strong> kanepe / divan</div>
+                <div><strong>het bed:</strong> yatak</div>
+                <div><strong>de kast / de kledingkast:</strong> dolap / gardırop</div>
+                <div><strong>het bureau:</strong> çalışma masası</div>
+              </div>
+              <div className="bg-rose-900/20 p-4 rounded-xl border border-rose-500/20 space-y-1.5">
+                <h4 className="font-bold text-rose-300 border-b border-rose-500/30 pb-1 mb-2">De Inrichting (Dekorasyon & Durum):</h4>
+                <div><strong>de lamp:</strong> lamba / aydınlatma</div>
+                <div><strong>de gordijnen:</strong> perdeler</div>
+                <div><strong>het tapijt / de vloerbedekking:</strong> halı / zemin kaplaması</div>
+                <div><strong>gemeubileerd:</strong> eşyalı (mobilyalı)</div>
+                <div><strong>ongemeubileerd / gestoffeerd:</strong> eşyasız (sadece zemin/perde var)</div>
+                <div><strong>kaal:</strong> tamamen boş (zemin ve lamba bile yok!)</div>
+              </div>
+            </div>
+          </div>
+        ) : (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #ec4899', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#f472b6' }}>🛋️ Furniture & Interior (Meubels & Inrichting)</h3>
+            <p className="text-sm text-slate-300 mb-4">Furniture items and Dutch rental conditions (furnished vs shell):</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-200">
+              <div className="bg-pink-900/20 p-4 rounded-xl border border-pink-500/20 space-y-1.5">
+                <h4 className="font-bold text-pink-300 border-b border-pink-500/30 pb-1 mb-2">Furniture (De Meubels):</h4>
+                <div><strong>de tafel:</strong> table</div>
+                <div><strong>de stoel:</strong> chair</div>
+                <div><strong>de bank:</strong> sofa / couch</div>
+                <div><strong>het bed:</strong> bed</div>
+                <div><strong>de kast:</strong> cupboard / wardrobe</div>
+                <div><strong>het bureau:</strong> desk</div>
+              </div>
+              <div className="bg-rose-900/20 p-4 rounded-xl border border-rose-500/20 space-y-1.5">
+                <h4 className="font-bold text-rose-300 border-b border-rose-500/30 pb-1 mb-2">Rental Conditions & Details:</h4>
+                <div><strong>de lamp:</strong> lamp</div>
+                <div><strong>de gordijnen:</strong> curtains</div>
+                <div><strong>het tapijt:</strong> carpet / rug</div>
+                <div><strong>gemeubileerd:</strong> fully furnished</div>
+                <div><strong>gestoffeerd:</strong> semi-furnished (floors and curtains included)</div>
+                <div><strong>kaal:</strong> unfurnished / bare shell (no flooring, no lamps)</div>
+              </div>
+            </div>
+          </div>
+        )}
+      </>
+    ),
+    exerciseGroups: [
+      {
+        instruction: "Opdracht: Meubels & Inrichting (Practice)",
+        isExtra: false,
+        questions: [
+          { id: "8.5_opd_1", type: "multiple_choice", question: "Een woning huren zonder meubels, maar met vloer en gordijnen heet...", options: ["gemeubileerd", "gestoffeerd", "kaal"], correctAnswer: "gestoffeerd" },
+          { id: "8.5_opd_2", type: "multiple_choice", question: "Waarop zit je als je tv kijkt in de woonkamer?", options: ["Op de bank of een stoel", "Op de koelkast", "Op de lamp"], correctAnswer: "Op de bank of een stoel" }
         ]
       }
     ]
@@ -241,6 +376,18 @@ export const chapter8Sections = [
               "Ik heb GEEN fiets." (Bisikletim yok - Genel) <br/>
               "Dat is NIET mijn fiets." (O benim bisikletim değil - Belirli)
             </div>
+
+            <div className="bg-amber-950/40 p-4 rounded-xl mt-4 border border-amber-500/30">
+              <h4 className="font-bold text-amber-300 mb-1">⚠️ Önemli Fark: Moeten vs Niet hoeven</h4>
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Bir zorunluluğun olmadığını (gerek yok / zorunda değilsin) söylemek için <strong>moeten niet DENMEZ</strong>! Bunun yerine <strong>niet hoeven (te)</strong> kullanılır:
+              </p>
+              <ul className="text-xs text-amber-200 mt-2 list-disc pl-5 space-y-1">
+                <li><strong>Je moet komen:</strong> Gelmek zorundasın.</li>
+                <li><strong>Je hoeft niet te komen:</strong> Gelmene gerek yok / zorunda değilsin.</li>
+                <li><em>(Not: "Je moet niet komen" derseniz "Gelmeyeceksin / gelmen yasak" anlamına gelir!).</em></li>
+              </ul>
+            </div>
           </div>
         ) : (
           <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #ef4444', marginBottom: '20px' }}>
@@ -269,6 +416,18 @@ export const chapter8Sections = [
               Compare: <br/>
               "Ik heb GEEN fiets." (I have no bike - Generic) <br/>
               "Dat is NIET mijn fiets." (That is not my bike - Definite)
+            </div>
+
+            <div className="bg-amber-950/40 p-4 rounded-xl mt-4 border border-amber-500/30">
+              <h4 className="font-bold text-amber-300 mb-1">⚠️ Crucial Distinction: Moeten vs Niet hoeven</h4>
+              <p className="text-xs text-slate-300 leading-relaxed">
+                To say that something is not necessary (you don't have to), Dutch uses <strong>niet hoeven (te)</strong>, NEVER *moeten niet*:
+              </p>
+              <ul className="text-xs text-amber-200 mt-2 list-disc pl-5 space-y-1">
+                <li><strong>Je moet komen:</strong> You must come.</li>
+                <li><strong>Je hoeft niet te komen:</strong> You don't have to come.</li>
+                <li><em>(Note: "Je moet niet komen" means "You must not come / Don't come!").</em></li>
+              </ul>
             </div>
           </div>
         )}
@@ -309,7 +468,8 @@ export const chapter8Sections = [
         isExtra: true,
         questions: [
           { id: "8.6_smart_1", type: "multiple_choice", question: "Vertaal (Translate): 'Bu benim köpeğim değil. / This is not my dog.'", options: ["Dat is geen mijn hond.", "Dat is niet mijn hond.", "Dat is mijn hond niet."], correctAnswer: "Dat is niet mijn hond." },
-          { id: "8.6_smart_2", type: "multiple_choice", question: "Waarom gebruik je GEEN in de zin: 'Ik heb geen tijd'?", options: ["Omdat tijd een werkwoord is.", "Omdat tijd een substantief (isim/noun) is zonder artikel of bezittelijk voornaamwoord.", "Omdat het in de toekomst is."], correctAnswer: "Omdat tijd een substantief (isim/noun) is zonder artikel of bezittelijk voornaamwoord." }
+          { id: "8.6_smart_2", type: "multiple_choice", question: "Waarom gebruik je GEEN in de zin: 'Ik heb geen tijd'?", options: ["Omdat tijd een werkwoord is.", "Omdat tijd een substantief (isim/noun) is zonder artikel of bezittelijk voornaamwoord.", "Omdat het in de toekomst is."], correctAnswer: "Omdat tijd een substantief (isim/noun) is zonder artikel of bezittelijk voornaamwoord." },
+          { id: "8.6_smart_3", type: "multiple_choice", question: "Vertaal: 'Erken kalkmak zorunda değilsin.' (You don't have to get up early).", options: ["Je moet niet vroeg opstaan.", "Je hoeft niet vroeg op te staan.", "Je mag niet vroeg opstaan."], correctAnswer: "Je hoeft niet vroeg op te staan." }
         ]
       }
     ]
@@ -322,52 +482,54 @@ export const chapter8Sections = [
       <>
         {lang === 'tr' ? (
           <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
-            <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>📍 Preposities (Edatlar)</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-200">
-              <div>
-                <ul className="space-y-1">
-                  <li><strong>in:</strong> içinde <em>(in de slaapkamer)</em></li>
-                  <li><strong>op:</strong> üstünde <em>(op het balkon)</em></li>
-                  <li><strong>aan:</strong> asılı/bitişik <em>(aan de muur)</em></li>
-                  <li><strong>naast:</strong> yanında <em>(naast het huis)</em></li>
-                  <li><strong>voor:</strong> önünde <em>(voor de lamp)</em></li>
-                  <li><strong>achter:</strong> arkasında <em>(achter het huis)</em></li>
+            <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>📍 Preposities van plaats (Yer Edatları)</h3>
+            <p className="text-sm text-slate-300 mb-3">Nesnelerin konumunu belirtirken şu kritik ayrımlara dikkat edin:</p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-200 mb-4">
+              <div className="bg-emerald-950/40 p-4 rounded-xl border border-emerald-500/20">
+                <h4 className="font-bold text-emerald-300 border-b border-emerald-500/30 pb-1 mb-2">Temas ve Yüzey:</h4>
+                <ul className="space-y-1.5 text-xs sm:text-sm">
+                  <li><strong>op:</strong> Yatay bir yüzeyin üstünde (temas var): <em>Het boek ligt op tafel.</em></li>
+                  <li><strong>aan:</strong> Dikey bir yüzeye asılı / bitişik: <em>De foto hangt aan de muur.</em></li>
+                  <li><strong>tegen:</strong> Yaslanmış / dayalı: <em>De fiets staat tegen het hek.</em></li>
+                  <li><strong>in:</strong> İçinde / kapalı alanda: <em>De melk staat in de koelkast.</em></li>
                 </ul>
               </div>
-              <div>
-                <ul className="space-y-1">
-                  <li><strong>boven:</strong> yukarısında <em>(boven de keuken)</em></li>
-                  <li><strong>onder:</strong> altında <em>(onder het balkon)</em></li>
-                  <li><strong>bij:</strong> yanında/civarında <em>(bij de tafel)</em></li>
-                  <li><strong>tussen:</strong> arasında <em>(tussen keuken en zolder)</em></li>
-                  <li><strong>tegenover:</strong> karşısında <em>(tegenover de deur)</em></li>
-                  <li><strong>tegen:</strong> yaslanmış/karşı <em>(tegen de muur)</em></li>
+              <div className="bg-teal-950/40 p-4 rounded-xl border border-teal-500/20">
+                <h4 className="font-bold text-teal-300 border-b border-teal-500/30 pb-1 mb-2">Konum ve Mesafe:</h4>
+                <ul className="space-y-1.5 text-xs sm:text-sm">
+                  <li><strong>boven:</strong> Yukarısında (temas yok): <em>De lamp hangt boven de tafel.</em></li>
+                  <li><strong>onder:</strong> Altında: <em>De kat ligt onder het bed.</em></li>
+                  <li><strong>naast / bij:</strong> Yanında / yakınında: <em>De bank staat naast de kast.</em></li>
+                  <li><strong>voor / achter:</strong> Önünde / arkasında: <em>De auto staat voor het huis.</em></li>
+                  <li><strong>tussen / tegenover:</strong> Arasında / karşısında: <em>De stoel staat tussen twee tafels.</em></li>
                 </ul>
               </div>
             </div>
           </div>
         ) : (
           <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
-            <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>📍 Preposities (Prepositions of Place)</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-200">
-              <div>
-                <ul className="space-y-1">
-                  <li><strong>in:</strong> inside / in <em>(in de slaapkamer)</em></li>
-                  <li><strong>op:</strong> on top of / on <em>(op het balkon)</em></li>
-                  <li><strong>aan:</strong> attached to / on <em>(aan de muur)</em></li>
-                  <li><strong>naast:</strong> next to <em>(naast het huis)</em></li>
-                  <li><strong>voor:</strong> in front of <em>(voor de lamp)</em></li>
-                  <li><strong>achter:</strong> behind <em>(achter het huis)</em></li>
+            <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>📍 Prepositions of Place (Preposities van plaats)</h3>
+            <p className="text-sm text-slate-300 mb-3">Notice these crucial spatial distinctions in Dutch:</p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-200 mb-4">
+              <div className="bg-emerald-950/40 p-4 rounded-xl border border-emerald-500/20">
+                <h4 className="font-bold text-emerald-300 border-b border-emerald-500/30 pb-1 mb-2">Contact & Surfaces:</h4>
+                <ul className="space-y-1.5 text-xs sm:text-sm">
+                  <li><strong>op:</strong> On top of a horizontal surface: <em>Het boek ligt op tafel.</em></li>
+                  <li><strong>aan:</strong> Attached to / on a vertical surface: <em>De foto hangt aan de muur.</em></li>
+                  <li><strong>tegen:</strong> Leaning against: <em>De fiets staat tegen het hek.</em></li>
+                  <li><strong>in:</strong> Inside: <em>De melk staat in de koelkast.</em></li>
                 </ul>
               </div>
-              <div>
-                <ul className="space-y-1">
-                  <li><strong>boven:</strong> above <em>(boven de keuken)</em></li>
-                  <li><strong>onder:</strong> under <em>(onder het balkon)</em></li>
-                  <li><strong>bij:</strong> near / at <em>(bij de tafel)</em></li>
-                  <li><strong>tussen:</strong> between <em>(tussen keuken en zolder)</em></li>
-                  <li><strong>tegenover:</strong> opposite <em>(tegenover de deur)</em></li>
-                  <li><strong>tegen:</strong> against <em>(tegen de muur)</em></li>
+              <div className="bg-teal-950/40 p-4 rounded-xl border border-teal-500/20">
+                <h4 className="font-bold text-teal-300 border-b border-teal-500/30 pb-1 mb-2">Position & Distance:</h4>
+                <ul className="space-y-1.5 text-xs sm:text-sm">
+                  <li><strong>boven:</strong> Above (without contact): <em>De lamp hangt boven de tafel.</em></li>
+                  <li><strong>onder:</strong> Under: <em>De kat ligt onder het bed.</em></li>
+                  <li><strong>naast / bij:</strong> Next to / near: <em>De bank staat naast de kast.</em></li>
+                  <li><strong>voor / achter:</strong> In front of / behind: <em>De auto staat voor het huis.</em></li>
+                  <li><strong>tussen / tegenover:</strong> Between / opposite: <em>De stoel staat tegenover de deur.</em></li>
                 </ul>
               </div>
             </div>
@@ -463,7 +625,319 @@ export const chapter8Sections = [
       }
     ]
   },
-  {
+    {
+    id: "Reading-8",
+    chapter: 8,
+    title: {
+      tr: "Okuma & Anlama",
+      en: "Reading Comprehension"
+    },
+    readingPassage: {
+      title: "Op zoek naar een huurwoning bij de makelaar",
+      level: "Niveau A1 • 19 Zinnen",
+      intro: {
+        tr: "Aşağıdaki okuma parçasını dikkatlice okuyunuz. Bu parça 8. Bölümde öğrendiğiniz ev kiralama terimleri (de makelaar, het appartement, de huurprijs, gemeubileerd), olumsuzluk kuralı (geen vs niet) ve yer bildiren edatlar (preposities van plaats: in, op, onder, naast, tussen) kullanılarak hazırlanmıştır. Metni dinleyebilir, kelimelerin sözlük anlamına bakabilir ve alttaki 20 soruluk testi çözebilirsiniz.",
+        en: "Read the following reading passage carefully. It incorporates renting & housing terms (real estate agent, apartment, rent, furnished), negation rules (geen vs niet), and prepositions of place (in, op, onder, naast, tussen) learned in Chapter 8. Listen to the text, click words to check meanings, and answer the 20 comprehension questions below."
+      },
+      paragraphs: [
+        "Op maandagochtend bezoeken Lucas en zijn Spaanse huisgenoot Mateo het kantoor van Makelaardij Utrecht aan de Biltstraat. Hun huidige huurcontract loopt over twee maanden af en ze moeten op zoek naar een nieuwe woonruimte. Makelaar meneer Van Dam ontvangt hen vriendelijk in zijn spreekkamer, schenkt koffie in en vraagt: \"Goedemorgen heren! Vertel eens, wat voor soort woning zoeken jullie precies?\"",
+        "Lucas legt rustig uit: \"Wij zoeken een ruim driekamerappartement met twee aparte slaapkamers en een lichte woonkamer. En als het even kan, graag ook een balkon of een klein terrasje.\" Makelaar Van Dam kijkt in zijn computersysteem en toont twee opties: \"Ik heb hier twee interessante woningen. Woning A is een mooi appartement op de tweede verdieping aan de rand van de Singel, volledig gemeubileerd met moderne meubels en een balkon. Woning B is een ruim eengezinshuis in een buitenwijk, maar dat huis is helemaal ongemeubileerd.\"",
+        "Mateo reageert direct: \"Wij hebben zelf nog geen meubels, dus een ongemeubileerd huis schikt ons beslist niet. Wij hebben ook geen auto, daarom willen we dicht bij het openbaar vervoer en het centrum wonen.\" De makelaar knikt instemmend: \"Dan is appartement A aan de Singel de perfecte keuze voor jullie. De indeling is uitstekend: de badkamer ligt tussen de twee slaapkamers. Onder het gebouw bevindt zich een afgesloten fietsenstalling, en direct naast de hoofdingang zit een grote supermarkt.\"",
+        "Lucas vraagt nieuwsgierig naar de financiële voorwaarden: \"Wat is de exacte huurprijs per maand?\" De makelaar antwoordt: \"De kale huur is duizend euro, en met de servicekosten en het voorschot voor gas, water en licht is het totaal twaalfhonderd euro per maand.\" Lucas en Mateo kijken elkaar enthousiast aan. Meneer Van Dam stelt voor: \"Zullen we morgenmiddag om vier uur gaan bezichtigen?\" Lucas antwoordt vol overtuiging: \"Dat komt uitstekend uit, afgesproken!\" Ze schudden elkaar de hand en verheugen zich op de bezichtiging."
+      ],
+      hints: [
+        {
+          title: { tr: "Emlak & Konut Terimleri", en: "Real Estate & Housing Terms" },
+          icon: "fa-building",
+          items: [
+            { term: "de makelaar", tr: "emlakçı", en: "real estate agent" },
+            { term: "gemeubileerd", tr: "eşyalı (mobilyalı)", en: "furnished" },
+            { term: "ongemeubileerd", tr: "eşyasız (boş)", en: "unfurnished" },
+            { term: "de bezichtiging", tr: "ev görme / evi gezme", en: "viewing" },
+            { term: "de huurprijs", tr: "kira bedeli", en: "rental price" }
+          ]
+        },
+        {
+          title: { tr: "Olumsuzluk: Geen vs Niet", en: "Negation: Geen vs Niet" },
+          icon: "fa-ban",
+          items: [
+            { term: "geen + isim", tr: "geen meubels, geen auto (artikelsiz/een alan isimler)", en: "no furniture, no car" },
+            { term: "niet + fiil/sıfat", tr: "schikt ons niet, niet duur (eylem ve sıfatlar)", en: "not suitable, not expensive" }
+          ]
+        },
+        {
+          title: { tr: "Yer Edatları (Preposities)", en: "Prepositions of Place" },
+          icon: "fa-map-pin",
+          items: [
+            { term: "tussen", tr: "arasında (de badkamer ligt tussen de slaapkamers)", en: "between" },
+            { term: "onder", tr: "altında (onder het gebouw)", en: "under / beneath" },
+            { term: "naast", tr: "yanında (naast de ingang)", en: "next to / beside" }
+          ]
+        }
+      ]
+    },
+    exerciseGroups: [
+      {
+        instruction: "Deel 1: Direct Begrip & Huurwoning (1-7: Doğrudan Bilgi ve Konut / Direct Facts)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_8_1",
+            type: "multiple_choice",
+            question: "Waarom bezoeken Lucas en Mateo op maandagochtend Makelaardij Utrecht?",
+            options: [
+              "Omdat ze een huis willen kopen als investering",
+              "Omdat hun huidige huurcontract over twee maanden afloopt en ze een nieuwe woning zoeken",
+              "Omdat ze makelaar willen worden",
+              "Omdat de buren te veel lawaai maken"
+            ],
+            correctAnswer: "Omdat hun huidige huurcontract over twee maanden afloopt en ze een yeni woning zoeken"
+          },
+          {
+            id: "reading_8_2",
+            type: "multiple_choice",
+            question: "Wat voor soort woning zoeken Lucas en Mateo volgens Lucas?",
+            options: [
+              "Een kleine studentenkamer zonder keuken",
+              "Een ruim driekamerappartement met twee aparte slaapkamers en een lichte woonkamer",
+              "Een grote villa met een zwembad",
+              "Een woonboot op de gracht"
+            ],
+            correctAnswer: "Een ruim driekamerappartement met twee aparte slaapkamers en een lichte woonkamer"
+          },
+          {
+            id: "reading_8_3",
+            type: "multiple_choice",
+            question: "Op welke verdieping bevindt Woning A (het appartement aan de Singel) zich?",
+            options: [
+              "Op de begane grond",
+              "Op de eerste verdieping",
+              "Op de tweede verdieping",
+              "Op de zolder"
+            ],
+            correctAnswer: "Op de tweede verdieping"
+          },
+          {
+            id: "reading_8_4",
+            type: "multiple_choice",
+            question: "Wat is het belangrijkste verschil tussen Woning A en Woning B?",
+            options: [
+              "Woning A is volledig gemeubileerd, terwijl Woning B helemaal ongemeubileerd is.",
+              "Woning A heeft geen badkamer.",
+              "Woning B ligt in het centrum van Madrid.",
+              "Woning A is veel te donker."
+            ],
+            correctAnswer: "Woning A is volledig gemeubileerd, terwijl Woning B helemaal ongemeubileerd is."
+          },
+          {
+            id: "reading_8_5",
+            type: "multiple_choice",
+            question: "Waar bevindt zich de afgesloten fietsenstalling van het appartementengebouw?",
+            options: [
+              "Op het dak van het gebouw",
+              "Onder het gebouw",
+              "Aan de overkant van de straat",
+              "In de woonkamer"
+            ],
+            correctAnswer: "Onder het gebouw"
+          },
+          {
+            id: "reading_8_6",
+            type: "multiple_choice",
+            question: "Wat bevindt zich direct NAAST de hoofdingang van appartement A?",
+            options: [
+              "Een politiebureau",
+              "Een grote supermarkt",
+              "Een café",
+              "Een treinstation"
+            ],
+            correctAnswer: "Een grote supermarkt"
+          },
+          {
+            id: "reading_8_7",
+            type: "multiple_choice",
+            question: "Waar bevindt de badkamer zich in appartement A?",
+            options: [
+              "Naast de lift",
+              "Tussen de twee slaapkamers",
+              "Op het balkon",
+              "Onder de keuken"
+            ],
+            correctAnswer: "Tussen de twee slaapkamers"
+          }
+        ]
+      },
+      {
+        instruction: "Deel 2: Huurprijs, Tijd & Afspraak (8-13: Kira, Saat ve Randevu / Rent & Viewing)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_8_8",
+            type: "multiple_choice",
+            question: "Hoeveel bedraagt de kale huur per maand voor appartement A?",
+            options: [
+              "€ 800",
+              "€ 1.000",
+              "€ 1.200",
+              "€ 1.500"
+            ],
+            correctAnswer: "€ 1.000"
+          },
+          {
+            id: "reading_8_9",
+            type: "multiple_choice",
+            question: "Hoeveel is het totale maandelijkse bedrag inclusief servicekosten, gas, water en licht?",
+            options: [
+              "€ 1.000",
+              "€ 1.100",
+              "€ 1.200",
+              "€ 1.400"
+            ],
+            correctAnswer: "€ 1.200"
+          },
+          {
+            id: "reading_8_10",
+            type: "multiple_choice",
+            question: "Voor wanneer maken de heren en de makelaar een afspraak voor de bezichtiging?",
+            options: [
+              "Voor maandagmiddag om 17.00 uur",
+              "Voor morgenmiddag (dinsdag) om 16.00 uur (vier uur)",
+              "Voor zaterdagochtend om 10.00 uur",
+              "Pas over twee weken"
+            ],
+            correctAnswer: "Voor morgenmiddag (dinsdag) om 16.00 uur (vier uur)"
+          },
+          {
+            id: "reading_8_11",
+            type: "multiple_choice",
+            question: "Over hoeveel maanden loopt het huidige huurcontract van Lucas en Mateo af?",
+            options: [
+              "Over twee weken",
+              "Over twee maanden",
+              "Over zes maanden",
+              "Morgen al"
+            ],
+            correctAnswer: "Over twee maanden"
+          },
+          {
+            id: "reading_8_12",
+            type: "multiple_choice",
+            question: "Wat betekent het woord 'bezichtiging' in de context van de huizenmarkt?",
+            options: [
+              "Het tekenen van een koopcontract",
+              "Het bezichtigen en bekijken van een woning ter plaatse",
+              "Het betalen van de borgsom",
+              "Het verven van de muren"
+            ],
+            correctAnswer: "Het bezichtigen en bekijken van een woning ter plaatse"
+          },
+          {
+            id: "reading_8_13",
+            type: "multiple_choice",
+            question: "Waarom willen Lucas en Mateo per se dicht bij het openbaar vervoer wonen?",
+            options: [
+              "Omdat ze zelf geen auto bezitten",
+              "Omdat ze gratis met de bus mogen reizen",
+              "Omdat Lucas buschauffeur is",
+              "Omdat autorijden verboden is in Utrecht"
+            ],
+            correctAnswer: "Omdat ze zelf geen auto bezitten"
+          }
+        ]
+      },
+      {
+        instruction: "Deel 3: Geen vs Niet & Voorzetsels (14-20: Olumsuzluk ve Edatlar / Negation & Prepositions)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_8_14",
+            type: "multiple_choice",
+            question: "Kijk naar de zin: \"Wij hebben zelf nog ... meubels.\" Welk ontkennend woord hoort hier?",
+            options: [
+              "niet",
+              "geen",
+              "geen niet",
+              "wel"
+            ],
+            correctAnswer: "geen"
+          },
+          {
+            id: "reading_8_15",
+            type: "multiple_choice",
+            question: "Waarom gebruiken we in de zin: \"...dus een ongemeubileerd huis schikt ons ...\" het woord 'niet' en niet 'geen'?",
+            options: [
+              "Omdat 'schikken' een werkwoord is en werkwoorden ontkend worden met 'niet'.",
+              "Omdat het woord 'huis' een het-woord is.",
+              "Omdat 'niet' altijd aan het begin van een zin staat.",
+              "Het is een vaste uitzondering."
+            ],
+            correctAnswer: "Omdat 'schikken' een werkwoord is en werkwoorden ontkend worden met 'niet'."
+          },
+          {
+            id: "reading_8_16",
+            type: "multiple_choice",
+            question: "Welke regel geldt over het algemeen voor het gebruik van 'geen' in het Nederlands?",
+            options: [
+              "'Geen' ontkent zelfstandige naamwoorden zonder lidwoord of met een onbepaald lidwoord ('een').",
+              "'Geen' ontkent altijd werkwoorden.",
+              "'Geen' ontkent bijvoeglijke naamwoorden.",
+              "'Geen' wordt alleen in vragen gebruikt."
+            ],
+            correctAnswer: "'Geen' ontkent zelfstandige naamwoorden zonder lidwoord of met een onbepaald lidwoord ('een')."
+          },
+          {
+            id: "reading_8_17",
+            type: "multiple_choice",
+            question: "Welk voorzetsel van plaats geeft aan dat iets zich in de ruimte tussen twee objecten bevindt?",
+            options: [
+              "onder",
+              "naast",
+              "tussen",
+              "op"
+            ],
+            correctAnswer: "tussen"
+          },
+          {
+            id: "reading_8_18",
+            type: "multiple_choice",
+            question: "Welk voorzetsel van plaats past in: \"De fietsenstalling bevindt zich ... het gebouw.\"?",
+            options: [
+              "boven",
+              "onder",
+              "in",
+              "achter"
+            ],
+            correctAnswer: "onder"
+          },
+          {
+            id: "reading_8_19",
+            type: "multiple_choice",
+            question: "Wat betekent het als een huurwoning 'gemeubileerd' is?",
+            options: [
+              "Dat er geen meubels zijn; je moet alles zelf meenemen.",
+              "Dat de woning al voorzien is van tafels, stoelen, bedden en kasten.",
+              "Dat de woning heel oud is.",
+              "Dat er alleen een keukenblok aanwezig is."
+            ],
+            correctAnswer: "Dat de woning al voorzien is van tafels, stoelen, bedden en kasten."
+          },
+          {
+            id: "reading_8_20",
+            type: "multiple_choice",
+            question: "Welke uitspraak over de situatie in de tekst is ONJUIST (niet waar)?",
+            options: [
+              "Lucas en Mateo bezoeken de makelaar op maandagochtend.",
+              "Lucas en Mateo kiezen direct voor het ongemeubileerde huis B in de buitenwijk.",
+              "De totale huur voor appartement A is twaalfhonderd euro inclusief nutsvoorzieningen.",
+              "De bezichtiging staat gepland voor morgen om 16.00 uur."
+            ],
+            correctAnswer: "Lucas en Mateo kiezen direct voor het ongemeubileerde huis B in de buitenwijk."
+          }
+        ]
+      }
+    ]
+  },
+{
     id: "On-Class-8",
     chapter: 8,
     title: "Summary",

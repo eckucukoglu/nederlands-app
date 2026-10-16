@@ -1,6 +1,5 @@
 // src/data/chapters/chapter14.js
 import React from 'react';
-import { generateSmartQuestions } from '../questionGenerator';
 
 export const chapter14Vocab = [
   { id: "14_1", chapter: 14, nl: "de sportschool", en: "sports club / gym", example: "Ik ga drie keer per week naar de sportschool." },
@@ -160,137 +159,191 @@ export const chapter14Sections = [
     id: "14.2",
     chapter: 14,
     title: "Vocabulary",
-    theory: (lang) => (
-      <>
-        {lang === 'tr' ? (
-          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
-            <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>📖 Woordenlijst & Sporten</h3>
-            <p>Hollandacada spor isimleri ve sporla ilgili eylemler (spieren versterken, gewicht verliezen vb.) bu ünitenin temelini oluşturur. Lütfen menüdeki "Flashcards" sekmesinden kelimeleri pratik yapın!</p>
-            <div className="grid grid-cols-2 gap-4 mt-4 text-sm text-slate-200">
-              <div>
-                <ul className="space-y-1">
-                  <li><strong>wielrennen:</strong> bisiklet sporu</li>
-                  <li><strong>hardlopen:</strong> koşu</li>
-                  <li><strong>zwemmen:</strong> yüzme</li>
-                  <li><strong>voetbal:</strong> futbol</li>
-                  <li><strong>schoonspringen:</strong> kule atlayışı</li>
-                </ul>
-              </div>
-              <div>
-                <ul className="space-y-1">
-                  <li><strong>gewichtheffen:</strong> halter</li>
-                  <li><strong>boogschieten:</strong> okçuluk</li>
-                  <li><strong>schermen:</strong> eskrim</li>
-                  <li><strong>turnen:</strong> jimnastik</li>
-                  <li><strong>honkbal:</strong> beyzbol</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        ) : (
-          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
-            <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>📖 Vocabulary & Sports</h3>
-            <p>Dutch sports names and sport-related actions (spieren versterken, gewicht verliezen etc.) form the basis of this unit. Please practice the vocabulary using the "Flashcards" section in the menu!</p>
-            <div className="grid grid-cols-2 gap-4 mt-4 text-sm text-slate-200">
-              <div>
-                <ul className="space-y-1">
-                  <li><strong>wielrennen:</strong> road cycling</li>
-                  <li><strong>hardlopen:</strong> running</li>
-                  <li><strong>zwemmen:</strong> swimming</li>
-                  <li><strong>voetbal:</strong> football/soccer</li>
-                  <li><strong>schoonspringen:</strong> diving</li>
-                </ul>
-              </div>
-              <div>
-                <ul className="space-y-1">
-                  <li><strong>gewichtheffen:</strong> weightlifting</li>
-                  <li><strong>boogschieten:</strong> archery</li>
-                  <li><strong>schermen:</strong> fencing</li>
-                  <li><strong>turnen:</strong> gymnastics</li>
-                  <li><strong>honkbal:</strong> baseball</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        )}
-      </>
-    ),
-    exerciseGroups: [
-      {
-        instruction: "Opdracht 2 & 3: Praten over sporten en Sporten raden. (Talking about sports and guessing sports)",
-        isExtra: false,
-        questions: [
-          { id: "14.2_opd2_1", type: "multiple_choice", question: "Welke sport speel je met een bal en voeten op een groot veld?", options: ["voetbal", "honkbal", "tennis"], correctAnswer: "voetbal" },
-          { id: "14.2_opd2_2", type: "multiple_choice", question: "Bij welke sport gebruik je een zwaar gewicht (heavy weight)?", options: ["gewichtheffen", "zwemmen", "hardlopen"], correctAnswer: "gewichtheffen" },
-          { id: "14.2_opd2_3", type: "multiple_choice", question: "Welke sport doe je in het water?", options: ["schermen", "boogschieten", "zwemmen"], correctAnswer: "zwemmen" },
-          { id: "14.2_opd2_4", type: "fill_in", question: "Vertaal (Translate): 'Ik wil kilo's afvallen.' -> Ik wil gewicht ________.", correctAnswer: "verliezen" },
-          ...generateSmartQuestions(14, "Woordenlijst", 5, chapter14Vocab)
-        ]
-      }
-    ]
+    theory: null,
+    exerciseGroups: []
   },
   {
     id: "14.3",
     chapter: 14,
-    title: "14.3 Informatie vragen (Dolaylı Sorular / Indirect Questions)",
+    title: "14.3 Sporten & Informatie vragen (Indirecte Vragen)",
     theory: (lang) => (
       <>
         {lang === 'tr' ? (
-          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #06b6d4', marginBottom: '20px' }}>
-            <h3 style={{ margin: '0 0 10px 0', color: '#22d3ee' }}>❓ Indirecte Vragen (Dolaylı Sorular)</h3>
-            <p className="text-sm text-slate-300">Hollandacada birine doğrudan soru sormak yerine, daha kibar olmak için <strong>"Weet u of..."</strong> (Biliyor musunuz) veya <strong>"Kunt u me zeggen waar..."</strong> (Bana söyleyebilir misiniz) gibi girişler (inleidende zinnen) kullanırız. Bu girişleri kullandığımızda, asıl sorumuz bir <strong>yan cümleye (bijzin)</strong> dönüşür!</p>
-            
-            <div className="bg-cyan-900/30 p-4 rounded-xl mt-4 border border-cyan-500/40">
-              <h4 className="font-bold text-cyan-300 mb-2">🚨 ALTIN KURAL: Fiili Sona At!</h4>
-              <p className="text-sm text-cyan-100">Bir cümleyi "Weet je..." veya "Kun je me zeggen..." ile başlattığınızda, cümlenin asıl fiili (veya fiilleri) <strong>EN SONA GİTMEK ZORUNDADIR!</strong></p>
-              <ul className="text-sm text-white mt-3 list-disc pl-5 space-y-3">
-                <li>
-                  <strong>Direct:</strong> Waar <span className="text-rose-400 font-bold">is</span> de sportschool? <em>(Fiil 2. sırada)</em><br/>
-                  <strong>Indirect:</strong> Kunt u me zeggen waar de sportschool <span className="text-rose-400 font-bold">is</span>? <em>(Fiil en sonda!)</em>
-                </li>
-                <li>
-                  <strong>Direct:</strong> Wat <span className="text-rose-400 font-bold">is</span> het verschil? <br/>
-                  <strong>Indirect:</strong> Kun je me zeggen wat het verschil <span className="text-rose-400 font-bold">is</span>?
-                </li>
-              </ul>
+          <div className="space-y-4 mb-6">
+            {/* Sports Visual Guide */}
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>🏅 Sporten in Nederland (Popüler Spor Dalları)</h3>
+              <p className="text-sm text-slate-300 leading-relaxed mb-3">
+                Hollanda'da spor ve fiziksel aktivite (conditie verbeteren, spieren versterken, gewicht verliezen) günlük yaşamın vazgeçilmez bir parçasıdır. En çok yapılan sporlar:
+              </p>
+              
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 text-xs">
+                <div className="bg-slate-900/60 p-2.5 rounded-lg border border-slate-700/60 flex items-center gap-2">
+                  <span className="text-lg">🚴</span>
+                  <div><strong className="text-white block">wielrennen</strong><span className="text-slate-400">bisiklet sporu</span></div>
+                </div>
+                <div className="bg-slate-900/60 p-2.5 rounded-lg border border-slate-700/60 flex items-center gap-2">
+                  <span className="text-lg">🏃</span>
+                  <div><strong className="text-white block">hardlopen</strong><span className="text-slate-400">koşu</span></div>
+                </div>
+                <div className="bg-slate-900/60 p-2.5 rounded-lg border border-slate-700/60 flex items-center gap-2">
+                  <span className="text-lg">🏊</span>
+                  <div><strong className="text-white block">zwemmen</strong><span className="text-slate-400">yüzme</span></div>
+                </div>
+                <div className="bg-slate-900/60 p-2.5 rounded-lg border border-slate-700/60 flex items-center gap-2">
+                  <span className="text-lg">⚽</span>
+                  <div><strong className="text-white block">voetbal</strong><span className="text-slate-400">futbol</span></div>
+                </div>
+                <div className="bg-slate-900/60 p-2.5 rounded-lg border border-slate-700/60 flex items-center gap-2">
+                  <span className="text-lg">🏋️</span>
+                  <div><strong className="text-white block">gewichtheffen</strong><span className="text-slate-400">halter / fitness</span></div>
+                </div>
+                <div className="bg-slate-900/60 p-2.5 rounded-lg border border-slate-700/60 flex items-center gap-2">
+                  <span className="text-lg">🏑</span>
+                  <div><strong className="text-white block">hockey</strong><span className="text-slate-400">çim hokeyi</span></div>
+                </div>
+                <div className="bg-slate-900/60 p-2.5 rounded-lg border border-slate-700/60 flex items-center gap-2">
+                  <span className="text-lg">🎾</span>
+                  <div><strong className="text-white block">tennis</strong><span className="text-slate-400">tenis</span></div>
+                </div>
+                <div className="bg-slate-900/60 p-2.5 rounded-lg border border-slate-700/60 flex items-center gap-2">
+                  <span className="text-lg">🏹</span>
+                  <div><strong className="text-white block">boogschieten</strong><span className="text-slate-400">okçuluk</span></div>
+                </div>
+                <div className="bg-slate-900/60 p-2.5 rounded-lg border border-slate-700/60 flex items-center gap-2">
+                  <span className="text-lg">🤸</span>
+                  <div><strong className="text-white block">turnen</strong><span className="text-slate-400">jimnastik</span></div>
+                </div>
+                <div className="bg-slate-900/60 p-2.5 rounded-lg border border-slate-700/60 flex items-center gap-2">
+                  <span className="text-lg">🥊</span>
+                  <div><strong className="text-white block">boksen</strong><span className="text-slate-400">boks</span></div>
+                </div>
+                <div className="bg-slate-900/60 p-2.5 rounded-lg border border-slate-700/60 flex items-center gap-2">
+                  <span className="text-lg">🤺</span>
+                  <div><strong className="text-white block">schermen</strong><span className="text-slate-400">eskrim</span></div>
+                </div>
+                <div className="bg-slate-900/60 p-2.5 rounded-lg border border-slate-700/60 flex items-center gap-2">
+                  <span className="text-lg">🤿</span>
+                  <div><strong className="text-white block">schoonspringen</strong><span className="text-slate-400">kule atlama</span></div>
+                </div>
+              </div>
             </div>
 
-            <div className="bg-emerald-900/30 p-4 rounded-xl mt-4 border border-emerald-500/40">
-              <h4 className="font-bold text-emerald-300 mb-2">💡 "OF" Kullanımı (Whether/If)</h4>
-              <p className="text-sm text-emerald-100">Eğer soruda 'Waar, Wie, Wat' gibi bir soru kelimesi YOKSA, yani bir "Evet/Hayır" sorusuysa, yan cümleyi bağlamak için <strong>'of'</strong> (olup olmadığı) kelimesini kullanırız.</p>
-              <ul className="text-sm text-white mt-2 list-disc pl-5">
-                <li><strong>Direct:</strong> Kan ik me hier inschrijven? (Evet/Hayır sorusu)<br/>
-                <strong>Indirect:</strong> Weet je misschien <strong className="text-emerald-400">of</strong> ik me hier in kan schrijven?</li>
-              </ul>
+            {/* Indirect Questions */}
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #06b6d4' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#22d3ee' }}>❓ Indirecte Vragen (Dolaylı Sorular & Yan Cümle Kuralı)</h3>
+              <p className="text-sm text-slate-300 leading-relaxed">
+                Bir resepsiyonda, spor salonunda veya sokakta bilgi sorarken doğrudan soru sormak yerine, daha nazik olmak için <strong>"Weet u of..."</strong> (Biliyor musunuz) veya <strong>"Kunt u me zeggen waar..."</strong> (Bana söyleyebilir misiniz) gibi girişler kullanılır.
+              </p>
+              
+              <div className="bg-cyan-900/30 p-4 rounded-xl mt-4 border border-cyan-500/40">
+                <h4 className="font-bold text-cyan-300 mb-2">🚨 ALTIN KURAL: Fiil En Sona Gider!</h4>
+                <p className="text-sm text-cyan-100">
+                  Bu giriş cümlelerinden sonra gelen asıl soru bir <strong>yan cümleye (bijzin)</strong> dönüştüğü için çekimli fiil <strong>cümlenin en sonuna</strong> gider:
+                </p>
+                <div className="mt-3 space-y-2 text-xs sm:text-sm font-mono">
+                  <div className="bg-slate-950/50 p-2 rounded border border-slate-700/60 text-slate-300">
+                    <span className="text-slate-400">Doğrudan:</span> Waar <strong className="text-rose-400">is</strong> de balie?<br/>
+                    <span className="text-cyan-400 font-bold">Dolaylı:</span> Kunt u me zeggen waar de balie <strong className="text-cyan-300">is</strong>?
+                  </div>
+                  <div className="bg-slate-950/50 p-2 rounded border border-slate-700/60 text-slate-300">
+                    <span className="text-slate-400">Doğrudan:</span> Is hier een wc in de buurt?<br/>
+                    <span className="text-cyan-400 font-bold">Dolaylı:</span> Weet u <strong className="text-emerald-400">of</strong> hier een wc in de buurt <strong className="text-cyan-300">is</strong>?
+                  </div>
+                </div>
+                <p className="text-xs text-amber-300 mt-3">
+                  💡 <strong>'Of' (Olup olmadığı / Whether):</strong> Soru kelimesi (Waar, Wat, Wie) olmayan evet/hayır sorularında araya <strong>'of'</strong> bağlacı gelir.
+                </p>
+              </div>
             </div>
           </div>
         ) : (
-          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #06b6d4', marginBottom: '20px' }}>
-            <h3 style={{ margin: '0 0 10px 0', color: '#22d3ee' }}>❓ Indirecte Vragen (Indirect Questions)</h3>
-            <p className="text-sm text-slate-300">In Dutch, instead of asking someone a direct question, we often use introductory phrases (inleidende zinnen) to be more polite, such as <strong>"Weet u of..."</strong> (Do you know if...) or <strong>"Kunt u me zeggen waar..."</strong> (Could you tell me where...). When we use these introductions, our actual question turns into a <strong>subordinate clause (bijzin)</strong>!</p>
-            
-            <div className="bg-cyan-900/30 p-4 rounded-xl mt-4 border border-cyan-500/40">
-              <h4 className="font-bold text-cyan-300 mb-2">🚨 GOLDEN RULE: Verb to the End!</h4>
-              <p className="text-sm text-cyan-100">When you start a sentence with "Weet je..." or "Kun je me zeggen...", the main verb (or verbs) of the question <strong>MUST GO TO THE VERY END!</strong></p>
-              <ul className="text-sm text-white mt-3 list-disc pl-5 space-y-3">
-                <li>
-                  <strong>Direct:</strong> Waar <span className="text-rose-400 font-bold">is</span> de sportschool? <em>(Verb is 2nd)</em><br/>
-                  <strong>Indirect:</strong> Kunt u me zeggen waar de sportschool <span className="text-rose-400 font-bold">is</span>? <em>(Verb is at the end!)</em>
-                </li>
-                <li>
-                  <strong>Direct:</strong> Wat <span className="text-rose-400 font-bold">is</span> het verschil? <br/>
-                  <strong>Indirect:</strong> Kun je me zeggen wat het verschil <span className="text-rose-400 font-bold">is</span>?
-                </li>
-              </ul>
+          <div className="space-y-4 mb-6">
+            {/* Sports Visual Guide */}
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>🏅 Sports in the Netherlands</h3>
+              <p className="text-sm text-slate-300 leading-relaxed mb-3">
+                Sports and physical workouts (improving stamina, strengthening muscles, losing weight) are an integral part of Dutch culture. Most popular sports:
+              </p>
+              
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 text-xs">
+                <div className="bg-slate-900/60 p-2.5 rounded-lg border border-slate-700/60 flex items-center gap-2">
+                  <span className="text-lg">🚴</span>
+                  <div><strong className="text-white block">wielrennen</strong><span className="text-slate-400">cycling</span></div>
+                </div>
+                <div className="bg-slate-900/60 p-2.5 rounded-lg border border-slate-700/60 flex items-center gap-2">
+                  <span className="text-lg">🏃</span>
+                  <div><strong className="text-white block">hardlopen</strong><span className="text-slate-400">running</span></div>
+                </div>
+                <div className="bg-slate-900/60 p-2.5 rounded-lg border border-slate-700/60 flex items-center gap-2">
+                  <span className="text-lg">🏊</span>
+                  <div><strong className="text-white block">zwemmen</strong><span className="text-slate-400">swimming</span></div>
+                </div>
+                <div className="bg-slate-900/60 p-2.5 rounded-lg border border-slate-700/60 flex items-center gap-2">
+                  <span className="text-lg">⚽</span>
+                  <div><strong className="text-white block">voetbal</strong><span className="text-slate-400">football / soccer</span></div>
+                </div>
+                <div className="bg-slate-900/60 p-2.5 rounded-lg border border-slate-700/60 flex items-center gap-2">
+                  <span className="text-lg">🏋️</span>
+                  <div><strong className="text-white block">gewichtheffen</strong><span className="text-slate-400">weightlifting</span></div>
+                </div>
+                <div className="bg-slate-900/60 p-2.5 rounded-lg border border-slate-700/60 flex items-center gap-2">
+                  <span className="text-lg">🏑</span>
+                  <div><strong className="text-white block">hockey</strong><span className="text-slate-400">field hockey</span></div>
+                </div>
+                <div className="bg-slate-900/60 p-2.5 rounded-lg border border-slate-700/60 flex items-center gap-2">
+                  <span className="text-lg">🎾</span>
+                  <div><strong className="text-white block">tennis</strong><span className="text-slate-400">tennis</span></div>
+                </div>
+                <div className="bg-slate-900/60 p-2.5 rounded-lg border border-slate-700/60 flex items-center gap-2">
+                  <span className="text-lg">🏹</span>
+                  <div><strong className="text-white block">boogschieten</strong><span className="text-slate-400">archery</span></div>
+                </div>
+                <div className="bg-slate-900/60 p-2.5 rounded-lg border border-slate-700/60 flex items-center gap-2">
+                  <span className="text-lg">🤸</span>
+                  <div><strong className="text-white block">turnen</strong><span className="text-slate-400">gymnastics</span></div>
+                </div>
+                <div className="bg-slate-900/60 p-2.5 rounded-lg border border-slate-700/60 flex items-center gap-2">
+                  <span className="text-lg">🥊</span>
+                  <div><strong className="text-white block">boksen</strong><span className="text-slate-400">boxing</span></div>
+                </div>
+                <div className="bg-slate-900/60 p-2.5 rounded-lg border border-slate-700/60 flex items-center gap-2">
+                  <span className="text-lg">🤺</span>
+                  <div><strong className="text-white block">schermen</strong><span className="text-slate-400">fencing</span></div>
+                </div>
+                <div className="bg-slate-900/60 p-2.5 rounded-lg border border-slate-700/60 flex items-center gap-2">
+                  <span className="text-lg">🤿</span>
+                  <div><strong className="text-white block">schoonspringen</strong><span className="text-slate-400">diving</span></div>
+                </div>
+              </div>
             </div>
 
-            <div className="bg-emerald-900/30 p-4 rounded-xl mt-4 border border-emerald-500/40">
-              <h4 className="font-bold text-emerald-300 mb-2">💡 Using "OF" (Whether/If)</h4>
-              <p className="text-sm text-emerald-100">If the question does NOT have a question word like 'Waar, Wie, Wat', meaning it is a "Yes/No" question, we use the word <strong>'of'</strong> (whether/if) to connect the subordinate clause.</p>
-              <ul className="text-sm text-white mt-2 list-disc pl-5">
-                <li><strong>Direct:</strong> Kan ik me hier inschrijven? (Yes/No question)<br/>
-                <strong>Indirect:</strong> Weet je misschien <strong className="text-emerald-400">of</strong> ik me hier in kan schrijven?</li>
-              </ul>
+            {/* Indirect Questions */}
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #06b6d4' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#22d3ee' }}>❓ Indirect Questions & Subclause Word Order</h3>
+              <p className="text-sm text-slate-300 leading-relaxed">
+                When asking for information at a front desk or on the street, to sound more polite we use polite introductions such as <strong>"Weet u of..."</strong> (Do you know if...) or <strong>"Kunt u me zeggen waar..."</strong> (Could you tell me where...).
+              </p>
+              
+              <div className="bg-cyan-900/30 p-4 rounded-xl mt-4 border border-cyan-500/40">
+                <h4 className="font-bold text-cyan-300 mb-2">🚨 GOLDEN RULE: Verb Moves to the Very End!</h4>
+                <p className="text-sm text-cyan-100">
+                  Because introductory phrases turn the question into a <strong>subordinate clause (bijzin)</strong>, the conjugated verb moves to the <strong>very end of the sentence</strong>:
+                </p>
+                <div className="mt-3 space-y-2 text-xs sm:text-sm font-mono">
+                  <div className="bg-slate-950/50 p-2 rounded border border-slate-700/60 text-slate-300">
+                    <span className="text-slate-400">Direct:</span> Waar <strong className="text-rose-400">is</strong> de balie?<br/>
+                    <span className="text-cyan-400 font-bold">Indirect:</span> Kunt u me zeggen waar de balie <strong className="text-cyan-300">is</strong>?
+                  </div>
+                  <div className="bg-slate-950/50 p-2 rounded border border-slate-700/60 text-slate-300">
+                    <span className="text-slate-400">Direct:</span> Is hier een wc in de buurt?<br/>
+                    <span className="text-cyan-400 font-bold">Indirect:</span> Weet u <strong className="text-emerald-400">of</strong> hier een wc in de buurt <strong className="text-cyan-300">is</strong>?
+                  </div>
+                </div>
+                <p className="text-xs text-amber-300 mt-3">
+                  💡 <strong>'Of' (Whether / If):</strong> In yes/no questions (no question word like Waar/Wat/Wie), use <strong>'of'</strong> to introduce the subclause.
+                </p>
+              </div>
             </div>
           </div>
         )}
@@ -298,7 +351,19 @@ export const chapter14Sections = [
     ),
     exerciseGroups: [
       {
-        instruction: "Opdracht 4: Formuleer de vraag op een andere manier. (Let op: Werkwoord naar achteren!)",
+        instruction: "Opdracht 2 & 3: Praten over sporten en Sporten raden (Talking about sports)",
+        isExtra: false,
+        questions: [
+          { id: "14.3_opd2_1", type: "multiple_choice", question: "Welke sport speel je met een bal en voeten op een groot veld?", options: ["voetbal", "honkbal", "tennis"], correctAnswer: "voetbal" },
+          { id: "14.3_opd2_2", type: "multiple_choice", question: "Bij welke sport gebruik je een zwaar gewicht (heavy weight)?", options: ["gewichtheffen", "zwemmen", "hardlopen"], correctAnswer: "gewichtheffen" },
+          { id: "14.3_opd2_3", type: "multiple_choice", question: "Welke sport doe je in het water?", options: ["schermen", "boogschieten", "zwemmen"], correctAnswer: "zwemmen" },
+          { id: "14.3_opd2_4", type: "fill_in", question: "Vertaal: 'Ik wil kilo's afvallen.' -> Ik wil gewicht ________.", correctAnswer: "verliezen" },
+          { id: "14.3_opd2_5", type: "multiple_choice", question: "Bij welke sport schiet je pijlen met een boog op een doel?", options: ["boogschieten", "hockey", "turnen"], correctAnswer: "boogschieten" },
+          { id: "14.3_opd2_6", type: "multiple_choice", question: "Welke sport beoefen je op een racefiets?", options: ["wielrennen", "schoonspringen", "handbal"], correctAnswer: "wielrennen" }
+        ]
+      },
+      {
+        instruction: "Opdracht 4: Formuleer de vraag op een andere manier (Let op: Werkwoord naar achteren!)",
         isExtra: false,
         questions: [
           { id: "14.3_opd4_1", type: "fill_in", question: "Waar is de balie? -> Kun je me zeggen waar de balie ________?", correctAnswer: "is" },
@@ -547,7 +612,319 @@ export const chapter14Sections = [
       }
     ]
   },
-  {
+    {
+    id: "Reading-14",
+    chapter: 14,
+    title: {
+      tr: "Okuma & Anlama",
+      en: "Reading Comprehension"
+    },
+    readingPassage: {
+      title: "Een sportieve start bij Fitnessclub Het Spoor",
+      level: "Niveau A2 • 19 Zinnen",
+      intro: {
+        tr: "Aşağıdaki okuma parçasını dikkatlice okuyunuz. Bu parça 14. Bölümde öğrendiğiniz spor salonu ve egzersiz terimleri (de conditie, het abonnement, de loopband, de spierpijn), dolaylı bilgi sorma (indirecte vragen: kunt u mij vertellen of...?), 'zullen' fiili ile olasılık ve gelecek zaman (futurum: zullen + infinitief) kullanılarak hazırlanmıştır. Metni dinleyebilir, kelimelerin sözlük anlamına bakabilir ve alttaki 20 soruluk testi çözebilirsiniz.",
+        en: "Read the following reading passage carefully. It incorporates fitness & gym vocabulary (fitness, subscription, treadmill, muscle ache), indirect questions (kunt u mij vertellen of...?), probability and future tense with modal 'zullen' (futurum: zullen + infinitive) learned in Chapter 14. Listen to the text, click words to check meanings, and answer the 20 comprehension questions below."
+      },
+      paragraphs: [
+        "Op maandagavond besluiten Lucas en zijn Spaanse huisgenoot Mateo om serieus aan hun gezondheid en conditie te werken. Ze bezoeken Fitnessclub Het Spoor, een modern en licht sportcentrum vlak bij het station in Utrecht. In de ruime ontvangsthal worden ze hartelijk begroet door fitnessinstructeur Lars. Lucas stelt direct een beleefde indirecte vraag: \"Goedenavond meneer! Kunt u ons misschien vertellen welke abonnementsvormen jullie precies aanbieden?\"",
+        "Instructeur Lars overhandigt hen een overzichtelijke brochure en legt enthousiast uit: \"Zeker weten! We hebben een flexibel maandabonnement en een voordelig jaarabonnement inclusief toegang tot alle groepslessen, de sauna en individuele coaching. Weet u toevallig al hoe vaak per week u wilt komen trainen?\" Mateo antwoordt: \"Wij zullen waarschijnlijk twee of drie avonden per week komen sporten, vooral na ons werk.\" Lars leidt hen rond langs de tientallen geavanceerde cardioapparaten, de krachttoestellen, de loopbanden en de schone kleedkamers.",
+        "Mateo kijkt enigszins geschrokken naar de zware halters en vraagt bezorgd: \"Zal het trainingsschema in het begin niet te zwaar voor ons zijn?\" Lars lacht geruststellend: \"Maak je geen zorgen, dat zal reuze meevallen! We maken een persoonlijk schema op maat en beginnen heel rustig met een lichte warming-up. Als jullie regelmatig blijven trainen, zal jullie uithoudingsvermogen binnen een maand al aanzienlijk verbeteren!\" Lucas en Mateo kijken elkaar vastberaden aan en besluiten direct een jaarabonnement af te sluiten.",
+        "Ze kleden zich enthousiast om in de kleedruimte en beginnen meteen aan hun allereerste proeftraining. Eerst doen ze een kwartier cardio op de hometrainer, daarna trainen ze de rug- en beenspieren op de apparaten en tot slot doen ze een uitgebreide cooling-down met rekoefeningen. Na afloop nemen ze een verkwikkende warme douche. Lucas stapt met een brede lach naar buiten en zegt: \"Ik zal morgen ongetwijfeld flinke spierpijn hebben, maar wat voelt het geweldig om weer zo actief bezig te zijn!\""
+      ],
+      hints: [
+        {
+          title: { tr: "Spor & Fitness Terimleri", en: "Fitness & Gym Terms" },
+          icon: "fa-dumbbell",
+          items: [
+            { term: "het abonnement", tr: "üyelik / abonelik", en: "subscription / membership" },
+            { term: "de conditie / het uithoudingsvermogen", tr: "kondisyon / dayanıklılık", en: "fitness / stamina" },
+            { term: "de loopband", tr: "koşu bandı", en: "treadmill" },
+            { term: "de spierpijn", tr: "kas ağrısı / hamlık", en: "muscle ache" },
+            { term: "de warming-up", tr: "ısınma hareketleri", en: "warm-up" }
+          ]
+        },
+        {
+          title: { tr: "Dolaylı Sorular (Indirecte Vragen)", en: "Indirect Questions" },
+          icon: "fa-circle-question",
+          items: [
+            { term: "Kunt u mij vertellen of...?", tr: "Bana ... olup olmadığını söyler misiniz?", en: "Could you tell me whether...?" },
+            { term: "Weet u misschien hoe vaak...?", tr: "Acaba ne sıklıkla ... biliyor musunuz?", en: "Do you happen to know how often...?" },
+            { term: "yan tümce kuralı", tr: "fiil cümlenin en sonuna gider", en: "verb moves to the end of clause" }
+          ]
+        },
+        {
+          title: { tr: "Olasılık & Gelecek Zaman (Zullen)", en: "Probability & Future Tense" },
+          icon: "fa-hourglass-half",
+          items: [
+            { term: "dat zal meevallen", tr: "o kadar da zor olmaz / korktuğuna değmez", en: "that will turn out better than expected" },
+            { term: "wij zullen sporten", tr: "spor yapacağız (futurum / gelecek zaman)", en: "we will exercise" }
+          ]
+        }
+      ]
+    },
+    exerciseGroups: [
+      {
+        instruction: "Deel 1: Direct Begrip & Fitnessclub (1-7: Doğrudan Bilgi ve Spor / Direct Facts)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_14_1",
+            type: "multiple_choice",
+            question: "Waarom bezoeken Lucas en Mateo op maandagavond Fitnessclub Het Spoor?",
+            options: [
+              "Omdat ze een vriend willen ophalen van het station",
+              "Omdat ze serieus aan hun gezondheid en fysieke conditie willen werken",
+              "Omdat ze werk zoeken als fitnesscoach",
+              "Omdat ze willen schuilen voor de regen"
+            ],
+            correctAnswer: "Omdat ze serieus aan hun gezondheid en fysieke conditie willen werken"
+          },
+          {
+            id: "reading_14_2",
+            type: "multiple_choice",
+            question: "Wie begroet de twee vrienden in de ontvangsthal van de fitnessclub?",
+            options: [
+              "De eigenaar van het restaurant",
+              "Fitnessinstructeur Lars",
+              "Meneer De Vries",
+              "De dokter van de praktijk"
+            ],
+            correctAnswer: "Fitnessinstructeur Lars"
+          },
+          {
+            id: "reading_14_3",
+            type: "multiple_choice",
+            question: "Welke abonnementsvormen biedt de sportschool aan volgens instructeur Lars?",
+            options: [
+              "Alleen een dagkaart voor toeristen",
+              "Een flexibel maandabonnement en een voordelig jaarabonnement",
+              "Alleen een gezinsabonnement voor vier personen",
+              "Gratis toegang voor iedereen"
+            ],
+            correctAnswer: "Een flexibel maandabonnement en een voordelig jaarabonnement"
+          },
+          {
+            id: "reading_14_4",
+            type: "multiple_choice",
+            question: "Wat is er allemaal inbegrepen bij het jaarabonnement van de club?",
+            options: [
+              "Alleen een kluisje in de kleedkamer",
+              "Toegang tot alle groepslessen, de sauna en individuele coaching",
+              "Elke dag een gratis diner",
+              "Gratis sportkleding en schoenen"
+            ],
+            correctAnswer: "Toegang tot alle groepslessen, de sauna en individuele coaching"
+          },
+          {
+            id: "reading_14_5",
+            type: "multiple_choice",
+            question: "Hoe vaak per week zijn Lucas en Mateo van plan om te komen trainen?",
+            options: [
+              "Elke ochtend van de week",
+              "Twee of drie avonden per week, vooral na het werk",
+              "Alleen op zondagmiddag",
+              "Eén keer per maand"
+            ],
+            correctAnswer: "Twee of drie avonden per week, vooral na het werk"
+          },
+          {
+            id: "reading_14_6",
+            type: "multiple_choice",
+            question: "Welk abonnement besluiten Lucas en Mateo uiteindelijk af te sluiten?",
+            options: [
+              "Een proefkaart voor één dag",
+              "Een jaarabonnement",
+              "Een maandabonnement",
+              "Ze sluiten helemaal geen abonnement af"
+            ],
+            correctAnswer: "Een jaarabonnement"
+          },
+          {
+            id: "reading_14_7",
+            type: "multiple_choice",
+            question: "Wat doen de twee vrienden direct na het afsluiten van het abonnement?",
+            options: [
+              "Ze gaan meteen naar huis om te eten.",
+              "Ze kleden zich om en beginnen meteen aan hun allereerste proeftraining.",
+              "Ze gaan naar de bioscoop.",
+              "Ze drinken een biertje aan de bar."
+            ],
+            correctAnswer: "Ze kleden zich om en beginnen meteen aan hun allereerste proeftraining."
+          }
+        ]
+      },
+      {
+        instruction: "Deel 2: Training, Oefeningen & Beleving (8-13: Egzersiz ve Deneyim / Training & Experience)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_14_8",
+            type: "multiple_choice",
+            question: "Met welke cardio-oefening beginnen Lucas en Mateo hun training in de zaal?",
+            options: [
+              "Een uur hardlopen buiten op straat",
+              "Een kwartier cardio op de hometrainer (fietsapparaat)",
+              "Zwemmen in het wedstrijdbad",
+              "Touwspringen"
+            ],
+            correctAnswer: "Een kwartier cardio op de hometrainer (fietsapparaat)"
+          },
+          {
+            id: "reading_14_9",
+            type: "multiple_choice",
+            question: "Welke spiergroepen trainen ze op de krachtapparaten tijdens de proefles?",
+            options: [
+              "Alleen hun vingers",
+              "Hun rug- en beenspieren",
+              "Alleen hun nek",
+              "Geen enkele spiergroep"
+            ],
+            correctAnswer: "Hun rug- en beenspieren"
+          },
+          {
+            id: "reading_14_10",
+            type: "multiple_choice",
+            question: "Wat doen ze aan het einde van de training om blessures te voorkomen?",
+            options: [
+              "Heel snel naar buiten rennen",
+              "Een uitgebreide cooling-down met rekoefeningen",
+              "Zware gewichten tillen",
+              "IJs eten"
+            ],
+            correctAnswer: "Een uitgebreide cooling-down met rekoefeningen"
+          },
+          {
+            id: "reading_14_11",
+            type: "multiple_choice",
+            question: "Wat verwacht Lucas morgen te voelen in zijn lichaam na de intensieve training?",
+            options: [
+              "Helemaal niets bijzonders",
+              "Flinke spierpijn",
+              "Ernstige koorts",
+              "Hevige keelpijn"
+            ],
+            correctAnswer: "Flinke spierpijn"
+          },
+          {
+            id: "reading_14_12",
+            type: "multiple_choice",
+            question: "Wat betekent de geruststellende uitdrukking: \"Dat zal reuze meevallen\"? ",
+            options: [
+              "Het zal vreselijk zwaar en pijnlijk zijn.",
+              "Het zal veel minder moeilijk of erg zijn dan je vooraf denkt.",
+              "Het kost ontzettend veel geld.",
+              "Je zult van het apparaat vallen."
+            ],
+            correctAnswer: "Het zal veel minder moeilijk of erg zijn dan je vooraf denkt."
+          },
+          {
+            id: "reading_14_13",
+            type: "multiple_choice",
+            question: "Binnen hoeveel tijd zal hun uithoudingsvermogen volgens coach Lars al aanzienlijk verbeteren?",
+            options: [
+              "Binnen twee dagen",
+              "Binnen een maand",
+              "Pas na vijf jaar",
+              "Nooit"
+            ],
+            correctAnswer: "Binnen een maand"
+          }
+        ]
+      },
+      {
+        instruction: "Deel 3: Indirecte Vragen, Zullen & Futurum (14-20: Dolaylı Sorular ve Gelecek Zaman / Grammar)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_14_14",
+            type: "multiple_choice",
+            question: "Kijk naar de zin: \"Kunt u ons vertellen welke abonnementsvormen jullie aanbieden?\" Wat gebeurt er met het werkwoord 'aanbieden' in deze indirecte vraag?",
+            options: [
+              "Het staat vooraan in de zin.",
+              "Het staat helemaal aan het einde van de bijzin.",
+              "Het verandert in een voltooid deelwoord.",
+              "Het valt weg."
+            ],
+            correctAnswer: "Het staat helemaal aan het einde van de bijzin."
+          },
+          {
+            id: "reading_14_15",
+            type: "multiple_choice",
+            question: "Welke inleiding maakt een directe vraag (zoals 'Hoe laat is het?') een beleefde indirecte vraag?",
+            options: [
+              "\"Zeg eens even...\"",
+              "\"Kunt u mij misschien vertellen hoe laat het is?\"",
+              "\"Ik wil weten...\"",
+              "\"Kom hier en vertel...\""
+            ],
+            correctAnswer: "\"Kunt u mij misschien vertellen hoe laat het is?\""
+          },
+          {
+            id: "reading_14_16",
+            type: "multiple_choice",
+            question: "Kijk naar de zin: \"Wij ZULLEN waarschijnlijk twee avonden KOMEN sporten.\" Welke grammaticale functie heeft 'zullen' hier?",
+            options: [
+              "Toekomende tijd (futurum) gecombineerd met een waarschijnlijkheid",
+              "Verleden tijd (imperfectum)",
+              "Een gebiedende wijs (imperatief)",
+              "Een ontkenning"
+            ],
+            correctAnswer: "Toekomende tijd (futurum) gecombineerd met een waarschijnlijkheid"
+          },
+          {
+            id: "reading_14_17",
+            type: "multiple_choice",
+            question: "Hoe vorm je in de Nederlandse grammatica over het algemeen de toekomende tijd (het futurum)?",
+            options: [
+              "Met het hulpwerkwoord 'hebben' + voltooid deelwoord",
+              "Met het hulpwerkwoord 'zullen' + infinitief van het hoofdwerkwoord",
+              "Met 'zijn' + infinitief",
+              "Door alleen het woord 'morgen' toe te voegen"
+            ],
+            correctAnswer: "Met het hulpwerkwoord 'zullen' + infinitief van het hoofdwerkwoord"
+          },
+          {
+            id: "reading_14_18",
+            type: "multiple_choice",
+            question: "Wat is de betekenis van het woord 'spierpijn'?",
+            options: [
+              "Pijn in je botten na een val",
+              "Pijnlijke en stijve spieren na een fysieke inspanning of sportles",
+              "Pijn in je tanden na het eten",
+              "Hoofdpijn door de felle zon"
+            ],
+            correctAnswer: "Pijnlijke en stijve spieren na een fysieke inspanning of sportles"
+          },
+          {
+            id: "reading_14_19",
+            type: "multiple_choice",
+            question: "Kijk naar de vraag: \"Zal het trainingsschema niet te zwaar zijn?\" Welke nuance drukt 'zal' hier uit?",
+            options: [
+              "Een bevel aan de coach",
+              "Een vermoeden of onzekerheid over de toekomst / waarschijnlijkheid",
+              "Een vaststaande historische gebeurtenis",
+              "Een beleefde toestemming"
+            ],
+            correctAnswer: "Een vermoeden of onzekerheid over de toekomst / waarschijnlijkheid"
+          },
+          {
+            id: "reading_14_20",
+            type: "multiple_choice",
+            question: "Welke bewering over het bezoek aan Fitnessclub Het Spoor is ONJUIST (niet waar)?",
+            options: [
+              "Lucas en Mateo bezoeken de fitnessclub op maandagavond.",
+              "Instructeur Lars adviseert hen om direct 100 kilo te tillen zonder warming-up.",
+              "Het jaarabonnement biedt toegang tot groepslessen, sauna en coaching.",
+              "Lucas verwacht morgen spierpijn te hebben, maar voelt zich voldaan en energiek."
+            ],
+            correctAnswer: "Instructeur Lars adviseert hen om direct 100 kilo te tillen zonder warming-up."
+          }
+        ]
+      }
+    ]
+  },
+{
     id: "On-Class-14",
     chapter: 14,
     title: "Summary",

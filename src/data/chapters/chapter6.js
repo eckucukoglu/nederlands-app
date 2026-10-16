@@ -147,13 +147,8 @@ export const chapter6Sections = [
         isExtra: false,
         questions: [
           { id: "6.1_opd1_1", type: "multiple_choice", question: "1. Jasper en Christine willen bij het raam zitten.", options: ["waar", "niet waar"], correctAnswer: "waar" },
-            {
-    id: "6.2",
-    chapter: 6,
-    title: "Vocabulary",
-    theory: null,
-    exerciseGroups: []
-  },
+
+
 { id: "6.1_opd1_2", type: "multiple_choice", question: "2. Jasper neemt alleen een hoofdgerecht.", options: ["waar", "niet waar"], correctAnswer: "niet waar" },
           { id: "6.1_opd1_3", type: "multiple_choice", question: "3. Christine neemt de Spaanse salade als voorgerecht.", options: ["waar", "niet waar"], correctAnswer: "waar" },
           { id: "6.1_opd1_4", type: "multiple_choice", question: "4. De serveerster moet nog een vork halen.", options: ["waar", "niet waar"], correctAnswer: "niet waar" },
@@ -172,6 +167,13 @@ export const chapter6Sections = [
         ]
       }
     ]
+  },
+  {
+    id: "6.2",
+    chapter: 6,
+    title: "Vocabulary",
+    theory: null,
+    exerciseGroups: []
   },
   {
     id: "6.3",
@@ -276,6 +278,99 @@ export const chapter6Sections = [
         questions: [
           { id: "6.3_smart_1", type: "multiple_choice", question: "Je eet een pizza, maar hij is heel slecht (very bad). Wat zeg je?", options: ["Ik vind de pizza heerlijk.", "Ik vind de pizza vies.", "Het gaat wel."], correctAnswer: "Ik vind de pizza vies." },
           { id: "6.3_smart_2", type: "fill_in", question: "Vertaal (Translate): 'Tavuk sever misin? / Do you like chicken?' -> ________ je van kip?", correctAnswer: "Houd" }
+        ]
+      }
+    ]
+  },
+  {
+    id: "6.4",
+    chapter: 6,
+    title: "6.4 Gangen, bestek & de rekening",
+    theory: (lang) => (
+      <>
+        {lang === 'tr' ? (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>🍽️ De gangen van het menu & Het bestek</h3>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-200 mb-4">
+              <div className="bg-emerald-950/40 p-4 rounded-xl border border-emerald-500/20">
+                <h4 className="font-bold text-emerald-300 border-b border-emerald-500/30 pb-1 mb-2">📜 De Gangen (Yemek Öğünleri)</h4>
+                <ul className="space-y-1.5 text-xs sm:text-sm">
+                  <li><strong>het voorgerecht:</strong> başlangıç yemeği (çorba, salata vb.)</li>
+                  <li><strong>het hoofdgerecht:</strong> ana yemek (et, balık, vejetaryen)</li>
+                  <li><strong>het nagerecht / het toetje:</strong> tatlı / tatlı ikramı</li>
+                </ul>
+              </div>
+              <div className="bg-indigo-950/40 p-4 rounded-xl border border-indigo-500/20">
+                <h4 className="font-bold text-indigo-300 border-b border-indigo-500/30 pb-1 mb-2">🍴 Het Bestek (Çatal-Bıçak-Kaşık)</h4>
+                <ul className="space-y-1.5 text-xs sm:text-sm">
+                  <li><strong>het mes:</strong> bıçak</li>
+                  <li><strong>de vork:</strong> çatal</li>
+                  <li><strong>de lepel:</strong> kaşık (de soeplepel, de theelepel)</li>
+                  <li><strong>het bord:</strong> tabak</li>
+                  <li><strong>het glas:</strong> bardak</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-amber-950/30 p-4 rounded-xl border border-amber-500/20 text-sm">
+              <h4 className="font-bold text-amber-300 mb-2">💶 Afrekenen & De Fooi (Hesap Ödeme ve Bahşiş)</h4>
+              <ul className="space-y-1.5 text-xs sm:text-slate-300">
+                <li><strong>"Mag ik de rekening, alstublieft?"</strong> (Hesabı alabilir miyim lütfen?)</li>
+                <li><strong>"Wilt u pinnen of contant betalen?"</strong> (Kartla mı yoksa nakit mi ödemek istersiniz? - Hollanda'da çoğu yer sadece kartla ödeme <em>'alleen pinnen'</em> kabul eder).</li>
+                <li><strong>"Laat de rest maar zitten."</strong> (Üstü kalsın).</li>
+                <li><strong>"Het is goed zo."</strong> (Böyle iyi / Para üstünü vermenize gerek yok).</li>
+                <li>Hollanda'da bahşiş zorunlu değildir ancak iyi bir hizmet için <strong>%5 ile %10 arası</strong> bahşiş bırakmak adettendir.</li>
+              </ul>
+            </div>
+          </div>
+        ) : (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>🍽️ Courses of the Menu & Cutlery</h3>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-200 mb-4">
+              <div className="bg-emerald-950/40 p-4 rounded-xl border border-emerald-500/20">
+                <h4 className="font-bold text-emerald-300 border-b border-emerald-500/30 pb-1 mb-2">📜 The Courses (De Gangen)</h4>
+                <ul className="space-y-1.5 text-xs sm:text-sm">
+                  <li><strong>het voorgerecht:</strong> starter / appetizer (soup, salad)</li>
+                  <li><strong>het hoofdgerecht:</strong> main course (meat, fish, veggie)</li>
+                  <li><strong>het nagerecht / het toetje:</strong> dessert</li>
+                </ul>
+              </div>
+              <div className="bg-indigo-950/40 p-4 rounded-xl border border-indigo-500/20">
+                <h4 className="font-bold text-indigo-300 border-b border-indigo-500/30 pb-1 mb-2">🍴 Cutlery (Het Bestek)</h4>
+                <ul className="space-y-1.5 text-xs sm:text-sm">
+                  <li><strong>het mes:</strong> knife</li>
+                  <li><strong>de vork:</strong> fork</li>
+                  <li><strong>de lepel:</strong> spoon (soup spoon, teaspoon)</li>
+                  <li><strong>het bord:</strong> plate</li>
+                  <li><strong>het glas:</strong> glass</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-amber-950/30 p-4 rounded-xl border border-amber-500/20 text-sm">
+              <h4 className="font-bold text-amber-300 mb-2">💶 Paying the Bill & Tipping</h4>
+              <ul className="space-y-1.5 text-xs sm:text-slate-300">
+                <li><strong>"Mag ik de rekening, alstublieft?"</strong> (Could I have the bill, please?)</li>
+                <li><strong>"Wilt u pinnen of contant betalen?"</strong> (Would you like to pay with card or cash? - Most places in NL only accept card: <em>'alleen pinnen'</em>).</li>
+                <li><strong>"Laat de rest maar zitten."</strong> (Keep the change).</li>
+                <li><strong>"Het is goed zo."</strong> (That's fine as it is / keep the change).</li>
+                <li>In the Netherlands, tipping is not compulsory, but a tip of <strong>5% to 10%</strong> is customary for good service.</li>
+              </ul>
+            </div>
+          </div>
+        )}
+      </>
+    ),
+    exerciseGroups: [
+      {
+        instruction: "Opdracht: Herken het bestek en de gangen (Identify cutlery and courses)",
+        isExtra: false,
+        questions: [
+          { id: "6.4_opd_1", type: "multiple_choice", question: "Waarmee snijd je vlees in een restaurant?", options: ["Met een mes", "Met een lepel", "Met een glas"], correctAnswer: "Met een mes" },
+          { id: "6.4_opd_2", type: "multiple_choice", question: "Wat is 'ijs met chocoladesaus' in een driegangenmenu?", options: ["Het voorgerecht", "Het hoofdgerecht", "Het nagerecht (toetje)"], correctAnswer: "Het nagerecht (toetje)" },
+          { id: "6.4_opd_3", type: "fill_in", question: "Je wilt betalen. Wat zeg je tegen de ober? -> 'Mag ik de ________, alstublieft?'", correctAnswer: "rekening" }
         ]
       }
     ]
@@ -469,7 +564,320 @@ export const chapter6Sections = [
       }
     ]
   },
-  {
+    {
+    id: "Reading-6",
+    chapter: 6,
+    title: {
+      tr: "Okuma & Anlama",
+      en: "Reading Comprehension"
+    },
+    readingPassage: {
+      title: "Een heerlijk diner in restaurant De Gouden Leeuw",
+      level: "Niveau A1 • 19 Zinnen",
+      intro: {
+        tr: "Aşağıdaki okuma parçasını dikkatlice okuyunuz. Bu parça 6. Bölümde öğrendiğiniz restoran iletişimi (voorgerecht, hoofdgerecht, nagerecht), fikir belirtme (ik vind... lekker), kiplik fiilleri (modale werkwoorden: willen, kunnen, moeten, mogen) ve Hollanda bahşiş kültürü (fooi / afronden) kullanılarak hazırlanmıştır. Metni dinleyebilir, kelimelerin sözlük anlamlarına bakabilir ve alttaki 20 soruluk testi çözebilirsiniz.",
+        en: "Read the following reading passage carefully. It incorporates restaurant dining vocabulary (starters, main courses, desserts), expressing opinions (ik vind... lekker), modal verbs (willen, kunnen, moeten, mogen), and Dutch tipping etiquette (fooi / rounding up) learned in Chapter 6. Listen to the text, click words to check meanings, and answer the 20 comprehension questions below."
+      },
+      paragraphs: [
+        "Het is vrijdagavond zeven uur. Edit, Lucas en Susy vieren dat ze hun tussentijdse toets Nederlands met succes hebben afgerond. Ze hebben gereserveerd bij restaurant De Gouden Leeuw aan de gezellige gracht. Een vriendelijke serveerster brengt hen naar een ronde tafel bij het raam en overhandigt de menukaarten. De kaart biedt een ruime keuze aan voorgerechten, hoofdgerechten en nagerechten.",
+        "Lucas kijkt aandachtig naar de voorgerechten en vraagt: \"Ik wil graag beginnen met een soep. Wat kunnen jullie aanraden?\" Susy zegt enthousiast: \"Je moet echt de romige champignonsoep proeven, die vind ik hier altijd heerlijk!\" Lucas bestelt de champignonsoep, Susy kiest een frisse tomatensoep met basilicum en Edit neemt een kleine salade met geitenkaas. Voor het hoofdgerecht kiest Lucas gegrilde biefstuk met knapperige frietjes, Edit neemt gebakken zalm met verse groenten en Susy bestelt een vegetarische pasta.",
+        "Tijdens het eten komt de serveerster langs de tafel en vraagt met een glimlach: \"Smaakt alles naar wens?\" De drie vrienden knikken tevreden en Lucas zegt: \"Ja zeker mevrouw, het eten smaakt werkelijk verrukkelijk!\" Nadat de borden zijn leeggegeten, kunnen ze een toetje niet weerstaan. Lucas bestelt warme appeltaart met slagroom, Edit kiest een coupe vanille-ijs met verse aardbeien en Susy sluit af met een kopje sterke koffie.",
+        "Rond half tien vraagt Lucas om de rekening: \"Mevrouw, mogen we afrekenen alstublieft?\" De serveerster brengt het rekeningmapje: het totaalbedrag is vierentachtig euro en vijftig cent (€ 84,50). Susy merkt op: \"De bediening was ontzettend vriendelijk en het eten was perfect. Zullen we een mooie fooi geven?\" Lucas knikt, overhandigt zijn pinpas en zegt tegen de serveerster: \"Maak er maar negentig euro van alstublieft.\" De serveerster bedankt hen hartelijk en wenst hen een fijne avond verder."
+      ],
+      hints: [
+        {
+          title: { tr: "Yemek & Restoran Terimleri", en: "Dining & Restaurant Terms" },
+          icon: "fa-utensils",
+          items: [
+            { term: "het voorgerecht", tr: "başlangıç yemeği", en: "starter / appetizer" },
+            { term: "het hoofdgerecht", tr: "ana yemek", en: "main course" },
+            { term: "het nagerecht / toetje", tr: "tatlı", en: "dessert" },
+            { term: "smaakt het naar wens?", tr: "her şey yolunda mı / beğendiniz mi?", en: "is everything to your liking?" }
+          ]
+        },
+        {
+          title: { tr: "Kiplik Fiiller (Modale Werkwoorden)", en: "Modal Verbs" },
+          icon: "fa-gears",
+          items: [
+            { term: "willen (wil)", tr: "istemek", en: "to want" },
+            { term: "kunnen (kan)", tr: "yapabilmek / muktedir olmak", en: "can / to be able to" },
+            { term: "moeten (moet)", tr: "zorunda olmak", en: "must / to have to" },
+            { term: "mogen (mag)", tr: "izinli olmak", en: "may / to be allowed to" }
+          ]
+        },
+        {
+          title: { tr: "Fikir Belirtme & Bahşiş", en: "Opinions & Tipping" },
+          icon: "fa-receipt",
+          items: [
+            { term: "ik vind... lekker", tr: "...yı lezzetli buluyorum", en: "I find... delicious" },
+            { term: "de fooi", tr: "bahşiş", en: "tip" },
+            { term: "afronden naar boven", tr: "yukarı yuvarlamak (ör: €84,50 -> €90)", en: "rounding up the bill" }
+          ]
+        }
+      ]
+    },
+    exerciseGroups: [
+      {
+        instruction: "Deel 1: Direct Begrip & Diner (1-7: Doğrudan Bilgi ve Siparişler / Direct Facts)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_6_1",
+            type: "multiple_choice",
+            question: "Wat vieren Edit, Lucas en Susy tijdens hun etentje in restaurant De Gouden Leeuw?",
+            options: [
+              "De verjaardag van de ober",
+              "Dat ze hun tussentijdse toets Nederlands met succes hebben afgerond",
+              "De aankoop van een nieuw huis",
+              "Hun vertrek naar een andere stad"
+            ],
+            correctAnswer: "Dat ze hun tussentijdse toets Nederlands met succes hebben afgerond"
+          },
+          {
+            id: "reading_6_2",
+            type: "multiple_choice",
+            question: "Welk voorgerecht raadt Susy aan Lucas aan?",
+            options: [
+              "De frisse tomatensoep met basilicum",
+              "De romige champignonsoep",
+              "De salade met geitenkaas",
+              "Garnalencocktail"
+            ],
+            correctAnswer: "De romige champignonsoep"
+          },
+          {
+            id: "reading_6_3",
+            type: "multiple_choice",
+            question: "Wat kiest Edit als voorgerecht?",
+            options: [
+              "Een salade met geitenkaas",
+              "Uiensoep",
+              "Brood met kruidenboter",
+              "Een kopje champignonsoep"
+            ],
+            correctAnswer: "Een salade met geitenkaas"
+          },
+          {
+            id: "reading_6_4",
+            type: "multiple_choice",
+            question: "Wat bestelt Lucas als hoofdgerecht?",
+            options: [
+              "Gebakken zalm met groenten",
+              "Vegetarische pasta",
+              "Gegrilde biefstuk met frietjes",
+              "Een pizza margherita"
+            ],
+            correctAnswer: "Gegrilde biefstuk met frietjes"
+          },
+          {
+            id: "reading_6_5",
+            type: "multiple_choice",
+            question: "Wat bestelt Susy als hoofdgerecht?",
+            options: [
+              "Een visgerecht",
+              "Een vegetarische pasta",
+              "Biefstuk met frietjes",
+              "Kippensoep"
+            ],
+            correctAnswer: "Een vegetarische pasta"
+          },
+          {
+            id: "reading_6_6",
+            type: "multiple_choice",
+            question: "Wat vraagt de serveerster vriendelijk tijdens het diner?",
+            options: [
+              "\"Wilt u nu al betalen?\"",
+              "\"Smaakt alles naar wens?\"",
+              "\"Hoe heet jullie docent?\"",
+              "\"Gaan jullie morgen vroeg op?\""
+            ],
+            correctAnswer: "\"Smaakt alles naar wens?\""
+          },
+          {
+            id: "reading_6_7",
+            type: "multiple_choice",
+            question: "Wat kiest Lucas als toetje (nagerecht)?",
+            options: [
+              "Vanille-ijs met aardbeien",
+              "Warme appeltaart met slagroom",
+              "Alleen zwarte koffie",
+              "Chocolademousse"
+            ],
+            correctAnswer: "Warme appeltaart met slagroom"
+          }
+        ]
+      },
+      {
+        instruction: "Deel 2: Prijzen, Rekening & Fooi (8-13: Fiyatlar, Hesap ve Bahşiş / Money & Tipping)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_6_8",
+            type: "multiple_choice",
+            question: "Hoeveel bedroeg het officiële totaalbedrag op de rekening precies?",
+            options: [
+              "€ 75,00",
+              "€ 84,50",
+              "€ 90,00",
+              "€ 100,00"
+            ],
+            correctAnswer: "€ 84,50"
+          },
+          {
+            id: "reading_6_9",
+            type: "multiple_choice",
+            question: "Hoeveel euro betaalt Lucas uiteindelijk met zijn pinpas aan de serveerster?",
+            options: [
+              "€ 84,50 (zonder fooi)",
+              "€ 85,00",
+              "€ 90,00",
+              "€ 95,00"
+            ],
+            correctAnswer: "€ 90,00"
+          },
+          {
+            id: "reading_6_10",
+            type: "multiple_choice",
+            question: "Hoeveel euro fooi heeft de serveerster ontvangen?",
+            options: [
+              "€ 4,50",
+              "€ 5,50",
+              "€ 10,00",
+              "Helemaal niets"
+            ],
+            correctAnswer: "€ 5,50"
+          },
+          {
+            id: "reading_6_11",
+            type: "multiple_choice",
+            question: "Waarom besluiten de vrienden een royale fooi te geven?",
+            options: [
+              "Omdat de ober hen dwong",
+              "Omdat de bediening ontzettend vriendelijk was en het eten perfect smaakte",
+              "Omdat het verplicht is volgens de Nederlandse wet",
+              "Omdat Lucas te veel geld bij zich had"
+            ],
+            correctAnswer: "Omdat de bediening ontzettend vriendelijk was en het eten perfect smaakte"
+          },
+          {
+            id: "reading_6_12",
+            type: "multiple_choice",
+            question: "Wat bestelt Susy aan het einde van het diner als afsluiting?",
+            options: [
+              "Appeltaart met ijs",
+              "Een glas rode wijn",
+              "Een kopje sterke koffie",
+              "Een verse muntthee"
+            ],
+            correctAnswer: "Een kopje sterke koffie"
+          },
+          {
+            id: "reading_6_13",
+            type: "multiple_choice",
+            question: "Rond welk tijdstip vraagt Lucas om de rekening van het diner?",
+            options: [
+              "Rond 19.00 uur",
+              "Rond 20.15 uur",
+              "Rond 21.30 uur (half tien)",
+              "Rond 23.00 uur"
+            ],
+            correctAnswer: "Rond 21.30 uur (half tien)"
+          }
+        ]
+      },
+      {
+        instruction: "Deel 3: Modale Werkwoorden & Grammatica (14-20: Kiplik Fiiller ve Yapı / Modals & Grammar)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_6_14",
+            type: "multiple_choice",
+            question: "Welk modaal werkwoord drukt een wens of verlangen uit in de zin: \"Ik wil graag beginnen met een soep\"? ",
+            options: [
+              "moeten",
+              "kunnen",
+              "willen",
+              "mogen"
+            ],
+            correctAnswer: "willen"
+          },
+          {
+            id: "reading_6_15",
+            type: "multiple_choice",
+            question: "Welk modaal werkwoord gebruikt Susy in: \"Je moet echt de champignonsoep proeven!\"? ",
+            options: [
+              "moeten (sterke aanbeveling of verplichting)",
+              "mogen (toestemming)",
+              "willen (verlangen)",
+              "zullen (toekomst)"
+            ],
+            correctAnswer: "moeten (sterke aanbeveling of verplichting)"
+          },
+          {
+            id: "reading_6_16",
+            type: "multiple_choice",
+            question: "Wat is de beleefde manier om toestemming te vragen voor de rekening: \"Mevrouw, ... we afrekenen?\"?",
+            options: [
+              "moeten",
+              "mogen",
+              "zullen",
+              "willen"
+            ],
+            correctAnswer: "mogen"
+          },
+          {
+            id: "reading_6_17",
+            type: "multiple_choice",
+            question: "Wat gebeurt er met het tweede werkwoord (het hoofdwerkwoord) in een zin met een modaal werkwoord?",
+            options: [
+              "Het staat direct na het onderwerp.",
+              "Het staat helemaal aan het einde van de zin in de infinitiefvorm (onbepaalde wijs).",
+              "Het krijgt altijd een t-uitgang.",
+              "Het verdwijnt uit de zin."
+            ],
+            correctAnswer: "Het staat helemaal aan het einde van de zin in de infinitiefvorm (onbepaalde wijs)."
+          },
+          {
+            id: "reading_6_18",
+            type: "multiple_choice",
+            question: "Wat betekent de uitdrukking 'afronden naar boven' bij het betalen van een restaurantrekening?",
+            options: [
+              "Minder betalen dan op de bon staat",
+              "Het bedrag verhogen naar een rond getal als fooi (bijv. € 84,50 naar € 90,00)",
+              "De rekening splitsen in twee gelijke delen",
+              "Om korting vragen aan de chef"
+            ],
+            correctAnswer: "Het bedrag verhogen naar een rond getal als fooi (bijv. € 84,50 naar € 90,00)"
+          },
+          {
+            id: "reading_6_19",
+            type: "multiple_choice",
+            question: "Hoe drukt Lucas zijn mening uit over het hoofdgerecht?",
+            options: [
+              "\"Het eten smaakt werkelijk verrukkelijk!\"",
+              "\"Het is veel te koud.\"",
+              "\"Ik lust dit niet.\"",
+              "\"Het smaakt nergens naar.\""
+            ],
+            correctAnswer: "\"Het eten smaakt werkelijk verrukkelijk!\""
+          },
+          {
+            id: "reading_6_20",
+            type: "multiple_choice",
+            question: "Welke stelling over het diner is ONJUIST (niet waar)?",
+            options: [
+              "Lucas bestelt biefstuk met knapperige frietjes.",
+              "Susy eet een vegetarische pasta als hoofdgerecht.",
+              "Edit slaat het toetje over en drinkt alleen thee.",
+              "Lucas rondt het bedrag af naar negentig euro bij het pinnen."
+            ],
+            correctAnswer: "Edit slaat het toetje over en drinkt alleen thee."
+          }
+        ]
+      }
+    ]
+  },
+{
     id: "On-Class-6",
     chapter: 6,
     title: "Summary",

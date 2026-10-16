@@ -110,41 +110,81 @@ export const chapter10Sections = [
     theory: null,
     exerciseGroups: []
   },
-{
+  {
     id: "10.3",
     chapter: 10,
-    title: "10.3 / 10.4 Begrijpen & Bedoelen",
+    title: "10.3 Zeggen dat je het niet verstaat of begrijpt",
     theory: (lang) => (
       <>
         {lang === 'tr' ? (
           <>
             <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
-              <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>🗣️ Verstaan vs Begrijpen</h3>
-              <p><strong>Niet verstaan (Fiziksel olarak duyamamak/anlayamamak):</strong> Ortamda çok gürültü varsa veya ses kısıksa kullanılır. <em>(Sorry, ik versta u niet goed. Kunt u het herhalen?)</em></p>
-              <p><strong>Niet begrijpen (Zihinsel olarak kavrayamamak):</strong> Söylenen kelimelerin veya dilbilgisinin manasını anlamadığınızda kullanılır. <em>(Sorry, ik begrijp het niet.)</em></p>
+              <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>🗣️ Verstaan vs Begrijpen (Duyamamak vs Kavrayamamak)</h3>
+              <p>Hollandacada birini anlayamadığınızda durumun sebebine göre iki farklı fiil kullanılır:</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
+                <div className="bg-slate-800/80 p-3 rounded-lg border border-purple-500/30">
+                  <h4 className="font-bold text-purple-300 text-sm mb-1">👂 Niet verstaan (Akustik / Fiziksel olarak duyamamak)</h4>
+                  <p className="text-xs text-slate-300 mb-2">Ortam gürültülü olduğunda, kişi hızlı veya kısık sesle konuştuğunda kullanılır.</p>
+                  <ul className="text-xs text-purple-200 space-y-1 list-disc pl-4">
+                    <li><em>Sorry, ik versta u niet goed.</em> (Özür dilerim, sizi iyi duyamıyorum.)</li>
+                    <li><em>Kunt u het even herhalen?</em> (Tekrar edebilir misiniz?)</li>
+                    <li><em>Wat zegt u?</em> (Ne dediniz?)</li>
+                  </ul>
+                </div>
+                <div className="bg-slate-800/80 p-3 rounded-lg border border-pink-500/30">
+                  <h4 className="font-bold text-pink-300 text-sm mb-1">🧠 Niet begrijpen (Zihinsel olarak anlamını kavrayamamak)</h4>
+                  <p className="text-xs text-slate-300 mb-2">Söylenen kelimenin, deyimin veya gramerin ne anlama geldiğini bilmediğinizde kullanılır.</p>
+                  <ul className="text-xs text-pink-200 space-y-1 list-disc pl-4">
+                    <li><em>Sorry, ik begrijp het niet.</em> (Özür dilerim, anlamıyorum.)</li>
+                    <li><em>Wat bedoelt u met 'tiptop'?</em> ('Tiptop' ile ne kastediyorsunuz?)</li>
+                  </ul>
+                </div>
+              </div>
             </div>
             
-            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #ec4899', marginBottom: '20px' }}>
-              <h3 style={{ margin: '0 0 10px 0', color: '#f472b6' }}>🔍 Bedoelen vs Betekenen</h3>
-              <ul style={{ margin: 0, paddingLeft: '20px' }}>
-                <li style={{ marginBottom: '8px' }}><strong>Bedoelen:</strong> Bir <em>kişinin</em> ne söylemek istediği veya niyeti (Kastetmek). <em>(Wat bedoelt u daarmee?)</em></li>
-                <li><strong>Betekenen:</strong> Bir <em>kelimenin veya durumun</em> tanımı (Anlamına gelmek). <em>(Wat betekent het woord 'zadel'?)</em></li>
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #06b6d4', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#22d3ee' }}>❓ Vragen hoe je iets zegt in het Nederlands (Nasıl dendiğini sormak)</h3>
+              <p className="text-sm text-slate-300">Bir kelimeyi hatırlayamadığınızda veya Hollandacasını öğrenmek istediğinizde bu altın kalıpları kullanın:</p>
+              <ul className="text-sm text-cyan-200 mt-2 space-y-1 list-disc pl-5">
+                <li><strong>Hoe zeg je dat in het Nederlands?</strong> (Bunu Hollandacada nasıl söylersiniz?)</li>
+                <li><strong>Hoe heet zo'n ding?</strong> (Böyle bir şeyin adı nedir?)</li>
+                <li><strong>Zeg je dat zo in het Nederlands?</strong> (Hollandacada böyle mi denir?)</li>
               </ul>
             </div>
           </>
         ) : (
           <>
             <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
-              <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>🗣️ Verstaan vs Begrijpen</h3>
-              <p><strong>Niet verstaan (Physically not hearing/understanding):</strong> Used when the sound is too soft or there is a lot of noise. <em>(Sorry, ik versta u niet goed. Kunt u het herhalen?)</em></p>
-              <p><strong>Niet begrijpen (Mentally not grasping the meaning):</strong> Used when you don't understand the meaning of the words or the grammar. <em>(Sorry, ik begrijp het niet.)</em></p>
+              <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>🗣️ Verstaan vs Begrijpen (Acoustic vs Cognitive)</h3>
+              <p>In Dutch, two different verbs are used depending on why you didn't understand:</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
+                <div className="bg-slate-800/80 p-3 rounded-lg border border-purple-500/30">
+                  <h4 className="font-bold text-purple-300 text-sm mb-1">👂 Niet verstaan (Physically / Acoustically not hearing)</h4>
+                  <p className="text-xs text-slate-300 mb-2">Used when there is noise, or the speaker is too fast or speaks too quietly.</p>
+                  <ul className="text-xs text-purple-200 space-y-1 list-disc pl-4">
+                    <li><em>Sorry, ik versta u niet goed.</em> (Sorry, I cannot hear you well.)</li>
+                    <li><em>Kunt u het even herhalen?</em> (Could you repeat that?)</li>
+                    <li><em>Wat zegt u?</em> (What did you say?)</li>
+                  </ul>
+                </div>
+                <div className="bg-slate-800/80 p-3 rounded-lg border border-pink-500/30">
+                  <h4 className="font-bold text-pink-300 text-sm mb-1">🧠 Niet begrijpen (Mentally not understanding meaning)</h4>
+                  <p className="text-xs text-slate-300 mb-2">Used when you don't know the meaning of the words or idiom.</p>
+                  <ul className="text-xs text-pink-200 space-y-1 list-disc pl-4">
+                    <li><em>Sorry, ik begrijp het niet.</em> (Sorry, I don't understand.)</li>
+                    <li><em>Wat bedoelt u met 'tiptop'?</em> (What do you mean by 'tiptop'?)</li>
+                  </ul>
+                </div>
+              </div>
             </div>
             
-            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #ec4899', marginBottom: '20px' }}>
-              <h3 style={{ margin: '0 0 10px 0', color: '#f472b6' }}>🔍 Bedoelen vs Betekenen</h3>
-              <ul style={{ margin: 0, paddingLeft: '20px' }}>
-                <li style={{ marginBottom: '8px' }}><strong>Bedoelen:</strong> What a <em>person</em> wants to say or intends (To mean/intend). <em>(Wat bedoelt u daarmee?)</em></li>
-                <li><strong>Betekenen:</strong> What a <em>word or situation</em> is (To mean/signify). <em>(Wat betekent het woord 'zadel'?)</em></li>
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #06b6d4', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#22d3ee' }}>❓ Asking how to say something in Dutch</h3>
+              <p className="text-sm text-slate-300">When you can't recall a word or want to ask for its name in Dutch:</p>
+              <ul className="text-sm text-cyan-200 mt-2 space-y-1 list-disc pl-5">
+                <li><strong>Hoe zeg je dat in het Nederlands?</strong> (How do you say that in Dutch?)</li>
+                <li><strong>Hoe heet zo'n ding?</strong> (What is such a thing called?)</li>
+                <li><strong>Zeg je dat zo in het Nederlands?</strong> (Do you say it like that in Dutch?)</li>
               </ul>
             </div>
           </>
@@ -165,6 +205,77 @@ export const chapter10Sections = [
         ]
       },
       {
+        instruction: "Slimme Oefeningen (Smart Exercises): Verstaan of Begrijpen?",
+        isExtra: true,
+        questions: [
+          { id: "10.3_smart_1", type: "multiple_choice", question: "De radio staat te hard en er is veel lawaai. Ik kan je niet ________.", options: ["verstaan", "begrijpen", "bedoelen"], correctAnswer: "verstaan" },
+          { id: "10.3_smart_2", type: "multiple_choice", question: "Deze grammaticale theorie is heel ingewikkeld. Ik ________ het niet.", options: ["versta", "begrijp", "beteken"], correctAnswer: "begrijp" },
+          { id: "10.3_smart_3", type: "fill_in", question: "Hoe vraag je naar de naam van een voorwerp? 'Hoe heet zo'n ________?'", correctAnswer: "ding" }
+        ]
+      }
+    ]
+  },
+  {
+    id: "10.4",
+    chapter: 10,
+    title: "10.4 Bedoelen en betekenen",
+    theory: (lang) => (
+      <>
+        {lang === 'tr' ? (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #ec4899', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#f472b6' }}>🔍 Bedoelen vs Betekenen (Kastetmek vs Anlamına Gelmek)</h3>
+            <p className="text-sm text-slate-300">Bu iki fiil Türkçede bazen "demek istemek / anlamına gelmek" olarak karıştırılır, ancak Hollandacada kesin bir kural vardır:</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+              <div className="bg-pink-900/20 p-4 rounded-xl border border-pink-500/30">
+                <h4 className="font-bold text-pink-300 mb-1">👤 Bedoelen (Özne bir KİŞİDİR)</h4>
+                <p className="text-xs text-pink-100 mb-2">Bir insanın niyetini veya neyi ima ettiğini belirtir: <em>kastetmek</em>.</p>
+                <ul className="text-xs text-slate-200 space-y-1 list-disc pl-4">
+                  <li><strong>Wat bedoelt u?</strong> (Ne demek istiyorsunuz / neyi kastediyorsunuz?)</li>
+                  <li><strong>U bedoelt de bagagedrager.</strong> (Bagaj taşıyıcısını kastediyorsunuz.)</li>
+                  <li><strong>Ik bedoel iets anders.</strong> (Başka bir şeyi kastediyorum.)</li>
+                </ul>
+              </div>
+              <div className="bg-amber-900/20 p-4 rounded-xl border border-amber-500/30">
+                <h4 className="font-bold text-amber-300 mb-1">📖 Betekenen (Özne bir KELİME, ŞEY veya DURUMDUR)</h4>
+                <p className="text-xs text-amber-100 mb-2">Bir kavramın sözlük anlamını veya olayın sonucunu belirtir: <em>anlamına gelmek</em>.</p>
+                <ul className="text-xs text-slate-200 space-y-1 list-disc pl-4">
+                  <li><strong>Wat betekent zadel?</strong> ('Zadel' ne anlama gelir?)</li>
+                  <li><strong>Morgen is het een feestdag. Dat betekent dat we gesloten zijn.</strong> (Yarın bayram, bu kapalı olduğumuz anlamına gelir.)</li>
+                  <li><strong>Wat betekent p.p.?</strong> (p.p. ne demektir? -> per persoon).</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        ) : (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #ec4899', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#f472b6' }}>🔍 Bedoelen vs Betekenen (People vs Things)</h3>
+            <p className="text-sm text-slate-300">These two verbs both translate to "mean" in English, but follow a strict grammatical distinction in Dutch:</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+              <div className="bg-pink-900/20 p-4 rounded-xl border border-pink-500/30">
+                <h4 className="font-bold text-pink-300 mb-1">👤 Bedoelen (Subject is a PERSON)</h4>
+                <p className="text-xs text-pink-100 mb-2">What a person intends or refers to: <em>to mean / intend</em>.</p>
+                <ul className="text-xs text-slate-200 space-y-1 list-disc pl-4">
+                  <li><strong>Wat bedoelt u?</strong> (What do you mean?)</li>
+                  <li><strong>U bedoelt de bagagedrager.</strong> (You mean the luggage carrier.)</li>
+                  <li><strong>Ik bedoelde de buurman.</strong> (I meant the neighbor.)</li>
+                </ul>
+              </div>
+              <div className="bg-amber-900/20 p-4 rounded-xl border border-amber-500/30">
+                <h4 className="font-bold text-amber-300 mb-1">📖 Betekenen (Subject is a WORD, THING or SITUATION)</h4>
+                <p className="text-xs text-amber-100 mb-2">The definition of a term or consequence of a fact: <em>to signify / mean</em>.</p>
+                <ul className="text-xs text-slate-200 space-y-1 list-disc pl-4">
+                  <li><strong>Wat betekent 'zadel'?</strong> (What does 'zadel' mean?)</li>
+                  <li><strong>Morgen is het een feestdag. Dat betekent dat we gesloten zijn.</strong> (Tomorrow is a holiday. That means we are closed.)</li>
+                  <li><strong>Wat betekent p.p.?</strong> (What does p.p. mean? -> per person).</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        )}
+      </>
+    ),
+    exerciseGroups: [
+      {
         instruction: "Opdracht 3: Vul een vorm in van bedoelen of betekenen.",
         isExtra: false,
         questions: [
@@ -176,13 +287,12 @@ export const chapter10Sections = [
         ]
       },
       {
-        instruction: "Slimme Oefeningen (Smart Exercises): Begrijp je het verschil?",
+        instruction: "Slimme Oefeningen (Smart Exercises): Bedoelen of Betekenen?",
         isExtra: true,
         questions: [
-          { id: "10.3_smart_1", type: "multiple_choice", question: "De radio staat te hard. Ik kan je niet ________.", options: ["verstaan", "begrijpen", "bedoelen"], correctAnswer: "verstaan" },
-          { id: "10.3_smart_2", type: "multiple_choice", question: "Deze theorie is moeilijk. Ik ________ het niet.", options: ["versta", "begrijp", "beteken"], correctAnswer: "begrijp" },
-          { id: "10.3_smart_3", type: "multiple_choice", question: "Wat ________ het woord 'fietsenmaker' in het Engels?", options: ["bedoelt", "betekent", "verstaat"], correctAnswer: "betekent" },
-          { id: "10.3_smart_4", type: "multiple_choice", question: "Hij is boos, maar ik weet niet wat hij precies ________.", options: ["bedoelt", "betekent", "begrijpt"], correctAnswer: "bedoelt" }
+          { id: "10.4_smart_1", type: "multiple_choice", question: "Wat ________ het woord 'fietsenmaker' in het Engels?", options: ["bedoelt", "betekent", "verstaat"], correctAnswer: "betekent" },
+          { id: "10.4_smart_2", type: "multiple_choice", question: "Hij is boos, maar ik weet niet wat hij precies ________.", options: ["bedoelt", "betekent", "begrijpt"], correctAnswer: "bedoelt" },
+          { id: "10.4_smart_3", type: "fill_in", question: "A: 'Het regent hard.' B: 'Dat ________ dat we met de bus moeten gaan.' (betekenen)", correctAnswer: "betekent" }
         ]
       }
     ]
@@ -196,18 +306,40 @@ export const chapter10Sections = [
         {lang === 'tr' ? (
           <>
             <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
-              <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>🚲 Fietsonderdelen (Bisiklet Parçaları)</h3>
-              <p>bagagedrager (bagaj), band (lastik), bel (zil), trapper (pedal), stuur (gidon), wiel (tekerlek), zadel (sele), remmen (frenler), voorlicht (ön far), achterlicht (arka far), slot (kilit), standaard (ayaklık).</p>
+              <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>🚲 Opdracht 4: Fietsonderdelen (Bisikletin 12 Temel Parçası)</h3>
+              <p className="text-xs text-slate-300 mb-3">Kitapta bisiklet şeması üzerinde numaralandırılmış tüm 12 parça:</p>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 text-xs">
+                <div className="bg-slate-800/80 p-2 rounded-lg border border-emerald-500/30"><strong className="text-emerald-300">1. de bagagedrager</strong><span className="text-slate-400 block">bagaj taşıyıcı</span></div>
+                <div className="bg-slate-800/80 p-2 rounded-lg border border-emerald-500/30"><strong className="text-emerald-300">2. de band</strong><span className="text-slate-400 block">lastik (buitenband)</span></div>
+                <div className="bg-slate-800/80 p-2 rounded-lg border border-emerald-500/30"><strong className="text-emerald-300">3. het stuur</strong><span className="text-slate-400 block">gidon / direksiyon</span></div>
+                <div className="bg-slate-800/80 p-2 rounded-lg border border-emerald-500/30"><strong className="text-emerald-300">4. de trapper</strong><span className="text-slate-400 block">pedal</span></div>
+                <div className="bg-slate-800/80 p-2 rounded-lg border border-emerald-500/30"><strong className="text-emerald-300">5. het zadel</strong><span className="text-slate-400 block">sele / oturak</span></div>
+                <div className="bg-slate-800/80 p-2 rounded-lg border border-emerald-500/30"><strong className="text-emerald-300">6. het wiel</strong><span className="text-slate-400 block">tekerlek</span></div>
+                <div className="bg-slate-800/80 p-2 rounded-lg border border-emerald-500/30"><strong className="text-emerald-300">7. het frame</strong><span className="text-slate-400 block">kadro / gövde</span></div>
+                <div className="bg-slate-800/80 p-2 rounded-lg border border-emerald-500/30"><strong className="text-emerald-300">8. de bel / rem</strong><span className="text-slate-400 block">zil / fren kolu</span></div>
+                <div className="bg-slate-800/80 p-2 rounded-lg border border-emerald-500/30"><strong className="text-emerald-300">9. het achterlicht</strong><span className="text-slate-400 block">arka far</span></div>
+                <div className="bg-slate-800/80 p-2 rounded-lg border border-emerald-500/30"><strong className="text-emerald-300">10. het voorlicht</strong><span className="text-slate-400 block">ön far</span></div>
+                <div className="bg-slate-800/80 p-2 rounded-lg border border-emerald-500/30"><strong className="text-emerald-300">11. het slot</strong><span className="text-slate-400 block">kilit</span></div>
+                <div className="bg-slate-800/80 p-2 rounded-lg border border-emerald-500/30"><strong className="text-emerald-300">12. de standaard</strong><span className="text-slate-400 block">ayaklık / park desteği</span></div>
+              </div>
             </div>
             
             <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f59e0b', marginBottom: '20px' }}>
-              <h3 style={{ margin: '0 0 10px 0', color: '#fbbf24' }}>📌 Imperfectum (Geçmiş Zaman Hikayesi)</h3>
+              <h3 style={{ margin: '0 0 10px 0', color: '#fbbf24' }}>📌 Imperfectum (o.v.t. - Geçmiş Zaman Hikayesi)</h3>
               <p><strong>Regelmatig (Düzenli Fiiller):</strong> <code>stam + te(n) / de(n)</code></p>
-              <p><strong>Soft Ketchup Kuralı:</strong> Fiilin kökü (stam) <strong>s, f, t, k, ch veya p</strong> harflerinden biriyle bitiyorsa <strong>-te(n)</strong> alır. Diğer tüm durumlarda <strong>-de(n)</strong> alır.</p>
-              <ul style={{ margin: '10px 0 0 0' }}>
-                <li><strong>Fietsen:</strong> stam = fiets ➔ 's' harfi kuralda var ➔ Ik fiets<strong>te</strong>. Wij fiets<strong>ten</strong>.</li>
-                <li><strong>Mankeren:</strong> stam = mankeer ➔ 'r' harfi kuralda YOK ➔ Het mankeer<strong>de</strong>.</li>
-              </ul>
+              <p><strong>Soft Ketchup Kuralı:</strong> Fiilin kökü (stam) <strong>s, f, t, k, ch veya p</strong> harflerinden biriyle bitiyorsa tekilde <strong>-te</strong>, çoğulda <strong>-ten</strong> alır. Diğer tüm durumlarda tekilde <strong>-de</strong>, çoğulda <strong>-den</strong> alır.</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3 text-xs font-mono">
+                <div className="bg-slate-900/60 p-3 rounded-lg border border-amber-500/30">
+                  <span className="text-amber-300 font-bold block mb-1">fietsen (stam = fiets ➔ s var)</span>
+                  ik / jij / hij fiets<strong>te</strong><br/>
+                  wij / jullie / zij fiets<strong>ten</strong>
+                </div>
+                <div className="bg-slate-900/60 p-3 rounded-lg border border-amber-500/30">
+                  <span className="text-amber-300 font-bold block mb-1">mankeren (stam = mankeer ➔ r yok)</span>
+                  ik / jij / het mankeer<strong>de</strong><br/>
+                  wij / jullie / zij mankeer<strong>den</strong>
+                </div>
+              </div>
             </div>
 
             <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #06b6d4', marginBottom: '20px' }}>
@@ -228,18 +360,40 @@ export const chapter10Sections = [
         ) : (
           <>
             <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #10b981', marginBottom: '20px' }}>
-              <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>🚲 Fietsonderdelen (Bicycle Parts)</h3>
-              <p>bagagedrager (carrier), band (tire), bel (bell), trapper (pedal), stuur (handlebars), wiel (wheel), zadel (saddle/seat), remmen (brakes), voorlicht (front light), achterlicht (tail light), slot (lock), standaard (kickstand).</p>
+              <h3 style={{ margin: '0 0 10px 0', color: '#34d399' }}>🚲 Opdracht 4: Fietsonderdelen (12 Bicycle Parts)</h3>
+              <p className="text-xs text-slate-300 mb-3">All 12 parts labeled in the textbook diagram:</p>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 text-xs">
+                <div className="bg-slate-800/80 p-2 rounded-lg border border-emerald-500/30"><strong className="text-emerald-300">1. de bagagedrager</strong><span className="text-slate-400 block">carrier</span></div>
+                <div className="bg-slate-800/80 p-2 rounded-lg border border-emerald-500/30"><strong className="text-emerald-300">2. de band</strong><span className="text-slate-400 block">tyre</span></div>
+                <div className="bg-slate-800/80 p-2 rounded-lg border border-emerald-500/30"><strong className="text-emerald-300">3. het stuur</strong><span className="text-slate-400 block">handlebars</span></div>
+                <div className="bg-slate-800/80 p-2 rounded-lg border border-emerald-500/30"><strong className="text-emerald-300">4. de trapper</strong><span className="text-slate-400 block">pedal</span></div>
+                <div className="bg-slate-800/80 p-2 rounded-lg border border-emerald-500/30"><strong className="text-emerald-300">5. het zadel</strong><span className="text-slate-400 block">saddle</span></div>
+                <div className="bg-slate-800/80 p-2 rounded-lg border border-emerald-500/30"><strong className="text-emerald-300">6. het wiel</strong><span className="text-slate-400 block">wheel</span></div>
+                <div className="bg-slate-800/80 p-2 rounded-lg border border-emerald-500/30"><strong className="text-emerald-300">7. het frame</strong><span className="text-slate-400 block">frame</span></div>
+                <div className="bg-slate-800/80 p-2 rounded-lg border border-emerald-500/30"><strong className="text-emerald-300">8. de bel / rem</strong><span className="text-slate-400 block">bell / brake</span></div>
+                <div className="bg-slate-800/80 p-2 rounded-lg border border-emerald-500/30"><strong className="text-emerald-300">9. het achterlicht</strong><span className="text-slate-400 block">tail light</span></div>
+                <div className="bg-slate-800/80 p-2 rounded-lg border border-emerald-500/30"><strong className="text-emerald-300">10. het voorlicht</strong><span className="text-slate-400 block">headlight</span></div>
+                <div className="bg-slate-800/80 p-2 rounded-lg border border-emerald-500/30"><strong className="text-emerald-300">11. het slot</strong><span className="text-slate-400 block">lock</span></div>
+                <div className="bg-slate-800/80 p-2 rounded-lg border border-emerald-500/30"><strong className="text-emerald-300">12. de standaard</strong><span className="text-slate-400 block">kickstand</span></div>
+              </div>
             </div>
             
             <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f59e0b', marginBottom: '20px' }}>
               <h3 style={{ margin: '0 0 10px 0', color: '#fbbf24' }}>📌 Imperfectum (Past Simple Tense)</h3>
               <p><strong>Regelmatig (Regular Verbs):</strong> <code>stam + te(n) / de(n)</code></p>
-              <p><strong>'t Kofschip (Soft Ketchup) Rule:</strong> If the stem ends in <strong>s, f, t, k, ch or p</strong>, you write <strong>-te(n)</strong>. Otherwise <strong>-de(n)</strong>.</p>
-              <ul style={{ margin: '10px 0 0 0' }}>
-                <li><strong>Fietsen:</strong> stam = fiets ➔ 's' is in soft ketchup ➔ Ik fiets<strong>te</strong>. Wij fiets<strong>ten</strong>.</li>
-                <li><strong>Mankeren:</strong> stam = mankeer ➔ 'r' is NOT in soft ketchup ➔ Het mankeer<strong>de</strong>.</li>
-              </ul>
+              <p><strong>'t Kofschip (Soft Ketchup) Rule:</strong> If the stem ends in <strong>s, f, t, k, ch or p</strong>, you write <strong>-te</strong> in singular and <strong>-ten</strong> in plural. Otherwise <strong>-de</strong> in singular and <strong>-den</strong> in plural.</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3 text-xs font-mono">
+                <div className="bg-slate-900/60 p-3 rounded-lg border border-amber-500/30">
+                  <span className="text-amber-300 font-bold block mb-1">fietsen (stam = fiets ➔ ends in s)</span>
+                  ik / jij / hij fiets<strong>te</strong><br/>
+                  wij / jullie / zij fiets<strong>ten</strong>
+                </div>
+                <div className="bg-slate-900/60 p-3 rounded-lg border border-amber-500/30">
+                  <span className="text-amber-300 font-bold block mb-1">mankeren (stam = mankeer ➔ no soft ketchup)</span>
+                  ik / jij / het mankeer<strong>de</strong><br/>
+                  wij / jullie / zij mankeer<strong>den</strong>
+                </div>
+              </div>
             </div>
 
             <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #06b6d4', marginBottom: '20px' }}>
@@ -594,7 +748,320 @@ export const chapter10Sections = [
     ),
     exerciseGroups: []
   },
-  {
+    {
+    id: "Reading-10",
+    chapter: 10,
+    title: {
+      tr: "Okuma & Anlama",
+      en: "Reading Comprehension"
+    },
+    readingPassage: {
+      title: "Met pech op het fietspad naar de fietsenmaker",
+      level: "Niveau A2 • 19 Zinnen",
+      intro: {
+        tr: "Aşağıdaki okuma parçasını dikkatlice okuyunuz. Bu parça 10. Bölümde öğrendiğiniz bisiklet ve ulaşım terimleri (de band, de ketting, de rem, het zadel), geçmiş zaman (imperfectum / verleden tijd: werkte, fietste, had, was), kiplik fiillerinin geçmiş zamanı (moest, kon, wilde) ve yolculuk ifadeleri kullanılarak hazırlanmıştır. Metni dinleyebilir, kelimelerin sözlük anlamına bakabilir ve alttaki 20 soruluk testi çözebilirsiniz.",
+        en: "Read the following reading passage carefully. It incorporates bicycle & transport vocabulary (tyre, chain, brake, saddle), simple past tense (het imperfectum: werkte, fietste, had, was), past tense of modal verbs (moest, kon, wilde), and breakdown situations learned in Chapter 10. Listen to the text, click words to check meanings, and answer the 20 comprehension questions below."
+      },
+      paragraphs: [
+        "Het was een frisse donderdagochtend in september. Edit had om precies negen uur een belangrijk schriftelijk examen Nederlands op de taalschool in Utrecht. Ze stapte om kwart over acht vol goede moed op haar felrode stadsfiets. In Nederland fietst vrijwel iedereen dagelijks naar het werk of naar school over de brede, veilige fietspaden. Edit trapte stevig door langs het water van de singel, maar plotseling hoorde ze vlak voor de stenen brug een harde knal en een sissend geluid.",
+        "Haar fiets begon direct hevig te wiebelen. Edit kneep verschrikt in haar handremmen en stapte aan de zijkant van het fietspad af. Ze keek ongerust naar haar achterwiel: de achterband was zo plat als een dubbeltje en bovendien lag de fietsketting helemaal los tussen de spaken. Edit zuchtte wanhopig: \"Wat een enorme pech! Ik had zo'n haast en nu kon ik onmogelijk verder fietsen.\" De tijd tikte snel weg en ze moest nog zeker vier kilometer afleggen om op tijd bij de les te zijn.",
+        "Gelukkig zag Edit tweehonderd meter verderop een uithangbord: Fietsenmakerij De Zadelmeester. Ze duwde haar zware fiets haastig naar de werkplaats. Binnen rook het heerlijk naar rubber en kettingvet. De vriendelijke fietsenmaker meneer Visser begreep haar paniek meteen toen Edit vertelde: \"Meneer, ik heb om negen uur een examen Nederlands! Kunt u alstublieft mijn lekke band plakken?\" Meneer Visser pakte direct zijn bandenlichters en lijm. Binnen een kwartier plakte hij vakkundig het gat in de binnenband, zette de ketting weer strak op de tandwielen en controleerde de remmen.",
+        "Edit was ontzettend dankbaar en opgelucht. De snelle reparatie kostte slechts twaalf euro en vijftig cent. Ze rekende snel af met haar pinpas, bedankte meneer Visser uit de grond van haar hart en sprong weer op het zadel. Ze fietste het laatste stuk met een hoge snelheid, stopte keurig voor het rode stoplicht en rende om tien voor negen het schoolgebouw binnen. Docent meneer De Vries keek op zijn horloge en zei met een knipoog: \"Kijk eens aan Edit, precies op tijd binnen! Pak rustig je pen en veel succes met de toets.\""
+      ],
+      hints: [
+        {
+          title: { tr: "Bisiklet Parçaları & Arıza", en: "Bicycle Parts & Breakdown" },
+          icon: "fa-bicycle",
+          items: [
+            { term: "de achterband", tr: "arka lastik", en: "rear tyre" },
+            { term: "de fietsketting", tr: "bisiklet zinciri", en: "bicycle chain" },
+            { term: "de rem (remmen)", tr: "fren (frenler)", en: "brake(s)" },
+            { term: "het zadel", tr: "sele", en: "saddle" },
+            { term: "de lekke band", tr: "patlak lastik", en: "flat tyre" }
+          ]
+        },
+        {
+          title: { tr: "Geçmiş Zaman (Imperfectum)", en: "Past Tense (Imperfectum)" },
+          icon: "fa-history",
+          items: [
+            { term: "fietste / fietsten", tr: "bisiklet sürdü(ler)", en: "cycled" },
+            { term: "had / hadden", tr: "vardı / sahip oldu", en: "had" },
+            { term: "was / waren", tr: "idi(ler)", en: "was / were" }
+          ]
+        },
+        {
+          title: { tr: "Kipliklerin Geçmiş Zamanı", en: "Past Tense of Modals" },
+          icon: "fa-wrench",
+          items: [
+            { term: "moest (moeten)", tr: "zorundaydı (-meliydi)", en: "had to" },
+            { term: "kon (kunnen)", tr: "yapabildi (-ebildi)", en: "could / was able to" },
+            { term: "wilde (willen)", tr: "istedi", en: "wanted" }
+          ]
+        }
+      ]
+    },
+    exerciseGroups: [
+      {
+        instruction: "Deel 1: Direct Begrip & Fietstocht (1-7: Doğrudan Bilgi ve Olaylar / Direct Facts)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_10_1",
+            type: "multiple_choice",
+            question: "Waarom had Edit op donderdagochtend zo'n grote haast?",
+            options: [
+              "Omdat ze een vliegtuig naar Spanje moest halen",
+              "Omdat ze om negen uur een belangrijk schriftelijk examen Nederlands had",
+              "Omdat ze naar een verjaardagsfeest ging",
+              "Omdat haar vriendin op haar wachtte in het café"
+            ],
+            correctAnswer: "Omdat ze om negen uur een belangrijk schriftelijk examen Nederlands had"
+          },
+          {
+            id: "reading_10_2",
+            type: "multiple_choice",
+            question: "Wat voor soort fiets reed Edit?",
+            options: [
+              "Een zwarte elektrische bakfiets",
+              "Een felrode stadsfiets",
+              "Een blauwe racefiets",
+              "Een mountainbike met twintig versnellingen"
+            ],
+            correctAnswer: "Een felrode stadsfiets"
+          },
+          {
+            id: "reading_10_3",
+            type: "multiple_choice",
+            question: "Wat gebeurde er plotseling met de fiets van Edit vlak voor de brug?",
+            options: [
+              "Het stuur brak doormidden.",
+              "De achterband ging lek met een knal en de ketting raakte los tussen de spaken.",
+              "De bel viel van het stuur in het water.",
+              "De remmen werkten helemaal niet meer."
+            ],
+            correctAnswer: "De achterband ging lek met een knal en de ketting raakte los tussen de spaken."
+          },
+          {
+            id: "reading_10_4",
+            type: "multiple_choice",
+            question: "Waar vond Edit gelukkig hulp voor haar kapotte fiets?",
+            options: [
+              "Bij het politiebureau aan de overkant",
+              "Bij Fietsenmakerij De Zadelmeester, tweehonderd meter verderop",
+              "Bij een benzinepomp langs de snelweg",
+              "Bij een toevallige voorbijganger op straat"
+            ],
+            correctAnswer: "Bij Fietsenmakerij De Zadelmeester, tweehonderd meter verderop"
+          },
+          {
+            id: "reading_10_5",
+            type: "multiple_choice",
+            question: "Wie was de vriendelijke fietsenmaker die Edit hielp?",
+            options: [
+              "Meneer De Vries",
+              "Meneer Visser",
+              "Meneer Van Dam",
+              "Lucas Moreno"
+            ],
+            correctAnswer: "Meneer Visser"
+          },
+          {
+            id: "reading_10_6",
+            type: "multiple_choice",
+            question: "Wat deed meneer Visser om de fiets van Edit weer rijklaar te maken?",
+            options: [
+              "Hij gaf haar een compleet nieuwe fiets mee.",
+              "Hij plakte de binnenband, spande de ketting en controleerde de remmen.",
+              "Hij verving alleen het zadel.",
+              "Hij zei dat reparatie twee dagen zou duren."
+            ],
+            correctAnswer: "Hij plakte de binnenband, spande de ketting en controleerde de remmen."
+          },
+          {
+            id: "reading_10_7",
+            type: "multiple_choice",
+            question: "Hoe reageerde docent meneer De Vries toen Edit het lokaal binnenkwam?",
+            options: [
+              "Hij stuurde haar boos weg omdat ze te laat was.",
+              "Hij zei met een knipoog dat ze precies op tijd was en wenste haar succes.",
+              "Hij vroeg waar haar boeken waren gebleven.",
+              "Hij wist niet wie Edit was."
+            ],
+            correctAnswer: "Hij zei met een knipoog dat ze precies op tijd was en wenste haar succes."
+          }
+        ]
+      },
+      {
+        instruction: "Deel 2: Tijd, Afstand & Kosten (8-13: Saat, Mesafe ve Maliyet / Time, Distance & Cost)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_10_8",
+            type: "multiple_choice",
+            question: "Hoe laat stapte Edit 's ochtends thuis op haar fiets?",
+            options: [
+              "Om 08.00 uur",
+              "Om 08.15 uur (kwart over acht)",
+              "Om 08.45 uur",
+              "Om 09.00 uur"
+            ],
+            correctAnswer: "Om 08.15 uur (kwart over acht)"
+          },
+          {
+            id: "reading_10_9",
+            type: "multiple_choice",
+            question: "Hoeveel kilometer moest Edit nog afleggen toen haar band lek ging?",
+            options: [
+              "Eén kilometer",
+              "Zeker vier kilometer",
+              "Tien kilometer",
+              "Honderd meter"
+            ],
+            correctAnswer: "Zeker vier kilometer"
+          },
+          {
+            id: "reading_10_10",
+            type: "multiple_choice",
+            question: "Binnen hoeveel minuten repareerde meneer Visser de lekke band?",
+            options: [
+              "Binnen vijf minuten",
+              "Binnen een kwartier (15 minuten)",
+              "Binnen een half uur (30 minuten)",
+              "Binnen een heel uur"
+            ],
+            correctAnswer: "Binnen een kwartier (15 minuten)"
+          },
+          {
+            id: "reading_10_11",
+            type: "multiple_choice",
+            question: "Hoeveel kostte de snelle reparatie bij de fietsenmaker?",
+            options: [
+              "€ 5,00",
+              "€ 12,50",
+              "€ 25,00",
+              "Het was helemaal gratis"
+            ],
+            correctAnswer: "€ 12,50"
+          },
+          {
+            id: "reading_10_12",
+            type: "multiple_choice",
+            question: "Hoe laat kwam Edit uiteindelijk bij het schoolgebouw aan?",
+            options: [
+              "Om 08.30 uur",
+              "Om 08.50 uur (tien voor negen)",
+              "Om 09.05 uur (te laat)",
+              "Om 09.30 uur"
+            ],
+            correctAnswer: "Om 08.50 uur (tien voor negen)"
+          },
+          {
+            id: "reading_10_13",
+            type: "multiple_choice",
+            question: "Hoeveel minuten had Edit nog over voordat haar examen om 09.00 uur begon?",
+            options: [
+              "Twee minuten",
+              "Tien minuten",
+              "Vijfentwintig minuten",
+              "Nul minuten"
+            ],
+            correctAnswer: "Tien minuten"
+          }
+        ]
+      },
+      {
+        instruction: "Deel 3: Imperfectum & Grammatica (14-20: Basit Geçmiş Zaman ve Dil / Grammar & Past Tense)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_10_14",
+            type: "multiple_choice",
+            question: "Kijk naar de zin: \"Het WAS een frisse donderdagochtend.\" Van welk infinitief werkwoord is 'was' de verleden tijd?",
+            options: [
+              "worden",
+              "zijn",
+              "hebben",
+              "willen"
+            ],
+            correctAnswer: "zijn"
+          },
+          {
+            id: "reading_10_15",
+            type: "multiple_choice",
+            question: "Wat is de verleden tijd (imperfectum) van het modale werkwoord 'moeten' in het enkelvoud?",
+            options: [
+              "moette",
+              "moest",
+              "mocht",
+              "kon"
+            ],
+            correctAnswer: "moest"
+          },
+          {
+            id: "reading_10_16",
+            type: "multiple_choice",
+            question: "Wat is de verleden tijd (imperfectum) van het modale werkwoord 'kunnen' in het enkelvoud?",
+            options: [
+              "kande",
+              "kon",
+              "kende",
+              "wilde"
+            ],
+            correctAnswer: "kon"
+          },
+          {
+            id: "reading_10_17",
+            type: "multiple_choice",
+            question: "Wat betekent de Nederlandse uitdrukking: \"Zo plat als een dubbeltje\"? ",
+            options: [
+              "Heel erg glimmend",
+              "Helemaal leeg of plat (geen lucht meer in de band)",
+              "Gemaakt van zilver",
+              "Heel erg goedkoop"
+            ],
+            correctAnswer: "Helemaal leeg of plat (geen lucht meer in de band)"
+          },
+          {
+            id: "reading_10_18",
+            type: "multiple_choice",
+            question: "Wat is het meervoud van de verleden tijdsvorm 'fietste' in het Nederlands?",
+            options: [
+              "fietsteden",
+              "fietsten (met -ten)",
+              "gefietst",
+              "fietsden"
+            ],
+            correctAnswer: "fietsten (met -ten)"
+          },
+          {
+            id: "reading_10_19",
+            type: "multiple_choice",
+            question: "Waarom fietste Edit niet door toen het stoplicht op rood stond?",
+            options: [
+              "Omdat haar ketting er weer af viel",
+              "Omdat stoppen voor rood licht in Nederland verplicht en veilig is",
+              "Omdat ze de weg kwijt was",
+              "Omdat de fietsenmaker haar tegenhield"
+            ],
+            correctAnswer: "Omdat stoppen voor rood licht in Nederland verplicht en veilig is"
+          },
+          {
+            id: "reading_10_20",
+            type: "multiple_choice",
+            question: "Welke stelling over de tekst is ONJUIST (niet waar)?",
+            options: [
+              "Edit reed op een felrode stadsfiets.",
+              "De fietsenmaker weigerde Edit te helpen omdat het te vroeg was.",
+              "De reparatie kostte twaalf euro vijftig.",
+              "Edit kwam om tien voor negen aan op de taalschool."
+            ],
+            correctAnswer: "De fietsenmaker weigerde Edit te helpen omdat het te vroeg was."
+          }
+        ]
+      }
+    ]
+  },
+{
     id: "On-Class-10",
     chapter: 10,
     title: "Summary",

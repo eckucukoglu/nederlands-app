@@ -136,15 +136,110 @@ export const chapter17Sections = [
         isExtra: false,
         questions: [
           { id: "17.1_opd1_1", type: "multiple_choice", question: "Wat studeert Tina?", options: ["Informatietechnologie", "Filosofie", "Geschiedenis"], correctAnswer: "Filosofie" },
-            {
+
+
+{ id: "17.1_opd1_2", type: "multiple_choice", question: "Wat is het beroep van Sam?", options: ["Computerprogrammateur / IT", "Caissère in de bioscoop", "Makelaar"], correctAnswer: "Computerprogrammateur / IT" },
+          { id: "17.1_opd1_3", type: "multiple_choice", question: "Waarom heeft Sam slecht geslapen?", options: ["Omdat hij ziek is", "Omdat hij nadenkt over een probleem op zijn werk", "Omdat het te warm is"], correctAnswer: "Omdat hij nadenkt over een probleem op zijn werk" }
+        ]
+      }
+    ]
+  },
+  {
     id: "17.2",
     chapter: 17,
     title: "Vocabulary",
     theory: null,
     exerciseGroups: []
   },
-{ id: "17.1_opd1_2", type: "multiple_choice", question: "Wat is het beroep van Sam?", options: ["Computerprogrammateur / IT", "Caissère in de bioscoop", "Makelaar"], correctAnswer: "Computerprogrammateur / IT" },
-          { id: "17.1_opd1_3", type: "multiple_choice", question: "Waarom heeft Sam slecht geslapen?", options: ["Omdat hij ziek is", "Omdat hij nadenkt over een probleem op zijn werk", "Omdat het te warm is"], correctAnswer: "Omdat hij nadenkt over een probleem op zijn werk" }
+  {
+    id: "17.3",
+    chapter: 17,
+    title: "17.3 Dagelijkse bezigheden & Telefoongesprekken",
+    theory: (lang) => (
+      <>
+        {lang === 'tr' ? (
+          <>
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>📱 Een app sturen (WhatsApp & Mesajlaşma)</h3>
+              <p className="text-sm text-slate-300">Kitaptaki Sam ve Tina arasındaki gün içi mesajlaşma örneği:</p>
+              <div className="bg-slate-900/80 p-3 rounded-lg border border-slate-700 font-mono text-xs text-slate-200 mt-2 space-y-2">
+                <div className="bg-slate-800 p-2 rounded-lg text-slate-300"><strong>Sam:</strong> Hoi Tina, hoe was het tentamen?</div>
+                <div className="bg-emerald-950/60 p-2 rounded-lg text-emerald-200 ml-4"><strong>Tina:</strong> Prima, geen problemen, geen storingen! 😊</div>
+                <div className="bg-slate-800 p-2 rounded-lg text-slate-300"><strong>Sam:</strong> Ik heb zin in stampot boerenkool. Het is zo koud. ❄️</div>
+                <div className="bg-emerald-950/60 p-2 rounded-lg text-emerald-200 ml-4"><strong>Tina:</strong> Ja, lekker! Ik doe wel boodschappen.</div>
+              </div>
+            </div>
+
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #06b6d4', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#22d3ee' }}>📞 Opdracht 5: Telefoongesprekken voeren (Telefon Görüşmeleri)</h3>
+              <p className="text-sm text-slate-300">Farklı durumlarda telefonla konuşurken kullanılan standart kalıplar:</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-3 text-xs">
+                <div className="bg-slate-800/80 p-3 rounded-lg border border-cyan-500/30">
+                  <strong className="text-cyan-300 block mb-1">🏥 Je huisarts bellen (Randevu Değiştirme)</strong>
+                  <p className="text-slate-300"><em>"Goedemorgen, met Sam. Ik heb vanmiddag een afspraak, maar ik wil hem graag verzetten naar morgen."</em></p>
+                </div>
+                <div className="bg-slate-800/80 p-3 rounded-lg border border-cyan-500/30">
+                  <strong className="text-cyan-300 block mb-1">🎬 De bioscoop bellen (Unutulan Eşya)</strong>
+                  <p className="text-slate-300"><em>"Goedendag, ik was gisteren in zaal 3 en ik denk dat ik mijn sjaal heb laten liggen."</em></p>
+                </div>
+                <div className="bg-slate-800/80 p-3 rounded-lg border border-cyan-500/30">
+                  <strong className="text-cyan-300 block mb-1">🍕 Een pizzeria bellen (Sipariş Verme)</strong>
+                  <p className="text-slate-300"><em>"Goedenavond, mag ik twee pizza's bestellen om af te halen?"</em></p>
+                </div>
+                <div className="bg-slate-800/80 p-3 rounded-lg border border-cyan-500/30">
+                  <strong className="text-cyan-300 block mb-1">🎉 Een vriend bellen (Davet Etme)</strong>
+                  <p className="text-slate-300"><em>"Hoi Max, kom je vrijdag bij ons eten? Sam kookt!"</em></p>
+                </div>
+              </div>
+            </div>
+          </>
+        ) : (
+          <>
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>📱 Texting & Messaging (Een app sturen)</h3>
+              <p className="text-sm text-slate-300">The daily messaging exchange between Sam and Tina from the textbook:</p>
+              <div className="bg-slate-900/80 p-3 rounded-lg border border-slate-700 font-mono text-xs text-slate-200 mt-2 space-y-2">
+                <div className="bg-slate-800 p-2 rounded-lg text-slate-300"><strong>Sam:</strong> Hoi Tina, hoe was het tentamen?</div>
+                <div className="bg-emerald-950/60 p-2 rounded-lg text-emerald-200 ml-4"><strong>Tina:</strong> Prima, geen problemen, geen storingen! 😊</div>
+                <div className="bg-slate-800 p-2 rounded-lg text-slate-300"><strong>Sam:</strong> Ik heb zin in stampot boerenkool. Het is zo koud. ❄️</div>
+                <div className="bg-emerald-950/60 p-2 rounded-lg text-emerald-200 ml-4"><strong>Tina:</strong> Ja, lekker! Ik doe wel boodschappen.</div>
+              </div>
+            </div>
+
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #06b6d4', marginBottom: '20px' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#22d3ee' }}>📞 Conducting Phone Calls (Telefoongesprekken voeren)</h3>
+              <p className="text-sm text-slate-300">Standard telephone expressions in various daily situations:</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-3 text-xs">
+                <div className="bg-slate-800/80 p-3 rounded-lg border border-cyan-500/30">
+                  <strong className="text-cyan-300 block mb-1">🏥 Calling the Doctor (Reschedule)</strong>
+                  <p className="text-slate-300"><em>"Goedemorgen, met Sam. Ik heb vanmiddag een afspraak, maar ik wil hem graag verzetten naar morgen."</em></p>
+                </div>
+                <div className="bg-slate-800/80 p-3 rounded-lg border border-cyan-500/30">
+                  <strong className="text-cyan-300 block mb-1">🎬 Calling Cinema (Lost Property)</strong>
+                  <p className="text-slate-300"><em>"Goedendag, ik was gisteren in zaal 3 en ik denk dat ik mijn sjaal heb laten liggen."</em></p>
+                </div>
+                <div className="bg-slate-800/80 p-3 rounded-lg border border-cyan-500/30">
+                  <strong className="text-cyan-300 block mb-1">🍕 Calling Pizzeria (Ordering)</strong>
+                  <p className="text-slate-300"><em>"Goedenavond, mag ik twee pizza's bestellen om af te halen?"</em></p>
+                </div>
+                <div className="bg-slate-800/80 p-3 rounded-lg border border-cyan-500/30">
+                  <strong className="text-cyan-300 block mb-1">🎉 Calling a Friend (Invitation)</strong>
+                  <p className="text-slate-300"><em>"Hoi Max, kom je vrijdag bij ons eten? Sam kookt!"</em></p>
+                </div>
+              </div>
+            </div>
+          </>
+        )}
+      </>
+    ),
+    exerciseGroups: [
+      {
+        instruction: "Opdracht 5: Telefoongesprekken - Kies de juiste reactie (Choose the right telephone phrase)",
+        isExtra: false,
+        questions: [
+          { id: "17.3_opd5_1", type: "multiple_choice", question: "Je belt de huisarts omdat je niet kunt komen. Wat zeg je?", options: ["Ik wil graag een afspraak verzetten.", "Ik wil een pizza bestellen.", "Ik heb iets laten liggen."], correctAnswer: "Ik wil graag een afspraak verzetten." },
+          { id: "17.3_opd5_2", type: "multiple_choice", question: "Je bent je portemonnee vergeten in de bioscoop. Wat zeg je?", options: ["Ik heb gisteren iets laten liggen.", "Ik wil mijn afspraak annuleren.", "Ik wil een tentamen doen."], correctAnswer: "Ik heb gisteren iets laten liggen." },
+          { id: "17.3_opd5_3", type: "fill_in", question: "Vertaal: 'Bir randevuyu ertelemek/başka tarihe almak': Een afspraak ________.", correctAnswer: "verzetten" }
         ]
       }
     ]
@@ -316,7 +411,318 @@ export const chapter17Sections = [
       }
     ]
   },
-  {
+    {
+    id: "Reading-17",
+    chapter: 17,
+    title: {
+      tr: "Okuma & Anlama",
+      en: "Reading Comprehension"
+    },
+    readingPassage: {
+      title: "De dagelijkse ochtend- en avondroutine van Tina en Sam",
+      level: "Niveau A2 • 19 Zinnen",
+      intro: {
+        tr: "Aşağıdaki okuma parçasını dikkatlice okuyunuz. Bu parça 17. Bölümde öğrendiğiniz günlük rutin & ev işleri terimleri (opstaan, ontbijten, stofzuigen, de vaatwasser), şimdiki zaman sürüp giden eylem yapısı (continuatief: zijn aan het + infinitief), yer belirteçleri (er / daar) ve Hollanda ev yaşamı kullanılarak hazırlanmıştır. Metni dinleyebilir, kelimelerin sözlük anlamına bakabilir ve alttaki 20 soruluk testi çözebilirsiniz.",
+        en: "Read the following reading passage carefully. It incorporates daily routine & household chore vocabulary (waking up, breakfast, vacuuming, dishwasher), present continuous aspect (zijn aan het + infinitive), locative pronouns (er / daar), and Dutch domestic lifestyle learned in Chapter 17. Listen to the text, click words to check meanings, and answer the 20 comprehension questions below."
+      },
+      paragraphs: [
+        "Tina en Sam zijn een vrolijk werkend stel dat samenwoont in een sfeervol gerenoveerd rijtjeshuis met een kleine tuin in Utrecht. Op doordeweekse dagen gaat hun wekker stipt om kwart voor zeven 's ochtends af. Tina stapt als eerste uit bed, opent de slaapkamergordijnen en neemt een verkwikkende warme douche. Ondertussen loopt Sam op blote voeten naar de keuken beneden om het ontbijt klaar te maken: hij zet verse koffie, perst sinaasappelsap en snijdt volkorenbrood met belegen Goudse kaas en aardbeienjam.",
+        "Om kwart over zeven zitten ze gezellig samen aan de ronde keukentafel. Sam leest het ochtendnieuws op zijn tablet, terwijl Tina rustig geniet van haar ontbijt. Ze verdelen de huishoudelijke taken altijd eerlijk en efficiënt. Tina zegt: \"Sam, terwijl jij de vaatwasser aan het inruimen bent, zal ik boven snel de bedden opmaken en de vuilniszak bij de straat zetten.\" Om precies acht uur pakken ze hun tassen en stappen beiden op hun fiets naar hun werk.",
+        "Tina werkt met veel passie als grafisch ontwerper bij een modern mediabureau in het hart van de binnenstad. Er werken ruim dertig creatieve collega's en ze heeft het er ontzettend naar haar zin. Sam werkt als fysiotherapeut in een druk wijkgezondheidscentrum; hij fietst daar in twintig minuten naartoe. Rond zes uur 's avonds komen ze bijna tegelijkertijd weer thuis. Bij de buurtsupermarkt op de hoek hebben ze verse groenten en kipfilet gehaald om samen een gezonde maaltijd te koken.",
+        "Om zeven uur staat Sam ontspannen in de keuken: hij is een geurige groentesoep aan het koken en bakt aardappeltjes in de pan. Tina is intussen de woonkamer aan het stofzuigen en geeft de kamerplanten water. Na het eten ruimen ze samen de keuken op. Om half negen ploffen ze voldaan op de comfortabele hoekbank, kijken naar een interessante natuurdocumentaire en drinken verse muntthee. Om half elf gaan de lichten uit en vallen ze na een productieve dag heerlijk in slaap."
+      ],
+      hints: [
+        {
+          title: { tr: "Günlük Rutin & Ev İşleri", en: "Daily Routine & Chores" },
+          icon: "fa-house-user",
+          items: [
+            { term: "de wekker gaat af", tr: "çalar saat çalıyor", en: "the alarm goes off" },
+            { term: "de vaatwasser inruimen", tr: "bulaşık makinesini doldurmak", en: "to pack the dishwasher" },
+            { term: "stofzuigen", tr: "elektrik süpürgesiyle süpürmek", en: "to vacuum" },
+            { term: "het rijtjeshuis", tr: "bitişik nizam sıra ev", en: "terraced house" }
+          ]
+        },
+        {
+          title: { tr: "Sürüp Giden Eylem: Zijn aan het + inf.", en: "Present Continuous: Zijn aan het" },
+          icon: "fa-spinner",
+          items: [
+            { term: "is aan het koken", tr: "yemek pişiriyor / pişirmekte", en: "is cooking" },
+            { term: "bent aan het inruimen", tr: "yerleştirmektesin / dolduruyorsun", en: "are packing" },
+            { term: "is aan het stofzuigen", tr: "süpürge yapmaktadır", en: "is vacuuming" }
+          ]
+        },
+        {
+          title: { tr: "Konum Zamirleri: Er / Daar", en: "Locative Pronouns: Er / Daar" },
+          icon: "fa-location-dot",
+          items: [
+            { term: "er werken 30 mensen", tr: "orada 30 kişi çalışıyor", en: "30 people work there" },
+            { term: "fietst daarnaartoe", tr: "oraya bisikletle gidiyor", en: "cycles over there" }
+          ]
+        }
+      ]
+    },
+    exerciseGroups: [
+      {
+        instruction: "Deel 1: Direct Begrip & Dagindeling (1-7: Doğrudan Bilgi ve Günlük Düzen / Direct Facts)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_17_1",
+            type: "multiple_choice",
+            question: "In wat voor soort woning wonen Tina en Sam samen in Utrecht?",
+            options: [
+              "In een flatje op de tiende verdieping",
+              "In een sfeervol gerenoveerd rijtjeshuis met een kleine tuin",
+              "Op een woonboot in de gracht",
+              "In een studentenkamer"
+            ],
+            correctAnswer: "In een sfeervol gerenoveerd rijtjeshuis met een kleine tuin"
+          },
+          {
+            id: "reading_17_2",
+            type: "multiple_choice",
+            question: "Hoe laat gaat de wekker van Tina en Sam af op doordeweekse ochtenden?",
+            options: [
+              "Om 06.00 uur",
+              "Om 06.45 uur (kwart voor zeven)",
+              "Om 07.30 uur",
+              "Om 08.00 uur"
+            ],
+            correctAnswer: "Om 06.45 uur (kwart voor zeven)"
+          },
+          {
+            id: "reading_17_3",
+            type: "multiple_choice",
+            question: "Wat maakt Sam klaar voor het ontbijt terwijl Tina doucht?",
+            options: [
+              "Pannenkoeken met stroop",
+              "Verse koffie, geperst sinaasappelsap en volkorenbrood met kaas en jam",
+              "Havermout met water",
+              "Gebakken eieren met spek"
+            ],
+            correctAnswer: "Verse koffie, geperst sinaasappelsap en volkorenbrood met kaas en jam"
+          },
+          {
+            id: "reading_17_4",
+            type: "multiple_choice",
+            question: "Welke huishoudelijke taak doet Sam direct na het ontbijt?",
+            options: [
+              "De was strijken",
+              "De vaatwasser inruimen",
+              "De ramen lappen",
+              "De tuin maaien"
+            ],
+            correctAnswer: "De vaatwasser inruimen"
+          },
+          {
+            id: "reading_17_5",
+            type: "multiple_choice",
+            question: "Wat voor werk doet Tina overdag?",
+            options: [
+              "Ze is advocate op een rechtbank.",
+              "Ze werkt als grafisch ontwerper bij een modern mediabureau.",
+              "Ze is docente Nederlands.",
+              "Ze werkt in een bakkerij."
+            ],
+            correctAnswer: "Ze werkt als grafisch ontwerper bij een modern mediabureau."
+          },
+          {
+            id: "reading_17_6",
+            type: "multiple_choice",
+            question: "Wat is het beroep van Sam?",
+            options: [
+              "Architect",
+              "Fysiotherapeut in een gezondheidscentrum",
+              "Buschauffeur",
+              "Politieagent"
+            ],
+            correctAnswer: "Fysiotherapeut in een gezondheidscentrum"
+          },
+          {
+            id: "reading_17_7",
+            type: "multiple_choice",
+            question: "Hoe reizen zowel Tina als Sam elke ochtend naar hun werkplek?",
+            options: [
+              "Met de auto",
+              "Met de fiets",
+              "Met de trein",
+              "Met de stadsbus"
+            ],
+            correctAnswer: "Met de fiets"
+          }
+        ]
+      },
+      {
+        instruction: "Deel 2: Avondroutine, Taken & Tijden (8-13: Akşam Rutini, Görevler ve Saatler / Evening)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_17_8",
+            type: "multiple_choice",
+            question: "Rond welk tijdstip komen Tina en Sam 's avonds weer thuis van hun werk?",
+            options: [
+              "Rond 16.00 uur",
+              "Rond 18.00 uur (zes uur)",
+              "Pas om 21.00 uur",
+              "Om middernacht"
+            ],
+            correctAnswer: "Rond 18.00 uur (zes uur)"
+          },
+          {
+            id: "reading_17_9",
+            type: "multiple_choice",
+            question: "Wat kookt Sam voor het avondeten in de keuken?",
+            options: [
+              "Een diepvriespizza",
+              "Een geurige groentesoep en gebakken aardappeltjes met groenten en kip",
+              "Spaghetti bolognese",
+              "Alleen een salade"
+            ],
+            correctAnswer: "Een geurige groentesoep en gebakken aardappeltjes met groenten en kip"
+          },
+          {
+            id: "reading_17_10",
+            type: "multiple_choice",
+            question: "Welke huishoudelijke taak verricht Tina terwijl Sam staat te koken?",
+            options: [
+              "Ze slaapt op de bank.",
+              "Ze stofzuigt de woonkamer en geeft de planten water.",
+              "Ze wast de auto.",
+              "Ze fietst naar de bibliotheek."
+            ],
+            correctAnswer: "Ze stofzuigt de woonkamer en geeft de planten water."
+          },
+          {
+            id: "reading_17_11",
+            type: "multiple_choice",
+            question: "Wat doen Tina en Sam om half negen om te ontspannen?",
+            options: [
+              "Ze gaan naar de sportschool.",
+              "Ze ploffen op de hoekbank, kijken naar een natuurdocumentaire en drinken muntthee.",
+              "Ze spelen computerspelletjes.",
+              "Ze gaan naar de kroeg."
+            ],
+            correctAnswer: "Ze ploffen op de hoekbank, kijken naar een natuurdocumentaire en drinken muntthee."
+          },
+          {
+            id: "reading_17_12",
+            type: "multiple_choice",
+            question: "Hoe laat gaan de lichten uit en gaan Tina en Sam slapen?",
+            options: [
+              "Om 21.30 uur",
+              "Om 22.30 uur (half elf)",
+              "Om 00.30 uur",
+              "Pas om 02.00 uur"
+            ],
+            correctAnswer: "Om 22.30 uur (half elf)"
+          },
+          {
+            id: "reading_17_13",
+            type: "multiple_choice",
+            question: "Hoeveel minuten fietst Sam van zijn huis naar het wijkgezondheidscentrum?",
+            options: [
+              "Vijf minuten",
+              "Twintig minuten",
+              "Een heel uur",
+              "Vijfenveertig minuten"
+            ],
+            correctAnswer: "Twintig minuten"
+          }
+        ]
+      },
+      {
+        instruction: "Deel 3: Zijn aan het + inf & Er / Daar (14-20: Şimdiki Zaman ve Yer Zamirleri / Grammar)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_17_14",
+            type: "multiple_choice",
+            question: "Kijk naar de zin: \"Sam IS een soep AAN HET KOKEN.\" Welke grammaticale betekenis heeft deze constructie?",
+            options: [
+              "Een handeling die nu op dit moment aan de gang is (duratief / continuatief aspect).",
+              "Een handeling die gisteren al helemaal voltooid is.",
+              "Een bevel om snel te gaan koken.",
+              "Een toekomstige wens."
+            ],
+            correctAnswer: "Een handeling die nu op dit moment aan de gang is (duratief / continuatief aspect)."
+          },
+          {
+            id: "reading_17_15",
+            type: "multiple_choice",
+            question: "Hoe vorm je in het Nederlands de constructie 'aan het + infinitief' met het onderwerp 'wij' en het werkwoord 'werken'?",
+            options: [
+              "Wij zijn aan het werken.",
+              "Wij hebben aan het werken.",
+              "Wij werken aan het zijn.",
+              "Wij zullen aan het werken."
+            ],
+            correctAnswer: "Wij zijn aan het werken."
+          },
+          {
+            id: "reading_17_16",
+            type: "multiple_choice",
+            question: "In de zin: \"Tina werkt op een mediabureau. ER werken dertig creatieve collega's.\" Waarnaar verwijst het woord 'er'?",
+            options: [
+              "Naar het mediabureau (als plaatsvervangend voornaamwoord van locatie).",
+              "Naar haar echtgenoot Sam.",
+              "Naar de computer van Tina.",
+              "Naar de stad Amsterdam."
+            ],
+            correctAnswer: "Naar het mediabureau (als plaatsvervangend voornaamwoord van locatie)."
+          },
+          {
+            id: "reading_17_17",
+            type: "multiple_choice",
+            question: "Kijk naar de zin: \"Sam werkt in een gezondheidscentrum; hij fietst DAAR in twintig minuten naartoe.\" Waarom gebruiken we 'daar'?",
+            options: [
+              "Om te verwijzen naar een eerder genoemde bestemming / locatie met nadruk.",
+              "Omdat Sam geen auto heeft.",
+              "Omdat het over de tijd gaat.",
+              "Het is een ontkennend woord."
+            ],
+            correctAnswer: "Om te verwijzen naar een eerder genoemde bestemming / locatie met nadruk."
+          },
+          {
+            id: "reading_17_18",
+            type: "multiple_choice",
+            question: "Wat betekent het Nederlandse woord 'rijtjeshuis'?",
+            options: [
+              "Een vrijstaand landhuis op een heuvel",
+              "Een eengezinswoning die in een aaneengesloten rij van identieke huizen staat (sıra ev)",
+              "Een houten hut in het bos",
+              "Een flat op de zestiende etage"
+            ],
+            correctAnswer: "Een eengezinswoning die in een aaneengesloten rij van identieke huizen staat (sıra ev)"
+          },
+          {
+            id: "reading_17_19",
+            type: "multiple_choice",
+            question: "Welk werkwoord betekent 'het schoonmaken van de vloer met een elektrisch zuigapparaat'?",
+            options: [
+              "opmaken",
+              "afwassen",
+              "stofzuigen",
+              "dweilen"
+            ],
+            correctAnswer: "stofzuigen"
+          },
+          {
+            id: "reading_17_20",
+            type: "multiple_choice",
+            question: "Welke stelling over Tina en Sam is ONJUIST (niet waar)?",
+            options: [
+              "Hun wekker gaat om 06.45 uur af op doordeweekse dagen.",
+              "Tina weigert alle huishoudelijke taken en laat Sam alles alleen doen.",
+              "Sam is fysiotherapeut en Tina is grafisch ontwerper.",
+              "Ze drinken 's avonds muntthee op de bank en gaan om 22.30 uur slapen."
+            ],
+            correctAnswer: "Tina weigert alle huishoudelijke taken en laat Sam alles alleen doen."
+          }
+        ]
+      }
+    ]
+  },
+{
     id: "On-Class-17",
     chapter: 17,
     title: "Summary",

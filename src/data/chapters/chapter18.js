@@ -116,64 +116,154 @@ export const chapter18Sections = [
         isExtra: false,
         questions: [
           { id: "18.1_opd1_1", type: "multiple_choice", question: "Wat gebeurde er als EERSTE in het verhaal?", options: ["Sam gaat naar de politie.", "Sam zit op een terras met een collega.", "Sam koopt een nieuwe portemonnee."], correctAnswer: "Sam zit op een terras met een collega." },
-            {
-    id: "18.2",
-    chapter: 18,
-    title: "Vocabulary",
-    theory: null,
-    exerciseGroups: []
-  },
+
+
 { id: "18.1_opd1_2", type: "multiple_choice", question: "Wat deed Sam nadat hij merkte dat zijn portemonnee weg was?", options: ["Hij blokkeerde meteen zijn pinpas.", "Hij ging direct naar de politie om aangifte te doen."], correctAnswer: "Hij ging direct naar de politie om aangifte te doen." }
         ]
       }
     ]
   },
   {
+    id: "18.2",
+    chapter: 18,
+    title: "Vocabulary",
+    theory: null,
+    exerciseGroups: []
+  },
+  {
     id: "18.3",
     chapter: 18,
-    title: "18.3 Conjuncties (Yan Cümlecikler ve Bağlaçlar / Subordinate clauses and Conjunctions)",
+    title: "18.3 Conjuncties (Yan Cümleler ve Bağlaçlar / Subordinate Clauses)",
     theory: (lang) => (
       <>
         {lang === 'tr' ? (
-          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #ef4444', marginBottom: '20px' }}>
-            <h3 style={{ margin: '0 0 10px 0', color: '#f87171' }}>🔗 Bijzinnen & Conjuncties (ÇOK ÖNEMLİ GRAMER KURALI!)</h3>
-            <p className="text-sm text-slate-300">Daha önceki ünitelerde (Hoofdstuk 16) öğrendiğimiz bağlaçlar (*en, of, maar, want, dus*) ana cümleleri bağlıyordu ve kelime sırasını değiştirmiyordu.</p>
-            <p className="text-sm text-slate-300 mt-2 font-bold text-rose-300">Ancak bu ünitede öğrendiğimiz bağlaçlar (ondergeschikte voegwoorden) bir YAN CÜMLECİK (bijzin) başlatır!</p>
+          <div className="space-y-4 mb-6">
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #ef4444' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#f87171' }}>🔗 Bijzinnen & Conjuncties (Hollandaca Yan Cümleler)</h3>
+              <p className="text-sm text-slate-300 leading-relaxed">
+                Hoofdstuk 16'da öğrendiğimiz <em>en, of, maar, want, dus</em> bağlaçları cümle sırasını bozmazken; bu ünitede öğrendiğimiz bağlaçlar bir <strong>YAN CÜMLE (Bijzin)</strong> başlatır.
+              </p>
 
-            <div className="bg-rose-900/40 p-4 rounded-xl mt-4 border border-rose-500/50">
-              <h4 className="font-bold text-rose-300 mb-2">🚨 ALTIN KURAL: Fiil En Sona Gider! (Werkwoord achteraan)</h4>
-              <p className="text-sm text-rose-100">Bu bağlaçlarla kurulan yan cümlelerde <strong>çekimli fiil (verb) cümlenin EN SONUNA atılır!</strong></p>
-              <ul className="text-sm text-white mt-3 space-y-3 list-disc pl-5">
-                <li><strong>omdat (çünkü):</strong> Ik herinner me dat zo goed <span className="text-amber-300 font-bold">omdat</span> ik net een nieuwe portemonnee <span className="text-amber-300 font-bold">heb</span>.</li>
-                <li><strong>zodat (öyle ki / -sın diye):</strong> De rits was kapot <span className="text-amber-300 font-bold">zodat</span> het geld steeds uit mijn portemonnee <span className="text-amber-300 font-bold">viel</span>.</li>
-                <li><strong>hoewel (rağmen):</strong> Ik heb dat onmiddellijk gedaan <span className="text-amber-300 font-bold">hoewel</span> dat heel onhandig <span className="text-amber-300 font-bold">is</span>.</li>
-                <li><strong>terwijl (iken):</strong> De portemonnee is gestolen <span className="text-amber-300 font-bold">terwijl</span> mijn collega naar de wc <span className="text-amber-300 font-bold">was</span>.</li>
-                <li><strong>nadat (sonra):</strong> Sam gaat naar de politie <span className="text-amber-300 font-bold">nadat</span> zijn portemonnee gestolen <span className="text-amber-300 font-bold">is</span>.</li>
-                <li><strong>voordat (önce):</strong> Je moet een kaartje kopen <span className="text-amber-300 font-bold">voordat</span> je naar binnen <span className="text-amber-300 font-bold">mag</span>.</li>
-                <li><strong>toen (geçmişte -andığında/-ken):</strong> <span className="text-amber-300 font-bold">Toen</span> we op het terras gingen <span className="text-amber-300 font-bold">zitten</span>, heb ik hem op tafel gelegd. <em>(Not: Cümle 'Toen' ile başlarsa ana cümlede inversion olur!)</em></li>
-                <li><strong>als (eğer / olduğunda):</strong> <span className="text-amber-300 font-bold">Als</span> ik eerlijk <span className="text-amber-300 font-bold">ben</span>, denk ik dat ook.</li>
-              </ul>
+              {/* Golden Rule */}
+              <div className="bg-rose-900/40 p-4 rounded-xl mt-3 border border-rose-500/50">
+                <h4 className="font-bold text-rose-300 mb-2">🚨 ALTIN KURAL: Fiiller Cümlenin En Sonuna Gider!</h4>
+                <p className="text-sm text-rose-100">
+                  Yan cümle başlatan bağlaçtan sonra özne ve tümleçler gelir; <strong>tüm fiiller ise cümlenin en sonuna atılır</strong>:
+                </p>
+                <div className="bg-slate-950/60 p-2.5 rounded-lg border border-slate-700 font-mono text-xs sm:text-sm text-center text-slate-200 mt-2">
+                  <span className="text-rose-400 font-bold">conjunctie</span> + subject + rest + <strong className="text-cyan-400">persoonsvorm (+ infinitief / participium)</strong>
+                </div>
+              </div>
+
+              {/* Toen vs Als */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
+                <div className="bg-amber-950/40 border border-amber-700/50 p-3.5 rounded-xl">
+                  <span className="text-xs font-bold text-amber-400 block mb-1">⏳ Toen (Geçmişte Tek Bir An / Zaman)</span>
+                  <p className="text-xs text-slate-300 mb-2 leading-relaxed">
+                    Sadece <strong>geçmiş zamanda</strong> yaşanmış, tek seferlik bir olay veya dönem anlatılırken kullanılır (İngilizcedeki 'when in past').
+                  </p>
+                  <p className="text-xs font-mono text-amber-200">
+                    ➔ <strong>Toen</strong> we op het terras gingen zitten, heb ik hem op tafel gelegd.<br/>
+                    ➔ <strong>Toen</strong> ik 20 werd, heb ik een groot feest gegeven.
+                  </p>
+                </div>
+                <div className="bg-emerald-950/40 border border-emerald-700/50 p-3.5 rounded-xl">
+                  <span className="text-xs font-bold text-emerald-400 block mb-1">🌱 Als (Eğer / Şimdiki-Gelecek Zaman / Her Zaman)</span>
+                  <p className="text-xs text-slate-300 mb-2 leading-relaxed">
+                    <strong>Koşul</strong> (eğer/if), <strong>şimdiki veya gelecek zaman</strong> (geldiğinde), ya da tekrarlanan alışkanlıklarda (her olduğunda) kullanılır.
+                  </p>
+                  <p className="text-xs font-mono text-emerald-200">
+                    ➔ <strong>Als</strong> je morgen komt, gaan we fietsen.<br/>
+                    ➔ <strong>Als</strong> ik eerlijk ben, denk ik dat ook.
+                  </p>
+                </div>
+              </div>
+
+              {/* Inversion rule */}
+              <div className="bg-purple-950/40 border border-purple-700/50 p-3.5 rounded-xl mt-3">
+                <span className="text-xs font-bold text-purple-300 block mb-1">🔄 Yan Cümle Başa Gelirse: İNVERSİON!</span>
+                <p className="text-xs text-slate-300 leading-relaxed">
+                  Cümleye yan cümle ile başlarsanız, virgülden sonraki ana cümlede <strong>özne ile fiil yer değiştirir (devrik cümle)</strong>. İki fiil virgülde karşılaşır:
+                </p>
+                <p className="text-xs font-mono text-purple-200 mt-1">
+                  Nadat mijn fiets gestolen <strong className="text-purple-400">was</strong>, <strong className="text-purple-400">ben</strong> ik naar de politie gegaan.
+                </p>
+              </div>
+
+              {/* End Verbs Cluster */}
+              <div className="bg-slate-900/60 p-3.5 rounded-xl border border-slate-700 mt-3">
+                <span className="text-xs font-bold text-cyan-300 block mb-2">📦 Sonda Birden Fazla Fiil Varsa (Werkwoordclusters):</span>
+                <ul className="text-xs text-slate-300 space-y-1 list-disc pl-5">
+                  <li><strong>Modal + Mastar:</strong> ...als ik je <strong className="text-white">kan helpen</strong>.</li>
+                  <li><strong>Gaan + Mastar:</strong> ...omdat we even een kopje koffie <strong className="text-white">moeten wachten</strong>.</li>
+                  <li><strong>Participium + Zijn/Hebben:</strong> Her iki sıra da DOĞRUDUR: ...zodra de portemonnee <strong className="text-emerald-400">gevonden is</strong> / <strong className="text-emerald-400">is gevonden</strong>.</li>
+                </ul>
+              </div>
             </div>
           </div>
         ) : (
-          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #ef4444', marginBottom: '20px' }}>
-            <h3 style={{ margin: '0 0 10px 0', color: '#f87171' }}>🔗 Bijzinnen & Conjuncties (VERY IMPORTANT GRAMMAR RULE!)</h3>
-            <p className="text-sm text-slate-300">The conjunctions we learned in earlier units (Chapter 16) (*en, of, maar, want, dus*) connected main clauses and did not change the word order.</p>
-            <p className="text-sm text-slate-300 mt-2 font-bold text-rose-300">However, the conjunctions we learn in this unit (subordinating conjunctions / ondergeschikte voegwoorden) start a SUBORDINATE CLAUSE (bijzin)!</p>
+          <div className="space-y-4 mb-6">
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #ef4444' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#f87171' }}>🔗 Subordinating Conjunctions (Bijzinnen & Conjuncties)</h3>
+              <p className="text-sm text-slate-300 leading-relaxed">
+                Unlike <em>en, of, maar, want, dus</em> which connect main clauses, the conjunctions introduced in this chapter initiate a <strong>SUBORDINATE CLAUSE (Bijzin)</strong>.
+              </p>
 
-            <div className="bg-rose-900/40 p-4 rounded-xl mt-4 border border-rose-500/50">
-              <h4 className="font-bold text-rose-300 mb-2">🚨 GOLDEN RULE: The Verb Goes to the End! (Werkwoord achteraan)</h4>
-              <p className="text-sm text-rose-100">In subordinate clauses built with these conjunctions, <strong>the conjugated verb goes to the VERY END of the sentence!</strong></p>
-              <ul className="text-sm text-white mt-3 space-y-3 list-disc pl-5">
-                <li><strong>omdat (because):</strong> Ik herinner me dat zo goed <span className="text-amber-300 font-bold">omdat</span> ik net een nieuwe portemonnee <span className="text-amber-300 font-bold">heb</span>.</li>
-                <li><strong>zodat (so that):</strong> De rits was kapot <span className="text-amber-300 font-bold">zodat</span> het geld steeds uit mijn portemonnee <span className="text-amber-300 font-bold">viel</span>.</li>
-                <li><strong>hoewel (although):</strong> Ik heb dat onmiddellijk gedaan <span className="text-amber-300 font-bold">hoewel</span> dat heel onhandig <span className="text-amber-300 font-bold">is</span>.</li>
-                <li><strong>terwijl (while):</strong> De portemonnee is gestolen <span className="text-amber-300 font-bold">terwijl</span> mijn collega naar de wc <span className="text-amber-300 font-bold">was</span>.</li>
-                <li><strong>nadat (after):</strong> Sam gaat naar de politie <span className="text-amber-300 font-bold">nadat</span> zijn portemonnee gestolen <span className="text-amber-300 font-bold">is</span>.</li>
-                <li><strong>voordat (before):</strong> Je moet een kaartje kopen <span className="text-amber-300 font-bold">voordat</span> je naar binnen <span className="text-amber-300 font-bold">mag</span>.</li>
-                <li><strong>toen (when - in the past):</strong> <span className="text-amber-300 font-bold">Toen</span> we op het terras gingen <span className="text-amber-300 font-bold">zitten</span>, heb ik hem op tafel gelegd. <em>(Note: If the sentence starts with 'Toen', the main clause takes inversion!)</em></li>
-                <li><strong>als (if / when):</strong> <span className="text-amber-300 font-bold">Als</span> ik eerlijk <span className="text-amber-300 font-bold">ben</span>, denk ik dat ook.</li>
-              </ul>
+              {/* Golden Rule */}
+              <div className="bg-rose-900/40 p-4 rounded-xl mt-3 border border-rose-500/50">
+                <h4 className="font-bold text-rose-300 mb-2">🚨 GOLDEN RULE: All Verbs Kick to the End!</h4>
+                <p className="text-sm text-rose-100">
+                  After a subordinating conjunction, the subject and complements appear first, while <strong>all verbs are pushed to the very end of the clause</strong>:
+                </p>
+                <div className="bg-slate-950/60 p-2.5 rounded-lg border border-slate-700 font-mono text-xs sm:text-sm text-center text-slate-200 mt-2">
+                  <span className="text-rose-400 font-bold">conjunction</span> + subject + rest + <strong className="text-cyan-400">verb (+ infinitive / participle)</strong>
+                </div>
+              </div>
+
+              {/* Toen vs Als */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
+                <div className="bg-amber-950/40 border border-amber-700/50 p-3.5 rounded-xl">
+                  <span className="text-xs font-bold text-amber-400 block mb-1">⏳ Toen (Single Past Event / Time)</span>
+                  <p className="text-xs text-slate-300 mb-2 leading-relaxed">
+                    Used exclusively for a specific single event or situation in the <strong>past</strong> (English 'when').
+                  </p>
+                  <p className="text-xs font-mono text-amber-200">
+                    ➔ <strong>Toen</strong> we op het terras gingen zitten, heb ik hem op tafel gelegd.<br/>
+                    ➔ <strong>Toen</strong> ik 20 werd, heb ik een groot feest gegeven.
+                  </p>
+                </div>
+                <div className="bg-emerald-950/40 border border-emerald-700/50 p-3.5 rounded-xl">
+                  <span className="text-xs font-bold text-emerald-400 block mb-1">🌱 Als (If / Present & Future / Whenever)</span>
+                  <p className="text-xs text-slate-300 mb-2 leading-relaxed">
+                    Used for <strong>conditions</strong> (if), <strong>present or future time</strong> (when you come tomorrow), and recurring habits (whenever).
+                  </p>
+                  <p className="text-xs font-mono text-emerald-200">
+                    ➔ <strong>Als</strong> je morgen komt, gaan we fietsen.<br/>
+                    ➔ <strong>Als</strong> ik eerlijk ben, denk ik dat ook.
+                  </p>
+                </div>
+              </div>
+
+              {/* Inversion rule */}
+              <div className="bg-purple-950/40 border border-purple-700/50 p-3.5 rounded-xl mt-3">
+                <span className="text-xs font-bold text-purple-300 block mb-1">🔄 Subclause First = INVERSION in Main Clause!</span>
+                <p className="text-xs text-slate-300 leading-relaxed">
+                  If the sentence begins with the subclause, the following main clause requires subject-verb inversion. The two verbs meet across the comma:
+                </p>
+                <p className="text-xs font-mono text-purple-200 mt-1">
+                  Nadat mijn fiets gestolen <strong className="text-purple-400">was</strong>, <strong className="text-purple-400">ben</strong> ik naar de politie gegaan.
+                </p>
+              </div>
+
+              {/* End Verbs Cluster */}
+              <div className="bg-slate-900/60 p-3.5 rounded-xl border border-slate-700 mt-3">
+                <span className="text-xs font-bold text-cyan-300 block mb-2">📦 Verb Clusters at the End:</span>
+                <ul className="text-xs text-slate-300 space-y-1 list-disc pl-5">
+                  <li><strong>Modal + Infinitive:</strong> ...als ik je <strong className="text-white">kan helpen</strong>.</li>
+                  <li><strong>Gaan + Infinitive:</strong> ...omdat we even <strong className="text-white">gaan koffiedrinken</strong>.</li>
+                  <li><strong>Participle + Auxiliary:</strong> Both word orders are CORRECT: ...zodra de portemonnee <strong className="text-emerald-400">gevonden is</strong> / <strong className="text-emerald-400">is gevonden</strong>.</li>
+                </ul>
+              </div>
             </div>
           </div>
         )}
@@ -181,22 +271,35 @@ export const chapter18Sections = [
     ),
     exerciseGroups: [
       {
-        instruction: "Opdracht 3: Maak van beide zinnen één zin. Gebruik de gegeven conjunctie (Fiili sona atmayı unutmayın! / Do not forget to put the verb at the end!).",
+        instruction: "Opdracht 3: Maak van beide zinnen één zin. Gebruik de gegeven conjunctie (Fiili sona atmayı unutmayın!).",
         isExtra: false,
         questions: [
           { id: "18.3_opd3_1", type: "fill_in", question: "1. hoewel - We vonden nog een plaats op het terras. Het was erg druk. -> We vonden nog een plaats op het terras ________ het erg druk ________.", correctAnswer: "hoewel, was" },
           { id: "18.3_opd3_2", type: "fill_in", question: "2. omdat - Je kunt internet nu niet gebruiken. Er is een storing. -> Je kunt internet nu niet gebruiken ________ er een storing ________.", correctAnswer: "omdat, is" },
-          { id: "18.3_opd3_3", type: "fill_in", question: "3. zodat - We wonen met vijf studenten in een huis. We wonen niet zo duur. -> We wonen met vijf studenten in een huis ________ we niet zo duur ________.", correctAnswer: "zodat, wonen" },
-          { id: "18.3_opd3_4", type: "fill_in", question: "4. zodra - Ik koop een nieuwe computer. Deze computer gaat kapot. -> Ik koop een nieuwe computer ________ deze computer ________.", correctAnswer: "zodra, opgaat / kapotgaat" }
+          { id: "18.3_opd3_3", type: "fill_in", question: "3. zodat - We wonen met vijf studenten in een huis. We wonen niet zo duur. -> We wonen met beş studenten in een huis ________ we niet zo duur ________.", correctAnswer: "zodat, wonen" },
+          { id: "18.3_opd3_4", type: "fill_in", question: "4. zodra - Ik koop een nieuwe computer. Deze computer gaat kapot. -> Ik koop een nieuwe computer ________ deze computer ________.", correctAnswer: "zodra, kapotgaat / opgaat" },
+          { id: "18.3_opd3_5", type: "fill_in", question: "5. voordat - Je moet een kaartje kopen. Je mag naar binnen. -> Je moet een kaartje kopen ________ je naar binnen ________.", correctAnswer: "voordat, mag" },
+          { id: "18.3_opd3_6", type: "fill_in", question: "6. toen - Mijn portemonnee is gestolen. Ik praatte even met iemand naast ons. -> Mijn portemonnee is gestolen ________ ik even met iemand naast ons ________.", correctAnswer: "toen, praatte" },
+          { id: "18.3_opd3_7", type: "fill_in", question: "7. als - Je mag niet naar binnen. De film is al begonnen. -> Je mag niet naar binnen ________ de film al begonnen ________.", correctAnswer: "als, is" },
+          { id: "18.3_opd3_8", type: "fill_in", question: "8. omdat - Charlotte kan niet pinnen. Ze is haar bankpas kwijt. -> Charlotte kan niet pinnen ________ ze haar bankpas kwijt ________.", correctAnswer: "omdat, is" },
+          { id: "18.3_opd3_9", type: "fill_in", question: "9. nadat - Ik ga pas een nieuwe kast kopen. Ik heb een kamer gevonden. -> Ik ga pas een nieuwe kast kopen ________ ik een kamer gevonden ________.", correctAnswer: "nadat, heb" },
+          { id: "18.3_opd3_10", type: "fill_in", question: "10. terwijl - Bas kookt het eten. Maria brengt de auto naar de garage. -> Bas kookt het eten ________ Maria de auto naar de garage ________.", correctAnswer: "terwijl, brengt" }
         ]
       },
       {
         instruction: "Opdracht 4: Zoek de goede zinnen bij elkaar (Eşleştirme / Matching).",
         isExtra: false,
         questions: [
-          { id: "18.3_opd4_1", type: "multiple_choice", question: "1. Zeg het maar als ...", options: ["a) ik bij mijn tante mocht logeren.", "h) je hier kunt studeren."], correctAnswer: "h) je hier kunt studeren." },
-          { id: "18.3_opd4_2", type: "multiple_choice", question: "2. Je moet Nederlands leren voordat ...", options: ["c) ik nog moet werken.", "f) ik een nieuwe telefoon moest kopen."], correctAnswer: "c) ik nog moet werken." },
-          { id: "18.3_opd4_3", type: "multiple_choice", question: "3. Die vakantie was niet duur omdat ...", options: ["i) het wel duur zal zijn.", "e) ik liever wil lopen."], correctAnswer: "i) het wel duur zal zijn." }
+          { id: "18.3_opd4_1", type: "multiple_choice", question: "1. Zeg het maar als ...", options: ["we iets kunnen afspreken.", "ik bij mijn tante mocht logeren.", "ik nog moet werken."], correctAnswer: "we iets kunnen afspreken." },
+          { id: "18.3_opd4_2", type: "multiple_choice", question: "2. Je moet Nederlands leren voordat ...", options: ["je hier kunt studeren.", "ik een nieuwe telefoon moest kopen.", "er vanmiddag bezoek komt."], correctAnswer: "je hier kunt studeren." },
+          { id: "18.3_opd4_3", type: "multiple_choice", question: "3. Die vakantie was niet duur omdat ...", options: ["ik bij mijn tante mocht logeren.", "het wel duur zal zijn.", "ik liever wil lopen."], correctAnswer: "ik bij mijn tante mocht logeren." },
+          { id: "18.3_opd4_4", type: "multiple_choice", question: "4. Ik heb informatie gevraagd toen ...", options: ["ik een nieuwe telefoon moest kopen.", "we iets kunnen afspreken.", "je hier kunt studeren."], correctAnswer: "ik een yeni telefoon moest kopen." },
+          { id: "18.3_opd4_5", type: "multiple_choice", question: "5. Ik moet thuisblijven omdat ...", options: ["er vanmiddag bezoek komt.", "ik weer kan pinnen.", "ik liever wil lopen."], correctAnswer: "er vanmiddag bezoek komt." },
+          { id: "18.3_opd4_6", type: "multiple_choice", question: "6. Ik ga met jullie met de auto mee hoewel ...", options: ["ik liever wil lopen.", "ik bij mijn tante mocht logeren.", "het wel duur zal zijn."], correctAnswer: "ik liever wil lopen." },
+          { id: "18.3_opd4_7", type: "multiple_choice", question: "7. Ik pak even mijn agenda zodat ...", options: ["we iets kunnen afspreken.", "ik nog moet werken.", "er vanmiddag bezoek komt."], correctAnswer: "we iets kunnen afspreken." },
+          { id: "18.3_opd4_8", type: "multiple_choice", question: "8. Je krijgt je geld terug zodra ...", options: ["ik weer kan pinnen.", "je hier kunt studeren.", "het wel duur zal zijn."], correctAnswer: "ik weer kan pinnen." },
+          { id: "18.3_opd4_9", type: "multiple_choice", question: "9. Iedereen zit lekker op het terras terwijl ...", options: ["ik nog moet werken.", "ik bij mijn tante mocht logeren.", "ik liever wil lopen."], correctAnswer: "ik nog moet werken." },
+          { id: "18.3_opd4_10", type: "multiple_choice", question: "10. Ik wil dat schilderij kopen hoewel ...", options: ["het wel duur zal zijn.", "ik weer kan pinnen.", "we iets kunnen afspreken."], correctAnswer: "het wel duur zal zijn." }
         ]
       },
       {
@@ -204,7 +307,8 @@ export const chapter18Sections = [
         isExtra: true,
         questions: [
           { id: "18.3_smart_1", type: "multiple_choice", question: "Welke zin is grammaticaal correct met 'omdat'?", options: ["Ik kom niet naar de les, omdat ik ben ziek.", "Ik kom niet naar de les, omdat ik ziek ben.", "Ik kom niet naar de les, omdat ziek ben ik."], correctAnswer: "Ik kom niet naar de les, omdat ik ziek ben." },
-          { id: "18.3_smart_2", type: "multiple_choice", question: "Waar staat de persvorm (çekimli fiil / conjugated verb) in een bijzin met 'zodat'?", options: ["Op de tweede plaats", "Helemaal vooraan", "Helemaal achteraan"], correctAnswer: "Helemaal achteraan" }
+          { id: "18.3_smart_2", type: "multiple_choice", question: "Waar staat de persvorm (çekimli fiil / conjugated verb) in een bijzin met 'zodat'?", options: ["Op de tweede plaats", "Helemaal vooraan", "Helemaal achteraan"], correctAnswer: "Helemaal achteraan" },
+          { id: "18.3_smart_3", type: "multiple_choice", question: "Kies de juiste conjunctie voor een gebeurtenis in het verleden (geçmişte tek bir an): '________ ik twintig jaar werd, gaf ik een feest.'", options: ["Toen", "Als", "Omdat"], correctAnswer: "Toen" }
         ]
       }
     ]
@@ -240,12 +344,14 @@ export const chapter18Sections = [
     ),
     exerciseGroups: [
       {
-        instruction: "Opdracht 6: Kies de juiste zin (Konu Anlama / Reading comprehension).",
+        instruction: "Opdracht 6: Kies de juiste conjunctie (Konu Anlama / Reading comprehension).",
         isExtra: false,
         questions: [
           { id: "18.4_opd6_1", type: "multiple_choice", question: "1. U kunt aangifte doen op het politiebureau ________ u kunt meestal ook telefonisch aangifte doen.", options: ["dus", "maar"], correctAnswer: "maar" },
-          { id: "18.4_opd6_2", type: "multiple_choice", question: "2. De politie schrijft het complete verhaal op ________ de politie hebt verteld wat er is gebeurd.", options: ["nadat", "voordat"], correctAnswer: "nadat" },
-          { id: "18.4_opd6_3", type: "multiple_choice", question: "3. Bel van tevoren ________ u een aangifte van inbraak wilt doen.", options: ["omdat", "als"], correctAnswer: "als" }
+          { id: "18.4_opd6_2", type: "multiple_choice", question: "2. De politie schrijft het complete verhaal op ________ u de politie hebt verteld wat er is gebeurd.", options: ["nadat", "voordat"], correctAnswer: "nadat" },
+          { id: "18.4_opd6_3", type: "multiple_choice", question: "3. Bel van tevoren ________ u een aangifte van inbraak wilt doen.", options: ["omdat", "als"], correctAnswer: "als" },
+          { id: "18.4_opd6_4", type: "multiple_choice", question: "4. U kunt een afspraak maken om aangifte te doen ________ u niet hoeft te wachten.", options: ["zodat", "hoewel"], correctAnswer: "zodat" },
+          { id: "18.4_opd6_5", type: "multiple_choice", question: "5. ________ er direct gevaar voor mensen is, moet u bellen.", options: ["Zodra", "Totdat"], correctAnswer: "Zodra" }
         ]
       }
     ]
@@ -303,7 +409,319 @@ export const chapter18Sections = [
       }
     ]
   },
-  {
+    {
+    id: "Reading-18",
+    chapter: 18,
+    title: {
+      tr: "Okuma & Anlama",
+      en: "Reading Comprehension"
+    },
+    readingPassage: {
+      title: "Aangifte doen van een gestolen fiets bij de politie",
+      level: "Niveau A2 • 19 Zinnen",
+      intro: {
+        tr: "Aşağıdaki okuma parçasını dikkatlice okuyunuz. Bu parça 18. Bölümde öğrendiğiniz polis & suç duyurusu terimleri (aangifte doen, het proces-verbaal, het framenummer, de diefstal), yan cümle bağlaçları (onderschikkende conjuncties: omdat, als, toen, dat - fiil cümlenin en sonuna gider) ve tavsiye isteme/verme kalıpları (wat moet ik doen? ik raad je aan om...) kullanılarak hazırlanmıştır. Metni dinleyebilir, kelimelerin sözlük anlamına bakabilir ve alttaki 20 soruluk testi çözebilirsiniz.",
+        en: "Read the following reading passage carefully. It incorporates police & crime report vocabulary (filing a report, official police report, frame number, theft), subordinating conjunctions (omdat, als, toen, dat - verb moves to end of subclause), and asking/giving advice expressions learned in Chapter 18. Listen to the text, click words to check meanings, and answer the 20 comprehension questions below."
+      },
+      paragraphs: [
+        "Op dinsdagmiddag beleeft Lucas een ontzettend vervelend avontuur in het centrum van Utrecht. Na zijn intensieve les Nederlands loopt hij om vier uur opgewekt naar de bewaakte fietsenstalling bij de centrale bibliotheek, maar zijn fiets is spoorloos verdwenen. Op de stenen grond ligt alleen zijn zware kettingslot dat met een betonschaar doormidden is geknipt. Lucas schrikt enorm en voelt zich machteloos. Zijn studiegenoot Edit ziet zijn bleke gezicht en adviseert meelevend: \"Wat vreselijk Lucas! Je kunt het beste direct naar het politiebureau aan het Paardenveld lopen om officiële aangifte te doen.\"",
+        "Lucas haast zich naar het bureau OMDAT hij een officieel proces-verbaal nodig heeft voor zijn fietsverzekering. In de rustige wachtruimte trekt hij een volgnummertje en wacht geduldig tot hij aan de beurt is. Politie-inspecteur De Jong roept hem binnen in zijn spreekkamer en vraagt vriendelijk: \"Goedemiddag meneer Moreno, wat is er precies gebeurd?\" Lucas legt rustig uit: \"TOEN ik vanmiddag rond vier uur bij de bibliotheek kwam, ontdekte ik DAT mijn matzwarte stadsfiets gestolen was.\"",
+        "Inspecteur De Jong opent het digitale aangifteformulier op zijn scherm en vraagt gedetailleerd: \"Kunt u een nauwkeurig signalement van de gestolen fiets geven?\" Lucas antwoordt direct: \"Het is een herenfiets van het bekende merk Gazelle, met een bruin leren zadel en een zilverkleurige bel. Er zit ook een opvallende gele sticker van de universiteit op het achterspatbord.\" Lucas toont op zijn telefoon een duidelijke foto, de originele aankoopnota en het unieke gegraveerde framenummer. De inspecteur noteert alle gegevens zorgvuldig in het politiesysteem.",
+        "Na een kwartier print inspecteur De Jong het officiële proces-verbaal uit en overhandigt het aan Lucas: \"Als onze surveillanten of handhavers uw fiets terugvinden, nemen we direct telefonisch contact met u op. Ik raad u aan om dit politierapport vandaag nog digitaal door te sturen naar uw verzekeringsmaatschappij.\" Lucas bedankt de politieagent hartelijk voor de snelle en professionele hulp. Hoewel hij vandaag helaas naar huis moet wandelen, is hij opgelucht dat de aangifte zo correct en vlot is afgehandeld."
+      ],
+      hints: [
+        {
+          title: { tr: "Polis & Suç Duyurusu Terimleri", en: "Police & Reporting Terms" },
+          icon: "fa-shield-halved",
+          items: [
+            { term: "aangifte doen", tr: "suç duyurusunda bulunmak / ihbar etmek", en: "to file a police report" },
+            { term: "het proces-verbaal", tr: "polis tutanağı / resmi rapor", en: "official police report" },
+            { term: "het framenummer", tr: "şasi / kadro numarası", en: "frame number" },
+            { term: "het signalement", tr: "eşkal / detaylı tarif", en: "description / profile" },
+            { term: "de diefstal", tr: "hırsızlık", en: "theft" }
+          ]
+        },
+        {
+          title: { tr: "Yan Cümle Bağlaçları (SOV)", en: "Subordinating Conjunctions" },
+          icon: "fa-shuffle",
+          items: [
+            { term: "omdat (çünkü / -dığı için)", tr: "fiil cümlenin en sonuna gider", en: "verb at the end of subclause" },
+            { term: "toen (-dığı zaman / geçmişte)", tr: "fiil cümlenin en sonuna gider", en: "when (in the past)" },
+            { term: "dat (ki / olduğunu)", tr: "fiil cümlenin en sonuna gider", en: "that" }
+          ]
+        },
+        {
+          title: { tr: "Tavsiye İsteme & Verme", en: "Asking & Giving Advice" },
+          icon: "fa-handshake",
+          items: [
+            { term: "je kunt het beste...", tr: "en iyisi ... yapmandır", en: "you had best..." },
+            { term: "ik raad je aan om... te...", tr: "sana ... yapmanı öneririm", en: "I advise you to..." }
+          ]
+        }
+      ]
+    },
+    exerciseGroups: [
+      {
+        instruction: "Deel 1: Direct Begrip & Aangifte (1-7: Doğrudan Bilgi ve Olaylar / Direct Facts)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_18_1",
+            type: "multiple_choice",
+            question: "Wat voor vervelende gebeurtenis overkomt Lucas op dinsdagmiddag in Utrecht?",
+            options: [
+              "Hij verliest zijn paspoort in de trein.",
+              "Zijn geliefde stadsfiets is gestolen bij de centrale bibliotheek.",
+              "Hij krijgt een boete voor te hard fietsen.",
+              "Zijn huurcontract wordt plotseling opgezegd."
+            ],
+            correctAnswer: "Zijn geliefde stadsfiets is gestolen bij de centrale bibliotheek."
+          },
+          {
+            id: "reading_18_2",
+            type: "multiple_choice",
+            question: "Wat treft Lucas op de stenen grond aan op de plek waar zijn fiets stond?",
+            options: [
+              "Zijn rugzak",
+              "Zijn zware kettingslot dat met een betonschaar doormidden is geknipt",
+              "Een briefje van de politie",
+              "Zijn fietssleutel"
+            ],
+            correctAnswer: "Zijn zware kettingslot dat met een betonschaar doormidden is geknipt"
+          },
+          {
+            id: "reading_18_3",
+            type: "multiple_choice",
+            question: "Welk advies geeft klasgenoot Edit direct aan Lucas als ze ziet wat er gebeurd is?",
+            options: [
+              "\"Koop maar meteen een nieuwe fiets in de winkel.\"",
+              "\"Je kunt het beste direct naar het politiebureau aan het Paardenveld lopen om aangifte te doen.\"",
+              "\"Ga naar huis en vergeet het maar.\"",
+              "\"Bel je verzekering nog niet.\""
+            ],
+            correctAnswer: "\"Je kunt het beste direct naar het politiebureau aan het Paardenveld lopen om aangifte te doen.\""
+          },
+          {
+            id: "reading_18_4",
+            type: "multiple_choice",
+            question: "Waarom heeft Lucas per se een officieel proces-verbaal van de politie nodig?",
+            options: [
+              "Voor zijn docent Nederlands",
+              "Voor zijn fietsverzekering om de schade vergoed te krijgen",
+              "Om een nieuwe bibliotheekpas aan te vragen",
+              "Om te mogen lopen op straat"
+            ],
+            correctAnswer: "Voor zijn fietsverzekering om de schade vergoed te krijgen"
+          },
+          {
+            id: "reading_18_5",
+            type: "multiple_choice",
+            question: "Wat is het merk en de kleur van de gestolen fiets van Lucas?",
+            options: [
+              "Een felrode racefiets van Batavus",
+              "Een matzwarte herenfiets van het merk Gazelle",
+              "Een witte vouwfiets",
+              "Een groene mountainbike"
+            ],
+            correctAnswer: "Een matzwarte herenfiets van het merk Gazelle"
+          },
+          {
+            id: "reading_18_6",
+            type: "multiple_choice",
+            question: "Welk opvallend kenmerk zat er op het achterspatbord van de fiets?",
+            options: [
+              "Een rode vlag",
+              "Een opvallende gele sticker van de universiteit",
+              "Een kras van tien centimeter",
+              "Zijn eigen naam in witte letters"
+            ],
+            correctAnswer: "Een opvallende gele sticker van de universiteit"
+          },
+          {
+            id: "reading_18_7",
+            type: "multiple_choice",
+            question: "Wat heeft Lucas gelukkig digitaal opgeslagen op zijn smartphone?",
+            options: [
+              "Een foto van de dader",
+              "Een duidelijke foto van de fiets, de aankoopnota en het unieke framenummer",
+              "Het telefoonnummer van de dief",
+              "Alleen muziek"
+            ],
+            correctAnswer: "Een duidelijke foto van de fiets, de aankoopnota en het unieke framenummer"
+          }
+        ]
+      },
+      {
+        instruction: "Deel 2: Politieprocedure & Advies (8-13: Polis Prosedürü ve Tavsiyeler / Police & Advice)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_18_8",
+            type: "multiple_choice",
+            question: "Hoe heet het officiële politierapport dat inspecteur De Jong na de aangifte uitprint?",
+            options: [
+              "Het diploma",
+              "Het proces-verbaal",
+              "Het huurcontract",
+              "Het medisch dossier"
+            ],
+            correctAnswer: "Het proces-verbaal"
+          },
+          {
+            id: "reading_18_9",
+            type: "multiple_choice",
+            question: "Aan welke straat bevindt zich het politiebureau in Utrecht waar Lucas naartoe gaat?",
+            options: [
+              "Aan de Oudegracht",
+              "Aan het Paardenveld",
+              "Aan de Biltstraat",
+              "Op het Domplein"
+            ],
+            correctAnswer: "Aan het Paardenveld"
+          },
+          {
+            id: "reading_18_10",
+            type: "multiple_choice",
+            question: "Wat raadt inspecteur De Jong Lucas aan om vandaag nog te doen met het politierapport?",
+            options: [
+              "Het rapport weggooien in de papierbak",
+              "Het politierapport digitaal doorsturen naar zijn verzekeringsmaatschappij",
+              "Het rapport ophangen in de bibliotheek",
+              "Het rapport vertalen in het Spaans"
+            ],
+            correctAnswer: "Het politierapport digitaal doorsturen naar zijn verzekeringsmaatschappij"
+          },
+          {
+            id: "reading_18_11",
+            type: "multiple_choice",
+            question: "Wat doet de politie als surveillanten of handhavers de gestolen fiets terugvinden?",
+            options: [
+              "Ze verkopen de fiets op een veiling.",
+              "Ze nemen direct telefonisch contact op met Lucas.",
+              "Ze bewaren de fiets voor altijd op het bureau.",
+              "Ze sturen de fiets naar het buitenland."
+            ],
+            correctAnswer: "Ze nemen direct telefonisch contact op met Lucas."
+          },
+          {
+            id: "reading_18_12",
+            type: "multiple_choice",
+            question: "Wat is het 'framenummer' van een fiets?",
+            options: [
+              "Het telefoonnummer van de fietsenmaker",
+              "Een uniek identificatienummer dat in het metalen frame van de fiets is gegraveerd",
+              "Het aantal versnellingen van de fiets",
+              "De postcode van de eigenaar"
+            ],
+            correctAnswer: "Een uniek identificatienummer dat in het metalen frame van de fiets is gegraveerd"
+          },
+          {
+            id: "reading_18_13",
+            type: "multiple_choice",
+            question: "Hoe moet Lucas na het bezoek aan het politiebureau naar huis gaan?",
+            options: [
+              "Met zijn gerepareerde fiets",
+              "Lopend / te voet (wandelen)",
+              "Met een helikopter",
+              "Inspecteur De Jong brengt hem thuis in een politieauto"
+            ],
+            correctAnswer: "Lopend / te voet (wandelen)"
+          }
+        ]
+      },
+      {
+        instruction: "Deel 3: Onderschikkende Conjuncties & Grammatica (14-20: Yan Cümleler ve Dil / Conjunctions)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_18_14",
+            type: "multiple_choice",
+            question: "Kijk naar de zin: \"Lucas haast zich naar het bureau OMDAT hij een proces-verbaal NODIG HEEFT.\" Waar staat de persoonsvorm in de bijzin na 'omdat'?",
+            options: [
+              "Direct na het voegwoord 'omdat'",
+              "Helemaal aan het einde van de bijzin (SOV-volgorde)",
+              "Vooraan in de hoofdzin",
+              "De persoonsvorm verdwijnt"
+            ],
+            correctAnswer: "Helemaal aan het einde van de bijzin (SOV-volgorde)"
+          },
+          {
+            id: "reading_18_15",
+            type: "multiple_choice",
+            question: "Kijk naar de zin: \"TOEN ik bij de bibliotheek KWAM, ontdekte ik...\" Welk voegwoord gebruiken we voor een eenmalige gebeurtenis in het verleden?",
+            options: [
+              "als",
+              "toen",
+              "wanneer",
+              "terwijl"
+            ],
+            correctAnswer: "toen"
+          },
+          {
+            id: "reading_18_16",
+            type: "multiple_choice",
+            question: "Kijk naar de zin: \"...ontdekte ik DAT mijn fiets GESTOLEN WAS.\" Wat voor voegwoord is 'dat' hier?",
+            options: [
+              "Een aanwijzend voornaamwoord",
+              "Een onderschikkend voegwoord dat een inhoudelijke bijzin inleidt (ki / olduğunu)",
+              "Een vraagwoord",
+              "Een lidwoord"
+            ],
+            correctAnswer: "Een onderschikkend voegwoord dat een inhoudelijke bijzin inleidt (ki / olduğunu)"
+          },
+          {
+            id: "reading_18_17",
+            type: "multiple_choice",
+            question: "Kijk naar de constructie: \"ALS onze surveillanten uw fiets VINDEN, nemen we contact op.\" Wat gebeurt er met de persoonsvorm 'vinden' in de als-zin?",
+            options: [
+              "Hij staat direct achter 'als'.",
+              "Hij staat aan het einde van de voorwaardelijke bijzin.",
+              "Hij staat in de hoofdzin.",
+              "Hij staat in de verleden tijd."
+            ],
+            correctAnswer: "Hij staat aan het einde van de voorwaardelijke bijzin."
+          },
+          {
+            id: "reading_18_18",
+            type: "multiple_choice",
+            question: "Welke vaste formulering gebruikt Edit om vriendelijk en dringend advies te geven aan Lucas?",
+            options: [
+              "\"Je moet stoppen met ademen.\"",
+              "\"Je kunt het beste direct naar het politiebureau lopen...\"",
+              "\"Ik wil dat je weggaat.\"",
+              "\"Waarom vraag je dat aan mij?\""
+            ],
+            correctAnswer: "\"Je kunt het beste direct naar het politiebureau lopen...\""
+          },
+          {
+            id: "reading_18_19",
+            type: "multiple_choice",
+            question: "Welke vaste uitdrukking gebruikt inspecteur De Jong om Lucas advies te geven: \"Ik raad u aan ... dit rapport door te sturen\"? ",
+            options: [
+              "om ... te (ik raad u aan OM dit rapport door TE sturen)",
+              "voor ... te",
+              "met ... te",
+              "zonder ... te"
+            ],
+            correctAnswer: "om ... te (ik raad u aan OM dit rapport door TE sturen)"
+          },
+          {
+            id: "reading_18_20",
+            type: "multiple_choice",
+            question: "Welke bewering over de diefstal en aangifte is ONJUIST (niet waar)?",
+            options: [
+              "De fiets van Lucas werd gestolen bij de centrale bibliotheek.",
+              "De politie weigerde om Lucas' aangifte op te nemen en stuurde hem weg.",
+              "Lucas had het framenummer en de nota op zijn telefoon bewaard.",
+              "Inspecteur De Jong printte een officieel proces-verbaal voor Lucas uit."
+            ],
+            correctAnswer: "De politie weigerde om Lucas' aangifte op te nemen en stuurde hem weg."
+          }
+        ]
+      }
+    ]
+  },
+{
     id: "On-Class-18",
     chapter: 18,
     title: "Summary",

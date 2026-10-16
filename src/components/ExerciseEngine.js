@@ -77,7 +77,7 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
     currentGroups.forEach(group => {
       group.questions.forEach(q => {
         const userAns = answers[q.id]?.toLowerCase().trim() || "";
-        const isCorrect = userAns === q.correctAnswer.toLowerCase();
+        const isCorrect = Boolean(userAns && q.correctAnswer && userAns === q.correctAnswer.toLowerCase().trim());
         if (userAns !== "") {
           const current = newStats[q.id] || { correct: 0, incorrect: 0 };
           newStats[q.id] = {
@@ -111,22 +111,115 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
   return (
     <div className="space-y-6" onClick={() => setShowFavInput(false)}>
       
-      {/* BAŞLIK VE AKSİYON KUTUSU (Reading ve Summary modlarında kontroller kendi barlarında olduğu için gizlenir) */}
+      {/* SUMMARY MODU BAŞLIK VE KONTROL KARTI */}
+      {isSummaryMode && (
+        <div className="bg-slate-800 rounded-2xl p-5 sm:p-6 shadow-lg border border-amber-900/40 relative overflow-hidden flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+          {/* Dekoratif Arka Plan İkonu */}
+          <div className="absolute top-0 right-0 p-6 opacity-5 pointer-events-none">
+            <i className="fa-solid fa-chalkboard-user text-8xl text-amber-400"></i>
+          </div>
+
+          {/* SOL: Başlık & Rozet */}
+          <div className="relative z-10">
+            <div className="inline-flex items-center space-x-2 bg-amber-950/50 border border-amber-800/60 text-amber-300 font-bold px-3 py-1 rounded-full text-xs mb-2">
+              <i className="fa-solid fa-chalkboard-user text-[11px]"></i>
+              <span>Hoofdstuk ({t.chapter}) {chapterNum} • {lang === 'tr' ? 'Özet' : 'Summary'}</span>
+            </div>
+            <h2 className="text-xl sm:text-2xl font-extrabold text-slate-100 tracking-tight">
+              {lang === 'tr' ? `Bölüm ${chapterNum} - Ders Özeti (Summary)` : `Chapter ${chapterNum} - Chapter Summary`}
+            </h2>
+            {isFav && favorites[sectionData.id] && (
+              <span className="text-xs text-amber-400 font-medium flex items-center gap-1 mt-1">
+                <i className="fa-solid fa-star text-[10px]"></i> {favorites[sectionData.id]}
+              </span>
+            )}
+          </div>
+
+          {/* SAĞ: Aksiyon Butonları (Practice, Tamamlandı, Favori) */}
+          <div className="relative z-10 flex items-center gap-2.5 sm:gap-3 self-end sm:self-center">
+            {/* PRACTICE BUTONU */}
+            <button
+              type="button"
+              onClick={() => setIsQuizOpen(true)}
+              className="flex items-center gap-2 h-9 px-3.5 sm:px-4 rounded-xl text-xs sm:text-sm font-bold bg-amber-600/20 hover:bg-amber-600 text-amber-400 hover:text-white border border-amber-500/50 hover:border-amber-500 transition-all shadow-sm group cursor-pointer"
+              title={lang === 'tr' ? "Ünite Özeti Testi (Pratik Yap)" : "Practice Summary Quiz"}
+            >
+              <i className="fa-solid fa-dumbbell group-hover:animate-bounce text-xs"></i>
+              <span>{t.practiceSummary || "Practice"}</span>
+            </button>
+
+            {/* TAMAMLANDI BUTONU */}
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                toggleCompleted(sectionData.id);
+              }}
+              className="text-2xl transition-transform hover:scale-110 focus:outline-none cursor-pointer flex items-center justify-center w-8 h-8"
+              title={isComp ? (lang === 'tr' ? "Tamamlandı olarak işaretlendi" : "Marked as completed") : (lang === 'tr' ? "Tamamlandı olarak işaretle" : "Mark as completed")}
+            >
+              {isComp ? (
+                <i className="fa-solid fa-circle-check text-emerald-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.6)]"></i>
+              ) : (
+                <i className="fa-regular fa-circle-check text-slate-500 hover:text-emerald-400 transition-colors"></i>
+              )}
+            </button>
+
+            {/* FAVORİ BUTONU & NOT AÇILIR PENCERESİ */}
+            <div className="relative flex items-center">
+              <button
+                type="button"
+                onClick={handleStarClick}
+                className="text-2xl transition-transform hover:scale-110 focus:outline-none cursor-pointer flex items-center justify-center w-8 h-8"
+                title={isFav ? `Favori: ${favorites[sectionData.id]}` : (lang === 'tr' ? "Favorilere ekle" : "Add to favorites")}
+              >
+                {isFav ? (
+                  <i className="fa-solid fa-star text-amber-400 drop-shadow-[0_0_8px_rgba(251,191,36,0.6)]"></i>
+                ) : (
+                  <i className="fa-regular fa-star text-slate-500 hover:text-amber-400 transition-colors"></i>
+                )}
+              </button>
+
+              {showFavInput && (
+                <div 
+                  className="absolute right-0 top-full mt-2 bg-slate-900 border border-amber-500/50 p-1.5 rounded-xl shadow-2xl z-50 flex items-center gap-1.5 animate-fadeIn" 
+                  onClick={e => e.stopPropagation()}
+                >
+                  <input
+                    autoFocus
+                    maxLength={100}
+                    value={favNote}
+                    onChange={e => setFavNote(e.target.value)}
+                    onKeyDown={e => { 
+                      if (e.key === 'Enter') saveFavorite(e); 
+                      if (e.key === 'Escape') setShowFavInput(false);
+                    }}
+                    placeholder={t.notePlaceholder}
+                    className="bg-slate-950 text-slate-200 text-xs px-2.5 py-1 w-36 sm:w-48 rounded-lg border border-slate-700 focus:outline-none focus:border-amber-400 placeholder-slate-500"
+                  />
+                  <button 
+                    type="button"
+                    onClick={saveFavorite} 
+                    className="bg-amber-600 hover:bg-amber-500 text-white px-2 py-1 rounded-lg text-xs font-bold transition-colors cursor-pointer flex items-center justify-center shadow-sm"
+                  >
+                    <i className="fa-solid fa-check"></i>
+                  </button>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* STANDART BÖLÜM BAŞLIK VE AKSİYON KUTUSU */}
       {!isReadingMode && !isSummaryMode && (
         <div className="bg-slate-800 rounded-2xl p-6 shadow-lg border border-slate-700 flex flex-col lg:flex-row justify-between items-start gap-6 relative overflow-hidden">
           
-          {/* Dekoratif Arka Plan İkonu (Summary Modu İçin) */}
-          {isSummaryMode && (
-             <div className="absolute top-0 right-0 p-8 opacity-5 pointer-events-none">
-               <i className="fa-solid fa-chalkboard-user text-9xl text-amber-400"></i>
-             </div>
-          )}
-
           {/* SOL KISIM: Başlık, Chapter Etiketi, Favori/Tamamlandı İkonları */}
           <div className="flex-1 w-full relative z-10">
             <div className="inline-flex items-center space-x-2 bg-brand-900/30 border border-brand-500/20 text-brand-400 font-bold px-3 py-1 rounded-full text-xs mb-3">
               <i className="fa-solid fa-stethoscope"></i>
-              <span>Hoofdstuk ({t.chapter}) {chapterNum} • {isSummaryMode ? (lang === 'tr' ? 'Özet' : 'Summary') : `${t.section} ${sectionData.id}`}</span>
+              <span>Hoofdstuk ({t.chapter}) {chapterNum} • {`${t.section} ${sectionData.id}`}</span>
             </div>
             
             <div className="flex flex-wrap items-center justify-between w-full gap-4">
@@ -187,20 +280,6 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
               </div>
             </div>
           </div>
-
-          {/* SAĞ KISIM: Quiz Butonu (Summary Modu) */}
-          {isSummaryMode && (
-            <div className="flex flex-col items-end gap-3 w-full lg:w-auto relative z-10">
-              <button 
-                onClick={() => setIsQuizOpen(true)}
-                className="flex items-center justify-center gap-2 bg-amber-600/20 text-amber-400 hover:bg-amber-600 hover:text-white border border-amber-500/50 hover:border-amber-500 px-5 py-2.5 rounded-xl text-sm font-bold transition-all shadow-sm group w-full sm:w-auto"
-              >
-                <i className="fa-solid fa-dumbbell group-hover:animate-bounce"></i> 
-                {t.practiceSummary}
-              </button>
-            </div>
-          )}
-
         </div>
       )}
 
@@ -247,9 +326,9 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
                 <span>{group.instruction}</span>
               </h4>
 
-            {group.questions.map((q, idx) => {
+            {group.questions.filter(q => q && q.question).map((q, idx) => {
               const userAns = answers[q.id];
-              const isCorrect = userAns?.toLowerCase().trim() === q.correctAnswer.toLowerCase();
+              const isCorrect = Boolean(userAns && q.correctAnswer && userAns.toLowerCase().trim() === q.correctAnswer.toLowerCase().trim());
 
               return (
                 <div key={q.id} className="p-4 rounded-xl border border-slate-700 bg-slate-900/50 space-y-3">

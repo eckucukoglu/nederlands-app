@@ -611,7 +611,7 @@ export default function VocabularySection({
               <div className="space-y-4">
                 {group.questions.map((q) => {
                   const userAns = answers[q.id] || "";
-                  const isCorrect = userAns.toLowerCase().trim() === q.correctAnswer.toLowerCase().trim();
+                  const isCorrect = Boolean(q.correctAnswer && userAns.toLowerCase().trim() === q.correctAnswer.toLowerCase().trim());
 
                   return (
                     <div key={q.id} className="bg-slate-900/60 p-4 rounded-xl border border-slate-700/70 space-y-2">

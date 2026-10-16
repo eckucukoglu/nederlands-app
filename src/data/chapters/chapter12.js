@@ -103,13 +103,8 @@ export const chapter12Sections = [
         isExtra: false,
         questions: [
           { id: "12.1_opd1_1", type: "multiple_choice", question: "Waar is Kirsten aan het begin van de dialoog?", options: ["Op de Wandelbeurs", "Op het station in Amsterdam", "In het restaurant"], correctAnswer: "Op het station in Amsterdam" },
-            {
-    id: "12.2",
-    chapter: 12,
-    title: "Vocabulary",
-    theory: null,
-    exerciseGroups: []
-  },
+
+
 { id: "12.1_opd1_2", type: "multiple_choice", question: "Wat vraagt Kirsten aan de buschauffeur?", options: ["Of de tram stopt.", "Of ze naar de Evenementenhal kan lopen of dat het te ver is.", "Waar ze de plattegrond kan vinden."], correctAnswer: "Of ze naar de Evenementenhal kan lopen of dat het te ver is." },
           { id: "12.1_opd1_3", type: "multiple_choice", question: "Hoe gaat ze naar de Evenementenhal?", options: ["Met de bus", "Lopend", "Met de tram (lijn 25)"], correctAnswer: "Met de tram (lijn 25)" },
           { id: "12.1_opd1_4", type: "multiple_choice", question: "Waar stopt lijn 25?", options: ["Ver weg van de hal.", "Tegenover de ingang van de Evenementenhal.", "Bij het restaurant."], correctAnswer: "Tegenover de ingang van de Evenementenhal." },
@@ -121,61 +116,108 @@ export const chapter12Sections = [
     ]
   },
   {
+    id: "12.2",
+    chapter: 12,
+    title: "Vocabulary",
+    theory: null,
+    exerciseGroups: []
+  },
+  {
     id: "12.3",
     chapter: 12,
     title: "12.3 De weg vragen en wijzen (Yol Tarifi / Directions)",
     theory: (lang) => (
       <>
         {lang === 'tr' ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #06b6d4' }}>
-              <h3 style={{ margin: '0 0 10px 0', color: '#22d3ee' }}>❓ De weg vragen (Yol Sormak)</h3>
-              <ul style={{ color: '#cbd5e1', listStyleType: 'disc', paddingLeft: '20px', marginBottom: '10px' }}>
-                <li><strong>Mag ik u iets vragen?</strong> (Size bir şey sorabilir miyim?)</li>
-                <li><strong>Bent u hier bekend?</strong> (Buraları biliyor musunuz?)</li>
-                <li><strong>Weet u waar ... is?</strong> (... nerede biliyor musunuz?)</li>
-                <li><strong>Ik zoek ...</strong> (... arıyorum.)</li>
-                <li><strong>Zijn er / is er ook ergens ...?</strong> (Buralarda bir yerde ... var mı?)</li>
-              </ul>
-              <p className="text-xs text-cyan-200 mt-2">Anlamadığınızda: <em>Kunt u dat nog een keer zeggen? / Wilt u dat herhalen? / Sorry, ik begrijp het niet.</em></p>
+          <div className="space-y-4 mb-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #06b6d4' }}>
+                <h3 style={{ margin: '0 0 10px 0', color: '#22d3ee' }}>❓ De weg vragen (Yol Sormak)</h3>
+                <ul className="text-xs text-slate-200 space-y-1.5 list-disc pl-5">
+                  <li><strong>Mag ik u iets vragen?</strong> (Size bir şey sorabilir miyim?)</li>
+                  <li><strong>Bent u hier bekend?</strong> (Buraları biliyor musunuz?)</li>
+                  <li><strong>Weet u waar ... is?</strong> (... nerede biliyor musunuz?)</li>
+                  <li><strong>Ik zoek de toiletten / hal 3.</strong> (Tuvaletleri / 3. holü arıyorum.)</li>
+                  <li><strong>Zijn er / is er ook ergens ...?</strong> (Buralarda bir yerde ... var mı?)</li>
+                  <li><strong>Kunt u dat nog een keer zeggen?</strong> (Bunu bir kez daha söyler misiniz?)</li>
+                </ul>
+              </div>
+
+              <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #ec4899' }}>
+                <h3 style={{ margin: '0 0 10px 0', color: '#f472b6' }}>👉 Buiten de weg wijzen (Sokakta Tarif)</h3>
+                <ul className="text-xs text-slate-200 space-y-1.5 list-disc pl-5">
+                  <li><strong>U gaat hier rechtdoor.</strong> (Buradan dümdüz gidin.)</li>
+                  <li><strong>U steekt de straat over.</strong> (Karşıdan karşıya geçin.)</li>
+                  <li><strong>U gaat linksaf / rechtsaf.</strong> (Sola / Sağa dönün.)</li>
+                  <li><strong>U neemt de eerste / tweede straat rechts.</strong> (1./2. sokaktan sağa dönün.)</li>
+                  <li><strong>Aan het eind van de straat...</strong> (Sokağın sonunda...)</li>
+                  <li><strong>De tram stopt tegenover de ingang.</strong> (Tramvay girişin tam karşısında durur.)</li>
+                </ul>
+              </div>
             </div>
 
-            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #ec4899' }}>
-              <h3 style={{ margin: '0 0 10px 0', color: '#f472b6' }}>👉 De weg wijzen (Yol Tarif Etmek)</h3>
-              <ul style={{ color: '#cbd5e1', listStyleType: 'disc', paddingLeft: '20px' }}>
-                <li><strong>U gaat hier rechtdoor.</strong> (Buradan dümdüz gidersiniz.)</li>
-                <li><strong>U gaat linksaf / rechtsaf.</strong> (Sola/Sağa dönersiniz.)</li>
-                <li><strong>U steekt de straat over.</strong> (Sokağın karşısına geçersiniz.)</li>
-                <li><strong>U neemt de eerste / tweede straat rechts.</strong> (Birinci/İkinci sokaktan sağa dönersiniz.)</li>
-                <li><strong>Aan de linkerkant / rechterkant.</strong> (Sol tarafta / Sağ tarafta.)</li>
-                <li><strong>Volg de bordjes.</strong> (Tabelaları takip edin.)</li>
-              </ul>
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>🏢 Binnen de weg wijzen (Bina / Fuar İçinde Tarif)</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-200">
+                <ul className="space-y-1.5 list-disc pl-5">
+                  <li><strong>Ga hier de trap op.</strong> (Buradan merdivenlerden yukarı çıkın.)</li>
+                  <li><strong>Ga hier de trap af.</strong> (Buradan merdivenlerden aşağı inin.)</li>
+                  <li><strong>Boven, op de eerste verdieping.</strong> (Yukarıda, birinci katta.)</li>
+                  <li><strong>De toiletten zijn beneden.</strong> (Tuvaletler alt katta.)</li>
+                </ul>
+                <ul className="space-y-1.5 list-disc pl-5">
+                  <li><strong>Loop rechtdoor tot het restaurant.</strong> (Restorana kadar dümdüz yürüyün.)</li>
+                  <li><strong>De gang uit lopen.</strong> (Koridorun sonuna kadar yürümek.)</li>
+                  <li><strong>Ga hier rechts de hoek om.</strong> (Buradan sağdaki köşeyi dönün.)</li>
+                  <li><strong>Volg de bordjes / Neem de plattegrond mee.</strong> (Tabelaları takip edin / Krokiyi yanınıza alın.)</li>
+                </ul>
+              </div>
             </div>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #06b6d4' }}>
-              <h3 style={{ margin: '0 0 10px 0', color: '#22d3ee' }}>❓ De weg vragen (Asking for directions)</h3>
-              <ul style={{ color: '#cbd5e1', listStyleType: 'disc', paddingLeft: '20px', marginBottom: '10px' }}>
-                <li><strong>Mag ik u iets vragen?</strong> (May I ask you something?)</li>
-                <li><strong>Bent u hier bekend?</strong> (Do you know your way around here?)</li>
-                <li><strong>Weet u waar ... is?</strong> (Do you know where ... is?)</li>
-                <li><strong>Ik zoek ...</strong> (I am looking for ...)</li>
-                <li><strong>Zijn er / is er ook ergens ...?</strong> (Are there / is there also somewhere ...?)</li>
-              </ul>
-              <p className="text-xs text-cyan-200 mt-2">When you don't understand: <em>Kunt u dat nog een keer zeggen? / Wilt u dat herhalen? / Sorry, ik begrijp het niet.</em></p>
+          <div className="space-y-4 mb-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #06b6d4' }}>
+                <h3 style={{ margin: '0 0 10px 0', color: '#22d3ee' }}>❓ Asking for directions (De weg vragen)</h3>
+                <ul className="text-xs text-slate-200 space-y-1.5 list-disc pl-5">
+                  <li><strong>Mag ik u iets vragen?</strong> (May I ask you something?)</li>
+                  <li><strong>Bent u hier bekend?</strong> (Do you know your way around here?)</li>
+                  <li><strong>Weet u waar ... is?</strong> (Do you know where ... is?)</li>
+                  <li><strong>Ik zoek de toiletten / hal 3.</strong> (I'm looking for the restrooms / hall 3.)</li>
+                  <li><strong>Zijn er / is er ook ergens ...?</strong> (Is there / are there also ... anywhere?)</li>
+                  <li><strong>Kunt u dat nog een keer zeggen?</strong> (Could you say that once more?)</li>
+                </ul>
+              </div>
+
+              <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #ec4899' }}>
+                <h3 style={{ margin: '0 0 10px 0', color: '#f472b6' }}>👉 Giving directions outside (Buiten)</h3>
+                <ul className="text-xs text-slate-200 space-y-1.5 list-disc pl-5">
+                  <li><strong>U gaat hier rechtdoor.</strong> (You go straight ahead here.)</li>
+                  <li><strong>U steekt de straat over.</strong> (You cross the street.)</li>
+                  <li><strong>U gaat linksaf / rechtsaf.</strong> (You turn left / right.)</li>
+                  <li><strong>U neemt de eerste / tweede straat rechts.</strong> (Take the 1st / 2nd street right.)</li>
+                  <li><strong>Aan het eind van de straat...</strong> (At the end of the street...)</li>
+                  <li><strong>De tram stopt tegenover de ingang.</strong> (The tram stops opposite the entrance.)</li>
+                </ul>
+              </div>
             </div>
 
-            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #ec4899' }}>
-              <h3 style={{ margin: '0 0 10px 0', color: '#f472b6' }}>👉 De weg wijzen (Giving directions)</h3>
-              <ul style={{ color: '#cbd5e1', listStyleType: 'disc', paddingLeft: '20px' }}>
-                <li><strong>U gaat hier rechtdoor.</strong> (You go straight ahead here.)</li>
-                <li><strong>U gaat linksaf / rechtsaf.</strong> (You turn left / right.)</li>
-                <li><strong>U steekt de straat over.</strong> (You cross the street.)</li>
-                <li><strong>U neemt de eerste / tweede straat rechts.</strong> (You take the first / second street on the right.)</li>
-                <li><strong>Aan de linkerkant / rechterkant.</strong> (On the left side / right side.)</li>
-                <li><strong>Volg de bordjes.</strong> (Follow the signs.)</li>
-              </ul>
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>🏢 Giving directions indoors (Binnen)</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-200">
+                <ul className="space-y-1.5 list-disc pl-5">
+                  <li><strong>Ga hier de trap op.</strong> (Go up the stairs here.)</li>
+                  <li><strong>Ga hier de trap af.</strong> (Go down the stairs here.)</li>
+                  <li><strong>Boven, op de eerste verdieping.</strong> (Upstairs, on the first floor.)</li>
+                  <li><strong>De toiletten zijn beneden.</strong> (The toilets are downstairs.)</li>
+                </ul>
+                <ul className="space-y-1.5 list-disc pl-5">
+                  <li><strong>Loop rechtdoor tot het restaurant.</strong> (Walk straight until the restaurant.)</li>
+                  <li><strong>De gang uit lopen.</strong> (Walk down the end of the hall.)</li>
+                  <li><strong>Ga hier rechts de hoek om.</strong> (Go around the corner to the right.)</li>
+                  <li><strong>Volg de bordjes / Neem de plattegrond mee.</strong> (Follow the signs / Take the map with you.)</li>
+                </ul>
+              </div>
             </div>
           </div>
         )}
@@ -183,13 +225,23 @@ export const chapter12Sections = [
     ),
     exerciseGroups: [
       {
-        instruction: "Slimme Oefeningen (Smart Exercises): De Weg Vragen",
+        instruction: "Opdracht 2: De weg vragen en wijzen (Kies de juiste reactie / Choose the right reaction)",
+        isExtra: false,
+        questions: [
+          { id: "12.3_opd2_1", type: "multiple_choice", question: "Kirsten zoekt de toiletten in het gebouw. Wat antwoordt de portier?", options: ["De toiletten zijn beneden, ga hier de trap af.", "U moet direct instappen in de tram.", "Kirsten steekt de straat over."], correctAnswer: "De toiletten zijn beneden, ga hier de trap af." },
+          { id: "12.3_opd2_2", type: "multiple_choice", question: "Kirsten vraagt: 'Kunt u mij vertellen in welke hal de Wandelbeurs is?' Wat zegt de portier?", options: ["Boven op de eerste verdieping, in hal 3.", "U hoeft alleen maar de straat over te steken.", "Dat kunt u beter aan de buschauffeur vragen."], correctAnswer: "Boven op de eerste verdieping, in hal 3." },
+          { id: "12.3_opd2_3", type: "multiple_choice", question: "Wat betekent: 'Loop rechtdoor tot het restaurant'?", options: ["Restorana kadar dümdüz yürüyün / Walk straight until the restaurant", "Restoranın önünden sağa dönün", "Restorana hiç gitmeyin"], correctAnswer: "Restorana kadar dümdüz yürüyün / Walk straight until the restaurant" }
+        ]
+      },
+      {
+        instruction: "Slimme Oefeningen (Smart Exercises): De Weg Vragen & Wijzen",
         isExtra: true,
         questions: [
-          { id: "12.3_smart_1", type: "multiple_choice", question: "Je bent op straat en je bent verdwaald (lost). Wat is de meest beleefde (kibar / polite) manier om iemand aan te spreken?", options: ["Waar is het station?", "Mag ik u iets vragen? Bent u hier bekend?", "Ik zoek het station."], correctAnswer: "Mag ik u iets vragen? Bent u hier bekend?" },
+          { id: "12.3_smart_1", type: "multiple_choice", question: "Je bent op straat en je bent verdwaald (lost). Wat is de meest beleefde manier om iemand aan te spreken?", options: ["Waar is het station?", "Mag ik u iets vragen? Bent u hier bekend?", "Ik zoek het station."], correctAnswer: "Mag ik u iets vragen? Bent u hier bekend?" },
           { id: "12.3_smart_2", type: "multiple_choice", question: "Je begrijpt niet wat de man zegt. Wat zeg je?", options: ["Kunt u dat nog een keer zeggen?", "Wat is dit?", "Ik zoek het niet."], correctAnswer: "Kunt u dat nog een keer zeggen?" },
           { id: "12.3_smart_3", type: "fill_in", question: "Vertaal 'Dümdüz gidin / Go straight': U gaat hier ________.", correctAnswer: "rechtdoor" },
-          { id: "12.3_smart_4", type: "fill_in", question: "Vertaal 'İlk sokaktan sağa dönün / Take the first street right': U neemt de ________ straat rechts.", correctAnswer: "eerste" }
+          { id: "12.3_smart_4", type: "fill_in", question: "Vertaal 'İlk sokaktan sağa dönün / Take the first street right': U neemt de ________ straat rechts.", correctAnswer: "eerste" },
+          { id: "12.3_smart_5", type: "fill_in", question: "Vertaal 'Karşıdan karşıya geçmek / To cross': U hoeft alleen maar de straat ________ te steken.", correctAnswer: "over" }
         ]
       }
     ]
@@ -424,7 +476,321 @@ export const chapter12Sections = [
       }
     ]
   },
-  {
+    {
+    id: "Reading-12",
+    chapter: 12,
+    title: {
+      tr: "Okuma & Anlama",
+      en: "Reading Comprehension"
+    },
+    readingPassage: {
+      title: "De weg wijzen naar de Jaarbeurs in Utrecht",
+      level: "Niveau A2 • 19 Zinnen",
+      intro: {
+        tr: "Aşağıdaki okuma parçasını dikkatlice okuyunuz. Bu parça 12. Bölümde öğrendiğiniz yol sorma ve tarif etme kalıpları (rechtdoor, linksaf/rechtsaf slaan, oversteken, het kruispunt, de rotonde), ayrılabilen fiiller (scheidbare werkwoorden: oversteken, afslaan, binnenstappen) ve Hollanda fuar kültürü (de Jaarbeurs) kullanılarak hazırlanmıştır. Metni dinleyebilir, kelimelerin sözlük anlamına bakabilir ve alttaki 20 soruluk testi çözebilirsiniz.",
+        en: "Read the following reading passage carefully. It incorporates asking & giving directions (rechtdoor, turn left/right, cross, junction, roundabout), separable verbs (scheidbare werkwoorden: oversteken, afslaan, binnenstappen), and Dutch exhibition culture (de Jaarbeurs) learned in Chapter 12. Listen to the text, click words to check meanings, and answer the 20 comprehension questions below."
+      },
+      paragraphs: [
+        "Op zaterdagochtend bezoekt Mateo de stad Utrecht om naar de beroemde Fiets- en Wandelbeurs in het grote beurscomplex de Jaarbeurs te gaan. Helaas verlaat hij het centrale station via de verkeerde uitgang, waardoor hij verdwaalt tussen de historische grachten en smalle steegjes van de oude binnenstad. Hij ziet een vriendelijke oudere dame die haar hondje uitlaat en besluit haar beleefd aan te spreken: \"Pardon mevrouw, mag ik u iets vragen? Weet u misschien hoe ik bij de Jaarbeurs kom?\"",
+        "De dame stopt vriendelijk, glimlacht en wijst naar voren: \"Jazeker jongeman, dat is helemaal niet ver! U loopt eerst deze straat helemaal rechtdoor tot aan het grote kruispunt met de stoplichten. Bij dat kruispunt slaat u linksaf de drukke Vredenburgstraat in. Daarna loopt u ongeveer tweehonderd meter door en steekt u bij de witte brug het water over.\" Mateo knikt aandachtig en herhaalt de aanwijzingen in zijn hoofd om niets te vergeten.",
+        "De dame vervolgt haar duidelijke routebeschrijving: \"Direct na de brug ziet u een grote rotonde. Bij die rotonde neemt u de tweede afslag naar rechts. Vervolgens loopt u onder het brede spoorviaduct door. Aan de overkant ziet u meteen het moderne glazen gebouw van de Jaarbeurs aan uw rechterhand. U kunt het enorme complex met de grote vlaggen werkelijk onmogelijk missen!\" Mateo bedankt haar hartelijk: \"Wat legt u dat fantastisch en duidelijk uit, dank u wel mevrouw!\" De dame antwoordt opgewekt: \"Graag gedaan en veel plezier op de beurs!\"",
+        "Mateo volgt de routebeschrijving nauwkeurig op. Hij loopt rechtdoor, slaat linksaf bij het stoplicht, steekt de karakteristieke brug over en passeert de rotonde. Binnen vijftien minuten staat hij voor de hoofdingang van de Jaarbeurs. Hij koopt een toegangskaartje, stapt de beurshal binnen en bewondert honderden stands vol innovatieve fietsen, wandelkaarten en kampeeruitrusting. Hij belt zijn huisgenoot Lucas op: \"Ik ben er al zonder problemen gekomen, de beurs is echt geweldig!\""
+      ],
+      hints: [
+        {
+          title: { tr: "Yol Tarifi Kalıpları", en: "Giving Directions Terms" },
+          icon: "fa-diamond-turn-right",
+          items: [
+            { term: "rechtdoor lopen", tr: "dümdüz yürümek", en: "to walk straight ahead" },
+            { term: "linksaf / rechtsaf slaan", tr: "sola / sağa dönmek", en: "to turn left / right" },
+            { term: "oversteken", tr: "karşıya geçmek", en: "to cross (street/bridge)" },
+            { term: "het kruispunt", tr: "kavşak / dörtyol", en: "crossroads / junction" },
+            { term: "de rotonde", tr: "döner kavşak (göbek)", en: "roundabout" }
+          ]
+        },
+        {
+          title: { tr: "Ayrılabilen Fiiller (Scheidbare Werkwoorden)", en: "Separable Verbs" },
+          icon: "fa-arrows-split-up-and-left",
+          items: [
+            { term: "afslaan (slaat... af)", tr: "sapmak / dönmek", en: "to turn" },
+            { term: "oversteken (steekt... over)", tr: "karşıya geçmek", en: "to cross over" },
+            { term: "binnenstappen (stapt... binnen)", tr: "içeri adım atmak / girmek", en: "to step inside" },
+            { term: "uitlaten (laat... uit)", tr: "(köpeği) gezdirmek", en: "to walk (the dog)" }
+          ]
+        },
+        {
+          title: { tr: "Konum & Yapılar", en: "Location & Landmarks" },
+          icon: "fa-landmark",
+          items: [
+            { term: "aan uw rechterhand", tr: "sağ kolunuzda / sağınızda", en: "on your right hand" },
+            { term: "de Jaarbeurs", tr: "Utrecht Fuar ve Kongre Merkezi", en: "Jaarbeurs exhibition centre" },
+            { term: "het viaduct", tr: "viyadük / köprü altı geçidi", en: "viaduct" }
+          ]
+        }
+      ]
+    },
+    exerciseGroups: [
+      {
+        instruction: "Deel 1: Direct Begrip & Route (1-7: Doğrudan Bilgi ve Güzergah / Direct Facts)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_12_1",
+            type: "multiple_choice",
+            question: "Waarom bezoekt Mateo de stad Utrecht op zaterdagochtend?",
+            options: [
+              "Om familie te bezoeken in een buitenwijk",
+              "Om naar de Fiets- en Wandelbeurs in de Jaarbeurs te gaan",
+              "Om een nieuwe kledingwinkel te openen",
+              "Om te studeren in de universiteitsbibliotheek"
+            ],
+            correctAnswer: "Om naar de Fiets- en Wandelbeurs in de Jaarbeurs te gaan"
+          },
+          {
+            id: "reading_12_2",
+            type: "multiple_choice",
+            question: "Hoe raakt Mateo verdwaald in de binnenstad van Utrecht?",
+            options: [
+              "Hij is zijn telefoon en navigatie vergeten.",
+              "Hij verlaat het centrale station via de verkeerde uitgang.",
+              "De politie stuurt hem de verkeerde kant op.",
+              "Hij is in slaap gevallen in de bus."
+            ],
+            correctAnswer: "Hij verlaat het centrale station via de verkeerde uitgang."
+          },
+          {
+            id: "reading_12_3",
+            type: "multiple_choice",
+            question: "Aan wie vraagt Mateo beleefd de weg?",
+            options: [
+              "Aan een buschauffeur",
+              "Aan een vriendelijke oudere dame die haar hondje uitlaat",
+              "Aan een toerist uit Frankrijk",
+              "Aan meneer De Vries"
+            ],
+            correctAnswer: "Aan een vriendelijke oudere dame die haar hondje uitlaat"
+          },
+          {
+            id: "reading_12_4",
+            type: "multiple_choice",
+            question: "Wat moet Mateo doen bij het grote kruispunt met de stoplichten?",
+            options: [
+              "Rechtsaf slaan",
+              "Linksaf de Vredenburgstraat in slaan",
+              "Meteen omdraaien",
+              "Wachten op de stadsbus"
+            ],
+            correctAnswer: "Linksaf de Vredenburgstraat in slaan"
+          },
+          {
+            id: "reading_12_5",
+            type: "multiple_choice",
+            question: "Wat moet hij oversteken nadat hij de Vredenburgstraat is ingelopen?",
+            options: [
+              "Een spoorwegovergang",
+              "Het water bij de witte ophaalbrug",
+              "Een drukke autosnelweg",
+              "Een parkeerterrein"
+            ],
+            correctAnswer: "Het water bij de witte ophaalbrug"
+          },
+          {
+            id: "reading_12_6",
+            type: "multiple_choice",
+            question: "Aan welke kant ziet hij het glazen gebouw van de Jaarbeurs nadat hij onder het spoorviaduct doorloopt?",
+            options: [
+              "Aan zijn linkerhand",
+              "Aan zijn rechterhand",
+              "Recht achter zich",
+              "Het gebouw is niet zichtbaar"
+            ],
+            correctAnswer: "Aan zijn rechterhand"
+          },
+          {
+            id: "reading_12_7",
+            type: "multiple_choice",
+            question: "Wat doet Mateo zodra hij bij de beurshal is aangekomen?",
+            options: [
+              "Hij koopt een toegangskaartje, stapt naar binnen en belt zijn vriend Lucas op.",
+              "Hij gaat direct lunchen in een restaurant.",
+              "Hij neemt de trein terug naar huis.",
+              "Hij vraagt om zijn geld terug."
+            ],
+            correctAnswer: "Hij koopt een toegangskaartje, stapt naar binnen en belt zijn vriend Lucas op."
+          }
+        ]
+      },
+      {
+        instruction: "Deel 2: Afslagen, Tijd & Locaties (8-13: Dönüşler, Zaman ve Konumlar / Directions & Turns)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_12_8",
+            type: "multiple_choice",
+            question: "Welke afslag moet Mateo nemen bij de grote rotonde na de brug?",
+            options: [
+              "De eerste afslag naar links",
+              "De tweede afslag naar rechts",
+              "De derde afslag",
+              "Hij moet de hele rotonde rondlopen"
+            ],
+            correctAnswer: "De tweede afslag naar rechts"
+          },
+          {
+            id: "reading_12_9",
+            type: "multiple_choice",
+            question: "Onder welk bouwwerk moet Mateo doorlopen volgens de dame?",
+            options: [
+              "Onder een tunnel onder de rivier",
+              "Onder het brede spoorviaduct door",
+              "Onder de Domtoren",
+              "Onder een parkeergarage"
+            ],
+            correctAnswer: "Onder het brede spoorviaduct door"
+          },
+          {
+            id: "reading_12_10",
+            type: "multiple_choice",
+            question: "Binnen hoeveel minuten arriveert Mateo bij de ingang van de Jaarbeurs nadat hij de aanwijzingen volgt?",
+            options: [
+              "Binnen twee minuten",
+              "Binnen vijftien minuten",
+              "Binnen vijfenveertig minuten",
+              "Het kostte hem twee uur"
+            ],
+            correctAnswer: "Binnen vijftien minuten"
+          },
+          {
+            id: "reading_12_11",
+            type: "multiple_choice",
+            question: "Wat voor soort beurs vindt er plaats in de Jaarbeurs volgens de tekst?",
+            options: [
+              "Een boekenbeurs",
+              "De Fiets- en Wandelbeurs",
+              "Een autobeursshow",
+              "Een kunsttentoonstelling"
+            ],
+            correctAnswer: "De Fiets- en Wandelbeurs"
+          },
+          {
+            id: "reading_12_12",
+            type: "multiple_choice",
+            question: "Wat betekent het Nederlandse woord 'rotonde'?",
+            options: [
+              "Een doodlopende straat",
+              "Een cirkelvormig kruispunt (döner kavşak)",
+              "Een stoplicht",
+              "Een voetgangersoversteekplaats"
+            ],
+            correctAnswer: "Een cirkelvormig kruispunt (döner kavşak)"
+          },
+          {
+            id: "reading_12_13",
+            type: "multiple_choice",
+            question: "Wat betekent de uitdrukking: \"U kunt het gebouw onmogelijk missen\"? ",
+            options: [
+              "Het gebouw is heel moeilijk te vinden.",
+              "Het gebouw is zo opvallend en groot dat je er vanzelf tegenaan loopt.",
+              "Het gebouw is gesloten.",
+              "Je mag het gebouw niet betreden."
+            ],
+            correctAnswer: "Het gebouw is zo opvallend en groot dat je er vanzelf tegenaan loopt."
+          }
+        ]
+      },
+      {
+        instruction: "Deel 3: Scheidbare Werkwoorden & Grammatica (14-20: Ayrılabilen Fiiller ve Dil / Separable Verbs)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_12_14",
+            type: "multiple_choice",
+            question: "Kijk naar de zin: \"Bij het kruispunt SLAAT u linksaf.\" Wat is het hele werkwoord (de infinitief)?",
+            options: [
+              "slaan",
+              "afslaan (scheidbaar werkwoord)",
+              "inslaan",
+              "verslaan"
+            ],
+            correctAnswer: "afslaan (scheidbaar werkwoord)"
+          },
+          {
+            id: "reading_12_15",
+            type: "multiple_choice",
+            question: "Wat gebeurt er met het voorvoegsel van een scheidbaar werkwoord (zoals 'af-' in 'afslaan') in een gewone hoofdzin in de tegenwoordige tijd?",
+            options: [
+              "Het blijft vastzitten aan het werkwoord.",
+              "Het verhuist helemaal naar het einde van de zin of zinsdeel.",
+              "Het valt helemaal weg.",
+              "Het verandert in een voorzetsel."
+            ],
+            correctAnswer: "Het verhuist helemaal naar het einde van de zin of zinsdeel."
+          },
+          {
+            id: "reading_12_16",
+            type: "multiple_choice",
+            question: "Kijk naar de zin: \"U STEEKT bij de brug het water OVER.\" Welk scheidbaar werkwoord zien we hier?",
+            options: [
+              "insteken",
+              "oversteken",
+              "doorsteken",
+              "uitsteken"
+            ],
+            correctAnswer: "oversteken"
+          },
+          {
+            id: "reading_12_17",
+            type: "multiple_choice",
+            question: "Kijk naar de zin: \"Hij STAPT de beurshal BINNEN.\" Wat is de infinitiefvorm?",
+            options: [
+              "opstappen",
+              "uitstappen",
+              "binnenstappen",
+              "overstappen"
+            ],
+            correctAnswer: "binnenstappen"
+          },
+          {
+            id: "reading_12_18",
+            type: "multiple_choice",
+            question: "Welke beleefde indirecte vraag gebruikt Mateo om de weg te vragen?",
+            options: [
+              "\"Waar is het station?\"",
+              "\"Weet u misschien hoe ik bij de Jaarbeurs kom?\"",
+              "\"Breng mij naar de Jaarbeurs!\"",
+              "\"Ga weg, ik zoek de weg zelf.\""
+            ],
+            correctAnswer: "\"Weet u misschien hoe ik bij de Jaarbeurs kom?\""
+          },
+          {
+            id: "reading_12_19",
+            type: "multiple_choice",
+            question: "Wat is het tegenovergestelde van 'linksaf' in het Nederlands?",
+            options: [
+              "rechtdoor",
+              "rechtsaf",
+              "boven",
+              "achteruit"
+            ],
+            correctAnswer: "rechtsaf"
+          },
+          {
+            id: "reading_12_20",
+            type: "multiple_choice",
+            question: "Welke bewering over de wandeling van Mateo is ONJUIST (niet waar)?",
+            options: [
+              "Mateo raakt verdwaald omdat hij het station via de verkeerde kant verlaat.",
+              "De oudere dame weigert hem te helpen en loopt zwijgend door.",
+              "Mateo moet bij het stoplicht linksaf slaan.",
+              "Binnen vijftien minuten bereikt Mateo de hoofdingang van de beurs."
+            ],
+            correctAnswer: "De oudere dame weigert hem te helpen en loopt zwijgend door."
+          }
+        ]
+      }
+    ]
+  },
+{
     id: "On-Class-12",
     chapter: 12,
     title: "Summary",

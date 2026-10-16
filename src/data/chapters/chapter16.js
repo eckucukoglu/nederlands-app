@@ -87,13 +87,8 @@ export const chapter16Sections = [
         isExtra: false,
         questions: [
           { id: "16.1_opd1_1", type: "multiple_choice", question: "1. Amira wil...", options: ["a) vandaag een film zien.", "b) reserveren voor een film."], correctAnswer: "a) vandaag een film zien." },
-            {
-    id: "16.2",
-    chapter: 16,
-    title: "Vocabulary",
-    theory: null,
-    exerciseGroups: []
-  },
+
+
 { id: "16.1_opd1_2", type: "multiple_choice", question: "2. Amira gaat niet naar 'Alles is liefde'.", options: ["a) Dat mag niet want de film is al begonnen.", "b) Dat wil ze niet want ze heeft het begin gemist."], correctAnswer: "b) Dat wil ze niet want ze heeft het begin gemist." },
           { id: "16.1_opd1_3", type: "multiple_choice", question: "3. 'De Nieuwe Wildernis' is een Nederlandse film, dus...", options: ["a) ze spreken Nederlands.", "b) hij is niet ondertiteld."], correctAnswer: "a) ze spreken Nederlands." },
           { id: "16.1_opd1_4", type: "multiple_choice", question: "4. 'Zomerhitte' is...", options: ["a) een Nederlandse film.", "b) een natuurdocumentaire."], correctAnswer: "a) een Nederlandse film." },
@@ -101,6 +96,13 @@ export const chapter16Sections = [
         ]
       }
     ]
+  },
+  {
+    id: "16.2",
+    chapter: 16,
+    title: "Vocabulary",
+    theory: null,
+    exerciseGroups: []
   },
   {
     id: "16.3",
@@ -237,11 +239,14 @@ export const chapter16Sections = [
     ),
     exerciseGroups: [
       {
-        instruction: "Opdracht 9: Beantwoord de vragen met behulp van de Kijkwijzer. (Answer the questions using the Kijkwijzer.)",
+        instruction: "Opdracht 9: Beantwoord de vragen met behulp van de Kijkwijzer. (Kijkwijzer sembollerine göre soruları cevaplayın.)",
         isExtra: false,
         questions: [
           { id: "16.4_opd9_1", type: "multiple_choice", question: "1. Je wil niet naar een film met discriminatie. Naar welke film op de poster ga je dan NIET?", options: ["Date Night", "Sneak Preview", "Robin Hood"], correctAnswer: "Sneak Preview" },
-          { id: "16.4_opd9_2", type: "multiple_choice", question: "2. Je wil naar een actiefilm met geweld (violence). Dat vind je geen probleem. Naar welke film kun je gaan?", options: ["Planet 51", "Bride Flight", "Centurion (16)"], correctAnswer: "Centurion (16)" }
+          { id: "16.4_opd9_2", type: "multiple_choice", question: "2. Je wil naar een actiefilm met geweld (violence). Dat vind je geen probleem. Naar welke film kun je gaan?", options: ["Planet 51 (AL)", "Bride Flight (12)", "Centurion (16)"], correctAnswer: "Centurion (16)" },
+          { id: "16.4_opd9_3", type: "multiple_choice", question: "3. Je vindt grof taalgebruik (küfür / vulgar language) in een film niet prettig. Naar welke film kun je gaan?", options: ["Sneak Preview (bevat grof taalgebruik)", "Date Night (bevat alleen angst, 9)", "Een film met vloeken"], correctAnswer: "Date Night (bevat alleen angst, 9)" },
+          { id: "16.4_opd9_4", type: "multiple_choice", question: "4. Je bent met je neefje van 14 jaar. Welke film mag hij volgens de Kijkwijzer NIET in de zaal zien?", options: ["Robin Hood (12)", "Planet 51 (AL)", "Centurion (16)"], correctAnswer: "Centurion (16)" },
+          { id: "16.4_opd9_5", type: "multiple_choice", question: "5. Wat betekent het Kijkwijzer-symbool 'AL'?", options: ["Alle Leeftijden (Her yaşa uygun / All ages)", "Alleen Volwassenen (Sadece yetişkinler)", "Alleen Leerkrachten"], correctAnswer: "Alle Leeftijden (Her yaşa uygun / All ages)" }
         ]
       }
     ]
@@ -288,7 +293,320 @@ export const chapter16Sections = [
       }
     ]
   },
-  {
+    {
+    id: "Reading-16",
+    chapter: 16,
+    title: {
+      tr: "Okuma & Anlama",
+      en: "Reading Comprehension"
+    },
+    readingPassage: {
+      title: "Een gezellige filmavond in bioscoop Pathé Rembrandt",
+      level: "Niveau A2 • 19 Zinnen",
+      intro: {
+        tr: "Aşağıdaki okuma parçasını dikkatlice okuyunuz. Bu parça 16. Bölümde öğrendiğiniz sinema ve film türleri terimleri (de bioscoop, de komedie, de thriller, de zaal), cümle bağlaçları (nevenschikkende conjuncties: en, of, maar, want, dus), yaş ve içerik sınıflandırması (Kijkwijzer) ve film sonrası sohbet kalıpları kullanılarak hazırlanmıştır. Metni dinleyebilir, kelimelerin sözlük anlamına bakabilir ve alttaki 20 soruluk testi çözebilirsiniz.",
+        en: "Read the following reading passage carefully. It incorporates cinema & movie genres vocabulary (cinema, comedy, thriller, auditorium), coordinating conjunctions (en, of, maar, want, dus), film classification ratings (Kijkwijzer), and movie discussion expressions learned in Chapter 16. Listen to the text, click words to check meanings, and answer the 20 comprehension questions below."
+      },
+      paragraphs: [
+        "Op zaterdagavond spreken Lucas, Mateo en Susy met elkaar af voor een ontspannen cultureel uitje in Utrecht. Ze besluiten naar de bekende historische bioscoop Pathé Rembrandt aan de Oudegracht te gaan. In de levendige entreehal hangen grote, verlichte filmposters van romantische komedies, spectaculaire actiefilms en spannende thrillers. De vrienden bestuderen het actuele filmprogramma op de digitale schermen.",
+        "Mateo wijst enthousiast naar een poster en stelt voor: \"Ik wil heel graag naar die nieuwe Hollywood-actiefilm, WANT de recensies in de krant waren buitengewoon lovend!\" Susy knikt begrijpend, MAAR ze merkt direct op: \"Die film duurt ruim drie uur, DUS dan zijn we pas diep in de nacht klaar.\" Lucas overlegt met de groep: \"Zullen we naar de Nederlandse komedie gaan, OF kiezen we toch voor die bekroonde detectivefilm?\" Ze stemmen gezamenlijk EN kiezen unaniem voor de succesvolle Nederlandse komedie.\"",
+        "Lucas bestelt handig drie e-tickets op zijn smartphone voor zaal 3 op rij 7 in het midden. Ze bekijken de officiële Kijkwijzer-symbolen op het scherm: de komedie is geschikt bevonden voor 'alle leeftijden' en bevat geen angstaanjagende of gewelddadige scènes. Voordat de film begint, lopen ze snel langs het buffet. Mateo koopt een grote emmer zoete popcorn, Lucas neemt knapperige zoute popcorn en Susy kiest een koud flesje bruisend bronwater.",
+        "De film blijkt een enorm succes: de grappen zijn spitsvondig en de hele volle zaal lacht onafgebroken mee. Na afloop verlaten de drie vrienden de bioscoopzaal met een uitstekend humeur. Ze wandelen langs de sfeervol verlichte gracht naar een gezellig café om onder het genot van een drankje na te praten over de grappigste filmscènes. Susy zegt lachend: \"Wat een geweldige avond, die hoofdrolspeler speelde zijn rol werkelijk fantastisch!\""
+      ],
+      hints: [
+        {
+          title: { tr: "Sinema & Film Terimleri", en: "Cinema & Film Terms" },
+          icon: "fa-film",
+          items: [
+            { term: "de bioscoop", tr: "sinema", en: "cinema / movie theatre" },
+            { term: "de komedie / thriller", tr: "komedi / gerilim filmi", en: "comedy / thriller" },
+            { term: "de recensie", tr: "film eleştirisi / yorumu", en: "movie review" },
+            { term: "de rij / zaal", tr: "sıra / salon", en: "row / auditorium" },
+            { term: "napraten", tr: "(film/etkinlik sonrası) değerlendirmek, sohbet etmek", en: "to chat afterwards" }
+          ]
+        },
+        {
+          title: { tr: "Bağlaçlar (Nevenschikkende Conjuncties)", en: "Coordinating Conjunctions" },
+          icon: "fa-link",
+          items: [
+            { term: "en / of", tr: "ve / veya", en: "and / or" },
+            { term: "maar / want", tr: "ama / çünkü", en: "but / because" },
+            { term: "dus", tr: "bu yüzden / öyleyse", en: "so / therefore" },
+            { term: "düz dizilim", tr: "bu bağlaçlardan sonra özne + fiil (S-V-O) sırası bozulmaz", en: "word order remains S-V-O" }
+          ]
+        },
+        {
+          title: { tr: "Kijkwijzer (İçerik Sınıflandırması)", en: "Kijkwijzer Film Ratings" },
+          icon: "fa-shield-halved",
+          items: [
+            { term: "alle leeftijden (AL)", tr: "her yaş grubu için uygun", en: "all ages" },
+            { term: "geweld / angst", tr: "şiddet / korku unsuru", en: "violence / fear indicator" }
+          ]
+        }
+      ]
+    },
+    exerciseGroups: [
+      {
+        instruction: "Deel 1: Direct Begrip & Bioscoopbezoek (1-7: Doğrudan Bilgi ve Sinema / Direct Facts)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_16_1",
+            type: "multiple_choice",
+            question: "Naar welke bioscoop gaan Lucas, Mateo en Susy op zaterdagavond in Utrecht?",
+            options: [
+              "Naar Pathé Rembrandt aan de Oudegracht",
+              "Naar het Filmtheater Kinepolis",
+              "Naar een openluchtbioscoop in het park",
+              "Naar een klein filmhuis in Amsterdam"
+            ],
+            correctAnswer: "Naar Pathé Rembrandt aan de Oudegracht"
+          },
+          {
+            id: "reading_16_2",
+            type: "multiple_choice",
+            question: "Waarom wilde Mateo in eerste instantie graag naar de actiefilm?",
+            options: [
+              "Omdat hij de hoofdrolspeler persoonlijk kent",
+              "Omdat de recensies in de krant buitengewoon lovend waren",
+              "Omdat die film gratis was",
+              "Omdat de film maar dertig minuten duurde"
+            ],
+            correctAnswer: "Omdat de recensies in de krant buitengewoon lovend waren"
+          },
+          {
+            id: "reading_16_3",
+            type: "multiple_choice",
+            question: "Waarom kiezen ze er uiteindelijk voor om NIET naar de actiefilm te gaan?",
+            options: [
+              "Omdat de film uitverkocht was",
+              "Omdat de film ruim drie uur duurt en het dan te laat wordt",
+              "Omdat Susy bang is in het donker",
+              "Omdat de zaal gesloten was"
+            ],
+            correctAnswer: "Omdat de film ruim drie uur duurt en het dan te laat wordt"
+          },
+          {
+            id: "reading_16_4",
+            type: "multiple_choice",
+            question: "Voor welk filmgenre kiezen de vrienden uiteindelijk gezamenlijk?",
+            options: [
+              "Een enge horrorfilm",
+              "Een succesvolle Nederlandse komedie",
+              "Een animatiefilm voor peuters",
+              "Een historisch oorlogsdrama"
+            ],
+            correctAnswer: "Een succesvolle Nederlandse komedie"
+          },
+          {
+            id: "reading_16_5",
+            type: "multiple_choice",
+            question: "In welke zaal en op welke rij zitten ze tijdens de voorstelling?",
+            options: [
+              "In zaal 1 op rij 1",
+              "In zaal 3 op rij 7 in het midden",
+              "In zaal 5 op de achterste rij",
+              "Op het balkon"
+            ],
+            correctAnswer: "In zaal 3 op rij 7 in het midden"
+          },
+          {
+            id: "reading_16_6",
+            type: "multiple_choice",
+            question: "Welke snacks en drankjes kopen ze bij de snackbalie voor de film?",
+            options: [
+              "Frietjes en hamburgers",
+              "Zoete popcorn voor Mateo, zoute popcorn voor Lucas en bronwater voor Susy",
+              "Drie zakken chips en bier",
+              "Alleen appels en thee"
+            ],
+            correctAnswer: "Zoete popcorn voor Mateo, zoute popcorn voor Lucas en bronwater voor Susy"
+          },
+          {
+            id: "reading_16_7",
+            type: "multiple_choice",
+            question: "Wat doen de vrienden direct na afloop van de film?",
+            options: [
+              "Ze gaan meteen naar huis om te slapen.",
+              "Ze wandelen naar een gezellig café aan de gracht om na te praten over de film.",
+              "Ze kopen kaartjes voor een tweede film.",
+              "Ze gaan naar de sportschool."
+            ],
+            correctAnswer: "Ze wandelen naar een gezellig café aan de gracht om na te praten over de film."
+          }
+        ]
+      },
+      {
+        instruction: "Deel 2: Kijkwijzer & Bioscoopervaring (8-13: Kijkwijzer ve Deneyim / Ratings & Cinema)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_16_8",
+            type: "multiple_choice",
+            question: "Wat is in Nederland het doel van het 'Kijkwijzer'-systeem?",
+            options: [
+              "Prijzen van filmkaartjes vergelijken",
+              "Informatie geven over de geschiktheid van films qua leeftijd en schadelijke inhoud zoals geweld en angst",
+              "De weg naar de bioscoop wijzen",
+              "De beste stoelen in de zaal reserveren"
+            ],
+            correctAnswer: "Informatie geven over de geschiktheid van films qua leeftijd en schadelijke inhoud zoals geweld en angst"
+          },
+          {
+            id: "reading_16_9",
+            type: "multiple_choice",
+            question: "Welke leeftijdsclassificatie had de gekozen komediefilm volgens het Kijkwijzer-scherm?",
+            options: [
+              "Geschikt voor alle leeftijden (AL)",
+              "Vanaf 12 jaar",
+              "Vanaf 16 jaar",
+              "Alleen voor volwassenen (18+)"
+            ],
+            correctAnswer: "Geschikt voor alle leeftijden (AL)"
+          },
+          {
+            id: "reading_16_10",
+            type: "multiple_choice",
+            question: "Hoe reageerde het publiek in de zaal tijdens de voorstelling van de komedie?",
+            options: [
+              "Veel mensen vielen in slaap.",
+              "De hele volle zaal lachte onafgebroken om de spitsvondige grappen.",
+              "Mensen liepen boos weg.",
+              "Iedereen was doodstil."
+            ],
+            correctAnswer: "De hele volle zaal lachte onafgebroken om de spitsvondige grappen."
+          },
+          {
+            id: "reading_16_11",
+            type: "multiple_choice",
+            question: "Hoe kocht Lucas de bioscoopkaartjes voor de vriendengroep?",
+            options: [
+              "Contant aan de kassa bij een medewerker",
+              "Digitaal als e-tickets op zijn smartphone",
+              "Via de post",
+              "Hij had gewonnen bij een prijsvraag"
+            ],
+            correctAnswer: "Digitaal als e-tickets op zijn smartphone"
+          },
+          {
+            id: "reading_16_12",
+            type: "multiple_choice",
+            question: "Wat betekent het werkwoord 'napraten' in deze context?",
+            options: [
+              "Woorden letterlijk herhalen zoals een papegaai",
+              "Na afloop van een gebeurtenis of film gezellig evalueren en bespreken wat je gezien hebt",
+              "Iemand beledigen achter zijn rug",
+              "Heel zachtjes fluisteren in de zaal"
+            ],
+            correctAnswer: "Na afloop van een gebeurtenis of film gezellig evalueren en bespreken wat je gezien hebt"
+          },
+          {
+            id: "reading_16_13",
+            type: "multiple_choice",
+            question: "Wat vond Susy van het optreden van de hoofdrolspeler?",
+            options: [
+              "Slecht en ongeloofwaardig",
+              "Werkelijk fantastisch en hilarisch",
+              "Saai",
+              "Veel te serieus"
+            ],
+            correctAnswer: "Werkelijk fantastisch en hilarisch"
+          }
+        ]
+      },
+      {
+        instruction: "Deel 3: Nevenschikkende Conjuncties & Grammatica (14-20: Bağlaçlar ve Cümle Dizilimi / Conjunctions)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_16_14",
+            type: "multiple_choice",
+            question: "Welke vijf voegwoorden behoren tot de nevenschikkende conjuncties in het Nederlands?",
+            options: [
+              "omdat, als, toen, dat, hoewel",
+              "en, of, maar, want, dus",
+              "hier, daar, waar, waarom, hoe",
+              "in, op, onder, naast, tussen"
+            ],
+            correctAnswer: "en, of, maar, want, dus"
+          },
+          {
+            id: "reading_16_15",
+            type: "multiple_choice",
+            question: "Kijk naar de zin: \"Ik wil naar die film, WANT de recensies WAREN fantastisch.\" Wat gebeurt er met de woordvolgorde na 'want'?",
+            options: [
+              "Het werkwoord gaat naar het einde van de zin.",
+              "De normale hoofdzinvolgorde blijft behouden (onderwerp + persoonsvorm: de recensies waren).",
+              "Er vindt verplichte inversie plaats.",
+              "Het onderwerp verdwijnt."
+            ],
+            correctAnswer: "De normale hoofdzinvolgorde blijft behouden (onderwerp + persoonsvorm: de recensies waren)."
+          },
+          {
+            id: "reading_16_16",
+            type: "multiple_choice",
+            question: "Welk voegwoord drukt een reden of oorzaak uit zonder de woordvolgorde te veranderen: 'want' of 'omdat'?",
+            options: [
+              "want (geen verandering in woordvolgorde)",
+              "omdat (werkwoord gaat naar het einde)",
+              "beide veranderen de volgorde niet",
+              "geen van beide"
+            ],
+            correctAnswer: "want (geen verandering in woordvolgorde)"
+          },
+          {
+            id: "reading_16_17",
+            type: "multiple_choice",
+            question: "Welk voegwoord drukt een gevolg of conclusie uit in de zin: \"De film duurt drie uur, ... dan zijn we pas laat klaar\"? ",
+            options: [
+              "maar",
+              "of",
+              "dus",
+              "want"
+            ],
+            correctAnswer: "dus"
+          },
+          {
+            id: "reading_16_18",
+            type: "multiple_choice",
+            question: "Welk voegwoord geeft een tegenstelling aan in: \"Susy knikt begrijpend, ... ze merkt op dat het te laat wordt\"? ",
+            options: [
+              "en",
+              "maar",
+              "of",
+              "want"
+            ],
+            correctAnswer: "maar"
+          },
+          {
+            id: "reading_16_19",
+            type: "multiple_choice",
+            question: "Welk voegwoord geeft een keuze aan tussen twee mogelijkheden: \"Zullen we naar de komedie gaan, ... kiezen we een thriller?\"?",
+            options: [
+              "en",
+              "of",
+              "dus",
+              "want"
+            ],
+            correctAnswer: "of"
+          },
+          {
+            id: "reading_16_20",
+            type: "multiple_choice",
+            question: "Welke stelling over de filmavond is ONJUIST (niet waar)?",
+            options: [
+              "De vrienden gaan naar Pathé Rembrandt in Utrecht.",
+              "Mateo eet zoete popcorn en Lucas eet zoute popcorn.",
+              "De gekozen film bleek zo saai dat de vrienden halverwege wegliepen.",
+              "Na afloop gaan ze nog wat drinken in een café aan de gracht."
+            ],
+            correctAnswer: "De gekozen film bleek zo saai dat de vrienden halverwege wegliepen."
+          }
+        ]
+      }
+    ]
+  },
+{
     id: "On-Class-16",
     chapter: 16,
     title: "Summary",

@@ -387,18 +387,13 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
   });
 
   useEffect(() => {
-    setShowSummaryFavInput(false);
-    setSummaryFavNote("");
-    setIsSummaryQuizOpen(false);
     if (activeTab !== 'home') {
       setLastTabBeforeHome(activeTab);
       localStorage.setItem('lastTabBeforeHome', activeTab);
     }
   }, [activeTab]);
 
-  const [isSummaryQuizOpen, setIsSummaryQuizOpen] = useState(false);
-  const [showSummaryFavInput, setShowSummaryFavInput] = useState(false);
-  const [summaryFavNote, setSummaryFavNote] = useState("");
+
 
   const [isSearchExpanded, setIsSearchExpanded] = useState(false);
   const [isMobileSearchOpen, setIsMobileSearchOpen] = useState(false);
@@ -1133,14 +1128,7 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
         />
       )}
 
-      {/* SUMMARY QUIZ MODAL */}
-      {isSummaryQuizOpen && (
-        <QuizModule 
-          tags={[`summary_ch${currentChapter}`]} 
-          onClose={() => setIsSummaryQuizOpen(false)} 
-          title={lang === 'tr' ? `Ünite Özeti Testi (H${currentChapter})` : `Chapter Summary Quiz (H${currentChapter})`}
-        />
-      )}
+
 
       {/* 1. HEADER (SADECE BU KISIM SABİT) */}
       <header className="bg-slate-950/95 backdrop-blur-md text-white shadow-md sticky top-0 z-50 border-b border-slate-800 flex-none w-full">
@@ -1443,9 +1431,7 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
           
           <div 
             ref={sectionMeasureRef} 
-            className={`w-full max-w-full overflow-x-auto hide-scroll whitespace-nowrap flex justify-center items-center gap-2 px-10 sm:px-12 ${
-              isSummaryMode ? 'pr-48 sm:pr-56' : ''
-            }`} 
+            className="w-full max-w-full overflow-x-auto hide-scroll whitespace-nowrap flex justify-center items-center gap-2 px-10 sm:px-12" 
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
             <div className="flex items-center justify-center flex-nowrap gap-1.5 sm:gap-2 px-1 flex-shrink-0">
@@ -1493,98 +1479,6 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
 
           {/* SAĞ TARAF AKSİYONLARI */}
           <div className="absolute right-3 sm:right-4 z-10 flex items-center gap-2 sm:gap-2.5">
-            {isSummaryMode && (
-              <>
-                {/* PRACTICE BUTONU */}
-                <button
-                  type="button"
-                  onClick={() => setIsSummaryQuizOpen(true)}
-                  className="flex items-center gap-1.5 h-8 px-3 rounded-full text-xs font-bold bg-amber-600/20 hover:bg-amber-600 text-amber-400 hover:text-white border border-amber-500/50 hover:border-amber-500 transition-all shadow-sm group cursor-pointer"
-                  title={lang === 'tr' ? "Ünite Özeti Testi (Pratik Yap)" : "Practice Summary Quiz"}
-                >
-                  <i className="fa-solid fa-dumbbell group-hover:animate-bounce text-[11px]"></i>
-                  <span>Practice</span>
-                </button>
-
-                {/* TAMAMLANDI BUTONU */}
-                <button
-                  type="button"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    toggleCompleted(activeTab);
-                  }}
-                  className="text-xl transition-transform hover:scale-110 focus:outline-none cursor-pointer flex items-center justify-center w-7 h-7"
-                  title={completed[activeTab] ? (lang === 'tr' ? "Tamamlandı olarak işaretlendi" : "Marked as completed") : (lang === 'tr' ? "Tamamlandı olarak işaretle" : "Mark as completed")}
-                >
-                  {completed[activeTab] ? (
-                    <i className="fa-solid fa-circle-check text-emerald-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.6)]"></i>
-                  ) : (
-                    <i className="fa-regular fa-circle-check text-slate-500 hover:text-emerald-400 transition-colors"></i>
-                  )}
-                </button>
-
-                {/* FAVORİ BUTONU & POPUP */}
-                <div className="relative flex items-center">
-                  <button
-                    type="button"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      if (favorites[activeTab]) {
-                        toggleFavorite(activeTab, null);
-                      } else {
-                        setShowSummaryFavInput(true);
-                      }
-                    }}
-                    className="text-xl transition-transform hover:scale-110 focus:outline-none cursor-pointer flex items-center justify-center w-7 h-7"
-                    title={favorites[activeTab] ? `Favori: ${favorites[activeTab]}` : (lang === 'tr' ? "Favorilere ekle" : "Add to favorites")}
-                  >
-                    {favorites[activeTab] ? (
-                      <i className="fa-solid fa-star text-amber-400 drop-shadow-[0_0_8px_rgba(251,191,36,0.6)]"></i>
-                    ) : (
-                      <i className="fa-regular fa-star text-slate-500 hover:text-amber-400 transition-colors"></i>
-                    )}
-                  </button>
-
-                  {showSummaryFavInput && (
-                    <div 
-                      className="absolute right-0 top-full mt-2 bg-slate-900 border border-amber-500/50 p-1.5 rounded-xl shadow-2xl z-50 flex items-center gap-1.5 animate-fadeIn" 
-                      onClick={e => e.stopPropagation()}
-                    >
-                      <input
-                        autoFocus
-                        maxLength={100}
-                        value={summaryFavNote}
-                        onChange={e => setSummaryFavNote(e.target.value)}
-                        onKeyDown={e => { 
-                          if (e.key === 'Enter') {
-                            e.stopPropagation();
-                            toggleFavorite(activeTab, summaryFavNote.trim() || (lang === 'tr' ? "Önemli Özet" : "Important Summary"));
-                            setShowSummaryFavInput(false);
-                            setSummaryFavNote("");
-                          } 
-                          if (e.key === 'Escape') setShowSummaryFavInput(false);
-                        }}
-                        placeholder={lang === 'tr' ? "Notun (max 100 kar.)..." : "Your note (max 100 char.)..."}
-                        className="bg-slate-950 text-slate-200 text-xs px-2.5 py-1 w-36 sm:w-48 rounded-lg border border-slate-700 focus:outline-none focus:border-amber-400 placeholder-slate-500"
-                      />
-                      <button 
-                        type="button"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          toggleFavorite(activeTab, summaryFavNote.trim() || (lang === 'tr' ? "Önemli Özet" : "Important Summary"));
-                          setShowSummaryFavInput(false);
-                          setSummaryFavNote("");
-                        }} 
-                        className="bg-amber-600 hover:bg-amber-500 text-white px-2 py-1 rounded-lg text-xs font-bold transition-colors cursor-pointer flex items-center justify-center shadow-sm"
-                      >
-                        <i className="fa-solid fa-check"></i>
-                      </button>
-                    </div>
-                  )}
-                </div>
-              </>
-            )}
-
             {/* SABİT GERİ BİLDİRİM (+) BUTONU */}
             <button 
               type="button"
@@ -1645,47 +1539,7 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
               })}
             </div>
           </button>
-          {isSummaryMode && (
-            <div className="flex items-center gap-1.5 flex-shrink-0">
-              <button
-                type="button"
-                onClick={() => setIsSummaryQuizOpen(true)}
-                className="flex items-center gap-1 bg-amber-600/20 hover:bg-amber-600 text-amber-400 hover:text-white border border-amber-500/50 h-7 px-2.5 rounded-lg text-xs font-bold transition-colors"
-                title="Practice"
-              >
-                <i className="fa-solid fa-dumbbell text-[10px]"></i>
-                <span className="hidden xs:inline">Practice</span>
-              </button>
-              <button
-                type="button"
-                onClick={(e) => { e.stopPropagation(); toggleCompleted(activeTab); }}
-                className="text-lg w-7 h-7 flex items-center justify-center focus:outline-none"
-                title={completed[activeTab] ? (lang === 'tr' ? "Tamamlandı" : "Completed") : (lang === 'tr' ? "Tamamla" : "Complete")}
-              >
-                {completed[activeTab] ? (
-                  <i className="fa-solid fa-circle-check text-emerald-400"></i>
-                ) : (
-                  <i className="fa-regular fa-circle-check text-slate-500"></i>
-                )}
-              </button>
-              <button
-                type="button"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  if (favorites[activeTab]) toggleFavorite(activeTab, null);
-                  else toggleFavorite(activeTab, lang === 'tr' ? "Önemli Özet" : "Important Summary");
-                }}
-                className="text-lg w-7 h-7 flex items-center justify-center focus:outline-none"
-                title={favorites[activeTab] ? (favorites[activeTab] === true ? "Favori" : `Favori: ${favorites[activeTab]}`) : (lang === 'tr' ? "Favori Ekle" : "Add Favorite")}
-              >
-                {favorites[activeTab] ? (
-                  <i className="fa-solid fa-star text-amber-400"></i>
-                ) : (
-                  <i className="fa-regular fa-star text-slate-500"></i>
-                )}
-              </button>
-            </div>
-          )}
+
           <button
             type="button"
             onClick={() => setIsFeedbackOpen(true)}

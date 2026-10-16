@@ -1,6 +1,5 @@
 // src/data/chapters/chapter5.js
 import React from 'react';
-import { generateSmartQuestions } from '../questionGenerator';
 
 export const chapter5Vocab = [
   { id: "5_1", chapter: 5, nl: "boodschappen doen", en: "go shopping", example: "Hans gaat boodschappen doen op de markt." },
@@ -139,33 +138,52 @@ export const chapter5Sections = [
     id: "5.2",
     chapter: 5,
     title: "Vocabulary",
+    theory: null,
+    exerciseGroups: []
+  },
+  {
+    id: "5.3",
+    chapter: 5,
+    title: "5.3 Groente en fruit",
     theory: (lang) => (
       <>
         {lang === 'tr' ? (
           <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
             <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>🥦 Groente en Fruit (Sebze ve Meyve)</h3>
-            <div className="grid grid-cols-2 gap-4 text-sm text-slate-200">
-              <div>
-                <h4 className="font-bold text-purple-300 border-b border-purple-500/30 pb-1 mb-2">Groente (Sebzeler)</h4>
-                <ul className="space-y-1">
-                  <li>de courgette (kabak), de aubergine (patlıcan)</li>
-                  <li>de paprika (biber), de tomaat (domates)</li>
-                  <li>de andijvie (hindiba), de aardappel (patates)</li>
-                  <li>de bloemkool (karnabahar), de ui (soğan)</li>
-                  <li>de champignon (mantar), de peterselie (maydanoz)</li>
-                  <li>de knoflook (sarımsak), de komkommer (salatalık)</li>
-                  <li>de wortel (havuç)</li>
+            <p className="text-sm text-slate-300 mb-4">Hollanda pazarında ve süpermarketinde en sık karşılaşacağınız taze sebze ve meyveler:</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-200">
+              <div className="bg-purple-900/20 p-4 rounded-xl border border-purple-500/20">
+                <h4 className="font-bold text-purple-300 border-b border-purple-500/30 pb-1 mb-2">🥕 Groente (Sebzeler)</h4>
+                <ul className="space-y-1.5 text-xs sm:text-sm">
+                  <li><strong>de aardappel:</strong> patates</li>
+                  <li><strong>de andijvie:</strong> hindiba (geleneksel stamppot için)</li>
+                  <li><strong>de aubergine:</strong> patlıcan</li>
+                  <li><strong>de bloemkool:</strong> karnabahar</li>
+                  <li><strong>de courgette:</strong> kabak</li>
+                  <li><strong>de champignon:</strong> mantar</li>
+                  <li><strong>de knoflook:</strong> sarımsak</li>
+                  <li><strong>de komkommer:</strong> salatalık</li>
+                  <li><strong>de paprika:</strong> dolmalık biber</li>
+                  <li><strong>de peterselie:</strong> maydanoz</li>
+                  <li><strong>de tomaat:</strong> domates</li>
+                  <li><strong>de ui:</strong> soğan</li>
+                  <li><strong>de wortel:</strong> havuç</li>
                 </ul>
               </div>
-              <div>
-                <h4 className="font-bold text-indigo-300 border-b border-indigo-500/30 pb-1 mb-2">Fruit (Meyveler)</h4>
-                <ul className="space-y-1">
-                  <li>de aardbei (çilek), de druif (üzüm)</li>
-                  <li>de perzik (şeftali), de pruim (erik)</li>
-                  <li>de kers (kiraz), de appel (elma)</li>
-                  <li>de peer (armut), de sinaasapppel (portakal)</li>
-                  <li>de mandarijn (mandalina), de kiwi (kivi)</li>
-                  <li>de banaan (muz)</li>
+              <div className="bg-indigo-900/20 p-4 rounded-xl border border-indigo-500/20">
+                <h4 className="font-bold text-indigo-300 border-b border-indigo-500/30 pb-1 mb-2">🍎 Fruit (Meyveler)</h4>
+                <ul className="space-y-1.5 text-xs sm:text-sm">
+                  <li><strong>de aardbei:</strong> çilek</li>
+                  <li><strong>de appel:</strong> elma</li>
+                  <li><strong>de banaan:</strong> muz</li>
+                  <li><strong>de druif:</strong> üzüm</li>
+                  <li><strong>de kers:</strong> kiraz</li>
+                  <li><strong>de kiwi:</strong> kivi</li>
+                  <li><strong>de mandarijn:</strong> mandalina</li>
+                  <li><strong>de peer:</strong> armut</li>
+                  <li><strong>de perzik:</strong> şeftali</li>
+                  <li><strong>de pruim:</strong> erik</li>
+                  <li><strong>de sinaasappel:</strong> portakal</li>
                 </ul>
               </div>
             </div>
@@ -173,28 +191,40 @@ export const chapter5Sections = [
         ) : (
           <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
             <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>🥦 Groente en Fruit (Vegetables and Fruit)</h3>
-            <div className="grid grid-cols-2 gap-4 text-sm text-slate-200">
-              <div>
-                <h4 className="font-bold text-purple-300 border-b border-purple-500/30 pb-1 mb-2">Groente (Vegetables)</h4>
-                <ul className="space-y-1">
-                  <li>de courgette (zucchini), de aubergine (eggplant)</li>
-                  <li>de paprika (bell pepper), de tomaat (tomato)</li>
-                  <li>de andijvie (endive), de aardappel (potato)</li>
-                  <li>de bloemkool (cauliflower), de ui (onion)</li>
-                  <li>de champignon (mushroom), de peterselie (parsley)</li>
-                  <li>de knoflook (garlic), de komkommer (cucumber)</li>
-                  <li>de wortel (carrot)</li>
+            <p className="text-sm text-slate-300 mb-4">The most common fresh produce at Dutch street markets and supermarkets:</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-200">
+              <div className="bg-purple-900/20 p-4 rounded-xl border border-purple-500/20">
+                <h4 className="font-bold text-purple-300 border-b border-purple-500/30 pb-1 mb-2">🥕 Groente (Vegetables)</h4>
+                <ul className="space-y-1.5 text-xs sm:text-sm">
+                  <li><strong>de aardappel:</strong> potato</li>
+                  <li><strong>de andijvie:</strong> endive (for traditional stamppot)</li>
+                  <li><strong>de aubergine:</strong> eggplant / aubergine</li>
+                  <li><strong>de bloemkool:</strong> cauliflower</li>
+                  <li><strong>de courgette:</strong> zucchini / courgette</li>
+                  <li><strong>de champignon:</strong> mushroom</li>
+                  <li><strong>de knoflook:</strong> garlic</li>
+                  <li><strong>de komkommer:</strong> cucumber</li>
+                  <li><strong>de paprika:</strong> bell pepper</li>
+                  <li><strong>de peterselie:</strong> parsley</li>
+                  <li><strong>de tomaat:</strong> tomato</li>
+                  <li><strong>de ui:</strong> onion</li>
+                  <li><strong>de wortel:</strong> carrot</li>
                 </ul>
               </div>
-              <div>
-                <h4 className="font-bold text-indigo-300 border-b border-indigo-500/30 pb-1 mb-2">Fruit (Fruit)</h4>
-                <ul className="space-y-1">
-                  <li>de aardbei (strawberry), de druif (grape)</li>
-                  <li>de perzik (peach), de pruim (plum)</li>
-                  <li>de kers (cherry), de appel (apple)</li>
-                  <li>de peer (pear), de sinaasapppel (orange)</li>
-                  <li>de mandarijn (mandarin), de kiwi (kiwi)</li>
-                  <li>de banaan (banana)</li>
+              <div className="bg-indigo-900/20 p-4 rounded-xl border border-indigo-500/20">
+                <h4 className="font-bold text-indigo-300 border-b border-indigo-500/30 pb-1 mb-2">🍎 Fruit (Fruit)</h4>
+                <ul className="space-y-1.5 text-xs sm:text-sm">
+                  <li><strong>de aardbei:</strong> strawberry</li>
+                  <li><strong>de appel:</strong> apple</li>
+                  <li><strong>de banaan:</strong> banana</li>
+                  <li><strong>de druif:</strong> grape</li>
+                  <li><strong>de kers:</strong> cherry</li>
+                  <li><strong>de kiwi:</strong> kiwi</li>
+                  <li><strong>de mandarijn:</strong> mandarin</li>
+                  <li><strong>de peer:</strong> pear</li>
+                  <li><strong>de perzik:</strong> peach</li>
+                  <li><strong>de pruim:</strong> plum</li>
+                  <li><strong>de sinaasappel:</strong> orange</li>
                 </ul>
               </div>
             </div>
@@ -204,7 +234,7 @@ export const chapter5Sections = [
     ),
     exerciseGroups: [
       {
-        instruction: "Opdracht 2: Anagrammen. Welke woorden (groente en fruit) vind je hier terug? (Anagrams. Which words can you find here?)",
+        instruction: "Opdracht 2: Anagrammen. Welke woorden (groente en fruit) vind je hier terug? (Anagrams)",
         isExtra: false,
         questions: [
           { id: "5.3_opd2_1", type: "fill_in", question: "lapderaap (hint: pata... / pota...)", correctAnswer: "aardappel" },
@@ -217,9 +247,12 @@ export const chapter5Sections = [
         ]
       },
       {
-        instruction: "Extra Oefeningen (Woordenlijst Test / Vocabulary Test)",
+        instruction: "Slimme Oefeningen (Smart Exercises): Groente & Fruit Kennis",
         isExtra: true,
-        questions: generateSmartQuestions(5, "Woordenlijst", 10, chapter5Vocab)
+        questions: [
+          { id: "5.3_smart_1", type: "multiple_choice", question: "Welke groente is essentieel voor de traditionele Nederlandse stamppot?", options: ["De andijvie", "De banaan", "De kiwi"], correctAnswer: "De andijvie" },
+          { id: "5.3_smart_2", type: "multiple_choice", question: "Wat is 'de sinaasappel'?", options: ["Portakal / Orange", "Elma / Apple", "Armut / Pear"], correctAnswer: "Portakal / Orange" }
+        ]
       }
     ]
   },
@@ -411,59 +444,45 @@ export const chapter5Sections = [
   {
     id: "5.6",
     chapter: 5,
-    title: "5.6 t/m 5.8 In gesprek op de markt & De prijs",
+    title: "5.6 In gesprek op de markt & De prijs",
     theory: (lang) => (
       <>
         {lang === 'tr' ? (
-          <>
-            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #06b6d4', marginBottom: '20px' }}>
-              <h3 style={{ margin: '0 0 10px 0', color: '#22d3ee' }}>🛒 Gesprek en Prijs (Pazarda Konuşma ve Fiyat)</h3>
-              <p className="text-sm text-slate-300">Pazarda veya markette alışveriş yaparken sık duyulan kalıplar:</p>
-              <ul className="text-sm text-slate-200 mt-2 list-disc pl-5">
-                <li><strong>Verder / Anders nog iets?</strong> (Başka bir şey?) ➔ Nee, dat was het. (Hayır, hepsi buydu.)</li>
-                <li><strong>Tasje erbij?</strong> (Poşet ister misiniz?) ➔ Ja, graag. / Nee hoor.</li>
-                <li><strong>Gaat het zo mee?</strong> (Böyle elinizde götürür müsünüz? / Poşetsiz alır mısınız?)</li>
-              </ul>
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #06b6d4', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#22d3ee' }}>🛒 Gesprek en Prijs (Pazarda Konuşma ve Fiyat)</h3>
+            <p className="text-sm text-slate-300">Pazarda veya markette alışveriş yaparken sık duyulan kalıplar:</p>
+            <ul className="text-sm text-slate-200 mt-2 list-disc pl-5 space-y-1">
+              <li><strong>Wie is er aan de beurt?</strong> (Sıradaki kim? / Sıra kimde?) ➔ <em>Ik! (Ben!)</em></li>
+              <li><strong>Verder / Anders nog iets?</strong> (Başka bir şey?) ➔ <em>Nee, dat was het. (Hayır, hepsi bu.)</em></li>
+              <li><strong>Tasje erbij?</strong> (Poşet ister misiniz?) ➔ <em>Ja, graag. / Nee hoor.</em></li>
+              <li><strong>Gaat het zo mee?</strong> (Böyle elinizde götürür müsünüz? / Poşetsiz alır mısınız?)</li>
+            </ul>
 
-              <h4 className="font-bold text-cyan-300 mt-4 border-b border-cyan-500/30 pb-1">💸 Prijzen vragen (Fiyat sormak)</h4>
-              <ul className="text-sm text-slate-200 mt-2 list-disc pl-5">
-                <li><strong>Wat kost</strong> de andijvie? ➔ Drie komkommers voor één euro.</li>
-                <li><strong>Hoe duur zijn</strong> de boontjes? ➔ Dat is dan acht dertig. (€8,30)</li>
-                <li><strong>Hebt u er dertig cent bij?</strong> (Bozukluk olarak 30 sentin var mı/üzerine ekleyebilir misin?)</li>
-              </ul>
-            </div>
-            
-            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
-              <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>☝️ Imperatief (Emir Kipi)</h3>
-              <p className="text-sm text-slate-300">Hollandacada emir kipi direkt fiilin kökü (stam) kullanılarak yapılır. Ancak kulağa kaba gelmemesi için cümlenin içine <strong>maar, even, eens</strong> gibi yumuşatıcı kelimeler eklenir.</p>
-              <p className="text-sm italic text-slate-200 mt-2">Nötr: Zeg het. (Söyle.)<br/>Kibar: Zeg het <strong>maar</strong>. (Söyleyin bakalım.)<br/>Vertel <strong>eens</strong> over je familie. (Ailenden biraz bahset.)</p>
-            </div>
-          </>
+            <h4 className="font-bold text-cyan-300 mt-4 border-b border-cyan-500/30 pb-1">💸 Prijzen vragen (Fiyat sormak)</h4>
+            <ul className="text-sm text-slate-200 mt-2 list-disc pl-5 space-y-1">
+              <li><strong>Wat kost</strong> de andijvie? ➔ Drie komkommers voor één euro.</li>
+              <li><strong>Hoe duur zijn</strong> de boontjes? ➔ Dat is dan acht dertig. (€8,30)</li>
+              <li><strong>Hebt u er dertig cent bij?</strong> (Bozukluk olarak 30 sentiniz var mı/üzerine ekleyebilir misiniz?)</li>
+            </ul>
+          </div>
         ) : (
-          <>
-            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #06b6d4', marginBottom: '20px' }}>
-              <h3 style={{ margin: '0 0 10px 0', color: '#22d3ee' }}>🛒 Gesprek en Prijs (Conversation at the market & The price)</h3>
-              <p className="text-sm text-slate-300">Common phrases heard when shopping at the market or supermarket:</p>
-              <ul className="text-sm text-slate-200 mt-2 list-disc pl-5">
-                <li><strong>Verder / Anders nog iets?</strong> (Anything else?) ➔ Nee, dat was het. (No, that's all.)</li>
-                <li><strong>Tasje erbij?</strong> (Would you like a bag?) ➔ Ja, graag. / Nee hoor.</li>
-                <li><strong>Gaat het zo mee?</strong> (Will you take it like this? / Without a bag?)</li>
-              </ul>
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #06b6d4', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#22d3ee' }}>🛒 Conversation at the Market & Prices</h3>
+            <p className="text-sm text-slate-300">Common phrases heard when shopping at the street market or supermarket:</p>
+            <ul className="text-sm text-slate-200 mt-2 list-disc pl-5 space-y-1">
+              <li><strong>Wie is er aan de beurt?</strong> (Who's next?) ➔ <em>Ik! (Me!)</em></li>
+              <li><strong>Verder / Anders nog iets?</strong> (Anything else?) ➔ <em>Nee, dat was het. (No, that's all.)</em></li>
+              <li><strong>Tasje erbij?</strong> (Would you like a bag?) ➔ <em>Ja, graag. / Nee hoor.</em></li>
+              <li><strong>Gaat het zo mee?</strong> (Will you take it like this? / Without a bag?)</li>
+            </ul>
 
-              <h4 className="font-bold text-cyan-300 mt-4 border-b border-cyan-500/30 pb-1">💸 Prijzen vragen (Asking for prices)</h4>
-              <ul className="text-sm text-slate-200 mt-2 list-disc pl-5">
-                <li><strong>Wat kost</strong> de andijvie? ➔ Drie komkommers voor één euro.</li>
-                <li><strong>Hoe duur zijn</strong> de boontjes? ➔ Dat is dan acht dertig. (€8.30)</li>
-                <li><strong>Hebt u er dertig cent bij?</strong> (Do you have thirty cents to add to the payment?)</li>
-              </ul>
-            </div>
-            
-            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
-              <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>☝️ Imperatief (The Imperative)</h3>
-              <p className="text-sm text-slate-300">In Dutch, the imperative is made using the verb stem. However, to avoid sounding rude, softening words like <strong>maar, even, eens</strong> are added to the sentence.</p>
-              <p className="text-sm italic text-slate-200 mt-2">Neutral: Zeg het. (Say it.)<br/>Polite: Zeg het <strong>maar</strong>. (Go ahead and tell me.)<br/>Vertel <strong>eens</strong> over je familie. (Tell me a bit about your family.)</p>
-            </div>
-          </>
+            <h4 className="font-bold text-cyan-300 mt-4 border-b border-cyan-500/30 pb-1">💸 Asking for prices</h4>
+            <ul className="text-sm text-slate-200 mt-2 list-disc pl-5 space-y-1">
+              <li><strong>Wat kost</strong> de andijvie? ➔ Drie komkommers voor één euro.</li>
+              <li><strong>Hoe duur zijn</strong> de boontjes? ➔ Dat is dan acht dertig. (€8.30)</li>
+              <li><strong>Hebt u er dertig cent bij?</strong> (Do you have thirty cents to round up the change?)</li>
+            </ul>
+          </div>
         )}
       </>
     ),
@@ -485,11 +504,88 @@ export const chapter5Sections = [
         ]
       },
       {
-        instruction: "Slimme Oefeningen: Imperatief en Prijs",
+        instruction: "Slimme Oefeningen: Prijzen en Afrekenen op de markt",
         isExtra: true,
         questions: [
+          { id: "5.6_smart_1", type: "fill_in", question: "Vertaal de vraag: 'Ne kadar tutuyor? / Fiyatı ne kadar?' (How much does it cost?) -> Hoeveel ________ het?", correctAnswer: "kost" },
+          { id: "5.6_smart_2", type: "multiple_choice", question: "De groenteboer vraagt: 'Hebt u er twintig cent bij?'. Waarom vraagt hij dat?", options: ["Omdat de groente duurder is geworden.", "Om gemakkelijk wisselgeld terug te kunnen geven.", "Omdat pinnen verboden is."], correctAnswer: "Om gemakkelijk wisselgeld terug te kunnen geven." }
+        ]
+      }
+    ]
+  },
+  {
+    id: "5.8",
+    chapter: 5,
+    title: "5.8 De imperatief (Emir Kipi)",
+    theory: (lang) => (
+      <>
+        {lang === 'tr' ? (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>☝️ De Imperatief (Emir Kipi ve Yumuşatma)</h3>
+            <p className="text-sm text-slate-300 mb-3">
+              Hollandacada emir kipi direkt fiilin kökü (stam) kullanılarak yapılır:
+            </p>
+            <div className="bg-purple-950/40 p-4 rounded-xl border border-purple-500/20 text-sm mb-4">
+              <ul className="space-y-1.5 text-slate-200">
+                <li><strong>Kijk!</strong> (Bak!)</li>
+                <li><strong>Luister!</strong> (Dinle!)</li>
+                <li><strong>Zeg het!</strong> (Söyle!)</li>
+                <li><strong>Kom binnen!</strong> (İçeri gir!)</li>
+              </ul>
+            </div>
+
+            <div className="bg-amber-950/40 p-4 rounded-xl border border-amber-500/30 text-sm">
+              <h4 className="font-bold text-amber-300 mb-2">✨ Gouden Regel: Emri Kibarlaştırmak (Softening)</h4>
+              <p className="text-xs text-slate-300 mb-2">
+                Hollandalılar tek başına emir kipini kaba bulurlar. Bu yüzden cümlenin içine mutlaka <strong>maar, even, eens</strong> modal parçacıklarını eklerler:
+              </p>
+              <ul className="text-xs space-y-2 text-slate-200">
+                <li><strong>Zeg het maar.</strong> (Söyleyin bakalım / buyrun dinliyorum - pazarda satıcı söyler).</li>
+                <li><strong>Doe die maar.</strong> (Şunu verin lütfen / şunu alayım).</li>
+                <li><strong>Kijk eens even.</strong> (Bir baksana / bir göz atar mısın).</li>
+                <li><strong>Kom maar binnen.</strong> (Buyrun, içeri gelin).</li>
+              </ul>
+            </div>
+          </div>
+        ) : (
+          <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #8b5cf6', marginBottom: '20px' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#a78bfa' }}>☝️ The Imperative (De Imperatief)</h3>
+            <p className="text-sm text-slate-300 mb-3">
+              In Dutch, the imperative is formed simply by using the verb stem:
+            </p>
+            <div className="bg-purple-950/40 p-4 rounded-xl border border-purple-500/20 text-sm mb-4">
+              <ul className="space-y-1.5 text-slate-200">
+                <li><strong>Kijk!</strong> (Look!)</li>
+                <li><strong>Luister!</strong> (Listen!)</li>
+                <li><strong>Zeg het!</strong> (Say it!)</li>
+                <li><strong>Kom binnen!</strong> (Come in!)</li>
+              </ul>
+            </div>
+
+            <div className="bg-amber-950/40 p-4 rounded-xl border border-amber-500/30 text-sm">
+              <h4 className="font-bold text-amber-300 mb-2">✨ Golden Rule: Softening the Imperative</h4>
+              <p className="text-xs text-slate-300 mb-2">
+                Using just the imperative can sound abrupt or rude. Dutch speakers soften commands into polite requests using <strong>maar, even, eens</strong>:
+              </p>
+              <ul className="text-xs space-y-2 text-slate-200">
+                <li><strong>Zeg het maar.</strong> (Go ahead and tell me - common greeting from shopkeepers).</li>
+                <li><strong>Doe die maar.</strong> (I'll take that one, please).</li>
+                <li><strong>Kijk eens even.</strong> (Take a quick look).</li>
+                <li><strong>Kom maar binnen.</strong> (Please, come right in).</li>
+              </ul>
+            </div>
+          </div>
+        )}
+      </>
+    ),
+    exerciseGroups: [
+      {
+        instruction: "Opdracht: Maak de imperatief vriendelijk (Make the imperative polite)",
+        isExtra: false,
+        questions: [
           { id: "5.8_smart_1", type: "multiple_choice", question: "Hoe maak je een commando/imperatief vriendelijk (kibar / polite)?", options: ["Je gebruikt het hele werkwoord.", "Je gebruikt woorden zoals 'maar', 'even' of 'eens'.", "Je zegt altijd 'alstublieft' twee keer."], correctAnswer: "Je gebruikt woorden zoals 'maar', 'even' of 'eens'." },
-          { id: "5.8_smart_2", type: "fill_in", question: "Vertaal de vraag: 'Ne kadar tutuyor? / Fiyatı ne kadar?' (How much does it cost?) -> Hoeveel ________ het?", correctAnswer: "kost" }
+          { id: "5.8_smart_2", type: "multiple_choice", question: "De groenteboer kijkt je vriendelijk aan en vraagt wat je wilt. Wat zegt hij?", options: ["Zeg het maar!", "Zeg jij!", "U zegt nu!"], correctAnswer: "Zeg het maar!" },
+          { id: "5.8_smart_3", type: "fill_in", question: "Maak de zin vriendelijk: 'Kom ________ binnen.' (İçeri gelin buyrun / Come right in).", correctAnswer: "maar" }
         ]
       }
     ]
@@ -586,7 +682,320 @@ export const chapter5Sections = [
       }
     ]
   },
-  {
+    {
+    id: "Reading-5",
+    chapter: 5,
+    title: {
+      tr: "Okuma & Anlama",
+      en: "Reading Comprehension"
+    },
+    readingPassage: {
+      title: "Zaterdagochtend op de markt van Vredenburg",
+      level: "Niveau A1 • 19 Zinnen",
+      intro: {
+        tr: "Aşağıdaki okuma parçasını dikkatlice okuyunuz. Bu parça 5. Bölümde öğrendiğiniz pazar alışverişi terimleri (groente & fruit, de kraam, de marktkoopman), çoğul yapma kuralları (-en, -s), sıfat çekimleri (verse groenten, oude kaas), ağırlık birimleri (kilo, pond, ons) ve fiyat sorma/ödeme kalıpları kullanılarak hazırlanmıştır. Metni dinleyebilir, kelimelerin sözlük anlamına bakabilir ve alttaki 20 soruluk testi çözebilirsiniz.",
+        en: "Read the following reading passage carefully. It incorporates market shopping terms (fruits & vegetables, market stalls, market vendor), plural noun endings (-en, -s), adjective declension (verse groenten, oude kaas), weight units (kilo, pond, ons), and price/payment phrases learned in Chapter 5. Listen to the text, click words to check meanings, and answer the 20 comprehension questions below."
+      },
+      paragraphs: [
+        "Het is zaterdagochtend tien uur. Het grote plein Vredenburg in het centrum van Utrecht staat helemaal vol met gezellige marktkramen. Overal hoor je de luide, vrolijke stemmen van marktkooplieden die hun verse producten aanprijzen: \"Twee doosjes zoete aardbeien voor vier euro! Mooie Hollandse bloemkool, één euro per stuk!\" Edit en haar studievriend Lucas lopen samen over de markt met twee stevige linnen tassen. Vanavond willen ze een traditionele Nederlandse maaltijd koken voor hun medecursisten: stamppot met verse boerenkool en rookworst.",
+        "Ze stoppen als eerste bij een grote groentekraam met bergen verse groenten. De marktkoopman groet opgewekt: \"Goedemorgen jongelui, zegt u het maar! Wat mag het zijn?\" Edit zegt beleefd: \"Goedemorgen meneer! Ik wil graag twee kilo aardappels en een pond verse wortels alstublieft.\" De koopman schept de aardappels in een papieren zak en legt ze op de weegschaal. \"Het is ietsje meer dan twee kilo, twee kilo en honderd gram. Mag dat?\" vraagt de koopman vriendelijk. Edit lacht: \"Ja hoor, geen probleem.\" Daarna vraagt Lucas: \"Heeft u ook nog een zak verse boerenkool en drie grote uien?\" De man pakt de groenten en legt ze erbij.",
+        "De marktkoopman veegt zijn handen af en vraagt: \"Anders nog iets?\" Edit antwoordt: \"Ja, graag nog een kilo zoete handsinaasappels en een half pond blauwe druiven.\" De koopman rekent de prijzen snel uit op zijn kassa: \"Dat is dan bij elkaar precies tien euro en vijftig cent alstublieft.\" Lucas geeft een bankbiljet van twintig euro aan de man. De koopman overhandigt negen euro en vijftig cent wisselgeld terug en zegt: \"Dank u wel, en een heel fijn weekend gewenst!\"",
+        "Voordat ze naar huis gaan, lopen ze nog langs de bekende kaaskraam. Daar liggen honderden ronde kazen uit Gouda en Edam. De vriendelijke kaasboer snijdt met een speciaal mes een dun plakje oude kaas af en biedt het aan: \"Proef maar eens, dit is echte Hollandse boerenkaas!\" Edit en Lucas proeven het stukje. \"Mmm, dat smaakt werkelijk heerlijk!\" roept Lucas enthousiast. Ze kopen driehonderd gram van de oude kaas. Met goedgevulde tassen vol gezonde groenten, zoet fruit en lekkere kaas lopen ze tevreden naar hun fietsen."
+      ],
+      hints: [
+        {
+          title: { tr: "Pazar & Alışveriş Terimleri", en: "Market & Shopping Terms" },
+          icon: "fa-basket-shopping",
+          items: [
+            { term: "de marktkraam", tr: "pazar tezgahı", en: "market stall" },
+            { term: "de marktkoopman", tr: "pazarcı / tezgahtar", en: "market vendor" },
+            { term: "mag het ietsje meer zijn?", tr: "biraz fazla olabilir mi?", en: "can it be slightly more?" },
+            { term: "anders nog iets?", tr: "başka bir şey var mıydı?", en: "anything else?" },
+            { term: "het wisselgeld", tr: "para üstü", en: "change (money returned)" }
+          ]
+        },
+        {
+          title: { tr: "Miktar & Ağırlık Birimleri", en: "Quantities & Weights" },
+          icon: "fa-scale-balanced",
+          items: [
+            { term: "een kilo", tr: "1 kilo (1000 gram)", en: "one kilo (1000 grams)" },
+            { term: "een pond", tr: "yarım kilo (500 gram)", en: "one pond (500 grams)" },
+            { term: "een ons", tr: "100 gram", en: "one ounce / 100 grams" },
+            { term: "een half pond", tr: "250 gram", en: "half a pond (250 grams)" }
+          ]
+        },
+        {
+          title: { tr: "Çoğullar & Sıfat Çekimi", en: "Plurals & Adjective Endings" },
+          icon: "fa-font",
+          items: [
+            { term: "çoğul: -en / -s", tr: "aardappels, sinaasappels (-s) / tomaten, wortels (-en)", en: "potatoes, oranges / tomatoes, carrots" },
+            { term: "sıfat + e", tr: "verse groenten, oude kaas, een grote zak", en: "inflected adjectives" }
+          ]
+        }
+      ]
+    },
+    exerciseGroups: [
+      {
+        instruction: "Deel 1: Direct Begrip & Boodschappen (1-7: Doğrudan Bilgi ve Alışveriş / Direct Facts)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_5_1",
+            type: "multiple_choice",
+            question: "Op welk plein in Utrecht bezoeken Edit en Lucas de markt?",
+            options: [
+              "Op het Domplein",
+              "Op het plein Vredenburg",
+              "Op het Janskerkhof",
+              "Op de Neude"
+            ],
+            correctAnswer: "Op het plein Vredenburg"
+          },
+          {
+            id: "reading_5_2",
+            type: "multiple_choice",
+            question: "Wat zijn Edit en Lucas van plan om vanavond te koken voor hun medecursisten?",
+            options: [
+              "Spaanse paella met zeevruchten",
+              "Italiaanse pasta met tomatensaus",
+              "Traditionele Nederlandse stamppot met verse boerenkool en rookworst",
+              "Franse uiensoep met stokbrood"
+            ],
+            correctAnswer: "Traditionele Nederlandse stamppot met verse boerenkool en rookworst"
+          },
+          {
+            id: "reading_5_3",
+            type: "multiple_choice",
+            question: "Welke groenten bestellen ze bij de groentekraam?",
+            options: [
+              "Alleen tomaten en komkommers",
+              "Aardappels, wortels, verse boerenkool en grote uien",
+              "Bloemkool, spinazie en prei",
+              "Paprika's en champignons"
+            ],
+            correctAnswer: "Aardappels, wortels, verse boerenkool en grote uien"
+          },
+          {
+            id: "reading_5_4",
+            type: "multiple_choice",
+            question: "Welk fruit kopen ze bij de koopman?",
+            options: [
+              "Appels en peren",
+              "Handsinaasappels en blauwe druiven",
+              "Bananen en ananas",
+              "Twee doosjes aardbeien"
+            ],
+            correctAnswer: "Handsinaasappels en blauwe druiven"
+          },
+          {
+            id: "reading_5_5",
+            type: "multiple_choice",
+            question: "Wat voor soort kaas proeven Edit en Lucas bij de kaaskraam?",
+            options: [
+              "Jonge Franse brie",
+              "Echte Hollandse oude boerenkaas",
+              "Griekse fetakaas",
+              "Hüttenkäse"
+            ],
+            correctAnswer: "Echte Hollandse oude boerenkaas"
+          },
+          {
+            id: "reading_5_6",
+            type: "multiple_choice",
+            question: "Hoeveel gram van de oude kaas kopen ze uiteindelijk?",
+            options: [
+              "Honderd gram (1 ons)",
+              "Tweehonderd gram",
+              "Driehonderd gram (3 ons)",
+              "Een hele kilo"
+            ],
+            correctAnswer: "Driehonderd gram (3 ons)"
+          },
+          {
+            id: "reading_5_7",
+            type: "multiple_choice",
+            question: "Hoe gaan Edit en Lucas na het winkelen weer naar huis?",
+            options: [
+              "Met de stadsbus",
+              "Met hun fietsen",
+              "Met de trein",
+              "Met een taxi"
+            ],
+            correctAnswer: "Met hun fietsen"
+          }
+        ]
+      },
+      {
+        instruction: "Deel 2: Gewichten, Prijzen & Rekenen (8-13: Ağırlık, Fiyat ve Hesap / Weights & Money)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_5_8",
+            type: "multiple_choice",
+            question: "Hoeveel weegt 'een pond' volgens het Nederlandse matenstelsel?",
+            options: [
+              "100 gram",
+              "250 gram",
+              "500 gram (een halve kilo)",
+              "1000 gram"
+            ],
+            correctAnswer: "500 gram (een halve kilo)"
+          },
+          {
+            id: "reading_5_9",
+            type: "multiple_choice",
+            question: "Hoeveel wegen de aardappels op de weegschaal van de marktkoopman precies?",
+            options: [
+              "Precies 2 kilo",
+              "2 kilo en 100 gram",
+              "1 kilo en 500 gram",
+              "3 kilo"
+            ],
+            correctAnswer: "2 kilo en 100 gram"
+          },
+          {
+            id: "reading_5_10",
+            type: "multiple_choice",
+            question: "Hoeveel wegen de blauwe druiven die ze kopen ('een half pond')?",
+            options: [
+              "100 gram",
+              "250 gram",
+              "500 gram",
+              "750 gram"
+            ],
+            correctAnswer: "250 gram"
+          },
+          {
+            id: "reading_5_11",
+            type: "multiple_choice",
+            question: "Hoeveel kosten de groenten en het fruit bij elkaar bij de eerste kraam?",
+            options: [
+              "€ 8,50",
+              "€ 9,70",
+              "€ 10,50",
+              "€ 12,00"
+            ],
+            correctAnswer: "€ 10,50"
+          },
+          {
+            id: "reading_5_12",
+            type: "multiple_choice",
+            question: "Met welk bankbiljet betaalt Lucas bij de groentekraam?",
+            options: [
+              "Een briefje van vijf euro",
+              "Een briefje van tien euro",
+              "Een briefje van twintig euro",
+              "Een briefje van vijftig euro"
+            ],
+            correctAnswer: "Een briefje van twintig euro"
+          },
+          {
+            id: "reading_5_13",
+            type: "multiple_choice",
+            question: "Hoeveel wisselgeld geeft de marktkoopman terug aan Lucas?",
+            options: [
+              "€ 5,50",
+              "€ 9,50",
+              "€ 10,00",
+              "€ 10,50"
+            ],
+            correctAnswer: "€ 9,50"
+          }
+        ]
+      },
+      {
+        instruction: "Deel 3: Markttaal & Grammatica (14-20: Pazar Dili ve Dilbilgisi / Language & Grammar)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_5_14",
+            type: "multiple_choice",
+            question: "Wat vraagt een marktkoopman als de weegschaal iets zwaarder is dan gevraagd?",
+            options: [
+              "\"Is dat alles?\"",
+              "\"Mag het ietsje meer zijn?\"",
+              "\"Hoeveel kost dit?\"",
+              "\"Wilt u pinnen of contant?\""
+            ],
+            correctAnswer: "\"Mag het ietsje meer zijn?\""
+          },
+          {
+            id: "reading_5_15",
+            type: "multiple_choice",
+            question: "Welke vraag stelt de marktkoopman om te vragen of de klant nog andere producten wil kopen?",
+            options: [
+              "\"Hoe heet u?\"",
+              "\"Anders nog iets?\"",
+              "\"Waar woont u?\"",
+              "\"Wat kost dat?\""
+            ],
+            correctAnswer: "\"Anders nog iets?\""
+          },
+          {
+            id: "reading_5_16",
+            type: "multiple_choice",
+            question: "Wat is het meervoud van de zelfstandige naamwoorden 'aardappel' en 'sinaasappel' in het Nederlands?",
+            options: [
+              "aardappelen en sinaasappelen",
+              "aardappels en sinaasappels (met -s)",
+              "aardappelse en sinaasappelse",
+              "aardappeltjes en sinaasappeltjes"
+            ],
+            correctAnswer: "aardappels en sinaasappels (met -s)"
+          },
+          {
+            id: "reading_5_17",
+            type: "multiple_choice",
+            question: "Wat is het meervoud van het woord 'wortel'?",
+            options: [
+              "wortels",
+              "wortelen",
+              "Zowel 'wortels' als 'wortelen' kan, maar 'wortels' is heel gebruikelijk.",
+              "wortelt"
+            ],
+            correctAnswer: "Zowel 'wortels' als 'wortelen' kan, maar 'wortels' is heel gebruikelijk."
+          },
+          {
+            id: "reading_5_18",
+            type: "multiple_choice",
+            question: "Kijk naar de woordgroep: \"verse groenten\" en \"oude kaas\". Waarom krijgen deze bijvoeglijke naamwoorden een -e aan het einde?",
+            options: [
+              "Omdat meervouden en de-woorden met een bijvoeglijk naamwoord een buigings-e krijgen.",
+              "Omdat alle woorden in het Nederlands eindigen op -e.",
+              "Het is een typfout.",
+              "Alleen bij eten krijgt een adjectief een -e."
+            ],
+            correctAnswer: "Omdat meervouden en de-woorden met een bijvoeglijk naamwoord een buigings-e krijgen."
+          },
+          {
+            id: "reading_5_19",
+            type: "multiple_choice",
+            question: "Uit welke Nederlandse steden komen de bekende kazen die in de tekst worden genoemd?",
+            options: [
+              "Rotterdam en Den Haag",
+              "Gouda en Edam",
+              "Utrecht en Groningen",
+              "Maastricht en Eindhoven"
+            ],
+            correctAnswer: "Gouda en Edam"
+          },
+          {
+            id: "reading_5_20",
+            type: "multiple_choice",
+            question: "Welke bewering is ONJUIST (niet waar) volgens de tekst?",
+            options: [
+              "Edit en Lucas bezoeken de markt op een zaterdagochtend.",
+              "Lucas betaalt de groentekraam met een briefje van twintig euro.",
+              "De kaasboer weigert om hen een stukje kaas te laten proeven.",
+              "Ze kopen driehonderd gram van de oude kaas."
+            ],
+            correctAnswer: "De kaasboer weigert om hen een stukje kaas te laten proeven."
+          }
+        ]
+      }
+    ]
+  },
+{
     id: "On-Class-5",
     chapter: 5,
     title: "Summary",

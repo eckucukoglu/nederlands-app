@@ -131,18 +131,20 @@ export const chapter11Sections = [
         isExtra: true,
         questions: [
           { id: "11.1_smart_1", type: "multiple_choice", question: "Waarom geeft Tom een kaartje voor Festival Cubana aan Marit?", options: ["Omdat Tom zelf niet kan gaan.", "Omdat Marit van Cubaanse muziek houdt.", "Omdat Peter ook naar het festival gaat."], correctAnswer: "Omdat Marit van Cubaanse muziek houdt." },
-            {
-    id: "11.2",
-    chapter: 11,
-    title: "Vocabulary",
-    theory: null,
-    exerciseGroups: []
-  },
+
+
 { id: "11.1_smart_2", type: "fill_in", question: "Kirsten vindt dat Tom te snel praat. Ze vraagt: 'Kun je misschien iets ________ praten?'", correctAnswer: "langzamer" },
           { id: "11.1_smart_3", type: "multiple_choice", question: "Wat betekent de zin 'Ik ben gek op films'?", options: ["Ben filmlerden nefret ederim.", "Ben filmlere bayılırım / hastasıyım.", "Ben filmlerde oynamak istiyorum."], correctAnswer: "Ben filmlere bayılırım / hastasıyım." }
         ]
       }
     ]
+  },
+  {
+    id: "11.2",
+    chapter: 11,
+    title: "Vocabulary",
+    theory: null,
+    exerciseGroups: []
   },
   {
     id: "11.3",
@@ -151,43 +153,81 @@ export const chapter11Sections = [
     theory: (lang) => (
       <>
         {lang === 'tr' ? (
-          <>
-            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #06b6d4', marginBottom: '20px' }}>
+          <div className="space-y-4 mb-6">
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #06b6d4' }}>
               <h3 style={{ margin: '0 0 10px 0', color: '#22d3ee' }}>🗣️ İş, Eğitim ve Hobiler Hakkında Soru Sormak</h3>
-              <p>Birisiyle tanıştığınızda mesleğini veya ilgi alanlarını sormak Hollandacada çok basittir:</p>
-              <ul style={{ margin: '10px 0', paddingLeft: '20px', color: 'var(--text-main)' }}>
-                <li><strong>Wat doe je?</strong> (Ne yapıyorsun? / Ne iş yapıyorsun?)</li>
-                <li><strong>Studeer je? / Werk je?</strong> (Okuyor musun? / Çalışıyor musun?)</li>
-                <li><strong>Heb je een baan?</strong> (Bir işin var mı?)</li>
-                <li><strong>Doe je ook nog iets naast je studie?</strong> (Eğitiminin yanında başka bir şey de yapıyor musun? -> Hollandalı öğrenciler genellikle "bijbaantje" adı verilen ek işlerde çalışırlar).</li>
-              </ul>
+              <p className="text-sm text-slate-300 leading-relaxed">
+                Bir doğum günü partisinde veya sosyal ortamda yeni tanıştığınız biriyle konuşurken işini, eğitimini ve hobilerini sormak için kullanılan temel soru kalıpları:
+              </p>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
+                <div className="bg-slate-900/60 p-3 rounded-xl border border-slate-700">
+                  <span className="text-xs font-bold text-cyan-400 block mb-1">💼 Werk (İş)</span>
+                  <ul className="text-xs text-slate-200 space-y-1">
+                    <li><strong>Wat doe je?</strong> (Ne iş yapıyorsun?)</li>
+                    <li><strong>Werk je? / Heb je een baan?</strong> (Çalışıyor musun?)</li>
+                    <li><strong>Ik ben fietsenmaker / accountant.</strong> (Bisikletçiyim / Muhasebeciyim).</li>
+                    <li><strong>Ik heb een eigen bedrijf / Ik ben eigen baas.</strong> (Kendi işimin patronuyum).</li>
+                  </ul>
+                </div>
+                <div className="bg-slate-900/60 p-3 rounded-xl border border-slate-700">
+                  <span className="text-xs font-bold text-indigo-400 block mb-1">🎓 Studie & Bijbaan (Eğitim & Ek İş)</span>
+                  <ul className="text-xs text-slate-200 space-y-1">
+                    <li><strong>Studeer je?</strong> (Okuyor musun?)</li>
+                    <li><strong>Ik ben student. Ik studeer logopedie.</strong> (Öğrenciyim, dil terapisi okuyorum).</li>
+                    <li><strong>Doe je iets naast je studie?</strong> (Okulun yanında ek iş var mı?)</li>
+                    <li><strong>Ik heb een bijbaantje in de bioscoop.</strong> (Sinemada yarı zamanlı işim var).</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="bg-slate-900/60 p-3 rounded-xl border border-slate-700 mt-3">
+                <span className="text-xs font-bold text-amber-400 block mb-1">⚽ Hobby & Sport (Hobiler)</span>
+                <ul className="text-xs text-slate-200 space-y-1">
+                  <li><strong>Is film ook je hobby?</strong> (Sinema da hobin mi?) ➔ <em>Nee, niet echt. Ik houd meer van sport.</em></li>
+                  <li><strong>Waar ben je gek op?</strong> (Neye bayılırsın?) ➔ <em>Ik ben gek op Cubaanse muziek / wandelen.</em></li>
+                </ul>
+              </div>
             </div>
-            
-            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #ec4899', marginBottom: '20px' }}>
-              <h3 style={{ margin: '0 0 10px 0', color: '#f472b6' }}>💬 Reacties geven (Tepki Vermek)</h3>
-              <p>Reageren in een gesprek is belangrijk. Gebruik "Wat + adjectief":</p>
-              <p><em>Wat leuk! Wat toevallig! Wat jammer! Wat gezellig! Wat lekker! Wat interessant! Wat vervelend!</em></p>
-            </div>
-          </>
+          </div>
         ) : (
-          <>
-            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #06b6d4', marginBottom: '20px' }}>
-              <h3 style={{ margin: '0 0 10px 0', color: '#22d3ee' }}>🗣️ Asking about work, studies and hobbies</h3>
-              <p>When you meet someone, asking about their profession or interests is very simple in Dutch:</p>
-              <ul style={{ margin: '10px 0', paddingLeft: '20px', color: 'var(--text-main)' }}>
-                <li><strong>Wat doe je?</strong> (What do you do? / What is your job?)</li>
-                <li><strong>Studeer je? / Werk je?</strong> (Do you study? / Do you work?)</li>
-                <li><strong>Heb je een baan?</strong> (Do you have a job?)</li>
-                <li><strong>Doe je ook nog iets naast je studie?</strong> (Do you do anything else besides your studies? -> Dutch students often work side jobs called "bijbaantje").</li>
-              </ul>
+          <div className="space-y-4 mb-6">
+            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #06b6d4' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#22d3ee' }}>🗣️ Asking about work, studies, and hobbies</h3>
+              <p className="text-sm text-slate-300 leading-relaxed">
+                Key questions and answers used in social gatherings (like birthdays) to ask about someone's occupation, studies, and hobbies:
+              </p>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
+                <div className="bg-slate-900/60 p-3 rounded-xl border border-slate-700">
+                  <span className="text-xs font-bold text-cyan-400 block mb-1">💼 Work</span>
+                  <ul className="text-xs text-slate-200 space-y-1">
+                    <li><strong>Wat doe je?</strong> (What do you do?)</li>
+                    <li><strong>Werk je? / Heb je een baan?</strong> (Do you work? / Do you have a job?)</li>
+                    <li><strong>Ik ben fietsenmaker / accountant.</strong> (I'm a bicycle mechanic / accountant).</li>
+                    <li><strong>Ik heb een eigen bedrijf / Ik ben eigen baas.</strong> (I run my own business / I'm my own boss).</li>
+                  </ul>
+                </div>
+                <div className="bg-slate-900/60 p-3 rounded-xl border border-slate-700">
+                  <span className="text-xs font-bold text-indigo-400 block mb-1">🎓 Studies & Side jobs</span>
+                  <ul className="text-xs text-slate-200 space-y-1">
+                    <li><strong>Studeer je?</strong> (Do you study?)</li>
+                    <li><strong>Ik ben student. Ik studeer logopedie.</strong> (I'm a student. I study speech therapy).</li>
+                    <li><strong>Doe je iets naast je studie?</strong> (Do you do anything besides your studies?)</li>
+                    <li><strong>Ik heb een bijbaantje in de bioscoop.</strong> (I have a part-time job in the cinema).</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="bg-slate-900/60 p-3 rounded-xl border border-slate-700 mt-3">
+                <span className="text-xs font-bold text-amber-400 block mb-1">⚽ Hobbies & Sports</span>
+                <ul className="text-xs text-slate-200 space-y-1">
+                  <li><strong>Is film ook je hobby?</strong> (Is film also your hobby?) ➔ <em>Nee, niet echt. Ik houd meer van sport.</em></li>
+                  <li><strong>Waar ben je gek op?</strong> (What are you crazy about?) ➔ <em>Ik ben gek op Cubaanse muziek / wandelen.</em></li>
+                </ul>
+              </div>
             </div>
-            
-            <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #ec4899', marginBottom: '20px' }}>
-              <h3 style={{ margin: '0 0 10px 0', color: '#f472b6' }}>💬 Reacties geven (Reacting)</h3>
-              <p>Reacting in a conversation is important. Use "Wat + adjective":</p>
-              <p><em>Wat leuk! Wat toevallig! Wat jammer! Wat gezellig! Wat lekker! Wat interessant! Wat vervelend!</em></p>
-            </div>
-          </>
+          </div>
         )}
       </>
     ),
@@ -202,7 +242,8 @@ export const chapter11Sections = [
           { id: "11.3_opd2_4", type: "multiple_choice", question: "Antwoord: 'Ja, ik ben gek op films.'", options: ["Wat is je werk?", "Is film je hobby?", "Studeer je?"], correctAnswer: "Is film je hobby?" },
           { id: "11.3_opd2_5", type: "multiple_choice", question: "Antwoord: 'Uit India.'", options: ["Waar kom je vandaan?", "Waar werk je?", "Waar ga je naartoe?"], correctAnswer: "Waar kom je vandaan?" },
           { id: "11.3_opd2_6", type: "multiple_choice", question: "Antwoord: 'Ja, ik ken haar al heel lang.'", options: ["Ken je Marit?", "Ben je de buurman?", "Hoe heet ze?"], correctAnswer: "Ken je Marit?" },
-          { id: "11.3_opd2_7", type: "multiple_choice", question: "Antwoord: 'Ik ben de buurman van Susan.'", options: ["Kennen jullie elkaar?", "Wie ben jij?", "Waar kom je vandaan?"], correctAnswer: "Wie ben jij?" }
+          { id: "11.3_opd2_7", type: "multiple_choice", question: "Antwoord: 'Ik ben de buurman van Susan.'", options: ["Kennen jullie elkaar?", "Wie ben jij?", "Waar kom je vandaan?"], correctAnswer: "Wie ben jij?" },
+          { id: "11.3_opd2_8", type: "multiple_choice", question: "Antwoord: 'Ja, lekker!'", options: ["Wil je koffie en taart?", "Wat is je hobby?", "Waar woon je?"], correctAnswer: "Wil je koffie en taart?" }
         ]
       }
     ]
@@ -216,34 +257,56 @@ export const chapter11Sections = [
         {lang === 'tr' ? (
           <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #ec4899', marginBottom: '20px' }}>
             <h3 style={{ margin: '0 0 10px 0', color: '#f472b6' }}>💬 "Wat + Sıfat!" Kalıbı ile Tepki Vermek</h3>
-            <p>Hollandacada sohbete katılım göstermek ve karşıdakinin anlattığına tepki vermek için <strong>"Wat + Adjectief!" (Ne kadar + Sıfat!)</strong> kalıbı sıklıkla kullanılır:</p>
-            <div className="grid grid-cols-2 gap-4 mt-3">
-              <div>
-                <p><strong>Wat leuk!</strong> (Ne güzel!)</p>
-                <p><strong>Wat toevallig!</strong> (Ne tesadüf!)</p>
-                <p><strong>Wat jammer!</strong> (Ne yazık/Tüh!)</p>
+            <p className="text-sm text-slate-300 leading-relaxed mb-4">
+              Hollandacada sohbete aktif katılmak ve karşıdakinin duygusunu paylaşmak için <strong>"Wat + Sıfat!" (Ne kadar ...! / Ne ...!)</strong> kalıbı vazgeçilmezdir:
+            </p>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div className="bg-emerald-950/40 border border-emerald-700/50 p-3 rounded-xl">
+                <span className="text-xs font-bold text-emerald-400 block mb-2">🎉 Olumlu / Coşkulu</span>
+                <p className="text-xs text-slate-200"><strong>Wat leuk!</strong> (Ne güzel!)</p>
+                <p className="text-xs text-slate-200"><strong>Wat gezellig!</strong> (Ne samimi/hoş!)</p>
+                <p className="text-xs text-slate-200"><strong>Wat lekker!</strong> (Ne lezzetli!)</p>
               </div>
-              <div>
-                <p><strong>Wat gezellig!</strong> (Ne hoş/Samimi!)</p>
-                <p><strong>Wat lekker!</strong> (Ne lezzetli!)</p>
-                <p><strong>Wat vervelend!</strong> (Ne can sıkıcı/Kötü!)</p>
+              <div className="bg-sky-950/40 border border-sky-700/50 p-3 rounded-xl">
+                <span className="text-xs font-bold text-sky-400 block mb-2">😲 Şaşkınlık / İlgi</span>
+                <p className="text-xs text-slate-200"><strong>Wat toevallig!</strong> (Ne tesadüf!)</p>
+                <p className="text-xs text-slate-200"><strong>Wat interessant!</strong> (Ne ilginç!)</p>
+                <p className="text-xs text-slate-200"><strong>Wat bijzonder!</strong> (Ne özel/farklı!)</p>
+              </div>
+              <div className="bg-rose-950/40 border border-rose-700/50 p-3 rounded-xl">
+                <span className="text-xs font-bold text-rose-400 block mb-2">😔 Üzüntü / Can Sıkıntısı</span>
+                <p className="text-xs text-slate-200"><strong>Wat jammer!</strong> (Ne yazık/Tüh!)</p>
+                <p className="text-xs text-slate-200"><strong>Wat vervelend!</strong> (Ne can sıkıcı/Kötü!)</p>
+                <p className="text-xs text-slate-200"><strong>Wat erg!</strong> (Ne fena!)</p>
               </div>
             </div>
           </div>
         ) : (
           <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.6)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #ec4899', marginBottom: '20px' }}>
             <h3 style={{ margin: '0 0 10px 0', color: '#f472b6' }}>💬 Reacting with "Wat + Adjective!"</h3>
-            <p>In Dutch, to participate in a conversation and react to what someone is saying, the <strong>"Wat + Adjectief!" (How + Adjective!)</strong> pattern is frequently used:</p>
-            <div className="grid grid-cols-2 gap-4 mt-3">
-              <div>
-                <p><strong>Wat leuk!</strong> (How nice/fun!)</p>
-                <p><strong>Wat toevallig!</strong> (What a coincidence!)</p>
-                <p><strong>Wat jammer!</strong> (What a pity!)</p>
+            <p className="text-sm text-slate-300 leading-relaxed mb-4">
+              In Dutch, to actively participate in conversations and show emotional engagement, the <strong>"Wat + Adjectief!" (How ...! / What a ...!)</strong> pattern is essential:
+            </p>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div className="bg-emerald-950/40 border border-emerald-700/50 p-3 rounded-xl">
+                <span className="text-xs font-bold text-emerald-400 block mb-2">🎉 Positive / Enthusiastic</span>
+                <p className="text-xs text-slate-200"><strong>Wat leuk!</strong> (How nice!)</p>
+                <p className="text-xs text-slate-200"><strong>Wat gezellig!</strong> (How cozy/fun!)</p>
+                <p className="text-xs text-slate-200"><strong>Wat lekker!</strong> (How delicious!)</p>
               </div>
-              <div>
-                <p><strong>Wat gezellig!</strong> (How cozy/fun!)</p>
-                <p><strong>Wat lekker!</strong> (How delicious!)</p>
-                <p><strong>Wat vervelend!</strong> (How annoying/unpleasant!)</p>
+              <div className="bg-sky-950/40 border border-sky-700/50 p-3 rounded-xl">
+                <span className="text-xs font-bold text-sky-400 block mb-2">😲 Surprise / Interest</span>
+                <p className="text-xs text-slate-200"><strong>Wat toevallig!</strong> (What a coincidence!)</p>
+                <p className="text-xs text-slate-200"><strong>Wat interessant!</strong> (How interesting!)</p>
+                <p className="text-xs text-slate-200"><strong>Wat bijzonder!</strong> (How special!)</p>
+              </div>
+              <div className="bg-rose-950/40 border border-rose-700/50 p-3 rounded-xl">
+                <span className="text-xs font-bold text-rose-400 block mb-2">😔 Sympathy / Disappointment</span>
+                <p className="text-xs text-slate-200"><strong>Wat jammer!</strong> (What a pity!)</p>
+                <p className="text-xs text-slate-200"><strong>Wat vervelend!</strong> (How annoying/unfortunate!)</p>
+                <p className="text-xs text-slate-200"><strong>Wat erg!</strong> (How terrible!)</p>
               </div>
             </div>
           </div>
@@ -527,7 +590,319 @@ export const chapter11Sections = [
       }
     ]
   },
-  {
+    {
+    id: "Reading-11",
+    chapter: 11,
+    title: {
+      tr: "Okuma & Anlama",
+      en: "Reading Comprehension"
+    },
+    readingPassage: {
+      title: "Een feestelijke zaterdagavond bij Selin thuis",
+      level: "Niveau A2 • 19 Zinnen",
+      intro: {
+        tr: "Aşağıdaki okuma parçasını dikkatlice okuyunuz. Bu parça 11. Bölümde öğrendiğiniz doğum günü & kutlama ifadeleri, sosyal tepkiler (wat leuk, wat jammer, meen je dat?), dönüşlü fiiller (reflexieve werkwoorden: zich voelen, zich vergissen, zich herinneren, zich amuseren), 'elkaar' ve öğrenci ek işleri (de bijbaan) kullanılarak hazırlanmıştır. Metni dinleyebilir, kelimelerin sözlük anlamına bakabilir ve alttaki 20 soruluk testi çözebilirsiniz.",
+        en: "Read the following reading passage carefully. It incorporates birthday & party vocabulary, conversational reactions (wat leuk, wat jammer, meen je dat?), reflexive verbs (zich voelen, zich vergissen, zich herinneren, zich amuseren), 'elkaar', and student jobs (de bijbaan) learned in Chapter 11. Listen to the text, click words to check meanings, and answer the 20 comprehension questions below."
+      },
+      paragraphs: [
+        "Op zaterdagavond viert Selin haar zesentwintigste verjaardag in haar pas gerenoveerde appartement in Utrecht. Het is tevens een housewarmingparty voor al haar vrienden van de cursus Nederlands. Rond acht uur 's avonds gaat de deurbel. Susy, Lucas, Edit en klasgenoot Ning staan lachend voor de deur. Selin opent de deur met een stralende lach en roept enthousiast: \"Welkom allemaal, kom gauw binnen! Wat geweldig dat jullie er allemaal zijn!\" De gasten omhelzen Selin hartelijk en overhandigen een prachtige houten geschenkmand vol Hollandse lekkernijen en boeken.",
+        "In de sfeervolle woonkamer schenkt Selin drankjes in en zet schalen met zelfgemaakte hapjes op tafel. Terwijl ze genieten van de muziek, praten de vrienden geanimeerd over hun werk, hun studie en hun hobby's. Ning vertelt trots dat hij sinds vorige week een fantastische bijbaan heeft gevonden als assistent in het academisch ziekenhuis. Susy reageert enthousiast: \"Wat fantastisch Ning, van harte gefeliciteerd! Dat sluit perfect aan bij jouw medische studie!\" Even later vertelt Lucas dat zijn jongere broer in Spanje vorige week de griep had, waarop Edit meelevend reageert: \"Wat ontzettend jammer voor hem! Voelt hij zich inmiddels alweer wat beter?\"",
+        "Iedereen vermaakt zich uitstekend op het feest. Lucas neemt een slokje van zijn drankje en zegt tevreden: \"Ik voel me hier echt helemaal thuis, Selin.\" Selin glimlacht dankbaar: \"Dank je wel Lucas! Ik herinner me nog heel goed hoe verlegen en zenuwachtig we allemaal waren tijdens onze allereerste lesdag. Moet je kijken hoe gezellig we nu met elkaar in het Nederlands kletsen!\" Ning vergist zich even bij het vertellen van een Nederlandse grap met een moeilijk woord, maar iedereen lacht hartelijk en ze corrigeren elkaar op een vriendelijke manier.",
+        "Rond elf uur haalt Selin een zelfgebakken appeltaart met brandende kaarsjes tevoorschijn. De vrienden hebben allemaal hun telefoons bij zich en laten elkaar foto's zien van hun families in Turkije, Spanje en China. Om middernacht zingen ze luidkeels het bekende Nederlandse verjaardagslied \"Lang zal ze leven\". Selin blaast alle kaarsjes in één keer uit. De vrienden bedanken Selin voor de onvergetelijke, gezellige avond en spreken af om elkaar volgende week weer in de les te zien."
+      ],
+      hints: [
+        {
+          title: { tr: "Dönüşlü Fiiller (Reflexieve Werkwoorden)", en: "Reflexive Verbs" },
+          icon: "fa-rotate",
+          items: [
+            { term: "zich vermaken (ik vermaak me)", tr: "eğlenmek / iyi vakit geçirmek", en: "to enjoy oneself" },
+            { term: "zich voelen (hij voelt zich)", tr: "hissetmek (nasıl hissettiği)", en: "to feel" },
+            { term: "zich herinneren (ik herinner me)", tr: "hatırlamak", en: "to remember" },
+            { term: "zich vergissen (hij vergist zich)", tr: "yanılmak / hata yapmak", en: "to make a mistake" }
+          ]
+        },
+        {
+          title: { tr: "Sosyal Tepkiler (Reacties)", en: "Conversational Reactions" },
+          icon: "fa-face-smile",
+          items: [
+            { term: "wat fantastisch!", tr: "ne harika!", en: "how fantastic!" },
+            { term: "wat ontzettend jammer!", tr: "ne büyük yazık!", en: "what a shame!" },
+            { term: "meen je dat?", tr: "ciddi misin? / gerçekten mi?", en: "are you serious?" }
+          ]
+        },
+        {
+          title: { tr: "İşte & Sosyal İfadeler", en: "Work & Social Expressions" },
+          icon: "fa-briefcase",
+          items: [
+            { term: "de bijbaan", tr: "ek iş / öğrenci işi", en: "part-time job / side job" },
+            { term: "elkaar", tr: "birbirini / birbirine", en: "each other / one another" },
+            { term: "bij zich hebben", tr: "yanında bulundurmak", en: "to have with oneself" }
+          ]
+        }
+      ]
+    },
+    exerciseGroups: [
+      {
+        instruction: "Deel 1: Direct Begrip & Feest (1-7: Doğrudan Bilgi ve Parti / Direct Facts)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_11_1",
+            type: "multiple_choice",
+            question: "Wat voor feest viert Selin op zaterdagavond in haar appartement in Utrecht?",
+            options: [
+              "Alleen een afscheidsfeest voor meneer De Vries",
+              "Haar zesentwintigste verjaardag én een housewarmingparty",
+              "Een bruiloftsfeest met haar familie",
+              "Het behalen van haar rijbewijs"
+            ],
+            correctAnswer: "Haar zesentwintigste verjaardag én een housewarmingparty"
+          },
+          {
+            id: "reading_11_2",
+            type: "multiple_choice",
+            question: "Rond welk tijdstip arriveren de cursisten bij het appartement van Selin?",
+            options: [
+              "Rond 17.00 uur",
+              "Rond 20.00 uur 's avonds (acht uur)",
+              "Om 22.30 uur",
+              "Pas om middernacht"
+            ],
+            correctAnswer: "Rond 20.00 uur 's avonds (acht uur)"
+          },
+          {
+            id: "reading_11_3",
+            type: "multiple_choice",
+            question: "Wat geven de vrienden als gezamenlijk cadeau aan Selin?",
+            options: [
+              "Een bos verwelkte bloemen",
+              "Een prachtige houten geschenkmand vol Hollandse lekkernijen en boeken",
+              "Een nieuwe stadsfiets",
+              "Een cadeaubon van een kledingwinkel"
+            ],
+            correctAnswer: "Een prachtige houten geschenkmand vol Hollandse lekkernijen en boeken"
+          },
+          {
+            id: "reading_11_4",
+            type: "multiple_choice",
+            question: "Wat voor nieuwe bijbaan heeft klasgenoot Ning gevonden?",
+            options: [
+              "Hij is ober in een café.",
+              "Hij is assistent in het academisch ziekenhuis.",
+              "Hij bezorgt pizza's op de fiets.",
+              "Hij werkt in een kledingzaak."
+            ],
+            correctAnswer: "Hij is assistent in het academisch ziekenhuis."
+          },
+          {
+            id: "reading_11_5",
+            type: "multiple_choice",
+            question: "Wat had de jongere broer van Lucas in Spanje vorige week volgens Lucas?",
+            options: [
+              "Een gebroken been",
+              "De griep",
+              "Een nieuwe baan",
+              "Geen internet"
+            ],
+            correctAnswer: "De griep"
+          },
+          {
+            id: "reading_11_6",
+            type: "multiple_choice",
+            question: "Welk traditioneel Nederlands verjaardagslied zingen de vrienden om middernacht?",
+            options: [
+              "\"Het Wilhelmus\"",
+              "\"Lang zal ze leven\"",
+              "\"Zie ginds komt de stoomboot\"",
+              "\"In de maneschijn\""
+            ],
+            correctAnswer: "\"Lang zal ze leven\""
+          },
+          {
+            id: "reading_11_7",
+            type: "multiple_choice",
+            question: "Wat serveert Selin rond elf uur met brandende kaarsjes?",
+            options: [
+              "Een slagroomtaart uit de supermarkt",
+              "Een zelfgebakken appeltaart",
+              "Pannenkoeken",
+              "Een schaal met kaasblokjes"
+            ],
+            correctAnswer: "Een zelfgebakken appeltaart"
+          }
+        ]
+      },
+      {
+        instruction: "Deel 2: Reacties & Gesprekken (8-13: Tepkiler ve Sohbet / Conversational Reactions)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_11_8",
+            type: "multiple_choice",
+            question: "Hoe reageert Susy op het nieuws over de geweldige nieuwe bijbaan van Ning?",
+            options: [
+              "\"Wat vervelend voor je!\"",
+              "\"Wat fantastisch Ning, van harte gefeliciteerd!\"",
+              "\"Dat meen je niet, wat saai.\"",
+              "\"Waarom doe je dat?\""
+            ],
+            correctAnswer: "\"Wat fantastisch Ning, van harte gefeliciteerd!\""
+          },
+          {
+            id: "reading_11_9",
+            type: "multiple_choice",
+            question: "Welke reactie gebruikt Edit als ze hoort dat de broer van Lucas ziek is geweest?",
+            options: [
+              "\"Wat leuk voor hem!\"",
+              "\"Wat ontzettend jammer voor hem!\"",
+              "\"Eet smakelijk!\"",
+              "\"Prettig weekend!\""
+            ],
+            correctAnswer: "\"Wat ontzettend jammer voor hem!\""
+          },
+          {
+            id: "reading_11_10",
+            type: "multiple_choice",
+            question: "Wat herinnert Selin zich nog heel goed over hun eerste lesdag?",
+            options: [
+              "Dat iedereen ruzie maakte",
+              "Hoe verlegen en zenuwachtig ze allemaal waren",
+              "Dat de docent te laat was",
+              "Dat niemand een pen bij zich had"
+            ],
+            correctAnswer: "Hoe verlegen en zenuwachtig ze allemaal waren"
+          },
+          {
+            id: "reading_11_11",
+            type: "multiple_choice",
+            question: "Wat laten de vrienden elkaar zien op hun telefoons?",
+            options: [
+              "Filmpjes van grappige katten",
+              "Foto's van hun families in Turkije, Spanje en China",
+              "De resultaten van hun toets",
+              "Nieuwsberichten over het verkeer"
+            ],
+            correctAnswer: "Foto's van hun families in Turkije, Spanje en China"
+          },
+          {
+            id: "reading_11_12",
+            type: "multiple_choice",
+            question: "Wat betekent het woord 'bijbaan' in het Nederlands?",
+            options: [
+              "Een voltijdbaan van 40 uur per week",
+              "Een deeltijdbaan naast je studie of hoofdbaan",
+              "Een baan bij de politie",
+              "Vrijwilligerswerk zonder salaris"
+            ],
+            correctAnswer: "Een deeltijdbaan naast je studie of hoofdbaan"
+          },
+          {
+            id: "reading_11_13",
+            type: "multiple_choice",
+            question: "Wat betekent het wederkerig voornaamwoord 'elkaar'?",
+            options: [
+              "Niemand",
+              "Iedereen apart",
+              "Elkaars gezelschap / wederzijds (birbirini / birbirine)",
+              "Alleen de docent"
+            ],
+            correctAnswer: "Elkaars gezelschap / wederzijds (birbirini / birbirine)"
+          }
+        ]
+      },
+      {
+        instruction: "Deel 3: Reflexieve Werkwoorden & Grammatica (14-20: Dönüşlü Fiiller ve Dilbilgisi / Reflexive Verbs)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_11_14",
+            type: "multiple_choice",
+            question: "Kijk naar de zin: \"Iedereen vermaakt ... uitstekend.\" Welk reflexief pronomen hoort bij 'iedereen' (3e persoon enkelvoud)?",
+            options: [
+              "me",
+              "je",
+              "zich",
+              "ons"
+            ],
+            correctAnswer: "zich"
+          },
+          {
+            id: "reading_11_15",
+            type: "multiple_choice",
+            question: "Kijk naar de zin: \"Ik voel ... hier echt helemaal thuis.\" Welk reflexief pronomen hoort bij 'ik'?",
+            options: [
+              "me (mij)",
+              "je",
+              "zich",
+              "ons"
+            ],
+            correctAnswer: "me (mij)"
+          },
+          {
+            id: "reading_11_16",
+            type: "multiple_choice",
+            question: "Wat is het juiste reflexieve pronomen voor 'wij' in: \"Wij herinneren ... de eerste les.\"?",
+            options: [
+              "zich",
+              "jullie",
+              "ons",
+              "me"
+            ],
+            correctAnswer: "ons"
+          },
+          {
+            id: "reading_11_17",
+            type: "multiple_choice",
+            question: "Wat betekent het reflexieve werkwoord 'zich vergissen'?",
+            options: [
+              "Iets vergeten",
+              "Een vergissing maken / een fout maken",
+              "Boos worden",
+              "Heel hard zingen"
+            ],
+            correctAnswer: "Een vergissing maken / een fout maken"
+          },
+          {
+            id: "reading_11_18",
+            type: "multiple_choice",
+            question: "Wat gebeurt er als Ning zich vergist bij het vertellen van zijn grap?",
+            options: [
+              "Iedereen wordt stil en boos.",
+              "Iedereen lacht hartelijk en ze corrigeren elkaar op een vriendelijke manier.",
+              "Ning loopt huilend weg van het feest.",
+              "Selin stuurt hem naar huis."
+            ],
+            correctAnswer: "Iedereen lacht hartelijk en ze corrigeren elkaar op een vriendelijke manier."
+          },
+          {
+            id: "reading_11_19",
+            type: "multiple_choice",
+            question: "Wat betekent de uitdrukking: \"Ze hebben hun telefoons BIJ ZICH\"? ",
+            options: [
+              "Hun telefoons liggen nog thuis in de la.",
+              "Ze dragen hun telefoons bij hen / hebben ze bij de hand.",
+              "Hun telefoons zijn gestolen.",
+              "Hun telefoons staan uitgeschakeld."
+            ],
+            correctAnswer: "Ze dragen hun telefoons bij hen / hebben ze bij de hand."
+          },
+          {
+            id: "reading_11_20",
+            type: "multiple_choice",
+            question: "Welke stelling over het feest van Selin is ONJUIST (niet waar)?",
+            options: [
+              "Selin viert haar 26ste verjaardag en haar housewarming.",
+              "De gasten geven haar een geschenkmand met lekkernijen en boeken.",
+              "Niemand praat Nederlands op het feest; iedereen spreekt alleen Engels.",
+              "Om middernacht zingen ze 'Lang zal ze leven' voor Selin."
+            ],
+            correctAnswer: "Niemand praat Nederlands op het feest; iedereen spreekt alleen Engels."
+          }
+        ]
+      }
+    ]
+  },
+{
     id: "On-Class-11",
     chapter: 11,
     title: "Summary",

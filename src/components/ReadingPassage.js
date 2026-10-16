@@ -730,9 +730,6 @@ export default function ReadingPassage({
                     <i className="fa-solid fa-check-double text-xs sm:text-sm"></i>
                   </button>
 
-                  <span className="text-[10px] font-bold text-slate-500 tracking-wider">
-                    #{idx + 1}
-                  </span>
                 </div>
 
                 {/* Paragraf Metni (Tıklanabilir kelimeler ile) */}

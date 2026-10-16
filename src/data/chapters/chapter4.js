@@ -122,13 +122,8 @@ export const chapter4Sections = [
         isExtra: false,
         questions: [
           { id: "4.1_opd1_1", type: "multiple_choice", question: "1. Bert en Hans hebben elkaar lang niet gezien.", options: ["waar", "niet waar"], correctAnswer: "waar" },
-            {
-    id: "4.2",
-    chapter: 4,
-    title: "Vocabulary",
-    theory: null,
-    exerciseGroups: []
-  },
+
+
 { id: "4.1_opd1_2", type: "multiple_choice", question: "2. Hans en Wilma gaan in Venetië wonen.", options: ["waar", "niet waar"], correctAnswer: "niet waar" },
           { id: "4.1_opd1_3", type: "multiple_choice", question: "3. Hans gaat een film maken in de vakantie.", options: ["waar", "niet waar"], correctAnswer: "waar" },
           { id: "4.1_opd1_4", type: "multiple_choice", question: "4. Hans en Bert maken een afspraak om samen te eten.", options: ["waar", "niet waar"], correctAnswer: "waar" },
@@ -145,6 +140,13 @@ export const chapter4Sections = [
         ]
       }
     ]
+  },
+  {
+    id: "4.2",
+    chapter: 4,
+    title: "Vocabulary",
+    theory: null,
+    exerciseGroups: []
   },
   {
     id: "4.3",
@@ -518,7 +520,320 @@ export const chapter4Sections = [
       }
     ]
   },
-  {
+    {
+    id: "Reading-4",
+    chapter: 4,
+    title: {
+      tr: "Okuma & Anlama",
+      en: "Reading Comprehension"
+    },
+    readingPassage: {
+      title: "Een toevallige ontmoeting op de Oudegracht",
+      level: "Niveau A1 • 18 Zinnen",
+      intro: {
+        tr: "Aşağıdaki okuma parçasını dikkatlice okuyunuz. Bu parça 4. Bölümde öğrendiğiniz hal hatır sorma (hoe gaat het? druk, prima, moe), 'zullen' yardımcı fiili ile teklifte bulunma, randevulaşma (schikt dat? dat komt goed uit), açılış saatleri (openingstijden) ve haftalık planlar kullanılarak hazırlanmıştır. Metni dinleyebilir, kelimelerin sözlük anlamlarına bakabilir ve 20 soruluk testi çözebilirsiniz.",
+        en: "Read the following reading passage carefully. It incorporates asking how someone is doing, making suggestions with the modal verb 'zullen', scheduling an appointment (schikt dat? dat komt goed uit), opening hours, and weekly plans learned in Chapter 4. Listen to the text, click words to check meanings, and answer the 20 comprehension questions below."
+      },
+      paragraphs: [
+        "Het is een zonnige dinsdagmiddag. Lucas loopt rustig over de beroemde Oudegracht in het centrum van Utrecht. Opeens hoort hij een vrolijke stem achter zich: \"Hoi Lucas, wat leuk om jou hier tegen te komen!\" Lucas draait zich om en ziet zijn klasgenoot Selin. Ze draagt een zware rugzak vol studieboeken. Lucas glimlacht hartelijk en vraagt: \"Dag Selin, hoe gaat het met jou?\" Selin zucht even en antwoordt: \"Het gaat prima hoor, maar ik heb het ontzettend druk met mijn nieuwe baan en onze cursus Nederlands. En hoe is het met jou?\" Lucas zegt: \"Met mij gaat alles goed, dank je, al ben ik vandaag wel een beetje moe van het studeren.\"",
+        "Lucas heeft wel zin in een praatje en stelt voor: \"Zullen we ergens een kopje koffie drinken en even bijkletsen?\" Selin kijkt bedroefd op haar horloge en zegt: \"Dat wil ik heel graag, maar het schikt mij nu helaas echt niet. Ik moet over twintig minuten op kantoor zijn voor een belangrijke vergadering met mijn baas.\" Lucas knikt begripvol en zegt: \"Geen enkel probleem, werk gaat voor! Zullen we dan een afspraak maken voor komend weekend? Schikt zaterdagmiddag jou misschien?\"",
+        "Selin denkt even na en controleert haar agenda op haar telefoon. \"Ja, zaterdagmiddag komt uitstekend uit! Zullen we om twee uur 's middags afspreken bij het Centraal Museum?\" vraagt ze enthousiast. Lucas antwoordt: \"Dat is een geweldig plan! Weet jij toevallig wat de openingstijden van het museum zijn?\" Selin zoekt het direct op: \"Even kijken op de website... Het museum is op zaterdag geopend van tien uur 's ochtends tot vijf uur 's middags. Op maandag is het altijd de hele dag gesloten.\"",
+        "Lucas noteert de tijd in zijn agenda en zegt blij: \"Afgesproken! Zaterdag om 14.00 uur voor de hoofdingang van het museum. En als het regent, wachten we binnen bij de museumwinkel.\" Selin lacht: \"Heel goed doordacht. Ik verheug me erop! Doe de hartelijke groeten aan je huisgenoot en werk ze nog vandaag!\" Ze zwaaien naar elkaar en lopen snel door naar hun afspraken."
+      ],
+      hints: [
+        {
+          title: { tr: "Hal Hatır İfadeleri", en: "Asking & Answering How Things Are" },
+          icon: "fa-comments",
+          items: [
+            { term: "hoe gaat het met jou?", tr: "nasılsın / nasıl gidiyor?", en: "how are you doing?" },
+            { term: "druk hebben", tr: "çok meşgul / yoğun olmak", en: "to be busy" },
+            { term: "prima", tr: "gayet iyi / harika", en: "fine / great" },
+            { term: "moe", tr: "yorgun", en: "tired" }
+          ]
+        },
+        {
+          title: { tr: "Öneri & Randevu Kalıpları", en: "Proposals & Appointments" },
+          icon: "fa-calendar-check",
+          items: [
+            { term: "zullen we...", tr: "...yapalım mı? (öneri / teklif)", en: "shall we...?" },
+            { term: "het schikt mij niet", tr: "bana uymuyor / uygun değil", en: "it doesn't suit me" },
+            { term: "dat komt goed uit", tr: "bu çok iyi uyar / çok uygun", en: "that suits me well" },
+            { term: "afgesproken!", tr: "anlaştık! / sözleştik!", en: "it's a deal! / agreed!" }
+          ]
+        },
+        {
+          title: { tr: "Açılış Saatleri & Zaman", en: "Opening Hours & Time" },
+          icon: "fa-clock",
+          items: [
+            { term: "geopend van... tot...", tr: "...'den ...'e kadar açık", en: "open from... to..." },
+            { term: "gesloten", tr: "kapalı", en: "closed" },
+            { term: "de hoofdingang", tr: "ana giriş", en: "main entrance" }
+          ]
+        }
+      ]
+    },
+    exerciseGroups: [
+      {
+        instruction: "Deel 1: Direct Begrip & Situatie (1-7: Doğrudan Bilgi ve Durum / Direct Facts)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_4_1",
+            type: "multiple_choice",
+            question: "Waar ontmoeten Lucas en Selin elkaar toevallig?",
+            options: [
+              "Op het station van Amsterdam",
+              "Op de Oudegracht in het centrum van Utrecht",
+              "In de bibliotheek van de universiteit",
+              "In de kantine van de taalschool"
+            ],
+            correctAnswer: "Op de Oudegracht in het centrum van Utrecht"
+          },
+          {
+            id: "reading_4_2",
+            type: "multiple_choice",
+            question: "Wat draagt Selin bij zich als Lucas haar ziet?",
+            options: [
+              "Een grote boodschappentas vol fruit",
+              "Een zware rugzak vol studieboeken",
+              "Een koffer voor een reis naar Spanje",
+              "Helemaal niets"
+            ],
+            correctAnswer: "Een zware rugzak vol studieboeken"
+          },
+          {
+            id: "reading_4_3",
+            type: "multiple_choice",
+            question: "Hoe gaat het met Selin volgens haar eigen woorden?",
+            options: [
+              "Slecht, ze voelt zich ziek.",
+              "Het gaat prima, maar ze heeft het ontzettend druk.",
+              "Ze verveelt zich heel erg thuis.",
+              "Ze heeft vakantie en doet niets."
+            ],
+            correctAnswer: "Het gaat prima, maar ze heeft het ontzettend druk."
+          },
+          {
+            id: "reading_4_4",
+            type: "multiple_choice",
+            question: "Waarom heeft Selin het zo druk?",
+            options: [
+              "Met haar kinderen en het huishouden",
+              "Met haar nieuwe baan en de cursus Nederlands",
+              "Omdat ze moet verhuizen naar een andere stad",
+              "Met het organiseren van een verjaardagsfeest"
+            ],
+            correctAnswer: "Met haar yeni baan en de cursus Nederlands"
+          },
+          {
+            id: "reading_4_5",
+            type: "multiple_choice",
+            question: "Wat stelt Lucas in eerste instantie voor aan Selin?",
+            options: [
+              "Om samen naar het museum te gaan op dinsdag",
+              "Om samen een kopje koffie te drinken en bij te kletsen",
+              "Om samen te gaan hardlopen in het park",
+              "Om haar boeken voor haar te dragen"
+            ],
+            correctAnswer: "Om samen een kopje koffie te drinken en bij te kletsen"
+          },
+          {
+            id: "reading_4_6",
+            type: "multiple_choice",
+            question: "Waarom kan Selin op dinsdagmiddag NIET direct koffie drinken?",
+            options: [
+              "Omdat ze geen geld bij zich heeft",
+              "Omdat ze over twintig minuten een belangrijke vergadering op kantoor heeft",
+              "Omdat ze geen koffie lust",
+              "Omdat haar trein over vijf minuten vertrekt"
+            ],
+            correctAnswer: "Omdat ze over twintig minuten een belangrijke vergadering op kantoor heeft"
+          },
+          {
+            id: "reading_4_7",
+            type: "multiple_choice",
+            question: "Waar spreken Lucas en Selin af voor het komende weekend?",
+            options: [
+              "In een café aan de Neude",
+              "Bij het Centraal Museum in Utrecht",
+              "In het klaslokaal op de taalschool",
+              "Op de zaterdagmarkt"
+            ],
+            correctAnswer: "Bij het Centraal Museum in Utrecht"
+          }
+        ]
+      },
+      {
+        instruction: "Deel 2: Tijd, Afspraken & Openingstijden (8-13: Saat, Randevu ve Açılış Saatleri / Time & Schedule)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_4_8",
+            type: "multiple_choice",
+            question: "Op welke dag en hoe laat hebben Lucas en Selin hun afspraak gepland?",
+            options: [
+              "Op vrijdagmiddag om 15.00 uur",
+              "Op zaterdagmiddag om 14.00 uur (twee uur)",
+              "Op zondagochtend om 10.00 uur",
+              "Op dinsdagmiddag om 14.30 uur"
+            ],
+            correctAnswer: "Op zaterdagmiddag om 14.00 uur (twee uur)"
+          },
+          {
+            id: "reading_4_9",
+            type: "multiple_choice",
+            question: "Wat zijn de openingstijden van het Centraal Museum op zaterdag?",
+            options: [
+              "Van 09.00 tot 18.00 uur",
+              "Van 10.00 tot 17.00 uur",
+              "Van 12.00 tot 20.00 uur",
+              "Het museum is op zaterdag gesloten"
+            ],
+            correctAnswer: "Van 10.00 tot 17.00 uur"
+          },
+          {
+            id: "reading_4_10",
+            type: "multiple_choice",
+            question: "Op welke dag van de week is het Centraal Museum altijd de hele dag gesloten?",
+            options: [
+              "Op maandag",
+              "Op woensdag",
+              "Op zaterdag",
+              "Op zondag"
+            ],
+            correctAnswer: "Op maandag"
+          },
+          {
+            id: "reading_4_11",
+            type: "multiple_choice",
+            question: "Waar zullen ze op elkaar wachten als het zaterdag regent?",
+            options: [
+              "Onder de bomen langs de gracht",
+              "Binnen bij de museumwinkel",
+              "In de auto van Lucas",
+              "Bij de bushalte"
+            ],
+            correctAnswer: "Binnen bij de museumwinkel"
+          },
+          {
+            id: "reading_4_12",
+            type: "multiple_choice",
+            question: "Hoeveel minuten heeft Selin nog voordat haar vergadering op kantoor begint?",
+            options: [
+              "Tien minuten",
+              "Twintig minuten",
+              "Dertig minuten",
+              "Een heel uur"
+            ],
+            correctAnswer: "Twintig minuten"
+          },
+          {
+            id: "reading_4_13",
+            type: "multiple_choice",
+            question: "Welke dag van de week is het wanneer ze elkaar op straat tegenkomen?",
+            options: [
+              "Maandag",
+              "Dinsdag",
+              "Donderdag",
+              "Zaterdag"
+            ],
+            correctAnswer: "Dinsdag"
+          }
+        ]
+      },
+      {
+        instruction: "Deel 3: Taaluitingen & Grammatica (14-20: Dil Kalıpları ve Anlama / Expressions & Grammar)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_4_14",
+            type: "multiple_choice",
+            question: "Welk hulpwerkwoord gebruikt Lucas om een voorstel te doen: \"... we een afspraak maken?\"?",
+            options: [
+              "Kunnen",
+              "Mogen",
+              "Zullen",
+              "Willen"
+            ],
+            correctAnswer: "Zullen"
+          },
+          {
+            id: "reading_4_15",
+            type: "multiple_choice",
+            question: "Wat betekent de reactie: \"Het schikt mij nu helaas echt niet\"? ve",
+            options: [
+              "Het bevalt me helemaal niet.",
+              "Het tijdstip past mij nu helaas niet / ik kan nu niet.",
+              "Ik wil nooit meer met je afspreken.",
+              "Ik ben heel erg geschrokken."
+            ],
+            correctAnswer: "Het tijdstip past mij nu helaas niet / ik kan nu niet."
+          },
+          {
+            id: "reading_4_16",
+            type: "multiple_choice",
+            question: "Wat betekent het als iemand zegt: \"Zaterdagmiddag komt uitstekend uit!\"?",
+            options: [
+              "Zaterdagmiddag is heel handig en past perfect in mijn schema.",
+              "Zaterdagmiddag ben ik de hele dag weg.",
+              "Zaterdagmiddag moet ik heel hard werken.",
+              "Zaterdagmiddag wil ik liever uitslapen."
+            ],
+            correctAnswer: "Zaterdagmiddag is heel handig en past perfect in mijn schema."
+          },
+          {
+            id: "reading_4_17",
+            type: "multiple_choice",
+            question: "Wat betekent het werkwoord 'bijkletsen' in deze context?",
+            options: [
+              "Ruzie maken over geld",
+              "Gezellig met elkaar praten over nieuwtjes en wat je hebt meegemaakt",
+              "Heel hard schreeuwen op straat",
+              "Een vreemde taal leren"
+            ],
+            correctAnswer: "Gezellig met elkaar praten over nieuwtjes en wat je hebt meegemaakt"
+          },
+          {
+            id: "reading_4_18",
+            type: "multiple_choice",
+            question: "Wat zegt Selin bij het afscheid tegen Lucas om hem een prettige werkdag te wensen?",
+            options: [
+              "\"Eet smakelijk!\"",
+              "\"Werk ze nog vandaag!\"",
+              "\"Beterschap!\"",
+              "\"Slaap lekker!\""
+            ],
+            correctAnswer: "\"Werk ze nog vandaag!\""
+          },
+          {
+            id: "reading_4_19",
+            type: "multiple_choice",
+            question: "Aan wie vraagt Selin om de groeten te doen?",
+            options: [
+              "Aan meneer De Vries",
+              "Aan de baas van Lucas",
+              "Aan de huisgenoot (vriend) van Lucas",
+              "Aan haar eigen ouders"
+            ],
+            correctAnswer: "Aan de huisgenoot (vriend) van Lucas"
+          },
+          {
+            id: "reading_4_20",
+            type: "multiple_choice",
+            question: "Welke bewering is ONJUIST (niet waar) volgens de tekst?",
+            options: [
+              "Selin en Lucas ontmoeten elkaar op de Oudegracht in Utrecht.",
+              "Lucas stelt voor om direct koffie te gaan drinken.",
+              "Selin en Lucas gaan direct samen naar het museum op dinsdag.",
+              "Het museum is op zaterdag van 10.00 tot 17.00 uur geopend."
+            ],
+            correctAnswer: "Selin en Lucas gaan direct samen naar het museum op dinsdag."
+          }
+        ]
+      }
+    ]
+  },
+{
     id: "On-Class-4",
     chapter: 4,
     title: "Summary",

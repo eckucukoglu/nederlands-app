@@ -305,7 +305,7 @@ export default function QuizModule({ tags = [], onClose, title = "Oefening" }) {
     if (!rawAnswer || !rawAnswer.trim()) return;
 
     const answer = rawAnswer.trim();
-    const correct = answer.toLowerCase() === currentQ.correctAnswer.toLowerCase();
+    const correct = Boolean(currentQ.correctAnswer && answer.toLowerCase() === currentQ.correctAnswer.toLowerCase().trim());
     setIsCorrect(correct);
     setIsAnswered(true);
     setUserAnswer(answer);

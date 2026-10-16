@@ -119,13 +119,8 @@ export const chapter7Sections = [
         isExtra: false,
         questions: [
           { id: "7.1_opd1_1", type: "multiple_choice", question: "1. Sandra wil...", options: ["a) een spijkerbroek kopen.", "b) alleen even kijken."], correctAnswer: "a) een spijkerbroek kopen." },
-            {
-    id: "7.2",
-    chapter: 7,
-    title: "Vocabulary",
-    theory: null,
-    exerciseGroups: []
-  },
+
+
 { id: "7.1_opd1_2", type: "multiple_choice", question: "2. Sandra heeft...", options: ["a) maat 42.", "b) maat 40."], correctAnswer: "b) maat 40." },
           { id: "7.1_opd1_3", type: "multiple_choice", question: "3. Sandra past...", options: ["a) twee spijkerbroeken.", "b) een lichte spijkerbroek."], correctAnswer: "a) twee spijkerbroeken." },
           { id: "7.1_opd1_4", type: "multiple_choice", question: "4. Sandra vindt de tweede broek...", options: ["a) een beetje wijd.", "b) een beetje klein."], correctAnswer: "a) een beetje wijd." },
@@ -142,6 +137,13 @@ export const chapter7Sections = [
         ]
       }
     ]
+  },
+  {
+    id: "7.2",
+    chapter: 7,
+    title: "Vocabulary",
+    theory: null,
+    exerciseGroups: []
   },
   {
     id: "7.3",
@@ -587,7 +589,319 @@ export const chapter7Sections = [
       }
     ]
   },
-  {
+    {
+    id: "Reading-7",
+    chapter: 7,
+    title: {
+      tr: "Okuma & Anlama",
+      en: "Reading Comprehension"
+    },
+    readingPassage: {
+      title: "Winkelen voor een feestoutfit in het warenhuis",
+      level: "Niveau A1 • 19 Zinnen",
+      intro: {
+        tr: "Aşağıdaki okuma parçasını dikkatlice okuyunuz. Bu parça 7. Bölümde öğrendiğiniz giyim & ayakkabı kelimeleri, renkler, beden sorma & prova (de maat, het pashokje, passen), sıfat karşılaştırmaları (comparatief & superlatief: mooi-mooier-mooist), işaret zamirleri (deze/die, dit/dat) ve nesne zamirleri (mij, jou, hem, haar) kullanılarak hazırlanmıştır. Metni dinleyebilir, kelimelerin sözlük anlamına bakabilir ve alttaki 20 soruluk testi çözebilirsiniz.",
+        en: "Read the following reading passage carefully. It incorporates clothing & footwear vocabulary, colours, sizes & fitting (de maat, het pashokje, passen), comparative & superlative adjectives (mooi-mooier-mooist), demonstrative pronouns (deze/die, dit/dat), and object pronouns (mij, jou, hem, haar) learned in Chapter 7. Listen to the text, click words to check meanings, and answer the 20 comprehension questions below."
+      },
+      paragraphs: [
+        "Op zaterdagmiddag gaan Selin en haar goede vriendin Edit naar het bekende warenhuis in de binnenstad van Utrecht. Selin is uitgenodigd voor een feestelijke bruiloft van haar collega volgende maand en zoekt een elegante outfit. De kledingafdeling hangt vol met feestelijke jurken, modieuze jassen, nette broeken en bijpassende schoenen. Selin ziet direct een prachtige donkerblauwe jurk op een paspop.",
+        "Een vriendelijke verkoopster loopt op hen af en vraagt attent: \"Goedemiddag dames, kan ik u ergens mee helpen?\" Selin wijst naar de paspop en zegt: \"Ja graag! Welke maat heeft deze donkerblauwe jurk?\" De verkoopster controleert het label: \"Dit is maat 38.\" Selin neemt de jurk mee naar het pashokje om hem te passen. Na twee minuten komt ze naar buiten en kijkt in de grote spiegel. De jurk zit een beetje te strak om haar middel. Selin vraagt: \"Heeft u deze jurk misschien ook een maatje groter, in maat 40?\" De verkoopster haalt snel maat 40 uit het magazijn. Selin past hem opnieuw en roept blij: \"Deze maat zit werkelijk gegoten!\" Edit knikt bewonderend: \"Wauw Selin, deze donkerblauwe kleur staat jou fantastisch!\"",
+        "Nu zoekt Selin nog schoenen die mooi bij de jurk passen. Ze twijfelt tussen rode pumps met een hoge hak en zwarte leren schoenen met een lagere hak. De rode pumps zijn wel opvallender, maar de zwarte schoenen zijn veel comfortabeler om de hele avond op te dansen. Edit adviseert eerlijk: \"De zwarte schoenen zijn het mooist en passen het best bij deze jurk. Beter een comfortabele schoen dan pijn aan je voeten!\" Selin besluit de zwarte schoenen te nemen en koopt er ook nog een lichtgrijze wollen jas bij voor de koudere herfstavonden.",
+        "Bij de kassa scant de caissière de drie artikelen: \"Dat is dan bij elkaar honderdnegentien euro alstublieft.\" Selin pakt haar bankpas en vraagt: \"Kan ik hier contactloos pinnen?\" De caissière glimlacht: \"Jazeker, houdt u uw pas maar tegen het schermpje.\" De betaling slaagt meteen. De caissière stopt de kleding netjes in een grote papieren tas en overhandigt de bon: \"Alsjeblieft, uw aankoopbewijs en veel plezier op de bruiloft!\" Zeer tevreden met haar nieuwe outfit verlaten Selin en Edit het warenhuis om ergens een kopje koffie te drinken."
+      ],
+      hints: [
+        {
+          title: { tr: "Giyim & Beden Terimleri", en: "Clothing & Fitting Terms" },
+          icon: "fa-shirt",
+          items: [
+            { term: "het pashokje", tr: "deneme kabini", en: "fitting room" },
+            { term: "de maat", tr: "beden / numara", en: "size" },
+            { term: "te strak / te wijd", tr: "çok dar / çok bol", en: "too tight / too loose" },
+            { term: "het staat jou fantastisch", tr: "sana harika yakıştı", en: "it looks fantastic on you" }
+          ]
+        },
+        {
+          title: { tr: "Karşılaştırma (Comparatief & Superlatief)", en: "Comparatives & Superlatives" },
+          icon: "fa-arrow-up-right-dots",
+          items: [
+            { term: "groot - groter - grootst", tr: "büyük - daha büyük - en büyük", en: "big - bigger - biggest" },
+            { term: "mooi - mooier - mooist", tr: "güzel - daha güzel - en güzel", en: "beautiful - more - most" },
+            { term: "goed - beter - best", tr: "iyi - daha iyi - en iyi", en: "good - better - best" }
+          ]
+        },
+        {
+          title: { tr: "İşaret & Nesne Zamirleri", en: "Demonstrative & Object Pronouns" },
+          icon: "fa-fingerprint",
+          items: [
+            { term: "deze / die", tr: "bu / şu (de-sözcükleri ve çoğullar)", en: "this / that (de-words & plurals)" },
+            { term: "dit / dat", tr: "bu / şu (het-sözcükleri)", en: "this / that (het-words)" },
+            { term: "mij, jou, hem, haar, ons", tr: "beni/bana, seni/sana, onu/ona...", en: "me, you, him, her, us" }
+          ]
+        }
+      ]
+    },
+    exerciseGroups: [
+      {
+        instruction: "Deel 1: Direct Begrip & Kleding (1-7: Doğrudan Bilgi ve Kıyafet / Direct Facts)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_7_1",
+            type: "multiple_choice",
+            question: "Waarom winkelen Selin en Edit op zaterdagmiddag in het warenhuis?",
+            options: [
+              "Omdat Selin nieuwe sportschoenen nodig heeft",
+              "Omdat Selin een feestelijke outfit zoekt voor de bruiloft van haar collega",
+              "Omdat ze een verjaardagscadeau voor meneer De Vries kopen",
+              "Omdat Edit een winterjas zoekt"
+            ],
+            correctAnswer: "Omdat Selin een feestelijke outfit zoekt voor de bruiloft van haar collega"
+          },
+          {
+            id: "reading_7_2",
+            type: "multiple_choice",
+            question: "Welk kledingstuk ziet Selin als eerste op de paspop?",
+            options: [
+              "Een rode wollen trui",
+              "Een prachtige donkerblauwe jurk",
+              "Een witte zijden blouse",
+              "Een zwarte spijkerbroek"
+            ],
+            correctAnswer: "Een prachtige donkerblauwe jurk"
+          },
+          {
+            id: "reading_7_3",
+            type: "multiple_choice",
+            question: "Welke maat jurk hangt er op de paspop en past Selin als eerste?",
+            options: [
+              "Maat 36",
+              "Maat 38",
+              "Maat 40",
+              "Maat 42"
+            ],
+            correctAnswer: "Maat 38"
+          },
+          {
+            id: "reading_7_4",
+            type: "multiple_choice",
+            question: "Waarom ruilt Selin maat 38 om voor maat 40?",
+            options: [
+              "Omdat maat 38 veel te wijd en te lang was",
+              "Omdat de rits kapot was",
+              "Omdat maat 38 een beetje te strak om haar middel zat",
+              "Omdat de kleur haar niet beviel"
+            ],
+            correctAnswer: "Omdat maat 38 een beetje te strak om haar middel zat"
+          },
+          {
+            id: "reading_7_5",
+            type: "multiple_choice",
+            question: "Welke schoenen kiest Selin uiteindelijk voor de bruiloft?",
+            options: [
+              "Rode pumps met een hoge hak",
+              "Zwarte leren schoenen met een lagere hak",
+              "Witte sportsneakers",
+              "Bruine winterlaarzen"
+            ],
+            correctAnswer: "Zwarte leren schoenen met een lagere hak"
+          },
+          {
+            id: "reading_7_6",
+            type: "multiple_choice",
+            question: "Wat koopt Selin naast de jurk en de schoenen nog extra voor koudere avonden?",
+            options: [
+              "Een dikke rode muts",
+              "Een lichtgrijze wollen jas",
+              "Een leren riem",
+              "Een zwarte paraplu"
+            ],
+            correctAnswer: "Een lichtgrijze wollen jas"
+          },
+          {
+            id: "reading_7_7",
+            type: "multiple_choice",
+            question: "Wat zegt Edit bewonderend als Selin maat 40 aantrekt?",
+            options: [
+              "\"Trek dat direct uit, het staat niet!\"",
+              "\"Wauw Selin, deze donkerblauwe kleur staat jou fantastisch!\"",
+              "\"De jurk is veel te duur.\"",
+              "\"Blauw is niet modieus dit seizoen.\""
+            ],
+            correctAnswer: "\"Wauw Selin, deze donkerblauwe kleur staat jou fantastisch!\""
+          }
+        ]
+      },
+      {
+        instruction: "Deel 2: Prijzen, Maten & Vergelijkingen (8-13: Fiyatlar ve Karşılaştırmalar / Sizes & Comparatives)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_7_8",
+            type: "multiple_choice",
+            question: "Waarom zijn de zwarte schoenen volgens Edit een betere keuze dan de rode pumps?",
+            options: [
+              "Omdat de zwarte schoenen goedkoper zijn",
+              "Omdat de zwarte schoenen veel comfortabeler zijn om de hele avond op te dansen",
+              "Omdat de rode schoenen uitverkocht waren",
+              "Omdat rood verboden is op een bruiloft"
+            ],
+            correctAnswer: "Omdat de zwarte schoenen veel comfortabeler zijn om de hele avond op te dansen"
+          },
+          {
+            id: "reading_7_9",
+            type: "multiple_choice",
+            question: "Hoeveel kosten de drie artikelen (jurk, schoenen en jas) in totaal bij de kassa?",
+            options: [
+              "€ 89,00",
+              "€ 100,00",
+              "€ 119,00",
+              "€ 150,00"
+            ],
+            correctAnswer: "€ 119,00"
+          },
+          {
+            id: "reading_7_10",
+            type: "multiple_choice",
+            question: "Op welke manier betaalt Selin bij de kassa?",
+            options: [
+              "Contant met briefjes van vijftig euro",
+              "Contactloos met haar bankpas (pinnen)",
+              "Met een creditcard van haar bedrijf",
+              "Achteraf op factuur"
+            ],
+            correctAnswer: "Contactloos met haar bankpas (pinnen)"
+          },
+          {
+            id: "reading_7_11",
+            type: "multiple_choice",
+            question: "Wat is de overtreffende trap (superlatief) van het bijvoeglijk naamwoord 'mooi'?",
+            options: [
+              "mooier",
+              "het mooist / de mooiste",
+              "mooiste-est",
+              "meest mooi"
+            ],
+            correctAnswer: "het mooist / de mooiste"
+          },
+          {
+            id: "reading_7_12",
+            type: "multiple_choice",
+            question: "Wat is de vergrotende trap (comparatief) van het onregelmatige bijvoeglijk naamwoord 'goed'?",
+            options: [
+              "goeder",
+              "beter",
+              "best",
+              "meer goed"
+            ],
+            correctAnswer: "beter"
+          },
+          {
+            id: "reading_7_13",
+            type: "multiple_choice",
+            question: "Wat krijgt Selin van de caissière samen met haar papieren tas?",
+            options: [
+              "Een gratis doos chocola",
+              "Haar aankoopbewijs (de kassabon)",
+              "Een kortingsbon voor de supermarkt",
+              "Een lidmaatschapspas"
+            ],
+            correctAnswer: "Haar aankoopbewijs (de kassabon)"
+          }
+        ]
+      },
+      {
+        instruction: "Deel 3: Aanwijzende & Persoonlijke Voornaamwoorden (14-20: Zamirler ve Dilbilgisi / Pronouns & Grammar)",
+        isExtra: false,
+        questions: [
+          {
+            id: "reading_7_14",
+            type: "multiple_choice",
+            question: "Kijk naar de zin: \"Welke maat heeft DEZE donkerblauwe jurk?\" Waarom gebruiken we 'deze' en niet 'dit'?",
+            options: [
+              "Omdat 'jurk' een de-woord is (de jurk).",
+              "Omdat 'jurk' een het-woord is.",
+              "Het is willekeurig in het Nederlands.",
+              "Omdat de jurk donkerblauw van kleur is."
+            ],
+            correctAnswer: "Omdat 'jurk' een de-woord is (de jurk)."
+          },
+          {
+            id: "reading_7_15",
+            type: "multiple_choice",
+            question: "Welk aanwijzend voornaamwoord gebruik je voor een het-woord dichtbij (zoals 'het pashokje')?",
+            options: [
+              "deze",
+              "dit",
+              "die",
+              "dat"
+            ],
+            correctAnswer: "dit"
+          },
+          {
+            id: "reading_7_16",
+            type: "multiple_choice",
+            question: "In de zin: \"Selin neemt de jurk mee naar het pashokje om HEM te passen.\" Waarnaar verwijst 'hem'?",
+            options: [
+              "Naar haar vriend Lucas",
+              "Naar de donkerblauwe jurk (objectvorm voor een de-woord)",
+              "Naar de verkoper van de winkel",
+              "Naar het pashokje"
+            ],
+            correctAnswer: "Naar de donkerblauwe jurk (objectvorm voor een de-woord)"
+          },
+          {
+            id: "reading_7_17",
+            type: "multiple_choice",
+            question: "Wat is de juiste objectvorm van 'jij / je' in de zin: \"Deze kleur staat ... fantastisch!\"?",
+            options: [
+              "jou / je",
+              "jouw",
+              "uwer",
+              "zijn"
+            ],
+            correctAnswer: "jou / je"
+          },
+          {
+            id: "reading_7_18",
+            type: "multiple_choice",
+            question: "Wat betekent de Nederlandse uitdrukking 'Het zit gegoten'?",
+            options: [
+              "Er is water overheen gemorst.",
+              "Het kledingstuk past werkelijk perfect qua maat en pasvorm.",
+              "Het is veel te groot en slobberig.",
+              "Het is gemaakt van vloeibare stof."
+            ],
+            correctAnswer: "Het kledingstuk past werkelijk perfect qua maat en pasvorm."
+          },
+          {
+            id: "reading_7_19",
+            type: "multiple_choice",
+            question: "Waar gaan Selin en Edit naartoe nadat ze het warenhuis verlaten?",
+            options: [
+              "Ze gaan meteen naar huis om te slapen.",
+              "Ze gaan ergens een kopje koffie drinken om na te praten.",
+              "Ze gaan direct naar de bruiloft.",
+              "Ze gaan naar de schoenmaker om schoenen te repareren."
+            ],
+            correctAnswer: "Ze gaan ergens een kopje koffie drinken om na te praten."
+          },
+          {
+            id: "reading_7_20",
+            type: "multiple_choice",
+            question: "Welke bewering over het winkelbezoek is ONJUIST (niet waar)?",
+            options: [
+              "Selin past eerst maat 38, maar die zit te strak.",
+              "Selin koopt rode pumps met een hele hoge hak.",
+              "De totale aankoop kost honderdnegentien euro (€ 119).",
+              "Edit vindt dat de donkerblauwe kleur Selin fantastisch staat."
+            ],
+            correctAnswer: "Selin koopt rode pumps met een hele hoge hak."
+          }
+        ]
+      }
+    ]
+  },
+{
     id: "On-Class-7",
     chapter: 7,
     title: "Summary",
