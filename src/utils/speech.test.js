@@ -1,5 +1,12 @@
 // src/utils/speech.test.js
-import { parseTextTokens, findTokenIndexAtChar, buildSpeechChunks, detectSpeakerGender } from './speech';
+import { 
+  parseTextTokens, 
+  findTokenIndexAtChar, 
+  buildSpeechChunks, 
+  detectSpeakerGender,
+  isRealDutchVoice,
+  getDutchAudioUrl
+} from './speech';
 
 describe('Speech Synthesis Robustness & Chunking Tests', () => {
   const sampleLongText = 
@@ -85,6 +92,31 @@ describe('Speech Synthesis Robustness & Chunking Tests', () => {
     expect(detectSpeakerGender('Dokter Jansen')).toBe('male');
     expect(detectSpeakerGender('Verteller')).toBe('male');
     expect(detectSpeakerGender('Onbekend')).toBe('neutral');
+  });
+
+  test('isRealDutchVoice strictly identifies genuine Dutch voices and rejects English or other voices', () => {
+    // Gerçek Hollandaca sesler kabul edilmeli
+    expect(isRealDutchVoice({ lang: 'nl-NL', name: 'Google Nederlands' })).toBe(true);
+    expect(isRealDutchVoice({ lang: 'nl-BE', name: 'Ellen' })).toBe(true);
+    expect(isRealDutchVoice({ lang: 'nld', name: 'Flemish Speaker' })).toBe(true);
+
+    // İngilizce sesler (adı dutch içerse dahi) KESİNLİKLE reddedilmeli
+    expect(isRealDutchVoice({ lang: 'en-US', name: 'Microsoft David' })).toBe(false);
+    expect(isRealDutchVoice({ lang: 'en-US', name: 'English (Dutch Antilles)' })).toBe(false);
+    expect(isRealDutchVoice({ lang: 'en-GB', name: 'Google UK English' })).toBe(false);
+
+    // Türkçe ve diğer diller reddedilmeli
+    expect(isRealDutchVoice({ lang: 'tr-TR', name: 'Yelda' })).toBe(false);
+    expect(isRealDutchVoice({ lang: 'de-DE', name: 'Google Deutsch' })).toBe(false);
+    expect(isRealDutchVoice(null)).toBe(false);
+  });
+
+  test('getDutchAudioUrl generates valid Google Dutch audio streaming URL with tl=nl', () => {
+    const url = getDutchAudioUrl('Goedemorgen, hoe gaat het?');
+    expect(url).toContain('https://translate.google.com/translate_tts');
+    expect(url).toContain('tl=nl');
+    expect(url).toContain('client=tw-ob');
+    expect(url).toContain('q=Goedemorgen%2C%20hoe%20gaat%20het%3F');
   });
 });
 
