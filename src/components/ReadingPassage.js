@@ -593,9 +593,9 @@ export default function ReadingPassage({
           return (
             <span
               key={sIdx}
-              className={`transition-colors duration-200 rounded-lg inline ${
+              className={`transition-all duration-200 rounded-lg inline ${
                 isSentenceActive 
-                  ? 'bg-amber-500/[0.08] text-slate-100 px-1 py-0.5 border-b border-amber-400/25' 
+                  ? 'bg-amber-500/15 text-slate-100 ring-1 ring-amber-400/40 px-1 py-0.5 shadow-[0_0_12px_rgba(245,158,11,0.2)]' 
                   : ''
               }`}
             >
@@ -635,15 +635,15 @@ export default function ReadingPassage({
                   <span
                     key={i}
                     style={{
-                      color: isWordActive ? '#fef3c7' : wordColor,
+                      color: isWordActive ? '#020617' : wordColor,
                       textDecoration: isWordActive ? 'none' : 'underline',
                       textDecorationStyle: 'dotted',
                       cursor: 'pointer'
                     }}
                     onClick={(e) => handleWordClick(e, i, cleanWords)}
-                    className={`transition-colors duration-150 inline-block mx-0.5 rounded px-1.5 py-0.5 ${
+                    className={`transition-all duration-150 inline-block mx-0.5 rounded ${
                       isWordActive 
-                        ? 'bg-amber-400/30 text-amber-100 font-semibold ring-1 ring-amber-400/50 shadow-sm' 
+                        ? 'bg-gradient-to-r from-amber-400 via-amber-300 to-yellow-400 text-slate-950 font-black px-1.5 py-0.5 shadow-[0_0_16px_rgba(251,191,36,0.95)] ring-2 ring-amber-300 scale-110 z-20 -translate-y-0.5' 
                         : 'hover:text-indigo-300'
                     }`}
                   >
