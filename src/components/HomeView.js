@@ -51,12 +51,9 @@ export default function HomeView({
   GuideContent
 }) {
   const isTr = lang === 'tr';
-  const hasUserActivity = 
-    Object.keys(favorites).length > 0 || 
-    Object.keys(completed).length > 0;
 
-  // Kılavuz açık/kapalı durumu: İlk açılışta aktivite yoksa açık, varsa kapalı
-  const [isGuideExpanded, setIsGuideExpanded] = useState(!hasUserActivity);
+  // Kılavuz açık/kapalı durumu (varsayılan kapalı akordeon)
+  const [isGuideExpanded, setIsGuideExpanded] = useState(false);
 
   // Aktif İstatistik Sekmesi: 'overview' | 'questions' | 'vocabulary' | 'chapters'
   const [activeTabId, setActiveTabId] = useState('overview');
@@ -355,6 +352,45 @@ export default function HomeView({
     return stats.topicStats;
   }, [stats.topicStats, topicFilter]);
 
+  // %5'ten az ilerleme varsa kılavuz en üstte (dashboard girişinde), %5 ve üzerinde ise en altta gösterilir
+  const showGuideAtTop = (stats?.overallProgress || 0) < 5;
+
+  const renderGuideAccordion = () => {
+    if (!GuideContent) return null;
+    return (
+      <div className="bg-slate-800/60 border border-slate-700/70 rounded-3xl p-5 sm:p-6 shadow-md transition-all">
+        <button 
+          type="button"
+          onClick={() => setIsGuideExpanded(!isGuideExpanded)}
+          className="w-full flex items-center justify-between text-left cursor-pointer group"
+        >
+          <div className="flex items-center gap-3">
+            <div className="w-9 h-9 rounded-xl bg-brand-950/80 border border-brand-800/60 flex items-center justify-center text-brand-400 group-hover:scale-105 transition-transform">
+              <i className="fa-solid fa-book-open text-sm"></i>
+            </div>
+            <div>
+              <h3 className="text-base sm:text-lg font-bold text-slate-100 group-hover:text-brand-300 transition-colors">
+                {isTr ? 'Uygulama Kullanım Kılavuzu & İpuçları' : 'App Guide & Helpful Tips'}
+              </h3>
+              <p className="text-xs text-slate-400">
+                {isTr ? 'Diyaloglar, kelime havuzu ve quiz sisteminin verimli kullanımı.' : 'Learn how to make the most of dialogues, pool, and quizzes.'}
+              </p>
+            </div>
+          </div>
+          <div className="w-8 h-8 rounded-full bg-slate-850 flex items-center justify-center text-slate-400 group-hover:text-white transition-colors">
+            <i className={`fa-solid fa-chevron-${isGuideExpanded ? 'up' : 'down'} text-xs`}></i>
+          </div>
+        </button>
+
+        {isGuideExpanded && (
+          <div className="mt-6 pt-6 border-t border-slate-700/80">
+            <GuideContent lang={lang} />
+          </div>
+        )}
+      </div>
+    );
+  };
+
   return (
     <div className="space-y-8 max-w-6xl mx-auto w-full pb-10">
       
@@ -588,6 +624,9 @@ export default function HomeView({
           </button>
         )}
       </div>
+
+      {/* KILAVUZ & REHBER (İlerleme %5'in altındayken en üstte gösterilir) */}
+      {showGuideAtTop && renderGuideAccordion()}
 
       {/* 2. GENEL İLERLEME (HERO BANNER - 3 SÜTUNLU ORTALAMA GÖSTERİMİ) */}
       <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-900 via-slate-850 to-indigo-950/60 border border-slate-700/80 p-5 sm:p-7 shadow-2xl">
@@ -1886,40 +1925,9 @@ export default function HomeView({
       )}
 
       {/* ======================================================== */}
-      {/* 7. KILAVUZ & REHBER (AKORDEON AÇILIR/KAPANIR)             */}
+      {/* 7. KILAVUZ & REHBER (%5 ve üzeri ilerlemede en altta)     */}
       {/* ======================================================== */}
-      {GuideContent && (
-        <div className="bg-slate-800/60 border border-slate-700/70 rounded-3xl p-5 sm:p-6 shadow-md transition-all">
-          <button 
-            type="button"
-            onClick={() => setIsGuideExpanded(!isGuideExpanded)}
-            className="w-full flex items-center justify-between text-left cursor-pointer group"
-          >
-            <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-xl bg-brand-950/80 border border-brand-800/60 flex items-center justify-center text-brand-400 group-hover:scale-105 transition-transform">
-                <i className="fa-solid fa-book-open text-sm"></i>
-              </div>
-              <div>
-                <h3 className="text-base sm:text-lg font-bold text-slate-100 group-hover:text-brand-300 transition-colors">
-                  {isTr ? 'Uygulama Kullanım Kılavuzu & İpuçları' : 'App Guide & Helpful Tips'}
-                </h3>
-                <p className="text-xs text-slate-400">
-                  {isTr ? 'Diyaloglar, kelime havuzu ve quiz sisteminin verimli kullanımı.' : 'Learn how to make the most of dialogues, pool, and quizzes.'}
-                </p>
-              </div>
-            </div>
-            <div className="w-8 h-8 rounded-full bg-slate-850 flex items-center justify-center text-slate-400 group-hover:text-white transition-colors">
-              <i className={`fa-solid fa-chevron-${isGuideExpanded ? 'up' : 'down'} text-xs`}></i>
-            </div>
-          </button>
-
-          {isGuideExpanded && (
-            <div className="mt-6 pt-6 border-t border-slate-700/80">
-              <GuideContent lang={lang} />
-            </div>
-          )}
-        </div>
-      )}
+      {!showGuideAtTop && renderGuideAccordion()}
     </div>
   );
 }
