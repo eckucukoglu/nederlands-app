@@ -176,6 +176,7 @@ export default function Flashcards({ initialChapter, chapter }) {
   useEffect(() => {
     setCurrentIndex(0);
     setIsFlipped(false);
+    setSessionStats({ known: 0, unknown: 0 });
   }, [studyUnknownsOnly]);
 
   const displayDeck = useMemo(() => {
@@ -336,6 +337,7 @@ export default function Flashcards({ initialChapter, chapter }) {
     });
     setCurrentIndex(0);
     setIsFlipped(false);
+    setSessionStats({ known: 0, unknown: 0 });
   };
 
   const removeCurrentWord = (e) => {
@@ -421,7 +423,10 @@ export default function Flashcards({ initialChapter, chapter }) {
   };
 
   const wordGlobalStat = globalStats[currentWord?.id || currentWord?.nl] || { known: 0, unknown: 0, lastStatus: null };
-  const progressPercentage = totalWords > 0 && !currentWord?.id?.startsWith('empty') ? Math.round(((currentIndex + 1) / totalWords) * 100) : 0;
+  const sessionCompleted = sessionStats.known + sessionStats.unknown;
+  const progressPercentage = totalWords > 0 && !currentWord?.id?.startsWith('empty')
+    ? Math.min(100, Math.round((sessionCompleted / totalWords) * 100))
+    : 0;
 
   let sessionBgClass = "bg-slate-800 border-slate-700";
   if (sessionStats.known === 0 && sessionStats.unknown === 0) {
