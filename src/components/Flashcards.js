@@ -274,6 +274,32 @@ export default function Flashcards({ initialChapter }) {
     setGlobalStats(newGlobal);
     localStorage.setItem('flashcardStats', JSON.stringify(newGlobal)); 
 
+    // Havuz ve genel durum senkronizasyonu
+    try {
+      const pool = JSON.parse(localStorage.getItem('globalWordPool')) || {};
+      const lowerNL = (currentWord.nl || '').toLowerCase();
+      const cleanNL = lowerNL.replace(/^(de|het|een)\s+/, '').replace(/\(.*?\)/g, '').trim();
+      const existing = pool[lowerNL] || pool[cleanNL] || {};
+      const updatedWord = {
+        ...existing,
+        ...currentWord,
+        chapter: currentWord.chapter || existing.chapter || (typeof targetChapter === 'number' ? targetChapter : undefined),
+        status: isKnown ? 'known' : 'unknown',
+        addedAt: existing.addedAt || new Date().toISOString()
+      };
+      pool[lowerNL] = updatedWord;
+      if (cleanNL && cleanNL !== lowerNL) {
+        pool[cleanNL] = updatedWord;
+      }
+      localStorage.setItem('globalWordPool', JSON.stringify(pool));
+    } catch (e) {
+      console.error('Error syncing flashcards to globalWordPool:', e);
+    }
+
+    // Dashboard ve Başlık Progress Bar'ını Anında Canlı Olarak Güncelle
+    window.dispatchEvent(new Event('wordStatusUpdated'));
+    window.dispatchEvent(new Event('progressUpdated'));
+
     if (isFlipped) {
       setIsFlipped(false);
       setTimeout(() => {
@@ -282,7 +308,7 @@ export default function Flashcards({ initialChapter }) {
     } else {
       setCurrentIndex(prev => (prev + 1) % totalWords);
     }
-  }, [currentWord, totalWords, isFlipped]);
+  }, [currentWord, totalWords, isFlipped, targetChapter]);
 
   const handleKeyDown = useCallback((e) => {
     if (['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) return;

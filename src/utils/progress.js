@@ -1,5 +1,5 @@
 // src/utils/progress.js
-import { vocabulary } from '../data';
+import { bookSections as defaultBookSections, vocabulary } from '../data';
 import { quizQuestions } from '../data/quizData';
 
 export const CHAPTER_INFO = {
@@ -61,8 +61,20 @@ export function calculateOverallProgress({ completed = {}, favorites = {}, bookS
     starredVerbs = JSON.parse(localStorage.getItem('starredIrregularVerbs')) || [];
   } catch (e) {}
 
-  const poolWords = Object.values(globalWordPool);
-  const totalPoolWords = poolWords.length;
+  // Benzersiz havuz kelimelerini temizle ve deduplicate et (örn: 'de man' ve 'man' ikililerini tekilleştir)
+  const uniquePoolWordsMap = new Map();
+  Object.values(globalWordPool).forEach(item => {
+    if (!item || !item.nl) return;
+    const cleanKey = (item.nl || '').toLowerCase().replace(/^(de|het|een)\s+/, '').replace(/\(.*?\)/g, '').trim();
+    if (!cleanKey) return;
+    const existing = uniquePoolWordsMap.get(cleanKey);
+    // 'known' durumu olan kayıtlar daima önceliklidir
+    if (!existing || item.status === 'known') {
+      uniquePoolWordsMap.set(cleanKey, { ...item, cleanKey });
+    }
+  });
+  const uniquePoolWords = Array.from(uniquePoolWordsMap.values());
+  const totalPoolWords = uniquePoolWords.length;
 
   let flashcardKnownTotal = 0;
   let flashcardUnknownTotal = 0;
@@ -74,6 +86,11 @@ export function calculateOverallProgress({ completed = {}, favorites = {}, bookS
   const flashcardAccuracy = totalFlashcardReviews > 0 
     ? Math.round((flashcardKnownTotal / totalFlashcardReviews) * 100) 
     : 0;
+
+  // Müfredat kelimelerinin normalize edilmiş clean anahtarları
+  const curriculumCleanKeys = new Set(
+    vocabulary.map(w => (w.nl || '').toLowerCase().replace(/^(de|het|een)\s+/, '').replace(/\(.*?\)/g, '').trim())
+  );
 
   // 1. Ünite 1 - 18 Kelime Dağılımı
   const chapterVocabStats = Array.from({ length: 18 }, (_, idx) => {
@@ -89,14 +106,17 @@ export function calculateOverallProgress({ completed = {}, favorites = {}, bookS
       vocabStatuses = JSON.parse(localStorage.getItem(`vocabularyWordStatuses_${ch}`)) || {};
     } catch (e) {}
 
-    let learnedCount = 0;
-    let learningCount = 0;
+    let chCurriculumLearned = 0;
+    let chCurriculumLearning = 0;
 
     chCurriculumWords.forEach(word => {
       const lowerNL = (word.nl || '').toLowerCase();
-      const poolItem = globalWordPool[lowerNL];
-      const fcItem = flashcardStats[word.id] || flashcardStats[lowerNL] || flashcardStats[word.nl];
-      const diagStatus = vocabStatuses[lowerNL] || dialogueStatuses[lowerNL] || readingStatuses[lowerNL];
+      const cleanNL = lowerNL.replace(/^(de|het|een)\s+/, '').replace(/\(.*?\)/g, '').trim();
+      const poolItem = globalWordPool[lowerNL] || globalWordPool[cleanNL];
+      const fcItem = flashcardStats[word.id] || flashcardStats[lowerNL] || flashcardStats[cleanNL] || flashcardStats[word.nl];
+      const diagStatus = vocabStatuses[lowerNL] || vocabStatuses[cleanNL] || 
+                         dialogueStatuses[lowerNL] || dialogueStatuses[cleanNL] || 
+                         readingStatuses[lowerNL] || readingStatuses[cleanNL];
 
       const isLearned = 
         poolItem?.status === 'known' || 
@@ -110,26 +130,42 @@ export function calculateOverallProgress({ completed = {}, favorites = {}, bookS
         diagStatus === 'unknown'
       );
 
-      if (isLearned) learnedCount++;
-      else if (isLearning) learningCount++;
+      if (isLearned) chCurriculumLearned++;
+      else if (isLearning) chCurriculumLearning++;
     });
 
-    const extraPoolChWords = poolWords.filter(w => {
+    // Bu üniteye özel etiketlenmiş ekstra havuz kelimeleri (müfredat harici)
+    const extraPoolChWords = uniquePoolWords.filter(w => {
       if (w.chapter !== ch) return false;
-      const lower = (w.nl || '').toLowerCase();
-      return !chCurriculumWords.some(cw => (cw.nl || '').toLowerCase() === lower);
+      return !curriculumCleanKeys.has(w.cleanKey);
     });
 
+    let extraChLearned = 0;
+    let extraChLearning = 0;
     extraPoolChWords.forEach(w => {
-      if (w.status === 'known') learnedCount++;
-      else if (w.status === 'unknown') learningCount++;
+      if (w.status === 'known') extraChLearned++;
+      else if (w.status === 'unknown') extraChLearning++;
     });
 
+    const learnedCount = chCurriculumLearned + extraChLearned;
+    const learningCount = chCurriculumLearning + extraChLearning;
     const totalWords = chCurriculumWords.length + extraPoolChWords.length;
     const unstudied = Math.max(0, totalWords - learnedCount - learningCount);
-    const progress = totalWords > 0 ? Math.round((learnedCount / totalWords) * 100) : 0;
+
+    // Ünite kelime ilerlemesi: Resmi müfredat kelimeleri tamamlandığında %100 olur
+    const progress = chCurriculumWords.length > 0
+      ? Math.min(100, Math.round((chCurriculumLearned / chCurriculumWords.length) * 100))
+      : (totalWords > 0 ? Math.min(100, Math.round((learnedCount / totalWords) * 100)) : 0);
+
     const studiedTotal = learnedCount + learningCount;
-    const isVocabSectionDone = Boolean(completed[`${ch}.2`] || (chCurriculumWords.length > 0 && learnedCount === chCurriculumWords.length));
+
+    // Ünitenin .2 Kelime bölümü tamamlandı mı?
+    // Kullanıcı .2'yi tamamladıysa VEYA o ünitenin tüm resmi müfredat kelimeleri biliniyorsa kesin olarak tamamlanmıştır.
+    // Ekstra okuma kelimeleri bu tamamlamayı ASLA bozamaz.
+    const isVocabSectionDone = Boolean(
+      completed[`${ch}.2`] || 
+      (chCurriculumWords.length > 0 && chCurriculumLearned >= chCurriculumWords.length)
+    );
     const info = CHAPTER_INFO[ch] || {};
 
     return {
@@ -141,6 +177,8 @@ export function calculateOverallProgress({ completed = {}, favorites = {}, bookS
       totalWords,
       learnedCount,
       learningCount,
+      chCurriculumLearned,
+      chCurriculumTotal: chCurriculumWords.length,
       unstudied,
       studiedTotal,
       progress,
@@ -150,12 +188,23 @@ export function calculateOverallProgress({ completed = {}, favorites = {}, bookS
 
   // 1. Ünite 1 - 18 Kelime Dağılımı ve Hazne Analizi (Sütun 2: Maks 3.500 XP)
   const totalBookWords = vocabulary.length || 1066;
-  const totalLearnedWords = chapterVocabStats.reduce((acc, c) => acc + c.learnedCount, 0);
-  const totalLearningWords = chapterVocabStats.reduce((acc, c) => acc + c.learningCount, 0);
+
+  // Tüm müfredat kelimelerinden öğrenilenler
+  const totalCurriculumLearned = chapterVocabStats.reduce((acc, c) => acc + c.chCurriculumLearned, 0);
+  const totalCurriculumLearning = chapterVocabStats.reduce((acc, c) => acc + c.learningCount, 0);
+
+  // Müfredat dışı (özel, okuma metinleri, diyaloglar) tüm benzersiz havuz kelimeleri
+  const extraPoolWords = uniquePoolWords.filter(w => !curriculumCleanKeys.has(w.cleanKey));
+  const totalExtraLearned = extraPoolWords.filter(w => w.status === 'known').length;
+  const totalExtraLearning = extraPoolWords.filter(w => w.status === 'unknown').length;
+
+  const totalLearnedWords = totalCurriculumLearned + totalExtraLearned;
+  const totalLearningWords = totalCurriculumLearning + totalExtraLearning;
   const starredVerbsCount = Array.isArray(starredVerbs) ? starredVerbs.length : 0;
 
-  // Hedef kelime evreni: Müfredattaki 1.066 kelime + kullanıcının eklediği özgün havuz kelimeleri
-  const targetWordCount = Math.max(1066, totalBookWords + Math.max(0, totalPoolWords - totalBookWords));
+  // Hedef kelime evreni: Sabit 1.066 müfredat kelimesi referansı.
+  // Ekstra kelimeler öğrenildikçe puan kazandırır, fakat hedef tavanını genişleterek kazanılmış ilerlemeyi asla düşürmez.
+  const targetWordCount = totalBookWords;
   const flashcardBonus = Math.min(100, Math.floor(totalFlashcardReviews / 20));
   const starredBonus = Math.min(50, starredVerbsCount);
   const effectiveWordScore = totalLearnedWords + (totalLearningWords * 0.30) + flashcardBonus + starredBonus;
@@ -199,13 +248,13 @@ export function calculateOverallProgress({ completed = {}, favorites = {}, bookS
   const questionsProgressPercent = Math.min(100, Math.round((questionsXP / 3000) * 100));
 
   // 3. Bölüm & Ders İstatistikleri (Sütun 1: Maks 3.500 XP)
-  const allSections = bookSections;
+  const allSections = (bookSections && bookSections.length > 0) ? bookSections : defaultBookSections;
   const totalBookSections = allSections.length || 169;
   const completedSectionsCount = allSections.filter(s => {
     if (completed[s.id]) return true;
     if (s.id.endsWith('.2')) {
       const v = chapterVocabStats.find(c => c.chapterNum === s.chapter);
-      return v && v.progress === 100;
+      return v && v.isVocabSectionDone;
     }
     return false;
   }).length;
@@ -215,7 +264,7 @@ export function calculateOverallProgress({ completed = {}, favorites = {}, bookS
     if (completed[s.id]) return;
     if (s.id.endsWith('.2')) {
       const v = chapterVocabStats.find(c => c.chapterNum === s.chapter);
-      if (v && v.progress > 0 && v.progress < 100) {
+      if (v && v.progress > 0 && !v.isVocabSectionDone) {
         partialSectionPoints += (v.progress / 100);
       }
     } else if (s.id.endsWith('.1')) {
@@ -241,14 +290,16 @@ export function calculateOverallProgress({ completed = {}, favorites = {}, bookS
 
   const availableChapters = Array.from({ length: 18 }, (_, i) => i + 1);
   const chapterSectionStats = availableChapters.map(ch => {
-    const dialogueSec = bookSections.find(s => s.chapter === ch && s.id.endsWith('.1'));
-    const vocabSec = bookSections.find(s => s.chapter === ch && s.id.endsWith('.2'));
-    const exerciseSecs = bookSections.filter(s => s.chapter === ch && !s.id.endsWith('.1') && !s.id.endsWith('.2') && !s.id.includes('Reading') && !s.id.includes('On-Class'));
-    const readingSec = bookSections.find(s => s.chapter === ch && s.id.includes('Reading'));
-    const summarySec = bookSections.find(s => s.chapter === ch && s.id.includes('On-Class'));
+    const dialogueSec = allSections.find(s => s.chapter === ch && s.id.endsWith('.1'));
+    const vocabSec = allSections.find(s => s.chapter === ch && s.id.endsWith('.2'));
+    const exerciseSecs = allSections.filter(s => s.chapter === ch && !s.id.endsWith('.1') && !s.id.endsWith('.2') && !s.id.includes('Reading') && !s.id.includes('On-Class'));
+    const readingSec = allSections.find(s => s.chapter === ch && s.id.includes('Reading'));
+    const summarySec = allSections.find(s => s.chapter === ch && s.id.includes('On-Class'));
 
     const chVocab = chapterVocabStats.find(v => v.chapterNum === ch);
-    const isVocabDone = vocabSec ? Boolean(completed[vocabSec.id] || (chVocab && chVocab.progress === 100)) : false;
+    const isVocabDone = vocabSec 
+      ? Boolean(completed[vocabSec.id] || (chVocab && chVocab.isVocabSectionDone)) 
+      : false;
     const isDialogueDone = dialogueSec ? Boolean(completed[dialogueSec.id]) : false;
     const isReadingDone = readingSec ? Boolean(completed[readingSec.id]) : false;
     const isSummaryDone = summarySec ? Boolean(completed[summarySec.id]) : false;

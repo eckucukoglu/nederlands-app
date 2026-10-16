@@ -322,7 +322,8 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
             nl: cleanWord,
             en: fallback,
             tr: "Çeviri bulunamadı",
-            example: "Uit de dialoog"
+            example: "Uit de dialoog",
+            chapter: chapterId
           };
         }
       }
@@ -330,7 +331,13 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
       // Eğer geçerli bir sözlük/fallback kelimesi bulunduysa listeye ekle
       if (wordObj) {
         hasChanges = true;
-        pool[wordObj.nl.toLowerCase()] = { ...wordObj, status: 'known', addedAt: new Date().toISOString() };
+        const entryWithChapter = {
+          ...wordObj,
+          chapter: wordObj.chapter || chapterId,
+          status: 'known',
+          addedAt: new Date().toISOString()
+        };
+        pool[wordObj.nl.toLowerCase()] = entryWithChapter;
         existingUnknowns = existingUnknowns.filter(w => w.nl.toLowerCase() !== wordObj.nl.toLowerCase());
         
         newStatuses[cleanWord] = 'known';
@@ -359,6 +366,7 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
       localStorage.setItem(`dialogueWordStatuses_${chapterId}`, JSON.stringify(newStatuses));
       setWordStatuses(newStatuses);
       window.dispatchEvent(new Event('wordStatusUpdated'));
+      window.dispatchEvent(new Event('progressUpdated'));
     }
   };
   // -------------------------------------------------------
@@ -418,9 +426,16 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
     if (status === undefined) {
       delete pool[wordObj.nl.toLowerCase()];
     } else {
-      pool[wordObj.nl.toLowerCase()] = { ...wordObj, status, addedAt: new Date().toISOString() };
+      pool[wordObj.nl.toLowerCase()] = {
+        ...wordObj,
+        chapter: wordObj.chapter || chapterId,
+        status,
+        addedAt: new Date().toISOString()
+      };
     }
     localStorage.setItem('globalWordPool', JSON.stringify(pool));
+    window.dispatchEvent(new Event('wordStatusUpdated'));
+    window.dispatchEvent(new Event('progressUpdated'));
   };
 
   const handleWordKnowledge = (wordObj, isKnown) => {
