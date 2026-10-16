@@ -413,7 +413,7 @@ export default function VocabularySection({
       <div className="bg-slate-800/80 rounded-2xl p-3 sm:p-4 border border-slate-700/80 shadow-md flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3 sm:gap-4 w-full min-w-0 max-w-full">
         
         {/* Gruplama Tipi Butonları (3 Tür: Alfabetik, Fonksiyonel, Contextual) */}
-        <div className="flex bg-slate-900/90 p-1 rounded-xl border border-slate-700 overflow-x-auto w-full md:w-auto max-w-full min-w-0 scrollbar-thin scrollbar-thumb-slate-700">
+        <div className="flex bg-slate-900/90 p-1 rounded-xl border border-slate-700 overflow-x-auto no-scrollbar w-full md:w-auto max-w-full min-w-0">
           <button
             onClick={() => setGroupType('alphabetical')}
             className={`flex-1 sm:flex-initial px-2.5 sm:px-3.5 py-1.5 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1.5 cursor-pointer whitespace-nowrap flex-shrink-0 ${
@@ -489,7 +489,7 @@ export default function VocabularySection({
 
       {/* Alfabetik Hızlı Atlama Çubuğu (Yalnızca alfabetik modda ve arama yokken) */}
       {groupType === 'alphabetical' && !searchQuery && (
-        <div className="flex items-center gap-1.5 overflow-x-auto py-1.5 scrollbar-thin scrollbar-thumb-slate-700 w-full max-w-full min-w-0">
+        <div className="flex items-center flex-wrap gap-1.5 py-1.5 w-full max-w-full min-w-0">
           <span className="text-[11px] font-bold text-slate-500 uppercase mr-1 flex-shrink-0">
             {isTr ? 'Harfler:' : 'Letters:'}
           </span>
