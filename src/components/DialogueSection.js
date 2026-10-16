@@ -2,7 +2,14 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { vocabulary, dialogues, bookSections } from '../data';
 import { globalDictionary } from '../data/globalDictionary'; 
 import { useLanguage } from '../contexts/LanguageContext'; 
-import { speakDutch as speakDutchAudio, getSpeechRate, setSpeechRate, cancelDutchSpeech } from '../utils/speech'; 
+import { 
+  speakDutch as speakDutchAudio, 
+  speakDutchWithHighlight, 
+  parseTextTokens, 
+  getSpeechRate, 
+  setSpeechRate, 
+  cancelDutchSpeech 
+} from '../utils/speech'; 
 
 const fallbackDictionary = {
   "de": "the", "een": "a/an", "het": "the", "ik": "I", "u": "you (formal)", "we": "we", "ze": "they", "mijn": "my", "uw": "your",
@@ -54,6 +61,8 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
   const [currentSpeechRate, setCurrentSpeechRate] = useState(getSpeechRate());
   const [isPlayingAll, setIsPlayingAll] = useState(false);
   const [playingLineIdx, setPlayingLineIdx] = useState(null);
+  const [activeWordIdx, setActiveWordIdx] = useState(null);
+  const [activeSentenceIdx, setActiveSentenceIdx] = useState(null);
 
   const playAllSessionRef = useRef(0);
   const playAllTimeoutRef = useRef(null);
@@ -103,6 +112,8 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
     // 4. State'leri sıfırla
     setIsPlayingAll(false);
     setPlayingLineIdx(null);
+    setActiveWordIdx(null);
+    setActiveSentenceIdx(null);
   }, []);
 
   // Bileşen kapandığında veya sayfa değiştiğinde konuşmayı kes
@@ -132,10 +143,57 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
     setSpeechRate(1.0);
   };
 
-  const speakDutch = (text, e, speaker) => {
+  const handlePlaySingleLine = (idx, line, e) => {
     if (e && e.stopPropagation) e.stopPropagation();
+    if (playingLineIdx === idx && !isPlayingAll) {
+      stopPlayingAll();
+      return;
+    }
+
     stopPlayingAll();
-    speakDutchAudio(text, { speaker, rate: currentSpeechRate });
+    const currentSession = ++playAllSessionRef.current;
+    setPlayingLineIdx(idx);
+    setIsPlayingAll(false);
+
+    speakDutchWithHighlight(line.text, {
+      speaker: line.speaker,
+      rate: currentSpeechRate,
+      onWord: (wIdx) => {
+        if (playAllSessionRef.current === currentSession) {
+          setActiveWordIdx(wIdx);
+        }
+      },
+      onSentence: (sIdx) => {
+        if (playAllSessionRef.current === currentSession) {
+          setActiveSentenceIdx(sIdx);
+        }
+      },
+      onEnd: () => {
+        if (playAllSessionRef.current === currentSession) {
+          setPlayingLineIdx(null);
+          setActiveWordIdx(null);
+          setActiveSentenceIdx(null);
+        }
+      },
+      onError: () => {
+        if (playAllSessionRef.current === currentSession) {
+          setPlayingLineIdx(null);
+          setActiveWordIdx(null);
+          setActiveSentenceIdx(null);
+        }
+      }
+    });
+  };
+
+  const speakDutch = (text, e, speaker, idx) => {
+    if (typeof idx === 'number') {
+      const line = activeDialogue[idx] || { text, speaker };
+      handlePlaySingleLine(idx, line, e);
+    } else {
+      if (e && e.stopPropagation) e.stopPropagation();
+      stopPlayingAll();
+      speakDutchAudio(text, { speaker, rate: currentSpeechRate });
+    }
   };
 
   const handlePlayAllDialogue = (e) => {
@@ -161,18 +219,37 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
       if (index >= activeDialogue.length) {
         setIsPlayingAll(false);
         setPlayingLineIdx(null);
+        setActiveWordIdx(null);
+        setActiveSentenceIdx(null);
         return;
       }
 
       setPlayingLineIdx(index);
+      const lineEl = document.getElementById(`dialogue-line-${index}`);
+      if (lineEl) {
+        lineEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+
       const line = activeDialogue[index];
       index++;
 
-      speakDutchAudio(line.text, {
+      speakDutchWithHighlight(line.text, {
         speaker: line.speaker,
         rate: currentSpeechRate,
+        onWord: (wIdx) => {
+          if (playAllSessionRef.current === currentSession) {
+            setActiveWordIdx(wIdx);
+          }
+        },
+        onSentence: (sIdx) => {
+          if (playAllSessionRef.current === currentSession) {
+            setActiveSentenceIdx(sIdx);
+          }
+        },
         onEnd: () => {
           if (playAllSessionRef.current !== currentSession) return;
+          setActiveWordIdx(null);
+          setActiveSentenceIdx(null);
           playAllTimeoutRef.current = setTimeout(() => {
             if (playAllSessionRef.current !== currentSession) return;
             playNext();
@@ -182,6 +259,8 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
           if (playAllSessionRef.current !== currentSession) return;
           setIsPlayingAll(false);
           setPlayingLineIdx(null);
+          setActiveWordIdx(null);
+          setActiveSentenceIdx(null);
         }
       });
     };
@@ -597,9 +676,17 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
         
         <div className="space-y-3">
           {activeDialogue.map((line, idx) => {
-            const words = line.text.split(' ');
-            const cleanWords = words.map(w => w.replace(/[.,?!:;–-]/g, '').toLowerCase());
+            const tokens = parseTextTokens(line.text);
+            const cleanWords = tokens.map(t => t.clean);
             
+            // Cümle bazlı gruplama
+            const sentenceGroups = [];
+            tokens.forEach((token, tokenIdx) => {
+              const sIdx = token.sentenceIndex;
+              if (!sentenceGroups[sIdx]) sentenceGroups[sIdx] = [];
+              sentenceGroups[sIdx].push({ ...token, globalIndex: tokenIdx });
+            });
+
             const style = getSpeakerStyle(line.speaker);
 
             const translationText = typeof line.translation === 'object' 
@@ -607,60 +694,114 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
               : line.translation;
               
             const flag = lang === 'tr' ? '🇹🇷' : '🇬🇧';
-            const isLinePlaying = isPlayingAll && playingLineIdx === idx;
+            const isLinePlaying = playingLineIdx === idx;
 
             return (
-              <div key={idx} className={`p-3.5 rounded-xl flex items-start space-x-3 transition-all ${style.bg} border-l-4 ${style.border} ${isLinePlaying ? 'ring-2 ring-brand-400 border-l-brand-400 bg-brand-950/40 shadow-lg shadow-brand-950/50' : ''}`}>
-                
+              <div 
+                id={`dialogue-line-${idx}`}
+                key={idx} 
+                className={`p-3.5 rounded-xl flex items-start space-x-3 transition-all ${style.bg} border-l-4 ${style.border} ${
+                  isLinePlaying 
+                    ? 'ring-2 ring-amber-400/90 border-l-amber-400 bg-slate-800/95 shadow-[0_0_25px_rgba(251,191,36,0.25)] scale-[1.01]' 
+                    : ''
+                }`}
+              >
                 {/* --- DİNLEME VE TOPLU İŞARETLEME BUTONLARI --- */}
                 <div className="flex flex-col gap-2 flex-shrink-0 mt-0.5">
-                  <button onClick={(e) => speakDutch(line.text, e, line.speaker)} className={`border p-2 rounded-lg shadow-sm transition ${isLinePlaying ? 'bg-brand-600 border-brand-400 text-white shadow-md' : 'bg-slate-800 border-slate-600 hover:bg-slate-700 text-brand-400'}`} title={lang === 'tr' ? 'Dinle' : 'Listen'}>
-                    <i className={`fa-solid fa-volume-high text-sm ${isLinePlaying ? 'animate-pulse' : ''}`}></i>
+                  <button 
+                    onClick={(e) => handlePlaySingleLine(idx, line, e)} 
+                    className={`border p-2 rounded-lg shadow-sm transition ${
+                      isLinePlaying 
+                        ? 'bg-amber-500 border-amber-300 text-slate-950 font-bold shadow-md shadow-amber-500/40 scale-105' 
+                        : 'bg-slate-800 border-slate-600 hover:bg-slate-700 text-brand-400'
+                    }`} 
+                    title={isLinePlaying ? (lang === 'tr' ? 'Durdur' : 'Stop') : (lang === 'tr' ? 'Dinle' : 'Listen')}
+                  >
+                    <i className={`fa-solid ${isLinePlaying ? 'fa-stop text-slate-950' : 'fa-volume-high'}`}></i>
                   </button>
-                  <button onClick={(e) => handleMarkLineAsKnown(e, cleanWords)} className="bg-slate-800 border border-slate-600 p-2 rounded-lg shadow-sm hover:bg-emerald-900/40 hover:border-emerald-500 hover:text-emerald-400 text-slate-500 transition" title={lang === 'tr' ? 'Tüm cümleyi biliyorum olarak işaretle' : 'Mark all words as known'}>
+                  <button 
+                    onClick={(e) => handleMarkLineAsKnown(e, cleanWords)} 
+                    className="bg-slate-800 border border-slate-600 p-2 rounded-lg shadow-sm hover:bg-emerald-900/40 hover:border-emerald-500 hover:text-emerald-400 text-slate-500 transition" 
+                    title={lang === 'tr' ? 'Tüm cümleyi biliyorum olarak işaretle' : 'Mark all words as known'}
+                  >
                     <i className="fa-solid fa-check-double text-sm"></i>
                   </button>
                 </div>
                 
-                <div className="flex-1">
-                  <span className={`font-bold text-xs uppercase tracking-wider ${style.text}`}>{line.speaker}</span>
-                  <p className="text-sm font-semibold text-slate-200 mt-0.5 leading-relaxed">
-                    {words.map((word, i) => {
-                      let status = wordStatuses[cleanWords[i]]; 
-                      
-                      if (!status) {
-                        const checkPhrases = [
-                          [[i-4, i-3, i-2, i-1, i], [i-3, i-2, i-1, i, i+1], [i-2, i-1, i, i+1, i+2], [i-1, i, i+1, i+2, i+3], [i, i+1, i+2, i+3, i+4]],
-                          [[i-3, i-2, i-1, i], [i-2, i-1, i, i+1], [i-1, i, i+1, i+2], [i, i+1, i+2, i+3]],
-                          [[i-2, i-1, i], [i-1, i, i+1], [i, i+1, i+2]],
-                          [[i-1, i], [i, i+1]]
-                        ];
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center justify-between gap-2 mb-1">
+                    <span className={`font-bold text-xs uppercase tracking-wider ${style.text}`}>{line.speaker}</span>
+                    {isLinePlaying && (
+                      <span className="inline-flex items-center gap-1.5 text-[10px] font-bold text-amber-300 bg-amber-950/70 px-2.5 py-0.5 rounded-full border border-amber-600/60 shadow-[0_0_10px_rgba(245,158,11,0.25)] animate-pulse">
+                        <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shadow-[0_0_5px_#fbbf24]"></span>
+                        <span>{lang === 'tr' ? 'Seslendiriliyor...' : 'Playing...'}</span>
+                      </span>
+                    )}
+                  </div>
 
-                        for (const group of checkPhrases) {
-                          for (const indices of group) {
-                            if (indices.every(idx => idx >= 0 && idx < cleanWords.length)) {
-                              const phrase = indices.map(idx => cleanWords[idx]).join(' ');
-                              if (wordStatuses[phrase]) {
-                                status = wordStatuses[phrase];
-                                break;
-                              }
-                            }
-                          }
-                          if (status) break;
-                        }
-                      }
-
-                      let wordColor = 'inherit';
-                      if (status === 'known') wordColor = '#34d399'; 
-                      if (status === 'unknown') wordColor = '#fb7185';
-
+                  <p className="text-sm font-semibold text-slate-200 leading-relaxed">
+                    {sentenceGroups.map((group, sIdx) => {
+                      const isSentenceActive = isLinePlaying && activeSentenceIdx === sIdx;
                       return (
                         <span 
-                          key={i} 
-                          style={{ color: wordColor, textDecoration: 'underline', textDecorationStyle: 'dotted', cursor: 'pointer' }} 
-                          onClick={(e) => handleWordClick(e, i, cleanWords)}
+                          key={sIdx}
+                          className={`transition-all duration-200 rounded-lg inline ${
+                            isSentenceActive 
+                              ? 'bg-amber-500/15 text-slate-100 ring-1 ring-amber-400/40 px-1 py-0.5 shadow-[0_0_12px_rgba(245,158,11,0.2)]' 
+                              : ''
+                          }`}
                         >
-                          {word}{' '}
+                          {group.map((token) => {
+                            const i = token.globalIndex;
+                            const isWordActive = isLinePlaying && activeWordIdx === i;
+
+                            let status = wordStatuses[token.clean]; 
+                            if (!status) {
+                              const checkPhrases = [
+                                [[i-4, i-3, i-2, i-1, i], [i-3, i-2, i-1, i, i+1], [i-2, i-1, i, i+1, i+2], [i-1, i, i+1, i+2, i+3], [i, i+1, i+2, i+3, i+4]],
+                                [[i-3, i-2, i-1, i], [i-2, i-1, i, i+1], [i-1, i, i+1, i+2], [i, i+1, i+2, i+3]],
+                                [[i-2, i-1, i], [i-1, i, i+1], [i, i+1, i+2]],
+                                [[i-1, i], [i, i+1]]
+                              ];
+
+                              for (const grp of checkPhrases) {
+                                for (const indices of grp) {
+                                  if (indices.every(idx => idx >= 0 && idx < cleanWords.length)) {
+                                    const phrase = indices.map(idx => cleanWords[idx]).join(' ');
+                                    if (wordStatuses[phrase]) {
+                                      status = wordStatuses[phrase];
+                                      break;
+                                    }
+                                  }
+                                }
+                                if (status) break;
+                              }
+                            }
+
+                            let wordColor = 'inherit';
+                            if (status === 'known') wordColor = '#34d399'; 
+                            if (status === 'unknown') wordColor = '#fb7185';
+
+                            return (
+                              <span 
+                                key={i} 
+                                style={{ 
+                                  color: isWordActive ? '#020617' : wordColor, 
+                                  textDecoration: isWordActive ? 'none' : 'underline', 
+                                  textDecorationStyle: 'dotted', 
+                                  cursor: 'pointer' 
+                                }} 
+                                onClick={(e) => handleWordClick(e, i, cleanWords)}
+                                className={`transition-all duration-150 inline-block mx-0.5 rounded ${
+                                  isWordActive 
+                                    ? 'bg-gradient-to-r from-amber-400 via-amber-300 to-yellow-400 text-slate-950 font-black px-1.5 py-0.5 shadow-[0_0_16px_rgba(251,191,36,0.95)] ring-2 ring-amber-300 scale-110 z-20 -translate-y-0.5' 
+                                    : ''
+                                }`}
+                              >
+                                {token.raw}{' '}
+                              </span>
+                            );
+                          })}
                         </span>
                       );
                     })}

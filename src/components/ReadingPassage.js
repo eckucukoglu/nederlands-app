@@ -2,7 +2,14 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { vocabulary } from '../data';
 import { globalDictionary } from '../data/globalDictionary';
-import { speakDutch, cancelDutchSpeech, getSpeechRate, setSpeechRate } from '../utils/speech';
+import { 
+  speakDutch, 
+  speakDutchWithHighlight, 
+  parseTextTokens, 
+  cancelDutchSpeech, 
+  getSpeechRate, 
+  setSpeechRate 
+} from '../utils/speech';
 
 const fallbackDictionary = {
   "de": "the", "een": "a/an", "het": "the", "ik": "I", "u": "you (formal)", "we": "we", "ze": "they", "mijn": "my", "uw": "your",
@@ -36,6 +43,8 @@ export default function ReadingPassage({
 
   const [playingIdx, setPlayingIdx] = useState(null);
   const [isPlayingAll, setIsPlayingAll] = useState(false);
+  const [activeWordIdx, setActiveWordIdx] = useState(null);
+  const [activeSentenceIdx, setActiveSentenceIdx] = useState(null);
   const [currentSpeechRate, setCurrentSpeechRate] = useState(getSpeechRate());
 
   // Favoriler ve Tamamlandı Yönetimi (Diyalog ile aynı)
@@ -137,6 +146,8 @@ export default function ReadingPassage({
     cancelDutchSpeech();
     setPlayingIdx(null);
     setIsPlayingAll(false);
+    setActiveWordIdx(null);
+    setActiveSentenceIdx(null);
   };
 
   const handleSpeechRateChange = (e) => {
@@ -155,7 +166,7 @@ export default function ReadingPassage({
 
   // Tekil paragrafı çal / durdur
   const handleToggleParagraph = (idx) => {
-    if (playingIdx === idx) {
+    if (playingIdx === idx && !isPlayingAll) {
       stopPlayback();
       return;
     }
@@ -164,16 +175,40 @@ export default function ReadingPassage({
     const para = paragraphs[idx];
     if (!para || !para.text) return;
 
+    const currentSession = ++playAllSessionRef.current;
     setPlayingIdx(idx);
     setIsPlayingAll(false);
 
-    speakDutch(para.text, {
+    const paraEl = document.getElementById(`reading-para-${idx}`);
+    if (paraEl) {
+      paraEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    speakDutchWithHighlight(para.text, {
       rate: currentSpeechRate,
+      onWord: (wIdx) => {
+        if (playAllSessionRef.current === currentSession) {
+          setActiveWordIdx(wIdx);
+        }
+      },
+      onSentence: (sIdx) => {
+        if (playAllSessionRef.current === currentSession) {
+          setActiveSentenceIdx(sIdx);
+        }
+      },
       onEnd: () => {
-        setPlayingIdx(null);
+        if (playAllSessionRef.current === currentSession) {
+          setPlayingIdx(null);
+          setActiveWordIdx(null);
+          setActiveSentenceIdx(null);
+        }
       },
       onError: () => {
-        setPlayingIdx(null);
+        if (playAllSessionRef.current === currentSession) {
+          setPlayingIdx(null);
+          setActiveWordIdx(null);
+          setActiveSentenceIdx(null);
+        }
       }
     });
   };
@@ -198,17 +233,36 @@ export default function ReadingPassage({
       if (index >= paragraphs.length) {
         setIsPlayingAll(false);
         setPlayingIdx(null);
+        setActiveWordIdx(null);
+        setActiveSentenceIdx(null);
         return;
       }
 
       setPlayingIdx(index);
+      const paraEl = document.getElementById(`reading-para-${index}`);
+      if (paraEl) {
+        paraEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+
       const para = paragraphs[index];
       index++;
 
-      speakDutch(para.text, {
+      speakDutchWithHighlight(para.text, {
         rate: currentSpeechRate,
+        onWord: (wIdx) => {
+          if (playAllSessionRef.current === currentSession) {
+            setActiveWordIdx(wIdx);
+          }
+        },
+        onSentence: (sIdx) => {
+          if (playAllSessionRef.current === currentSession) {
+            setActiveSentenceIdx(sIdx);
+          }
+        },
         onEnd: () => {
           if (playAllSessionRef.current !== currentSession) return;
+          setActiveWordIdx(null);
+          setActiveSentenceIdx(null);
           playAllTimeoutRef.current = setTimeout(() => {
             if (playAllSessionRef.current !== currentSession) return;
             playNext();
@@ -218,6 +272,8 @@ export default function ReadingPassage({
           if (playAllSessionRef.current !== currentSession) return;
           setIsPlayingAll(false);
           setPlayingIdx(null);
+          setActiveWordIdx(null);
+          setActiveSentenceIdx(null);
         }
       });
     };
@@ -497,56 +553,88 @@ export default function ReadingPassage({
     trackColor = "bg-emerald-900/60"; thumbColor = "bg-emerald-500"; translateClass = "translate-x-[34px]"; 
   }
 
-  // Paragraftaki kelimeleri tıklanabilir ve renkli olarak render et
-  const renderInteractiveParagraph = (text) => {
-    const words = text.split(' ');
-    const cleanWords = words.map(w => w.replace(/[.,?!:;–—"“”'‘’()]/g, '').toLowerCase());
+  // Paragraftaki kelimeleri tıklanabilir, cümle gruplu ve ışıklı olarak render et
+  const renderInteractiveParagraph = (text, isThisPlaying) => {
+    const tokens = parseTextTokens(text);
+    const cleanWords = tokens.map(t => t.clean);
 
-    return words.map((word, i) => {
-      let status = wordStatuses[cleanWords[i]];
-
-      if (!status) {
-        const checkPhrases = [
-          [[i-4, i-3, i-2, i-1, i], [i-3, i-2, i-1, i, i+1], [i-2, i-1, i, i+1, i+2], [i-1, i, i+1, i+2, i+3], [i, i+1, i+2, i+3, i+4]],
-          [[i-3, i-2, i-1, i], [i-2, i-1, i, i+1], [i-1, i, i+1, i+2], [i, i+1, i+2, i+3]],
-          [[i-2, i-1, i], [i-1, i, i+1], [i, i+1, i+2]],
-          [[i-1, i], [i, i+1]]
-        ];
-
-        for (const group of checkPhrases) {
-          for (const indices of group) {
-            if (indices.every(idx => idx >= 0 && idx < cleanWords.length)) {
-              const phrase = indices.map(idx => cleanWords[idx]).join(' ');
-              if (wordStatuses[phrase]) {
-                status = wordStatuses[phrase];
-                break;
-              }
-            }
-          }
-          if (status) break;
-        }
-      }
-
-      let wordColor = 'inherit';
-      if (status === 'known') wordColor = '#34d399'; 
-      if (status === 'unknown') wordColor = '#fb7185';
-
-      return (
-        <span
-          key={i}
-          style={{
-            color: wordColor,
-            textDecoration: 'underline',
-            textDecorationStyle: 'dotted',
-            cursor: 'pointer'
-          }}
-          onClick={(e) => handleWordClick(e, i, cleanWords)}
-          className="hover:text-indigo-300 transition-colors"
-        >
-          {word}{' '}
-        </span>
-      );
+    const sentenceGroups = [];
+    tokens.forEach((token, tokenIdx) => {
+      const sIdx = token.sentenceIndex;
+      if (!sentenceGroups[sIdx]) sentenceGroups[sIdx] = [];
+      sentenceGroups[sIdx].push({ ...token, globalIndex: tokenIdx });
     });
+
+    return (
+      <span className="leading-relaxed">
+        {sentenceGroups.map((group, sIdx) => {
+          const isSentenceActive = isThisPlaying && activeSentenceIdx === sIdx;
+          return (
+            <span
+              key={sIdx}
+              className={`transition-all duration-200 rounded-lg inline ${
+                isSentenceActive 
+                  ? 'bg-amber-500/15 text-slate-100 ring-1 ring-amber-400/40 px-1 py-0.5 shadow-[0_0_12px_rgba(245,158,11,0.2)]' 
+                  : ''
+              }`}
+            >
+              {group.map((token) => {
+                const i = token.globalIndex;
+                const isWordActive = isThisPlaying && activeWordIdx === i;
+
+                let status = wordStatuses[token.clean];
+
+                if (!status) {
+                  const checkPhrases = [
+                    [[i-4, i-3, i-2, i-1, i], [i-3, i-2, i-1, i, i+1], [i-2, i-1, i, i+1, i+2], [i-1, i, i+1, i+2, i+3], [i, i+1, i+2, i+3, i+4]],
+                    [[i-3, i-2, i-1, i], [i-2, i-1, i, i+1], [i-1, i, i+1, i+2], [i, i+1, i+2, i+3]],
+                    [[i-2, i-1, i], [i-1, i, i+1], [i, i+1, i+2]],
+                    [[i-1, i], [i, i+1]]
+                  ];
+
+                  for (const grp of checkPhrases) {
+                    for (const indices of grp) {
+                      if (indices.every(idx => idx >= 0 && idx < cleanWords.length)) {
+                        const phrase = indices.map(idx => cleanWords[idx]).join(' ');
+                        if (wordStatuses[phrase]) {
+                          status = wordStatuses[phrase];
+                          break;
+                        }
+                      }
+                    }
+                    if (status) break;
+                  }
+                }
+
+                let wordColor = 'inherit';
+                if (status === 'known') wordColor = '#34d399'; 
+                if (status === 'unknown') wordColor = '#fb7185';
+
+                return (
+                  <span
+                    key={i}
+                    style={{
+                      color: isWordActive ? '#020617' : wordColor,
+                      textDecoration: isWordActive ? 'none' : 'underline',
+                      textDecorationStyle: 'dotted',
+                      cursor: 'pointer'
+                    }}
+                    onClick={(e) => handleWordClick(e, i, cleanWords)}
+                    className={`transition-all duration-150 inline-block mx-0.5 rounded ${
+                      isWordActive 
+                        ? 'bg-gradient-to-r from-amber-400 via-amber-300 to-yellow-400 text-slate-950 font-black px-1.5 py-0.5 shadow-[0_0_16px_rgba(251,191,36,0.95)] ring-2 ring-amber-300 scale-110 z-20 -translate-y-0.5' 
+                        : 'hover:text-indigo-300'
+                    }`}
+                  >
+                    {token.raw}{' '}
+                  </span>
+                );
+              })}
+            </span>
+          );
+        })}
+      </span>
+    );
   };
 
   const isAudioActive = isPlayingAll || playingIdx !== null;
@@ -695,10 +783,11 @@ export default function ReadingPassage({
 
             return (
               <div
+                id={`reading-para-${idx}`}
                 key={para.id}
                 className={`p-4 sm:p-5 rounded-xl border transition-all duration-300 flex items-start gap-3 sm:gap-4 ${
                   isThisPlaying
-                    ? 'bg-indigo-950/50 border-indigo-500/80 ring-2 ring-indigo-500/30 shadow-lg shadow-indigo-950/60'
+                    ? 'bg-slate-900/95 border-amber-500/80 ring-2 ring-amber-400/80 shadow-[0_0_25px_rgba(251,191,36,0.25)] scale-[1.01]'
                     : 'bg-slate-950/60 border-slate-800/80 hover:border-slate-700'
                 }`}
               >
@@ -709,12 +798,12 @@ export default function ReadingPassage({
                     onClick={() => handleToggleParagraph(idx)}
                     className={`w-9 h-9 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center transition-all cursor-pointer border ${
                       isThisPlaying
-                        ? 'bg-indigo-600 border-indigo-400 text-white shadow-md shadow-indigo-600/40 scale-105'
+                        ? 'bg-amber-500 border-amber-300 text-slate-950 font-bold shadow-md shadow-amber-500/40 scale-105'
                         : 'bg-slate-900 border-slate-700 text-indigo-400 hover:bg-slate-800 hover:border-indigo-600 hover:text-indigo-300'
                     }`}
                     title={isThisPlaying ? (isTr ? 'Durdur' : 'Stop') : (isTr ? 'Paragrafı Dinle' : 'Listen to paragraph')}
                   >
-                    <i className={`text-sm fa-solid ${isThisPlaying ? 'fa-stop' : 'fa-volume-high'}`}></i>
+                    <i className={`text-sm fa-solid ${isThisPlaying ? 'fa-stop text-slate-950' : 'fa-volume-high'}`}></i>
                   </button>
 
                   <button
@@ -735,13 +824,13 @@ export default function ReadingPassage({
                 {/* Paragraf Metni (Tıklanabilir kelimeler ile) */}
                 <div className="flex-1 text-slate-100 text-sm sm:text-base leading-relaxed">
                   {isThisPlaying && (
-                    <div className="inline-flex items-center gap-1.5 text-[11px] font-bold text-indigo-300 bg-indigo-900/60 px-2 py-0.5 rounded-full mb-1.5 border border-indigo-700/50 animate-pulse">
-                      <span className="w-1.5 h-1.5 rounded-full bg-indigo-400"></span>
+                    <div className="inline-flex items-center gap-1.5 text-[11px] font-bold text-amber-300 bg-amber-950/70 px-2.5 py-0.5 rounded-full mb-2 border border-amber-600/60 shadow-[0_0_10px_rgba(245,158,11,0.25)] animate-pulse">
+                      <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shadow-[0_0_5px_#fbbf24]"></span>
                       <span>{isTr ? 'Seslendiriliyor...' : 'Playing...'}</span>
                     </div>
                   )}
                   <p className="text-slate-200">
-                    {renderInteractiveParagraph(para.text)}
+                    {renderInteractiveParagraph(para.text, isThisPlaying)}
                   </p>
                 </div>
               </div>

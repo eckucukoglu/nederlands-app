@@ -155,8 +155,11 @@ const clearHeartbeat = () => {
   }
 };
 
+let currentHighlightSession = 0;
+
 // Seslendirmeyi anında durdurma fonksiyonu
 export const cancelDutchSpeech = () => {
+  currentHighlightSession++;
   clearHeartbeat();
   if (typeof window !== 'undefined' && window.speechSynthesis) {
     window.speechSynthesis.cancel();
@@ -191,6 +194,14 @@ export const speakDutch = (text, options = {}) => {
   const currentRate = options.rate !== undefined ? options.rate : getSpeechRate();
   utterance.rate = currentRate;
 
+  utterance.onstart = (e) => {
+    if (options.onStart) options.onStart(e);
+  };
+
+  utterance.onboundary = (e) => {
+    if (options.onBoundary) options.onBoundary(e);
+  };
+
   utterance.onend = (e) => {
     clearHeartbeat();
     if (options.onEnd) options.onEnd(e);
@@ -212,6 +223,189 @@ export const speakDutch = (text, options = {}) => {
   }, 10000);
 
   window.speechSynthesis.speak(utterance);
+};
+
+// Metni kelime ve cümle tokenlarına ayırarak karakter konumlarını hesapla
+export const parseTextTokens = (text) => {
+  if (!text || typeof text !== 'string') return [];
+  const tokens = [];
+  let currentSentence = 0;
+  const regex = /\S+/g;
+  let match;
+
+  while ((match = regex.exec(text)) !== null) {
+    const raw = match[0];
+    const startChar = match.index;
+    const endChar = match.index + raw.length;
+    const clean = raw.replace(/[.,?!:;–—"“”'‘’()]/g, '').toLowerCase();
+
+    tokens.push({
+      raw,
+      clean,
+      startChar,
+      endChar,
+      sentenceIndex: currentSentence
+    });
+
+    if (/[.!?]+["'”’]?$/.test(raw)) {
+      currentSentence++;
+    }
+  }
+
+  return tokens;
+};
+
+// Karakter indeksine göre en uygun kelime token indeksini bul
+export const findTokenIndexAtChar = (tokens, charIndex) => {
+  if (!tokens || tokens.length === 0) return -1;
+  for (let i = 0; i < tokens.length; i++) {
+    const nextStart = i < tokens.length - 1 ? tokens[i + 1].startChar : tokens[i].endChar + 9999;
+    if (charIndex >= tokens[i].startChar && charIndex < nextStart) {
+      return i;
+    }
+  }
+  let closest = 0;
+  let minDiff = Infinity;
+  for (let i = 0; i < tokens.length; i++) {
+    const diff = Math.abs(tokens[i].startChar - charIndex);
+    if (diff < minDiff) {
+      minDiff = diff;
+      closest = i;
+    }
+  }
+  return closest;
+};
+
+// Seslendirmeyi kelime ve cümle bazında ışıklı senkronizasyon ile yürüten fonksiyon
+export const speakDutchWithHighlight = (text, options = {}) => {
+  if (typeof window === 'undefined' || !window.speechSynthesis) {
+    if (options.onEnd) options.onEnd();
+    return { cancel: () => {} };
+  }
+  if (!text || typeof text !== 'string') {
+    if (options.onEnd) options.onEnd();
+    return { cancel: () => {} };
+  }
+
+  const tokens = parseTextTokens(text);
+  if (tokens.length === 0) {
+    if (options.onEnd) options.onEnd();
+    return { cancel: () => {} };
+  }
+
+  const sessionId = ++currentHighlightSession;
+  let fallbackTimer = null;
+  let hasReceivedBoundary = false;
+  let currentWordIdx = -1;
+  let currentSentIdx = -1;
+
+  const emitWord = (idx) => {
+    if (sessionId !== currentHighlightSession) return;
+    if (idx === currentWordIdx) return;
+    currentWordIdx = idx;
+
+    if (options.onWord) {
+      options.onWord(idx, idx !== null && idx >= 0 ? tokens[idx] : null);
+    }
+
+    if (idx !== null && idx >= 0 && tokens[idx]) {
+      const sIdx = tokens[idx].sentenceIndex;
+      if (sIdx !== currentSentIdx) {
+        currentSentIdx = sIdx;
+        if (options.onSentence) options.onSentence(sIdx);
+      }
+    } else {
+      if (currentSentIdx !== null) {
+        currentSentIdx = null;
+        if (options.onSentence) options.onSentence(null);
+      }
+    }
+  };
+
+  const cleanup = () => {
+    if (fallbackTimer) {
+      clearInterval(fallbackTimer);
+      fallbackTimer = null;
+    }
+    emitWord(null);
+  };
+
+  const currentRate = options.rate !== undefined ? options.rate : getSpeechRate();
+
+  speakDutch(text, {
+    speaker: options.speaker,
+    rate: currentRate,
+    pitch: options.pitch,
+    onStart: (e) => {
+      if (sessionId !== currentHighlightSession) return;
+      emitWord(0);
+      if (options.onStart) options.onStart(e);
+
+      // Web Speech API boundary olayı desteklenmeyen ortamlar için akıllı zamanlama yedeği
+      const startTime = Date.now();
+      const charsPerSec = 14 * currentRate;
+      let cumulativeTime = 0;
+      const wordStartTimes = tokens.map(t => {
+        const durationMs = Math.max(180, (t.raw.length / charsPerSec) * 1000);
+        const start = cumulativeTime;
+        cumulativeTime += durationMs;
+        return start;
+      });
+
+      fallbackTimer = setInterval(() => {
+        if (sessionId !== currentHighlightSession) {
+          clearInterval(fallbackTimer);
+          return;
+        }
+        if (hasReceivedBoundary) return;
+
+        const elapsed = Date.now() - startTime;
+        let activeIdx = tokens.length - 1;
+        for (let i = 0; i < wordStartTimes.length; i++) {
+          if (elapsed < wordStartTimes[i]) {
+            activeIdx = Math.max(0, i - 1);
+            break;
+          }
+        }
+        emitWord(activeIdx);
+      }, 50);
+    },
+    onBoundary: (e) => {
+      if (sessionId !== currentHighlightSession) return;
+      if (e.name === 'word' || e.charIndex !== undefined) {
+        hasReceivedBoundary = true;
+        const idx = findTokenIndexAtChar(tokens, e.charIndex);
+        if (idx >= 0 && idx < tokens.length) {
+          emitWord(idx);
+        }
+      } else if (e.name === 'sentence') {
+        const idx = findTokenIndexAtChar(tokens, e.charIndex);
+        if (idx >= 0 && idx < tokens.length) {
+          emitWord(idx);
+        }
+      }
+    },
+    onEnd: (e) => {
+      if (sessionId !== currentHighlightSession) return;
+      cleanup();
+      if (options.onEnd) options.onEnd(e);
+    },
+    onError: (e) => {
+      if (sessionId !== currentHighlightSession) return;
+      cleanup();
+      if (options.onError) options.onError(e);
+    }
+  });
+
+  return {
+    cancel: () => {
+      if (sessionId === currentHighlightSession) {
+        currentHighlightSession++;
+      }
+      cleanup();
+      cancelDutchSpeech();
+    }
+  };
 };
 
 // Hız ve ses testi için örnek cümle
