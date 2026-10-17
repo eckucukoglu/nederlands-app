@@ -249,7 +249,8 @@ export default function ReadingPassage({
 
     // EĞER BÖLÜM İÇİN DOĞAL STÜDYO KAYDI VARSA, DOĞRUDAN O PARAGRAFIN ZAMAN ARALIĞINI DİNLET
     if (studioReading && studioReading.paragraphs) {
-      const paraTiming = studioReading.paragraphs.find(p => p.idx === idx);
+      const paraTimingIdx = studioReading.paragraphs.findIndex(p => p.idx === idx);
+      const paraTiming = paraTimingIdx !== -1 ? studioReading.paragraphs[paraTimingIdx] : null;
       if (paraTiming) {
         if (!studioAudioRef.current) {
           studioAudioRef.current = new Audio();
@@ -259,14 +260,22 @@ export default function ReadingPassage({
         audio.playbackRate = currentSpeechRate;
         audio.currentTime = paraTiming.start;
 
+        const nextParaTiming = studioReading.paragraphs[paraTimingIdx + 1];
+        // Doğal ses sönümlemesi ve son kelimelerin kesilmemesi için:
+        // Eğer sonraki paragraf varsa, sonraki paragraf başlamadan önceki sessizlik aralığına kadar çal.
+        // Eğer son paragraf ise, dosya sonuna veya paragraf sonundan +0.7 saniye sonrasına kadar çal.
+        const stopAt = nextParaTiming
+          ? Math.max(paraTiming.end, nextParaTiming.start - 0.08)
+          : (audio.duration ? Math.min(paraTiming.end + 0.70, audio.duration) : paraTiming.end + 0.70);
+
         const tokens = parseTextTokens(para.text);
 
         audio.ontimeupdate = () => {
           if (playAllSessionRef.current !== currentSession) return;
           const cur = audio.currentTime;
 
-          // Bu paragrafın bitiş saniyesine ulaşıldıysa durdur
-          if (cur >= paraTiming.end) {
+          // Bu paragrafın bitiş saniyesine (stopAt eşiğine) ulaşıldıysa durdur
+          if (cur >= stopAt) {
             audio.pause();
             if (playAllSessionRef.current === currentSession) {
               setPlayingIdx(null);

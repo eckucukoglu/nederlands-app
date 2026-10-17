@@ -212,7 +212,8 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
 
     // EĞER BÖLÜM İÇİN DOĞAL STÜDYO KAYDI VARSA, DOĞRUDAN O SATIRIN ZAMAN ARALIĞINI DİNLET
     if (studioDialogue && studioDialogue.lines) {
-      const lineTiming = studioDialogue.lines.find(l => l.idx === idx);
+      const lineTimingIdx = studioDialogue.lines.findIndex(l => l.idx === idx);
+      const lineTiming = lineTimingIdx !== -1 ? studioDialogue.lines[lineTimingIdx] : null;
       if (lineTiming) {
         if (!studioAudioRef.current) {
           studioAudioRef.current = new Audio();
@@ -222,14 +223,22 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
         audio.playbackRate = currentSpeechRate;
         audio.currentTime = lineTiming.start;
 
+        const nextTiming = studioDialogue.lines[lineTimingIdx + 1];
+        // Doğal ses sönümlemesi ve son kelimelerin kesilmemesi için:
+        // Eğer sonraki satır varsa, sonraki satır başlamadan önceki sessizlik aralığına kadar çal.
+        // Eğer son satır ise, dosya sonuna veya satır sonundan +0.6 saniye sonrasına kadar çal.
+        const stopAt = nextTiming
+          ? Math.max(lineTiming.end, nextTiming.start - 0.06)
+          : (audio.duration ? Math.min(lineTiming.end + 0.60, audio.duration) : lineTiming.end + 0.60);
+
         const tokens = parseTextTokens(line.text);
 
         audio.ontimeupdate = () => {
           if (playAllSessionRef.current !== currentSession) return;
           const cur = audio.currentTime;
 
-          // Bu satırın bitiş saniyesine ulaşıldıysa durdur
-          if (cur >= lineTiming.end) {
+          // Bu satırın bitiş saniyesine (stopAt eşiğine) ulaşıldıysa durdur
+          if (cur >= stopAt) {
             audio.pause();
             if (playAllSessionRef.current === currentSession) {
               setPlayingLineIdx(null);
