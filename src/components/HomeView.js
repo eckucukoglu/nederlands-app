@@ -11,7 +11,6 @@ import {
   dialoguesReading 
 } from '../data/quizData';
 import QuizModule from './QuizModule';
-import { generateSmartQuestions } from '../data/questionGenerator';
 import { calculateOverallProgress, LEVEL_TIERS } from '../utils/progress';
 
 // Ünite Başlıkları ve Anlamları
@@ -214,14 +213,14 @@ export default function HomeView({
           chapterNum: ch,
           titleTr: `Kelime Sınavı: Ünite ${ch} (${info.tr ? info.tr.split('(')[0].trim() : ''})`,
           titleEn: `Vocab Quiz: Chapter ${ch} (${info.en ? info.en.split('(')[0].trim() : ''})`,
-          nlTitle: `Woorden H${ch} (${chVocab.length} Woorden)`,
+          nlTitle: `${info.nl || `Hoofdstuk ${ch}`} Woordenschat`,
           icon: "fa-solid fa-spell-check",
-          tags: [`vocab_ch${ch}`, 'vocab', `ch${ch}`],
+          tags: ['vocabulary', `summary_ch${ch}`],
+          tagFilterMode: 'all',
           vocabCount: chVocab.length,
-          getCustomQuestions: () => generateSmartQuestions(ch, "Woordenschat", 15, chVocab),
           matcher: (q) => {
             const tags = q.tags || [];
-            return tags.includes(`vocab_ch${ch}`) || (q.id && q.id.startsWith(`extra_h${ch}_`));
+            return tags.includes('vocabulary') && tags.includes(`summary_ch${ch}`);
           }
         };
       })
@@ -229,44 +228,6 @@ export default function HomeView({
 
     // Konu Bazlı İstatistikleri Hesapla
     const topicStats = rawTopics.map(topic => {
-      if (topic.category === 'vocabulary') {
-        const ch = topic.chapterNum;
-        const vStat = baseStats.chapterVocabStats?.find(v => v.chapterNum === ch);
-        const total = topic.vocabCount || (vStat ? vStat.totalWords : 50);
-        const learned = vStat ? vStat.learnedCount : 0;
-        const learning = vStat ? vStat.learningCount : 0;
-        const progress = vStat ? vStat.progress : 0;
-
-        const topicQuestions = quizQuestions.filter(topic.matcher);
-        let qAttempted = 0, qCorrect = 0, qIncorrect = 0;
-        topicQuestions.forEach(q => {
-          const hist = quizHistory[q.id];
-          if (hist) {
-            const c = Number(hist.correct) || 0;
-            const inc = Number(hist.incorrect) || 0;
-            if (c + inc > 0) {
-              qAttempted++;
-              qCorrect += c;
-              qIncorrect += inc;
-            }
-          }
-        });
-        const qAttempts = qCorrect + qIncorrect;
-        const accuracy = qAttempts > 0 ? Math.round((qCorrect / qAttempts) * 100) : (progress > 0 ? progress : 0);
-
-        return {
-          ...topic,
-          total,
-          attempted: (learned + learning) > 0 ? (learned + learning) : qAttempted,
-          correct: learned,
-          incorrect: learning,
-          mastered: learned,
-          weak: learning,
-          accuracy,
-          progress
-        };
-      }
-
       const topicQuestions = quizQuestions.filter(topic.matcher);
       const total = topicQuestions.length;
       let attempted = 0;
@@ -817,6 +778,7 @@ export default function HomeView({
       {activeQuizTopic && (
         <QuizModule 
           tags={activeQuizTopic.tags || []}
+          tagFilterMode={activeQuizTopic.tagFilterMode || 'some'}
           customQuestions={activeQuizTopic.customQuestions || (typeof activeQuizTopic.getCustomQuestions === 'function' ? activeQuizTopic.getCustomQuestions() : null)}
           title={isTr ? `${activeQuizTopic.titleTr}` : `${activeQuizTopic.titleEn}`}
           onClose={() => {
@@ -1708,16 +1670,16 @@ export default function HomeView({
 
                       <button
                         onClick={() => {
-                          const chVocab = vocabulary.filter(w => w.chapter === ch.chapterNum);
                           setActiveQuizTopic({
+                            id: `vocab_ch${ch.chapterNum}`,
                             titleTr: `${ch.titleTr} - Kelime Sınavı`,
                             titleEn: `${ch.titleEn} - Vocab Quiz`,
-                            tags: [`vocab_ch${ch.chapterNum}`, 'vocab'],
-                            customQuestions: generateSmartQuestions(ch.chapterNum, "Woordenschat", 15, chVocab)
+                            tags: ['vocabulary', `summary_ch${ch.chapterNum}`],
+                            tagFilterMode: 'all'
                           });
                         }}
                         className="py-2 px-2.5 rounded-xl bg-teal-950/60 hover:bg-teal-900/80 text-teal-300 hover:text-white border border-teal-800/60 hover:border-teal-500 text-xs font-bold flex items-center justify-center gap-1.5 transition-all shadow-sm active:scale-[0.98]"
-                        title={isTr ? `Ünite ${ch.chapterNum} Kelimelerinden 15 Soruluk Sınav Başlat` : `Start 15-question Vocab Quiz for Chapter ${ch.chapterNum}`}
+                        title={isTr ? `Ünite ${ch.chapterNum} Kelime Sınavı Başlat` : `Start Vocab Quiz for Chapter ${ch.chapterNum}`}
                       >
                         <i className="fa-solid fa-clipboard-question text-[11px]"></i>
                         <span className="truncate">{isTr ? 'Kelime Sınavı' : 'Vocab Quiz'}</span>
@@ -1932,16 +1894,16 @@ export default function HomeView({
                     <div className="flex items-center gap-1.5">
                       <button
                         onClick={() => {
-                          const chVocab = vocabulary.filter(w => w.chapter === ch.chapterNum);
                           setActiveQuizTopic({
+                            id: `vocab_ch${ch.chapterNum}`,
                             titleTr: `${ch.titleTr} - Kelime Sınavı`,
                             titleEn: `${ch.titleEn} - Vocab Quiz`,
-                            tags: [`vocab_ch${ch.chapterNum}`, 'vocab'],
-                            customQuestions: generateSmartQuestions(ch.chapterNum, "Woordenschat", 15, chVocab)
+                            tags: ['vocabulary', `summary_ch${ch.chapterNum}`],
+                            tagFilterMode: 'all'
                           });
                         }}
                         className="py-1 px-2.5 rounded-lg bg-teal-950/60 hover:bg-teal-900 text-teal-300 hover:text-white border border-teal-800/60 text-xs font-bold flex items-center gap-1 transition-all active:scale-[0.98]"
-                        title={isTr ? '15 Soruluk Kelime Sınavı Başlat' : 'Start 15-question Vocab Quiz'}
+                        title={isTr ? `Ünite ${ch.chapterNum} Kelime Sınavı Başlat` : `Start Vocab Quiz for Chapter ${ch.chapterNum}`}
                       >
                         <i className="fa-solid fa-clipboard-question text-[10px]"></i>
                         <span>{isTr ? 'Kelime Sınavı' : 'Vocab Quiz'}</span>

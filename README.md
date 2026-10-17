@@ -1,6 +1,6 @@
 # 🇳🇱 Nederlands in Gang - Interactief Oefenportaal (A1 → A2)
 
-[![Version](https://img.shields.io/badge/version-v0.1.7-10B981.svg?style=for-the-badge)](https://github.com/eckucukoglu/nederlands-app/releases/tag/v0.1.7)
+[![Version](https://img.shields.io/badge/version-v0.1.8-10B981.svg?style=for-the-badge)](https://github.com/eckucukoglu/nederlands-app/releases/tag/v0.1.8)
 [![Firebase Hosting](https://img.shields.io/badge/hosting-live-FFCA28.svg?style=for-the-badge&logo=firebase&logoColor=black)](https://nederlands-app.web.app)
 [![React](https://img.shields.io/badge/react-19.x-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)](https://react.dev/)
 [![TailwindCSS](https://img.shields.io/badge/tailwindcss-3.x-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
@@ -15,9 +15,15 @@ An open-source, interactive, and personalized web application designed to track 
 
 ---
 
-## 🌟 Key Highlights & Features (v0.1.7)
+## 🌟 Key Highlights & Features (v0.1.8)
 
-### 🎯 1. Initial Word Pre-Roll & Seek-Jitter Prevention (v0.1.7)
+### 📚 1. Authentic Chapter Vocabulary Quiz Integration & Dual Tag Filtering (v0.1.8)
+* **Real Curriculum Vocabulary Quizzes (All 18 Chapters)**: Connected all "Kelime Sınavı" (Vocab Quiz) buttons across the dashboard (Sekme 2: Soru Bankası & Konu Bazlı Sınavlar, Sekme 3: Kelimeler & Ünite Bazlı İstatistikler, Sekme 4: Ünite Detayları & İlerleme) directly to the authentic question bank (`quizQuestions`).
+* **Dual Tag Intersection Filtering (`#vocabulary` + `#summary_chX`)**: Quizzes now filter strictly for questions that contain **both** `#vocabulary` and `#summary_chX` (where X is the chapter number from 1 to 18), providing 15 to 42 high-quality matching, fill-in-the-blank, and multiple-choice questions per chapter with comprehensive Turkish and English explanations.
+* **Visible Dual Tag Filter Badges & "Birlikte Filtreleniyor" Indicator**: The quiz header displays active `#vocabulary` and `#summary_chX` badges with a link indicator (`🔗 Birlikte Filtreleniyor`), allowing seamless one-click tag removal or clearing.
+* **Unified Dashboard Statistics**: Topic cards in Sekme 2 now calculate real question counts, solved questions, accuracy, and mastery directly from user history on genuine chapter questions.
+
+### 🎯 2. Initial Word Pre-Roll & Seek-Jitter Prevention (v0.1.7)
 * **Eliminated First-Word Clipping in Single-Line & Single-Paragraph Playback**: Resolved an issue where playback of isolated dialogue lines occasionally cut off the very first consonant or syllable due to MP3 frame boundary quantization and DAC initialization latency. Playback now initiates smoothly from a calibrated pre-roll silence buffer (150–180ms) within the inter-line silence gap, ensuring the first word is heard with complete clarity from its very first millisecond.
 
 ### 🎙️ 2. Complete Natural Dutch Studio Audio Engine (Chapters 1–18) (v0.1.6)

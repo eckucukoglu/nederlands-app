@@ -12,11 +12,12 @@ const DIFFICULTY_LEVELS = [
   { level: 5, labelTr: 'B1 Hazırlık', labelEn: 'B1 Prep', shortTr: 'B1', shortEn: 'B1', color: 'bg-rose-950/90 text-rose-300 border-rose-800/80 hover:bg-rose-900' },
 ];
 
-export default function QuizModule({ tags = [], customQuestions = null, onClose, title = "Oefening" }) {
+export default function QuizModule({ tags = [], customQuestions = null, onClose, title = "Oefening", tagFilterMode = 'some' }) {
   const { lang } = useLanguage();
   const isTr = lang === 'tr';
 
   const [activeTags, setActiveTags] = useState(tags);
+  const [tagMatchMode, setTagMatchMode] = useState(tagFilterMode);
   const [deck, setDeck] = useState([]); 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [userAnswer, setUserAnswer] = useState('');
@@ -30,7 +31,14 @@ export default function QuizModule({ tags = [], customQuestions = null, onClose,
   const [activeFilter, setActiveFilter] = useState('all'); 
   const [selectedDifficulty, setSelectedDifficulty] = useState(null);
   const [isDiffMenuOpen, setIsDiffMenuOpen] = useState(false);
-  const [tagInput, setTagInput] = useState(tags && tags.length > 0 ? tags[0] : '');
+  const [tagInput, setTagInput] = useState(tags && tags.length === 1 ? tags[0] : '');
+
+  const tagsKey = Array.isArray(tags) ? tags.join(',') : '';
+  useEffect(() => {
+    setActiveTags(tags);
+    setTagMatchMode(tagFilterMode);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [tagsKey, tagFilterMode]);
 
   // Tüm mevcut etiketlerin listesi (Datalist otomatik tamamlama için)
   const allAvailableTags = useMemo(() => {
@@ -93,7 +101,13 @@ export default function QuizModule({ tags = [], customQuestions = null, onClose,
     const sourceQuestions = customQuestions || quizQuestions;
     let filtered = activeTags.length === 0 
         ? [...sourceQuestions] 
-        : sourceQuestions.filter(q => q.tags && q.tags.some(tag => activeTags.includes(tag)));
+        : sourceQuestions.filter(q => {
+            if (!q.tags || !Array.isArray(q.tags)) return false;
+            if (tagMatchMode === 'all') {
+              return activeTags.every(tag => q.tags.includes(tag));
+            }
+            return activeTags.some(tag => q.tags.includes(tag));
+          });
     
     if (selectedDifficulty !== null) {
       filtered = filtered.filter(q => q.difficulty === selectedDifficulty);
@@ -126,7 +140,7 @@ export default function QuizModule({ tags = [], customQuestions = null, onClose,
     setIsFinished(false);
     setSessionScore({ correct: 0, incorrect: 0, skipped: 0 });
     setWrongTagsCloud({});
-  }, [activeTags, activeFilter, selectedDifficulty, customQuestions]);
+  }, [activeTags, tagMatchMode, activeFilter, selectedDifficulty, customQuestions]);
 
   const currentQ = deck[currentIndex];
   const qHistory = currentQ ? quizHistory[currentQ.id] || { correct: 0, incorrect: 0 } : null;
@@ -234,8 +248,9 @@ export default function QuizModule({ tags = [], customQuestions = null, onClose,
   };
 
   const handleTagClick = (clickedTag) => {
-    setTagInput(clickedTag);
+    setTagInput('');
     setActiveTags([clickedTag]);
+    setTagMatchMode('some');
   };
 
   const handleTagSubmit = (e) => {
@@ -243,13 +258,19 @@ export default function QuizModule({ tags = [], customQuestions = null, onClose,
     const cleanTag = tagInput.replace(/^#/, '').trim().toLowerCase();
     if (!cleanTag) return;
     const matchedTag = allAvailableTags.find(t => t.toLowerCase() === cleanTag) || cleanTag;
-    setTagInput(matchedTag);
+    setTagInput('');
     setActiveTags([matchedTag]);
+    setTagMatchMode('some');
+  };
+
+  const handleRemoveActiveTag = (tagToRemove) => {
+    setActiveTags(prev => prev.filter(t => t !== tagToRemove));
   };
 
   const handleClearTagFilter = () => {
     setTagInput('');
-    setActiveTags(tags);
+    setActiveTags([]);
+    setTagMatchMode('some');
   };
 
   const toggleFilter = (filterType) => {
@@ -814,7 +835,7 @@ export default function QuizModule({ tags = [], customQuestions = null, onClose,
               {/* Manuel Tag Giriş Alanı */}
               <form onSubmit={handleTagSubmit} className="flex items-center gap-1 flex-1 sm:flex-initial min-w-0">
                 <div className={`flex items-center bg-slate-900 rounded-lg px-2 py-1 border transition-all flex-1 min-w-0 ${
-                  activeTags.length > 0 && activeTags[0] === (tagInput.replace(/^#/, '').trim())
+                  activeTags.length > 0 && activeTags.includes(tagInput.replace(/^#/, '').trim())
                     ? 'border-indigo-500 ring-2 ring-indigo-500/30'
                     : 'border-slate-700 focus-within:border-indigo-500'
                 }`}>
@@ -830,9 +851,9 @@ export default function QuizModule({ tags = [], customQuestions = null, onClose,
                   {tagInput && (
                     <button 
                       type="button" 
-                      onClick={handleClearTagFilter}
+                      onClick={() => setTagInput('')}
                       className="text-slate-400 hover:text-rose-400 ml-0.5 p-0.5 text-xs cursor-pointer flex-shrink-0"
-                      title={isTr ? "Etiket filtresini temizle" : "Clear tag filter"}
+                      title={isTr ? "Aramayı temizle" : "Clear search"}
                     >
                       <i className="fa-solid fa-xmark"></i>
                     </button>
@@ -857,6 +878,45 @@ export default function QuizModule({ tags = [], customQuestions = null, onClose,
               </datalist>
             </div>
           </div>
+
+          {/* Aktif Etiket Filtre Rozetleri */}
+          {activeTags.length > 0 && (
+            <div className="flex items-center gap-1.5 flex-wrap pt-0.5 text-xs animate-fadeIn">
+              <span className="text-slate-400 text-[11px] font-medium flex items-center gap-1">
+                <i className="fa-solid fa-filter text-indigo-400 text-[10px]"></i>
+                {isTr ? 'Aktif Filtreler:' : 'Active Filters:'}
+              </span>
+              {activeTags.map(tag => (
+                <span
+                  key={tag}
+                  className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-indigo-950/90 text-indigo-200 border border-indigo-700/80 font-mono text-[11px] font-semibold shadow-sm"
+                >
+                  <span>#{tag}</span>
+                  <button
+                    type="button"
+                    onClick={() => handleRemoveActiveTag(tag)}
+                    className="text-indigo-400 hover:text-rose-300 ml-0.5 cursor-pointer"
+                    title={isTr ? `"${tag}" filtresini kaldır` : `Remove "${tag}" filter`}
+                  >
+                    <i className="fa-solid fa-xmark text-[10px]"></i>
+                  </button>
+                </span>
+              ))}
+              {tagMatchMode === 'all' && activeTags.length > 1 && (
+                <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-md bg-emerald-950/90 text-emerald-300 border border-emerald-700/80 flex items-center gap-1 shadow-sm">
+                  <i className="fa-solid fa-link text-[9px]"></i>
+                  {isTr ? 'Birlikte Filtreleniyor' : 'Filtered Together'}
+                </span>
+              )}
+              <button
+                type="button"
+                onClick={handleClearTagFilter}
+                className="text-[10px] font-medium text-slate-400 hover:text-rose-300 underline underline-offset-2 ml-1 cursor-pointer transition-colors"
+              >
+                {isTr ? 'Temizle' : 'Clear'}
+              </button>
+            </div>
+          )}
         </div>
 
         {/* Progress Bar */}
