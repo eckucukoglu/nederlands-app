@@ -1,6 +1,6 @@
 # 🇳🇱 Nederlands in Gang - Interactief Oefenportaal (A1 → A2)
 
-[![Version](https://img.shields.io/badge/version-v0.1.8-10B981.svg?style=for-the-badge)](https://github.com/eckucukoglu/nederlands-app/releases/tag/v0.1.8)
+[![Version](https://img.shields.io/badge/version-v0.1.9-10B981.svg?style=for-the-badge)](https://github.com/eckucukoglu/nederlands-app/releases/tag/v0.1.9)
 [![Firebase Hosting](https://img.shields.io/badge/hosting-live-FFCA28.svg?style=for-the-badge&logo=firebase&logoColor=black)](https://nederlands-app.web.app)
 [![React](https://img.shields.io/badge/react-19.x-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)](https://react.dev/)
 [![TailwindCSS](https://img.shields.io/badge/tailwindcss-3.x-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
@@ -15,9 +15,29 @@ An open-source, interactive, and personalized web application designed to track 
 
 ---
 
-## 🌟 Key Highlights & Features (v0.1.8)
+## 🌟 Key Highlights & Features (v0.1.9)
 
-### 📚 1. Authentic Chapter Vocabulary Quiz Integration & Dual Tag Filtering (v0.1.8)
+### 🧮 1. Mathematically Precise, Anti-Inflation 10,000 XP Scoring Engine (v0.1.9)
+* **Root-Cause Anti-Inflation Architecture**: Completely overhauled progress and XP calculations to eliminate single-activity inflation. Users can no longer inflate "Words XP" to 100% simply by marking reading passage paragraphs as "known" without studying the core curriculum vocabulary or using flashcards.
+* **Strict Sub-Quotas & Hard Ceilings Across 3 Dedicated Pillars**:
+  * **Pillar 1: Curriculum & Course Sections (Max 3,500 XP)**:
+    * *169 Curriculum Sections*: Max 2,800 XP (~16.5 XP per section, partial engagement capped at 100 XP).
+    * *18 Complete Chapter Masteries*: Max 400 XP (~22.2 XP per unit; awarded only when every single section of a chapter is genuinely complete).
+    * *Grammar Notes & Bookmarks*: Max 300 XP.
+  * **Pillar 2: Words & Vocabulary Mastery (Max 3,500 XP)**:
+    * *1,066 Core Curriculum Words*: Max 2,000 XP (~1.876 XP per word; strictly chapter-isolated so words from other chapters cannot substitute).
+    * *Flashcard Practice & Active Recall*: Max 800 XP (users who do not practice flashcards cannot earn this quota; impossible to earn via reading alone).
+    * *Contextual Reading & Dialogue Words*: Max 500 XP (hard capped at 500 XP regardless of how many hundreds of passage words are tagged).
+    * *Irregular Verbs & Custom Starred Terms*: Max 200 XP.
+  * **Pillar 3: Question Bank & Quizzes (Max 3,000 XP)**:
+    * *Unique Correct Questions*: Max 2,200 XP across ~3,069 authentic questions.
+    * *Zero-Mistake Question Mastery*: Max 400 XP.
+    * *Accuracy Bonus (70%+)*: Max 250 XP (requires at least 20 question attempts to prevent volatility).
+    * *Repetition & Good Question Feedback*: Max 150 XP.
+* **Elimination of Fake `.2 Woordenlijst` Section Completions**: Vocabulary sections (`.2`) are strictly protected: reading words or generic pool words can no longer trigger automatic section completion. Only genuine completion in the vocabulary module or explicit section check marks register completion.
+* **Comprehensive Test Suite & Corner-Case Rigor**: 9 automated test cases in `src/utils/progress.test.js` verifying baseline zero-state, anti-inflation caps, section .2 protection, single-activity users, strict monotonicity, article deduplication (`de`/`het`), and exact 10,000 XP saturation ceiling.
+
+### 📚 2. Authentic Chapter Vocabulary Quiz Integration & Dual Tag Filtering (v0.1.8)
 * **Real Curriculum Vocabulary Quizzes (All 18 Chapters)**: Connected all "Kelime Sınavı" (Vocab Quiz) buttons across the dashboard (Sekme 2: Soru Bankası & Konu Bazlı Sınavlar, Sekme 3: Kelimeler & Ünite Bazlı İstatistikler, Sekme 4: Ünite Detayları & İlerleme) directly to the authentic question bank (`quizQuestions`).
 * **Dual Tag Intersection Filtering (`#vocabulary` + `#summary_chX`)**: Quizzes now filter strictly for questions that contain **both** `#vocabulary` and `#summary_chX` (where X is the chapter number from 1 to 18), providing 15 to 42 high-quality matching, fill-in-the-blank, and multiple-choice questions per chapter with comprehensive Turkish and English explanations.
 * **Visible Dual Tag Filter Badges & "Birlikte Filtreleniyor" Indicator**: The quiz header displays active `#vocabulary` and `#summary_chX` badges with a link indicator (`🔗 Birlikte Filtreleniyor`), allowing seamless one-click tag removal or clearing.

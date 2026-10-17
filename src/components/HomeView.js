@@ -882,9 +882,23 @@ export default function HomeView({
                   </div>
                   <p className="text-xs text-slate-300 leading-relaxed">
                     {isTr 
-                      ? '18 ünitedeki 169 bölümün (Diyalog .1, Vocabulary .2, Alıştırmalar, Okuma Parçaları ve Sınıf İçi Özetler) her biri ~17.8 XP kazandırır (Toplam 3.000 XP). Ayrıca eksiksiz bitirilen her 18 ünite için ~27.8 XP tamamlama rozeti verilir (Toplam 500 XP).'
-                      : '169 sections across 18 chapters yield ~17.8 XP each (3,000 XP total). In addition, fully completing all sections in each chapter awards a chapter mastery badge of ~27.8 XP (500 XP total).'}
+                      ? '18 ünitedeki 169 bölümün tamamlanması (Maks 2.800 XP), tüm bölümleri eksiksiz bitirilen 18 ünitenin Ustalık Rozeti (Maks 400 XP) ve Gramer notları/favorileri (Maks 300 XP) puanlanır.'
+                      : 'Completing 169 sections across 18 chapters (Max 2,800 XP), Chapter Mastery badges for fully completed chapters (Max 400 XP), and Grammar notes/favorites (Max 300 XP).'}
                   </p>
+                  <div className="grid grid-cols-3 gap-1.5 pt-1 text-[11px] font-mono text-slate-400">
+                    <div className="bg-slate-900/60 rounded px-2 py-1 border border-slate-700/30">
+                      <span className="block text-[10px] text-slate-400">{isTr ? 'Bölümler (169)' : 'Sections (169)'}</span>
+                      <strong className="text-indigo-300">{(stats.sectionsSubBreakdown?.completedSectionsXP || 0).toLocaleString()} / 2.800</strong>
+                    </div>
+                    <div className="bg-slate-900/60 rounded px-2 py-1 border border-slate-700/30">
+                      <span className="block text-[10px] text-slate-400">{isTr ? 'Ünite Ustalığı' : 'Unit Mastery'}</span>
+                      <strong className="text-indigo-300">{(stats.sectionsSubBreakdown?.chapterMasteryXP || 0).toLocaleString()} / 400</strong>
+                    </div>
+                    <div className="bg-slate-900/60 rounded px-2 py-1 border border-slate-700/30">
+                      <span className="block text-[10px] text-slate-400">{isTr ? 'Gramer & Not' : 'Grammar & Fav'}</span>
+                      <strong className="text-indigo-300">{(stats.sectionsSubBreakdown?.grammarXP || 0).toLocaleString()} / 300</strong>
+                    </div>
+                  </div>
                   <div className="flex justify-between text-[11px] text-slate-400 pt-1 border-t border-slate-700/40">
                     <span>{isTr ? 'Tamamlanan Bölüm:' : 'Completed Sections:'} <strong className="text-slate-200">{stats.completedSectionsCount} / {stats.totalBookSections}</strong></span>
                     <span>{isTr ? 'Eksiksiz Ünite:' : 'Mastered Chapters:'} <strong className="text-slate-200">{stats.completedChaptersCount} / 18</strong></span>
@@ -908,12 +922,30 @@ export default function HomeView({
                   </div>
                   <p className="text-xs text-slate-300 leading-relaxed">
                     {isTr 
-                      ? 'Kitabın 1.066 müfredat kelimesi ve kendi eklediğiniz sözlük kelimeleri kapsanır. "Biliyorum" (Known) olarak işaretlenen her kelime tam puan (kelime başı ~3.28 XP), "Öğreniyorum" kelimeleri %30 puan sağlar. Tüm kelimeler öğrenildiğinde tam 3.500 XP kazanılır.'
-                      : 'Covers 1,066 curriculum words plus custom vocabulary. Every word marked as "Known" awards full credit (~3.28 XP), while "Learning" words grant 30% credit. Full mastery awards exactly 3,500 XP.'}
+                      ? 'Dört bağımsız alt kotaya ayrılmıştır: 1.066 Resmi Müfredat Kelimesi (Maks 2.000 XP), Flashcards Pratiği & Hatırlama (Maks 800 XP), Okuma & Diyalog Metin Kelimeleri (Maks 500 XP) ve Düzensiz Fiiller (Maks 200 XP). Tek bir kaynaktan şişirilemez.'
+                      : 'Divided into 4 independent quotas: 1,066 Core Curriculum Words (Max 2,000 XP), Flashcard Practice & Recall (Max 800 XP), Reading & Dialogue Context Words (Max 500 XP), and Irregular Verbs (Max 200 XP). Cannot be inflated from a single source.'}
                   </p>
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5 pt-1 text-[11px] font-mono text-slate-400">
+                    <div className="bg-slate-900/60 rounded px-2 py-1 border border-slate-700/30">
+                      <span className="block text-[10px] text-slate-400">{isTr ? 'Müfredat (1.066)' : 'Core (1,066)'}</span>
+                      <strong className="text-emerald-300">{(stats.wordsSubBreakdown?.curriculumVocabXP || 0).toLocaleString()} / 2.000</strong>
+                    </div>
+                    <div className="bg-slate-900/60 rounded px-2 py-1 border border-slate-700/30">
+                      <span className="block text-[10px] text-slate-400">{isTr ? 'Flashcards' : 'Flashcards'}</span>
+                      <strong className="text-emerald-300">{(stats.wordsSubBreakdown?.flashcardsXP || 0).toLocaleString()} / 800</strong>
+                    </div>
+                    <div className="bg-slate-900/60 rounded px-2 py-1 border border-slate-700/30">
+                      <span className="block text-[10px] text-slate-400">{isTr ? 'Metin Kelimeleri' : 'Passage Words'}</span>
+                      <strong className="text-emerald-300">{(stats.wordsSubBreakdown?.readingContextXP || 0).toLocaleString()} / 500</strong>
+                    </div>
+                    <div className="bg-slate-900/60 rounded px-2 py-1 border border-slate-700/30">
+                      <span className="block text-[10px] text-slate-400">{isTr ? 'Fiiller & Favori' : 'Verbs & Star'}</span>
+                      <strong className="text-emerald-300">{(stats.wordsSubBreakdown?.verbsAndStarredXP || 0).toLocaleString()} / 200</strong>
+                    </div>
+                  </div>
                   <div className="flex justify-between text-[11px] text-slate-400 pt-1 border-t border-slate-700/40">
-                    <span>{isTr ? 'Biliyorum:' : 'Mastered:'} <strong className="text-slate-200">{stats.totalLearnedWords} / {stats.targetWordCount || stats.totalBookWords}</strong></span>
-                    <span>{isTr ? 'Çalışılan / Tekrar:' : 'In Review / Flashcards:'} <strong className="text-slate-200">{stats.totalLearningWords} • +{stats.totalFlashcardReviews}</strong></span>
+                    <span>{isTr ? 'Müfredat Öğrenilen:' : 'Curriculum Mastered:'} <strong className="text-slate-200">{stats.totalCurriculumLearned || 0} / {stats.totalBookWords}</strong></span>
+                    <span>{isTr ? 'Flashcard Tekrarı:' : 'Flashcard Reviews:'} <strong className="text-slate-200">{stats.totalFlashcardReviews || 0}</strong></span>
                   </div>
                 </div>
 
@@ -934,9 +966,27 @@ export default function HomeView({
                   </div>
                   <p className="text-xs text-slate-300 leading-relaxed">
                     {isTr 
-                      ? 'Sitedeki ~3.069 soru ve test havuzunu kapsar. Doğru çözülen her benzersiz soru 2.600 XP havuzundan pay alır. Hatasız ustalık (0 yanlışla çözme) 250 XP ve %70+ genel başarı oranı 150 XP bonus ekler.'
-                      : 'Covers all ~3,069 questions across all units and grammar tests. Correct answers earn from the 2,600 XP base pool, with 250 XP for perfect mastery (0 mistakes) and 150 XP for high accuracy (70%+).'}
+                      ? '~3.069 soruluk havuzda doğru çözülen benzersiz sorular (Maks 2.200 XP), 0 hata ile kusursuz ustalık (Maks 400 XP), %70+ başarı oranı istikrarı (Maks 250 XP) ve tekrar/iyi soru bonusu (Maks 150 XP).'
+                      : 'Unique correct questions across ~3,069 questions (Max 2,200 XP), zero-mistake mastery (Max 400 XP), consistent 70%+ accuracy bonus (Max 250 XP), and repetition/good-question bonus (Max 150 XP).'}
                   </p>
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5 pt-1 text-[11px] font-mono text-slate-400">
+                    <div className="bg-slate-900/60 rounded px-2 py-1 border border-slate-700/30">
+                      <span className="block text-[10px] text-slate-400">{isTr ? 'Doğru Sorular' : 'Correct Qs'}</span>
+                      <strong className="text-teal-300">{(stats.questionsSubBreakdown?.baseQuestionsXP || 0).toLocaleString()} / 2.200</strong>
+                    </div>
+                    <div className="bg-slate-900/60 rounded px-2 py-1 border border-slate-700/30">
+                      <span className="block text-[10px] text-slate-400">{isTr ? 'Hatasız Ustalık' : 'Mastery (0 err)'}</span>
+                      <strong className="text-teal-300">{(stats.questionsSubBreakdown?.masteryXP || 0).toLocaleString()} / 400</strong>
+                    </div>
+                    <div className="bg-slate-900/60 rounded px-2 py-1 border border-slate-700/30">
+                      <span className="block text-[10px] text-slate-400">{isTr ? 'Doğruluk %70+' : 'Accuracy 70%+'}</span>
+                      <strong className="text-teal-300">{(stats.questionsSubBreakdown?.accuracyBonus || 0).toLocaleString()} / 250</strong>
+                    </div>
+                    <div className="bg-slate-900/60 rounded px-2 py-1 border border-slate-700/30">
+                      <span className="block text-[10px] text-slate-400">{isTr ? 'Tekrar & İyi Soru' : 'Repetition & Star'}</span>
+                      <strong className="text-teal-300">{(stats.questionsSubBreakdown?.extraQuestionsXP || 0).toLocaleString()} / 150</strong>
+                    </div>
+                  </div>
                   <div className="flex justify-between text-[11px] text-slate-400 pt-1 border-t border-slate-700/40">
                     <span>{isTr ? 'Doğru Çözülen:' : 'Unique Correct:'} <strong className="text-slate-200">{stats.uniqueCorrect || 0} / {stats.totalQuizQuestions}</strong></span>
                     <span>{isTr ? 'Kusursuz / Başarı:' : 'Mastered / Accuracy:'} <strong className="text-slate-200">{stats.masteredCount} • %{stats.quizAccuracy}</strong></span>

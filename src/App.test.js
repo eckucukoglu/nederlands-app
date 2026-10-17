@@ -4,7 +4,7 @@ import { quizQuestions } from './data/quizData';
 
 test('app version is defined and matches semantic versioning format', () => {
   expect(APP_VERSION).toMatch(/^v\d+\.\d+\.\d+$/);
-  expect(APP_VERSION).toBe('v0.1.8');
+  expect(APP_VERSION).toBe('v0.1.9');
 });
 
 test('studio audio data contains Chapter 1 lines and paragraphs timestamps', () => {

@@ -13,7 +13,7 @@ export const CHAPTER_INFO = {
   8: { tr: "Bij de makelaar (Emlakçıda & Konut)", en: "Bij de makelaar (Real Estate)", nl: "Bij de makelaar", icon: "fa-solid fa-house" },
   9: { tr: "Bij de huisarts (Doktorda & Sağlık)", en: "Bij de huisarts (At the Doctor)", nl: "Bij de huisarts", icon: "fa-solid fa-user-doctor" },
   10: { tr: "Bij de fietsenmaker (Bisiklet & Ulaşım)", en: "Bij de fietsenmaker (Bike Repair)", nl: "Bij de fietsenmaker", icon: "fa-solid fa-bicycle" },
-  11: { tr: "Op een verjaardag (Doğum Günü & İş)", en: "Op een verjaardag (Birthday & Work)", nl: "Op een verjaardag", icon: "fa-solid fa-cake-candles" },
+  11: { tr: "Op een verjaardag (Doğum Günü & İş)", en: "Op een verjaardag (Birthday & Work)", nl: "Op bir verjaardag", icon: "fa-solid fa-cake-candles" },
   12: { tr: "Naar de Evenementenhal (Etkinlikler)", en: "Naar de Evenementenhal (Events & Fairs)", nl: "Naar de Evenementenhal", icon: "fa-solid fa-ticket" },
   13: { tr: "Bij vrienden (Arkadaşlarda & Ziyaret)", en: "Bij vrienden (With Friends)", nl: "Bij vrienden", icon: "fa-solid fa-users" },
   14: { tr: "In de sportschool (Spor & Yaşam)", en: "In de sportschool (In the Gym)", nl: "In de sportschool", icon: "fa-solid fa-dumbbell" },
@@ -45,6 +45,10 @@ export function notifyProgressUpdated() {
 
 /**
  * Müfredat ve çalışma verilerine göre genel ilerlemeyi (0-100) ve detaylı istatistikleri hesaplar.
+ * 10.000 XP Tavan Puanı 3 Bağımsız Direğe Ayrılmıştır:
+ * 1. Müfredat Dersleri & Bölümler: 3.500 XP
+ * 2. Kelimeler & Kelime Çalışmaları: 3.500 XP
+ * 3. Soru Bankası & Quizler: 3.000 XP
  */
 export function calculateOverallProgress({ completed = {}, favorites = {}, bookSections = [] } = {}) {
   let quizHistory = {};
@@ -76,11 +80,18 @@ export function calculateOverallProgress({ completed = {}, favorites = {}, bookS
   const uniquePoolWords = Array.from(uniquePoolWordsMap.values());
   const totalPoolWords = uniquePoolWords.length;
 
+  // Flashcards İstatistikleri & Aktif Ustalık
   let flashcardKnownTotal = 0;
   let flashcardUnknownTotal = 0;
+  let uniqueFlashcardMastered = 0;
   Object.values(flashcardStats).forEach(s => {
-    flashcardKnownTotal += (Number(s.known) || 0);
-    flashcardUnknownTotal += (Number(s.unknown) || 0);
+    const k = Number(s.known) || 0;
+    const u = Number(s.unknown) || 0;
+    flashcardKnownTotal += k;
+    flashcardUnknownTotal += u;
+    if (s.lastStatus === 'known' || (k > u && k > 0)) {
+      uniqueFlashcardMastered++;
+    }
   });
   const totalFlashcardReviews = flashcardKnownTotal + flashcardUnknownTotal;
   const flashcardAccuracy = totalFlashcardReviews > 0 
@@ -92,7 +103,7 @@ export function calculateOverallProgress({ completed = {}, favorites = {}, bookS
     vocabulary.map(w => (w.nl || '').toLowerCase().replace(/^(de|het|een)\s+/, '').replace(/\(.*?\)/g, '').trim())
   );
 
-  // 1. Ünite 1 - 18 Kelime Dağılımı
+  // 1. Ünite 1 - 18 Kelime Dağılımı ve Doğrulaması
   const chapterVocabStats = Array.from({ length: 18 }, (_, idx) => {
     const ch = idx + 1;
     const chCurriculumWords = vocabulary.filter(w => w.chapter === ch);
@@ -114,27 +125,34 @@ export function calculateOverallProgress({ completed = {}, favorites = {}, bookS
       const cleanNL = lowerNL.replace(/^(de|het|een)\s+/, '').replace(/\(.*?\)/g, '').trim();
       const poolItem = globalWordPool[lowerNL] || globalWordPool[cleanNL];
       const fcItem = flashcardStats[word.id] || flashcardStats[lowerNL] || flashcardStats[cleanNL] || flashcardStats[word.nl];
-      const diagStatus = vocabStatuses[lowerNL] || vocabStatuses[cleanNL] || 
-                         dialogueStatuses[lowerNL] || dialogueStatuses[cleanNL] || 
-                         readingStatuses[lowerNL] || readingStatuses[cleanNL];
+      const vs = vocabStatuses[lowerNL] || vocabStatuses[cleanNL];
+      const ds = dialogueStatuses[lowerNL] || dialogueStatuses[cleanNL];
+      const rs = readingStatuses[lowerNL] || readingStatuses[cleanNL];
+
+      // Pool kaydı sadece bu üniteye aitse veya açıkça o kelime kimliğine aitse geçerlidir
+      const isPoolItemForThisChapter = poolItem && (poolItem.chapter === ch || (!poolItem.chapter && poolItem.id && word.id === poolItem.id));
 
       const isLearned = 
-        poolItem?.status === 'known' || 
+        vs === 'known' ||
         fcItem?.lastStatus === 'known' || 
         (fcItem && fcItem.known > fcItem.unknown) || 
-        diagStatus === 'known';
+        ds === 'known' || 
+        rs === 'known' ||
+        (isPoolItemForThisChapter && poolItem.status === 'known');
 
       const isLearning = !isLearned && (
-        poolItem?.status === 'unknown' || 
+        vs === 'unknown' ||
         (fcItem && (fcItem.unknown > 0 || fcItem.known > 0)) || 
-        diagStatus === 'unknown'
+        ds === 'unknown' || 
+        rs === 'unknown' ||
+        (isPoolItemForThisChapter && poolItem.status === 'unknown')
       );
 
       if (isLearned) chCurriculumLearned++;
       else if (isLearning) chCurriculumLearning++;
     });
 
-    // Bu üniteye özel etiketlenmiş ekstra havuz kelimeleri (müfredat harici)
+    // Bu üniteye özel etiketlenmiş ekstra havuz kelimeleri (müfredat harici metin kelimeleri)
     const extraPoolChWords = uniquePoolWords.filter(w => {
       if (w.chapter !== ch) return false;
       return !curriculumCleanKeys.has(w.cleanKey);
@@ -160,12 +178,18 @@ export function calculateOverallProgress({ completed = {}, favorites = {}, bookS
     const studiedTotal = learnedCount + learningCount;
 
     // Ünitenin .2 Kelime bölümü tamamlandı mı?
-    // Kullanıcı .2'yi tamamladıysa VEYA o ünitenin tüm resmi müfredat kelimeleri biliniyorsa kesin olarak tamamlanmıştır.
-    // Ekstra okuma kelimeleri bu tamamlamayı ASLA bozamaz.
-    const isVocabSectionDone = Boolean(
-      completed[`${ch}.2`] || 
-      (chCurriculumWords.length > 0 && chCurriculumLearned >= chCurriculumWords.length)
-    );
+    // 1) Kullanıcı açıkça .2 bölümünü tamamladı olarak işaretlediyse VEYA
+    // 2) Bu ünitenin tüm resmi müfredat kelimelerini Vocabulary bölümünde veya Flashcards ile 'known' yaptıysa.
+    // (Okuma metinleri ve rastgele havuz kelimeleri .2 bölümünü ASLA sahte olarak tamamlayamaz!)
+    const allCurriculumWordsLearnedInVocab = chCurriculumWords.length > 0 && chCurriculumWords.every(w => {
+      const lowerNL = (w.nl || '').toLowerCase();
+      const cleanNL = lowerNL.replace(/^(de|het|een)\s+/, '').replace(/\(.*?\)/g, '').trim();
+      const fc = flashcardStats[w.id] || flashcardStats[lowerNL] || flashcardStats[cleanNL];
+      const vs = vocabStatuses[lowerNL] || vocabStatuses[cleanNL];
+      return vs === 'known' || fc?.lastStatus === 'known' || (fc && fc.known > fc.unknown);
+    });
+
+    const isVocabSectionDone = Boolean(completed[`${ch}.2`] || allCurriculumWordsLearnedInVocab);
     const info = CHAPTER_INFO[ch] || {};
 
     return {
@@ -178,6 +202,7 @@ export function calculateOverallProgress({ completed = {}, favorites = {}, bookS
       learnedCount,
       learningCount,
       chCurriculumLearned,
+      chCurriculumLearning,
       chCurriculumTotal: chCurriculumWords.length,
       unstudied,
       studiedTotal,
@@ -186,35 +211,70 @@ export function calculateOverallProgress({ completed = {}, favorites = {}, bookS
     };
   });
 
-  // 1. Ünite 1 - 18 Kelime Dağılımı ve Hazne Analizi (Sütun 2: Maks 3.500 XP)
+  // =========================================================================
+  // DİREK 2: KELİMELER & KELİME ÇALIŞMALARI (TAVAN: 3.500 XP)
+  // Şişirilemez, 4 Bağımsız Alt Kotaya Bölünmüş Matematiksel Dağılım
+  // =========================================================================
   const totalBookWords = vocabulary.length || 1066;
 
-  // Tüm müfredat kelimelerinden öğrenilenler
+  // 2A. Resmi Müfredat Kelimeleri (Core 1.066 Words) - Maks 2.000 XP
+  // 18 ünitenin resmi ders kitabı sözlüğü. Her kelime tam öğrenildiğinde ~1.876 XP sağlar.
   const totalCurriculumLearned = chapterVocabStats.reduce((acc, c) => acc + c.chCurriculumLearned, 0);
-  const totalCurriculumLearning = chapterVocabStats.reduce((acc, c) => acc + c.learningCount, 0);
+  const totalCurriculumLearning = chapterVocabStats.reduce((acc, c) => acc + c.chCurriculumLearning, 0);
+  const curriculumScore = totalCurriculumLearned + (totalCurriculumLearning * 0.30);
+  const curriculumVocabXP = totalBookWords > 0 
+    ? Math.min(2000, Math.round((curriculumScore / totalBookWords) * 2000))
+    : 0;
 
-  // Müfredat dışı (özel, okuma metinleri, diyaloglar) tüm benzersiz havuz kelimeleri
+  // 2B. Flashcards Pratiği & Aktif Hatırlama - Maks 800 XP
+  // Kullanıcı Flashcards çözmezse bu 800 XP kesinlikle 0 kalır; okuma metinleriyle kazanılamaz.
+  let flashcardsXP = 0;
+  if (totalFlashcardReviews > 0) {
+    const fcMasteryXP = Math.min(600, Math.round((uniqueFlashcardMastered / 300) * 600));
+    const fcVolumeBonus = Math.min(100, Math.floor(totalFlashcardReviews / 10));
+    const fcAccuracyBonus = flashcardAccuracy >= 70 
+      ? Math.min(100, Math.round(((flashcardAccuracy - 70) / 30) * 100)) 
+      : 0;
+    flashcardsXP = Math.min(800, fcMasteryXP + fcVolumeBonus + fcAccuracyBonus);
+  }
+
+  // 2C. Okuma & Diyalog Metin Kelimeleri (Contextual Vocabulary) - Maks 500 XP
+  // Metinlerde karşılaşılan ve işaretlenen kelimeler. Kaç bin kelime işaretlenirse işaretlensin 500 XP'yi AŞAMAZ!
   const extraPoolWords = uniquePoolWords.filter(w => !curriculumCleanKeys.has(w.cleanKey));
   const totalExtraLearned = extraPoolWords.filter(w => w.status === 'known').length;
   const totalExtraLearning = extraPoolWords.filter(w => w.status === 'unknown').length;
+  const readingContextScore = totalExtraLearned + (totalExtraLearning * 0.30);
+  const readingContextXP = Math.min(500, Math.round(readingContextScore));
+
+  // 2D. Düzensiz Fiiller & Kişisel Hazne - Maks 200 XP
+  // Düzensiz fiil tablosu ve favori kelimeler.
+  const starredVerbsCount = Array.isArray(starredVerbs) ? starredVerbs.length : 0;
+  const starredVerbsXP = Math.min(150, starredVerbsCount * 3);
+  const customBonus = Math.min(50, Math.floor(totalExtraLearned / 10));
+  const verbsAndStarredXP = Math.min(200, starredVerbsXP + customBonus);
+
+  // Toplam Kelimeler & Hazne XP (Maks 3.500 XP)
+  const wordsXP = Math.min(3500, curriculumVocabXP + flashcardsXP + readingContextXP + verbsAndStarredXP);
+  const wordsProgressPercent = Math.min(100, Math.round((wordsXP / 3500) * 100));
 
   const totalLearnedWords = totalCurriculumLearned + totalExtraLearned;
   const totalLearningWords = totalCurriculumLearning + totalExtraLearning;
-  const starredVerbsCount = Array.isArray(starredVerbs) ? starredVerbs.length : 0;
-
-  // Hedef kelime evreni: Sabit 1.066 müfredat kelimesi referansı.
-  // Ekstra kelimeler öğrenildikçe puan kazandırır, fakat hedef tavanını genişleterek kazanılmış ilerlemeyi asla düşürmez.
   const targetWordCount = totalBookWords;
-  const flashcardBonus = Math.min(100, Math.floor(totalFlashcardReviews / 20));
-  const starredBonus = Math.min(50, starredVerbsCount);
-  const effectiveWordScore = totalLearnedWords + (totalLearningWords * 0.30) + flashcardBonus + starredBonus;
-  const wordProgressRatio = targetWordCount > 0 
-    ? Math.min(1.0, effectiveWordScore / targetWordCount) 
-    : 0;
-  const wordsXP = Math.min(3500, Math.round(wordProgressRatio * 3500));
-  const wordsProgressPercent = Math.min(100, Math.round((wordsXP / 3500) * 100));
 
-  // 2. Soru & Quiz İstatistikleri (Sütun 3: Maks 3.000 XP)
+  const wordsSubBreakdown = {
+    curriculumVocabXP,
+    curriculumVocabMaxXP: 2000,
+    flashcardsXP,
+    flashcardsMaxXP: 800,
+    readingContextXP,
+    readingContextMaxXP: 500,
+    verbsAndStarredXP,
+    verbsAndStarredMaxXP: 200
+  };
+
+  // =========================================================================
+  // DİREK 3: SORU BANKASI & QUİZLER (TAVAN: 3.000 XP)
+  // =========================================================================
   const attemptedQIds = Object.keys(quizHistory);
   const uniqueAttempted = attemptedQIds.length;
   let totalQuizCorrect = 0;
@@ -240,16 +300,48 @@ export function calculateOverallProgress({ completed = {}, favorites = {}, bookS
   const goodQuestionsCount = Object.keys(goodQuestions).length;
 
   const uniqueCorrect = attemptedQIds.filter(id => (quizHistory[id]?.correct || 0) > 0).length;
-  const accuracyBonus = quizAccuracy >= 70 ? Math.round((quizAccuracy - 70) * 3.33) : 0; // Maks 100 XP
-  const repetitionBonus = Math.min(50, Math.floor(totalQuizCorrect / 20)); // Maks 50 XP
-  const masteryXP = totalQuizQuestions > 0 ? Math.min(250, Math.round((masteredCount / totalQuizQuestions) * 250)) : 0;
-  const baseQuestionsXP = totalQuizQuestions > 0 ? Math.min(2600, Math.round((uniqueCorrect / totalQuizQuestions) * 2600)) : 0;
-  const questionsXP = Math.min(3000, baseQuestionsXP + masteryXP + accuracyBonus + repetitionBonus);
+
+  // 3A. Benzersiz Doğru Çözülen Sorular: Maks 2.200 XP
+  const baseQuestionsXP = totalQuizQuestions > 0 
+    ? Math.min(2200, Math.round((uniqueCorrect / totalQuizQuestions) * 2200)) 
+    : 0;
+
+  // 3B. Sıfır Hata ile Ustalık: Maks 400 XP
+  const masteryXP = totalQuizQuestions > 0 
+    ? Math.min(400, Math.round((masteredCount / totalQuizQuestions) * 400)) 
+    : 0;
+
+  // 3C. Yüksek Doğruluk Oranı (%70+): Maks 250 XP (En az 20 soru çözümüyle aktive olur)
+  const accuracyBonus = (quizAccuracy >= 70 && totalQuizAttempts >= 20) 
+    ? Math.min(250, Math.round(((quizAccuracy - 70) / 30) * 250)) 
+    : 0;
+
+  // 3D. Tekrar & İyi Soru Bildirimi: Maks 150 XP
+  const repetitionBonus = Math.min(100, Math.floor(totalQuizCorrect / 30));
+  const goodBonus = Math.min(50, goodQuestionsCount * 5);
+  const extraQuestionsXP = Math.min(150, repetitionBonus + goodBonus);
+
+  const questionsXP = Math.min(3000, baseQuestionsXP + masteryXP + accuracyBonus + extraQuestionsXP);
   const questionsProgressPercent = Math.min(100, Math.round((questionsXP / 3000) * 100));
 
-  // 3. Bölüm & Ders İstatistikleri (Sütun 1: Maks 3.500 XP)
+  const questionsSubBreakdown = {
+    baseQuestionsXP,
+    baseQuestionsMaxXP: 2200,
+    masteryXP,
+    masteryMaxXP: 400,
+    accuracyBonus,
+    accuracyBonusMaxXP: 250,
+    extraQuestionsXP,
+    extraQuestionsMaxXP: 150
+  };
+
+  // =========================================================================
+  // DİREK 1: MÜFREDAT DERSLERİ & BÖLÜMLER (TAVAN: 3.500 XP)
+  // =========================================================================
   const allSections = (bookSections && bookSections.length > 0) ? bookSections : defaultBookSections;
   const totalBookSections = allSections.length || 169;
+
+  // Tamamlanan Bölümler (169 Bölüm - Maks 2.800 XP)
   const completedSectionsCount = allSections.filter(s => {
     if (completed[s.id]) return true;
     if (s.id.endsWith('.2')) {
@@ -265,14 +357,14 @@ export function calculateOverallProgress({ completed = {}, favorites = {}, bookS
     if (s.id.endsWith('.2')) {
       const v = chapterVocabStats.find(c => c.chapterNum === s.chapter);
       if (v && v.progress > 0 && !v.isVocabSectionDone) {
-        partialSectionPoints += (v.progress / 100);
+        partialSectionPoints += (v.progress / 100) * 0.5;
       }
     } else if (s.id.endsWith('.1')) {
       try {
         const diagSt = JSON.parse(localStorage.getItem(`dialogueWordStatuses_${s.chapter}`)) || {};
         const studiedCount = Object.keys(diagSt).length;
         if (studiedCount > 0) {
-          partialSectionPoints += Math.min(0.5, studiedCount * 0.05);
+          partialSectionPoints += Math.min(0.4, studiedCount * 0.04);
         }
       } catch (e) {}
     } else if (s.id.includes('Reading')) {
@@ -280,11 +372,17 @@ export function calculateOverallProgress({ completed = {}, favorites = {}, bookS
         const readSt = JSON.parse(localStorage.getItem(`readingWordStatuses_${s.chapter}`)) || {};
         const studiedCount = Object.keys(readSt).length;
         if (studiedCount > 0) {
-          partialSectionPoints += Math.min(0.5, studiedCount * 0.05);
+          partialSectionPoints += Math.min(0.4, studiedCount * 0.04);
         }
       } catch (e) {}
     }
   });
+
+  const baseSectionsXP = totalBookSections > 0 
+    ? Math.min(2800, Math.round((completedSectionsCount / totalBookSections) * 2800))
+    : 0;
+  const partialSectionsXP = Math.min(100, Math.round((partialSectionPoints / totalBookSections) * 1000));
+  const completedSectionsXP = Math.min(2800, baseSectionsXP + partialSectionsXP);
 
   const totalFavoritesCount = Object.keys(favorites).length;
 
@@ -335,20 +433,30 @@ export function calculateOverallProgress({ completed = {}, favorites = {}, bookS
     };
   });
 
+  // 18 Tam Ünite Ustalığı (18 Chapters - Maks 400 XP)
   const completedChaptersCount = chapterSectionStats.filter(c => c.isFullyDone).length;
+  const chapterMasteryXP = Math.min(400, Math.round((completedChaptersCount / 18) * 400));
 
-  // 169 Bölüm (3.000 XP) + 18 Tam Ünite Tamamlama Rozeti (500 XP) = 3.500 XP
-  const baseSectionProgressRatio = totalBookSections > 0 
-    ? Math.min(1.0, (completedSectionsCount + (partialSectionPoints * 0.5)) / totalBookSections)
-    : 0;
-  const baseSectionsXP = Math.round(baseSectionProgressRatio * 3000);
-  const chapterMasteryXP = Math.round((completedChaptersCount / 18) * 500);
-  const sectionsXP = Math.min(3500, baseSectionsXP + chapterMasteryXP);
+  // Gramer Notları & Favoriler: Maks 300 XP
+  const grammarXP = Math.min(300, totalFavoritesCount * 30);
+
+  const sectionsXP = Math.min(3500, completedSectionsXP + chapterMasteryXP + grammarXP);
   const sectionsProgressPercent = Math.min(100, Math.round((sectionsXP / 3500) * 100));
 
+  const sectionsSubBreakdown = {
+    completedSectionsXP: baseSectionsXP,
+    completedSectionsMaxXP: 2800,
+    chapterMasteryXP,
+    chapterMasteryMaxXP: 400,
+    grammarXP,
+    grammarMaxXP: 300
+  };
+
+  // =========================================================================
   // 4. BİRLEŞİK TOPLAM XP (TAVAN: 10.000 XP) & GENEL İLERLEME (%)
+  // =========================================================================
   const totalXP = Math.min(10000, sectionsXP + wordsXP + questionsXP);
-  const hasAnyActivity = totalXP > 0 || uniqueAttempted > 0 || totalLearnedWords > 0 || totalLearningWords > 0 || completedSectionsCount > 0 || totalFlashcardReviews > 0 || partialSectionPoints > 0;
+  const hasAnyActivity = totalXP > 0 || uniqueAttempted > 0 || totalLearnedWords > 0 || completedSectionsCount > 0 || totalFlashcardReviews > 0 || partialSectionPoints > 0;
   const overallProgress = Math.min(100, hasAnyActivity ? Math.max(1, Math.round((totalXP / 10000) * 100)) : 0);
 
   // 5. XP & Seviye Sistemi (10 Kademe)
@@ -379,6 +487,7 @@ export function calculateOverallProgress({ completed = {}, favorites = {}, bookS
     masteredCount,
     weakCount,
     goodQuestionsCount,
+    questionsSubBreakdown,
 
     // 2. Kelimeler & Hazne (Maks 3.500 XP)
     wordsXP,
@@ -389,9 +498,14 @@ export function calculateOverallProgress({ completed = {}, favorites = {}, bookS
     totalBookWords,
     totalLearnedWords,
     totalLearningWords,
+    totalCurriculumLearned,
+    totalCurriculumLearning,
+    totalExtraLearned,
     totalFlashcardReviews,
     flashcardAccuracy,
+    uniqueFlashcardMastered,
     chapterVocabStats,
+    wordsSubBreakdown,
 
     // 3. Bölümler & Dersler (Maks 3.500 XP)
     sectionsXP,
@@ -405,6 +519,7 @@ export function calculateOverallProgress({ completed = {}, favorites = {}, bookS
     chapterSectionStats,
     totalFavoritesCount,
     starredVerbsCount,
+    sectionsSubBreakdown,
 
     // Seviye & Tier
     currentTier,
@@ -413,4 +528,3 @@ export function calculateOverallProgress({ completed = {}, favorites = {}, bookS
     xpToNextLevel
   };
 }
-
