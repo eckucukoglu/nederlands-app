@@ -5,7 +5,8 @@ import {
   buildSpeechChunks, 
   detectSpeakerGender,
   isRealDutchVoice,
-  getDutchAudioUrl
+  getDutchAudioUrl,
+  speakDutch
 } from './speech';
 
 describe('Speech Synthesis Robustness & Chunking Tests', () => {
@@ -117,6 +118,32 @@ describe('Speech Synthesis Robustness & Chunking Tests', () => {
     expect(url).toContain('tl=nl');
     expect(url).toContain('client=tw-ob');
     expect(url).toContain('q=Goedemorgen%2C%20hoe%20gaat%20het%3F');
+  });
+
+  test('speakDutch only speaks once per word without duplicate playback', () => {
+    const speakMock = jest.fn();
+    const cancelMock = jest.fn();
+
+    global.SpeechSynthesisUtterance = function(text) {
+      this.text = text;
+      this.volume = 1.0;
+      this.rate = 1.0;
+      this.pitch = 1.0;
+      this.lang = 'nl-NL';
+    };
+
+    window.speechSynthesis = {
+      speak: speakMock,
+      cancel: cancelMock,
+      getVoices: jest.fn().mockReturnValue([{ lang: 'nl-NL', name: 'Google Nederlands' }]),
+      speaking: false,
+      paused: false
+    };
+
+    speakDutch('welkom');
+
+    expect(speakMock).toHaveBeenCalledTimes(1);
+    expect(speakMock.mock.calls[0][0].text).toBe('welkom');
   });
 });
 

@@ -598,135 +598,81 @@ export const speakDutchWithHighlight = (text, options = {}) => {
       }, 35);
     };
 
-    // --- Web Speech API Yedek Sentezleyici ---
-    const playViaWebSpeech = () => {
-      if (typeof window === 'undefined' || !window.speechSynthesis) {
-        advanceToNextChunk();
-        return;
-      }
+    // --- Web Speech API Ses Sentezleyici (Kesin Tekil Seslendirme) ---
+    if (typeof window === 'undefined' || !window.speechSynthesis) {
+      advanceToNextChunk();
+      return;
+    }
 
-      const utterance = new SpeechSynthesisUtterance(chunk.text);
-      utterance.volume = 1.0;
-      utterance.rate = currentRate;
-      utterance.pitch = currentPitch;
+    const utterance = new SpeechSynthesisUtterance(chunk.text);
+    utterance.volume = 1.0;
+    utterance.rate = currentRate;
+    utterance.pitch = currentPitch;
 
-      if (voice && isRealDutchVoice(voice)) {
-        utterance.voice = voice;
-        utterance.lang = voice.lang || 'nl-NL';
-      } else {
-        utterance.lang = 'nl-NL';
-      }
+    if (voice && isRealDutchVoice(voice)) {
+      utterance.voice = voice;
+      utterance.lang = voice.lang || 'nl-NL';
+    } else {
+      utterance.lang = 'nl-NL';
+    }
 
-      activeUtterances.add(utterance);
+    activeUtterances.add(utterance);
 
-      const maxExpectedMs = Math.max(3000, (chunk.text.length / (7 * currentRate)) * 1000 + 3000);
-      watchdogTimer = setTimeout(() => {
-        if (sessionId !== currentHighlightSession) return;
-        if (activeUtterances.has(utterance)) {
-          activeUtterances.delete(utterance);
-          advanceToNextChunk();
-        }
-      }, maxExpectedMs);
-
-      utterance.onstart = () => {
-        if (sessionId !== currentHighlightSession) return;
-        if (index === 0 && options.onStart) options.onStart();
-        const estDurationMs = Math.max(700, (chunk.text.length / (13.5 * currentRate)) * 1000);
-        runWordHighlighter(Date.now(), estDurationMs);
-      };
-
-      utterance.onboundary = (e) => {
-        if (sessionId !== currentHighlightSession) return;
-        if (e.name && e.name !== 'word') return;
-        clearCurrentTimers();
-        const charIdx = e.charIndex !== undefined ? e.charIndex : 0;
-        for (let i = 0; i < chunkTokens.length; i++) {
-          const localStart = chunkTokens[i].startChar - chunk.startChar;
-          const nextLocalStart = i < chunkTokens.length - 1
-            ? chunkTokens[i + 1].startChar - chunk.startChar
-            : Infinity;
-
-          if (charIdx >= localStart && charIdx < nextLocalStart) {
-            const targetIdx = chunk.startTokenIdx + i;
-            if (targetIdx >= currentWordIdx) {
-              emitWord(targetIdx);
-            }
-            break;
-          }
-        }
-      };
-
-      utterance.onend = () => {
-        activeUtterances.delete(utterance);
-        advanceToNextChunk();
-      };
-
-      utterance.onerror = (e) => {
-        activeUtterances.delete(utterance);
-        if (e.error === 'interrupted' || e.error === 'canceled') {
-          cleanup();
-          return;
-        }
-        advanceToNextChunk();
-      };
-
-      try {
-        window.speechSynthesis.speak(utterance);
-      } catch (err) {
-        advanceToNextChunk();
-      }
-    };
-
-    // --- BİRİNCİL MOTOR: Google Doğal İnsansı Hollandaca Ses Akışı ---
-    // Cihazın işletim sistemi veya tarayıcısından bağımsız olarak %100 saf, otantik ve
-    // asla İngilizceye kaymayan gerçek Hollandaca insan telaffuzunu garanti eder.
-    const audioUrl = getDutchAudioUrl(chunk.text);
-    const audio = getSharedAudio() || new Audio();
-
-    audio.playbackRate = currentRate;
-    audio.src = audioUrl;
-
-    const maxAudioMs = Math.max(4000, (chunk.text.length / (6 * currentRate)) * 1000 + 3500);
+    const maxExpectedMs = Math.max(3000, (chunk.text.length / (7 * currentRate)) * 1000 + 3000);
     watchdogTimer = setTimeout(() => {
       if (sessionId !== currentHighlightSession) return;
-      advanceToNextChunk();
-    }, maxAudioMs);
+      if (activeUtterances.has(utterance)) {
+        activeUtterances.delete(utterance);
+        advanceToNextChunk();
+      }
+    }, maxExpectedMs);
 
-    audio.onplay = () => {
-      if (sessionId !== currentHighlightSession) {
-        try { audio.pause(); } catch (e) {}
+    utterance.onstart = () => {
+      if (sessionId !== currentHighlightSession) return;
+      if (index === 0 && options.onStart) options.onStart();
+      const estDurationMs = Math.max(700, (chunk.text.length / (13.5 * currentRate)) * 1000);
+      runWordHighlighter(Date.now(), estDurationMs);
+    };
+
+    utterance.onboundary = (e) => {
+      if (sessionId !== currentHighlightSession) return;
+      if (e.name && e.name !== 'word') return;
+      clearCurrentTimers();
+      const charIdx = e.charIndex !== undefined ? e.charIndex : 0;
+      for (let i = 0; i < chunkTokens.length; i++) {
+        const localStart = chunkTokens[i].startChar - chunk.startChar;
+        const nextLocalStart = i < chunkTokens.length - 1
+          ? chunkTokens[i + 1].startChar - chunk.startChar
+          : Infinity;
+
+        if (charIdx >= localStart && charIdx < nextLocalStart) {
+          const targetIdx = chunk.startTokenIdx + i;
+          if (targetIdx >= currentWordIdx) {
+            emitWord(targetIdx);
+          }
+          break;
+        }
+      }
+    };
+
+    utterance.onend = () => {
+      activeUtterances.delete(utterance);
+      advanceToNextChunk();
+    };
+
+    utterance.onerror = (e) => {
+      activeUtterances.delete(utterance);
+      if (e.error === 'interrupted' || e.error === 'canceled') {
+        cleanup();
         return;
       }
-      if (index === 0 && options.onStart) options.onStart();
-
-      const durationMs = (audio.duration && !isNaN(audio.duration) && audio.duration > 0)
-        ? (audio.duration / currentRate) * 1000
-        : Math.max(700, (chunk.text.length / (13.5 * currentRate)) * 1000);
-
-      runWordHighlighter(Date.now(), durationMs);
-    };
-
-    audio.onended = () => {
       advanceToNextChunk();
-    };
-
-    audio.onerror = () => {
-      clearCurrentTimers();
-      playViaWebSpeech();
     };
 
     try {
-      const playPromise = audio.play();
-      if (playPromise !== undefined) {
-        playPromise.catch(() => {
-          clearCurrentTimers();
-          if (sessionId !== currentHighlightSession) return;
-          playViaWebSpeech();
-        });
-      }
+      window.speechSynthesis.speak(utterance);
     } catch (err) {
-      clearCurrentTimers();
-      playViaWebSpeech();
+      advanceToNextChunk();
     }
   };
 

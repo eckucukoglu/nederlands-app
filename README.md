@@ -1,6 +1,6 @@
 # 🇳🇱 Nederlands in Gang - Interactief Oefenportaal (A1 → A2)
 
-[![Version](https://img.shields.io/badge/version-v0.1.3-10B981.svg?style=for-the-badge)](https://github.com/eckucukoglu/nederlands-app/releases/tag/v0.1.3)
+[![Version](https://img.shields.io/badge/version-v0.1.4-10B981.svg?style=for-the-badge)](https://github.com/eckucukoglu/nederlands-app/releases/tag/v0.1.4)
 [![Firebase Hosting](https://img.shields.io/badge/hosting-live-FFCA28.svg?style=for-the-badge&logo=firebase&logoColor=black)](https://nederlands-app.web.app)
 [![React](https://img.shields.io/badge/react-19.x-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)](https://react.dev/)
 [![TailwindCSS](https://img.shields.io/badge/tailwindcss-3.x-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
@@ -15,9 +15,12 @@ An open-source, interactive, and personalized web application designed to track 
 
 ---
 
-## 🌟 Key Highlights & Features (v0.1.3)
+## 🌟 Key Highlights & Features (v0.1.4)
 
-### 🎛️ 1. Smart Collapsible Dashboard & Adaptive Onboarding (v0.1.3)
+### 🔊 1. Single Speech Playback Fix (v0.1.4)
+* **Resolved Double-Speaking in Flashcards, Dictionary & Dialogues**: Eliminated duplicate utterance queuing caused by parallel audio error and promise catch triggers when playing individual word pronunciations. Words now cleanly and instantaneously speak exactly once via authentic Dutch speech synthesis.
+
+### 🎛️ 2. Smart Collapsible Dashboard & Adaptive Onboarding
 * **Collapsible Accordion Progress & Guide Cards**: Both "Birleşik Öğrenme İlerlemesi" (Combined Learning Progress) and "Uygulama Kullanım Kılavuzu" (App Usage Guide) feature interactive headers that can be expanded or collapsed with a single click.
 * **Intelligent Progress-Adaptive Layout**:
   * **Beginner Users (< 5% Progress)**: The App Usage Guide is placed at the top and expanded by default to introduce course tools, while the detailed progress card is placed below and collapsed with a sleek summary bar.
