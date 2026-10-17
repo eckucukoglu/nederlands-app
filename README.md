@@ -1,6 +1,6 @@
 # 🇳🇱 Nederlands in Gang - Interactief Oefenportaal (A1 → A2)
 
-[![Version](https://img.shields.io/badge/version-v0.1.9-10B981.svg?style=for-the-badge)](https://github.com/eckucukoglu/nederlands-app/releases/tag/v0.1.9)
+[![Version](https://img.shields.io/badge/version-v0.1.10-10B981.svg?style=for-the-badge)](https://github.com/eckucukoglu/nederlands-app/releases/tag/v0.1.10)
 [![Firebase Hosting](https://img.shields.io/badge/hosting-live-FFCA28.svg?style=for-the-badge&logo=firebase&logoColor=black)](https://nederlands-app.web.app)
 [![React](https://img.shields.io/badge/react-19.x-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)](https://react.dev/)
 [![TailwindCSS](https://img.shields.io/badge/tailwindcss-3.x-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
@@ -15,9 +15,17 @@ An open-source, interactive, and personalized web application designed to track 
 
 ---
 
-## 🌟 Key Highlights & Features (v0.1.9)
+## 🌟 Key Highlights & Features (v0.1.10)
 
-### 🧮 1. Mathematically Precise, Anti-Inflation 10,000 XP Scoring Engine (v0.1.9)
+### 🎯 1. Cross-Chapter Isolation, Context Scaling & Honest 2-Chapter Metric Alignment (v0.1.10)
+* **Elimination of Cross-Chapter Word Pollution**: Resolved an issue where common words encountered in Chapter 1 or 2 reading passages/dialogues were stored with their source textbook chapter IDs (e.g. Chapter 5 or 8), unintentionally leaking into and marking other chapters' official curriculum words as known. Reading words are now strictly scoped to the active chapter and dedicated to the 2C Context Quota.
+* **Proportionate 1,500 Target Word Context Scaling**: Contextual reading & dialogue words (Max 500 XP) are now mathematically scaled across ~1,500 total words found throughout all 18 chapters (~0.33 XP per word). Marking words in only 2 reading passages now appropriately awards ~50 XP rather than maxing out the entire 500 XP book ceiling.
+* **Disentangled Vocabulary Card Metrics**: The Dashboard Vocabulary card now cleanly distinguishes **1,066 Core Curriculum Words** (`totalCurriculumLearned / 1066`) from **Contextual Text Words** (`+totalExtraLearned`), eliminating misleading figures like `317/1066 known` when only 2 chapters were studied.
+* **Exact 2-Chapter Progression (~3.5% - 4.0%)**: Studying only 2 chapters' vocabulary (~164 words) and reading texts now yields an honest, mathematically precise **~3.5% - 4.0%** overall progress (matching the theoretical $\frac{2}{18} \times \text{Weight}$), eliminating premature 14% inflation.
+* **Transparent (i) Progress Mathematics Modal**: The info modal now details the Anti-Inflation Principle, exact point weights per action (~1.88 XP/core word, ~16.57 XP/section, ~0.72 XP/quiz question, ~0.33 XP/context word), and live interactive breakdowns.
+* **Automated Test Suite Expansion**: Added test case `TC10: 2 Chapters User Scenario` verifying strict isolation, correct word counts (164 core words), and ~3.5% - 4.5% overall progress.
+
+### 🧮 2. Mathematically Precise, Anti-Inflation 10,000 XP Scoring Engine (v0.1.9)
 * **Root-Cause Anti-Inflation Architecture**: Completely overhauled progress and XP calculations to eliminate single-activity inflation. Users can no longer inflate "Words XP" to 100% simply by marking reading passage paragraphs as "known" without studying the core curriculum vocabulary or using flashcards.
 * **Strict Sub-Quotas & Hard Ceilings Across 3 Dedicated Pillars**:
   * **Pillar 1: Curriculum & Course Sections (Max 3,500 XP)**:

@@ -228,8 +228,8 @@ describe('Experience and Progress System Robustness & Scoring Engine Tests', () 
       });
       localStorage.setItem(`vocabularyWordStatuses_${ch}`, JSON.stringify(chVocab));
     }
-    // Ekstra 1.000 metin kelimesi
-    for (let i = 0; i < 1000; i++) {
+    // Ekstra 1.500 metin kelimesi (tüm 18 ünite metin havuzu)
+    for (let i = 0; i < 1500; i++) {
       pool[`extra_${i}`] = { nl: `extra_${i}`, status: 'known', chapter: (i % 18) + 1 };
     }
     localStorage.setItem('globalWordPool', JSON.stringify(pool));
@@ -241,8 +241,8 @@ describe('Experience and Progress System Robustness & Scoring Engine Tests', () 
     }
     localStorage.setItem('flashcardStats', JSON.stringify(fc));
 
-    // 4. 50 düzensiz fiil
-    const verbs = Array.from({ length: 50 }, (_, i) => `verb_${i}`);
+    // 4. 100 düzensiz fiil
+    const verbs = Array.from({ length: 100 }, (_, i) => `verb_${i}`);
     localStorage.setItem('starredIrregularVerbs', JSON.stringify(verbs));
 
     // 5. 3.000 soru çözümü %100 başarıyla
@@ -280,5 +280,66 @@ describe('Experience and Progress System Robustness & Scoring Engine Tests', () 
 
     const stats = calculateOverallProgress();
     expect(stats.totalPoolWords).toBe(2);
+  });
+
+  test('TC10: 2 Chapters User Scenario - Studying vocabulary and reading in 2 chapters awards proportional progress (~3.5% - 4.5%), NOT 14%', () => {
+    // Kullanıcı senaryosu: Kullanıcı yalnızca Chapter 1 ve Chapter 2'nin kelimelerini ve okuma parçalarını tamamlar.
+    // Chapter 1'de 89 kelime, Chapter 2'de 75 kelime = toplam 164 müfredat kelimesi.
+    // Okuma metinlerinden de yaklaşık 150 ek metin kelimesi işaretlenir.
+    const pool = {};
+    const ch1Vocab = {};
+    vocabulary.filter(w => w.chapter === 1).forEach(w => {
+      ch1Vocab[(w.nl || '').toLowerCase()] = 'known';
+      pool[(w.nl || '').toLowerCase()] = { ...w, status: 'known', chapter: 1 };
+    });
+    localStorage.setItem('vocabularyWordStatuses_1', JSON.stringify(ch1Vocab));
+
+    const ch2Vocab = {};
+    vocabulary.filter(w => w.chapter === 2).forEach(w => {
+      ch2Vocab[(w.nl || '').toLowerCase()] = 'known';
+      pool[(w.nl || '').toLowerCase()] = { ...w, status: 'known', chapter: 2 };
+    });
+    localStorage.setItem('vocabularyWordStatuses_2', JSON.stringify(ch2Vocab));
+
+    // Chapter 1 ve Chapter 2 okuma parçalarından 150 metin kelimesi
+    const r1 = {};
+    const r2 = {};
+    for (let i = 0; i < 75; i++) {
+      r1[`r1_word_${i}`] = 'known';
+      pool[`r1_word_${i}`] = { nl: `r1_word_${i}`, status: 'known', chapter: 1 };
+      r2[`r2_word_${i}`] = 'known';
+      pool[`r2_word_${i}`] = { nl: `r2_word_${i}`, status: 'known', chapter: 2 };
+    }
+    localStorage.setItem('readingWordStatuses_1', JSON.stringify(r1));
+    localStorage.setItem('readingWordStatuses_2', JSON.stringify(r2));
+    localStorage.setItem('globalWordPool', JSON.stringify(pool));
+
+    // Kullanıcı Chapter 1 ve 2'nin kelime ve okuma bölümlerini tamamlamış
+    const completed = { '1.2': true, 'Reading-1': true, '2.2': true, 'Reading-2': true };
+    const stats = calculateOverallProgress({ completed });
+
+    // 1. Müfredat kelimeleri sayısı tam 164 olmalı, asla 317 veya başka bir şişme olmamalıdır!
+    expect(stats.totalCurriculumLearned).toBe(164);
+    expect(stats.totalLearnedWords).toBe(164);
+
+    // 2. Metin kelimeleri 150 olmalıdır
+    expect(stats.totalExtraLearned).toBe(150);
+
+    // 3. Kelime puanı ~350 - 400 XP aralığında olmalı (oran: %10 - %12)
+    expect(stats.wordsXP).toBeGreaterThanOrEqual(300);
+    expect(stats.wordsXP).toBeLessThanOrEqual(450);
+    expect(stats.wordsProgressPercent).toBeLessThanOrEqual(13);
+
+    // 4. Genel İlerleme kesinlikle %14 OLMAMALI, %3 ile %5 arasında hakkaniyetli kalmalıdır!
+    expect(stats.overallProgress).toBeGreaterThanOrEqual(3);
+    expect(stats.overallProgress).toBeLessThanOrEqual(5);
+
+    // 5. Dokunulmayan Chapter 3..18'in kelime ilerlemesi kesinlikle 0 kalmalıdır
+    for (let ch = 3; ch <= 18; ch++) {
+      const chStat = stats.chapterVocabStats.find(c => c.chapterNum === ch);
+      expect(chStat.progress).toBe(0);
+      expect(chStat.chCurriculumLearned).toBe(0);
+      expect(chStat.isVocabSectionDone).toBe(false);
+    }
   });
 });

@@ -129,23 +129,23 @@ export function calculateOverallProgress({ completed = {}, favorites = {}, bookS
       const ds = dialogueStatuses[lowerNL] || dialogueStatuses[cleanNL];
       const rs = readingStatuses[lowerNL] || readingStatuses[cleanNL];
 
-      // Pool kaydı sadece bu üniteye aitse veya açıkça o kelime kimliğine aitse geçerlidir
-      const isPoolItemForThisChapter = poolItem && (poolItem.chapter === ch || (!poolItem.chapter && poolItem.id && word.id === poolItem.id));
+      // Müfredat kelimesinin öğrenilmiş sayılması için:
+      // 1) Bu ünitenin Kelime Bölümünde (VocabularySection) 'biliyorum' yapılması (vs === 'known') VEYA
+      // 2) Bu kelimenin Flashcards ile pekiştirilmesi (fcItem) VEYA
+      // 3) Açıkça bu üniteye ait geçerli sözlük kaydının bulunması (poolItem.chapter === ch && poolItem.status === 'known')
+      // (Okuma metinleri ve diyaloglar bu ünitenin veya başka ünitelerin müfredat sözlüğünü sahte olarak tamamlayamaz; onlar 2C bağlam kotasına gider)
+      const isPoolItemForThisChapter = poolItem && (poolItem.chapter === ch && poolItem.status === 'known' && !rs && !ds);
 
       const isLearned = 
         vs === 'known' ||
         fcItem?.lastStatus === 'known' || 
         (fcItem && fcItem.known > fcItem.unknown) || 
-        ds === 'known' || 
-        rs === 'known' ||
-        (isPoolItemForThisChapter && poolItem.status === 'known');
+        isPoolItemForThisChapter;
 
       const isLearning = !isLearned && (
         vs === 'unknown' ||
         (fcItem && (fcItem.unknown > 0 || fcItem.known > 0)) || 
-        ds === 'unknown' || 
-        rs === 'unknown' ||
-        (isPoolItemForThisChapter && poolItem.status === 'unknown')
+        (poolItem && poolItem.chapter === ch && poolItem.status === 'unknown')
       );
 
       if (isLearned) chCurriculumLearned++;
@@ -239,26 +239,28 @@ export function calculateOverallProgress({ completed = {}, favorites = {}, bookS
   }
 
   // 2C. Okuma & Diyalog Metin Kelimeleri (Contextual Vocabulary) - Maks 500 XP
-  // Metinlerde karşılaşılan ve işaretlenen kelimeler. Kaç bin kelime işaretlenirse işaretlensin 500 XP'yi AŞAMAZ!
+  // 18 ünitenin okuma parçalarında ve diyaloglarında geçen ~1.500 bağlamsal kelime.
+  // 18 ünitenin tamamına dengeli dağıtılmıştır (kelime başı ~0.33 XP).
   const extraPoolWords = uniquePoolWords.filter(w => !curriculumCleanKeys.has(w.cleanKey));
   const totalExtraLearned = extraPoolWords.filter(w => w.status === 'known').length;
   const totalExtraLearning = extraPoolWords.filter(w => w.status === 'unknown').length;
   const readingContextScore = totalExtraLearned + (totalExtraLearning * 0.30);
-  const readingContextXP = Math.min(500, Math.round(readingContextScore));
+  const targetReadingWords = 1500;
+  const readingContextXP = Math.min(500, Math.round((readingContextScore / targetReadingWords) * 500));
 
   // 2D. Düzensiz Fiiller & Kişisel Hazne - Maks 200 XP
-  // Düzensiz fiil tablosu ve favori kelimeler.
+  // 100 düzensiz fiil çekim tablosu (150 XP) + kişisel kelime haznesi (50 XP).
   const starredVerbsCount = Array.isArray(starredVerbs) ? starredVerbs.length : 0;
-  const starredVerbsXP = Math.min(150, starredVerbsCount * 3);
-  const customBonus = Math.min(50, Math.floor(totalExtraLearned / 10));
+  const starredVerbsXP = Math.min(150, Math.round(starredVerbsCount * 1.5));
+  const customBonus = Math.min(50, Math.floor(totalExtraLearned / 30));
   const verbsAndStarredXP = Math.min(200, starredVerbsXP + customBonus);
 
   // Toplam Kelimeler & Hazne XP (Maks 3.500 XP)
   const wordsXP = Math.min(3500, curriculumVocabXP + flashcardsXP + readingContextXP + verbsAndStarredXP);
   const wordsProgressPercent = Math.min(100, Math.round((wordsXP / 3500) * 100));
 
-  const totalLearnedWords = totalCurriculumLearned + totalExtraLearned;
-  const totalLearningWords = totalCurriculumLearning + totalExtraLearning;
+  const totalLearnedWords = totalCurriculumLearned;
+  const totalLearningWords = totalCurriculumLearning;
   const targetWordCount = totalBookWords;
 
   const wordsSubBreakdown = {
@@ -381,7 +383,7 @@ export function calculateOverallProgress({ completed = {}, favorites = {}, bookS
   const baseSectionsXP = totalBookSections > 0 
     ? Math.min(2800, Math.round((completedSectionsCount / totalBookSections) * 2800))
     : 0;
-  const partialSectionsXP = Math.min(100, Math.round((partialSectionPoints / totalBookSections) * 1000));
+  const partialSectionsXP = Math.min(50, Math.round((partialSectionPoints / totalBookSections) * 500));
   const completedSectionsXP = Math.min(2800, baseSectionsXP + partialSectionsXP);
 
   const totalFavoritesCount = Object.keys(favorites).length;

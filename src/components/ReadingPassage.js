@@ -588,7 +588,7 @@ export default function ReadingPassage({
         hasChanges = true;
         const entryWithChapter = {
           ...wordObj,
-          chapter: wordObj.chapter || chapterId,
+          chapter: chapterId,
           status: 'known',
           addedAt: new Date().toISOString()
         };
@@ -632,7 +632,7 @@ export default function ReadingPassage({
     } else {
       pool[wordObj.nl.toLowerCase()] = {
         ...wordObj,
-        chapter: wordObj.chapter || chapterId,
+        chapter: chapterId,
         status,
         addedAt: new Date().toISOString()
       };

@@ -631,11 +631,11 @@ export default function HomeView({
                   </div>
                   <div className="flex items-center justify-between text-[11px] text-slate-400">
                     <span>{isTr ? 'Kelime Puanı:' : 'Vocab Score:'}</span>
-                    <span className="font-bold text-slate-200">{stats.wordsXP.toLocaleString()} / 3.500 XP</span>
+                    <span className="font-bold text-slate-200">{stats.wordsXP.toLocaleString()} / 3.500 XP (%{stats.wordsProgressPercent})</span>
                   </div>
-                  <div className="mt-1 text-[10px] text-emerald-300/80 flex items-center justify-between">
-                    <span>{stats.totalLearnedWords}/{stats.targetWordCount || stats.totalBookWords} {isTr ? 'biliyorum' : 'known'}</span>
-                    <span>{isTr ? `${stats.totalLearningWords} çalışılan • +${stats.totalFlashcardReviews} kart` : `${stats.totalLearningWords} review • +${stats.totalFlashcardReviews} cards`}</span>
+                  <div className="mt-1 text-[10px] text-emerald-300/90 flex items-center justify-between flex-wrap gap-1">
+                    <span>{stats.totalCurriculumLearned || stats.totalLearnedWords} / {stats.totalBookWords} {isTr ? 'müfredat' : 'curriculum'}</span>
+                    <span>+{stats.totalExtraLearned || 0} {isTr ? 'metin' : 'context'} • {stats.totalFlashcardReviews} {isTr ? 'kart' : 'cards'}</span>
                   </div>
                 </div>
 
@@ -922,8 +922,8 @@ export default function HomeView({
                   </div>
                   <p className="text-xs text-slate-300 leading-relaxed">
                     {isTr 
-                      ? 'Dört bağımsız alt kotaya ayrılmıştır: 1.066 Resmi Müfredat Kelimesi (Maks 2.000 XP), Flashcards Pratiği & Hatırlama (Maks 800 XP), Okuma & Diyalog Metin Kelimeleri (Maks 500 XP) ve Düzensiz Fiiller (Maks 200 XP). Tek bir kaynaktan şişirilemez.'
-                      : 'Divided into 4 independent quotas: 1,066 Core Curriculum Words (Max 2,000 XP), Flashcard Practice & Recall (Max 800 XP), Reading & Dialogue Context Words (Max 500 XP), and Irregular Verbs (Max 200 XP). Cannot be inflated from a single source.'}
+                      ? 'Dört bağımsız alt kotaya ayrılmıştır: 1.066 Resmi Müfredat Kelimesi (Maks 2.000 XP), Flashcards Pratiği & Hatırlama (Maks 800 XP), 18 Ünite Okuma & Diyalog Metin Kelimeleri (Maks 500 XP, kelime başı ~0.33 XP) ve Düzensiz Fiiller (Maks 200 XP). Yalnızca okuma metinlerini işaretlemek müfredat sözlüğünü veya puanı şişiremez.'
+                      : 'Divided into 4 independent quotas: 1,066 Core Curriculum Words (Max 2,000 XP), Flashcard Practice & Recall (Max 800 XP), Reading & Dialogue Context Words across 18 units (Max 500 XP, ~0.33 XP/word), and Irregular Verbs (Max 200 XP). Tagging reading passages alone cannot inflate core vocabulary.'}
                   </p>
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5 pt-1 text-[11px] font-mono text-slate-400">
                     <div className="bg-slate-900/60 rounded px-2 py-1 border border-slate-700/30">
@@ -944,8 +944,8 @@ export default function HomeView({
                     </div>
                   </div>
                   <div className="flex justify-between text-[11px] text-slate-400 pt-1 border-t border-slate-700/40">
-                    <span>{isTr ? 'Müfredat Öğrenilen:' : 'Curriculum Mastered:'} <strong className="text-slate-200">{stats.totalCurriculumLearned || 0} / {stats.totalBookWords}</strong></span>
-                    <span>{isTr ? 'Flashcard Tekrarı:' : 'Flashcard Reviews:'} <strong className="text-slate-200">{stats.totalFlashcardReviews || 0}</strong></span>
+                    <span>{isTr ? 'Müfredat Kelimeleri:' : 'Curriculum Words:'} <strong className="text-slate-200">{stats.totalCurriculumLearned || stats.totalLearnedWords || 0} / {stats.totalBookWords}</strong></span>
+                    <span>{isTr ? 'Metin Kelimeleri:' : 'Context Words:'} <strong className="text-slate-200">+{stats.totalExtraLearned || 0}</strong> • {stats.totalFlashcardReviews || 0} {isTr ? 'kart' : 'cards'}</span>
                   </div>
                 </div>
 
@@ -992,6 +992,25 @@ export default function HomeView({
                     <span>{isTr ? 'Kusursuz / Başarı:' : 'Mastered / Accuracy:'} <strong className="text-slate-200">{stats.masteredCount} • %{stats.quizAccuracy}</strong></span>
                   </div>
                 </div>
+              </div>
+            </div>
+
+            {/* Adil İlerleme ve Şişirilemezlik İlkemiz */}
+            <div className="bg-slate-950/70 rounded-2xl p-3.5 border border-amber-900/40 space-y-1.5 text-xs">
+              <div className="font-bold text-amber-300 flex items-center gap-1.5 text-xs">
+                <i className="fa-solid fa-shield-halved text-amber-400"></i>
+                <span>{isTr ? 'Adil İlerleme & Şişirilemezlik İlkemiz' : 'Fair Progress & Anti-Inflation Guarantee'}</span>
+              </div>
+              <p className="text-slate-300 text-[11px] leading-relaxed">
+                {isTr 
+                  ? 'Sitede tek bir aktiviteyi (örneğin sadece okuma metinlerini) işaretlemek genel ilerlemeyi yapay olarak şişiremez. Yalnızca 2 ünitenin kelime ve okuma parçalarını tamamlayan bir öğrenci, 18 ünitenin ~%11\'ini açmış ve bu ünitelerdeki içeriğin yaklaşık üçte birini bitirmiş olur; bu eylem genel ilerlemeye yapay bir %14 değil, hakkaniyetli olarak ~%3.5 - %4.0 yansıtır.'
+                  : 'Single activities (such as marking reading passages alone) cannot artificially inflate overall progress. A learner who finishes vocabulary and reading in 2 units has covered ~11% of chapters and roughly a third of those units; this translates to a fair and honest ~3.5% - 4.0% overall progress rather than an inflated 14%.'}
+              </p>
+              <div className="flex items-center justify-between flex-wrap gap-2 text-[10px] font-mono text-slate-400 pt-1 border-t border-slate-800">
+                <span>{isTr ? '1 Müfredat Kelimesi: ~1.88 XP' : '1 Core Word: ~1.88 XP'}</span>
+                <span>{isTr ? '1 Bölüm: ~16.57 XP' : '1 Section: ~16.57 XP'}</span>
+                <span>{isTr ? '1 Doğru Soru: ~0.72 XP' : '1 Correct Q: ~0.72 XP'}</span>
+                <span>{isTr ? '1 Metin Kelimesi: ~0.33 XP' : '1 Context Word: ~0.33 XP'}</span>
               </div>
             </div>
 
