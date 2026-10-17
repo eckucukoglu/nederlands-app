@@ -77,3 +77,18 @@ code {
 .animate-nav-pop {
   animation: navPopIn 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+
+@keyframes accordionFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-accordion-fade {
+  animation: accordionFadeIn 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

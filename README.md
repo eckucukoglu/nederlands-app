@@ -1,6 +1,6 @@
 # 🇳🇱 Nederlands in Gang - Interactief Oefenportaal (A1 → A2)
 
-[![Version](https://img.shields.io/badge/version-v0.1.2-10B981.svg?style=for-the-badge)](https://github.com/eckucukoglu/nederlands-app/releases/tag/v0.1.2)
+[![Version](https://img.shields.io/badge/version-v0.1.3-10B981.svg?style=for-the-badge)](https://github.com/eckucukoglu/nederlands-app/releases/tag/v0.1.3)
 [![Firebase Hosting](https://img.shields.io/badge/hosting-live-FFCA28.svg?style=for-the-badge&logo=firebase&logoColor=black)](https://nederlands-app.web.app)
 [![React](https://img.shields.io/badge/react-19.x-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)](https://react.dev/)
 [![TailwindCSS](https://img.shields.io/badge/tailwindcss-3.x-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
@@ -15,9 +15,15 @@ An open-source, interactive, and personalized web application designed to track 
 
 ---
 
-## 🌟 Key Highlights & Features (v0.1.2)
+## 🌟 Key Highlights & Features (v0.1.3)
 
-### 🎙️ 1. Integrated Audio & Real-time Text Following (v0.1.2)
+### 🎛️ 1. Smart Collapsible Dashboard & Adaptive Onboarding (v0.1.3)
+* **Collapsible Accordion Progress & Guide Cards**: Both "Birleşik Öğrenme İlerlemesi" (Combined Learning Progress) and "Uygulama Kullanım Kılavuzu" (App Usage Guide) feature interactive headers that can be expanded or collapsed with a single click.
+* **Intelligent Progress-Adaptive Layout**:
+  * **Beginner Users (< 5% Progress)**: The App Usage Guide is placed at the top and expanded by default to introduce course tools, while the detailed progress card is placed below and collapsed with a sleek summary bar.
+  * **Advanced Learners (≥ 5% Progress)**: The layout seamlessly switches: the Progress Card sits at the top and expanded by default, while the Guide moves to the bottom and collapsed.
+* **User Manual State Memory**: Manual clicks immediately override defaults and persist across reloads and navigation.
+* **Full Bilingual Support**: Header titles, status badges (`Daralt`/`Collapse`, `Detayları Gör`/`View Details`), tooltips, and accessibility labels available in both Turkish and English.
 * **Embedded Neural Audio Engine**: Studio quality Dutch voice recordings seamlessly integrated into the native dialogue and reading interface without intrusive standalone players.
 * **Synchronized Line & Word Highlighting**: As the recording plays, lines and words light up in real-time, accompanied by smooth auto-scrolling.
 * **Per-Line & Per-Paragraph Audio Snapping**: Clicking the speaker button next to any dialogue line or reading paragraph jumps directly to that section in the studio recording.

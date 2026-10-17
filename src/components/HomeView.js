@@ -52,8 +52,24 @@ export default function HomeView({
 }) {
   const isTr = lang === 'tr';
 
-  // Kılavuz açık/kapalı durumu (varsayılan kapalı akordeon)
-  const [isGuideExpanded, setIsGuideExpanded] = useState(false);
+  // Kullanıcının kılavuz ve ilerleme kartını manuel açıp/kapatma tercihleri (null = varsayılan kural geçerli)
+  const [guideUserOverride, setGuideUserOverride] = useState(() => {
+    try {
+      const val = localStorage.getItem('dashboard_guide_open');
+      return val !== null ? val === 'true' : null;
+    } catch (e) {
+      return null;
+    }
+  });
+
+  const [progressUserOverride, setProgressUserOverride] = useState(() => {
+    try {
+      const val = localStorage.getItem('dashboard_progress_open');
+      return val !== null ? val === 'true' : null;
+    } catch (e) {
+      return null;
+    }
+  });
 
   // Aktif İstatistik Sekmesi: 'overview' | 'questions' | 'vocabulary' | 'chapters'
   const [activeTabId, setActiveTabId] = useState('overview');
@@ -352,8 +368,33 @@ export default function HomeView({
     return stats.topicStats;
   }, [stats.topicStats, topicFilter]);
 
-  // %5'ten az ilerleme varsa kılavuz en üstte (dashboard girişinde), %5 ve üzerinde ise en altta gösterilir
-  const showGuideAtTop = (stats?.overallProgress || 0) < 5;
+  // %5 ve üzeri ilerleme kontrolü
+  const hasAdvancedProgress = (stats?.overallProgress || 0) >= 5;
+
+  // %5'ten az ilerleme varsa kılavuz en üstte, %5 ve üzerinde ise en altta gösterilir
+  const showGuideAtTop = !hasAdvancedProgress;
+
+  // Kullanıcı kendi manuel olarak değiştirmediği müddetçe:
+  // %5 altı: Kılavuz açık (true), İlerleme kapalı (false)
+  // %5 ve üzeri: İlerleme açık (true), Kılavuz kapalı (false)
+  const isGuideExpanded = guideUserOverride !== null ? guideUserOverride : !hasAdvancedProgress;
+  const isProgressExpanded = progressUserOverride !== null ? progressUserOverride : hasAdvancedProgress;
+
+  const toggleGuide = () => {
+    const next = !isGuideExpanded;
+    setGuideUserOverride(next);
+    try {
+      localStorage.setItem('dashboard_guide_open', String(next));
+    } catch (e) {}
+  };
+
+  const toggleProgress = () => {
+    const next = !isProgressExpanded;
+    setProgressUserOverride(next);
+    try {
+      localStorage.setItem('dashboard_progress_open', String(next));
+    } catch (e) {}
+  };
 
   const renderGuideAccordion = () => {
     if (!GuideContent) return null;
@@ -361,32 +402,410 @@ export default function HomeView({
       <div className="bg-slate-800/60 border border-slate-700/70 rounded-3xl p-5 sm:p-6 shadow-md transition-all">
         <button 
           type="button"
-          onClick={() => setIsGuideExpanded(!isGuideExpanded)}
+          onClick={toggleGuide}
           className="w-full flex items-center justify-between text-left cursor-pointer group"
+          aria-expanded={isGuideExpanded}
         >
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-brand-950/80 border border-brand-800/60 flex items-center justify-center text-brand-400 group-hover:scale-105 transition-transform">
+            <div className="w-9 h-9 rounded-xl bg-brand-950/80 border border-brand-800/60 flex items-center justify-center text-brand-400 group-hover:scale-105 transition-transform flex-shrink-0 shadow-sm">
               <i className="fa-solid fa-book-open text-sm"></i>
             </div>
             <div>
-              <h3 className="text-base sm:text-lg font-bold text-slate-100 group-hover:text-brand-300 transition-colors">
-                {isTr ? 'Uygulama Kullanım Kılavuzu & İpuçları' : 'App Guide & Helpful Tips'}
-              </h3>
-              <p className="text-xs text-slate-400">
+              <div className="flex items-center gap-2 flex-wrap">
+                <h3 className="text-base sm:text-lg font-bold text-slate-100 group-hover:text-brand-300 transition-colors">
+                  {isTr ? 'Uygulama Kullanım Kılavuzu & İpuçları' : 'App Guide & Helpful Tips'}
+                </h3>
+                <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-800/90 border border-slate-700 text-slate-300 group-hover:border-brand-500/50 group-hover:text-brand-300 transition-colors">
+                  {isGuideExpanded ? (isTr ? 'Daralt' : 'Collapse') : (isTr ? 'Kılavuzu Gör' : 'View Guide')}
+                </span>
+              </div>
+              <p className="text-xs text-slate-400 mt-0.5">
                 {isTr ? 'Diyaloglar, kelime havuzu ve quiz sisteminin verimli kullanımı.' : 'Learn how to make the most of dialogues, pool, and quizzes.'}
               </p>
             </div>
           </div>
-          <div className="w-8 h-8 rounded-full bg-slate-850 flex items-center justify-center text-slate-400 group-hover:text-white transition-colors">
+          <div className="w-8 h-8 rounded-full bg-slate-850 border border-slate-700/80 flex items-center justify-center text-slate-400 group-hover:text-white group-hover:border-brand-500/50 group-hover:bg-slate-800 transition-all flex-shrink-0">
             <i className={`fa-solid fa-chevron-${isGuideExpanded ? 'up' : 'down'} text-xs`}></i>
           </div>
         </button>
 
         {isGuideExpanded && (
-          <div className="mt-6 pt-6 border-t border-slate-700/80">
+          <div className="mt-6 pt-6 border-t border-slate-700/80 animate-accordion-fade">
             <GuideContent lang={lang} />
           </div>
         )}
+      </div>
+    );
+  };
+
+  const renderProgressAccordion = () => {
+    return (
+      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-900 via-slate-850 to-indigo-950/60 border border-slate-700/80 p-5 sm:p-7 shadow-2xl transition-all">
+        <div className="absolute top-0 right-0 -mt-10 -mr-10 w-72 h-72 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 -mb-10 -ml-10 w-72 h-72 bg-teal-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div className="relative z-10 flex flex-col gap-5">
+          {/* TIKLANABİLİR BAŞLIK (ACCORDION HEADER) */}
+          <div 
+            onClick={toggleProgress}
+            className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 cursor-pointer select-none group transition-colors"
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleProgress();
+              }
+            }}
+            aria-expanded={isProgressExpanded}
+          >
+            <div className="flex items-start gap-3.5">
+              <div className="w-10 h-10 rounded-2xl bg-brand-950/80 border border-brand-800/60 flex items-center justify-center text-brand-400 group-hover:scale-105 transition-transform flex-shrink-0 mt-0.5 shadow-sm">
+                <i className="fa-solid fa-chart-pie text-base"></i>
+              </div>
+              <div>
+                <div className="flex items-center gap-2 flex-wrap">
+                  <span className="text-xs font-bold uppercase tracking-wider text-brand-400">
+                    {isTr ? 'Birleşik Öğrenme İlerlemesi' : 'Combined Learning Progress'}
+                  </span>
+                  <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-800/90 border border-slate-700 text-slate-300 group-hover:border-brand-500/50 group-hover:text-brand-300 transition-colors">
+                    {isProgressExpanded ? (isTr ? 'Daralt' : 'Collapse') : (isTr ? 'Detayları Gör' : 'View Details')}
+                  </span>
+                </div>
+                <h3 className="text-lg sm:text-2xl font-black text-slate-100 group-hover:text-brand-300 transition-colors mt-0.5">
+                  {isTr ? 'A1 → A2 Genel İlerleme Durumu' : 'A1 → A2 Overall Progress Index'}
+                </h3>
+                {!isProgressExpanded && (
+                  <p className="text-xs text-slate-400 mt-1">
+                    {isTr 
+                      ? 'Dersler, kelimeler ve soru istatistiklerinizi ve 10.000 XP hedefinizi görmek için tıklayın.' 
+                      : 'Click to expand sections, vocabulary, quiz statistics, and 10,000 XP goal breakdown.'}
+                  </p>
+                )}
+              </div>
+            </div>
+
+            {/* Sağ Taraf: Yüzde, XP, Info Butonu ve Chevron */}
+            <div className="flex items-center gap-3 sm:gap-4 self-end sm:self-center flex-shrink-0">
+              <div className="text-right">
+                <div className="flex items-center justify-end gap-2.5">
+                  <span className="text-3xl sm:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-brand-300 to-indigo-300">
+                    %{stats.overallProgress}
+                  </span>
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setShowProgressInfoModal(true);
+                    }}
+                    className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-800/90 hover:bg-slate-700 text-teal-400 hover:text-teal-200 border border-teal-500/40 hover:border-teal-400 transition-all flex items-center justify-center text-xs sm:text-sm shadow-md hover:scale-110 active:scale-95 cursor-pointer flex-shrink-0"
+                    title={isTr ? "10.000 XP İlerleme ve Puanlama Matematiği" : "10,000 XP Progress & Scoring Math"}
+                    aria-label="Progress Math Information"
+                  >
+                    <i className="fa-solid fa-info"></i>
+                  </button>
+                </div>
+                <span className="block text-[11px] font-semibold text-slate-400 font-mono">
+                  {isProgressExpanded 
+                    ? (isTr ? 'Ortalama İlerleme' : 'Average Progress')
+                    : `${stats.totalXP.toLocaleString()} / 10.000 XP`}
+                </span>
+              </div>
+
+              {/* Chevron Açma/Kapama İkonu */}
+              <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-slate-850 border border-slate-700/80 flex items-center justify-center text-slate-400 group-hover:text-white group-hover:border-brand-500/50 group-hover:bg-slate-800 transition-all flex-shrink-0">
+                <i className={`fa-solid fa-chevron-${isProgressExpanded ? 'up' : 'down'} text-xs`}></i>
+              </div>
+            </div>
+          </div>
+
+          {/* KAPALIYKEN GÖSTERİLEN MİNİ İLERLEME ÇUBUĞU */}
+          {!isProgressExpanded && (
+            <div 
+              className="w-full bg-slate-800/90 rounded-full h-2.5 overflow-hidden p-0.5 border border-slate-700/80 shadow-inner cursor-pointer"
+              onClick={toggleProgress}
+              title={isTr ? 'Genişletmek için tıklayın' : 'Click to expand'}
+            >
+              <div 
+                className="bg-gradient-to-r from-teal-500 via-brand-500 to-indigo-500 h-full rounded-full transition-all duration-700 shadow-[0_0_10px_rgba(56,189,248,0.5)]"
+                style={{ width: `${Math.max(3, stats.overallProgress)}%` }}
+              ></div>
+            </div>
+          )}
+
+          {/* AÇIK İÇERİK (DETAYLI SEKMELER, 3D SÜTUNLAR, XP ÇİZELGESİ, AKSİYONLAR) */}
+          {isProgressExpanded && (
+            <div className="space-y-6 pt-3 border-t border-slate-700/70 animate-accordion-fade">
+              {/* MOTTO PİLL */}
+              <div>
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-gradient-to-r from-teal-500/15 via-brand-500/15 to-indigo-500/15 border border-brand-500/30 text-[11px] font-semibold text-brand-300 shadow-sm">
+                  <i className="fa-solid fa-fire text-amber-400 animate-pulse"></i>
+                  <span>
+                    {isTr 
+                      ? 'Her Çalışma Bir İlerlemedir: Çözülen her soru, öğrenilen her kelime ve tamamlanan her bölüm seviyenizi anında yükseltir.' 
+                      : 'Every Action Matters: Every question answered, word studied, and section completed moves your progress forward.'}
+                  </span>
+                </div>
+              </div>
+
+              {/* XP & SEVİYE İLERLEME ŞERİDİ */}
+              <div className="bg-slate-800/60 rounded-2xl p-3.5 border border-slate-700/60 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-inner">
+                <div className="flex items-center gap-3 w-full sm:w-auto">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500/20 to-orange-500/20 border border-amber-500/40 flex items-center justify-center text-amber-300 text-lg flex-shrink-0 shadow-sm">
+                    <i className={levelInfo.icon}></i>
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-xs font-black text-amber-300 uppercase tracking-wider">
+                        {isTr ? `Seviye ${levelInfo.level}` : `Level ${levelInfo.level}`} • {levelInfo.title}
+                      </span>
+                      <span className="text-[10px] px-2 py-0.5 rounded-full bg-slate-900 border border-slate-700 font-bold text-slate-300">
+                        {levelInfo.rank}
+                      </span>
+                    </div>
+                    <p className="text-[11px] text-slate-400 mt-0.5">
+                      {levelInfo.nextTierTitle 
+                        ? (isTr ? `Sonraki Seviye: ${levelInfo.nextTierTitle} (${levelInfo.xpToNextLevel.toLocaleString()} XP kaldı)` : `Next: ${levelInfo.nextTierTitle} (${levelInfo.xpToNextLevel.toLocaleString()} XP left)`)
+                        : (isTr ? 'En yüksek seviyeye ulaşıldı!' : 'Max Level Reached!')}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="w-full sm:w-64 space-y-1">
+                  <div className="flex justify-between text-[11px]">
+                    <span className="text-amber-400 font-mono font-bold flex items-center gap-1">
+                      <i className="fa-solid fa-bolt text-xs"></i> {stats.totalXP.toLocaleString()} XP
+                    </span>
+                    <span className="text-slate-400 font-mono">
+                      %{levelInfo.tierProgressPercent}
+                    </span>
+                  </div>
+                  <div className="w-full bg-slate-900 rounded-full h-2 overflow-hidden border border-slate-800">
+                    <div 
+                      className="bg-gradient-to-r from-amber-400 via-orange-400 to-rose-400 h-full rounded-full transition-all duration-500"
+                      style={{ width: `${Math.max(4, levelInfo.tierProgressPercent)}%` }}
+                    ></div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Ana İlerleme Çubuğu */}
+              <div className="space-y-1.5">
+                <div className="w-full bg-slate-800/90 rounded-full h-4 overflow-hidden p-0.5 border border-slate-700/80 shadow-inner">
+                  <div 
+                    className="bg-gradient-to-r from-teal-500 via-brand-500 to-indigo-500 h-full rounded-full transition-all duration-700 shadow-[0_0_14px_rgba(56,189,248,0.6)]"
+                    style={{ width: `${Math.max(3, stats.overallProgress)}%` }}
+                  ></div>
+                </div>
+                <div className="flex justify-between items-center text-[11px] text-slate-400 px-1 flex-wrap gap-2">
+                  <span>0% {isTr ? 'Başlangıç' : 'Start'} (0 XP)</span>
+                  <span className="font-mono text-slate-300 text-center">
+                    {isTr 
+                      ? `Dersler: %${stats.sectionsProgressPercent} (${stats.sectionsXP.toLocaleString()}/3.500 XP) + Kelimeler: %${stats.wordsProgressPercent} (${stats.wordsXP.toLocaleString()}/3.500 XP) + Sorular: %${stats.questionsProgressPercent} (${stats.questionsXP.toLocaleString()}/3.000 XP) = %${stats.overallProgress} (${stats.totalXP.toLocaleString()}/10.000 XP)`
+                      : `Sections: %${stats.sectionsProgressPercent} (${stats.sectionsXP.toLocaleString()}/3,500 XP) + Vocab: %${stats.wordsProgressPercent} (${stats.wordsXP.toLocaleString()}/3,500 XP) + Quizzes: %${stats.questionsProgressPercent} (${stats.questionsXP.toLocaleString()}/3,000 XP) = %${stats.overallProgress} (${stats.totalXP.toLocaleString()}/10,000 XP)`}
+                  </span>
+                  <span>100% {isTr ? 'A2 Yetkinlik' : 'A2 Mastery'} (10.000 XP)</span>
+                </div>
+              </div>
+
+              {/* 3 Boyutlu İlerleme Kartları (Pillars) */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 pt-2 border-t border-slate-700/60">
+                {/* Sütun 1: Bölüm & Dersler */}
+                <div 
+                  onClick={() => setActiveTabId('chapters')}
+                  className="bg-slate-800/70 hover:bg-slate-800 p-3.5 rounded-2xl border border-indigo-900/50 hover:border-indigo-500/50 transition-all cursor-pointer group shadow-sm"
+                >
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="flex items-center gap-2">
+                      <div className="w-7 h-7 rounded-lg bg-indigo-950/80 border border-indigo-800/60 flex items-center justify-center text-indigo-400 group-hover:scale-105 transition-transform">
+                        <i className="fa-solid fa-book-open text-xs"></i>
+                      </div>
+                      <span className="text-xs font-bold text-slate-300">
+                        {isTr ? 'Bölümler & Dersler' : 'Course Sections'}
+                      </span>
+                    </div>
+                    <span className="text-base font-black text-indigo-400">
+                      %{stats.sectionsProgressPercent}
+                    </span>
+                  </div>
+                  <div className="w-full bg-slate-900 rounded-full h-2 overflow-hidden mb-2">
+                    <div 
+                      className="bg-gradient-to-r from-indigo-500 to-sky-500 h-full rounded-full transition-all"
+                      style={{ width: `${stats.sectionsProgressPercent}%` }}
+                    ></div>
+                  </div>
+                  <div className="flex items-center justify-between text-[11px] text-slate-400">
+                    <span>{isTr ? 'Bölüm Puanı:' : 'Section Score:'}</span>
+                    <span className="font-bold text-slate-200">{stats.sectionsXP.toLocaleString()} / 3.500 XP</span>
+                  </div>
+                  <div className="mt-1 text-[10px] text-indigo-300/80 flex items-center justify-between">
+                    <span>{stats.completedSectionsCount}/{stats.totalBookSections} {isTr ? 'bölüm' : 'secs'}</span>
+                    <span>{isTr ? `+${stats.completedChaptersCount} tam ünite (${Math.round((stats.completedChaptersCount/18)*500)} XP)` : `+${stats.completedChaptersCount} chapters (${Math.round((stats.completedChaptersCount/18)*500)} XP)`}</span>
+                  </div>
+                </div>
+
+                {/* Sütun 2: Kelimeler & Hazne */}
+                <div 
+                  onClick={() => setActiveTabId('vocabulary')}
+                  className="bg-slate-800/70 hover:bg-slate-800 p-3.5 rounded-2xl border border-emerald-900/50 hover:border-emerald-500/50 transition-all cursor-pointer group shadow-sm"
+                >
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="flex items-center gap-2">
+                      <div className="w-7 h-7 rounded-lg bg-emerald-950/80 border border-emerald-800/60 flex items-center justify-center text-emerald-400 group-hover:scale-105 transition-transform">
+                        <i className="fa-solid fa-brain text-xs"></i>
+                      </div>
+                      <span className="text-xs font-bold text-slate-300">
+                        {isTr ? 'Kelimeler & Hazne' : 'Vocabulary'}
+                      </span>
+                    </div>
+                    <span className="text-base font-black text-emerald-400">
+                      %{stats.wordsProgressPercent}
+                    </span>
+                  </div>
+                  <div className="w-full bg-slate-900 rounded-full h-2 overflow-hidden mb-2">
+                    <div 
+                      className="bg-gradient-to-r from-emerald-500 to-teal-400 h-full rounded-full transition-all"
+                      style={{ width: `${stats.wordsProgressPercent}%` }}
+                    ></div>
+                  </div>
+                  <div className="flex items-center justify-between text-[11px] text-slate-400">
+                    <span>{isTr ? 'Kelime Puanı:' : 'Vocab Score:'}</span>
+                    <span className="font-bold text-slate-200">{stats.wordsXP.toLocaleString()} / 3.500 XP</span>
+                  </div>
+                  <div className="mt-1 text-[10px] text-emerald-300/80 flex items-center justify-between">
+                    <span>{stats.totalLearnedWords}/{stats.targetWordCount || stats.totalBookWords} {isTr ? 'biliyorum' : 'known'}</span>
+                    <span>{isTr ? `${stats.totalLearningWords} çalışılan • +${stats.totalFlashcardReviews} kart` : `${stats.totalLearningWords} review • +${stats.totalFlashcardReviews} cards`}</span>
+                  </div>
+                </div>
+
+                {/* Sütun 3: Sorular & Quizler */}
+                <div 
+                  onClick={() => setActiveTabId('questions')}
+                  className="bg-slate-800/70 hover:bg-slate-800 p-3.5 rounded-2xl border border-teal-900/50 hover:border-teal-500/50 transition-all cursor-pointer group shadow-sm"
+                >
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="flex items-center gap-2">
+                      <div className="w-7 h-7 rounded-lg bg-teal-950/80 border border-teal-800/60 flex items-center justify-center text-teal-400 group-hover:scale-105 transition-transform">
+                        <i className="fa-solid fa-clipboard-question text-xs"></i>
+                      </div>
+                      <span className="text-xs font-bold text-slate-300">
+                        {isTr ? 'Sorular & Quizler' : 'Questions & Quizzes'}
+                      </span>
+                    </div>
+                    <span className="text-base font-black text-teal-400">
+                      %{stats.questionsProgressPercent}
+                    </span>
+                  </div>
+                  <div className="w-full bg-slate-900 rounded-full h-2 overflow-hidden mb-2">
+                    <div 
+                      className="bg-gradient-to-r from-teal-500 to-cyan-400 h-full rounded-full transition-all"
+                      style={{ width: `${stats.questionsProgressPercent}%` }}
+                    ></div>
+                  </div>
+                  <div className="flex items-center justify-between text-[11px] text-slate-400">
+                    <span>{isTr ? 'Soru Puanı:' : 'Quiz Score:'}</span>
+                    <span className="font-bold text-slate-200">{stats.questionsXP.toLocaleString()} / 3.000 XP</span>
+                  </div>
+                  <div className="mt-1 text-[10px] text-teal-300/80 flex items-center justify-between">
+                    <span>{stats.uniqueCorrect || 0}/{stats.totalQuizQuestions} {isTr ? 'doğru' : 'correct'}</span>
+                    <span>{isTr ? `${stats.masteredCount} kusursuz • %${stats.quizAccuracy} doğruluk` : `${stats.masteredCount} mastered • %${stats.quizAccuracy}`}</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Aksiyon Etki Tablosu (Action Impact Strip - 10.000 XP) */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1 border-t border-slate-700/50">
+                <div className="p-2.5 rounded-xl bg-slate-800/40 border border-slate-700/50 flex items-center gap-2.5">
+                  <span className="w-7 h-7 rounded-lg bg-teal-500/15 border border-teal-500/30 flex items-center justify-center text-teal-400 text-xs flex-shrink-0">
+                    <i className="fa-solid fa-clipboard-check"></i>
+                  </span>
+                  <div className="min-w-0">
+                    <div className="text-[11px] font-bold text-slate-200 truncate">{isTr ? '1 Soru Çözümü' : '1 Question'}</div>
+                    <div className="text-[10px] text-teal-300 font-mono">+0.85-0.98 XP • 3.000 XP</div>
+                  </div>
+                </div>
+
+                <div className="p-2.5 rounded-xl bg-slate-800/40 border border-slate-700/50 flex items-center gap-2.5">
+                  <span className="w-7 h-7 rounded-lg bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-xs flex-shrink-0">
+                    <i className="fa-solid fa-brain"></i>
+                  </span>
+                  <div className="min-w-0">
+                    <div className="text-[11px] font-bold text-slate-200 truncate">{isTr ? '1 Kelime (Biliyorum)' : '1 Word (Known)'}</div>
+                    <div className="text-[10px] text-emerald-300 font-mono">+3.28 XP • 3.500 XP</div>
+                  </div>
+                </div>
+
+                <div className="p-2.5 rounded-xl bg-slate-800/40 border border-slate-700/50 flex items-center gap-2.5">
+                  <span className="w-7 h-7 rounded-lg bg-indigo-500/15 border border-indigo-500/30 flex items-center justify-center text-indigo-400 text-xs flex-shrink-0">
+                    <i className="fa-solid fa-book-bookmark"></i>
+                  </span>
+                  <div className="min-w-0">
+                    <div className="text-[11px] font-bold text-slate-200 truncate">{isTr ? 'Bölüm Bitirme' : 'Section Done'}</div>
+                    <div className="text-[10px] text-indigo-300 font-mono">+17.8 XP • 3.000 XP</div>
+                  </div>
+                </div>
+
+                <div className="p-2.5 rounded-xl bg-slate-800/40 border border-slate-700/50 flex items-center gap-2.5">
+                  <span className="w-7 h-7 rounded-lg bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-400 text-xs flex-shrink-0">
+                    <i className="fa-solid fa-medal"></i>
+                  </span>
+                  <div className="min-w-0">
+                    <div className="text-[11px] font-bold text-slate-200 truncate">{isTr ? 'Ünite Bitirme' : 'Chapter Done'}</div>
+                    <div className="text-[10px] text-amber-300 font-mono">+27.8 XP • 500 XP</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Hızlı Aksiyon Butonları */}
+              <div className="flex flex-wrap items-center justify-between gap-2.5 pt-2">
+                <div className="flex flex-wrap gap-2 flex-1">
+                  {setIsFullQuizOpen && (
+                    <button
+                      onClick={() => setIsFullQuizOpen(true)}
+                      className="px-4 py-2.5 rounded-xl bg-teal-600 hover:bg-teal-500 text-white text-xs sm:text-sm font-bold flex items-center gap-2 shadow-lg shadow-teal-950/40 transition-all active:scale-[0.98]"
+                    >
+                      <i className="fa-solid fa-graduation-cap"></i>
+                      {isTr ? 'Genel Sınav Çöz' : 'Start Full Quiz'}
+                    </button>
+                  )}
+
+                  {setActiveTab && (
+                    <>
+                      <button
+                        onClick={() => setActiveTabId('vocabulary')}
+                        className="px-3.5 py-2.5 rounded-xl bg-purple-950/70 hover:bg-purple-900/90 border border-purple-800/60 text-purple-300 hover:text-white text-xs sm:text-sm font-semibold flex items-center gap-2 transition-all shadow-sm"
+                      >
+                        <i className="fa-solid fa-spell-check text-xs"></i>
+                        {isTr ? 'Kelime Durumu' : 'Vocabulary Hub'}
+                      </button>
+
+                      <button
+                        onClick={() => setActiveTab('flashcards')}
+                        className="px-3.5 py-2.5 rounded-xl bg-rose-950/70 hover:bg-rose-900/90 border border-rose-800/60 text-rose-300 hover:text-white text-xs sm:text-sm font-semibold flex items-center gap-2 transition-all shadow-sm"
+                      >
+                        <i className="fa-solid fa-clone text-xs"></i>
+                        {isTr ? 'Flashcard Çalış' : 'Open Flashcards'}
+                      </button>
+
+                      <button
+                        onClick={() => setActiveTab('grammar')}
+                        className="px-3.5 py-2.5 rounded-xl bg-indigo-950/70 hover:bg-indigo-900/90 border border-indigo-800/60 text-indigo-300 hover:text-white text-xs sm:text-sm font-semibold flex items-center gap-2 transition-all shadow-sm"
+                      >
+                        <i className="fa-solid fa-spell-check text-xs"></i>
+                        {isTr ? 'Gramer Referansı' : 'Grammar Reference'}
+                      </button>
+                    </>
+                  )}
+                </div>
+
+                <div className="text-[11px] text-slate-400 italic">
+                  <i className="fa-solid fa-circle-info mr-1 text-slate-500"></i>
+                  {isTr ? 'Ayrıntılı döküm için aşağıdaki sekmeleri kullanabilirsiniz.' : 'Select a tab below to inspect detailed metrics.'}
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     );
   };
@@ -625,317 +1044,15 @@ export default function HomeView({
         )}
       </div>
 
-      {/* KILAVUZ & REHBER (İlerleme %5'in altındayken en üstte gösterilir) */}
-      {showGuideAtTop && renderGuideAccordion()}
-
-      {/* 2. GENEL İLERLEME (HERO BANNER - 3 SÜTUNLU ORTALAMA GÖSTERİMİ) */}
-      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-900 via-slate-850 to-indigo-950/60 border border-slate-700/80 p-5 sm:p-7 shadow-2xl">
-        <div className="absolute top-0 right-0 -mt-10 -mr-10 w-72 h-72 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
-        <div className="absolute bottom-0 left-0 -mb-10 -ml-10 w-72 h-72 bg-teal-500/10 rounded-full blur-3xl pointer-events-none"></div>
-
-        <div className="relative z-10 flex flex-col gap-6">
-          {/* Üst Kısım: Genel Başlık, Yüzde ve Motto */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-            <div>
-              <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-400">
-                <i className="fa-solid fa-chart-pie"></i>
-                {isTr ? 'Birleşik Öğrenme İlerlemesi' : 'Combined Learning Progress'}
-              </div>
-              <h3 className="text-xl sm:text-2xl font-black text-slate-100 mt-1">
-                {isTr ? 'A1 → A2 Genel İlerleme Durumu' : 'A1 → A2 Overall Progress Index'}
-              </h3>
-              
-              {/* MOTTO PİLL */}
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-gradient-to-r from-teal-500/15 via-brand-500/15 to-indigo-500/15 border border-brand-500/30 text-[11px] font-semibold text-brand-300 mt-2 shadow-sm">
-                <i className="fa-solid fa-fire text-amber-400 animate-pulse"></i>
-                <span>
-                  {isTr 
-                    ? 'Her Çalışma Bir İlerlemedir: Çözülen her soru, öğrenilen her kelime ve tamamlanan her bölüm seviyenizi anında yükseltir.' 
-                    : 'Every Action Matters: Every question answered, word studied, and section completed moves your progress forward.'}
-                </span>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-4 flex-shrink-0">
-              <div className="text-right">
-                <div className="flex items-center justify-end gap-2.5">
-                  <span className="text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-brand-300 to-indigo-300">
-                    %{stats.overallProgress}
-                  </span>
-                  <button
-                    type="button"
-                    onClick={() => setShowProgressInfoModal(true)}
-                    className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-800/90 hover:bg-slate-700 text-teal-400 hover:text-teal-200 border border-teal-500/40 hover:border-teal-400 transition-all flex items-center justify-center text-xs sm:text-sm shadow-md hover:scale-110 active:scale-95 cursor-pointer flex-shrink-0"
-                    title={isTr ? "10.000 XP İlerleme ve Puanlama Matematiği" : "10,000 XP Progress & Scoring Math"}
-                    aria-label="Progress Math Information"
-                  >
-                    <i className="fa-solid fa-info"></i>
-                  </button>
-                </div>
-                <span className="block text-[11px] font-semibold text-slate-400">
-                  {isTr ? 'Ortalama İlerleme' : 'Average Progress'}
-                </span>
-              </div>
-            </div>
-          </div>
-
-          {/* XP & SEVİYE İLERLEME ŞERİDİ */}
-          <div className="bg-slate-800/60 rounded-2xl p-3.5 border border-slate-700/60 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-inner">
-            <div className="flex items-center gap-3 w-full sm:w-auto">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500/20 to-orange-500/20 border border-amber-500/40 flex items-center justify-center text-amber-300 text-lg flex-shrink-0 shadow-sm">
-                <i className={levelInfo.icon}></i>
-              </div>
-              <div>
-                <div className="flex items-center gap-2">
-                  <span className="text-xs font-black text-amber-300 uppercase tracking-wider">
-                    {isTr ? `Seviye ${levelInfo.level}` : `Level ${levelInfo.level}`} • {levelInfo.title}
-                  </span>
-                  <span className="text-[10px] px-2 py-0.5 rounded-full bg-slate-900 border border-slate-700 font-bold text-slate-300">
-                    {levelInfo.rank}
-                  </span>
-                </div>
-                <p className="text-[11px] text-slate-400 mt-0.5">
-                  {levelInfo.nextTierTitle 
-                    ? (isTr ? `Sonraki Seviye: ${levelInfo.nextTierTitle} (${levelInfo.xpToNextLevel.toLocaleString()} XP kaldı)` : `Next: ${levelInfo.nextTierTitle} (${levelInfo.xpToNextLevel.toLocaleString()} XP left)`)
-                    : (isTr ? 'En yüksek seviyeye ulaşıldı!' : 'Max Level Reached!')}
-                </p>
-              </div>
-            </div>
-
-            <div className="w-full sm:w-64 space-y-1">
-              <div className="flex justify-between text-[11px]">
-                <span className="text-amber-400 font-mono font-bold flex items-center gap-1">
-                  <i className="fa-solid fa-bolt text-xs"></i> {stats.totalXP.toLocaleString()} XP
-                </span>
-                <span className="text-slate-400 font-mono">
-                  %{levelInfo.tierProgressPercent}
-                </span>
-              </div>
-              <div className="w-full bg-slate-900 rounded-full h-2 overflow-hidden border border-slate-800">
-                <div 
-                  className="bg-gradient-to-r from-amber-400 via-orange-400 to-rose-400 h-full rounded-full transition-all duration-500"
-                  style={{ width: `${Math.max(4, levelInfo.tierProgressPercent)}%` }}
-                ></div>
-              </div>
-            </div>
-          </div>
-
-          {/* Ana İlerleme Çubuğu */}
-          <div className="space-y-1.5">
-            <div className="w-full bg-slate-800/90 rounded-full h-4 overflow-hidden p-0.5 border border-slate-700/80 shadow-inner">
-              <div 
-                className="bg-gradient-to-r from-teal-500 via-brand-500 to-indigo-500 h-full rounded-full transition-all duration-700 shadow-[0_0_14px_rgba(56,189,248,0.6)]"
-                style={{ width: `${Math.max(3, stats.overallProgress)}%` }}
-              ></div>
-            </div>
-            <div className="flex justify-between items-center text-[11px] text-slate-400 px-1 flex-wrap gap-2">
-              <span>0% {isTr ? 'Başlangıç' : 'Start'} (0 XP)</span>
-              <span className="font-mono text-slate-300 text-center">
-                {isTr 
-                  ? `Dersler: %${stats.sectionsProgressPercent} (${stats.sectionsXP.toLocaleString()}/3.500 XP) + Kelimeler: %${stats.wordsProgressPercent} (${stats.wordsXP.toLocaleString()}/3.500 XP) + Sorular: %${stats.questionsProgressPercent} (${stats.questionsXP.toLocaleString()}/3.000 XP) = %${stats.overallProgress} (${stats.totalXP.toLocaleString()}/10.000 XP)`
-                  : `Sections: %${stats.sectionsProgressPercent} (${stats.sectionsXP.toLocaleString()}/3,500 XP) + Vocab: %${stats.wordsProgressPercent} (${stats.wordsXP.toLocaleString()}/3,500 XP) + Quizzes: %${stats.questionsProgressPercent} (${stats.questionsXP.toLocaleString()}/3,000 XP) = %${stats.overallProgress} (${stats.totalXP.toLocaleString()}/10,000 XP)`}
-              </span>
-              <span>100% {isTr ? 'A2 Yetkinlik' : 'A2 Mastery'} (10.000 XP)</span>
-            </div>
-          </div>
-
-          {/* 3 Boyutlu İlerleme Kartları (Pillars) */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 pt-2 border-t border-slate-700/60">
-            {/* Sütun 1: Bölüm & Dersler */}
-            <div 
-              onClick={() => setActiveTabId('chapters')}
-              className="bg-slate-800/70 hover:bg-slate-800 p-3.5 rounded-2xl border border-indigo-900/50 hover:border-indigo-500/50 transition-all cursor-pointer group shadow-sm"
-            >
-              <div className="flex items-center justify-between mb-2">
-                <div className="flex items-center gap-2">
-                  <div className="w-7 h-7 rounded-lg bg-indigo-950/80 border border-indigo-800/60 flex items-center justify-center text-indigo-400 group-hover:scale-105 transition-transform">
-                    <i className="fa-solid fa-book-open text-xs"></i>
-                  </div>
-                  <span className="text-xs font-bold text-slate-300">
-                    {isTr ? 'Bölümler & Dersler' : 'Course Sections'}
-                  </span>
-                </div>
-                <span className="text-base font-black text-indigo-400">
-                  %{stats.sectionsProgressPercent}
-                </span>
-              </div>
-              <div className="w-full bg-slate-900 rounded-full h-2 overflow-hidden mb-2">
-                <div 
-                  className="bg-gradient-to-r from-indigo-500 to-sky-500 h-full rounded-full transition-all"
-                  style={{ width: `${stats.sectionsProgressPercent}%` }}
-                ></div>
-              </div>
-              <div className="flex items-center justify-between text-[11px] text-slate-400">
-                <span>{isTr ? 'Bölüm Puanı:' : 'Section Score:'}</span>
-                <span className="font-bold text-slate-200">{stats.sectionsXP.toLocaleString()} / 3.500 XP</span>
-              </div>
-              <div className="mt-1 text-[10px] text-indigo-300/80 flex items-center justify-between">
-                <span>{stats.completedSectionsCount}/{stats.totalBookSections} {isTr ? 'bölüm' : 'secs'}</span>
-                <span>{isTr ? `+${stats.completedChaptersCount} tam ünite (${Math.round((stats.completedChaptersCount/18)*500)} XP)` : `+${stats.completedChaptersCount} chapters (${Math.round((stats.completedChaptersCount/18)*500)} XP)`}</span>
-              </div>
-            </div>
-
-            {/* Sütun 2: Kelimeler & Hazne */}
-            <div 
-              onClick={() => setActiveTabId('vocabulary')}
-              className="bg-slate-800/70 hover:bg-slate-800 p-3.5 rounded-2xl border border-emerald-900/50 hover:border-emerald-500/50 transition-all cursor-pointer group shadow-sm"
-            >
-              <div className="flex items-center justify-between mb-2">
-                <div className="flex items-center gap-2">
-                  <div className="w-7 h-7 rounded-lg bg-emerald-950/80 border border-emerald-800/60 flex items-center justify-center text-emerald-400 group-hover:scale-105 transition-transform">
-                    <i className="fa-solid fa-brain text-xs"></i>
-                  </div>
-                  <span className="text-xs font-bold text-slate-300">
-                    {isTr ? 'Kelimeler & Hazne' : 'Vocabulary'}
-                  </span>
-                </div>
-                <span className="text-base font-black text-emerald-400">
-                  %{stats.wordsProgressPercent}
-                </span>
-              </div>
-              <div className="w-full bg-slate-900 rounded-full h-2 overflow-hidden mb-2">
-                <div 
-                  className="bg-gradient-to-r from-emerald-500 to-teal-400 h-full rounded-full transition-all"
-                  style={{ width: `${stats.wordsProgressPercent}%` }}
-                ></div>
-              </div>
-              <div className="flex items-center justify-between text-[11px] text-slate-400">
-                <span>{isTr ? 'Kelime Puanı:' : 'Vocab Score:'}</span>
-                <span className="font-bold text-slate-200">{stats.wordsXP.toLocaleString()} / 3.500 XP</span>
-              </div>
-              <div className="mt-1 text-[10px] text-emerald-300/80 flex items-center justify-between">
-                <span>{stats.totalLearnedWords}/{stats.targetWordCount || stats.totalBookWords} {isTr ? 'biliyorum' : 'known'}</span>
-                <span>{isTr ? `${stats.totalLearningWords} çalışılan • +${stats.totalFlashcardReviews} kart` : `${stats.totalLearningWords} review • +${stats.totalFlashcardReviews} cards`}</span>
-              </div>
-            </div>
-
-            {/* Sütun 3: Sorular & Quizler */}
-            <div 
-              onClick={() => setActiveTabId('questions')}
-              className="bg-slate-800/70 hover:bg-slate-800 p-3.5 rounded-2xl border border-teal-900/50 hover:border-teal-500/50 transition-all cursor-pointer group shadow-sm"
-            >
-              <div className="flex items-center justify-between mb-2">
-                <div className="flex items-center gap-2">
-                  <div className="w-7 h-7 rounded-lg bg-teal-950/80 border border-teal-800/60 flex items-center justify-center text-teal-400 group-hover:scale-105 transition-transform">
-                    <i className="fa-solid fa-clipboard-question text-xs"></i>
-                  </div>
-                  <span className="text-xs font-bold text-slate-300">
-                    {isTr ? 'Sorular & Quizler' : 'Questions & Quizzes'}
-                  </span>
-                </div>
-                <span className="text-base font-black text-teal-400">
-                  %{stats.questionsProgressPercent}
-                </span>
-              </div>
-              <div className="w-full bg-slate-900 rounded-full h-2 overflow-hidden mb-2">
-                <div 
-                  className="bg-gradient-to-r from-teal-500 to-cyan-400 h-full rounded-full transition-all"
-                  style={{ width: `${stats.questionsProgressPercent}%` }}
-                ></div>
-              </div>
-              <div className="flex items-center justify-between text-[11px] text-slate-400">
-                <span>{isTr ? 'Soru Puanı:' : 'Quiz Score:'}</span>
-                <span className="font-bold text-slate-200">{stats.questionsXP.toLocaleString()} / 3.000 XP</span>
-              </div>
-              <div className="mt-1 text-[10px] text-teal-300/80 flex items-center justify-between">
-                <span>{stats.uniqueCorrect || 0}/{stats.totalQuizQuestions} {isTr ? 'doğru' : 'correct'}</span>
-                <span>{isTr ? `${stats.masteredCount} kusursuz • %${stats.quizAccuracy} doğruluk` : `${stats.masteredCount} mastered • %${stats.quizAccuracy}`}</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Aksiyon Etki Tablosu (Action Impact Strip - 10.000 XP) */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1 border-t border-slate-700/50">
-            <div className="p-2.5 rounded-xl bg-slate-800/40 border border-slate-700/50 flex items-center gap-2.5">
-              <span className="w-7 h-7 rounded-lg bg-teal-500/15 border border-teal-500/30 flex items-center justify-center text-teal-400 text-xs flex-shrink-0">
-                <i className="fa-solid fa-clipboard-check"></i>
-              </span>
-              <div className="min-w-0">
-                <div className="text-[11px] font-bold text-slate-200 truncate">{isTr ? '1 Soru Çözümü' : '1 Question'}</div>
-                <div className="text-[10px] text-teal-300 font-mono">+0.85-0.98 XP • 3.000 XP</div>
-              </div>
-            </div>
-
-            <div className="p-2.5 rounded-xl bg-slate-800/40 border border-slate-700/50 flex items-center gap-2.5">
-              <span className="w-7 h-7 rounded-lg bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-xs flex-shrink-0">
-                <i className="fa-solid fa-brain"></i>
-              </span>
-              <div className="min-w-0">
-                <div className="text-[11px] font-bold text-slate-200 truncate">{isTr ? '1 Kelime (Biliyorum)' : '1 Word (Known)'}</div>
-                <div className="text-[10px] text-emerald-300 font-mono">+3.28 XP • 3.500 XP</div>
-              </div>
-            </div>
-
-            <div className="p-2.5 rounded-xl bg-slate-800/40 border border-slate-700/50 flex items-center gap-2.5">
-              <span className="w-7 h-7 rounded-lg bg-indigo-500/15 border border-indigo-500/30 flex items-center justify-center text-indigo-400 text-xs flex-shrink-0">
-                <i className="fa-solid fa-book-bookmark"></i>
-              </span>
-              <div className="min-w-0">
-                <div className="text-[11px] font-bold text-slate-200 truncate">{isTr ? 'Bölüm Bitirme' : 'Section Done'}</div>
-                <div className="text-[10px] text-indigo-300 font-mono">+17.8 XP • 3.000 XP</div>
-              </div>
-            </div>
-
-            <div className="p-2.5 rounded-xl bg-slate-800/40 border border-slate-700/50 flex items-center gap-2.5">
-              <span className="w-7 h-7 rounded-lg bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-400 text-xs flex-shrink-0">
-                <i className="fa-solid fa-medal"></i>
-              </span>
-              <div className="min-w-0">
-                <div className="text-[11px] font-bold text-slate-200 truncate">{isTr ? 'Ünite Bitirme' : 'Chapter Done'}</div>
-                <div className="text-[10px] text-amber-300 font-mono">+27.8 XP • 500 XP</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Hızlı Aksiyon Butonları */}
-          <div className="flex flex-wrap items-center justify-between gap-2.5 pt-2">
-            <div className="flex flex-wrap gap-2 flex-1">
-              {setIsFullQuizOpen && (
-                <button
-                  onClick={() => setIsFullQuizOpen(true)}
-                  className="px-4 py-2.5 rounded-xl bg-teal-600 hover:bg-teal-500 text-white text-xs sm:text-sm font-bold flex items-center gap-2 shadow-lg shadow-teal-950/40 transition-all active:scale-[0.98]"
-                >
-                  <i className="fa-solid fa-graduation-cap"></i>
-                  {isTr ? 'Genel Sınav Çöz' : 'Start Full Quiz'}
-                </button>
-              )}
-
-              {setActiveTab && (
-                <>
-                  <button
-                    onClick={() => setActiveTabId('vocabulary')}
-                    className="px-3.5 py-2.5 rounded-xl bg-purple-950/70 hover:bg-purple-900/90 border border-purple-800/60 text-purple-300 hover:text-white text-xs sm:text-sm font-semibold flex items-center gap-2 transition-all shadow-sm"
-                  >
-                    <i className="fa-solid fa-spell-check text-xs"></i>
-                    {isTr ? 'Kelime Durumu' : 'Vocabulary Hub'}
-                  </button>
-
-                  <button
-                    onClick={() => setActiveTab('flashcards')}
-                    className="px-3.5 py-2.5 rounded-xl bg-rose-950/70 hover:bg-rose-900/90 border border-rose-800/60 text-rose-300 hover:text-white text-xs sm:text-sm font-semibold flex items-center gap-2 transition-all shadow-sm"
-                  >
-                    <i className="fa-solid fa-clone text-xs"></i>
-                    {isTr ? 'Flashcard Çalış' : 'Open Flashcards'}
-                  </button>
-
-                  <button
-                    onClick={() => setActiveTab('grammar')}
-                    className="px-3.5 py-2.5 rounded-xl bg-indigo-950/70 hover:bg-indigo-900/90 border border-indigo-800/60 text-indigo-300 hover:text-white text-xs sm:text-sm font-semibold flex items-center gap-2 transition-all shadow-sm"
-                  >
-                    <i className="fa-solid fa-spell-check text-xs"></i>
-                    {isTr ? 'Gramer Referansı' : 'Grammar Reference'}
-                  </button>
-                </>
-              )}
-            </div>
-
-            <div className="text-[11px] text-slate-400 italic">
-              <i className="fa-solid fa-circle-info mr-1 text-slate-500"></i>
-              {isTr ? 'Ayrıntılı döküm için aşağıdaki sekmeleri kullanabilirsiniz.' : 'Select a tab below to inspect detailed metrics.'}
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* 2. KILAVUZ & BİRLEŞİK İLERLEME KARTLARI */}
+      {showGuideAtTop ? (
+        <>
+          {renderGuideAccordion()}
+          {renderProgressAccordion()}
+        </>
+      ) : (
+        renderProgressAccordion()
+      )}
 
       {/* 3. İNTERAKTİF DETAY SEKMELERİ (NAVIGATION TABS) */}
       <div className="grid grid-cols-2 sm:flex sm:items-center sm:flex-wrap gap-2 border-b border-slate-800 pb-3">
