@@ -3,7 +3,7 @@ import { STUDIO_AUDIO_DATA } from './data/studioAudio';
 
 test('app version is defined and matches semantic versioning format', () => {
   expect(APP_VERSION).toMatch(/^v\d+\.\d+\.\d+$/);
-  expect(APP_VERSION).toBe('v0.1.5');
+  expect(APP_VERSION).toBe('v0.1.6');
 });
 
 test('studio audio data contains Chapter 1 lines and paragraphs timestamps', () => {
@@ -14,4 +14,18 @@ test('studio audio data contains Chapter 1 lines and paragraphs timestamps', () 
   expect(STUDIO_AUDIO_DATA.reading[1]).toBeDefined();
   expect(STUDIO_AUDIO_DATA.reading[1].audioSrc).toContain('ch1.mp3');
   expect(STUDIO_AUDIO_DATA.reading[1].paragraphs.length).toBe(4);
+});
+
+test('studio audio data covers all 18 chapters for both dialogues and reading passages', () => {
+  for (let ch = 1; ch <= 18; ch++) {
+    expect(STUDIO_AUDIO_DATA.dialogues[ch]).toBeDefined();
+    expect(STUDIO_AUDIO_DATA.dialogues[ch].audioSrc).toContain(`ch${ch}.mp3`);
+    expect(STUDIO_AUDIO_DATA.dialogues[ch].lines.length).toBeGreaterThan(0);
+    expect(STUDIO_AUDIO_DATA.dialogues[ch].totalDuration).toBeGreaterThan(10);
+
+    expect(STUDIO_AUDIO_DATA.reading[ch]).toBeDefined();
+    expect(STUDIO_AUDIO_DATA.reading[ch].audioSrc).toContain(`ch${ch}.mp3`);
+    expect(STUDIO_AUDIO_DATA.reading[ch].paragraphs.length).toBe(4);
+    expect(STUDIO_AUDIO_DATA.reading[ch].totalDuration).toBeGreaterThan(10);
+  }
 });

@@ -1,17 +1,25 @@
 // src/data/studioAudio.js
-import chapter1Timestamps from './chapter1Timestamps.json';
+import studioAudioTimestamps from './studioAudioTimestamps.json';
+
+const prefix = process.env.PUBLIC_URL || '';
 
 export const STUDIO_AUDIO_DATA = {
-  dialogues: {
-    1: {
-      ...chapter1Timestamps.dialogue,
-      audioSrc: `${process.env.PUBLIC_URL || ''}${chapter1Timestamps.dialogue.audioSrc}`
-    }
-  },
-  reading: {
-    1: {
-      ...chapter1Timestamps.reading,
-      audioSrc: `${process.env.PUBLIC_URL || ''}${chapter1Timestamps.reading.audioSrc}`
-    }
-  }
+  dialogues: Object.fromEntries(
+    Object.entries(studioAudioTimestamps.dialogues).map(([ch, data]) => [
+      parseInt(ch, 10),
+      {
+        ...data,
+        audioSrc: `${prefix}${data.audioSrc}`
+      }
+    ])
+  ),
+  reading: Object.fromEntries(
+    Object.entries(studioAudioTimestamps.reading).map(([ch, data]) => [
+      parseInt(ch, 10),
+      {
+        ...data,
+        audioSrc: `${prefix}${data.audioSrc}`
+      }
+    ])
+  )
 };

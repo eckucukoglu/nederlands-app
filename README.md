@@ -1,6 +1,6 @@
 # 🇳🇱 Nederlands in Gang - Interactief Oefenportaal (A1 → A2)
 
-[![Version](https://img.shields.io/badge/version-v0.1.5-10B981.svg?style=for-the-badge)](https://github.com/eckucukoglu/nederlands-app/releases/tag/v0.1.5)
+[![Version](https://img.shields.io/badge/version-v0.1.6-10B981.svg?style=for-the-badge)](https://github.com/eckucukoglu/nederlands-app/releases/tag/v0.1.6)
 [![Firebase Hosting](https://img.shields.io/badge/hosting-live-FFCA28.svg?style=for-the-badge&logo=firebase&logoColor=black)](https://nederlands-app.web.app)
 [![React](https://img.shields.io/badge/react-19.x-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)](https://react.dev/)
 [![TailwindCSS](https://img.shields.io/badge/tailwindcss-3.x-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
@@ -15,9 +15,15 @@ An open-source, interactive, and personalized web application designed to track 
 
 ---
 
-## 🌟 Key Highlights & Features (v0.1.5)
+## 🌟 Key Highlights & Features (v0.1.6)
 
-### 🔊 1. Complete Line & Paragraph Speech Playback (v0.1.5)
+### 🎙️ 1. Complete Natural Dutch Studio Audio Engine (Chapters 1–18) (v0.1.6)
+* **36 High-Fidelity Studio Recordings across All 18 Chapters**: Natural, human-like neural Dutch studio recordings are now fully generated, timestamped, and embedded for every single dialogue (`.1`) and reading passage (`Reading-X`) across the entire 18-chapter textbook curriculum.
+* **Multi-Speaker Character Cast**: Dialogue characters (teachers, students, narrators, shopkeepers, doctors, etc.) feature distinct, authentic Dutch neural voices (`nl-NL-ColetteNeural`, `nl-NL-MaartenNeural`, `nl-NL-FennaNeural`) with conversational prosody and stage-direction timing.
+* **Precision Millisecond Highlighting**: Synchronized word and line/sentence lighting follows the exact studio audio timestamps across all 18 chapters with smooth auto-scrolling.
+* **Interactive Line & Paragraph Snapping**: Jump instantly to any sentence or paragraph with smooth scrolling, complete sentence decay (no premature cutoffs), and global speed control.
+
+### 🔊 2. Complete Line & Paragraph Speech Playback (v0.1.5)
 * **Eliminated Premature Audio Cutoff in Single Line & Paragraph Playback**: Resolved an issue where playing individual dialogue lines or reading paragraphs cut off the final words prematurely. The playback stop threshold now extends seamlessly into the natural silence gap before subsequent sections, ensuring full acoustic decay and natural sentence completion without abrupt pauses.
 
 ### 🎧 2. Single Speech Playback Fix (v0.1.4)
