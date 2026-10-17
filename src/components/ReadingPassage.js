@@ -10,8 +10,7 @@ import {
   getSpeechRate, 
   setSpeechRate 
 } from '../utils/speech';
-import { STUDIO_AUDIO } from '../data/studioAudio';
-import StudioAudioPlayer from './StudioAudioPlayer';
+import { STUDIO_AUDIO_DATA } from '../data/studioAudio';
 
 const fallbackDictionary = {
   "de": "the", "een": "a/an", "het": "the", "ik": "I", "u": "you (formal)", "we": "we", "ze": "they", "mijn": "my", "uw": "your",
@@ -132,11 +131,25 @@ export default function ReadingPassage({
     return { id: p.id || idx, text: p.text };
   });
 
+  const studioAudioRef = useRef(null);
+  const chNum = parseInt(chapterId, 10);
+  const studioReading = (STUDIO_AUDIO_DATA.reading[chNum]?.sectionId === sectionId || STUDIO_AUDIO_DATA.reading[chNum]?.chapter === chNum) 
+    ? STUDIO_AUDIO_DATA.reading[chNum] 
+    : null;
+
   const stopPlayback = useCallback(() => {
     playAllSessionRef.current++;
     if (playAllTimeoutRef.current) {
       clearTimeout(playAllTimeoutRef.current);
       playAllTimeoutRef.current = null;
+    }
+    if (studioAudioRef.current) {
+      try {
+        studioAudioRef.current.pause();
+        studioAudioRef.current.onended = null;
+        studioAudioRef.current.ontimeupdate = null;
+        studioAudioRef.current.onerror = null;
+      } catch (e) {}
     }
     cancelDutchSpeech();
     setPlayingIdx(null);
@@ -152,23 +165,26 @@ export default function ReadingPassage({
     };
   }, [data, stopPlayback]);
 
-  // Stüdyo podcast seslendirmesi başladığında Web Speech döngüsünü durdur
   useEffect(() => {
-    const handleStudioStarted = () => {
-      stopPlayback();
+    const handleRateUpdate = (e) => {
+      const rate = e.detail || getSpeechRate();
+      setCurrentSpeechRate(rate);
+      if (studioAudioRef.current) {
+        studioAudioRef.current.playbackRate = rate;
+      }
     };
-    window.addEventListener('studioAudioStarted', handleStudioStarted);
-    return () => window.removeEventListener('studioAudioStarted', handleStudioStarted);
-  }, [stopPlayback]);
-
-  const chNum = parseInt(chapterId, 10);
-  const studioAudio = STUDIO_AUDIO.reading[chNum];
+    window.addEventListener('speechRateChanged', handleRateUpdate);
+    return () => window.removeEventListener('speechRateChanged', handleRateUpdate);
+  }, []);
 
   const handleSpeechRateChange = (e) => {
     const newRate = parseFloat(e.target.value);
     if (!isNaN(newRate)) {
       setCurrentSpeechRate(newRate);
       setSpeechRate(newRate);
+      if (studioAudioRef.current) {
+        studioAudioRef.current.playbackRate = newRate;
+      }
     }
   };
 
@@ -176,28 +192,12 @@ export default function ReadingPassage({
     if (e && e.stopPropagation) e.stopPropagation();
     setCurrentSpeechRate(1.0);
     setSpeechRate(1.0);
+    if (studioAudioRef.current) {
+      studioAudioRef.current.playbackRate = 1.0;
+    }
   };
 
-  // Tekil paragrafı çal / durdur
-  const handleToggleParagraph = (idx) => {
-    if (playingIdx === idx) {
-      stopPlayback();
-      return;
-    }
-
-    stopPlayback();
-    const para = paragraphs[idx];
-    if (!para || !para.text) return;
-
-    const currentSession = ++playAllSessionRef.current;
-    setPlayingIdx(idx);
-    setIsPlayingAll(false);
-
-    const paraEl = document.getElementById(`reading-para-${idx}`);
-    if (paraEl) {
-      paraEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    }
-
+  const playWebSpeechSinglePara = (idx, para, currentSession) => {
     speakDutchWithHighlight(para.text, {
       rate: currentSpeechRate,
       onWord: (wIdx) => {
@@ -227,18 +227,87 @@ export default function ReadingPassage({
     });
   };
 
-  // Tüm metni sırayla paragraf paragraf seslendir
-  const handleTogglePlayAll = () => {
-    if (isPlayingAll) {
+  // Tekil paragrafı çal / durdur
+  const handleToggleParagraph = (idx) => {
+    if (playingIdx === idx) {
       stopPlayback();
       return;
     }
 
-    if (paragraphs.length === 0) return;
-
     stopPlayback();
+    const para = paragraphs[idx];
+    if (!para || !para.text) return;
+
     const currentSession = ++playAllSessionRef.current;
-    setIsPlayingAll(true);
+    setPlayingIdx(idx);
+    setIsPlayingAll(false);
+
+    const paraEl = document.getElementById(`reading-para-${idx}`);
+    if (paraEl) {
+      paraEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    // EĞER BÖLÜM İÇİN DOĞAL STÜDYO KAYDI VARSA, DOĞRUDAN O PARAGRAFIN ZAMAN ARALIĞINI DİNLET
+    if (studioReading && studioReading.paragraphs) {
+      const paraTiming = studioReading.paragraphs.find(p => p.idx === idx);
+      if (paraTiming) {
+        if (!studioAudioRef.current) {
+          studioAudioRef.current = new Audio();
+        }
+        const audio = studioAudioRef.current;
+        audio.src = studioReading.audioSrc;
+        audio.playbackRate = currentSpeechRate;
+        audio.currentTime = paraTiming.start;
+
+        const tokens = parseTextTokens(para.text);
+
+        audio.ontimeupdate = () => {
+          if (playAllSessionRef.current !== currentSession) return;
+          const cur = audio.currentTime;
+
+          // Bu paragrafın bitiş saniyesine ulaşıldıysa durdur
+          if (cur >= paraTiming.end) {
+            audio.pause();
+            if (playAllSessionRef.current === currentSession) {
+              setPlayingIdx(null);
+              setActiveWordIdx(null);
+              setActiveSentenceIdx(null);
+            }
+            return;
+          }
+
+          // Paragraf içi kelime ve cümle ışıklandırma
+          if (tokens.length > 0) {
+            const pElapsed = cur - paraTiming.start;
+            const pDur = Math.max(0.1, paraTiming.end - paraTiming.start);
+            const progress = Math.min(Math.max(pElapsed / pDur, 0), 1);
+            const tokenTargetIdx = Math.min(Math.floor(progress * tokens.length), tokens.length - 1);
+            setActiveWordIdx(tokenTargetIdx);
+            if (tokens[tokenTargetIdx]) {
+              setActiveSentenceIdx(tokens[tokenTargetIdx].sentenceIndex);
+            }
+          }
+        };
+
+        audio.onended = () => {
+          if (playAllSessionRef.current === currentSession) {
+            setPlayingIdx(null);
+            setActiveWordIdx(null);
+            setActiveSentenceIdx(null);
+          }
+        };
+
+        audio.play().catch(() => {
+          playWebSpeechSinglePara(idx, para, currentSession);
+        });
+        return;
+      }
+    }
+
+    playWebSpeechSinglePara(idx, para, currentSession);
+  };
+
+  const playWebSpeechReading = (currentSession) => {
     let index = 0;
 
     const playNext = () => {
@@ -249,6 +318,7 @@ export default function ReadingPassage({
         setPlayingIdx(null);
         setActiveWordIdx(null);
         setActiveSentenceIdx(null);
+        cancelDutchSpeech();
         return;
       }
 
@@ -277,10 +347,11 @@ export default function ReadingPassage({
           if (playAllSessionRef.current !== currentSession) return;
           setActiveWordIdx(null);
           setActiveSentenceIdx(null);
+          if (playAllTimeoutRef.current) clearTimeout(playAllTimeoutRef.current);
           playAllTimeoutRef.current = setTimeout(() => {
             if (playAllSessionRef.current !== currentSession) return;
             playNext();
-          }, 600);
+          }, 500);
         },
         onError: () => {
           if (playAllSessionRef.current !== currentSession) return;
@@ -293,6 +364,90 @@ export default function ReadingPassage({
     };
 
     playNext();
+  };
+
+  // Tüm metni sırayla seslendir
+  const handleTogglePlayAll = () => {
+    if (isPlayingAll) {
+      stopPlayback();
+      return;
+    }
+
+    if (paragraphs.length === 0) return;
+
+    stopPlayback();
+    const currentSession = ++playAllSessionRef.current;
+    setIsPlayingAll(true);
+
+    // 1. EĞER BÖLÜM İÇİN DOĞAL STÜDYO KAYDI VARSA (Örn. Hoofdstuk 1)
+    if (studioReading && studioReading.paragraphs && studioReading.paragraphs.length > 0) {
+      if (!studioAudioRef.current) {
+        studioAudioRef.current = new Audio();
+      }
+      const audio = studioAudioRef.current;
+      audio.src = studioReading.audioSrc;
+      audio.playbackRate = currentSpeechRate;
+      audio.currentTime = 0;
+
+      const paras = studioReading.paragraphs;
+
+      audio.ontimeupdate = () => {
+        if (playAllSessionRef.current !== currentSession) return;
+        const cur = audio.currentTime;
+
+        const currentParaTiming = paras.find(p => cur >= p.start && cur < p.end);
+        if (currentParaTiming) {
+          const pIdx = currentParaTiming.idx;
+          setPlayingIdx(prevIdx => {
+            if (prevIdx !== pIdx) {
+              const paraEl = document.getElementById(`reading-para-${pIdx}`);
+              if (paraEl) {
+                paraEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+              }
+              return pIdx;
+            }
+            return prevIdx;
+          });
+
+          // Paragraf içi kelime ve cümle ışıklandırma
+          const paraData = paragraphs[pIdx];
+          if (paraData && paraData.text) {
+            const tokens = parseTextTokens(paraData.text);
+            if (tokens.length > 0) {
+              const pElapsed = cur - currentParaTiming.start;
+              const pDur = Math.max(0.1, currentParaTiming.end - currentParaTiming.start);
+              const progress = Math.min(Math.max(pElapsed / pDur, 0), 1);
+              const tokenTargetIdx = Math.min(Math.floor(progress * tokens.length), tokens.length - 1);
+              setActiveWordIdx(tokenTargetIdx);
+              if (tokens[tokenTargetIdx]) {
+                setActiveSentenceIdx(tokens[tokenTargetIdx].sentenceIndex);
+              }
+            }
+          }
+        }
+      };
+
+      audio.onended = () => {
+        if (playAllSessionRef.current === currentSession) {
+          setIsPlayingAll(false);
+          setPlayingIdx(null);
+          setActiveWordIdx(null);
+          setActiveSentenceIdx(null);
+        }
+      };
+
+      audio.onerror = () => {
+        playWebSpeechReading(currentSession);
+      };
+
+      audio.play().catch(() => {
+        playWebSpeechReading(currentSession);
+      });
+      return;
+    }
+
+    // 2. STÜDYO KAYDI OLMAYAN BÖLÜMLER İÇİN WEB SPEECH MOTORU
+    playWebSpeechReading(currentSession);
   };
 
   // ========================================================
@@ -808,15 +963,6 @@ export default function ReadingPassage({
           <p className="text-xs sm:text-sm text-slate-400 mb-4 leading-relaxed">
             {introText}
           </p>
-        )}
-
-        {/* STÜDYO PODCAST SES KAYDI BİLEŞENİ */}
-        {studioAudio && (
-          <StudioAudioPlayer 
-            audioData={studioAudio} 
-            lang={lang} 
-            type="reading" 
-          />
         )}
 
         {/* PARAGRAFLAR LİSTESİ */}

@@ -221,7 +221,7 @@ const startUnpauseWatchdog = () => {
   if (unpauseWatchdogTimer) clearInterval(unpauseWatchdogTimer);
   unpauseWatchdogTimer = setInterval(() => {
     if (typeof window !== 'undefined' && window.speechSynthesis) {
-      if (window.speechSynthesis.paused) {
+      if (window.speechSynthesis.speaking && window.speechSynthesis.paused) {
         window.speechSynthesis.resume();
       }
     }
@@ -274,10 +274,6 @@ export const cancelDutchSpeech = () => {
     if (window.speechSynthesis) {
       try {
         window.speechSynthesis.cancel();
-        // Olası takılı kalmış paused durumunu serbest bırak
-        if (window.speechSynthesis.paused) {
-          window.speechSynthesis.resume();
-        }
       } catch (e) {}
     }
   }
@@ -523,6 +519,7 @@ export const speakDutchWithHighlight = (text, options = {}) => {
 
     let chunkTimer = null;
     let watchdogTimer = null;
+    let hasAdvanced = false;
 
     const clearCurrentTimers = () => {
       if (chunkTimer) {
@@ -538,6 +535,8 @@ export const speakDutchWithHighlight = (text, options = {}) => {
 
     // Noktalama işaretlerine göre nefes ve duraklama ile sıradaki parçaya geç
     const advanceToNextChunk = () => {
+      if (hasAdvanced) return;
+      hasAdvanced = true;
       clearCurrentTimers();
       if (sessionId !== currentHighlightSession) return;
 
