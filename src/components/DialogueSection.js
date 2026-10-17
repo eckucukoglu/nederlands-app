@@ -221,7 +221,13 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
         const audio = studioAudioRef.current;
         audio.src = studioDialogue.audioSrc;
         audio.playbackRate = currentSpeechRate;
-        audio.currentTime = lineTiming.start;
+        const prevTiming = lineTimingIdx > 0 ? studioDialogue.lines[lineTimingIdx - 1] : null;
+        // MP3 çerçeve eşleme (seek jitter) ve ses donanımı başlangıç gecikmesinde ilk kelimenin
+        // ilk hecesinin kesilmemesi için önceki satırın bitişinden sonraki sessizlik aralığından (150ms geriden) başlat
+        const seekStart = prevTiming
+          ? Math.max(prevTiming.end + 0.05, lineTiming.start - 0.15)
+          : 0;
+        audio.currentTime = seekStart;
 
         const nextTiming = studioDialogue.lines[lineTimingIdx + 1];
         // Doğal ses sönümlemesi ve son kelimelerin kesilmemesi için:

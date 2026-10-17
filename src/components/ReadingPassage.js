@@ -258,7 +258,14 @@ export default function ReadingPassage({
         const audio = studioAudioRef.current;
         audio.src = studioReading.audioSrc;
         audio.playbackRate = currentSpeechRate;
-        audio.currentTime = paraTiming.start;
+
+        const prevParaTiming = paraTimingIdx > 0 ? studioReading.paragraphs[paraTimingIdx - 1] : null;
+        // MP3 çerçeve eşleme ve ses donanımı başlangıç gecikmesinde ilk kelimenin
+        // ilk hecesinin kesilmemesi için önceki paragraf bitişinden sonraki sessizlik aralığından (180ms geriden) başlat
+        const seekStart = prevParaTiming
+          ? Math.max(prevParaTiming.end + 0.08, paraTiming.start - 0.18)
+          : 0;
+        audio.currentTime = seekStart;
 
         const nextParaTiming = studioReading.paragraphs[paraTimingIdx + 1];
         // Doğal ses sönümlemesi ve son kelimelerin kesilmemesi için:

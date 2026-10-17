@@ -1,6 +1,6 @@
 # 🇳🇱 Nederlands in Gang - Interactief Oefenportaal (A1 → A2)
 
-[![Version](https://img.shields.io/badge/version-v0.1.6-10B981.svg?style=for-the-badge)](https://github.com/eckucukoglu/nederlands-app/releases/tag/v0.1.6)
+[![Version](https://img.shields.io/badge/version-v0.1.7-10B981.svg?style=for-the-badge)](https://github.com/eckucukoglu/nederlands-app/releases/tag/v0.1.7)
 [![Firebase Hosting](https://img.shields.io/badge/hosting-live-FFCA28.svg?style=for-the-badge&logo=firebase&logoColor=black)](https://nederlands-app.web.app)
 [![React](https://img.shields.io/badge/react-19.x-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)](https://react.dev/)
 [![TailwindCSS](https://img.shields.io/badge/tailwindcss-3.x-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
@@ -15,9 +15,12 @@ An open-source, interactive, and personalized web application designed to track 
 
 ---
 
-## 🌟 Key Highlights & Features (v0.1.6)
+## 🌟 Key Highlights & Features (v0.1.7)
 
-### 🎙️ 1. Complete Natural Dutch Studio Audio Engine (Chapters 1–18) (v0.1.6)
+### 🎯 1. Initial Word Pre-Roll & Seek-Jitter Prevention (v0.1.7)
+* **Eliminated First-Word Clipping in Single-Line & Single-Paragraph Playback**: Resolved an issue where playback of isolated dialogue lines occasionally cut off the very first consonant or syllable due to MP3 frame boundary quantization and DAC initialization latency. Playback now initiates smoothly from a calibrated pre-roll silence buffer (150–180ms) within the inter-line silence gap, ensuring the first word is heard with complete clarity from its very first millisecond.
+
+### 🎙️ 2. Complete Natural Dutch Studio Audio Engine (Chapters 1–18) (v0.1.6)
 * **36 High-Fidelity Studio Recordings across All 18 Chapters**: Natural, human-like neural Dutch studio recordings are now fully generated, timestamped, and embedded for every single dialogue (`.1`) and reading passage (`Reading-X`) across the entire 18-chapter textbook curriculum.
 * **Multi-Speaker Character Cast**: Dialogue characters (teachers, students, narrators, shopkeepers, doctors, etc.) feature distinct, authentic Dutch neural voices (`nl-NL-ColetteNeural`, `nl-NL-MaartenNeural`, `nl-NL-FennaNeural`) with conversational prosody and stage-direction timing.
 * **Precision Millisecond Highlighting**: Synchronized word and line/sentence lighting follows the exact studio audio timestamps across all 18 chapters with smooth auto-scrolling.
