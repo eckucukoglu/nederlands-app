@@ -1,5 +1,6 @@
 import { calculateOverallProgress } from './progress';
 import { vocabulary } from '../data';
+import { quizQuestions } from '../data/quizData';
 
 describe('Experience and Progress System Robustness & Scoring Engine Tests', () => {
   beforeEach(() => {
@@ -132,7 +133,7 @@ describe('Experience and Progress System Robustness & Scoring Engine Tests', () 
     expect(stats.quizAccuracy).toBe(100);
 
     // Soru XP'si hesaplanmalı ve 3.000 XP tavanında kalmalı
-    expect(stats.questionsXP).toBeGreaterThan(1500);
+    expect(stats.questionsXP).toBeGreaterThan(1200);
     expect(stats.questionsXP).toBeLessThanOrEqual(3000);
 
     // Kelime ve Bölüm puanları kesinlikle 0 olmalı
@@ -245,11 +246,11 @@ describe('Experience and Progress System Robustness & Scoring Engine Tests', () 
     const verbs = Array.from({ length: 100 }, (_, i) => `verb_${i}`);
     localStorage.setItem('starredIrregularVerbs', JSON.stringify(verbs));
 
-    // 5. 3.000 soru çözümü %100 başarıyla
+    // 5. Tüm soru bankasını %100 başarıyla çöz
     const qh = {};
-    for (let q = 0; q < 3200; q++) {
-      qh[`q_${q}`] = { correct: 5, incorrect: 0 };
-    }
+    quizQuestions.forEach(q => {
+      qh[q.id] = { correct: 5, incorrect: 0 };
+    });
     localStorage.setItem('quizHistory', JSON.stringify(qh));
 
     const favorites = { 'fav_1': true, 'fav_2': true, 'fav_3': true, 'fav_4': true, 'fav_5': true, 'fav_6': true, 'fav_7': true, 'fav_8': true, 'fav_9': true, 'fav_10': true };
@@ -336,5 +337,34 @@ describe('Experience and Progress System Robustness & Scoring Engine Tests', () 
       expect(chStat.chCurriculumLearned).toBe(0);
       expect(chStat.isVocabSectionDone).toBe(false);
     }
+  });
+
+  test('TC11: 5x Weighting for Matching Questions - Matching question carries 5x the weight of single choice question', () => {
+    // 1 matching soru ve 1 multiple_choice soru bulalım
+    const matchingQ = quizQuestions.find(q => q.type === 'matching');
+    const mcQ = quizQuestions.find(q => q.type === 'multiple_choice');
+
+    expect(matchingQ).toBeDefined();
+    expect(mcQ).toBeDefined();
+
+    // Senaryo A: Sadece 1 Çoktan Seçmeli Soru Çözen Kullanıcı
+    localStorage.setItem('quizHistory', JSON.stringify({
+      [mcQ.id]: { correct: 1, incorrect: 0 }
+    }));
+    const statsMC = calculateOverallProgress();
+
+    // Senaryo B: Sadece 1 Eşleştirme (Matching) Sorusu Çözen Kullanıcı
+    localStorage.setItem('quizHistory', JSON.stringify({
+      [matchingQ.id]: { correct: 1, incorrect: 0 }
+    }));
+    const statsMatching = calculateOverallProgress();
+
+    expect(statsMC.weightedUniqueCorrect).toBe(1);
+    expect(statsMatching.weightedUniqueCorrect).toBe(5);
+
+    // Eşleştirme sorusunun kazandırdığı ağırlık tam olarak 5 katıdır
+    expect(statsMatching.weightedUniqueCorrect).toBe(statsMC.weightedUniqueCorrect * 5);
+    expect(statsMatching.questionsSubBreakdown.baseQuestionsXP).toBe(3); // round(5/4171 * 2200) = 3
+    expect(statsMC.questionsSubBreakdown.baseQuestionsXP).toBe(1); // round(1/4171 * 2200) = 1
   });
 });

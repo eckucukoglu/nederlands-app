@@ -475,11 +475,18 @@ export default function ReadingPassage({
     if (!cleanWord) return;
     setClickedWordRaw(cleanWord);
 
+    // Viewport clamping to prevent popup overflow on mobile screens
+    const halfWidth = 140;
+    const padding = 12;
+    const minX = halfWidth + padding;
+    const maxX = Math.max(minX, window.innerWidth - halfWidth - padding);
+    const clampedX = Math.min(Math.max(e.clientX, minX), maxX);
+
     let yPosition = e.clientY + 15;
-    if (yPosition + 280 > window.innerHeight) {
-      yPosition = e.clientY - 260;
+    if (yPosition + 320 > window.innerHeight) {
+      yPosition = Math.max(20, e.clientY - 300);
     }
-    setPopupPos({ x: e.clientX, y: yPosition });
+    setPopupPos({ x: clampedX, y: yPosition });
 
     const allVocab = [...vocabulary, ...globalDictionary];
     const uniqueVocabMap = new Map();
@@ -510,15 +517,65 @@ export default function ReadingPassage({
       }];
     }
 
+    // Context analysis for accurate ranking
+    const prevWord = wordIndex > 0 ? cleanWords[wordIndex - 1] : '';
+    const nextWord = wordIndex < cleanWords.length - 1 ? cleanWords[wordIndex + 1] : '';
+    const bigramBefore = prevWord ? `${prevWord} ${cleanWord}` : '';
+    const bigramAfter = nextWord ? `${cleanWord} ${nextWord}` : '';
+
     matches.sort((a, b) => {
       const getScore = (item) => {
         const low = item.nl.toLowerCase();
         const lowNoApos = low.replace(/['’]/g, '');
-        if (low === cleanWord || lowNoApos === cleanWord) return 100;
-        if (low === `de ${cleanWord}` || low === `het ${cleanWord}` || low === `een ${cleanWord}`) return 90;
-        if (low.startsWith(`${cleanWord} (`) || lowNoApos.startsWith(`${cleanWord} (`)) return 85;
-        if (low.includes(`(${cleanWord})`)) return 80;
-        return 50 - Math.min(item.nl.length, 40);
+        const cleanNL = low.replace(/^(de|het|een)\s+/, '').replace(/\(.*?\)/g, '').trim();
+
+        let score = 0;
+
+        // 1. Phrasal & compound verb matches in immediate sentence context
+        if (bigramBefore && (low.includes(bigramBefore) || cleanNL.includes(bigramBefore))) {
+          score += 150;
+        } else if (bigramAfter && (low.includes(bigramAfter) || cleanNL.includes(bigramAfter))) {
+          score += 140;
+        }
+
+        // 2. Exact single word match
+        if (low === cleanWord || lowNoApos === cleanWord || cleanNL === cleanWord) {
+          score += 100;
+        } else if (low === `de ${cleanWord}` || low === `het ${cleanWord}` || low === `een ${cleanWord}`) {
+          score += 95;
+        } else if (low.startsWith(`${cleanWord} (`) || lowNoApos.startsWith(`${cleanWord} (`)) {
+          score += 90;
+        } else if (low.includes(`(${cleanWord})`)) {
+          score += 85;
+        }
+
+        // 3. Current active chapter curriculum bonus
+        if (item.chapter === chapterId || Number(item.chapter) === Number(chapterId)) {
+          score += 45;
+        }
+
+        // 4. Example sentence matches text
+        if (item.example) {
+          const exLow = item.example.toLowerCase();
+          if (exLow.includes(cleanWord) && (bigramBefore && exLow.includes(bigramBefore))) {
+            score += 35;
+          }
+        }
+
+        // 5. Penalize multi-word phrases whose other words do NOT appear in the current sentence
+        const wordsInItem = low.replace(/[^a-z0-9\s]/g, ' ').split(/\s+/).filter(w => w.length > 1 && !['de', 'het', 'een'].includes(w));
+        if (wordsInItem.length > 1) {
+          const otherWords = wordsInItem.filter(w => w !== cleanWord);
+          const hasOtherWordInSentence = otherWords.some(w => cleanWords.includes(w));
+          if (!hasOtherWordInSentence) {
+            score -= 60;
+          }
+        }
+
+        // Length tiebreaker
+        score += Math.max(0, 30 - Math.min(item.nl.length, 30));
+
+        return score;
       };
       return getScore(b) - getScore(a);
     });
@@ -1095,7 +1152,7 @@ export default function ReadingPassage({
           ></div>
 
           <div 
-            className="fixed bg-slate-800 border border-slate-600 p-3 rounded-xl shadow-2xl z-50 min-w-[240px] max-w-[280px] transform -translate-x-1/2 max-h-[360px] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-600" 
+            className="fixed bg-slate-800 border border-slate-600 p-3 rounded-xl shadow-2xl z-50 w-[280px] max-w-[calc(100vw-24px)] box-border transform -translate-x-1/2 max-h-[360px] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-600" 
             style={{ left: `${popupPos.x}px`, top: `${popupPos.y}px` }} 
             onClick={(e) => e.stopPropagation()}
           >

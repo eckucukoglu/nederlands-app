@@ -548,13 +548,21 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
   const handleWordClick = (e, wordIndex, cleanWords) => {
     e.stopPropagation();
     const cleanWord = cleanWords[wordIndex];
+    if (!cleanWord) return;
     setClickedWordRaw(cleanWord);
 
+    // Viewport clamping to prevent popup overflow on mobile screens
+    const halfWidth = 140;
+    const padding = 12;
+    const minX = halfWidth + padding;
+    const maxX = Math.max(minX, window.innerWidth - halfWidth - padding);
+    const clampedX = Math.min(Math.max(e.clientX, minX), maxX);
+
     let yPosition = e.clientY + 15;
-    if (yPosition + 280 > window.innerHeight) {
-      yPosition = e.clientY - 260; 
+    if (yPosition + 320 > window.innerHeight) {
+      yPosition = Math.max(20, e.clientY - 300); 
     }
-    setPopupPos({ x: e.clientX, y: yPosition });
+    setPopupPos({ x: clampedX, y: yPosition });
 
     const allVocab = [...vocabulary, ...globalDictionary];
     const uniqueVocabMap = new Map();
@@ -585,15 +593,66 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
       }];
     }
 
+    // Context analysis for accurate ranking
+    const prevWord = wordIndex > 0 ? cleanWords[wordIndex - 1] : '';
+    const nextWord = wordIndex < cleanWords.length - 1 ? cleanWords[wordIndex + 1] : '';
+    const bigramBefore = prevWord ? `${prevWord} ${cleanWord}` : '';
+    const bigramAfter = nextWord ? `${cleanWord} ${nextWord}` : '';
+
     matches.sort((a, b) => {
       const getScore = (item) => {
         const low = item.nl.toLowerCase();
         const lowNoApos = low.replace(/['’]/g, '');
-        if (low === cleanWord || lowNoApos === cleanWord) return 100;
-        if (low === `de ${cleanWord}` || low === `het ${cleanWord}` || low === `een ${cleanWord}`) return 90;
-        if (low.startsWith(`${cleanWord} (`) || lowNoApos.startsWith(`${cleanWord} (`)) return 85;
-        if (low.includes(`(${cleanWord})`)) return 80;
-        return 50 - Math.min(item.nl.length, 40);
+        const cleanNL = low.replace(/^(de|het|een)\s+/, '').replace(/\(.*?\)/g, '').trim();
+
+        let score = 0;
+
+        // 1. Phrasal & compound verb matches in immediate sentence context (e.g. "gaan verder" when clicking "verder")
+        if (bigramBefore && (low.includes(bigramBefore) || cleanNL.includes(bigramBefore))) {
+          score += 150;
+        } else if (bigramAfter && (low.includes(bigramAfter) || cleanNL.includes(bigramAfter))) {
+          score += 140;
+        }
+
+        // 2. Exact single word match
+        if (low === cleanWord || lowNoApos === cleanWord || cleanNL === cleanWord) {
+          score += 100;
+        } else if (low === `de ${cleanWord}` || low === `het ${cleanWord}` || low === `een ${cleanWord}`) {
+          score += 95;
+        } else if (low.startsWith(`${cleanWord} (`) || lowNoApos.startsWith(`${cleanWord} (`)) {
+          score += 90;
+        } else if (low.includes(`(${cleanWord})`)) {
+          score += 85;
+        }
+
+        // 3. Current active chapter curriculum bonus
+        if (item.chapter === chapterId || Number(item.chapter) === Number(chapterId)) {
+          score += 45;
+        }
+
+        // 4. Example sentence matches dialogue text
+        if (item.example) {
+          const exLow = item.example.toLowerCase();
+          if (exLow.includes(cleanWord) && (bigramBefore && exLow.includes(bigramBefore))) {
+            score += 35;
+          }
+        }
+
+        // 5. Penalize multi-word phrases whose other words do NOT appear in the current sentence
+        // (Prevents irrelevant idioms like "kom verder" from appearing when the user clicked "verder" in "we gaan verder met de les")
+        const wordsInItem = low.replace(/[^a-z0-9\s]/g, ' ').split(/\s+/).filter(w => w.length > 1 && !['de', 'het', 'een'].includes(w));
+        if (wordsInItem.length > 1) {
+          const otherWords = wordsInItem.filter(w => w !== cleanWord);
+          const hasOtherWordInSentence = otherWords.some(w => cleanWords.includes(w));
+          if (!hasOtherWordInSentence) {
+            score -= 60;
+          }
+        }
+
+        // Length tiebreaker
+        score += Math.max(0, 30 - Math.min(item.nl.length, 30));
+
+        return score;
       };
       return getScore(b) - getScore(a);
     });
@@ -872,6 +931,28 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
 
         <div className="space-y-3">
           {activeDialogue.map((line, idx) => {
+            const isLinePlaying = playingLineIdx === idx;
+
+            // Anlatı ara geçişi / zaman atlaması kontrolü (örn. "Verteller: (...)")
+            if (line.text.trim() === '(...)' || line.text.trim() === '...') {
+              return (
+                <div 
+                  id={`dialogue-line-${idx}`}
+                  key={idx} 
+                  className={`py-2 px-4 rounded-xl flex items-center justify-center gap-3 text-xs text-slate-500 italic transition-all ${
+                    isLinePlaying ? 'bg-amber-950/30 text-amber-300 ring-1 ring-amber-500/50' : ''
+                  }`}
+                >
+                  <div className="h-px bg-slate-700/60 flex-1 max-w-[80px]"></div>
+                  <span className="flex items-center gap-1.5 select-none font-medium text-[11px] text-slate-400">
+                    <i className="fa-solid fa-hourglass-half text-[10px] text-slate-500"></i>
+                    {lang === 'tr' ? 'kısa ara / sahne geçişi' : 'brief pause / transition'}
+                  </span>
+                  <div className="h-px bg-slate-700/60 flex-1 max-w-[80px]"></div>
+                </div>
+              );
+            }
+
             const tokens = parseTextTokens(line.text);
             const cleanWords = tokens.map(t => t.clean);
             
@@ -890,7 +971,6 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
               : line.translation;
               
             const flag = lang === 'tr' ? '🇹🇷' : '🇬🇧';
-            const isLinePlaying = playingLineIdx === idx;
 
             return (
               <div 
@@ -1107,7 +1187,7 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
         <>
           <div className="fixed inset-0 z-40" onClick={(e) => { e.stopPropagation(); setSelectedWords(null); }}></div>
           <div 
-            className="fixed bg-slate-800 border border-slate-600 p-3 rounded-xl shadow-2xl z-50 min-w-[240px] max-w-[280px] transform -translate-x-1/2 max-h-[360px] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-600" 
+            className="fixed bg-slate-800 border border-slate-600 p-3 rounded-xl shadow-2xl z-50 w-[280px] max-w-[calc(100vw-24px)] box-border transform -translate-x-1/2 max-h-[360px] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-600" 
             style={{ left: `${popupPos.x}px`, top: `${popupPos.y}px` }} 
             onClick={(e) => e.stopPropagation()}
           >

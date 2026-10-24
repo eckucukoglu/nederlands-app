@@ -50,7 +50,7 @@ export function notifyProgressUpdated() {
  * 2. Kelimeler & Kelime Çalışmaları: 3.500 XP
  * 3. Soru Bankası & Quizler: 3.000 XP
  */
-export function calculateOverallProgress({ completed = {}, favorites = {}, bookSections = [] } = {}) {
+export function calculateOverallProgress({ completed = {}, favorites = {}, bookSections = [], quizQuestions: customQuizQuestions } = {}) {
   let quizHistory = {};
   let globalWordPool = {};
   let flashcardStats = {};
@@ -274,7 +274,25 @@ export function calculateOverallProgress({ completed = {}, favorites = {}, bookS
 
   // =========================================================================
   // DİREK 3: SORU BANKASI & QUİZLER (TAVAN: 3.000 XP)
+  // Matching sorular 5x ağırlık, tekil/boşluk doldurma soruları 1x ağırlık taşır.
   // =========================================================================
+  const questionsList = customQuizQuestions || quizQuestions || [];
+  const questionMap = new Map();
+  questionsList.forEach(q => {
+    if (q && q.id) questionMap.set(q.id, q);
+  });
+
+  const getQuestionWeight = (id) => {
+    const q = questionMap.get(id);
+    return (q && q.type === 'matching') ? 5 : 1;
+  };
+
+  let totalWeightedQuizQuestions = 0;
+  questionsList.forEach(q => {
+    totalWeightedQuizQuestions += (q && q.type === 'matching') ? 5 : 1;
+  });
+  if (totalWeightedQuizQuestions === 0) totalWeightedQuizQuestions = 3069;
+
   const attemptedQIds = Object.keys(quizHistory);
   const uniqueAttempted = attemptedQIds.length;
   let totalQuizCorrect = 0;
@@ -282,31 +300,48 @@ export function calculateOverallProgress({ completed = {}, favorites = {}, bookS
   let masteredCount = 0;
   let weakCount = 0;
 
+  let weightedUniqueCorrect = 0;
+  let weightedMastered = 0;
+  let totalWeightedCorrect = 0;
+  let totalWeightedAttempts = 0;
+
   attemptedQIds.forEach(id => {
     const q = quizHistory[id] || {};
     const c = Number(q.correct) || 0;
     const inc = Number(q.incorrect) || 0;
+    const w = getQuestionWeight(id);
+
     totalQuizCorrect += c;
     totalQuizIncorrect += inc;
-    if (c > 0 && inc === 0) masteredCount++;
+    totalWeightedCorrect += (c * w);
+    totalWeightedAttempts += ((c + inc) * w);
+
+    if (c > 0) {
+      weightedUniqueCorrect += w;
+    }
+    if (c > 0 && inc === 0) {
+      masteredCount++;
+      weightedMastered += w;
+    }
     if (inc > c) weakCount++;
   });
 
   const totalQuizAttempts = totalQuizCorrect + totalQuizIncorrect;
-  const quizAccuracy = totalQuizAttempts > 0 
-    ? Math.round((totalQuizCorrect / totalQuizAttempts) * 100) 
+  const quizAccuracy = totalWeightedAttempts > 0 
+    ? Math.round((totalWeightedCorrect / totalWeightedAttempts) * 100) 
     : 0;
-  const totalQuizQuestions = quizQuestions?.length || 3069;
+  const totalQuizQuestions = questionsList.length || 3069;
   const uniqueCorrect = attemptedQIds.filter(id => (quizHistory[id]?.correct || 0) > 0).length;
 
   // 3A. Benzersiz Doğru Çözülen Sorular: Maks 2.200 XP
-  const baseQuestionsXP = totalQuizQuestions > 0 
-    ? Math.min(2200, Math.round((uniqueCorrect / totalQuizQuestions) * 2200)) 
+  // Eşleştirme soruları 5x ağırlık taşır (matching = 5 ağırlık, çoktan seçmeli/boşluk doldurma = 1 ağırlık).
+  const baseQuestionsXP = totalWeightedQuizQuestions > 0 
+    ? Math.min(2200, Math.round((weightedUniqueCorrect / totalWeightedQuizQuestions) * 2200)) 
     : 0;
 
   // 3B. Sıfır Hata ile Ustalık: Maks 400 XP
-  const masteryXP = totalQuizQuestions > 0 
-    ? Math.min(400, Math.round((masteredCount / totalQuizQuestions) * 400)) 
+  const masteryXP = totalWeightedQuizQuestions > 0 
+    ? Math.min(400, Math.round((weightedMastered / totalWeightedQuizQuestions) * 400)) 
     : 0;
 
   // 3C. Yüksek Doğruluk Oranı (%70+): Maks 250 XP (En az 20 soru çözümüyle aktive olur)
@@ -315,7 +350,7 @@ export function calculateOverallProgress({ completed = {}, favorites = {}, bookS
     : 0;
 
   // 3D. Soru Tekrarı & Çözüm Hacmi: Maks 150 XP
-  const repetitionBonus = Math.min(150, Math.floor(totalQuizCorrect / 20));
+  const repetitionBonus = Math.min(150, Math.floor(totalWeightedCorrect / 25));
   const extraQuestionsXP = repetitionBonus;
 
   const questionsXP = Math.min(3000, baseQuestionsXP + masteryXP + accuracyBonus + extraQuestionsXP);
@@ -329,7 +364,10 @@ export function calculateOverallProgress({ completed = {}, favorites = {}, bookS
     accuracyBonus,
     accuracyBonusMaxXP: 250,
     extraQuestionsXP,
-    extraQuestionsMaxXP: 150
+    extraQuestionsMaxXP: 150,
+    weightedUniqueCorrect,
+    totalWeightedQuizQuestions,
+    weightedMastered
   };
 
   // =========================================================================
@@ -476,6 +514,9 @@ export function calculateOverallProgress({ completed = {}, favorites = {}, bookS
     questionsProgressPercent,
     uniqueAttempted,
     uniqueCorrect,
+    weightedUniqueCorrect,
+    totalWeightedQuizQuestions,
+    weightedMastered,
     totalQuizAttempts,
     totalQuizCorrect,
     totalQuizIncorrect,

@@ -1,6 +1,6 @@
 # 🇳🇱 Nederlands in Gang - Interactief Oefenportaal (A1 → A2)
 
-[![Version](https://img.shields.io/badge/version-v0.1.11-10B981.svg?style=for-the-badge)](https://github.com/eckucukoglu/nederlands-app/releases/tag/v0.1.11)
+[![Version](https://img.shields.io/badge/version-v0.1.12-10B981.svg?style=for-the-badge)](https://github.com/eckucukoglu/nederlands-app/releases/tag/v0.1.12)
 [![Firebase Hosting](https://img.shields.io/badge/hosting-live-FFCA28.svg?style=for-the-badge&logo=firebase&logoColor=black)](https://nederlands-app.web.app)
 [![React](https://img.shields.io/badge/react-19.x-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)](https://react.dev/)
 [![TailwindCSS](https://img.shields.io/badge/tailwindcss-3.x-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
@@ -15,9 +15,21 @@ An open-source, interactive, and personalized web application designed to track 
 
 ---
 
-## 🌟 Key Highlights & Features (v0.1.11)
+## 🌟 Key Highlights & Features (v0.1.12)
 
-### 🧹 1. Removal of "Good Question" Marking & Cleaned Feedback Pipeline (v0.1.11)
+### 🎯 1. 5x Weighting for Matching Questions in Quiz Scoring (v0.1.12)
+* **5x Weight Multiplier for Matching Questions**: Matching questions (`type: 'matching'`) require cognitive effort across 4–5 paired items; they now award **5 times** the XP weight of single-choice (`multiple_choice`) and fill-in-the-blank questions (weight = 5 vs weight = 1).
+* **Weighted Soru Bankası Math (Total Weight = 4,171)**: Base questions XP (`2,200 XP max`) and mastery XP (`400 XP max`) are computed directly against the total available weight (428 matching × 5 + 2,031 multiple choice × 1 = 4,171).
+* **Saturation Ceiling & Monotonicity Preservation**: Perfect completion of all 2,459 questions strictly hits the 3,000 XP cap for Pillar 3 and 10,000 XP (100.0%) overall.
+* **Automated Unit Testing (`TC11`)**: Added test case `TC11` to `src/utils/progress.test.js`, mathematically verifying that a matching question awards exactly 5x the weight and proportional base XP of a multiple-choice question.
+
+### 📱 2. Mobile Popover Viewport Clamping & Contextual Phrase Ranking (v0.1.12)
+* **Mobile Viewport Clamping (`DialogueSection.js` & `ReadingPassage.js`)**: Fixed a layout bug where tapping a word near the right side of a mobile screen caused the translation popover to overflow outside the viewport, cutting off the audio button, example sentence, and the unknown `[ ✗ ]` button. Popovers are now dynamically clamped within safe screen boundaries (`w-[280px] max-w-[calc(100vw-24px)] box-border`).
+* **Intelligent Sentence Context Ranking**: Tapping a word like `verder` in *"Oké, we gaan verder met de les."* now detects the surrounding bigram (`gaan verder`) and boosts relevant compound verbs from the active chapter to the top (#1). Irrelevant multi-word idioms whose other terms do not appear in the sentence (e.g. `kom verder`) are automatically penalized and de-ranked.
+* **Polished Dialogue Scene Dividers**: Replaced raw `VERTELLER (...)` dialogue entries with discreet narrative transition dividers, keeping audio sync without rendering misleading empty speaker boxes.
+* **Expanded `verder` Lexicon Entry**: Refined the definition of `verder` in `globalDictionary.js` to encompass *"further / furthermore / else / continue"* (`"daha ileri, ileride, ayrıca, başka, devam"`).
+
+### 🧹 3. Removal of "Good Question" Marking & Cleaned Feedback Pipeline (v0.1.11)
 * **Removed "İyi Soru" (Good Question) Marking**: Eliminated the thumbs-up button and associated toggle logic from the quiz interface (`QuizModule.js`), streamlining the quiz workflow so learners focus purely on answering questions and reporting actual mistakes.
 * **Streamlined Admin Reports / Feedbacks Screen (`AdminReports.js`)**: Removed the separate "İyi / Kaliteli Olarak İşaretlenen Sorular" table and bulk ID copy action from the `/feedbacks` dashboard. The admin view now cleanly focuses on active bug reports, error corrections, and user feedback.
 * **Scoring Engine Adjustment (Pillar 3D)**: Shifted Pillar 3D quota (`extraQuestionsXP`) entirely to practice volume and question repetition (`repetitionBonus` based on repeated correct answers), removing the dependency on `goodQuestions`.

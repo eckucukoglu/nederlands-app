@@ -682,7 +682,7 @@ export default function HomeView({
                   </span>
                   <div className="min-w-0">
                     <div className="text-[11px] font-bold text-slate-200 truncate">{isTr ? '1 Soru Çözümü' : '1 Question'}</div>
-                    <div className="text-[10px] text-teal-300 font-mono">+0.85-0.98 XP • 3.000 XP</div>
+                    <div className="text-[10px] text-teal-300 font-mono">{isTr ? '+0.6 - 3.1 XP (Matching 5x)' : '+0.6 - 3.1 XP (Matching 5x)'}</div>
                   </div>
                 </div>
 
@@ -966,8 +966,8 @@ export default function HomeView({
                   </div>
                   <p className="text-xs text-slate-300 leading-relaxed">
                     {isTr 
-                      ? '~3.069 soruluk havuzda doğru çözülen benzersiz sorular (Maks 2.200 XP), 0 hata ile kusursuz ustalık (Maks 400 XP), %70+ başarı oranı istikrarı (Maks 250 XP) ve soru tekrarı / pratik hacmi bonusu (Maks 150 XP).'
-                      : 'Unique correct questions across ~3,069 questions (Max 2,200 XP), zero-mistake mastery (Max 400 XP), consistent 70%+ accuracy bonus (Max 250 XP), and repetition / practice volume bonus (Max 150 XP).'}
+                      ? 'Soru havuzunda çözülen benzersiz sorular (Maks 2.200 XP; Eşleştirme (matching) soruları 5x, çoktan seçmeli ve boşluk doldurma soruları 1x ağırlıktadır), 0 hata ile kusursuz ustalık (Maks 400 XP), %70+ başarı oranı istikrarı (Maks 250 XP) ve soru tekrarı / pratik hacmi bonusu (Maks 150 XP).'
+                      : 'Unique correct questions across the pool (Max 2,200 XP; matching questions carry 5x weight, multiple choice and fill-in carry 1x weight), zero-mistake mastery (Max 400 XP), consistent 70%+ accuracy bonus (Max 250 XP), and repetition / practice volume bonus (Max 150 XP).'}
                   </p>
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5 pt-1 text-[11px] font-mono text-slate-400">
                     <div className="bg-slate-900/60 rounded px-2 py-1 border border-slate-700/30">
@@ -988,7 +988,7 @@ export default function HomeView({
                     </div>
                   </div>
                   <div className="flex justify-between text-[11px] text-slate-400 pt-1 border-t border-slate-700/40">
-                    <span>{isTr ? 'Doğru Çözülen:' : 'Unique Correct:'} <strong className="text-slate-200">{stats.uniqueCorrect || 0} / {stats.totalQuizQuestions}</strong></span>
+                    <span>{isTr ? 'Doğru Çözülen:' : 'Unique Correct:'} <strong className="text-slate-200">{stats.uniqueCorrect || 0} / {stats.totalQuizQuestions} ({stats.weightedUniqueCorrect || 0} / {stats.totalWeightedQuizQuestions || 0} {isTr ? 'ağırlık' : 'weight'})</strong></span>
                     <span>{isTr ? 'Kusursuz / Başarı:' : 'Mastered / Accuracy:'} <strong className="text-slate-200">{stats.masteredCount} • %{stats.quizAccuracy}</strong></span>
                   </div>
                 </div>

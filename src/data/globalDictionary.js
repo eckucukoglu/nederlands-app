@@ -2725,7 +2725,7 @@ export const globalDictionary = [
   { nl: "ver", en: "far", tr: "uzak", example: "Het strand is niet ver hier vandaan." },
   { nl: "veranderen", en: "to change", tr: "değiştirmek", example: "Het weer kan snel veranderen." },
   { nl: "verbeteren", en: "to improve", tr: "geliştirmek, düzeltmek", example: "Ik wil mijn Nederlands graag verbeteren." },
-  { nl: "verder", en: "otherwise", tr: "başka, ileride", example: "Heb je verder nog wensen?" },
+  { nl: "verder", en: "further / furthermore / else", tr: "daha ileri, ileride, ayrıca, başka", example: "We gaan verder met de les." },
   { nl: "verder nog (iets)", en: "anything else", tr: "başka bir şey var mı", example: "Wil je verder nog iets drinken?" },
   { nl: "verdergaan", en: "to go on / continue", tr: "devam etmek", example: "Laten we nu weer verdergaan." },
   { nl: "verderkomen", en: "to come in", tr: "içeri gelmek, ilerlemek", example: "Kom verder, neem plaats." },
