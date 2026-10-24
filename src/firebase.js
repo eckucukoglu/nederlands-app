@@ -134,33 +134,6 @@ export const toggleReportQuestion = async (question, user, isReporting) => {
 };
 
 
-// YENİ: İyi / Kaliteli Soruyu İşaretleme veya Geri Alma
-export const toggleGoodQuestion = async (question, user, isGood) => {
-  if (!user) throw new Error("Kullanıcı bulunamadı"); 
-  
-  const docId = `${question.id}_${user.uid}_good`;
-  const docRef = doc(db, "reported_questions", docId);
-  
-  try {
-    if (isGood) {
-      await setDoc(docRef, {
-        questionId: question.id || "ID Yok",
-        questionNl: question.questionNl || "Soru metni yok",
-        tags: question.tags || [],
-        userId: user.uid,
-        userEmail: user.email || "Email belirtilmemiş",
-        reportType: "good",
-        timestamp: new Date().toISOString()
-      });
-    } else {
-      await deleteDoc(docRef);
-    }
-  } catch (err) {
-    console.error("İyi soru işaretleme hatası (Firebase):", err);
-    throw err;
-  }
-};
-
 // YENİ: Genel Text Feedback Gönderme
 export const submitFeedback = async (text, user) => {
   const collRef = collection(db, "feedbacks");

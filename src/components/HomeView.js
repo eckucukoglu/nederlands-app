@@ -966,8 +966,8 @@ export default function HomeView({
                   </div>
                   <p className="text-xs text-slate-300 leading-relaxed">
                     {isTr 
-                      ? '~3.069 soruluk havuzda doğru çözülen benzersiz sorular (Maks 2.200 XP), 0 hata ile kusursuz ustalık (Maks 400 XP), %70+ başarı oranı istikrarı (Maks 250 XP) ve tekrar/iyi soru bonusu (Maks 150 XP).'
-                      : 'Unique correct questions across ~3,069 questions (Max 2,200 XP), zero-mistake mastery (Max 400 XP), consistent 70%+ accuracy bonus (Max 250 XP), and repetition/good-question bonus (Max 150 XP).'}
+                      ? '~3.069 soruluk havuzda doğru çözülen benzersiz sorular (Maks 2.200 XP), 0 hata ile kusursuz ustalık (Maks 400 XP), %70+ başarı oranı istikrarı (Maks 250 XP) ve soru tekrarı / pratik hacmi bonusu (Maks 150 XP).'
+                      : 'Unique correct questions across ~3,069 questions (Max 2,200 XP), zero-mistake mastery (Max 400 XP), consistent 70%+ accuracy bonus (Max 250 XP), and repetition / practice volume bonus (Max 150 XP).'}
                   </p>
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5 pt-1 text-[11px] font-mono text-slate-400">
                     <div className="bg-slate-900/60 rounded px-2 py-1 border border-slate-700/30">
@@ -983,7 +983,7 @@ export default function HomeView({
                       <strong className="text-teal-300">{(stats.questionsSubBreakdown?.accuracyBonus || 0).toLocaleString()} / 250</strong>
                     </div>
                     <div className="bg-slate-900/60 rounded px-2 py-1 border border-slate-700/30">
-                      <span className="block text-[10px] text-slate-400">{isTr ? 'Tekrar & İyi Soru' : 'Repetition & Star'}</span>
+                      <span className="block text-[10px] text-slate-400">{isTr ? 'Tekrar & Hacim' : 'Repetition & Vol'}</span>
                       <strong className="text-teal-300">{(stats.questionsSubBreakdown?.extraQuestionsXP || 0).toLocaleString()} / 150</strong>
                     </div>
                   </div>
@@ -1330,14 +1330,6 @@ export default function HomeView({
                       {isTr ? 'Tekrar Gerekenler (Zorlanılan)' : 'Questions Needing Review'}
                     </span>
                     <span className="font-extrabold text-amber-400">{stats.weakCount}</span>
-                  </div>
-
-                  <div className="flex items-center justify-between text-xs sm:text-sm py-1.5 border-b border-slate-700/60">
-                    <span className="text-slate-400 flex items-center gap-2">
-                      <i className="fa-solid fa-thumbs-up text-brand-400 text-xs"></i>
-                      {isTr ? 'Beğenilen Sorular (İyi Soru)' : 'Favorited Questions'}
-                    </span>
-                    <span className="font-extrabold text-brand-300">{stats.goodQuestionsCount}</span>
                   </div>
 
                   <div className="flex items-center justify-between text-xs sm:text-sm py-1.5">

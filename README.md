@@ -1,6 +1,6 @@
 # 🇳🇱 Nederlands in Gang - Interactief Oefenportaal (A1 → A2)
 
-[![Version](https://img.shields.io/badge/version-v0.1.10-10B981.svg?style=for-the-badge)](https://github.com/eckucukoglu/nederlands-app/releases/tag/v0.1.10)
+[![Version](https://img.shields.io/badge/version-v0.1.11-10B981.svg?style=for-the-badge)](https://github.com/eckucukoglu/nederlands-app/releases/tag/v0.1.11)
 [![Firebase Hosting](https://img.shields.io/badge/hosting-live-FFCA28.svg?style=for-the-badge&logo=firebase&logoColor=black)](https://nederlands-app.web.app)
 [![React](https://img.shields.io/badge/react-19.x-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)](https://react.dev/)
 [![TailwindCSS](https://img.shields.io/badge/tailwindcss-3.x-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
@@ -15,9 +15,15 @@ An open-source, interactive, and personalized web application designed to track 
 
 ---
 
-## 🌟 Key Highlights & Features (v0.1.10)
+## 🌟 Key Highlights & Features (v0.1.11)
 
-### 🎯 1. Cross-Chapter Isolation, Context Scaling & Honest 2-Chapter Metric Alignment (v0.1.10)
+### 🧹 1. Removal of "Good Question" Marking & Cleaned Feedback Pipeline (v0.1.11)
+* **Removed "İyi Soru" (Good Question) Marking**: Eliminated the thumbs-up button and associated toggle logic from the quiz interface (`QuizModule.js`), streamlining the quiz workflow so learners focus purely on answering questions and reporting actual mistakes.
+* **Streamlined Admin Reports / Feedbacks Screen (`AdminReports.js`)**: Removed the separate "İyi / Kaliteli Olarak İşaretlenen Sorular" table and bulk ID copy action from the `/feedbacks` dashboard. The admin view now cleanly focuses on active bug reports, error corrections, and user feedback.
+* **Scoring Engine Adjustment (Pillar 3D)**: Shifted Pillar 3D quota (`extraQuestionsXP`) entirely to practice volume and question repetition (`repetitionBonus` based on repeated correct answers), removing the dependency on `goodQuestions`.
+* **Cleaned Firebase Database Operations**: Removed `toggleGoodQuestion` Firestore calls from `firebase.js`.
+
+### 🎯 2. Cross-Chapter Isolation, Context Scaling & Honest 2-Chapter Metric Alignment (v0.1.10)
 * **Elimination of Cross-Chapter Word Pollution**: Resolved an issue where common words encountered in Chapter 1 or 2 reading passages/dialogues were stored with their source textbook chapter IDs (e.g. Chapter 5 or 8), unintentionally leaking into and marking other chapters' official curriculum words as known. Reading words are now strictly scoped to the active chapter and dedicated to the 2C Context Quota.
 * **Proportionate 1,500 Target Word Context Scaling**: Contextual reading & dialogue words (Max 500 XP) are now mathematically scaled across ~1,500 total words found throughout all 18 chapters (~0.33 XP per word). Marking words in only 2 reading passages now appropriately awards ~50 XP rather than maxing out the entire 500 XP book ceiling.
 * **Disentangled Vocabulary Card Metrics**: The Dashboard Vocabulary card now cleanly distinguishes **1,066 Core Curriculum Words** (`totalCurriculumLearned / 1066`) from **Contextual Text Words** (`+totalExtraLearned`), eliminating misleading figures like `317/1066 known` when only 2 chapters were studied.
@@ -41,7 +47,7 @@ An open-source, interactive, and personalized web application designed to track 
     * *Unique Correct Questions*: Max 2,200 XP across ~3,069 authentic questions.
     * *Zero-Mistake Question Mastery*: Max 400 XP.
     * *Accuracy Bonus (70%+)*: Max 250 XP (requires at least 20 question attempts to prevent volatility).
-    * *Repetition & Good Question Feedback*: Max 150 XP.
+    * *Repetition & Practice Volume*: Max 150 XP.
 * **Elimination of Fake `.2 Woordenlijst` Section Completions**: Vocabulary sections (`.2`) are strictly protected: reading words or generic pool words can no longer trigger automatic section completion. Only genuine completion in the vocabulary module or explicit section check marks register completion.
 * **Comprehensive Test Suite & Corner-Case Rigor**: 9 automated test cases in `src/utils/progress.test.js` verifying baseline zero-state, anti-inflation caps, section .2 protection, single-activity users, strict monotonicity, article deduplication (`de`/`het`), and exact 10,000 XP saturation ceiling.
 

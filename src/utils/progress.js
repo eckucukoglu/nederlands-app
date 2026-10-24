@@ -52,14 +52,12 @@ export function notifyProgressUpdated() {
  */
 export function calculateOverallProgress({ completed = {}, favorites = {}, bookSections = [] } = {}) {
   let quizHistory = {};
-  let goodQuestions = {};
   let globalWordPool = {};
   let flashcardStats = {};
   let starredVerbs = [];
 
   try {
     quizHistory = JSON.parse(localStorage.getItem('quizHistory')) || {};
-    goodQuestions = JSON.parse(localStorage.getItem('goodQuestions')) || {};
     globalWordPool = JSON.parse(localStorage.getItem('globalWordPool')) || {};
     flashcardStats = JSON.parse(localStorage.getItem('flashcardStats')) || {};
     starredVerbs = JSON.parse(localStorage.getItem('starredIrregularVerbs')) || [];
@@ -299,8 +297,6 @@ export function calculateOverallProgress({ completed = {}, favorites = {}, bookS
     ? Math.round((totalQuizCorrect / totalQuizAttempts) * 100) 
     : 0;
   const totalQuizQuestions = quizQuestions?.length || 3069;
-  const goodQuestionsCount = Object.keys(goodQuestions).length;
-
   const uniqueCorrect = attemptedQIds.filter(id => (quizHistory[id]?.correct || 0) > 0).length;
 
   // 3A. Benzersiz Doğru Çözülen Sorular: Maks 2.200 XP
@@ -318,10 +314,9 @@ export function calculateOverallProgress({ completed = {}, favorites = {}, bookS
     ? Math.min(250, Math.round(((quizAccuracy - 70) / 30) * 250)) 
     : 0;
 
-  // 3D. Tekrar & İyi Soru Bildirimi: Maks 150 XP
-  const repetitionBonus = Math.min(100, Math.floor(totalQuizCorrect / 30));
-  const goodBonus = Math.min(50, goodQuestionsCount * 5);
-  const extraQuestionsXP = Math.min(150, repetitionBonus + goodBonus);
+  // 3D. Soru Tekrarı & Çözüm Hacmi: Maks 150 XP
+  const repetitionBonus = Math.min(150, Math.floor(totalQuizCorrect / 20));
+  const extraQuestionsXP = repetitionBonus;
 
   const questionsXP = Math.min(3000, baseQuestionsXP + masteryXP + accuracyBonus + extraQuestionsXP);
   const questionsProgressPercent = Math.min(100, Math.round((questionsXP / 3000) * 100));
@@ -488,7 +483,6 @@ export function calculateOverallProgress({ completed = {}, favorites = {}, bookS
     totalQuizQuestions,
     masteredCount,
     weakCount,
-    goodQuestionsCount,
     questionsSubBreakdown,
 
     // 2. Kelimeler & Hazne (Maks 3.500 XP)

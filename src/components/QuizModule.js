@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { quizQuestions } from '../data/quizData';
-import { auth, toggleReportQuestion, toggleGoodQuestion, onAuthStateChanged } from '../firebase'; 
+import { auth, toggleReportQuestion, onAuthStateChanged } from '../firebase'; 
 
 const DIFFICULTY_LEVELS = [
   { level: 1, labelTr: 'A1 Temel', labelEn: 'A1 Basics', shortTr: 'A1', shortEn: 'A1', color: 'bg-emerald-950/90 text-emerald-300 border-emerald-800/80 hover:bg-emerald-900' },
@@ -56,7 +56,6 @@ export default function QuizModule({ tags = [], customQuestions = null, onClose,
   const [sessionScore, setSessionScore] = useState({ correct: 0, incorrect: 0, skipped: 0 });
   const [wrongTagsCloud, setWrongTagsCloud] = useState({}); 
   const [reportedQuestions, setReportedQuestions] = useState(() => JSON.parse(localStorage.getItem('reportedQuestions')) || {}); 
-  const [goodQuestions, setGoodQuestions] = useState(() => JSON.parse(localStorage.getItem('goodQuestions')) || {}); 
   const [currentUser, setCurrentUser] = useState(() => auth.currentUser);
 
   useEffect(() => {
@@ -145,7 +144,6 @@ export default function QuizModule({ tags = [], customQuestions = null, onClose,
   const currentQ = deck[currentIndex];
   const qHistory = currentQ ? quizHistory[currentQ.id] || { correct: 0, incorrect: 0 } : null;
   const isReported = (currentQ && currentUser) ? !!reportedQuestions[currentQ.id] : false;
-  const isGood = (currentQ && currentUser) ? !!goodQuestions[currentQ.id] : false;
 
   useEffect(() => {
     setUserMatches({});
@@ -215,37 +213,6 @@ export default function QuizModule({ tags = [], customQuestions = null, onClose,
     }
   };
 
-  const handleGoodToggle = async () => {
-    if (!currentQ) return;
-    if (!auth.currentUser) {
-      alert(isTr ? "İyi soru bildirmek için giriş yapmalısınız." : "You must be logged in to mark a good question.");
-      return;
-    }
-
-    const newStatus = !isGood;
-    try {
-      await toggleGoodQuestion(currentQ, auth.currentUser, newStatus);
-
-      const updatedGoods = { ...goodQuestions, [currentQ.id]: newStatus };
-      setGoodQuestions(updatedGoods);
-      localStorage.setItem('goodQuestions', JSON.stringify(updatedGoods));
-      window.dispatchEvent(new Event('progressUpdated'));
-
-      showGestureToast(
-        newStatus 
-          ? (isTr ? 'İyi Soru Olarak İşaretlendi 👍' : 'Marked as Good Question 👍') 
-          : (isTr ? 'İyi Soru İşareti Kaldırıldı' : 'Removed from Good Questions'),
-        'fa-thumbs-up',
-        newStatus ? 'text-emerald-400' : 'text-slate-400'
-      );
-    } catch (error) {
-      console.error("Firebase toggleGoodQuestion hatası:", error);
-      alert(isTr 
-        ? "İyi soru bildirilirken bir hata oluştu. Lütfen bağlantınızı veya izinleri kontrol edin." 
-        : "An error occurred while marking as good question. Please check your connection."
-      );
-    }
-  };
 
   const handleTagClick = (clickedTag) => {
     setTagInput('');
@@ -503,7 +470,7 @@ export default function QuizModule({ tags = [], customQuestions = null, onClose,
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isAnswered, currentQ, userAnswer, userMatches, currentIndex, deck.length, isGood, goodQuestions]);
+  }, [isAnswered, currentQ, userAnswer, userMatches, currentIndex, deck.length]);
 
   // Mobil Dokunmatik / Kaydırma (Swipe) Hareketleri:
   // Sağa veya sola kaydırma: Soruyu geç (veya soru yanıtlandıysa sıradaki soru)
@@ -754,19 +721,6 @@ export default function QuizModule({ tags = [], customQuestions = null, onClose,
             </div>
 
             <div className="flex items-center gap-1 sm:gap-1.5 flex-shrink-0">
-              {/* İyi Soru */}
-              <button 
-                onClick={handleGoodToggle}
-                title={
-                  !currentUser
-                    ? (isTr ? "İyi soru bildirmek için giriş yapmalısınız" : "Login required to mark as good question")
-                    : (isTr ? (isGood ? "İyi Soru (İşareti Kaldır)" : "İyi Soru Olarak İşaretle") : (isGood ? "Remove Good Mark" : "Mark as Good Question"))
-                }
-                className={`w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center text-sm sm:text-base transition-colors rounded-lg hover:bg-slate-700/70 cursor-pointer ${isGood ? 'text-emerald-400 bg-emerald-950/40 border border-emerald-800/50' : 'text-slate-400 hover:text-emerald-400'}`}
-              >
-                <i className={isGood ? "fa-solid fa-thumbs-up" : "fa-regular fa-thumbs-up"}></i>
-              </button>
-
               {/* Hatalı Soru Bildir */}
               <button 
                 onClick={handleReportToggle}

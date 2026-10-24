@@ -251,11 +251,6 @@ describe('Experience and Progress System Robustness & Scoring Engine Tests', () 
       qh[`q_${q}`] = { correct: 5, incorrect: 0 };
     }
     localStorage.setItem('quizHistory', JSON.stringify(qh));
-    const gq = {};
-    for (let q = 0; q < 15; q++) {
-      gq[`q_${q}`] = true;
-    }
-    localStorage.setItem('goodQuestions', JSON.stringify(gq));
 
     const favorites = { 'fav_1': true, 'fav_2': true, 'fav_3': true, 'fav_4': true, 'fav_5': true, 'fav_6': true, 'fav_7': true, 'fav_8': true, 'fav_9': true, 'fav_10': true };
 
