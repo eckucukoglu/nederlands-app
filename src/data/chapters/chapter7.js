@@ -87,7 +87,7 @@ export const chapter7Sections = [
   {
     id: "7.1",
     chapter: 7,
-    title: "7.1 & 7.2 Dialoog en Woordenlijst",
+    title: "7.1 Dialoog",
     theory: (lang) => (
       <>
         {lang === 'tr' ? (
@@ -148,7 +148,7 @@ export const chapter7Sections = [
   {
     id: "7.3",
     chapter: 7,
-    title: "7.3 Kleuren en 7.4 Kleding",
+    title: "7.3 Kleuren en Kleding",
     theory: (lang) => (
       <>
         {lang === 'tr' ? (
@@ -226,9 +226,10 @@ export const chapter7Sections = [
     ]
   },
   {
-    id: "7.5",
+    id: "7.4",
+    legacyId: "7.5",
     chapter: 7,
-    title: "7.5 t/m 7.6 De maat, model, en passen",
+    title: "7.4 De maat, model, en passen",
     theory: (lang) => (
       <>
         {lang === 'tr' ? (
@@ -300,9 +301,10 @@ export const chapter7Sections = [
     ]
   },
   {
-    id: "7.7",
+    id: "7.5",
+    legacyId: "7.7",
     chapter: 7,
-    title: "7.7 Comparatief en Superlatief",
+    title: "7.5 Comparatief en Superlatief",
     theory: (lang) => (
       <>
         {lang === 'tr' ? (
@@ -386,9 +388,10 @@ export const chapter7Sections = [
     ]
   },
   {
-    id: "7.8",
+    id: "7.6",
+    legacyId: "7.8",
     chapter: 7,
-    title: "7.8 Demonstratief pronomen (İşaret Zamirleri / Demonstrative pronouns)",
+    title: "7.6 Demonstratief pronomen (İşaret Zamirleri / Demonstrative pronouns)",
     theory: (lang) => (
       <>
         {lang === 'tr' ? (
@@ -452,9 +455,10 @@ export const chapter7Sections = [
     ]
   },
   {
-    id: "7.9",
+    id: "7.7",
+    legacyId: "7.9",
     chapter: 7,
-    title: "7.9 Objectvorm van het personaal pronomen (Nesne Zamirleri / Object Pronouns)",
+    title: "7.7 Objectvorm van het personaal pronomen (Nesne Zamirleri / Object Pronouns)",
     theory: (lang) => (
       <>
         {lang === 'tr' ? (
@@ -554,9 +558,10 @@ export const chapter7Sections = [
     ]
   },
   {
-    id: "7.10",
+    id: "7.8",
+    legacyId: "7.10",
     chapter: 7,
-    title: "7.10 Tekst & 7.11 Uitspraak",
+    title: "7.8 Tekst & Uitspraak",
     theory: (lang) => (
       <>
         {lang === 'tr' ? (

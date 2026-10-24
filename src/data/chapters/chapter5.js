@@ -514,9 +514,10 @@ export const chapter5Sections = [
     ]
   },
   {
-    id: "5.8",
+    id: "5.7",
+    legacyId: "5.8",
     chapter: 5,
-    title: "5.8 De imperatief (Emir Kipi)",
+    title: "5.7 De imperatief (Emir Kipi)",
     theory: (lang) => (
       <>
         {lang === 'tr' ? (
@@ -594,9 +595,10 @@ export const chapter5Sections = [
     ]
   },
   {
-    id: "5.9",
+    id: "5.8",
+    legacyId: "5.9",
     chapter: 5,
-    title: "5.9 Tekst: Echte Hollandse winterkost",
+    title: "5.8 Tekst: Echte Hollandse winterkost",
     theory: (lang) => (
       <>
         {lang === 'tr' ? (
@@ -635,9 +637,10 @@ export const chapter5Sections = [
     ]
   },
   {
-    id: "5.10",
+    id: "5.9",
+    legacyId: "5.10",
     chapter: 5,
-    title: "5.10 Uitspraak & Cultuur",
+    title: "5.9 Uitspraak & Cultuur",
     theory: (lang) => (
       <>
         {lang === 'tr' ? (

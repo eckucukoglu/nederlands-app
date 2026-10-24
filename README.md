@@ -1,6 +1,6 @@
 # 🇳🇱 Nederlands in Gang - Interactief Oefenportaal (A1 → A2)
 
-[![Version](https://img.shields.io/badge/version-v0.1.13-10B981.svg?style=for-the-badge)](https://github.com/eckucukoglu/nederlands-app/releases/tag/v0.1.13)
+[![Version](https://img.shields.io/badge/version-v0.1.14-10B981.svg?style=for-the-badge)](https://github.com/eckucukoglu/nederlands-app/releases/tag/v0.1.14)
 [![Firebase Hosting](https://img.shields.io/badge/hosting-live-FFCA28.svg?style=for-the-badge&logo=firebase&logoColor=black)](https://nederlands-app.web.app)
 [![React](https://img.shields.io/badge/react-19.x-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)](https://react.dev/)
 [![TailwindCSS](https://img.shields.io/badge/tailwindcss-3.x-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
@@ -15,9 +15,15 @@ An open-source, interactive, and personalized web application designed to track 
 
 ---
 
-## 🌟 Key Highlights & Features (v0.1.13)
+## 🌟 Key Highlights & Features (v0.1.14)
 
-### 📱 1. Flawless Mobile Modal Viewport Centering & Clamping (v0.1.13)
+### 🔢 1. Strictly Consecutive Section Renumbering & Lossless Migration (v0.1.14)
+* **Gap-Free, Consecutive Section Numbering Across All 18 Chapters**: Renumbered previously discontinuous section IDs (e.g. Chapter 2's `2.3, 2.5, 2.8, 2.9, 2.10, 2.12` → `2.3, 2.4, 2.5, 2.6, 2.7, 2.8`) across Chapters 2, 3, 4, 5, and 7, ensuring sections increment by 1 strictly without skips. Cleaned multi-section title references (e.g. `2.5 - 2.7` → `2.4`).
+* **Zero Data Loss Guarantee (`sectionMigration.js`)**: Built an automated bidirectional migration layer (`LEGACY_SECTION_ID_MAP` and `NEW_TO_LEGACY_SECTION_MAP`) that runs seamlessly upon application startup. Users retain 100% of their completed section checkmarks (`completedSections`), favorite notes (`favoriteSections`), and tab navigation states (`lastVisitedTab_X`, `lastTabBeforeHome`).
+* **Dual-State Synchronization**: Both legacy and new section IDs are supported dynamically in `isSectionCompleted()` and `getSectionFavoriteNote()`, ensuring XP calculations, progress bars, and cloud synchronization remain exact.
+* **Automated Unit Testing**: Added comprehensive unit test suite in [`sectionMigration.test.js`](file:///home/deck/nederlands-app/src/utils/sectionMigration.test.js) validating all 18 chapters have consecutive section numbering, zero XP drift, and flawless localStorage portability.
+
+### 📱 2. Flawless Mobile Modal Viewport Centering & Clamping (v0.1.13)
 * **True Horizontal Centering on Mobile (`<640px`)**: On mobile viewports, the word lookup and translation modal is now placed with `xPosition = window.innerWidth / 2`, `left: 50%`, and `-translate-x-1/2` with `w-[calc(100vw-32px)] max-w-[300px]`. This guarantees a permanent, mathematically unbreakable **16px minimum safe margin** on both the left and right screen borders across all phone screen sizes.
 * **Vertical Boundary Safeguard**: Added `min(380px, calc(100vh-90px))` maximum height and constrained `top` positioning between 70px (under top navigation bar) and `window.innerHeight - 340px`, ensuring popovers remain comfortably scrollable and never overflow vertically.
 * **Unified Component Alignment**: Applied the identical responsive centering and bounding architecture across [`DialogueSection.js`](file:///home/deck/nederlands-app/src/components/DialogueSection.js), [`ReadingPassage.js`](file:///home/deck/nederlands-app/src/components/ReadingPassage.js), and [`VocabularySection.js`](file:///home/deck/nederlands-app/src/components/VocabularySection.js).

@@ -92,7 +92,7 @@ export const chapter3Sections = [
   {
     id: "3.1",
     chapter: 3,
-    title: "3.1 & 3.2 Dialoog en Woordenlijst",
+    title: "3.1 Dialoog",
     theory: (lang) => (
       <>
         {lang === 'tr' ? (
@@ -153,7 +153,7 @@ export const chapter3Sections = [
   {
     id: "3.3",
     chapter: 3,
-    title: "3.3 - 3.5 Bestellen, Afrekenen en Bedanken",
+    title: "3.3 Bestellen, Afrekenen en Bedanken",
     theory: (lang) => (
       <>
         {lang === 'tr' ? (
@@ -255,9 +255,10 @@ export const chapter3Sections = [
     ]
   },
   {
-    id: "3.6",
+    id: "3.4",
+    legacyId: "3.6",
     chapter: 3,
-    title: "3.6 Artikel (Definiet en Indefiniet)",
+    title: "3.4 Artikel (Definiet en Indefiniet)",
     theory: (lang) => (
       <>
         {lang === 'tr' ? (
@@ -346,9 +347,10 @@ export const chapter3Sections = [
     ]
   },
   {
-    id: "3.7",
+    id: "3.5",
+    legacyId: "3.7",
     chapter: 3,
-    title: "3.7 Hoofdzin met inversie (Devrik Cümle / Inversion)",
+    title: "3.5 Hoofdzin met inversie (Devrik Cümle / Inversion)",
     theory: (lang) => (
       <>
         {lang === 'tr' ? (
@@ -411,9 +413,10 @@ export const chapter3Sections = [
     ]
   },
   {
-    id: "3.8",
+    id: "3.6",
+    legacyId: "3.8",
     chapter: 3,
-    title: "3.8 Rangtelwoorden (Sıra Sayıları / Ordinal Numbers)",
+    title: "3.6 Rangtelwoorden (Sıra Sayıları / Ordinal Numbers)",
     theory: (lang) => (
       <>
         {lang === 'tr' ? (
@@ -463,9 +466,10 @@ export const chapter3Sections = [
     ]
   },
   {
-    id: "3.9",
+    id: "3.7",
+    legacyId: "3.9",
     chapter: 3,
-    title: "3.9 Cultuur, Tekst & 3.10 Uitspraak",
+    title: "3.7 Cultuur, Tekst & Uitspraak",
     theory: (lang) => (
       <>
         {lang === 'tr' ? (

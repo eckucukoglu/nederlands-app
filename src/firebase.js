@@ -4,6 +4,7 @@ import { getAuth, isSignInWithEmailLink, signInWithEmailLink, sendSignInLinkToEm
 import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
 import { deleteDoc } from "firebase/firestore"; // Eğer bu import henüz yoksa en üste ekle
 import { collection, addDoc } from "firebase/firestore";
+import { migrateLocalStorageSectionData } from "./utils/sectionMigration";
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -58,6 +59,7 @@ export const pullFromCloud = async (uid) => {
       Object.keys(cloudData).forEach(key => {
         originalSetItem.call(localStorage, key, cloudData[key]);
       });
+      migrateLocalStorageSectionData();
     }
   } catch (err) {
     console.error("Pull error:", err);
@@ -81,6 +83,7 @@ export const handleUserSyncOnLogin = async (user) => {
     Object.keys(cloudData).forEach(key => {
       originalSetItem.call(localStorage, key, cloudData[key]);
     });
+    migrateLocalStorageSectionData();
     isPulling = false;
     return "restored";
   } else {

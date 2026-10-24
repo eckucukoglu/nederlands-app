@@ -21,6 +21,15 @@ import { LanguageProvider, useLanguage } from './contexts/LanguageContext';
 import { speakDutch as speakDutchAudio } from './utils/speech';
 import { calculateOverallProgress } from './utils/progress';
 import { APP_VERSION } from './version';
+import { 
+  normalizeSectionId, 
+  NEW_TO_LEGACY_SECTION_MAP, 
+  migrateLocalStorageSectionData, 
+  migrateCompletedSections, 
+  migrateFavoriteSections, 
+  isSectionCompleted, 
+  getSectionFavoriteNote 
+} from './utils/sectionMigration';
 
 const chapterTitles = {
   1: "Welkom", 2: "In de kantine", 3: "In het café", 4: "Op straat", 5: "Op de markt",
@@ -368,30 +377,49 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
     return fallbackChapter;
   });
 
+  useEffect(() => {
+    migrateLocalStorageSectionData();
+  }, []);
+
   const [favorites, setFavorites] = useState(() => {
     const saved = localStorage.getItem('favoriteSections');
-    return saved ? JSON.parse(saved) : {};
+    if (!saved) return {};
+    try {
+      const parsed = JSON.parse(saved);
+      const { migrated } = migrateFavoriteSections(parsed);
+      return migrated;
+    } catch (e) {
+      return {};
+    }
   });
 
   const [completed, setCompleted] = useState(() => {
     const saved = localStorage.getItem('completedSections');
-    return saved ? JSON.parse(saved) : {};
+    if (!saved) return {};
+    try {
+      const parsed = JSON.parse(saved);
+      const { migrated } = migrateCompletedSections(parsed);
+      return migrated;
+    } catch (e) {
+      return {};
+    }
   });
 
   const [activeTab, setActiveTab] = useState(() => {
     const savedTab = localStorage.getItem(`lastVisitedTab_${currentChapter}`);
+    const normalizedTab = savedTab ? normalizeSectionId(savedTab) : null;
     const hasData = (Object.keys(favorites).length > 0) || (Object.keys(completed).length > 0);
-    if (!savedTab && !hasData) return 'home';
-    return savedTab ? savedTab : `${currentChapter}.1`;
+    if (!normalizedTab && !hasData) return 'home';
+    return normalizedTab ? normalizedTab : `${currentChapter}.1`;
   });
 
   const [previousTab, setPreviousTab] = useState('home');
 
   const [lastTabBeforeHome, setLastTabBeforeHome] = useState(() => {
     const saved = localStorage.getItem('lastTabBeforeHome');
-    if (saved && saved !== 'home') return saved;
+    if (saved && saved !== 'home') return normalizeSectionId(saved);
     const savedTab = localStorage.getItem(`lastVisitedTab_${currentChapter}`);
-    if (savedTab && savedTab !== 'home') return savedTab;
+    if (savedTab && savedTab !== 'home') return normalizeSectionId(savedTab);
     return `${currentChapter}.1`;
   });
 
@@ -496,20 +524,21 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
   const isChapterFullyCompleted = (chNum) => {
     const chapterSections = bookSections.filter(s => s.chapter === chNum);
     if (chapterSections.length === 0) return false;
-    return chapterSections.every(s => completed[s.id]);
+    return chapterSections.every(s => isSectionCompleted(completed, s));
   };
 
   const goToSection = (secId) => {
+    const targetId = normalizeSectionId(secId);
     let chapter = fallbackChapter;
-    if (secId.startsWith('On-Class-')) {
-      chapter = Number(secId.replace('On-Class-', ''));
-    } else if (secId.startsWith('Reading-')) {
-      chapter = Number(secId.replace('Reading-', ''));
+    if (targetId.startsWith('On-Class-')) {
+      chapter = Number(targetId.replace('On-Class-', ''));
+    } else if (targetId.startsWith('Reading-')) {
+      chapter = Number(targetId.replace('Reading-', ''));
     } else {
-      chapter = Number(secId.split('.')[0]);
+      chapter = Number(targetId.split('.')[0]);
     }
     if (!isNaN(chapter)) setCurrentChapter(chapter);
-    setActiveTab(secId);
+    setActiveTab(targetId);
   };
 
   useEffect(() => {
@@ -856,17 +885,30 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
   };
 
   const toggleFavorite = (sectionId, note) => {
+    const targetId = normalizeSectionId(sectionId);
+    const legacyId = NEW_TO_LEGACY_SECTION_MAP[targetId];
     const newFavs = { ...favorites };
-    if (newFavs[sectionId]) delete newFavs[sectionId];
-    else newFavs[sectionId] = note;
+    if (newFavs[targetId] || (legacyId && newFavs[legacyId])) {
+      delete newFavs[targetId];
+      if (legacyId) delete newFavs[legacyId];
+    } else {
+      newFavs[targetId] = note;
+    }
     setFavorites(newFavs);
     localStorage.setItem('favoriteSections', JSON.stringify(newFavs));
   };
 
   const toggleCompleted = (sectionId) => {
+    const targetId = normalizeSectionId(sectionId);
+    const legacyId = NEW_TO_LEGACY_SECTION_MAP[targetId];
     const newComp = { ...completed };
-    if (newComp[sectionId]) delete newComp[sectionId];
-    else newComp[sectionId] = true;
+    const isAlreadyDone = Boolean(newComp[targetId] || (legacyId && newComp[legacyId]));
+    if (isAlreadyDone) {
+      delete newComp[targetId];
+      if (legacyId) delete newComp[legacyId];
+    } else {
+      newComp[targetId] = true;
+    }
     setCompleted(newComp);
     localStorage.setItem('completedSections', JSON.stringify(newComp));
   };
@@ -891,15 +933,17 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
     }
 
     const savedTab = localStorage.getItem(`lastVisitedTab_${newChapter}`);
+    const normalizedTab = savedTab ? normalizeSectionId(savedTab) : null;
     
-    if (savedTab && !savedTab.includes('On-Class') && savedTab !== 'home') {
-       setActiveTab(savedTab);
+    if (normalizedTab && !normalizedTab.includes('On-Class') && normalizedTab !== 'home') {
+       setActiveTab(normalizedTab);
     } else {
        setActiveTab(`${newChapter}.1`);
     }
   };
 
-  const getSectionTitle = (secId) => {
+  const getSectionTitle = (rawSecId) => {
+    const secId = normalizeSectionId(rawSecId);
     if (!secId || secId === 'home') return "Dashboard";
     if (secId === 'flashcards') return "Flashcards";
     if (secId === 'verbs') return lang === 'tr' ? "Düzensiz Fiiller" : "Irregular Verbs";
@@ -920,11 +964,11 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
        const ch = secId.split('.')[0];
        return lang === 'tr' ? `Ünite ${ch} - Vocabulary` : `Chapter ${ch} - Vocabulary`;
     }
-    const sec = bookSections.find(s => s.id === secId);
+    const sec = bookSections.find(s => s.id === secId || s.legacyId === secId || s.id === rawSecId);
     if (sec && sec.title) {
       const titleStr = typeof sec.title === 'object' ? (sec.title[lang] || sec.title.tr || sec.title.en) : sec.title;
-      const clean = String(titleStr).replace(new RegExp(`^(?:${secId.replace('.', '\\.')}\\s*[-–:]?\\s*)+`, 'i'), '').trim();
-      return clean ? `${secId} - ${clean}` : secId;
+      const clean = String(titleStr).replace(new RegExp(`^(?:${sec.id.replace('.', '\\.')}\\s*[-–:]?\\s*)+`, 'i'), '').trim();
+      return clean ? `${sec.id} - ${clean}` : sec.id;
     }
     return `${secId} (${lang === 'tr' ? "Alıştırma" : "Exercise"})`;
   };
@@ -1529,8 +1573,9 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
             <div className="flex items-center justify-center flex-nowrap gap-1.5 sm:gap-2 px-1 flex-shrink-0">
               {currentSections.map(sec => {
                 const isActive = activeTab === sec.id;
-                const isC = completed[sec.id];
-                const isF = favorites[sec.id];
+                const isC = isSectionCompleted(completed, sec);
+                const favNote = getSectionFavoriteNote(favorites, sec);
+                const isF = Boolean(favNote);
                 const isSummary = sec.id.startsWith('On-Class-');
                 const isReading = sec.id.startsWith('Reading-');
                 const isDialogue = sec.id.endsWith('.1');
@@ -1544,7 +1589,7 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
                       }
                       setActiveTab(sec.id);
                     }}
-                    title={favorites[sec.id] ? `Favori Notu: ${favorites[sec.id]}` : ''}
+                    title={favNote ? `Favori Notu: ${favNote}` : ''}
                     className={`relative flex items-center h-9 px-3.5 sm:px-4 rounded-full text-[11px] sm:text-xs font-extrabold transition-all border shadow-sm whitespace-nowrap gap-1.5 ${
                       isActive 
                         ? (isSummary ? 'bg-amber-600 text-white border-amber-500 z-10' : isReading ? 'bg-indigo-600 text-white border-indigo-500 z-10' : isVocabulary ? 'bg-purple-600 text-white border-purple-500 z-10' : 'bg-brand-600 text-white border-brand-500 z-10')
@@ -1557,9 +1602,9 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
                     {isVocabulary && <i className="fa-solid fa-spell-check text-[10px]"></i>}
                     <span>{isSummary ? (lang === 'tr' ? 'Özet' : 'Summary') : isReading ? (lang === 'tr' ? 'Okuma' : 'Reading') : isDialogue ? (lang === 'tr' ? 'Diyalog' : 'Dialogue') : isVocabulary ? 'Vocabulary' : sec.id}</span>
                     {isF && <i className="fa-solid fa-star text-amber-400 text-[10px]"></i>}
-                    {isF && favorites[sec.id] && (
+                    {isF && favNote && (
                       <span className={`text-[10px] font-normal truncate max-w-[80px] ${isActive ? 'text-amber-200' : 'text-amber-400/80'}`}>
-                        {favorites[sec.id]}
+                        {favNote}
                       </span>
                     )}
                     {isC && <i className="fa-solid fa-circle-check text-emerald-400 text-[10px] ml-0.5"></i>}
@@ -1609,8 +1654,8 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
             <div className="flex items-center justify-between w-full gap-1">
               {currentSections.map((sec) => {
                 const isActive = activeTab === sec.id;
-                const isC = completed[sec.id];
-                const isF = favorites[sec.id];
+                const isC = isSectionCompleted(completed, sec);
+                const isF = Boolean(getSectionFavoriteNote(favorites, sec));
                 const isSummary = sec.id.startsWith('On-Class-');
                 const isReading = sec.id.startsWith('Reading-');
                 return (
@@ -1647,8 +1692,9 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
               <div className="fixed inset-0 z-40" onClick={() => setIsMobileMenuOpen(false)}></div>
               <div className="absolute top-full left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-3xl mt-2 bg-slate-800 border border-slate-600 rounded-2xl shadow-2xl z-50 overflow-hidden flex flex-col py-1.5 max-h-[50vh] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-600">
                 {currentSections.map(sec => {
-                  const isC = completed[sec.id];
-                  const isF = favorites[sec.id];
+                  const isC = isSectionCompleted(completed, sec);
+                  const favNote = getSectionFavoriteNote(favorites, sec);
+                  const isF = Boolean(favNote);
                   const isSummary = sec.id.startsWith('On-Class-');
                   const isReading = sec.id.startsWith('Reading-');
                   const isDialogue = sec.id.endsWith('.1');
@@ -1682,9 +1728,9 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
                             : getSectionTitle(sec.id)
                           }
                         </span>
-                        {favorites[sec.id] && (
+                        {favNote && (
                           <span className="text-[11px] text-amber-400/90 italic truncate mt-0.5 flex items-center gap-1">
-                            <i className="fa-solid fa-star text-[9px]"></i> {favorites[sec.id]}
+                            <i className="fa-solid fa-star text-[9px]"></i> {favNote}
                           </span>
                         )}
                       </div>

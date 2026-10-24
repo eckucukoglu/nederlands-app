@@ -577,7 +577,7 @@ export const chapter8Sections = [
   {
     id: "8.8",
     chapter: 8,
-    title: "8.8 Tekst & 8.9 Uitspraak",
+    title: "8.8 Tekst & Uitspraak",
     theory: (lang) => (
       <>
         {lang === 'tr' ? (

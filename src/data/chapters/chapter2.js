@@ -110,7 +110,7 @@ export const chapter2Sections = [
   {
     id: "2.1",
     chapter: 2,
-    title: "2.1 & 2.2 Dialoog en Woordenlijst",
+    title: "2.1 Dialoog",
     theory: (lang) => (
       <>
         {lang === 'tr' ? (
@@ -162,7 +162,7 @@ export const chapter2Sections = [
   {
     id: "2.3",
     chapter: 2,
-    title: "2.3 / 2.4 Familierelaties en Mensen beschrijven",
+    title: "2.3 Familierelaties en Mensen beschrijven",
     theory: (lang) => (
       <>
         {lang === 'tr' ? (
@@ -257,9 +257,10 @@ export const chapter2Sections = [
     ]
   },
   {
-    id: "2.5",
+    id: "2.4",
+    legacyId: "2.5",
     chapter: 2,
-    title: "2.5 - 2.7 Zinnen en Vragen (Cümle ve Soru Yapısı)",
+    title: "2.4 Zinnen en Vragen (Cümle ve Soru Yapısı)",
     theory: (lang) => (
       <>
         {lang === 'tr' ? (
@@ -345,9 +346,10 @@ export const chapter2Sections = [
     ]
   },
   {
-    id: "2.8",
+    id: "2.5",
+    legacyId: "2.8",
     chapter: 2,
-    title: "2.8 Possessief pronomen (İyelik Zamirleri)",
+    title: "2.5 Possessief pronomen (İyelik Zamirleri)",
     theory: (lang) => (
       <>
         {lang === 'tr' ? (
@@ -436,9 +438,10 @@ export const chapter2Sections = [
     ]
   },
   {
-    id: "2.9",
+    id: "2.6",
+    legacyId: "2.9",
     chapter: 2,
-    title: "2.9 De klok (Saatler)",
+    title: "2.6 De klok (Saatler)",
     theory: (lang) => (
       <>
         {lang === 'tr' ? (
@@ -521,9 +524,10 @@ export const chapter2Sections = [
     ]
   },
   {
-    id: "2.10",
+    id: "2.7",
+    legacyId: "2.10",
     chapter: 2,
-    title: "2.10 & 2.11 Dagen, Maanden, Seizoenen & Preposities",
+    title: "2.7 Dagen, Maanden, Seizoenen & Preposities",
     theory: (lang) => (
       <>
         {lang === 'tr' ? (
@@ -597,9 +601,10 @@ export const chapter2Sections = [
     ]
   },
   {
-    id: "2.12",
+    id: "2.8",
+    legacyId: "2.12",
     chapter: 2,
-    title: "2.12 Tekst & 2.13 Uitspraak",
+    title: "2.8 Tekst & Uitspraak",
     theory: (lang) => (
       <>
         {lang === 'tr' ? (

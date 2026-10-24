@@ -83,3 +83,9 @@ export const bookSections = [
   ...chapter17Sections,
   ...chapter18Sections
 ];
+
+export {
+  LEGACY_SECTION_ID_MAP,
+  NEW_TO_LEGACY_SECTION_MAP,
+  normalizeSectionId
+} from '../utils/sectionMigration';

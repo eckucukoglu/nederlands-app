@@ -90,7 +90,7 @@ export const chapter4Sections = [
   {
     id: "4.1",
     chapter: 4,
-    title: "4.1 & 4.2 Dialoog en Woordenlijst",
+    title: "4.1 Dialoog",
     theory: (lang) => (
       <>
         {lang === 'tr' ? (
@@ -309,7 +309,7 @@ export const chapter4Sections = [
   {
     id: "4.5",
     chapter: 4,
-    title: "4.5 & 4.6 Een afspraak maken en Reageren",
+    title: "4.5 Een afspraak maken en Reageren",
     theory: (lang) => (
       <>
         {lang === 'tr' ? (
@@ -427,9 +427,10 @@ export const chapter4Sections = [
     ]
   },
   {
-    id: "4.7",
+    id: "4.6",
+    legacyId: "4.7",
     chapter: 4,
-    title: "4.7 Tekst: Openingstijden (Açılış Saatleri / Opening Hours)",
+    title: "4.6 Tekst: Openingstijden (Açılış Saatleri / Opening Hours)",
     theory: (lang) => (
       <>
         {lang === 'tr' ? (
@@ -470,9 +471,10 @@ export const chapter4Sections = [
     ]
   },
   {
-    id: "4.8",
+    id: "4.7",
+    legacyId: "4.8",
     chapter: 4,
-    title: "4.8 Uitspraak & Cultuur",
+    title: "4.7 Uitspraak & Cultuur",
     theory: (lang) => (
       <>
         {lang === 'tr' ? (

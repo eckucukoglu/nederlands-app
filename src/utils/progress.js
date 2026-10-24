@@ -1,6 +1,7 @@
 // src/utils/progress.js
 import { bookSections as defaultBookSections, vocabulary } from '../data';
 import { quizQuestions } from '../data/quizData';
+import { isSectionCompleted } from './sectionMigration';
 
 export const CHAPTER_INFO = {
   1: { tr: "Welkom (Tanışma & Başlangıç)", en: "Welkom (Welcome & Basics)", nl: "Welkom", icon: "fa-solid fa-handshake" },
@@ -378,7 +379,7 @@ export function calculateOverallProgress({ completed = {}, favorites = {}, bookS
 
   // Tamamlanan Bölümler (169 Bölüm - Maks 2.800 XP)
   const completedSectionsCount = allSections.filter(s => {
-    if (completed[s.id]) return true;
+    if (isSectionCompleted(completed, s)) return true;
     if (s.id.endsWith('.2')) {
       const v = chapterVocabStats.find(c => c.chapterNum === s.chapter);
       return v && v.isVocabSectionDone;
@@ -388,7 +389,7 @@ export function calculateOverallProgress({ completed = {}, favorites = {}, bookS
 
   let partialSectionPoints = 0;
   allSections.forEach(s => {
-    if (completed[s.id]) return;
+    if (isSectionCompleted(completed, s)) return;
     if (s.id.endsWith('.2')) {
       const v = chapterVocabStats.find(c => c.chapterNum === s.chapter);
       if (v && v.progress > 0 && !v.isVocabSectionDone) {
@@ -431,12 +432,12 @@ export function calculateOverallProgress({ completed = {}, favorites = {}, bookS
 
     const chVocab = chapterVocabStats.find(v => v.chapterNum === ch);
     const isVocabDone = vocabSec 
-      ? Boolean(completed[vocabSec.id] || (chVocab && chVocab.isVocabSectionDone)) 
+      ? Boolean(isSectionCompleted(completed, vocabSec) || (chVocab && chVocab.isVocabSectionDone)) 
       : false;
-    const isDialogueDone = dialogueSec ? Boolean(completed[dialogueSec.id]) : false;
-    const isReadingDone = readingSec ? Boolean(completed[readingSec.id]) : false;
-    const isSummaryDone = summarySec ? Boolean(completed[summarySec.id]) : false;
-    const completedExerciseCount = exerciseSecs.filter(s => completed[s.id]).length;
+    const isDialogueDone = dialogueSec ? Boolean(isSectionCompleted(completed, dialogueSec)) : false;
+    const isReadingDone = readingSec ? Boolean(isSectionCompleted(completed, readingSec)) : false;
+    const isSummaryDone = summarySec ? Boolean(isSectionCompleted(completed, summarySec)) : false;
+    const completedExerciseCount = exerciseSecs.filter(s => isSectionCompleted(completed, s)).length;
 
     const totalCount = (dialogueSec ? 1 : 0) + (vocabSec ? 1 : 0) + exerciseSecs.length + (readingSec ? 1 : 0) + (summarySec ? 1 : 0);
     const completedCount = (isDialogueDone ? 1 : 0) + (isVocabDone ? 1 : 0) + completedExerciseCount + (isReadingDone ? 1 : 0) + (isSummaryDone ? 1 : 0);
