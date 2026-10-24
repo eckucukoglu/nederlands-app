@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback, useLayoutEffect } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { vocabulary, dialogues, bookSections } from '../data';
 import { globalDictionary } from '../data/globalDictionary'; 
 import { useLanguage } from '../contexts/LanguageContext'; 
@@ -578,7 +578,7 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
       clickY: clickData.clickY,
       targetRect: clickData.targetRect,
       preferredWidth: 300,
-      estimatedHeight: 240
+      estimatedHeight: 260
     });
     setPopupPos(initialPos);
 
@@ -628,41 +628,16 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
     setSelectedWords(matches);
   };
 
-  // Açılan sözlük modalı için gerçek DOM ölçüsü ile dinamik hassas konumlandırma
-  useLayoutEffect(() => {
-    if (!selectedWords || selectedWords.length === 0 || !popupRef.current || !lastClickRef.current) return;
-    const rect = popupRef.current.getBoundingClientRect();
-    if (rect.width <= 0 || rect.height <= 0) return;
-
-    const refinedPos = calculatePopupPosition({
-      clickX: lastClickRef.current.clickX,
-      clickY: lastClickRef.current.clickY,
-      targetRect: lastClickRef.current.targetRect,
-      actualWidth: rect.width,
-      actualHeight: rect.height,
-      preferredWidth: 300
-    });
-
-    setPopupPos(prev => {
-      if (Math.abs(prev.x - refinedPos.x) > 1 || Math.abs(prev.y - refinedPos.y) > 1) {
-        return refinedPos;
-      }
-      return prev;
-    });
-  }, [selectedWords]);
-
   // Ekran boyutu değiştiğinde açık olan popup'ı ekrandan taşmayacak şekilde yeniden konumlandır
   useEffect(() => {
     const handleResize = () => {
-      if (selectedWords && lastClickRef.current && popupRef.current) {
-        const rect = popupRef.current.getBoundingClientRect();
+      if (selectedWords && lastClickRef.current) {
         const refinedPos = calculatePopupPosition({
           clickX: lastClickRef.current.clickX,
           clickY: lastClickRef.current.clickY,
           targetRect: lastClickRef.current.targetRect,
-          actualWidth: rect.width,
-          actualHeight: rect.height,
-          preferredWidth: 300
+          preferredWidth: 300,
+          estimatedHeight: 260
         });
         setPopupPos(refinedPos);
       }
@@ -1240,7 +1215,7 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
           <div className="fixed inset-0 z-40" onClick={(e) => { e.stopPropagation(); setSelectedWords(null); }}></div>
           <div 
             ref={popupRef}
-            className="fixed bg-slate-800 border border-slate-600 p-3 sm:p-4 rounded-2xl shadow-2xl z-50 w-[290px] sm:w-[300px] max-w-[calc(100vw-24px)] box-border transform -translate-x-1/2 max-h-[min(380px,calc(100vh-80px))] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-600 animate-fadeIn" 
+            className="fixed bg-slate-800 border border-slate-600 p-3 sm:p-4 rounded-2xl shadow-2xl z-50 w-[290px] sm:w-[300px] max-w-[calc(100vw-24px)] box-border max-h-[min(380px,calc(100vh-80px))] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-600 animate-fadeIn" 
             style={{ 
               left: `${popupPos.x}px`, 
               top: `${popupPos.y}px` 

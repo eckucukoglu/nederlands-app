@@ -1,6 +1,6 @@
 # 🇳🇱 Nederlands in Gang - Interactief Oefenportaal (A1 → A2)
 
-[![Version](https://img.shields.io/badge/version-v0.1.16-10B981.svg?style=for-the-badge)](https://github.com/eckucukoglu/nederlands-app/releases/tag/v0.1.16)
+[![Version](https://img.shields.io/badge/version-v0.1.17-10B981.svg?style=for-the-badge)](https://github.com/eckucukoglu/nederlands-app/releases/tag/v0.1.17)
 [![Firebase Hosting](https://img.shields.io/badge/hosting-live-FFCA28.svg?style=for-the-badge&logo=firebase&logoColor=black)](https://nederlands-app.web.app)
 [![React](https://img.shields.io/badge/react-19.x-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)](https://react.dev/)
 [![TailwindCSS](https://img.shields.io/badge/tailwindcss-3.x-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
@@ -15,9 +15,9 @@ An open-source, interactive, and personalized web application designed to track 
 
 ---
 
-## 🌟 Key Highlights & Features (v0.1.16)
+## 🌟 Key Highlights & Features (v0.1.17)
 
-### 📖 1. Lean Dictionary Lookup & True Proximity Responsive Popover Positioning (v0.1.16)
+### 📖 1. Direct-Bounded Popup Positioning & Animation Conflict Elimination (v0.1.17)
 * **Reverted to Clean, Lean Dictionary Search & Ranking**: Restored the intuitive, predictable dictionary lookup engine across Reading ([`ReadingPassage.js`](file:///home/deck/nederlands-app/src/components/ReadingPassage.js)) and Dialogues ([`DialogueSection.js`](file:///home/deck/nederlands-app/src/components/DialogueSection.js)). Removed the complex bigram heuristics, chapter bias penalties, and phrase bleeding introduced in v0.1.12 that caused words to be misordered or fail lookup.
 * **Proximity-First Positioning (`popupPosition.js`)**: Modals and translation popovers now open right next to the clicked word or card (`clickX`, `clickY`, `targetRect`) instead of being forced into the middle of the screen horizontally or jumping to fixed vertical anchors.
 * **Flawless Viewport Clamping (Desktop & Mobile)**:

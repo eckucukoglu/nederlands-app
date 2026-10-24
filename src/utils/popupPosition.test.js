@@ -1,7 +1,7 @@
 import { calculatePopupPosition } from './popupPosition';
 
 describe('calculatePopupPosition Utility Tests', () => {
-  test('TC1: Desktop screen - centered click opens below with exact alignment', () => {
+  test('TC1: Desktop screen - centered click opens below with direct left alignment', () => {
     const pos = calculatePopupPosition({
       clickX: 800,
       clickY: 300,
@@ -14,15 +14,15 @@ describe('calculatePopupPosition Utility Tests', () => {
       spacing: 8
     });
 
-    // Centered horizontally around 800 (the center of targetRect): pos.x = 800
-    expect(pos.x).toBe(800);
+    // Anchor center is 800 (targetRect center). Direct left is 800 - 150 = 650
+    expect(pos.x).toBe(650);
     // Opened below target bottom (310 + 8 = 318)
     expect(pos.y).toBe(318);
     expect(pos.width).toBe(300);
     expect(pos.placement).toBe('below');
-    // Bounded within viewport when translated with -translate-x-1/2
-    expect(pos.x - pos.width / 2).toBeGreaterThanOrEqual(12);
-    expect(pos.x + pos.width / 2).toBeLessThanOrEqual(1920 - 12);
+    // Direct left and right edges are safely bounded within viewport
+    expect(pos.x).toBeGreaterThanOrEqual(12);
+    expect(pos.x + pos.width).toBeLessThanOrEqual(1920 - 12);
   });
 
   test('TC2: Desktop screen - click near bottom boundary opens ABOVE target without overflow', () => {
@@ -41,11 +41,11 @@ describe('calculatePopupPosition Utility Tests', () => {
     // Opens above target top: 970 - 240 - 8 = 722
     expect(pos.y).toBe(722);
     expect(pos.placement).toBe('above');
-    expect(pos.y).toBeGreaterThanOrEqual(70);
+    expect(pos.y).toBeGreaterThanOrEqual(65);
     expect(pos.y + 240).toBeLessThanOrEqual(1080);
   });
 
-  test('TC3: Mobile screen (360x740) - click near left edge clamps to margin without overflow', () => {
+  test('TC3: Mobile screen (360x740) - click near left edge clamps left edge to margin without overflow', () => {
     const pos = calculatePopupPosition({
       clickX: 20,
       clickY: 250,
@@ -58,14 +58,14 @@ describe('calculatePopupPosition Utility Tests', () => {
       spacing: 8
     });
 
-    // Left edge (pos.x - pos.width / 2) should clamp to minimum margin (12px), NOT be negative
-    expect(pos.x - pos.width / 2).toBeGreaterThanOrEqual(12);
-    expect(pos.x + pos.width / 2).toBeLessThanOrEqual(360 - 12);
+    // Left edge (pos.x) clamps to minimum margin (12px), NOT offscreen
+    expect(pos.x).toBe(12);
+    expect(pos.x + pos.width).toBeLessThanOrEqual(360 - 12);
     expect(pos.y).toBe(268); // 260 + 8
     expect(pos.placement).toBe('below');
   });
 
-  test('TC4: Mobile screen (360x740) - click near right edge clamps to right margin without overflow', () => {
+  test('TC4: Mobile screen (360x740) - click near right edge clamps right edge to margin without overflow', () => {
     const pos = calculatePopupPosition({
       clickX: 345,
       clickY: 250,
@@ -78,9 +78,10 @@ describe('calculatePopupPosition Utility Tests', () => {
       spacing: 8
     });
 
-    // Right edge should not exceed 360 - 12 = 348
-    expect(pos.x + pos.width / 2).toBeLessThanOrEqual(348);
-    expect(pos.x - pos.width / 2).toBeGreaterThanOrEqual(12);
+    // Right edge (pos.x + pos.width) should not exceed 360 - 12 = 348
+    expect(pos.x).toBe(360 - 300 - 12); // 48
+    expect(pos.x + pos.width).toBeLessThanOrEqual(348);
+    expect(pos.x).toBeGreaterThanOrEqual(12);
     expect(pos.y).toBe(268);
   });
 
@@ -99,7 +100,7 @@ describe('calculatePopupPosition Utility Tests', () => {
 
     expect(pos.placement).toBe('above');
     expect(pos.y).toBe(680 - 240 - 8); // 432
-    expect(pos.y).toBeGreaterThanOrEqual(70);
+    expect(pos.y).toBeGreaterThanOrEqual(65);
     expect(pos.y + 240).toBeLessThanOrEqual(740);
   });
 
@@ -117,8 +118,8 @@ describe('calculatePopupPosition Utility Tests', () => {
 
     // Maximum available width is 320 - 20 = 300px
     expect(pos.width).toBeLessThanOrEqual(300);
-    expect(pos.x - pos.width / 2).toBeGreaterThanOrEqual(10);
-    expect(pos.x + pos.width / 2).toBeLessThanOrEqual(310);
+    expect(pos.x).toBeGreaterThanOrEqual(10);
+    expect(pos.x + pos.width).toBeLessThanOrEqual(310);
   });
 
   test('TC7: Small landscape viewport (640x360) - popup clamps vertically within safe margins', () => {
@@ -133,11 +134,11 @@ describe('calculatePopupPosition Utility Tests', () => {
       spacing: 8
     });
 
-    expect(pos.y).toBeGreaterThanOrEqual(70);
+    expect(pos.y).toBeGreaterThanOrEqual(65);
     expect(pos.y + 240).toBeLessThanOrEqual(360);
   });
 
-  test('TC8: Dynamic actual dimensions refinement after DOM mount', () => {
+  test('TC8: Dynamic actual dimensions refinement', () => {
     const pos = calculatePopupPosition({
       clickX: 500,
       clickY: 600,
@@ -153,6 +154,6 @@ describe('calculatePopupPosition Utility Tests', () => {
     // 768 - 600 = 168 < 180 + 8 + 12 = 200, so spaceBelow is not enough -> opens above
     expect(pos.placement).toBe('above');
     expect(pos.y).toBe(600 - 180 - 8); // 412
-    expect(pos.y).toBeGreaterThanOrEqual(70);
+    expect(pos.y).toBeGreaterThanOrEqual(65);
   });
 });

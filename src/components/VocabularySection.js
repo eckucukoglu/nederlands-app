@@ -1,5 +1,4 @@
-// src/components/VocabularySection.js
-import React, { useState, useEffect, useCallback, useMemo, useRef, useLayoutEffect } from 'react';
+import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { vocabulary, bookSections } from '../data';
 import { useLanguage } from '../contexts/LanguageContext';
 import { speakDutch } from '../utils/speech';
@@ -225,48 +224,23 @@ export default function VocabularySection({
       clickX: clickData.clickX,
       clickY: clickData.clickY,
       targetRect: clickData.targetRect,
-      preferredWidth: 310,
-      estimatedHeight: 240
+      preferredWidth: 300,
+      estimatedHeight: 260
     });
     setPopupPos(initialPos);
     setSelectedWord(word);
   };
 
-  // Açılan modal için gerçek DOM ölçüsü ile dinamik hassas konumlandırma
-  useLayoutEffect(() => {
-    if (!selectedWord || !popupRef.current || !lastClickRef.current) return;
-    const rect = popupRef.current.getBoundingClientRect();
-    if (rect.width <= 0 || rect.height <= 0) return;
-
-    const refinedPos = calculatePopupPosition({
-      clickX: lastClickRef.current.clickX,
-      clickY: lastClickRef.current.clickY,
-      targetRect: lastClickRef.current.targetRect,
-      actualWidth: rect.width,
-      actualHeight: rect.height,
-      preferredWidth: 310
-    });
-
-    setPopupPos(prev => {
-      if (Math.abs(prev.x - refinedPos.x) > 1 || Math.abs(prev.y - refinedPos.y) > 1) {
-        return refinedPos;
-      }
-      return prev;
-    });
-  }, [selectedWord]);
-
   // Ekran boyutu değiştiğinde açık olan popup'ı ekrandan taşmayacak şekilde yeniden konumlandır
   useEffect(() => {
     const handleResize = () => {
-      if (selectedWord && lastClickRef.current && popupRef.current) {
-        const rect = popupRef.current.getBoundingClientRect();
+      if (selectedWord && lastClickRef.current) {
         const refinedPos = calculatePopupPosition({
           clickX: lastClickRef.current.clickX,
           clickY: lastClickRef.current.clickY,
           targetRect: lastClickRef.current.targetRect,
-          actualWidth: rect.width,
-          actualHeight: rect.height,
-          preferredWidth: 310
+          preferredWidth: 300,
+          estimatedHeight: 260
         });
         setPopupPos(refinedPos);
       }
@@ -913,7 +887,7 @@ export default function VocabularySection({
 
           <div 
             ref={popupRef}
-            className="fixed bg-slate-800 border border-slate-600 p-4 rounded-2xl shadow-2xl z-50 w-[310px] max-w-[calc(100vw-24px)] box-border transform -translate-x-1/2 max-h-[min(380px,calc(100vh-80px))] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-600 animate-fadeIn" 
+            className="fixed bg-slate-800 border border-slate-600 p-4 rounded-2xl shadow-2xl z-50 w-[300px] max-w-[calc(100vw-24px)] box-border max-h-[min(380px,calc(100vh-80px))] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-600 animate-fadeIn" 
             style={{ 
               left: `${popupPos.x}px`, 
               top: `${popupPos.y}px` 
