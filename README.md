@@ -1,6 +1,6 @@
 # 🇳🇱 Nederlands in Gang - Interactief Oefenportaal (A1 → A2)
 
-[![Version](https://img.shields.io/badge/version-v0.1.12-10B981.svg?style=for-the-badge)](https://github.com/eckucukoglu/nederlands-app/releases/tag/v0.1.12)
+[![Version](https://img.shields.io/badge/version-v0.1.13-10B981.svg?style=for-the-badge)](https://github.com/eckucukoglu/nederlands-app/releases/tag/v0.1.13)
 [![Firebase Hosting](https://img.shields.io/badge/hosting-live-FFCA28.svg?style=for-the-badge&logo=firebase&logoColor=black)](https://nederlands-app.web.app)
 [![React](https://img.shields.io/badge/react-19.x-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)](https://react.dev/)
 [![TailwindCSS](https://img.shields.io/badge/tailwindcss-3.x-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
@@ -15,9 +15,15 @@ An open-source, interactive, and personalized web application designed to track 
 
 ---
 
-## 🌟 Key Highlights & Features (v0.1.12)
+## 🌟 Key Highlights & Features (v0.1.13)
 
-### 🎯 1. 5x Weighting for Matching Questions in Quiz Scoring (v0.1.12)
+### 📱 1. Flawless Mobile Modal Viewport Centering & Clamping (v0.1.13)
+* **True Horizontal Centering on Mobile (`<640px`)**: On mobile viewports, the word lookup and translation modal is now placed with `xPosition = window.innerWidth / 2`, `left: 50%`, and `-translate-x-1/2` with `w-[calc(100vw-32px)] max-w-[300px]`. This guarantees a permanent, mathematically unbreakable **16px minimum safe margin** on both the left and right screen borders across all phone screen sizes.
+* **Vertical Boundary Safeguard**: Added `min(380px, calc(100vh-90px))` maximum height and constrained `top` positioning between 70px (under top navigation bar) and `window.innerHeight - 340px`, ensuring popovers remain comfortably scrollable and never overflow vertically.
+* **Unified Component Alignment**: Applied the identical responsive centering and bounding architecture across [`DialogueSection.js`](file:///home/deck/nederlands-app/src/components/DialogueSection.js), [`ReadingPassage.js`](file:///home/deck/nederlands-app/src/components/ReadingPassage.js), and [`VocabularySection.js`](file:///home/deck/nederlands-app/src/components/VocabularySection.js).
+* **Flexbox Layout Protection**: Guarded item titles with `truncate flex-1` and pinned audio speaker buttons with `flex-shrink-0`, ensuring pronunciation controls and action buttons never get pushed outside card boundaries.
+
+### 🎯 2. 5x Weighting for Matching Questions in Quiz Scoring (v0.1.12)
 * **5x Weight Multiplier for Matching Questions**: Matching questions (`type: 'matching'`) require cognitive effort across 4–5 paired items; they now award **5 times** the XP weight of single-choice (`multiple_choice`) and fill-in-the-blank questions (weight = 5 vs weight = 1).
 * **Weighted Soru Bankası Math (Total Weight = 4,171)**: Base questions XP (`2,200 XP max`) and mastery XP (`400 XP max`) are computed directly against the total available weight (428 matching × 5 + 2,031 multiple choice × 1 = 4,171).
 * **Saturation Ceiling & Monotonicity Preservation**: Perfect completion of all 2,459 questions strictly hits the 3,000 XP cap for Pillar 3 and 10,000 XP (100.0%) overall.

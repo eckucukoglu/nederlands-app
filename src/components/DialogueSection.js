@@ -551,18 +551,25 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
     if (!cleanWord) return;
     setClickedWordRaw(cleanWord);
 
-    // Viewport clamping to prevent popup overflow on mobile screens
-    const halfWidth = 140;
-    const padding = 12;
-    const minX = halfWidth + padding;
-    const maxX = Math.max(minX, window.innerWidth - halfWidth - padding);
-    const clampedX = Math.min(Math.max(e.clientX, minX), maxX);
+    // Viewport clamping: mobile screens (<640px) always center horizontally with safe 16px margins
+    const isMobile = typeof window !== 'undefined' && window.innerWidth < 640;
+    let xPosition;
+    if (isMobile) {
+      xPosition = window.innerWidth / 2;
+    } else {
+      const halfWidth = 150;
+      const padding = 20;
+      xPosition = Math.min(Math.max(e.clientX, halfWidth + padding), window.innerWidth - halfWidth - padding);
+    }
 
     let yPosition = e.clientY + 15;
-    if (yPosition + 320 > window.innerHeight) {
-      yPosition = Math.max(20, e.clientY - 300); 
+    const estimatedHeight = 340;
+    if (yPosition + estimatedHeight > window.innerHeight) {
+      yPosition = Math.max(70, e.clientY - estimatedHeight - 10); 
     }
-    setPopupPos({ x: clampedX, y: yPosition });
+    yPosition = Math.max(70, Math.min(window.innerHeight - estimatedHeight, yPosition));
+
+    setPopupPos({ x: xPosition, y: yPosition });
 
     const allVocab = [...vocabulary, ...globalDictionary];
     const uniqueVocabMap = new Map();
@@ -1187,13 +1194,13 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
         <>
           <div className="fixed inset-0 z-40" onClick={(e) => { e.stopPropagation(); setSelectedWords(null); }}></div>
           <div 
-            className="fixed bg-slate-800 border border-slate-600 p-3 rounded-xl shadow-2xl z-50 w-[280px] max-w-[calc(100vw-24px)] box-border transform -translate-x-1/2 max-h-[360px] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-600" 
+            className="fixed bg-slate-800 border border-slate-600 p-3 sm:p-4 rounded-2xl shadow-2xl z-50 w-[calc(100vw-32px)] max-w-[300px] box-border transform -translate-x-1/2 max-h-[min(380px,calc(100vh-90px))] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-600 animate-fadeIn" 
             style={{ left: `${popupPos.x}px`, top: `${popupPos.y}px` }} 
             onClick={(e) => e.stopPropagation()}
           >
             
             <div className="mb-3 pb-3 border-b border-slate-700/80 flex justify-between items-center gap-3">
-              <div className="flex flex-col truncate">
+              <div className="flex flex-col truncate min-w-0 flex-1">
                 <span className="text-[13px] font-bold text-slate-200 truncate">
                   <i className="fa-solid fa-pen-nib text-brand-400 mr-1.5"></i>
                   {clickedWordRaw}
@@ -1213,9 +1220,9 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
                 const currentStatus = wordStatuses[wordObj.nl.toLowerCase()];
                 return (
                   <div key={idx} className="border-b border-slate-700 last:border-0 pb-3 last:pb-0">
-                    <div className="flex justify-between items-center mb-1">
-                      <h3 className="font-bold text-brand-400 text-[15px] leading-tight">{wordObj.nl}</h3>
-                      <button onClick={(e) => speakDutch(wordObj.nl, e)} className="text-slate-400 hover:text-brand-300 ml-2">
+                    <div className="flex justify-between items-center mb-1 gap-2">
+                      <h3 className="font-bold text-brand-400 text-[15px] leading-tight truncate flex-1">{wordObj.nl}</h3>
+                      <button onClick={(e) => speakDutch(wordObj.nl, e)} className="text-slate-400 hover:text-brand-300 p-1 flex-shrink-0" title={lang === 'tr' ? 'Dinle' : 'Listen'}>
                         <i className="fa-solid fa-volume-high text-xs"></i>
                       </button>
                     </div>

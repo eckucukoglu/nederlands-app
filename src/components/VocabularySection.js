@@ -163,11 +163,24 @@ export default function VocabularySection({
   // Kelimeye tıklayınca modal aç
   const handleWordCardClick = (e, word) => {
     e.stopPropagation();
-    let yPosition = e.clientY + 15;
-    if (yPosition + 320 > window.innerHeight) {
-      yPosition = e.clientY - 280;
+    const isMobile = typeof window !== 'undefined' && window.innerWidth < 640;
+    let xPosition;
+    if (isMobile) {
+      xPosition = window.innerWidth / 2;
+    } else {
+      const halfWidth = 150;
+      const padding = 20;
+      xPosition = Math.min(Math.max(e.clientX, halfWidth + padding), window.innerWidth - halfWidth - padding);
     }
-    setPopupPos({ x: Math.min(Math.max(e.clientX, 150), window.innerWidth - 150), y: Math.max(yPosition, 70) });
+
+    let yPosition = e.clientY + 15;
+    const estimatedHeight = 340;
+    if (yPosition + estimatedHeight > window.innerHeight) {
+      yPosition = Math.max(70, e.clientY - estimatedHeight - 10);
+    }
+    yPosition = Math.max(70, Math.min(window.innerHeight - estimatedHeight, yPosition));
+
+    setPopupPos({ x: xPosition, y: yPosition });
     setSelectedWord(word);
   };
 
@@ -782,7 +795,7 @@ export default function VocabularySection({
           ></div>
 
           <div 
-            className="fixed bg-slate-800 border border-slate-600 p-4 rounded-2xl shadow-2xl z-50 min-w-[260px] max-w-[320px] transform -translate-x-1/2 max-h-[380px] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-600 animate-fadeIn" 
+            className="fixed bg-slate-800 border border-slate-600 p-4 rounded-2xl shadow-2xl z-50 w-[calc(100vw-32px)] max-w-[320px] box-border transform -translate-x-1/2 max-h-[min(380px,calc(100vh-90px))] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-600 animate-fadeIn" 
             style={{ left: `${popupPos.x}px`, top: `${popupPos.y}px` }} 
             onClick={(e) => e.stopPropagation()}
           >
