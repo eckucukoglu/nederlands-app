@@ -1,6 +1,6 @@
 # 🇳🇱 Nederlands in Gang - Interactief Oefenportaal (A1 → A2)
 
-[![Version](https://img.shields.io/badge/version-v0.1.14-10B981.svg?style=for-the-badge)](https://github.com/eckucukoglu/nederlands-app/releases/tag/v0.1.14)
+[![Version](https://img.shields.io/badge/version-v0.1.15-10B981.svg?style=for-the-badge)](https://github.com/eckucukoglu/nederlands-app/releases/tag/v0.1.15)
 [![Firebase Hosting](https://img.shields.io/badge/hosting-live-FFCA28.svg?style=for-the-badge&logo=firebase&logoColor=black)](https://nederlands-app.web.app)
 [![React](https://img.shields.io/badge/react-19.x-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)](https://react.dev/)
 [![TailwindCSS](https://img.shields.io/badge/tailwindcss-3.x-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
@@ -15,9 +15,16 @@ An open-source, interactive, and personalized web application designed to track 
 
 ---
 
-## 🌟 Key Highlights & Features (v0.1.14)
+## 🌟 Key Highlights & Features (v0.1.15)
 
-### 🔢 1. Strictly Consecutive Section Renumbering & Lossless Migration (v0.1.14)
+### ✨ 1. Elegant, Mobile-Optimized Exercise Evaluation Feedback & Auto-Fade Toast (v0.1.15)
+* **Instant Evaluation on "Cevapları Kontrol Et" / "Verify Answers"**: When checking inline chapter exercises ([`ExerciseEngine.js`](file:///home/deck/nederlands-app/src/components/ExerciseEngine.js)), dialogue comprehension tests ([`DialogueSection.js`](file:///home/deck/nederlands-app/src/components/DialogueSection.js)), and vocabulary tests ([`VocabularySection.js`](file:///home/deck/nederlands-app/src/components/VocabularySection.js)), learners are now immediately presented with a refined breakdown showing exact counts of correct answers (`✔ X Doğru`), incorrect answers (`✖ Y Yanlış`), and empty questions (`- Z Boş`).
+* **Sleek Glassmorphic Floating Toast (`ExerciseResultToast.js`)**: An animated bottom toast (`fixed bottom-6 left-1/2 -translate-x-1/2`) slides up into view (`animate-toast-slide-up`) with dark frosted-glass backdrop blur (`bg-slate-900/95 backdrop-blur-md`). It guarantees a mobile-safe margin (`w-[calc(100vw-32px)] max-w-sm sm:max-w-md`) and is `pointer-events-none` so it never obstructs page scrolling or interaction.
+* **Smooth Graceful Fade-Out ("Yavaşça Kaybolma")**: Remains visible and comfortably readable for 3.2 seconds, then initiates a gentle 1,000ms easing fade-out (`opacity-0 translate-y-3 scale-95 duration-1000 ease-out`) before unmounting. Clicking the verify button again smoothly resets and re-animates the evaluation banner.
+* **Inline Action-Bar Status Pill**: In addition to the floating toast, an inline status badge appears alongside the "Cevapları Kontrol Et" button for immediate visual feedback right at the user's cursor or thumb position.
+* **Automated Unit Testing**: Added [`ExerciseResultToast.test.js`](file:///home/deck/nederlands-app/src/components/ExerciseResultToast.test.js) ensuring bilingual accuracy (TR/EN), perfect evaluation messages, timer triggers, and smooth fade transitions.
+
+### 🔢 2. Strictly Consecutive Section Renumbering & Lossless Migration (v0.1.14)
 * **Gap-Free, Consecutive Section Numbering Across All 18 Chapters**: Renumbered previously discontinuous section IDs (e.g. Chapter 2's `2.3, 2.5, 2.8, 2.9, 2.10, 2.12` → `2.3, 2.4, 2.5, 2.6, 2.7, 2.8`) across Chapters 2, 3, 4, 5, and 7, ensuring sections increment by 1 strictly without skips. Cleaned multi-section title references (e.g. `2.5 - 2.7` → `2.4`).
 * **Zero Data Loss Guarantee (`sectionMigration.js`)**: Built an automated bidirectional migration layer (`LEGACY_SECTION_ID_MAP` and `NEW_TO_LEGACY_SECTION_MAP`) that runs seamlessly upon application startup. Users retain 100% of their completed section checkmarks (`completedSections`), favorite notes (`favoriteSections`), and tab navigation states (`lastVisitedTab_X`, `lastTabBeforeHome`).
 * **Dual-State Synchronization**: Both legacy and new section IDs are supported dynamically in `isSectionCompleted()` and `getSectionFavoriteNote()`, ensuring XP calculations, progress bars, and cloud synchronization remain exact.

@@ -11,6 +11,7 @@ import {
   cancelDutchSpeech 
 } from '../utils/speech'; 
 import { STUDIO_AUDIO_DATA } from '../data/studioAudio'; 
+import ExerciseResultToast from './ExerciseResultToast'; 
 
 const fallbackDictionary = {
   "de": "the", "een": "a/an", "het": "the", "ik": "I", "u": "you (formal)", "we": "we", "ze": "they", "mijn": "my", "uw": "your",
@@ -58,6 +59,7 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
 
   const [answers, setAnswers] = useState({});
   const [showResults, setShowResults] = useState(false);
+  const [resultToast, setResultToast] = useState(null);
   const [qStats, setQStats] = useState(JSON.parse(localStorage.getItem('questionStats')) || {});
   const [currentSpeechRate, setCurrentSpeechRate] = useState(getSpeechRate());
   const [isPlayingAll, setIsPlayingAll] = useState(false);
@@ -144,6 +146,7 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
   useEffect(() => {
     setAnswers({});         
     setShowResults(false);
+    setResultToast(null);
     stopPlayingAll();
   }, [sectionId, stopPlayingAll]);
 
@@ -803,11 +806,25 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
   const handleVerify = () => {
     setShowResults(true);
     const newStats = { ...qStats };
+    let correct = 0;
+    let incorrect = 0;
+    let unanswered = 0;
+    let total = 0;
+
     const groups = sectionData?.exerciseGroups || [];
     groups.forEach(group => {
       group.questions.forEach(q => {
+        total += 1;
         const userAns = answers[q.id]?.toLowerCase().trim() || "";
         const isCorrect = Boolean(userAns && q.correctAnswer && userAns === q.correctAnswer.toLowerCase().trim());
+        if (!userAns) {
+          unanswered += 1;
+          incorrect += 1;
+        } else if (isCorrect) {
+          correct += 1;
+        } else {
+          incorrect += 1;
+        }
         if (userAns !== "") {
           const current = newStats[q.id] || { correct: 0, incorrect: 0 };
           newStats[q.id] = {
@@ -819,6 +836,7 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
     });
     setQStats(newStats);
     localStorage.setItem('questionStats', JSON.stringify(newStats));
+    setResultToast({ correct, incorrect, unanswered, total, ts: Date.now() });
   };
 
   const rawStatus = wordStatuses[clickedWordRaw];
@@ -1181,13 +1199,39 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
             </div>
           ))}
 
-          <div className="flex justify-end pt-4 border-t border-slate-700">
-            <button onClick={handleVerify} className="px-6 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white text-sm font-bold shadow-lg transition">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-4 border-t border-slate-700">
+            {resultToast ? (
+              <div className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-800/90 border border-slate-700 text-xs font-bold shadow-sm animate-fadeIn">
+                <span className="flex items-center gap-1.5 text-emerald-400">
+                  <i className="fa-solid fa-circle-check"></i> {resultToast.correct} {lang === 'tr' ? 'Doğru' : 'Correct'}
+                </span>
+                <span className="text-slate-600">•</span>
+                <span className="flex items-center gap-1.5 text-rose-400">
+                  <i className="fa-solid fa-circle-xmark"></i> {resultToast.incorrect} {lang === 'tr' ? 'Yanlış' : 'Incorrect'}
+                </span>
+                {resultToast.unanswered > 0 && (
+                  <>
+                    <span className="text-slate-600">•</span>
+                    <span className="flex items-center gap-1 text-slate-400 font-medium">
+                      {resultToast.unanswered} {lang === 'tr' ? 'Boş' : 'Empty'}
+                    </span>
+                  </>
+                )}
+              </div>
+            ) : <div className="hidden sm:block"></div>}
+            <button onClick={handleVerify} className="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white text-sm font-bold shadow-lg transition cursor-pointer">
               {lang === 'tr' ? 'Cevapları Kontrol Et' : 'Verify Answers'}
             </button>
           </div>
         </div>
       )}
+
+      {/* FLOATING TEST DEĞERLENDİRME BİLDİRİMİ */}
+      <ExerciseResultToast 
+        stats={resultToast} 
+        lang={lang} 
+        onClose={() => setResultToast(null)} 
+      />
 
       {/* 4. MODALS (Kelime Çeviri) */}
       {selectedWords && selectedWords.length > 0 && (

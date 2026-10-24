@@ -8,6 +8,7 @@ import {
   groupChapterWords 
 } from '../data/vocabCategories';
 import { CHAPTER_VOCAB_GUIDES } from '../data/vocabGuides';
+import ExerciseResultToast from './ExerciseResultToast';
 
 export default function VocabularySection({
   sectionId = '1.2',
@@ -54,6 +55,44 @@ export default function VocabularySection({
   // Egzersiz State'leri (varsa)
   const [answers, setAnswers] = useState({});
   const [showResults, setShowResults] = useState(false);
+  const [resultToast, setResultToast] = useState(null);
+
+  useEffect(() => {
+    setAnswers({});
+    setShowResults(false);
+    setResultToast(null);
+  }, [sectionId]);
+
+  const handleToggleResults = () => {
+    if (!showResults) {
+      let correct = 0;
+      let incorrect = 0;
+      let unanswered = 0;
+      let total = 0;
+
+      const groups = sectionData?.exerciseGroups || [];
+      groups.forEach(group => {
+        group.questions.forEach(q => {
+          total += 1;
+          const userAns = answers[q.id]?.toLowerCase().trim() || "";
+          const isCorrect = Boolean(userAns && q.correctAnswer && userAns === q.correctAnswer.toLowerCase().trim());
+          if (!userAns) {
+            unanswered += 1;
+            incorrect += 1;
+          } else if (isCorrect) {
+            correct += 1;
+          } else {
+            incorrect += 1;
+          }
+        });
+      });
+      setResultToast({ correct, incorrect, unanswered, total, ts: Date.now() });
+      setShowResults(true);
+    } else {
+      setShowResults(false);
+      setResultToast(null);
+    }
+  };
 
   // Kelime durumlarını yükle
   const fetchStatuses = useCallback(() => {
@@ -773,16 +812,42 @@ export default function VocabularySection({
             </div>
           ))}
 
-          <div className="pt-3 border-t border-slate-700 flex justify-end">
+          <div className="pt-3 border-t border-slate-700 flex flex-col sm:flex-row items-center justify-between gap-3">
+            {resultToast && showResults ? (
+              <div className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-800/90 border border-slate-700 text-xs font-bold shadow-sm animate-fadeIn">
+                <span className="flex items-center gap-1.5 text-emerald-400">
+                  <i className="fa-solid fa-circle-check"></i> {resultToast.correct} {isTr ? 'Doğru' : 'Correct'}
+                </span>
+                <span className="text-slate-600">•</span>
+                <span className="flex items-center gap-1.5 text-rose-400">
+                  <i className="fa-solid fa-circle-xmark"></i> {resultToast.incorrect} {isTr ? 'Yanlış' : 'Incorrect'}
+                </span>
+                {resultToast.unanswered > 0 && (
+                  <>
+                    <span className="text-slate-600">•</span>
+                    <span className="flex items-center gap-1 text-slate-400 font-medium">
+                      {resultToast.unanswered} {isTr ? 'Boş' : 'Empty'}
+                    </span>
+                  </>
+                )}
+              </div>
+            ) : <div className="hidden sm:block"></div>}
             <button
-              onClick={() => setShowResults(!showResults)}
-              className="bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold px-4 py-2 rounded-xl transition cursor-pointer shadow-md"
+              onClick={handleToggleResults}
+              className="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-500 text-white text-xs sm:text-sm font-bold px-5 py-2.5 rounded-xl transition cursor-pointer shadow-md"
             >
               {showResults ? (isTr ? 'Sonuçları Gizle' : 'Hide Results') : (isTr ? 'Cevapları Kontrol Et' : 'Check Answers')}
             </button>
           </div>
         </div>
       )}
+
+      {/* FLOATING TEST DEĞERLENDİRME BİLDİRİMİ */}
+      <ExerciseResultToast 
+        stats={resultToast} 
+        lang={lang} 
+        onClose={() => setResultToast(null)} 
+      />
 
       {/* ======================================================== */}
       {/* 5. KELİME ÇEVİRİ VE İŞARETLEME MODAL POPUP                */}
