@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { createPortal } from 'react-dom';
 import { vocabulary, dialogues, bookSections } from '../data';
 import { globalDictionary } from '../data/globalDictionary'; 
 import { useLanguage } from '../contexts/LanguageContext'; 
@@ -578,7 +579,7 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
       clickY: clickData.clickY,
       targetRect: clickData.targetRect,
       preferredWidth: 300,
-      estimatedHeight: 260
+      estimatedHeight: 220
     });
     setPopupPos(initialPos);
 
@@ -637,7 +638,7 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
           clickY: lastClickRef.current.clickY,
           targetRect: lastClickRef.current.targetRect,
           preferredWidth: 300,
-          estimatedHeight: 260
+          estimatedHeight: 220
         });
         setPopupPos(refinedPos);
       }
@@ -1210,7 +1211,7 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
       />
 
       {/* 4. MODALS (Kelime Çeviri) */}
-      {selectedWords && selectedWords.length > 0 && (
+      {selectedWords && selectedWords.length > 0 && typeof document !== 'undefined' && createPortal(
         <>
           <div className="fixed inset-0 z-40" onClick={(e) => { e.stopPropagation(); setSelectedWords(null); }}></div>
           <div 
@@ -1314,7 +1315,8 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
               })}
             </div>
           </div>
-        </>
+        </>,
+        document.body
       )}
     </div>
   );

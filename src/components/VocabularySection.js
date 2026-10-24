@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import { vocabulary, bookSections } from '../data';
 import { useLanguage } from '../contexts/LanguageContext';
 import { speakDutch } from '../utils/speech';
@@ -225,7 +226,7 @@ export default function VocabularySection({
       clickY: clickData.clickY,
       targetRect: clickData.targetRect,
       preferredWidth: 300,
-      estimatedHeight: 260
+      estimatedHeight: 210
     });
     setPopupPos(initialPos);
     setSelectedWord(word);
@@ -240,7 +241,7 @@ export default function VocabularySection({
           clickY: lastClickRef.current.clickY,
           targetRect: lastClickRef.current.targetRect,
           preferredWidth: 300,
-          estimatedHeight: 260
+          estimatedHeight: 210
         });
         setPopupPos(refinedPos);
       }
@@ -878,7 +879,7 @@ export default function VocabularySection({
       {/* ======================================================== */}
       {/* 5. KELİME ÇEVİRİ VE İŞARETLEME MODAL POPUP                */}
       {/* ======================================================== */}
-      {selectedWord && (
+      {selectedWord && typeof document !== 'undefined' && createPortal(
         <>
           <div 
             className="fixed inset-0 z-40" 
@@ -968,7 +969,8 @@ export default function VocabularySection({
               </button>
             </div>
           </div>
-        </>
+        </>,
+        document.body
       )}
 
     </div>
