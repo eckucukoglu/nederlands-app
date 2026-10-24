@@ -1,0 +1,8 @@
+{
+  "appId": "com.nederlands.app",
+  "appName": "Nederlands Portal",
+  "webDir": "build",
+  "server": {
+    "androidScheme": "https"
+  }
+}

@@ -33,7 +33,7 @@ export default function ExerciseResultToast({
       clearTimeout(fadeTimer);
       clearTimeout(removeTimer);
     };
-  }, [stats?.ts, duration, onClose]);
+  }, [stats, duration, onClose]);
 
   if (!stats) return null;
 
