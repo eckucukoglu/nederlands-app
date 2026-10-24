@@ -1,5 +1,5 @@
 // src/components/ReadingPassage.js
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useCallback, useLayoutEffect } from 'react';
 import { vocabulary } from '../data';
 import { globalDictionary } from '../data/globalDictionary';
 import { 
@@ -11,6 +11,7 @@ import {
   setSpeechRate 
 } from '../utils/speech';
 import { STUDIO_AUDIO_DATA } from '../data/studioAudio';
+import { calculatePopupPosition } from '../utils/popupPosition';
 
 const fallbackDictionary = {
   "de": "the", "een": "a/an", "het": "the", "ik": "I", "u": "you (formal)", "we": "we", "ze": "they", "mijn": "my", "uw": "your",
@@ -82,9 +83,12 @@ export default function ReadingPassage({
 
   // Kelime Popup ve Durum Yönetimi
   const [selectedWords, setSelectedWords] = useState(null);
-  const [popupPos, setPopupPos] = useState({ x: 0, y: 0 });
+  const [popupPos, setPopupPos] = useState({ x: 0, y: 0, width: 300 });
   const [clickedWordRaw, setClickedWordRaw] = useState("");
   const [wordStatuses, setWordStatuses] = useState({});
+
+  const popupRef = useRef(null);
+  const lastClickRef = useRef(null);
 
   const playAllSessionRef = useRef(0);
   const playAllTimeoutRef = useRef(null);
@@ -467,7 +471,7 @@ export default function ReadingPassage({
   };
 
   // ========================================================
-  // KELİME TIKLAMA VE POPUP İŞLEMLERİ (Diyalog ile Birebir Aynı)
+  // KELİME TIKLAMA VE POPUP İŞLEMLERİ (Yalın ve Taşmayan Konumlandırma)
   // ========================================================
   const handleWordClick = (e, wordIndex, cleanWords) => {
     e.stopPropagation();
@@ -475,25 +479,29 @@ export default function ReadingPassage({
     if (!cleanWord) return;
     setClickedWordRaw(cleanWord);
 
-    // Viewport clamping: mobile screens (<640px) always center horizontally with safe 16px margins
-    const isMobile = typeof window !== 'undefined' && window.innerWidth < 640;
-    let xPosition;
-    if (isMobile) {
-      xPosition = window.innerWidth / 2;
-    } else {
-      const halfWidth = 150;
-      const padding = 20;
-      xPosition = Math.min(Math.max(e.clientX, halfWidth + padding), window.innerWidth - halfWidth - padding);
-    }
+    const targetRect = e.currentTarget?.getBoundingClientRect?.();
+    const clickData = {
+      clickX: e.clientX,
+      clickY: e.clientY,
+      targetRect: targetRect ? {
+        left: targetRect.left,
+        right: targetRect.right,
+        top: targetRect.top,
+        bottom: targetRect.bottom,
+        width: targetRect.width,
+        height: targetRect.height
+      } : null
+    };
+    lastClickRef.current = clickData;
 
-    let yPosition = e.clientY + 15;
-    const estimatedHeight = 340;
-    if (yPosition + estimatedHeight > window.innerHeight) {
-      yPosition = Math.max(70, e.clientY - estimatedHeight - 10);
-    }
-    yPosition = Math.max(70, Math.min(window.innerHeight - estimatedHeight, yPosition));
-
-    setPopupPos({ x: xPosition, y: yPosition });
+    const initialPos = calculatePopupPosition({
+      clickX: clickData.clickX,
+      clickY: clickData.clickY,
+      targetRect: clickData.targetRect,
+      preferredWidth: 300,
+      estimatedHeight: 240
+    });
+    setPopupPos(initialPos);
 
     const allVocab = [...vocabulary, ...globalDictionary];
     const uniqueVocabMap = new Map();
@@ -524,71 +532,65 @@ export default function ReadingPassage({
       }];
     }
 
-    // Context analysis for accurate ranking
-    const prevWord = wordIndex > 0 ? cleanWords[wordIndex - 1] : '';
-    const nextWord = wordIndex < cleanWords.length - 1 ? cleanWords[wordIndex + 1] : '';
-    const bigramBefore = prevWord ? `${prevWord} ${cleanWord}` : '';
-    const bigramAfter = nextWord ? `${cleanWord} ${nextWord}` : '';
-
+    // Normal, yalın çalışma hali (v0.1.11 lean ranking)
     matches.sort((a, b) => {
       const getScore = (item) => {
         const low = item.nl.toLowerCase();
         const lowNoApos = low.replace(/['’]/g, '');
-        const cleanNL = low.replace(/^(de|het|een)\s+/, '').replace(/\(.*?\)/g, '').trim();
-
-        let score = 0;
-
-        // 1. Phrasal & compound verb matches in immediate sentence context
-        if (bigramBefore && (low.includes(bigramBefore) || cleanNL.includes(bigramBefore))) {
-          score += 150;
-        } else if (bigramAfter && (low.includes(bigramAfter) || cleanNL.includes(bigramAfter))) {
-          score += 140;
-        }
-
-        // 2. Exact single word match
-        if (low === cleanWord || lowNoApos === cleanWord || cleanNL === cleanWord) {
-          score += 100;
-        } else if (low === `de ${cleanWord}` || low === `het ${cleanWord}` || low === `een ${cleanWord}`) {
-          score += 95;
-        } else if (low.startsWith(`${cleanWord} (`) || lowNoApos.startsWith(`${cleanWord} (`)) {
-          score += 90;
-        } else if (low.includes(`(${cleanWord})`)) {
-          score += 85;
-        }
-
-        // 3. Current active chapter curriculum bonus
-        if (item.chapter === chapterId || Number(item.chapter) === Number(chapterId)) {
-          score += 45;
-        }
-
-        // 4. Example sentence matches text
-        if (item.example) {
-          const exLow = item.example.toLowerCase();
-          if (exLow.includes(cleanWord) && (bigramBefore && exLow.includes(bigramBefore))) {
-            score += 35;
-          }
-        }
-
-        // 5. Penalize multi-word phrases whose other words do NOT appear in the current sentence
-        const wordsInItem = low.replace(/[^a-z0-9\s]/g, ' ').split(/\s+/).filter(w => w.length > 1 && !['de', 'het', 'een'].includes(w));
-        if (wordsInItem.length > 1) {
-          const otherWords = wordsInItem.filter(w => w !== cleanWord);
-          const hasOtherWordInSentence = otherWords.some(w => cleanWords.includes(w));
-          if (!hasOtherWordInSentence) {
-            score -= 60;
-          }
-        }
-
-        // Length tiebreaker
-        score += Math.max(0, 30 - Math.min(item.nl.length, 30));
-
-        return score;
+        if (low === cleanWord || lowNoApos === cleanWord) return 100;
+        if (low === `de ${cleanWord}` || low === `het ${cleanWord}` || low === `een ${cleanWord}`) return 90;
+        if (low.startsWith(`${cleanWord} (`) || lowNoApos.startsWith(`${cleanWord} (`)) return 85;
+        if (low.includes(`(${cleanWord})`)) return 80;
+        return 50 - Math.min(item.nl.length, 40);
       };
       return getScore(b) - getScore(a);
     });
 
     setSelectedWords(matches);
   };
+
+  // Açılan sözlük modalı için gerçek DOM ölçüsü ile dinamik hassas konumlandırma
+  useLayoutEffect(() => {
+    if (!selectedWords || selectedWords.length === 0 || !popupRef.current || !lastClickRef.current) return;
+    const rect = popupRef.current.getBoundingClientRect();
+    if (rect.width <= 0 || rect.height <= 0) return;
+
+    const refinedPos = calculatePopupPosition({
+      clickX: lastClickRef.current.clickX,
+      clickY: lastClickRef.current.clickY,
+      targetRect: lastClickRef.current.targetRect,
+      actualWidth: rect.width,
+      actualHeight: rect.height,
+      preferredWidth: 300
+    });
+
+    setPopupPos(prev => {
+      if (Math.abs(prev.x - refinedPos.x) > 1 || Math.abs(prev.y - refinedPos.y) > 1) {
+        return refinedPos;
+      }
+      return prev;
+    });
+  }, [selectedWords]);
+
+  // Ekran boyutu değiştiğinde açık olan popup'ı ekrandan taşmayacak şekilde yeniden konumlandır
+  useEffect(() => {
+    const handleResize = () => {
+      if (selectedWords && lastClickRef.current && popupRef.current) {
+        const rect = popupRef.current.getBoundingClientRect();
+        const refinedPos = calculatePopupPosition({
+          clickX: lastClickRef.current.clickX,
+          clickY: lastClickRef.current.clickY,
+          targetRect: lastClickRef.current.targetRect,
+          actualWidth: rect.width,
+          actualHeight: rect.height,
+          preferredWidth: 300
+        });
+        setPopupPos(refinedPos);
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [selectedWords]);
 
   // --- BULK (TOPLU) PARAGRAF KELİMELERİNİ BİLİYORUM İŞARETLEME ---
   const handleMarkParagraphAsKnown = (e, cleanWords) => {
@@ -1159,8 +1161,12 @@ export default function ReadingPassage({
           ></div>
 
           <div 
-            className="fixed bg-slate-800 border border-slate-600 p-3 sm:p-4 rounded-2xl shadow-2xl z-50 w-[calc(100vw-32px)] max-w-[300px] box-border transform -translate-x-1/2 max-h-[min(380px,calc(100vh-90px))] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-600 animate-fadeIn" 
-            style={{ left: `${popupPos.x}px`, top: `${popupPos.y}px` }} 
+            ref={popupRef}
+            className="fixed bg-slate-800 border border-slate-600 p-3 sm:p-4 rounded-2xl shadow-2xl z-50 w-[290px] sm:w-[300px] max-w-[calc(100vw-24px)] box-border transform -translate-x-1/2 max-h-[min(380px,calc(100vh-80px))] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-600 animate-fadeIn" 
+            style={{ 
+              left: `${popupPos.x}px`, 
+              top: `${popupPos.y}px` 
+            }} 
             onClick={(e) => e.stopPropagation()}
           >
             {/* Üst Kısım: Seçilen Ham Kelime ve Hızlı Slider */}

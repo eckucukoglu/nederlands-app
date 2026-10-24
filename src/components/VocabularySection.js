@@ -1,5 +1,5 @@
 // src/components/VocabularySection.js
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useEffect, useCallback, useMemo, useRef, useLayoutEffect } from 'react';
 import { vocabulary, bookSections } from '../data';
 import { useLanguage } from '../contexts/LanguageContext';
 import { speakDutch } from '../utils/speech';
@@ -9,6 +9,7 @@ import {
 } from '../data/vocabCategories';
 import { CHAPTER_VOCAB_GUIDES } from '../data/vocabGuides';
 import ExerciseResultToast from './ExerciseResultToast';
+import { calculatePopupPosition } from '../utils/popupPosition';
 
 export default function VocabularySection({
   sectionId = '1.2',
@@ -45,8 +46,11 @@ export default function VocabularySection({
   const [statusFilter, setStatusFilter] = useState('all'); // 'all' | 'known' | 'unknown' | 'unmarked'
   const [wordStatuses, setWordStatuses] = useState({});
   const [selectedWord, setSelectedWord] = useState(null);
-  const [popupPos, setPopupPos] = useState({ x: 0, y: 0 });
+  const [popupPos, setPopupPos] = useState({ x: 0, y: 0, width: 320 });
   const [showGuide, setShowGuide] = useState(false);
+
+  const popupRef = useRef(null);
+  const lastClickRef = useRef(null);
 
   // Favori Notu State
   const [showFavInput, setShowFavInput] = useState(false);
@@ -199,29 +203,77 @@ export default function VocabularySection({
     return { total, knownCount, unknownCount, unmarkedCount, progressPercent };
   }, [chapterWords, getStatusOfWord]);
 
-  // Kelimeye tıklayınca modal aç
+  // Kelimeye tıklayınca modal aç (Taşmayan ve Tıklanılan Yere Yakın Konumlandırma)
   const handleWordCardClick = (e, word) => {
     e.stopPropagation();
-    const isMobile = typeof window !== 'undefined' && window.innerWidth < 640;
-    let xPosition;
-    if (isMobile) {
-      xPosition = window.innerWidth / 2;
-    } else {
-      const halfWidth = 150;
-      const padding = 20;
-      xPosition = Math.min(Math.max(e.clientX, halfWidth + padding), window.innerWidth - halfWidth - padding);
-    }
+    const targetRect = e.currentTarget?.getBoundingClientRect?.();
+    const clickData = {
+      clickX: e.clientX,
+      clickY: e.clientY,
+      targetRect: targetRect ? {
+        left: targetRect.left,
+        right: targetRect.right,
+        top: targetRect.top,
+        bottom: targetRect.bottom,
+        width: targetRect.width,
+        height: targetRect.height
+      } : null
+    };
+    lastClickRef.current = clickData;
 
-    let yPosition = e.clientY + 15;
-    const estimatedHeight = 340;
-    if (yPosition + estimatedHeight > window.innerHeight) {
-      yPosition = Math.max(70, e.clientY - estimatedHeight - 10);
-    }
-    yPosition = Math.max(70, Math.min(window.innerHeight - estimatedHeight, yPosition));
-
-    setPopupPos({ x: xPosition, y: yPosition });
+    const initialPos = calculatePopupPosition({
+      clickX: clickData.clickX,
+      clickY: clickData.clickY,
+      targetRect: clickData.targetRect,
+      preferredWidth: 310,
+      estimatedHeight: 240
+    });
+    setPopupPos(initialPos);
     setSelectedWord(word);
   };
+
+  // Açılan modal için gerçek DOM ölçüsü ile dinamik hassas konumlandırma
+  useLayoutEffect(() => {
+    if (!selectedWord || !popupRef.current || !lastClickRef.current) return;
+    const rect = popupRef.current.getBoundingClientRect();
+    if (rect.width <= 0 || rect.height <= 0) return;
+
+    const refinedPos = calculatePopupPosition({
+      clickX: lastClickRef.current.clickX,
+      clickY: lastClickRef.current.clickY,
+      targetRect: lastClickRef.current.targetRect,
+      actualWidth: rect.width,
+      actualHeight: rect.height,
+      preferredWidth: 310
+    });
+
+    setPopupPos(prev => {
+      if (Math.abs(prev.x - refinedPos.x) > 1 || Math.abs(prev.y - refinedPos.y) > 1) {
+        return refinedPos;
+      }
+      return prev;
+    });
+  }, [selectedWord]);
+
+  // Ekran boyutu değiştiğinde açık olan popup'ı ekrandan taşmayacak şekilde yeniden konumlandır
+  useEffect(() => {
+    const handleResize = () => {
+      if (selectedWord && lastClickRef.current && popupRef.current) {
+        const rect = popupRef.current.getBoundingClientRect();
+        const refinedPos = calculatePopupPosition({
+          clickX: lastClickRef.current.clickX,
+          clickY: lastClickRef.current.clickY,
+          targetRect: lastClickRef.current.targetRect,
+          actualWidth: rect.width,
+          actualHeight: rect.height,
+          preferredWidth: 310
+        });
+        setPopupPos(refinedPos);
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [selectedWord]);
 
   // Kelime Durumu Değiştir (Biliyorum / Bilmiyorum)
   const setWordKnowledge = (word, status) => {
@@ -860,8 +912,12 @@ export default function VocabularySection({
           ></div>
 
           <div 
-            className="fixed bg-slate-800 border border-slate-600 p-4 rounded-2xl shadow-2xl z-50 w-[calc(100vw-32px)] max-w-[320px] box-border transform -translate-x-1/2 max-h-[min(380px,calc(100vh-90px))] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-600 animate-fadeIn" 
-            style={{ left: `${popupPos.x}px`, top: `${popupPos.y}px` }} 
+            ref={popupRef}
+            className="fixed bg-slate-800 border border-slate-600 p-4 rounded-2xl shadow-2xl z-50 w-[310px] max-w-[calc(100vw-24px)] box-border transform -translate-x-1/2 max-h-[min(380px,calc(100vh-80px))] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-600 animate-fadeIn" 
+            style={{ 
+              left: `${popupPos.x}px`, 
+              top: `${popupPos.y}px` 
+            }} 
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Üst: Başlık & Telaffuz */}

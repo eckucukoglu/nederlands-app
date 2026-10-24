@@ -1,6 +1,6 @@
 # 🇳🇱 Nederlands in Gang - Interactief Oefenportaal (A1 → A2)
 
-[![Version](https://img.shields.io/badge/version-v0.1.15-10B981.svg?style=for-the-badge)](https://github.com/eckucukoglu/nederlands-app/releases/tag/v0.1.15)
+[![Version](https://img.shields.io/badge/version-v0.1.16-10B981.svg?style=for-the-badge)](https://github.com/eckucukoglu/nederlands-app/releases/tag/v0.1.16)
 [![Firebase Hosting](https://img.shields.io/badge/hosting-live-FFCA28.svg?style=for-the-badge&logo=firebase&logoColor=black)](https://nederlands-app.web.app)
 [![React](https://img.shields.io/badge/react-19.x-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)](https://react.dev/)
 [![TailwindCSS](https://img.shields.io/badge/tailwindcss-3.x-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
@@ -15,9 +15,19 @@ An open-source, interactive, and personalized web application designed to track 
 
 ---
 
-## 🌟 Key Highlights & Features (v0.1.15)
+## 🌟 Key Highlights & Features (v0.1.16)
 
-### ✨ 1. Elegant, Mobile-Optimized Exercise Evaluation Feedback & Auto-Fade Toast (v0.1.15)
+### 📖 1. Lean Dictionary Lookup & True Proximity Responsive Popover Positioning (v0.1.16)
+* **Reverted to Clean, Lean Dictionary Search & Ranking**: Restored the intuitive, predictable dictionary lookup engine across Reading ([`ReadingPassage.js`](file:///home/deck/nederlands-app/src/components/ReadingPassage.js)) and Dialogues ([`DialogueSection.js`](file:///home/deck/nederlands-app/src/components/DialogueSection.js)). Removed the complex bigram heuristics, chapter bias penalties, and phrase bleeding introduced in v0.1.12 that caused words to be misordered or fail lookup.
+* **Proximity-First Positioning (`popupPosition.js`)**: Modals and translation popovers now open right next to the clicked word or card (`clickX`, `clickY`, `targetRect`) instead of being forced into the middle of the screen horizontally or jumping to fixed vertical anchors.
+* **Flawless Viewport Clamping (Desktop & Mobile)**:
+  - Dynamically calculates available space below and above the clicked target; gracefully opens above when near the bottom of the viewport and below when near the top.
+  - Mathematically bounds the popup horizontally within minimum margins (`minLeft = 12px`, `maxLeft = viewportWidth - width - 12px`). Never clips or overflows on desktop browsers or Capacitor native mobile screens (tested from 320px up to 1920px+).
+  - Synchronous `useLayoutEffect` DOM measurement refinement guarantees the popover adjusts dynamically according to its exact rendered height before screen paint.
+* **Unified Component Architecture**: Applied the identical robust positioning architecture to [`ReadingPassage.js`](file:///home/deck/nederlands-app/src/components/ReadingPassage.js), [`DialogueSection.js`](file:///home/deck/nederlands-app/src/components/DialogueSection.js), and [`VocabularySection.js`](file:///home/deck/nederlands-app/src/components/VocabularySection.js).
+* **Automated Unit & Integration Testing**: Added [`popupPosition.test.js`](file:///home/deck/nederlands-app/src/utils/popupPosition.test.js) and [`DictionaryPopup.test.js`](file:///home/deck/nederlands-app/src/components/DictionaryPopup.test.js) testing edge-to-edge desktop, phone, narrow screen, and landscape conditions.
+
+### ✨ 2. Elegant, Mobile-Optimized Exercise Evaluation Feedback & Auto-Fade Toast (v0.1.15)
 * **Instant Evaluation on "Cevapları Kontrol Et" / "Verify Answers"**: When checking inline chapter exercises ([`ExerciseEngine.js`](file:///home/deck/nederlands-app/src/components/ExerciseEngine.js)), dialogue comprehension tests ([`DialogueSection.js`](file:///home/deck/nederlands-app/src/components/DialogueSection.js)), and vocabulary tests ([`VocabularySection.js`](file:///home/deck/nederlands-app/src/components/VocabularySection.js)), learners are now immediately presented with a refined breakdown showing exact counts of correct answers (`✔ X Doğru`), incorrect answers (`✖ Y Yanlış`), and empty questions (`- Z Boş`).
 * **Sleek Glassmorphic Floating Toast (`ExerciseResultToast.js`)**: An animated bottom toast (`fixed bottom-6 left-1/2 -translate-x-1/2`) slides up into view (`animate-toast-slide-up`) with dark frosted-glass backdrop blur (`bg-slate-900/95 backdrop-blur-md`). It guarantees a mobile-safe margin (`w-[calc(100vw-32px)] max-w-sm sm:max-w-md`) and is `pointer-events-none` so it never obstructs page scrolling or interaction.
 * **Smooth Graceful Fade-Out ("Yavaşça Kaybolma")**: Remains visible and comfortably readable for 3.2 seconds, then initiates a gentle 1,000ms easing fade-out (`opacity-0 translate-y-3 scale-95 duration-1000 ease-out`) before unmounting. Clicking the verify button again smoothly resets and re-animates the evaluation banner.
