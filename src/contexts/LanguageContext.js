@@ -33,7 +33,16 @@ export const uiDictionary = {
     manualManageInfo: "Giriş yapmak istemiyor musun? Verilerini manuel yönet:",
     downloadBackup: "İndir (Yedekle)",
     importDataBtn: "İçe Aktar",
-    language: "Dil"
+    language: "Dil",
+    syncStatusActive: "Bulut Senkronizasyonu Aktif",
+    syncNow: "Şimdi Senkronize Et",
+    syncing: "Senkronize Ediliyor...",
+    syncSuccess: "Tüm ilerlemeniz başarıyla senkronize edildi!",
+    syncError: "Senkronizasyon sırasında bir hata oluştu.",
+    restoreFromCloud: "Buluttan Yenile",
+    lastSync: "Son Eşitleme",
+    justNow: "Az önce",
+    syncMobileTip: "Not: Giriş bağlantısına tıkladığınızda bu tarayıcıda açıldığından emin olun."
   },
   en: {
     searchPlaceholder: "Search dictionary...",
@@ -64,7 +73,16 @@ export const uiDictionary = {
     manualManageInfo: "Don't want to log in? Manage your data manually:",
     downloadBackup: "Download (Backup)",
     importDataBtn: "Import",
-    language: "Language"
+    language: "Language",
+    syncStatusActive: "Cloud Sync Active",
+    syncNow: "Sync Now",
+    syncing: "Syncing...",
+    syncSuccess: "All progress synchronized successfully!",
+    syncError: "An error occurred during synchronization.",
+    restoreFromCloud: "Restore from Cloud",
+    lastSync: "Last Sync",
+    justNow: "Just now",
+    syncMobileTip: "Note: Ensure the login link opens in this same browser."
   }
 };
 

@@ -1,6 +1,6 @@
 // src/components/AuthModal.js
 import React, { useState, useEffect } from 'react';
-import { auth, sendSignInLinkToEmail, deleteCloudData } from '../firebase'; 
+import { auth, sendSignInLinkToEmail, deleteCloudData, syncToCloud, pullFromCloud } from '../firebase'; 
 import { useLanguage } from '../contexts/LanguageContext';
 import { getSpeechRate, setSpeechRate, testDutchSpeech } from '../utils/speech';
 
@@ -10,6 +10,9 @@ export default function AuthModal({ isOpen, onClose, user }) {
   const [loading, setLoading] = useState(false);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
   const [speechRate, setLocalSpeechRate] = useState(getSpeechRate());
+  const [lastSyncTime, setLastSyncTime] = useState(() => localStorage.getItem('lastCloudSyncTimestamp'));
+  const [isManualSyncing, setIsManualSyncing] = useState(false);
+  const [syncFeedback, setSyncFeedback] = useState(null);
   const { lang, setLang, t } = useLanguage();
 
   useEffect(() => {
@@ -19,27 +22,79 @@ export default function AuthModal({ isOpen, onClose, user }) {
     window.addEventListener('speechRateChanged', handleRateUpdate);
     return () => window.removeEventListener('speechRateChanged', handleRateUpdate);
   }, []);
+
+  useEffect(() => {
+    const handleSyncEvent = (e) => {
+      if (e?.detail?.lastSyncedAt) {
+        setLastSyncTime(e.detail.lastSyncedAt);
+      } else {
+        setLastSyncTime(localStorage.getItem('lastCloudSyncTimestamp'));
+      }
+    };
+    window.addEventListener('cloudSyncStateChanged', handleSyncEvent);
+    return () => window.removeEventListener('cloudSyncStateChanged', handleSyncEvent);
+  }, []);
   
   if (!isOpen) return null;
+
+  const formatSyncTime = (isoStr) => {
+    if (!isoStr) return t('justNow');
+    try {
+      const d = new Date(isoStr);
+      if (isNaN(d.getTime())) return t('justNow');
+      const diffMs = Date.now() - d.getTime();
+      if (diffMs < 60000) return t('justNow');
+      const mins = Math.floor(diffMs / 60000);
+      if (mins < 60) return `${mins} ${lang === 'tr' ? 'dk önce' : 'min ago'}`;
+      return d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) + ' ' + d.toLocaleDateString();
+    } catch (e) {
+      return t('justNow');
+    }
+  };
 
   const handleLogin = async (e) => {
     e.preventDefault();
     setLoading(true);
     setMessage("");
     
+    const cleanEmail = (email || '').trim().toLowerCase();
+    if (!cleanEmail) {
+      setLoading(false);
+      return;
+    }
+
     const actionCodeSettings = {
       url: window.location.origin, 
       handleCodeInApp: true,
     };
 
     try {
-      await sendSignInLinkToEmail(auth, email, actionCodeSettings);
-      window.localStorage.setItem('emailForSignIn', email);
+      await sendSignInLinkToEmail(auth, cleanEmail, actionCodeSettings);
+      window.localStorage.setItem('emailForSignIn', cleanEmail);
       setMessage(t('authSuccess')); 
     } catch (error) {
       setMessage(t('authError') + error.message); 
     }
     setLoading(false);
+  };
+
+  const handleManualSync = async () => {
+    if (!user) return;
+    setIsManualSyncing(true);
+    setSyncFeedback(null);
+    try {
+      await pullFromCloud(user.uid);
+      const res = await syncToCloud(true);
+      if (res && res.success) {
+        setLastSyncTime(res.timestamp || new Date().toISOString());
+        setSyncFeedback({ type: 'success', text: t('syncSuccess') });
+      } else {
+        setSyncFeedback({ type: 'error', text: t('syncError') });
+      }
+    } catch (err) {
+      setSyncFeedback({ type: 'error', text: t('syncError') + ' ' + (err.message || '') });
+    }
+    setIsManualSyncing(false);
   };
 
   const handleLogout = () => {
@@ -137,7 +192,7 @@ export default function AuthModal({ isOpen, onClose, user }) {
 
         {/* KULLANICI GİRİŞ DURUMU VEYA FORM */}
         {user ? (
-          <div className="mb-4">
+          <div className="mb-4 space-y-3">
             <div className="bg-emerald-950/40 border border-emerald-700/50 p-4 rounded-2xl flex items-center justify-between gap-3 shadow-inner">
               <div className="min-w-0 flex-1">
                 <p className="text-xs font-bold text-emerald-400 uppercase tracking-wider flex items-center gap-1.5">
@@ -153,6 +208,41 @@ export default function AuthModal({ isOpen, onClose, user }) {
                 <i className="fa-solid fa-arrow-right-from-bracket text-xs"></i>
                 <span>{t('logout')}</span>
               </button>
+            </div>
+
+            {/* BULUT SENKRONİZASYON KONTROLLERİ */}
+            <div className="bg-slate-950/70 border border-slate-800 p-3.5 sm:p-4 rounded-2xl space-y-3">
+              <div className="flex items-center justify-between text-xs sm:text-sm">
+                <span className="text-slate-300 font-semibold flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                  {t('syncStatusActive')}
+                </span>
+                <span className="text-slate-400 text-xs font-mono">
+                  {t('lastSync')}: <strong className="text-slate-200">{formatSyncTime(lastSyncTime)}</strong>
+                </span>
+              </div>
+
+              <div className="flex gap-2">
+                <button
+                  type="button"
+                  onClick={handleManualSync}
+                  disabled={isManualSyncing}
+                  className="flex-1 bg-brand-600 hover:bg-brand-500 active:scale-[0.98] text-white font-bold text-xs sm:text-sm py-2.5 px-3 rounded-xl transition-all flex items-center justify-center gap-2 disabled:opacity-50 cursor-pointer shadow-md"
+                >
+                  <i className={`fa-solid ${isManualSyncing ? 'fa-circle-notch fa-spin' : 'fa-arrows-rotate'} text-xs`}></i>
+                  <span>{isManualSyncing ? t('syncing') : t('syncNow')}</span>
+                </button>
+              </div>
+
+              {syncFeedback && (
+                <p className={`text-xs p-2 rounded-lg font-medium text-center border ${
+                  syncFeedback.type === 'success' 
+                    ? 'bg-emerald-950/50 border-emerald-800/60 text-emerald-300' 
+                    : 'bg-rose-950/50 border-rose-800/60 text-rose-300'
+                }`}>
+                  {syncFeedback.text}
+                </p>
+              )}
             </div>
           </div>
         ) : (
@@ -185,6 +275,9 @@ export default function AuthModal({ isOpen, onClose, user }) {
                 </>
               )}
             </button>
+            <p className="text-[11px] sm:text-xs text-slate-400 text-center leading-relaxed px-1">
+              {t('syncMobileTip')}
+            </p>
             {message && (
               <p className={`text-xs sm:text-sm text-center font-medium p-2 rounded-lg bg-slate-950/60 border ${message.includes('❌') ? 'text-rose-400 border-rose-900/50' : 'text-emerald-400 border-emerald-900/50'}`}>
                 {message}

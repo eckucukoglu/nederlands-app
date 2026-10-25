@@ -405,6 +405,30 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
     }
   });
 
+  useEffect(() => {
+    const handleCloudRestore = () => {
+      const savedComp = localStorage.getItem('completedSections');
+      if (savedComp) {
+        try {
+          const parsed = JSON.parse(savedComp);
+          const { migrated } = migrateCompletedSections(parsed);
+          setCompleted(migrated);
+        } catch (e) {}
+      }
+      const savedFavs = localStorage.getItem('favoriteSections');
+      if (savedFavs) {
+        try {
+          const parsed = JSON.parse(savedFavs);
+          const { migrated } = migrateFavoriteSections(parsed);
+          setFavorites(migrated);
+        } catch (e) {}
+      }
+    };
+
+    window.addEventListener('cloudDataRestored', handleCloudRestore);
+    return () => window.removeEventListener('cloudDataRestored', handleCloudRestore);
+  }, []);
+
   const [activeTab, setActiveTab] = useState(() => {
     const savedTab = localStorage.getItem(`lastVisitedTab_${currentChapter}`);
     const normalizedTab = savedTab ? normalizeSectionId(savedTab) : null;
@@ -1812,8 +1836,9 @@ export default function App() {
   const [user, setUser] = useState(null);
   const [isAppReady, setIsAppReady] = useState(false);
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
+  const isProcessingEmailLink = useRef(false);
 
-  // YENİ EKLENEN KISIM: URL'yi kontrol et
+  // URL'yi kontrol et
   const currentPath = window.location.pathname;
   const isAdminRoute = currentPath === '/feedbacks';
   
@@ -1827,21 +1852,30 @@ export default function App() {
         return; 
       }
 	  
-      if (isSignInWithEmailLink(auth, window.location.href)) {
+      if (isSignInWithEmailLink(auth, window.location.href) && !isProcessingEmailLink.current) {
+        isProcessingEmailLink.current = true;
         let email = window.localStorage.getItem('emailForSignIn');
-        if (!email) email = window.prompt('Lütfen doğrulama için mail adresinizi tekrar girin:');
+        if (!email) {
+          email = window.prompt('Lütfen doğrulama için mail adresinizi tekrar girin / Please confirm your email:');
+        }
         
         if (email) {
+          const cleanEmail = email.trim().toLowerCase();
           try {
-            const result = await signInWithEmailLink(auth, email, window.location.href);
+            const result = await signInWithEmailLink(auth, cleanEmail, window.location.href);
             window.localStorage.removeItem('emailForSignIn');
             await handleUserSyncOnLogin(result.user);
-            window.location.href = window.location.origin; 
+            if (window.history && window.history.replaceState) {
+              window.history.replaceState({}, document.title, window.location.pathname);
+            }
+            setIsAppReady(true);
           } catch (error) {
             console.error("Giriş hatası", error);
+            isProcessingEmailLink.current = false;
             setIsAppReady(true);
           }
         } else {
+          isProcessingEmailLink.current = false;
           setIsAppReady(true);
         }
       } else if (currentUser) {
@@ -1876,7 +1910,7 @@ export default function App() {
   return (
     <LanguageProvider>
       <AuthModal isOpen={isAuthModalOpen} onClose={() => setIsAuthModalOpen(false)} user={user} />
-      <MainContent user={user} isAuthModalOpen={isAuthModalOpen} setIsAuthModalOpen={setIsAuthModalOpen} />
+      <MainContent key={user ? user.uid : 'guest'} user={user} isAuthModalOpen={isAuthModalOpen} setIsAuthModalOpen={setIsAuthModalOpen} />
     </LanguageProvider>
   );
 }

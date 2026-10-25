@@ -2,9 +2,11 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, isSignInWithEmailLink, signInWithEmailLink, sendSignInLinkToEmail, onAuthStateChanged } from "firebase/auth";
 import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
-import { deleteDoc } from "firebase/firestore"; // Eğer bu import henüz yoksa en üste ekle
+import { deleteDoc } from "firebase/firestore";
 import { collection, addDoc } from "firebase/firestore";
 import { migrateLocalStorageSectionData } from "./utils/sectionMigration";
+import { mergeCloudAndLocalData } from "./utils/syncMerger";
+import { APP_VERSION } from "./version";
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -20,88 +22,166 @@ const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const db = getFirestore(app);
 
-let isPulling = false; // Veri indirilirken kazara geri yüklemeyi durdurmak için
+let isPulling = false; // Veri indirilirken kazara döngüye girmeyi engellemek için
 let syncTimeout = null;
 
-export const syncToCloud = async () => {
-  if (!auth.currentUser || isPulling) return;
+export const originalSetItem = typeof window !== 'undefined' ? localStorage.setItem : () => {};
+
+export const syncToCloud = async (immediate = false) => {
+  if (!auth.currentUser || isPulling) return { success: false, reason: 'skipped' };
+  
+  if (syncTimeout) {
+    clearTimeout(syncTimeout);
+    syncTimeout = null;
+  }
+
   const allData = {};
   for (let i = 0; i < localStorage.length; i++) {
     const key = localStorage.key(i);
-    if (!key.startsWith('firebase')) {
-      allData[key] = localStorage.getItem(key);
+    if (!key || key.startsWith('firebase') || key === 'emailForSignIn') continue;
+    const val = localStorage.getItem(key);
+    if (val !== null && val !== undefined) {
+      allData[key] = val;
     }
   }
+
   try {
-    await setDoc(doc(db, "users", auth.currentUser.uid), { localData: allData }, { merge: true });
+    const now = new Date().toISOString();
+    await setDoc(doc(db, "users", auth.currentUser.uid), {
+      localData: allData,
+      lastSyncedAt: now,
+      userEmail: auth.currentUser.email || null,
+      appVersion: APP_VERSION,
+      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : null
+    }, { merge: true });
+
+    originalSetItem.call(localStorage, 'lastCloudSyncTimestamp', now);
+
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(new CustomEvent('cloudSyncStateChanged', {
+        detail: { state: 'synced', lastSyncedAt: now }
+      }));
+    }
+    return { success: true, timestamp: now };
   } catch (err) {
     console.error("Cloud Sync Error:", err);
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(new CustomEvent('cloudSyncStateChanged', {
+        detail: { state: 'error', error: err.message }
+      }));
+    }
+    return { success: false, error: err };
   }
 };
 
-const originalSetItem = localStorage.setItem;
-localStorage.setItem = function(key, value) {
-  originalSetItem.apply(this, arguments);
-  if (!key.startsWith('firebase') && !isPulling) {
-    clearTimeout(syncTimeout);
-    syncTimeout = setTimeout(syncToCloud, 2000);
-  }
-};
+// LocalStorage monkey-patch: yazılan her ilerlemeyi debounced olarak buluta iletir
+if (typeof window !== 'undefined') {
+  localStorage.setItem = function(key, value) {
+    originalSetItem.apply(this, arguments);
+    if (key && !key.startsWith('firebase') && key !== 'emailForSignIn' && !isPulling) {
+      clearTimeout(syncTimeout);
+      syncTimeout = setTimeout(() => syncToCloud(false), 2000);
+    }
+  };
 
-// YENİ: Sayfa yenilendiğinde buluttaki en taze veriyi indiren fonksiyon
+  // Sekme arka plana geçtiğinde veya kapandığında bekleyen senkronizasyonu hemen tamamla
+  window.addEventListener('beforeunload', () => {
+    if (syncTimeout) {
+      clearTimeout(syncTimeout);
+      syncToCloud(true);
+    }
+  });
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'hidden' && syncTimeout) {
+      clearTimeout(syncTimeout);
+      syncToCloud(true);
+    } else if (document.visibilityState === 'visible' && auth.currentUser && !isPulling) {
+      // Telefonda veya başka cihazda geri dönüldüğünde en son bulut verisini sessizce çek ve birleştir
+      pullFromCloud(auth.currentUser.uid);
+    }
+  });
+
+  // Pencere odaklandığında (mobil uygulama veya tarayıcı sekmesi aktifleştiğinde)
+  window.addEventListener('focus', () => {
+    if (auth.currentUser && !isPulling) {
+      pullFromCloud(auth.currentUser.uid);
+    }
+  });
+}
+
+// Buluttaki veriyi çekip yerel veriyle akıllıca birleştiren (smart bidirectional merge) fonksiyon
 export const pullFromCloud = async (uid) => {
+  const targetUid = uid || auth.currentUser?.uid;
+  if (!targetUid) return { success: false, reason: 'no_uid' };
+
   isPulling = true;
   try {
-    const userDocRef = doc(db, "users", uid);
+    const userDocRef = doc(db, "users", targetUid);
     const docSnap = await getDoc(userDocRef);
+
     if (docSnap.exists() && docSnap.data().localData) {
       const cloudData = docSnap.data().localData;
-      Object.keys(cloudData).forEach(key => {
-        originalSetItem.call(localStorage, key, cloudData[key]);
+      const lastSyncedAt = docSnap.data().lastSyncedAt || new Date().toISOString();
+
+      // Mevcut yerel verileri topla
+      const localData = {};
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key && !key.startsWith('firebase') && key !== 'emailForSignIn') {
+          localData[key] = localStorage.getItem(key);
+        }
+      }
+
+      // AKILLI BİRLEŞTİRME: Asla sıfırlama, iki taraftaki ilerlemeyi koru
+      const merged = mergeCloudAndLocalData(cloudData, localData);
+
+      // Birleştirilen veriyi localStorage'a yaz
+      Object.keys(merged).forEach(key => {
+        originalSetItem.call(localStorage, key, merged[key]);
       });
+
+      originalSetItem.call(localStorage, 'lastCloudSyncTimestamp', lastSyncedAt);
       migrateLocalStorageSectionData();
+
+      // UI ve React bileşenlerini uyandır
+      if (typeof window !== 'undefined') {
+        window.dispatchEvent(new Event('progressUpdated'));
+        window.dispatchEvent(new Event('wordStatusUpdated'));
+        window.dispatchEvent(new Event('cloudDataRestored'));
+        window.dispatchEvent(new CustomEvent('cloudSyncStateChanged', {
+          detail: { state: 'synced', lastSyncedAt }
+        }));
+      }
+
+      // Eğer cihazda bulutta olmayan taze yerel ilerleme vardıysa bulutu da güncelle
+      isPulling = false;
+      syncToCloud(false);
+      return { success: true, count: Object.keys(merged).length };
+    } else {
+      // Bulutta kayıt yoksa, cihazdaki mevcut yerel veriyi buluta ilk yedek olarak gönder
+      isPulling = false;
+      await syncToCloud(true);
+      return { success: true, uploaded: true };
     }
   } catch (err) {
     console.error("Pull error:", err);
+    isPulling = false;
+    return { success: false, error: err };
   }
-  isPulling = false;
 };
 
 export const handleUserSyncOnLogin = async (user) => {
-  isPulling = true;
-  const userDocRef = doc(db, "users", user.uid);
-  const docSnap = await getDoc(userDocRef);
-
-  if (docSnap.exists() && docSnap.data().localData) {
-    const cloudData = docSnap.data().localData;
-    const keysToRemove = [];
-    for (let i = 0; i < localStorage.length; i++) {
-      if (!localStorage.key(i).startsWith('firebase')) keysToRemove.push(localStorage.key(i));
-    }
-    keysToRemove.forEach(k => localStorage.removeItem(k));
-
-    Object.keys(cloudData).forEach(key => {
-      originalSetItem.call(localStorage, key, cloudData[key]);
-    });
-    migrateLocalStorageSectionData();
-    isPulling = false;
-    return "restored";
-  } else {
-    isPulling = false;
-    await syncToCloud();
-    return "uploaded";
-  }
+  if (!user) return "no_user";
+  const res = await pullFromCloud(user.uid);
+  return res.success ? "synced" : "error";
 };
 
-// YENİ: Buluttaki kullanıcı verilerini tamamen silen fonksiyon
+// Buluttaki kullanıcı verilerini tamamen silen fonksiyon
 export const deleteCloudData = async (uid) => {
   try {
     const userDocRef = doc(db, "users", uid);
-    // İster dokümanı tamamen silebilirsin:
     await deleteDoc(userDocRef);
-    
-    // Veya dokümanı silmek yerine içini boşaltmak istersen:
-    // await setDoc(userDocRef, { localData: {} });
   } catch (err) {
     console.error("Cloud delete error:", err);
   }
@@ -109,7 +189,7 @@ export const deleteCloudData = async (uid) => {
 
 export { isSignInWithEmailLink, signInWithEmailLink, sendSignInLinkToEmail, onAuthStateChanged };
 
-// YENİ: Hatalı Soruyu Bildirme veya Geri Alma
+// Hatalı Soruyu Bildirme veya Geri Alma
 export const toggleReportQuestion = async (question, user, isReporting) => {
   if (!user) throw new Error("Kullanıcı bulunamadı"); 
   
@@ -132,12 +212,11 @@ export const toggleReportQuestion = async (question, user, isReporting) => {
     }
   } catch (err) {
     console.error("Soru bildirim hatası (Firebase):", err);
-    throw err; // Hatayı ekrana yansıtmak için fırlatıyoruz
+    throw err;
   }
 };
 
-
-// YENİ: Genel Text Feedback Gönderme
+// Genel Text Feedback Gönderme
 export const submitFeedback = async (text, user) => {
   const collRef = collection(db, "feedbacks");
   try {
@@ -146,7 +225,7 @@ export const submitFeedback = async (text, user) => {
       userId: user ? user.uid : "anonymous",
       userEmail: user ? user.email : "Ziyaretçi",
       timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent // Hangi cihazdan gönderildiğini bilmek faydalı olabilir
+      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : null
     });
   } catch (err) {
     console.error("Feedback gönderim hatası:", err);
