@@ -57,45 +57,95 @@ export default function VocabularySection({
   const [favNote, setFavNote] = useState('');
 
   // Egzersiz State'leri (varsa)
-  const [answers, setAnswers] = useState({});
-  const [showResults, setShowResults] = useState(false);
-  const [resultToast, setResultToast] = useState(null);
+  const [answers, setAnswers] = useState(() => {
+    try {
+      const saved = localStorage.getItem(`sectionExerciseAnswers_${sectionId}`);
+      return saved ? JSON.parse(saved) : {};
+    } catch (e) {
+      return {};
+    }
+  });
+  const [savedResult, setSavedResult] = useState(() => {
+    try {
+      const saved = localStorage.getItem(`sectionExerciseResult_${sectionId}`);
+      return saved ? JSON.parse(saved) : null;
+    } catch (e) {
+      return null;
+    }
+  });
+  const [showResults, setShowResults] = useState(() => {
+    try {
+      return Boolean(localStorage.getItem(`sectionExerciseResult_${sectionId}`));
+    } catch (e) {
+      return false;
+    }
+  });
+  const [activeToast, setActiveToast] = useState(null);
 
   useEffect(() => {
-    setAnswers({});
-    setShowResults(false);
-    setResultToast(null);
+    try {
+      const savedAns = localStorage.getItem(`sectionExerciseAnswers_${sectionId}`);
+      setAnswers(savedAns ? JSON.parse(savedAns) : {});
+
+      const savedRes = localStorage.getItem(`sectionExerciseResult_${sectionId}`);
+      const parsedRes = savedRes ? JSON.parse(savedRes) : null;
+      setSavedResult(parsedRes);
+      setShowResults(Boolean(parsedRes));
+    } catch (e) {
+      setAnswers({});
+      setSavedResult(null);
+      setShowResults(false);
+    }
+    setActiveToast(null);
   }, [sectionId]);
 
-  const handleToggleResults = () => {
-    if (!showResults) {
-      let correct = 0;
-      let incorrect = 0;
-      let unanswered = 0;
-      let total = 0;
+  const handleAnswerChange = (qId, value) => {
+    const updated = { ...answers, [qId]: value };
+    setAnswers(updated);
+    try {
+      localStorage.setItem(`sectionExerciseAnswers_${sectionId}`, JSON.stringify(updated));
+    } catch (e) {}
+  };
 
-      const groups = sectionData?.exerciseGroups || [];
-      groups.forEach(group => {
-        group.questions.forEach(q => {
-          total += 1;
-          const userAns = answers[q.id]?.toLowerCase().trim() || "";
-          const isCorrect = Boolean(userAns && q.correctAnswer && userAns === q.correctAnswer.toLowerCase().trim());
-          if (!userAns) {
-            unanswered += 1;
-            incorrect += 1;
-          } else if (isCorrect) {
-            correct += 1;
-          } else {
-            incorrect += 1;
-          }
-        });
+  const handleResetTest = () => {
+    setShowResults(false);
+    setAnswers({});
+    try {
+      localStorage.removeItem(`sectionExerciseAnswers_${sectionId}`);
+    } catch (e) {}
+  };
+
+  const handleVerify = () => {
+    let correct = 0;
+    let incorrect = 0;
+    let unanswered = 0;
+    let total = 0;
+
+    const groups = sectionData?.exerciseGroups || [];
+    groups.forEach(group => {
+      group.questions.forEach(q => {
+        total += 1;
+        const userAns = answers[q.id]?.toLowerCase().trim() || "";
+        const isCorrect = Boolean(userAns && q.correctAnswer && userAns === q.correctAnswer.toLowerCase().trim());
+        if (!userAns) {
+          unanswered += 1;
+          incorrect += 1;
+        } else if (isCorrect) {
+          correct += 1;
+        } else {
+          incorrect += 1;
+        }
       });
-      setResultToast({ correct, incorrect, unanswered, total, ts: Date.now() });
-      setShowResults(true);
-    } else {
-      setShowResults(false);
-      setResultToast(null);
-    }
+    });
+
+    const resultData = { correct, incorrect, unanswered, total, ts: Date.now() };
+    setSavedResult(resultData);
+    try {
+      localStorage.setItem(`sectionExerciseResult_${sectionId}`, JSON.stringify(resultData));
+      localStorage.setItem(`sectionExerciseAnswers_${sectionId}`, JSON.stringify(answers));
+    } catch (e) {}
+    setActiveToast(resultData);
+    setShowResults(true);
   };
 
   // Kelime durumlarını yükle
@@ -805,7 +855,8 @@ export default function VocabularySection({
                           {q.options.map((opt, oIdx) => (
                             <button
                               key={oIdx}
-                              onClick={() => setAnswers(prev => ({ ...prev, [q.id]: opt }))}
+                              disabled={showResults}
+                              onClick={() => handleAnswerChange(q.id, opt)}
                               className={`px-3 py-2 rounded-lg text-xs font-semibold text-left transition border ${
                                 userAns === opt
                                   ? 'bg-indigo-600 border-indigo-400 text-white shadow-md'
@@ -819,8 +870,9 @@ export default function VocabularySection({
                       ) : (
                         <input
                           type="text"
+                          disabled={showResults}
                           value={userAns}
-                          onChange={(e) => setAnswers(prev => ({ ...prev, [q.id]: e.target.value }))}
+                          onChange={(e) => handleAnswerChange(q.id, e.target.value)}
                           placeholder={isTr ? "Cevabınızı yazın..." : "Type your answer..."}
                           className="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-xs text-slate-200 focus:outline-none focus:border-indigo-500"
                         />
@@ -840,40 +892,51 @@ export default function VocabularySection({
           ))}
 
           <div className="pt-3 border-t border-slate-700 flex flex-col sm:flex-row items-center justify-between gap-3">
-            {resultToast && showResults ? (
+            {savedResult ? (
               <div className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-800/90 border border-slate-700 text-xs font-bold shadow-sm animate-fadeIn">
                 <span className="flex items-center gap-1.5 text-emerald-400">
-                  <i className="fa-solid fa-circle-check"></i> {resultToast.correct} {isTr ? 'Doğru' : 'Correct'}
+                  <i className="fa-solid fa-circle-check"></i> {savedResult.correct} {isTr ? 'Doğru' : 'Correct'}
                 </span>
                 <span className="text-slate-600">•</span>
                 <span className="flex items-center gap-1.5 text-rose-400">
-                  <i className="fa-solid fa-circle-xmark"></i> {resultToast.incorrect} {isTr ? 'Yanlış' : 'Incorrect'}
+                  <i className="fa-solid fa-circle-xmark"></i> {savedResult.incorrect} {isTr ? 'Yanlış' : 'Incorrect'}
                 </span>
-                {resultToast.unanswered > 0 && (
+                {savedResult.unanswered > 0 && (
                   <>
                     <span className="text-slate-600">•</span>
                     <span className="flex items-center gap-1 text-slate-400 font-medium">
-                      {resultToast.unanswered} {isTr ? 'Boş' : 'Empty'}
+                      {savedResult.unanswered} {isTr ? 'Boş' : 'Empty'}
                     </span>
                   </>
                 )}
               </div>
             ) : <div className="hidden sm:block"></div>}
-            <button
-              onClick={handleToggleResults}
-              className="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-500 text-white text-xs sm:text-sm font-bold px-5 py-2.5 rounded-xl transition cursor-pointer shadow-md"
-            >
-              {showResults ? (isTr ? 'Sonuçları Gizle' : 'Hide Results') : (isTr ? 'Cevapları Kontrol Et' : 'Check Answers')}
-            </button>
+            <div className="flex items-center gap-2 w-full sm:w-auto">
+              {showResults && (
+                <button 
+                  onClick={handleResetTest} 
+                  className="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700 text-xs sm:text-sm font-semibold transition cursor-pointer"
+                >
+                  <i className="fa-solid fa-rotate-left mr-1.5"></i>
+                  {isTr ? 'Yeniden Çöz' : 'Solve Again'}
+                </button>
+              )}
+              <button
+                onClick={handleVerify}
+                className="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-500 text-white text-xs sm:text-sm font-bold px-5 py-2.5 rounded-xl transition cursor-pointer shadow-md"
+              >
+                {isTr ? 'Cevapları Kontrol Et' : 'Verify Answers'}
+              </button>
+            </div>
           </div>
         </div>
       )}
 
       {/* FLOATING TEST DEĞERLENDİRME BİLDİRİMİ */}
       <ExerciseResultToast 
-        stats={resultToast} 
+        stats={activeToast} 
         lang={lang} 
-        onClose={() => setResultToast(null)} 
+        onClose={() => setActiveToast(null)} 
       />
 
       {/* ======================================================== */}

@@ -43,9 +43,32 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
   const { lang } = useLanguage();
   const t = translations[lang] || translations['tr'];
 
-  const [answers, setAnswers] = useState({});
-  const [showResults, setShowResults] = useState(false);
-  const [resultToast, setResultToast] = useState(null);
+  const secId = sectionData?.id || 'general';
+
+  const [answers, setAnswers] = useState(() => {
+    try {
+      const saved = localStorage.getItem(`sectionExerciseAnswers_${secId}`);
+      return saved ? JSON.parse(saved) : {};
+    } catch (e) {
+      return {};
+    }
+  });
+  const [savedResult, setSavedResult] = useState(() => {
+    try {
+      const saved = localStorage.getItem(`sectionExerciseResult_${secId}`);
+      return saved ? JSON.parse(saved) : null;
+    } catch (e) {
+      return null;
+    }
+  });
+  const [showResults, setShowResults] = useState(() => {
+    try {
+      return Boolean(localStorage.getItem(`sectionExerciseResult_${secId}`));
+    } catch (e) {
+      return false;
+    }
+  });
+  const [activeToast, setActiveToast] = useState(null);
   const [qStats, setQStats] = useState(JSON.parse(localStorage.getItem('questionStats')) || {});
 
   const [showFavInput, setShowFavInput] = useState(false);
@@ -59,9 +82,21 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
   const isReadingMode = sectionData?.id?.startsWith('Reading-'); 
 
   useEffect(() => {
-    setAnswers({});         
-    setShowResults(false);
-    setResultToast(null);  
+    const currentId = sectionData?.id || 'general';
+    try {
+      const savedAns = localStorage.getItem(`sectionExerciseAnswers_${currentId}`);
+      setAnswers(savedAns ? JSON.parse(savedAns) : {});
+
+      const savedRes = localStorage.getItem(`sectionExerciseResult_${currentId}`);
+      const parsedRes = savedRes ? JSON.parse(savedRes) : null;
+      setSavedResult(parsedRes);
+      setShowResults(Boolean(parsedRes));
+    } catch (e) {
+      setAnswers({});
+      setSavedResult(null);
+      setShowResults(false);
+    }
+    setActiveToast(null);
     setShowFavInput(false); 
     setIsQuizOpen(false);   
   }, [sectionData?.id]);
@@ -71,7 +106,19 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
   const currentGroups = sectionData.exerciseGroups || [];
 
   const handleAnswerChange = (qId, value) => {
-    setAnswers({ ...answers, [qId]: value });
+    const updated = { ...answers, [qId]: value };
+    setAnswers(updated);
+    try {
+      localStorage.setItem(`sectionExerciseAnswers_${sectionData?.id || 'general'}`, JSON.stringify(updated));
+    } catch (e) {}
+  };
+
+  const handleResetTest = () => {
+    setShowResults(false);
+    setAnswers({});
+    try {
+      localStorage.removeItem(`sectionExerciseAnswers_${sectionData?.id || 'general'}`);
+    } catch (e) {}
   };
 
   const handleVerify = () => {
@@ -105,8 +152,18 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
       });
     });
     setQStats(newStats);
-    localStorage.setItem('questionStats', JSON.stringify(newStats));
-    setResultToast({ correct, incorrect, unanswered, total, ts: Date.now() });
+    try {
+      localStorage.setItem('questionStats', JSON.stringify(newStats));
+    } catch (e) {}
+
+    const resultData = { correct, incorrect, unanswered, total, ts: Date.now() };
+    setSavedResult(resultData);
+    try {
+      const currentId = sectionData?.id || 'general';
+      localStorage.setItem(`sectionExerciseResult_${currentId}`, JSON.stringify(resultData));
+      localStorage.setItem(`sectionExerciseAnswers_${currentId}`, JSON.stringify(answers));
+    } catch (e) {}
+    setActiveToast(resultData);
   };
 
   const speakDutch = (text) => {
@@ -402,37 +459,48 @@ export default function ExerciseEngine({ sectionData, chapterNum, favorites, tog
         ))}
 
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-4 border-t border-slate-700">
-          {resultToast ? (
+          {savedResult ? (
             <div className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-800/90 border border-slate-700 text-xs font-bold shadow-sm animate-fadeIn">
               <span className="flex items-center gap-1.5 text-emerald-400">
-                <i className="fa-solid fa-circle-check"></i> {resultToast.correct} {lang === 'tr' ? 'Doğru' : 'Correct'}
+                <i className="fa-solid fa-circle-check"></i> {savedResult.correct} {lang === 'tr' ? 'Doğru' : 'Correct'}
               </span>
               <span className="text-slate-600">•</span>
               <span className="flex items-center gap-1.5 text-rose-400">
-                <i className="fa-solid fa-circle-xmark"></i> {resultToast.incorrect} {lang === 'tr' ? 'Yanlış' : 'Incorrect'}
+                <i className="fa-solid fa-circle-xmark"></i> {savedResult.incorrect} {lang === 'tr' ? 'Yanlış' : 'Incorrect'}
               </span>
-              {resultToast.unanswered > 0 && (
+              {savedResult.unanswered > 0 && (
                 <>
                   <span className="text-slate-600">•</span>
                   <span className="flex items-center gap-1 text-slate-400 font-medium">
-                    {resultToast.unanswered} {lang === 'tr' ? 'Boş' : 'Empty'}
+                    {savedResult.unanswered} {lang === 'tr' ? 'Boş' : 'Empty'}
                   </span>
                 </>
               )}
             </div>
           ) : <div className="hidden sm:block"></div>}
-          <button onClick={handleVerify} className="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white text-sm font-bold shadow-lg transition cursor-pointer">
-            {t.verifyAnswers}
-          </button>
+          <div className="flex items-center gap-2 w-full sm:w-auto">
+            {showResults && (
+              <button 
+                onClick={handleResetTest} 
+                className="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700 text-sm font-semibold transition cursor-pointer"
+              >
+                <i className="fa-solid fa-rotate-left mr-1.5"></i>
+                {lang === 'tr' ? 'Yeniden Çöz' : 'Solve Again'}
+              </button>
+            )}
+            <button onClick={handleVerify} className="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white text-sm font-bold shadow-lg transition cursor-pointer">
+              {t.verifyAnswers}
+            </button>
+          </div>
         </div>
       </div>
     )}
 
       {/* FLOATING TEST DEĞERLENDİRME BİLDİRİMİ */}
       <ExerciseResultToast 
-        stats={resultToast} 
+        stats={activeToast} 
         lang={lang} 
-        onClose={() => setResultToast(null)} 
+        onClose={() => setActiveToast(null)} 
       />
 
       {/* YENİ EKLENEN: QUIZ MODÜLÜ */}
