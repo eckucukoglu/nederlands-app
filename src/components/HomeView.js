@@ -1055,20 +1055,20 @@ export default function HomeView({
         </button>
 
         <button
-          onClick={() => setActiveTabId('questions')}
+          onClick={() => setActiveTabId('chapters')}
           className={`px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center justify-between sm:justify-start gap-2 cursor-pointer w-full sm:w-auto ${
-            activeTabId === 'questions'
-              ? 'bg-teal-600 text-white shadow-lg shadow-teal-900/30 border border-teal-400/50'
-              : 'bg-slate-800/80 text-slate-400 hover:text-teal-300 hover:bg-slate-800 border border-slate-700/60'
+            activeTabId === 'chapters'
+              ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-900/30 border border-indigo-400/50'
+              : 'bg-slate-800/80 text-slate-400 hover:text-indigo-300 hover:bg-slate-800 border border-slate-700/60'
           }`}
         >
           <div className="flex items-center gap-2 truncate">
-            <i className="fa-solid fa-clipboard-question text-xs flex-shrink-0"></i>
-            <span className="sm:hidden">{isTr ? 'Sorular' : 'Questions'}</span>
-            <span className="hidden sm:inline">{isTr ? 'Sorular & Konu İstatistikleri' : 'Questions & Topic Breakdown'}</span>
+            <i className="fa-solid fa-book-open text-xs flex-shrink-0"></i>
+            <span className="sm:hidden">{isTr ? 'Bölümler' : 'Chapters'}</span>
+            <span className="hidden sm:inline">{isTr ? 'Bölümler & Tamamlama' : 'Chapters & Completion'}</span>
           </div>
           <span className="text-[10px] bg-slate-900/60 px-2 py-0.5 rounded-full font-mono flex-shrink-0">
-            %{stats.questionsProgressPercent}
+            %{stats.sectionsProgressPercent}
           </span>
         </button>
 
@@ -1091,20 +1091,20 @@ export default function HomeView({
         </button>
 
         <button
-          onClick={() => setActiveTabId('chapters')}
+          onClick={() => setActiveTabId('questions')}
           className={`px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center justify-between sm:justify-start gap-2 cursor-pointer w-full sm:w-auto ${
-            activeTabId === 'chapters'
-              ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-900/30 border border-indigo-400/50'
-              : 'bg-slate-800/80 text-slate-400 hover:text-indigo-300 hover:bg-slate-800 border border-slate-700/60'
+            activeTabId === 'questions'
+              ? 'bg-teal-600 text-white shadow-lg shadow-teal-900/30 border border-teal-400/50'
+              : 'bg-slate-800/80 text-slate-400 hover:text-teal-300 hover:bg-slate-800 border border-slate-700/60'
           }`}
         >
           <div className="flex items-center gap-2 truncate">
-            <i className="fa-solid fa-book-open text-xs flex-shrink-0"></i>
-            <span className="sm:hidden">{isTr ? 'Bölümler' : 'Chapters'}</span>
-            <span className="hidden sm:inline">{isTr ? 'Bölümler & Tamamlama' : 'Chapters & Completion'}</span>
+            <i className="fa-solid fa-clipboard-question text-xs flex-shrink-0"></i>
+            <span className="sm:hidden">{isTr ? 'Sorular' : 'Questions'}</span>
+            <span className="hidden sm:inline">{isTr ? 'Sorular & Konu İstatistikleri' : 'Questions & Topic Breakdown'}</span>
           </div>
           <span className="text-[10px] bg-slate-900/60 px-2 py-0.5 rounded-full font-mono flex-shrink-0">
-            %{stats.sectionsProgressPercent}
+            %{stats.questionsProgressPercent}
           </span>
         </button>
       </div>
