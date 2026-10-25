@@ -716,54 +716,6 @@ export default function HomeView({
                   </div>
                 </div>
               </div>
-
-              {/* Hızlı Aksiyon Butonları */}
-              <div className="flex flex-wrap items-center justify-between gap-2.5 pt-2">
-                <div className="flex flex-wrap gap-2 flex-1">
-                  {setIsFullQuizOpen && (
-                    <button
-                      onClick={() => setIsFullQuizOpen(true)}
-                      className="px-4 py-2.5 rounded-xl bg-teal-600 hover:bg-teal-500 text-white text-xs sm:text-sm font-bold flex items-center gap-2 shadow-lg shadow-teal-950/40 transition-all active:scale-[0.98]"
-                    >
-                      <i className="fa-solid fa-graduation-cap"></i>
-                      {isTr ? 'Genel Sınav Çöz' : 'Start Full Quiz'}
-                    </button>
-                  )}
-
-                  {setActiveTab && (
-                    <>
-                      <button
-                        onClick={() => setActiveTabId('vocabulary')}
-                        className="px-3.5 py-2.5 rounded-xl bg-purple-950/70 hover:bg-purple-900/90 border border-purple-800/60 text-purple-300 hover:text-white text-xs sm:text-sm font-semibold flex items-center gap-2 transition-all shadow-sm"
-                      >
-                        <i className="fa-solid fa-spell-check text-xs"></i>
-                        {isTr ? 'Kelime Durumu' : 'Vocabulary Hub'}
-                      </button>
-
-                      <button
-                        onClick={() => setActiveTab('flashcards')}
-                        className="px-3.5 py-2.5 rounded-xl bg-rose-950/70 hover:bg-rose-900/90 border border-rose-800/60 text-rose-300 hover:text-white text-xs sm:text-sm font-semibold flex items-center gap-2 transition-all shadow-sm"
-                      >
-                        <i className="fa-solid fa-clone text-xs"></i>
-                        {isTr ? 'Flashcard Çalış' : 'Open Flashcards'}
-                      </button>
-
-                      <button
-                        onClick={() => setActiveTab('grammar')}
-                        className="px-3.5 py-2.5 rounded-xl bg-indigo-950/70 hover:bg-indigo-900/90 border border-indigo-800/60 text-indigo-300 hover:text-white text-xs sm:text-sm font-semibold flex items-center gap-2 transition-all shadow-sm"
-                      >
-                        <i className="fa-solid fa-spell-check text-xs"></i>
-                        {isTr ? 'Gramer Referansı' : 'Grammar Reference'}
-                      </button>
-                    </>
-                  )}
-                </div>
-
-                <div className="text-[11px] text-slate-400 italic">
-                  <i className="fa-solid fa-circle-info mr-1 text-slate-500"></i>
-                  {isTr ? 'Ayrıntılı döküm için aşağıdaki sekmeleri kullanabilirsiniz.' : 'Select a tab below to inspect detailed metrics.'}
-                </div>
-              </div>
             </div>
           )}
         </div>
