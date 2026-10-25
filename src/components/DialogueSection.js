@@ -62,14 +62,7 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
     return saved ? JSON.parse(saved) : {};
   });
 
-  const [answers, setAnswers] = useState(() => {
-    try {
-      const saved = localStorage.getItem(`sectionExerciseAnswers_${sectionId}`);
-      return saved ? JSON.parse(saved) : {};
-    } catch (e) {
-      return {};
-    }
-  });
+  const [answers, setAnswers] = useState({});
   const [savedResult, setSavedResult] = useState(() => {
     try {
       const saved = localStorage.getItem(`sectionExerciseResult_${sectionId}`);
@@ -78,13 +71,7 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
       return null;
     }
   });
-  const [showResults, setShowResults] = useState(() => {
-    try {
-      return Boolean(localStorage.getItem(`sectionExerciseResult_${sectionId}`));
-    } catch (e) {
-      return false;
-    }
-  });
+  const [showResults, setShowResults] = useState(false);
   const [activeToast, setActiveToast] = useState(null);
   const [qStats, setQStats] = useState(JSON.parse(localStorage.getItem('questionStats')) || {});
   const [currentSpeechRate, setCurrentSpeechRate] = useState(getSpeechRate());
@@ -170,18 +157,13 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
   }, [stopPlayingAll]);
 
   useEffect(() => {
+    setAnswers({});
+    setShowResults(false);
     try {
-      const savedAns = localStorage.getItem(`sectionExerciseAnswers_${sectionId}`);
-      setAnswers(savedAns ? JSON.parse(savedAns) : {});
-
       const savedRes = localStorage.getItem(`sectionExerciseResult_${sectionId}`);
-      const parsedRes = savedRes ? JSON.parse(savedRes) : null;
-      setSavedResult(parsedRes);
-      setShowResults(Boolean(parsedRes));
+      setSavedResult(savedRes ? JSON.parse(savedRes) : null);
     } catch (e) {
-      setAnswers({});
       setSavedResult(null);
-      setShowResults(false);
     }
     setActiveToast(null);
     stopPlayingAll();
@@ -809,19 +791,10 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
   };
 
   const handleAnswerChange = (qId, value) => {
-    const updated = { ...answers, [qId]: value };
-    setAnswers(updated);
-    try {
-      localStorage.setItem(`sectionExerciseAnswers_${sectionId}`, JSON.stringify(updated));
-    } catch (e) {}
-  };
-
-  const handleResetTest = () => {
-    setShowResults(false);
-    setAnswers({});
-    try {
-      localStorage.removeItem(`sectionExerciseAnswers_${sectionId}`);
-    } catch (e) {}
+    setAnswers(prev => ({ ...prev, [qId]: value }));
+    if (showResults) {
+      setShowResults(false);
+    }
   };
 
   const handleVerify = () => {
@@ -864,7 +837,6 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
     setSavedResult(resultData);
     try {
       localStorage.setItem(`sectionExerciseResult_${sectionId}`, JSON.stringify(resultData));
-      localStorage.setItem(`sectionExerciseAnswers_${sectionId}`, JSON.stringify(answers));
     } catch (e) {}
     setActiveToast(resultData);
   };
@@ -1197,7 +1169,7 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
                               else if (userAns === opt && !isCorrect) btnClass = "bg-rose-600 text-white border-rose-500";
                             }
                             return (
-                              <button key={opt} disabled={showResults} onClick={() => handleAnswerChange(q.id, opt)} className={`p-3 rounded-lg border text-xs text-left font-medium transition-all flex items-center justify-between ${btnClass}`}>
+                              <button key={opt} onClick={() => handleAnswerChange(q.id, opt)} className={`p-3 rounded-lg border text-xs text-left font-medium transition-all flex items-center justify-between ${btnClass}`}>
                                 <span>{opt}</span>
                                 {showResults && opt === q.correctAnswer && <i className="fa-solid fa-circle-check text-emerald-200 text-sm"></i>}
                                 {showResults && userAns === opt && !isCorrect && <i className="fa-solid fa-circle-xmark text-rose-200 text-sm"></i>}
@@ -1208,7 +1180,6 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
                       ) : (
                         <input 
                           type="text" 
-                          disabled={showResults}
                           placeholder={lang === 'tr' ? "Cevabını yaz..." : "Type your answer..."} 
                           value={userAns || ''} 
                           onChange={(e) => handleAnswerChange(q.id, e.target.value)}
@@ -1249,20 +1220,9 @@ export default function DialogueSection({ sectionId, favorites, toggleFavorite, 
                 )}
               </div>
             ) : <div className="hidden sm:block"></div>}
-            <div className="flex items-center gap-2 w-full sm:w-auto">
-              {showResults && (
-                <button 
-                  onClick={handleResetTest} 
-                  className="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700 text-sm font-semibold transition cursor-pointer"
-                >
-                  <i className="fa-solid fa-rotate-left mr-1.5"></i>
-                  {lang === 'tr' ? 'Yeniden Çöz' : 'Solve Again'}
-                </button>
-              )}
-              <button onClick={handleVerify} className="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white text-sm font-bold shadow-lg transition cursor-pointer">
-                {lang === 'tr' ? 'Cevapları Kontrol Et' : 'Verify Answers'}
-              </button>
-            </div>
+            <button onClick={handleVerify} className="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white text-sm font-bold shadow-lg transition cursor-pointer">
+              {lang === 'tr' ? 'Cevapları Kontrol Et' : 'Verify Answers'}
+            </button>
           </div>
         </div>
       )}

@@ -57,14 +57,7 @@ export default function VocabularySection({
   const [favNote, setFavNote] = useState('');
 
   // Egzersiz State'leri (varsa)
-  const [answers, setAnswers] = useState(() => {
-    try {
-      const saved = localStorage.getItem(`sectionExerciseAnswers_${sectionId}`);
-      return saved ? JSON.parse(saved) : {};
-    } catch (e) {
-      return {};
-    }
-  });
+  const [answers, setAnswers] = useState({});
   const [savedResult, setSavedResult] = useState(() => {
     try {
       const saved = localStorage.getItem(`sectionExerciseResult_${sectionId}`);
@@ -73,46 +66,26 @@ export default function VocabularySection({
       return null;
     }
   });
-  const [showResults, setShowResults] = useState(() => {
-    try {
-      return Boolean(localStorage.getItem(`sectionExerciseResult_${sectionId}`));
-    } catch (e) {
-      return false;
-    }
-  });
+  const [showResults, setShowResults] = useState(false);
   const [activeToast, setActiveToast] = useState(null);
 
   useEffect(() => {
+    setAnswers({});
+    setShowResults(false);
     try {
-      const savedAns = localStorage.getItem(`sectionExerciseAnswers_${sectionId}`);
-      setAnswers(savedAns ? JSON.parse(savedAns) : {});
-
       const savedRes = localStorage.getItem(`sectionExerciseResult_${sectionId}`);
-      const parsedRes = savedRes ? JSON.parse(savedRes) : null;
-      setSavedResult(parsedRes);
-      setShowResults(Boolean(parsedRes));
+      setSavedResult(savedRes ? JSON.parse(savedRes) : null);
     } catch (e) {
-      setAnswers({});
       setSavedResult(null);
-      setShowResults(false);
     }
     setActiveToast(null);
   }, [sectionId]);
 
   const handleAnswerChange = (qId, value) => {
-    const updated = { ...answers, [qId]: value };
-    setAnswers(updated);
-    try {
-      localStorage.setItem(`sectionExerciseAnswers_${sectionId}`, JSON.stringify(updated));
-    } catch (e) {}
-  };
-
-  const handleResetTest = () => {
-    setShowResults(false);
-    setAnswers({});
-    try {
-      localStorage.removeItem(`sectionExerciseAnswers_${sectionId}`);
-    } catch (e) {}
+    setAnswers(prev => ({ ...prev, [qId]: value }));
+    if (showResults) {
+      setShowResults(false);
+    }
   };
 
   const handleVerify = () => {
@@ -142,7 +115,6 @@ export default function VocabularySection({
     setSavedResult(resultData);
     try {
       localStorage.setItem(`sectionExerciseResult_${sectionId}`, JSON.stringify(resultData));
-      localStorage.setItem(`sectionExerciseAnswers_${sectionId}`, JSON.stringify(answers));
     } catch (e) {}
     setActiveToast(resultData);
     setShowResults(true);
@@ -855,7 +827,6 @@ export default function VocabularySection({
                           {q.options.map((opt, oIdx) => (
                             <button
                               key={oIdx}
-                              disabled={showResults}
                               onClick={() => handleAnswerChange(q.id, opt)}
                               className={`px-3 py-2 rounded-lg text-xs font-semibold text-left transition border ${
                                 userAns === opt
@@ -870,7 +841,6 @@ export default function VocabularySection({
                       ) : (
                         <input
                           type="text"
-                          disabled={showResults}
                           value={userAns}
                           onChange={(e) => handleAnswerChange(q.id, e.target.value)}
                           placeholder={isTr ? "Cevabınızı yazın..." : "Type your answer..."}
@@ -911,23 +881,12 @@ export default function VocabularySection({
                 )}
               </div>
             ) : <div className="hidden sm:block"></div>}
-            <div className="flex items-center gap-2 w-full sm:w-auto">
-              {showResults && (
-                <button 
-                  onClick={handleResetTest} 
-                  className="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700 text-xs sm:text-sm font-semibold transition cursor-pointer"
-                >
-                  <i className="fa-solid fa-rotate-left mr-1.5"></i>
-                  {isTr ? 'Yeniden Çöz' : 'Solve Again'}
-                </button>
-              )}
-              <button
-                onClick={handleVerify}
-                className="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-500 text-white text-xs sm:text-sm font-bold px-5 py-2.5 rounded-xl transition cursor-pointer shadow-md"
-              >
-                {isTr ? 'Cevapları Kontrol Et' : 'Verify Answers'}
-              </button>
-            </div>
+            <button
+              onClick={handleVerify}
+              className="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-500 text-white text-xs sm:text-sm font-bold px-5 py-2.5 rounded-xl transition cursor-pointer shadow-md"
+            >
+              {isTr ? 'Cevapları Kontrol Et' : 'Verify Answers'}
+            </button>
           </div>
         </div>
       )}
