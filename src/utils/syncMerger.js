@@ -236,12 +236,25 @@ export function mergeGrammarScores(cloudStr, localStr) {
 
 /**
  * Main bidirectional merger:
- * Takes cloudData (map of key -> val) and localData (map of key -> val).
+ * Takes cloudData (map of key -> val) and localData (map of key -> val),
+ * along with optional metadata ({ cloudSyncedAt, localLastSyncedAt, localLastUpdatedAt }).
  * Produces an intelligent, lossless, non-destructive merged map.
  */
-export function mergeCloudAndLocalData(cloudData = {}, localData = {}) {
+export function mergeCloudAndLocalData(cloudData = {}, localData = {}, meta = {}) {
   const merged = {};
   const allKeys = new Set([...Object.keys(cloudData || {}), ...Object.keys(localData || {})]);
+
+  const cloudSyncedAt = meta.cloudSyncedAt ? new Date(meta.cloudSyncedAt).getTime() : 0;
+  const localLastSyncedAt = meta.localLastSyncedAt ? new Date(meta.localLastSyncedAt).getTime() : 0;
+  const localLastUpdatedAt = meta.localLastUpdatedAt ? new Date(meta.localLastUpdatedAt).getTime() : 0;
+
+  // If local previously synced, and cloud was updated more recently from another session/device,
+  // and local has made no unpushed updates since its last sync, cloud state is authoritative for deletions
+  const cloudIsNewerAuthoritative = (
+    localLastSyncedAt > 0 &&
+    cloudSyncedAt > localLastSyncedAt &&
+    localLastUpdatedAt <= localLastSyncedAt
+  );
 
   allKeys.forEach(key => {
     // Exclude ephemeral, session or auth-specific keys
@@ -264,9 +277,9 @@ export function mergeCloudAndLocalData(cloudData = {}, localData = {}) {
 
     // Key exists in both - apply specialized merge by key pattern
     if (key === 'completedSections') {
-      merged[key] = mergeCompletedSections(cVal, lVal);
+      merged[key] = cloudIsNewerAuthoritative ? cVal : mergeCompletedSections(cVal, lVal);
     } else if (key === 'favoriteSections') {
-      merged[key] = mergeFavoriteSections(cVal, lVal);
+      merged[key] = cloudIsNewerAuthoritative ? cVal : mergeFavoriteSections(cVal, lVal);
     } else if (key === 'globalWordPool') {
       merged[key] = mergeGlobalWordPool(cVal, lVal);
     } else if (

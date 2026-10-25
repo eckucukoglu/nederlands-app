@@ -56,6 +56,7 @@ export const syncToCloud = async (immediate = false) => {
     }, { merge: true });
 
     originalSetItem.call(localStorage, 'lastCloudSyncTimestamp', now);
+    originalSetItem.call(localStorage, 'lastLocalUpdateTimestamp', now);
 
     if (typeof window !== 'undefined') {
       window.dispatchEvent(new CustomEvent('cloudSyncStateChanged', {
@@ -79,6 +80,9 @@ if (typeof window !== 'undefined') {
   localStorage.setItem = function(key, value) {
     originalSetItem.apply(this, arguments);
     if (key && !key.startsWith('firebase') && key !== 'emailForSignIn' && !isPulling) {
+      if (key !== 'lastLocalUpdateTimestamp' && key !== 'lastCloudSyncTimestamp') {
+        originalSetItem.call(localStorage, 'lastLocalUpdateTimestamp', new Date().toISOString());
+      }
       clearTimeout(syncTimeout);
       syncTimeout = setTimeout(() => syncToCloud(false), 2000);
     }
@@ -97,23 +101,35 @@ if (typeof window !== 'undefined') {
       clearTimeout(syncTimeout);
       syncToCloud(true);
     } else if (document.visibilityState === 'visible' && auth.currentUser && !isPulling) {
-      // Telefonda veya başka cihazda geri dönüldüğünde en son bulut verisini sessizce çek ve birleştir
-      pullFromCloud(auth.currentUser.uid);
+      // Telefonda veya başka cihazda geri dönüldüğünde en son bulut verisini çek
+      if (syncTimeout) {
+        clearTimeout(syncTimeout);
+        syncToCloud(true);
+      } else {
+        const lastSync = localStorage.getItem('lastCloudSyncTimestamp');
+        const now = Date.now();
+        // Son senkronizasyonun üzerinden en az 30 saniye geçtiyse arka planda kontrol et
+        if (!lastSync || (now - new Date(lastSync).getTime() > 30000)) {
+          pullFromCloud(auth.currentUser.uid);
+        }
+      }
     }
   });
 
-  // Pencere odaklandığında (mobil uygulama veya tarayıcı sekmesi aktifleştiğinde)
-  window.addEventListener('focus', () => {
-    if (auth.currentUser && !isPulling) {
-      pullFromCloud(auth.currentUser.uid);
-    }
-  });
+  // Not: Pencere tıklamalarında gereksiz döngü ve yarış durumlarını önlemek için window focus dinleyicisi kaldırıldı
 }
 
 // Buluttaki veriyi çekip yerel veriyle akıllıca birleştiren (smart bidirectional merge) fonksiyon
 export const pullFromCloud = async (uid) => {
   const targetUid = uid || auth.currentUser?.uid;
   if (!targetUid) return { success: false, reason: 'no_uid' };
+
+  // Bekleyen yerel değişiklik varsa önce buluta aktar
+  if (syncTimeout) {
+    clearTimeout(syncTimeout);
+    syncTimeout = null;
+    await syncToCloud(true);
+  }
 
   isPulling = true;
   try {
@@ -133,8 +149,15 @@ export const pullFromCloud = async (uid) => {
         }
       }
 
-      // AKILLI BİRLEŞTİRME: Asla sıfırlama, iki taraftaki ilerlemeyi koru
-      const merged = mergeCloudAndLocalData(cloudData, localData);
+      const localLastSyncedAt = localStorage.getItem('lastCloudSyncTimestamp');
+      const localLastUpdatedAt = localStorage.getItem('lastLocalUpdateTimestamp');
+
+      // AKILLI BİRLEŞTİRME: İki taraftaki ilerlemeyi koru, silme/işaret kaldırmaları destekle
+      const merged = mergeCloudAndLocalData(cloudData, localData, {
+        cloudSyncedAt: lastSyncedAt,
+        localLastSyncedAt,
+        localLastUpdatedAt
+      });
 
       // Birleştirilen veriyi localStorage'a yaz
       Object.keys(merged).forEach(key => {
@@ -142,6 +165,7 @@ export const pullFromCloud = async (uid) => {
       });
 
       originalSetItem.call(localStorage, 'lastCloudSyncTimestamp', lastSyncedAt);
+      originalSetItem.call(localStorage, 'lastLocalUpdateTimestamp', lastSyncedAt);
       migrateLocalStorageSectionData();
 
       // UI ve React bileşenlerini uyandır

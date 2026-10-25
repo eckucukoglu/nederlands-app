@@ -128,4 +128,48 @@ describe('syncMerger Unit Tests', () => {
     expect(JSON.parse(merged.starredIrregularVerbs)).toEqual(['zijn', 'gaan']);
     expect(merged.appLanguage).toBe('tr');
   });
+
+  test('mergeCloudAndLocalData adopts cloud deletions when cloud is newer authoritative and local has not modified', () => {
+    // Cloud has uncompleted 1.1 (cloud only has 1.2)
+    const cloudData = {
+      completedSections: JSON.stringify({ '1.2': true }),
+      favoriteSections: JSON.stringify({})
+    };
+
+    // Local device was synced at 10:00:00 and had 1.1
+    const localData = {
+      completedSections: JSON.stringify({ '1.1': true, '1.2': true }),
+      favoriteSections: JSON.stringify({ '1.1': 'Old note' })
+    };
+
+    const meta = {
+      cloudSyncedAt: '2026-10-25T10:15:00.000Z',
+      localLastSyncedAt: '2026-10-25T10:00:00.000Z',
+      localLastUpdatedAt: '2026-10-25T10:00:00.000Z'
+    };
+
+    const merged = mergeCloudAndLocalData(cloudData, localData, meta);
+    // Cloud state is adopted: 1.1 remains uncompleted and favorite note removed
+    expect(JSON.parse(merged.completedSections)).toEqual({ '1.2': true });
+    expect(JSON.parse(merged.favoriteSections)).toEqual({});
+  });
+
+  test('mergeCloudAndLocalData preserves local additions when local was modified after last sync', () => {
+    const cloudData = {
+      completedSections: JSON.stringify({ '1.2': true })
+    };
+
+    const localData = {
+      completedSections: JSON.stringify({ '1.2': true, '1.3': true })
+    };
+
+    const meta = {
+      cloudSyncedAt: '2026-10-25T10:10:00.000Z',
+      localLastSyncedAt: '2026-10-25T10:00:00.000Z',
+      localLastUpdatedAt: '2026-10-25T10:12:00.000Z' // local modified after sync
+    };
+
+    const merged = mergeCloudAndLocalData(cloudData, localData, meta);
+    expect(JSON.parse(merged.completedSections)).toEqual({ '1.2': true, '1.3': true });
+  });
 });

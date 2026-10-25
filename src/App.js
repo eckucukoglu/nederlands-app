@@ -15,7 +15,7 @@ import HomeView from './components/HomeView';
 
 import { bookSections, vocabulary } from './data';
 import { globalDictionary } from './data/globalDictionary';
-import { auth, isSignInWithEmailLink, signInWithEmailLink, onAuthStateChanged, handleUserSyncOnLogin, pullFromCloud } from './firebase';
+import { auth, isSignInWithEmailLink, signInWithEmailLink, onAuthStateChanged, handleUserSyncOnLogin, pullFromCloud, syncToCloud } from './firebase';
 
 import { LanguageProvider, useLanguage } from './contexts/LanguageContext';
 import { speakDutch as speakDutchAudio } from './utils/speech';
@@ -23,7 +23,6 @@ import { calculateOverallProgress } from './utils/progress';
 import { APP_VERSION } from './version';
 import { 
   normalizeSectionId, 
-  NEW_TO_LEGACY_SECTION_MAP, 
   migrateLocalStorageSectionData, 
   migrateCompletedSections, 
   migrateFavoriteSections, 
@@ -909,32 +908,28 @@ function MainContent({ user, setIsAuthModalOpen, isAuthModalOpen }) {
   };
 
   const toggleFavorite = (sectionId, note) => {
-    const targetId = normalizeSectionId(sectionId);
-    const legacyId = NEW_TO_LEGACY_SECTION_MAP[targetId];
     const newFavs = { ...favorites };
-    if (newFavs[targetId] || (legacyId && newFavs[legacyId])) {
-      delete newFavs[targetId];
-      if (legacyId) delete newFavs[legacyId];
+    if (newFavs[sectionId]) {
+      delete newFavs[sectionId];
     } else {
-      newFavs[targetId] = note;
+      newFavs[sectionId] = note;
     }
     setFavorites(newFavs);
     localStorage.setItem('favoriteSections', JSON.stringify(newFavs));
+    syncToCloud(true);
   };
 
   const toggleCompleted = (sectionId) => {
-    const targetId = normalizeSectionId(sectionId);
-    const legacyId = NEW_TO_LEGACY_SECTION_MAP[targetId];
     const newComp = { ...completed };
-    const isAlreadyDone = Boolean(newComp[targetId] || (legacyId && newComp[legacyId]));
+    const isAlreadyDone = Boolean(newComp[sectionId]);
     if (isAlreadyDone) {
-      delete newComp[targetId];
-      if (legacyId) delete newComp[legacyId];
+      delete newComp[sectionId];
     } else {
-      newComp[targetId] = true;
+      newComp[sectionId] = true;
     }
     setCompleted(newComp);
     localStorage.setItem('completedSections', JSON.stringify(newComp));
+    syncToCloud(true);
   };
 
   useEffect(() => {

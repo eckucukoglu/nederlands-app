@@ -13,51 +13,50 @@
 
 export const MIGRATION_VERSION_KEY = 'sectionsMigrated_v0.1.14';
 
-export const LEGACY_SECTION_ID_MAP = {
-  // Chapter 2
-  "2.5": "2.4",
-  "2.8": "2.5",
+/**
+ * Truly obsolete legacy IDs from v0.1.13 that do not exist in the current consecutive structure.
+ * Valid active canonical IDs (e.g. 2.4, 2.5, 2.8, 3.6, 3.7, 4.7, 5.8, 7.5, 7.7, 7.8)
+ * are NEVER mapped away so they cannot collide or cross-contaminate.
+ */
+export const OBSOLETE_SECTION_ID_MAP = {
+  // Chapter 2 (current has 2.1 - 2.8)
   "2.9": "2.6",
   "2.10": "2.7",
   "2.12": "2.8",
 
-  // Chapter 3
-  "3.6": "3.4",
-  "3.7": "3.5",
+  // Chapter 3 (current has 3.1 - 3.7)
   "3.8": "3.6",
   "3.9": "3.7",
 
-  // Chapter 4
-  "4.7": "4.6",
+  // Chapter 4 (current has 4.1 - 4.7)
   "4.8": "4.7",
 
-  // Chapter 5
-  "5.8": "5.7",
-  "5.9": "5.8",
+  // Chapter 5 (current has 5.1 - 5.9)
   "5.10": "5.9",
 
-  // Chapter 7
-  "7.5": "7.4",
-  "7.7": "7.5",
-  "7.8": "7.6",
+  // Chapter 7 (current has 7.1 - 7.8)
   "7.9": "7.7",
   "7.10": "7.8",
 };
 
+export const LEGACY_SECTION_ID_MAP = OBSOLETE_SECTION_ID_MAP;
+
 export const NEW_TO_LEGACY_SECTION_MAP = Object.fromEntries(
-  Object.entries(LEGACY_SECTION_ID_MAP).map(([oldId, newId]) => [newId, oldId])
+  Object.entries(OBSOLETE_SECTION_ID_MAP).map(([oldId, newId]) => [newId, oldId])
 );
 
 /**
- * Normalizes any section ID (legacy or current) to its canonical new ID.
+ * Normalizes obsolete section IDs to their canonical IDs.
+ * Valid canonical IDs (e.g. '2.5', '2.4', '2.8') are preserved untouched.
  */
 export const normalizeSectionId = (sectionId) => {
   if (!sectionId || typeof sectionId !== 'string') return sectionId;
-  return LEGACY_SECTION_ID_MAP[sectionId] || sectionId;
+  return OBSOLETE_SECTION_ID_MAP[sectionId] || sectionId;
 };
 
 /**
- * Migrates completed sections map so that canonical IDs are set if legacy IDs were completed.
+ * Migrates completed sections map so that obsolete IDs are ported to canonical IDs.
+ * Current active IDs are never mutated.
  */
 export const migrateCompletedSections = (rawCompleted = {}) => {
   if (!rawCompleted || typeof rawCompleted !== 'object') return { migrated: {}, changed: false };
@@ -65,8 +64,8 @@ export const migrateCompletedSections = (rawCompleted = {}) => {
   let changed = false;
 
   Object.entries(rawCompleted).forEach(([secId, isDone]) => {
-    if (LEGACY_SECTION_ID_MAP[secId]) {
-      const newId = LEGACY_SECTION_ID_MAP[secId];
+    if (OBSOLETE_SECTION_ID_MAP[secId]) {
+      const newId = OBSOLETE_SECTION_ID_MAP[secId];
       migrated[newId] = isDone;
       changed = true;
     } else {
@@ -78,7 +77,8 @@ export const migrateCompletedSections = (rawCompleted = {}) => {
 };
 
 /**
- * Migrates favorite sections map so that notes attached to legacy IDs are ported to new IDs.
+ * Migrates favorite sections map so that notes attached to obsolete IDs are ported.
+ * Current active IDs are never mutated.
  */
 export const migrateFavoriteSections = (rawFavorites = {}) => {
   if (!rawFavorites || typeof rawFavorites !== 'object') return { migrated: {}, changed: false };
@@ -86,8 +86,8 @@ export const migrateFavoriteSections = (rawFavorites = {}) => {
   let changed = false;
 
   Object.entries(rawFavorites).forEach(([secId, note]) => {
-    if (LEGACY_SECTION_ID_MAP[secId]) {
-      const newId = LEGACY_SECTION_ID_MAP[secId];
+    if (OBSOLETE_SECTION_ID_MAP[secId]) {
+      const newId = OBSOLETE_SECTION_ID_MAP[secId];
       migrated[newId] = note;
       changed = true;
     } else {
@@ -99,25 +99,28 @@ export const migrateFavoriteSections = (rawFavorites = {}) => {
 };
 
 /**
- * Checks if a section is completed in either its canonical form or its legacy form.
+ * Checks if a section is completed.
+ * Only checks the canonical section.id and, if present, non-colliding obsolete legacyId.
+ * Never cross-contaminates between active sections (e.g. 2.4 and 2.5).
  */
 export const isSectionCompleted = (completedMap, section) => {
-  if (!completedMap || !section) return false;
+  if (!completedMap || !section || !section.id) return false;
   if (completedMap[section.id]) return true;
-  if (section.legacyId && completedMap[section.legacyId]) return true;
-  if (NEW_TO_LEGACY_SECTION_MAP[section.id] && completedMap[NEW_TO_LEGACY_SECTION_MAP[section.id]]) return true;
+  if (section.legacyId && OBSOLETE_SECTION_ID_MAP[section.legacyId] && completedMap[section.legacyId]) {
+    return true;
+  }
   return false;
 };
 
 /**
- * Checks if a section is favorited in either its canonical form or its legacy form.
+ * Checks if a section has a favorite note.
+ * Never cross-contaminates between active sections (e.g. 2.4 and 2.5).
  */
 export const getSectionFavoriteNote = (favoritesMap, section) => {
-  if (!favoritesMap || !section) return null;
+  if (!favoritesMap || !section || !section.id) return null;
   if (favoritesMap[section.id]) return favoritesMap[section.id];
-  if (section.legacyId && favoritesMap[section.legacyId]) return favoritesMap[section.legacyId];
-  if (NEW_TO_LEGACY_SECTION_MAP[section.id] && favoritesMap[NEW_TO_LEGACY_SECTION_MAP[section.id]]) {
-    return favoritesMap[NEW_TO_LEGACY_SECTION_MAP[section.id]];
+  if (section.legacyId && OBSOLETE_SECTION_ID_MAP[section.legacyId] && favoritesMap[section.legacyId]) {
+    return favoritesMap[section.legacyId];
   }
   return null;
 };
