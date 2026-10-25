@@ -1116,35 +1116,35 @@ export default function HomeView({
         <div className="space-y-6">
           {/* 4 Ana Metrik Kartı */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {/* KART 1: QUIZ DOĞRULUK & SORU SAYISI */}
+            {/* KART 1: DERS & KİTAP İLERLEMESİ */}
             <div 
-              onClick={() => setActiveTabId('questions')}
-              className="bg-slate-800/90 border border-slate-700/80 rounded-2xl p-4 sm:p-5 flex flex-col justify-between shadow-md hover:border-teal-500/50 transition-all cursor-pointer group"
+              onClick={() => setActiveTabId('chapters')}
+              className="bg-slate-800/90 border border-slate-700/80 rounded-2xl p-4 sm:p-5 flex flex-col justify-between shadow-md hover:border-indigo-500/50 transition-all cursor-pointer group"
             >
               <div className="flex items-center justify-between mb-3">
-                <span className="text-xs font-bold text-slate-400 group-hover:text-teal-300 transition-colors">
-                  {isTr ? 'Quiz Başarısı' : 'Quiz Accuracy'}
+                <span className="text-xs font-bold text-slate-400 group-hover:text-indigo-300 transition-colors">
+                  {isTr ? 'Kitap İlerlemesi' : 'Course Progress'}
                 </span>
-                <div className="w-8 h-8 rounded-xl bg-teal-950/80 border border-teal-800/60 flex items-center justify-center text-teal-400">
-                  <i className="fa-solid fa-bullseye text-sm"></i>
+                <div className="w-8 h-8 rounded-xl bg-indigo-950/80 border border-indigo-800/60 flex items-center justify-center text-indigo-400">
+                  <i className="fa-solid fa-book-open text-sm"></i>
                 </div>
               </div>
               <div>
                 <div className="flex items-baseline gap-2">
-                  <span className="text-2xl sm:text-3xl font-black text-slate-100">
-                    {stats.totalQuizAttempts > 0 ? `%${stats.quizAccuracy}` : '--'}
+                  <span className="text-2xl sm:text-3xl font-black text-brand-300">
+                    %{stats.sectionsProgressPercent}
                   </span>
-                  <span className="text-xs font-bold text-teal-400">
-                    {stats.totalQuizCorrect} {isTr ? 'Doğru' : 'Correct'}
+                  <span className="text-xs font-bold text-slate-400">
+                    {stats.completedSectionsCount} / {stats.totalBookSections}
                   </span>
                 </div>
                 <p className="text-[11px] text-slate-400 mt-1">
-                  {stats.uniqueAttempted} {isTr ? 'farklı soru çözüldü' : 'unique questions'}
+                  {stats.completedChaptersCount} / {stats.totalChapters} {isTr ? 'tam ünite tamamlandı' : 'full chapters done'}
                 </p>
               </div>
               <div className="mt-3 pt-3 border-t border-slate-700/60 flex items-center justify-between text-[11px] text-slate-400">
-                <span>{isTr ? 'Soru Havuzu:' : 'Question Pool:'}</span>
-                <span className="font-extrabold text-slate-200">{stats.uniqueAttempted} / {stats.totalQuizQuestions}</span>
+                <span>{isTr ? 'Alınan Notlar:' : 'Favorites & Notes:'}</span>
+                <span className="font-extrabold text-amber-400">{stats.totalFavoritesCount} {isTr ? 'Bölüm' : 'Sections'}</span>
               </div>
             </div>
 
@@ -1182,35 +1182,35 @@ export default function HomeView({
               </div>
             </div>
 
-            {/* KART 3: DERS & KİTAP İLERLEMESİ */}
+            {/* KART 3: QUIZ DOĞRULUK & SORU SAYISI */}
             <div 
-              onClick={() => setActiveTabId('chapters')}
-              className="bg-slate-800/90 border border-slate-700/80 rounded-2xl p-4 sm:p-5 flex flex-col justify-between shadow-md hover:border-indigo-500/50 transition-all cursor-pointer group"
+              onClick={() => setActiveTabId('questions')}
+              className="bg-slate-800/90 border border-slate-700/80 rounded-2xl p-4 sm:p-5 flex flex-col justify-between shadow-md hover:border-teal-500/50 transition-all cursor-pointer group"
             >
               <div className="flex items-center justify-between mb-3">
-                <span className="text-xs font-bold text-slate-400 group-hover:text-indigo-300 transition-colors">
-                  {isTr ? 'Kitap İlerlemesi' : 'Course Progress'}
+                <span className="text-xs font-bold text-slate-400 group-hover:text-teal-300 transition-colors">
+                  {isTr ? 'Quiz Başarısı' : 'Quiz Accuracy'}
                 </span>
-                <div className="w-8 h-8 rounded-xl bg-indigo-950/80 border border-indigo-800/60 flex items-center justify-center text-indigo-400">
-                  <i className="fa-solid fa-book-open text-sm"></i>
+                <div className="w-8 h-8 rounded-xl bg-teal-950/80 border border-teal-800/60 flex items-center justify-center text-teal-400">
+                  <i className="fa-solid fa-bullseye text-sm"></i>
                 </div>
               </div>
               <div>
                 <div className="flex items-baseline gap-2">
-                  <span className="text-2xl sm:text-3xl font-black text-brand-300">
-                    %{stats.sectionsProgressPercent}
+                  <span className="text-2xl sm:text-3xl font-black text-slate-100">
+                    {stats.totalQuizAttempts > 0 ? `%${stats.quizAccuracy}` : '--'}
                   </span>
-                  <span className="text-xs font-bold text-slate-400">
-                    {stats.completedSectionsCount} / {stats.totalBookSections}
+                  <span className="text-xs font-bold text-teal-400">
+                    {stats.totalQuizCorrect} {isTr ? 'Doğru' : 'Correct'}
                   </span>
                 </div>
                 <p className="text-[11px] text-slate-400 mt-1">
-                  {stats.completedChaptersCount} / {stats.totalChapters} {isTr ? 'tam ünite tamamlandı' : 'full chapters done'}
+                  {stats.uniqueAttempted} {isTr ? 'farklı soru çözüldü' : 'unique questions'}
                 </p>
               </div>
               <div className="mt-3 pt-3 border-t border-slate-700/60 flex items-center justify-between text-[11px] text-slate-400">
-                <span>{isTr ? 'Alınan Notlar:' : 'Favorites & Notes:'}</span>
-                <span className="font-extrabold text-amber-400">{stats.totalFavoritesCount} {isTr ? 'Bölüm' : 'Sections'}</span>
+                <span>{isTr ? 'Soru Havuzu:' : 'Question Pool:'}</span>
+                <span className="font-extrabold text-slate-200">{stats.uniqueAttempted} / {stats.totalQuizQuestions}</span>
               </div>
             </div>
 
